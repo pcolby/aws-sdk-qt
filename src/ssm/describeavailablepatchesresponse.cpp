@@ -65,7 +65,7 @@ const DescribeAvailablePatchesRequest * DescribeAvailablePatchesResponse::reques
  */
 void DescribeAvailablePatchesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeAvailablePatchesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

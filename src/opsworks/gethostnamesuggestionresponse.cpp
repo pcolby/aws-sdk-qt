@@ -65,7 +65,7 @@ const GetHostnameSuggestionRequest * GetHostnameSuggestionResponse::request() co
  */
 void GetHostnameSuggestionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetHostnameSuggestionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

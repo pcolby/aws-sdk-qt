@@ -65,7 +65,7 @@ const CreateDhcpOptionsRequest * CreateDhcpOptionsResponse::request() const
  */
 void CreateDhcpOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateDhcpOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

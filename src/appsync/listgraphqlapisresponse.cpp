@@ -65,7 +65,7 @@ const ListGraphqlApisRequest * ListGraphqlApisResponse::request() const
  */
 void ListGraphqlApisResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListGraphqlApisResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

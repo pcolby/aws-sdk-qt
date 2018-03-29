@@ -52,7 +52,7 @@ ShieldResponse::ShieldResponse(QObject * const parent)
  */
 void ShieldResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ShieldResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ShieldResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ShieldResponse instance.
  */
 ShieldResponsePrivate::ShieldResponsePrivate(
-    ShieldQueueResponse * const q) : ShieldPrivate(q)
+    ShieldResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

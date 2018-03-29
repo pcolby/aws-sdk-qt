@@ -52,7 +52,7 @@ MediaLiveResponse::MediaLiveResponse(QObject * const parent)
  */
 void MediaLiveResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(MediaLiveResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void MediaLiveResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MediaLiveResponse instance.
  */
 MediaLiveResponsePrivate::MediaLiveResponsePrivate(
-    MediaLiveQueueResponse * const q) : MediaLivePrivate(q)
+    MediaLiveResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

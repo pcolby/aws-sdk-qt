@@ -65,7 +65,7 @@ const AssociateTargetsWithJobRequest * AssociateTargetsWithJobResponse::request(
  */
 void AssociateTargetsWithJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateTargetsWithJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DisableVpcClassicLinkDnsSupportRequest * DisableVpcClassicLinkDnsSupportRe
  */
 void DisableVpcClassicLinkDnsSupportResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisableVpcClassicLinkDnsSupportResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

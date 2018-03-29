@@ -65,7 +65,7 @@ const CopyImageRequest * CopyImageResponse::request() const
  */
 void CopyImageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CopyImageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const PollForDecisionTaskRequest * PollForDecisionTaskResponse::request() const
  */
 void PollForDecisionTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PollForDecisionTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

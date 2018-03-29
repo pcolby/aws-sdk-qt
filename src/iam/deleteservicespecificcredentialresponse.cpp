@@ -65,7 +65,7 @@ const DeleteServiceSpecificCredentialRequest * DeleteServiceSpecificCredentialRe
  */
 void DeleteServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteServiceSpecificCredentialResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

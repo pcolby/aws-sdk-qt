@@ -65,7 +65,7 @@ const DeleteBackupRequest * DeleteBackupResponse::request() const
  */
 void DeleteBackupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteBackupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

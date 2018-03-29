@@ -52,7 +52,7 @@ CognitoSyncResponse::CognitoSyncResponse(QObject * const parent)
  */
 void CognitoSyncResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CognitoSyncResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CognitoSyncResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CognitoSyncResponse instance.
  */
 CognitoSyncResponsePrivate::CognitoSyncResponsePrivate(
-    CognitoSyncQueueResponse * const q) : CognitoSyncPrivate(q)
+    CognitoSyncResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

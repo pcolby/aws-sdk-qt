@@ -65,7 +65,7 @@ const GetSMSAttributesRequest * GetSMSAttributesResponse::request() const
  */
 void GetSMSAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetSMSAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const AddCustomAttributesRequest * AddCustomAttributesResponse::request() const
  */
 void AddCustomAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AddCustomAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

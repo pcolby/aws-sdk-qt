@@ -65,7 +65,7 @@ const PutBucketVersioningRequest * PutBucketVersioningResponse::request() const
  */
 void PutBucketVersioningResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutBucketVersioningResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

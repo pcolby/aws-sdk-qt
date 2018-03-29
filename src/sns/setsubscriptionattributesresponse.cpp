@@ -65,7 +65,7 @@ const SetSubscriptionAttributesRequest * SetSubscriptionAttributesResponse::requ
  */
 void SetSubscriptionAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetSubscriptionAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

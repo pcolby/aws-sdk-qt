@@ -52,7 +52,7 @@ CloudFormationResponse::CloudFormationResponse(QObject * const parent)
  */
 void CloudFormationResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CloudFormationResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CloudFormationResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudFormationResponse instance.
  */
 CloudFormationResponsePrivate::CloudFormationResponsePrivate(
-    CloudFormationQueueResponse * const q) : CloudFormationPrivate(q)
+    CloudFormationResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

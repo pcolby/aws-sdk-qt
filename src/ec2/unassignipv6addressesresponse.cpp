@@ -65,7 +65,7 @@ const UnassignIpv6AddressesRequest * UnassignIpv6AddressesResponse::request() co
  */
 void UnassignIpv6AddressesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UnassignIpv6AddressesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

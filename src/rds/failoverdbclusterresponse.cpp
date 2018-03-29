@@ -65,7 +65,7 @@ const FailoverDBClusterRequest * FailoverDBClusterResponse::request() const
  */
 void FailoverDBClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(FailoverDBClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

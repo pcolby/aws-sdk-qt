@@ -65,7 +65,7 @@ const GetDirectoryRequest * GetDirectoryResponse::request() const
  */
 void GetDirectoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetDirectoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

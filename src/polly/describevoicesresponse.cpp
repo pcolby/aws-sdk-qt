@@ -65,7 +65,7 @@ const DescribeVoicesRequest * DescribeVoicesResponse::request() const
  */
 void DescribeVoicesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeVoicesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

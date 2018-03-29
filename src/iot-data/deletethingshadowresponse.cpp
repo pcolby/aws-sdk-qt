@@ -65,7 +65,7 @@ const DeleteThingShadowRequest * DeleteThingShadowResponse::request() const
  */
 void DeleteThingShadowResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteThingShadowResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

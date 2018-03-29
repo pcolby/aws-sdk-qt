@@ -65,7 +65,7 @@ const CreateDataSourceFromRedshiftRequest * CreateDataSourceFromRedshiftResponse
  */
 void CreateDataSourceFromRedshiftResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateDataSourceFromRedshiftResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

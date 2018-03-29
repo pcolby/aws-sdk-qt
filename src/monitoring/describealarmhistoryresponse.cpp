@@ -65,7 +65,7 @@ const DescribeAlarmHistoryRequest * DescribeAlarmHistoryResponse::request() cons
  */
 void DescribeAlarmHistoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeAlarmHistoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

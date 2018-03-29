@@ -65,7 +65,7 @@ const DeleteClassifierRequest * DeleteClassifierResponse::request() const
  */
 void DeleteClassifierResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteClassifierResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

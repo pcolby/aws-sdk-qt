@@ -65,7 +65,7 @@ const DeleteBucketPolicyRequest * DeleteBucketPolicyResponse::request() const
  */
 void DeleteBucketPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteBucketPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeTargetGroupAttributesRequest * DescribeTargetGroupAttributesRespon
  */
 void DescribeTargetGroupAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeTargetGroupAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

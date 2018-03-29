@@ -65,7 +65,7 @@ const DescribeLaunchConfigurationsRequest * DescribeLaunchConfigurationsResponse
  */
 void DescribeLaunchConfigurationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeLaunchConfigurationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const UpdateAvailabilityOptionsRequest * UpdateAvailabilityOptionsResponse::requ
  */
 void UpdateAvailabilityOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateAvailabilityOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

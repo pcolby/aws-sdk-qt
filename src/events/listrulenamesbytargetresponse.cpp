@@ -65,7 +65,7 @@ const ListRuleNamesByTargetRequest * ListRuleNamesByTargetResponse::request() co
  */
 void ListRuleNamesByTargetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListRuleNamesByTargetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

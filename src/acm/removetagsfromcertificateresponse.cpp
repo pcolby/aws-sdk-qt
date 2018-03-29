@@ -65,7 +65,7 @@ const RemoveTagsFromCertificateRequest * RemoveTagsFromCertificateResponse::requ
  */
 void RemoveTagsFromCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RemoveTagsFromCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

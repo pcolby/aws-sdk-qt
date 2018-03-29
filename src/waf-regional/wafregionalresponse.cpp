@@ -52,7 +52,7 @@ WAFRegionalResponse::WAFRegionalResponse(QObject * const parent)
  */
 void WAFRegionalResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(WAFRegionalResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void WAFRegionalResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public WAFRegionalResponse instance.
  */
 WAFRegionalResponsePrivate::WAFRegionalResponsePrivate(
-    WAFRegionalQueueResponse * const q) : WAFRegionalPrivate(q)
+    WAFRegionalResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

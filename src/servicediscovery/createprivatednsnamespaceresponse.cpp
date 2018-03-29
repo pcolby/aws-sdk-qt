@@ -65,7 +65,7 @@ const CreatePrivateDnsNamespaceRequest * CreatePrivateDnsNamespaceResponse::requ
  */
 void CreatePrivateDnsNamespaceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreatePrivateDnsNamespaceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

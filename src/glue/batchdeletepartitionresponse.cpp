@@ -65,7 +65,7 @@ const BatchDeletePartitionRequest * BatchDeletePartitionResponse::request() cons
  */
 void BatchDeletePartitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BatchDeletePartitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

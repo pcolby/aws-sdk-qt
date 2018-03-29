@@ -65,7 +65,7 @@ const CreateClusterParameterGroupRequest * CreateClusterParameterGroupResponse::
  */
 void CreateClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateClusterParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

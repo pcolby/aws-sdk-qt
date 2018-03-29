@@ -52,7 +52,7 @@ BudgetsResponse::BudgetsResponse(QObject * const parent)
  */
 void BudgetsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(BudgetsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void BudgetsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public BudgetsResponse instance.
  */
 BudgetsResponsePrivate::BudgetsResponsePrivate(
-    BudgetsQueueResponse * const q) : BudgetsPrivate(q)
+    BudgetsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

@@ -65,7 +65,7 @@ const GetStaticIpsRequest * GetStaticIpsResponse::request() const
  */
 void GetStaticIpsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetStaticIpsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

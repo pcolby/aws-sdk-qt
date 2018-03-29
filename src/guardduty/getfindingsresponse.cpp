@@ -65,7 +65,7 @@ const GetFindingsRequest * GetFindingsResponse::request() const
  */
 void GetFindingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetFindingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

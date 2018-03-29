@@ -65,7 +65,7 @@ const ListRootsRequest * ListRootsResponse::request() const
  */
 void ListRootsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListRootsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

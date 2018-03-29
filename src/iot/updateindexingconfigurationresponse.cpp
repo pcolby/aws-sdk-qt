@@ -65,7 +65,7 @@ const UpdateIndexingConfigurationRequest * UpdateIndexingConfigurationResponse::
  */
 void UpdateIndexingConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateIndexingConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteQueryLoggingConfigRequest * DeleteQueryLoggingConfigResponse::reques
  */
 void DeleteQueryLoggingConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteQueryLoggingConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

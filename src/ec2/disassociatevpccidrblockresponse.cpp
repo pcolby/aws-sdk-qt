@@ -65,7 +65,7 @@ const DisassociateVpcCidrBlockRequest * DisassociateVpcCidrBlockResponse::reques
  */
 void DisassociateVpcCidrBlockResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisassociateVpcCidrBlockResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

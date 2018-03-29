@@ -65,7 +65,7 @@ const ListInstanceProfilesForRoleRequest * ListInstanceProfilesForRoleResponse::
  */
 void ListInstanceProfilesForRoleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListInstanceProfilesForRoleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

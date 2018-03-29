@@ -65,7 +65,7 @@ const UpdateCertificateOptionsRequest * UpdateCertificateOptionsResponse::reques
  */
 void UpdateCertificateOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateCertificateOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const StopGameSessionPlacementRequest * StopGameSessionPlacementResponse::reques
  */
 void StopGameSessionPlacementResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopGameSessionPlacementResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const RegisterInstanceRequest * RegisterInstanceResponse::request() const
  */
 void RegisterInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RegisterInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

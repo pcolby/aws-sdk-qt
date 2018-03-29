@@ -65,7 +65,7 @@ const DeleteConfigurationSetRequest * DeleteConfigurationSetResponse::request() 
  */
 void DeleteConfigurationSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteConfigurationSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

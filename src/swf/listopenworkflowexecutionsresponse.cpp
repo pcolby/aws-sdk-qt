@@ -65,7 +65,7 @@ const ListOpenWorkflowExecutionsRequest * ListOpenWorkflowExecutionsResponse::re
  */
 void ListOpenWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListOpenWorkflowExecutionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

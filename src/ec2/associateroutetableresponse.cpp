@@ -65,7 +65,7 @@ const AssociateRouteTableRequest * AssociateRouteTableResponse::request() const
  */
 void AssociateRouteTableResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateRouteTableResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

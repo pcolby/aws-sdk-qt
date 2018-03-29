@@ -65,7 +65,7 @@ const GetV2LoggingOptionsRequest * GetV2LoggingOptionsResponse::request() const
  */
 void GetV2LoggingOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetV2LoggingOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

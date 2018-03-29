@@ -65,7 +65,7 @@ const ListThingPrincipalsRequest * ListThingPrincipalsResponse::request() const
  */
 void ListThingPrincipalsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListThingPrincipalsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

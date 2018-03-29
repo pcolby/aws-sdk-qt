@@ -65,7 +65,7 @@ const DescribeScheduledInstancesRequest * DescribeScheduledInstancesResponse::re
  */
 void DescribeScheduledInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeScheduledInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

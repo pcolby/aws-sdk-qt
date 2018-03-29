@@ -65,7 +65,7 @@ const DeprecateThingTypeRequest * DeprecateThingTypeResponse::request() const
  */
 void DeprecateThingTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeprecateThingTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

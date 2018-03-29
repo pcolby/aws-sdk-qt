@@ -65,7 +65,7 @@ const ModifyReplicationGroupShardConfigurationRequest * ModifyReplicationGroupSh
  */
 void ModifyReplicationGroupShardConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyReplicationGroupShardConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

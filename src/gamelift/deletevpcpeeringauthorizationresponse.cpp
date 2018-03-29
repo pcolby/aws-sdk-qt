@@ -65,7 +65,7 @@ const DeleteVpcPeeringAuthorizationRequest * DeleteVpcPeeringAuthorizationRespon
  */
 void DeleteVpcPeeringAuthorizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteVpcPeeringAuthorizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

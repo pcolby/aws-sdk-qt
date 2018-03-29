@@ -65,7 +65,7 @@ const DescribeConfigurationRecorderStatusRequest * DescribeConfigurationRecorder
  */
 void DescribeConfigurationRecorderStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeConfigurationRecorderStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

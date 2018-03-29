@@ -65,7 +65,7 @@ const DeleteLunaClientRequest * DeleteLunaClientResponse::request() const
  */
 void DeleteLunaClientResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteLunaClientResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

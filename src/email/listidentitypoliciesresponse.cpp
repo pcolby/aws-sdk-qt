@@ -65,7 +65,7 @@ const ListIdentityPoliciesRequest * ListIdentityPoliciesResponse::request() cons
  */
 void ListIdentityPoliciesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListIdentityPoliciesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const PutComplianceItemsRequest * PutComplianceItemsResponse::request() const
  */
 void PutComplianceItemsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutComplianceItemsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

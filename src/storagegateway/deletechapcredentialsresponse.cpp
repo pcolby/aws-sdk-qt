@@ -65,7 +65,7 @@ const DeleteChapCredentialsRequest * DeleteChapCredentialsResponse::request() co
  */
 void DeleteChapCredentialsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteChapCredentialsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

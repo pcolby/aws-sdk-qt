@@ -65,7 +65,7 @@ const RestartAppServerRequest * RestartAppServerResponse::request() const
  */
 void RestartAppServerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RestartAppServerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteScalingPolicyRequest * DeleteScalingPolicyResponse::request() const
  */
 void DeleteScalingPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteScalingPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const UnlinkIdentityRequest * UnlinkIdentityResponse::request() const
  */
 void UnlinkIdentityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UnlinkIdentityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

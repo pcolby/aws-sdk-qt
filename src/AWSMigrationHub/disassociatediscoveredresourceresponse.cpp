@@ -65,7 +65,7 @@ const DisassociateDiscoveredResourceRequest * DisassociateDiscoveredResourceResp
  */
 void DisassociateDiscoveredResourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisassociateDiscoveredResourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

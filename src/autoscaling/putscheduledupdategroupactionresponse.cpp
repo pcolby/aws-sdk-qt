@@ -65,7 +65,7 @@ const PutScheduledUpdateGroupActionRequest * PutScheduledUpdateGroupActionRespon
  */
 void PutScheduledUpdateGroupActionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutScheduledUpdateGroupActionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ListVerifiedEmailAddressesRequest * ListVerifiedEmailAddressesResponse::re
  */
 void ListVerifiedEmailAddressesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListVerifiedEmailAddressesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

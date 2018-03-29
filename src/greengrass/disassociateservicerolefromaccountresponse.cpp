@@ -65,7 +65,7 @@ const DisassociateServiceRoleFromAccountRequest * DisassociateServiceRoleFromAcc
  */
 void DisassociateServiceRoleFromAccountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisassociateServiceRoleFromAccountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

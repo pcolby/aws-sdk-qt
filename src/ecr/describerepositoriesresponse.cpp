@@ -65,7 +65,7 @@ const DescribeRepositoriesRequest * DescribeRepositoriesResponse::request() cons
  */
 void DescribeRepositoriesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeRepositoriesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

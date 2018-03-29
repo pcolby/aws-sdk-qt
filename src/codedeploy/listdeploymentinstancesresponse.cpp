@@ -65,7 +65,7 @@ const ListDeploymentInstancesRequest * ListDeploymentInstancesResponse::request(
  */
 void ListDeploymentInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListDeploymentInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

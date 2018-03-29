@@ -65,7 +65,7 @@ const GetVaultNotificationsRequest * GetVaultNotificationsResponse::request() co
  */
 void GetVaultNotificationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetVaultNotificationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

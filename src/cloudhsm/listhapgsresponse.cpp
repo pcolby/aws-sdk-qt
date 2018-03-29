@@ -65,7 +65,7 @@ const ListHapgsRequest * ListHapgsResponse::request() const
  */
 void ListHapgsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListHapgsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

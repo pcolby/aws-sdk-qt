@@ -52,7 +52,7 @@ AutoScalingPlansResponse::AutoScalingPlansResponse(QObject * const parent)
  */
 void AutoScalingPlansResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(AutoScalingPlansResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void AutoScalingPlansResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public AutoScalingPlansResponse instance.
  */
 AutoScalingPlansResponsePrivate::AutoScalingPlansResponsePrivate(
-    AutoScalingPlansQueueResponse * const q) : AutoScalingPlansPrivate(q)
+    AutoScalingPlansResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

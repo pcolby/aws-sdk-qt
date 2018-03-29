@@ -65,7 +65,7 @@ const SendInvitationRequest * SendInvitationResponse::request() const
  */
 void SendInvitationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SendInvitationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeScalingPlansRequest * DescribeScalingPlansResponse::request() cons
  */
 void DescribeScalingPlansResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeScalingPlansResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

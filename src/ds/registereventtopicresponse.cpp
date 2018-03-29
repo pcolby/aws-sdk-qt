@@ -65,7 +65,7 @@ const RegisterEventTopicRequest * RegisterEventTopicResponse::request() const
  */
 void RegisterEventTopicResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RegisterEventTopicResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetBucketCorsRequest * GetBucketCorsResponse::request() const
  */
 void GetBucketCorsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetBucketCorsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeElasticLoadBalancersRequest * DescribeElasticLoadBalancersResponse
  */
 void DescribeElasticLoadBalancersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeElasticLoadBalancersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

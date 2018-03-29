@@ -52,7 +52,7 @@ AppSyncResponse::AppSyncResponse(QObject * const parent)
  */
 void AppSyncResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(AppSyncResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void AppSyncResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public AppSyncResponse instance.
  */
 AppSyncResponsePrivate::AppSyncResponsePrivate(
-    AppSyncQueueResponse * const q) : AppSyncPrivate(q)
+    AppSyncResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

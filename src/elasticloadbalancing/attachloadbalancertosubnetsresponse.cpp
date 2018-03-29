@@ -65,7 +65,7 @@ const AttachLoadBalancerToSubnetsRequest * AttachLoadBalancerToSubnetsResponse::
  */
 void AttachLoadBalancerToSubnetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AttachLoadBalancerToSubnetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

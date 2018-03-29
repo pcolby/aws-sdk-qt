@@ -65,7 +65,7 @@ const SearchResourcesRequest * SearchResourcesResponse::request() const
  */
 void SearchResourcesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SearchResourcesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

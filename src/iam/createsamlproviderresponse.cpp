@@ -65,7 +65,7 @@ const CreateSAMLProviderRequest * CreateSAMLProviderResponse::request() const
  */
 void CreateSAMLProviderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateSAMLProviderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

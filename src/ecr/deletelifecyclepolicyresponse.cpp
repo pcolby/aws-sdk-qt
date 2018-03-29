@@ -65,7 +65,7 @@ const DeleteLifecyclePolicyRequest * DeleteLifecyclePolicyResponse::request() co
  */
 void DeleteLifecyclePolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteLifecyclePolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

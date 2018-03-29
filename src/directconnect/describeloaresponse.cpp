@@ -65,7 +65,7 @@ const DescribeLoaRequest * DescribeLoaResponse::request() const
  */
 void DescribeLoaResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeLoaResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

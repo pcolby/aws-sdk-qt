@@ -65,7 +65,7 @@ const ListConstraintsForPortfolioRequest * ListConstraintsForPortfolioResponse::
  */
 void ListConstraintsForPortfolioResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListConstraintsForPortfolioResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

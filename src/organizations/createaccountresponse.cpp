@@ -65,7 +65,7 @@ const CreateAccountRequest * CreateAccountResponse::request() const
  */
 void CreateAccountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateAccountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const AdminUserGlobalSignOutRequest * AdminUserGlobalSignOutResponse::request() 
  */
 void AdminUserGlobalSignOutResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AdminUserGlobalSignOutResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

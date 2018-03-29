@@ -65,7 +65,7 @@ const DeleteLaunchTemplateVersionsRequest * DeleteLaunchTemplateVersionsResponse
  */
 void DeleteLaunchTemplateVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteLaunchTemplateVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

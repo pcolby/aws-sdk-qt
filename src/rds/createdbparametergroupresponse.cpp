@@ -65,7 +65,7 @@ const CreateDBParameterGroupRequest * CreateDBParameterGroupResponse::request() 
  */
 void CreateDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateDBParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

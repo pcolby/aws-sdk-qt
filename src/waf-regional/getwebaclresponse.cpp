@@ -65,7 +65,7 @@ const GetWebACLRequest * GetWebACLResponse::request() const
  */
 void GetWebACLResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetWebACLResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const PutMetricAlarmRequest * PutMetricAlarmResponse::request() const
  */
 void PutMetricAlarmResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutMetricAlarmResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

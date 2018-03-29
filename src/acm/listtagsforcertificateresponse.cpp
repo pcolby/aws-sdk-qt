@@ -65,7 +65,7 @@ const ListTagsForCertificateRequest * ListTagsForCertificateResponse::request() 
  */
 void ListTagsForCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListTagsForCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

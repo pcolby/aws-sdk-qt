@@ -65,7 +65,7 @@ const PutNotificationConfigurationRequest * PutNotificationConfigurationResponse
  */
 void PutNotificationConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutNotificationConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

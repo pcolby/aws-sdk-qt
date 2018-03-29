@@ -65,7 +65,7 @@ const DeleteRoleRequest * DeleteRoleResponse::request() const
  */
 void DeleteRoleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteRoleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

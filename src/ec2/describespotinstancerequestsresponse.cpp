@@ -65,7 +65,7 @@ const DescribeSpotInstanceRequestsRequest * DescribeSpotInstanceRequestsResponse
  */
 void DescribeSpotInstanceRequestsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeSpotInstanceRequestsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

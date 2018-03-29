@@ -65,7 +65,7 @@ const DeleteNotebookInstanceRequest * DeleteNotebookInstanceResponse::request() 
  */
 void DeleteNotebookInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteNotebookInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

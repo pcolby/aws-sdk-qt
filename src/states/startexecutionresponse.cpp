@@ -65,7 +65,7 @@ const StartExecutionRequest * StartExecutionResponse::request() const
  */
 void StartExecutionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartExecutionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

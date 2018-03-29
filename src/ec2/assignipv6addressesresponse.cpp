@@ -65,7 +65,7 @@ const AssignIpv6AddressesRequest * AssignIpv6AddressesResponse::request() const
  */
 void AssignIpv6AddressesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssignIpv6AddressesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

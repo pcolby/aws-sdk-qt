@@ -65,7 +65,7 @@ const ListDeadLetterSourceQueuesRequest * ListDeadLetterSourceQueuesResponse::re
  */
 void ListDeadLetterSourceQueuesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListDeadLetterSourceQueuesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

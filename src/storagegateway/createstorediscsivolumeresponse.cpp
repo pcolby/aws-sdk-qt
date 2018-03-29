@@ -65,7 +65,7 @@ const CreateStorediSCSIVolumeRequest * CreateStorediSCSIVolumeResponse::request(
  */
 void CreateStorediSCSIVolumeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateStorediSCSIVolumeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

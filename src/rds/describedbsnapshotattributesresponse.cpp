@@ -65,7 +65,7 @@ const DescribeDBSnapshotAttributesRequest * DescribeDBSnapshotAttributesResponse
  */
 void DescribeDBSnapshotAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeDBSnapshotAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

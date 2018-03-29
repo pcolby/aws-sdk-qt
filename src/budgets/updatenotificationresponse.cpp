@@ -65,7 +65,7 @@ const UpdateNotificationRequest * UpdateNotificationResponse::request() const
  */
 void UpdateNotificationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateNotificationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

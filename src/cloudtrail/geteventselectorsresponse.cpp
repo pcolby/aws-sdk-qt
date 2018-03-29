@@ -65,7 +65,7 @@ const GetEventSelectorsRequest * GetEventSelectorsResponse::request() const
  */
 void GetEventSelectorsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetEventSelectorsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

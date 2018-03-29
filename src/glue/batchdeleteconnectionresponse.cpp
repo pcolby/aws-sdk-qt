@@ -65,7 +65,7 @@ const BatchDeleteConnectionRequest * BatchDeleteConnectionResponse::request() co
  */
 void BatchDeleteConnectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BatchDeleteConnectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

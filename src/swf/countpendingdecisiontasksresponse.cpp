@@ -65,7 +65,7 @@ const CountPendingDecisionTasksRequest * CountPendingDecisionTasksResponse::requ
  */
 void CountPendingDecisionTasksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CountPendingDecisionTasksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

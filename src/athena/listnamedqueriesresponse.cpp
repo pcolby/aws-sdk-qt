@@ -65,7 +65,7 @@ const ListNamedQueriesRequest * ListNamedQueriesResponse::request() const
  */
 void ListNamedQueriesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListNamedQueriesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

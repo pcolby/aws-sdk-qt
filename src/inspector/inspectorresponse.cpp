@@ -52,7 +52,7 @@ InspectorResponse::InspectorResponse(QObject * const parent)
  */
 void InspectorResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(InspectorResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void InspectorResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public InspectorResponse instance.
  */
 InspectorResponsePrivate::InspectorResponsePrivate(
-    InspectorQueueResponse * const q) : InspectorPrivate(q)
+    InspectorResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

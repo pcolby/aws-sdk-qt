@@ -65,7 +65,7 @@ const SendBounceRequest * SendBounceResponse::request() const
  */
 void SendBounceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SendBounceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetHealthCheckStatusRequest * GetHealthCheckStatusResponse::request() cons
  */
 void GetHealthCheckStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetHealthCheckStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

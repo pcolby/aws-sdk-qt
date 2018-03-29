@@ -65,7 +65,7 @@ const StartDataCollectionByAgentIdsRequest * StartDataCollectionByAgentIdsRespon
  */
 void StartDataCollectionByAgentIdsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartDataCollectionByAgentIdsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

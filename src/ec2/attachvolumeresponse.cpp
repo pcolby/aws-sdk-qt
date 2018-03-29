@@ -65,7 +65,7 @@ const AttachVolumeRequest * AttachVolumeResponse::request() const
  */
 void AttachVolumeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AttachVolumeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CancelRetrievalRequest * CancelRetrievalResponse::request() const
  */
 void CancelRetrievalResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CancelRetrievalResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeTargetHealthRequest * DescribeTargetHealthResponse::request() cons
  */
 void DescribeTargetHealthResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeTargetHealthResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

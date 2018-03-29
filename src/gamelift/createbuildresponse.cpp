@@ -65,7 +65,7 @@ const CreateBuildRequest * CreateBuildResponse::request() const
  */
 void CreateBuildResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateBuildResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

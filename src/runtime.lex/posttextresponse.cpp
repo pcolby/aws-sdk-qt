@@ -65,7 +65,7 @@ const PostTextRequest * PostTextResponse::request() const
  */
 void PostTextResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PostTextResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

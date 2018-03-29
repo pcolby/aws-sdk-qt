@@ -65,7 +65,7 @@ const UploadSigningCertificateRequest * UploadSigningCertificateResponse::reques
  */
 void UploadSigningCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UploadSigningCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

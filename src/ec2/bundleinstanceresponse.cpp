@@ -65,7 +65,7 @@ const BundleInstanceRequest * BundleInstanceResponse::request() const
  */
 void BundleInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BundleInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

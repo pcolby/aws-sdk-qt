@@ -65,7 +65,7 @@ const GetConfigRequest * GetConfigResponse::request() const
  */
 void GetConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

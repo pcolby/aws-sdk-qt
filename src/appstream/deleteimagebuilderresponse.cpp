@@ -65,7 +65,7 @@ const DeleteImageBuilderRequest * DeleteImageBuilderResponse::request() const
  */
 void DeleteImageBuilderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteImageBuilderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

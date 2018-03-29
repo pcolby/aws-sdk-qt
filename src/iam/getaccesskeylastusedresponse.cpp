@@ -65,7 +65,7 @@ const GetAccessKeyLastUsedRequest * GetAccessKeyLastUsedResponse::request() cons
  */
 void GetAccessKeyLastUsedResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetAccessKeyLastUsedResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

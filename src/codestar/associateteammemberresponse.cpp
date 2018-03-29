@@ -65,7 +65,7 @@ const AssociateTeamMemberRequest * AssociateTeamMemberResponse::request() const
  */
 void AssociateTeamMemberResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateTeamMemberResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

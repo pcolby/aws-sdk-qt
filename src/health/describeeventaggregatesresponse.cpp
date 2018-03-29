@@ -65,7 +65,7 @@ const DescribeEventAggregatesRequest * DescribeEventAggregatesResponse::request(
  */
 void DescribeEventAggregatesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeEventAggregatesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

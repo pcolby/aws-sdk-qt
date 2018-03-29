@@ -65,7 +65,7 @@ const RegisterRdsDbInstanceRequest * RegisterRdsDbInstanceResponse::request() co
  */
 void RegisterRdsDbInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RegisterRdsDbInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetStreamingDistributionConfigRequest * GetStreamingDistributionConfigResp
  */
 void GetStreamingDistributionConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetStreamingDistributionConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const PollForJobsRequest * PollForJobsResponse::request() const
  */
 void PollForJobsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PollForJobsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeConstraintRequest * DescribeConstraintResponse::request() const
  */
 void DescribeConstraintResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeConstraintResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

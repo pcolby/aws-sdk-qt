@@ -65,7 +65,7 @@ const DeleteSmsChannelRequest * DeleteSmsChannelResponse::request() const
  */
 void DeleteSmsChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteSmsChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

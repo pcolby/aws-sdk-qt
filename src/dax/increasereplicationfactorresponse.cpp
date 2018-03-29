@@ -65,7 +65,7 @@ const IncreaseReplicationFactorRequest * IncreaseReplicationFactorResponse::requ
  */
 void IncreaseReplicationFactorResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(IncreaseReplicationFactorResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

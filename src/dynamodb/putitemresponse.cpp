@@ -65,7 +65,7 @@ const PutItemRequest * PutItemResponse::request() const
  */
 void PutItemResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutItemResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

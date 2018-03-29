@@ -65,7 +65,7 @@ const RevokeDBSecurityGroupIngressRequest * RevokeDBSecurityGroupIngressResponse
  */
 void RevokeDBSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RevokeDBSecurityGroupIngressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

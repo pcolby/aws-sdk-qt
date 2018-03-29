@@ -65,7 +65,7 @@ const ListAccessKeysRequest * ListAccessKeysResponse::request() const
  */
 void ListAccessKeysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListAccessKeysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

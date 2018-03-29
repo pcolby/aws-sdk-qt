@@ -65,7 +65,7 @@ const GetTagValuesRequest * GetTagValuesResponse::request() const
  */
 void GetTagValuesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetTagValuesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

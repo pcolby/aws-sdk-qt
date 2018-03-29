@@ -65,7 +65,7 @@ const ResetSnapshotAttributeRequest * ResetSnapshotAttributeResponse::request() 
  */
 void ResetSnapshotAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ResetSnapshotAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

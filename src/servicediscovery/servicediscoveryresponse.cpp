@@ -52,7 +52,7 @@ ServiceDiscoveryResponse::ServiceDiscoveryResponse(QObject * const parent)
  */
 void ServiceDiscoveryResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ServiceDiscoveryResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ServiceDiscoveryResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ServiceDiscoveryResponse instance.
  */
 ServiceDiscoveryResponsePrivate::ServiceDiscoveryResponsePrivate(
-    ServiceDiscoveryQueueResponse * const q) : ServiceDiscoveryPrivate(q)
+    ServiceDiscoveryResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

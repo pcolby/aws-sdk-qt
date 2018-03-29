@@ -65,7 +65,7 @@ const ListQualificationTypesRequest * ListQualificationTypesResponse::request() 
  */
 void ListQualificationTypesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListQualificationTypesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

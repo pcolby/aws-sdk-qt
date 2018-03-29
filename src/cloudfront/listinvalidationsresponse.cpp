@@ -65,7 +65,7 @@ const ListInvalidationsRequest * ListInvalidationsResponse::request() const
  */
 void ListInvalidationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListInvalidationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

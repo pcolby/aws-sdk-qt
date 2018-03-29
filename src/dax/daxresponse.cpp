@@ -52,7 +52,7 @@ DAXResponse::DAXResponse(QObject * const parent)
  */
 void DAXResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(DAXResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void DAXResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public DAXResponse instance.
  */
 DAXResponsePrivate::DAXResponsePrivate(
-    DAXQueueResponse * const q) : DAXPrivate(q)
+    DAXResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

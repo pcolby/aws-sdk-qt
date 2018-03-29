@@ -65,7 +65,7 @@ const DescribeLaunchTemplateVersionsRequest * DescribeLaunchTemplateVersionsResp
  */
 void DescribeLaunchTemplateVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeLaunchTemplateVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

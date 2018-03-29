@@ -65,7 +65,7 @@ const ListAWSServiceAccessForOrganizationRequest * ListAWSServiceAccessForOrgani
  */
 void ListAWSServiceAccessForOrganizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListAWSServiceAccessForOrganizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const AdminCreateUserRequest * AdminCreateUserResponse::request() const
  */
 void AdminCreateUserResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AdminCreateUserResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

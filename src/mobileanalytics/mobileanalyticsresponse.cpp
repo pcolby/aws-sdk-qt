@@ -52,7 +52,7 @@ MobileAnalyticsResponse::MobileAnalyticsResponse(QObject * const parent)
  */
 void MobileAnalyticsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(MobileAnalyticsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void MobileAnalyticsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MobileAnalyticsResponse instance.
  */
 MobileAnalyticsResponsePrivate::MobileAnalyticsResponsePrivate(
-    MobileAnalyticsQueueResponse * const q) : MobileAnalyticsPrivate(q)
+    MobileAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

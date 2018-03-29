@@ -65,7 +65,7 @@ const ListBonusPaymentsRequest * ListBonusPaymentsResponse::request() const
  */
 void ListBonusPaymentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListBonusPaymentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

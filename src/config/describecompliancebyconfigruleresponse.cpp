@@ -65,7 +65,7 @@ const DescribeComplianceByConfigRuleRequest * DescribeComplianceByConfigRuleResp
  */
 void DescribeComplianceByConfigRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeComplianceByConfigRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

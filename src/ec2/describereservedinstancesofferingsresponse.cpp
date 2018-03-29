@@ -65,7 +65,7 @@ const DescribeReservedInstancesOfferingsRequest * DescribeReservedInstancesOffer
  */
 void DescribeReservedInstancesOfferingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeReservedInstancesOfferingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

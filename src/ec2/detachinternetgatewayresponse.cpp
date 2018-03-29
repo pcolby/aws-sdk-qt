@@ -65,7 +65,7 @@ const DetachInternetGatewayRequest * DetachInternetGatewayResponse::request() co
  */
 void DetachInternetGatewayResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DetachInternetGatewayResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

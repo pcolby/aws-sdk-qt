@@ -65,7 +65,7 @@ const DeleteClusterSecurityGroupRequest * DeleteClusterSecurityGroupResponse::re
  */
 void DeleteClusterSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteClusterSecurityGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

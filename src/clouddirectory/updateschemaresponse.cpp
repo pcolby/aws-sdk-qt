@@ -65,7 +65,7 @@ const UpdateSchemaRequest * UpdateSchemaResponse::request() const
  */
 void UpdateSchemaResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateSchemaResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const AssumeRoleRequest * AssumeRoleResponse::request() const
  */
 void AssumeRoleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssumeRoleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

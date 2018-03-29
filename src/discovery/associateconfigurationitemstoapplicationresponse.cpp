@@ -65,7 +65,7 @@ const AssociateConfigurationItemsToApplicationRequest * AssociateConfigurationIt
  */
 void AssociateConfigurationItemsToApplicationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateConfigurationItemsToApplicationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

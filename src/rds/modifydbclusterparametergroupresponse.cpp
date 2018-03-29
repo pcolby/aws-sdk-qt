@@ -65,7 +65,7 @@ const ModifyDBClusterParameterGroupRequest * ModifyDBClusterParameterGroupRespon
  */
 void ModifyDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyDBClusterParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

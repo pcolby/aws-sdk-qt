@@ -65,7 +65,7 @@ const ReleaseHostsRequest * ReleaseHostsResponse::request() const
  */
 void ReleaseHostsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ReleaseHostsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

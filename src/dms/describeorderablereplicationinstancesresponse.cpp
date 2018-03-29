@@ -65,7 +65,7 @@ const DescribeOrderableReplicationInstancesRequest * DescribeOrderableReplicatio
  */
 void DescribeOrderableReplicationInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeOrderableReplicationInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

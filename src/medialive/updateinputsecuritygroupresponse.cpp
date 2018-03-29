@@ -65,7 +65,7 @@ const UpdateInputSecurityGroupRequest * UpdateInputSecurityGroupResponse::reques
  */
 void UpdateInputSecurityGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateInputSecurityGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

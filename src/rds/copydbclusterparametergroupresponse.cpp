@@ -65,7 +65,7 @@ const CopyDBClusterParameterGroupRequest * CopyDBClusterParameterGroupResponse::
  */
 void CopyDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CopyDBClusterParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

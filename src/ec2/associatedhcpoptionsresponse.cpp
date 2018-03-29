@@ -65,7 +65,7 @@ const AssociateDhcpOptionsRequest * AssociateDhcpOptionsResponse::request() cons
  */
 void AssociateDhcpOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateDhcpOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const PutInventoryRequest * PutInventoryResponse::request() const
  */
 void PutInventoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutInventoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

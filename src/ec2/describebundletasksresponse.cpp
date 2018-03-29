@@ -65,7 +65,7 @@ const DescribeBundleTasksRequest * DescribeBundleTasksResponse::request() const
  */
 void DescribeBundleTasksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeBundleTasksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

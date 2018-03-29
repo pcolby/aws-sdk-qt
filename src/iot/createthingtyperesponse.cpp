@@ -65,7 +65,7 @@ const CreateThingTypeRequest * CreateThingTypeResponse::request() const
  */
 void CreateThingTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateThingTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

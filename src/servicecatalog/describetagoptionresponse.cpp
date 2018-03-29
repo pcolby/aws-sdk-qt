@@ -65,7 +65,7 @@ const DescribeTagOptionRequest * DescribeTagOptionResponse::request() const
  */
 void DescribeTagOptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeTagOptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

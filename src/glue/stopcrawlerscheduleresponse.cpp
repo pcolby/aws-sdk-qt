@@ -65,7 +65,7 @@ const StopCrawlerScheduleRequest * StopCrawlerScheduleResponse::request() const
  */
 void StopCrawlerScheduleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopCrawlerScheduleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

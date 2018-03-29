@@ -65,7 +65,7 @@ const CreatePlatformApplicationRequest * CreatePlatformApplicationResponse::requ
  */
 void CreatePlatformApplicationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreatePlatformApplicationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ResyncMFADeviceRequest * ResyncMFADeviceResponse::request() const
  */
 void ResyncMFADeviceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ResyncMFADeviceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

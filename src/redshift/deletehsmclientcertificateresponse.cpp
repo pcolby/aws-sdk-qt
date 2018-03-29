@@ -65,7 +65,7 @@ const DeleteHsmClientCertificateRequest * DeleteHsmClientCertificateResponse::re
  */
 void DeleteHsmClientCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteHsmClientCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

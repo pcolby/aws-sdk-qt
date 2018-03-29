@@ -65,7 +65,7 @@ const CreateModelRequest * CreateModelResponse::request() const
  */
 void CreateModelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateModelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

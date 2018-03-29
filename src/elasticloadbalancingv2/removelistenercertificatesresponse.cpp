@@ -65,7 +65,7 @@ const RemoveListenerCertificatesRequest * RemoveListenerCertificatesResponse::re
  */
 void RemoveListenerCertificatesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RemoveListenerCertificatesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

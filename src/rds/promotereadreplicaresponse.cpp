@@ -65,7 +65,7 @@ const PromoteReadReplicaRequest * PromoteReadReplicaResponse::request() const
  */
 void PromoteReadReplicaResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PromoteReadReplicaResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

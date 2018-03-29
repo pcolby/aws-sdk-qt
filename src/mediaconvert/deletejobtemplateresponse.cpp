@@ -65,7 +65,7 @@ const DeleteJobTemplateRequest * DeleteJobTemplateResponse::request() const
  */
 void DeleteJobTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteJobTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

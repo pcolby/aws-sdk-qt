@@ -65,7 +65,7 @@ const CreateOrUpdateTagsRequest * CreateOrUpdateTagsResponse::request() const
  */
 void CreateOrUpdateTagsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateOrUpdateTagsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

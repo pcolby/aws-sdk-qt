@@ -65,7 +65,7 @@ const UpdateTrailRequest * UpdateTrailResponse::request() const
  */
 void UpdateTrailResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateTrailResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

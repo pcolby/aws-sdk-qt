@@ -65,7 +65,7 @@ const DecryptRequest * DecryptResponse::request() const
  */
 void DecryptResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DecryptResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

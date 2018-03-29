@@ -65,7 +65,7 @@ const UpdateBrokerRequest * UpdateBrokerResponse::request() const
  */
 void UpdateBrokerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateBrokerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

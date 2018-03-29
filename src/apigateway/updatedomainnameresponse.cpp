@@ -65,7 +65,7 @@ const UpdateDomainNameRequest * UpdateDomainNameResponse::request() const
  */
 void UpdateDomainNameResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateDomainNameResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

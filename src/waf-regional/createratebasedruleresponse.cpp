@@ -65,7 +65,7 @@ const CreateRateBasedRuleRequest * CreateRateBasedRuleResponse::request() const
  */
 void CreateRateBasedRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateRateBasedRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

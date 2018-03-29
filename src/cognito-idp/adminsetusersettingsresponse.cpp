@@ -65,7 +65,7 @@ const AdminSetUserSettingsRequest * AdminSetUserSettingsResponse::request() cons
  */
 void AdminSetUserSettingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AdminSetUserSettingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

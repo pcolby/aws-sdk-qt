@@ -65,7 +65,7 @@ const UpdateLayerRequest * UpdateLayerResponse::request() const
  */
 void UpdateLayerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateLayerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreateReservedInstancesListingRequest * CreateReservedInstancesListingResp
  */
 void CreateReservedInstancesListingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateReservedInstancesListingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

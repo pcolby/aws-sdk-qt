@@ -65,7 +65,7 @@ const StartDBInstanceRequest * StartDBInstanceResponse::request() const
  */
 void StartDBInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartDBInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetAutomationExecutionRequest * GetAutomationExecutionResponse::request() 
  */
 void GetAutomationExecutionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetAutomationExecutionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

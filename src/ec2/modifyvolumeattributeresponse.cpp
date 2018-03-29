@@ -65,7 +65,7 @@ const ModifyVolumeAttributeRequest * ModifyVolumeAttributeResponse::request() co
  */
 void ModifyVolumeAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyVolumeAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

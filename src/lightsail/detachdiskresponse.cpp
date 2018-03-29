@@ -65,7 +65,7 @@ const DetachDiskRequest * DetachDiskResponse::request() const
  */
 void DetachDiskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DetachDiskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

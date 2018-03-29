@@ -52,7 +52,7 @@ SimpleDBResponse::SimpleDBResponse(QObject * const parent)
  */
 void SimpleDBResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(SimpleDBResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void SimpleDBResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SimpleDBResponse instance.
  */
 SimpleDBResponsePrivate::SimpleDBResponsePrivate(
-    SimpleDBQueueResponse * const q) : SimpleDBPrivate(q)
+    SimpleDBResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

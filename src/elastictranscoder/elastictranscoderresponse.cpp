@@ -52,7 +52,7 @@ ElasticTranscoderResponse::ElasticTranscoderResponse(QObject * const parent)
  */
 void ElasticTranscoderResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ElasticTranscoderResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ElasticTranscoderResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ElasticTranscoderResponse instance.
  */
 ElasticTranscoderResponsePrivate::ElasticTranscoderResponsePrivate(
-    ElasticTranscoderQueueResponse * const q) : ElasticTranscoderPrivate(q)
+    ElasticTranscoderResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

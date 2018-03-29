@@ -65,7 +65,7 @@ const UpdateThreatIntelSetRequest * UpdateThreatIntelSetResponse::request() cons
  */
 void UpdateThreatIntelSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateThreatIntelSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

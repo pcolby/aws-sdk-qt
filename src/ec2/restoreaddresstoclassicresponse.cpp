@@ -65,7 +65,7 @@ const RestoreAddressToClassicRequest * RestoreAddressToClassicResponse::request(
  */
 void RestoreAddressToClassicResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RestoreAddressToClassicResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

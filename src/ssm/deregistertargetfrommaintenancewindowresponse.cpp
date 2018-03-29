@@ -65,7 +65,7 @@ const DeregisterTargetFromMaintenanceWindowRequest * DeregisterTargetFromMainten
  */
 void DeregisterTargetFromMaintenanceWindowResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeregisterTargetFromMaintenanceWindowResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

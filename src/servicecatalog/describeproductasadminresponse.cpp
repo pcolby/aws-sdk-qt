@@ -65,7 +65,7 @@ const DescribeProductAsAdminRequest * DescribeProductAsAdminResponse::request() 
  */
 void DescribeProductAsAdminResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeProductAsAdminResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

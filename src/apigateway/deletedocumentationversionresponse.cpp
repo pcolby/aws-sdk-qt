@@ -65,7 +65,7 @@ const DeleteDocumentationVersionRequest * DeleteDocumentationVersionResponse::re
  */
 void DeleteDocumentationVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteDocumentationVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

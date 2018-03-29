@@ -65,7 +65,7 @@ const ListBucketAnalyticsConfigurationsRequest * ListBucketAnalyticsConfiguratio
  */
 void ListBucketAnalyticsConfigurationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListBucketAnalyticsConfigurationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

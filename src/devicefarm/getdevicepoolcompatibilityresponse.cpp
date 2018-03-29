@@ -65,7 +65,7 @@ const GetDevicePoolCompatibilityRequest * GetDevicePoolCompatibilityResponse::re
  */
 void GetDevicePoolCompatibilityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetDevicePoolCompatibilityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreateRepositoryRequest * CreateRepositoryResponse::request() const
  */
 void CreateRepositoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateRepositoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

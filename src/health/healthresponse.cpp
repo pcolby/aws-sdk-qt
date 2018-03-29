@@ -52,7 +52,7 @@ HealthResponse::HealthResponse(QObject * const parent)
  */
 void HealthResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(HealthResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void HealthResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public HealthResponse instance.
  */
 HealthResponsePrivate::HealthResponsePrivate(
-    HealthQueueResponse * const q) : HealthPrivate(q)
+    HealthResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

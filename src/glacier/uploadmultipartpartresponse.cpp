@@ -65,7 +65,7 @@ const UploadMultipartPartRequest * UploadMultipartPartResponse::request() const
  */
 void UploadMultipartPartResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UploadMultipartPartResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteNotificationRequest * DeleteNotificationResponse::request() const
  */
 void DeleteNotificationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteNotificationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

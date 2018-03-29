@@ -65,7 +65,7 @@ const UpdateIntegrationResponseRequest * UpdateIntegrationResponseResponse::requ
  */
 void UpdateIntegrationResponseResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateIntegrationResponseResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

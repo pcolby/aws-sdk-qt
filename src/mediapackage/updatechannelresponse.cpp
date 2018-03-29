@@ -65,7 +65,7 @@ const UpdateChannelRequest * UpdateChannelResponse::request() const
  */
 void UpdateChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

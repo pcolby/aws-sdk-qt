@@ -65,7 +65,7 @@ const SetV2LoggingLevelRequest * SetV2LoggingLevelResponse::request() const
  */
 void SetV2LoggingLevelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetV2LoggingLevelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeAnalysisSchemesRequest * DescribeAnalysisSchemesResponse::request(
  */
 void DescribeAnalysisSchemesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeAnalysisSchemesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

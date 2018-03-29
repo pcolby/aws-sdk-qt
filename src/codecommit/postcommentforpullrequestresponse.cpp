@@ -65,7 +65,7 @@ const PostCommentForPullRequestRequest * PostCommentForPullRequestResponse::requ
  */
 void PostCommentForPullRequestResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PostCommentForPullRequestResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

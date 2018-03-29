@@ -65,7 +65,7 @@ const DeleteNatGatewayRequest * DeleteNatGatewayResponse::request() const
  */
 void DeleteNatGatewayResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteNatGatewayResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreateServiceSpecificCredentialRequest * CreateServiceSpecificCredentialRe
  */
 void CreateServiceSpecificCredentialResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateServiceSpecificCredentialResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

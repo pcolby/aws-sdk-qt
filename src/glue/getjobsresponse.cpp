@@ -65,7 +65,7 @@ const GetJobsRequest * GetJobsResponse::request() const
  */
 void GetJobsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetJobsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

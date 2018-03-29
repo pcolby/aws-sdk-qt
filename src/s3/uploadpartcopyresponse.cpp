@@ -65,7 +65,7 @@ const UploadPartCopyRequest * UploadPartCopyResponse::request() const
  */
 void UploadPartCopyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UploadPartCopyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreateClusterRequest * CreateClusterResponse::request() const
  */
 void CreateClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

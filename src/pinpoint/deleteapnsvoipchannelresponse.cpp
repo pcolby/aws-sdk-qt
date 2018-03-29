@@ -65,7 +65,7 @@ const DeleteApnsVoipChannelRequest * DeleteApnsVoipChannelResponse::request() co
  */
 void DeleteApnsVoipChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteApnsVoipChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetMaintenanceWindowExecutionRequest * GetMaintenanceWindowExecutionRespon
  */
 void GetMaintenanceWindowExecutionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetMaintenanceWindowExecutionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

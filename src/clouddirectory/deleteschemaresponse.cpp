@@ -65,7 +65,7 @@ const DeleteSchemaRequest * DeleteSchemaResponse::request() const
  */
 void DeleteSchemaResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteSchemaResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

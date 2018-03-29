@@ -52,7 +52,7 @@ GlueResponse::GlueResponse(QObject * const parent)
  */
 void GlueResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(GlueResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void GlueResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public GlueResponse instance.
  */
 GlueResponsePrivate::GlueResponsePrivate(
-    GlueQueueResponse * const q) : GluePrivate(q)
+    GlueResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

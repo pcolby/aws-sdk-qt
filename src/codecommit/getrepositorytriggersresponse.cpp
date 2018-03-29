@@ -65,7 +65,7 @@ const GetRepositoryTriggersRequest * GetRepositoryTriggersResponse::request() co
  */
 void GetRepositoryTriggersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetRepositoryTriggersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

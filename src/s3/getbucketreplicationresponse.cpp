@@ -65,7 +65,7 @@ const GetBucketReplicationRequest * GetBucketReplicationResponse::request() cons
  */
 void GetBucketReplicationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetBucketReplicationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

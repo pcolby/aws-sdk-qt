@@ -65,7 +65,7 @@ const CreateRoomRequest * CreateRoomResponse::request() const
  */
 void CreateRoomResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateRoomResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

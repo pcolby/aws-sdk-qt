@@ -65,7 +65,7 @@ const CreateTapeWithBarcodeRequest * CreateTapeWithBarcodeResponse::request() co
  */
 void CreateTapeWithBarcodeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateTapeWithBarcodeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

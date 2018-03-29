@@ -65,7 +65,7 @@ const PutThirdPartyJobFailureResultRequest * PutThirdPartyJobFailureResultRespon
  */
 void PutThirdPartyJobFailureResultResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutThirdPartyJobFailureResultResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetRegionsRequest * GetRegionsResponse::request() const
  */
 void GetRegionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetRegionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

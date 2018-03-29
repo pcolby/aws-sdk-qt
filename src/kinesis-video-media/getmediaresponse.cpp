@@ -65,7 +65,7 @@ const GetMediaRequest * GetMediaResponse::request() const
  */
 void GetMediaResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetMediaResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

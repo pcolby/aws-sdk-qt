@@ -65,7 +65,7 @@ const DeleteNamedQueryRequest * DeleteNamedQueryResponse::request() const
  */
 void DeleteNamedQueryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteNamedQueryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

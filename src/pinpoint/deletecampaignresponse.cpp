@@ -65,7 +65,7 @@ const DeleteCampaignRequest * DeleteCampaignResponse::request() const
  */
 void DeleteCampaignResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteCampaignResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

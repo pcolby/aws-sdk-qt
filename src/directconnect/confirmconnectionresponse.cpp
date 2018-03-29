@@ -65,7 +65,7 @@ const ConfirmConnectionRequest * ConfirmConnectionResponse::request() const
  */
 void ConfirmConnectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ConfirmConnectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

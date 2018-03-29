@@ -65,7 +65,7 @@ const RunTaskRequest * RunTaskResponse::request() const
  */
 void RunTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RunTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

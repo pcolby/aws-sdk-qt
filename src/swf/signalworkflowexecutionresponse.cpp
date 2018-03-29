@@ -65,7 +65,7 @@ const SignalWorkflowExecutionRequest * SignalWorkflowExecutionResponse::request(
  */
 void SignalWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SignalWorkflowExecutionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

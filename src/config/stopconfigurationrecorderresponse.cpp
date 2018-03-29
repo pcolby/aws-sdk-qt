@@ -65,7 +65,7 @@ const StopConfigurationRecorderRequest * StopConfigurationRecorderResponse::requ
  */
 void StopConfigurationRecorderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopConfigurationRecorderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

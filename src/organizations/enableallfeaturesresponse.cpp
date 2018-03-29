@@ -65,7 +65,7 @@ const EnableAllFeaturesRequest * EnableAllFeaturesResponse::request() const
  */
 void EnableAllFeaturesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(EnableAllFeaturesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

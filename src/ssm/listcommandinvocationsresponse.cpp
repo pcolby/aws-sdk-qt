@@ -65,7 +65,7 @@ const ListCommandInvocationsRequest * ListCommandInvocationsResponse::request() 
  */
 void ListCommandInvocationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListCommandInvocationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

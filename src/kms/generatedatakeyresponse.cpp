@@ -65,7 +65,7 @@ const GenerateDataKeyRequest * GenerateDataKeyResponse::request() const
  */
 void GenerateDataKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GenerateDataKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

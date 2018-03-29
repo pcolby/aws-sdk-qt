@@ -52,7 +52,7 @@ SnowballResponse::SnowballResponse(QObject * const parent)
  */
 void SnowballResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(SnowballResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void SnowballResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SnowballResponse instance.
  */
 SnowballResponsePrivate::SnowballResponsePrivate(
-    SnowballQueueResponse * const q) : SnowballPrivate(q)
+    SnowballResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

@@ -65,7 +65,7 @@ const DeletePlatformVersionRequest * DeletePlatformVersionResponse::request() co
  */
 void DeletePlatformVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeletePlatformVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

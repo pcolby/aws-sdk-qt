@@ -65,7 +65,7 @@ const GetInstanceMetricDataRequest * GetInstanceMetricDataResponse::request() co
  */
 void GetInstanceMetricDataResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetInstanceMetricDataResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

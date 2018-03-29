@@ -52,7 +52,7 @@ CodeStarResponse::CodeStarResponse(QObject * const parent)
  */
 void CodeStarResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CodeStarResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CodeStarResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CodeStarResponse instance.
  */
 CodeStarResponsePrivate::CodeStarResponsePrivate(
-    CodeStarQueueResponse * const q) : CodeStarPrivate(q)
+    CodeStarResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

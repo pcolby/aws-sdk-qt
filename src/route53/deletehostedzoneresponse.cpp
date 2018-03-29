@@ -65,7 +65,7 @@ const DeleteHostedZoneRequest * DeleteHostedZoneResponse::request() const
  */
 void DeleteHostedZoneResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteHostedZoneResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

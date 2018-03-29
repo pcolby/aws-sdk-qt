@@ -65,7 +65,7 @@ const CopyObjectRequest * CopyObjectResponse::request() const
  */
 void CopyObjectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CopyObjectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

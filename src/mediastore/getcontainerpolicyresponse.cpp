@@ -65,7 +65,7 @@ const GetContainerPolicyRequest * GetContainerPolicyResponse::request() const
  */
 void GetContainerPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetContainerPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteTapeRequest * DeleteTapeResponse::request() const
  */
 void DeleteTapeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteTapeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

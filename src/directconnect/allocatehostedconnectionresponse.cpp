@@ -65,7 +65,7 @@ const AllocateHostedConnectionRequest * AllocateHostedConnectionResponse::reques
  */
 void AllocateHostedConnectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AllocateHostedConnectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

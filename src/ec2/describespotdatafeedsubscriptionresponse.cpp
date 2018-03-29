@@ -65,7 +65,7 @@ const DescribeSpotDatafeedSubscriptionRequest * DescribeSpotDatafeedSubscription
  */
 void DescribeSpotDatafeedSubscriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeSpotDatafeedSubscriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

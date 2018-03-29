@@ -65,7 +65,7 @@ const UnsubscribeRequest * UnsubscribeResponse::request() const
  */
 void UnsubscribeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UnsubscribeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

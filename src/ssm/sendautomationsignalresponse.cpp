@@ -65,7 +65,7 @@ const SendAutomationSignalRequest * SendAutomationSignalResponse::request() cons
  */
 void SendAutomationSignalResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SendAutomationSignalResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const UpdateAssociationStatusRequest * UpdateAssociationStatusResponse::request(
  */
 void UpdateAssociationStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateAssociationStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreateWorkspacesRequest * CreateWorkspacesResponse::request() const
  */
 void CreateWorkspacesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateWorkspacesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

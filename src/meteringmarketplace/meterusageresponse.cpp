@@ -65,7 +65,7 @@ const MeterUsageRequest * MeterUsageResponse::request() const
  */
 void MeterUsageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(MeterUsageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

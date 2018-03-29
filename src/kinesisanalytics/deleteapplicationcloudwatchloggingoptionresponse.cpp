@@ -65,7 +65,7 @@ const DeleteApplicationCloudWatchLoggingOptionRequest * DeleteApplicationCloudWa
  */
 void DeleteApplicationCloudWatchLoggingOptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteApplicationCloudWatchLoggingOptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

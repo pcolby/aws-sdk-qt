@@ -65,7 +65,7 @@ const UpdateQualificationTypeRequest * UpdateQualificationTypeResponse::request(
  */
 void UpdateQualificationTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateQualificationTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

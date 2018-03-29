@@ -65,7 +65,7 @@ const GetIdentityProviderByIdentifierRequest * GetIdentityProviderByIdentifierRe
  */
 void GetIdentityProviderByIdentifierResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetIdentityProviderByIdentifierResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

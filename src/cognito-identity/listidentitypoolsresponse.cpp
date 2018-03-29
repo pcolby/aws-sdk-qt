@@ -65,7 +65,7 @@ const ListIdentityPoolsRequest * ListIdentityPoolsResponse::request() const
  */
 void ListIdentityPoolsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListIdentityPoolsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

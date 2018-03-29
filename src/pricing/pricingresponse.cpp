@@ -52,7 +52,7 @@ PricingResponse::PricingResponse(QObject * const parent)
  */
 void PricingResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(PricingResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void PricingResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public PricingResponse instance.
  */
 PricingResponsePrivate::PricingResponsePrivate(
-    PricingQueueResponse * const q) : PricingPrivate(q)
+    PricingResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

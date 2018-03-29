@@ -52,7 +52,7 @@ IoTResponse::IoTResponse(QObject * const parent)
  */
 void IoTResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(IoTResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void IoTResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public IoTResponse instance.
  */
 IoTResponsePrivate::IoTResponsePrivate(
-    IoTQueueResponse * const q) : IoTPrivate(q)
+    IoTResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

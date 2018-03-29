@@ -65,7 +65,7 @@ const ListOfferingTransactionsRequest * ListOfferingTransactionsResponse::reques
  */
 void ListOfferingTransactionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListOfferingTransactionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DisassociateFromMasterAccountRequest * DisassociateFromMasterAccountRespon
  */
 void DisassociateFromMasterAccountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisassociateFromMasterAccountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

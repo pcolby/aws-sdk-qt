@@ -65,7 +65,7 @@ const PutBucketReplicationRequest * PutBucketReplicationResponse::request() cons
  */
 void PutBucketReplicationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutBucketReplicationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

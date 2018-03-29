@@ -65,7 +65,7 @@ const CreateSubscriptionDefinitionVersionRequest * CreateSubscriptionDefinitionV
  */
 void CreateSubscriptionDefinitionVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateSubscriptionDefinitionVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

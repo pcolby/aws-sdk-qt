@@ -65,7 +65,7 @@ const DescribeMountTargetsRequest * DescribeMountTargetsResponse::request() cons
  */
 void DescribeMountTargetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeMountTargetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

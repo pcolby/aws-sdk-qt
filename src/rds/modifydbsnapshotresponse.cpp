@@ -65,7 +65,7 @@ const ModifyDBSnapshotRequest * ModifyDBSnapshotResponse::request() const
  */
 void ModifyDBSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyDBSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

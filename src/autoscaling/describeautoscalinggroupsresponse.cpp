@@ -65,7 +65,7 @@ const DescribeAutoScalingGroupsRequest * DescribeAutoScalingGroupsResponse::requ
  */
 void DescribeAutoScalingGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeAutoScalingGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

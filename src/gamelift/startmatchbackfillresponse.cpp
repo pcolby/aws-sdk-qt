@@ -65,7 +65,7 @@ const StartMatchBackfillRequest * StartMatchBackfillResponse::request() const
  */
 void StartMatchBackfillResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartMatchBackfillResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

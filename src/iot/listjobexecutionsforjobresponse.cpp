@@ -65,7 +65,7 @@ const ListJobExecutionsForJobRequest * ListJobExecutionsForJobResponse::request(
  */
 void ListJobExecutionsForJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListJobExecutionsForJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreateCustomActionTypeRequest * CreateCustomActionTypeResponse::request() 
  */
 void CreateCustomActionTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateCustomActionTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

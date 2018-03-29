@@ -65,7 +65,7 @@ const MergeShardsRequest * MergeShardsResponse::request() const
  */
 void MergeShardsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(MergeShardsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

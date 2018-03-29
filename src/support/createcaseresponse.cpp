@@ -65,7 +65,7 @@ const CreateCaseRequest * CreateCaseResponse::request() const
  */
 void CreateCaseResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateCaseResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

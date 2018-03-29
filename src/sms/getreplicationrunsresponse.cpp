@@ -65,7 +65,7 @@ const GetReplicationRunsRequest * GetReplicationRunsResponse::request() const
  */
 void GetReplicationRunsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetReplicationRunsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DisassociateVPCFromHostedZoneRequest * DisassociateVPCFromHostedZoneRespon
  */
 void DisassociateVPCFromHostedZoneResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisassociateVPCFromHostedZoneResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

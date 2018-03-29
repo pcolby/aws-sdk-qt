@@ -65,7 +65,7 @@ const UpdateAccessKeyRequest * UpdateAccessKeyResponse::request() const
  */
 void UpdateAccessKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateAccessKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

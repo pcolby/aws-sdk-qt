@@ -65,7 +65,7 @@ const DescribeContainerInstancesRequest * DescribeContainerInstancesResponse::re
  */
 void DescribeContainerInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeContainerInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

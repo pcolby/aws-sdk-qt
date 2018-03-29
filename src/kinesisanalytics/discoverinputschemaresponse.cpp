@@ -65,7 +65,7 @@ const DiscoverInputSchemaRequest * DiscoverInputSchemaResponse::request() const
  */
 void DiscoverInputSchemaResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DiscoverInputSchemaResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

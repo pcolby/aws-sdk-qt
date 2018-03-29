@@ -65,7 +65,7 @@ const DescribeEventTypesRequest * DescribeEventTypesResponse::request() const
  */
 void DescribeEventTypesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeEventTypesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

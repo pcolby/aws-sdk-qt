@@ -65,7 +65,7 @@ const ListSAMLProvidersRequest * ListSAMLProvidersResponse::request() const
  */
 void ListSAMLProvidersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListSAMLProvidersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

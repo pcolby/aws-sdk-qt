@@ -52,7 +52,7 @@ SFNResponse::SFNResponse(QObject * const parent)
  */
 void SFNResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(SFNResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void SFNResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SFNResponse instance.
  */
 SFNResponsePrivate::SFNResponsePrivate(
-    SFNQueueResponse * const q) : SFNPrivate(q)
+    SFNResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

@@ -65,7 +65,7 @@ const ListLexiconsRequest * ListLexiconsResponse::request() const
  */
 void ListLexiconsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListLexiconsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

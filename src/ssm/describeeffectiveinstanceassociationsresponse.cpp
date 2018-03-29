@@ -65,7 +65,7 @@ const DescribeEffectiveInstanceAssociationsRequest * DescribeEffectiveInstanceAs
  */
 void DescribeEffectiveInstanceAssociationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeEffectiveInstanceAssociationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

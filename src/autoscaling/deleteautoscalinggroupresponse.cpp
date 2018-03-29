@@ -65,7 +65,7 @@ const DeleteAutoScalingGroupRequest * DeleteAutoScalingGroupResponse::request() 
  */
 void DeleteAutoScalingGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteAutoScalingGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const UpdateSubscriptionDefinitionRequest * UpdateSubscriptionDefinitionResponse
  */
 void UpdateSubscriptionDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateSubscriptionDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

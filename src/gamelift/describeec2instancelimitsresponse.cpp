@@ -65,7 +65,7 @@ const DescribeEC2InstanceLimitsRequest * DescribeEC2InstanceLimitsResponse::requ
  */
 void DescribeEC2InstanceLimitsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeEC2InstanceLimitsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

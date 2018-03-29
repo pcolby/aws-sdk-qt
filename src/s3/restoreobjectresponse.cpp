@@ -65,7 +65,7 @@ const RestoreObjectRequest * RestoreObjectResponse::request() const
  */
 void RestoreObjectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RestoreObjectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

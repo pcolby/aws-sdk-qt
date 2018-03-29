@@ -65,7 +65,7 @@ const GetOTAUpdateRequest * GetOTAUpdateResponse::request() const
  */
 void GetOTAUpdateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetOTAUpdateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

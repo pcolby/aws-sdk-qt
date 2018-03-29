@@ -52,7 +52,7 @@ OpsWorksCMResponse::OpsWorksCMResponse(QObject * const parent)
  */
 void OpsWorksCMResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(OpsWorksCMResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void OpsWorksCMResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public OpsWorksCMResponse instance.
  */
 OpsWorksCMResponsePrivate::OpsWorksCMResponsePrivate(
-    OpsWorksCMQueueResponse * const q) : OpsWorksCMPrivate(q)
+    OpsWorksCMResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

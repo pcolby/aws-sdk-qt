@@ -65,7 +65,7 @@ const DescribeStorediSCSIVolumesRequest * DescribeStorediSCSIVolumesResponse::re
  */
 void DescribeStorediSCSIVolumesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeStorediSCSIVolumesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

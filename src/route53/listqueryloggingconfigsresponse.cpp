@@ -65,7 +65,7 @@ const ListQueryLoggingConfigsRequest * ListQueryLoggingConfigsResponse::request(
  */
 void ListQueryLoggingConfigsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListQueryLoggingConfigsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

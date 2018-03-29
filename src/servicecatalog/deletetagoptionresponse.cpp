@@ -65,7 +65,7 @@ const DeleteTagOptionRequest * DeleteTagOptionResponse::request() const
  */
 void DeleteTagOptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteTagOptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

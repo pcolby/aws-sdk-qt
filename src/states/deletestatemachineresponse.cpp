@@ -65,7 +65,7 @@ const DeleteStateMachineRequest * DeleteStateMachineResponse::request() const
  */
 void DeleteStateMachineResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteStateMachineResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

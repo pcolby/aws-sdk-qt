@@ -52,7 +52,7 @@ CostandUsageReportServiceResponse::CostandUsageReportServiceResponse(QObject * c
  */
 void CostandUsageReportServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CostandUsageReportServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CostandUsageReportServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CostandUsageReportServiceResponse instance.
  */
 CostandUsageReportServiceResponsePrivate::CostandUsageReportServiceResponsePrivate(
-    CostandUsageReportServiceQueueResponse * const q) : CostandUsageReportServicePrivate(q)
+    CostandUsageReportServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

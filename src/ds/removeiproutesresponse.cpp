@@ -65,7 +65,7 @@ const RemoveIpRoutesRequest * RemoveIpRoutesResponse::request() const
  */
 void RemoveIpRoutesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RemoveIpRoutesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

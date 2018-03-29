@@ -65,7 +65,7 @@ const GetSessionTokenRequest * GetSessionTokenResponse::request() const
  */
 void GetSessionTokenResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetSessionTokenResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteDeliveryStreamRequest * DeleteDeliveryStreamResponse::request() cons
  */
 void DeleteDeliveryStreamResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteDeliveryStreamResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

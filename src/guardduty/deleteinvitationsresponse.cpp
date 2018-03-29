@@ -65,7 +65,7 @@ const DeleteInvitationsRequest * DeleteInvitationsResponse::request() const
  */
 void DeleteInvitationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteInvitationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

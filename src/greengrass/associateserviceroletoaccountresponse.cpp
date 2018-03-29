@@ -65,7 +65,7 @@ const AssociateServiceRoleToAccountRequest * AssociateServiceRoleToAccountRespon
  */
 void AssociateServiceRoleToAccountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateServiceRoleToAccountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

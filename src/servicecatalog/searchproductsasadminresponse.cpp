@@ -65,7 +65,7 @@ const SearchProductsAsAdminRequest * SearchProductsAsAdminResponse::request() co
  */
 void SearchProductsAsAdminResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SearchProductsAsAdminResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

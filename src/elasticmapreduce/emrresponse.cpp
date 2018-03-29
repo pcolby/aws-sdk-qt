@@ -52,7 +52,7 @@ EMRResponse::EMRResponse(QObject * const parent)
  */
 void EMRResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(EMRResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void EMRResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public EMRResponse instance.
  */
 EMRResponsePrivate::EMRResponsePrivate(
-    EMRQueueResponse * const q) : EMRPrivate(q)
+    EMRResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

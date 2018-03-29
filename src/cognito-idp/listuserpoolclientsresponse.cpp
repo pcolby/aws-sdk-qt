@@ -65,7 +65,7 @@ const ListUserPoolClientsRequest * ListUserPoolClientsResponse::request() const
  */
 void ListUserPoolClientsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListUserPoolClientsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -52,7 +52,7 @@ GameLiftResponse::GameLiftResponse(QObject * const parent)
  */
 void GameLiftResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(GameLiftResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void GameLiftResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public GameLiftResponse instance.
  */
 GameLiftResponsePrivate::GameLiftResponsePrivate(
-    GameLiftQueueResponse * const q) : GameLiftPrivate(q)
+    GameLiftResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

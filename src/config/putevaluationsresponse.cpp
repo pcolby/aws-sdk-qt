@@ -65,7 +65,7 @@ const PutEvaluationsRequest * PutEvaluationsResponse::request() const
  */
 void PutEvaluationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutEvaluationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -52,7 +52,7 @@ ECRResponse::ECRResponse(QObject * const parent)
  */
 void ECRResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ECRResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ECRResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ECRResponse instance.
  */
 ECRResponsePrivate::ECRResponsePrivate(
-    ECRQueueResponse * const q) : ECRPrivate(q)
+    ECRResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

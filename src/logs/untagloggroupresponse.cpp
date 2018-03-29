@@ -65,7 +65,7 @@ const UntagLogGroupRequest * UntagLogGroupResponse::request() const
  */
 void UntagLogGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UntagLogGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

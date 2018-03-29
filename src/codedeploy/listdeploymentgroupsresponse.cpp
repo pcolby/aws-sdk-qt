@@ -65,7 +65,7 @@ const ListDeploymentGroupsRequest * ListDeploymentGroupsResponse::request() cons
  */
 void ListDeploymentGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListDeploymentGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

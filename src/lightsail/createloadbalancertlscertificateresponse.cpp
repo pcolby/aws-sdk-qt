@@ -65,7 +65,7 @@ const CreateLoadBalancerTlsCertificateRequest * CreateLoadBalancerTlsCertificate
  */
 void CreateLoadBalancerTlsCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateLoadBalancerTlsCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

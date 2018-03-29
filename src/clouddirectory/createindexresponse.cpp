@@ -65,7 +65,7 @@ const CreateIndexRequest * CreateIndexResponse::request() const
  */
 void CreateIndexResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateIndexResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

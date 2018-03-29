@@ -65,7 +65,7 @@ const SetRepositoryPolicyRequest * SetRepositoryPolicyResponse::request() const
  */
 void SetRepositoryPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetRepositoryPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

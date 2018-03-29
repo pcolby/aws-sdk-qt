@@ -65,7 +65,7 @@ const DeleteByteMatchSetRequest * DeleteByteMatchSetResponse::request() const
  */
 void DeleteByteMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteByteMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

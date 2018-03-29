@@ -65,7 +65,7 @@ const DeleteSAMLProviderRequest * DeleteSAMLProviderResponse::request() const
  */
 void DeleteSAMLProviderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteSAMLProviderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

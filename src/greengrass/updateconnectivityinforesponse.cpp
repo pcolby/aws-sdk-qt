@@ -65,7 +65,7 @@ const UpdateConnectivityInfoRequest * UpdateConnectivityInfoResponse::request() 
  */
 void UpdateConnectivityInfoResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateConnectivityInfoResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteAccessKeyRequest * DeleteAccessKeyResponse::request() const
  */
 void DeleteAccessKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteAccessKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

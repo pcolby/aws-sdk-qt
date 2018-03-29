@@ -65,7 +65,7 @@ const ComposeEnvironmentsRequest * ComposeEnvironmentsResponse::request() const
  */
 void ComposeEnvironmentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ComposeEnvironmentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

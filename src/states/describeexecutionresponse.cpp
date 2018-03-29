@@ -65,7 +65,7 @@ const DescribeExecutionRequest * DescribeExecutionResponse::request() const
  */
 void DescribeExecutionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeExecutionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

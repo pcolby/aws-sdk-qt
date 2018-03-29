@@ -52,7 +52,7 @@ MachineLearningResponse::MachineLearningResponse(QObject * const parent)
  */
 void MachineLearningResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(MachineLearningResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void MachineLearningResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MachineLearningResponse instance.
  */
 MachineLearningResponsePrivate::MachineLearningResponsePrivate(
-    MachineLearningQueueResponse * const q) : MachineLearningPrivate(q)
+    MachineLearningResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

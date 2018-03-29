@@ -65,7 +65,7 @@ const UpdateKeyDescriptionRequest * UpdateKeyDescriptionResponse::request() cons
  */
 void UpdateKeyDescriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateKeyDescriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

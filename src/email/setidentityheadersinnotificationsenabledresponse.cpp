@@ -65,7 +65,7 @@ const SetIdentityHeadersInNotificationsEnabledRequest * SetIdentityHeadersInNoti
  */
 void SetIdentityHeadersInNotificationsEnabledResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetIdentityHeadersInNotificationsEnabledResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

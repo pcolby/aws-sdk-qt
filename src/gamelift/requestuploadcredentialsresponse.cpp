@@ -65,7 +65,7 @@ const RequestUploadCredentialsRequest * RequestUploadCredentialsResponse::reques
  */
 void RequestUploadCredentialsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RequestUploadCredentialsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

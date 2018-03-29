@@ -65,7 +65,7 @@ const StopStackSetOperationRequest * StopStackSetOperationResponse::request() co
  */
 void StopStackSetOperationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopStackSetOperationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

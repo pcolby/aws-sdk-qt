@@ -52,7 +52,7 @@ RekognitionResponse::RekognitionResponse(QObject * const parent)
  */
 void RekognitionResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(RekognitionResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void RekognitionResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public RekognitionResponse instance.
  */
 RekognitionResponsePrivate::RekognitionResponsePrivate(
-    RekognitionQueueResponse * const q) : RekognitionPrivate(q)
+    RekognitionResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

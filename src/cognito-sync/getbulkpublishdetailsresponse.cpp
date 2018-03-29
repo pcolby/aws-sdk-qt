@@ -65,7 +65,7 @@ const GetBulkPublishDetailsRequest * GetBulkPublishDetailsResponse::request() co
  */
 void GetBulkPublishDetailsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetBulkPublishDetailsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

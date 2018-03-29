@@ -65,7 +65,7 @@ const DescribeReservedDBInstancesOfferingsRequest * DescribeReservedDBInstancesO
  */
 void DescribeReservedDBInstancesOfferingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeReservedDBInstancesOfferingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

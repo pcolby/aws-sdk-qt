@@ -65,7 +65,7 @@ const CreateRegexPatternSetRequest * CreateRegexPatternSetResponse::request() co
  */
 void CreateRegexPatternSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateRegexPatternSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

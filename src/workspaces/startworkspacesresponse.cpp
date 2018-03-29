@@ -65,7 +65,7 @@ const StartWorkspacesRequest * StartWorkspacesResponse::request() const
  */
 void StartWorkspacesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartWorkspacesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

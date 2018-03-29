@@ -52,7 +52,7 @@ CloudTrailResponse::CloudTrailResponse(QObject * const parent)
  */
 void CloudTrailResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CloudTrailResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CloudTrailResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudTrailResponse instance.
  */
 CloudTrailResponsePrivate::CloudTrailResponsePrivate(
-    CloudTrailQueueResponse * const q) : CloudTrailPrivate(q)
+    CloudTrailResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

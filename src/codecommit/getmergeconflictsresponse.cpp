@@ -65,7 +65,7 @@ const GetMergeConflictsRequest * GetMergeConflictsResponse::request() const
  */
 void GetMergeConflictsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetMergeConflictsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

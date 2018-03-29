@@ -52,7 +52,7 @@ ECSResponse::ECSResponse(QObject * const parent)
  */
 void ECSResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ECSResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ECSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ECSResponse instance.
  */
 ECSResponsePrivate::ECSResponsePrivate(
-    ECSQueueResponse * const q) : ECSPrivate(q)
+    ECSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

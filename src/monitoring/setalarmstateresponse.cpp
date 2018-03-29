@@ -65,7 +65,7 @@ const SetAlarmStateRequest * SetAlarmStateResponse::request() const
  */
 void SetAlarmStateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetAlarmStateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

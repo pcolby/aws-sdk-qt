@@ -65,7 +65,7 @@ const InvalidateProjectCacheRequest * InvalidateProjectCacheResponse::request() 
  */
 void InvalidateProjectCacheResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(InvalidateProjectCacheResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

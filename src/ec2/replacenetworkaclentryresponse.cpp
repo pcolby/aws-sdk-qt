@@ -65,7 +65,7 @@ const ReplaceNetworkAclEntryRequest * ReplaceNetworkAclEntryResponse::request() 
  */
 void ReplaceNetworkAclEntryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ReplaceNetworkAclEntryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

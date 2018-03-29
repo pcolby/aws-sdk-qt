@@ -65,7 +65,7 @@ const LeaveOrganizationRequest * LeaveOrganizationResponse::request() const
  */
 void LeaveOrganizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(LeaveOrganizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

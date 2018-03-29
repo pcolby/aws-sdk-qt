@@ -65,7 +65,7 @@ const ListSigningCertificatesRequest * ListSigningCertificatesResponse::request(
  */
 void ListSigningCertificatesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListSigningCertificatesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

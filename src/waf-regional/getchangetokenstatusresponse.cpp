@@ -65,7 +65,7 @@ const GetChangeTokenStatusRequest * GetChangeTokenStatusResponse::request() cons
  */
 void GetChangeTokenStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetChangeTokenStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

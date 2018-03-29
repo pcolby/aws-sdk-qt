@@ -65,7 +65,7 @@ const CreateOTAUpdateRequest * CreateOTAUpdateResponse::request() const
  */
 void CreateOTAUpdateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateOTAUpdateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

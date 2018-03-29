@@ -65,7 +65,7 @@ const PutConfigRuleRequest * PutConfigRuleResponse::request() const
  */
 void PutConfigRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutConfigRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

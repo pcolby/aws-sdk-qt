@@ -65,7 +65,7 @@ const CancelBundleTaskRequest * CancelBundleTaskResponse::request() const
  */
 void CancelBundleTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CancelBundleTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

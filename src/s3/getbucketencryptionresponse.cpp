@@ -65,7 +65,7 @@ const GetBucketEncryptionRequest * GetBucketEncryptionResponse::request() const
  */
 void GetBucketEncryptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetBucketEncryptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

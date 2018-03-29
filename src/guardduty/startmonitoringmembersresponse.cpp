@@ -65,7 +65,7 @@ const StartMonitoringMembersRequest * StartMonitoringMembersResponse::request() 
  */
 void StartMonitoringMembersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartMonitoringMembersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const SearchProfilesRequest * SearchProfilesResponse::request() const
  */
 void SearchProfilesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SearchProfilesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetChangeRequest * GetChangeResponse::request() const
  */
 void GetChangeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetChangeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const AcknowledgeThirdPartyJobRequest * AcknowledgeThirdPartyJobResponse::reques
  */
 void AcknowledgeThirdPartyJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AcknowledgeThirdPartyJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

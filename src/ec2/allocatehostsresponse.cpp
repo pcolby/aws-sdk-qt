@@ -65,7 +65,7 @@ const AllocateHostsRequest * AllocateHostsResponse::request() const
  */
 void AllocateHostsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AllocateHostsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

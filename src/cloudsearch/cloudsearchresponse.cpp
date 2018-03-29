@@ -52,7 +52,7 @@ CloudSearchResponse::CloudSearchResponse(QObject * const parent)
  */
 void CloudSearchResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CloudSearchResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CloudSearchResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudSearchResponse instance.
  */
 CloudSearchResponsePrivate::CloudSearchResponsePrivate(
-    CloudSearchQueueResponse * const q) : CloudSearchPrivate(q)
+    CloudSearchResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

@@ -65,7 +65,7 @@ const ListAssessmentTargetsRequest * ListAssessmentTargetsResponse::request() co
  */
 void ListAssessmentTargetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListAssessmentTargetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

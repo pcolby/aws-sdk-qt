@@ -52,7 +52,7 @@ GuardDutyResponse::GuardDutyResponse(QObject * const parent)
  */
 void GuardDutyResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(GuardDutyResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void GuardDutyResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public GuardDutyResponse instance.
  */
 GuardDutyResponsePrivate::GuardDutyResponsePrivate(
-    GuardDutyQueueResponse * const q) : GuardDutyPrivate(q)
+    GuardDutyResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

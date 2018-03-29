@@ -65,7 +65,7 @@ const DeletePortfolioShareRequest * DeletePortfolioShareResponse::request() cons
  */
 void DeletePortfolioShareResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeletePortfolioShareResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

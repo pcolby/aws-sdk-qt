@@ -65,7 +65,7 @@ const AssociateSubnetCidrBlockRequest * AssociateSubnetCidrBlockResponse::reques
  */
 void AssociateSubnetCidrBlockResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateSubnetCidrBlockResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

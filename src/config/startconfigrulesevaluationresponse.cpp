@@ -65,7 +65,7 @@ const StartConfigRulesEvaluationRequest * StartConfigRulesEvaluationResponse::re
  */
 void StartConfigRulesEvaluationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartConfigRulesEvaluationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

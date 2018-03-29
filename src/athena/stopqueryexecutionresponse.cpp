@@ -65,7 +65,7 @@ const StopQueryExecutionRequest * StopQueryExecutionResponse::request() const
  */
 void StopQueryExecutionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopQueryExecutionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

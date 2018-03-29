@@ -65,7 +65,7 @@ const GetCredentialsForIdentityRequest * GetCredentialsForIdentityResponse::requ
  */
 void GetCredentialsForIdentityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetCredentialsForIdentityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

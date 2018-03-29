@@ -65,7 +65,7 @@ const StopInstancesRequest * StopInstancesResponse::request() const
  */
 void StopInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

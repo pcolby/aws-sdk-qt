@@ -65,7 +65,7 @@ const DescribeChangeSetRequest * DescribeChangeSetResponse::request() const
  */
 void DescribeChangeSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeChangeSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

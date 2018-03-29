@@ -65,7 +65,7 @@ const AssociateRoleToGroupRequest * AssociateRoleToGroupResponse::request() cons
  */
 void AssociateRoleToGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateRoleToGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

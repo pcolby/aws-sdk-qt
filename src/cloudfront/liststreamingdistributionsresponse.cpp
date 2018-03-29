@@ -65,7 +65,7 @@ const ListStreamingDistributionsRequest * ListStreamingDistributionsResponse::re
  */
 void ListStreamingDistributionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListStreamingDistributionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

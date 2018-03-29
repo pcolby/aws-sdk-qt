@@ -65,7 +65,7 @@ const DescribeTableRestoreStatusRequest * DescribeTableRestoreStatusResponse::re
  */
 void DescribeTableRestoreStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeTableRestoreStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

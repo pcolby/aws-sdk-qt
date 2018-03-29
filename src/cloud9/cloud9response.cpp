@@ -52,7 +52,7 @@ Cloud9Response::Cloud9Response(QObject * const parent)
  */
 void Cloud9Response::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(Cloud9Response);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void Cloud9Response::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public Cloud9Response instance.
  */
 Cloud9ResponsePrivate::Cloud9ResponsePrivate(
-    Cloud9QueueResponse * const q) : Cloud9Private(q)
+    Cloud9Response * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

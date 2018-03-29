@@ -65,7 +65,7 @@ const ResetImageAttributeRequest * ResetImageAttributeResponse::request() const
  */
 void ResetImageAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ResetImageAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

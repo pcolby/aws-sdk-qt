@@ -65,7 +65,7 @@ const UpdatePortfolioRequest * UpdatePortfolioResponse::request() const
  */
 void UpdatePortfolioResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdatePortfolioResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

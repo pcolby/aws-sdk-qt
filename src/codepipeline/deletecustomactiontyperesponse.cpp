@@ -65,7 +65,7 @@ const DeleteCustomActionTypeRequest * DeleteCustomActionTypeResponse::request() 
  */
 void DeleteCustomActionTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteCustomActionTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

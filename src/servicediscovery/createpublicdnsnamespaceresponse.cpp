@@ -65,7 +65,7 @@ const CreatePublicDnsNamespaceRequest * CreatePublicDnsNamespaceResponse::reques
  */
 void CreatePublicDnsNamespaceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreatePublicDnsNamespaceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

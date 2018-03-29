@@ -65,7 +65,7 @@ const GetVpcLinksRequest * GetVpcLinksResponse::request() const
  */
 void GetVpcLinksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetVpcLinksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

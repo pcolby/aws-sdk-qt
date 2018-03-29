@@ -65,7 +65,7 @@ const DeleteAnalysisSchemeRequest * DeleteAnalysisSchemeResponse::request() cons
  */
 void DeleteAnalysisSchemeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteAnalysisSchemeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

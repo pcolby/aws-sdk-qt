@@ -65,7 +65,7 @@ const GetEventStreamRequest * GetEventStreamResponse::request() const
  */
 void GetEventStreamResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetEventStreamResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

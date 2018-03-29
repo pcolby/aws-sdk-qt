@@ -65,7 +65,7 @@ const AdminForgetDeviceRequest * AdminForgetDeviceResponse::request() const
  */
 void AdminForgetDeviceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AdminForgetDeviceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

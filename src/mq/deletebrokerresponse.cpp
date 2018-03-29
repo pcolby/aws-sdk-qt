@@ -65,7 +65,7 @@ const DeleteBrokerRequest * DeleteBrokerResponse::request() const
  */
 void DeleteBrokerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteBrokerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

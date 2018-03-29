@@ -65,7 +65,7 @@ const DescribeSeverityLevelsRequest * DescribeSeverityLevelsResponse::request() 
  */
 void DescribeSeverityLevelsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeSeverityLevelsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

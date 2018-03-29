@@ -65,7 +65,7 @@ const UpdateRecordsRequest * UpdateRecordsResponse::request() const
  */
 void UpdateRecordsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateRecordsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

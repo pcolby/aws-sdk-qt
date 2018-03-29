@@ -65,7 +65,7 @@ const UpdateRuleGroupRequest * UpdateRuleGroupResponse::request() const
  */
 void UpdateRuleGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateRuleGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

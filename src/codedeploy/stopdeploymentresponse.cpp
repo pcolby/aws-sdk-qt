@@ -65,7 +65,7 @@ const StopDeploymentRequest * StopDeploymentResponse::request() const
  */
 void StopDeploymentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopDeploymentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

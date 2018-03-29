@@ -65,7 +65,7 @@ const DeleteRouteRequest * DeleteRouteResponse::request() const
  */
 void DeleteRouteResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteRouteResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeExportConfigurationsRequest * DescribeExportConfigurationsResponse
  */
 void DescribeExportConfigurationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeExportConfigurationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

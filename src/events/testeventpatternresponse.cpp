@@ -65,7 +65,7 @@ const TestEventPatternRequest * TestEventPatternResponse::request() const
  */
 void TestEventPatternResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(TestEventPatternResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

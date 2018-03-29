@@ -65,7 +65,7 @@ const BatchGetProjectsRequest * BatchGetProjectsResponse::request() const
  */
 void BatchGetProjectsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BatchGetProjectsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

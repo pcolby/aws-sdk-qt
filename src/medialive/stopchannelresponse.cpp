@@ -65,7 +65,7 @@ const StopChannelRequest * StopChannelResponse::request() const
  */
 void StopChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

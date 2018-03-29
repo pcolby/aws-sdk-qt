@@ -65,7 +65,7 @@ const ListServiceSpecificCredentialsRequest * ListServiceSpecificCredentialsResp
  */
 void ListServiceSpecificCredentialsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListServiceSpecificCredentialsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

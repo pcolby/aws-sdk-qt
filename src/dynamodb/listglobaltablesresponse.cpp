@@ -65,7 +65,7 @@ const ListGlobalTablesRequest * ListGlobalTablesResponse::request() const
  */
 void ListGlobalTablesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListGlobalTablesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

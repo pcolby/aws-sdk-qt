@@ -65,7 +65,7 @@ const GetIdentityPoliciesRequest * GetIdentityPoliciesResponse::request() const
  */
 void GetIdentityPoliciesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetIdentityPoliciesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

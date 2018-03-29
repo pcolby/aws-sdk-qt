@@ -65,7 +65,7 @@ const RetrieveTapeArchiveRequest * RetrieveTapeArchiveResponse::request() const
  */
 void RetrieveTapeArchiveResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RetrieveTapeArchiveResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

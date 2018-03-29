@@ -65,7 +65,7 @@ const UpdateWebhookRequest * UpdateWebhookResponse::request() const
  */
 void UpdateWebhookResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateWebhookResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

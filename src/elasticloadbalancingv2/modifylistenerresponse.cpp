@@ -65,7 +65,7 @@ const ModifyListenerRequest * ModifyListenerResponse::request() const
  */
 void ModifyListenerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyListenerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

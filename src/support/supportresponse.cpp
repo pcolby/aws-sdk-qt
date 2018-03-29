@@ -52,7 +52,7 @@ SupportResponse::SupportResponse(QObject * const parent)
  */
 void SupportResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(SupportResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void SupportResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SupportResponse instance.
  */
 SupportResponsePrivate::SupportResponsePrivate(
-    SupportQueueResponse * const q) : SupportPrivate(q)
+    SupportResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

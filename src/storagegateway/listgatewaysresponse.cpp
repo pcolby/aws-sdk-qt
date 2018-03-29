@@ -65,7 +65,7 @@ const ListGatewaysRequest * ListGatewaysResponse::request() const
  */
 void ListGatewaysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListGatewaysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

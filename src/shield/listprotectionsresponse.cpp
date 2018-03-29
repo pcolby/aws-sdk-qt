@@ -65,7 +65,7 @@ const ListProtectionsRequest * ListProtectionsResponse::request() const
  */
 void ListProtectionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListProtectionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

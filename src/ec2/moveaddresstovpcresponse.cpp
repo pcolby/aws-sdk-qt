@@ -65,7 +65,7 @@ const MoveAddressToVpcRequest * MoveAddressToVpcResponse::request() const
  */
 void MoveAddressToVpcResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(MoveAddressToVpcResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

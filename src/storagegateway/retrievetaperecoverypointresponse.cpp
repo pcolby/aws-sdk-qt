@@ -65,7 +65,7 @@ const RetrieveTapeRecoveryPointRequest * RetrieveTapeRecoveryPointResponse::requ
  */
 void RetrieveTapeRecoveryPointResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RetrieveTapeRecoveryPointResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

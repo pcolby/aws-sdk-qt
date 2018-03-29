@@ -65,7 +65,7 @@ const ListOutgoingCertificatesRequest * ListOutgoingCertificatesResponse::reques
  */
 void ListOutgoingCertificatesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListOutgoingCertificatesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

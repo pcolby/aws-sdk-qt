@@ -65,7 +65,7 @@ const RebootBrokerRequest * RebootBrokerResponse::request() const
  */
 void RebootBrokerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RebootBrokerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

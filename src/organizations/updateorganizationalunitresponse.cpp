@@ -65,7 +65,7 @@ const UpdateOrganizationalUnitRequest * UpdateOrganizationalUnitResponse::reques
  */
 void UpdateOrganizationalUnitResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateOrganizationalUnitResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

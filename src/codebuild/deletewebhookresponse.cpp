@@ -65,7 +65,7 @@ const DeleteWebhookRequest * DeleteWebhookResponse::request() const
  */
 void DeleteWebhookResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteWebhookResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

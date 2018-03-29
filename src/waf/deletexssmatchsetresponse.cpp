@@ -65,7 +65,7 @@ const DeleteXssMatchSetRequest * DeleteXssMatchSetResponse::request() const
  */
 void DeleteXssMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteXssMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeDocumentVersionsRequest * DescribeDocumentVersionsResponse::reques
  */
 void DescribeDocumentVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeDocumentVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

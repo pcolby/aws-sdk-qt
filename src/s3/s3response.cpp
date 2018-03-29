@@ -52,7 +52,7 @@ S3Response::S3Response(QObject * const parent)
  */
 void S3Response::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(S3Response);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void S3Response::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public S3Response instance.
  */
 S3ResponsePrivate::S3ResponsePrivate(
-    S3QueueResponse * const q) : S3Private(q)
+    S3Response * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

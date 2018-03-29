@@ -65,7 +65,7 @@ const SendTestEventNotificationRequest * SendTestEventNotificationResponse::requ
  */
 void SendTestEventNotificationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SendTestEventNotificationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

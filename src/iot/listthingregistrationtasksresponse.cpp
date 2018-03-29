@@ -65,7 +65,7 @@ const ListThingRegistrationTasksRequest * ListThingRegistrationTasksResponse::re
  */
 void ListThingRegistrationTasksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListThingRegistrationTasksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeTerminationPolicyTypesRequest * DescribeTerminationPolicyTypesResp
  */
 void DescribeTerminationPolicyTypesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeTerminationPolicyTypesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

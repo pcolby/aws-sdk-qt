@@ -65,7 +65,7 @@ const DeleteFileShareRequest * DeleteFileShareResponse::request() const
  */
 void DeleteFileShareResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteFileShareResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

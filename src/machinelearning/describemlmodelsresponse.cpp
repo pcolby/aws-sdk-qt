@@ -65,7 +65,7 @@ const DescribeMLModelsRequest * DescribeMLModelsResponse::request() const
  */
 void DescribeMLModelsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeMLModelsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

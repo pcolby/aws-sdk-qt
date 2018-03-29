@@ -65,7 +65,7 @@ const CreateGameSessionRequest * CreateGameSessionResponse::request() const
  */
 void CreateGameSessionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateGameSessionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

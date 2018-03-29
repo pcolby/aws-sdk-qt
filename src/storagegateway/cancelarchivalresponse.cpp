@@ -65,7 +65,7 @@ const CancelArchivalRequest * CancelArchivalResponse::request() const
  */
 void CancelArchivalResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CancelArchivalResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

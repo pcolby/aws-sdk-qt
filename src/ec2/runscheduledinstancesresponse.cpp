@@ -65,7 +65,7 @@ const RunScheduledInstancesRequest * RunScheduledInstancesResponse::request() co
  */
 void RunScheduledInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RunScheduledInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

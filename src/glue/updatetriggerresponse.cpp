@@ -65,7 +65,7 @@ const UpdateTriggerRequest * UpdateTriggerResponse::request() const
  */
 void UpdateTriggerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateTriggerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

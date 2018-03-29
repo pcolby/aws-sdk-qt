@@ -65,7 +65,7 @@ const DeleteCacheClusterRequest * DeleteCacheClusterResponse::request() const
  */
 void DeleteCacheClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteCacheClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

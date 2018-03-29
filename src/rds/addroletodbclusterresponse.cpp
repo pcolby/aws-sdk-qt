@@ -65,7 +65,7 @@ const AddRoleToDBClusterRequest * AddRoleToDBClusterResponse::request() const
  */
 void AddRoleToDBClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AddRoleToDBClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

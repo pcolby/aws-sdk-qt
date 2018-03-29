@@ -65,7 +65,7 @@ const AddApplicationCloudWatchLoggingOptionRequest * AddApplicationCloudWatchLog
  */
 void AddApplicationCloudWatchLoggingOptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AddApplicationCloudWatchLoggingOptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

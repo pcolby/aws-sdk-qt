@@ -65,7 +65,7 @@ const RebuildWorkspacesRequest * RebuildWorkspacesResponse::request() const
  */
 void RebuildWorkspacesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RebuildWorkspacesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

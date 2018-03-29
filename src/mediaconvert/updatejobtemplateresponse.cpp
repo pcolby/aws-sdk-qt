@@ -65,7 +65,7 @@ const UpdateJobTemplateRequest * UpdateJobTemplateResponse::request() const
  */
 void UpdateJobTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateJobTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

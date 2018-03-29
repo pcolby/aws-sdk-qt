@@ -65,7 +65,7 @@ const DeleteLagRequest * DeleteLagResponse::request() const
  */
 void DeleteLagResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteLagResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

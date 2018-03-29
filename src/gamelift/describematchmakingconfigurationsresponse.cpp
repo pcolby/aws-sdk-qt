@@ -65,7 +65,7 @@ const DescribeMatchmakingConfigurationsRequest * DescribeMatchmakingConfiguratio
  */
 void DescribeMatchmakingConfigurationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeMatchmakingConfigurationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

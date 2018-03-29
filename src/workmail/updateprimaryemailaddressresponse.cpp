@@ -65,7 +65,7 @@ const UpdatePrimaryEmailAddressRequest * UpdatePrimaryEmailAddressResponse::requ
  */
 void UpdatePrimaryEmailAddressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdatePrimaryEmailAddressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

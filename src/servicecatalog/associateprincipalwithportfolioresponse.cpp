@@ -65,7 +65,7 @@ const AssociatePrincipalWithPortfolioRequest * AssociatePrincipalWithPortfolioRe
  */
 void AssociatePrincipalWithPortfolioResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociatePrincipalWithPortfolioResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

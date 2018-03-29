@@ -65,7 +65,7 @@ const AssociateNodeRequest * AssociateNodeResponse::request() const
  */
 void AssociateNodeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateNodeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

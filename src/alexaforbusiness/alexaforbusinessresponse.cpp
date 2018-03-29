@@ -52,7 +52,7 @@ AlexaForBusinessResponse::AlexaForBusinessResponse(QObject * const parent)
  */
 void AlexaForBusinessResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(AlexaForBusinessResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void AlexaForBusinessResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public AlexaForBusinessResponse instance.
  */
 AlexaForBusinessResponsePrivate::AlexaForBusinessResponsePrivate(
-    AlexaForBusinessQueueResponse * const q) : AlexaForBusinessPrivate(q)
+    AlexaForBusinessResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

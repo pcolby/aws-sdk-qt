@@ -65,7 +65,7 @@ const DescribeCacheParametersRequest * DescribeCacheParametersResponse::request(
  */
 void DescribeCacheParametersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeCacheParametersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

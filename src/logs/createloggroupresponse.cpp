@@ -65,7 +65,7 @@ const CreateLogGroupRequest * CreateLogGroupResponse::request() const
  */
 void CreateLogGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateLogGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

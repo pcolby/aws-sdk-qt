@@ -65,7 +65,7 @@ const PutRetentionPolicyRequest * PutRetentionPolicyResponse::request() const
  */
 void PutRetentionPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutRetentionPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const RejectPortfolioShareRequest * RejectPortfolioShareResponse::request() cons
  */
 void RejectPortfolioShareResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RejectPortfolioShareResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

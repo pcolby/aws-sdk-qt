@@ -65,7 +65,7 @@ const CreateAccountAliasRequest * CreateAccountAliasResponse::request() const
  */
 void CreateAccountAliasResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateAccountAliasResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

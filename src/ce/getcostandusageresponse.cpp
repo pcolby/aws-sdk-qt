@@ -65,7 +65,7 @@ const GetCostAndUsageRequest * GetCostAndUsageResponse::request() const
  */
 void GetCostAndUsageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetCostAndUsageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

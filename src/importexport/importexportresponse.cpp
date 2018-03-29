@@ -52,7 +52,7 @@ ImportExportResponse::ImportExportResponse(QObject * const parent)
  */
 void ImportExportResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ImportExportResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ImportExportResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ImportExportResponse instance.
  */
 ImportExportResponsePrivate::ImportExportResponsePrivate(
-    ImportExportQueueResponse * const q) : ImportExportPrivate(q)
+    ImportExportResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

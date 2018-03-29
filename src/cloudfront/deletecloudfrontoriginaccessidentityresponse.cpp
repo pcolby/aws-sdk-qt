@@ -65,7 +65,7 @@ const DeleteCloudFrontOriginAccessIdentityRequest * DeleteCloudFrontOriginAccess
  */
 void DeleteCloudFrontOriginAccessIdentityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteCloudFrontOriginAccessIdentityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

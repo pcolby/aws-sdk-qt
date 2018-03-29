@@ -65,7 +65,7 @@ const CreateEnvironmentEC2Request * CreateEnvironmentEC2Response::request() cons
  */
 void CreateEnvironmentEC2Response::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateEnvironmentEC2Response);
     QXmlStreamReader xml(&response);
     /// @todo
 }

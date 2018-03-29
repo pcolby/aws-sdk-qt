@@ -65,7 +65,7 @@ const DescribeElasticsearchDomainConfigRequest * DescribeElasticsearchDomainConf
  */
 void DescribeElasticsearchDomainConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeElasticsearchDomainConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

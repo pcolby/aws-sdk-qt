@@ -65,7 +65,7 @@ const AssociateElasticIpRequest * AssociateElasticIpResponse::request() const
  */
 void AssociateElasticIpResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateElasticIpResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

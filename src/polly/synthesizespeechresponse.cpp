@@ -65,7 +65,7 @@ const SynthesizeSpeechRequest * SynthesizeSpeechResponse::request() const
  */
 void SynthesizeSpeechResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SynthesizeSpeechResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

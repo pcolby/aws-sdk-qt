@@ -65,7 +65,7 @@ const CreateElasticsearchDomainRequest * CreateElasticsearchDomainResponse::requ
  */
 void CreateElasticsearchDomainResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateElasticsearchDomainResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

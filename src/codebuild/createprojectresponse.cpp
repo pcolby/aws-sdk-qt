@@ -65,7 +65,7 @@ const CreateProjectRequest * CreateProjectResponse::request() const
  */
 void CreateProjectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateProjectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

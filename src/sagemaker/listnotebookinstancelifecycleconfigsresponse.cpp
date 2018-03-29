@@ -65,7 +65,7 @@ const ListNotebookInstanceLifecycleConfigsRequest * ListNotebookInstanceLifecycl
  */
 void ListNotebookInstanceLifecycleConfigsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListNotebookInstanceLifecycleConfigsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

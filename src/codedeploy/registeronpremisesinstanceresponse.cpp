@@ -65,7 +65,7 @@ const RegisterOnPremisesInstanceRequest * RegisterOnPremisesInstanceResponse::re
  */
 void RegisterOnPremisesInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RegisterOnPremisesInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

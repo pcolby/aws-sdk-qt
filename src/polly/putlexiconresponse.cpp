@@ -65,7 +65,7 @@ const PutLexiconRequest * PutLexiconResponse::request() const
  */
 void PutLexiconResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutLexiconResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

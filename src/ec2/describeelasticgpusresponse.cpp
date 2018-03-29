@@ -65,7 +65,7 @@ const DescribeElasticGpusRequest * DescribeElasticGpusResponse::request() const
  */
 void DescribeElasticGpusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeElasticGpusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeOriginEndpointRequest * DescribeOriginEndpointResponse::request() 
  */
 void DescribeOriginEndpointResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeOriginEndpointResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

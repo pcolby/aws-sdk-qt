@@ -65,7 +65,7 @@ const GetServiceGraphRequest * GetServiceGraphResponse::request() const
  */
 void GetServiceGraphResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetServiceGraphResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

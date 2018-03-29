@@ -65,7 +65,7 @@ const CreateBrokerRequest * CreateBrokerResponse::request() const
  */
 void CreateBrokerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateBrokerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

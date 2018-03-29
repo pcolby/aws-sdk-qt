@@ -65,7 +65,7 @@ const DescribeWorkspacesConnectionStatusRequest * DescribeWorkspacesConnectionSt
  */
 void DescribeWorkspacesConnectionStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeWorkspacesConnectionStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

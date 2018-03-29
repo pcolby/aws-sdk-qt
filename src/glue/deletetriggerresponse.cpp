@@ -65,7 +65,7 @@ const DeleteTriggerRequest * DeleteTriggerResponse::request() const
  */
 void DeleteTriggerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteTriggerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

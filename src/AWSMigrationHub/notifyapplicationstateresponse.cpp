@@ -65,7 +65,7 @@ const NotifyApplicationStateRequest * NotifyApplicationStateResponse::request() 
  */
 void NotifyApplicationStateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(NotifyApplicationStateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

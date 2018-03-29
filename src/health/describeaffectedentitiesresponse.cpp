@@ -65,7 +65,7 @@ const DescribeAffectedEntitiesRequest * DescribeAffectedEntitiesResponse::reques
  */
 void DescribeAffectedEntitiesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeAffectedEntitiesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

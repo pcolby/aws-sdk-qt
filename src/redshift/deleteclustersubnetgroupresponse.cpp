@@ -65,7 +65,7 @@ const DeleteClusterSubnetGroupRequest * DeleteClusterSubnetGroupResponse::reques
  */
 void DeleteClusterSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteClusterSubnetGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

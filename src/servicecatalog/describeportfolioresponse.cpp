@@ -65,7 +65,7 @@ const DescribePortfolioRequest * DescribePortfolioResponse::request() const
  */
 void DescribePortfolioResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribePortfolioResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

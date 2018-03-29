@@ -65,7 +65,7 @@ const RestoreDBClusterToPointInTimeRequest * RestoreDBClusterToPointInTimeRespon
  */
 void RestoreDBClusterToPointInTimeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RestoreDBClusterToPointInTimeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

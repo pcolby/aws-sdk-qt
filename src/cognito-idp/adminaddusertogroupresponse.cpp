@@ -65,7 +65,7 @@ const AdminAddUserToGroupRequest * AdminAddUserToGroupResponse::request() const
  */
 void AdminAddUserToGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AdminAddUserToGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

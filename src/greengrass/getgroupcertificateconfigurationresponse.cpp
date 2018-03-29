@@ -65,7 +65,7 @@ const GetGroupCertificateConfigurationRequest * GetGroupCertificateConfiguration
  */
 void GetGroupCertificateConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetGroupCertificateConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

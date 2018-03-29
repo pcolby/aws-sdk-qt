@@ -65,7 +65,7 @@ const SetDesiredCapacityRequest * SetDesiredCapacityResponse::request() const
  */
 void SetDesiredCapacityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetDesiredCapacityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ModifyVpcPeeringConnectionOptionsRequest * ModifyVpcPeeringConnectionOptio
  */
 void ModifyVpcPeeringConnectionOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyVpcPeeringConnectionOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

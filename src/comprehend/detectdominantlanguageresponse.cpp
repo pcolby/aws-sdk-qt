@@ -65,7 +65,7 @@ const DetectDominantLanguageRequest * DetectDominantLanguageResponse::request() 
  */
 void DetectDominantLanguageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DetectDominantLanguageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

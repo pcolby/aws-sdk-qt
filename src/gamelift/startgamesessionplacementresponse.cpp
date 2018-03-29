@@ -65,7 +65,7 @@ const StartGameSessionPlacementRequest * StartGameSessionPlacementResponse::requ
  */
 void StartGameSessionPlacementResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartGameSessionPlacementResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

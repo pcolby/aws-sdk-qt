@@ -65,7 +65,7 @@ const ValidateMatchmakingRuleSetRequest * ValidateMatchmakingRuleSetResponse::re
  */
 void ValidateMatchmakingRuleSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ValidateMatchmakingRuleSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

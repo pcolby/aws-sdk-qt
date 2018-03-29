@@ -65,7 +65,7 @@ const RegisterElasticIpRequest * RegisterElasticIpResponse::request() const
  */
 void RegisterElasticIpResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RegisterElasticIpResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

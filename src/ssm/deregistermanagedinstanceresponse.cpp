@@ -65,7 +65,7 @@ const DeregisterManagedInstanceRequest * DeregisterManagedInstanceResponse::requ
  */
 void DeregisterManagedInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeregisterManagedInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

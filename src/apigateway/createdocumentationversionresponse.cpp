@@ -65,7 +65,7 @@ const CreateDocumentationVersionRequest * CreateDocumentationVersionResponse::re
  */
 void CreateDocumentationVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateDocumentationVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

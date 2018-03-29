@@ -65,7 +65,7 @@ const ArchiveFindingsRequest * ArchiveFindingsResponse::request() const
  */
 void ArchiveFindingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ArchiveFindingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

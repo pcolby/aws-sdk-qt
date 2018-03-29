@@ -52,7 +52,7 @@ MigrationHubResponse::MigrationHubResponse(QObject * const parent)
  */
 void MigrationHubResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(MigrationHubResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void MigrationHubResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MigrationHubResponse instance.
  */
 MigrationHubResponsePrivate::MigrationHubResponsePrivate(
-    MigrationHubQueueResponse * const q) : MigrationHubPrivate(q)
+    MigrationHubResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

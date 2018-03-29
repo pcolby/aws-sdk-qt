@@ -65,7 +65,7 @@ const ListAccountsForParentRequest * ListAccountsForParentResponse::request() co
  */
 void ListAccountsForParentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListAccountsForParentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

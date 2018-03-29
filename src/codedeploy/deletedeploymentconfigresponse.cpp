@@ -65,7 +65,7 @@ const DeleteDeploymentConfigRequest * DeleteDeploymentConfigResponse::request() 
  */
 void DeleteDeploymentConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteDeploymentConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

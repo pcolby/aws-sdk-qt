@@ -65,7 +65,7 @@ const DescribeHsmClientCertificatesRequest * DescribeHsmClientCertificatesRespon
  */
 void DescribeHsmClientCertificatesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeHsmClientCertificatesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

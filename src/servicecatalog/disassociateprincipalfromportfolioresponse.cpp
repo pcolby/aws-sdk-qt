@@ -65,7 +65,7 @@ const DisassociatePrincipalFromPortfolioRequest * DisassociatePrincipalFromPortf
  */
 void DisassociatePrincipalFromPortfolioResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisassociatePrincipalFromPortfolioResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

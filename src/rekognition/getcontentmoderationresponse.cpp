@@ -65,7 +65,7 @@ const GetContentModerationRequest * GetContentModerationResponse::request() cons
  */
 void GetContentModerationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetContentModerationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

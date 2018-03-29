@@ -65,7 +65,7 @@ const UpdateContinuousBackupsRequest * UpdateContinuousBackupsResponse::request(
  */
 void UpdateContinuousBackupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateContinuousBackupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

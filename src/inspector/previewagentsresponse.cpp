@@ -65,7 +65,7 @@ const PreviewAgentsRequest * PreviewAgentsResponse::request() const
  */
 void PreviewAgentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PreviewAgentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

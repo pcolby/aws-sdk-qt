@@ -65,7 +65,7 @@ const GetDomainNamesRequest * GetDomainNamesResponse::request() const
  */
 void GetDomainNamesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetDomainNamesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetFolderRequest * GetFolderResponse::request() const
  */
 void GetFolderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetFolderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

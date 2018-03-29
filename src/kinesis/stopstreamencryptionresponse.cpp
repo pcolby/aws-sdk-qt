@@ -65,7 +65,7 @@ const StopStreamEncryptionRequest * StopStreamEncryptionResponse::request() cons
  */
 void StopStreamEncryptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopStreamEncryptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

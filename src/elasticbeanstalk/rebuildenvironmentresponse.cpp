@@ -65,7 +65,7 @@ const RebuildEnvironmentRequest * RebuildEnvironmentResponse::request() const
  */
 void RebuildEnvironmentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RebuildEnvironmentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

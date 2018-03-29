@@ -65,7 +65,7 @@ const ListSuitesRequest * ListSuitesResponse::request() const
  */
 void ListSuitesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListSuitesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

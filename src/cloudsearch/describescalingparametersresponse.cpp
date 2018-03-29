@@ -65,7 +65,7 @@ const DescribeScalingParametersRequest * DescribeScalingParametersResponse::requ
  */
 void DescribeScalingParametersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeScalingParametersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

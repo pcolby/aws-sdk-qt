@@ -65,7 +65,7 @@ const GetAttributeValuesRequest * GetAttributeValuesResponse::request() const
  */
 void GetAttributeValuesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetAttributeValuesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

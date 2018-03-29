@@ -65,7 +65,7 @@ const UpdateFleetRequest * UpdateFleetResponse::request() const
  */
 void UpdateFleetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateFleetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

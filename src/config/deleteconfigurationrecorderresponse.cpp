@@ -65,7 +65,7 @@ const DeleteConfigurationRecorderRequest * DeleteConfigurationRecorderResponse::
  */
 void DeleteConfigurationRecorderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteConfigurationRecorderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

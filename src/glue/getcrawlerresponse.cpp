@@ -65,7 +65,7 @@ const GetCrawlerRequest * GetCrawlerResponse::request() const
  */
 void GetCrawlerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetCrawlerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

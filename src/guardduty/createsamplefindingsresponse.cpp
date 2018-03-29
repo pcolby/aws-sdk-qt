@@ -65,7 +65,7 @@ const CreateSampleFindingsRequest * CreateSampleFindingsResponse::request() cons
  */
 void CreateSampleFindingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateSampleFindingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

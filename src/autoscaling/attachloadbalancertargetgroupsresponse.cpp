@@ -65,7 +65,7 @@ const AttachLoadBalancerTargetGroupsRequest * AttachLoadBalancerTargetGroupsResp
  */
 void AttachLoadBalancerTargetGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AttachLoadBalancerTargetGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

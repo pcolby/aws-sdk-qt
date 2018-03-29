@@ -65,7 +65,7 @@ const PeerVpcRequest * PeerVpcResponse::request() const
  */
 void PeerVpcResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PeerVpcResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

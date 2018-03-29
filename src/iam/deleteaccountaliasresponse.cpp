@@ -65,7 +65,7 @@ const DeleteAccountAliasRequest * DeleteAccountAliasResponse::request() const
  */
 void DeleteAccountAliasResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteAccountAliasResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

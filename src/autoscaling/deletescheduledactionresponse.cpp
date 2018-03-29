@@ -65,7 +65,7 @@ const DeleteScheduledActionRequest * DeleteScheduledActionResponse::request() co
  */
 void DeleteScheduledActionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteScheduledActionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

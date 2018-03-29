@@ -52,7 +52,7 @@ ElasticLoadBalancingv2Response::ElasticLoadBalancingv2Response(QObject * const p
  */
 void ElasticLoadBalancingv2Response::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ElasticLoadBalancingv2Response);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ElasticLoadBalancingv2Response::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ElasticLoadBalancingv2Response instance.
  */
 ElasticLoadBalancingv2ResponsePrivate::ElasticLoadBalancingv2ResponsePrivate(
-    ElasticLoadBalancingv2QueueResponse * const q) : ElasticLoadBalancingv2Private(q)
+    ElasticLoadBalancingv2Response * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

@@ -65,7 +65,7 @@ const GetRateBasedRuleManagedKeysRequest * GetRateBasedRuleManagedKeysResponse::
  */
 void GetRateBasedRuleManagedKeysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetRateBasedRuleManagedKeysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

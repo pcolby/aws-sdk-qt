@@ -65,7 +65,7 @@ const DescribeGatewayInformationRequest * DescribeGatewayInformationResponse::re
  */
 void DescribeGatewayInformationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeGatewayInformationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

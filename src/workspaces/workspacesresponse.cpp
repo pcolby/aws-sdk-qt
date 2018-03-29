@@ -52,7 +52,7 @@ WorkSpacesResponse::WorkSpacesResponse(QObject * const parent)
  */
 void WorkSpacesResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(WorkSpacesResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void WorkSpacesResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public WorkSpacesResponse instance.
  */
 WorkSpacesResponsePrivate::WorkSpacesResponsePrivate(
-    WorkSpacesQueueResponse * const q) : WorkSpacesPrivate(q)
+    WorkSpacesResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

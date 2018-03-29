@@ -65,7 +65,7 @@ const DetachTypedLinkRequest * DetachTypedLinkResponse::request() const
  */
 void DetachTypedLinkResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DetachTypedLinkResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

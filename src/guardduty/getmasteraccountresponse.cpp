@@ -65,7 +65,7 @@ const GetMasterAccountRequest * GetMasterAccountResponse::request() const
  */
 void GetMasterAccountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetMasterAccountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

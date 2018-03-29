@@ -65,7 +65,7 @@ const CheckDomainAvailabilityRequest * CheckDomainAvailabilityResponse::request(
  */
 void CheckDomainAvailabilityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CheckDomainAvailabilityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

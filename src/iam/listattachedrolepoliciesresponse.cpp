@@ -65,7 +65,7 @@ const ListAttachedRolePoliciesRequest * ListAttachedRolePoliciesResponse::reques
  */
 void ListAttachedRolePoliciesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListAttachedRolePoliciesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

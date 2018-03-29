@@ -65,7 +65,7 @@ const UpdateConfigurationSetReputationMetricsEnabledRequest * UpdateConfiguratio
  */
 void UpdateConfigurationSetReputationMetricsEnabledResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateConfigurationSetReputationMetricsEnabledResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

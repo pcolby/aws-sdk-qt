@@ -65,7 +65,7 @@ const FilterLogEventsRequest * FilterLogEventsResponse::request() const
  */
 void FilterLogEventsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(FilterLogEventsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

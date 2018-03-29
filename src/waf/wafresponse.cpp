@@ -52,7 +52,7 @@ WAFResponse::WAFResponse(QObject * const parent)
  */
 void WAFResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(WAFResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void WAFResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public WAFResponse instance.
  */
 WAFResponsePrivate::WAFResponsePrivate(
-    WAFQueueResponse * const q) : WAFPrivate(q)
+    WAFResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

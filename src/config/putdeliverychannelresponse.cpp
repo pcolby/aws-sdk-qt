@@ -65,7 +65,7 @@ const PutDeliveryChannelRequest * PutDeliveryChannelResponse::request() const
  */
 void PutDeliveryChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutDeliveryChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

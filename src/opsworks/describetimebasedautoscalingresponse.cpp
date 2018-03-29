@@ -65,7 +65,7 @@ const DescribeTimeBasedAutoScalingRequest * DescribeTimeBasedAutoScalingResponse
  */
 void DescribeTimeBasedAutoScalingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeTimeBasedAutoScalingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

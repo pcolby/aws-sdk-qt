@@ -65,7 +65,7 @@ const PurchaseReservedInstancesOfferingRequest * PurchaseReservedInstancesOfferi
  */
 void PurchaseReservedInstancesOfferingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PurchaseReservedInstancesOfferingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

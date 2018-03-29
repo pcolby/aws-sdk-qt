@@ -65,7 +65,7 @@ const GetTableVersionsRequest * GetTableVersionsResponse::request() const
  */
 void GetTableVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetTableVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

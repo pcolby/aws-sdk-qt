@@ -47,7 +47,7 @@ const {{OperationName}}Request * {{ClassName}}::request() const
  */
 void {{ClassName}}::parseSuccess(QIODevice &response)
 {
-    Q_D({{Operation}}Response);
+    Q_D({{ClassName}});
     QXmlStreamReader xml(&response);
     /// @todo
 }

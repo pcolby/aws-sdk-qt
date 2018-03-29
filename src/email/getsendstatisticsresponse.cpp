@@ -65,7 +65,7 @@ const GetSendStatisticsRequest * GetSendStatisticsResponse::request() const
  */
 void GetSendStatisticsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetSendStatisticsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

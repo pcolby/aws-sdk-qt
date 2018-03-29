@@ -65,7 +65,7 @@ const EstimateTemplateCostRequest * EstimateTemplateCostResponse::request() cons
  */
 void EstimateTemplateCostResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(EstimateTemplateCostResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

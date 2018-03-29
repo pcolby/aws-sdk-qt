@@ -65,7 +65,7 @@ const DeleteDirectConnectGatewayAssociationRequest * DeleteDirectConnectGatewayA
  */
 void DeleteDirectConnectGatewayAssociationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteDirectConnectGatewayAssociationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

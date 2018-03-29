@@ -65,7 +65,7 @@ const StopDataCollectionByAgentIdsRequest * StopDataCollectionByAgentIdsResponse
  */
 void StopDataCollectionByAgentIdsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopDataCollectionByAgentIdsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

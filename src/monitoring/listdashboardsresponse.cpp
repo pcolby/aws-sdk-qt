@@ -65,7 +65,7 @@ const ListDashboardsRequest * ListDashboardsResponse::request() const
  */
 void ListDashboardsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListDashboardsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

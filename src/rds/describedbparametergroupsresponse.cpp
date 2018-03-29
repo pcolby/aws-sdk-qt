@@ -65,7 +65,7 @@ const DescribeDBParameterGroupsRequest * DescribeDBParameterGroupsResponse::requ
  */
 void DescribeDBParameterGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeDBParameterGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const AdminListGroupsForUserRequest * AdminListGroupsForUserResponse::request() 
  */
 void AdminListGroupsForUserResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AdminListGroupsForUserResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

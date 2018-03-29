@@ -65,7 +65,7 @@ const CancelKeyDeletionRequest * CancelKeyDeletionResponse::request() const
  */
 void CancelKeyDeletionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CancelKeyDeletionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const RecordLifecycleActionHeartbeatRequest * RecordLifecycleActionHeartbeatResp
  */
 void RecordLifecycleActionHeartbeatResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RecordLifecycleActionHeartbeatResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

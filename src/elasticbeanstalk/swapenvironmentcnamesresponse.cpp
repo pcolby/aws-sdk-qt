@@ -65,7 +65,7 @@ const SwapEnvironmentCNAMEsRequest * SwapEnvironmentCNAMEsResponse::request() co
  */
 void SwapEnvironmentCNAMEsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SwapEnvironmentCNAMEsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

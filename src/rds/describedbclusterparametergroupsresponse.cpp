@@ -65,7 +65,7 @@ const DescribeDBClusterParameterGroupsRequest * DescribeDBClusterParameterGroups
  */
 void DescribeDBClusterParameterGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeDBClusterParameterGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

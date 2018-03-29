@@ -65,7 +65,7 @@ const DeleteImportedKeyMaterialRequest * DeleteImportedKeyMaterialResponse::requ
  */
 void DeleteImportedKeyMaterialResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteImportedKeyMaterialResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

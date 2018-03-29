@@ -65,7 +65,7 @@ const GetStageRequest * GetStageResponse::request() const
  */
 void GetStageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetStageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

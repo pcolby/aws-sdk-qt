@@ -52,7 +52,7 @@ CloudHSMV2Response::CloudHSMV2Response(QObject * const parent)
  */
 void CloudHSMV2Response::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CloudHSMV2Response);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CloudHSMV2Response::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudHSMV2Response instance.
  */
 CloudHSMV2ResponsePrivate::CloudHSMV2ResponsePrivate(
-    CloudHSMV2QueueResponse * const q) : CloudHSMV2Private(q)
+    CloudHSMV2Response * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

@@ -65,7 +65,7 @@ const AddApplicationReferenceDataSourceRequest * AddApplicationReferenceDataSour
  */
 void AddApplicationReferenceDataSourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AddApplicationReferenceDataSourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

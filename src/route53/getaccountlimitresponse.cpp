@@ -65,7 +65,7 @@ const GetAccountLimitRequest * GetAccountLimitResponse::request() const
  */
 void GetAccountLimitResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetAccountLimitResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

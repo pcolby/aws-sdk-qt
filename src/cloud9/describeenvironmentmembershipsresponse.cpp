@@ -65,7 +65,7 @@ const DescribeEnvironmentMembershipsRequest * DescribeEnvironmentMembershipsResp
  */
 void DescribeEnvironmentMembershipsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeEnvironmentMembershipsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

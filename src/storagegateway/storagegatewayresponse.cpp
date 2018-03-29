@@ -52,7 +52,7 @@ StorageGatewayResponse::StorageGatewayResponse(QObject * const parent)
  */
 void StorageGatewayResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(StorageGatewayResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void StorageGatewayResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public StorageGatewayResponse instance.
  */
 StorageGatewayResponsePrivate::StorageGatewayResponsePrivate(
-    StorageGatewayQueueResponse * const q) : StorageGatewayPrivate(q)
+    StorageGatewayResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

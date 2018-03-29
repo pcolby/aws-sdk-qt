@@ -65,7 +65,7 @@ const DeleteSnapshotScheduleRequest * DeleteSnapshotScheduleResponse::request() 
  */
 void DeleteSnapshotScheduleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteSnapshotScheduleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

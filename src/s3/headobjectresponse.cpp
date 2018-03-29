@@ -65,7 +65,7 @@ const HeadObjectRequest * HeadObjectResponse::request() const
  */
 void HeadObjectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(HeadObjectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

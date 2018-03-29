@@ -65,7 +65,7 @@ const GetDifferencesRequest * GetDifferencesResponse::request() const
  */
 void GetDifferencesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetDifferencesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

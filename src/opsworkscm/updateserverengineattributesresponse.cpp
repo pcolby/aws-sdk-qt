@@ -65,7 +65,7 @@ const UpdateServerEngineAttributesRequest * UpdateServerEngineAttributesResponse
  */
 void UpdateServerEngineAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateServerEngineAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

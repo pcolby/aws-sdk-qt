@@ -65,7 +65,7 @@ const DeleteIntentVersionRequest * DeleteIntentVersionResponse::request() const
  */
 void DeleteIntentVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteIntentVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

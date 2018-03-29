@@ -65,7 +65,7 @@ const ResetDeploymentsRequest * ResetDeploymentsResponse::request() const
  */
 void ResetDeploymentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ResetDeploymentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

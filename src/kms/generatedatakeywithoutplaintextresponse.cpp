@@ -65,7 +65,7 @@ const GenerateDataKeyWithoutPlaintextRequest * GenerateDataKeyWithoutPlaintextRe
  */
 void GenerateDataKeyWithoutPlaintextResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GenerateDataKeyWithoutPlaintextResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

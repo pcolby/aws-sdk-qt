@@ -65,7 +65,7 @@ const GetDeployablePatchSnapshotForInstanceRequest * GetDeployablePatchSnapshotF
  */
 void GetDeployablePatchSnapshotForInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetDeployablePatchSnapshotForInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

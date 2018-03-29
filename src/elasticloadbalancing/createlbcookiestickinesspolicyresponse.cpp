@@ -65,7 +65,7 @@ const CreateLBCookieStickinessPolicyRequest * CreateLBCookieStickinessPolicyResp
  */
 void CreateLBCookieStickinessPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateLBCookieStickinessPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

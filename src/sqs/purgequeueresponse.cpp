@@ -65,7 +65,7 @@ const PurgeQueueRequest * PurgeQueueResponse::request() const
  */
 void PurgeQueueResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PurgeQueueResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

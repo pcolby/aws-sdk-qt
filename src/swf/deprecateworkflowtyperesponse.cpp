@@ -65,7 +65,7 @@ const DeprecateWorkflowTypeRequest * DeprecateWorkflowTypeResponse::request() co
  */
 void DeprecateWorkflowTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeprecateWorkflowTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

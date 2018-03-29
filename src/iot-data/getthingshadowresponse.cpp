@@ -65,7 +65,7 @@ const GetThingShadowRequest * GetThingShadowResponse::request() const
  */
 void GetThingShadowResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetThingShadowResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

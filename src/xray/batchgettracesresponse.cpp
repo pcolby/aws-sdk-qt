@@ -65,7 +65,7 @@ const BatchGetTracesRequest * BatchGetTracesResponse::request() const
  */
 void BatchGetTracesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BatchGetTracesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const NotifyMigrationTaskStateRequest * NotifyMigrationTaskStateResponse::reques
  */
 void NotifyMigrationTaskStateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(NotifyMigrationTaskStateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

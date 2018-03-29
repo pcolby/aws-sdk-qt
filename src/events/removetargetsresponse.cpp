@@ -65,7 +65,7 @@ const RemoveTargetsRequest * RemoveTargetsResponse::request() const
  */
 void RemoveTargetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RemoveTargetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

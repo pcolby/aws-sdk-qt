@@ -65,7 +65,7 @@ const DescribeAutomationStepExecutionsRequest * DescribeAutomationStepExecutions
  */
 void DescribeAutomationStepExecutionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeAutomationStepExecutionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

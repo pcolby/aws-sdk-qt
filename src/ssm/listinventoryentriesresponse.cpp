@@ -65,7 +65,7 @@ const ListInventoryEntriesRequest * ListInventoryEntriesResponse::request() cons
  */
 void ListInventoryEntriesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListInventoryEntriesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

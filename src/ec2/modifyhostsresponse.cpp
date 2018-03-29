@@ -65,7 +65,7 @@ const ModifyHostsRequest * ModifyHostsResponse::request() const
  */
 void ModifyHostsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyHostsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

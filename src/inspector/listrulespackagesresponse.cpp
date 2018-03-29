@@ -65,7 +65,7 @@ const ListRulesPackagesRequest * ListRulesPackagesResponse::request() const
  */
 void ListRulesPackagesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListRulesPackagesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

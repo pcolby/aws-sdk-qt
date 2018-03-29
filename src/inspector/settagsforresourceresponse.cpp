@@ -65,7 +65,7 @@ const SetTagsForResourceRequest * SetTagsForResourceResponse::request() const
  */
 void SetTagsForResourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetTagsForResourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

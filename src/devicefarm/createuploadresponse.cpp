@@ -65,7 +65,7 @@ const CreateUploadRequest * CreateUploadResponse::request() const
  */
 void CreateUploadResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateUploadResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetPasswordDataRequest * GetPasswordDataResponse::request() const
  */
 void GetPasswordDataResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetPasswordDataResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

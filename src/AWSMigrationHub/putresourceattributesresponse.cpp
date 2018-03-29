@@ -65,7 +65,7 @@ const PutResourceAttributesRequest * PutResourceAttributesResponse::request() co
  */
 void PutResourceAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutResourceAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

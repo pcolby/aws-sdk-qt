@@ -52,7 +52,7 @@ CloudWatchEventsResponse::CloudWatchEventsResponse(QObject * const parent)
  */
 void CloudWatchEventsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CloudWatchEventsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CloudWatchEventsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudWatchEventsResponse instance.
  */
 CloudWatchEventsResponsePrivate::CloudWatchEventsResponsePrivate(
-    CloudWatchEventsQueueResponse * const q) : CloudWatchEventsPrivate(q)
+    CloudWatchEventsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

@@ -52,7 +52,7 @@ ComprehendResponse::ComprehendResponse(QObject * const parent)
  */
 void ComprehendResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ComprehendResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ComprehendResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ComprehendResponse instance.
  */
 ComprehendResponsePrivate::ComprehendResponsePrivate(
-    ComprehendQueueResponse * const q) : ComprehendPrivate(q)
+    ComprehendResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

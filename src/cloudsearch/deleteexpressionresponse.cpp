@@ -65,7 +65,7 @@ const DeleteExpressionRequest * DeleteExpressionResponse::request() const
  */
 void DeleteExpressionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteExpressionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

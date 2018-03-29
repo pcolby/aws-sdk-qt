@@ -65,7 +65,7 @@ const DeregisterPatchBaselineForPatchGroupRequest * DeregisterPatchBaselineForPa
  */
 void DeregisterPatchBaselineForPatchGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeregisterPatchBaselineForPatchGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

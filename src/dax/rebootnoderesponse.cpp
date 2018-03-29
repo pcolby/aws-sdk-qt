@@ -65,7 +65,7 @@ const RebootNodeRequest * RebootNodeResponse::request() const
  */
 void RebootNodeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RebootNodeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

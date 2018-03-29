@@ -65,7 +65,7 @@ const AddAttachmentsToSetRequest * AddAttachmentsToSetResponse::request() const
  */
 void AddAttachmentsToSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AddAttachmentsToSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

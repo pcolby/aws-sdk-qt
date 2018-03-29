@@ -65,7 +65,7 @@ const GetSampledRequestsRequest * GetSampledRequestsResponse::request() const
  */
 void GetSampledRequestsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetSampledRequestsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

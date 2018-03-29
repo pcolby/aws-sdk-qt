@@ -65,7 +65,7 @@ const PollForTaskRequest * PollForTaskResponse::request() const
  */
 void PollForTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PollForTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

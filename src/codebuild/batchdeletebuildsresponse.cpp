@@ -65,7 +65,7 @@ const BatchDeleteBuildsRequest * BatchDeleteBuildsResponse::request() const
  */
 void BatchDeleteBuildsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BatchDeleteBuildsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

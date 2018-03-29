@@ -65,7 +65,7 @@ const CreateDataSourceFromS3Request * CreateDataSourceFromS3Response::request() 
  */
 void CreateDataSourceFromS3Response::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateDataSourceFromS3Response);
     QXmlStreamReader xml(&response);
     /// @todo
 }

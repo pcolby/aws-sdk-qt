@@ -65,7 +65,7 @@ const UpdateEndpointWeightsAndCapacitiesRequest * UpdateEndpointWeightsAndCapaci
  */
 void UpdateEndpointWeightsAndCapacitiesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateEndpointWeightsAndCapacitiesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

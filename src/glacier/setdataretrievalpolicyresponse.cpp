@@ -65,7 +65,7 @@ const SetDataRetrievalPolicyRequest * SetDataRetrievalPolicyResponse::request() 
  */
 void SetDataRetrievalPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetDataRetrievalPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

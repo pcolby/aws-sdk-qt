@@ -52,7 +52,7 @@ DataPipelineResponse::DataPipelineResponse(QObject * const parent)
  */
 void DataPipelineResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(DataPipelineResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void DataPipelineResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public DataPipelineResponse instance.
  */
 DataPipelineResponsePrivate::DataPipelineResponsePrivate(
-    DataPipelineQueueResponse * const q) : DataPipelinePrivate(q)
+    DataPipelineResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

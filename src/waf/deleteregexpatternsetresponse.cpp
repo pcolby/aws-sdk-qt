@@ -65,7 +65,7 @@ const DeleteRegexPatternSetRequest * DeleteRegexPatternSetResponse::request() co
  */
 void DeleteRegexPatternSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteRegexPatternSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

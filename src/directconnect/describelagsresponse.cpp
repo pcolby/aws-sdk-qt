@@ -65,7 +65,7 @@ const DescribeLagsRequest * DescribeLagsResponse::request() const
  */
 void DescribeLagsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeLagsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

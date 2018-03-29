@@ -65,7 +65,7 @@ const GetXssMatchSetRequest * GetXssMatchSetResponse::request() const
  */
 void GetXssMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetXssMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

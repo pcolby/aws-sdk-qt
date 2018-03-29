@@ -65,7 +65,7 @@ const UpdateRepositoryDescriptionRequest * UpdateRepositoryDescriptionResponse::
  */
 void UpdateRepositoryDescriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateRepositoryDescriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

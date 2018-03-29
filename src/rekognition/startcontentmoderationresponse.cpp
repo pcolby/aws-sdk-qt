@@ -65,7 +65,7 @@ const StartContentModerationRequest * StartContentModerationResponse::request() 
  */
 void StartContentModerationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartContentModerationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeregisterImageRequest * DeregisterImageResponse::request() const
  */
 void DeregisterImageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeregisterImageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetShippingLabelRequest * GetShippingLabelResponse::request() const
  */
 void GetShippingLabelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetShippingLabelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

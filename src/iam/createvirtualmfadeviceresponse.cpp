@@ -65,7 +65,7 @@ const CreateVirtualMFADeviceRequest * CreateVirtualMFADeviceResponse::request() 
  */
 void CreateVirtualMFADeviceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateVirtualMFADeviceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

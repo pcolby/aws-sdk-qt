@@ -65,7 +65,7 @@ const PutInstancePublicPortsRequest * PutInstancePublicPortsResponse::request() 
  */
 void PutInstancePublicPortsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutInstancePublicPortsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetKeyPairRequest * GetKeyPairResponse::request() const
  */
 void GetKeyPairResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetKeyPairResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

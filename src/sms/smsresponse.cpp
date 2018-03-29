@@ -52,7 +52,7 @@ SMSResponse::SMSResponse(QObject * const parent)
  */
 void SMSResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(SMSResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void SMSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SMSResponse instance.
  */
 SMSResponsePrivate::SMSResponsePrivate(
-    SMSQueueResponse * const q) : SMSPrivate(q)
+    SMSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

@@ -65,7 +65,7 @@ const UpdateObjectAttributesRequest * UpdateObjectAttributesResponse::request() 
  */
 void UpdateObjectAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateObjectAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

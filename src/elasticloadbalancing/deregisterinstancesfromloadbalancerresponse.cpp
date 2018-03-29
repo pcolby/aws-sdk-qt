@@ -65,7 +65,7 @@ const DeregisterInstancesFromLoadBalancerRequest * DeregisterInstancesFromLoadBa
  */
 void DeregisterInstancesFromLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeregisterInstancesFromLoadBalancerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

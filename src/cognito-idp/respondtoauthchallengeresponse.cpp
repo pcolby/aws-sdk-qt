@@ -65,7 +65,7 @@ const RespondToAuthChallengeRequest * RespondToAuthChallengeResponse::request() 
  */
 void RespondToAuthChallengeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RespondToAuthChallengeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

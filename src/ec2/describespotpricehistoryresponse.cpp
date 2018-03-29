@@ -65,7 +65,7 @@ const DescribeSpotPriceHistoryRequest * DescribeSpotPriceHistoryResponse::reques
  */
 void DescribeSpotPriceHistoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeSpotPriceHistoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

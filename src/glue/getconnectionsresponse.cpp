@@ -65,7 +65,7 @@ const GetConnectionsRequest * GetConnectionsResponse::request() const
  */
 void GetConnectionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetConnectionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

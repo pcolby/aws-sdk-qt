@@ -65,7 +65,7 @@ const ListOfferingPromotionsRequest * ListOfferingPromotionsResponse::request() 
  */
 void ListOfferingPromotionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListOfferingPromotionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

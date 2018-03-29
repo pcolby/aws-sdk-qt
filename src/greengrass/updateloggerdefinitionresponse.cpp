@@ -65,7 +65,7 @@ const UpdateLoggerDefinitionRequest * UpdateLoggerDefinitionResponse::request() 
  */
 void UpdateLoggerDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateLoggerDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

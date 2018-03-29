@@ -65,7 +65,7 @@ const CreateClusterSubnetGroupRequest * CreateClusterSubnetGroupResponse::reques
  */
 void CreateClusterSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateClusterSubnetGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

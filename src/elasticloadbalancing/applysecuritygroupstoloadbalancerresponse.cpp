@@ -65,7 +65,7 @@ const ApplySecurityGroupsToLoadBalancerRequest * ApplySecurityGroupsToLoadBalanc
  */
 void ApplySecurityGroupsToLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ApplySecurityGroupsToLoadBalancerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

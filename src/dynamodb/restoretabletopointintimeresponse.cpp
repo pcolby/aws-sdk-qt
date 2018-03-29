@@ -65,7 +65,7 @@ const RestoreTableToPointInTimeRequest * RestoreTableToPointInTimeResponse::requ
  */
 void RestoreTableToPointInTimeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RestoreTableToPointInTimeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

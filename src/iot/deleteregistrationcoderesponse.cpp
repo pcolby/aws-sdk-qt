@@ -65,7 +65,7 @@ const DeleteRegistrationCodeRequest * DeleteRegistrationCodeResponse::request() 
  */
 void DeleteRegistrationCodeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteRegistrationCodeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

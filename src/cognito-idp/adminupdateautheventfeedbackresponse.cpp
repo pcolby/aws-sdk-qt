@@ -65,7 +65,7 @@ const AdminUpdateAuthEventFeedbackRequest * AdminUpdateAuthEventFeedbackResponse
  */
 void AdminUpdateAuthEventFeedbackResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AdminUpdateAuthEventFeedbackResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

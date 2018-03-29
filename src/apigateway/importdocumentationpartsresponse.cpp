@@ -65,7 +65,7 @@ const ImportDocumentationPartsRequest * ImportDocumentationPartsResponse::reques
  */
 void ImportDocumentationPartsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ImportDocumentationPartsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

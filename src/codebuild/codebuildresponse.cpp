@@ -52,7 +52,7 @@ CodeBuildResponse::CodeBuildResponse(QObject * const parent)
  */
 void CodeBuildResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CodeBuildResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CodeBuildResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CodeBuildResponse instance.
  */
 CodeBuildResponsePrivate::CodeBuildResponsePrivate(
-    CodeBuildQueueResponse * const q) : CodeBuildPrivate(q)
+    CodeBuildResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

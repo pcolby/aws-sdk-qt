@@ -65,7 +65,7 @@ const SetIpAddressTypeRequest * SetIpAddressTypeResponse::request() const
  */
 void SetIpAddressTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetIpAddressTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

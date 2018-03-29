@@ -65,7 +65,7 @@ const DescribeClassicLinkInstancesRequest * DescribeClassicLinkInstancesResponse
  */
 void DescribeClassicLinkInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeClassicLinkInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

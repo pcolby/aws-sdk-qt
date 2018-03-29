@@ -65,7 +65,7 @@ const UpdateCustomVerificationEmailTemplateRequest * UpdateCustomVerificationEma
  */
 void UpdateCustomVerificationEmailTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateCustomVerificationEmailTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

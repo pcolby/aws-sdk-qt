@@ -65,7 +65,7 @@ const ShutdownGatewayRequest * ShutdownGatewayResponse::request() const
  */
 void ShutdownGatewayResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ShutdownGatewayResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetAccountAuthorizationDetailsRequest * GetAccountAuthorizationDetailsResp
  */
 void GetAccountAuthorizationDetailsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetAccountAuthorizationDetailsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

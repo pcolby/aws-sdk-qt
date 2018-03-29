@@ -65,7 +65,7 @@ const ListVolumeRecoveryPointsRequest * ListVolumeRecoveryPointsResponse::reques
  */
 void ListVolumeRecoveryPointsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListVolumeRecoveryPointsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

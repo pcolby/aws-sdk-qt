@@ -52,7 +52,7 @@ CodeCommitResponse::CodeCommitResponse(QObject * const parent)
  */
 void CodeCommitResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CodeCommitResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CodeCommitResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CodeCommitResponse instance.
  */
 CodeCommitResponsePrivate::CodeCommitResponsePrivate(
-    CodeCommitQueueResponse * const q) : CodeCommitPrivate(q)
+    CodeCommitResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

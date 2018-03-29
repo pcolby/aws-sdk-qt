@@ -65,7 +65,7 @@ const ListFileSharesRequest * ListFileSharesResponse::request() const
  */
 void ListFileSharesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListFileSharesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

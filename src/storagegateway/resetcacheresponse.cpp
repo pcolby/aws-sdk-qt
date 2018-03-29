@@ -65,7 +65,7 @@ const ResetCacheRequest * ResetCacheResponse::request() const
  */
 void ResetCacheResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ResetCacheResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

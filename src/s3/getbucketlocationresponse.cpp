@@ -65,7 +65,7 @@ const GetBucketLocationRequest * GetBucketLocationResponse::request() const
  */
 void GetBucketLocationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetBucketLocationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

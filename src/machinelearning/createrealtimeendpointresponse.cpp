@@ -65,7 +65,7 @@ const CreateRealtimeEndpointRequest * CreateRealtimeEndpointResponse::request() 
  */
 void CreateRealtimeEndpointResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateRealtimeEndpointResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

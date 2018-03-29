@@ -65,7 +65,7 @@ const VerifyDomainDkimRequest * VerifyDomainDkimResponse::request() const
  */
 void VerifyDomainDkimResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(VerifyDomainDkimResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

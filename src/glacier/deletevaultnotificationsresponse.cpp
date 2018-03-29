@@ -65,7 +65,7 @@ const DeleteVaultNotificationsRequest * DeleteVaultNotificationsResponse::reques
  */
 void DeleteVaultNotificationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteVaultNotificationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

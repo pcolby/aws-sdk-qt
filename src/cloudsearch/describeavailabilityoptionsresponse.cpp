@@ -65,7 +65,7 @@ const DescribeAvailabilityOptionsRequest * DescribeAvailabilityOptionsResponse::
  */
 void DescribeAvailabilityOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeAvailabilityOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

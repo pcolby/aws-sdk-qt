@@ -65,7 +65,7 @@ const CreateReplicationInstanceRequest * CreateReplicationInstanceResponse::requ
  */
 void CreateReplicationInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateReplicationInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

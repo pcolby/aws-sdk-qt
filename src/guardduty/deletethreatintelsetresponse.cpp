@@ -65,7 +65,7 @@ const DeleteThreatIntelSetRequest * DeleteThreatIntelSetResponse::request() cons
  */
 void DeleteThreatIntelSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteThreatIntelSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const SetTopicAttributesRequest * SetTopicAttributesResponse::request() const
  */
 void SetTopicAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetTopicAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeRefreshSchemasStatusRequest * DescribeRefreshSchemasStatusResponse
  */
 void DescribeRefreshSchemasStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeRefreshSchemasStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

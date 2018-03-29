@@ -65,7 +65,7 @@ const ActivateUserRequest * ActivateUserResponse::request() const
  */
 void ActivateUserResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ActivateUserResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

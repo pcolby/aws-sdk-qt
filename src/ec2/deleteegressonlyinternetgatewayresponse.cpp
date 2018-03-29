@@ -65,7 +65,7 @@ const DeleteEgressOnlyInternetGatewayRequest * DeleteEgressOnlyInternetGatewayRe
  */
 void DeleteEgressOnlyInternetGatewayResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteEgressOnlyInternetGatewayResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

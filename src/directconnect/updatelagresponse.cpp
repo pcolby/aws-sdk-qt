@@ -65,7 +65,7 @@ const UpdateLagRequest * UpdateLagResponse::request() const
  */
 void UpdateLagResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateLagResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetEntitlementsRequest * GetEntitlementsResponse::request() const
  */
 void GetEntitlementsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetEntitlementsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

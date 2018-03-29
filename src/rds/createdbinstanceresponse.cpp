@@ -65,7 +65,7 @@ const CreateDBInstanceRequest * CreateDBInstanceResponse::request() const
  */
 void CreateDBInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateDBInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

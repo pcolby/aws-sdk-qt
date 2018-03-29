@@ -65,7 +65,7 @@ const UpdateSnapshotScheduleRequest * UpdateSnapshotScheduleResponse::request() 
  */
 void UpdateSnapshotScheduleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateSnapshotScheduleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

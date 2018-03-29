@@ -65,7 +65,7 @@ const CreatePlayerSessionRequest * CreatePlayerSessionResponse::request() const
  */
 void CreatePlayerSessionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreatePlayerSessionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -52,7 +52,7 @@ RedshiftResponse::RedshiftResponse(QObject * const parent)
  */
 void RedshiftResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(RedshiftResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void RedshiftResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public RedshiftResponse instance.
  */
 RedshiftResponsePrivate::RedshiftResponsePrivate(
-    RedshiftQueueResponse * const q) : RedshiftPrivate(q)
+    RedshiftResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

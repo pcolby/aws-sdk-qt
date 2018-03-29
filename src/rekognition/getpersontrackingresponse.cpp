@@ -65,7 +65,7 @@ const GetPersonTrackingRequest * GetPersonTrackingResponse::request() const
  */
 void GetPersonTrackingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetPersonTrackingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

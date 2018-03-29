@@ -65,7 +65,7 @@ const DeleteLayerRequest * DeleteLayerResponse::request() const
  */
 void DeleteLayerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteLayerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

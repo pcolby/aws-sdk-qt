@@ -65,7 +65,7 @@ const ListSecurityConfigurationsRequest * ListSecurityConfigurationsResponse::re
  */
 void ListSecurityConfigurationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListSecurityConfigurationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

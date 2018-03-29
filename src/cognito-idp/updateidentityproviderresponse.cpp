@@ -65,7 +65,7 @@ const UpdateIdentityProviderRequest * UpdateIdentityProviderResponse::request() 
  */
 void UpdateIdentityProviderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateIdentityProviderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

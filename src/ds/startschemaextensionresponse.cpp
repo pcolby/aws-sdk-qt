@@ -65,7 +65,7 @@ const StartSchemaExtensionRequest * StartSchemaExtensionResponse::request() cons
  */
 void StartSchemaExtensionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartSchemaExtensionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetPipelineStateRequest * GetPipelineStateResponse::request() const
  */
 void GetPipelineStateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetPipelineStateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const AttachInternetGatewayRequest * AttachInternetGatewayResponse::request() co
  */
 void AttachInternetGatewayResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AttachInternetGatewayResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ModifySnapshotAttributeRequest * ModifySnapshotAttributeResponse::request(
  */
 void ModifySnapshotAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifySnapshotAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

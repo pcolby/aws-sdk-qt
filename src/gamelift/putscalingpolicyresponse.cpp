@@ -65,7 +65,7 @@ const PutScalingPolicyRequest * PutScalingPolicyResponse::request() const
  */
 void PutScalingPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutScalingPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

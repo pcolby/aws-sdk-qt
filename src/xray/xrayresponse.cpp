@@ -52,7 +52,7 @@ XRayResponse::XRayResponse(QObject * const parent)
  */
 void XRayResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(XRayResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void XRayResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public XRayResponse instance.
  */
 XRayResponsePrivate::XRayResponsePrivate(
-    XRayQueueResponse * const q) : XRayPrivate(q)
+    XRayResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

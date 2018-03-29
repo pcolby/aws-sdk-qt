@@ -65,7 +65,7 @@ const TestFailoverRequest * TestFailoverResponse::request() const
  */
 void TestFailoverResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(TestFailoverResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetTypeRequest * GetTypeResponse::request() const
  */
 void GetTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

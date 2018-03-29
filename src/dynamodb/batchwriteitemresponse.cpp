@@ -65,7 +65,7 @@ const BatchWriteItemRequest * BatchWriteItemResponse::request() const
  */
 void BatchWriteItemResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BatchWriteItemResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

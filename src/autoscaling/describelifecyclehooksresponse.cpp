@@ -65,7 +65,7 @@ const DescribeLifecycleHooksRequest * DescribeLifecycleHooksResponse::request() 
  */
 void DescribeLifecycleHooksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeLifecycleHooksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

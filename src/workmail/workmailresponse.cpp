@@ -52,7 +52,7 @@ WorkMailResponse::WorkMailResponse(QObject * const parent)
  */
 void WorkMailResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(WorkMailResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void WorkMailResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public WorkMailResponse instance.
  */
 WorkMailResponsePrivate::WorkMailResponsePrivate(
-    WorkMailQueueResponse * const q) : WorkMailPrivate(q)
+    WorkMailResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

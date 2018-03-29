@@ -65,7 +65,7 @@ const RestoreServerRequest * RestoreServerResponse::request() const
  */
 void RestoreServerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RestoreServerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

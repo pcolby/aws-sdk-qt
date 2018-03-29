@@ -65,7 +65,7 @@ const PutRestApiRequest * PutRestApiResponse::request() const
  */
 void PutRestApiResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutRestApiResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

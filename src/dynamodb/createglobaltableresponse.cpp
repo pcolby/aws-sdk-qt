@@ -65,7 +65,7 @@ const CreateGlobalTableRequest * CreateGlobalTableResponse::request() const
  */
 void CreateGlobalTableResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateGlobalTableResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeHandshakeRequest * DescribeHandshakeResponse::request() const
  */
 void DescribeHandshakeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeHandshakeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

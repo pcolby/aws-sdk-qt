@@ -65,7 +65,7 @@ const DescribeSubnetGroupsRequest * DescribeSubnetGroupsResponse::request() cons
  */
 void DescribeSubnetGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeSubnetGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

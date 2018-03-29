@@ -52,7 +52,7 @@ DeviceFarmResponse::DeviceFarmResponse(QObject * const parent)
  */
 void DeviceFarmResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(DeviceFarmResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void DeviceFarmResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public DeviceFarmResponse instance.
  */
 DeviceFarmResponsePrivate::DeviceFarmResponsePrivate(
-    DeviceFarmQueueResponse * const q) : DeviceFarmPrivate(q)
+    DeviceFarmResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

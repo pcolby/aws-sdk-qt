@@ -65,7 +65,7 @@ const CheckDNSAvailabilityRequest * CheckDNSAvailabilityResponse::request() cons
  */
 void CheckDNSAvailabilityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CheckDNSAvailabilityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

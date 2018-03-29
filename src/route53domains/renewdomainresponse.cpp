@@ -65,7 +65,7 @@ const RenewDomainRequest * RenewDomainResponse::request() const
  */
 void RenewDomainResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RenewDomainResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

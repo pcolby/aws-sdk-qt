@@ -65,7 +65,7 @@ const DescribeSnapshotCopyGrantsRequest * DescribeSnapshotCopyGrantsResponse::re
  */
 void DescribeSnapshotCopyGrantsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeSnapshotCopyGrantsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

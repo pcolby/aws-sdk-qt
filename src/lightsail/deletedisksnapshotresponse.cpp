@@ -65,7 +65,7 @@ const DeleteDiskSnapshotRequest * DeleteDiskSnapshotResponse::request() const
  */
 void DeleteDiskSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteDiskSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

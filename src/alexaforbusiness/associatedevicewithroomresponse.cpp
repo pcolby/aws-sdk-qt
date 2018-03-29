@@ -65,7 +65,7 @@ const AssociateDeviceWithRoomRequest * AssociateDeviceWithRoomResponse::request(
  */
 void AssociateDeviceWithRoomResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateDeviceWithRoomResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

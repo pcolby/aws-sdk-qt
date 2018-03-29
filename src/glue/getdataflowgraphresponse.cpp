@@ -65,7 +65,7 @@ const GetDataflowGraphRequest * GetDataflowGraphResponse::request() const
  */
 void GetDataflowGraphResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetDataflowGraphResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

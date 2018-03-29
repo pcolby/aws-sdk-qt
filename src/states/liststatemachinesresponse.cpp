@@ -65,7 +65,7 @@ const ListStateMachinesRequest * ListStateMachinesResponse::request() const
  */
 void ListStateMachinesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListStateMachinesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

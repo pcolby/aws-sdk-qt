@@ -65,7 +65,7 @@ const SendBonusRequest * SendBonusResponse::request() const
  */
 void SendBonusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SendBonusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

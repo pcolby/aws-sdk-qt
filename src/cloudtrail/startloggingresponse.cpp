@@ -65,7 +65,7 @@ const StartLoggingRequest * StartLoggingResponse::request() const
  */
 void StartLoggingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartLoggingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

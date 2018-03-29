@@ -65,7 +65,7 @@ const RequestCancelWorkflowExecutionRequest * RequestCancelWorkflowExecutionResp
  */
 void RequestCancelWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RequestCancelWorkflowExecutionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

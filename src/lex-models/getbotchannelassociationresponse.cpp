@@ -65,7 +65,7 @@ const GetBotChannelAssociationRequest * GetBotChannelAssociationResponse::reques
  */
 void GetBotChannelAssociationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetBotChannelAssociationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

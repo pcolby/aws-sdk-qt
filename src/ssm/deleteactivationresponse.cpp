@@ -65,7 +65,7 @@ const DeleteActivationRequest * DeleteActivationResponse::request() const
  */
 void DeleteActivationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteActivationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

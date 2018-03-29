@@ -65,7 +65,7 @@ const DeleteVPCAssociationAuthorizationRequest * DeleteVPCAssociationAuthorizati
  */
 void DeleteVPCAssociationAuthorizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteVPCAssociationAuthorizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

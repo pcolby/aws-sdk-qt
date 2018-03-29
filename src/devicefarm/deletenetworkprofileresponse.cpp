@@ -65,7 +65,7 @@ const DeleteNetworkProfileRequest * DeleteNetworkProfileResponse::request() cons
  */
 void DeleteNetworkProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteNetworkProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

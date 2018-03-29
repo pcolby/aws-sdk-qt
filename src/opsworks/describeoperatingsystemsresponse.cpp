@@ -65,7 +65,7 @@ const DescribeOperatingSystemsRequest * DescribeOperatingSystemsResponse::reques
  */
 void DescribeOperatingSystemsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeOperatingSystemsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const AdminConfirmSignUpRequest * AdminConfirmSignUpResponse::request() const
  */
 void AdminConfirmSignUpResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AdminConfirmSignUpResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

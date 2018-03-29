@@ -65,7 +65,7 @@ const ListUserPoliciesRequest * ListUserPoliciesResponse::request() const
  */
 void ListUserPoliciesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListUserPoliciesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

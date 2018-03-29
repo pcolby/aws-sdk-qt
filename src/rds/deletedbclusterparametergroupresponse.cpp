@@ -65,7 +65,7 @@ const DeleteDBClusterParameterGroupRequest * DeleteDBClusterParameterGroupRespon
  */
 void DeleteDBClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteDBClusterParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

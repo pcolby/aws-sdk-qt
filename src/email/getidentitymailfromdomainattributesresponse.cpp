@@ -65,7 +65,7 @@ const GetIdentityMailFromDomainAttributesRequest * GetIdentityMailFromDomainAttr
  */
 void GetIdentityMailFromDomainAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetIdentityMailFromDomainAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

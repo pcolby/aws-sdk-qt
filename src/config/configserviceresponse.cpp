@@ -52,7 +52,7 @@ ConfigServiceResponse::ConfigServiceResponse(QObject * const parent)
  */
 void ConfigServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ConfigServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ConfigServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ConfigServiceResponse instance.
  */
 ConfigServiceResponsePrivate::ConfigServiceResponsePrivate(
-    ConfigServiceQueueResponse * const q) : ConfigServicePrivate(q)
+    ConfigServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

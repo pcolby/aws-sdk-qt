@@ -65,7 +65,7 @@ const DeleteRoomSkillParameterRequest * DeleteRoomSkillParameterResponse::reques
  */
 void DeleteRoomSkillParameterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteRoomSkillParameterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

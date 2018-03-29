@@ -65,7 +65,7 @@ const SendUsersMessagesRequest * SendUsersMessagesResponse::request() const
  */
 void SendUsersMessagesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SendUsersMessagesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

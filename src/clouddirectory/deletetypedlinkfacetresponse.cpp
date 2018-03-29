@@ -65,7 +65,7 @@ const DeleteTypedLinkFacetRequest * DeleteTypedLinkFacetResponse::request() cons
  */
 void DeleteTypedLinkFacetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteTypedLinkFacetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

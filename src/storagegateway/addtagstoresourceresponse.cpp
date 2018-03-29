@@ -65,7 +65,7 @@ const AddTagsToResourceRequest * AddTagsToResourceResponse::request() const
  */
 void AddTagsToResourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AddTagsToResourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

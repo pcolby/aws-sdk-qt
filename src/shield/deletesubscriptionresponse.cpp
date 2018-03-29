@@ -65,7 +65,7 @@ const DeleteSubscriptionRequest * DeleteSubscriptionResponse::request() const
  */
 void DeleteSubscriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteSubscriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

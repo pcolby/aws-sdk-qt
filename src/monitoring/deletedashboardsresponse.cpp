@@ -65,7 +65,7 @@ const DeleteDashboardsRequest * DeleteDashboardsResponse::request() const
  */
 void DeleteDashboardsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteDashboardsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

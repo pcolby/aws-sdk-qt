@@ -65,7 +65,7 @@ const ListObjectParentPathsRequest * ListObjectParentPathsResponse::request() co
  */
 void ListObjectParentPathsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListObjectParentPathsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

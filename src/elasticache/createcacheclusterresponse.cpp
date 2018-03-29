@@ -65,7 +65,7 @@ const CreateCacheClusterRequest * CreateCacheClusterResponse::request() const
  */
 void CreateCacheClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateCacheClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

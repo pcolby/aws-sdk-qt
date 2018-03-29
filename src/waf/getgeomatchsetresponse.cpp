@@ -65,7 +65,7 @@ const GetGeoMatchSetRequest * GetGeoMatchSetResponse::request() const
  */
 void GetGeoMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetGeoMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

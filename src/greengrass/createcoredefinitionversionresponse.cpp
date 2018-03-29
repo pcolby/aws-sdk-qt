@@ -65,7 +65,7 @@ const CreateCoreDefinitionVersionRequest * CreateCoreDefinitionVersionResponse::
  */
 void CreateCoreDefinitionVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateCoreDefinitionVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

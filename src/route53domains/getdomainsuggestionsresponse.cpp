@@ -65,7 +65,7 @@ const GetDomainSuggestionsRequest * GetDomainSuggestionsResponse::request() cons
  */
 void GetDomainSuggestionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetDomainSuggestionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

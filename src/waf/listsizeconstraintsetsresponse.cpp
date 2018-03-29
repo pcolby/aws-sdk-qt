@@ -65,7 +65,7 @@ const ListSizeConstraintSetsRequest * ListSizeConstraintSetsResponse::request() 
  */
 void ListSizeConstraintSetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListSizeConstraintSetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

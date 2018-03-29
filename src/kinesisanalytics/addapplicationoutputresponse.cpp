@@ -65,7 +65,7 @@ const AddApplicationOutputRequest * AddApplicationOutputResponse::request() cons
  */
 void AddApplicationOutputResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AddApplicationOutputResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

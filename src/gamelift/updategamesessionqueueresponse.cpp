@@ -65,7 +65,7 @@ const UpdateGameSessionQueueRequest * UpdateGameSessionQueueResponse::request() 
  */
 void UpdateGameSessionQueueResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateGameSessionQueueResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -52,7 +52,7 @@ ServiceCatalogResponse::ServiceCatalogResponse(QObject * const parent)
  */
 void ServiceCatalogResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ServiceCatalogResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ServiceCatalogResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ServiceCatalogResponse instance.
  */
 ServiceCatalogResponsePrivate::ServiceCatalogResponsePrivate(
-    ServiceCatalogQueueResponse * const q) : ServiceCatalogPrivate(q)
+    ServiceCatalogResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

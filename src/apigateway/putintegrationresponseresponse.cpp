@@ -65,7 +65,7 @@ const PutIntegrationResponseRequest * PutIntegrationResponseResponse::request() 
  */
 void PutIntegrationResponseResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutIntegrationResponseResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

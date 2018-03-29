@@ -65,7 +65,7 @@ const ModifyClusterIamRolesRequest * ModifyClusterIamRolesResponse::request() co
  */
 void ModifyClusterIamRolesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyClusterIamRolesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

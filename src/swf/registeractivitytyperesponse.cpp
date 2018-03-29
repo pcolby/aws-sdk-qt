@@ -65,7 +65,7 @@ const RegisterActivityTypeRequest * RegisterActivityTypeResponse::request() cons
  */
 void RegisterActivityTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RegisterActivityTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

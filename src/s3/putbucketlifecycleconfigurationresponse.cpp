@@ -65,7 +65,7 @@ const PutBucketLifecycleConfigurationRequest * PutBucketLifecycleConfigurationRe
  */
 void PutBucketLifecycleConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutBucketLifecycleConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

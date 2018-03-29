@@ -65,7 +65,7 @@ const ListElasticsearchVersionsRequest * ListElasticsearchVersionsResponse::requ
  */
 void ListElasticsearchVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListElasticsearchVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

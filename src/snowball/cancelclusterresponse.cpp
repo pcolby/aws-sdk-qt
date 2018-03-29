@@ -65,7 +65,7 @@ const CancelClusterRequest * CancelClusterResponse::request() const
  */
 void CancelClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CancelClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

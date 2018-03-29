@@ -52,7 +52,7 @@ SageMakerResponse::SageMakerResponse(QObject * const parent)
  */
 void SageMakerResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(SageMakerResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void SageMakerResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SageMakerResponse instance.
  */
 SageMakerResponsePrivate::SageMakerResponsePrivate(
-    SageMakerQueueResponse * const q) : SageMakerPrivate(q)
+    SageMakerResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

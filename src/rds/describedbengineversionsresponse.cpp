@@ -65,7 +65,7 @@ const DescribeDBEngineVersionsRequest * DescribeDBEngineVersionsResponse::reques
  */
 void DescribeDBEngineVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeDBEngineVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

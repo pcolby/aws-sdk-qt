@@ -65,7 +65,7 @@ const VerifyDomainIdentityRequest * VerifyDomainIdentityResponse::request() cons
  */
 void VerifyDomainIdentityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(VerifyDomainIdentityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

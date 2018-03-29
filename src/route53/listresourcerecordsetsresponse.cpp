@@ -65,7 +65,7 @@ const ListResourceRecordSetsRequest * ListResourceRecordSetsResponse::request() 
  */
 void ListResourceRecordSetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListResourceRecordSetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

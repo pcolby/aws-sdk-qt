@@ -52,7 +52,7 @@ AthenaResponse::AthenaResponse(QObject * const parent)
  */
 void AthenaResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(AthenaResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void AthenaResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public AthenaResponse instance.
  */
 AthenaResponsePrivate::AthenaResponsePrivate(
-    AthenaQueueResponse * const q) : AthenaPrivate(q)
+    AthenaResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

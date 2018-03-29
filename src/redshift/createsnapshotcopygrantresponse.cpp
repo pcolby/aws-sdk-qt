@@ -65,7 +65,7 @@ const CreateSnapshotCopyGrantRequest * CreateSnapshotCopyGrantResponse::request(
  */
 void CreateSnapshotCopyGrantResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateSnapshotCopyGrantResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

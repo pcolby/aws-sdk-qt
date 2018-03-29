@@ -65,7 +65,7 @@ const ModifyTargetGroupAttributesRequest * ModifyTargetGroupAttributesResponse::
  */
 void ModifyTargetGroupAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyTargetGroupAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

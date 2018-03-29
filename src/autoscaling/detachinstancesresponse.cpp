@@ -65,7 +65,7 @@ const DetachInstancesRequest * DetachInstancesResponse::request() const
  */
 void DetachInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DetachInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

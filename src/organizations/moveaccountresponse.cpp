@@ -65,7 +65,7 @@ const MoveAccountRequest * MoveAccountResponse::request() const
  */
 void MoveAccountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(MoveAccountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

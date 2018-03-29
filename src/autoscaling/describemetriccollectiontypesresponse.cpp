@@ -65,7 +65,7 @@ const DescribeMetricCollectionTypesRequest * DescribeMetricCollectionTypesRespon
  */
 void DescribeMetricCollectionTypesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeMetricCollectionTypesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

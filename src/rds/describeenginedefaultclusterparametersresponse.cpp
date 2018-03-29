@@ -65,7 +65,7 @@ const DescribeEngineDefaultClusterParametersRequest * DescribeEngineDefaultClust
  */
 void DescribeEngineDefaultClusterParametersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeEngineDefaultClusterParametersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

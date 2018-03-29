@@ -65,7 +65,7 @@ const ValidatePipelineDefinitionRequest * ValidatePipelineDefinitionResponse::re
  */
 void ValidatePipelineDefinitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ValidatePipelineDefinitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreateConstraintRequest * CreateConstraintResponse::request() const
  */
 void CreateConstraintResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateConstraintResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

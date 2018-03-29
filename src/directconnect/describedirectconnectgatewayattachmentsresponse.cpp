@@ -65,7 +65,7 @@ const DescribeDirectConnectGatewayAttachmentsRequest * DescribeDirectConnectGate
  */
 void DescribeDirectConnectGatewayAttachmentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeDirectConnectGatewayAttachmentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

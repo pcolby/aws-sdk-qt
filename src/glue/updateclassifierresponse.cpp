@@ -65,7 +65,7 @@ const UpdateClassifierRequest * UpdateClassifierResponse::request() const
  */
 void UpdateClassifierResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateClassifierResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

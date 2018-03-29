@@ -65,7 +65,7 @@ const DeleteIndexFieldRequest * DeleteIndexFieldResponse::request() const
  */
 void DeleteIndexFieldResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteIndexFieldResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

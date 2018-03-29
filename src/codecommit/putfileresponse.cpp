@@ -65,7 +65,7 @@ const PutFileRequest * PutFileResponse::request() const
  */
 void PutFileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutFileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

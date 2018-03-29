@@ -65,7 +65,7 @@ const UpdateTableRequest * UpdateTableResponse::request() const
  */
 void UpdateTableResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateTableResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

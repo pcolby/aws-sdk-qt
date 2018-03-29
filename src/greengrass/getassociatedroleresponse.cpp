@@ -65,7 +65,7 @@ const GetAssociatedRoleRequest * GetAssociatedRoleResponse::request() const
  */
 void GetAssociatedRoleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetAssociatedRoleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DisassociateAddressRequest * DisassociateAddressResponse::request() const
  */
 void DisassociateAddressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisassociateAddressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteClusterParameterGroupRequest * DeleteClusterParameterGroupResponse::
  */
 void DeleteClusterParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteClusterParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ExitStandbyRequest * ExitStandbyResponse::request() const
  */
 void ExitStandbyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ExitStandbyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GenerateRandomRequest * GenerateRandomResponse::request() const
  */
 void GenerateRandomResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GenerateRandomResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetAccountPasswordPolicyRequest * GetAccountPasswordPolicyResponse::reques
  */
 void GetAccountPasswordPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetAccountPasswordPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

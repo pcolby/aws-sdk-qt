@@ -65,7 +65,7 @@ const UpdateVTLDeviceTypeRequest * UpdateVTLDeviceTypeResponse::request() const
  */
 void UpdateVTLDeviceTypeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateVTLDeviceTypeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

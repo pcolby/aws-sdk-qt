@@ -65,7 +65,7 @@ const ListEndpointsByPlatformApplicationRequest * ListEndpointsByPlatformApplica
  */
 void ListEndpointsByPlatformApplicationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListEndpointsByPlatformApplicationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

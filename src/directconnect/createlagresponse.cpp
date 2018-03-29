@@ -65,7 +65,7 @@ const CreateLagRequest * CreateLagResponse::request() const
  */
 void CreateLagResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateLagResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

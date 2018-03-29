@@ -65,7 +65,7 @@ const SetEndpointAttributesRequest * SetEndpointAttributesResponse::request() co
  */
 void SetEndpointAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetEndpointAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

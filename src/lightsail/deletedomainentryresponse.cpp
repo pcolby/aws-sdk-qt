@@ -65,7 +65,7 @@ const DeleteDomainEntryRequest * DeleteDomainEntryResponse::request() const
  */
 void DeleteDomainEntryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteDomainEntryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

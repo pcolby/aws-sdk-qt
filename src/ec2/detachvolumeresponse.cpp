@@ -65,7 +65,7 @@ const DetachVolumeRequest * DetachVolumeResponse::request() const
  */
 void DetachVolumeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DetachVolumeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

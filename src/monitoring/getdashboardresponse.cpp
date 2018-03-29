@@ -65,7 +65,7 @@ const GetDashboardRequest * GetDashboardResponse::request() const
  */
 void GetDashboardResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetDashboardResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

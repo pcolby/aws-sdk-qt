@@ -65,7 +65,7 @@ const DescribeHostReservationsRequest * DescribeHostReservationsResponse::reques
  */
 void DescribeHostReservationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeHostReservationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

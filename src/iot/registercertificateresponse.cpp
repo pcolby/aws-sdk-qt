@@ -65,7 +65,7 @@ const RegisterCertificateRequest * RegisterCertificateResponse::request() const
  */
 void RegisterCertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RegisterCertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

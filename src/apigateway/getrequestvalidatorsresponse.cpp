@@ -65,7 +65,7 @@ const GetRequestValidatorsRequest * GetRequestValidatorsResponse::request() cons
  */
 void GetRequestValidatorsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetRequestValidatorsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

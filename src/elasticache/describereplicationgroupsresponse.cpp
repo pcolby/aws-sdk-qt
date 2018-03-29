@@ -65,7 +65,7 @@ const DescribeReplicationGroupsRequest * DescribeReplicationGroupsResponse::requ
  */
 void DescribeReplicationGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeReplicationGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

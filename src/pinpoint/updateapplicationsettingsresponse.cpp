@@ -65,7 +65,7 @@ const UpdateApplicationSettingsRequest * UpdateApplicationSettingsResponse::requ
  */
 void UpdateApplicationSettingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateApplicationSettingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const PutBucketEncryptionRequest * PutBucketEncryptionResponse::request() const
  */
 void PutBucketEncryptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutBucketEncryptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

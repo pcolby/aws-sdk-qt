@@ -65,7 +65,7 @@ const AssociateWebACLRequest * AssociateWebACLResponse::request() const
  */
 void AssociateWebACLResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateWebACLResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

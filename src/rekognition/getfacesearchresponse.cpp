@@ -65,7 +65,7 @@ const GetFaceSearchRequest * GetFaceSearchResponse::request() const
  */
 void GetFaceSearchResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetFaceSearchResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

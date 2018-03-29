@@ -65,7 +65,7 @@ const CreateEnvironmentMembershipRequest * CreateEnvironmentMembershipResponse::
  */
 void CreateEnvironmentMembershipResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateEnvironmentMembershipResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

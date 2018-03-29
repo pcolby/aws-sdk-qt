@@ -52,7 +52,7 @@ DatabaseMigrationServiceResponse::DatabaseMigrationServiceResponse(QObject * con
  */
 void DatabaseMigrationServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(DatabaseMigrationServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void DatabaseMigrationServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public DatabaseMigrationServiceResponse instance.
  */
 DatabaseMigrationServiceResponsePrivate::DatabaseMigrationServiceResponsePrivate(
-    DatabaseMigrationServiceQueueResponse * const q) : DatabaseMigrationServicePrivate(q)
+    DatabaseMigrationServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

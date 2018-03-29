@@ -65,7 +65,7 @@ const DeleteCACertificateRequest * DeleteCACertificateResponse::request() const
  */
 void DeleteCACertificateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteCACertificateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

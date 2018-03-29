@@ -65,7 +65,7 @@ const GetExportJobsRequest * GetExportJobsResponse::request() const
  */
 void GetExportJobsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetExportJobsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

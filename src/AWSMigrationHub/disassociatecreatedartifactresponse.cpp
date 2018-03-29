@@ -65,7 +65,7 @@ const DisassociateCreatedArtifactRequest * DisassociateCreatedArtifactResponse::
  */
 void DisassociateCreatedArtifactResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisassociateCreatedArtifactResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

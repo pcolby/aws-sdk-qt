@@ -65,7 +65,7 @@ const BuildSuggestersRequest * BuildSuggestersResponse::request() const
  */
 void BuildSuggestersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BuildSuggestersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

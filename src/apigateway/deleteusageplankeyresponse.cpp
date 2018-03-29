@@ -65,7 +65,7 @@ const DeleteUsagePlanKeyRequest * DeleteUsagePlanKeyResponse::request() const
  */
 void DeleteUsagePlanKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteUsagePlanKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

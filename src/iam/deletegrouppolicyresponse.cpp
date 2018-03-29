@@ -65,7 +65,7 @@ const DeleteGroupPolicyRequest * DeleteGroupPolicyResponse::request() const
  */
 void DeleteGroupPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteGroupPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

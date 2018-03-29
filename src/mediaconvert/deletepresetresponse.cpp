@@ -65,7 +65,7 @@ const DeletePresetRequest * DeletePresetResponse::request() const
  */
 void DeletePresetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeletePresetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

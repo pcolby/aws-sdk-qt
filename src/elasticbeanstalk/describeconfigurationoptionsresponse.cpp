@@ -65,7 +65,7 @@ const DescribeConfigurationOptionsRequest * DescribeConfigurationOptionsResponse
  */
 void DescribeConfigurationOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeConfigurationOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

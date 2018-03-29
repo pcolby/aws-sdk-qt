@@ -65,7 +65,7 @@ const SendTemplatedEmailRequest * SendTemplatedEmailResponse::request() const
  */
 void SendTemplatedEmailResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SendTemplatedEmailResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

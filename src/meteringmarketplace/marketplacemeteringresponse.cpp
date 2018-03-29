@@ -52,7 +52,7 @@ MarketplaceMeteringResponse::MarketplaceMeteringResponse(QObject * const parent)
  */
 void MarketplaceMeteringResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(MarketplaceMeteringResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void MarketplaceMeteringResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MarketplaceMeteringResponse instance.
  */
 MarketplaceMeteringResponsePrivate::MarketplaceMeteringResponsePrivate(
-    MarketplaceMeteringQueueResponse * const q) : MarketplaceMeteringPrivate(q)
+    MarketplaceMeteringResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

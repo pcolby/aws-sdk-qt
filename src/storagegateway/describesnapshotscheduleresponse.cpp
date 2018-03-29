@@ -65,7 +65,7 @@ const DescribeSnapshotScheduleRequest * DescribeSnapshotScheduleResponse::reques
  */
 void DescribeSnapshotScheduleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeSnapshotScheduleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

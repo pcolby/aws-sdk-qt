@@ -65,7 +65,7 @@ const DescribeImportImageTasksRequest * DescribeImportImageTasksResponse::reques
  */
 void DescribeImportImageTasksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeImportImageTasksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

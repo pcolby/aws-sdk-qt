@@ -65,7 +65,7 @@ const RemoveResourcePermissionRequest * RemoveResourcePermissionResponse::reques
  */
 void RemoveResourcePermissionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RemoveResourcePermissionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

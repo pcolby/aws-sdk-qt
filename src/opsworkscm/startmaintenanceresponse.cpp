@@ -65,7 +65,7 @@ const StartMaintenanceRequest * StartMaintenanceResponse::request() const
  */
 void StartMaintenanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartMaintenanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

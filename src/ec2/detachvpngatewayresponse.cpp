@@ -65,7 +65,7 @@ const DetachVpnGatewayRequest * DetachVpnGatewayResponse::request() const
  */
 void DetachVpnGatewayResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DetachVpnGatewayResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

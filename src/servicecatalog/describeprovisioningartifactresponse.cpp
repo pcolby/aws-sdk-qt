@@ -65,7 +65,7 @@ const DescribeProvisioningArtifactRequest * DescribeProvisioningArtifactResponse
  */
 void DescribeProvisioningArtifactResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeProvisioningArtifactResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

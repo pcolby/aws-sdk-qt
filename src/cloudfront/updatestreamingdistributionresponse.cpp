@@ -65,7 +65,7 @@ const UpdateStreamingDistributionRequest * UpdateStreamingDistributionResponse::
  */
 void UpdateStreamingDistributionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateStreamingDistributionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

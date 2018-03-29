@@ -52,7 +52,7 @@ LambdaResponse::LambdaResponse(QObject * const parent)
  */
 void LambdaResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(LambdaResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void LambdaResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public LambdaResponse instance.
  */
 LambdaResponsePrivate::LambdaResponsePrivate(
-    LambdaQueueResponse * const q) : LambdaPrivate(q)
+    LambdaResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

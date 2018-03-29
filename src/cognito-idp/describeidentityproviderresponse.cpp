@@ -65,7 +65,7 @@ const DescribeIdentityProviderRequest * DescribeIdentityProviderResponse::reques
  */
 void DescribeIdentityProviderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeIdentityProviderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

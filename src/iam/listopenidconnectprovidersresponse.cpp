@@ -65,7 +65,7 @@ const ListOpenIDConnectProvidersRequest * ListOpenIDConnectProvidersResponse::re
  */
 void ListOpenIDConnectProvidersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListOpenIDConnectProvidersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

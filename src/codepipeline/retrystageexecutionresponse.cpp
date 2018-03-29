@@ -65,7 +65,7 @@ const RetryStageExecutionRequest * RetryStageExecutionResponse::request() const
  */
 void RetryStageExecutionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RetryStageExecutionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

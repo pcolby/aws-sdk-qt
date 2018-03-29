@@ -65,7 +65,7 @@ const GetLifecyclePolicyPreviewRequest * GetLifecyclePolicyPreviewResponse::requ
  */
 void GetLifecyclePolicyPreviewResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetLifecyclePolicyPreviewResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

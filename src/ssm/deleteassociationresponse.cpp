@@ -65,7 +65,7 @@ const DeleteAssociationRequest * DeleteAssociationResponse::request() const
  */
 void DeleteAssociationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteAssociationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -52,7 +52,7 @@ LightsailResponse::LightsailResponse(QObject * const parent)
  */
 void LightsailResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(LightsailResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void LightsailResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public LightsailResponse instance.
  */
 LightsailResponsePrivate::LightsailResponsePrivate(
-    LightsailQueueResponse * const q) : LightsailPrivate(q)
+    LightsailResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

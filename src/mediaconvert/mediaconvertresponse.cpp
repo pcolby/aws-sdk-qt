@@ -52,7 +52,7 @@ MediaConvertResponse::MediaConvertResponse(QObject * const parent)
  */
 void MediaConvertResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(MediaConvertResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void MediaConvertResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MediaConvertResponse instance.
  */
 MediaConvertResponsePrivate::MediaConvertResponsePrivate(
-    MediaConvertQueueResponse * const q) : MediaConvertPrivate(q)
+    MediaConvertResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

@@ -65,7 +65,7 @@ const AttachObjectRequest * AttachObjectResponse::request() const
  */
 void AttachObjectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AttachObjectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

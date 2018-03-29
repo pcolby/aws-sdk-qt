@@ -65,7 +65,7 @@ const PublishRequest * PublishResponse::request() const
  */
 void PublishResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PublishResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

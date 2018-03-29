@@ -65,7 +65,7 @@ const ListVirtualMFADevicesRequest * ListVirtualMFADevicesResponse::request() co
  */
 void ListVirtualMFADevicesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListVirtualMFADevicesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetInstancePortStatesRequest * GetInstancePortStatesResponse::request() co
  */
 void GetInstancePortStatesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetInstancePortStatesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

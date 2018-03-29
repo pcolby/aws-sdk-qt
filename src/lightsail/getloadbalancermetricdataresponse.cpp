@@ -65,7 +65,7 @@ const GetLoadBalancerMetricDataRequest * GetLoadBalancerMetricDataResponse::requ
  */
 void GetLoadBalancerMetricDataResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetLoadBalancerMetricDataResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

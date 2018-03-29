@@ -65,7 +65,7 @@ const GetNetworkProfileRequest * GetNetworkProfileResponse::request() const
  */
 void GetNetworkProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetNetworkProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

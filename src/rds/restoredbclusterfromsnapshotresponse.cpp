@@ -65,7 +65,7 @@ const RestoreDBClusterFromSnapshotRequest * RestoreDBClusterFromSnapshotResponse
  */
 void RestoreDBClusterFromSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RestoreDBClusterFromSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

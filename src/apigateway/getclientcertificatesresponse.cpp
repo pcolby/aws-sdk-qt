@@ -65,7 +65,7 @@ const GetClientCertificatesRequest * GetClientCertificatesResponse::request() co
  */
 void GetClientCertificatesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetClientCertificatesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

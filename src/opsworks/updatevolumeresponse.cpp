@@ -65,7 +65,7 @@ const UpdateVolumeRequest * UpdateVolumeResponse::request() const
  */
 void UpdateVolumeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateVolumeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ModifyDBInstanceRequest * ModifyDBInstanceResponse::request() const
  */
 void ModifyDBInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyDBInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

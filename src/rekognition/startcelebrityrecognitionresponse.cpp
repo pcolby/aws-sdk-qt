@@ -65,7 +65,7 @@ const StartCelebrityRecognitionRequest * StartCelebrityRecognitionResponse::requ
  */
 void StartCelebrityRecognitionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartCelebrityRecognitionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

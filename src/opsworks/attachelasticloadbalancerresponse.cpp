@@ -65,7 +65,7 @@ const AttachElasticLoadBalancerRequest * AttachElasticLoadBalancerResponse::requ
  */
 void AttachElasticLoadBalancerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AttachElasticLoadBalancerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

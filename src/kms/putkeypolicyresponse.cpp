@@ -65,7 +65,7 @@ const PutKeyPolicyRequest * PutKeyPolicyResponse::request() const
  */
 void PutKeyPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutKeyPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

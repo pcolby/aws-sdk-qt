@@ -65,7 +65,7 @@ const ContinueUpdateRollbackRequest * ContinueUpdateRollbackResponse::request() 
  */
 void ContinueUpdateRollbackResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ContinueUpdateRollbackResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

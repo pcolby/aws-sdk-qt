@@ -65,7 +65,7 @@ const RetireGrantRequest * RetireGrantResponse::request() const
  */
 void RetireGrantResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RetireGrantResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

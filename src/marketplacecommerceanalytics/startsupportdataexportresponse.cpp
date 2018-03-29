@@ -65,7 +65,7 @@ const StartSupportDataExportRequest * StartSupportDataExportResponse::request() 
  */
 void StartSupportDataExportResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartSupportDataExportResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

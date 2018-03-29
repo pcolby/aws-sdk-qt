@@ -65,7 +65,7 @@ const GetDiscoveredResourceCountsRequest * GetDiscoveredResourceCountsResponse::
  */
 void GetDiscoveredResourceCountsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetDiscoveredResourceCountsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

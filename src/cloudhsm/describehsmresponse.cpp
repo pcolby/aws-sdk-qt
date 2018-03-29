@@ -65,7 +65,7 @@ const DescribeHsmRequest * DescribeHsmResponse::request() const
  */
 void DescribeHsmResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeHsmResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

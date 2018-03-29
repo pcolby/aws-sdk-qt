@@ -65,7 +65,7 @@ const IndexDocumentsRequest * IndexDocumentsResponse::request() const
  */
 void IndexDocumentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(IndexDocumentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

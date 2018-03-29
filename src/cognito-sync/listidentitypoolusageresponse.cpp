@@ -65,7 +65,7 @@ const ListIdentityPoolUsageRequest * ListIdentityPoolUsageResponse::request() co
  */
 void ListIdentityPoolUsageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListIdentityPoolUsageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

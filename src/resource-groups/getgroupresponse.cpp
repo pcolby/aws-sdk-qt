@@ -65,7 +65,7 @@ const GetGroupRequest * GetGroupResponse::request() const
  */
 void GetGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

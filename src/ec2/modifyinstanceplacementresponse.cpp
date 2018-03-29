@@ -65,7 +65,7 @@ const ModifyInstancePlacementRequest * ModifyInstancePlacementResponse::request(
  */
 void ModifyInstancePlacementResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyInstancePlacementResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

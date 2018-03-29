@@ -65,7 +65,7 @@ const DescribeBackupRequest * DescribeBackupResponse::request() const
  */
 void DescribeBackupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeBackupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const UpdateApplicationResourceLifecycleRequest * UpdateApplicationResourceLifec
  */
 void UpdateApplicationResourceLifecycleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateApplicationResourceLifecycleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

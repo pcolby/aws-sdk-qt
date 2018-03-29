@@ -65,7 +65,7 @@ const ResolveRoomRequest * ResolveRoomResponse::request() const
  */
 void ResolveRoomResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ResolveRoomResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

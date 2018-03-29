@@ -65,7 +65,7 @@ const GetRuleRequest * GetRuleResponse::request() const
  */
 void GetRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -52,7 +52,7 @@ IAMResponse::IAMResponse(QObject * const parent)
  */
 void IAMResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(IAMResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void IAMResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public IAMResponse instance.
  */
 IAMResponsePrivate::IAMResponsePrivate(
-    IAMQueueResponse * const q) : IAMPrivate(q)
+    IAMResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

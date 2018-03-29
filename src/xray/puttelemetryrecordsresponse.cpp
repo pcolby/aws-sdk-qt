@@ -65,7 +65,7 @@ const PutTelemetryRecordsRequest * PutTelemetryRecordsResponse::request() const
  */
 void PutTelemetryRecordsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutTelemetryRecordsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

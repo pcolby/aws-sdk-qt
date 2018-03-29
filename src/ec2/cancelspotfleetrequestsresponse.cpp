@@ -65,7 +65,7 @@ const CancelSpotFleetRequestsRequest * CancelSpotFleetRequestsResponse::request(
  */
 void CancelSpotFleetRequestsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CancelSpotFleetRequestsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

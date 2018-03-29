@@ -65,7 +65,7 @@ const CreateTableRequest * CreateTableResponse::request() const
  */
 void CreateTableResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateTableResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

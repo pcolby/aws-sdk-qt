@@ -65,7 +65,7 @@ const DeleteSSHPublicKeyRequest * DeleteSSHPublicKeyResponse::request() const
  */
 void DeleteSSHPublicKeyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteSSHPublicKeyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

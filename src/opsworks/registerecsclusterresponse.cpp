@@ -65,7 +65,7 @@ const RegisterEcsClusterRequest * RegisterEcsClusterResponse::request() const
  */
 void RegisterEcsClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RegisterEcsClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

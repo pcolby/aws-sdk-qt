@@ -65,7 +65,7 @@ const CheckDomainTransferabilityRequest * CheckDomainTransferabilityResponse::re
  */
 void CheckDomainTransferabilityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CheckDomainTransferabilityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

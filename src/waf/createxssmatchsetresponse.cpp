@@ -65,7 +65,7 @@ const CreateXssMatchSetRequest * CreateXssMatchSetResponse::request() const
  */
 void CreateXssMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateXssMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

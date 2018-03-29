@@ -65,7 +65,7 @@ const DescribeRegionsRequest * DescribeRegionsResponse::request() const
  */
 void DescribeRegionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeRegionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

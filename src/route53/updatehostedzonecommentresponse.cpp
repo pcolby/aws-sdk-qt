@@ -65,7 +65,7 @@ const UpdateHostedZoneCommentRequest * UpdateHostedZoneCommentResponse::request(
  */
 void UpdateHostedZoneCommentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateHostedZoneCommentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

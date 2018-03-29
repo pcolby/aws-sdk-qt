@@ -65,7 +65,7 @@ const DeleteConfigurationSetEventDestinationRequest * DeleteConfigurationSetEven
  */
 void DeleteConfigurationSetEventDestinationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteConfigurationSetEventDestinationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

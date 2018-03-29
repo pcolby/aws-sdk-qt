@@ -65,7 +65,7 @@ const DeleteTemplateRequest * DeleteTemplateResponse::request() const
  */
 void DeleteTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

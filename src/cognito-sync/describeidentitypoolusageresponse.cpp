@@ -65,7 +65,7 @@ const DescribeIdentityPoolUsageRequest * DescribeIdentityPoolUsageResponse::requ
  */
 void DescribeIdentityPoolUsageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeIdentityPoolUsageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

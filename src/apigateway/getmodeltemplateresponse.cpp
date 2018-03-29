@@ -65,7 +65,7 @@ const GetModelTemplateRequest * GetModelTemplateResponse::request() const
  */
 void GetModelTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetModelTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

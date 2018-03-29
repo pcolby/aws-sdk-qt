@@ -65,7 +65,7 @@ const RemoveTagsFromOnPremisesInstancesRequest * RemoveTagsFromOnPremisesInstanc
  */
 void RemoveTagsFromOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RemoveTagsFromOnPremisesInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

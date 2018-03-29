@@ -65,7 +65,7 @@ const ScheduleKeyDeletionRequest * ScheduleKeyDeletionResponse::request() const
  */
 void ScheduleKeyDeletionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ScheduleKeyDeletionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

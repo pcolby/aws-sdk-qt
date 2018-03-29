@@ -65,7 +65,7 @@ const DescribeMaintenanceStartTimeRequest * DescribeMaintenanceStartTimeResponse
  */
 void DescribeMaintenanceStartTimeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeMaintenanceStartTimeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ListFacetAttributesRequest * ListFacetAttributesResponse::request() const
  */
 void ListFacetAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListFacetAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

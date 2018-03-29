@@ -65,7 +65,7 @@ const DisassociateRoleFromGroupRequest * DisassociateRoleFromGroupResponse::requ
  */
 void DisassociateRoleFromGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisassociateRoleFromGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

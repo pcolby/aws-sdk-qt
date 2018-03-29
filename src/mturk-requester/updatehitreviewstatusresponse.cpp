@@ -65,7 +65,7 @@ const UpdateHITReviewStatusRequest * UpdateHITReviewStatusResponse::request() co
  */
 void UpdateHITReviewStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateHITReviewStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

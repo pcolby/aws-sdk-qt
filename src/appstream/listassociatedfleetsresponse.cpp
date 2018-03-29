@@ -65,7 +65,7 @@ const ListAssociatedFleetsRequest * ListAssociatedFleetsResponse::request() cons
  */
 void ListAssociatedFleetsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListAssociatedFleetsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

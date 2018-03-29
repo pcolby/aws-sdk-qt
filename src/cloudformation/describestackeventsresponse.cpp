@@ -65,7 +65,7 @@ const DescribeStackEventsRequest * DescribeStackEventsResponse::request() const
  */
 void DescribeStackEventsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeStackEventsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

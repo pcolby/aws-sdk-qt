@@ -65,7 +65,7 @@ const GetDatabasesRequest * GetDatabasesResponse::request() const
  */
 void GetDatabasesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetDatabasesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

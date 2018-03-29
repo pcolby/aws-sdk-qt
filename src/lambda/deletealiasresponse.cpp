@@ -65,7 +65,7 @@ const DeleteAliasRequest * DeleteAliasResponse::request() const
  */
 void DeleteAliasResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteAliasResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

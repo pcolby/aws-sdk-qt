@@ -65,7 +65,7 @@ const GetUtterancesViewRequest * GetUtterancesViewResponse::request() const
  */
 void GetUtterancesViewResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetUtterancesViewResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CheckIfPhoneNumberIsOptedOutRequest * CheckIfPhoneNumberIsOptedOutResponse
  */
 void CheckIfPhoneNumberIsOptedOutResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CheckIfPhoneNumberIsOptedOutResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

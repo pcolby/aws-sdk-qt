@@ -52,7 +52,7 @@ PollyResponse::PollyResponse(QObject * const parent)
  */
 void PollyResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(PollyResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void PollyResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public PollyResponse instance.
  */
 PollyResponsePrivate::PollyResponsePrivate(
-    PollyQueueResponse * const q) : PollyPrivate(q)
+    PollyResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

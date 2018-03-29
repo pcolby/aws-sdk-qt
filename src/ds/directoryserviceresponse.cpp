@@ -52,7 +52,7 @@ DirectoryServiceResponse::DirectoryServiceResponse(QObject * const parent)
  */
 void DirectoryServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(DirectoryServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void DirectoryServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public DirectoryServiceResponse instance.
  */
 DirectoryServiceResponsePrivate::DirectoryServiceResponsePrivate(
-    DirectoryServiceQueueResponse * const q) : DirectoryServicePrivate(q)
+    DirectoryServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

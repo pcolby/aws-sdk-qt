@@ -65,7 +65,7 @@ const CreatePresignedNotebookInstanceUrlRequest * CreatePresignedNotebookInstanc
  */
 void CreatePresignedNotebookInstanceUrlResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreatePresignedNotebookInstanceUrlResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreateSubnetRequest * CreateSubnetResponse::request() const
  */
 void CreateSubnetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateSubnetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

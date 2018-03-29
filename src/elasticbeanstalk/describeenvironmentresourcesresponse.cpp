@@ -65,7 +65,7 @@ const DescribeEnvironmentResourcesRequest * DescribeEnvironmentResourcesResponse
  */
 void DescribeEnvironmentResourcesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeEnvironmentResourcesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

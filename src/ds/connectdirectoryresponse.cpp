@@ -65,7 +65,7 @@ const ConnectDirectoryRequest * ConnectDirectoryResponse::request() const
  */
 void ConnectDirectoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ConnectDirectoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

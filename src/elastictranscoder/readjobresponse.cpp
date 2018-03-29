@@ -65,7 +65,7 @@ const ReadJobRequest * ReadJobResponse::request() const
  */
 void ReadJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ReadJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

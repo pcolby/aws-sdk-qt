@@ -65,7 +65,7 @@ const DetectTextRequest * DetectTextResponse::request() const
  */
 void DetectTextResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DetectTextResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

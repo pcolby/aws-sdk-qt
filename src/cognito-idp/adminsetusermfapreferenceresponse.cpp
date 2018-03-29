@@ -65,7 +65,7 @@ const AdminSetUserMFAPreferenceRequest * AdminSetUserMFAPreferenceResponse::requ
  */
 void AdminSetUserMFAPreferenceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AdminSetUserMFAPreferenceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

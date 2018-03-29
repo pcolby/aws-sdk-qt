@@ -65,7 +65,7 @@ const CreateProgressUpdateStreamRequest * CreateProgressUpdateStreamResponse::re
  */
 void CreateProgressUpdateStreamResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateProgressUpdateStreamResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

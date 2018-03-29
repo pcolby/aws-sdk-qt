@@ -65,7 +65,7 @@ const DisassociateTagOptionFromResourceRequest * DisassociateTagOptionFromResour
  */
 void DisassociateTagOptionFromResourceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisassociateTagOptionFromResourceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

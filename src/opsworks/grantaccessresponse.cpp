@@ -65,7 +65,7 @@ const GrantAccessRequest * GrantAccessResponse::request() const
  */
 void GrantAccessResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GrantAccessResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreatePresetRequest * CreatePresetResponse::request() const
  */
 void CreatePresetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreatePresetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

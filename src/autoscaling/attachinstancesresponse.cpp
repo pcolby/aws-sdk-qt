@@ -65,7 +65,7 @@ const AttachInstancesRequest * AttachInstancesResponse::request() const
  */
 void AttachInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AttachInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

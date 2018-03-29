@@ -65,7 +65,7 @@ const ListBrokersRequest * ListBrokersResponse::request() const
  */
 void ListBrokersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListBrokersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

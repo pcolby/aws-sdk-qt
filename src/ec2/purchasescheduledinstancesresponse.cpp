@@ -65,7 +65,7 @@ const PurchaseScheduledInstancesRequest * PurchaseScheduledInstancesResponse::re
  */
 void PurchaseScheduledInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PurchaseScheduledInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

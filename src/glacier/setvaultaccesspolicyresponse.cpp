@@ -65,7 +65,7 @@ const SetVaultAccessPolicyRequest * SetVaultAccessPolicyResponse::request() cons
  */
 void SetVaultAccessPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetVaultAccessPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

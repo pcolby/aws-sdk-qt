@@ -65,7 +65,7 @@ const DescribeEffectivePatchesForPatchBaselineRequest * DescribeEffectivePatches
  */
 void DescribeEffectivePatchesForPatchBaselineResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeEffectivePatchesForPatchBaselineResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const EnableMFADeviceRequest * EnableMFADeviceResponse::request() const
  */
 void EnableMFADeviceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(EnableMFADeviceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

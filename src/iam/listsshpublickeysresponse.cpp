@@ -65,7 +65,7 @@ const ListSSHPublicKeysRequest * ListSSHPublicKeysResponse::request() const
  */
 void ListSSHPublicKeysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListSSHPublicKeysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteTagsForDomainRequest * DeleteTagsForDomainResponse::request() const
  */
 void DeleteTagsForDomainResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteTagsForDomainResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

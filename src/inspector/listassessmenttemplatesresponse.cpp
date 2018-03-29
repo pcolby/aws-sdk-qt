@@ -65,7 +65,7 @@ const ListAssessmentTemplatesRequest * ListAssessmentTemplatesResponse::request(
  */
 void ListAssessmentTemplatesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListAssessmentTemplatesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

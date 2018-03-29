@@ -65,7 +65,7 @@ const DeleteTableVersionRequest * DeleteTableVersionResponse::request() const
  */
 void DeleteTableVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteTableVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

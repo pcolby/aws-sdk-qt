@@ -52,7 +52,7 @@ CodeDeployResponse::CodeDeployResponse(QObject * const parent)
  */
 void CodeDeployResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CodeDeployResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CodeDeployResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CodeDeployResponse instance.
  */
 CodeDeployResponsePrivate::CodeDeployResponsePrivate(
-    CodeDeployQueueResponse * const q) : CodeDeployPrivate(q)
+    CodeDeployResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

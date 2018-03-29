@@ -65,7 +65,7 @@ const CreateFolderRequest * CreateFolderResponse::request() const
  */
 void CreateFolderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateFolderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

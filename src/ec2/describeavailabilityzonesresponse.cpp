@@ -65,7 +65,7 @@ const DescribeAvailabilityZonesRequest * DescribeAvailabilityZonesResponse::requ
  */
 void DescribeAvailabilityZonesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeAvailabilityZonesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

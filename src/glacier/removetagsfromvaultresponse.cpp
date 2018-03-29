@@ -65,7 +65,7 @@ const RemoveTagsFromVaultRequest * RemoveTagsFromVaultResponse::request() const
  */
 void RemoveTagsFromVaultResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RemoveTagsFromVaultResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteBGPPeerRequest * DeleteBGPPeerResponse::request() const
  */
 void DeleteBGPPeerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteBGPPeerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

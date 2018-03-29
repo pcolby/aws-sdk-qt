@@ -65,7 +65,7 @@ const DomainMetadataRequest * DomainMetadataResponse::request() const
  */
 void DomainMetadataResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DomainMetadataResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

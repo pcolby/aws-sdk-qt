@@ -52,7 +52,7 @@ FirehoseResponse::FirehoseResponse(QObject * const parent)
  */
 void FirehoseResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(FirehoseResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void FirehoseResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public FirehoseResponse instance.
  */
 FirehoseResponsePrivate::FirehoseResponsePrivate(
-    FirehoseQueueResponse * const q) : FirehosePrivate(q)
+    FirehoseResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

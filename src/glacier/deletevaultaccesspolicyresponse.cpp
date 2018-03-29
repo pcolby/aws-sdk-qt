@@ -65,7 +65,7 @@ const DeleteVaultAccessPolicyRequest * DeleteVaultAccessPolicyResponse::request(
  */
 void DeleteVaultAccessPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteVaultAccessPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

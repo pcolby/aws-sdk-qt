@@ -65,7 +65,7 @@ const ImportInstanceRequest * ImportInstanceResponse::request() const
  */
 void ImportInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ImportInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

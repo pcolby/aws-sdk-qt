@@ -65,7 +65,7 @@ const DeleteWorkerBlockRequest * DeleteWorkerBlockResponse::request() const
  */
 void DeleteWorkerBlockResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteWorkerBlockResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

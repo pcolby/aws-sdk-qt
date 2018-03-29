@@ -65,7 +65,7 @@ const ResetDBParameterGroupRequest * ResetDBParameterGroupResponse::request() co
  */
 void ResetDBParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ResetDBParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

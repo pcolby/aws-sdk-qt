@@ -65,7 +65,7 @@ const UpdateGraphqlApiRequest * UpdateGraphqlApiResponse::request() const
  */
 void UpdateGraphqlApiResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateGraphqlApiResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

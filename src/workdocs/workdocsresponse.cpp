@@ -52,7 +52,7 @@ WorkDocsResponse::WorkDocsResponse(QObject * const parent)
  */
 void WorkDocsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(WorkDocsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void WorkDocsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public WorkDocsResponse instance.
  */
 WorkDocsResponsePrivate::WorkDocsResponsePrivate(
-    WorkDocsQueueResponse * const q) : WorkDocsPrivate(q)
+    WorkDocsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

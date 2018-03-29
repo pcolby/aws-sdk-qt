@@ -65,7 +65,7 @@ const VerifyEmailIdentityRequest * VerifyEmailIdentityResponse::request() const
  */
 void VerifyEmailIdentityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(VerifyEmailIdentityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

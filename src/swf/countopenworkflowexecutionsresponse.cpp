@@ -65,7 +65,7 @@ const CountOpenWorkflowExecutionsRequest * CountOpenWorkflowExecutionsResponse::
  */
 void CountOpenWorkflowExecutionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CountOpenWorkflowExecutionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

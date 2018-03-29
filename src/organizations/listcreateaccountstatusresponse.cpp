@@ -65,7 +65,7 @@ const ListCreateAccountStatusRequest * ListCreateAccountStatusResponse::request(
  */
 void ListCreateAccountStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListCreateAccountStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

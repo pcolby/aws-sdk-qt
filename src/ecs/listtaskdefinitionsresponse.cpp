@@ -65,7 +65,7 @@ const ListTaskDefinitionsRequest * ListTaskDefinitionsResponse::request() const
  */
 void ListTaskDefinitionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListTaskDefinitionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

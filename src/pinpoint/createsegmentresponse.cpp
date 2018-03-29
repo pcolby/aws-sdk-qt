@@ -65,7 +65,7 @@ const CreateSegmentRequest * CreateSegmentResponse::request() const
  */
 void CreateSegmentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateSegmentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

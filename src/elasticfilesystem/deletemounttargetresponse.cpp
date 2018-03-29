@@ -65,7 +65,7 @@ const DeleteMountTargetRequest * DeleteMountTargetResponse::request() const
  */
 void DeleteMountTargetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteMountTargetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

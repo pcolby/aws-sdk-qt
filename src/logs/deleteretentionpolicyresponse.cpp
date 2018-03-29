@@ -65,7 +65,7 @@ const DeleteRetentionPolicyRequest * DeleteRetentionPolicyResponse::request() co
  */
 void DeleteRetentionPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteRetentionPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeBrokerRequest * DescribeBrokerResponse::request() const
  */
 void DescribeBrokerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeBrokerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ListCuratedEnvironmentImagesRequest * ListCuratedEnvironmentImagesResponse
  */
 void ListCuratedEnvironmentImagesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListCuratedEnvironmentImagesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

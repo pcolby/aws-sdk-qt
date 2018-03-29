@@ -52,7 +52,7 @@ STSResponse::STSResponse(QObject * const parent)
  */
 void STSResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(STSResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void STSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public STSResponse instance.
  */
 STSResponsePrivate::STSResponsePrivate(
-    STSQueueResponse * const q) : STSPrivate(q)
+    STSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

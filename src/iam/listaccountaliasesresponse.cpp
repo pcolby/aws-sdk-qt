@@ -65,7 +65,7 @@ const ListAccountAliasesRequest * ListAccountAliasesResponse::request() const
  */
 void ListAccountAliasesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListAccountAliasesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

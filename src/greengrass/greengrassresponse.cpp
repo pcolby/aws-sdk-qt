@@ -52,7 +52,7 @@ GreengrassResponse::GreengrassResponse(QObject * const parent)
  */
 void GreengrassResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(GreengrassResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void GreengrassResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public GreengrassResponse instance.
  */
 GreengrassResponsePrivate::GreengrassResponsePrivate(
-    GreengrassQueueResponse * const q) : GreengrassPrivate(q)
+    GreengrassResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

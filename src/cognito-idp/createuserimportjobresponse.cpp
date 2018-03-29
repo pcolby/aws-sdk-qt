@@ -65,7 +65,7 @@ const CreateUserImportJobRequest * CreateUserImportJobResponse::request() const
  */
 void CreateUserImportJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateUserImportJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

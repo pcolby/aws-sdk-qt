@@ -65,7 +65,7 @@ const AddSourceIdentifierToSubscriptionRequest * AddSourceIdentifierToSubscripti
  */
 void AddSourceIdentifierToSubscriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AddSourceIdentifierToSubscriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

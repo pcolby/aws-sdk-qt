@@ -65,7 +65,7 @@ const UpdateSqlInjectionMatchSetRequest * UpdateSqlInjectionMatchSetResponse::re
  */
 void UpdateSqlInjectionMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateSqlInjectionMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

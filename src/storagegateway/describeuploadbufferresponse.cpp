@@ -65,7 +65,7 @@ const DescribeUploadBufferRequest * DescribeUploadBufferResponse::request() cons
  */
 void DescribeUploadBufferResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeUploadBufferResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

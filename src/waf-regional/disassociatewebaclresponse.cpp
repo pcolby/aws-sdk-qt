@@ -65,7 +65,7 @@ const DisassociateWebACLRequest * DisassociateWebACLResponse::request() const
  */
 void DisassociateWebACLResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisassociateWebACLResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

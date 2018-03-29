@@ -52,7 +52,7 @@ MarketplaceCommerceAnalyticsResponse::MarketplaceCommerceAnalyticsResponse(QObje
  */
 void MarketplaceCommerceAnalyticsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(MarketplaceCommerceAnalyticsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void MarketplaceCommerceAnalyticsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MarketplaceCommerceAnalyticsResponse instance.
  */
 MarketplaceCommerceAnalyticsResponsePrivate::MarketplaceCommerceAnalyticsResponsePrivate(
-    MarketplaceCommerceAnalyticsQueueResponse * const q) : MarketplaceCommerceAnalyticsPrivate(q)
+    MarketplaceCommerceAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

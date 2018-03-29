@@ -65,7 +65,7 @@ const GetFileUploadURLRequest * GetFileUploadURLResponse::request() const
  */
 void GetFileUploadURLResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetFileUploadURLResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

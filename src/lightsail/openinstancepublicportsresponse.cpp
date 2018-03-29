@@ -65,7 +65,7 @@ const OpenInstancePublicPortsRequest * OpenInstancePublicPortsResponse::request(
  */
 void OpenInstancePublicPortsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(OpenInstancePublicPortsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const PutIdentityPolicyRequest * PutIdentityPolicyResponse::request() const
  */
 void PutIdentityPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutIdentityPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

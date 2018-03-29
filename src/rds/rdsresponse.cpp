@@ -52,7 +52,7 @@ RDSResponse::RDSResponse(QObject * const parent)
  */
 void RDSResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(RDSResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void RDSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public RDSResponse instance.
  */
 RDSResponsePrivate::RDSResponsePrivate(
-    RDSQueueResponse * const q) : RDSPrivate(q)
+    RDSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

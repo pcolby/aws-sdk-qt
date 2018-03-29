@@ -65,7 +65,7 @@ const DescribeAlarmsForMetricRequest * DescribeAlarmsForMetricResponse::request(
  */
 void DescribeAlarmsForMetricResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeAlarmsForMetricResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

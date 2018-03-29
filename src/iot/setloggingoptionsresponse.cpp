@@ -65,7 +65,7 @@ const SetLoggingOptionsRequest * SetLoggingOptionsResponse::request() const
  */
 void SetLoggingOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetLoggingOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

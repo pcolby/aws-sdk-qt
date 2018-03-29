@@ -65,7 +65,7 @@ const RestoreDBInstanceFromS3Request * RestoreDBInstanceFromS3Response::request(
  */
 void RestoreDBInstanceFromS3Response::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RestoreDBInstanceFromS3Response);
     QXmlStreamReader xml(&response);
     /// @todo
 }

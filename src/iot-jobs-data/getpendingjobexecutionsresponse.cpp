@@ -65,7 +65,7 @@ const GetPendingJobExecutionsRequest * GetPendingJobExecutionsResponse::request(
  */
 void GetPendingJobExecutionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetPendingJobExecutionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

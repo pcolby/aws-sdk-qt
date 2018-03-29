@@ -65,7 +65,7 @@ const CreateDatabaseRequest * CreateDatabaseResponse::request() const
  */
 void CreateDatabaseResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateDatabaseResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

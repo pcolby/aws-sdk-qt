@@ -65,7 +65,7 @@ const AddInstanceGroupsRequest * AddInstanceGroupsResponse::request() const
  */
 void AddInstanceGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AddInstanceGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

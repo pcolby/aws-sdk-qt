@@ -52,7 +52,7 @@ KMSResponse::KMSResponse(QObject * const parent)
  */
 void KMSResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(KMSResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void KMSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public KMSResponse instance.
  */
 KMSResponsePrivate::KMSResponsePrivate(
-    KMSQueueResponse * const q) : KMSPrivate(q)
+    KMSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

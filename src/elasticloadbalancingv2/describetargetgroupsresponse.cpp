@@ -65,7 +65,7 @@ const DescribeTargetGroupsRequest * DescribeTargetGroupsResponse::request() cons
  */
 void DescribeTargetGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeTargetGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

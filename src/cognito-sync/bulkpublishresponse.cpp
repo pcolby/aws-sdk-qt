@@ -65,7 +65,7 @@ const BulkPublishRequest * BulkPublishResponse::request() const
  */
 void BulkPublishResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BulkPublishResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

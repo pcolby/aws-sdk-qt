@@ -65,7 +65,7 @@ const GetUsagePlanKeysRequest * GetUsagePlanKeysResponse::request() const
  */
 void GetUsagePlanKeysResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetUsagePlanKeysResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

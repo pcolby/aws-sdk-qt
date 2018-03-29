@@ -52,7 +52,7 @@ CloudFrontResponse::CloudFrontResponse(QObject * const parent)
  */
 void CloudFrontResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CloudFrontResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CloudFrontResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudFrontResponse instance.
  */
 CloudFrontResponsePrivate::CloudFrontResponsePrivate(
-    CloudFrontQueueResponse * const q) : CloudFrontPrivate(q)
+    CloudFrontResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

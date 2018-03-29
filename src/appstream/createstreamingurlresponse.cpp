@@ -65,7 +65,7 @@ const CreateStreamingURLRequest * CreateStreamingURLResponse::request() const
  */
 void CreateStreamingURLResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateStreamingURLResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

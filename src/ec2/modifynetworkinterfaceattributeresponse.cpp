@@ -65,7 +65,7 @@ const ModifyNetworkInterfaceAttributeRequest * ModifyNetworkInterfaceAttributeRe
  */
 void ModifyNetworkInterfaceAttributeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyNetworkInterfaceAttributeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

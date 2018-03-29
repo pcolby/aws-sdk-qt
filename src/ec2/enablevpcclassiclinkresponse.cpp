@@ -65,7 +65,7 @@ const EnableVpcClassicLinkRequest * EnableVpcClassicLinkResponse::request() cons
  */
 void EnableVpcClassicLinkResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(EnableVpcClassicLinkResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

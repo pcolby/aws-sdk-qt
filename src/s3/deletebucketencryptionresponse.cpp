@@ -65,7 +65,7 @@ const DeleteBucketEncryptionRequest * DeleteBucketEncryptionResponse::request() 
  */
 void DeleteBucketEncryptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteBucketEncryptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

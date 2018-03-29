@@ -65,7 +65,7 @@ const DeleteFolderRequest * DeleteFolderResponse::request() const
  */
 void DeleteFolderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteFolderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

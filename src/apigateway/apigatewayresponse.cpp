@@ -52,7 +52,7 @@ APIGatewayResponse::APIGatewayResponse(QObject * const parent)
  */
 void APIGatewayResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(APIGatewayResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void APIGatewayResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public APIGatewayResponse instance.
  */
 APIGatewayResponsePrivate::APIGatewayResponsePrivate(
-    APIGatewayQueueResponse * const q) : APIGatewayPrivate(q)
+    APIGatewayResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

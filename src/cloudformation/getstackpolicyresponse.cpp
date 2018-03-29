@@ -65,7 +65,7 @@ const GetStackPolicyRequest * GetStackPolicyResponse::request() const
  */
 void GetStackPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetStackPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

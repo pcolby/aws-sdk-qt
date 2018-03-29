@@ -65,7 +65,7 @@ const PutCorsPolicyRequest * PutCorsPolicyResponse::request() const
  */
 void PutCorsPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutCorsPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ListAccountsRequest * ListAccountsResponse::request() const
  */
 void ListAccountsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListAccountsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeDBClustersRequest * DescribeDBClustersResponse::request() const
  */
 void DescribeDBClustersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeDBClustersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

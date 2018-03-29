@@ -65,7 +65,7 @@ const NotifyWorkersRequest * NotifyWorkersResponse::request() const
  */
 void NotifyWorkersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(NotifyWorkersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

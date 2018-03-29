@@ -65,7 +65,7 @@ const GetKeyRotationStatusRequest * GetKeyRotationStatusResponse::request() cons
  */
 void GetKeyRotationStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetKeyRotationStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

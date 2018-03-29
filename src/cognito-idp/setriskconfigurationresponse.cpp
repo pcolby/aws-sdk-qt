@@ -65,7 +65,7 @@ const SetRiskConfigurationRequest * SetRiskConfigurationResponse::request() cons
  */
 void SetRiskConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetRiskConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

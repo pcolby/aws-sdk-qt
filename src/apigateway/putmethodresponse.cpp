@@ -65,7 +65,7 @@ const PutMethodRequest * PutMethodResponse::request() const
  */
 void PutMethodResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutMethodResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

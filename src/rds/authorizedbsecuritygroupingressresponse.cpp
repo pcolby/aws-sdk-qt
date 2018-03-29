@@ -65,7 +65,7 @@ const AuthorizeDBSecurityGroupIngressRequest * AuthorizeDBSecurityGroupIngressRe
  */
 void AuthorizeDBSecurityGroupIngressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AuthorizeDBSecurityGroupIngressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

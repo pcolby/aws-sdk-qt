@@ -65,7 +65,7 @@ const DeleteUploadRequest * DeleteUploadResponse::request() const
  */
 void DeleteUploadResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteUploadResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

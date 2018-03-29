@@ -65,7 +65,7 @@ const SendTaskSuccessRequest * SendTaskSuccessResponse::request() const
  */
 void SendTaskSuccessResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SendTaskSuccessResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetIdentityVerificationAttributesRequest * GetIdentityVerificationAttribut
  */
 void GetIdentityVerificationAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetIdentityVerificationAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

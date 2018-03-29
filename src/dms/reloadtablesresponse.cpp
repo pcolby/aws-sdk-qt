@@ -65,7 +65,7 @@ const ReloadTablesRequest * ReloadTablesResponse::request() const
  */
 void ReloadTablesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ReloadTablesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

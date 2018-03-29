@@ -65,7 +65,7 @@ const DescribeConditionalForwardersRequest * DescribeConditionalForwardersRespon
  */
 void DescribeConditionalForwardersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeConditionalForwardersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

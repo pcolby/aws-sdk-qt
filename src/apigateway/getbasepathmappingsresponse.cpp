@@ -65,7 +65,7 @@ const GetBasePathMappingsRequest * GetBasePathMappingsResponse::request() const
  */
 void GetBasePathMappingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetBasePathMappingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

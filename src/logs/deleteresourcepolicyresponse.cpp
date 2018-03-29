@@ -65,7 +65,7 @@ const DeleteResourcePolicyRequest * DeleteResourcePolicyResponse::request() cons
  */
 void DeleteResourcePolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteResourcePolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

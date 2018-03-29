@@ -65,7 +65,7 @@ const DeleteRuleGroupRequest * DeleteRuleGroupResponse::request() const
  */
 void DeleteRuleGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteRuleGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

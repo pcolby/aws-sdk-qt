@@ -65,7 +65,7 @@ const CreateNotificationSubscriptionRequest * CreateNotificationSubscriptionResp
  */
 void CreateNotificationSubscriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateNotificationSubscriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

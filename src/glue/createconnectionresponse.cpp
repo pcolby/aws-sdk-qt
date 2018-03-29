@@ -65,7 +65,7 @@ const CreateConnectionRequest * CreateConnectionResponse::request() const
  */
 void CreateConnectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateConnectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

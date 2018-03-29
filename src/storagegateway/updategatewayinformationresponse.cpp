@@ -65,7 +65,7 @@ const UpdateGatewayInformationRequest * UpdateGatewayInformationResponse::reques
  */
 void UpdateGatewayInformationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateGatewayInformationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

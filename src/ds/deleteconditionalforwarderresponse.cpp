@@ -65,7 +65,7 @@ const DeleteConditionalForwarderRequest * DeleteConditionalForwarderResponse::re
  */
 void DeleteConditionalForwarderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteConditionalForwarderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

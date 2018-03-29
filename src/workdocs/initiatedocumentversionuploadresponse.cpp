@@ -65,7 +65,7 @@ const InitiateDocumentVersionUploadRequest * InitiateDocumentVersionUploadRespon
  */
 void InitiateDocumentVersionUploadResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(InitiateDocumentVersionUploadResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

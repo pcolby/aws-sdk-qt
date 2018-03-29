@@ -65,7 +65,7 @@ const DeleteDevEndpointRequest * DeleteDevEndpointResponse::request() const
  */
 void DeleteDevEndpointResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteDevEndpointResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

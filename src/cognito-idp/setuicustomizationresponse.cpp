@@ -65,7 +65,7 @@ const SetUICustomizationRequest * SetUICustomizationResponse::request() const
  */
 void SetUICustomizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetUICustomizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

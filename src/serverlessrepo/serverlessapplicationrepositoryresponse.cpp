@@ -52,7 +52,7 @@ ServerlessApplicationRepositoryResponse::ServerlessApplicationRepositoryResponse
  */
 void ServerlessApplicationRepositoryResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ServerlessApplicationRepositoryResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ServerlessApplicationRepositoryResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ServerlessApplicationRepositoryResponse instance.
  */
 ServerlessApplicationRepositoryResponsePrivate::ServerlessApplicationRepositoryResponsePrivate(
-    ServerlessApplicationRepositoryQueueResponse * const q) : ServerlessApplicationRepositoryPrivate(q)
+    ServerlessApplicationRepositoryResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

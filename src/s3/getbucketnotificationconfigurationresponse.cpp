@@ -65,7 +65,7 @@ const GetBucketNotificationConfigurationRequest * GetBucketNotificationConfigura
  */
 void GetBucketNotificationConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetBucketNotificationConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

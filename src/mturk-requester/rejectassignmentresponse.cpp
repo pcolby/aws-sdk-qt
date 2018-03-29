@@ -65,7 +65,7 @@ const RejectAssignmentRequest * RejectAssignmentResponse::request() const
  */
 void RejectAssignmentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RejectAssignmentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

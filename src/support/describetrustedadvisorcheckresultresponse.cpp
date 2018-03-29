@@ -65,7 +65,7 @@ const DescribeTrustedAdvisorCheckResultRequest * DescribeTrustedAdvisorCheckResu
  */
 void DescribeTrustedAdvisorCheckResultResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeTrustedAdvisorCheckResultResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

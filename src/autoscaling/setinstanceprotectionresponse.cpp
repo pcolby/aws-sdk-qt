@@ -65,7 +65,7 @@ const SetInstanceProtectionRequest * SetInstanceProtectionResponse::request() co
  */
 void SetInstanceProtectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetInstanceProtectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

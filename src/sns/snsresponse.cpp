@@ -52,7 +52,7 @@ SNSResponse::SNSResponse(QObject * const parent)
  */
 void SNSResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(SNSResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void SNSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SNSResponse instance.
  */
 SNSResponsePrivate::SNSResponsePrivate(
-    SNSQueueResponse * const q) : SNSPrivate(q)
+    SNSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

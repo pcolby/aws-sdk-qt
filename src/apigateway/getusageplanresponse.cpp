@@ -65,7 +65,7 @@ const GetUsagePlanRequest * GetUsagePlanResponse::request() const
  */
 void GetUsagePlanResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetUsagePlanResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

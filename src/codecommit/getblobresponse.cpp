@@ -65,7 +65,7 @@ const GetBlobRequest * GetBlobResponse::request() const
  */
 void GetBlobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetBlobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

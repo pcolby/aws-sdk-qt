@@ -65,7 +65,7 @@ const DeleteIntegrationResponseRequest * DeleteIntegrationResponseResponse::requ
  */
 void DeleteIntegrationResponseResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteIntegrationResponseResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ListProvisionedCapacityRequest * ListProvisionedCapacityResponse::request(
  */
 void ListProvisionedCapacityResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListProvisionedCapacityResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

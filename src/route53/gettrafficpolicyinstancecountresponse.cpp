@@ -65,7 +65,7 @@ const GetTrafficPolicyInstanceCountRequest * GetTrafficPolicyInstanceCountRespon
  */
 void GetTrafficPolicyInstanceCountResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetTrafficPolicyInstanceCountResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

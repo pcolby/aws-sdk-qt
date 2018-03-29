@@ -65,7 +65,7 @@ const StopAssessmentRunRequest * StopAssessmentRunResponse::request() const
  */
 void StopAssessmentRunResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopAssessmentRunResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

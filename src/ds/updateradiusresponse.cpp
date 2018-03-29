@@ -65,7 +65,7 @@ const UpdateRadiusRequest * UpdateRadiusResponse::request() const
  */
 void UpdateRadiusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateRadiusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -52,7 +52,7 @@ IoTJobsDataPlaneResponse::IoTJobsDataPlaneResponse(QObject * const parent)
  */
 void IoTJobsDataPlaneResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(IoTJobsDataPlaneResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void IoTJobsDataPlaneResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public IoTJobsDataPlaneResponse instance.
  */
 IoTJobsDataPlaneResponsePrivate::IoTJobsDataPlaneResponsePrivate(
-    IoTJobsDataPlaneQueueResponse * const q) : IoTJobsDataPlanePrivate(q)
+    IoTJobsDataPlaneResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

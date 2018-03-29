@@ -65,7 +65,7 @@ const RespondActivityTaskFailedRequest * RespondActivityTaskFailedResponse::requ
  */
 void RespondActivityTaskFailedResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RespondActivityTaskFailedResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreateNatGatewayRequest * CreateNatGatewayResponse::request() const
  */
 void CreateNatGatewayResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateNatGatewayResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

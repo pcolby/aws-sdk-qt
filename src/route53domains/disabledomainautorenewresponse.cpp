@@ -65,7 +65,7 @@ const DisableDomainAutoRenewRequest * DisableDomainAutoRenewResponse::request() 
  */
 void DisableDomainAutoRenewResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisableDomainAutoRenewResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

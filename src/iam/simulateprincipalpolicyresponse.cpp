@@ -65,7 +65,7 @@ const SimulatePrincipalPolicyRequest * SimulatePrincipalPolicyResponse::request(
  */
 void SimulatePrincipalPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SimulatePrincipalPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

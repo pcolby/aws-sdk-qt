@@ -65,7 +65,7 @@ const CreateDistributionWithTagsRequest * CreateDistributionWithTagsResponse::re
  */
 void CreateDistributionWithTagsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateDistributionWithTagsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

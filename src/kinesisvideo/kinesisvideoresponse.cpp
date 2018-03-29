@@ -52,7 +52,7 @@ KinesisVideoResponse::KinesisVideoResponse(QObject * const parent)
  */
 void KinesisVideoResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(KinesisVideoResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void KinesisVideoResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public KinesisVideoResponse instance.
  */
 KinesisVideoResponsePrivate::KinesisVideoResponsePrivate(
-    KinesisVideoQueueResponse * const q) : KinesisVideoPrivate(q)
+    KinesisVideoResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

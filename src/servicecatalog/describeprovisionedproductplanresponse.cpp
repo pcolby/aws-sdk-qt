@@ -65,7 +65,7 @@ const DescribeProvisionedProductPlanRequest * DescribeProvisionedProductPlanResp
  */
 void DescribeProvisionedProductPlanResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeProvisionedProductPlanResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteLabelsRequest * DeleteLabelsResponse::request() const
  */
 void DeleteLabelsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteLabelsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

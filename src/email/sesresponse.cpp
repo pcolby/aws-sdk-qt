@@ -52,7 +52,7 @@ SESResponse::SESResponse(QObject * const parent)
  */
 void SESResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(SESResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void SESResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SESResponse instance.
  */
 SESResponsePrivate::SESResponsePrivate(
-    SESQueueResponse * const q) : SESPrivate(q)
+    SESResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

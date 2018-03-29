@@ -65,7 +65,7 @@ const GetCatalogImportStatusRequest * GetCatalogImportStatusResponse::request() 
  */
 void GetCatalogImportStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetCatalogImportStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

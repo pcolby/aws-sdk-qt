@@ -65,7 +65,7 @@ const StartAssessmentRunRequest * StartAssessmentRunResponse::request() const
  */
 void StartAssessmentRunResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartAssessmentRunResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

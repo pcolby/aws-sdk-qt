@@ -65,7 +65,7 @@ const SetDefaultAuthorizerRequest * SetDefaultAuthorizerResponse::request() cons
  */
 void SetDefaultAuthorizerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetDefaultAuthorizerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

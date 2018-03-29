@@ -65,7 +65,7 @@ const GetHostedZoneLimitRequest * GetHostedZoneLimitResponse::request() const
  */
 void GetHostedZoneLimitResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetHostedZoneLimitResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

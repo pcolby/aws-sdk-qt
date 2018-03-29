@@ -65,7 +65,7 @@ const GetDisksRequest * GetDisksResponse::request() const
  */
 void GetDisksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetDisksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

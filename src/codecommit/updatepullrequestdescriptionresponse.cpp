@@ -65,7 +65,7 @@ const UpdatePullRequestDescriptionRequest * UpdatePullRequestDescriptionResponse
  */
 void UpdatePullRequestDescriptionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdatePullRequestDescriptionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

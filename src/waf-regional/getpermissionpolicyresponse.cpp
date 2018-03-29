@@ -65,7 +65,7 @@ const GetPermissionPolicyRequest * GetPermissionPolicyResponse::request() const
  */
 void GetPermissionPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetPermissionPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeConnectionsOnInterconnectRequest * DescribeConnectionsOnInterconne
  */
 void DescribeConnectionsOnInterconnectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeConnectionsOnInterconnectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

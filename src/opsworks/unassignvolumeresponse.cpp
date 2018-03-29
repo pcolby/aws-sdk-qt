@@ -65,7 +65,7 @@ const UnassignVolumeRequest * UnassignVolumeResponse::request() const
  */
 void UnassignVolumeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UnassignVolumeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

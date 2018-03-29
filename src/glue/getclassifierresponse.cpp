@@ -65,7 +65,7 @@ const GetClassifierRequest * GetClassifierResponse::request() const
  */
 void GetClassifierResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetClassifierResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

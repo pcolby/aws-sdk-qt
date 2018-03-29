@@ -65,7 +65,7 @@ const DeleteOrganizationRequest * DeleteOrganizationResponse::request() const
  */
 void DeleteOrganizationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteOrganizationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

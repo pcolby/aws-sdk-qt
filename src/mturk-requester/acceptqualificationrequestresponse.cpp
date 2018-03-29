@@ -65,7 +65,7 @@ const AcceptQualificationRequestRequest * AcceptQualificationRequestResponse::re
  */
 void AcceptQualificationRequestResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AcceptQualificationRequestResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

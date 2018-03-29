@@ -65,7 +65,7 @@ const GetBuiltinIntentRequest * GetBuiltinIntentResponse::request() const
  */
 void GetBuiltinIntentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetBuiltinIntentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

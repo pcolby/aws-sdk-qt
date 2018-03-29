@@ -65,7 +65,7 @@ const DisassociateProductFromPortfolioRequest * DisassociateProductFromPortfolio
  */
 void DisassociateProductFromPortfolioResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DisassociateProductFromPortfolioResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

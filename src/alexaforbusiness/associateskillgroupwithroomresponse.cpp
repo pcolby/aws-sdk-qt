@@ -65,7 +65,7 @@ const AssociateSkillGroupWithRoomRequest * AssociateSkillGroupWithRoomResponse::
  */
 void AssociateSkillGroupWithRoomResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateSkillGroupWithRoomResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

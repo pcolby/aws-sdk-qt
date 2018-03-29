@@ -65,7 +65,7 @@ const PredictRequest * PredictResponse::request() const
  */
 void PredictResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PredictResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

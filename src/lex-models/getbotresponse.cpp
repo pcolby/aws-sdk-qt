@@ -65,7 +65,7 @@ const GetBotRequest * GetBotResponse::request() const
  */
 void GetBotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetBotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

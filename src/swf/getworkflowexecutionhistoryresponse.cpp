@@ -65,7 +65,7 @@ const GetWorkflowExecutionHistoryRequest * GetWorkflowExecutionHistoryResponse::
  */
 void GetWorkflowExecutionHistoryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetWorkflowExecutionHistoryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

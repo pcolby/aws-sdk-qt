@@ -52,7 +52,7 @@ CostExplorerResponse::CostExplorerResponse(QObject * const parent)
  */
 void CostExplorerResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CostExplorerResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CostExplorerResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CostExplorerResponse instance.
  */
 CostExplorerResponsePrivate::CostExplorerResponsePrivate(
-    CostExplorerQueueResponse * const q) : CostExplorerPrivate(q)
+    CostExplorerResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

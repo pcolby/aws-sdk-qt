@@ -52,7 +52,7 @@ ElastiCacheResponse::ElastiCacheResponse(QObject * const parent)
  */
 void ElastiCacheResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ElastiCacheResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ElastiCacheResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ElastiCacheResponse instance.
  */
 ElastiCacheResponsePrivate::ElastiCacheResponsePrivate(
-    ElastiCacheQueueResponse * const q) : ElastiCachePrivate(q)
+    ElastiCacheResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

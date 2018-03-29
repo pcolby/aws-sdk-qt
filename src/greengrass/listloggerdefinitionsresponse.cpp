@@ -65,7 +65,7 @@ const ListLoggerDefinitionsRequest * ListLoggerDefinitionsResponse::request() co
  */
 void ListLoggerDefinitionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListLoggerDefinitionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

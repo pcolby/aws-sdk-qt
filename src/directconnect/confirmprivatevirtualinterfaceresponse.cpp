@@ -65,7 +65,7 @@ const ConfirmPrivateVirtualInterfaceRequest * ConfirmPrivateVirtualInterfaceResp
  */
 void ConfirmPrivateVirtualInterfaceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ConfirmPrivateVirtualInterfaceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

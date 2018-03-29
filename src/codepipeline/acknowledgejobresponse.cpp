@@ -65,7 +65,7 @@ const AcknowledgeJobRequest * AcknowledgeJobResponse::request() const
  */
 void AcknowledgeJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AcknowledgeJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

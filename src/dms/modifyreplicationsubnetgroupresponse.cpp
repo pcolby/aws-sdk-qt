@@ -65,7 +65,7 @@ const ModifyReplicationSubnetGroupRequest * ModifyReplicationSubnetGroupResponse
  */
 void ModifyReplicationSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyReplicationSubnetGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

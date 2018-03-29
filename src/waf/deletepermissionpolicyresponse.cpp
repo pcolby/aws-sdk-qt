@@ -65,7 +65,7 @@ const DeletePermissionPolicyRequest * DeletePermissionPolicyResponse::request() 
  */
 void DeletePermissionPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeletePermissionPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const RemoveRoleFromDBClusterRequest * RemoveRoleFromDBClusterResponse::request(
  */
 void RemoveRoleFromDBClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RemoveRoleFromDBClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

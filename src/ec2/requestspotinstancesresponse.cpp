@@ -65,7 +65,7 @@ const RequestSpotInstancesRequest * RequestSpotInstancesResponse::request() cons
  */
 void RequestSpotInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RequestSpotInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

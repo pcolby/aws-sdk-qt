@@ -65,7 +65,7 @@ const CreateComputeEnvironmentRequest * CreateComputeEnvironmentResponse::reques
  */
 void CreateComputeEnvironmentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateComputeEnvironmentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

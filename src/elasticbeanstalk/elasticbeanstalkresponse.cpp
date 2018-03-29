@@ -52,7 +52,7 @@ ElasticBeanstalkResponse::ElasticBeanstalkResponse(QObject * const parent)
  */
 void ElasticBeanstalkResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ElasticBeanstalkResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ElasticBeanstalkResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ElasticBeanstalkResponse instance.
  */
 ElasticBeanstalkResponsePrivate::ElasticBeanstalkResponsePrivate(
-    ElasticBeanstalkQueueResponse * const q) : ElasticBeanstalkPrivate(q)
+    ElasticBeanstalkResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

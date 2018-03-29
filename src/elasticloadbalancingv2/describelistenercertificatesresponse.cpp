@@ -65,7 +65,7 @@ const DescribeListenerCertificatesRequest * DescribeListenerCertificatesResponse
  */
 void DescribeListenerCertificatesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeListenerCertificatesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

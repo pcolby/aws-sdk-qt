@@ -65,7 +65,7 @@ const GetUserPoolMfaConfigRequest * GetUserPoolMfaConfigResponse::request() cons
  */
 void GetUserPoolMfaConfigResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetUserPoolMfaConfigResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

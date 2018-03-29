@@ -52,7 +52,7 @@ GlacierResponse::GlacierResponse(QObject * const parent)
  */
 void GlacierResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(GlacierResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void GlacierResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public GlacierResponse instance.
  */
 GlacierResponsePrivate::GlacierResponsePrivate(
-    GlacierQueueResponse * const q) : GlacierPrivate(q)
+    GlacierResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

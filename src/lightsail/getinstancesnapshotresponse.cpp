@@ -65,7 +65,7 @@ const GetInstanceSnapshotRequest * GetInstanceSnapshotResponse::request() const
  */
 void GetInstanceSnapshotResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetInstanceSnapshotResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

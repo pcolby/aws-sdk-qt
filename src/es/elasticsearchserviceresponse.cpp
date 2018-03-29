@@ -52,7 +52,7 @@ ElasticsearchServiceResponse::ElasticsearchServiceResponse(QObject * const paren
  */
 void ElasticsearchServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ElasticsearchServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ElasticsearchServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ElasticsearchServiceResponse instance.
  */
 ElasticsearchServiceResponsePrivate::ElasticsearchServiceResponsePrivate(
-    ElasticsearchServiceQueueResponse * const q) : ElasticsearchServicePrivate(q)
+    ElasticsearchServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

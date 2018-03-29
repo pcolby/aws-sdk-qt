@@ -65,7 +65,7 @@ const BatchGetDeploymentsRequest * BatchGetDeploymentsResponse::request() const
  */
 void BatchGetDeploymentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BatchGetDeploymentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

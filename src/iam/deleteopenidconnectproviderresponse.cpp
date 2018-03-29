@@ -65,7 +65,7 @@ const DeleteOpenIDConnectProviderRequest * DeleteOpenIDConnectProviderResponse::
  */
 void DeleteOpenIDConnectProviderResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteOpenIDConnectProviderResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

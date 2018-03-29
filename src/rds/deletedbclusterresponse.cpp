@@ -65,7 +65,7 @@ const DeleteDBClusterRequest * DeleteDBClusterResponse::request() const
  */
 void DeleteDBClusterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteDBClusterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

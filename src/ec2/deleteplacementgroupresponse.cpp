@@ -65,7 +65,7 @@ const DeletePlacementGroupRequest * DeletePlacementGroupResponse::request() cons
  */
 void DeletePlacementGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeletePlacementGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const CreateLaunchConfigurationRequest * CreateLaunchConfigurationResponse::requ
  */
 void CreateLaunchConfigurationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateLaunchConfigurationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

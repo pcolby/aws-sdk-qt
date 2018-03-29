@@ -52,7 +52,7 @@ ResourceGroupsResponse::ResourceGroupsResponse(QObject * const parent)
  */
 void ResourceGroupsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ResourceGroupsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ResourceGroupsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ResourceGroupsResponse instance.
  */
 ResourceGroupsResponsePrivate::ResourceGroupsResponsePrivate(
-    ResourceGroupsQueueResponse * const q) : ResourceGroupsPrivate(q)
+    ResourceGroupsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

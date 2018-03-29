@@ -65,7 +65,7 @@ const ImportImageRequest * ImportImageResponse::request() const
  */
 void ImportImageResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ImportImageResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

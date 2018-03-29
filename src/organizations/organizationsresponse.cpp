@@ -52,7 +52,7 @@ OrganizationsResponse::OrganizationsResponse(QObject * const parent)
  */
 void OrganizationsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(OrganizationsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void OrganizationsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public OrganizationsResponse instance.
  */
 OrganizationsResponsePrivate::OrganizationsResponsePrivate(
-    OrganizationsQueueResponse * const q) : OrganizationsPrivate(q)
+    OrganizationsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

@@ -65,7 +65,7 @@ const BatchDetectKeyPhrasesRequest * BatchDetectKeyPhrasesResponse::request() co
  */
 void BatchDetectKeyPhrasesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BatchDetectKeyPhrasesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

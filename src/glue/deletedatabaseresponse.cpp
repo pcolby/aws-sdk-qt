@@ -65,7 +65,7 @@ const DeleteDatabaseRequest * DeleteDatabaseResponse::request() const
  */
 void DeleteDatabaseResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteDatabaseResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

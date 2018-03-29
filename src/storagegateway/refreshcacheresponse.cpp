@@ -65,7 +65,7 @@ const RefreshCacheRequest * RefreshCacheResponse::request() const
  */
 void RefreshCacheResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RefreshCacheResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

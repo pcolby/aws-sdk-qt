@@ -65,7 +65,7 @@ const UpdateMyUserProfileRequest * UpdateMyUserProfileResponse::request() const
  */
 void UpdateMyUserProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateMyUserProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

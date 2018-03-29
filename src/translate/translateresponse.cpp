@@ -52,7 +52,7 @@ TranslateResponse::TranslateResponse(QObject * const parent)
  */
 void TranslateResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(TranslateResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void TranslateResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public TranslateResponse instance.
  */
 TranslateResponsePrivate::TranslateResponsePrivate(
-    TranslateQueueResponse * const q) : TranslatePrivate(q)
+    TranslateResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

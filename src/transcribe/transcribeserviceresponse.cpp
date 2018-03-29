@@ -52,7 +52,7 @@ TranscribeServiceResponse::TranscribeServiceResponse(QObject * const parent)
  */
 void TranscribeServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(TranscribeServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void TranscribeServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public TranscribeServiceResponse instance.
  */
 TranscribeServiceResponsePrivate::TranscribeServiceResponsePrivate(
-    TranscribeServiceQueueResponse * const q) : TranscribeServicePrivate(q)
+    TranscribeServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

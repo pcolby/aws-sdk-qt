@@ -65,7 +65,7 @@ const EnableTopicRuleRequest * EnableTopicRuleResponse::request() const
  */
 void EnableTopicRuleResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(EnableTopicRuleResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

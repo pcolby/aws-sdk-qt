@@ -52,7 +52,7 @@ DynamoDBResponse::DynamoDBResponse(QObject * const parent)
  */
 void DynamoDBResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(DynamoDBResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void DynamoDBResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public DynamoDBResponse instance.
  */
 DynamoDBResponsePrivate::DynamoDBResponsePrivate(
-    DynamoDBQueueResponse * const q) : DynamoDBPrivate(q)
+    DynamoDBResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

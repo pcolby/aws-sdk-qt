@@ -65,7 +65,7 @@ const DescribeNFSFileSharesRequest * DescribeNFSFileSharesResponse::request() co
  */
 void DescribeNFSFileSharesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeNFSFileSharesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

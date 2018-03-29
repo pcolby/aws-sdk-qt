@@ -52,7 +52,7 @@ Route53DomainsResponse::Route53DomainsResponse(QObject * const parent)
  */
 void Route53DomainsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(Route53DomainsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void Route53DomainsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public Route53DomainsResponse instance.
  */
 Route53DomainsResponsePrivate::Route53DomainsResponsePrivate(
-    Route53DomainsQueueResponse * const q) : Route53DomainsPrivate(q)
+    Route53DomainsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

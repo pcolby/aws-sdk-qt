@@ -65,7 +65,7 @@ const CreatePolicyVersionRequest * CreatePolicyVersionResponse::request() const
  */
 void CreatePolicyVersionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreatePolicyVersionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

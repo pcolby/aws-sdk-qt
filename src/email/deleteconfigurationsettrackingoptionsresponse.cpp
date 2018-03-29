@@ -65,7 +65,7 @@ const DeleteConfigurationSetTrackingOptionsRequest * DeleteConfigurationSetTrack
  */
 void DeleteConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteConfigurationSetTrackingOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

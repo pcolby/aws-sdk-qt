@@ -65,7 +65,7 @@ const UpgradeAppliedSchemaRequest * UpgradeAppliedSchemaResponse::request() cons
  */
 void UpgradeAppliedSchemaResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpgradeAppliedSchemaResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

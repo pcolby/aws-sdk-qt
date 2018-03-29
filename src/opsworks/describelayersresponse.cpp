@@ -65,7 +65,7 @@ const DescribeLayersRequest * DescribeLayersResponse::request() const
  */
 void DescribeLayersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeLayersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const UpdateEventSourceMappingRequest * UpdateEventSourceMappingResponse::reques
  */
 void UpdateEventSourceMappingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateEventSourceMappingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeCacheEngineVersionsRequest * DescribeCacheEngineVersionsResponse::
  */
 void DescribeCacheEngineVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeCacheEngineVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

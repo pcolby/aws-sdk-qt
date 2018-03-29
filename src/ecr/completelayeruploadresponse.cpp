@@ -65,7 +65,7 @@ const CompleteLayerUploadRequest * CompleteLayerUploadResponse::request() const
  */
 void CompleteLayerUploadResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CompleteLayerUploadResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

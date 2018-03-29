@@ -65,7 +65,7 @@ const CreateInputRequest * CreateInputResponse::request() const
  */
 void CreateInputResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateInputResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

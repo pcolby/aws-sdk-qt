@@ -65,7 +65,7 @@ const ListUniqueProblemsRequest * ListUniqueProblemsResponse::request() const
  */
 void ListUniqueProblemsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListUniqueProblemsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

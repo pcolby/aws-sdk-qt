@@ -65,7 +65,7 @@ const ModifyMountTargetSecurityGroupsRequest * ModifyMountTargetSecurityGroupsRe
  */
 void ModifyMountTargetSecurityGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifyMountTargetSecurityGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

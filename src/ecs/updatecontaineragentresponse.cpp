@@ -65,7 +65,7 @@ const UpdateContainerAgentRequest * UpdateContainerAgentResponse::request() cons
  */
 void UpdateContainerAgentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateContainerAgentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

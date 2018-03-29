@@ -52,7 +52,7 @@ MTurkResponse::MTurkResponse(QObject * const parent)
  */
 void MTurkResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(MTurkResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void MTurkResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MTurkResponse instance.
  */
 MTurkResponsePrivate::MTurkResponsePrivate(
-    MTurkQueueResponse * const q) : MTurkPrivate(q)
+    MTurkResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

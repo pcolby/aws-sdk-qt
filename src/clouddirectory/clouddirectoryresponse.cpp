@@ -52,7 +52,7 @@ CloudDirectoryResponse::CloudDirectoryResponse(QObject * const parent)
  */
 void CloudDirectoryResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CloudDirectoryResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CloudDirectoryResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudDirectoryResponse instance.
  */
 CloudDirectoryResponsePrivate::CloudDirectoryResponsePrivate(
-    CloudDirectoryQueueResponse * const q) : CloudDirectoryPrivate(q)
+    CloudDirectoryResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

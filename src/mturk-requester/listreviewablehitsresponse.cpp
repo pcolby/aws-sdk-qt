@@ -65,7 +65,7 @@ const ListReviewableHITsRequest * ListReviewableHITsResponse::request() const
  */
 void ListReviewableHITsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListReviewableHITsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

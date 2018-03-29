@@ -52,7 +52,7 @@ EC2Response::EC2Response(QObject * const parent)
  */
 void EC2Response::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(EC2Response);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void EC2Response::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public EC2Response instance.
  */
 EC2ResponsePrivate::EC2ResponsePrivate(
-    EC2QueueResponse * const q) : EC2Private(q)
+    EC2Response * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

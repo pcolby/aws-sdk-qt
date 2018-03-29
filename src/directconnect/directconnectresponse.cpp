@@ -52,7 +52,7 @@ DirectConnectResponse::DirectConnectResponse(QObject * const parent)
  */
 void DirectConnectResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(DirectConnectResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void DirectConnectResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public DirectConnectResponse instance.
  */
 DirectConnectResponsePrivate::DirectConnectResponsePrivate(
-    DirectConnectQueueResponse * const q) : DirectConnectPrivate(q)
+    DirectConnectResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

@@ -65,7 +65,7 @@ const TestInvokeMethodRequest * TestInvokeMethodResponse::request() const
  */
 void TestInvokeMethodResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(TestInvokeMethodResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

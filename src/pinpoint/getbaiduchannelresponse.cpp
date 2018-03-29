@@ -65,7 +65,7 @@ const GetBaiduChannelRequest * GetBaiduChannelResponse::request() const
  */
 void GetBaiduChannelResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetBaiduChannelResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

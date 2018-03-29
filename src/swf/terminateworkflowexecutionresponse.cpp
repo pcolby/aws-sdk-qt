@@ -65,7 +65,7 @@ const TerminateWorkflowExecutionRequest * TerminateWorkflowExecutionResponse::re
  */
 void TerminateWorkflowExecutionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(TerminateWorkflowExecutionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

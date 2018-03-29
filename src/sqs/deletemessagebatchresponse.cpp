@@ -65,7 +65,7 @@ const DeleteMessageBatchRequest * DeleteMessageBatchResponse::request() const
  */
 void DeleteMessageBatchResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteMessageBatchResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

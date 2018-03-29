@@ -65,7 +65,7 @@ const ListHsmsRequest * ListHsmsResponse::request() const
  */
 void ListHsmsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListHsmsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

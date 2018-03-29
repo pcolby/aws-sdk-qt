@@ -65,7 +65,7 @@ const DeleteNetworkInterfaceRequest * DeleteNetworkInterfaceResponse::request() 
  */
 void DeleteNetworkInterfaceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteNetworkInterfaceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

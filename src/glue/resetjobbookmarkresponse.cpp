@@ -65,7 +65,7 @@ const ResetJobBookmarkRequest * ResetJobBookmarkResponse::request() const
  */
 void ResetJobBookmarkResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ResetJobBookmarkResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

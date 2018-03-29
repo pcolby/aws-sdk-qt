@@ -65,7 +65,7 @@ const AddFacetToObjectRequest * AddFacetToObjectResponse::request() const
  */
 void AddFacetToObjectResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AddFacetToObjectResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ModifySnapshotCopyRetentionPeriodRequest * ModifySnapshotCopyRetentionPeri
  */
 void ModifySnapshotCopyRetentionPeriodResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ModifySnapshotCopyRetentionPeriodResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ListAssociatedStacksRequest * ListAssociatedStacksResponse::request() cons
  */
 void ListAssociatedStacksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListAssociatedStacksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

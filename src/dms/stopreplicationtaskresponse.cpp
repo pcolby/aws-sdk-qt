@@ -65,7 +65,7 @@ const StopReplicationTaskRequest * StopReplicationTaskResponse::request() const
  */
 void StopReplicationTaskResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopReplicationTaskResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

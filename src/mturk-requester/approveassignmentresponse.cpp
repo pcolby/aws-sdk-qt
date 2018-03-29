@@ -65,7 +65,7 @@ const ApproveAssignmentRequest * ApproveAssignmentResponse::request() const
  */
 void ApproveAssignmentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ApproveAssignmentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ListGeoLocationsRequest * ListGeoLocationsResponse::request() const
  */
 void ListGeoLocationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListGeoLocationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

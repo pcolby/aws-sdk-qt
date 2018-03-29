@@ -65,7 +65,7 @@ const GetDocumentationVersionsRequest * GetDocumentationVersionsResponse::reques
  */
 void GetDocumentationVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetDocumentationVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

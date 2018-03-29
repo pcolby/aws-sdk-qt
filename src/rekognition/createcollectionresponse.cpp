@@ -65,7 +65,7 @@ const CreateCollectionRequest * CreateCollectionResponse::request() const
  */
 void CreateCollectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateCollectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

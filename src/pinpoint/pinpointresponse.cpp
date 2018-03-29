@@ -52,7 +52,7 @@ PinpointResponse::PinpointResponse(QObject * const parent)
  */
 void PinpointResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(PinpointResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void PinpointResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public PinpointResponse instance.
  */
 PinpointResponsePrivate::PinpointResponsePrivate(
-    PinpointQueueResponse * const q) : PinpointPrivate(q)
+    PinpointResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

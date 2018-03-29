@@ -65,7 +65,7 @@ const CreateAuthorizerRequest * CreateAuthorizerResponse::request() const
  */
 void CreateAuthorizerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateAuthorizerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

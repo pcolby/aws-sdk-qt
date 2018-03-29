@@ -65,7 +65,7 @@ const CopyOptionGroupRequest * CopyOptionGroupResponse::request() const
  */
 void CopyOptionGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CopyOptionGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

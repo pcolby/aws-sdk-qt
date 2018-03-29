@@ -65,7 +65,7 @@ const CreateSnapshotFromVolumeRecoveryPointRequest * CreateSnapshotFromVolumeRec
  */
 void CreateSnapshotFromVolumeRecoveryPointResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateSnapshotFromVolumeRecoveryPointResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

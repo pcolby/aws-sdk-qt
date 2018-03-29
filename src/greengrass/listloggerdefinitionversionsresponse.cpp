@@ -65,7 +65,7 @@ const ListLoggerDefinitionVersionsRequest * ListLoggerDefinitionVersionsResponse
  */
 void ListLoggerDefinitionVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListLoggerDefinitionVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeDeliveryChannelStatusRequest * DescribeDeliveryChannelStatusRespon
  */
 void DescribeDeliveryChannelStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeDeliveryChannelStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

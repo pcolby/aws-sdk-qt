@@ -65,7 +65,7 @@ const DeleteHapgRequest * DeleteHapgResponse::request() const
  */
 void DeleteHapgResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteHapgResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

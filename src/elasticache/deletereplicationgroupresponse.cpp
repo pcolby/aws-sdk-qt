@@ -65,7 +65,7 @@ const DeleteReplicationGroupRequest * DeleteReplicationGroupResponse::request() 
  */
 void DeleteReplicationGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteReplicationGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

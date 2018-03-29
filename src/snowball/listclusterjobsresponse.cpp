@@ -65,7 +65,7 @@ const ListClusterJobsRequest * ListClusterJobsResponse::request() const
  */
 void ListClusterJobsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListClusterJobsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

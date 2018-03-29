@@ -65,7 +65,7 @@ const BatchGetRepositoriesRequest * BatchGetRepositoriesResponse::request() cons
  */
 void BatchGetRepositoriesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BatchGetRepositoriesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

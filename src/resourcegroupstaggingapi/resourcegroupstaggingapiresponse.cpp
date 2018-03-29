@@ -52,7 +52,7 @@ ResourceGroupsTaggingAPIResponse::ResourceGroupsTaggingAPIResponse(QObject * con
  */
 void ResourceGroupsTaggingAPIResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ResourceGroupsTaggingAPIResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ResourceGroupsTaggingAPIResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ResourceGroupsTaggingAPIResponse instance.
  */
 ResourceGroupsTaggingAPIResponsePrivate::ResourceGroupsTaggingAPIResponsePrivate(
-    ResourceGroupsTaggingAPIQueueResponse * const q) : ResourceGroupsTaggingAPIPrivate(q)
+    ResourceGroupsTaggingAPIResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

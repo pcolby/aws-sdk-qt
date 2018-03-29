@@ -65,7 +65,7 @@ const DescribeLoadBalancerPolicyTypesRequest * DescribeLoadBalancerPolicyTypesRe
  */
 void DescribeLoadBalancerPolicyTypesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeLoadBalancerPolicyTypesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

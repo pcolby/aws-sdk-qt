@@ -65,7 +65,7 @@ const GetBucketAclRequest * GetBucketAclResponse::request() const
  */
 void GetBucketAclResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetBucketAclResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const RemoveRoleFromInstanceProfileRequest * RemoveRoleFromInstanceProfileRespon
  */
 void RemoveRoleFromInstanceProfileResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RemoveRoleFromInstanceProfileResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

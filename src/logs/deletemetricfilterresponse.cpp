@@ -65,7 +65,7 @@ const DeleteMetricFilterRequest * DeleteMetricFilterResponse::request() const
  */
 void DeleteMetricFilterResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteMetricFilterResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

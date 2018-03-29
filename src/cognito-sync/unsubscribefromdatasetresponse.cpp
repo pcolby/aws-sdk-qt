@@ -65,7 +65,7 @@ const UnsubscribeFromDatasetRequest * UnsubscribeFromDatasetResponse::request() 
  */
 void UnsubscribeFromDatasetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UnsubscribeFromDatasetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

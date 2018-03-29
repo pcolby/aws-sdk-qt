@@ -52,7 +52,7 @@ CognitoIdentityProviderResponse::CognitoIdentityProviderResponse(QObject * const
  */
 void CognitoIdentityProviderResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(CognitoIdentityProviderResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void CognitoIdentityProviderResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CognitoIdentityProviderResponse instance.
  */
 CognitoIdentityProviderResponsePrivate::CognitoIdentityProviderResponsePrivate(
-    CognitoIdentityProviderQueueResponse * const q) : CognitoIdentityProviderPrivate(q)
+    CognitoIdentityProviderResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

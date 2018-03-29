@@ -52,7 +52,7 @@ EFSResponse::EFSResponse(QObject * const parent)
  */
 void EFSResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(EFSResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void EFSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public EFSResponse instance.
  */
 EFSResponsePrivate::EFSResponsePrivate(
-    EFSQueueResponse * const q) : EFSPrivate(q)
+    EFSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

@@ -65,7 +65,7 @@ const ListLocalDisksRequest * ListLocalDisksResponse::request() const
  */
 void ListLocalDisksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListLocalDisksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

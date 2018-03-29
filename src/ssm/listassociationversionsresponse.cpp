@@ -65,7 +65,7 @@ const ListAssociationVersionsRequest * ListAssociationVersionsResponse::request(
  */
 void ListAssociationVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListAssociationVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

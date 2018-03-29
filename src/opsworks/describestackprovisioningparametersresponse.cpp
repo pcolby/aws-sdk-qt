@@ -65,7 +65,7 @@ const DescribeStackProvisioningParametersRequest * DescribeStackProvisioningPara
  */
 void DescribeStackProvisioningParametersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeStackProvisioningParametersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

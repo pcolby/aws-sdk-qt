@@ -34,7 +34,7 @@ namespace {{NameSpaceName}} {
  */
 void {{ClassName}}::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D({{ClassName}});
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -64,7 +64,7 @@ void {{ClassName}}::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public {{ClassName}} instance.
  */
 {{ClassName}}Private::{{ClassName}}Private(
-    {{ClassName|cut:"Response"}}QueueResponse * const q) : {{ClassName|cut:"Response"}}Private(q)
+    {{ClassName}} * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

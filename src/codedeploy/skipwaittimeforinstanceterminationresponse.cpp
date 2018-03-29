@@ -65,7 +65,7 @@ const SkipWaitTimeForInstanceTerminationRequest * SkipWaitTimeForInstanceTermina
  */
 void SkipWaitTimeForInstanceTerminationResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SkipWaitTimeForInstanceTerminationResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

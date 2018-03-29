@@ -65,7 +65,7 @@ const StartReplicationTaskAssessmentRequest * StartReplicationTaskAssessmentResp
  */
 void StartReplicationTaskAssessmentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartReplicationTaskAssessmentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

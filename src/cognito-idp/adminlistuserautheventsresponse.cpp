@@ -65,7 +65,7 @@ const AdminListUserAuthEventsRequest * AdminListUserAuthEventsResponse::request(
  */
 void AdminListUserAuthEventsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AdminListUserAuthEventsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

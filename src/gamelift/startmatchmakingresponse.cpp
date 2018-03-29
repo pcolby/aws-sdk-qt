@@ -65,7 +65,7 @@ const StartMatchmakingRequest * StartMatchmakingResponse::request() const
  */
 void StartMatchmakingResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StartMatchmakingResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const ListAttacksRequest * ListAttacksResponse::request() const
  */
 void ListAttacksResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListAttacksResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

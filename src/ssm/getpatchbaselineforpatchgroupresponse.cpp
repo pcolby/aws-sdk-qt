@@ -65,7 +65,7 @@ const GetPatchBaselineForPatchGroupRequest * GetPatchBaselineForPatchGroupRespon
  */
 void GetPatchBaselineForPatchGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetPatchBaselineForPatchGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

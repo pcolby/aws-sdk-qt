@@ -65,7 +65,7 @@ const BatchDeleteAttributesRequest * BatchDeleteAttributesResponse::request() co
  */
 void BatchDeleteAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BatchDeleteAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

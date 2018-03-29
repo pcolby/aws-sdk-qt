@@ -65,7 +65,7 @@ const CreateByteMatchSetRequest * CreateByteMatchSetResponse::request() const
  */
 void CreateByteMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateByteMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeClusterVersionsRequest * DescribeClusterVersionsResponse::request(
  */
 void DescribeClusterVersionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeClusterVersionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const EnableVolumeIORequest * EnableVolumeIOResponse::request() const
  */
 void EnableVolumeIOResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(EnableVolumeIOResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -52,7 +52,7 @@ SWFResponse::SWFResponse(QObject * const parent)
  */
 void SWFResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(SWFResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void SWFResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SWFResponse instance.
  */
 SWFResponsePrivate::SWFResponsePrivate(
-    SWFQueueResponse * const q) : SWFPrivate(q)
+    SWFResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

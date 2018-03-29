@@ -65,7 +65,7 @@ const RemoveAttributesFromFindingsRequest * RemoveAttributesFromFindingsResponse
  */
 void RemoveAttributesFromFindingsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(RemoveAttributesFromFindingsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

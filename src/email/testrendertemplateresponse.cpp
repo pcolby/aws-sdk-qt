@@ -65,7 +65,7 @@ const TestRenderTemplateRequest * TestRenderTemplateResponse::request() const
  */
 void TestRenderTemplateResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(TestRenderTemplateResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

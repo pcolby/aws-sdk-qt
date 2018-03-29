@@ -65,7 +65,7 @@ const CreateNetworkAclEntryRequest * CreateNetworkAclEntryResponse::request() co
  */
 void CreateNetworkAclEntryResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateNetworkAclEntryResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

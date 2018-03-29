@@ -52,7 +52,7 @@ ACMResponse::ACMResponse(QObject * const parent)
  */
 void ACMResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(ACMResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void ACMResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ACMResponse instance.
  */
 ACMResponsePrivate::ACMResponsePrivate(
-    ACMQueueResponse * const q) : ACMPrivate(q)
+    ACMResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

@@ -65,7 +65,7 @@ const CreateDeploymentRequest * CreateDeploymentResponse::request() const
  */
 void CreateDeploymentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateDeploymentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

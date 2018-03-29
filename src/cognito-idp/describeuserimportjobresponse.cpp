@@ -65,7 +65,7 @@ const DescribeUserImportJobRequest * DescribeUserImportJobResponse::request() co
  */
 void DescribeUserImportJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeUserImportJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

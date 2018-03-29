@@ -65,7 +65,7 @@ const StopTrainingJobRequest * StopTrainingJobResponse::request() const
  */
 void StopTrainingJobResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopTrainingJobResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

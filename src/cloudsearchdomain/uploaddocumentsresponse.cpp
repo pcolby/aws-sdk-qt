@@ -65,7 +65,7 @@ const UploadDocumentsRequest * UploadDocumentsResponse::request() const
  */
 void UploadDocumentsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UploadDocumentsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

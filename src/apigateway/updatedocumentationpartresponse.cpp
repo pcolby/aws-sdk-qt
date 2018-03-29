@@ -65,7 +65,7 @@ const UpdateDocumentationPartRequest * UpdateDocumentationPartResponse::request(
  */
 void UpdateDocumentationPartResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateDocumentationPartResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

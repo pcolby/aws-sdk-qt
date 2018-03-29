@@ -65,7 +65,7 @@ const EnableDomainTransferLockRequest * EnableDomainTransferLockResponse::reques
  */
 void EnableDomainTransferLockResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(EnableDomainTransferLockResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

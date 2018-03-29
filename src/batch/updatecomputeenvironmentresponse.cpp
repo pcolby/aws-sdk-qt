@@ -65,7 +65,7 @@ const UpdateComputeEnvironmentRequest * UpdateComputeEnvironmentResponse::reques
  */
 void UpdateComputeEnvironmentResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateComputeEnvironmentResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const PutAutoScalingPolicyRequest * PutAutoScalingPolicyResponse::request() cons
  */
 void PutAutoScalingPolicyResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutAutoScalingPolicyResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

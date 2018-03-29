@@ -65,7 +65,7 @@ const DeleteTrafficPolicyInstanceRequest * DeleteTrafficPolicyInstanceResponse::
  */
 void DeleteTrafficPolicyInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteTrafficPolicyInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

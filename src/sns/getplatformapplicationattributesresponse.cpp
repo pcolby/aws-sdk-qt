@@ -65,7 +65,7 @@ const GetPlatformApplicationAttributesRequest * GetPlatformApplicationAttributes
  */
 void GetPlatformApplicationAttributesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetPlatformApplicationAttributesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

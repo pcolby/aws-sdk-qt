@@ -65,7 +65,7 @@ const GetAuthorizersRequest * GetAuthorizersResponse::request() const
  */
 void GetAuthorizersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetAuthorizersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

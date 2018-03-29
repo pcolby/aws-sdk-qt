@@ -52,7 +52,7 @@ LexRuntimeServiceResponse::LexRuntimeServiceResponse(QObject * const parent)
  */
 void LexRuntimeServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(LexRuntimeServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void LexRuntimeServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public LexRuntimeServiceResponse instance.
  */
 LexRuntimeServiceResponsePrivate::LexRuntimeServiceResponsePrivate(
-    LexRuntimeServiceQueueResponse * const q) : LexRuntimeServicePrivate(q)
+    LexRuntimeServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

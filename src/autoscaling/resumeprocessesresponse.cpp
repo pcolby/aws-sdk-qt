@@ -65,7 +65,7 @@ const ResumeProcessesRequest * ResumeProcessesResponse::request() const
  */
 void ResumeProcessesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ResumeProcessesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const GetOfferingStatusRequest * GetOfferingStatusResponse::request() const
  */
 void GetOfferingStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetOfferingStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

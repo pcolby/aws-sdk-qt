@@ -65,7 +65,7 @@ const DeleteTrailRequest * DeleteTrailResponse::request() const
  */
 void DeleteTrailResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteTrailResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

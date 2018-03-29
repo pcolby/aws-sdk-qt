@@ -65,7 +65,7 @@ const StopRunRequest * StopRunResponse::request() const
  */
 void StopRunResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(StopRunResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

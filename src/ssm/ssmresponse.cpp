@@ -52,7 +52,7 @@ SSMResponse::SSMResponse(QObject * const parent)
  */
 void SSMResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(SSMResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void SSMResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SSMResponse instance.
  */
 SSMResponsePrivate::SSMResponsePrivate(
-    SSMQueueResponse * const q) : SSMPrivate(q)
+    SSMResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

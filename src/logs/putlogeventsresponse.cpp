@@ -65,7 +65,7 @@ const PutLogEventsRequest * PutLogEventsResponse::request() const
  */
 void PutLogEventsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(PutLogEventsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

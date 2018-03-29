@@ -65,7 +65,7 @@ const SetRulePrioritiesRequest * SetRulePrioritiesResponse::request() const
  */
 void SetRulePrioritiesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetRulePrioritiesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

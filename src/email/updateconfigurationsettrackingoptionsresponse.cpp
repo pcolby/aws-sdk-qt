@@ -65,7 +65,7 @@ const UpdateConfigurationSetTrackingOptionsRequest * UpdateConfigurationSetTrack
  */
 void UpdateConfigurationSetTrackingOptionsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateConfigurationSetTrackingOptionsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

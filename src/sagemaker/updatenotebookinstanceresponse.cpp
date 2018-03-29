@@ -65,7 +65,7 @@ const UpdateNotebookInstanceRequest * UpdateNotebookInstanceResponse::request() 
  */
 void UpdateNotebookInstanceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateNotebookInstanceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

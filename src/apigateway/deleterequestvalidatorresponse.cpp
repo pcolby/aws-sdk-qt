@@ -65,7 +65,7 @@ const DeleteRequestValidatorRequest * DeleteRequestValidatorResponse::request() 
  */
 void DeleteRequestValidatorResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteRequestValidatorResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

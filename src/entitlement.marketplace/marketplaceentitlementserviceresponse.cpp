@@ -52,7 +52,7 @@ MarketplaceEntitlementServiceResponse::MarketplaceEntitlementServiceResponse(QOb
  */
 void MarketplaceEntitlementServiceResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(MarketplaceEntitlementServiceResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void MarketplaceEntitlementServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MarketplaceEntitlementServiceResponse instance.
  */
 MarketplaceEntitlementServiceResponsePrivate::MarketplaceEntitlementServiceResponsePrivate(
-    MarketplaceEntitlementServiceQueueResponse * const q) : MarketplaceEntitlementServicePrivate(q)
+    MarketplaceEntitlementServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

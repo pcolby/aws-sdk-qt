@@ -65,7 +65,7 @@ const UpdateElasticIpRequest * UpdateElasticIpResponse::request() const
  */
 void UpdateElasticIpResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateElasticIpResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

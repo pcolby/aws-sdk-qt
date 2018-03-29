@@ -65,7 +65,7 @@ const UpdatePipelineNotificationsRequest * UpdatePipelineNotificationsResponse::
  */
 void UpdatePipelineNotificationsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdatePipelineNotificationsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const AssociateQualificationWithWorkerRequest * AssociateQualificationWithWorker
  */
 void AssociateQualificationWithWorkerResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateQualificationWithWorkerResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteCacheSubnetGroupRequest * DeleteCacheSubnetGroupResponse::request() 
  */
 void DeleteCacheSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteCacheSubnetGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const UpdateParameterGroupRequest * UpdateParameterGroupResponse::request() cons
  */
 void UpdateParameterGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(UpdateParameterGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeLoadBalancerTargetGroupsRequest * DescribeLoadBalancerTargetGroups
  */
 void DescribeLoadBalancerTargetGroupsResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeLoadBalancerTargetGroupsResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DeleteGeoMatchSetRequest * DeleteGeoMatchSetResponse::request() const
  */
 void DeleteGeoMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DeleteGeoMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

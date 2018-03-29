@@ -65,7 +65,7 @@ const SetVisibleToAllUsersRequest * SetVisibleToAllUsersResponse::request() cons
  */
 void SetVisibleToAllUsersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(SetVisibleToAllUsersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

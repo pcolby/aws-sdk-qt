@@ -65,7 +65,7 @@ const CreateDBSubnetGroupRequest * CreateDBSubnetGroupResponse::request() const
  */
 void CreateDBSubnetGroupResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(CreateDBSubnetGroupResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const AssociateHostedConnectionRequest * AssociateHostedConnectionResponse::requ
  */
 void AssociateHostedConnectionResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(AssociateHostedConnectionResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

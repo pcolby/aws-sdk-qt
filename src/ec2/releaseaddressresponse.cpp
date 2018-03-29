@@ -65,7 +65,7 @@ const ReleaseAddressRequest * ReleaseAddressResponse::request() const
  */
 void ReleaseAddressResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ReleaseAddressResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

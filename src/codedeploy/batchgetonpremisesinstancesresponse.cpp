@@ -65,7 +65,7 @@ const BatchGetOnPremisesInstancesRequest * BatchGetOnPremisesInstancesResponse::
  */
 void BatchGetOnPremisesInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(BatchGetOnPremisesInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

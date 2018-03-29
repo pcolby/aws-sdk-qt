@@ -65,7 +65,7 @@ const GetNamespaceRequest * GetNamespaceResponse::request() const
  */
 void GetNamespaceResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetNamespaceResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

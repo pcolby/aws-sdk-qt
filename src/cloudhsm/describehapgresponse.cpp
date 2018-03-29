@@ -65,7 +65,7 @@ const DescribeHapgRequest * DescribeHapgResponse::request() const
  */
 void DescribeHapgResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeHapgResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

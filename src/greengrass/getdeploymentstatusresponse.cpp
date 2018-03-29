@@ -65,7 +65,7 @@ const GetDeploymentStatusRequest * GetDeploymentStatusResponse::request() const
  */
 void GetDeploymentStatusResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetDeploymentStatusResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

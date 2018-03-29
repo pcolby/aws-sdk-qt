@@ -65,7 +65,7 @@ const GetRegexMatchSetRequest * GetRegexMatchSetResponse::request() const
  */
 void GetRegexMatchSetResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetRegexMatchSetResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

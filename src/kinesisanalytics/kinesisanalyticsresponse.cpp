@@ -52,7 +52,7 @@ KinesisAnalyticsResponse::KinesisAnalyticsResponse(QObject * const parent)
  */
 void KinesisAnalyticsResponse::parseFailure(QIODevice &response)
 {
-    Q_D(SqsResponse);
+    Q_D(KinesisAnalyticsResponse);
     Q_UNUSED(response);
     /*QXmlStreamReader xml(&response);
     if (xml.readNextStartElement()) {
@@ -82,7 +82,7 @@ void KinesisAnalyticsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public KinesisAnalyticsResponse instance.
  */
 KinesisAnalyticsResponsePrivate::KinesisAnalyticsResponsePrivate(
-    KinesisAnalyticsQueueResponse * const q) : KinesisAnalyticsPrivate(q)
+    KinesisAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
 {
 
 }

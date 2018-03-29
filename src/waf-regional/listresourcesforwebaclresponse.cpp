@@ -65,7 +65,7 @@ const ListResourcesForWebACLRequest * ListResourcesForWebACLResponse::request() 
  */
 void ListResourcesForWebACLResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(ListResourcesForWebACLResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

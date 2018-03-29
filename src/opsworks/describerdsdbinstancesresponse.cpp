@@ -65,7 +65,7 @@ const DescribeRdsDbInstancesRequest * DescribeRdsDbInstancesResponse::request() 
  */
 void DescribeRdsDbInstancesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeRdsDbInstancesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

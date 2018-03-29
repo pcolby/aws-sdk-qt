@@ -65,7 +65,7 @@ const GetUserAttributeVerificationCodeRequest * GetUserAttributeVerificationCode
  */
 void GetUserAttributeVerificationCodeResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(GetUserAttributeVerificationCodeResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

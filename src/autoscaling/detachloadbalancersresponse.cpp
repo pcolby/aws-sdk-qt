@@ -65,7 +65,7 @@ const DetachLoadBalancersRequest * DetachLoadBalancersResponse::request() const
  */
 void DetachLoadBalancersResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DetachLoadBalancersResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }

@@ -65,7 +65,7 @@ const DescribeScalingProcessTypesRequest * DescribeScalingProcessTypesResponse::
  */
 void DescribeScalingProcessTypesResponse::parseSuccess(QIODevice &response)
 {
-    Q_D(Response);
+    Q_D(DescribeScalingProcessTypesResponse);
     QXmlStreamReader xml(&response);
     /// @todo
 }
