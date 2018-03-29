@@ -23,8 +23,7 @@
 #include "opsworksresponse.h"
 #include "deletestackrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorks {
 
 class DeleteStackResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace OpsWorks
-} // namespace AWS
+} // namespace QtAws
 
 #endif

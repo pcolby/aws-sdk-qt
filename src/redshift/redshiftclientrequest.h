@@ -27,8 +27,7 @@
 
 class QNetworkRequest;
 
-namespace AWS {
-
+namespace QtAws {
 namespace Redshift {
 
 class AwsAbstractClient;
@@ -77,6 +76,6 @@ private:
 }
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

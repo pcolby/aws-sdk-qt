@@ -23,8 +23,7 @@
 #include "cognitoidentityprovider_p.h"
 #include "getsigningcertificaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 class GetSigningCertificateRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws
 
 #endif

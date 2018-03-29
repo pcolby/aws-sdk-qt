@@ -23,8 +23,7 @@
 #include "ecs_p.h"
 #include "deleteclusterrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ECS {
 
 class DeleteClusterRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ECS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

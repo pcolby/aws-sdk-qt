@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace TranscribeService {
 
 /**
@@ -103,4 +103,4 @@ void GetTranscriptionJobResponsePrivate::GetTranscriptionJobResponse(QXmlStreamR
 }
 
 } // namespace TranscribeService
-} // namespace AWS
+} // namespace QtAws

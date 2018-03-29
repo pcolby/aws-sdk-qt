@@ -23,8 +23,7 @@
 #include "cloudhsmv2_p.h"
 #include "cloudhsmv2clientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSMV2 {
 
 class CloudHSMV2ClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudHSMV2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

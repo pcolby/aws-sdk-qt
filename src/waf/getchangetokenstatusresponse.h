@@ -23,8 +23,7 @@
 #include "wafresponse.h"
 #include "getchangetokenstatusrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class GetChangeTokenStatusResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

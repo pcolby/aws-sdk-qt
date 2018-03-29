@@ -20,7 +20,7 @@
 #include "datapipelineclientrequest.h"
 #include "datapipelineclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DataPipeline {
 
 /**
@@ -337,4 +337,4 @@ QString DataPipelineClientRequestPrivate::toString(const DataPipelineClientReque
 }
 
 } // namespace DataPipeline
-} // namespace AWS
+} // namespace QtAws

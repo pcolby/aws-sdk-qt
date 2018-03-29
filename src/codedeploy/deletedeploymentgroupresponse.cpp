@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CodeDeploy {
 
 /**
@@ -103,4 +103,4 @@ void DeleteDeploymentGroupResponsePrivate::DeleteDeploymentGroupResponse(QXmlStr
 }
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws

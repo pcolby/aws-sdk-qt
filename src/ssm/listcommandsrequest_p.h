@@ -23,8 +23,7 @@
 #include "ssm_p.h"
 #include "listcommandsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SSM {
 
 class ListCommandsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

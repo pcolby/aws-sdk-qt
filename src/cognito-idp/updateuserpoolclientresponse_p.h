@@ -23,8 +23,7 @@
 #include "cognitoidentityproviderresponse.h"
 #include "updateuserpoolclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 class UpdateUserPoolClientResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws
 
 #endif

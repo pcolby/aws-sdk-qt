@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace Rekognition {
 
 class RekognitionClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws
 
 #endif

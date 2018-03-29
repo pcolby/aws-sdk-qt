@@ -22,7 +22,7 @@
 #include "restorefromsnapshotresponse.h"
 #include "directoryservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DirectoryService {
 
 /**
@@ -116,4 +116,4 @@ RestoreFromSnapshotRequestPrivate::RestoreFromSnapshotRequestPrivate(
 }
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws

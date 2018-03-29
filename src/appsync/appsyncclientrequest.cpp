@@ -20,7 +20,7 @@
 #include "appsyncclientrequest.h"
 #include "appsyncclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AppSync {
 
 /**
@@ -337,4 +337,4 @@ QString AppSyncClientRequestPrivate::toString(const AppSyncClientRequest::Action
 }
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws

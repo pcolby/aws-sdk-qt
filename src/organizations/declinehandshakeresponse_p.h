@@ -23,8 +23,7 @@
 #include "organizationsresponse.h"
 #include "declinehandshakerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Organizations {
 
 class DeclineHandshakeResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws
 
 #endif

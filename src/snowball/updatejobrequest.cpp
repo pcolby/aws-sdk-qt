@@ -22,7 +22,7 @@
 #include "updatejobresponse.h"
 #include "snowballrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Snowball {
 
 /**
@@ -116,4 +116,4 @@ UpdateJobRequestPrivate::UpdateJobRequestPrivate(
 }
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws

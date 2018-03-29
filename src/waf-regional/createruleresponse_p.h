@@ -23,8 +23,7 @@
 #include "wafregionalresponse.h"
 #include "createrulerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAFRegional {
 
 class CreateRuleResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace WAFRegional
-} // namespace AWS
+} // namespace QtAws
 
 #endif

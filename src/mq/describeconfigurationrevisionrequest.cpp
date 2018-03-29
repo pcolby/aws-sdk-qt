@@ -22,7 +22,7 @@
 #include "describeconfigurationrevisionresponse.h"
 #include "mqrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MQ {
 
 /**
@@ -116,4 +116,4 @@ DescribeConfigurationRevisionRequestPrivate::DescribeConfigurationRevisionReques
 }
 
 } // namespace MQ
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "deletelayerresponse.h"
 #include "opsworksrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace OpsWorks {
 
 /**
@@ -116,4 +116,4 @@ DeleteLayerRequestPrivate::DeleteLayerRequestPrivate(
 }
 
 } // namespace OpsWorks
-} // namespace AWS
+} // namespace QtAws

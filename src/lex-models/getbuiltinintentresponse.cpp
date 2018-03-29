@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace LexModelBuildingService {
 
 /**
@@ -103,4 +103,4 @@ void GetBuiltinIntentResponsePrivate::GetBuiltinIntentResponse(QXmlStreamReader 
 }
 
 } // namespace LexModelBuildingService
-} // namespace AWS
+} // namespace QtAws

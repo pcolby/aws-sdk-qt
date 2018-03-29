@@ -22,7 +22,7 @@
 #include "listfragmentsresponse.h"
 #include "kinesisvideoarchivedmediarequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisVideoArchivedMedia {
 
 /**
@@ -116,4 +116,4 @@ ListFragmentsRequestPrivate::ListFragmentsRequestPrivate(
 }
 
 } // namespace KinesisVideoArchivedMedia
-} // namespace AWS
+} // namespace QtAws

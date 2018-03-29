@@ -22,7 +22,7 @@
 #include "listlexiconsresponse.h"
 #include "pollyrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Polly {
 
 /**
@@ -116,4 +116,4 @@ ListLexiconsRequestPrivate::ListLexiconsRequestPrivate(
 }
 
 } // namespace Polly
-} // namespace AWS
+} // namespace QtAws

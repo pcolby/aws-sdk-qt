@@ -22,8 +22,7 @@
 
 #include "glacierrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glacier {
 
 class DeleteArchiveRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws
 
 #endif

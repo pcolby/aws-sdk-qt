@@ -23,8 +23,7 @@
 #include "s3response.h"
 #include "deletebucketcorsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace S3 {
 
 class DeleteBucketCorsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "rekognitionresponse.h"
 #include "startcelebrityrecognitionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Rekognition {
 
 class StartCelebrityRecognitionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws
 
 #endif

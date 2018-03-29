@@ -23,8 +23,7 @@
 #include "waf_p.h"
 #include "createrulerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class CreateRuleRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

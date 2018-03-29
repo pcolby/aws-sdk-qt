@@ -23,8 +23,7 @@
 #include "applicationautoscalingresponse.h"
 #include "deletescalingpolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ApplicationAutoScaling {
 
 class DeleteScalingPolicyResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ApplicationAutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

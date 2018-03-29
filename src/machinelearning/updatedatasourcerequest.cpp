@@ -22,7 +22,7 @@
 #include "updatedatasourceresponse.h"
 #include "machinelearningrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MachineLearning {
 
 /**
@@ -116,4 +116,4 @@ UpdateDataSourceRequestPrivate::UpdateDataSourceRequestPrivate(
 }
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws

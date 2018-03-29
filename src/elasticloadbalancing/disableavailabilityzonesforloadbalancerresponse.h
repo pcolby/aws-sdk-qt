@@ -23,8 +23,7 @@
 #include "elasticloadbalancingresponse.h"
 #include "disableavailabilityzonesforloadbalancerrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticLoadBalancing {
 
 class DisableAvailabilityZonesForLoadBalancerResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ElasticLoadBalancing
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "applicationdiscoveryserviceresponse.h"
 #include "updateapplicationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 class UpdateApplicationResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ApplicationDiscoveryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "iot_p.h"
 #include "iotclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class IoTClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

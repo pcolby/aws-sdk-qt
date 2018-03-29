@@ -22,7 +22,7 @@
 #include "listdiscoveredresourcesresponse.h"
 #include "migrationhubrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MigrationHub {
 
 /**
@@ -116,4 +116,4 @@ ListDiscoveredResourcesRequestPrivate::ListDiscoveredResourcesRequestPrivate(
 }
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws

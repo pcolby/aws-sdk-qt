@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 class ApplicationDiscoveryServiceClientPrivate;
@@ -113,6 +112,6 @@ private:
 };
 
 } // namespace ApplicationDiscoveryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

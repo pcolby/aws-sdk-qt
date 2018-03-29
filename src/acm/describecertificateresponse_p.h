@@ -23,8 +23,7 @@
 #include "acmresponse.h"
 #include "describecertificaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ACM {
 
 class DescribeCertificateResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ACM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

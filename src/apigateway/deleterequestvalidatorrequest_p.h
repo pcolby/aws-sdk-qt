@@ -23,8 +23,7 @@
 #include "apigateway_p.h"
 #include "deleterequestvalidatorrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace APIGateway {
 
 class DeleteRequestValidatorRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

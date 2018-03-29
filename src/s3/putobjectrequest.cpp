@@ -22,7 +22,7 @@
 #include "putobjectresponse.h"
 #include "s3request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace S3 {
 
 /**
@@ -116,4 +116,4 @@ PutObjectRequestPrivate::PutObjectRequestPrivate(
 }
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws

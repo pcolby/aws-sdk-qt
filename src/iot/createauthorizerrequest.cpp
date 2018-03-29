@@ -22,7 +22,7 @@
 #include "createauthorizerresponse.h"
 #include "iotrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IoT {
 
 /**
@@ -116,4 +116,4 @@ CreateAuthorizerRequestPrivate::CreateAuthorizerRequestPrivate(
 }
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws

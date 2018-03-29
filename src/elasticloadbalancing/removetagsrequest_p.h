@@ -23,8 +23,7 @@
 #include "elasticloadbalancing_p.h"
 #include "removetagsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticLoadBalancing {
 
 class RemoveTagsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ElasticLoadBalancing
-} // namespace AWS
+} // namespace QtAws
 
 #endif

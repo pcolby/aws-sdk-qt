@@ -23,8 +23,7 @@
 #include "workspacesresponse.h"
 #include "describeworkspacebundlesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkSpaces {
 
 class DescribeWorkspaceBundlesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace WorkSpaces
-} // namespace AWS
+} // namespace QtAws
 
 #endif

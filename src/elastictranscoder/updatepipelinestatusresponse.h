@@ -23,8 +23,7 @@
 #include "elastictranscoderresponse.h"
 #include "updatepipelinestatusrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticTranscoder {
 
 class UpdatePipelineStatusResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ElasticTranscoder
-} // namespace AWS
+} // namespace QtAws
 
 #endif

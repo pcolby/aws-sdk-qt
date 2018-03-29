@@ -23,8 +23,7 @@
 #include "clouddirectoryresponse.h"
 #include "lookuppolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudDirectory {
 
 class LookupPolicyResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws
 
 #endif

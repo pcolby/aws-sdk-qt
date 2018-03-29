@@ -22,7 +22,7 @@
 #include "putattributesresponse.h"
 #include "simpledbrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SimpleDB {
 
 /**
@@ -116,4 +116,4 @@ PutAttributesRequestPrivate::PutAttributesRequestPrivate(
 }
 
 } // namespace SimpleDB
-} // namespace AWS
+} // namespace QtAws

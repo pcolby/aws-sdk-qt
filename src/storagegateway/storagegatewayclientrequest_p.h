@@ -23,8 +23,7 @@
 #include "storagegateway_p.h"
 #include "storagegatewayclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace StorageGateway {
 
 class StorageGatewayClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

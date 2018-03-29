@@ -23,8 +23,7 @@
 #include "workmail_p.h"
 #include "workmailclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkMail {
 
 class WorkMailClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

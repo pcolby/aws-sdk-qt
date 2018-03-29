@@ -23,8 +23,7 @@
 #include "pinpointresponse.h"
 #include "deleteapnssandboxchannelrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pinpoint {
 
 class DeleteApnsSandboxChannelResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws
 
 #endif

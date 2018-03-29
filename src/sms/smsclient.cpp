@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace SMS {
 
 /**
@@ -272,4 +272,4 @@ SmsClientPrivate::SmsClientPrivate(SmsClient * const q)
 }
 
 } // namespace SMS
-} // namespace AWS
+} // namespace QtAws

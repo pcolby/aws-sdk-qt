@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace OpsWorksCM {
 
 /**
@@ -568,4 +568,4 @@ OpsWorksCMClientPrivate::OpsWorksCMClientPrivate(OpsWorksCMClient * const q)
 }
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws

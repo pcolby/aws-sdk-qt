@@ -23,8 +23,7 @@
 #include "pinpointresponse.h"
 #include "updatesegmentrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pinpoint {
 
 class UpdateSegmentResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws
 
 #endif

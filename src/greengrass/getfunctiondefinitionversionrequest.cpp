@@ -22,7 +22,7 @@
 #include "getfunctiondefinitionversionresponse.h"
 #include "greengrassrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -116,4 +116,4 @@ GetFunctionDefinitionVersionRequestPrivate::GetFunctionDefinitionVersionRequestP
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

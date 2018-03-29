@@ -22,7 +22,7 @@
 #include "describetagoptionresponse.h"
 #include "servicecatalogrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceCatalog {
 
 /**
@@ -116,4 +116,4 @@ DescribeTagOptionRequestPrivate::DescribeTagOptionRequestPrivate(
 }
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws

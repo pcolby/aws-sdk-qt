@@ -23,8 +23,7 @@
 #include "lightsail_p.h"
 #include "getkeypairrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lightsail {
 
 class GetKeyPairRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

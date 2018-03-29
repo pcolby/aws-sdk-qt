@@ -23,8 +23,7 @@
 #include "iot_p.h"
 #include "describeendpointrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class DescribeEndpointRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

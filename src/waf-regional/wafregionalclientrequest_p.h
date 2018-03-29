@@ -23,8 +23,7 @@
 #include "wafregional_p.h"
 #include "wafregionalclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAFRegional {
 
 class WAFRegionalClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WAFRegional
-} // namespace AWS
+} // namespace QtAws
 
 #endif

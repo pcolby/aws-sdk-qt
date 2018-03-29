@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkMail {
 
 class WorkMailClientPrivate;
@@ -141,6 +140,6 @@ private:
 };
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

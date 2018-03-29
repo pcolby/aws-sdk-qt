@@ -23,8 +23,7 @@
 #include "clouddirectoryresponse.h"
 #include "getfacetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudDirectory {
 
 class GetFacetResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws
 
 #endif

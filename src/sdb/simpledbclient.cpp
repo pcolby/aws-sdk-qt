@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace SimpleDB {
 
 /**
@@ -394,4 +394,4 @@ SimpleDBClientPrivate::SimpleDBClientPrivate(SimpleDBClient * const q)
 }
 
 } // namespace SimpleDB
-} // namespace AWS
+} // namespace QtAws

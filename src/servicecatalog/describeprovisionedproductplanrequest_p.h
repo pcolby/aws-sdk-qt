@@ -23,8 +23,7 @@
 #include "servicecatalog_p.h"
 #include "describeprovisionedproductplanrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceCatalog {
 
 class DescribeProvisionedProductPlanRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws
 
 #endif

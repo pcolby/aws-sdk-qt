@@ -20,7 +20,7 @@
 #include "redshiftclientrequest.h"
 #include "redshiftclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Redshift {
 
 /**
@@ -337,4 +337,4 @@ QString RedshiftClientRequestPrivate::toString(const RedshiftClientRequest::Acti
 }
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws

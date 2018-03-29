@@ -23,8 +23,7 @@
 #include "workdocsresponse.h"
 #include "updatedocumentversionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkDocs {
 
 class UpdateDocumentVersionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

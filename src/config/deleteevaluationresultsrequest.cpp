@@ -22,7 +22,7 @@
 #include "deleteevaluationresultsresponse.h"
 #include "configservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ConfigService {
 
 /**
@@ -116,4 +116,4 @@ DeleteEvaluationResultsRequestPrivate::DeleteEvaluationResultsRequestPrivate(
 }
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws

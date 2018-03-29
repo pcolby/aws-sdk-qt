@@ -23,8 +23,7 @@
 #include "xrayresponse.h"
 #include "puttelemetryrecordsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace XRay {
 
 class PutTelemetryRecordsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace XRay
-} // namespace AWS
+} // namespace QtAws
 
 #endif

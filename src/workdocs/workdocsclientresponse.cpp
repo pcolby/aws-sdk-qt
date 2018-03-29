@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace WorkDocs {
 
 /**
@@ -67,4 +67,4 @@ WorkDocsClientResponsePrivate::WorkDocsClientResponsePrivate(
 }
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws

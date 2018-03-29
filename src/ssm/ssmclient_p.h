@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace SSM {
 
 class SsmClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Cloud9 {
 
 /**
@@ -103,4 +103,4 @@ void CreateEnvironmentEC2ResponsePrivate::CreateEnvironmentEC2Response(QXmlStrea
 }
 
 } // namespace Cloud9
-} // namespace AWS
+} // namespace QtAws

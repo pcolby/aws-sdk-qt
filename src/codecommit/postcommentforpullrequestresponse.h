@@ -23,8 +23,7 @@
 #include "codecommitresponse.h"
 #include "postcommentforpullrequestrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeCommit {
 
 class PostCommentForPullRequestResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeCommit
-} // namespace AWS
+} // namespace QtAws
 
 #endif

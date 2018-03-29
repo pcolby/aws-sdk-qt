@@ -23,8 +23,7 @@
 #include "directoryserviceresponse.h"
 #include "updateradiusrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectoryService {
 
 class UpdateRadiusResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

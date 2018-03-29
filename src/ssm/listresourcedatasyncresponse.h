@@ -23,8 +23,7 @@
 #include "ssmresponse.h"
 #include "listresourcedatasyncrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SSM {
 
 class ListResourceDataSyncResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

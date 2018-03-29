@@ -22,7 +22,7 @@
 #include "createdomainresponse.h"
 #include "lightsailrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Lightsail {
 
 /**
@@ -116,4 +116,4 @@ CreateDomainRequestPrivate::CreateDomainRequestPrivate(
 }
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws

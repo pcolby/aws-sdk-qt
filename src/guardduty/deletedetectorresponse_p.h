@@ -23,8 +23,7 @@
 #include "guarddutyresponse.h"
 #include "deletedetectorrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace GuardDuty {
 
 class DeleteDetectorResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace GuardDuty
-} // namespace AWS
+} // namespace QtAws
 
 #endif

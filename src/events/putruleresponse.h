@@ -23,8 +23,7 @@
 #include "cloudwatcheventsresponse.h"
 #include "putrulerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatchEvents {
 
 class PutRuleResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudWatchEvents
-} // namespace AWS
+} // namespace QtAws
 
 #endif

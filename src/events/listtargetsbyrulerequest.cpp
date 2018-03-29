@@ -22,7 +22,7 @@
 #include "listtargetsbyruleresponse.h"
 #include "cloudwatcheventsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudWatchEvents {
 
 /**
@@ -116,4 +116,4 @@ ListTargetsByRuleRequestPrivate::ListTargetsByRuleRequestPrivate(
 }
 
 } // namespace CloudWatchEvents
-} // namespace AWS
+} // namespace QtAws

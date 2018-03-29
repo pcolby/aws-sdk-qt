@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoTDataPlane {
 
 class IoTDataPlaneClientPrivate;
@@ -69,6 +68,6 @@ private:
 };
 
 } // namespace IoTDataPlane
-} // namespace AWS
+} // namespace QtAws
 
 #endif

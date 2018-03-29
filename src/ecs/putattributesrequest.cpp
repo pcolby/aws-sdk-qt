@@ -22,7 +22,7 @@
 #include "putattributesresponse.h"
 #include "ecsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ECS {
 
 /**
@@ -116,4 +116,4 @@ PutAttributesRequestPrivate::PutAttributesRequestPrivate(
 }
 
 } // namespace ECS
-} // namespace AWS
+} // namespace QtAws

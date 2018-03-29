@@ -23,8 +23,7 @@
 #include "kinesis_p.h"
 #include "kinesisclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Kinesis {
 
 class KinesisClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Kinesis
-} // namespace AWS
+} // namespace QtAws
 
 #endif

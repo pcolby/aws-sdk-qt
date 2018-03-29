@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSM {
 
 class CloudHSMClientPrivate;
@@ -117,6 +116,6 @@ private:
 };
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

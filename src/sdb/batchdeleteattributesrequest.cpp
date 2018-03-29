@@ -22,7 +22,7 @@
 #include "batchdeleteattributesresponse.h"
 #include "simpledbrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SimpleDB {
 
 /**
@@ -116,4 +116,4 @@ BatchDeleteAttributesRequestPrivate::BatchDeleteAttributesRequestPrivate(
 }
 
 } // namespace SimpleDB
-} // namespace AWS
+} // namespace QtAws

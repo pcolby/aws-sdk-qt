@@ -22,7 +22,7 @@
 #include "applysecuritygroupstoloadbalancerresponse.h"
 #include "elasticloadbalancingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticLoadBalancing {
 
 /**
@@ -116,4 +116,4 @@ ApplySecurityGroupsToLoadBalancerRequestPrivate::ApplySecurityGroupsToLoadBalanc
 }
 
 } // namespace ElasticLoadBalancing
-} // namespace AWS
+} // namespace QtAws

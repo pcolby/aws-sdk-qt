@@ -22,7 +22,7 @@
 #include "rotatechannelcredentialsresponse.h"
 #include "mediapackagerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MediaPackage {
 
 /**
@@ -116,4 +116,4 @@ RotateChannelCredentialsRequestPrivate::RotateChannelCredentialsRequestPrivate(
 }
 
 } // namespace MediaPackage
-} // namespace AWS
+} // namespace QtAws

@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceDiscovery {
 
 /**
@@ -479,4 +479,4 @@ ServiceDiscoveryClientPrivate::ServiceDiscoveryClientPrivate(ServiceDiscoveryCli
 }
 
 } // namespace ServiceDiscovery
-} // namespace AWS
+} // namespace QtAws

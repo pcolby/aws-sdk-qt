@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoIdentity {
 
 /**
@@ -67,4 +67,4 @@ CognitoIdentityClientResponsePrivate::CognitoIdentityClientResponsePrivate(
 }
 
 } // namespace CognitoIdentity
-} // namespace AWS
+} // namespace QtAws

@@ -22,8 +22,7 @@
 
 #include "ssmrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SSM {
 
 class DeleteParameterRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

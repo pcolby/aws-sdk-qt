@@ -23,8 +23,7 @@
 #include "swfresponse.h"
 #include "terminateworkflowexecutionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SWF {
 
 class TerminateWorkflowExecutionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

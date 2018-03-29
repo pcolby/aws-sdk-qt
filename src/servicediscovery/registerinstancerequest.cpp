@@ -22,7 +22,7 @@
 #include "registerinstanceresponse.h"
 #include "servicediscoveryrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceDiscovery {
 
 /**
@@ -116,4 +116,4 @@ RegisterInstanceRequestPrivate::RegisterInstanceRequestPrivate(
 }
 
 } // namespace ServiceDiscovery
-} // namespace AWS
+} // namespace QtAws

@@ -27,8 +27,7 @@
 
 class QNetworkRequest;
 
-namespace AWS {
-
+namespace QtAws {
 namespace Snowball {
 
 class AwsAbstractClient;
@@ -77,6 +76,6 @@ private:
 }
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws
 
 #endif

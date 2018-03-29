@@ -23,8 +23,7 @@
 #include "opsworkscmresponse.h"
 #include "startmaintenancerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorksCM {
 
 class StartMaintenanceResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

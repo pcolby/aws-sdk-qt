@@ -22,7 +22,7 @@
 #include "rebootworkspacesresponse.h"
 #include "workspacesrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WorkSpaces {
 
 /**
@@ -116,4 +116,4 @@ RebootWorkspacesRequestPrivate::RebootWorkspacesRequestPrivate(
 }
 
 } // namespace WorkSpaces
-} // namespace AWS
+} // namespace QtAws

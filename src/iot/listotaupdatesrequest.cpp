@@ -22,7 +22,7 @@
 #include "listotaupdatesresponse.h"
 #include "iotrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IoT {
 
 /**
@@ -116,4 +116,4 @@ ListOTAUpdatesRequestPrivate::ListOTAUpdatesRequestPrivate(
 }
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws

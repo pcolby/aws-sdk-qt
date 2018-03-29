@@ -23,8 +23,7 @@
 #include "cloudformationresponse.h"
 #include "gettemplaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFormation {
 
 class GetTemplateResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws
 
 #endif

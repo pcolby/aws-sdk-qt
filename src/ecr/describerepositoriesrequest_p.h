@@ -23,8 +23,7 @@
 #include "ecr_p.h"
 #include "describerepositoriesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ECR {
 
 class DescribeRepositoriesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

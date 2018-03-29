@@ -23,8 +23,7 @@
 #include "greengrassresponse.h"
 #include "getgrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Greengrass {
 
 class GetGroupResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws
 
 #endif

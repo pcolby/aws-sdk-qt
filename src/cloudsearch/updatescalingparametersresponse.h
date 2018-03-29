@@ -23,8 +23,7 @@
 #include "cloudsearchresponse.h"
 #include "updatescalingparametersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudSearch {
 
 class UpdateScalingParametersResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

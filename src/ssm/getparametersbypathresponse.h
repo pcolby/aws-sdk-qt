@@ -23,8 +23,7 @@
 #include "ssmresponse.h"
 #include "getparametersbypathrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SSM {
 
 class GetParametersByPathResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

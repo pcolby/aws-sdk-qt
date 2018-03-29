@@ -23,8 +23,7 @@
 #include "apigatewayresponse.h"
 #include "getdocumentationversionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace APIGateway {
 
 class GetDocumentationVersionsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

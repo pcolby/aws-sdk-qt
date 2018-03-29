@@ -22,7 +22,7 @@
 #include "deleteslottyperesponse.h"
 #include "lexmodelbuildingservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace LexModelBuildingService {
 
 /**
@@ -116,4 +116,4 @@ DeleteSlotTypeRequestPrivate::DeleteSlotTypeRequestPrivate(
 }
 
 } // namespace LexModelBuildingService
-} // namespace AWS
+} // namespace QtAws

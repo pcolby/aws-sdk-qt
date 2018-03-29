@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SWF {
 
 /**
@@ -67,4 +67,4 @@ SwfClientResponsePrivate::SwfClientResponsePrivate(
 }
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws

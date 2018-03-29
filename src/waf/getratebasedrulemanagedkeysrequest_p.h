@@ -23,8 +23,7 @@
 #include "waf_p.h"
 #include "getratebasedrulemanagedkeysrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class GetRateBasedRuleManagedKeysRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

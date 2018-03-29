@@ -23,8 +23,7 @@
 #include "appsync_p.h"
 #include "deletedatasourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppSync {
 
 class DeleteDataSourceRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

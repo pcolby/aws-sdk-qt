@@ -5,7 +5,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace {{NameSpaceName}} {
 
 /**
@@ -49,4 +49,4 @@ namespace {{NameSpaceName}} {
 }
 
 } // namespace {{NameSpaceName}}
-} // namespace AWS
+} // namespace QtAws

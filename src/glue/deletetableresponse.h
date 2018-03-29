@@ -23,8 +23,7 @@
 #include "glueresponse.h"
 #include "deletetablerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glue {
 
 class DeleteTableResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws
 
 #endif

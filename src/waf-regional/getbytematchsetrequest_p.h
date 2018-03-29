@@ -23,8 +23,7 @@
 #include "wafregional_p.h"
 #include "getbytematchsetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAFRegional {
 
 class GetByteMatchSetRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace WAFRegional
-} // namespace AWS
+} // namespace QtAws
 
 #endif

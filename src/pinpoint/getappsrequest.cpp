@@ -22,7 +22,7 @@
 #include "getappsresponse.h"
 #include "pinpointrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Pinpoint {
 
 /**
@@ -116,4 +116,4 @@ GetAppsRequestPrivate::GetAppsRequestPrivate(
 }
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws

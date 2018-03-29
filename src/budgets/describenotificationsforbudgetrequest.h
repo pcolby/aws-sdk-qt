@@ -22,8 +22,7 @@
 
 #include "budgetsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Budgets {
 
 class DescribeNotificationsForBudgetRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Budgets
-} // namespace AWS
+} // namespace QtAws
 
 #endif

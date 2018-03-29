@@ -22,7 +22,7 @@
 #include "describeenvironmentresourcesresponse.h"
 #include "elasticbeanstalkrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 /**
@@ -116,4 +116,4 @@ DescribeEnvironmentResourcesRequestPrivate::DescribeEnvironmentResourcesRequestP
 }
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws

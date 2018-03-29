@@ -23,8 +23,7 @@
 #include "servicediscovery_p.h"
 #include "updateinstancecustomhealthstatusrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceDiscovery {
 
 class UpdateInstanceCustomHealthStatusRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ServiceDiscovery
-} // namespace AWS
+} // namespace QtAws
 
 #endif

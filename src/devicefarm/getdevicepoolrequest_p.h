@@ -23,8 +23,7 @@
 #include "devicefarm_p.h"
 #include "getdevicepoolrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DeviceFarm {
 
 class GetDevicePoolRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws
 
 #endif

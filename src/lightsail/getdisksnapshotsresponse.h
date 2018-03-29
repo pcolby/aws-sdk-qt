@@ -23,8 +23,7 @@
 #include "lightsailresponse.h"
 #include "getdisksnapshotsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lightsail {
 
 class GetDiskSnapshotsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

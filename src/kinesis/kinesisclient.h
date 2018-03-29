@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace Kinesis {
 
 class KinesisClientPrivate;
@@ -126,6 +125,6 @@ private:
 };
 
 } // namespace Kinesis
-} // namespace AWS
+} // namespace QtAws
 
 #endif

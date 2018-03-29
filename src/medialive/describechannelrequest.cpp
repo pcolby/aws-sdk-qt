@@ -22,7 +22,7 @@
 #include "describechannelresponse.h"
 #include "medialiverequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MediaLive {
 
 /**
@@ -116,4 +116,4 @@ DescribeChannelRequestPrivate::DescribeChannelRequestPrivate(
 }
 
 } // namespace MediaLive
-} // namespace AWS
+} // namespace QtAws

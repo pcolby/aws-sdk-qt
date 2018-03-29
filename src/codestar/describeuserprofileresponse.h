@@ -23,8 +23,7 @@
 #include "codestarresponse.h"
 #include "describeuserprofilerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeStar {
 
 class DescribeUserProfileResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeStar
-} // namespace AWS
+} // namespace QtAws
 
 #endif

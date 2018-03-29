@@ -23,8 +23,7 @@
 #include "pinpointresponse.h"
 #include "deleteeventstreamrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pinpoint {
 
 class DeleteEventStreamResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws
 
 #endif

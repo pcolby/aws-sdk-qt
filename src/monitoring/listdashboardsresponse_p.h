@@ -23,8 +23,7 @@
 #include "cloudwatchresponse.h"
 #include "listdashboardsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatch {
 
 class ListDashboardsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudWatch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace GuardDuty {
 
 /**
@@ -103,4 +103,4 @@ void DeclineInvitationsResponsePrivate::DeclineInvitationsResponse(QXmlStreamRea
 }
 
 } // namespace GuardDuty
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "elasticbeanstalkresponse.h"
 #include "deleteenvironmentconfigurationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 class DeleteEnvironmentConfigurationResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

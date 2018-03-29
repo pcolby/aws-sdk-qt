@@ -20,7 +20,7 @@
 #include "route53clientrequest.h"
 #include "route53clientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Route53 {
 
 /**
@@ -337,4 +337,4 @@ QString Route53ClientRequestPrivate::toString(const Route53ClientRequest::Action
 }
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws

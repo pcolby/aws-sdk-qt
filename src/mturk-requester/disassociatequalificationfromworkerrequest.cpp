@@ -22,7 +22,7 @@
 #include "disassociatequalificationfromworkerresponse.h"
 #include "mturkrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MTurk {
 
 /**
@@ -116,4 +116,4 @@ DisassociateQualificationFromWorkerRequestPrivate::DisassociateQualificationFrom
 }
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws

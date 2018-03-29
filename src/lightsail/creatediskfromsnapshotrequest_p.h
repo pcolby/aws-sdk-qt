@@ -23,8 +23,7 @@
 #include "lightsail_p.h"
 #include "creatediskfromsnapshotrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lightsail {
 
 class CreateDiskFromSnapshotRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

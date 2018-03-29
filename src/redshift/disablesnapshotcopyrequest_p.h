@@ -23,8 +23,7 @@
 #include "redshift_p.h"
 #include "disablesnapshotcopyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Redshift {
 
 class DisableSnapshotCopyRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

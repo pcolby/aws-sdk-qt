@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Support {
 
 /**
@@ -569,4 +569,4 @@ SupportClientPrivate::SupportClientPrivate(SupportClient * const q)
 }
 
 } // namespace Support
-} // namespace AWS
+} // namespace QtAws

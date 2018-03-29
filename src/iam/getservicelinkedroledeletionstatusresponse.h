@@ -23,8 +23,7 @@
 #include "iamresponse.h"
 #include "getservicelinkedroledeletionstatusrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IAM {
 
 class GetServiceLinkedRoleDeletionStatusResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "gameliftresponse.h"
 #include "describefleeteventsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace GameLift {
 
 class DescribeFleetEventsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

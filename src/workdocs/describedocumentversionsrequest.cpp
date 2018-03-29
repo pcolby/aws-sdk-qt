@@ -22,7 +22,7 @@
 #include "describedocumentversionsresponse.h"
 #include "workdocsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WorkDocs {
 
 /**
@@ -116,4 +116,4 @@ DescribeDocumentVersionsRequestPrivate::DescribeDocumentVersionsRequestPrivate(
 }
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws

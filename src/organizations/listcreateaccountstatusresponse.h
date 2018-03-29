@@ -23,8 +23,7 @@
 #include "organizationsresponse.h"
 #include "listcreateaccountstatusrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Organizations {
 
 class ListCreateAccountStatusResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws
 
 #endif

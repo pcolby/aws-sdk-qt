@@ -23,8 +23,7 @@
 #include "codebuildresponse.h"
 #include "createwebhookrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeBuild {
 
 class CreateWebhookResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeBuild
-} // namespace AWS
+} // namespace QtAws
 
 #endif

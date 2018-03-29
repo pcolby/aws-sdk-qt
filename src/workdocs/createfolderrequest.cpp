@@ -22,7 +22,7 @@
 #include "createfolderresponse.h"
 #include "workdocsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WorkDocs {
 
 /**
@@ -116,4 +116,4 @@ CreateFolderRequestPrivate::CreateFolderRequestPrivate(
 }
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws

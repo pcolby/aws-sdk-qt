@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudHSM {
 
 /**
@@ -67,4 +67,4 @@ CloudHSMClientResponsePrivate::CloudHSMClientResponsePrivate(
 }
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws

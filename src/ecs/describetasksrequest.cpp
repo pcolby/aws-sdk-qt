@@ -22,7 +22,7 @@
 #include "describetasksresponse.h"
 #include "ecsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ECS {
 
 /**
@@ -116,4 +116,4 @@ DescribeTasksRequestPrivate::DescribeTasksRequestPrivate(
 }
 
 } // namespace ECS
-} // namespace AWS
+} // namespace QtAws

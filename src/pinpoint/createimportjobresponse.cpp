@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Pinpoint {
 
 /**
@@ -103,4 +103,4 @@ void CreateImportJobResponsePrivate::CreateImportJobResponse(QXmlStreamReader &x
 }
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws

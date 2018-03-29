@@ -23,8 +23,7 @@
 #include "kinesisresponse.h"
 #include "deletestreamrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Kinesis {
 
 class DeleteStreamResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Kinesis
-} // namespace AWS
+} // namespace QtAws
 
 #endif

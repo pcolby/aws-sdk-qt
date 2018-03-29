@@ -22,7 +22,7 @@
 #include "batchgetimageresponse.h"
 #include "ecrrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ECR {
 
 /**
@@ -116,4 +116,4 @@ BatchGetImageRequestPrivate::BatchGetImageRequestPrivate(
 }
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws

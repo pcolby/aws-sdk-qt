@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace WorkMail {
 
 /**
@@ -103,4 +103,4 @@ void DeregisterFromWorkMailResponsePrivate::DeregisterFromWorkMailResponse(QXmlS
 }
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws

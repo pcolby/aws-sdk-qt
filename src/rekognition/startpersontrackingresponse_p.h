@@ -23,8 +23,7 @@
 #include "rekognitionresponse.h"
 #include "startpersontrackingrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Rekognition {
 
 class StartPersonTrackingResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws
 
 #endif

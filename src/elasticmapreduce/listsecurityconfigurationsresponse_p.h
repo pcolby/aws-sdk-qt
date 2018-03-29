@@ -23,8 +23,7 @@
 #include "emrresponse.h"
 #include "listsecurityconfigurationsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EMR {
 
 class ListSecurityConfigurationsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "kinesisvideoresponse.h"
 #include "listtagsforstreamrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KinesisVideo {
 
 class ListTagsForStreamResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace KinesisVideo
-} // namespace AWS
+} // namespace QtAws
 
 #endif

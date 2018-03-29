@@ -23,8 +23,7 @@
 #include "directoryserviceresponse.h"
 #include "listiproutesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectoryService {
 
 class ListIpRoutesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

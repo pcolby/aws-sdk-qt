@@ -22,7 +22,7 @@
 #include "createaddressresponse.h"
 #include "snowballrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Snowball {
 
 /**
@@ -116,4 +116,4 @@ CreateAddressRequestPrivate::CreateAddressRequestPrivate(
 }
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws

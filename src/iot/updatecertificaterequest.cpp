@@ -22,7 +22,7 @@
 #include "updatecertificateresponse.h"
 #include "iotrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IoT {
 
 /**
@@ -116,4 +116,4 @@ UpdateCertificateRequestPrivate::UpdateCertificateRequestPrivate(
 }
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws

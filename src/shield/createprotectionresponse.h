@@ -23,8 +23,7 @@
 #include "shieldresponse.h"
 #include "createprotectionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Shield {
 
 class CreateProtectionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Shield
-} // namespace AWS
+} // namespace QtAws
 
 #endif

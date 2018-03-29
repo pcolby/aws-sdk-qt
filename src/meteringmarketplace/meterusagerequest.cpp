@@ -22,7 +22,7 @@
 #include "meterusageresponse.h"
 #include "marketplacemeteringrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceMetering {
 
 /**
@@ -116,4 +116,4 @@ MeterUsageRequestPrivate::MeterUsageRequestPrivate(
 }
 
 } // namespace MarketplaceMetering
-} // namespace AWS
+} // namespace QtAws

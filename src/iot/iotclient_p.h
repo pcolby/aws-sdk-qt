@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace IoT {
 
 class IoTClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

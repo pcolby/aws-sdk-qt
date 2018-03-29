@@ -23,8 +23,7 @@
 #include "workdocsresponse.h"
 #include "createfolderrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkDocs {
 
 class CreateFolderResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

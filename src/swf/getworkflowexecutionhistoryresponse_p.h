@@ -23,8 +23,7 @@
 #include "swfresponse.h"
 #include "getworkflowexecutionhistoryrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SWF {
 
 class GetWorkflowExecutionHistoryResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

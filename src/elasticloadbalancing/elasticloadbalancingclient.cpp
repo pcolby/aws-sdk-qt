@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticLoadBalancing {
 
 /**
@@ -822,4 +822,4 @@ ElasticLoadBalancingClientPrivate::ElasticLoadBalancingClientPrivate(ElasticLoad
 }
 
 } // namespace ElasticLoadBalancing
-} // namespace AWS
+} // namespace QtAws

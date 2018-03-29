@@ -20,7 +20,7 @@
 #include "daxclientrequest.h"
 #include "daxclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DAX {
 
 /**
@@ -337,4 +337,4 @@ QString DaxClientRequestPrivate::toString(const DaxClientRequest::Action &action
 }
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws

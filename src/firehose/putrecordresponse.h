@@ -23,8 +23,7 @@
 #include "firehoseresponse.h"
 #include "putrecordrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Firehose {
 
 class PutRecordResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Firehose
-} // namespace AWS
+} // namespace QtAws
 
 #endif

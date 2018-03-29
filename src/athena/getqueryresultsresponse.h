@@ -23,8 +23,7 @@
 #include "athenaresponse.h"
 #include "getqueryresultsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Athena {
 
 class GetQueryResultsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Athena
-} // namespace AWS
+} // namespace QtAws
 
 #endif

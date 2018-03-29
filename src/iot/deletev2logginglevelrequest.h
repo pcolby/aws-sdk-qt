@@ -22,8 +22,7 @@
 
 #include "iotrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class DeleteV2LoggingLevelRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

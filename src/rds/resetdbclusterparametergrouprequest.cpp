@@ -22,7 +22,7 @@
 #include "resetdbclusterparametergroupresponse.h"
 #include "rdsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -116,4 +116,4 @@ ResetDBClusterParameterGroupRequestPrivate::ResetDBClusterParameterGroupRequestP
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

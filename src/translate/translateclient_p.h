@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace Translate {
 
 class TranslateClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace Translate
-} // namespace AWS
+} // namespace QtAws
 
 #endif

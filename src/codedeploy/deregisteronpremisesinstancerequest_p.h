@@ -23,8 +23,7 @@
 #include "codedeploy_p.h"
 #include "deregisteronpremisesinstancerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeDeploy {
 
 class DeregisterOnPremisesInstanceRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws
 
 #endif

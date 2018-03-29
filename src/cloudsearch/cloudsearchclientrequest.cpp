@@ -20,7 +20,7 @@
 #include "cloudsearchclientrequest.h"
 #include "cloudsearchclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudSearch {
 
 /**
@@ -337,4 +337,4 @@ QString CloudSearchClientRequestPrivate::toString(const CloudSearchClientRequest
 }
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws

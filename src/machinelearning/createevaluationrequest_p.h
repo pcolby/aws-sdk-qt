@@ -23,8 +23,7 @@
 #include "machinelearning_p.h"
 #include "createevaluationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MachineLearning {
 
 class CreateEvaluationRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "iamresponse.h"
 #include "listgroupsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IAM {
 
 class ListGroupsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

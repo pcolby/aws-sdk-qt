@@ -22,8 +22,7 @@
 
 #include "directconnectrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectConnect {
 
 class DeleteInterconnectRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws
 
 #endif

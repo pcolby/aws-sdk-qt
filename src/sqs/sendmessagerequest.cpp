@@ -22,7 +22,7 @@
 #include "sendmessageresponse.h"
 #include "sqsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SQS {
 
 /**
@@ -116,4 +116,4 @@ SendMessageRequestPrivate::SendMessageRequestPrivate(
 }
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws

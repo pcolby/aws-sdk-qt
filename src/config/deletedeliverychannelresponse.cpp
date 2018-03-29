@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ConfigService {
 
 /**
@@ -103,4 +103,4 @@ void DeleteDeliveryChannelResponsePrivate::DeleteDeliveryChannelResponse(QXmlStr
 }
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws

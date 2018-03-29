@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace OpsWorksCM {
 
 /**
@@ -103,4 +103,4 @@ void DescribeBackupsResponsePrivate::DescribeBackupsResponse(QXmlStreamReader &x
 }
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws

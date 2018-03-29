@@ -22,7 +22,7 @@
 #include "disassociateconfigurationitemsfromapplicationresponse.h"
 #include "applicationdiscoveryservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 /**
@@ -116,4 +116,4 @@ DisassociateConfigurationItemsFromApplicationRequestPrivate::DisassociateConfigu
 }
 
 } // namespace ApplicationDiscoveryService
-} // namespace AWS
+} // namespace QtAws

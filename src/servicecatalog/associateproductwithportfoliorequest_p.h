@@ -23,8 +23,7 @@
 #include "servicecatalog_p.h"
 #include "associateproductwithportfoliorequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceCatalog {
 
 class AssociateProductWithPortfolioRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws
 
 #endif

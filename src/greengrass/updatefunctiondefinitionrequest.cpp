@@ -22,7 +22,7 @@
 #include "updatefunctiondefinitionresponse.h"
 #include "greengrassrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -116,4 +116,4 @@ UpdateFunctionDefinitionRequestPrivate::UpdateFunctionDefinitionRequestPrivate(
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

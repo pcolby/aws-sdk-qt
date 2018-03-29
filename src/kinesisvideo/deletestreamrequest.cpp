@@ -22,7 +22,7 @@
 #include "deletestreamresponse.h"
 #include "kinesisvideorequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisVideo {
 
 /**
@@ -116,4 +116,4 @@ DeleteStreamRequestPrivate::DeleteStreamRequestPrivate(
 }
 
 } // namespace KinesisVideo
-} // namespace AWS
+} // namespace QtAws

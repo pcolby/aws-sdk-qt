@@ -22,7 +22,7 @@
 #include "createbrokerresponse.h"
 #include "mqrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MQ {
 
 /**
@@ -116,4 +116,4 @@ CreateBrokerRequestPrivate::CreateBrokerRequestPrivate(
 }
 
 } // namespace MQ
-} // namespace AWS
+} // namespace QtAws

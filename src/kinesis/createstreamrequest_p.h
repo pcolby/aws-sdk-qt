@@ -23,8 +23,7 @@
 #include "kinesis_p.h"
 #include "createstreamrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Kinesis {
 
 class CreateStreamRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Kinesis
-} // namespace AWS
+} // namespace QtAws
 
 #endif

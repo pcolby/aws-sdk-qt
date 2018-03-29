@@ -23,8 +23,7 @@
 #include "ec2_p.h"
 #include "enablevolumeiorequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EC2 {
 
 class EnableVolumeIORequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

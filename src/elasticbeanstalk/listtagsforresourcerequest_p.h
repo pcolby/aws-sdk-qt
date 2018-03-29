@@ -23,8 +23,7 @@
 #include "elasticbeanstalk_p.h"
 #include "listtagsforresourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 class ListTagsForResourceRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

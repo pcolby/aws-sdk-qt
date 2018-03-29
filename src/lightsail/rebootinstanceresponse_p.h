@@ -23,8 +23,7 @@
 #include "lightsailresponse.h"
 #include "rebootinstancerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lightsail {
 
 class RebootInstanceResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

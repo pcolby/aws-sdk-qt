@@ -22,7 +22,7 @@
 #include "unlinkidentityresponse.h"
 #include "cognitoidentityrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoIdentity {
 
 /**
@@ -116,4 +116,4 @@ UnlinkIdentityRequestPrivate::UnlinkIdentityRequestPrivate(
 }
 
 } // namespace CognitoIdentity
-} // namespace AWS
+} // namespace QtAws

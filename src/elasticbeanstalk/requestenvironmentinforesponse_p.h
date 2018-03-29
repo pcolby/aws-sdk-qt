@@ -23,8 +23,7 @@
 #include "elasticbeanstalkresponse.h"
 #include "requestenvironmentinforequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 class RequestEnvironmentInfoResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

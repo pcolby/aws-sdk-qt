@@ -22,7 +22,7 @@
 #include "createenvironmentec2response.h"
 #include "cloud9request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Cloud9 {
 
 /**
@@ -116,4 +116,4 @@ CreateEnvironmentEC2RequestPrivate::CreateEnvironmentEC2RequestPrivate(
 }
 
 } // namespace Cloud9
-} // namespace AWS
+} // namespace QtAws

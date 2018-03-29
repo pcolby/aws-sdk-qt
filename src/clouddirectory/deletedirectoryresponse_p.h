@@ -23,8 +23,7 @@
 #include "clouddirectoryresponse.h"
 #include "deletedirectoryrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudDirectory {
 
 class DeleteDirectoryResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws
 
 #endif

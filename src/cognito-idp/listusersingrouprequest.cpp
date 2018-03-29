@@ -22,7 +22,7 @@
 #include "listusersingroupresponse.h"
 #include "cognitoidentityproviderrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 /**
@@ -116,4 +116,4 @@ ListUsersInGroupRequestPrivate::ListUsersInGroupRequestPrivate(
 }
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws

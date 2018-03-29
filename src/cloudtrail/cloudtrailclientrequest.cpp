@@ -20,7 +20,7 @@
 #include "cloudtrailclientrequest.h"
 #include "cloudtrailclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudTrail {
 
 /**
@@ -337,4 +337,4 @@ QString CloudTrailClientRequestPrivate::toString(const CloudTrailClientRequest::
 }
 
 } // namespace CloudTrail
-} // namespace AWS
+} // namespace QtAws

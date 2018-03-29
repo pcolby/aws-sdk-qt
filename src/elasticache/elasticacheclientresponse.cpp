@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ElastiCache {
 
 /**
@@ -67,4 +67,4 @@ ElastiCacheClientResponsePrivate::ElastiCacheClientResponsePrivate(
 }
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws

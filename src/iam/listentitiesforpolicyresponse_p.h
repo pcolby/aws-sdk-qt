@@ -23,8 +23,7 @@
 #include "iamresponse.h"
 #include "listentitiesforpolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IAM {
 
 class ListEntitiesForPolicyResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

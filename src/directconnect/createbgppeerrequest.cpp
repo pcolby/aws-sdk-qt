@@ -22,7 +22,7 @@
 #include "createbgppeerresponse.h"
 #include "directconnectrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DirectConnect {
 
 /**
@@ -116,4 +116,4 @@ CreateBGPPeerRequestPrivate::CreateBGPPeerRequestPrivate(
 }
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws

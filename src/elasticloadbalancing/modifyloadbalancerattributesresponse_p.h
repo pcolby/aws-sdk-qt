@@ -23,8 +23,7 @@
 #include "elasticloadbalancingresponse.h"
 #include "modifyloadbalancerattributesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticLoadBalancing {
 
 class ModifyLoadBalancerAttributesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ElasticLoadBalancing
-} // namespace AWS
+} // namespace QtAws
 
 #endif

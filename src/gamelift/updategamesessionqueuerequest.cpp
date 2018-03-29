@@ -22,7 +22,7 @@
 #include "updategamesessionqueueresponse.h"
 #include "gameliftrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace GameLift {
 
 /**
@@ -116,4 +116,4 @@ UpdateGameSessionQueueRequestPrivate::UpdateGameSessionQueueRequestPrivate(
 }
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws

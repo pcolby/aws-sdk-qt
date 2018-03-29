@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Glacier {
 
 /**
@@ -103,4 +103,4 @@ void InitiateVaultLockResponsePrivate::InitiateVaultLockResponse(QXmlStreamReade
 }
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws

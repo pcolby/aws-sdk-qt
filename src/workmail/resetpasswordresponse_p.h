@@ -23,8 +23,7 @@
 #include "workmailresponse.h"
 #include "resetpasswordrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkMail {
 
 class ResetPasswordResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

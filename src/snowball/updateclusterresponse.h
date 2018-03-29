@@ -23,8 +23,7 @@
 #include "snowballresponse.h"
 #include "updateclusterrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Snowball {
 
 class UpdateClusterResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws
 
 #endif

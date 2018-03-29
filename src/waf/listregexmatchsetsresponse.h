@@ -23,8 +23,7 @@
 #include "wafresponse.h"
 #include "listregexmatchsetsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class ListRegexMatchSetsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

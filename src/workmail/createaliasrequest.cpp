@@ -22,7 +22,7 @@
 #include "createaliasresponse.h"
 #include "workmailrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WorkMail {
 
 /**
@@ -116,4 +116,4 @@ CreateAliasRequestPrivate::CreateAliasRequestPrivate(
 }
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws

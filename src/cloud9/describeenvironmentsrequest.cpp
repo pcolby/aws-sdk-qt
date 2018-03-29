@@ -22,7 +22,7 @@
 #include "describeenvironmentsresponse.h"
 #include "cloud9request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Cloud9 {
 
 /**
@@ -116,4 +116,4 @@ DescribeEnvironmentsRequestPrivate::DescribeEnvironmentsRequestPrivate(
 }
 
 } // namespace Cloud9
-} // namespace AWS
+} // namespace QtAws

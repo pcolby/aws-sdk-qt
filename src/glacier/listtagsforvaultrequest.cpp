@@ -22,7 +22,7 @@
 #include "listtagsforvaultresponse.h"
 #include "glacierrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Glacier {
 
 /**
@@ -116,4 +116,4 @@ ListTagsForVaultRequestPrivate::ListTagsForVaultRequestPrivate(
 }
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws

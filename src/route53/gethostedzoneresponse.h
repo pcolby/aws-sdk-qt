@@ -23,8 +23,7 @@
 #include "route53response.h"
 #include "gethostedzonerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53 {
 
 class GetHostedZoneResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "codebuildresponse.h"
 #include "batchgetbuildsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeBuild {
 
 class BatchGetBuildsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeBuild
-} // namespace AWS
+} // namespace QtAws
 
 #endif

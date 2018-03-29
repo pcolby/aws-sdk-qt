@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace DAX {
 
 class DaxClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws
 
 #endif

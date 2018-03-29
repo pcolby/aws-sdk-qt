@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace ApplicationAutoScaling {
 
 class ApplicationAutoScalingClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace ApplicationAutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

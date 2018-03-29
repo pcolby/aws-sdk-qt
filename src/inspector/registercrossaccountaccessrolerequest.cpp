@@ -22,7 +22,7 @@
 #include "registercrossaccountaccessroleresponse.h"
 #include "inspectorrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Inspector {
 
 /**
@@ -116,4 +116,4 @@ RegisterCrossAccountAccessRoleRequestPrivate::RegisterCrossAccountAccessRoleRequ
 }
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws

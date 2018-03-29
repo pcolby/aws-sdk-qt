@@ -22,7 +22,7 @@
 #include "putscheduledactionresponse.h"
 #include "applicationautoscalingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ApplicationAutoScaling {
 
 /**
@@ -116,4 +116,4 @@ PutScheduledActionRequestPrivate::PutScheduledActionRequestPrivate(
 }
 
 } // namespace ApplicationAutoScaling
-} // namespace AWS
+} // namespace QtAws

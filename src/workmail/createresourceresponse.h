@@ -23,8 +23,7 @@
 #include "workmailresponse.h"
 #include "createresourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkMail {
 
 class CreateResourceResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "wafregionalresponse.h"
 #include "createxssmatchsetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAFRegional {
 
 class CreateXssMatchSetResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace WAFRegional
-} // namespace AWS
+} // namespace QtAws
 
 #endif

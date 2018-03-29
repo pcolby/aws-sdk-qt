@@ -23,8 +23,7 @@
 #include "cloudformationresponse.h"
 #include "signalresourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFormation {
 
 class SignalResourceResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws
 
 #endif

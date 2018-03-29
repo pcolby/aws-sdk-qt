@@ -22,7 +22,7 @@
 #include "describesourceregionsresponse.h"
 #include "rdsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -116,4 +116,4 @@ DescribeSourceRegionsRequestPrivate::DescribeSourceRegionsRequestPrivate(
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

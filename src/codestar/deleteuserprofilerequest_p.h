@@ -23,8 +23,7 @@
 #include "codestar_p.h"
 #include "deleteuserprofilerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeStar {
 
 class DeleteUserProfileRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CodeStar
-} // namespace AWS
+} // namespace QtAws
 
 #endif

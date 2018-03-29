@@ -22,7 +22,7 @@
 #include "submitjobresponse.h"
 #include "batchrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Batch {
 
 /**
@@ -116,4 +116,4 @@ SubmitJobRequestPrivate::SubmitJobRequestPrivate(
 }
 
 } // namespace Batch
-} // namespace AWS
+} // namespace QtAws

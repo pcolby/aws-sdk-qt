@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SES {
 
 /**
@@ -103,4 +103,4 @@ void DeleteConfigurationSetResponsePrivate::DeleteConfigurationSetResponse(QXmlS
 }
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws

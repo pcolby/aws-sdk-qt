@@ -23,8 +23,7 @@
 #include "clouddirectory_p.h"
 #include "addfacettoobjectrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudDirectory {
 
 class AddFacetToObjectRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws
 
 #endif

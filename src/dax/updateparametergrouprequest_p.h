@@ -23,8 +23,7 @@
 #include "dax_p.h"
 #include "updateparametergrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DAX {
 
 class UpdateParameterGroupRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws
 
 #endif

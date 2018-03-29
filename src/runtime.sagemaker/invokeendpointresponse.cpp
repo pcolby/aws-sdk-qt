@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SageMakerRuntime {
 
 /**
@@ -103,4 +103,4 @@ void InvokeEndpointResponsePrivate::InvokeEndpointResponse(QXmlStreamReader &xml
 }
 
 } // namespace SageMakerRuntime
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "ec2response.h"
 #include "describeidformatrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EC2 {
 
 class DescribeIdFormatResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

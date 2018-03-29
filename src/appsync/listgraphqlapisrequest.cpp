@@ -22,7 +22,7 @@
 #include "listgraphqlapisresponse.h"
 #include "appsyncrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AppSync {
 
 /**
@@ -116,4 +116,4 @@ ListGraphqlApisRequestPrivate::ListGraphqlApisRequestPrivate(
 }
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws

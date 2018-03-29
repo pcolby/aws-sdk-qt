@@ -22,8 +22,7 @@
 
 #include "directoryservicerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectoryService {
 
 class RemoveIpRoutesRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

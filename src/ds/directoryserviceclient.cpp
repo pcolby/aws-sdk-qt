@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace DirectoryService {
 
 /**
@@ -809,4 +809,4 @@ DirectoryServiceClientPrivate::DirectoryServiceClientPrivate(DirectoryServiceCli
 }
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws

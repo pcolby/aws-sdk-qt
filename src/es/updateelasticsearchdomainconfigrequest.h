@@ -22,8 +22,7 @@
 
 #include "elasticsearchservicerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticsearchService {
 
 class UpdateElasticsearchDomainConfigRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace ElasticsearchService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

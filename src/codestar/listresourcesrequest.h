@@ -22,8 +22,7 @@
 
 #include "codestarrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeStar {
 
 class ListResourcesRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace CodeStar
-} // namespace AWS
+} // namespace QtAws
 
 #endif

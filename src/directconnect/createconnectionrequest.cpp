@@ -22,7 +22,7 @@
 #include "createconnectionresponse.h"
 #include "directconnectrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DirectConnect {
 
 /**
@@ -116,4 +116,4 @@ CreateConnectionRequestPrivate::CreateConnectionRequestPrivate(
 }
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws

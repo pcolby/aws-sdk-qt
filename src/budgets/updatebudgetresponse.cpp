@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Budgets {
 
 /**
@@ -103,4 +103,4 @@ void UpdateBudgetResponsePrivate::UpdateBudgetResponse(QXmlStreamReader &xml)
 }
 
 } // namespace Budgets
-} // namespace AWS
+} // namespace QtAws

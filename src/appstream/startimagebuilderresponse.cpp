@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace AppStream {
 
 /**
@@ -103,4 +103,4 @@ void StartImageBuilderResponsePrivate::StartImageBuilderResponse(QXmlStreamReade
 }
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws

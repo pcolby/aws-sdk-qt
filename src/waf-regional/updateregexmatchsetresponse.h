@@ -23,8 +23,7 @@
 #include "wafregionalresponse.h"
 #include "updateregexmatchsetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAFRegional {
 
 class UpdateRegexMatchSetResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WAFRegional
-} // namespace AWS
+} // namespace QtAws
 
 #endif

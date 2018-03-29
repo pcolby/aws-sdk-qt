@@ -22,7 +22,7 @@
 #include "stopmatchmakingresponse.h"
 #include "gameliftrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace GameLift {
 
 /**
@@ -116,4 +116,4 @@ StopMatchmakingRequestPrivate::StopMatchmakingRequestPrivate(
 }
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws

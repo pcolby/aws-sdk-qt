@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace ServerlessApplicationRepository {
 
 class ServerlessApplicationRepositoryClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace ServerlessApplicationRepository
-} // namespace AWS
+} // namespace QtAws
 
 #endif

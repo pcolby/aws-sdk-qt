@@ -22,7 +22,7 @@
 #include "updatepresetresponse.h"
 #include "mediaconvertrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MediaConvert {
 
 /**
@@ -116,4 +116,4 @@ UpdatePresetRequestPrivate::UpdatePresetRequestPrivate(
 }
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws

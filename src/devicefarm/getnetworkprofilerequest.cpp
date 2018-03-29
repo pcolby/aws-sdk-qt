@@ -22,7 +22,7 @@
 #include "getnetworkprofileresponse.h"
 #include "devicefarmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DeviceFarm {
 
 /**
@@ -116,4 +116,4 @@ GetNetworkProfileRequestPrivate::GetNetworkProfileRequestPrivate(
 }
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws

@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace MarketplaceEntitlementService {
 
 class MarketplaceEntitlementServiceClientPrivate;
@@ -60,6 +59,6 @@ private:
 };
 
 } // namespace MarketplaceEntitlementService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

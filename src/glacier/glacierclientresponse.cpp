@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Glacier {
 
 /**
@@ -67,4 +67,4 @@ GlacierClientResponsePrivate::GlacierClientResponsePrivate(
 }
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws

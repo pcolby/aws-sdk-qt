@@ -22,7 +22,7 @@
 #include "describeeventbusresponse.h"
 #include "cloudwatcheventsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudWatchEvents {
 
 /**
@@ -116,4 +116,4 @@ DescribeEventBusRequestPrivate::DescribeEventBusRequestPrivate(
 }
 
 } // namespace CloudWatchEvents
-} // namespace AWS
+} // namespace QtAws

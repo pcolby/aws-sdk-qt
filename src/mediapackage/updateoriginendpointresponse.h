@@ -23,8 +23,7 @@
 #include "mediapackageresponse.h"
 #include "updateoriginendpointrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaPackage {
 
 class UpdateOriginEndpointResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MediaPackage
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "simpledbresponse.h"
 #include "createdomainrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SimpleDB {
 
 class CreateDomainResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SimpleDB
-} // namespace AWS
+} // namespace QtAws
 
 #endif

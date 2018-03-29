@@ -22,7 +22,7 @@
 #include "getjobrunresponse.h"
 #include "gluerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Glue {
 
 /**
@@ -116,4 +116,4 @@ GetJobRunRequestPrivate::GetJobRunRequestPrivate(
 }
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws

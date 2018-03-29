@@ -23,8 +23,7 @@
 #include "storagegateway_p.h"
 #include "describechapcredentialsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace StorageGateway {
 
 class DescribeChapCredentialsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

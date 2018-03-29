@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace MachineLearning {
 
 /**
@@ -711,4 +711,4 @@ MachineLearningClientPrivate::MachineLearningClientPrivate(MachineLearningClient
 }
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws

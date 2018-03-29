@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace DeviceFarm {
 
 /**
@@ -838,4 +838,4 @@ DeviceFarmClientPrivate::DeviceFarmClientPrivate(DeviceFarmClient * const q)
 }
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws

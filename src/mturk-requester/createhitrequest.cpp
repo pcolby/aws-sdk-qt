@@ -22,7 +22,7 @@
 #include "createhitresponse.h"
 #include "mturkrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MTurk {
 
 /**
@@ -116,4 +116,4 @@ CreateHITRequestPrivate::CreateHITRequestPrivate(
 }
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws

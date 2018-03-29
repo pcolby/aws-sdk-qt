@@ -23,8 +23,7 @@
 #include "codestarresponse.h"
 #include "updateprojectrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeStar {
 
 class UpdateProjectResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CodeStar
-} // namespace AWS
+} // namespace QtAws
 
 #endif

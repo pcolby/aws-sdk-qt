@@ -22,8 +22,7 @@
 
 #include "ecrrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ECR {
 
 class DeleteRepositoryPolicyRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

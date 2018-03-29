@@ -23,8 +23,7 @@
 #include "sfn_p.h"
 #include "listactivitiesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SFN {
 
 class ListActivitiesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws
 
 #endif

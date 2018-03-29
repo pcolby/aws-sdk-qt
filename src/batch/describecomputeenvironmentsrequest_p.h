@@ -23,8 +23,7 @@
 #include "batch_p.h"
 #include "describecomputeenvironmentsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Batch {
 
 class DescribeComputeEnvironmentsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Batch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

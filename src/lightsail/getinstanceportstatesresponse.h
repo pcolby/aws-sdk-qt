@@ -23,8 +23,7 @@
 #include "lightsailresponse.h"
 #include "getinstanceportstatesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lightsail {
 
 class GetInstancePortStatesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

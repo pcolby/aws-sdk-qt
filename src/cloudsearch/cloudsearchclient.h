@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudSearch {
 
 class CloudSearchClientPrivate;
@@ -128,6 +127,6 @@ private:
 };
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

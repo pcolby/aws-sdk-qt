@@ -22,7 +22,7 @@
 #include "getinvitationscountresponse.h"
 #include "guarddutyrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace GuardDuty {
 
 /**
@@ -116,4 +116,4 @@ GetInvitationsCountRequestPrivate::GetInvitationsCountRequestPrivate(
 }
 
 } // namespace GuardDuty
-} // namespace AWS
+} // namespace QtAws

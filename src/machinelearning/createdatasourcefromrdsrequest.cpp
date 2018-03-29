@@ -22,7 +22,7 @@
 #include "createdatasourcefromrdsresponse.h"
 #include "machinelearningrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MachineLearning {
 
 /**
@@ -116,4 +116,4 @@ CreateDataSourceFromRDSRequestPrivate::CreateDataSourceFromRDSRequestPrivate(
 }
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "describesubscriptionresponse.h"
 #include "shieldrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Shield {
 
 /**
@@ -116,4 +116,4 @@ DescribeSubscriptionRequestPrivate::DescribeSubscriptionRequestPrivate(
 }
 
 } // namespace Shield
-} // namespace AWS
+} // namespace QtAws

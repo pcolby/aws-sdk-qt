@@ -22,7 +22,7 @@
 #include "getexportresponse.h"
 #include "lexmodelbuildingservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace LexModelBuildingService {
 
 /**
@@ -116,4 +116,4 @@ GetExportRequestPrivate::GetExportRequestPrivate(
 }
 
 } // namespace LexModelBuildingService
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "deletestackinstancesresponse.h"
 #include "cloudformationrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFormation {
 
 /**
@@ -116,4 +116,4 @@ DeleteStackInstancesRequestPrivate::DeleteStackInstancesRequestPrivate(
 }
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws

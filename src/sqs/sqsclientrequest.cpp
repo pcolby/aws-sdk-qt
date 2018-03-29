@@ -20,7 +20,7 @@
 #include "sqsclientrequest.h"
 #include "sqsclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SQS {
 
 /**
@@ -337,4 +337,4 @@ QString SqsClientRequestPrivate::toString(const SqsClientRequest::Action &action
 }
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws

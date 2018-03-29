@@ -23,8 +23,7 @@
 #include "swfresponse.h"
 #include "responddecisiontaskcompletedrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SWF {
 
 class RespondDecisionTaskCompletedResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

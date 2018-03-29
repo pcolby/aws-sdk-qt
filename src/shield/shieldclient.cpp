@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Shield {
 
 /**
@@ -263,4 +263,4 @@ ShieldClientPrivate::ShieldClientPrivate(ShieldClient * const q)
 }
 
 } // namespace Shield
-} // namespace AWS
+} // namespace QtAws

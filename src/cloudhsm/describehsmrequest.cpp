@@ -22,7 +22,7 @@
 #include "describehsmresponse.h"
 #include "cloudhsmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudHSM {
 
 /**
@@ -116,4 +116,4 @@ DescribeHsmRequestPrivate::DescribeHsmRequestPrivate(
 }
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws

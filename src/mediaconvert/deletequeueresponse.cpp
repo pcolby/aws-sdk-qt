@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MediaConvert {
 
 /**
@@ -103,4 +103,4 @@ void DeleteQueueResponsePrivate::DeleteQueueResponse(QXmlStreamReader &xml)
 }
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws

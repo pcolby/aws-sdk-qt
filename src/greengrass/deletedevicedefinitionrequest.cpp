@@ -22,7 +22,7 @@
 #include "deletedevicedefinitionresponse.h"
 #include "greengrassrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -116,4 +116,4 @@ DeleteDeviceDefinitionRequestPrivate::DeleteDeviceDefinitionRequestPrivate(
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

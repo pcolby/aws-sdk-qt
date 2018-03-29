@@ -22,8 +22,7 @@
 
 #include "gluerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glue {
 
 class UpdatePartitionRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws
 
 #endif

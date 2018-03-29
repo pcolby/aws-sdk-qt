@@ -23,8 +23,7 @@
 #include "rekognitionresponse.h"
 #include "detecttextrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Rekognition {
 
 class DetectTextResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "getcontainerpolicyresponse.h"
 #include "mediastorerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MediaStore {
 
 /**
@@ -116,4 +116,4 @@ GetContainerPolicyRequestPrivate::GetContainerPolicyRequestPrivate(
 }
 
 } // namespace MediaStore
-} // namespace AWS
+} // namespace QtAws

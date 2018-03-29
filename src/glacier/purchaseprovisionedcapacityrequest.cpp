@@ -22,7 +22,7 @@
 #include "purchaseprovisionedcapacityresponse.h"
 #include "glacierrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Glacier {
 
 /**
@@ -116,4 +116,4 @@ PurchaseProvisionedCapacityRequestPrivate::PurchaseProvisionedCapacityRequestPri
 }
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws

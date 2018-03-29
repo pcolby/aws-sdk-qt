@@ -23,8 +23,7 @@
 #include "core/awsabstractresponse.h"
 //#include "@todo-error.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MarketplaceMetering {
 
 class MarketplaceMeteringClientResponsePrivate;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace MarketplaceMetering
-} // namespace AWS
+} // namespace QtAws
 
 #endif

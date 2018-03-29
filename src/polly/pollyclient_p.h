@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace Polly {
 
 class PollyClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace Polly
-} // namespace AWS
+} // namespace QtAws
 
 #endif

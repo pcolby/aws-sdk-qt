@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Mobile {
 
 /**
@@ -103,4 +103,4 @@ void ListBundlesResponsePrivate::ListBundlesResponse(QXmlStreamReader &xml)
 }
 
 } // namespace Mobile
-} // namespace AWS
+} // namespace QtAws

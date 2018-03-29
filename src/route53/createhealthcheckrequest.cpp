@@ -22,7 +22,7 @@
 #include "createhealthcheckresponse.h"
 #include "route53request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Route53 {
 
 /**
@@ -116,4 +116,4 @@ CreateHealthCheckRequestPrivate::CreateHealthCheckRequestPrivate(
 }
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws

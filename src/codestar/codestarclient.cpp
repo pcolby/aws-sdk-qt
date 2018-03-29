@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CodeStar {
 
 /**
@@ -464,4 +464,4 @@ CodeStarClientPrivate::CodeStarClientPrivate(CodeStarClient * const q)
 }
 
 } // namespace CodeStar
-} // namespace AWS
+} // namespace QtAws

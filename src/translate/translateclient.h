@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace Translate {
 
 class TranslateClientPrivate;
@@ -60,6 +59,6 @@ private:
 };
 
 } // namespace Translate
-} // namespace AWS
+} // namespace QtAws
 
 #endif

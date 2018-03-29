@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 class DatabaseMigrationServiceClientPrivate;
@@ -189,6 +188,6 @@ private:
 };
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

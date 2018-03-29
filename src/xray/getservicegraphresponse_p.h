@@ -23,8 +23,7 @@
 #include "xrayresponse.h"
 #include "getservicegraphrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace XRay {
 
 class GetServiceGraphResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace XRay
-} // namespace AWS
+} // namespace QtAws
 
 #endif

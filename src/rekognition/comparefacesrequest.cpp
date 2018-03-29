@@ -22,7 +22,7 @@
 #include "comparefacesresponse.h"
 #include "rekognitionrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Rekognition {
 
 /**
@@ -116,4 +116,4 @@ CompareFacesRequestPrivate::CompareFacesRequestPrivate(
 }
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws

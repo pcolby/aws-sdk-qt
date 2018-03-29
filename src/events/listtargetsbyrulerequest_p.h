@@ -23,8 +23,7 @@
 #include "cloudwatchevents_p.h"
 #include "listtargetsbyrulerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatchEvents {
 
 class ListTargetsByRuleRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudWatchEvents
-} // namespace AWS
+} // namespace QtAws
 
 #endif

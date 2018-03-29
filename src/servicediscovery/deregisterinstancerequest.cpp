@@ -22,7 +22,7 @@
 #include "deregisterinstanceresponse.h"
 #include "servicediscoveryrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceDiscovery {
 
 /**
@@ -116,4 +116,4 @@ DeregisterInstanceRequestPrivate::DeregisterInstanceRequestPrivate(
 }
 
 } // namespace ServiceDiscovery
-} // namespace AWS
+} // namespace QtAws

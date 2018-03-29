@@ -23,8 +23,7 @@
 #include "cloudfrontresponse.h"
 #include "createstreamingdistributionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFront {
 
 class CreateStreamingDistributionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws
 
 #endif

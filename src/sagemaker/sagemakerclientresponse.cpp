@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SageMaker {
 
 /**
@@ -67,4 +67,4 @@ SageMakerClientResponsePrivate::SageMakerClientResponsePrivate(
 }
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws

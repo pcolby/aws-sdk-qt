@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SageMaker {
 
 /**
@@ -103,4 +103,4 @@ void CreateNotebookInstanceLifecycleConfigResponsePrivate::CreateNotebookInstanc
 }
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws

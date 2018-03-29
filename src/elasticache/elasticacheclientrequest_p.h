@@ -23,8 +23,7 @@
 #include "elasticache_p.h"
 #include "elasticacheclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElastiCache {
 
 class ElastiCacheClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws
 
 #endif

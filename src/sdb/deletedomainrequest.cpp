@@ -22,7 +22,7 @@
 #include "deletedomainresponse.h"
 #include "simpledbrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SimpleDB {
 
 /**
@@ -116,4 +116,4 @@ DeleteDomainRequestPrivate::DeleteDomainRequestPrivate(
 }
 
 } // namespace SimpleDB
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "iotjobsdataplane_p.h"
 #include "getpendingjobexecutionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoTJobsDataPlane {
 
 class GetPendingJobExecutionsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace IoTJobsDataPlane
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "changepasswordresponse.h"
 #include "cognitoidentityproviderrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 /**
@@ -116,4 +116,4 @@ ChangePasswordRequestPrivate::ChangePasswordRequestPrivate(
 }
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws

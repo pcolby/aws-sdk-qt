@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Inspector {
 
 /**
@@ -103,4 +103,4 @@ void RemoveAttributesFromFindingsResponsePrivate::RemoveAttributesFromFindingsRe
 }
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "rds_p.h"
 #include "rdsclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace RDS {
 
 class RdsClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

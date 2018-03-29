@@ -22,7 +22,7 @@
 #include "rebootdbinstanceresponse.h"
 #include "rdsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -116,4 +116,4 @@ RebootDBInstanceRequestPrivate::RebootDBInstanceRequestPrivate(
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
 /**
@@ -67,4 +67,4 @@ MarketplaceCommerceAnalyticsClientResponsePrivate::MarketplaceCommerceAnalyticsC
 }
 
 } // namespace MarketplaceCommerceAnalytics
-} // namespace AWS
+} // namespace QtAws

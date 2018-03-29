@@ -22,7 +22,7 @@
 #include "listlaunchpathsresponse.h"
 #include "servicecatalogrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceCatalog {
 
 /**
@@ -116,4 +116,4 @@ ListLaunchPathsRequestPrivate::ListLaunchPathsRequestPrivate(
 }
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws

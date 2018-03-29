@@ -23,8 +23,7 @@
 #include "kinesisvideoresponse.h"
 #include "getdataendpointrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KinesisVideo {
 
 class GetDataEndpointResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace KinesisVideo
-} // namespace AWS
+} // namespace QtAws
 
 #endif

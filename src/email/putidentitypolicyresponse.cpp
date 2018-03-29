@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SES {
 
 /**
@@ -103,4 +103,4 @@ void PutIdentityPolicyResponsePrivate::PutIdentityPolicyResponse(QXmlStreamReade
 }
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws

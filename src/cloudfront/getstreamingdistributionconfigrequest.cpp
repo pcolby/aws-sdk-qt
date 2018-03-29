@@ -22,7 +22,7 @@
 #include "getstreamingdistributionconfigresponse.h"
 #include "cloudfrontrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFront {
 
 /**
@@ -116,4 +116,4 @@ GetStreamingDistributionConfigRequestPrivate::GetStreamingDistributionConfigRequ
 }
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws

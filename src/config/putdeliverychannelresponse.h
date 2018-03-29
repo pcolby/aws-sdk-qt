@@ -23,8 +23,7 @@
 #include "configserviceresponse.h"
 #include "putdeliverychannelrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ConfigService {
 
 class PutDeliveryChannelResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

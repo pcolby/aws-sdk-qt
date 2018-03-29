@@ -23,8 +23,7 @@
 #include "cloudtrailresponse.h"
 #include "puteventselectorsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudTrail {
 
 class PutEventSelectorsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudTrail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

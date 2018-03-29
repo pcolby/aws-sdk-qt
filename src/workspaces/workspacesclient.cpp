@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace WorkSpaces {
 
 /**
@@ -369,4 +369,4 @@ WorkSpacesClientPrivate::WorkSpacesClientPrivate(WorkSpacesClient * const q)
 }
 
 } // namespace WorkSpaces
-} // namespace AWS
+} // namespace QtAws

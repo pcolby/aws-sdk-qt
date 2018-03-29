@@ -22,7 +22,7 @@
 #include "setidentitynotificationtopicresponse.h"
 #include "sesrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SES {
 
 /**
@@ -116,4 +116,4 @@ SetIdentityNotificationTopicRequestPrivate::SetIdentityNotificationTopicRequestP
 }
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws

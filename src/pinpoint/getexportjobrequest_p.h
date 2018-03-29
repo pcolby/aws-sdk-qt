@@ -23,8 +23,7 @@
 #include "pinpoint_p.h"
 #include "getexportjobrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pinpoint {
 
 class GetExportJobRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -20,7 +20,7 @@
 #include "simpledbclientrequest.h"
 #include "simpledbclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SimpleDB {
 
 /**
@@ -337,4 +337,4 @@ QString SimpleDBClientRequestPrivate::toString(const SimpleDBClientRequest::Acti
 }
 
 } // namespace SimpleDB
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "clouddirectory_p.h"
 #include "getobjectinformationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudDirectory {
 
 class GetObjectInformationRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws
 
 #endif

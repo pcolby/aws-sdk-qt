@@ -23,8 +23,7 @@
 #include "workdocsresponse.h"
 #include "getfolderpathrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkDocs {
 
 class GetFolderPathResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

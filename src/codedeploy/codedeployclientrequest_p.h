@@ -23,8 +23,7 @@
 #include "codedeploy_p.h"
 #include "codedeployclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeDeploy {
 
 class CodeDeployClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws
 
 #endif

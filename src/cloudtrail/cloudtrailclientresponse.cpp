@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudTrail {
 
 /**
@@ -67,4 +67,4 @@ CloudTrailClientResponsePrivate::CloudTrailClientResponsePrivate(
 }
 
 } // namespace CloudTrail
-} // namespace AWS
+} // namespace QtAws

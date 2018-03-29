@@ -23,8 +23,7 @@
 #include "workspacesresponse.h"
 #include "modifyworkspacepropertiesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkSpaces {
 
 class ModifyWorkspacePropertiesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WorkSpaces
-} // namespace AWS
+} // namespace QtAws
 
 #endif

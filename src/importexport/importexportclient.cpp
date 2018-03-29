@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace ImportExport {
 
 /**
@@ -205,4 +205,4 @@ ImportExportClientPrivate::ImportExportClientPrivate(ImportExportClient * const 
 }
 
 } // namespace ImportExport
-} // namespace AWS
+} // namespace QtAws

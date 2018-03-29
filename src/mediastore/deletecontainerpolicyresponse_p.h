@@ -23,8 +23,7 @@
 #include "mediastoreresponse.h"
 #include "deletecontainerpolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaStore {
 
 class DeleteContainerPolicyResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace MediaStore
-} // namespace AWS
+} // namespace QtAws
 
 #endif

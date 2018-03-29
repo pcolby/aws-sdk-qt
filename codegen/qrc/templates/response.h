@@ -5,8 +5,7 @@
 #include "{{ServiceName|lower}}response.h"
 #include "{{OperationName|lower}}request.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace {{NameSpaceName}} {
 
 class {{ClassName}}Private;
@@ -29,6 +28,6 @@ private:
 };
 
 } // namespace {{NameSpaceName}}
-} // namespace AWS
+} // namespace QtAws
 
 #endif

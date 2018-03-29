@@ -23,8 +23,7 @@
 #include "databasemigrationserviceresponse.h"
 #include "deletereplicationinstancerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 class DeleteReplicationInstanceResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

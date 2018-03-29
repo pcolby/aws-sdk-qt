@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ResourceGroups {
 
 /**
@@ -103,4 +103,4 @@ void GetGroupResponsePrivate::GetGroupResponse(QXmlStreamReader &xml)
 }
 
 } // namespace ResourceGroups
-} // namespace AWS
+} // namespace QtAws

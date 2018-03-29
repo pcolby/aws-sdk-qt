@@ -23,8 +23,7 @@
 #include "directoryservice_p.h"
 #include "removetagsfromresourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectoryService {
 
 class RemoveTagsFromResourceRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

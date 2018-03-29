@@ -23,8 +23,7 @@
 #include "storagegatewayresponse.h"
 #include "addtagstoresourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace StorageGateway {
 
 class AddTagsToResourceResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

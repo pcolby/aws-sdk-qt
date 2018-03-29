@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
 /**
@@ -103,4 +103,4 @@ void RegisterTargetsResponsePrivate::RegisterTargetsResponse(QXmlStreamReader &x
 }
 
 } // namespace ElasticLoadBalancingv2
-} // namespace AWS
+} // namespace QtAws

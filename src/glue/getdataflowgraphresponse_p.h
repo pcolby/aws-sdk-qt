@@ -23,8 +23,7 @@
 #include "glueresponse.h"
 #include "getdataflowgraphrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glue {
 
 class GetDataflowGraphResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws
 
 #endif

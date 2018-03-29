@@ -22,7 +22,7 @@
 #include "updateconditionalforwarderresponse.h"
 #include "directoryservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DirectoryService {
 
 /**
@@ -116,4 +116,4 @@ UpdateConditionalForwarderRequestPrivate::UpdateConditionalForwarderRequestPriva
 }
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "ec2response.h"
 #include "disassociateaddressrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EC2 {
 
 class DisassociateAddressResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

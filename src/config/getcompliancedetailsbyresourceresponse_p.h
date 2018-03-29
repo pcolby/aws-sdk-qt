@@ -23,8 +23,7 @@
 #include "configserviceresponse.h"
 #include "getcompliancedetailsbyresourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ConfigService {
 
 class GetComplianceDetailsByResourceResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

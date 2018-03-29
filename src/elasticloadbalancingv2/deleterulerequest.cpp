@@ -22,7 +22,7 @@
 #include "deleteruleresponse.h"
 #include "elasticloadbalancingv2request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
 /**
@@ -116,4 +116,4 @@ DeleteRuleRequestPrivate::DeleteRuleRequestPrivate(
 }
 
 } // namespace ElasticLoadBalancingv2
-} // namespace AWS
+} // namespace QtAws

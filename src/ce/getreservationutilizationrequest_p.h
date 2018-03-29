@@ -23,8 +23,7 @@
 #include "costexplorer_p.h"
 #include "getreservationutilizationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CostExplorer {
 
 class GetReservationUtilizationRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CostExplorer
-} // namespace AWS
+} // namespace QtAws
 
 #endif

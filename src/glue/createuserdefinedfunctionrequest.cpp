@@ -22,7 +22,7 @@
 #include "createuserdefinedfunctionresponse.h"
 #include "gluerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Glue {
 
 /**
@@ -116,4 +116,4 @@ CreateUserDefinedFunctionRequestPrivate::CreateUserDefinedFunctionRequestPrivate
 }
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws

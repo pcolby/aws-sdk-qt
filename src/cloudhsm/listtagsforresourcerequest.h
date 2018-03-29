@@ -22,8 +22,7 @@
 
 #include "cloudhsmrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSM {
 
 class ListTagsForResourceRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

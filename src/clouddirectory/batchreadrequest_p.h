@@ -23,8 +23,7 @@
 #include "clouddirectory_p.h"
 #include "batchreadrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudDirectory {
 
 class BatchReadRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws
 
 #endif

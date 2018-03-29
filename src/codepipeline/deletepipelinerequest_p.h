@@ -23,8 +23,7 @@
 #include "codepipeline_p.h"
 #include "deletepipelinerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodePipeline {
 
 class DeletePipelineRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

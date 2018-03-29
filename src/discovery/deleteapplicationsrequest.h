@@ -22,8 +22,7 @@
 
 #include "applicationdiscoveryservicerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 class DeleteApplicationsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace ApplicationDiscoveryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

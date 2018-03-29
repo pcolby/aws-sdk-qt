@@ -23,8 +23,7 @@
 #include "autoscalingresponse.h"
 #include "attachinstancesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AutoScaling {
 
 class AttachInstancesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "createbatchpredictionresponse.h"
 #include "machinelearningrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MachineLearning {
 
 /**
@@ -116,4 +116,4 @@ CreateBatchPredictionRequestPrivate::CreateBatchPredictionRequestPrivate(
 }
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws

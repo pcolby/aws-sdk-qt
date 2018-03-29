@@ -23,8 +23,7 @@
 #include "iotresponse.h"
 #include "describeindexrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class DescribeIndexResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

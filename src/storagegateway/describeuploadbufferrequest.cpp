@@ -22,7 +22,7 @@
 #include "describeuploadbufferresponse.h"
 #include "storagegatewayrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace StorageGateway {
 
 /**
@@ -116,4 +116,4 @@ DescribeUploadBufferRequestPrivate::DescribeUploadBufferRequestPrivate(
 }
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws

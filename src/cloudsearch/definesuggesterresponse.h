@@ -23,8 +23,7 @@
 #include "cloudsearchresponse.h"
 #include "definesuggesterrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudSearch {
 
 class DefineSuggesterResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

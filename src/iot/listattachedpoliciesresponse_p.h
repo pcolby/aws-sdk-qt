@@ -23,8 +23,7 @@
 #include "iotresponse.h"
 #include "listattachedpoliciesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class ListAttachedPoliciesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

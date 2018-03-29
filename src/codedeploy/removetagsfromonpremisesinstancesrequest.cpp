@@ -22,7 +22,7 @@
 #include "removetagsfromonpremisesinstancesresponse.h"
 #include "codedeployrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeDeploy {
 
 /**
@@ -116,4 +116,4 @@ RemoveTagsFromOnPremisesInstancesRequestPrivate::RemoveTagsFromOnPremisesInstanc
 }
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "getqueueresponse.h"
 #include "mediaconvertrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MediaConvert {
 
 /**
@@ -116,4 +116,4 @@ GetQueueRequestPrivate::GetQueueRequestPrivate(
 }
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws

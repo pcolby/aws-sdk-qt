@@ -22,7 +22,7 @@
 #include "createtagsresponse.h"
 #include "workspacesrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WorkSpaces {
 
 /**
@@ -116,4 +116,4 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
 }
 
 } // namespace WorkSpaces
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "detectsentimentresponse.h"
 #include "comprehendrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Comprehend {
 
 /**
@@ -116,4 +116,4 @@ DetectSentimentRequestPrivate::DetectSentimentRequestPrivate(
 }
 
 } // namespace Comprehend
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "daxresponse.h"
 #include "deletesubnetgrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DAX {
 
 class DeleteSubnetGroupResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws
 
 #endif

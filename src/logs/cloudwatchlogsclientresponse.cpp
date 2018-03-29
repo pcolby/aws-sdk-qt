@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudWatchLogs {
 
 /**
@@ -67,4 +67,4 @@ CloudWatchLogsClientResponsePrivate::CloudWatchLogsClientResponsePrivate(
 }
 
 } // namespace CloudWatchLogs
-} // namespace AWS
+} // namespace QtAws

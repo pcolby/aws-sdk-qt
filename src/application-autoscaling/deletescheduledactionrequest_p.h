@@ -23,8 +23,7 @@
 #include "applicationautoscaling_p.h"
 #include "deletescheduledactionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ApplicationAutoScaling {
 
 class DeleteScheduledActionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ApplicationAutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

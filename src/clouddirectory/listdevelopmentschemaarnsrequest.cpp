@@ -22,7 +22,7 @@
 #include "listdevelopmentschemaarnsresponse.h"
 #include "clouddirectoryrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudDirectory {
 
 /**
@@ -116,4 +116,4 @@ ListDevelopmentSchemaArnsRequestPrivate::ListDevelopmentSchemaArnsRequestPrivate
 }
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws

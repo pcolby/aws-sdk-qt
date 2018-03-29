@@ -23,8 +23,7 @@
 #include "alexaforbusinessresponse.h"
 #include "startdevicesyncrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AlexaForBusiness {
 
 class StartDeviceSyncResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws
 
 #endif

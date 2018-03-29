@@ -23,8 +23,7 @@
 #include "codepipelineresponse.h"
 #include "putapprovalresultrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodePipeline {
 
 class PutApprovalResultResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

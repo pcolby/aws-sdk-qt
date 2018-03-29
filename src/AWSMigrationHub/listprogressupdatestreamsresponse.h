@@ -23,8 +23,7 @@
 #include "migrationhubresponse.h"
 #include "listprogressupdatestreamsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MigrationHub {
 
 class ListProgressUpdateStreamsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws
 
 #endif

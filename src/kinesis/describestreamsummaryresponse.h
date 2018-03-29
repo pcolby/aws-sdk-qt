@@ -23,8 +23,7 @@
 #include "kinesisresponse.h"
 #include "describestreamsummaryrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Kinesis {
 
 class DescribeStreamSummaryResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Kinesis
-} // namespace AWS
+} // namespace QtAws
 
 #endif

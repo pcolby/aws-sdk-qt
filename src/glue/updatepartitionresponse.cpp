@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Glue {
 
 /**
@@ -103,4 +103,4 @@ void UpdatePartitionResponsePrivate::UpdatePartitionResponse(QXmlStreamReader &x
 }
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws

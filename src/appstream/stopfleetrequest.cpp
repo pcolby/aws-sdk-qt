@@ -22,7 +22,7 @@
 #include "stopfleetresponse.h"
 #include "appstreamrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AppStream {
 
 /**
@@ -116,4 +116,4 @@ StopFleetRequestPrivate::StopFleetRequestPrivate(
 }
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws

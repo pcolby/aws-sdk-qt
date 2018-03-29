@@ -22,7 +22,7 @@
 #include "deletewebaclresponse.h"
 #include "wafrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WAF {
 
 /**
@@ -116,4 +116,4 @@ DeleteWebACLRequestPrivate::DeleteWebACLRequestPrivate(
 }
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws

@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace ECR {
 
 class EcrClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

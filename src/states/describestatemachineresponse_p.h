@@ -23,8 +23,7 @@
 #include "sfnresponse.h"
 #include "describestatemachinerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SFN {
 
 class DescribeStateMachineResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws
 
 #endif

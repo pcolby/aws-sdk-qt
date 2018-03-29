@@ -23,8 +23,7 @@
 #include "glacier_p.h"
 #include "deletevaultaccesspolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glacier {
 
 class DeleteVaultAccessPolicyRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws
 
 #endif

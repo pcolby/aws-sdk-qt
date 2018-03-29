@@ -23,8 +23,7 @@
 #include "rekognition_p.h"
 #include "rekognitionclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Rekognition {
 
 class RekognitionClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws
 
 #endif

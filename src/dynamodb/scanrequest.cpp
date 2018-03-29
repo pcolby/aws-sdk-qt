@@ -22,7 +22,7 @@
 #include "scanresponse.h"
 #include "dynamodbrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DynamoDB {
 
 /**
@@ -116,4 +116,4 @@ ScanRequestPrivate::ScanRequestPrivate(
 }
 
 } // namespace DynamoDB
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "pollyresponse.h"
 #include "pollyclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Polly {
 
 class PollyClientResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Polly
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "rds_p.h"
 #include "removerolefromdbclusterrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace RDS {
 
 class RemoveRoleFromDBClusterRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

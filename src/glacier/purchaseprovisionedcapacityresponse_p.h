@@ -23,8 +23,7 @@
 #include "glacierresponse.h"
 #include "purchaseprovisionedcapacityrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glacier {
 
 class PurchaseProvisionedCapacityResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws
 
 #endif

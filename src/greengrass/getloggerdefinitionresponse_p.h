@@ -23,8 +23,7 @@
 #include "greengrassresponse.h"
 #include "getloggerdefinitionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Greengrass {
 
 class GetLoggerDefinitionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws
 
 #endif

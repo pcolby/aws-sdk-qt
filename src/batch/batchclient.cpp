@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Batch {
 
 /**
@@ -404,4 +404,4 @@ BatchClientPrivate::BatchClientPrivate(BatchClient * const q)
 }
 
 } // namespace Batch
-} // namespace AWS
+} // namespace QtAws

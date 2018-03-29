@@ -23,8 +23,7 @@
 #include "dynamodb_p.h"
 #include "updatecontinuousbackupsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DynamoDB {
 
 class UpdateContinuousBackupsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DynamoDB
-} // namespace AWS
+} // namespace QtAws
 
 #endif

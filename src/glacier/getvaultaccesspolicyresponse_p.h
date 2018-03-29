@@ -23,8 +23,7 @@
 #include "glacierresponse.h"
 #include "getvaultaccesspolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glacier {
 
 class GetVaultAccessPolicyResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws
 
 #endif

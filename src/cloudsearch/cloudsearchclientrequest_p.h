@@ -23,8 +23,7 @@
 #include "cloudsearch_p.h"
 #include "cloudsearchclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudSearch {
 
 class CloudSearchClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

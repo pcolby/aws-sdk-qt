@@ -22,7 +22,7 @@
 #include "createcloudformationchangesetresponse.h"
 #include "serverlessapplicationrepositoryrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServerlessApplicationRepository {
 
 /**
@@ -116,4 +116,4 @@ CreateCloudFormationChangeSetRequestPrivate::CreateCloudFormationChangeSetReques
 }
 
 } // namespace ServerlessApplicationRepository
-} // namespace AWS
+} // namespace QtAws

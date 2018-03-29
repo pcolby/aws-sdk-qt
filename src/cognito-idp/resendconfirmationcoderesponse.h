@@ -23,8 +23,7 @@
 #include "cognitoidentityproviderresponse.h"
 #include "resendconfirmationcoderequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 class ResendConfirmationCodeResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws
 
 #endif

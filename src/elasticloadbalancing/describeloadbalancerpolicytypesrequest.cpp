@@ -22,7 +22,7 @@
 #include "describeloadbalancerpolicytypesresponse.h"
 #include "elasticloadbalancingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticLoadBalancing {
 
 /**
@@ -116,4 +116,4 @@ DescribeLoadBalancerPolicyTypesRequestPrivate::DescribeLoadBalancerPolicyTypesRe
 }
 
 } // namespace ElasticLoadBalancing
-} // namespace AWS
+} // namespace QtAws

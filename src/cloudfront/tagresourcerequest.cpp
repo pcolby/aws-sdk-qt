@@ -22,7 +22,7 @@
 #include "tagresourceresponse.h"
 #include "cloudfrontrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFront {
 
 /**
@@ -116,4 +116,4 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 }
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws

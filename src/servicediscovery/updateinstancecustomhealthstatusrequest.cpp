@@ -22,7 +22,7 @@
 #include "updateinstancecustomhealthstatusresponse.h"
 #include "servicediscoveryrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceDiscovery {
 
 /**
@@ -116,4 +116,4 @@ UpdateInstanceCustomHealthStatusRequestPrivate::UpdateInstanceCustomHealthStatus
 }
 
 } // namespace ServiceDiscovery
-} // namespace AWS
+} // namespace QtAws

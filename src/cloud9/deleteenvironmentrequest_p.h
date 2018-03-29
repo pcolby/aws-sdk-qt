@@ -23,8 +23,7 @@
 #include "cloud9_p.h"
 #include "deleteenvironmentrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Cloud9 {
 
 class DeleteEnvironmentRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Cloud9
-} // namespace AWS
+} // namespace QtAws
 
 #endif

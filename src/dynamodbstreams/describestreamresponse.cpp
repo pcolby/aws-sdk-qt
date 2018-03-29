@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DynamoDBStreams {
 
 /**
@@ -103,4 +103,4 @@ void DescribeStreamResponsePrivate::DescribeStreamResponse(QXmlStreamReader &xml
 }
 
 } // namespace DynamoDBStreams
-} // namespace AWS
+} // namespace QtAws

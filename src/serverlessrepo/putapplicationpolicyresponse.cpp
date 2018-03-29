@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ServerlessApplicationRepository {
 
 /**
@@ -103,4 +103,4 @@ void PutApplicationPolicyResponsePrivate::PutApplicationPolicyResponse(QXmlStrea
 }
 
 } // namespace ServerlessApplicationRepository
-} // namespace AWS
+} // namespace QtAws

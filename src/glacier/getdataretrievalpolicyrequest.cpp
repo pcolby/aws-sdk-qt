@@ -22,7 +22,7 @@
 #include "getdataretrievalpolicyresponse.h"
 #include "glacierrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Glacier {
 
 /**
@@ -116,4 +116,4 @@ GetDataRetrievalPolicyRequestPrivate::GetDataRetrievalPolicyRequestPrivate(
 }
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws

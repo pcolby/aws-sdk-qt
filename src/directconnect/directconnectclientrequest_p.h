@@ -23,8 +23,7 @@
 #include "directconnect_p.h"
 #include "directconnectclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectConnect {
 
 class DirectConnectClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws
 
 #endif

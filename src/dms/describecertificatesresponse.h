@@ -23,8 +23,7 @@
 #include "databasemigrationserviceresponse.h"
 #include "describecertificatesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 class DescribeCertificatesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

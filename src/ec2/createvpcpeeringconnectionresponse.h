@@ -23,8 +23,7 @@
 #include "ec2response.h"
 #include "createvpcpeeringconnectionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EC2 {
 
 class CreateVpcPeeringConnectionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

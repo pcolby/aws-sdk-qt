@@ -22,7 +22,7 @@
 #include "getserviceresponse.h"
 #include "servicediscoveryrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceDiscovery {
 
 /**
@@ -116,4 +116,4 @@ GetServiceRequestPrivate::GetServiceRequestPrivate(
 }
 
 } // namespace ServiceDiscovery
-} // namespace AWS
+} // namespace QtAws

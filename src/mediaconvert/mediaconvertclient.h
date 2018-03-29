@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaConvert {
 
 class MediaConvertClientPrivate;
@@ -117,6 +116,6 @@ private:
 };
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws
 
 #endif

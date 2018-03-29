@@ -22,7 +22,7 @@
 #include "disassociatefrommasteraccountresponse.h"
 #include "guarddutyrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace GuardDuty {
 
 /**
@@ -116,4 +116,4 @@ DisassociateFromMasterAccountRequestPrivate::DisassociateFromMasterAccountReques
 }
 
 } // namespace GuardDuty
-} // namespace AWS
+} // namespace QtAws

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace S3 {
 
 /**
@@ -103,4 +103,4 @@ void GetBucketInventoryConfigurationResponsePrivate::GetBucketInventoryConfigura
 }
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws

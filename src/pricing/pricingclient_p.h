@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace Pricing {
 
 class PricingClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace Pricing
-} // namespace AWS
+} // namespace QtAws
 
 #endif

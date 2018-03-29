@@ -23,8 +23,7 @@
 #include "pinpointresponse.h"
 #include "getcampaignsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pinpoint {
 
 class GetCampaignsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws
 
 #endif

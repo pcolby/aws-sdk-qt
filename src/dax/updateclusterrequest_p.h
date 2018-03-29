@@ -23,8 +23,7 @@
 #include "dax_p.h"
 #include "updateclusterrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DAX {
 
 class UpdateClusterRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws
 
 #endif

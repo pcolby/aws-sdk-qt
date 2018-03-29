@@ -23,8 +23,7 @@
 #include "athena_p.h"
 #include "batchgetqueryexecutionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Athena {
 
 class BatchGetQueryExecutionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Athena
-} // namespace AWS
+} // namespace QtAws
 
 #endif

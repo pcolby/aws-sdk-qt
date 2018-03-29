@@ -22,7 +22,7 @@
 #include "describelogstreamsresponse.h"
 #include "cloudwatchlogsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudWatchLogs {
 
 /**
@@ -116,4 +116,4 @@ DescribeLogStreamsRequestPrivate::DescribeLogStreamsRequestPrivate(
 }
 
 } // namespace CloudWatchLogs
-} // namespace AWS
+} // namespace QtAws

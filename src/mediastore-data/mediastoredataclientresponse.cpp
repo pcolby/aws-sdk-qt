@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MediaStoreData {
 
 /**
@@ -67,4 +67,4 @@ MediaStoreDataClientResponsePrivate::MediaStoreDataClientResponsePrivate(
 }
 
 } // namespace MediaStoreData
-} // namespace AWS
+} // namespace QtAws

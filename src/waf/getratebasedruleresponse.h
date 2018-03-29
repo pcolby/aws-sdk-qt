@@ -23,8 +23,7 @@
 #include "wafresponse.h"
 #include "getratebasedrulerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class GetRateBasedRuleResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

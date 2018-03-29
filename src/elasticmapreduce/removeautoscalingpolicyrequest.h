@@ -22,8 +22,7 @@
 
 #include "emrrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EMR {
 
 class RemoveAutoScalingPolicyRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "workmailresponse.h"
 #include "associatemembertogrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkMail {
 
 class AssociateMemberToGroupResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

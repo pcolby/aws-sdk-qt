@@ -22,7 +22,7 @@
 #include "getslottypeversionsresponse.h"
 #include "lexmodelbuildingservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace LexModelBuildingService {
 
 /**
@@ -116,4 +116,4 @@ GetSlotTypeVersionsRequestPrivate::GetSlotTypeVersionsRequestPrivate(
 }
 
 } // namespace LexModelBuildingService
-} // namespace AWS
+} // namespace QtAws

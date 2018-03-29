@@ -23,8 +23,7 @@
 #include "workmailresponse.h"
 #include "disassociatedelegatefromresourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkMail {
 
 class DisassociateDelegateFromResourceResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

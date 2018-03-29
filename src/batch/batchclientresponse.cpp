@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Batch {
 
 /**
@@ -67,4 +67,4 @@ BatchClientResponsePrivate::BatchClientResponsePrivate(
 }
 
 } // namespace Batch
-} // namespace AWS
+} // namespace QtAws

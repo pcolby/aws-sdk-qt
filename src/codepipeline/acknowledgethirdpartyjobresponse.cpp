@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CodePipeline {
 
 /**
@@ -103,4 +103,4 @@ void AcknowledgeThirdPartyJobResponsePrivate::AcknowledgeThirdPartyJobResponse(Q
 }
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws

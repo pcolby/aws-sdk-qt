@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace MTurk {
 
 /**
@@ -935,4 +935,4 @@ MTurkClientPrivate::MTurkClientPrivate(MTurkClient * const q)
 }
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws

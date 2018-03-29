@@ -22,8 +22,7 @@
 
 #include "inspectorrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Inspector {
 
 class CreateAssessmentTargetRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws
 
 #endif

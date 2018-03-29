@@ -22,7 +22,7 @@
 #include "addpermissionresponse.h"
 #include "sqsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SQS {
 
 /**
@@ -116,4 +116,4 @@ AddPermissionRequestPrivate::AddPermissionRequestPrivate(
 }
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws

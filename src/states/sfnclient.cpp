@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace SFN {
 
 /**
@@ -460,4 +460,4 @@ SfnClientPrivate::SfnClientPrivate(SfnClient * const q)
 }
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws

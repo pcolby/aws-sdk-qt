@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DirectConnect {
 
 /**
@@ -67,4 +67,4 @@ DirectConnectClientResponsePrivate::DirectConnectClientResponsePrivate(
 }
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws

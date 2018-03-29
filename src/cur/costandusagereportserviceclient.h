@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace CostandUsageReportService {
 
 class CostandUsageReportServiceClientPrivate;
@@ -66,6 +65,6 @@ private:
 };
 
 } // namespace CostandUsageReportService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

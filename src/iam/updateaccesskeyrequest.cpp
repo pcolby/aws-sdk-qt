@@ -22,7 +22,7 @@
 #include "updateaccesskeyresponse.h"
 #include "iamrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IAM {
 
 /**
@@ -116,4 +116,4 @@ UpdateAccessKeyRequestPrivate::UpdateAccessKeyRequestPrivate(
 }
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws

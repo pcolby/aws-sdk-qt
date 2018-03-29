@@ -22,8 +22,7 @@
 
 #include "pricingrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pricing {
 
 class GetAttributeValuesRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Pricing
-} // namespace AWS
+} // namespace QtAws
 
 #endif

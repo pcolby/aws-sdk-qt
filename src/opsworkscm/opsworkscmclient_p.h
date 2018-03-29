@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace OpsWorksCM {
 
 class OpsWorksCMClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

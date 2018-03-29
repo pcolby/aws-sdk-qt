@@ -23,8 +23,7 @@
 #include "lexruntimeservice_p.h"
 #include "lexruntimeserviceclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace LexRuntimeService {
 
 class LexRuntimeServiceClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace LexRuntimeService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

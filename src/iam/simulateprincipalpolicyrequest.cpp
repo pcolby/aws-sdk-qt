@@ -22,7 +22,7 @@
 #include "simulateprincipalpolicyresponse.h"
 #include "iamrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IAM {
 
 /**
@@ -116,4 +116,4 @@ SimulatePrincipalPolicyRequestPrivate::SimulatePrincipalPolicyRequestPrivate(
 }
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws

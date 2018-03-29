@@ -23,8 +23,7 @@
 #include "apigateway_p.h"
 #include "getrequestvalidatorrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace APIGateway {
 
 class GetRequestValidatorRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace LexRuntimeService {
 
 class LexRuntimeServiceClientPrivate;
@@ -63,6 +62,6 @@ private:
 };
 
 } // namespace LexRuntimeService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

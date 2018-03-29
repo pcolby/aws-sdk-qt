@@ -22,7 +22,7 @@
 #include "createmlmodelresponse.h"
 #include "machinelearningrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MachineLearning {
 
 /**
@@ -116,4 +116,4 @@ CreateMLModelRequestPrivate::CreateMLModelRequestPrivate(
 }
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws

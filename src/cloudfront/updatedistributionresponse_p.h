@@ -23,8 +23,7 @@
 #include "cloudfrontresponse.h"
 #include "updatedistributionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFront {
 
 class UpdateDistributionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws
 
 #endif

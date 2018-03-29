@@ -23,8 +23,7 @@
 #include "route53domains_p.h"
 #include "resendcontactreachabilityemailrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53Domains {
 
 class ResendContactReachabilityEmailRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Route53Domains
-} // namespace AWS
+} // namespace QtAws
 
 #endif

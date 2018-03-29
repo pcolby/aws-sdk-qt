@@ -23,8 +23,7 @@
 #include "pinpointresponse.h"
 #include "updatebaiduchannelrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pinpoint {
 
 class UpdateBaiduChannelResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws
 
 #endif

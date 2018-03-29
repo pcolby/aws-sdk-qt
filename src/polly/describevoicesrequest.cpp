@@ -22,7 +22,7 @@
 #include "describevoicesresponse.h"
 #include "pollyrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Polly {
 
 /**
@@ -116,4 +116,4 @@ DescribeVoicesRequestPrivate::DescribeVoicesRequestPrivate(
 }
 
 } // namespace Polly
-} // namespace AWS
+} // namespace QtAws

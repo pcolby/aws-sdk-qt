@@ -23,8 +23,7 @@
 #include "opsworkscmresponse.h"
 #include "createbackuprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorksCM {
 
 class CreateBackupResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

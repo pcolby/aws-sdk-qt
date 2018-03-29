@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MediaPackage {
 
 /**
@@ -103,4 +103,4 @@ void UpdateOriginEndpointResponsePrivate::UpdateOriginEndpointResponse(QXmlStrea
 }
 
 } // namespace MediaPackage
-} // namespace AWS
+} // namespace QtAws

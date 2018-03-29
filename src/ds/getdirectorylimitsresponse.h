@@ -23,8 +23,7 @@
 #include "directoryserviceresponse.h"
 #include "getdirectorylimitsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectoryService {
 
 class GetDirectoryLimitsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

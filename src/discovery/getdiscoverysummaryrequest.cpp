@@ -22,7 +22,7 @@
 #include "getdiscoverysummaryresponse.h"
 #include "applicationdiscoveryservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 /**
@@ -116,4 +116,4 @@ GetDiscoverySummaryRequestPrivate::GetDiscoverySummaryRequestPrivate(
 }
 
 } // namespace ApplicationDiscoveryService
-} // namespace AWS
+} // namespace QtAws

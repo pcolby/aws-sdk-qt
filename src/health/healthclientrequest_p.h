@@ -23,8 +23,7 @@
 #include "health_p.h"
 #include "healthclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Health {
 
 class HealthClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Health
-} // namespace AWS
+} // namespace QtAws
 
 #endif

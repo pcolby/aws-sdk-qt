@@ -20,7 +20,7 @@
 #include "costandusagereportserviceclientrequest.h"
 #include "costandusagereportserviceclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CostandUsageReportService {
 
 /**
@@ -337,4 +337,4 @@ QString CostandUsageReportServiceClientRequestPrivate::toString(const CostandUsa
 }
 
 } // namespace CostandUsageReportService
-} // namespace AWS
+} // namespace QtAws

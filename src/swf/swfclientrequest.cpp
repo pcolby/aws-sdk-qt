@@ -20,7 +20,7 @@
 #include "swfclientrequest.h"
 #include "swfclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SWF {
 
 /**
@@ -337,4 +337,4 @@ QString SwfClientRequestPrivate::toString(const SwfClientRequest::Action &action
 }
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws

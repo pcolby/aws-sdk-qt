@@ -22,7 +22,7 @@
 #include "listshardsresponse.h"
 #include "kinesisrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Kinesis {
 
 /**
@@ -116,4 +116,4 @@ ListShardsRequestPrivate::ListShardsRequestPrivate(
 }
 
 } // namespace Kinesis
-} // namespace AWS
+} // namespace QtAws

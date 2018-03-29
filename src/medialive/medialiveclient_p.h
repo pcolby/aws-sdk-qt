@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace MediaLive {
 
 class MediaLiveClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace MediaLive
-} // namespace AWS
+} // namespace QtAws
 
 #endif

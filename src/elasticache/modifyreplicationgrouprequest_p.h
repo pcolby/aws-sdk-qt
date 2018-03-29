@@ -23,8 +23,7 @@
 #include "elasticache_p.h"
 #include "modifyreplicationgrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElastiCache {
 
 class ModifyReplicationGroupRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws
 
 #endif

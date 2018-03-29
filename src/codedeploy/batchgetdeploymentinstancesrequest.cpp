@@ -22,7 +22,7 @@
 #include "batchgetdeploymentinstancesresponse.h"
 #include "codedeployrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeDeploy {
 
 /**
@@ -116,4 +116,4 @@ BatchGetDeploymentInstancesRequestPrivate::BatchGetDeploymentInstancesRequestPri
 }
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws

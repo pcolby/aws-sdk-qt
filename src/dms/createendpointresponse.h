@@ -23,8 +23,7 @@
 #include "databasemigrationserviceresponse.h"
 #include "createendpointrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 class CreateEndpointResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

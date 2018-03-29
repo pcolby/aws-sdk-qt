@@ -22,7 +22,7 @@
 #include "getimportjobsresponse.h"
 #include "pinpointrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Pinpoint {
 
 /**
@@ -116,4 +116,4 @@ GetImportJobsRequestPrivate::GetImportJobsRequestPrivate(
 }
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws

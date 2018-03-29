@@ -23,8 +23,7 @@
 #include "opsworksresponse.h"
 #include "describerdsdbinstancesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorks {
 
 class DescribeRdsDbInstancesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace OpsWorks
-} // namespace AWS
+} // namespace QtAws
 
 #endif

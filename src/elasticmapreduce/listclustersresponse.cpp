@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace EMR {
 
 /**
@@ -103,4 +103,4 @@ void ListClustersResponsePrivate::ListClustersResponse(QXmlStreamReader &xml)
 }
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws

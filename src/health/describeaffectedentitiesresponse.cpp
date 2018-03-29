@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Health {
 
 /**
@@ -103,4 +103,4 @@ void DescribeAffectedEntitiesResponsePrivate::DescribeAffectedEntitiesResponse(Q
 }
 
 } // namespace Health
-} // namespace AWS
+} // namespace QtAws

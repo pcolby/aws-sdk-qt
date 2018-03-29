@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace MigrationHub {
 
 class MigrationHubClientPrivate;
@@ -105,6 +104,6 @@ private:
 };
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws
 
 #endif

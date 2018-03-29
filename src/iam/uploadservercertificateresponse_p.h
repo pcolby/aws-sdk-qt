@@ -23,8 +23,7 @@
 #include "iamresponse.h"
 #include "uploadservercertificaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IAM {
 
 class UploadServerCertificateResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

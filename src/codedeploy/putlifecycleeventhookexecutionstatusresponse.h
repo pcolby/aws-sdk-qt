@@ -23,8 +23,7 @@
 #include "codedeployresponse.h"
 #include "putlifecycleeventhookexecutionstatusrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeDeploy {
 
 class PutLifecycleEventHookExecutionStatusResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "describedomainsresponse.h"
 #include "cloudsearchrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudSearch {
 
 /**
@@ -116,4 +116,4 @@ DescribeDomainsRequestPrivate::DescribeDomainsRequestPrivate(
 }
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws

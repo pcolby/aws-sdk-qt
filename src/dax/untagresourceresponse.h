@@ -23,8 +23,7 @@
 #include "daxresponse.h"
 #include "untagresourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DAX {
 
 class UntagResourceResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "updateeventsourcemappingresponse.h"
 #include "lambdarequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Lambda {
 
 /**
@@ -116,4 +116,4 @@ UpdateEventSourceMappingRequestPrivate::UpdateEventSourceMappingRequestPrivate(
 }
 
 } // namespace Lambda
-} // namespace AWS
+} // namespace QtAws

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Pinpoint {
 
 /**
@@ -103,4 +103,4 @@ void GetCampaignResponsePrivate::GetCampaignResponse(QXmlStreamReader &xml)
 }
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws

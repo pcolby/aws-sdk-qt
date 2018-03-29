@@ -23,8 +23,7 @@
 #include "pinpoint_p.h"
 #include "geteventstreamrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pinpoint {
 
 class GetEventStreamRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "mobileresponse.h"
 #include "deleteprojectrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Mobile {
 
 class DeleteProjectResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Mobile
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CodeBuild {
 
 /**
@@ -103,4 +103,4 @@ void ListBuildsForProjectResponsePrivate::ListBuildsForProjectResponse(QXmlStrea
 }
 
 } // namespace CodeBuild
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "listgroupcertificateauthoritiesresponse.h"
 #include "greengrassrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -116,4 +116,4 @@ ListGroupCertificateAuthoritiesRequestPrivate::ListGroupCertificateAuthoritiesRe
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

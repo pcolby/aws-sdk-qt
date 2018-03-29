@@ -22,7 +22,7 @@
 #include "listservicespecificcredentialsresponse.h"
 #include "iamrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IAM {
 
 /**
@@ -116,4 +116,4 @@ ListServiceSpecificCredentialsRequestPrivate::ListServiceSpecificCredentialsRequ
 }
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws

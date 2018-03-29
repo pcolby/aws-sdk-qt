@@ -23,8 +23,7 @@
 #include "swf_p.h"
 #include "countclosedworkflowexecutionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SWF {
 
 class CountClosedWorkflowExecutionsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

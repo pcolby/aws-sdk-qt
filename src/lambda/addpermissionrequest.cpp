@@ -22,7 +22,7 @@
 #include "addpermissionresponse.h"
 #include "lambdarequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Lambda {
 
 /**
@@ -116,4 +116,4 @@ AddPermissionRequestPrivate::AddPermissionRequestPrivate(
 }
 
 } // namespace Lambda
-} // namespace AWS
+} // namespace QtAws

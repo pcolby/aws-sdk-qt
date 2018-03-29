@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace ImportExport {
 
 class ImportExportClientPrivate;
@@ -75,6 +74,6 @@ private:
 };
 
 } // namespace ImportExport
-} // namespace AWS
+} // namespace QtAws
 
 #endif

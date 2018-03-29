@@ -23,8 +23,7 @@
 #include "core/awsabstractresponse.h"
 //#include "@todo-error.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSMV2 {
 
 class CloudHSMV2ClientResponsePrivate;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudHSMV2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

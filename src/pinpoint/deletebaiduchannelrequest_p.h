@@ -23,8 +23,7 @@
 #include "pinpoint_p.h"
 #include "deletebaiduchannelrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pinpoint {
 
 class DeleteBaiduChannelRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws
 
 #endif

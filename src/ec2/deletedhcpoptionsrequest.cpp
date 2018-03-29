@@ -22,7 +22,7 @@
 #include "deletedhcpoptionsresponse.h"
 #include "ec2request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace EC2 {
 
 /**
@@ -116,4 +116,4 @@ DeleteDhcpOptionsRequestPrivate::DeleteDhcpOptionsRequestPrivate(
 }
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws

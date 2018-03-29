@@ -23,8 +23,7 @@
 #include "alexaforbusiness_p.h"
 #include "alexaforbusinessclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AlexaForBusiness {
 
 class AlexaForBusinessClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws
 
 #endif

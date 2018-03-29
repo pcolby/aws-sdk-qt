@@ -23,8 +23,7 @@
 #include "acmresponse.h"
 #include "updatecertificateoptionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ACM {
 
 class UpdateCertificateOptionsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ACM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

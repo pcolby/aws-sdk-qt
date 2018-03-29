@@ -23,8 +23,7 @@
 #include "resourcegroupsresponse.h"
 #include "listgroupsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ResourceGroups {
 
 class ListGroupsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ResourceGroups
-} // namespace AWS
+} // namespace QtAws
 
 #endif

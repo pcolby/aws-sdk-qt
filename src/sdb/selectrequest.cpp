@@ -22,7 +22,7 @@
 #include "selectresponse.h"
 #include "simpledbrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SimpleDB {
 
 /**
@@ -116,4 +116,4 @@ SelectRequestPrivate::SelectRequestPrivate(
 }
 
 } // namespace SimpleDB
-} // namespace AWS
+} // namespace QtAws

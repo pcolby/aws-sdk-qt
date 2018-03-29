@@ -23,8 +23,7 @@
 #include "elasticsearchserviceresponse.h"
 #include "listtagsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticsearchService {
 
 class ListTagsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ElasticsearchService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

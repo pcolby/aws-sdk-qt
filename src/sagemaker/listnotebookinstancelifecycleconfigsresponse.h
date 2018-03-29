@@ -23,8 +23,7 @@
 #include "sagemakerresponse.h"
 #include "listnotebookinstancelifecycleconfigsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SageMaker {
 
 class ListNotebookInstanceLifecycleConfigsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws
 
 #endif

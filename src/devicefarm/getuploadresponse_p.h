@@ -23,8 +23,7 @@
 #include "devicefarmresponse.h"
 #include "getuploadrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DeviceFarm {
 
 class GetUploadResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws
 
 #endif

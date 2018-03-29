@@ -23,8 +23,7 @@
 #include "sns_p.h"
 #include "checkifphonenumberisoptedoutrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SNS {
 
 class CheckIfPhoneNumberIsOptedOutRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SNS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

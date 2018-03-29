@@ -22,8 +22,7 @@
 
 #include "lightsailrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lightsail {
 
 class GetLoadBalancersRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

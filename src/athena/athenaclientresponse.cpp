@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Athena {
 
 /**
@@ -67,4 +67,4 @@ AthenaClientResponsePrivate::AthenaClientResponsePrivate(
 }
 
 } // namespace Athena
-} // namespace AWS
+} // namespace QtAws

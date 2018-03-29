@@ -22,7 +22,7 @@
 #include "updatereplicationjobresponse.h"
 #include "smsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SMS {
 
 /**
@@ -116,4 +116,4 @@ UpdateReplicationJobRequestPrivate::UpdateReplicationJobRequestPrivate(
 }
 
 } // namespace SMS
-} // namespace AWS
+} // namespace QtAws

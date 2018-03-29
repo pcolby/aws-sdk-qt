@@ -22,7 +22,7 @@
 #include "updateappresponse.h"
 #include "opsworksrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace OpsWorks {
 
 /**
@@ -116,4 +116,4 @@ UpdateAppRequestPrivate::UpdateAppRequestPrivate(
 }
 
 } // namespace OpsWorks
-} // namespace AWS
+} // namespace QtAws

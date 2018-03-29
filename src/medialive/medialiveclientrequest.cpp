@@ -20,7 +20,7 @@
 #include "medialiveclientrequest.h"
 #include "medialiveclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MediaLive {
 
 /**
@@ -337,4 +337,4 @@ QString MediaLiveClientRequestPrivate::toString(const MediaLiveClientRequest::Ac
 }
 
 } // namespace MediaLive
-} // namespace AWS
+} // namespace QtAws

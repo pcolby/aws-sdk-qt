@@ -23,8 +23,7 @@
 #include "ec2_p.h"
 #include "modifyidentityidformatrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EC2 {
 
 class ModifyIdentityIdFormatRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

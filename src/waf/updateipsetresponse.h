@@ -23,8 +23,7 @@
 #include "wafresponse.h"
 #include "updateipsetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class UpdateIPSetResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "cloudformationresponse.h"
 #include "executechangesetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFormation {
 
 class ExecuteChangeSetResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws
 
 #endif

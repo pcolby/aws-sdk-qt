@@ -23,8 +23,7 @@
 #include "iam_p.h"
 #include "creategrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IAM {
 
 class CreateGroupRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

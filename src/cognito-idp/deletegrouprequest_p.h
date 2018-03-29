@@ -23,8 +23,7 @@
 #include "cognitoidentityprovider_p.h"
 #include "deletegrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 class DeleteGroupRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws
 
 #endif

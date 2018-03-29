@@ -23,8 +23,7 @@
 #include "ssmresponse.h"
 #include "getmaintenancewindowtaskrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SSM {
 
 class GetMaintenanceWindowTaskResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

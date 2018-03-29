@@ -23,8 +23,7 @@
 #include "workdocsresponse.h"
 #include "deletenotificationsubscriptionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkDocs {
 
 class DeleteNotificationSubscriptionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "opsworksresponse.h"
 #include "deregisterrdsdbinstancerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorks {
 
 class DeregisterRdsDbInstanceResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace OpsWorks
-} // namespace AWS
+} // namespace QtAws
 
 #endif

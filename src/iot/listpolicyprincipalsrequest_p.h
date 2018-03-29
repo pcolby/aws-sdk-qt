@@ -23,8 +23,7 @@
 #include "iot_p.h"
 #include "listpolicyprincipalsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class ListPolicyPrincipalsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

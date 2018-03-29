@@ -23,8 +23,7 @@
 #include "elastictranscoderresponse.h"
 #include "listpipelinesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticTranscoder {
 
 class ListPipelinesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ElasticTranscoder
-} // namespace AWS
+} // namespace QtAws
 
 #endif

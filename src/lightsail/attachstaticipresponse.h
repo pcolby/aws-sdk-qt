@@ -23,8 +23,7 @@
 #include "lightsailresponse.h"
 #include "attachstaticiprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lightsail {
 
 class AttachStaticIpResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

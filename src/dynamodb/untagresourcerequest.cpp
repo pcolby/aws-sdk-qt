@@ -22,7 +22,7 @@
 #include "untagresourceresponse.h"
 #include "dynamodbrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DynamoDB {
 
 /**
@@ -116,4 +116,4 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
 }
 
 } // namespace DynamoDB
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "autoscalingresponse.h"
 #include "deletelifecyclehookrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AutoScaling {
 
 class DeleteLifecycleHookResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "describeclusterresponse.h"
 #include "snowballrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Snowball {
 
 /**
@@ -116,4 +116,4 @@ DescribeClusterRequestPrivate::DescribeClusterRequestPrivate(
 }
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws

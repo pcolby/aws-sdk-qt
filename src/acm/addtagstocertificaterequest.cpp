@@ -22,7 +22,7 @@
 #include "addtagstocertificateresponse.h"
 #include "acmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ACM {
 
 /**
@@ -116,4 +116,4 @@ AddTagsToCertificateRequestPrivate::AddTagsToCertificateRequestPrivate(
 }
 
 } // namespace ACM
-} // namespace AWS
+} // namespace QtAws

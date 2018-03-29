@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace AlexaForBusiness {
 
 /**
@@ -67,4 +67,4 @@ AlexaForBusinessClientResponsePrivate::AlexaForBusinessClientResponsePrivate(
 }
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws

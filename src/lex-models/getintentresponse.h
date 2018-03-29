@@ -23,8 +23,7 @@
 #include "lexmodelbuildingserviceresponse.h"
 #include "getintentrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace LexModelBuildingService {
 
 class GetIntentResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace LexModelBuildingService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

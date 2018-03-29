@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceDiscovery {
 
 /**
@@ -67,4 +67,4 @@ ServiceDiscoveryClientResponsePrivate::ServiceDiscoveryClientResponsePrivate(
 }
 
 } // namespace ServiceDiscovery
-} // namespace AWS
+} // namespace QtAws

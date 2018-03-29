@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ApplicationAutoScaling {
 
 /**
@@ -103,4 +103,4 @@ void DescribeScalingPoliciesResponsePrivate::DescribeScalingPoliciesResponse(QXm
 }
 
 } // namespace ApplicationAutoScaling
-} // namespace AWS
+} // namespace QtAws

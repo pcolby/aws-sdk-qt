@@ -20,7 +20,7 @@
 #include "resourcegroupstaggingapiclientrequest.h"
 #include "resourcegroupstaggingapiclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
 
 /**
@@ -337,4 +337,4 @@ QString ResourceGroupsTaggingAPIClientRequestPrivate::toString(const ResourceGro
 }
 
 } // namespace ResourceGroupsTaggingAPI
-} // namespace AWS
+} // namespace QtAws

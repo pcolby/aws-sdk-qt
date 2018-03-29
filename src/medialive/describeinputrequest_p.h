@@ -23,8 +23,7 @@
 #include "medialive_p.h"
 #include "describeinputrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaLive {
 
 class DescribeInputRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace MediaLive
-} // namespace AWS
+} // namespace QtAws
 
 #endif

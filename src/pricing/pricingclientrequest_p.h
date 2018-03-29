@@ -23,8 +23,7 @@
 #include "pricing_p.h"
 #include "pricingclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pricing {
 
 class PricingClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Pricing
-} // namespace AWS
+} // namespace QtAws
 
 #endif

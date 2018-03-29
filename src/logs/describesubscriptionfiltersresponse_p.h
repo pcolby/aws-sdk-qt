@@ -23,8 +23,7 @@
 #include "cloudwatchlogsresponse.h"
 #include "describesubscriptionfiltersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatchLogs {
 
 class DescribeSubscriptionFiltersResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudWatchLogs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Lambda {
 
 /**
@@ -839,4 +839,4 @@ LambdaClientPrivate::LambdaClientPrivate(LambdaClient * const q)
 }
 
 } // namespace Lambda
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "ec2_p.h"
 #include "describebundletasksrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EC2 {
 
 class DescribeBundleTasksRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "sagemakerresponse.h"
 #include "listtagsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SageMaker {
 
 class ListTagsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws
 
 #endif

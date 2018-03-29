@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace StorageGateway {
 
 /**
@@ -67,4 +67,4 @@ StorageGatewayClientResponsePrivate::StorageGatewayClientResponsePrivate(
 }
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "readpipelineresponse.h"
 #include "elastictranscoderrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticTranscoder {
 
 /**
@@ -116,4 +116,4 @@ ReadPipelineRequestPrivate::ReadPipelineRequestPrivate(
 }
 
 } // namespace ElasticTranscoder
-} // namespace AWS
+} // namespace QtAws

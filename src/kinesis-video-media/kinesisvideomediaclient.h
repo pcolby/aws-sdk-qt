@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace KinesisVideoMedia {
 
 class KinesisVideoMediaClientPrivate;
@@ -60,6 +59,6 @@ private:
 };
 
 } // namespace KinesisVideoMedia
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,8 +22,7 @@
 
 #include "storagegatewayrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace StorageGateway {
 
 class CancelRetrievalRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

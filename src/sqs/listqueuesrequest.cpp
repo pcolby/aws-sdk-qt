@@ -22,7 +22,7 @@
 #include "listqueuesresponse.h"
 #include "sqsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SQS {
 
 /**
@@ -116,4 +116,4 @@ ListQueuesRequestPrivate::ListQueuesRequestPrivate(
 }
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws

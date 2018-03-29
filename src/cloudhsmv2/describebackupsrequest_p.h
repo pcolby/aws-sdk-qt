@@ -23,8 +23,7 @@
 #include "cloudhsmv2_p.h"
 #include "describebackupsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSMV2 {
 
 class DescribeBackupsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudHSMV2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

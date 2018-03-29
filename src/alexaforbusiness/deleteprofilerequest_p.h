@@ -23,8 +23,7 @@
 #include "alexaforbusiness_p.h"
 #include "deleteprofilerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AlexaForBusiness {
 
 class DeleteProfileRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws
 
 #endif

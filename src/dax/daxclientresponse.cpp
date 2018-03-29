@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DAX {
 
 /**
@@ -67,4 +67,4 @@ DaxClientResponsePrivate::DaxClientResponsePrivate(
 }
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws

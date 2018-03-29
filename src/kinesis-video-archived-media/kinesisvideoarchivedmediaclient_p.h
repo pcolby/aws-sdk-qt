@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisVideoArchivedMedia {
 
 class KinesisVideoArchivedMediaClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace KinesisVideoArchivedMedia
-} // namespace AWS
+} // namespace QtAws
 
 #endif

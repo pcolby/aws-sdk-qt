@@ -23,8 +23,7 @@
 #include "daxresponse.h"
 #include "describeparametersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DAX {
 
 class DescribeParametersResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws
 
 #endif

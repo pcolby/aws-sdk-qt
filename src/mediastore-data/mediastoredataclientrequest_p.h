@@ -23,8 +23,7 @@
 #include "mediastoredata_p.h"
 #include "mediastoredataclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaStoreData {
 
 class MediaStoreDataClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MediaStoreData
-} // namespace AWS
+} // namespace QtAws
 
 #endif

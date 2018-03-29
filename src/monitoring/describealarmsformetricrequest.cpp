@@ -22,7 +22,7 @@
 #include "describealarmsformetricresponse.h"
 #include "cloudwatchrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudWatch {
 
 /**
@@ -116,4 +116,4 @@ DescribeAlarmsForMetricRequestPrivate::DescribeAlarmsForMetricRequestPrivate(
 }
 
 } // namespace CloudWatch
-} // namespace AWS
+} // namespace QtAws

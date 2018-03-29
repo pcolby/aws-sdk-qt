@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudWatch {
 
 /**
@@ -103,4 +103,4 @@ void EnableAlarmActionsResponsePrivate::EnableAlarmActionsResponse(QXmlStreamRea
 }
 
 } // namespace CloudWatch
-} // namespace AWS
+} // namespace QtAws

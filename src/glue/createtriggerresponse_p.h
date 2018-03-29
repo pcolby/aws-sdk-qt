@@ -23,8 +23,7 @@
 #include "glueresponse.h"
 #include "createtriggerrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glue {
 
 class CreateTriggerResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws
 
 #endif

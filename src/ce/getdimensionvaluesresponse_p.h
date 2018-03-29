@@ -23,8 +23,7 @@
 #include "costexplorerresponse.h"
 #include "getdimensionvaluesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CostExplorer {
 
 class GetDimensionValuesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CostExplorer
-} // namespace AWS
+} // namespace QtAws
 
 #endif

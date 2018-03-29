@@ -23,8 +23,7 @@
 #include "core/awsabstractresponse.h"
 //#include "@todo-error.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DataPipeline {
 
 class DataPipelineClientResponsePrivate;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DataPipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

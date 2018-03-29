@@ -22,7 +22,7 @@
 #include "deleteassessmenttargetresponse.h"
 #include "inspectorrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Inspector {
 
 /**
@@ -116,4 +116,4 @@ DeleteAssessmentTargetRequestPrivate::DeleteAssessmentTargetRequestPrivate(
 }
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws

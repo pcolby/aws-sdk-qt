@@ -20,7 +20,7 @@
 #include "pinpointclientrequest.h"
 #include "pinpointclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Pinpoint {
 
 /**
@@ -337,4 +337,4 @@ QString PinpointClientRequestPrivate::toString(const PinpointClientRequest::Acti
 }
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "createresourcedefinitionresponse.h"
 #include "greengrassrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -116,4 +116,4 @@ CreateResourceDefinitionRequestPrivate::CreateResourceDefinitionRequestPrivate(
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

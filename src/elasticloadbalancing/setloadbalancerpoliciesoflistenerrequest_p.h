@@ -23,8 +23,7 @@
 #include "elasticloadbalancing_p.h"
 #include "setloadbalancerpoliciesoflistenerrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticLoadBalancing {
 
 class SetLoadBalancerPoliciesOfListenerRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ElasticLoadBalancing
-} // namespace AWS
+} // namespace QtAws
 
 #endif

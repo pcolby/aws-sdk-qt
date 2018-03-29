@@ -23,8 +23,7 @@
 #include "mediapackageresponse.h"
 #include "createoriginendpointrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaPackage {
 
 class CreateOriginEndpointResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace MediaPackage
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "ssm_p.h"
 #include "describeeffectivepatchesforpatchbaselinerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SSM {
 
 class DescribeEffectivePatchesForPatchBaselineRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

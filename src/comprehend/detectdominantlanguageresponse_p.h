@@ -23,8 +23,7 @@
 #include "comprehendresponse.h"
 #include "detectdominantlanguagerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Comprehend {
 
 class DetectDominantLanguageResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Comprehend
-} // namespace AWS
+} // namespace QtAws
 
 #endif

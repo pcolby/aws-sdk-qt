@@ -22,7 +22,7 @@
 #include "listtablesresponse.h"
 #include "dynamodbrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DynamoDB {
 
 /**
@@ -116,4 +116,4 @@ ListTablesRequestPrivate::ListTablesRequestPrivate(
 }
 
 } // namespace DynamoDB
-} // namespace AWS
+} // namespace QtAws

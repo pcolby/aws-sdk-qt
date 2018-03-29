@@ -23,8 +23,7 @@
 #include "codecommitresponse.h"
 #include "batchgetrepositoriesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeCommit {
 
 class BatchGetRepositoriesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeCommit
-} // namespace AWS
+} // namespace QtAws
 
 #endif

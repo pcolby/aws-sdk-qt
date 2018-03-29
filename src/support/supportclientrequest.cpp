@@ -20,7 +20,7 @@
 #include "supportclientrequest.h"
 #include "supportclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Support {
 
 /**
@@ -337,4 +337,4 @@ QString SupportClientRequestPrivate::toString(const SupportClientRequest::Action
 }
 
 } // namespace Support
-} // namespace AWS
+} // namespace QtAws

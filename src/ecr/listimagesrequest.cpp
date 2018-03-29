@@ -22,7 +22,7 @@
 #include "listimagesresponse.h"
 #include "ecrrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ECR {
 
 /**
@@ -116,4 +116,4 @@ ListImagesRequestPrivate::ListImagesRequestPrivate(
 }
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws

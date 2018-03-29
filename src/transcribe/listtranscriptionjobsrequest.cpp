@@ -22,7 +22,7 @@
 #include "listtranscriptionjobsresponse.h"
 #include "transcribeservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace TranscribeService {
 
 /**
@@ -116,4 +116,4 @@ ListTranscriptionJobsRequestPrivate::ListTranscriptionJobsRequestPrivate(
 }
 
 } // namespace TranscribeService
-} // namespace AWS
+} // namespace QtAws

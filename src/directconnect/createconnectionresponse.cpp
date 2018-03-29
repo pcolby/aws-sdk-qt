@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DirectConnect {
 
 /**
@@ -103,4 +103,4 @@ void CreateConnectionResponsePrivate::CreateConnectionResponse(QXmlStreamReader 
 }
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws

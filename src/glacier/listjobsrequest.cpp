@@ -22,7 +22,7 @@
 #include "listjobsresponse.h"
 #include "glacierrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Glacier {
 
 /**
@@ -116,4 +116,4 @@ ListJobsRequestPrivate::ListJobsRequestPrivate(
 }
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws

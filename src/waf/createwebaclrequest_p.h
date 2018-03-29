@@ -23,8 +23,7 @@
 #include "waf_p.h"
 #include "createwebaclrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class CreateWebACLRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

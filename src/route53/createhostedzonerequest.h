@@ -22,8 +22,7 @@
 
 #include "route53request.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53 {
 
 class CreateHostedZoneRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws
 
 #endif

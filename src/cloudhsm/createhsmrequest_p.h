@@ -23,8 +23,7 @@
 #include "cloudhsm_p.h"
 #include "createhsmrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSM {
 
 class CreateHsmRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

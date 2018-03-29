@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace Budgets {
 
 class BudgetsClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace Budgets
-} // namespace AWS
+} // namespace QtAws
 
 #endif

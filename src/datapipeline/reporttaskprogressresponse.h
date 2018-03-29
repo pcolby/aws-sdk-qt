@@ -23,8 +23,7 @@
 #include "datapipelineresponse.h"
 #include "reporttaskprogressrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DataPipeline {
 
 class ReportTaskProgressResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DataPipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

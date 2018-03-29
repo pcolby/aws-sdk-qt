@@ -23,8 +23,7 @@
 #include "apigatewayresponse.h"
 #include "updatedomainnamerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace APIGateway {
 
 class UpdateDomainNameResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

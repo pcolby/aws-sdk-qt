@@ -23,8 +23,7 @@
 #include "pinpointresponse.h"
 #include "updateapnssandboxchannelrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pinpoint {
 
 class UpdateApnsSandboxChannelResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws
 
 #endif

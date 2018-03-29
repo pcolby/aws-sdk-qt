@@ -23,8 +23,7 @@
 #include "apigatewayresponse.h"
 #include "updateclientcertificaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace APIGateway {
 
 class UpdateClientCertificateResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

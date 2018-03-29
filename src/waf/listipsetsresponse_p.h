@@ -23,8 +23,7 @@
 #include "wafresponse.h"
 #include "listipsetsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class ListIPSetsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

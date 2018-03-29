@@ -22,7 +22,7 @@
 #include "describeserversresponse.h"
 #include "opsworkscmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace OpsWorksCM {
 
 /**
@@ -116,4 +116,4 @@ DescribeServersRequestPrivate::DescribeServersRequestPrivate(
 }
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws

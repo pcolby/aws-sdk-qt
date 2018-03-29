@@ -22,8 +22,7 @@
 
 #include "lexruntimeservicerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace LexRuntimeService {
 
 class PostContentRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace LexRuntimeService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

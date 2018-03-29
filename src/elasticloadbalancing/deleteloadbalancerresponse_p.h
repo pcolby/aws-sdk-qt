@@ -23,8 +23,7 @@
 #include "elasticloadbalancingresponse.h"
 #include "deleteloadbalancerrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticLoadBalancing {
 
 class DeleteLoadBalancerResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ElasticLoadBalancing
-} // namespace AWS
+} // namespace QtAws
 
 #endif

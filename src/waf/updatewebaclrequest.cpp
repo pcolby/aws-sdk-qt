@@ -22,7 +22,7 @@
 #include "updatewebaclresponse.h"
 #include "wafrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WAF {
 
 /**
@@ -116,4 +116,4 @@ UpdateWebACLRequestPrivate::UpdateWebACLRequestPrivate(
 }
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws

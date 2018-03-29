@@ -22,7 +22,7 @@
 #include "describeresizeresponse.h"
 #include "redshiftrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Redshift {
 
 /**
@@ -116,4 +116,4 @@ DescribeResizeRequestPrivate::DescribeResizeRequestPrivate(
 }
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws

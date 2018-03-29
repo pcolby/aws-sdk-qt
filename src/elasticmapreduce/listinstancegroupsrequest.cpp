@@ -22,7 +22,7 @@
 #include "listinstancegroupsresponse.h"
 #include "emrrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace EMR {
 
 /**
@@ -116,4 +116,4 @@ ListInstanceGroupsRequestPrivate::ListInstanceGroupsRequestPrivate(
 }
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws

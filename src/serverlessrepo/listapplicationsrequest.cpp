@@ -22,7 +22,7 @@
 #include "listapplicationsresponse.h"
 #include "serverlessapplicationrepositoryrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServerlessApplicationRepository {
 
 /**
@@ -116,4 +116,4 @@ ListApplicationsRequestPrivate::ListApplicationsRequestPrivate(
 }
 
 } // namespace ServerlessApplicationRepository
-} // namespace AWS
+} // namespace QtAws

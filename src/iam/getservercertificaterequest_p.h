@@ -23,8 +23,7 @@
 #include "iam_p.h"
 #include "getservercertificaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IAM {
 
 class GetServerCertificateRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "describeenginedefaultparametersresponse.h"
 #include "elasticacherequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElastiCache {
 
 /**
@@ -116,4 +116,4 @@ DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRe
 }
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws

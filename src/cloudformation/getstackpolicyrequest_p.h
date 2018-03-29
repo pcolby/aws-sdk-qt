@@ -23,8 +23,7 @@
 #include "cloudformation_p.h"
 #include "getstackpolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFormation {
 
 class GetStackPolicyRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws
 
 #endif

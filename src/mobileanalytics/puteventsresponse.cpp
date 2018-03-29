@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MobileAnalytics {
 
 /**
@@ -103,4 +103,4 @@ void PutEventsResponsePrivate::PutEventsResponse(QXmlStreamReader &xml)
 }
 
 } // namespace MobileAnalytics
-} // namespace AWS
+} // namespace QtAws

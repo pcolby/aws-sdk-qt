@@ -23,8 +23,7 @@
 #include "rdsresponse.h"
 #include "createeventsubscriptionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace RDS {
 
 class CreateEventSubscriptionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

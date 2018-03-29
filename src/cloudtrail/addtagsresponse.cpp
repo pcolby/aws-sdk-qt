@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudTrail {
 
 /**
@@ -103,4 +103,4 @@ void AddTagsResponsePrivate::AddTagsResponse(QXmlStreamReader &xml)
 }
 
 } // namespace CloudTrail
-} // namespace AWS
+} // namespace QtAws

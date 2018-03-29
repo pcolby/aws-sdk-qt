@@ -22,7 +22,7 @@
 #include "listtagsforprojectresponse.h"
 #include "codestarrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeStar {
 
 /**
@@ -116,4 +116,4 @@ ListTagsForProjectRequestPrivate::ListTagsForProjectRequestPrivate(
 }
 
 } // namespace CodeStar
-} // namespace AWS
+} // namespace QtAws

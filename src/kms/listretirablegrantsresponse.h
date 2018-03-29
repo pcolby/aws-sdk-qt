@@ -23,8 +23,7 @@
 #include "kmsresponse.h"
 #include "listretirablegrantsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KMS {
 
 class ListRetirableGrantsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace KMS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

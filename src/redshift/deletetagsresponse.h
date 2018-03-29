@@ -23,8 +23,7 @@
 #include "redshiftresponse.h"
 #include "deletetagsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Redshift {
 
 class DeleteTagsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

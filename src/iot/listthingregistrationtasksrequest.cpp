@@ -22,7 +22,7 @@
 #include "listthingregistrationtasksresponse.h"
 #include "iotrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IoT {
 
 /**
@@ -116,4 +116,4 @@ ListThingRegistrationTasksRequestPrivate::ListThingRegistrationTasksRequestPriva
 }
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws

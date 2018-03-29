@@ -23,8 +23,7 @@
 #include "snowball_p.h"
 #include "cancelclusterrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Snowball {
 
 class CancelClusterRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "startlabeldetectionresponse.h"
 #include "rekognitionrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Rekognition {
 
 /**
@@ -116,4 +116,4 @@ StartLabelDetectionRequestPrivate::StartLabelDetectionRequestPrivate(
 }
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws

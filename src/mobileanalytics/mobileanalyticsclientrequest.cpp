@@ -20,7 +20,7 @@
 #include "mobileanalyticsclientrequest.h"
 #include "mobileanalyticsclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MobileAnalytics {
 
 /**
@@ -337,4 +337,4 @@ QString MobileAnalyticsClientRequestPrivate::toString(const MobileAnalyticsClien
 }
 
 } // namespace MobileAnalytics
-} // namespace AWS
+} // namespace QtAws

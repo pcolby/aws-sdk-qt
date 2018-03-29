@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Glue {
 
 /**
@@ -103,4 +103,4 @@ void StartJobRunResponsePrivate::StartJobRunResponse(QXmlStreamReader &xml)
 }
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws

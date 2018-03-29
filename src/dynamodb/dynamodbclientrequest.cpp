@@ -20,7 +20,7 @@
 #include "dynamodbclientrequest.h"
 #include "dynamodbclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DynamoDB {
 
 /**
@@ -337,4 +337,4 @@ QString DynamoDBClientRequestPrivate::toString(const DynamoDBClientRequest::Acti
 }
 
 } // namespace DynamoDB
-} // namespace AWS
+} // namespace QtAws

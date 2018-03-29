@@ -23,8 +23,7 @@
 #include "codedeployresponse.h"
 #include "addtagstoonpremisesinstancesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeDeploy {
 
 class AddTagsToOnPremisesInstancesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws
 
 #endif

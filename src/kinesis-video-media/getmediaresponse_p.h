@@ -23,8 +23,7 @@
 #include "kinesisvideomediaresponse.h"
 #include "getmediarequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KinesisVideoMedia {
 
 class GetMediaResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace KinesisVideoMedia
-} // namespace AWS
+} // namespace QtAws
 
 #endif

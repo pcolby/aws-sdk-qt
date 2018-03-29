@@ -22,7 +22,7 @@
 #include "updateopenidconnectproviderthumbprintresponse.h"
 #include "iamrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IAM {
 
 /**
@@ -116,4 +116,4 @@ UpdateOpenIDConnectProviderThumbprintRequestPrivate::UpdateOpenIDConnectProvider
 }
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "describenodeassociationstatusresponse.h"
 #include "opsworkscmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace OpsWorksCM {
 
 /**
@@ -116,4 +116,4 @@ DescribeNodeAssociationStatusRequestPrivate::DescribeNodeAssociationStatusReques
 }
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws

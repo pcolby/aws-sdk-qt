@@ -22,8 +22,7 @@
 
 #include "iamrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IAM {
 
 class ListPoliciesRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

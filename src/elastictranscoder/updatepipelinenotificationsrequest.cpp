@@ -22,7 +22,7 @@
 #include "updatepipelinenotificationsresponse.h"
 #include "elastictranscoderrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticTranscoder {
 
 /**
@@ -116,4 +116,4 @@ UpdatePipelineNotificationsRequestPrivate::UpdatePipelineNotificationsRequestPri
 }
 
 } // namespace ElasticTranscoder
-} // namespace AWS
+} // namespace QtAws

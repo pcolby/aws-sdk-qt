@@ -23,8 +23,7 @@
 #include "iotdataplane_p.h"
 #include "getthingshadowrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoTDataPlane {
 
 class GetThingShadowRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace IoTDataPlane
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "cloudformationresponse.h"
 #include "createstackrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFormation {
 
 class CreateStackResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws
 
 #endif

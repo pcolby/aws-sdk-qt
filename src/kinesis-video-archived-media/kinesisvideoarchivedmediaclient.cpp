@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisVideoArchivedMedia {
 
 /**
@@ -160,4 +160,4 @@ KinesisVideoArchivedMediaClientPrivate::KinesisVideoArchivedMediaClientPrivate(K
 }
 
 } // namespace KinesisVideoArchivedMedia
-} // namespace AWS
+} // namespace QtAws

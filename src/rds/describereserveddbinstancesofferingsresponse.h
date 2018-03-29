@@ -23,8 +23,7 @@
 #include "rdsresponse.h"
 #include "describereserveddbinstancesofferingsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace RDS {
 
 class DescribeReservedDBInstancesOfferingsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

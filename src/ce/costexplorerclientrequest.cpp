@@ -20,7 +20,7 @@
 #include "costexplorerclientrequest.h"
 #include "costexplorerclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CostExplorer {
 
 /**
@@ -337,4 +337,4 @@ QString CostExplorerClientRequestPrivate::toString(const CostExplorerClientReque
 }
 
 } // namespace CostExplorer
-} // namespace AWS
+} // namespace QtAws

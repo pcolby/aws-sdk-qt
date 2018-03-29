@@ -23,8 +23,7 @@
 #include "dynamodb_p.h"
 #include "deletetablerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DynamoDB {
 
 class DeleteTableRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DynamoDB
-} // namespace AWS
+} // namespace QtAws
 
 #endif

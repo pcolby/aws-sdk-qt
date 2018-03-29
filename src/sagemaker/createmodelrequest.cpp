@@ -22,7 +22,7 @@
 #include "createmodelresponse.h"
 #include "sagemakerrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SageMaker {
 
 /**
@@ -116,4 +116,4 @@ CreateModelRequestPrivate::CreateModelRequestPrivate(
 }
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws

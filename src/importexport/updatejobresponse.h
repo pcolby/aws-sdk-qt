@@ -23,8 +23,7 @@
 #include "importexportresponse.h"
 #include "updatejobrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ImportExport {
 
 class UpdateJobResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ImportExport
-} // namespace AWS
+} // namespace QtAws
 
 #endif

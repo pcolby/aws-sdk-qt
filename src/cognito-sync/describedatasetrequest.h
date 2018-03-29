@@ -22,8 +22,7 @@
 
 #include "cognitosyncrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoSync {
 
 class DescribeDatasetRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace CognitoSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

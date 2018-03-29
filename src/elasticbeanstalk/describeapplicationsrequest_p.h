@@ -23,8 +23,7 @@
 #include "elasticbeanstalk_p.h"
 #include "describeapplicationsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 class DescribeApplicationsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

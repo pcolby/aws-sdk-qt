@@ -23,8 +23,7 @@
 #include "elasticsearchserviceresponse.h"
 #include "listelasticsearchversionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticsearchService {
 
 class ListElasticsearchVersionsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ElasticsearchService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

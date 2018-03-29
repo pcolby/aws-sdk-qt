@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CodeCommit {
 
 /**
@@ -852,4 +852,4 @@ CodeCommitClientPrivate::CodeCommitClientPrivate(CodeCommitClient * const q)
 }
 
 } // namespace CodeCommit
-} // namespace AWS
+} // namespace QtAws

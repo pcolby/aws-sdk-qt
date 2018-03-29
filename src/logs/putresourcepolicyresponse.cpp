@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudWatchLogs {
 
 /**
@@ -103,4 +103,4 @@ void PutResourcePolicyResponsePrivate::PutResourcePolicyResponse(QXmlStreamReade
 }
 
 } // namespace CloudWatchLogs
-} // namespace AWS
+} // namespace QtAws

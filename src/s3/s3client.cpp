@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace S3 {
 
 /**
@@ -1138,4 +1138,4 @@ S3ClientPrivate::S3ClientPrivate(S3Client * const q)
 }
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws

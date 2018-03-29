@@ -23,8 +23,7 @@
 #include "codepipelineresponse.h"
 #include "putthirdpartyjobsuccessresultrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodePipeline {
 
 class PutThirdPartyJobSuccessResultResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

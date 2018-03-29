@@ -22,7 +22,7 @@
 #include "getentitlementsresponse.h"
 #include "marketplaceentitlementservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceEntitlementService {
 
 /**
@@ -116,4 +116,4 @@ GetEntitlementsRequestPrivate::GetEntitlementsRequestPrivate(
 }
 
 } // namespace MarketplaceEntitlementService
-} // namespace AWS
+} // namespace QtAws

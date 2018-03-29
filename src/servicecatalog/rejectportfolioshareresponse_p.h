@@ -23,8 +23,7 @@
 #include "servicecatalogresponse.h"
 #include "rejectportfoliosharerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceCatalog {
 
 class RejectPortfolioShareResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws
 
 #endif

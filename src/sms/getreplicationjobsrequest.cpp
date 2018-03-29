@@ -22,7 +22,7 @@
 #include "getreplicationjobsresponse.h"
 #include "smsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SMS {
 
 /**
@@ -116,4 +116,4 @@ GetReplicationJobsRequestPrivate::GetReplicationJobsRequestPrivate(
 }
 
 } // namespace SMS
-} // namespace AWS
+} // namespace QtAws

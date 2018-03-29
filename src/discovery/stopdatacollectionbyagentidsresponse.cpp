@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 /**
@@ -103,4 +103,4 @@ void StopDataCollectionByAgentIdsResponsePrivate::StopDataCollectionByAgentIdsRe
 }
 
 } // namespace ApplicationDiscoveryService
-} // namespace AWS
+} // namespace QtAws

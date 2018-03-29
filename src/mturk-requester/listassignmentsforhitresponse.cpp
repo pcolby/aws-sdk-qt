@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MTurk {
 
 /**
@@ -103,4 +103,4 @@ void ListAssignmentsForHITResponsePrivate::ListAssignmentsForHITResponse(QXmlStr
 }
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws

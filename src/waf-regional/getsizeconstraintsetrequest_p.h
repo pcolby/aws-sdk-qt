@@ -23,8 +23,7 @@
 #include "wafregional_p.h"
 #include "getsizeconstraintsetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAFRegional {
 
 class GetSizeConstraintSetRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace WAFRegional
-} // namespace AWS
+} // namespace QtAws
 
 #endif

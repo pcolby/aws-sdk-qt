@@ -23,8 +23,7 @@
 #include "mediapackageresponse.h"
 #include "describechannelrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaPackage {
 
 class DescribeChannelResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MediaPackage
-} // namespace AWS
+} // namespace QtAws
 
 #endif

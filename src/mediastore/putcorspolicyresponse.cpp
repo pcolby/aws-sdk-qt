@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MediaStore {
 
 /**
@@ -103,4 +103,4 @@ void PutCorsPolicyResponsePrivate::PutCorsPolicyResponse(QXmlStreamReader &xml)
 }
 
 } // namespace MediaStore
-} // namespace AWS
+} // namespace QtAws

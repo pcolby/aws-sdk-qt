@@ -23,8 +23,7 @@
 #include "cloudwatchresponse.h"
 #include "setalarmstaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatch {
 
 class SetAlarmStateResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudWatch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

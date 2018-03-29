@@ -22,7 +22,7 @@
 #include "createcachesubnetgroupresponse.h"
 #include "elasticacherequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElastiCache {
 
 /**
@@ -116,4 +116,4 @@ CreateCacheSubnetGroupRequestPrivate::CreateCacheSubnetGroupRequestPrivate(
 }
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws

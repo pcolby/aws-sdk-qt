@@ -23,8 +23,7 @@
 #include "pinpointresponse.h"
 #include "updatesmschannelrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pinpoint {
 
 class UpdateSmsChannelResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "greengrassresponse.h"
 #include "listsubscriptiondefinitionversionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Greengrass {
 
 class ListSubscriptionDefinitionVersionsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws
 
 #endif

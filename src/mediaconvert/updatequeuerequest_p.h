@@ -23,8 +23,7 @@
 #include "mediaconvert_p.h"
 #include "updatequeuerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaConvert {
 
 class UpdateQueueRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws
 
 #endif

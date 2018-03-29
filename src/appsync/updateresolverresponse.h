@@ -23,8 +23,7 @@
 #include "appsyncresponse.h"
 #include "updateresolverrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppSync {
 
 class UpdateResolverResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "cognitoidentityprovider_p.h"
 #include "adminupdateuserattributesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 class AdminUpdateUserAttributesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws
 
 #endif

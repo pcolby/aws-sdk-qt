@@ -23,8 +23,7 @@
 #include "sagemaker_p.h"
 #include "deletenotebookinstancelifecycleconfigrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SageMaker {
 
 class DeleteNotebookInstanceLifecycleConfigRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws
 
 #endif

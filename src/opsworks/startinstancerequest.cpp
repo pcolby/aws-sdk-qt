@@ -22,7 +22,7 @@
 #include "startinstanceresponse.h"
 #include "opsworksrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace OpsWorks {
 
 /**
@@ -116,4 +116,4 @@ StartInstanceRequestPrivate::StartInstanceRequestPrivate(
 }
 
 } // namespace OpsWorks
-} // namespace AWS
+} // namespace QtAws

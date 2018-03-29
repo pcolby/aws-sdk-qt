@@ -23,8 +23,7 @@
 #include "pinpointresponse.h"
 #include "deleteapnsvoipchannelrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pinpoint {
 
 class DeleteApnsVoipChannelResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace SWF {
 
 /**
@@ -1788,4 +1788,4 @@ SwfClientPrivate::SwfClientPrivate(SwfClient * const q)
 }
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "cloudsearchresponse.h"
 #include "defineindexfieldrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudSearch {
 
 class DefineIndexFieldResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

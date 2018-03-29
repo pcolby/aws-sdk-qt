@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace WAF {
 
 /**
@@ -103,4 +103,4 @@ void ListWebACLsResponsePrivate::ListWebACLsResponse(QXmlStreamReader &xml)
 }
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws

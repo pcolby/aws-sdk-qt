@@ -23,8 +23,7 @@
 #include "batchresponse.h"
 #include "describejobsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Batch {
 
 class DescribeJobsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Batch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

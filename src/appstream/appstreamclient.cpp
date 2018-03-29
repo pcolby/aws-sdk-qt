@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace AppStream {
 
 /**
@@ -629,4 +629,4 @@ AppStreamClientPrivate::AppStreamClientPrivate(AppStreamClient * const q)
 }
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws

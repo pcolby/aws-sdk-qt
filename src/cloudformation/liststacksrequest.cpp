@@ -22,7 +22,7 @@
 #include "liststacksresponse.h"
 #include "cloudformationrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFormation {
 
 /**
@@ -116,4 +116,4 @@ ListStacksRequestPrivate::ListStacksRequestPrivate(
 }
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws

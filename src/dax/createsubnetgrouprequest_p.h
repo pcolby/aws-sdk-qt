@@ -23,8 +23,7 @@
 #include "dax_p.h"
 #include "createsubnetgrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DAX {
 
 class CreateSubnetGroupRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "createtagsresponse.h"
 #include "applicationdiscoveryservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 /**
@@ -116,4 +116,4 @@ CreateTagsRequestPrivate::CreateTagsRequestPrivate(
 }
 
 } // namespace ApplicationDiscoveryService
-} // namespace AWS
+} // namespace QtAws

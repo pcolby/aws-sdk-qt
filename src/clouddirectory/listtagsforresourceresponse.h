@@ -23,8 +23,7 @@
 #include "clouddirectoryresponse.h"
 #include "listtagsforresourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudDirectory {
 
 class ListTagsForResourceResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws
 
 #endif

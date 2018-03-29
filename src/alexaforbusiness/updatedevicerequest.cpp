@@ -22,7 +22,7 @@
 #include "updatedeviceresponse.h"
 #include "alexaforbusinessrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AlexaForBusiness {
 
 /**
@@ -116,4 +116,4 @@ UpdateDeviceRequestPrivate::UpdateDeviceRequestPrivate(
 }
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws

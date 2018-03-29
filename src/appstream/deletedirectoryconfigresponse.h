@@ -23,8 +23,7 @@
 #include "appstreamresponse.h"
 #include "deletedirectoryconfigrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppStream {
 
 class DeleteDirectoryConfigResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws
 
 #endif

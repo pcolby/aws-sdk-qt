@@ -22,7 +22,7 @@
 #include "createdocumentationpartresponse.h"
 #include "apigatewayrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace APIGateway {
 
 /**
@@ -116,4 +116,4 @@ CreateDocumentationPartRequestPrivate::CreateDocumentationPartRequestPrivate(
 }
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws

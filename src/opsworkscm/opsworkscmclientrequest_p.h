@@ -23,8 +23,7 @@
 #include "opsworkscm_p.h"
 #include "opsworkscmclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorksCM {
 
 class OpsWorksCMClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

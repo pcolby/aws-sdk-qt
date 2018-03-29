@@ -23,8 +23,7 @@
 #include "appstreamresponse.h"
 #include "describedirectoryconfigsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppStream {
 
 class DescribeDirectoryConfigsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws
 
 #endif

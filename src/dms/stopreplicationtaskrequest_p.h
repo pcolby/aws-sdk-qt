@@ -23,8 +23,7 @@
 #include "databasemigrationservice_p.h"
 #include "stopreplicationtaskrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 class StopReplicationTaskRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "opsworkscmresponse.h"
 #include "deletebackuprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorksCM {
 
 class DeleteBackupResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

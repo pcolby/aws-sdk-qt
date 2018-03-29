@@ -23,8 +23,7 @@
 #include "appsyncresponse.h"
 #include "createtyperequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppSync {
 
 class CreateTypeResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

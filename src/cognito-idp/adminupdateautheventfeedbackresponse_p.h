@@ -23,8 +23,7 @@
 #include "cognitoidentityproviderresponse.h"
 #include "adminupdateautheventfeedbackrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 class AdminUpdateAuthEventFeedbackResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws
 
 #endif

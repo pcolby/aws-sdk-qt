@@ -23,8 +23,7 @@
 #include "swfresponse.h"
 #include "registeractivitytyperequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SWF {
 
 class RegisterActivityTypeResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

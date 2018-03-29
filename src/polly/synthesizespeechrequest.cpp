@@ -22,7 +22,7 @@
 #include "synthesizespeechresponse.h"
 #include "pollyrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Polly {
 
 /**
@@ -116,4 +116,4 @@ SynthesizeSpeechRequestPrivate::SynthesizeSpeechRequestPrivate(
 }
 
 } // namespace Polly
-} // namespace AWS
+} // namespace QtAws

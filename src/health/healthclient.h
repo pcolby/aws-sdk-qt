@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace Health {
 
 class HealthClientPrivate;
@@ -75,6 +74,6 @@ private:
 };
 
 } // namespace Health
-} // namespace AWS
+} // namespace QtAws
 
 #endif

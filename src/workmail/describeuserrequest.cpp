@@ -22,7 +22,7 @@
 #include "describeuserresponse.h"
 #include "workmailrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WorkMail {
 
 /**
@@ -116,4 +116,4 @@ DescribeUserRequestPrivate::DescribeUserRequestPrivate(
 }
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws

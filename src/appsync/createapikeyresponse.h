@@ -23,8 +23,7 @@
 #include "appsyncresponse.h"
 #include "createapikeyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppSync {
 
 class CreateApiKeyResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

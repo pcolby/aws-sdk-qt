@@ -22,7 +22,7 @@
 #include "getv2loggingoptionsresponse.h"
 #include "iotrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IoT {
 
 /**
@@ -116,4 +116,4 @@ GetV2LoggingOptionsRequestPrivate::GetV2LoggingOptionsRequestPrivate(
 }
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "lambdaresponse.h"
 #include "getfunctionconfigurationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lambda {
 
 class GetFunctionConfigurationResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Lambda
-} // namespace AWS
+} // namespace QtAws
 
 #endif

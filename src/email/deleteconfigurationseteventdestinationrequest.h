@@ -22,8 +22,7 @@
 
 #include "sesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SES {
 
 class DeleteConfigurationSetEventDestinationRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws
 
 #endif

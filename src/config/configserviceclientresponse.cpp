@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ConfigService {
 
 /**
@@ -67,4 +67,4 @@ ConfigServiceClientResponsePrivate::ConfigServiceClientResponsePrivate(
 }
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws

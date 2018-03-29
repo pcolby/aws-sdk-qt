@@ -22,7 +22,7 @@
 #include "deleterealtimeendpointresponse.h"
 #include "machinelearningrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MachineLearning {
 
 /**
@@ -116,4 +116,4 @@ DeleteRealtimeEndpointRequestPrivate::DeleteRealtimeEndpointRequestPrivate(
 }
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws

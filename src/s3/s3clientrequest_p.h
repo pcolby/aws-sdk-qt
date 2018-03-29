@@ -23,8 +23,7 @@
 #include "s3_p.h"
 #include "s3clientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace S3 {
 
 class S3ClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws
 
 #endif

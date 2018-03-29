@@ -23,8 +23,7 @@
 #include "codedeployresponse.h"
 #include "listgithubaccounttokennamesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeDeploy {
 
 class ListGitHubAccountTokenNamesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace WAF {
 
 /**
@@ -67,4 +67,4 @@ WafClientResponsePrivate::WafClientResponsePrivate(
 }
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws

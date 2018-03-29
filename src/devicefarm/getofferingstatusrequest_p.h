@@ -23,8 +23,7 @@
 #include "devicefarm_p.h"
 #include "getofferingstatusrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DeviceFarm {
 
 class GetOfferingStatusRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace DynamoDBStreams {
 
 class DynamoDBStreamsClientPrivate;
@@ -69,6 +68,6 @@ private:
 };
 
 } // namespace DynamoDBStreams
-} // namespace AWS
+} // namespace QtAws
 
 #endif

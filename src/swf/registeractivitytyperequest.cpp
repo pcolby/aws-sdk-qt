@@ -22,7 +22,7 @@
 #include "registeractivitytyperesponse.h"
 #include "swfrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SWF {
 
 /**
@@ -116,4 +116,4 @@ RegisterActivityTypeRequestPrivate::RegisterActivityTypeRequestPrivate(
 }
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws

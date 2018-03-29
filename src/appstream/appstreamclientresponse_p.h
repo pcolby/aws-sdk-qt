@@ -23,8 +23,7 @@
 #include "appstreamresponse.h"
 #include "appstreamclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppStream {
 
 class AppStreamClientResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws
 
 #endif

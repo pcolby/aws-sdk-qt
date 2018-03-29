@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
 class ElasticLoadBalancingv2Client;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace ElasticLoadBalancingv2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

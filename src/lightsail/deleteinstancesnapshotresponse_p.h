@@ -23,8 +23,7 @@
 #include "lightsailresponse.h"
 #include "deleteinstancesnapshotrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lightsail {
 
 class DeleteInstanceSnapshotResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

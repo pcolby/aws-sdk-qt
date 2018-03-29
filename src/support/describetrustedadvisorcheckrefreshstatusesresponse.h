@@ -23,8 +23,7 @@
 #include "supportresponse.h"
 #include "describetrustedadvisorcheckrefreshstatusesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Support {
 
 class DescribeTrustedAdvisorCheckRefreshStatusesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Support
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "deletescalingplanresponse.h"
 #include "autoscalingplansrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScalingPlans {
 
 /**
@@ -116,4 +116,4 @@ DeleteScalingPlanRequestPrivate::DeleteScalingPlanRequestPrivate(
 }
 
 } // namespace AutoScalingPlans
-} // namespace AWS
+} // namespace QtAws

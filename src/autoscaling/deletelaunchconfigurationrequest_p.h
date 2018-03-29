@@ -23,8 +23,7 @@
 #include "autoscaling_p.h"
 #include "deletelaunchconfigurationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AutoScaling {
 
 class DeleteLaunchConfigurationRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

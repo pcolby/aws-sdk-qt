@@ -23,8 +23,7 @@
 #include "iotdataplane_p.h"
 #include "iotdataplaneclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoTDataPlane {
 
 class IoTDataPlaneClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace IoTDataPlane
-} // namespace AWS
+} // namespace QtAws
 
 #endif

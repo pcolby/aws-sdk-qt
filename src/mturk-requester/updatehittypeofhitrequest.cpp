@@ -22,7 +22,7 @@
 #include "updatehittypeofhitresponse.h"
 #include "mturkrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MTurk {
 
 /**
@@ -116,4 +116,4 @@ UpdateHITTypeOfHITRequestPrivate::UpdateHITTypeOfHITRequestPrivate(
 }
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws

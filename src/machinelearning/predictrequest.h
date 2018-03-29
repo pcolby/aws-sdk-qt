@@ -22,8 +22,7 @@
 
 #include "machinelearningrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MachineLearning {
 
 class PredictRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "comprehendresponse.h"
 #include "detectsentimentrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Comprehend {
 
 class DetectSentimentResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Comprehend
-} // namespace AWS
+} // namespace QtAws
 
 #endif

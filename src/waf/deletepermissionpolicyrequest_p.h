@@ -23,8 +23,7 @@
 #include "waf_p.h"
 #include "deletepermissionpolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class DeletePermissionPolicyRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

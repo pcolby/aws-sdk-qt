@@ -22,7 +22,7 @@
 #include "gettracesummariesresponse.h"
 #include "xrayrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace XRay {
 
 /**
@@ -116,4 +116,4 @@ GetTraceSummariesRequestPrivate::GetTraceSummariesRequestPrivate(
 }
 
 } // namespace XRay
-} // namespace AWS
+} // namespace QtAws

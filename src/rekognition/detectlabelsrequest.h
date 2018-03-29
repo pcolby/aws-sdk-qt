@@ -22,8 +22,7 @@
 
 #include "rekognitionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Rekognition {
 
 class DetectLabelsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws
 
 #endif

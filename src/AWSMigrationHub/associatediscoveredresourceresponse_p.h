@@ -23,8 +23,7 @@
 #include "migrationhubresponse.h"
 #include "associatediscoveredresourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MigrationHub {
 
 class AssociateDiscoveredResourceResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws
 
 #endif

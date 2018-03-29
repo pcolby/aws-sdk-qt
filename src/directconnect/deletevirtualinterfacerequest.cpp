@@ -22,7 +22,7 @@
 #include "deletevirtualinterfaceresponse.h"
 #include "directconnectrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DirectConnect {
 
 /**
@@ -116,4 +116,4 @@ DeleteVirtualInterfaceRequestPrivate::DeleteVirtualInterfaceRequestPrivate(
 }
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws

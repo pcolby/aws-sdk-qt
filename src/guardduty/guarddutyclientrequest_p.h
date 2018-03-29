@@ -23,8 +23,7 @@
 #include "guardduty_p.h"
 #include "guarddutyclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace GuardDuty {
 
 class GuardDutyClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace GuardDuty
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Comprehend {
 
 /**
@@ -280,4 +280,4 @@ ComprehendClientPrivate::ComprehendClientPrivate(ComprehendClient * const q)
 }
 
 } // namespace Comprehend
-} // namespace AWS
+} // namespace QtAws

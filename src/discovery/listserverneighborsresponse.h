@@ -23,8 +23,7 @@
 #include "applicationdiscoveryserviceresponse.h"
 #include "listserverneighborsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 class ListServerNeighborsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ApplicationDiscoveryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

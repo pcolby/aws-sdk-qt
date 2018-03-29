@@ -23,8 +23,7 @@
 #include "serverlessapplicationrepository_p.h"
 #include "serverlessapplicationrepositoryclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServerlessApplicationRepository {
 
 class ServerlessApplicationRepositoryClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ServerlessApplicationRepository
-} // namespace AWS
+} // namespace QtAws
 
 #endif

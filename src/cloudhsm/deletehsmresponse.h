@@ -23,8 +23,7 @@
 #include "cloudhsmresponse.h"
 #include "deletehsmrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSM {
 
 class DeleteHsmResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

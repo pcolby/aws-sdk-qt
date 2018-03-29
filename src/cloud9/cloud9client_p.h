@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace Cloud9 {
 
 class Cloud9Client;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace Cloud9
-} // namespace AWS
+} // namespace QtAws
 
 #endif

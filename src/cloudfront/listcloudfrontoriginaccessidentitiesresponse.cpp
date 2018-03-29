@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFront {
 
 /**
@@ -103,4 +103,4 @@ void ListCloudFrontOriginAccessIdentitiesResponsePrivate::ListCloudFrontOriginAc
 }
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws

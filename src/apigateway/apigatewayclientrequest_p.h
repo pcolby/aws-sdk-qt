@@ -23,8 +23,7 @@
 #include "apigateway_p.h"
 #include "apigatewayclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace APIGateway {
 
 class APIGatewayClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

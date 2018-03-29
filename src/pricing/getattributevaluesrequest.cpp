@@ -22,7 +22,7 @@
 #include "getattributevaluesresponse.h"
 #include "pricingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Pricing {
 
 /**
@@ -116,4 +116,4 @@ GetAttributeValuesRequestPrivate::GetAttributeValuesRequestPrivate(
 }
 
 } // namespace Pricing
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "serverlessapplicationrepositoryresponse.h"
 #include "deleteapplicationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServerlessApplicationRepository {
 
 class DeleteApplicationResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ServerlessApplicationRepository
-} // namespace AWS
+} // namespace QtAws
 
 #endif

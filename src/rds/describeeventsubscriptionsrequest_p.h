@@ -23,8 +23,7 @@
 #include "rds_p.h"
 #include "describeeventsubscriptionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace RDS {
 
 class DescribeEventSubscriptionsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

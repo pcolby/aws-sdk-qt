@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticsearchService {
 
 /**
@@ -67,4 +67,4 @@ ElasticsearchServiceClientResponsePrivate::ElasticsearchServiceClientResponsePri
 }
 
 } // namespace ElasticsearchService
-} // namespace AWS
+} // namespace QtAws

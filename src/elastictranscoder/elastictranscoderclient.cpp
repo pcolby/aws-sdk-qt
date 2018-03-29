@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticTranscoder {
 
 /**
@@ -422,4 +422,4 @@ ElasticTranscoderClientPrivate::ElasticTranscoderClientPrivate(ElasticTranscoder
 }
 
 } // namespace ElasticTranscoder
-} // namespace AWS
+} // namespace QtAws

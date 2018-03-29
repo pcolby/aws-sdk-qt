@@ -23,8 +23,7 @@
 #include "route53_p.h"
 #include "listvpcassociationauthorizationsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53 {
 
 class ListVPCAssociationAuthorizationsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws
 
 #endif

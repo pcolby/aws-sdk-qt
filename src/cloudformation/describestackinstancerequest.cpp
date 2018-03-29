@@ -22,7 +22,7 @@
 #include "describestackinstanceresponse.h"
 #include "cloudformationrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFormation {
 
 /**
@@ -116,4 +116,4 @@ DescribeStackInstanceRequestPrivate::DescribeStackInstanceRequestPrivate(
 }
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "clouddirectoryresponse.h"
 #include "detachpolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudDirectory {
 
 class DetachPolicyResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws
 
 #endif

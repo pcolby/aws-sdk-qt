@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisVideoMedia {
 
 /**
@@ -103,4 +103,4 @@ void GetMediaResponsePrivate::GetMediaResponse(QXmlStreamReader &xml)
 }
 
 } // namespace KinesisVideoMedia
-} // namespace AWS
+} // namespace QtAws

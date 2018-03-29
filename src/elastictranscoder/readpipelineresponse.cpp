@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticTranscoder {
 
 /**
@@ -103,4 +103,4 @@ void ReadPipelineResponsePrivate::ReadPipelineResponse(QXmlStreamReader &xml)
 }
 
 } // namespace ElasticTranscoder
-} // namespace AWS
+} // namespace QtAws

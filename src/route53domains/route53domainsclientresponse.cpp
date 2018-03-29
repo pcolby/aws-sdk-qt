@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Route53Domains {
 
 /**
@@ -67,4 +67,4 @@ Route53DomainsClientResponsePrivate::Route53DomainsClientResponsePrivate(
 }
 
 } // namespace Route53Domains
-} // namespace AWS
+} // namespace QtAws

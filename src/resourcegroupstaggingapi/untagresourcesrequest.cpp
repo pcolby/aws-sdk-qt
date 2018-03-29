@@ -22,7 +22,7 @@
 #include "untagresourcesresponse.h"
 #include "resourcegroupstaggingapirequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
 
 /**
@@ -116,4 +116,4 @@ UntagResourcesRequestPrivate::UntagResourcesRequestPrivate(
 }
 
 } // namespace ResourceGroupsTaggingAPI
-} // namespace AWS
+} // namespace QtAws

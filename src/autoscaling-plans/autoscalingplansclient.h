@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace AutoScalingPlans {
 
 class AutoScalingPlansClientPrivate;
@@ -69,6 +68,6 @@ private:
 };
 
 } // namespace AutoScalingPlans
-} // namespace AWS
+} // namespace QtAws
 
 #endif

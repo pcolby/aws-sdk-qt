@@ -22,7 +22,7 @@
 #include "batchgetapplicationsresponse.h"
 #include "codedeployrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeDeploy {
 
 /**
@@ -116,4 +116,4 @@ BatchGetApplicationsRequestPrivate::BatchGetApplicationsRequestPrivate(
 }
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws

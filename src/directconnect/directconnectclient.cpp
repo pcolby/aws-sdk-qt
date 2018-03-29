@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace DirectConnect {
 
 /**
@@ -1048,4 +1048,4 @@ DirectConnectClientPrivate::DirectConnectClientPrivate(DirectConnectClient * con
 }
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws

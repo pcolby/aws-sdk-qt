@@ -22,7 +22,7 @@
 #include "cancelcommandresponse.h"
 #include "ssmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SSM {
 
 /**
@@ -116,4 +116,4 @@ CancelCommandRequestPrivate::CancelCommandRequestPrivate(
 }
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws

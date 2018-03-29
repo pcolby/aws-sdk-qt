@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticLoadBalancing {
 
 /**
@@ -103,4 +103,4 @@ void SetLoadBalancerPoliciesOfListenerResponsePrivate::SetLoadBalancerPoliciesOf
 }
 
 } // namespace ElasticLoadBalancing
-} // namespace AWS
+} // namespace QtAws

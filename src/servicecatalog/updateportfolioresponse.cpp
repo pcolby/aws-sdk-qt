@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceCatalog {
 
 /**
@@ -103,4 +103,4 @@ void UpdatePortfolioResponsePrivate::UpdatePortfolioResponse(QXmlStreamReader &x
 }
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws

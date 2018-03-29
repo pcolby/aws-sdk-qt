@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace DataPipeline {
 
 /**
@@ -472,4 +472,4 @@ DataPipelineClientPrivate::DataPipelineClientPrivate(DataPipelineClient * const 
 }
 
 } // namespace DataPipeline
-} // namespace AWS
+} // namespace QtAws

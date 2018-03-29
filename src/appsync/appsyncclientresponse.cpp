@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace AppSync {
 
 /**
@@ -67,4 +67,4 @@ AppSyncClientResponsePrivate::AppSyncClientResponsePrivate(
 }
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws

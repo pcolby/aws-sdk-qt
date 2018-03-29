@@ -23,8 +23,7 @@
 #include "route53response.h"
 #include "deletequeryloggingconfigrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53 {
 
 class DeleteQueryLoggingConfigResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws
 
 #endif

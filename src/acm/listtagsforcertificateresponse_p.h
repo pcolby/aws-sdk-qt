@@ -23,8 +23,7 @@
 #include "acmresponse.h"
 #include "listtagsforcertificaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ACM {
 
 class ListTagsForCertificateResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ACM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

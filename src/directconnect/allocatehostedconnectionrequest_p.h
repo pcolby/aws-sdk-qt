@@ -23,8 +23,7 @@
 #include "directconnect_p.h"
 #include "allocatehostedconnectionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectConnect {
 
 class AllocateHostedConnectionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws
 
 #endif

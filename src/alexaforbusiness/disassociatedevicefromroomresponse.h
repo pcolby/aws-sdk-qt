@@ -23,8 +23,7 @@
 #include "alexaforbusinessresponse.h"
 #include "disassociatedevicefromroomrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AlexaForBusiness {
 
 class DisassociateDeviceFromRoomResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws
 
 #endif

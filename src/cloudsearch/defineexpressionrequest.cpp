@@ -22,7 +22,7 @@
 #include "defineexpressionresponse.h"
 #include "cloudsearchrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudSearch {
 
 /**
@@ -116,4 +116,4 @@ DefineExpressionRequestPrivate::DefineExpressionRequestPrivate(
 }
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws

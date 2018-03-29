@@ -20,7 +20,7 @@
 #include "elasticsearchserviceclientrequest.h"
 #include "elasticsearchserviceclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticsearchService {
 
 /**
@@ -337,4 +337,4 @@ QString ElasticsearchServiceClientRequestPrivate::toString(const ElasticsearchSe
 }
 
 } // namespace ElasticsearchService
-} // namespace AWS
+} // namespace QtAws

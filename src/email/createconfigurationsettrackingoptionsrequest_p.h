@@ -23,8 +23,7 @@
 #include "ses_p.h"
 #include "createconfigurationsettrackingoptionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SES {
 
 class CreateConfigurationSetTrackingOptionsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws
 
 #endif

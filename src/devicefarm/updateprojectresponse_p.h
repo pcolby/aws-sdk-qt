@@ -23,8 +23,7 @@
 #include "devicefarmresponse.h"
 #include "updateprojectrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DeviceFarm {
 
 class UpdateProjectResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws
 
 #endif

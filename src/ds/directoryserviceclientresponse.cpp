@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DirectoryService {
 
 /**
@@ -67,4 +67,4 @@ DirectoryServiceClientResponsePrivate::DirectoryServiceClientResponsePrivate(
 }
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws

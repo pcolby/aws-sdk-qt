@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace DAX {
 
 /**
@@ -458,4 +458,4 @@ DaxClientPrivate::DaxClientPrivate(DaxClient * const q)
 }
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws

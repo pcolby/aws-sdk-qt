@@ -23,8 +23,7 @@
 #include "marketplacecommerceanalytics_p.h"
 #include "marketplacecommerceanalyticsclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
 class MarketplaceCommerceAnalyticsClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MarketplaceCommerceAnalytics
-} // namespace AWS
+} // namespace QtAws
 
 #endif

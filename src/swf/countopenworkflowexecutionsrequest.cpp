@@ -22,7 +22,7 @@
 #include "countopenworkflowexecutionsresponse.h"
 #include "swfrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SWF {
 
 /**
@@ -116,4 +116,4 @@ CountOpenWorkflowExecutionsRequestPrivate::CountOpenWorkflowExecutionsRequestPri
 }
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "pollyresponse.h"
 #include "listlexiconsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Polly {
 
 class ListLexiconsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Polly
-} // namespace AWS
+} // namespace QtAws
 
 #endif

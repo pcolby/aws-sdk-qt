@@ -23,8 +23,7 @@
 #include "lightsail_p.h"
 #include "detachdiskrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lightsail {
 
 class DetachDiskRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

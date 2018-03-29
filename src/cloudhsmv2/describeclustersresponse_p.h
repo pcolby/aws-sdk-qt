@@ -23,8 +23,7 @@
 #include "cloudhsmv2response.h"
 #include "describeclustersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSMV2 {
 
 class DescribeClustersResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudHSMV2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

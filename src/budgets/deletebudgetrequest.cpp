@@ -22,7 +22,7 @@
 #include "deletebudgetresponse.h"
 #include "budgetsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Budgets {
 
 /**
@@ -116,4 +116,4 @@ DeleteBudgetRequestPrivate::DeleteBudgetRequestPrivate(
 }
 
 } // namespace Budgets
-} // namespace AWS
+} // namespace QtAws

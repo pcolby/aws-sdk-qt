@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace LexModelBuildingService {
 
 /**
@@ -1012,4 +1012,4 @@ LexModelBuildingServiceClientPrivate::LexModelBuildingServiceClientPrivate(LexMo
 }
 
 } // namespace LexModelBuildingService
-} // namespace AWS
+} // namespace QtAws

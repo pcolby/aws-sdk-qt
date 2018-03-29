@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -103,4 +103,4 @@ void DescribeDBSecurityGroupsResponsePrivate::DescribeDBSecurityGroupsResponse(Q
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

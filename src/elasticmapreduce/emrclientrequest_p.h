@@ -23,8 +23,7 @@
 #include "emr_p.h"
 #include "emrclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EMR {
 
 class EmrClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

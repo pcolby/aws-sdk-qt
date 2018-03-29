@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace EFS {
 
 class EfsClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

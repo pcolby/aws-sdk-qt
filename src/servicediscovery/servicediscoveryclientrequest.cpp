@@ -20,7 +20,7 @@
 #include "servicediscoveryclientrequest.h"
 #include "servicediscoveryclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceDiscovery {
 
 /**
@@ -337,4 +337,4 @@ QString ServiceDiscoveryClientRequestPrivate::toString(const ServiceDiscoveryCli
 }
 
 } // namespace ServiceDiscovery
-} // namespace AWS
+} // namespace QtAws

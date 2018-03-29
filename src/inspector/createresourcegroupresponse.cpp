@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Inspector {
 
 /**
@@ -103,4 +103,4 @@ void CreateResourceGroupResponsePrivate::CreateResourceGroupResponse(QXmlStreamR
 }
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws

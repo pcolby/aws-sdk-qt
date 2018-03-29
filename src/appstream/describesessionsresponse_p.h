@@ -23,8 +23,7 @@
 #include "appstreamresponse.h"
 #include "describesessionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppStream {
 
 class DescribeSessionsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "describereportdefinitionsresponse.h"
 #include "costandusagereportservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CostandUsageReportService {
 
 /**
@@ -116,4 +116,4 @@ DescribeReportDefinitionsRequestPrivate::DescribeReportDefinitionsRequestPrivate
 }
 
 } // namespace CostandUsageReportService
-} // namespace AWS
+} // namespace QtAws

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace XRay {
 
 /**
@@ -103,4 +103,4 @@ void BatchGetTracesResponsePrivate::BatchGetTracesResponse(QXmlStreamReader &xml
 }
 
 } // namespace XRay
-} // namespace AWS
+} // namespace QtAws

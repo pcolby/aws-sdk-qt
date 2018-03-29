@@ -22,7 +22,7 @@
 #include "tagresourceresponse.h"
 #include "alexaforbusinessrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AlexaForBusiness {
 
 /**
@@ -116,4 +116,4 @@ TagResourceRequestPrivate::TagResourceRequestPrivate(
 }
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws

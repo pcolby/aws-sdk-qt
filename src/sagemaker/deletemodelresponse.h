@@ -23,8 +23,7 @@
 #include "sagemakerresponse.h"
 #include "deletemodelrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SageMaker {
 
 class DeleteModelResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws
 
 #endif

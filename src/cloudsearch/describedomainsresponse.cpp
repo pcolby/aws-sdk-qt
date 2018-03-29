@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudSearch {
 
 /**
@@ -103,4 +103,4 @@ void DescribeDomainsResponsePrivate::DescribeDomainsResponse(QXmlStreamReader &x
 }
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws

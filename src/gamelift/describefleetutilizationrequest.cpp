@@ -22,7 +22,7 @@
 #include "describefleetutilizationresponse.h"
 #include "gameliftrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace GameLift {
 
 /**
@@ -116,4 +116,4 @@ DescribeFleetUtilizationRequestPrivate::DescribeFleetUtilizationRequestPrivate(
 }
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws

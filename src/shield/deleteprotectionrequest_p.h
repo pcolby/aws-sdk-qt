@@ -23,8 +23,7 @@
 #include "shield_p.h"
 #include "deleteprotectionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Shield {
 
 class DeleteProtectionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Shield
-} // namespace AWS
+} // namespace QtAws
 
 #endif

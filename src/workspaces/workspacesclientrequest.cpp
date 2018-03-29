@@ -20,7 +20,7 @@
 #include "workspacesclientrequest.h"
 #include "workspacesclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WorkSpaces {
 
 /**
@@ -337,4 +337,4 @@ QString WorkSpacesClientRequestPrivate::toString(const WorkSpacesClientRequest::
 }
 
 } // namespace WorkSpaces
-} // namespace AWS
+} // namespace QtAws

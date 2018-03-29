@@ -23,8 +23,7 @@
 #include "dynamodbstreamsresponse.h"
 #include "liststreamsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DynamoDBStreams {
 
 class ListStreamsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DynamoDBStreams
-} // namespace AWS
+} // namespace QtAws
 
 #endif

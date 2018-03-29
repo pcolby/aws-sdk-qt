@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudWatchLogs {
 
 /**
@@ -103,4 +103,4 @@ void PutRetentionPolicyResponsePrivate::PutRetentionPolicyResponse(QXmlStreamRea
 }
 
 } // namespace CloudWatchLogs
-} // namespace AWS
+} // namespace QtAws

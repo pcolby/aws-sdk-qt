@@ -23,8 +23,7 @@
 #include "rdsresponse.h"
 #include "promotereadreplicadbclusterrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace RDS {
 
 class PromoteReadReplicaDBClusterResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

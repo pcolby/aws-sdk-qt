@@ -22,8 +22,7 @@
 
 #include "codepipelinerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodePipeline {
 
 class CreateCustomActionTypeRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "workdocs_p.h"
 #include "deleteuserrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkDocs {
 
 class DeleteUserRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisVideoMedia {
 
 /**
@@ -67,4 +67,4 @@ KinesisVideoMediaClientResponsePrivate::KinesisVideoMediaClientResponsePrivate(
 }
 
 } // namespace KinesisVideoMedia
-} // namespace AWS
+} // namespace QtAws

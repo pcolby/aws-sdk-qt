@@ -23,8 +23,7 @@
 #include "databasemigrationserviceresponse.h"
 #include "createreplicationinstancerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 class CreateReplicationInstanceResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "deleterepositoryresponse.h"
 #include "ecrrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ECR {
 
 /**
@@ -116,4 +116,4 @@ DeleteRepositoryRequestPrivate::DeleteRepositoryRequestPrivate(
 }
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws

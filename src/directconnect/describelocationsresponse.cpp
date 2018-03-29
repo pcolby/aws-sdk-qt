@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DirectConnect {
 
 /**
@@ -103,4 +103,4 @@ void DescribeLocationsResponsePrivate::DescribeLocationsResponse(QXmlStreamReade
 }
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "simpledb_p.h"
 #include "getattributesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SimpleDB {
 
 class GetAttributesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SimpleDB
-} // namespace AWS
+} // namespace QtAws
 
 #endif

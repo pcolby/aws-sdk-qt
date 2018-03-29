@@ -20,7 +20,7 @@
 #include "mediastoreclientrequest.h"
 #include "mediastoreclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MediaStore {
 
 /**
@@ -337,4 +337,4 @@ QString MediaStoreClientRequestPrivate::toString(const MediaStoreClientRequest::
 }
 
 } // namespace MediaStore
-} // namespace AWS
+} // namespace QtAws

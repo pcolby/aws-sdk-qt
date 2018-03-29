@@ -22,7 +22,7 @@
 #include "deletenotificationresponse.h"
 #include "budgetsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Budgets {
 
 /**
@@ -116,4 +116,4 @@ DeleteNotificationRequestPrivate::DeleteNotificationRequestPrivate(
 }
 
 } // namespace Budgets
-} // namespace AWS
+} // namespace QtAws

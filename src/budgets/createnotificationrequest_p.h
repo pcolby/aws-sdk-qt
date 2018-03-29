@@ -23,8 +23,7 @@
 #include "budgets_p.h"
 #include "createnotificationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Budgets {
 
 class CreateNotificationRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Budgets
-} // namespace AWS
+} // namespace QtAws
 
 #endif

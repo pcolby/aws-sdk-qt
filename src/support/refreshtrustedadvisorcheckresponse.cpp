@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Support {
 
 /**
@@ -103,4 +103,4 @@ void RefreshTrustedAdvisorCheckResponsePrivate::RefreshTrustedAdvisorCheckRespon
 }
 
 } // namespace Support
-} // namespace AWS
+} // namespace QtAws

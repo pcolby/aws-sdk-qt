@@ -23,8 +23,7 @@
 #include "wafresponse.h"
 #include "getpermissionpolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class GetPermissionPolicyResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

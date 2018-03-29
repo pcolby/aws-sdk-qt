@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace ElastiCache {
 
 /**
@@ -1068,4 +1068,4 @@ ElastiCacheClientPrivate::ElastiCacheClientPrivate(ElastiCacheClient * const q)
 }
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws

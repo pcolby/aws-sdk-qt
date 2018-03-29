@@ -23,8 +23,7 @@
 #include "mediaconvertresponse.h"
 #include "listqueuesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaConvert {
 
 class ListQueuesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws
 
 #endif

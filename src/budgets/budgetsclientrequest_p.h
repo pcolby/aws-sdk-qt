@@ -23,8 +23,7 @@
 #include "budgets_p.h"
 #include "budgetsclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Budgets {
 
 class BudgetsClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Budgets
-} // namespace AWS
+} // namespace QtAws
 
 #endif

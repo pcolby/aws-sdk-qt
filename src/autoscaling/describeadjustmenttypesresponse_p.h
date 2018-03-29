@@ -23,8 +23,7 @@
 #include "autoscalingresponse.h"
 #include "describeadjustmenttypesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AutoScaling {
 
 class DescribeAdjustmentTypesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

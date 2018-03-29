@@ -23,8 +23,7 @@
 #include "appstream_p.h"
 #include "listassociatedstacksrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppStream {
 
 class ListAssociatedStacksRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws
 
 #endif

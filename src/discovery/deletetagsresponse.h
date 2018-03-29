@@ -23,8 +23,7 @@
 #include "applicationdiscoveryserviceresponse.h"
 #include "deletetagsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 class DeleteTagsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ApplicationDiscoveryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

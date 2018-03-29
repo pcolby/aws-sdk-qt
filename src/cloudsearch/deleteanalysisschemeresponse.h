@@ -23,8 +23,7 @@
 #include "cloudsearchresponse.h"
 #include "deleteanalysisschemerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudSearch {
 
 class DeleteAnalysisSchemeResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

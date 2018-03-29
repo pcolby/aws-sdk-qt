@@ -23,8 +23,7 @@
 #include "iotresponse.h"
 #include "replacetopicrulerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class ReplaceTopicRuleResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

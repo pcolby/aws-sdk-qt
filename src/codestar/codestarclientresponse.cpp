@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CodeStar {
 
 /**
@@ -67,4 +67,4 @@ CodeStarClientResponsePrivate::CodeStarClientResponsePrivate(
 }
 
 } // namespace CodeStar
-} // namespace AWS
+} // namespace QtAws

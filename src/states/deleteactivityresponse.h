@@ -23,8 +23,7 @@
 #include "sfnresponse.h"
 #include "deleteactivityrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SFN {
 
 class DeleteActivityResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws
 
 #endif

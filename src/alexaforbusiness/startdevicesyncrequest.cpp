@@ -22,7 +22,7 @@
 #include "startdevicesyncresponse.h"
 #include "alexaforbusinessrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AlexaForBusiness {
 
 /**
@@ -116,4 +116,4 @@ StartDeviceSyncRequestPrivate::StartDeviceSyncRequestPrivate(
 }
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws

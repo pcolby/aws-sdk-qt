@@ -23,8 +23,7 @@
 #include "clouddirectory_p.h"
 #include "clouddirectoryclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudDirectory {
 
 class CloudDirectoryClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws
 
 #endif

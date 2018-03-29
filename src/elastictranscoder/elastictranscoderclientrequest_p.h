@@ -23,8 +23,7 @@
 #include "elastictranscoder_p.h"
 #include "elastictranscoderclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticTranscoder {
 
 class ElasticTranscoderClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ElasticTranscoder
-} // namespace AWS
+} // namespace QtAws
 
 #endif

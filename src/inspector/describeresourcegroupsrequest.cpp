@@ -22,7 +22,7 @@
 #include "describeresourcegroupsresponse.h"
 #include "inspectorrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Inspector {
 
 /**
@@ -116,4 +116,4 @@ DescribeResourceGroupsRequestPrivate::DescribeResourceGroupsRequestPrivate(
 }
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws

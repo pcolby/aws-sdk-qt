@@ -23,8 +23,7 @@
 #include "snowball_p.h"
 #include "updatejobrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Snowball {
 
 class UpdateJobRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws
 
 #endif

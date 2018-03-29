@@ -23,8 +23,7 @@
 #include "wafresponse.h"
 #include "listwebaclsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class ListWebACLsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "listassessmenttemplatesresponse.h"
 #include "inspectorrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Inspector {
 
 /**
@@ -116,4 +116,4 @@ ListAssessmentTemplatesRequestPrivate::ListAssessmentTemplatesRequestPrivate(
 }
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws

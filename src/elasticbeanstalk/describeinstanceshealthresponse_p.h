@@ -23,8 +23,7 @@
 #include "elasticbeanstalkresponse.h"
 #include "describeinstanceshealthrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 class DescribeInstancesHealthResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

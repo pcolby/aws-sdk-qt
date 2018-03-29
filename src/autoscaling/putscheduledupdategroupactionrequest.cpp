@@ -22,7 +22,7 @@
 #include "putscheduledupdategroupactionresponse.h"
 #include "autoscalingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScaling {
 
 /**
@@ -116,4 +116,4 @@ PutScheduledUpdateGroupActionRequestPrivate::PutScheduledUpdateGroupActionReques
 }
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws

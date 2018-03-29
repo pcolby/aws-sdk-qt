@@ -22,7 +22,7 @@
 #include "deleteintegrationresponse.h"
 #include "apigatewayrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace APIGateway {
 
 /**
@@ -116,4 +116,4 @@ DeleteIntegrationRequestPrivate::DeleteIntegrationRequestPrivate(
 }
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws

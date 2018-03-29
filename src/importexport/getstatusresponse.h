@@ -23,8 +23,7 @@
 #include "importexportresponse.h"
 #include "getstatusrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ImportExport {
 
 class GetStatusResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ImportExport
-} // namespace AWS
+} // namespace QtAws
 
 #endif

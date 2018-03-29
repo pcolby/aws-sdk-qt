@@ -23,8 +23,7 @@
 #include "route53domains_p.h"
 #include "enabledomainautorenewrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53Domains {
 
 class EnableDomainAutoRenewRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Route53Domains
-} // namespace AWS
+} // namespace QtAws
 
 #endif

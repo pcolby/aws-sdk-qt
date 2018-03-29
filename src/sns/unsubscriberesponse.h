@@ -23,8 +23,7 @@
 #include "snsresponse.h"
 #include "unsubscriberequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SNS {
 
 class UnsubscribeResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SNS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

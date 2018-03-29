@@ -4,7 +4,7 @@
 #include "{{OperationName|lower}}response.h"
 #include "{{ServiceName|lower}}request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace {{NameSpaceName}} {
 
 /**
@@ -99,4 +99,4 @@ AwsAbstractResponse * {{ClassName}}::response(QNetworkReply * const reply) const
 }
 
 } // namespace {{NameSpaceName}}
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "snsresponse.h"
 #include "deleteendpointrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SNS {
 
 class DeleteEndpointResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SNS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "mediaconvertresponse.h"
 #include "describeendpointsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaConvert {
 
 class DescribeEndpointsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "updateconfigurationtemplateresponse.h"
 #include "elasticbeanstalkrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 /**
@@ -116,4 +116,4 @@ UpdateConfigurationTemplateRequestPrivate::UpdateConfigurationTemplateRequestPri
 }
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws

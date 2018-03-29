@@ -22,7 +22,7 @@
 #include "updatesubnetgroupresponse.h"
 #include "daxrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DAX {
 
 /**
@@ -116,4 +116,4 @@ UpdateSubnetGroupRequestPrivate::UpdateSubnetGroupRequestPrivate(
 }
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws

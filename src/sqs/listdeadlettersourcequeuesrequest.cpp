@@ -22,7 +22,7 @@
 #include "listdeadlettersourcequeuesresponse.h"
 #include "sqsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SQS {
 
 /**
@@ -116,4 +116,4 @@ ListDeadLetterSourceQueuesRequestPrivate::ListDeadLetterSourceQueuesRequestPriva
 }
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws

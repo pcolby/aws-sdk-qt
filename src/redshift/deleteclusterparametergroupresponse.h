@@ -23,8 +23,7 @@
 #include "redshiftresponse.h"
 #include "deleteclusterparametergrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Redshift {
 
 class DeleteClusterParameterGroupResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

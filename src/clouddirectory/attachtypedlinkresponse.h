@@ -23,8 +23,7 @@
 #include "clouddirectoryresponse.h"
 #include "attachtypedlinkrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudDirectory {
 
 class AttachTypedLinkResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws
 
 #endif

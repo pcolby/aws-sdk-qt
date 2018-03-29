@@ -22,7 +22,7 @@
 #include "listloggerdefinitionsresponse.h"
 #include "greengrassrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -116,4 +116,4 @@ ListLoggerDefinitionsRequestPrivate::ListLoggerDefinitionsRequestPrivate(
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

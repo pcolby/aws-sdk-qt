@@ -23,8 +23,7 @@
 #include "codestarresponse.h"
 #include "disassociateteammemberrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeStar {
 
 class DisassociateTeamMemberResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeStar
-} // namespace AWS
+} // namespace QtAws
 
 #endif

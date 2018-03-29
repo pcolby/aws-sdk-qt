@@ -23,8 +23,7 @@
 #include "iotresponse.h"
 #include "stopthingregistrationtaskrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class StopThingRegistrationTaskResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "acm_p.h"
 #include "resendvalidationemailrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ACM {
 
 class ResendValidationEmailRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ACM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

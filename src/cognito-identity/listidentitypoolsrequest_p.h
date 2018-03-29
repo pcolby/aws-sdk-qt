@@ -23,8 +23,7 @@
 #include "cognitoidentity_p.h"
 #include "listidentitypoolsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentity {
 
 class ListIdentityPoolsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CognitoIdentity
-} // namespace AWS
+} // namespace QtAws
 
 #endif

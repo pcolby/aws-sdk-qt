@@ -23,8 +23,7 @@
 #include "cloudformationresponse.h"
 #include "liststacksetoperationsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFormation {
 
 class ListStackSetOperationsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws
 
 #endif

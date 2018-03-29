@@ -23,8 +23,7 @@
 #include "datapipelineresponse.h"
 #include "settaskstatusrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DataPipeline {
 
 class SetTaskStatusResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DataPipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -20,7 +20,7 @@
 #include "codedeployclientrequest.h"
 #include "codedeployclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeDeploy {
 
 /**
@@ -337,4 +337,4 @@ QString CodeDeployClientRequestPrivate::toString(const CodeDeployClientRequest::
 }
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws

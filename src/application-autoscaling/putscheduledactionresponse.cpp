@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ApplicationAutoScaling {
 
 /**
@@ -103,4 +103,4 @@ void PutScheduledActionResponsePrivate::PutScheduledActionResponse(QXmlStreamRea
 }
 
 } // namespace ApplicationAutoScaling
-} // namespace AWS
+} // namespace QtAws

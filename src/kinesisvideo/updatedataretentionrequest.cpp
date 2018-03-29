@@ -22,7 +22,7 @@
 #include "updatedataretentionresponse.h"
 #include "kinesisvideorequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisVideo {
 
 /**
@@ -116,4 +116,4 @@ UpdateDataRetentionRequestPrivate::UpdateDataRetentionRequestPrivate(
 }
 
 } // namespace KinesisVideo
-} // namespace AWS
+} // namespace QtAws

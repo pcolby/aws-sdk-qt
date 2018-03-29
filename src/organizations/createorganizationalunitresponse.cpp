@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Organizations {
 
 /**
@@ -103,4 +103,4 @@ void CreateOrganizationalUnitResponsePrivate::CreateOrganizationalUnitResponse(Q
 }
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws

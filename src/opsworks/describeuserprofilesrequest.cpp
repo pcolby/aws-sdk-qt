@@ -22,7 +22,7 @@
 #include "describeuserprofilesresponse.h"
 #include "opsworksrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace OpsWorks {
 
 /**
@@ -116,4 +116,4 @@ DescribeUserProfilesRequestPrivate::DescribeUserProfilesRequestPrivate(
 }
 
 } // namespace OpsWorks
-} // namespace AWS
+} // namespace QtAws

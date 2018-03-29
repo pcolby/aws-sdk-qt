@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DeviceFarm {
 
 /**
@@ -103,4 +103,4 @@ void ListSuitesResponsePrivate::ListSuitesResponse(QXmlStreamReader &xml)
 }
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws

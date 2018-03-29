@@ -23,8 +23,7 @@
 #include "configserviceresponse.h"
 #include "deletedeliverychannelrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ConfigService {
 
 class DeleteDeliveryChannelResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

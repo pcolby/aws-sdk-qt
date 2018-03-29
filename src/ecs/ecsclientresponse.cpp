@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ECS {
 
 /**
@@ -67,4 +67,4 @@ EcsClientResponsePrivate::EcsClientResponsePrivate(
 }
 
 } // namespace ECS
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "deletesubscriptiondefinitionresponse.h"
 #include "greengrassrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -116,4 +116,4 @@ DeleteSubscriptionDefinitionRequestPrivate::DeleteSubscriptionDefinitionRequestP
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

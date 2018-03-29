@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace DynamoDB {
 
 /**
@@ -1299,4 +1299,4 @@ DynamoDBClientPrivate::DynamoDBClientPrivate(DynamoDBClient * const q)
 }
 
 } // namespace DynamoDB
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "pinpoint_p.h"
 #include "pinpointclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pinpoint {
 
 class PinpointClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws
 
 #endif

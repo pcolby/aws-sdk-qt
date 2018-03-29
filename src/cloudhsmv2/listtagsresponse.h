@@ -23,8 +23,7 @@
 #include "cloudhsmv2response.h"
 #include "listtagsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSMV2 {
 
 class ListTagsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudHSMV2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "swfresponse.h"
 #include "deprecateactivitytyperequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SWF {
 
 class DeprecateActivityTypeResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

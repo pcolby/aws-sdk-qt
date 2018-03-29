@@ -22,7 +22,7 @@
 #include "createimagebuilderresponse.h"
 #include "appstreamrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AppStream {
 
 /**
@@ -116,4 +116,4 @@ CreateImageBuilderRequestPrivate::CreateImageBuilderRequestPrivate(
 }
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws

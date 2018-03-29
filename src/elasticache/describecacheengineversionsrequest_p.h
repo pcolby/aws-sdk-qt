@@ -23,8 +23,7 @@
 #include "elasticache_p.h"
 #include "describecacheengineversionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElastiCache {
 
 class DescribeCacheEngineVersionsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws
 
 #endif

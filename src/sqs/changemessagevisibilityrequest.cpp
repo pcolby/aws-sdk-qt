@@ -22,7 +22,7 @@
 #include "changemessagevisibilityresponse.h"
 #include "sqsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SQS {
 
 /**
@@ -116,4 +116,4 @@ ChangeMessageVisibilityRequestPrivate::ChangeMessageVisibilityRequestPrivate(
 }
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws

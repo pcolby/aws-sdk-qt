@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
 
 /**
@@ -103,4 +103,4 @@ void UntagResourcesResponsePrivate::UntagResourcesResponse(QXmlStreamReader &xml
 }
 
 } // namespace ResourceGroupsTaggingAPI
-} // namespace AWS
+} // namespace QtAws

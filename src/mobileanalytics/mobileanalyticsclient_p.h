@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace MobileAnalytics {
 
 class MobileAnalyticsClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace MobileAnalytics
-} // namespace AWS
+} // namespace QtAws
 
 #endif

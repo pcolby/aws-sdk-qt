@@ -23,8 +23,7 @@
 #include "glacier_p.h"
 #include "glacierclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glacier {
 
 class GlacierClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws
 
 #endif

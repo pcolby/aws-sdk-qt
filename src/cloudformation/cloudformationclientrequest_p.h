@@ -23,8 +23,7 @@
 #include "cloudformation_p.h"
 #include "cloudformationclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFormation {
 
 class CloudFormationClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "workdocs_p.h"
 #include "deactivateuserrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkDocs {
 
 class DeactivateUserRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,8 +22,7 @@
 
 #include "workdocsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkDocs {
 
 class DescribeCommentsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

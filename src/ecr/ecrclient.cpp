@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace ECR {
 
 /**
@@ -493,4 +493,4 @@ EcrClientPrivate::EcrClientPrivate(EcrClient * const q)
 }
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws

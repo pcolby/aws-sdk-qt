@@ -22,7 +22,7 @@
 #include "getqueueattributesresponse.h"
 #include "sqsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SQS {
 
 /**
@@ -116,4 +116,4 @@ GetQueueAttributesRequestPrivate::GetQueueAttributesRequestPrivate(
 }
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws

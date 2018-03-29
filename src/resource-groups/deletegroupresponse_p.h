@@ -23,8 +23,7 @@
 #include "resourcegroupsresponse.h"
 #include "deletegrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ResourceGroups {
 
 class DeleteGroupResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ResourceGroups
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "guarddutyresponse.h"
 #include "stopmonitoringmembersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace GuardDuty {
 
 class StopMonitoringMembersResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace GuardDuty
-} // namespace AWS
+} // namespace QtAws
 
 #endif

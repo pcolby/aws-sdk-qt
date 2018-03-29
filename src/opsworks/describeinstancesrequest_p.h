@@ -23,8 +23,7 @@
 #include "opsworks_p.h"
 #include "describeinstancesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorks {
 
 class DescribeInstancesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace OpsWorks
-} // namespace AWS
+} // namespace QtAws
 
 #endif

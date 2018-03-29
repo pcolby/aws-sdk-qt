@@ -22,8 +22,7 @@
 
 #include "efsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EFS {
 
 class DescribeMountTargetsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

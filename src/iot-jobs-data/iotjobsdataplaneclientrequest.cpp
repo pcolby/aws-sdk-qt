@@ -20,7 +20,7 @@
 #include "iotjobsdataplaneclientrequest.h"
 #include "iotjobsdataplaneclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IoTJobsDataPlane {
 
 /**
@@ -337,4 +337,4 @@ QString IoTJobsDataPlaneClientRequestPrivate::toString(const IoTJobsDataPlaneCli
 }
 
 } // namespace IoTJobsDataPlane
-} // namespace AWS
+} // namespace QtAws

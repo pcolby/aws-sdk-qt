@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudHSMV2 {
 
 /**
@@ -103,4 +103,4 @@ void InitializeClusterResponsePrivate::InitializeClusterResponse(QXmlStreamReade
 }
 
 } // namespace CloudHSMV2
-} // namespace AWS
+} // namespace QtAws

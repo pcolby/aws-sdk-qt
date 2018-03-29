@@ -23,8 +23,7 @@
 #include "sesresponse.h"
 #include "sendcustomverificationemailrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SES {
 
 class SendCustomVerificationEmailResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws
 
 #endif

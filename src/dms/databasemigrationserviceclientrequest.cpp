@@ -20,7 +20,7 @@
 #include "databasemigrationserviceclientrequest.h"
 #include "databasemigrationserviceclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 /**
@@ -337,4 +337,4 @@ QString DatabaseMigrationServiceClientRequestPrivate::toString(const DatabaseMig
 }
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws

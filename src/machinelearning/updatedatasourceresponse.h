@@ -23,8 +23,7 @@
 #include "machinelearningresponse.h"
 #include "updatedatasourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MachineLearning {
 
 class UpdateDataSourceResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws
 
 #endif

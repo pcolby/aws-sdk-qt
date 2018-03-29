@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Snowball {
 
 /**
@@ -415,4 +415,4 @@ SnowballClientPrivate::SnowballClientPrivate(SnowballClient * const q)
 }
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws

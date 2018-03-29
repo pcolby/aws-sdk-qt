@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -103,4 +103,4 @@ void GetDeploymentStatusResponsePrivate::GetDeploymentStatusResponse(QXmlStreamR
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "redshiftresponse.h"
 #include "resetclusterparametergrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Redshift {
 
 class ResetClusterParameterGroupResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

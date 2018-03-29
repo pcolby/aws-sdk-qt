@@ -23,8 +23,7 @@
 #include "iotresponse.h"
 #include "setdefaultauthorizerrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class SetDefaultAuthorizerResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

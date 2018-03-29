@@ -22,7 +22,7 @@
 #include "createdevicepoolresponse.h"
 #include "devicefarmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DeviceFarm {
 
 /**
@@ -116,4 +116,4 @@ CreateDevicePoolRequestPrivate::CreateDevicePoolRequestPrivate(
 }
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws

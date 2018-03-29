@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MediaConvert {
 
 /**
@@ -103,4 +103,4 @@ void DeleteJobTemplateResponsePrivate::DeleteJobTemplateResponse(QXmlStreamReade
 }
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws

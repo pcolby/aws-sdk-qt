@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace WorkDocs {
 
 /**
@@ -103,4 +103,4 @@ void DescribeCommentsResponsePrivate::DescribeCommentsResponse(QXmlStreamReader 
 }
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws

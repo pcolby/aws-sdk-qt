@@ -23,8 +23,7 @@
 #include "organizationsresponse.h"
 #include "createpolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Organizations {
 
 class CreatePolicyResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "lightsailresponse.h"
 #include "openinstancepublicportsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lightsail {
 
 class OpenInstancePublicPortsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

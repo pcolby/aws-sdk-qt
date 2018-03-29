@@ -23,8 +23,7 @@
 #include "mqresponse.h"
 #include "updateuserrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MQ {
 
 class UpdateUserResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MQ
-} // namespace AWS
+} // namespace QtAws
 
 #endif

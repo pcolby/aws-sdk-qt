@@ -22,7 +22,7 @@
 #include "modifyhapgresponse.h"
 #include "cloudhsmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudHSM {
 
 /**
@@ -116,4 +116,4 @@ ModifyHapgRequestPrivate::ModifyHapgRequestPrivate(
 }
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws

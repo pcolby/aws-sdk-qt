@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SFN {
 
 /**
@@ -103,4 +103,4 @@ void DescribeExecutionResponsePrivate::DescribeExecutionResponse(QXmlStreamReade
 }
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws

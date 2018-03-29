@@ -22,8 +22,7 @@
 
 #include "s3request.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace S3 {
 
 class DeleteBucketReplicationRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws
 
 #endif

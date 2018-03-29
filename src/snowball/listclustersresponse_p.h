@@ -23,8 +23,7 @@
 #include "snowballresponse.h"
 #include "listclustersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Snowball {
 
 class ListClustersResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws
 
 #endif

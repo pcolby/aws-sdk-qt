@@ -23,8 +23,7 @@
 #include "codedeployresponse.h"
 #include "deletedeploymentgrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeDeploy {
 
 class DeleteDeploymentGroupResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws
 
 #endif

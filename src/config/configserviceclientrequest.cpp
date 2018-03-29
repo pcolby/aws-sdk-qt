@@ -20,7 +20,7 @@
 #include "configserviceclientrequest.h"
 #include "configserviceclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ConfigService {
 
 /**
@@ -337,4 +337,4 @@ QString ConfigServiceClientRequestPrivate::toString(const ConfigServiceClientReq
 }
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws

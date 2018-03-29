@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceDiscovery {
 
 /**
@@ -103,4 +103,4 @@ void ListServicesResponsePrivate::ListServicesResponse(QXmlStreamReader &xml)
 }
 
 } // namespace ServiceDiscovery
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "accepthandshakeresponse.h"
 #include "organizationsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Organizations {
 
 /**
@@ -116,4 +116,4 @@ AcceptHandshakeRequestPrivate::AcceptHandshakeRequestPrivate(
 }
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws

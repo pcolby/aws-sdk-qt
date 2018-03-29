@@ -22,7 +22,7 @@
 #include "untagstreamresponse.h"
 #include "kinesisvideorequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisVideo {
 
 /**
@@ -116,4 +116,4 @@ UntagStreamRequestPrivate::UntagStreamRequestPrivate(
 }
 
 } // namespace KinesisVideo
-} // namespace AWS
+} // namespace QtAws

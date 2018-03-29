@@ -23,8 +23,7 @@
 #include "rds_p.h"
 #include "restoredbclusterfroms3request.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace RDS {
 
 class RestoreDBClusterFromS3Request;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

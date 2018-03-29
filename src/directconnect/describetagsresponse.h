@@ -23,8 +23,7 @@
 #include "directconnectresponse.h"
 #include "describetagsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectConnect {
 
 class DescribeTagsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws
 
 #endif

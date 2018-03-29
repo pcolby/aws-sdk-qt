@@ -23,8 +23,7 @@
 #include "route53domainsresponse.h"
 #include "updatedomaincontactrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53Domains {
 
 class UpdateDomainContactResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Route53Domains
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "iotresponse.h"
 #include "rejectcertificatetransferrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class RejectCertificateTransferResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

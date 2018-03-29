@@ -22,8 +22,7 @@
 
 #include "kinesisanalyticsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KinesisAnalytics {
 
 class AddApplicationReferenceDataSourceRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace KinesisAnalytics
-} // namespace AWS
+} // namespace QtAws
 
 #endif

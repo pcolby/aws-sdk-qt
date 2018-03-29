@@ -23,8 +23,7 @@
 #include "rekognitionresponse.h"
 #include "stopstreamprocessorrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Rekognition {
 
 class StopStreamProcessorResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws
 
 #endif

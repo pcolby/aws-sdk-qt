@@ -23,8 +23,7 @@
 #include "dynamodbresponse.h"
 #include "deletebackuprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DynamoDB {
 
 class DeleteBackupResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DynamoDB
-} // namespace AWS
+} // namespace QtAws
 
 #endif

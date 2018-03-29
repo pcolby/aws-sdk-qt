@@ -23,8 +23,7 @@
 #include "cloud9response.h"
 #include "cloud9clientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Cloud9 {
 
 class Cloud9ClientResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Cloud9
-} // namespace AWS
+} // namespace QtAws
 
 #endif

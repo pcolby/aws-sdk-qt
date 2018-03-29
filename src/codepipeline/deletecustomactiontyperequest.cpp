@@ -22,7 +22,7 @@
 #include "deletecustomactiontyperesponse.h"
 #include "codepipelinerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodePipeline {
 
 /**
@@ -116,4 +116,4 @@ DeleteCustomActionTypeRequestPrivate::DeleteCustomActionTypeRequestPrivate(
 }
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws

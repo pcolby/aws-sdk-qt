@@ -23,8 +23,7 @@
 #include "ses_p.h"
 #include "setidentityheadersinnotificationsenabledrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SES {
 
 class SetIdentityHeadersInNotificationsEnabledRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws
 
 #endif

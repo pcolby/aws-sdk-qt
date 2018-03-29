@@ -22,7 +22,7 @@
 #include "deletedirectconnectgatewayassociationresponse.h"
 #include "directconnectrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DirectConnect {
 
 /**
@@ -116,4 +116,4 @@ DeleteDirectConnectGatewayAssociationRequestPrivate::DeleteDirectConnectGatewayA
 }
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws

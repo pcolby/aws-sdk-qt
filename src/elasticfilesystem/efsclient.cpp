@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace EFS {
 
 /**
@@ -596,4 +596,4 @@ EfsClientPrivate::EfsClientPrivate(EfsClient * const q)
 }
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws

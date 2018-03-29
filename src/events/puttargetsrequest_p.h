@@ -23,8 +23,7 @@
 #include "cloudwatchevents_p.h"
 #include "puttargetsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatchEvents {
 
 class PutTargetsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudWatchEvents
-} // namespace AWS
+} // namespace QtAws
 
 #endif

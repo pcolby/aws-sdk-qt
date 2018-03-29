@@ -22,7 +22,7 @@
 #include "describeaccountattributesresponse.h"
 #include "opsworkscmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace OpsWorksCM {
 
 /**
@@ -116,4 +116,4 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 }
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws

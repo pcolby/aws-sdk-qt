@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
 class ElasticLoadBalancingv2ClientPrivate;
@@ -159,6 +158,6 @@ private:
 };
 
 } // namespace ElasticLoadBalancingv2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

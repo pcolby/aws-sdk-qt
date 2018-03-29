@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -103,4 +103,4 @@ void CreateSubscriptionDefinitionVersionResponsePrivate::CreateSubscriptionDefin
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

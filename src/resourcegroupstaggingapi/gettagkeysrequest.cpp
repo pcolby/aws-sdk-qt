@@ -22,7 +22,7 @@
 #include "gettagkeysresponse.h"
 #include "resourcegroupstaggingapirequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
 
 /**
@@ -116,4 +116,4 @@ GetTagKeysRequestPrivate::GetTagKeysRequestPrivate(
 }
 
 } // namespace ResourceGroupsTaggingAPI
-} // namespace AWS
+} // namespace QtAws

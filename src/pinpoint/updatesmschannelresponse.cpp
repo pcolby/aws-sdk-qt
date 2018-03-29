@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Pinpoint {
 
 /**
@@ -103,4 +103,4 @@ void UpdateSmsChannelResponsePrivate::UpdateSmsChannelResponse(QXmlStreamReader 
 }
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws

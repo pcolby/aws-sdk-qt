@@ -22,7 +22,7 @@
 #include "describeaccountattributesresponse.h"
 #include "databasemigrationservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 /**
@@ -116,4 +116,4 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 }
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "codepipeline_p.h"
 #include "putthirdpartyjobfailureresultrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodePipeline {
 
 class PutThirdPartyJobFailureResultRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

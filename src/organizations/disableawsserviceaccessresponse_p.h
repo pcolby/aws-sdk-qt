@@ -23,8 +23,7 @@
 #include "organizationsresponse.h"
 #include "disableawsserviceaccessrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Organizations {
 
 class DisableAWSServiceAccessResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws
 
 #endif

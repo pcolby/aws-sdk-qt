@@ -23,8 +23,7 @@
 #include "mturk_p.h"
 #include "listbonuspaymentsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MTurk {
 
 class ListBonusPaymentsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

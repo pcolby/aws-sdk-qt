@@ -23,8 +23,7 @@
 #include "inspectorresponse.h"
 #include "startassessmentrunrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Inspector {
 
 class StartAssessmentRunResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws
 
 #endif

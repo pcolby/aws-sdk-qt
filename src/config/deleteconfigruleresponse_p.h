@@ -23,8 +23,7 @@
 #include "configserviceresponse.h"
 #include "deleteconfigrulerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ConfigService {
 
 class DeleteConfigRuleResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "batchresponse.h"
 #include "createcomputeenvironmentrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Batch {
 
 class CreateComputeEnvironmentResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Batch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

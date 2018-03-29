@@ -23,8 +23,7 @@
 #include "greengrassresponse.h"
 #include "createcoredefinitionversionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Greengrass {
 
 class CreateCoreDefinitionVersionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws
 
 #endif

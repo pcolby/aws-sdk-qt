@@ -23,8 +23,7 @@
 #include "route53response.h"
 #include "getcheckeriprangesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53 {
 
 class GetCheckerIpRangesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws
 
 #endif

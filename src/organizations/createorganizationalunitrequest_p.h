@@ -23,8 +23,7 @@
 #include "organizations_p.h"
 #include "createorganizationalunitrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Organizations {
 
 class CreateOrganizationalUnitRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws
 
 #endif

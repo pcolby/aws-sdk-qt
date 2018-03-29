@@ -23,8 +23,7 @@
 #include "autoscalingresponse.h"
 #include "putnotificationconfigurationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AutoScaling {
 
 class PutNotificationConfigurationResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

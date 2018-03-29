@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace MediaPackage {
 
 /**
@@ -258,4 +258,4 @@ MediaPackageClientPrivate::MediaPackageClientPrivate(MediaPackageClient * const 
 }
 
 } // namespace MediaPackage
-} // namespace AWS
+} // namespace QtAws

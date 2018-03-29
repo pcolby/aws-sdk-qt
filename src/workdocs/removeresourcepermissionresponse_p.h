@@ -23,8 +23,7 @@
 #include "workdocsresponse.h"
 #include "removeresourcepermissionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkDocs {
 
 class RemoveResourcePermissionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

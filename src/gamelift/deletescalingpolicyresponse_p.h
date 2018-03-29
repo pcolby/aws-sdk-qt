@@ -23,8 +23,7 @@
 #include "gameliftresponse.h"
 #include "deletescalingpolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace GameLift {
 
 class DeleteScalingPolicyResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

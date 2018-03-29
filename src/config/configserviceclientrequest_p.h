@@ -23,8 +23,7 @@
 #include "configservice_p.h"
 #include "configserviceclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ConfigService {
 
 class ConfigServiceClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

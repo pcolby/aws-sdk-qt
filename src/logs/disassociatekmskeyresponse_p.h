@@ -23,8 +23,7 @@
 #include "cloudwatchlogsresponse.h"
 #include "disassociatekmskeyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatchLogs {
 
 class DisassociateKmsKeyResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudWatchLogs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

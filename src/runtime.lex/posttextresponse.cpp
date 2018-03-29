@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace LexRuntimeService {
 
 /**
@@ -103,4 +103,4 @@ void PostTextResponsePrivate::PostTextResponse(QXmlStreamReader &xml)
 }
 
 } // namespace LexRuntimeService
-} // namespace AWS
+} // namespace QtAws

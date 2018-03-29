@@ -23,8 +23,7 @@
 #include "sagemaker_p.h"
 #include "createtrainingjobrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SageMaker {
 
 class CreateTrainingJobRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws
 
 #endif

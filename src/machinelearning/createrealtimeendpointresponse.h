@@ -23,8 +23,7 @@
 #include "machinelearningresponse.h"
 #include "createrealtimeendpointrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MachineLearning {
 
 class CreateRealtimeEndpointResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -20,7 +20,7 @@
 #include "wafclientrequest.h"
 #include "wafclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WAF {
 
 /**
@@ -337,4 +337,4 @@ QString WafClientRequestPrivate::toString(const WafClientRequest::Action &action
 }
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws

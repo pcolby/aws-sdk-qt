@@ -23,8 +23,7 @@
 #include "cognitosync_p.h"
 #include "cognitosyncclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoSync {
 
 class CognitoSyncClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CognitoSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

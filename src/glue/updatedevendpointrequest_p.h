@@ -23,8 +23,7 @@
 #include "glue_p.h"
 #include "updatedevendpointrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glue {
 
 class UpdateDevEndpointRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws
 
 #endif

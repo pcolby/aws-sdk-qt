@@ -23,8 +23,7 @@
 #include "applicationautoscalingresponse.h"
 #include "describescalingpoliciesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ApplicationAutoScaling {
 
 class DescribeScalingPoliciesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ApplicationAutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "guarddutyresponse.h"
 #include "updatedetectorrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace GuardDuty {
 
 class UpdateDetectorResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace GuardDuty
-} // namespace AWS
+} // namespace QtAws
 
 #endif

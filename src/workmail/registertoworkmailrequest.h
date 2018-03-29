@@ -22,8 +22,7 @@
 
 #include "workmailrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkMail {
 
 class RegisterToWorkMailRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

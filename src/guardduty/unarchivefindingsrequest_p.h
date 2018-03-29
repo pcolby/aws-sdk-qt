@@ -23,8 +23,7 @@
 #include "guardduty_p.h"
 #include "unarchivefindingsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace GuardDuty {
 
 class UnarchiveFindingsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace GuardDuty
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Rekognition {
 
 /**
@@ -1214,4 +1214,4 @@ RekognitionClientPrivate::RekognitionClientPrivate(RekognitionClient * const q)
 }
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws

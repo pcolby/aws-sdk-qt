@@ -23,8 +23,7 @@
 #include "kinesis_p.h"
 #include "listshardsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Kinesis {
 
 class ListShardsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Kinesis
-} // namespace AWS
+} // namespace QtAws
 
 #endif

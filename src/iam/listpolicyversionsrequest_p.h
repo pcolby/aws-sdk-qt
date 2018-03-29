@@ -23,8 +23,7 @@
 #include "iam_p.h"
 #include "listpolicyversionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IAM {
 
 class ListPolicyVersionsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

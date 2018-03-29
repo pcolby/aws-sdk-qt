@@ -22,7 +22,7 @@
 #include "getcredentialsforidentityresponse.h"
 #include "cognitoidentityrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoIdentity {
 
 /**
@@ -116,4 +116,4 @@ GetCredentialsForIdentityRequestPrivate::GetCredentialsForIdentityRequestPrivate
 }
 
 } // namespace CognitoIdentity
-} // namespace AWS
+} // namespace QtAws

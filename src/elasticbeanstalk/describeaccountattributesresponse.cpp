@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 /**
@@ -103,4 +103,4 @@ void DescribeAccountAttributesResponsePrivate::DescribeAccountAttributesResponse
 }
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws

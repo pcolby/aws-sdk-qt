@@ -23,8 +23,7 @@
 #include "directoryserviceresponse.h"
 #include "describedirectoriesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectoryService {
 
 class DescribeDirectoriesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

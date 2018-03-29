@@ -23,8 +23,7 @@
 #include "daxresponse.h"
 #include "deleteparametergrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DAX {
 
 class DeleteParameterGroupResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws
 
 #endif

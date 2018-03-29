@@ -20,7 +20,7 @@
 #include "cognitoidentityclientrequest.h"
 #include "cognitoidentityclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoIdentity {
 
 /**
@@ -337,4 +337,4 @@ QString CognitoIdentityClientRequestPrivate::toString(const CognitoIdentityClien
 }
 
 } // namespace CognitoIdentity
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "ecrresponse.h"
 #include "getlifecyclepolicypreviewrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ECR {
 
 class GetLifecyclePolicyPreviewResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "authorizecachesecuritygroupingressresponse.h"
 #include "elasticacherequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElastiCache {
 
 /**
@@ -116,4 +116,4 @@ AuthorizeCacheSecurityGroupIngressRequestPrivate::AuthorizeCacheSecurityGroupIng
 }
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws

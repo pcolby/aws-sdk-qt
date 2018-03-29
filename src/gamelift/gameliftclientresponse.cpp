@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace GameLift {
 
 /**
@@ -67,4 +67,4 @@ GameLiftClientResponsePrivate::GameLiftClientResponsePrivate(
 }
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws

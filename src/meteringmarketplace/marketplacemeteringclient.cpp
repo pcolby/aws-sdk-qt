@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceMetering {
 
 /**
@@ -206,4 +206,4 @@ MarketplaceMeteringClientPrivate::MarketplaceMeteringClientPrivate(MarketplaceMe
 }
 
 } // namespace MarketplaceMetering
-} // namespace AWS
+} // namespace QtAws

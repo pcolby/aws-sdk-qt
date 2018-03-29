@@ -23,8 +23,7 @@
 #include "sesresponse.h"
 #include "getidentityverificationattributesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SES {
 
 class GetIdentityVerificationAttributesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws
 
 #endif

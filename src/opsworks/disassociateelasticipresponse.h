@@ -23,8 +23,7 @@
 #include "opsworksresponse.h"
 #include "disassociateelasticiprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorks {
 
 class DisassociateElasticIpResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace OpsWorks
-} // namespace AWS
+} // namespace QtAws
 
 #endif

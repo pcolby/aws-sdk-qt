@@ -22,7 +22,7 @@
 #include "createendpointconfigresponse.h"
 #include "sagemakerrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SageMaker {
 
 /**
@@ -116,4 +116,4 @@ CreateEndpointConfigRequestPrivate::CreateEndpointConfigRequestPrivate(
 }
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws

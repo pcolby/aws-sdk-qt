@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticsearchService {
 
 /**
@@ -333,4 +333,4 @@ ElasticsearchServiceClientPrivate::ElasticsearchServiceClientPrivate(Elasticsear
 }
 
 } // namespace ElasticsearchService
-} // namespace AWS
+} // namespace QtAws

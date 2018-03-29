@@ -23,8 +23,7 @@
 #include "iotjobsdataplaneresponse.h"
 #include "updatejobexecutionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoTJobsDataPlane {
 
 class UpdateJobExecutionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace IoTJobsDataPlane
-} // namespace AWS
+} // namespace QtAws
 
 #endif

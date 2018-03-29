@@ -23,8 +23,7 @@
 #include "cloudtrailresponse.h"
 #include "createtrailrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudTrail {
 
 class CreateTrailResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudTrail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

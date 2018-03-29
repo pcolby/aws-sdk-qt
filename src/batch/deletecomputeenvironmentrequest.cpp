@@ -22,7 +22,7 @@
 #include "deletecomputeenvironmentresponse.h"
 #include "batchrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Batch {
 
 /**
@@ -116,4 +116,4 @@ DeleteComputeEnvironmentRequestPrivate::DeleteComputeEnvironmentRequestPrivate(
 }
 
 } // namespace Batch
-} // namespace AWS
+} // namespace QtAws

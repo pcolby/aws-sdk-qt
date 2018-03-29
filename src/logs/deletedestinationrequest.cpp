@@ -22,7 +22,7 @@
 #include "deletedestinationresponse.h"
 #include "cloudwatchlogsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudWatchLogs {
 
 /**
@@ -116,4 +116,4 @@ DeleteDestinationRequestPrivate::DeleteDestinationRequestPrivate(
 }
 
 } // namespace CloudWatchLogs
-} // namespace AWS
+} // namespace QtAws

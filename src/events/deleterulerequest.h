@@ -22,8 +22,7 @@
 
 #include "cloudwatcheventsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatchEvents {
 
 class DeleteRuleRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace CloudWatchEvents
-} // namespace AWS
+} // namespace QtAws
 
 #endif

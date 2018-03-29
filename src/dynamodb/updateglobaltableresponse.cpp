@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DynamoDB {
 
 /**
@@ -103,4 +103,4 @@ void UpdateGlobalTableResponsePrivate::UpdateGlobalTableResponse(QXmlStreamReade
 }
 
 } // namespace DynamoDB
-} // namespace AWS
+} // namespace QtAws

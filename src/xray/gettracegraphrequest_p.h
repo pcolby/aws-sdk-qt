@@ -23,8 +23,7 @@
 #include "xray_p.h"
 #include "gettracegraphrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace XRay {
 
 class GetTraceGraphRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace XRay
-} // namespace AWS
+} // namespace QtAws
 
 #endif

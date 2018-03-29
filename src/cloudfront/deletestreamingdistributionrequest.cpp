@@ -22,7 +22,7 @@
 #include "deletestreamingdistributionresponse.h"
 #include "cloudfrontrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFront {
 
 /**
@@ -116,4 +116,4 @@ DeleteStreamingDistributionRequestPrivate::DeleteStreamingDistributionRequestPri
 }
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws

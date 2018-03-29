@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Lambda {
 
 /**
@@ -103,4 +103,4 @@ void UpdateFunctionConfigurationResponsePrivate::UpdateFunctionConfigurationResp
 }
 
 } // namespace Lambda
-} // namespace AWS
+} // namespace QtAws

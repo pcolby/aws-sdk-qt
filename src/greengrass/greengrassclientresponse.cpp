@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -67,4 +67,4 @@ GreengrassClientResponsePrivate::GreengrassClientResponsePrivate(
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "apigateway_p.h"
 #include "putintegrationresponserequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace APIGateway {
 
 class PutIntegrationResponseRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

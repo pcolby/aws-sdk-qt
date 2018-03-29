@@ -20,7 +20,7 @@
 #include "directconnectclientrequest.h"
 #include "directconnectclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DirectConnect {
 
 /**
@@ -337,4 +337,4 @@ QString DirectConnectClientRequestPrivate::toString(const DirectConnectClientReq
 }
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws

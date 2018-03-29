@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ImportExport {
 
 /**
@@ -103,4 +103,4 @@ void CancelJobResponsePrivate::CancelJobResponse(QXmlStreamReader &xml)
 }
 
 } // namespace ImportExport
-} // namespace AWS
+} // namespace QtAws

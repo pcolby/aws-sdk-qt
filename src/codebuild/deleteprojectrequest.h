@@ -22,8 +22,7 @@
 
 #include "codebuildrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeBuild {
 
 class DeleteProjectRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace CodeBuild
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "devicefarmresponse.h"
 #include "getjobrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DeviceFarm {
 
 class GetJobResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws
 
 #endif

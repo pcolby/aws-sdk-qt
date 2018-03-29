@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudDirectory {
 
 /**
@@ -1067,4 +1067,4 @@ CloudDirectoryClientPrivate::CloudDirectoryClientPrivate(CloudDirectoryClient * 
 }
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws

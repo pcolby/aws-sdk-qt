@@ -23,8 +23,7 @@
 #include "iamresponse.h"
 #include "deleteservicespecificcredentialrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IAM {
 
 class DeleteServiceSpecificCredentialResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "servicediscoveryresponse.h"
 #include "deletenamespacerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceDiscovery {
 
 class DeleteNamespaceResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ServiceDiscovery
-} // namespace AWS
+} // namespace QtAws
 
 #endif

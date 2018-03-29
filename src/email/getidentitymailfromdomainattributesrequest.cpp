@@ -22,7 +22,7 @@
 #include "getidentitymailfromdomainattributesresponse.h"
 #include "sesrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SES {
 
 /**
@@ -116,4 +116,4 @@ GetIdentityMailFromDomainAttributesRequestPrivate::GetIdentityMailFromDomainAttr
 }
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "batchdetectkeyphrasesresponse.h"
 #include "comprehendrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Comprehend {
 
 /**
@@ -116,4 +116,4 @@ BatchDetectKeyPhrasesRequestPrivate::BatchDetectKeyPhrasesRequestPrivate(
 }
 
 } // namespace Comprehend
-} // namespace AWS
+} // namespace QtAws

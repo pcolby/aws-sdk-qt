@@ -22,7 +22,7 @@
 #include "deletebranchresponse.h"
 #include "codecommitrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeCommit {
 
 /**
@@ -116,4 +116,4 @@ DeleteBranchRequestPrivate::DeleteBranchRequestPrivate(
 }
 
 } // namespace CodeCommit
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "createsubscriptiondefinitionresponse.h"
 #include "greengrassrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -116,4 +116,4 @@ CreateSubscriptionDefinitionRequestPrivate::CreateSubscriptionDefinitionRequestP
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

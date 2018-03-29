@@ -23,8 +23,7 @@
 #include "storagegatewayresponse.h"
 #include "adduploadbufferrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace StorageGateway {
 
 class AddUploadBufferResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

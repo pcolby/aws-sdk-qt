@@ -20,7 +20,7 @@
 #include "elasticacheclientrequest.h"
 #include "elasticacheclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElastiCache {
 
 /**
@@ -337,4 +337,4 @@ QString ElastiCacheClientRequestPrivate::toString(const ElastiCacheClientRequest
 }
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws

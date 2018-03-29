@@ -23,8 +23,7 @@
 #include "marketplacecommerceanalyticsresponse.h"
 #include "startsupportdataexportrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
 class StartSupportDataExportResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MarketplaceCommerceAnalytics
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "athenaresponse.h"
 #include "listqueryexecutionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Athena {
 
 class ListQueryExecutionsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Athena
-} // namespace AWS
+} // namespace QtAws
 
 #endif

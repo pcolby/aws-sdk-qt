@@ -23,8 +23,7 @@
 #include "rekognition_p.h"
 #include "getfacedetectionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Rekognition {
 
 class GetFaceDetectionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws
 
 #endif

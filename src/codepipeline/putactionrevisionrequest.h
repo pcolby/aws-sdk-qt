@@ -22,8 +22,7 @@
 
 #include "codepipelinerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodePipeline {
 
 class PutActionRevisionRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

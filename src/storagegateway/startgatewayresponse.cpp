@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace StorageGateway {
 
 /**
@@ -103,4 +103,4 @@ void StartGatewayResponsePrivate::StartGatewayResponse(QXmlStreamReader &xml)
 }
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "describereservedcachenodesresponse.h"
 #include "elasticacherequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElastiCache {
 
 /**
@@ -116,4 +116,4 @@ DescribeReservedCacheNodesRequestPrivate::DescribeReservedCacheNodesRequestPriva
 }
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws

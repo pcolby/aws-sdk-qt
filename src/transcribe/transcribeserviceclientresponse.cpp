@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace TranscribeService {
 
 /**
@@ -67,4 +67,4 @@ TranscribeServiceClientResponsePrivate::TranscribeServiceClientResponsePrivate(
 }
 
 } // namespace TranscribeService
-} // namespace AWS
+} // namespace QtAws

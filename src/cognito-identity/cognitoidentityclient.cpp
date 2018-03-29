@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoIdentity {
 
 /**
@@ -530,4 +530,4 @@ CognitoIdentityClientPrivate::CognitoIdentityClientPrivate(CognitoIdentityClient
 }
 
 } // namespace CognitoIdentity
-} // namespace AWS
+} // namespace QtAws

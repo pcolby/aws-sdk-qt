@@ -23,8 +23,7 @@
 #include "autoscaling_p.h"
 #include "disablemetricscollectionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AutoScaling {
 
 class DisableMetricsCollectionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

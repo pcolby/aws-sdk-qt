@@ -23,8 +23,7 @@
 #include "s3response.h"
 #include "putbucketrequestpaymentrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace S3 {
 
 class PutBucketRequestPaymentResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws
 
 #endif

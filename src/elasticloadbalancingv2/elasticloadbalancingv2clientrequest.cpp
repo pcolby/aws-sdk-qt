@@ -20,7 +20,7 @@
 #include "elasticloadbalancingv2clientrequest.h"
 #include "elasticloadbalancingv2clientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
 /**
@@ -337,4 +337,4 @@ QString ElasticLoadBalancingv2ClientRequestPrivate::toString(const ElasticLoadBa
 }
 
 } // namespace ElasticLoadBalancingv2
-} // namespace AWS
+} // namespace QtAws

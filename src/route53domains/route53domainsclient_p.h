@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace Route53Domains {
 
 class Route53DomainsClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace Route53Domains
-} // namespace AWS
+} // namespace QtAws
 
 #endif

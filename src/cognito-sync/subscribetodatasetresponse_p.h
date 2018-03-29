@@ -23,8 +23,7 @@
 #include "cognitosyncresponse.h"
 #include "subscribetodatasetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoSync {
 
 class SubscribeToDatasetResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CognitoSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

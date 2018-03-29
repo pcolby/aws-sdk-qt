@@ -22,7 +22,7 @@
 #include "listpresetsresponse.h"
 #include "elastictranscoderrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticTranscoder {
 
 /**
@@ -116,4 +116,4 @@ ListPresetsRequestPrivate::ListPresetsRequestPrivate(
 }
 
 } // namespace ElasticTranscoder
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "lexmodelbuildingservice_p.h"
 #include "getintentsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace LexModelBuildingService {
 
 class GetIntentsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace LexModelBuildingService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

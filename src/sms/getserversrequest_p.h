@@ -23,8 +23,7 @@
 #include "sms_p.h"
 #include "getserversrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SMS {
 
 class GetServersRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SMS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

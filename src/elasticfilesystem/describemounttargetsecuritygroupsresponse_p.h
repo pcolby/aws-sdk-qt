@@ -23,8 +23,7 @@
 #include "efsresponse.h"
 #include "describemounttargetsecuritygroupsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EFS {
 
 class DescribeMountTargetSecurityGroupsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

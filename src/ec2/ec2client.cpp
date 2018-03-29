@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace EC2 {
 
 /**
@@ -6091,4 +6091,4 @@ Ec2ClientPrivate::Ec2ClientPrivate(Ec2Client * const q)
 }
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws

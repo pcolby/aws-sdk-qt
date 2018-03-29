@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ResourceGroups {
 
 /**
@@ -67,4 +67,4 @@ ResourceGroupsClientResponsePrivate::ResourceGroupsClientResponsePrivate(
 }
 
 } // namespace ResourceGroups
-} // namespace AWS
+} // namespace QtAws

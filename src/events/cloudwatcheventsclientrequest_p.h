@@ -23,8 +23,7 @@
 #include "cloudwatchevents_p.h"
 #include "cloudwatcheventsclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatchEvents {
 
 class CloudWatchEventsClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudWatchEvents
-} // namespace AWS
+} // namespace QtAws
 
 #endif

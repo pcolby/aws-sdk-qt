@@ -23,8 +23,7 @@
 #include "servicecatalog_p.h"
 #include "terminateprovisionedproductrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceCatalog {
 
 class TerminateProvisionedProductRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws
 
 #endif

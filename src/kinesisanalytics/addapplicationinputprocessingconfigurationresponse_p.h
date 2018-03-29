@@ -23,8 +23,7 @@
 #include "kinesisanalyticsresponse.h"
 #include "addapplicationinputprocessingconfigurationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KinesisAnalytics {
 
 class AddApplicationInputProcessingConfigurationResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace KinesisAnalytics
-} // namespace AWS
+} // namespace QtAws
 
 #endif

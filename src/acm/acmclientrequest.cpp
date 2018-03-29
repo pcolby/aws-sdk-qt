@@ -20,7 +20,7 @@
 #include "acmclientrequest.h"
 #include "acmclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ACM {
 
 /**
@@ -337,4 +337,4 @@ QString AcmClientRequestPrivate::toString(const AcmClientRequest::Action &action
 }
 
 } // namespace ACM
-} // namespace AWS
+} // namespace QtAws

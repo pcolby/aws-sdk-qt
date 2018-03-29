@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 /**
@@ -954,4 +954,4 @@ ElasticBeanstalkClientPrivate::ElasticBeanstalkClientPrivate(ElasticBeanstalkCli
 }
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws

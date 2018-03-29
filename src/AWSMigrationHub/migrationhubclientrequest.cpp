@@ -20,7 +20,7 @@
 #include "migrationhubclientrequest.h"
 #include "migrationhubclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MigrationHub {
 
 /**
@@ -337,4 +337,4 @@ QString MigrationHubClientRequestPrivate::toString(const MigrationHubClientReque
 }
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws

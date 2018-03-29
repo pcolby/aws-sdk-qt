@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Cloud9 {
 
 /**
@@ -311,4 +311,4 @@ Cloud9ClientPrivate::Cloud9ClientPrivate(Cloud9Client * const q)
 }
 
 } // namespace Cloud9
-} // namespace AWS
+} // namespace QtAws

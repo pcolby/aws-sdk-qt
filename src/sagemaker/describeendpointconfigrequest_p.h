@@ -23,8 +23,7 @@
 #include "sagemaker_p.h"
 #include "describeendpointconfigrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SageMaker {
 
 class DescribeEndpointConfigRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws
 
 #endif

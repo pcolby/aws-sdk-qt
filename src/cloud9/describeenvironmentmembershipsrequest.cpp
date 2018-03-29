@@ -22,7 +22,7 @@
 #include "describeenvironmentmembershipsresponse.h"
 #include "cloud9request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Cloud9 {
 
 /**
@@ -116,4 +116,4 @@ DescribeEnvironmentMembershipsRequestPrivate::DescribeEnvironmentMembershipsRequ
 }
 
 } // namespace Cloud9
-} // namespace AWS
+} // namespace QtAws

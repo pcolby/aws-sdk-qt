@@ -23,8 +23,7 @@
 #include "greengrassresponse.h"
 #include "associateserviceroletoaccountrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Greengrass {
 
 class AssociateServiceRoleToAccountResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws
 
 #endif

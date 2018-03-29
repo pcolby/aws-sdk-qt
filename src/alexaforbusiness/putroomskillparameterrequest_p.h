@@ -23,8 +23,7 @@
 #include "alexaforbusiness_p.h"
 #include "putroomskillparameterrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AlexaForBusiness {
 
 class PutRoomSkillParameterRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws
 
 #endif

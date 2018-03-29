@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace WorkMail {
 
 /**
@@ -551,4 +551,4 @@ WorkMailClientPrivate::WorkMailClientPrivate(WorkMailClient * const q)
 }
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws

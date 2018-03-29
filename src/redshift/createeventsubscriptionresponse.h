@@ -23,8 +23,7 @@
 #include "redshiftresponse.h"
 #include "createeventsubscriptionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Redshift {
 
 class CreateEventSubscriptionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

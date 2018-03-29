@@ -22,7 +22,7 @@
 #include "enablemetricscollectionresponse.h"
 #include "autoscalingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScaling {
 
 /**
@@ -116,4 +116,4 @@ EnableMetricsCollectionRequestPrivate::EnableMetricsCollectionRequestPrivate(
 }
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws

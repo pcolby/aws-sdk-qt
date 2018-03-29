@@ -20,7 +20,7 @@
 #include "pricingclientrequest.h"
 #include "pricingclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Pricing {
 
 /**
@@ -337,4 +337,4 @@ QString PricingClientRequestPrivate::toString(const PricingClientRequest::Action
 }
 
 } // namespace Pricing
-} // namespace AWS
+} // namespace QtAws

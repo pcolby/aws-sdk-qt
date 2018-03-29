@@ -23,8 +23,7 @@
 #include "sqs_p.h"
 #include "sqsclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SQS {
 
 class SqsClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

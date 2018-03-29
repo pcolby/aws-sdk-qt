@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace EC2 {
 
 /**
@@ -103,4 +103,4 @@ void CreateVpnConnectionResponsePrivate::CreateVpnConnectionResponse(QXmlStreamR
 }
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws

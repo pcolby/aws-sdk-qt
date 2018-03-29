@@ -23,8 +23,7 @@
 #include "cognitosyncresponse.h"
 #include "describeidentitypoolusagerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoSync {
 
 class DescribeIdentityPoolUsageResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CognitoSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

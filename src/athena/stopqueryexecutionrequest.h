@@ -22,8 +22,7 @@
 
 #include "athenarequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Athena {
 
 class StopQueryExecutionRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Athena
-} // namespace AWS
+} // namespace QtAws
 
 #endif

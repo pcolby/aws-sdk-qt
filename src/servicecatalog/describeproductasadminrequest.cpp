@@ -22,7 +22,7 @@
 #include "describeproductasadminresponse.h"
 #include "servicecatalogrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceCatalog {
 
 /**
@@ -116,4 +116,4 @@ DescribeProductAsAdminRequestPrivate::DescribeProductAsAdminRequestPrivate(
 }
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "rekognitionresponse.h"
 #include "liststreamprocessorsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Rekognition {
 
 class ListStreamProcessorsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws
 
 #endif

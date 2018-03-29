@@ -23,8 +23,7 @@
 #include "ssm_p.h"
 #include "deletemaintenancewindowrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SSM {
 
 class DeleteMaintenanceWindowRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

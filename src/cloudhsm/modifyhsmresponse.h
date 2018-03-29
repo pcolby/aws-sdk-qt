@@ -23,8 +23,7 @@
 #include "cloudhsmresponse.h"
 #include "modifyhsmrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSM {
 
 class ModifyHsmResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "setidentityheadersinnotificationsenabledresponse.h"
 #include "sesrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SES {
 
 /**
@@ -116,4 +116,4 @@ SetIdentityHeadersInNotificationsEnabledRequestPrivate::SetIdentityHeadersInNoti
 }
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws

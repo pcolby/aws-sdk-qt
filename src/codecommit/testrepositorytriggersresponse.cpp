@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CodeCommit {
 
 /**
@@ -103,4 +103,4 @@ void TestRepositoryTriggersResponsePrivate::TestRepositoryTriggersResponse(QXmlS
 }
 
 } // namespace CodeCommit
-} // namespace AWS
+} // namespace QtAws

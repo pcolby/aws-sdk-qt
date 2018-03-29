@@ -27,8 +27,7 @@ class QNetworkReply;
 class AwsAbstractClient;
 class AwsAbstractCredentials;
 
-namespace AWS {
-
+namespace QtAws {
 namespace MobileAnalytics {
 
 class MobileAnalyticsClientPrivate;
@@ -60,6 +59,6 @@ private:
 };
 
 } // namespace MobileAnalytics
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "sns_p.h"
 #include "createtopicrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SNS {
 
 class CreateTopicRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SNS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

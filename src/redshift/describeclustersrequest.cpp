@@ -22,7 +22,7 @@
 #include "describeclustersresponse.h"
 #include "redshiftrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Redshift {
 
 /**
@@ -116,4 +116,4 @@ DescribeClustersRequestPrivate::DescribeClustersRequestPrivate(
 }
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws

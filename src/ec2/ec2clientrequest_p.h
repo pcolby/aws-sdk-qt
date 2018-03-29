@@ -23,8 +23,7 @@
 #include "ec2_p.h"
 #include "ec2clientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EC2 {
 
 class Ec2ClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

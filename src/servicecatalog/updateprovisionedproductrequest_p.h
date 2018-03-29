@@ -23,8 +23,7 @@
 #include "servicecatalog_p.h"
 #include "updateprovisionedproductrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceCatalog {
 
 class UpdateProvisionedProductRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws
 
 #endif

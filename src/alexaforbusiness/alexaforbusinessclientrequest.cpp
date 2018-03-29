@@ -20,7 +20,7 @@
 #include "alexaforbusinessclientrequest.h"
 #include "alexaforbusinessclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AlexaForBusiness {
 
 /**
@@ -337,4 +337,4 @@ QString AlexaForBusinessClientRequestPrivate::toString(const AlexaForBusinessCli
 }
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws

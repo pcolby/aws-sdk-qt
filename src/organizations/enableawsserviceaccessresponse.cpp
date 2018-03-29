@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Organizations {
 
 /**
@@ -103,4 +103,4 @@ void EnableAWSServiceAccessResponsePrivate::EnableAWSServiceAccessResponse(QXmlS
 }
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "codepipeline_p.h"
 #include "codepipelineclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodePipeline {
 
 class CodePipelineClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

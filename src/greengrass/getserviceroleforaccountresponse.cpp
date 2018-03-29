@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -103,4 +103,4 @@ void GetServiceRoleForAccountResponsePrivate::GetServiceRoleForAccountResponse(Q
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

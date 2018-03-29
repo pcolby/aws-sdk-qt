@@ -23,8 +23,7 @@
 #include "pollyresponse.h"
 #include "synthesizespeechrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Polly {
 
 class SynthesizeSpeechResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Polly
-} // namespace AWS
+} // namespace QtAws
 
 #endif

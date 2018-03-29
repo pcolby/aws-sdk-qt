@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Pinpoint {
 
 /**
@@ -960,4 +960,4 @@ PinpointClientPrivate::PinpointClientPrivate(PinpointClient * const q)
 }
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws

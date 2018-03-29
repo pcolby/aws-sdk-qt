@@ -23,8 +23,7 @@
 #include "lambdaresponse.h"
 #include "listeventsourcemappingsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lambda {
 
 class ListEventSourceMappingsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Lambda
-} // namespace AWS
+} // namespace QtAws
 
 #endif

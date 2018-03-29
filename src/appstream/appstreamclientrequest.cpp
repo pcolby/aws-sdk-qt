@@ -20,7 +20,7 @@
 #include "appstreamclientrequest.h"
 #include "appstreamclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AppStream {
 
 /**
@@ -337,4 +337,4 @@ QString AppStreamClientRequestPrivate::toString(const AppStreamClientRequest::Ac
 }
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws

@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace LexRuntimeService {
 
 /**
@@ -283,4 +283,4 @@ LexRuntimeServiceClientPrivate::LexRuntimeServiceClientPrivate(LexRuntimeService
 }
 
 } // namespace LexRuntimeService
-} // namespace AWS
+} // namespace QtAws

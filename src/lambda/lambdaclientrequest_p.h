@@ -23,8 +23,7 @@
 #include "lambda_p.h"
 #include "lambdaclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lambda {
 
 class LambdaClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Lambda
-} // namespace AWS
+} // namespace QtAws
 
 #endif

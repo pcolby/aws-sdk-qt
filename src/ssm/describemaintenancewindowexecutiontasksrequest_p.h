@@ -23,8 +23,7 @@
 #include "ssm_p.h"
 #include "describemaintenancewindowexecutiontasksrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SSM {
 
 class DescribeMaintenanceWindowExecutionTasksRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

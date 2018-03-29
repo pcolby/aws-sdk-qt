@@ -22,8 +22,7 @@
 
 #include "guarddutyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace GuardDuty {
 
 class ListThreatIntelSetsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace GuardDuty
-} // namespace AWS
+} // namespace QtAws
 
 #endif

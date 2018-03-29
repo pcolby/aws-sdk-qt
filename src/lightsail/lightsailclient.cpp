@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Lightsail {
 
 /**
@@ -1220,4 +1220,4 @@ LightsailClientPrivate::LightsailClientPrivate(LightsailClient * const q)
 }
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws

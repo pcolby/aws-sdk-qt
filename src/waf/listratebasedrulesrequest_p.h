@@ -23,8 +23,7 @@
 #include "waf_p.h"
 #include "listratebasedrulesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class ListRateBasedRulesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

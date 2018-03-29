@@ -23,8 +23,7 @@
 #include "dynamodbresponse.h"
 #include "dynamodbclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DynamoDB {
 
 class DynamoDBClientResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DynamoDB
-} // namespace AWS
+} // namespace QtAws
 
 #endif

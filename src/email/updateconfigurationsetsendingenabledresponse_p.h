@@ -23,8 +23,7 @@
 #include "sesresponse.h"
 #include "updateconfigurationsetsendingenabledrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SES {
 
 class UpdateConfigurationSetSendingEnabledResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws
 
 #endif

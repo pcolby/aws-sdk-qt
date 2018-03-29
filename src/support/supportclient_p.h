@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace Support {
 
 class SupportClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace Support
-} // namespace AWS
+} // namespace QtAws
 
 #endif

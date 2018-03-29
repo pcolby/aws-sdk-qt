@@ -23,8 +23,7 @@
 #include "elastictranscoder_p.h"
 #include "listjobsbystatusrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticTranscoder {
 
 class ListJobsByStatusRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ElasticTranscoder
-} // namespace AWS
+} // namespace QtAws
 
 #endif

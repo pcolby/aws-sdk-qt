@@ -23,8 +23,7 @@
 #include "databasemigrationservice_p.h"
 #include "deletereplicationsubnetgrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 class DeleteReplicationSubnetGroupRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

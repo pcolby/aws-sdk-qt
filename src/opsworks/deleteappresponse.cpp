@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace OpsWorks {
 
 /**
@@ -103,4 +103,4 @@ void DeleteAppResponsePrivate::DeleteAppResponse(QXmlStreamReader &xml)
 }
 
 } // namespace OpsWorks
-} // namespace AWS
+} // namespace QtAws

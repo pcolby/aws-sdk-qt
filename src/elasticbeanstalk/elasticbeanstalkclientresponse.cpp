@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 /**
@@ -67,4 +67,4 @@ ElasticBeanstalkClientResponsePrivate::ElasticBeanstalkClientResponsePrivate(
 }
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws

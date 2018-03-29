@@ -23,8 +23,7 @@
 #include "inspectorresponse.h"
 #include "gettelemetrymetadatarequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Inspector {
 
 class GetTelemetryMetadataResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws
 
 #endif

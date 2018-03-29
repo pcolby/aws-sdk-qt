@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Athena {
 
 /**
@@ -325,4 +325,4 @@ AthenaClientPrivate::AthenaClientPrivate(AthenaClient * const q)
 }
 
 } // namespace Athena
-} // namespace AWS
+} // namespace QtAws

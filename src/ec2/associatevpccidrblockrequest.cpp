@@ -22,7 +22,7 @@
 #include "associatevpccidrblockresponse.h"
 #include "ec2request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace EC2 {
 
 /**
@@ -116,4 +116,4 @@ AssociateVpcCidrBlockRequestPrivate::AssociateVpcCidrBlockRequestPrivate(
 }
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws

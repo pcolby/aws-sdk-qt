@@ -23,8 +23,7 @@
 #include "snsresponse.h"
 #include "publishrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SNS {
 
 class PublishResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SNS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

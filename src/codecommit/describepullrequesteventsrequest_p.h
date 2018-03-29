@@ -23,8 +23,7 @@
 #include "codecommit_p.h"
 #include "describepullrequesteventsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeCommit {
 
 class DescribePullRequestEventsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CodeCommit
-} // namespace AWS
+} // namespace QtAws
 
 #endif

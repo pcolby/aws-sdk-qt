@@ -23,8 +23,7 @@
 #include "wafregionalresponse.h"
 #include "disassociatewebaclrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAFRegional {
 
 class DisassociateWebACLResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WAFRegional
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "servicediscovery_p.h"
 #include "servicediscoveryclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceDiscovery {
 
 class ServiceDiscoveryClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ServiceDiscovery
-} // namespace AWS
+} // namespace QtAws
 
 #endif

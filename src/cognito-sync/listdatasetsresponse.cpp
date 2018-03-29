@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoSync {
 
 /**
@@ -103,4 +103,4 @@ void ListDatasetsResponsePrivate::ListDatasetsResponse(QXmlStreamReader &xml)
 }
 
 } // namespace CognitoSync
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "firehoseresponse.h"
 #include "createdeliverystreamrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Firehose {
 
 class CreateDeliveryStreamResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Firehose
-} // namespace AWS
+} // namespace QtAws
 
 #endif

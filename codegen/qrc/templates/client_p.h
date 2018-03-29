@@ -6,7 +6,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace {{NameSpaceName}} {
 
 class {{ClassName}};
@@ -23,6 +23,6 @@ private:
 };
 
 } // namespace {{NameSpaceName}}
-} // namespace AWS
+} // namespace QtAws
 
 #endif

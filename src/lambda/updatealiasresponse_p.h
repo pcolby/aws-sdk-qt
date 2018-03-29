@@ -23,8 +23,7 @@
 #include "lambdaresponse.h"
 #include "updatealiasrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lambda {
 
 class UpdateAliasResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Lambda
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "route53response.h"
 #include "deletehostedzonerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53 {
 
 class DeleteHostedZoneResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws
 
 #endif

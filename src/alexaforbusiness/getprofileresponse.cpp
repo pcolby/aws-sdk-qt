@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace AlexaForBusiness {
 
 /**
@@ -103,4 +103,4 @@ void GetProfileResponsePrivate::GetProfileResponse(QXmlStreamReader &xml)
 }
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws

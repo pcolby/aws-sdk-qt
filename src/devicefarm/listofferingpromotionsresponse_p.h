@@ -23,8 +23,7 @@
 #include "devicefarmresponse.h"
 #include "listofferingpromotionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DeviceFarm {
 
 class ListOfferingPromotionsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws
 
 #endif

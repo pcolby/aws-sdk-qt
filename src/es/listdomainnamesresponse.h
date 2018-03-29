@@ -23,8 +23,7 @@
 #include "elasticsearchserviceresponse.h"
 #include "listdomainnamesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticsearchService {
 
 class ListDomainNamesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ElasticsearchService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "clouddirectoryresponse.h"
 #include "getappliedschemaversionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudDirectory {
 
 class GetAppliedSchemaVersionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws
 
 #endif

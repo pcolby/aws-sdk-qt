@@ -23,8 +23,7 @@
 #include "rdsresponse.h"
 #include "stopdbinstancerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace RDS {
 
 class StopDBInstanceResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

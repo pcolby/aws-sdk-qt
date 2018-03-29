@@ -23,8 +23,7 @@
 #include "glacierresponse.h"
 #include "completemultipartuploadrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glacier {
 
 class CompleteMultipartUploadResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws
 
 #endif

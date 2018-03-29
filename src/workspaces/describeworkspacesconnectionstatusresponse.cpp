@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace WorkSpaces {
 
 /**
@@ -103,4 +103,4 @@ void DescribeWorkspacesConnectionStatusResponsePrivate::DescribeWorkspacesConnec
 }
 
 } // namespace WorkSpaces
-} // namespace AWS
+} // namespace QtAws

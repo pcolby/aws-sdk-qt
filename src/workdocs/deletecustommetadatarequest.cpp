@@ -22,7 +22,7 @@
 #include "deletecustommetadataresponse.h"
 #include "workdocsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WorkDocs {
 
 /**
@@ -116,4 +116,4 @@ DeleteCustomMetadataRequestPrivate::DeleteCustomMetadataRequestPrivate(
 }
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws

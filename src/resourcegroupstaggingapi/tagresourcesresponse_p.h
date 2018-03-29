@@ -23,8 +23,7 @@
 #include "resourcegroupstaggingapiresponse.h"
 #include "tagresourcesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ResourceGroupsTaggingAPI {
 
 class TagResourcesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ResourceGroupsTaggingAPI
-} // namespace AWS
+} // namespace QtAws
 
 #endif

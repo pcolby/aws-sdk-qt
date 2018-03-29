@@ -22,8 +22,7 @@
 
 #include "cloud9request.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Cloud9 {
 
 class DeleteEnvironmentMembershipRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Cloud9
-} // namespace AWS
+} // namespace QtAws
 
 #endif

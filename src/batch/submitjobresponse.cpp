@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Batch {
 
 /**
@@ -103,4 +103,4 @@ void SubmitJobResponsePrivate::SubmitJobResponse(QXmlStreamReader &xml)
 }
 
 } // namespace Batch
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "gethostedzonelimitresponse.h"
 #include "route53request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Route53 {
 
 /**
@@ -116,4 +116,4 @@ GetHostedZoneLimitRequestPrivate::GetHostedZoneLimitRequestPrivate(
 }
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws

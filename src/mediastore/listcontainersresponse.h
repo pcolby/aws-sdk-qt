@@ -23,8 +23,7 @@
 #include "mediastoreresponse.h"
 #include "listcontainersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaStore {
 
 class ListContainersResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MediaStore
-} // namespace AWS
+} // namespace QtAws
 
 #endif

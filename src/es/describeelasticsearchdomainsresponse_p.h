@@ -23,8 +23,7 @@
 #include "elasticsearchserviceresponse.h"
 #include "describeelasticsearchdomainsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticsearchService {
 
 class DescribeElasticsearchDomainsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ElasticsearchService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

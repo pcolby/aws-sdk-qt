@@ -22,8 +22,7 @@
 
 #include "cloudwatchrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatch {
 
 class DeleteDashboardsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace CloudWatch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisAnalytics {
 
 /**
@@ -67,4 +67,4 @@ KinesisAnalyticsClientResponsePrivate::KinesisAnalyticsClientResponsePrivate(
 }
 
 } // namespace KinesisAnalytics
-} // namespace AWS
+} // namespace QtAws

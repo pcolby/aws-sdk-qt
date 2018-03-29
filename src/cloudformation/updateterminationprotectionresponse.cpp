@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFormation {
 
 /**
@@ -103,4 +103,4 @@ void UpdateTerminationProtectionResponsePrivate::UpdateTerminationProtectionResp
 }
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws

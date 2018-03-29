@@ -22,7 +22,7 @@
 #include "describenfsfilesharesresponse.h"
 #include "storagegatewayrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace StorageGateway {
 
 /**
@@ -116,4 +116,4 @@ DescribeNFSFileSharesRequestPrivate::DescribeNFSFileSharesRequestPrivate(
 }
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws

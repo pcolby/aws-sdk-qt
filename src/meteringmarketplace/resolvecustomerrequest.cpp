@@ -22,7 +22,7 @@
 #include "resolvecustomerresponse.h"
 #include "marketplacemeteringrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceMetering {
 
 /**
@@ -116,4 +116,4 @@ ResolveCustomerRequestPrivate::ResolveCustomerRequestPrivate(
 }
 
 } // namespace MarketplaceMetering
-} // namespace AWS
+} // namespace QtAws

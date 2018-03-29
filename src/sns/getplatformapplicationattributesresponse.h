@@ -23,8 +23,7 @@
 #include "snsresponse.h"
 #include "getplatformapplicationattributesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SNS {
 
 class GetPlatformApplicationAttributesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SNS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "mediastoredataresponse.h"
 #include "putobjectrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaStoreData {
 
 class PutObjectResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace MediaStoreData
-} // namespace AWS
+} // namespace QtAws
 
 #endif

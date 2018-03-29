@@ -22,8 +22,7 @@
 
 #include "sagemakerrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SageMaker {
 
 class CreatePresignedNotebookInstanceUrlRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws
 
 #endif

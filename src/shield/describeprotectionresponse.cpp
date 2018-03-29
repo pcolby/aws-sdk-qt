@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Shield {
 
 /**
@@ -103,4 +103,4 @@ void DescribeProtectionResponsePrivate::DescribeProtectionResponse(QXmlStreamRea
 }
 
 } // namespace Shield
-} // namespace AWS
+} // namespace QtAws

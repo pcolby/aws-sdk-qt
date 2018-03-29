@@ -23,8 +23,7 @@
 #include "dynamodbresponse.h"
 #include "describetimetoliverequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DynamoDB {
 
 class DescribeTimeToLiveResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DynamoDB
-} // namespace AWS
+} // namespace QtAws
 
 #endif

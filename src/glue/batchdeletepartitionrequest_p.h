@@ -23,8 +23,7 @@
 #include "glue_p.h"
 #include "batchdeletepartitionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glue {
 
 class BatchDeletePartitionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws
 
 #endif

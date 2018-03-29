@@ -22,7 +22,7 @@
 #include "startmatchbackfillresponse.h"
 #include "gameliftrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace GameLift {
 
 /**
@@ -116,4 +116,4 @@ StartMatchBackfillRequestPrivate::StartMatchBackfillRequestPrivate(
 }
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "completevaultlockresponse.h"
 #include "glacierrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Glacier {
 
 /**
@@ -116,4 +116,4 @@ CompleteVaultLockRequestPrivate::CompleteVaultLockRequestPrivate(
 }
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws

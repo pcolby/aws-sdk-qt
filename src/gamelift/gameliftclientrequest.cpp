@@ -20,7 +20,7 @@
 #include "gameliftclientrequest.h"
 #include "gameliftclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace GameLift {
 
 /**
@@ -337,4 +337,4 @@ QString GameLiftClientRequestPrivate::toString(const GameLiftClientRequest::Acti
 }
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws

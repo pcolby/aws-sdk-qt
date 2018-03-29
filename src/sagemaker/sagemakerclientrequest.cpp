@@ -20,7 +20,7 @@
 #include "sagemakerclientrequest.h"
 #include "sagemakerclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SageMaker {
 
 /**
@@ -337,4 +337,4 @@ QString SageMakerClientRequestPrivate::toString(const SageMakerClientRequest::Ac
 }
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws

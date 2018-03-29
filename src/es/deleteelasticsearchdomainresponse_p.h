@@ -23,8 +23,7 @@
 #include "elasticsearchserviceresponse.h"
 #include "deleteelasticsearchdomainrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticsearchService {
 
 class DeleteElasticsearchDomainResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ElasticsearchService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

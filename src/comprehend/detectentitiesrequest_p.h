@@ -23,8 +23,7 @@
 #include "comprehend_p.h"
 #include "detectentitiesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Comprehend {
 
 class DetectEntitiesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Comprehend
-} // namespace AWS
+} // namespace QtAws
 
 #endif

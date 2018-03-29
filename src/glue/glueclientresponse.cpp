@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Glue {
 
 /**
@@ -67,4 +67,4 @@ GlueClientResponsePrivate::GlueClientResponsePrivate(
 }
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws

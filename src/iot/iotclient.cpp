@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace IoT {
 
 /**
@@ -2048,4 +2048,4 @@ IoTClientPrivate::IoTClientPrivate(IoTClient * const q)
 }
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws

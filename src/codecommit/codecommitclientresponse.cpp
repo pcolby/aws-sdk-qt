@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CodeCommit {
 
 /**
@@ -67,4 +67,4 @@ CodeCommitClientResponsePrivate::CodeCommitClientResponsePrivate(
 }
 
 } // namespace CodeCommit
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "sfnresponse.h"
 #include "sendtaskheartbeatrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SFN {
 
 class SendTaskHeartbeatResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws
 
 #endif

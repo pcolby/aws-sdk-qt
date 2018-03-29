@@ -20,7 +20,7 @@
 #include "lambdaclientrequest.h"
 #include "lambdaclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Lambda {
 
 /**
@@ -337,4 +337,4 @@ QString LambdaClientRequestPrivate::toString(const LambdaClientRequest::Action &
 }
 
 } // namespace Lambda
-} // namespace AWS
+} // namespace QtAws

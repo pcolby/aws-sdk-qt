@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceMetering {
 
 class MarketplaceMeteringClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace MarketplaceMetering
-} // namespace AWS
+} // namespace QtAws
 
 #endif

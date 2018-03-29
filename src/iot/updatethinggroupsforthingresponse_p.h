@@ -23,8 +23,7 @@
 #include "iotresponse.h"
 #include "updatethinggroupsforthingrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class UpdateThingGroupsForThingResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

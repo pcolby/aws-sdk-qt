@@ -22,7 +22,7 @@
 #include "allocatepublicvirtualinterfaceresponse.h"
 #include "directconnectrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DirectConnect {
 
 /**
@@ -116,4 +116,4 @@ AllocatePublicVirtualInterfaceRequestPrivate::AllocatePublicVirtualInterfaceRequ
 }
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws

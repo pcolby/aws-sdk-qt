@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DeviceFarm {
 
 /**
@@ -67,4 +67,4 @@ DeviceFarmClientResponsePrivate::DeviceFarmClientResponsePrivate(
 }
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws

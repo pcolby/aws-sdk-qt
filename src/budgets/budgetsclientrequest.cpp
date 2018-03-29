@@ -20,7 +20,7 @@
 #include "budgetsclientrequest.h"
 #include "budgetsclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Budgets {
 
 /**
@@ -337,4 +337,4 @@ QString BudgetsClientRequestPrivate::toString(const BudgetsClientRequest::Action
 }
 
 } // namespace Budgets
-} // namespace AWS
+} // namespace QtAws

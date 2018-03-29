@@ -22,8 +22,7 @@
 
 #include "codedeployrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeDeploy {
 
 class DeleteDeploymentConfigRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws
 
 #endif

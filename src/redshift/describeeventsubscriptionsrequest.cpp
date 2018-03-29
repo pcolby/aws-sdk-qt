@@ -22,7 +22,7 @@
 #include "describeeventsubscriptionsresponse.h"
 #include "redshiftrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Redshift {
 
 /**
@@ -116,4 +116,4 @@ DescribeEventSubscriptionsRequestPrivate::DescribeEventSubscriptionsRequestPriva
 }
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws

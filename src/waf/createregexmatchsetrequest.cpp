@@ -22,7 +22,7 @@
 #include "createregexmatchsetresponse.h"
 #include "wafrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WAF {
 
 /**
@@ -116,4 +116,4 @@ CreateRegexMatchSetRequestPrivate::CreateRegexMatchSetRequestPrivate(
 }
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws

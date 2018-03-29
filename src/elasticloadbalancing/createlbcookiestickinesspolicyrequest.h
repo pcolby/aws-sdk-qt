@@ -22,8 +22,7 @@
 
 #include "elasticloadbalancingrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticLoadBalancing {
 
 class CreateLBCookieStickinessPolicyRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace ElasticLoadBalancing
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoIdentity {
 
 /**
@@ -103,4 +103,4 @@ void ListIdentitiesResponsePrivate::ListIdentitiesResponse(QXmlStreamReader &xml
 }
 
 } // namespace CognitoIdentity
-} // namespace AWS
+} // namespace QtAws

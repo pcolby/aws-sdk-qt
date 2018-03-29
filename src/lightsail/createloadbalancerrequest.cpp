@@ -22,7 +22,7 @@
 #include "createloadbalancerresponse.h"
 #include "lightsailrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Lightsail {
 
 /**
@@ -116,4 +116,4 @@ CreateLoadBalancerRequestPrivate::CreateLoadBalancerRequestPrivate(
 }
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws

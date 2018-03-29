@@ -22,7 +22,7 @@
 #include "listnamedqueriesresponse.h"
 #include "athenarequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Athena {
 
 /**
@@ -116,4 +116,4 @@ ListNamedQueriesRequestPrivate::ListNamedQueriesRequestPrivate(
 }
 
 } // namespace Athena
-} // namespace AWS
+} // namespace QtAws

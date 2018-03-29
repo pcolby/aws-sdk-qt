@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Pinpoint {
 
 /**
@@ -67,4 +67,4 @@ PinpointClientResponsePrivate::PinpointClientResponsePrivate(
 }
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws

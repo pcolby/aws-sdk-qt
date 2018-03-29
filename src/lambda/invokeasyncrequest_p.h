@@ -23,8 +23,7 @@
 #include "lambda_p.h"
 #include "invokeasyncrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lambda {
 
 class InvokeAsyncRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Lambda
-} // namespace AWS
+} // namespace QtAws
 
 #endif

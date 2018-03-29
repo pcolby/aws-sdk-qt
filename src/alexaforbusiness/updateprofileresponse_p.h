@@ -23,8 +23,7 @@
 #include "alexaforbusinessresponse.h"
 #include "updateprofilerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AlexaForBusiness {
 
 class UpdateProfileResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Route53Domains {
 
 /**
@@ -569,4 +569,4 @@ Route53DomainsClientPrivate::Route53DomainsClientPrivate(Route53DomainsClient * 
 }
 
 } // namespace Route53Domains
-} // namespace AWS
+} // namespace QtAws

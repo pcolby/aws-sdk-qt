@@ -22,7 +22,7 @@
 #include "listgrantsresponse.h"
 #include "kmsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace KMS {
 
 /**
@@ -116,4 +116,4 @@ ListGrantsRequestPrivate::ListGrantsRequestPrivate(
 }
 
 } // namespace KMS
-} // namespace AWS
+} // namespace QtAws

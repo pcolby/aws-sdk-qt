@@ -20,7 +20,7 @@
 #include "mediaconvertclientrequest.h"
 #include "mediaconvertclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MediaConvert {
 
 /**
@@ -337,4 +337,4 @@ QString MediaConvertClientRequestPrivate::toString(const MediaConvertClientReque
 }
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws

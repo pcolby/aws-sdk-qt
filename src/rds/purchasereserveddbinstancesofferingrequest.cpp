@@ -22,7 +22,7 @@
 #include "purchasereserveddbinstancesofferingresponse.h"
 #include "rdsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -116,4 +116,4 @@ PurchaseReservedDBInstancesOfferingRequestPrivate::PurchaseReservedDBInstancesOf
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

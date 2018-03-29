@@ -23,8 +23,7 @@
 #include "mobileanalyticsresponse.h"
 #include "puteventsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MobileAnalytics {
 
 class PutEventsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MobileAnalytics
-} // namespace AWS
+} // namespace QtAws
 
 #endif

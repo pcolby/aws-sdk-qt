@@ -22,7 +22,7 @@
 #include "deleteinputresponse.h"
 #include "medialiverequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MediaLive {
 
 /**
@@ -116,4 +116,4 @@ DeleteInputRequestPrivate::DeleteInputRequestPrivate(
 }
 
 } // namespace MediaLive
-} // namespace AWS
+} // namespace QtAws

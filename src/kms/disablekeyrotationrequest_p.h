@@ -23,8 +23,7 @@
 #include "kms_p.h"
 #include "disablekeyrotationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KMS {
 
 class DisableKeyRotationRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace KMS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

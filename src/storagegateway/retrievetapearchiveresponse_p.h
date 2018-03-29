@@ -23,8 +23,7 @@
 #include "storagegatewayresponse.h"
 #include "retrievetapearchiverequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace StorageGateway {
 
 class RetrieveTapeArchiveResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

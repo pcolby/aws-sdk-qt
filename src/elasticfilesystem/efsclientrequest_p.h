@@ -23,8 +23,7 @@
 #include "efs_p.h"
 #include "efsclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EFS {
 
 class EfsClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

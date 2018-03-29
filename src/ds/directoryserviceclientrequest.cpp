@@ -20,7 +20,7 @@
 #include "directoryserviceclientrequest.h"
 #include "directoryserviceclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DirectoryService {
 
 /**
@@ -337,4 +337,4 @@ QString DirectoryServiceClientRequestPrivate::toString(const DirectoryServiceCli
 }
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws

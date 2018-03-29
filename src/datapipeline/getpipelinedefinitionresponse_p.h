@@ -23,8 +23,7 @@
 #include "datapipelineresponse.h"
 #include "getpipelinedefinitionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DataPipeline {
 
 class GetPipelineDefinitionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DataPipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

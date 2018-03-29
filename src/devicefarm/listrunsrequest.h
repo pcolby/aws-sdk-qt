@@ -22,8 +22,7 @@
 
 #include "devicefarmrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DeviceFarm {
 
 class ListRunsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "rds_p.h"
 #include "describedbsecuritygroupsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace RDS {
 
 class DescribeDBSecurityGroupsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

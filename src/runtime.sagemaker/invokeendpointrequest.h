@@ -22,8 +22,7 @@
 
 #include "sagemakerruntimerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SageMakerRuntime {
 
 class InvokeEndpointRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace SageMakerRuntime
-} // namespace AWS
+} // namespace QtAws
 
 #endif

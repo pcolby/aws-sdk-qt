@@ -23,8 +23,7 @@
 #include "health_p.h"
 #include "describeeventdetailsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Health {
 
 class DescribeEventDetailsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Health
-} // namespace AWS
+} // namespace QtAws
 
 #endif

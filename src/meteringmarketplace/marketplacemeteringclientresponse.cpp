@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceMetering {
 
 /**
@@ -67,4 +67,4 @@ MarketplaceMeteringClientResponsePrivate::MarketplaceMeteringClientResponsePriva
 }
 
 } // namespace MarketplaceMetering
-} // namespace AWS
+} // namespace QtAws

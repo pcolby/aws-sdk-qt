@@ -22,7 +22,7 @@
 #include "modifyinstancefleetresponse.h"
 #include "emrrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace EMR {
 
 /**
@@ -116,4 +116,4 @@ ModifyInstanceFleetRequestPrivate::ModifyInstanceFleetRequestPrivate(
 }
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws

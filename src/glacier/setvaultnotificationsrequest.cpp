@@ -22,7 +22,7 @@
 #include "setvaultnotificationsresponse.h"
 #include "glacierrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Glacier {
 
 /**
@@ -116,4 +116,4 @@ SetVaultNotificationsRequestPrivate::SetVaultNotificationsRequestPrivate(
 }
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws

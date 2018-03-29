@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Route53Domains {
 
 /**
@@ -103,4 +103,4 @@ void CheckDomainAvailabilityResponsePrivate::CheckDomainAvailabilityResponse(QXm
 }
 
 } // namespace Route53Domains
-} // namespace AWS
+} // namespace QtAws

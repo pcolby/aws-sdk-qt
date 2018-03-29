@@ -20,7 +20,7 @@
 #include "devicefarmclientrequest.h"
 #include "devicefarmclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DeviceFarm {
 
 /**
@@ -337,4 +337,4 @@ QString DeviceFarmClientRequestPrivate::toString(const DeviceFarmClientRequest::
 }
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws

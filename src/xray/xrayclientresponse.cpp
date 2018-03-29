@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace XRay {
 
 /**
@@ -67,4 +67,4 @@ XRayClientResponsePrivate::XRayClientResponsePrivate(
 }
 
 } // namespace XRay
-} // namespace AWS
+} // namespace QtAws

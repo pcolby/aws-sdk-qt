@@ -22,8 +22,7 @@
 
 #include "redshiftrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Redshift {
 
 class DescribeClusterSecurityGroupsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

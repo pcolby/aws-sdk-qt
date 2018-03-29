@@ -23,8 +23,7 @@
 #include "elasticache_p.h"
 #include "resetcacheparametergrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElastiCache {
 
 class ResetCacheParameterGroupRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws
 
 #endif

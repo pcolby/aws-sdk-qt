@@ -22,7 +22,7 @@
 #include "decreasereplicationfactorresponse.h"
 #include "daxrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DAX {
 
 /**
@@ -116,4 +116,4 @@ DecreaseReplicationFactorRequestPrivate::DecreaseReplicationFactorRequestPrivate
 }
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws

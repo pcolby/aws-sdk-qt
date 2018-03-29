@@ -22,7 +22,7 @@
 #include "verifyemailidentityresponse.h"
 #include "sesrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SES {
 
 /**
@@ -116,4 +116,4 @@ VerifyEmailIdentityRequestPrivate::VerifyEmailIdentityRequestPrivate(
 }
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws

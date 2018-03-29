@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace S3 {
 
 /**
@@ -67,4 +67,4 @@ S3ClientResponsePrivate::S3ClientResponsePrivate(
 }
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 /**
@@ -103,4 +103,4 @@ void StartReplicationTaskResponsePrivate::StartReplicationTaskResponse(QXmlStrea
 }
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws

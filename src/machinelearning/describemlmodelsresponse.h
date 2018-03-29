@@ -23,8 +23,7 @@
 #include "machinelearningresponse.h"
 #include "describemlmodelsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MachineLearning {
 
 class DescribeMLModelsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws
 
 #endif

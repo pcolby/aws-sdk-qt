@@ -23,8 +23,7 @@
 #include "codestar_p.h"
 #include "listteammembersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeStar {
 
 class ListTeamMembersRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CodeStar
-} // namespace AWS
+} // namespace QtAws
 
 #endif

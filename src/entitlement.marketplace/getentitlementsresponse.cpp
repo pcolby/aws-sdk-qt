@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceEntitlementService {
 
 /**
@@ -103,4 +103,4 @@ void GetEntitlementsResponsePrivate::GetEntitlementsResponse(QXmlStreamReader &x
 }
 
 } // namespace MarketplaceEntitlementService
-} // namespace AWS
+} // namespace QtAws

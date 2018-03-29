@@ -22,8 +22,7 @@
 
 #include "elastictranscoderrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticTranscoder {
 
 class ReadPresetRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace ElasticTranscoder
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,8 +22,7 @@
 
 #include "kinesisvideorequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KinesisVideo {
 
 class ListStreamsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace KinesisVideo
-} // namespace AWS
+} // namespace QtAws
 
 #endif

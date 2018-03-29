@@ -22,7 +22,7 @@
 #include "updateindexingconfigurationresponse.h"
 #include "iotrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IoT {
 
 /**
@@ -116,4 +116,4 @@ UpdateIndexingConfigurationRequestPrivate::UpdateIndexingConfigurationRequestPri
 }
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws

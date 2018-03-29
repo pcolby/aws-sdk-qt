@@ -23,8 +23,7 @@
 #include "batch_p.h"
 #include "updatecomputeenvironmentrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Batch {
 
 class UpdateComputeEnvironmentRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Batch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

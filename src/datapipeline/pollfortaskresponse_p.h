@@ -23,8 +23,7 @@
 #include "datapipelineresponse.h"
 #include "pollfortaskrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DataPipeline {
 
 class PollForTaskResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DataPipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

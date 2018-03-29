@@ -23,8 +23,7 @@
 #include "swf_p.h"
 #include "signalworkflowexecutionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SWF {
 
 class SignalWorkflowExecutionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

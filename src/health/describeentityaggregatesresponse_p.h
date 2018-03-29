@@ -23,8 +23,7 @@
 #include "healthresponse.h"
 #include "describeentityaggregatesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Health {
 
 class DescribeEntityAggregatesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Health
-} // namespace AWS
+} // namespace QtAws
 
 #endif

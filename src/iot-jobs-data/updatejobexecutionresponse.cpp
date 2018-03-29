@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace IoTJobsDataPlane {
 
 /**
@@ -103,4 +103,4 @@ void UpdateJobExecutionResponsePrivate::UpdateJobExecutionResponse(QXmlStreamRea
 }
 
 } // namespace IoTJobsDataPlane
-} // namespace AWS
+} // namespace QtAws

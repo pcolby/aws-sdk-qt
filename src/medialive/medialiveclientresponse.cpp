@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MediaLive {
 
 /**
@@ -67,4 +67,4 @@ MediaLiveClientResponsePrivate::MediaLiveClientResponsePrivate(
 }
 
 } // namespace MediaLive
-} // namespace AWS
+} // namespace QtAws

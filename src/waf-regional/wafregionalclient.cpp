@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace WAFRegional {
 
 /**
@@ -2549,4 +2549,4 @@ WAFRegionalClientPrivate::WAFRegionalClientPrivate(WAFRegionalClient * const q)
 }
 
 } // namespace WAFRegional
-} // namespace AWS
+} // namespace QtAws

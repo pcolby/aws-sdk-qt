@@ -23,8 +23,7 @@
 #include "elasticloadbalancingv2_p.h"
 #include "describeaccountlimitsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
 class DescribeAccountLimitsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ElasticLoadBalancingv2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

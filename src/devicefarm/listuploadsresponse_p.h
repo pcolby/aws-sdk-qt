@@ -23,8 +23,7 @@
 #include "devicefarmresponse.h"
 #include "listuploadsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DeviceFarm {
 
 class ListUploadsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws
 
 #endif

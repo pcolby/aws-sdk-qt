@@ -20,7 +20,7 @@
 #include "opsworkscmclientrequest.h"
 #include "opsworkscmclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace OpsWorksCM {
 
 /**
@@ -337,4 +337,4 @@ QString OpsWorksCMClientRequestPrivate::toString(const OpsWorksCMClientRequest::
 }
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws

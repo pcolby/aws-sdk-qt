@@ -23,8 +23,7 @@
 #include "acm_p.h"
 #include "acmclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ACM {
 
 class AcmClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ACM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

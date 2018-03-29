@@ -22,7 +22,7 @@
 #include "describetagsresponse.h"
 #include "efsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace EFS {
 
 /**
@@ -116,4 +116,4 @@ DescribeTagsRequestPrivate::DescribeTagsRequestPrivate(
 }
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws

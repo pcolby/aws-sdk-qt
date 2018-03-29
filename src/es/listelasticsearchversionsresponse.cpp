@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticsearchService {
 
 /**
@@ -103,4 +103,4 @@ void ListElasticsearchVersionsResponsePrivate::ListElasticsearchVersionsResponse
 }
 
 } // namespace ElasticsearchService
-} // namespace AWS
+} // namespace QtAws

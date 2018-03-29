@@ -23,8 +23,7 @@
 #include "cloudwatchlogsresponse.h"
 #include "getlogeventsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatchLogs {
 
 class GetLogEventsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudWatchLogs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

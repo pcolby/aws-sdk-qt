@@ -22,7 +22,7 @@
 #include "deleteautoscalinggroupresponse.h"
 #include "autoscalingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScaling {
 
 /**
@@ -116,4 +116,4 @@ DeleteAutoScalingGroupRequestPrivate::DeleteAutoScalingGroupRequestPrivate(
 }
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws

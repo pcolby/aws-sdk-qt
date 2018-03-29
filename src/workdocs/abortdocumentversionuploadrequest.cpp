@@ -22,7 +22,7 @@
 #include "abortdocumentversionuploadresponse.h"
 #include "workdocsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WorkDocs {
 
 /**
@@ -116,4 +116,4 @@ AbortDocumentVersionUploadRequestPrivate::AbortDocumentVersionUploadRequestPriva
 }
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws

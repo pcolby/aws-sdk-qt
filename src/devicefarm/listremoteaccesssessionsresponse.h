@@ -23,8 +23,7 @@
 #include "devicefarmresponse.h"
 #include "listremoteaccesssessionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DeviceFarm {
 
 class ListRemoteAccessSessionsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws
 
 #endif

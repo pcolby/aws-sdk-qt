@@ -23,8 +23,7 @@
 #include "athenaresponse.h"
 #include "athenaclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Athena {
 
 class AthenaClientResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Athena
-} // namespace AWS
+} // namespace QtAws
 
 #endif

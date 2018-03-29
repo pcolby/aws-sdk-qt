@@ -23,8 +23,7 @@
 #include "organizationsresponse.h"
 #include "listawsserviceaccessfororganizationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Organizations {
 
 class ListAWSServiceAccessForOrganizationResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Route53 {
 
 /**
@@ -103,4 +103,4 @@ void GetGeoLocationResponsePrivate::GetGeoLocationResponse(QXmlStreamReader &xml
 }
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws

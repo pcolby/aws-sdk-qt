@@ -20,7 +20,7 @@
 #include "storagegatewayclientrequest.h"
 #include "storagegatewayclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace StorageGateway {
 
 /**
@@ -337,4 +337,4 @@ QString StorageGatewayClientRequestPrivate::toString(const StorageGatewayClientR
 }
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws

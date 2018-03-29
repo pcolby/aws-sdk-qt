@@ -23,8 +23,7 @@
 #include "sfn_p.h"
 #include "stopexecutionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SFN {
 
 class StopExecutionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws
 
 #endif

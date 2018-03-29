@@ -23,8 +23,7 @@
 #include "elasticsearchservice_p.h"
 #include "describeelasticsearchinstancetypelimitsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticsearchService {
 
 class DescribeElasticsearchInstanceTypeLimitsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ElasticsearchService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

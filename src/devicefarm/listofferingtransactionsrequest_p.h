@@ -23,8 +23,7 @@
 #include "devicefarm_p.h"
 #include "listofferingtransactionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DeviceFarm {
 
 class ListOfferingTransactionsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws
 
 #endif

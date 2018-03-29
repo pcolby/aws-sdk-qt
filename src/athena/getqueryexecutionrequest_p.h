@@ -23,8 +23,7 @@
 #include "athena_p.h"
 #include "getqueryexecutionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Athena {
 
 class GetQueryExecutionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Athena
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "cognitoidentityproviderresponse.h"
 #include "adminsetusersettingsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 class AdminSetUserSettingsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws
 
 #endif

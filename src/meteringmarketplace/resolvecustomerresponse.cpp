@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceMetering {
 
 /**
@@ -103,4 +103,4 @@ void ResolveCustomerResponsePrivate::ResolveCustomerResponse(QXmlStreamReader &x
 }
 
 } // namespace MarketplaceMetering
-} // namespace AWS
+} // namespace QtAws

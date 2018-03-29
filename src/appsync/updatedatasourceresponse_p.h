@@ -23,8 +23,7 @@
 #include "appsyncresponse.h"
 #include "updatedatasourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppSync {
 
 class UpdateDataSourceResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

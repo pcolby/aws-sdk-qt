@@ -23,8 +23,7 @@
 #include "configserviceresponse.h"
 #include "deliverconfigsnapshotrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ConfigService {
 
 class DeliverConfigSnapshotResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

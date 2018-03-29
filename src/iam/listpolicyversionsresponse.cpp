@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace IAM {
 
 /**
@@ -103,4 +103,4 @@ void ListPolicyVersionsResponsePrivate::ListPolicyVersionsResponse(QXmlStreamRea
 }
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws

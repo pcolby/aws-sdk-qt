@@ -22,7 +22,7 @@
 #include "describeapplicationstateresponse.h"
 #include "migrationhubrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MigrationHub {
 
 /**
@@ -116,4 +116,4 @@ DescribeApplicationStateRequestPrivate::DescribeApplicationStateRequestPrivate(
 }
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws

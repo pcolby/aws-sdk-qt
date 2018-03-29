@@ -20,7 +20,7 @@
 #include "cloudformationclientrequest.h"
 #include "cloudformationclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFormation {
 
 /**
@@ -337,4 +337,4 @@ QString CloudFormationClientRequestPrivate::toString(const CloudFormationClientR
 }
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws

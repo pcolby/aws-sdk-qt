@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace GameLift {
 
 /**
@@ -5119,4 +5119,4 @@ GameLiftClientPrivate::GameLiftClientPrivate(GameLiftClient * const q)
 }
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws

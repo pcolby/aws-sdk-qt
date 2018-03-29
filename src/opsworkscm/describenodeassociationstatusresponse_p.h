@@ -23,8 +23,7 @@
 #include "opsworkscmresponse.h"
 #include "describenodeassociationstatusrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorksCM {
 
 class DescribeNodeAssociationStatusResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

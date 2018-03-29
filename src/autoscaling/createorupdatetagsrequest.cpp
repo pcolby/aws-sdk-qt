@@ -22,7 +22,7 @@
 #include "createorupdatetagsresponse.h"
 #include "autoscalingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScaling {
 
 /**
@@ -116,4 +116,4 @@ CreateOrUpdateTagsRequestPrivate::CreateOrUpdateTagsRequestPrivate(
 }
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws

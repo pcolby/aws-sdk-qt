@@ -22,7 +22,7 @@
 #include "upgradepublishedschemaresponse.h"
 #include "clouddirectoryrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudDirectory {
 
 /**
@@ -116,4 +116,4 @@ UpgradePublishedSchemaRequestPrivate::UpgradePublishedSchemaRequestPrivate(
 }
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "updatesigningcertificateresponse.h"
 #include "iamrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IAM {
 
 /**
@@ -116,4 +116,4 @@ UpdateSigningCertificateRequestPrivate::UpdateSigningCertificateRequestPrivate(
 }
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws

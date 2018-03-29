@@ -23,8 +23,7 @@
 #include "mqresponse.h"
 #include "listconfigurationrevisionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MQ {
 
 class ListConfigurationRevisionsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MQ
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "core/awsabstractresponse.h"
 //#include "@todo-error.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DynamoDBStreams {
 
 class DynamoDBStreamsClientResponsePrivate;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DynamoDBStreams
-} // namespace AWS
+} // namespace QtAws
 
 #endif

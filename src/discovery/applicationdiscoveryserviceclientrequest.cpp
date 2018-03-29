@@ -20,7 +20,7 @@
 #include "applicationdiscoveryserviceclientrequest.h"
 #include "applicationdiscoveryserviceclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 /**
@@ -337,4 +337,4 @@ QString ApplicationDiscoveryServiceClientRequestPrivate::toString(const Applicat
 }
 
 } // namespace ApplicationDiscoveryService
-} // namespace AWS
+} // namespace QtAws

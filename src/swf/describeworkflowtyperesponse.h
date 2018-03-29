@@ -23,8 +23,7 @@
 #include "swfresponse.h"
 #include "describeworkflowtyperequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SWF {
 
 class DescribeWorkflowTypeResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

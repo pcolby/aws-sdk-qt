@@ -23,8 +23,7 @@
 #include "mediaconvertresponse.h"
 #include "listpresetsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaConvert {
 
 class ListPresetsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws
 
 #endif

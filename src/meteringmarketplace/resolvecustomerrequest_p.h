@@ -23,8 +23,7 @@
 #include "marketplacemetering_p.h"
 #include "resolvecustomerrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MarketplaceMetering {
 
 class ResolveCustomerRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace MarketplaceMetering
-} // namespace AWS
+} // namespace QtAws
 
 #endif

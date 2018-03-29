@@ -23,8 +23,7 @@
 #include "appsync_p.h"
 #include "updategraphqlapirequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppSync {
 
 class UpdateGraphqlApiRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

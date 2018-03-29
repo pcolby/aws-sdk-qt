@@ -20,7 +20,7 @@
 #include "importexportclientrequest.h"
 #include "importexportclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ImportExport {
 
 /**
@@ -337,4 +337,4 @@ QString ImportExportClientRequestPrivate::toString(const ImportExportClientReque
 }
 
 } // namespace ImportExport
-} // namespace AWS
+} // namespace QtAws

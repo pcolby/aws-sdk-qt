@@ -23,8 +23,7 @@
 #include "cloudwatchlogsresponse.h"
 #include "describeresourcepoliciesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatchLogs {
 
 class DescribeResourcePoliciesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudWatchLogs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

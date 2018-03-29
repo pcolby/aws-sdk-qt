@@ -23,8 +23,7 @@
 #include "mediaconvertresponse.h"
 #include "deletequeuerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaConvert {
 
 class DeleteQueueResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws
 
 #endif

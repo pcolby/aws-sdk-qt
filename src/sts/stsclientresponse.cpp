@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace STS {
 
 /**
@@ -67,4 +67,4 @@ StsClientResponsePrivate::StsClientResponsePrivate(
 }
 
 } // namespace STS
-} // namespace AWS
+} // namespace QtAws

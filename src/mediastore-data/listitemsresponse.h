@@ -23,8 +23,7 @@
 #include "mediastoredataresponse.h"
 #include "listitemsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaStoreData {
 
 class ListItemsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MediaStoreData
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "putlifecycleeventhookexecutionstatusresponse.h"
 #include "codedeployrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeDeploy {
 
 /**
@@ -116,4 +116,4 @@ PutLifecycleEventHookExecutionStatusRequestPrivate::PutLifecycleEventHookExecuti
 }
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws

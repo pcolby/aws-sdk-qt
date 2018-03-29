@@ -23,8 +23,7 @@
 #include "rekognitionresponse.h"
 #include "describestreamprocessorrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Rekognition {
 
 class DescribeStreamProcessorResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudWatch {
 
 /**
@@ -544,4 +544,4 @@ CloudWatchClientPrivate::CloudWatchClientPrivate(CloudWatchClient * const q)
 }
 
 } // namespace CloudWatch
-} // namespace AWS
+} // namespace QtAws

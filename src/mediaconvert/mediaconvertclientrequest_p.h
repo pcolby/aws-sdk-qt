@@ -23,8 +23,7 @@
 #include "mediaconvert_p.h"
 #include "mediaconvertclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaConvert {
 
 class MediaConvertClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws
 
 #endif

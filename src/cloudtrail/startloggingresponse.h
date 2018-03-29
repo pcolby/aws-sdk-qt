@@ -23,8 +23,7 @@
 #include "cloudtrailresponse.h"
 #include "startloggingrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudTrail {
 
 class StartLoggingResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudTrail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

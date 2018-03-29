@@ -23,8 +23,7 @@
 #include "iotresponse.h"
 #include "listcertificatesbycarequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class ListCertificatesByCAResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

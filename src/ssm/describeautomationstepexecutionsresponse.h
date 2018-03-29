@@ -23,8 +23,7 @@
 #include "ssmresponse.h"
 #include "describeautomationstepexecutionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SSM {
 
 class DescribeAutomationStepExecutionsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

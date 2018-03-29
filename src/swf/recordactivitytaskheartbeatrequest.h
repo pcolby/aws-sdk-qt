@@ -22,8 +22,7 @@
 
 #include "swfrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SWF {
 
 class RecordActivityTaskHeartbeatRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

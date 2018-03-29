@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace ACM {
 
 /**
@@ -403,4 +403,4 @@ AcmClientPrivate::AcmClientPrivate(AcmClient * const q)
 }
 
 } // namespace ACM
-} // namespace AWS
+} // namespace QtAws

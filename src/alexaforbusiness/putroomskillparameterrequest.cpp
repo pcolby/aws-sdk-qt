@@ -22,7 +22,7 @@
 #include "putroomskillparameterresponse.h"
 #include "alexaforbusinessrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AlexaForBusiness {
 
 /**
@@ -116,4 +116,4 @@ PutRoomSkillParameterRequestPrivate::PutRoomSkillParameterRequestPrivate(
 }
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SSM {
 
 /**
@@ -103,4 +103,4 @@ void DeleteParametersResponsePrivate::DeleteParametersResponse(QXmlStreamReader 
 }
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws

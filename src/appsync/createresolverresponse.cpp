@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace AppSync {
 
 /**
@@ -103,4 +103,4 @@ void CreateResolverResponsePrivate::CreateResolverResponse(QXmlStreamReader &xml
 }
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws

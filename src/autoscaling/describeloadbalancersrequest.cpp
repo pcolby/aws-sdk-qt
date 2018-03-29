@@ -22,7 +22,7 @@
 #include "describeloadbalancersresponse.h"
 #include "autoscalingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScaling {
 
 /**
@@ -116,4 +116,4 @@ DescribeLoadBalancersRequestPrivate::DescribeLoadBalancersRequestPrivate(
 }
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws

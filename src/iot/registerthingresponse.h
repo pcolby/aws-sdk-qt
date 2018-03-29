@@ -23,8 +23,7 @@
 #include "iotresponse.h"
 #include "registerthingrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class RegisterThingResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

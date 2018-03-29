@@ -22,8 +22,7 @@
 
 #include "stsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace STS {
 
 class GetFederationTokenRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace STS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

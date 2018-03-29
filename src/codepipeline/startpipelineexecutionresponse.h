@@ -23,8 +23,7 @@
 #include "codepipelineresponse.h"
 #include "startpipelineexecutionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodePipeline {
 
 class StartPipelineExecutionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

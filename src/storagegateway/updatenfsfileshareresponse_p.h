@@ -23,8 +23,7 @@
 #include "storagegatewayresponse.h"
 #include "updatenfsfilesharerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace StorageGateway {
 
 class UpdateNFSFileShareResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

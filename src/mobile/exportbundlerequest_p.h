@@ -23,8 +23,7 @@
 #include "mobile_p.h"
 #include "exportbundlerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Mobile {
 
 class ExportBundleRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Mobile
-} // namespace AWS
+} // namespace QtAws
 
 #endif

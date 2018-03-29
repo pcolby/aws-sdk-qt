@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceEntitlementService {
 
 /**
@@ -67,4 +67,4 @@ MarketplaceEntitlementServiceClientResponsePrivate::MarketplaceEntitlementServic
 }
 
 } // namespace MarketplaceEntitlementService
-} // namespace AWS
+} // namespace QtAws

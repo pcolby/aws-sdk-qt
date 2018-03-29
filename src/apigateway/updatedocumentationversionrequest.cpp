@@ -22,7 +22,7 @@
 #include "updatedocumentationversionresponse.h"
 #include "apigatewayrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace APIGateway {
 
 /**
@@ -116,4 +116,4 @@ UpdateDocumentationVersionRequestPrivate::UpdateDocumentationVersionRequestPriva
 }
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws

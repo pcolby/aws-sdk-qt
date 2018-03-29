@@ -23,8 +23,7 @@
 #include "clouddirectoryresponse.h"
 #include "deletetypedlinkfacetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudDirectory {
 
 class DeleteTypedLinkFacetResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws
 
 #endif

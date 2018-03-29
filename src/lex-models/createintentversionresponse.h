@@ -23,8 +23,7 @@
 #include "lexmodelbuildingserviceresponse.h"
 #include "createintentversionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace LexModelBuildingService {
 
 class CreateIntentVersionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace LexModelBuildingService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "createreservedinstanceslistingresponse.h"
 #include "ec2request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace EC2 {
 
 /**
@@ -116,4 +116,4 @@ CreateReservedInstancesListingRequestPrivate::CreateReservedInstancesListingRequ
 }
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws

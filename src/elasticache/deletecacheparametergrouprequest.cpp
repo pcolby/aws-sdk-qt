@@ -22,7 +22,7 @@
 #include "deletecacheparametergroupresponse.h"
 #include "elasticacherequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElastiCache {
 
 /**
@@ -116,4 +116,4 @@ DeleteCacheParameterGroupRequestPrivate::DeleteCacheParameterGroupRequestPrivate
 }
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws

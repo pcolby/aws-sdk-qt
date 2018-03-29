@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudWatchLogs {
 
 /**
@@ -103,4 +103,4 @@ void TagLogGroupResponsePrivate::TagLogGroupResponse(QXmlStreamReader &xml)
 }
 
 } // namespace CloudWatchLogs
-} // namespace AWS
+} // namespace QtAws

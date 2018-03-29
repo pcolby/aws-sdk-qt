@@ -23,8 +23,7 @@
 #include "clouddirectory_p.h"
 #include "removefacetfromobjectrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudDirectory {
 
 class RemoveFacetFromObjectRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws
 
 #endif

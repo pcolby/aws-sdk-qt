@@ -22,7 +22,7 @@
 #include "describetrailsresponse.h"
 #include "cloudtrailrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudTrail {
 
 /**
@@ -116,4 +116,4 @@ DescribeTrailsRequestPrivate::DescribeTrailsRequestPrivate(
 }
 
 } // namespace CloudTrail
-} // namespace AWS
+} // namespace QtAws

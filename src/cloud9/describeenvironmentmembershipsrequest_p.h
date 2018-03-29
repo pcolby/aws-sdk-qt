@@ -23,8 +23,7 @@
 #include "cloud9_p.h"
 #include "describeenvironmentmembershipsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Cloud9 {
 
 class DescribeEnvironmentMembershipsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Cloud9
-} // namespace AWS
+} // namespace QtAws
 
 #endif

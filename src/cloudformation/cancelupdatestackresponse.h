@@ -23,8 +23,7 @@
 #include "cloudformationresponse.h"
 #include "cancelupdatestackrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFormation {
 
 class CancelUpdateStackResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws
 
 #endif

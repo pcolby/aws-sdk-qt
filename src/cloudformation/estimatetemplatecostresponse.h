@@ -23,8 +23,7 @@
 #include "cloudformationresponse.h"
 #include "estimatetemplatecostrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFormation {
 
 class EstimateTemplateCostResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws
 
 #endif

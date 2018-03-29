@@ -23,8 +23,7 @@
 #include "greengrassresponse.h"
 #include "listdevicedefinitionversionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Greengrass {
 
 class ListDeviceDefinitionVersionsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws
 
 #endif

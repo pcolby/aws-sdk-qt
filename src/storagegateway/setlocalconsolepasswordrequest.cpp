@@ -22,7 +22,7 @@
 #include "setlocalconsolepasswordresponse.h"
 #include "storagegatewayrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace StorageGateway {
 
 /**
@@ -116,4 +116,4 @@ SetLocalConsolePasswordRequestPrivate::SetLocalConsolePasswordRequestPrivate(
 }
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws

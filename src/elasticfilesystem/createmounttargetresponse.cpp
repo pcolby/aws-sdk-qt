@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace EFS {
 
 /**
@@ -103,4 +103,4 @@ void CreateMountTargetResponsePrivate::CreateMountTargetResponse(QXmlStreamReade
 }
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws

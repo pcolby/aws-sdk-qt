@@ -23,8 +23,7 @@
 #include "greengrassresponse.h"
 #include "getsubscriptiondefinitionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Greengrass {
 
 class GetSubscriptionDefinitionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws
 
 #endif

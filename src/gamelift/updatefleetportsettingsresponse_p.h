@@ -23,8 +23,7 @@
 #include "gameliftresponse.h"
 #include "updatefleetportsettingsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace GameLift {
 
 class UpdateFleetPortSettingsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

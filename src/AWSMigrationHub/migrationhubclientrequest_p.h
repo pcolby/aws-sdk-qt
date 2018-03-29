@@ -23,8 +23,7 @@
 #include "migrationhub_p.h"
 #include "migrationhubclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MigrationHub {
 
 class MigrationHubClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws
 
 #endif

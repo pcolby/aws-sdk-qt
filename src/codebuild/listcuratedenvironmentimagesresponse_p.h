@@ -23,8 +23,7 @@
 #include "codebuildresponse.h"
 #include "listcuratedenvironmentimagesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeBuild {
 
 class ListCuratedEnvironmentImagesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CodeBuild
-} // namespace AWS
+} // namespace QtAws
 
 #endif

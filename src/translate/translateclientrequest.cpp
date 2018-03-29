@@ -20,7 +20,7 @@
 #include "translateclientrequest.h"
 #include "translateclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Translate {
 
 /**
@@ -337,4 +337,4 @@ QString TranslateClientRequestPrivate::toString(const TranslateClientRequest::Ac
 }
 
 } // namespace Translate
-} // namespace AWS
+} // namespace QtAws

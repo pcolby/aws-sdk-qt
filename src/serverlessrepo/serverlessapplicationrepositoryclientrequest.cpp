@@ -20,7 +20,7 @@
 #include "serverlessapplicationrepositoryclientrequest.h"
 #include "serverlessapplicationrepositoryclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServerlessApplicationRepository {
 
 /**
@@ -337,4 +337,4 @@ QString ServerlessApplicationRepositoryClientRequestPrivate::toString(const Serv
 }
 
 } // namespace ServerlessApplicationRepository
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "comprehend_p.h"
 #include "detectkeyphrasesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Comprehend {
 
 class DetectKeyPhrasesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Comprehend
-} // namespace AWS
+} // namespace QtAws
 
 #endif

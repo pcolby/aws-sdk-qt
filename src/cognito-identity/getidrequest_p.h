@@ -23,8 +23,7 @@
 #include "cognitoidentity_p.h"
 #include "getidrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentity {
 
 class GetIdRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CognitoIdentity
-} // namespace AWS
+} // namespace QtAws
 
 #endif

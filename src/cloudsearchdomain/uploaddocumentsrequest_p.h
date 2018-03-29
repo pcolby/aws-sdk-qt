@@ -23,8 +23,7 @@
 #include "cloudsearchdomain_p.h"
 #include "uploaddocumentsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudSearchDomain {
 
 class UploadDocumentsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudSearchDomain
-} // namespace AWS
+} // namespace QtAws
 
 #endif

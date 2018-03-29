@@ -20,7 +20,7 @@
 #include "rekognitionclientrequest.h"
 #include "rekognitionclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Rekognition {
 
 /**
@@ -337,4 +337,4 @@ QString RekognitionClientRequestPrivate::toString(const RekognitionClientRequest
 }
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "gameliftresponse.h"
 #include "updateruntimeconfigurationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace GameLift {
 
 class UpdateRuntimeConfigurationResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

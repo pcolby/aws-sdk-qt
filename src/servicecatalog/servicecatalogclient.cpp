@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceCatalog {
 
 /**
@@ -1054,4 +1054,4 @@ ServiceCatalogClientPrivate::ServiceCatalogClientPrivate(ServiceCatalogClient * 
 }
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws

@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SFN {
 
 /**
@@ -67,4 +67,4 @@ SfnClientResponsePrivate::SfnClientResponsePrivate(
 }
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws

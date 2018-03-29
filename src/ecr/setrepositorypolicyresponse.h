@@ -23,8 +23,7 @@
 #include "ecrresponse.h"
 #include "setrepositorypolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ECR {
 
 class SetRepositoryPolicyResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "listresourcesforwebaclresponse.h"
 #include "wafregionalrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WAFRegional {
 
 /**
@@ -116,4 +116,4 @@ ListResourcesForWebACLRequestPrivate::ListResourcesForWebACLRequestPrivate(
 }
 
 } // namespace WAFRegional
-} // namespace AWS
+} // namespace QtAws

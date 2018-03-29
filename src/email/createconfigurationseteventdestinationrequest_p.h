@@ -23,8 +23,7 @@
 #include "ses_p.h"
 #include "createconfigurationseteventdestinationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SES {
 
 class CreateConfigurationSetEventDestinationRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws
 
 #endif

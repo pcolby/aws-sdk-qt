@@ -20,7 +20,7 @@
 #include "clouddirectoryclientrequest.h"
 #include "clouddirectoryclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudDirectory {
 
 /**
@@ -337,4 +337,4 @@ QString CloudDirectoryClientRequestPrivate::toString(const CloudDirectoryClientR
 }
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws

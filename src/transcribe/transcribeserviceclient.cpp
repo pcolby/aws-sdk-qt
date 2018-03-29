@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace TranscribeService {
 
 /**
@@ -160,4 +160,4 @@ TranscribeServiceClientPrivate::TranscribeServiceClientPrivate(TranscribeService
 }
 
 } // namespace TranscribeService
-} // namespace AWS
+} // namespace QtAws

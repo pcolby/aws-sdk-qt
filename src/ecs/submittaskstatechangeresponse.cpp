@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ECS {
 
 /**
@@ -103,4 +103,4 @@ void SubmitTaskStateChangeResponsePrivate::SubmitTaskStateChangeResponse(QXmlStr
 }
 
 } // namespace ECS
-} // namespace AWS
+} // namespace QtAws

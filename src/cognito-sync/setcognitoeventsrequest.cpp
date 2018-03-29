@@ -22,7 +22,7 @@
 #include "setcognitoeventsresponse.h"
 #include "cognitosyncrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoSync {
 
 /**
@@ -116,4 +116,4 @@ SetCognitoEventsRequestPrivate::SetCognitoEventsRequestPrivate(
 }
 
 } // namespace CognitoSync
-} // namespace AWS
+} // namespace QtAws

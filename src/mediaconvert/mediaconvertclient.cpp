@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace MediaConvert {
 
 /**
@@ -385,4 +385,4 @@ MediaConvertClientPrivate::MediaConvertClientPrivate(MediaConvertClient * const 
 }
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws

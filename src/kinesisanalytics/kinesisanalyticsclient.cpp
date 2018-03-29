@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisAnalytics {
 
 /**
@@ -538,4 +538,4 @@ KinesisAnalyticsClientPrivate::KinesisAnalyticsClientPrivate(KinesisAnalyticsCli
 }
 
 } // namespace KinesisAnalytics
-} // namespace AWS
+} // namespace QtAws

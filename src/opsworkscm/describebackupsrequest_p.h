@@ -23,8 +23,7 @@
 #include "opsworkscm_p.h"
 #include "describebackupsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorksCM {
 
 class DescribeBackupsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

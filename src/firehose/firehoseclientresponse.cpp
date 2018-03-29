@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Firehose {
 
 /**
@@ -67,4 +67,4 @@ FirehoseClientResponsePrivate::FirehoseClientResponsePrivate(
 }
 
 } // namespace Firehose
-} // namespace AWS
+} // namespace QtAws

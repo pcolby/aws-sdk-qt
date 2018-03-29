@@ -23,8 +23,7 @@
 #include "glueresponse.h"
 #include "createconnectionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glue {
 
 class CreateConnectionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -20,7 +20,7 @@
 #include "marketplaceentitlementserviceclientrequest.h"
 #include "marketplaceentitlementserviceclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceEntitlementService {
 
 /**
@@ -337,4 +337,4 @@ QString MarketplaceEntitlementServiceClientRequestPrivate::toString(const Market
 }
 
 } // namespace MarketplaceEntitlementService
-} // namespace AWS
+} // namespace QtAws

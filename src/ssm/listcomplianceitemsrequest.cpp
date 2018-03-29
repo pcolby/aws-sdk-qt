@@ -22,7 +22,7 @@
 #include "listcomplianceitemsresponse.h"
 #include "ssmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SSM {
 
 /**
@@ -116,4 +116,4 @@ ListComplianceItemsRequestPrivate::ListComplianceItemsRequestPrivate(
 }
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws

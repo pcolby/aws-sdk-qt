@@ -23,8 +23,7 @@
 #include "workdocsresponse.h"
 #include "createcustommetadatarequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkDocs {
 
 class CreateCustomMetadataResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

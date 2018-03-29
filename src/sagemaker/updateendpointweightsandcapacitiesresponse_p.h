@@ -23,8 +23,7 @@
 #include "sagemakerresponse.h"
 #include "updateendpointweightsandcapacitiesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SageMaker {
 
 class UpdateEndpointWeightsAndCapacitiesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws
 
 #endif

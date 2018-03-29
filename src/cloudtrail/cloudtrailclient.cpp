@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudTrail {
 
 /**
@@ -453,4 +453,4 @@ CloudTrailClientPrivate::CloudTrailClientPrivate(CloudTrailClient * const q)
 }
 
 } // namespace CloudTrail
-} // namespace AWS
+} // namespace QtAws

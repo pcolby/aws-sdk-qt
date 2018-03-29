@@ -22,7 +22,7 @@
 #include "deletereplicationsubnetgroupresponse.h"
 #include "databasemigrationservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 /**
@@ -116,4 +116,4 @@ DeleteReplicationSubnetGroupRequestPrivate::DeleteReplicationSubnetGroupRequestP
 }
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws

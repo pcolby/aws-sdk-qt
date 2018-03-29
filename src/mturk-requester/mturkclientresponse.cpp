@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MTurk {
 
 /**
@@ -67,4 +67,4 @@ MTurkClientResponsePrivate::MTurkClientResponsePrivate(
 }
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws

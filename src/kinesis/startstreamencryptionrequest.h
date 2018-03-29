@@ -22,8 +22,7 @@
 
 #include "kinesisrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Kinesis {
 
 class StartStreamEncryptionRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Kinesis
-} // namespace AWS
+} // namespace QtAws
 
 #endif

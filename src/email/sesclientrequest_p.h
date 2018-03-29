@@ -23,8 +23,7 @@
 #include "ses_p.h"
 #include "sesclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SES {
 
 class SesClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws
 
 #endif

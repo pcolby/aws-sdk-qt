@@ -23,8 +23,7 @@
 #include "shield_p.h"
 #include "getsubscriptionstaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Shield {
 
 class GetSubscriptionStateRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Shield
-} // namespace AWS
+} // namespace QtAws
 
 #endif

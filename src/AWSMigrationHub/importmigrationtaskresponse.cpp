@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MigrationHub {
 
 /**
@@ -103,4 +103,4 @@ void ImportMigrationTaskResponsePrivate::ImportMigrationTaskResponse(QXmlStreamR
 }
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws

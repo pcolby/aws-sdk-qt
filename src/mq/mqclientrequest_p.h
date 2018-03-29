@@ -23,8 +23,7 @@
 #include "mq_p.h"
 #include "mqclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MQ {
 
 class MqClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MQ
-} // namespace AWS
+} // namespace QtAws
 
 #endif

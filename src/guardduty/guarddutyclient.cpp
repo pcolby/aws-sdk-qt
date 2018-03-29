@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace GuardDuty {
 
 /**
@@ -607,4 +607,4 @@ GuardDutyClientPrivate::GuardDutyClientPrivate(GuardDutyClient * const q)
 }
 
 } // namespace GuardDuty
-} // namespace AWS
+} // namespace QtAws

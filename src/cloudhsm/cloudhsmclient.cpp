@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudHSM {
 
 /**
@@ -716,4 +716,4 @@ CloudHSMClientPrivate::CloudHSMClientPrivate(CloudHSMClient * const q)
 }
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws

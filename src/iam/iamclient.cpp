@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace IAM {
 
 /**
@@ -3095,4 +3095,4 @@ IamClientPrivate::IamClientPrivate(IamClient * const q)
 }
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws

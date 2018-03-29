@@ -23,8 +23,7 @@
 #include "costexplorer_p.h"
 #include "costexplorerclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CostExplorer {
 
 class CostExplorerClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CostExplorer
-} // namespace AWS
+} // namespace QtAws
 
 #endif

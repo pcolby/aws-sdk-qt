@@ -23,8 +23,7 @@
 #include "simpledb_p.h"
 #include "simpledbclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SimpleDB {
 
 class SimpleDBClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SimpleDB
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "lightsail_p.h"
 #include "lightsailclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lightsail {
 
 class LightsailClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

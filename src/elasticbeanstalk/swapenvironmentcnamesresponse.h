@@ -23,8 +23,7 @@
 #include "elasticbeanstalkresponse.h"
 #include "swapenvironmentcnamesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 class SwapEnvironmentCNAMEsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

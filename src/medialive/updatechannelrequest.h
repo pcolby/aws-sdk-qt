@@ -22,8 +22,7 @@
 
 #include "medialiverequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaLive {
 
 class UpdateChannelRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace MediaLive
-} // namespace AWS
+} // namespace QtAws
 
 #endif

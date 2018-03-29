@@ -23,8 +23,7 @@
 #include "ecr_p.h"
 #include "ecrclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ECR {
 
 class EcrClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

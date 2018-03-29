@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace STS {
 
 /**
@@ -103,4 +103,4 @@ void AssumeRoleResponsePrivate::AssumeRoleResponse(QXmlStreamReader &xml)
 }
 
 } // namespace STS
-} // namespace AWS
+} // namespace QtAws

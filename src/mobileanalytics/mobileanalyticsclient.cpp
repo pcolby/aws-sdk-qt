@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace MobileAnalytics {
 
 /**
@@ -131,4 +131,4 @@ MobileAnalyticsClientPrivate::MobileAnalyticsClientPrivate(MobileAnalyticsClient
 }
 
 } // namespace MobileAnalytics
-} // namespace AWS
+} // namespace QtAws

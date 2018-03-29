@@ -20,7 +20,7 @@
 #include "smsclientrequest.h"
 #include "smsclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SMS {
 
 /**
@@ -337,4 +337,4 @@ QString SmsClientRequestPrivate::toString(const SmsClientRequest::Action &action
 }
 
 } // namespace SMS
-} // namespace AWS
+} // namespace QtAws

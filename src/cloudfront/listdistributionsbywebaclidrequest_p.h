@@ -23,8 +23,7 @@
 #include "cloudfront_p.h"
 #include "listdistributionsbywebaclidrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFront {
 
 class ListDistributionsByWebACLIdRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws
 
 #endif

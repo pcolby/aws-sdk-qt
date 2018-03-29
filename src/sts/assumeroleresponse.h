@@ -23,8 +23,7 @@
 #include "stsresponse.h"
 #include "assumerolerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace STS {
 
 class AssumeRoleResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace STS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "appstream_p.h"
 #include "updatestackrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppStream {
 
 class UpdateStackRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws
 
 #endif

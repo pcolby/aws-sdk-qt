@@ -22,7 +22,7 @@
 #include "getdisksnapshotresponse.h"
 #include "lightsailrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Lightsail {
 
 /**
@@ -116,4 +116,4 @@ GetDiskSnapshotRequestPrivate::GetDiskSnapshotRequestPrivate(
 }
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws

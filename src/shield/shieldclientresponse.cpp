@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Shield {
 
 /**
@@ -67,4 +67,4 @@ ShieldClientResponsePrivate::ShieldClientResponsePrivate(
 }
 
 } // namespace Shield
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "restoredbinstancefroms3response.h"
 #include "rdsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -116,4 +116,4 @@ RestoreDBInstanceFromS3RequestPrivate::RestoreDBInstanceFromS3RequestPrivate(
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

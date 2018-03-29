@@ -20,7 +20,7 @@
 #include "codebuildclientrequest.h"
 #include "codebuildclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeBuild {
 
 /**
@@ -337,4 +337,4 @@ QString CodeBuildClientRequestPrivate::toString(const CodeBuildClientRequest::Ac
 }
 
 } // namespace CodeBuild
-} // namespace AWS
+} // namespace QtAws

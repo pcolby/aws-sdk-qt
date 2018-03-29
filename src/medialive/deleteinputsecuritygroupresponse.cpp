@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MediaLive {
 
 /**
@@ -103,4 +103,4 @@ void DeleteInputSecurityGroupResponsePrivate::DeleteInputSecurityGroupResponse(Q
 }
 
 } // namespace MediaLive
-} // namespace AWS
+} // namespace QtAws

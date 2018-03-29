@@ -22,7 +22,7 @@
 #include "publishresponse.h"
 #include "iotdataplanerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IoTDataPlane {
 
 /**
@@ -116,4 +116,4 @@ PublishRequestPrivate::PublishRequestPrivate(
 }
 
 } // namespace IoTDataPlane
-} // namespace AWS
+} // namespace QtAws

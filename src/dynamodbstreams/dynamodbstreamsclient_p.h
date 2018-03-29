@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace DynamoDBStreams {
 
 class DynamoDBStreamsClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace DynamoDBStreams
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "stopworkspacesresponse.h"
 #include "workspacesrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WorkSpaces {
 
 /**
@@ -116,4 +116,4 @@ StopWorkspacesRequestPrivate::StopWorkspacesRequestPrivate(
 }
 
 } // namespace WorkSpaces
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "listassociatedstacksresponse.h"
 #include "appstreamrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AppStream {
 
 /**
@@ -116,4 +116,4 @@ ListAssociatedStacksRequestPrivate::ListAssociatedStacksRequestPrivate(
 }
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws

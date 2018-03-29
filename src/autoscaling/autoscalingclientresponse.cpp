@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScaling {
 
 /**
@@ -67,4 +67,4 @@ AutoScalingClientResponsePrivate::AutoScalingClientResponsePrivate(
 }
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws

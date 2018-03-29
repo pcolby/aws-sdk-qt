@@ -23,8 +23,7 @@
 #include "glue_p.h"
 #include "glueclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glue {
 
 class GlueClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws
 
 #endif

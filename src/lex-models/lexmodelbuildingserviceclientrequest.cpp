@@ -20,7 +20,7 @@
 #include "lexmodelbuildingserviceclientrequest.h"
 #include "lexmodelbuildingserviceclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace LexModelBuildingService {
 
 /**
@@ -337,4 +337,4 @@ QString LexModelBuildingServiceClientRequestPrivate::toString(const LexModelBuil
 }
 
 } // namespace LexModelBuildingService
-} // namespace AWS
+} // namespace QtAws

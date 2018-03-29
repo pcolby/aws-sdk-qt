@@ -23,8 +23,7 @@
 #include "cognitoidentityresponse.h"
 #include "getopenidtokenfordeveloperidentityrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentity {
 
 class GetOpenIdTokenForDeveloperIdentityResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CognitoIdentity
-} // namespace AWS
+} // namespace QtAws
 
 #endif

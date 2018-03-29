@@ -23,8 +23,7 @@
 #include "devicefarmresponse.h"
 #include "stopremoteaccesssessionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DeviceFarm {
 
 class StopRemoteAccessSessionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws
 
 #endif

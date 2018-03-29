@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SQS {
 
 /**
@@ -103,4 +103,4 @@ void DeleteMessageBatchResponsePrivate::DeleteMessageBatchResponse(QXmlStreamRea
 }
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "codebuildresponse.h"
 #include "listbuildsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeBuild {
 
 class ListBuildsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CodeBuild
-} // namespace AWS
+} // namespace QtAws
 
 #endif

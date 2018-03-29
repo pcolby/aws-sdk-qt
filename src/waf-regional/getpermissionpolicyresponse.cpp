@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace WAFRegional {
 
 /**
@@ -103,4 +103,4 @@ void GetPermissionPolicyResponsePrivate::GetPermissionPolicyResponse(QXmlStreamR
 }
 
 } // namespace WAFRegional
-} // namespace AWS
+} // namespace QtAws

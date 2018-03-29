@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudDirectory {
 
 /**
@@ -103,4 +103,4 @@ void AttachPolicyResponsePrivate::AttachPolicyResponse(QXmlStreamReader &xml)
 }
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws

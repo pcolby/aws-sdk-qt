@@ -23,8 +23,7 @@
 #include "lightsail_p.h"
 #include "allocatestaticiprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lightsail {
 
 class AllocateStaticIpRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

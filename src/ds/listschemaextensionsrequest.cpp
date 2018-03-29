@@ -22,7 +22,7 @@
 #include "listschemaextensionsresponse.h"
 #include "directoryservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DirectoryService {
 
 /**
@@ -116,4 +116,4 @@ ListSchemaExtensionsRequestPrivate::ListSchemaExtensionsRequestPrivate(
 }
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "invalidateprojectcacheresponse.h"
 #include "codebuildrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeBuild {
 
 /**
@@ -116,4 +116,4 @@ InvalidateProjectCacheRequestPrivate::InvalidateProjectCacheRequestPrivate(
 }
 
 } // namespace CodeBuild
-} // namespace AWS
+} // namespace QtAws

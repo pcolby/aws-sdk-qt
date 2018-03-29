@@ -22,7 +22,7 @@
 #include "describeorderablereplicationinstancesresponse.h"
 #include "databasemigrationservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 /**
@@ -116,4 +116,4 @@ DescribeOrderableReplicationInstancesRequestPrivate::DescribeOrderableReplicatio
 }
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws

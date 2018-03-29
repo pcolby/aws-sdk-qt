@@ -22,7 +22,7 @@
 #include "describeelasticsearchinstancetypelimitsresponse.h"
 #include "elasticsearchservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticsearchService {
 
 /**
@@ -116,4 +116,4 @@ DescribeElasticsearchInstanceTypeLimitsRequestPrivate::DescribeElasticsearchInst
 }
 
 } // namespace ElasticsearchService
-} // namespace AWS
+} // namespace QtAws

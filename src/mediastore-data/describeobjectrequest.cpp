@@ -22,7 +22,7 @@
 #include "describeobjectresponse.h"
 #include "mediastoredatarequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MediaStoreData {
 
 /**
@@ -116,4 +116,4 @@ DescribeObjectRequestPrivate::DescribeObjectRequestPrivate(
 }
 
 } // namespace MediaStoreData
-} // namespace AWS
+} // namespace QtAws

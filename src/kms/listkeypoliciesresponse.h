@@ -23,8 +23,7 @@
 #include "kmsresponse.h"
 #include "listkeypoliciesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KMS {
 
 class ListKeyPoliciesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace KMS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

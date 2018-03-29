@@ -22,7 +22,7 @@
 #include "createstreamingdistributionwithtagsresponse.h"
 #include "cloudfrontrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFront {
 
 /**
@@ -116,4 +116,4 @@ CreateStreamingDistributionWithTagsRequestPrivate::CreateStreamingDistributionWi
 }
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws

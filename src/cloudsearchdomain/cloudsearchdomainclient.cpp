@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudSearchDomain {
 
 /**
@@ -225,4 +225,4 @@ CloudSearchDomainClientPrivate::CloudSearchDomainClientPrivate(CloudSearchDomain
 }
 
 } // namespace CloudSearchDomain
-} // namespace AWS
+} // namespace QtAws

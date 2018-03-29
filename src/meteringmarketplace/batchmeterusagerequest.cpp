@@ -22,7 +22,7 @@
 #include "batchmeterusageresponse.h"
 #include "marketplacemeteringrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceMetering {
 
 /**
@@ -116,4 +116,4 @@ BatchMeterUsageRequestPrivate::BatchMeterUsageRequestPrivate(
 }
 
 } // namespace MarketplaceMetering
-} // namespace AWS
+} // namespace QtAws

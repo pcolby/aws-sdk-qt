@@ -22,8 +22,7 @@
 
 #include "servicecatalogrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceCatalog {
 
 class AcceptPortfolioShareRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws
 
 #endif

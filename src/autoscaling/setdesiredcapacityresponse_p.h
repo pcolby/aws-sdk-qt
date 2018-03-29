@@ -23,8 +23,7 @@
 #include "autoscalingresponse.h"
 #include "setdesiredcapacityrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AutoScaling {
 
 class SetDesiredCapacityResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

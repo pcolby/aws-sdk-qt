@@ -23,8 +23,7 @@
 #include "stsresponse.h"
 #include "stsclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace STS {
 
 class StsClientResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace STS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

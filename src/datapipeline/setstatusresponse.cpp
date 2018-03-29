@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DataPipeline {
 
 /**
@@ -103,4 +103,4 @@ void SetStatusResponsePrivate::SetStatusResponse(QXmlStreamReader &xml)
 }
 
 } // namespace DataPipeline
-} // namespace AWS
+} // namespace QtAws

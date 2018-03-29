@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Cloud9 {
 
 /**
@@ -67,4 +67,4 @@ Cloud9ClientResponsePrivate::Cloud9ClientResponsePrivate(
 }
 
 } // namespace Cloud9
-} // namespace AWS
+} // namespace QtAws

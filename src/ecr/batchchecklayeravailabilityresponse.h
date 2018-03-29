@@ -23,8 +23,7 @@
 #include "ecrresponse.h"
 #include "batchchecklayeravailabilityrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ECR {
 
 class BatchCheckLayerAvailabilityResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

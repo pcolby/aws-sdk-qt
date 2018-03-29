@@ -22,7 +22,7 @@
 #include "getcompliancedetailsbyconfigruleresponse.h"
 #include "configservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ConfigService {
 
 /**
@@ -116,4 +116,4 @@ GetComplianceDetailsByConfigRuleRequestPrivate::GetComplianceDetailsByConfigRule
 }
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws

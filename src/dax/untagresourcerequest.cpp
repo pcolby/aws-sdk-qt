@@ -22,7 +22,7 @@
 #include "untagresourceresponse.h"
 #include "daxrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DAX {
 
 /**
@@ -116,4 +116,4 @@ UntagResourceRequestPrivate::UntagResourceRequestPrivate(
 }
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws

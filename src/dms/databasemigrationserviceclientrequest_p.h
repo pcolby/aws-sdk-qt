@@ -23,8 +23,7 @@
 #include "databasemigrationservice_p.h"
 #include "databasemigrationserviceclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 class DatabaseMigrationServiceClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

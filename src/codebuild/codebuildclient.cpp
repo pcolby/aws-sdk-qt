@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CodeBuild {
 
 /**
@@ -431,4 +431,4 @@ CodeBuildClientPrivate::CodeBuildClientPrivate(CodeBuildClient * const q)
 }
 
 } // namespace CodeBuild
-} // namespace AWS
+} // namespace QtAws

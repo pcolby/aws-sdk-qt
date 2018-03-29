@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace SageMakerRuntime {
 
 class SageMakerRuntimeClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace SageMakerRuntime
-} // namespace AWS
+} // namespace QtAws
 
 #endif

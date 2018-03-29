@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DAX {
 
 /**
@@ -103,4 +103,4 @@ void DeleteSubnetGroupResponsePrivate::DeleteSubnetGroupResponse(QXmlStreamReade
 }
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws

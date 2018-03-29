@@ -22,7 +22,7 @@
 #include "createhsmclientcertificateresponse.h"
 #include "redshiftrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Redshift {
 
 /**
@@ -116,4 +116,4 @@ CreateHsmClientCertificateRequestPrivate::CreateHsmClientCertificateRequestPriva
 }
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws

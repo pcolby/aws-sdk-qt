@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SimpleDB {
 
 /**
@@ -103,4 +103,4 @@ void ListDomainsResponsePrivate::ListDomainsResponse(QXmlStreamReader &xml)
 }
 
 } // namespace SimpleDB
-} // namespace AWS
+} // namespace QtAws

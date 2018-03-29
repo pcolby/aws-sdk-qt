@@ -22,7 +22,7 @@
 #include "describeexportconfigurationsresponse.h"
 #include "applicationdiscoveryservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 /**
@@ -116,4 +116,4 @@ DescribeExportConfigurationsRequestPrivate::DescribeExportConfigurationsRequestP
 }
 
 } // namespace ApplicationDiscoveryService
-} // namespace AWS
+} // namespace QtAws

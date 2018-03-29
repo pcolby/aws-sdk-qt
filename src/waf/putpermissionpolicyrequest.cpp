@@ -22,7 +22,7 @@
 #include "putpermissionpolicyresponse.h"
 #include "wafrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WAF {
 
 /**
@@ -116,4 +116,4 @@ PutPermissionPolicyRequestPrivate::PutPermissionPolicyRequestPrivate(
 }
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws

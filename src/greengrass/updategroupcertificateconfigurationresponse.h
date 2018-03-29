@@ -23,8 +23,7 @@
 #include "greengrassresponse.h"
 #include "updategroupcertificateconfigurationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Greengrass {
 
 class UpdateGroupCertificateConfigurationResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws
 
 #endif

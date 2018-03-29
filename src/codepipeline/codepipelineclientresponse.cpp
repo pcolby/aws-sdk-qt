@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CodePipeline {
 
 /**
@@ -67,4 +67,4 @@ CodePipelineClientResponsePrivate::CodePipelineClientResponsePrivate(
 }
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws

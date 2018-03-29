@@ -23,8 +23,7 @@
 #include "apigatewayresponse.h"
 #include "importrestapirequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace APIGateway {
 
 class ImportRestApiResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

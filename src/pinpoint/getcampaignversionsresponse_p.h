@@ -23,8 +23,7 @@
 #include "pinpointresponse.h"
 #include "getcampaignversionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Pinpoint {
 
 class GetCampaignVersionsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws
 
 #endif

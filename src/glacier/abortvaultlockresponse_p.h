@@ -23,8 +23,7 @@
 #include "glacierresponse.h"
 #include "abortvaultlockrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glacier {
 
 class AbortVaultLockResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws
 
 #endif

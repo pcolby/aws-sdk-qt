@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFront {
 
 /**
@@ -67,4 +67,4 @@ CloudFrontClientResponsePrivate::CloudFrontClientResponsePrivate(
 }
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws

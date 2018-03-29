@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Polly {
 
 /**
@@ -103,4 +103,4 @@ void SynthesizeSpeechResponsePrivate::SynthesizeSpeechResponse(QXmlStreamReader 
 }
 
 } // namespace Polly
-} // namespace AWS
+} // namespace QtAws

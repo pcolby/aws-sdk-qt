@@ -23,8 +23,7 @@
 #include "mediastoredata_p.h"
 #include "deleteobjectrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaStoreData {
 
 class DeleteObjectRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace MediaStoreData
-} // namespace AWS
+} // namespace QtAws
 
 #endif

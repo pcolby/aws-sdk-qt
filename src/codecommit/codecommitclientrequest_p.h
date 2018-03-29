@@ -23,8 +23,7 @@
 #include "codecommit_p.h"
 #include "codecommitclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeCommit {
 
 class CodeCommitClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeCommit
-} // namespace AWS
+} // namespace QtAws
 
 #endif

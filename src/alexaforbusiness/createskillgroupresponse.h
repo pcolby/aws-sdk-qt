@@ -23,8 +23,7 @@
 #include "alexaforbusinessresponse.h"
 #include "createskillgrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AlexaForBusiness {
 
 class CreateSkillGroupResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws
 
 #endif

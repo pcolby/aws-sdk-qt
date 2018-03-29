@@ -23,8 +23,7 @@
 #include "cloudhsmv2response.h"
 #include "tagresourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSMV2 {
 
 class TagResourceResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudHSMV2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

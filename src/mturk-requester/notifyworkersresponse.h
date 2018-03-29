@@ -23,8 +23,7 @@
 #include "mturkresponse.h"
 #include "notifyworkersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MTurk {
 
 class NotifyWorkersResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

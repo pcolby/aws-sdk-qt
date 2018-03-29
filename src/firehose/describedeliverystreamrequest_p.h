@@ -23,8 +23,7 @@
 #include "firehose_p.h"
 #include "describedeliverystreamrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Firehose {
 
 class DescribeDeliveryStreamRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Firehose
-} // namespace AWS
+} // namespace QtAws
 
 #endif

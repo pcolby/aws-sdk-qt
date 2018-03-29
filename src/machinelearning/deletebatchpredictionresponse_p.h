@@ -23,8 +23,7 @@
 #include "machinelearningresponse.h"
 #include "deletebatchpredictionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MachineLearning {
 
 class DeleteBatchPredictionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws
 
 #endif

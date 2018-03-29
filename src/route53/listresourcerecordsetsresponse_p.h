@@ -23,8 +23,7 @@
 #include "route53response.h"
 #include "listresourcerecordsetsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53 {
 
 class ListResourceRecordSetsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws
 
 #endif

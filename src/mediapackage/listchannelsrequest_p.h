@@ -23,8 +23,7 @@
 #include "mediapackage_p.h"
 #include "listchannelsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaPackage {
 
 class ListChannelsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace MediaPackage
-} // namespace AWS
+} // namespace QtAws
 
 #endif

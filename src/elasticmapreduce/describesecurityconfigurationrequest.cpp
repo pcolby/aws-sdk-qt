@@ -22,7 +22,7 @@
 #include "describesecurityconfigurationresponse.h"
 #include "emrrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace EMR {
 
 /**
@@ -116,4 +116,4 @@ DescribeSecurityConfigurationRequestPrivate::DescribeSecurityConfigurationReques
 }
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws

@@ -7,7 +7,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace {{NameSpaceName}} {
 
 /**
@@ -122,4 +122,4 @@ namespace {{NameSpaceName}} {
 }
 
 } // namespace {{NameSpaceName}}
-} // namespace AWS
+} // namespace QtAws

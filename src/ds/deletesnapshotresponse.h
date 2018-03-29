@@ -23,8 +23,7 @@
 #include "directoryserviceresponse.h"
 #include "deletesnapshotrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectoryService {
 
 class DeleteSnapshotResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "registerdefaultpatchbaselineresponse.h"
 #include "ssmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SSM {
 
 /**
@@ -116,4 +116,4 @@ RegisterDefaultPatchBaselineRequestPrivate::RegisterDefaultPatchBaselineRequestP
 }
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws

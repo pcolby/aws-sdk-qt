@@ -22,8 +22,7 @@
 
 #include "smsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SMS {
 
 class StartOnDemandReplicationRunRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace SMS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

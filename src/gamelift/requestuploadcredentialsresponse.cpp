@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace GameLift {
 
 /**
@@ -103,4 +103,4 @@ void RequestUploadCredentialsResponsePrivate::RequestUploadCredentialsResponse(Q
 }
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws

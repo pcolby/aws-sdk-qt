@@ -22,7 +22,7 @@
 #include "startapplicationresponse.h"
 #include "kinesisanalyticsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisAnalytics {
 
 /**
@@ -116,4 +116,4 @@ StartApplicationRequestPrivate::StartApplicationRequestPrivate(
 }
 
 } // namespace KinesisAnalytics
-} // namespace AWS
+} // namespace QtAws

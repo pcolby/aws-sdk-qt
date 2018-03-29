@@ -23,8 +23,7 @@
 #include "iot_p.h"
 #include "gettopicrulerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class GetTopicRuleRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

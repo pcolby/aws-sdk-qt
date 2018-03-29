@@ -22,7 +22,7 @@
 #include "createsqlinjectionmatchsetresponse.h"
 #include "wafregionalrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WAFRegional {
 
 /**
@@ -116,4 +116,4 @@ CreateSqlInjectionMatchSetRequestPrivate::CreateSqlInjectionMatchSetRequestPriva
 }
 
 } // namespace WAFRegional
-} // namespace AWS
+} // namespace QtAws

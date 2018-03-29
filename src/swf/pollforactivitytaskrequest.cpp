@@ -22,7 +22,7 @@
 #include "pollforactivitytaskresponse.h"
 #include "swfrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SWF {
 
 /**
@@ -116,4 +116,4 @@ PollForActivityTaskRequestPrivate::PollForActivityTaskRequestPrivate(
 }
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws

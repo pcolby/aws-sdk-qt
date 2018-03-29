@@ -23,8 +23,7 @@
 #include "codepipelineresponse.h"
 #include "enablestagetransitionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodePipeline {
 
 class EnableStageTransitionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

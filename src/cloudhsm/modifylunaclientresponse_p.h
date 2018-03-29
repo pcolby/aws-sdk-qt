@@ -23,8 +23,7 @@
 #include "cloudhsmresponse.h"
 #include "modifylunaclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSM {
 
 class ModifyLunaClientResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,8 +22,7 @@
 
 #include "appsyncrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppSync {
 
 class DeleteResolverRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

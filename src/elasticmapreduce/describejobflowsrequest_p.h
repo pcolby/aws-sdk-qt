@@ -23,8 +23,7 @@
 #include "emr_p.h"
 #include "describejobflowsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EMR {
 
 class DescribeJobFlowsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

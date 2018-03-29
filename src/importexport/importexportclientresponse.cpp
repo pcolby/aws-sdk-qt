@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ImportExport {
 
 /**
@@ -67,4 +67,4 @@ ImportExportClientResponsePrivate::ImportExportClientResponsePrivate(
 }
 
 } // namespace ImportExport
-} // namespace AWS
+} // namespace QtAws

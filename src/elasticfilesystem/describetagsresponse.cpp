@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace EFS {
 
 /**
@@ -103,4 +103,4 @@ void DescribeTagsResponsePrivate::DescribeTagsResponse(QXmlStreamReader &xml)
 }
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws

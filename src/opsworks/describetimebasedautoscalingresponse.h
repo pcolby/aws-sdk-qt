@@ -23,8 +23,7 @@
 #include "opsworksresponse.h"
 #include "describetimebasedautoscalingrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorks {
 
 class DescribeTimeBasedAutoScalingResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace OpsWorks
-} // namespace AWS
+} // namespace QtAws
 
 #endif

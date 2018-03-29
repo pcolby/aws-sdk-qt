@@ -22,7 +22,7 @@
 #include "describecopyproductstatusresponse.h"
 #include "servicecatalogrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceCatalog {
 
 /**
@@ -116,4 +116,4 @@ DescribeCopyProductStatusRequestPrivate::DescribeCopyProductStatusRequestPrivate
 }
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws

@@ -22,8 +22,7 @@
 
 #include "marketplaceentitlementservicerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MarketplaceEntitlementService {
 
 class GetEntitlementsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace MarketplaceEntitlementService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

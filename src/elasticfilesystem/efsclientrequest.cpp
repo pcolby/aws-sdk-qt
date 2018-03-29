@@ -20,7 +20,7 @@
 #include "efsclientrequest.h"
 #include "efsclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace EFS {
 
 /**
@@ -337,4 +337,4 @@ QString EfsClientRequestPrivate::toString(const EfsClientRequest::Action &action
 }
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws

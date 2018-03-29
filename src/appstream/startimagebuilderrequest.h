@@ -22,8 +22,7 @@
 
 #include "appstreamrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppStream {
 
 class StartImageBuilderRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "ec2response.h"
 #include "getlaunchtemplatedatarequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EC2 {
 
 class GetLaunchTemplateDataResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

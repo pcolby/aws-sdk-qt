@@ -20,7 +20,7 @@
 #include "emrclientrequest.h"
 #include "emrclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace EMR {
 
 /**
@@ -337,4 +337,4 @@ QString EmrClientRequestPrivate::toString(const EmrClientRequest::Action &action
 }
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws

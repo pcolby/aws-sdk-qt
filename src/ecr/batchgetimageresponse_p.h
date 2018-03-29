@@ -23,8 +23,7 @@
 #include "ecrresponse.h"
 #include "batchgetimagerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ECR {
 
 class BatchGetImageResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceCatalog {
 
 /**
@@ -103,4 +103,4 @@ void CopyProductResponsePrivate::CopyProductResponse(QXmlStreamReader &xml)
 }
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws

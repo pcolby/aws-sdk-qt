@@ -23,8 +23,7 @@
 #include "migrationhub_p.h"
 #include "disassociatecreatedartifactrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MigrationHub {
 
 class DisassociateCreatedArtifactRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws
 
 #endif

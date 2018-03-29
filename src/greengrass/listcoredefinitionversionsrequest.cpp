@@ -22,7 +22,7 @@
 #include "listcoredefinitionversionsresponse.h"
 #include "greengrassrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -116,4 +116,4 @@ ListCoreDefinitionVersionsRequestPrivate::ListCoreDefinitionVersionsRequestPriva
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

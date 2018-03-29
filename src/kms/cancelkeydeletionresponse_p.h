@@ -23,8 +23,7 @@
 #include "kmsresponse.h"
 #include "cancelkeydeletionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KMS {
 
 class CancelKeyDeletionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace KMS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

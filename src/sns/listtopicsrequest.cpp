@@ -22,7 +22,7 @@
 #include "listtopicsresponse.h"
 #include "snsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SNS {
 
 /**
@@ -116,4 +116,4 @@ ListTopicsRequestPrivate::ListTopicsRequestPrivate(
 }
 
 } // namespace SNS
-} // namespace AWS
+} // namespace QtAws

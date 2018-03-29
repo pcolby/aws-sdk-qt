@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace KMS {
 
 /**
@@ -103,4 +103,4 @@ void UntagResourceResponsePrivate::UntagResourceResponse(QXmlStreamReader &xml)
 }
 
 } // namespace KMS
-} // namespace AWS
+} // namespace QtAws

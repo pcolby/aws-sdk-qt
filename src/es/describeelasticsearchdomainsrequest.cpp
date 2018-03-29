@@ -22,7 +22,7 @@
 #include "describeelasticsearchdomainsresponse.h"
 #include "elasticsearchservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticsearchService {
 
 /**
@@ -116,4 +116,4 @@ DescribeElasticsearchDomainsRequestPrivate::DescribeElasticsearchDomainsRequestP
 }
 
 } // namespace ElasticsearchService
-} // namespace AWS
+} // namespace QtAws

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SQS {
 
 /**
@@ -103,4 +103,4 @@ void PurgeQueueResponsePrivate::PurgeQueueResponse(QXmlStreamReader &xml)
 }
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "importexport_p.h"
 #include "importexportclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ImportExport {
 
 class ImportExportClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ImportExport
-} // namespace AWS
+} // namespace QtAws
 
 #endif

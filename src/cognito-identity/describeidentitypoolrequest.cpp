@@ -22,7 +22,7 @@
 #include "describeidentitypoolresponse.h"
 #include "cognitoidentityrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoIdentity {
 
 /**
@@ -116,4 +116,4 @@ DescribeIdentityPoolRequestPrivate::DescribeIdentityPoolRequestPrivate(
 }
 
 } // namespace CognitoIdentity
-} // namespace AWS
+} // namespace QtAws

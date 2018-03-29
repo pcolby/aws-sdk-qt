@@ -22,7 +22,7 @@
 #include "sendtesteventnotificationresponse.h"
 #include "mturkrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MTurk {
 
 /**
@@ -116,4 +116,4 @@ SendTestEventNotificationRequestPrivate::SendTestEventNotificationRequestPrivate
 }
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws

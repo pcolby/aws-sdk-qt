@@ -23,8 +23,7 @@
 #include "alexaforbusiness_p.h"
 #include "revokeinvitationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AlexaForBusiness {
 
 class RevokeInvitationRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws
 
 #endif

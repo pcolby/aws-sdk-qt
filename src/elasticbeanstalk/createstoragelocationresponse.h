@@ -23,8 +23,7 @@
 #include "elasticbeanstalkresponse.h"
 #include "createstoragelocationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 class CreateStorageLocationResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

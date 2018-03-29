@@ -23,8 +23,7 @@
 #include "datapipeline_p.h"
 #include "activatepipelinerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DataPipeline {
 
 class ActivatePipelineRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DataPipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

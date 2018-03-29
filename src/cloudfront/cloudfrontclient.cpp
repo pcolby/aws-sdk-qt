@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFront {
 
 /**
@@ -661,4 +661,4 @@ CloudFrontClientPrivate::CloudFrontClientPrivate(CloudFrontClient * const q)
 }
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws

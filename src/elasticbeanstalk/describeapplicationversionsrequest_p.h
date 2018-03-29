@@ -23,8 +23,7 @@
 #include "elasticbeanstalk_p.h"
 #include "describeapplicationversionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 class DescribeApplicationVersionsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

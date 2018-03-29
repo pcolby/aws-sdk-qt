@@ -23,8 +23,7 @@
 #include "gameliftresponse.h"
 #include "createplayersessionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace GameLift {
 
 class CreatePlayerSessionsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Lightsail {
 
 /**
@@ -103,4 +103,4 @@ void DeleteDiskSnapshotResponsePrivate::DeleteDiskSnapshotResponse(QXmlStreamRea
 }
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws

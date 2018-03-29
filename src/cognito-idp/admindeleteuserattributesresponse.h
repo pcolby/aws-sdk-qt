@@ -23,8 +23,7 @@
 #include "cognitoidentityproviderresponse.h"
 #include "admindeleteuserattributesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 class AdminDeleteUserAttributesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "mturkresponse.h"
 #include "deleteworkerblockrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MTurk {
 
 class DeleteWorkerBlockResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

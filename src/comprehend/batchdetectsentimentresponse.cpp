@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Comprehend {
 
 /**
@@ -103,4 +103,4 @@ void BatchDetectSentimentResponsePrivate::BatchDetectSentimentResponse(QXmlStrea
 }
 
 } // namespace Comprehend
-} // namespace AWS
+} // namespace QtAws

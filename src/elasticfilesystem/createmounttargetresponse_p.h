@@ -23,8 +23,7 @@
 #include "efsresponse.h"
 #include "createmounttargetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EFS {
 
 class CreateMountTargetResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

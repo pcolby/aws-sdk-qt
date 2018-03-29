@@ -22,8 +22,7 @@
 
 #include "mturkrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MTurk {
 
 class SendBonusRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

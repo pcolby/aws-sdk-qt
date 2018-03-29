@@ -22,7 +22,7 @@
 #include "describecacheparametergroupsresponse.h"
 #include "elasticacherequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElastiCache {
 
 /**
@@ -116,4 +116,4 @@ DescribeCacheParameterGroupsRequestPrivate::DescribeCacheParameterGroupsRequestP
 }
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws

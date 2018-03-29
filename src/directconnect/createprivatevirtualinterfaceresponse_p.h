@@ -23,8 +23,7 @@
 #include "directconnectresponse.h"
 #include "createprivatevirtualinterfacerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectConnect {
 
 class CreatePrivateVirtualInterfaceResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "snowballresponse.h"
 #include "getjobunlockcoderequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Snowball {
 
 class GetJobUnlockCodeResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws
 
 #endif

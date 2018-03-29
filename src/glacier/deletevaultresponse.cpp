@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Glacier {
 
 /**
@@ -103,4 +103,4 @@ void DeleteVaultResponsePrivate::DeleteVaultResponse(QXmlStreamReader &xml)
 }
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "deleteapplicationreferencedatasourceresponse.h"
 #include "kinesisanalyticsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisAnalytics {
 
 /**
@@ -116,4 +116,4 @@ DeleteApplicationReferenceDataSourceRequestPrivate::DeleteApplicationReferenceDa
 }
 
 } // namespace KinesisAnalytics
-} // namespace AWS
+} // namespace QtAws

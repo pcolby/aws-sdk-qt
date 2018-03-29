@@ -22,7 +22,7 @@
 #include "listreviewablehitsresponse.h"
 #include "mturkrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MTurk {
 
 /**
@@ -116,4 +116,4 @@ ListReviewableHITsRequestPrivate::ListReviewableHITsRequestPrivate(
 }
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws

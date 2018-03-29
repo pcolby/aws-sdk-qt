@@ -20,7 +20,7 @@
 #include "ec2clientrequest.h"
 #include "ec2clientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace EC2 {
 
 /**
@@ -337,4 +337,4 @@ QString Ec2ClientRequestPrivate::toString(const Ec2ClientRequest::Action &action
 }
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws

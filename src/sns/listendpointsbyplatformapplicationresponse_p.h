@@ -23,8 +23,7 @@
 #include "snsresponse.h"
 #include "listendpointsbyplatformapplicationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SNS {
 
 class ListEndpointsByPlatformApplicationResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SNS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

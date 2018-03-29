@@ -22,8 +22,7 @@
 
 #include "snowballrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Snowball {
 
 class CancelJobRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws
 
 #endif

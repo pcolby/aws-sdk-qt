@@ -22,7 +22,7 @@
 #include "deleteapplicationinputprocessingconfigurationresponse.h"
 #include "kinesisanalyticsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisAnalytics {
 
 /**
@@ -116,4 +116,4 @@ DeleteApplicationInputProcessingConfigurationRequestPrivate::DeleteApplicationIn
 }
 
 } // namespace KinesisAnalytics
-} // namespace AWS
+} // namespace QtAws

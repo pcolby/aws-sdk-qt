@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DynamoDB {
 
 /**
@@ -67,4 +67,4 @@ DynamoDBClientResponsePrivate::DynamoDBClientResponsePrivate(
 }
 
 } // namespace DynamoDB
-} // namespace AWS
+} // namespace QtAws

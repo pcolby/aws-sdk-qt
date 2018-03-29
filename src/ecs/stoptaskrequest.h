@@ -22,8 +22,7 @@
 
 #include "ecsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ECS {
 
 class StopTaskRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace ECS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

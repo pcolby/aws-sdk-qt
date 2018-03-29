@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MediaStoreData {
 
 /**
@@ -103,4 +103,4 @@ void ListItemsResponsePrivate::ListItemsResponse(QXmlStreamReader &xml)
 }
 
 } // namespace MediaStoreData
-} // namespace AWS
+} // namespace QtAws

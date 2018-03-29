@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MediaConvert {
 
 /**
@@ -67,4 +67,4 @@ MediaConvertClientResponsePrivate::MediaConvertClientResponsePrivate(
 }
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws

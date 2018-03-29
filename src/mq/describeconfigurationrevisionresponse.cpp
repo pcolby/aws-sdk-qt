@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MQ {
 
 /**
@@ -103,4 +103,4 @@ void DescribeConfigurationRevisionResponsePrivate::DescribeConfigurationRevision
 }
 
 } // namespace MQ
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "applicationautoscaling_p.h"
 #include "registerscalabletargetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ApplicationAutoScaling {
 
 class RegisterScalableTargetRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ApplicationAutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

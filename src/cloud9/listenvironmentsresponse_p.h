@@ -23,8 +23,7 @@
 #include "cloud9response.h"
 #include "listenvironmentsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Cloud9 {
 
 class ListEnvironmentsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Cloud9
-} // namespace AWS
+} // namespace QtAws
 
 #endif

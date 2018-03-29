@@ -23,8 +23,7 @@
 #include "sesresponse.h"
 #include "updateaccountsendingenabledrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SES {
 
 class UpdateAccountSendingEnabledResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws
 
 #endif

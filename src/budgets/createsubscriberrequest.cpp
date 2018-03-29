@@ -22,7 +22,7 @@
 #include "createsubscriberresponse.h"
 #include "budgetsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Budgets {
 
 /**
@@ -116,4 +116,4 @@ CreateSubscriberRequestPrivate::CreateSubscriberRequestPrivate(
 }
 
 } // namespace Budgets
-} // namespace AWS
+} // namespace QtAws

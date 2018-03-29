@@ -23,8 +23,7 @@
 #include "kinesisresponse.h"
 #include "increasestreamretentionperiodrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Kinesis {
 
 class IncreaseStreamRetentionPeriodResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Kinesis
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "describeinstancepatchstatesforpatchgroupresponse.h"
 #include "ssmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SSM {
 
 /**
@@ -116,4 +116,4 @@ DescribeInstancePatchStatesForPatchGroupRequestPrivate::DescribeInstancePatchSta
 }
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws

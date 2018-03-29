@@ -22,7 +22,7 @@
 #include "describedeliverychannelstatusresponse.h"
 #include "configservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ConfigService {
 
 /**
@@ -116,4 +116,4 @@ DescribeDeliveryChannelStatusRequestPrivate::DescribeDeliveryChannelStatusReques
 }
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws

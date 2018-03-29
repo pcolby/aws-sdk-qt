@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace SES {
 
 /**
@@ -1931,4 +1931,4 @@ SesClientPrivate::SesClientPrivate(SesClient * const q)
 }
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws

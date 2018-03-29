@@ -22,7 +22,7 @@
 #include "createclusterresponse.h"
 #include "daxrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DAX {
 
 /**
@@ -116,4 +116,4 @@ CreateClusterRequestPrivate::CreateClusterRequestPrivate(
 }
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws

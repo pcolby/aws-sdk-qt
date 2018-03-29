@@ -20,7 +20,7 @@
 #include "comprehendclientrequest.h"
 #include "comprehendclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Comprehend {
 
 /**
@@ -337,4 +337,4 @@ QString ComprehendClientRequestPrivate::toString(const ComprehendClientRequest::
 }
 
 } // namespace Comprehend
-} // namespace AWS
+} // namespace QtAws

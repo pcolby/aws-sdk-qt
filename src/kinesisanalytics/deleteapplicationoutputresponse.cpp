@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisAnalytics {
 
 /**
@@ -103,4 +103,4 @@ void DeleteApplicationOutputResponsePrivate::DeleteApplicationOutputResponse(QXm
 }
 
 } // namespace KinesisAnalytics
-} // namespace AWS
+} // namespace QtAws

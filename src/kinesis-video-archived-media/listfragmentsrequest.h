@@ -22,8 +22,7 @@
 
 #include "kinesisvideoarchivedmediarequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KinesisVideoArchivedMedia {
 
 class ListFragmentsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace KinesisVideoArchivedMedia
-} // namespace AWS
+} // namespace QtAws
 
 #endif

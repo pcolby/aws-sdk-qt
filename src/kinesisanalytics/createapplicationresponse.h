@@ -23,8 +23,7 @@
 #include "kinesisanalyticsresponse.h"
 #include "createapplicationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KinesisAnalytics {
 
 class CreateApplicationResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace KinesisAnalytics
-} // namespace AWS
+} // namespace QtAws
 
 #endif

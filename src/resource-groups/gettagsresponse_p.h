@@ -23,8 +23,7 @@
 #include "resourcegroupsresponse.h"
 #include "gettagsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ResourceGroups {
 
 class GetTagsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ResourceGroups
-} // namespace AWS
+} // namespace QtAws
 
 #endif

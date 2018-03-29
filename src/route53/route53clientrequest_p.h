@@ -23,8 +23,7 @@
 #include "route53_p.h"
 #include "route53clientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53 {
 
 class Route53ClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws
 
 #endif

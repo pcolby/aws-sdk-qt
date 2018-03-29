@@ -23,8 +23,7 @@
 #include "ssmresponse.h"
 #include "describeinstancepatchesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SSM {
 
 class DescribeInstancePatchesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

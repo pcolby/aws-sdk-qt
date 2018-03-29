@@ -23,8 +23,7 @@
 #include "ec2_p.h"
 #include "createsecuritygrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EC2 {
 
 class CreateSecurityGroupRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

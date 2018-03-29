@@ -23,8 +23,7 @@
 #include "appstreamresponse.h"
 #include "listassociatedfleetsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppStream {
 
 class ListAssociatedFleetsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws
 
 #endif

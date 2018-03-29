@@ -23,8 +23,7 @@
 #include "servicecatalogresponse.h"
 #include "deleteprovisionedproductplanrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceCatalog {
 
 class DeleteProvisionedProductPlanResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws
 
 #endif

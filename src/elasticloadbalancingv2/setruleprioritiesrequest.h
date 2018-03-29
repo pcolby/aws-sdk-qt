@@ -22,8 +22,7 @@
 
 #include "elasticloadbalancingv2request.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
 class SetRulePrioritiesRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace ElasticLoadBalancingv2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

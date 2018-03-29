@@ -23,8 +23,7 @@
 #include "lightsailresponse.h"
 #include "attachloadbalancertlscertificaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lightsail {
 
 class AttachLoadBalancerTlsCertificateResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

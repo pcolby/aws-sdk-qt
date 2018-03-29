@@ -22,7 +22,7 @@
 #include "updateautoscalinggroupresponse.h"
 #include "autoscalingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScaling {
 
 /**
@@ -116,4 +116,4 @@ UpdateAutoScalingGroupRequestPrivate::UpdateAutoScalingGroupRequestPrivate(
 }
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws

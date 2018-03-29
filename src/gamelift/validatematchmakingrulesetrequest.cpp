@@ -22,7 +22,7 @@
 #include "validatematchmakingrulesetresponse.h"
 #include "gameliftrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace GameLift {
 
 /**
@@ -116,4 +116,4 @@ ValidateMatchmakingRuleSetRequestPrivate::ValidateMatchmakingRuleSetRequestPriva
 }
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws

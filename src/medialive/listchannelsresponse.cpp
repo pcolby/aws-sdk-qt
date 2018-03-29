@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MediaLive {
 
 /**
@@ -103,4 +103,4 @@ void ListChannelsResponsePrivate::ListChannelsResponse(QXmlStreamReader &xml)
 }
 
 } // namespace MediaLive
-} // namespace AWS
+} // namespace QtAws

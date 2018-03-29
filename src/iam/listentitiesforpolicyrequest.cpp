@@ -22,7 +22,7 @@
 #include "listentitiesforpolicyresponse.h"
 #include "iamrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IAM {
 
 /**
@@ -116,4 +116,4 @@ ListEntitiesForPolicyRequestPrivate::ListEntitiesForPolicyRequestPrivate(
 }
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws

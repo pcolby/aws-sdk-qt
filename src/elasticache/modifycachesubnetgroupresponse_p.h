@@ -23,8 +23,7 @@
 #include "elasticacheresponse.h"
 #include "modifycachesubnetgrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElastiCache {
 
 class ModifyCacheSubnetGroupResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws
 
 #endif

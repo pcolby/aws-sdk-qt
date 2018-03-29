@@ -22,8 +22,7 @@
 
 #include "rdsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace RDS {
 
 class DownloadDBLogFilePortionRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

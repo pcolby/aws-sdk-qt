@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DirectoryService {
 
 /**
@@ -103,4 +103,4 @@ void DeleteSnapshotResponsePrivate::DeleteSnapshotResponse(QXmlStreamReader &xml
 }
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws

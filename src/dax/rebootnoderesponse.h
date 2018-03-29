@@ -23,8 +23,7 @@
 #include "daxresponse.h"
 #include "rebootnoderequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DAX {
 
 class RebootNodeResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws
 
 #endif

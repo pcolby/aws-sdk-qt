@@ -23,8 +23,7 @@
 #include "codepipelineresponse.h"
 #include "pollforthirdpartyjobsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodePipeline {
 
 class PollForThirdPartyJobsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

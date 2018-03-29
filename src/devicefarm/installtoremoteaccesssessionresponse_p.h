@@ -23,8 +23,7 @@
 #include "devicefarmresponse.h"
 #include "installtoremoteaccesssessionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DeviceFarm {
 
 class InstallToRemoteAccessSessionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws
 
 #endif

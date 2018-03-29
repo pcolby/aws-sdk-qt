@@ -23,8 +23,7 @@
 #include "smsresponse.h"
 #include "createreplicationjobrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SMS {
 
 class CreateReplicationJobResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SMS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

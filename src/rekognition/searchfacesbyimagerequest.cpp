@@ -22,7 +22,7 @@
 #include "searchfacesbyimageresponse.h"
 #include "rekognitionrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Rekognition {
 
 /**
@@ -116,4 +116,4 @@ SearchFacesByImageRequestPrivate::SearchFacesByImageRequestPrivate(
 }
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws

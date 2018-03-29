@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Polly {
 
 /**
@@ -244,4 +244,4 @@ PollyClientPrivate::PollyClientPrivate(PollyClient * const q)
 }
 
 } // namespace Polly
-} // namespace AWS
+} // namespace QtAws

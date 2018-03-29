@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Health {
 
 /**
@@ -285,4 +285,4 @@ HealthClientPrivate::HealthClientPrivate(HealthClient * const q)
 }
 
 } // namespace Health
-} // namespace AWS
+} // namespace QtAws

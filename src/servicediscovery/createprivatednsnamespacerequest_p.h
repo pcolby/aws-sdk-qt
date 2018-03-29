@@ -23,8 +23,7 @@
 #include "servicediscovery_p.h"
 #include "createprivatednsnamespacerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceDiscovery {
 
 class CreatePrivateDnsNamespaceRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ServiceDiscovery
-} // namespace AWS
+} // namespace QtAws
 
 #endif

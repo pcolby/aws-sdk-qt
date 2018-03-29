@@ -23,8 +23,7 @@
 #include "sqsresponse.h"
 #include "changemessagevisibilitybatchrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SQS {
 
 class ChangeMessageVisibilityBatchResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

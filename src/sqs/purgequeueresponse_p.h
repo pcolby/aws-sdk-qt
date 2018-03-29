@@ -23,8 +23,7 @@
 #include "sqsresponse.h"
 #include "purgequeuerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SQS {
 
 class PurgeQueueResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

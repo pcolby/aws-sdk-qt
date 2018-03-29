@@ -22,7 +22,7 @@
 #include "addroletoinstanceprofileresponse.h"
 #include "iamrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IAM {
 
 /**
@@ -116,4 +116,4 @@ AddRoleToInstanceProfileRequestPrivate::AddRoleToInstanceProfileRequestPrivate(
 }
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws

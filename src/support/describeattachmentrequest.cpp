@@ -22,7 +22,7 @@
 #include "describeattachmentresponse.h"
 #include "supportrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Support {
 
 /**
@@ -116,4 +116,4 @@ DescribeAttachmentRequestPrivate::DescribeAttachmentRequestPrivate(
 }
 
 } // namespace Support
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "elasticloadbalancingresponse.h"
 #include "describeloadbalancerpoliciesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticLoadBalancing {
 
 class DescribeLoadBalancerPoliciesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ElasticLoadBalancing
-} // namespace AWS
+} // namespace QtAws
 
 #endif

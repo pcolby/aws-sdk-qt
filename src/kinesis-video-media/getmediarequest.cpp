@@ -22,7 +22,7 @@
 #include "getmediaresponse.h"
 #include "kinesisvideomediarequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisVideoMedia {
 
 /**
@@ -116,4 +116,4 @@ GetMediaRequestPrivate::GetMediaRequestPrivate(
 }
 
 } // namespace KinesisVideoMedia
-} // namespace AWS
+} // namespace QtAws

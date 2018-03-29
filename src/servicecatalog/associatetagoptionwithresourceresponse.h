@@ -23,8 +23,7 @@
 #include "servicecatalogresponse.h"
 #include "associatetagoptionwithresourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceCatalog {
 
 class AssociateTagOptionWithResourceResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws
 
 #endif

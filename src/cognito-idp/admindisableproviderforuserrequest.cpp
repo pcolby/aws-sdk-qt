@@ -22,7 +22,7 @@
 #include "admindisableproviderforuserresponse.h"
 #include "cognitoidentityproviderrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 /**
@@ -116,4 +116,4 @@ AdminDisableProviderForUserRequestPrivate::AdminDisableProviderForUserRequestPri
 }
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws

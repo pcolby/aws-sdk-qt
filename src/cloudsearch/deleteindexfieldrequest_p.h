@@ -23,8 +23,7 @@
 #include "cloudsearch_p.h"
 #include "deleteindexfieldrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudSearch {
 
 class DeleteIndexFieldRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

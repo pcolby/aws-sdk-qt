@@ -23,8 +23,7 @@
 #include "transcribeservice_p.h"
 #include "transcribeserviceclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace TranscribeService {
 
 class TranscribeServiceClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace TranscribeService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

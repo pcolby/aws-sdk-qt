@@ -23,8 +23,7 @@
 #include "dynamodbstreamsresponse.h"
 #include "getrecordsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DynamoDBStreams {
 
 class GetRecordsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DynamoDBStreams
-} // namespace AWS
+} // namespace QtAws
 
 #endif

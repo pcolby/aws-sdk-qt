@@ -20,7 +20,7 @@
 #include "apigatewayclientrequest.h"
 #include "apigatewayclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace APIGateway {
 
 /**
@@ -337,4 +337,4 @@ QString APIGatewayClientRequestPrivate::toString(const APIGatewayClientRequest::
 }
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws

@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 /**
@@ -67,4 +67,4 @@ DatabaseMigrationServiceClientResponsePrivate::DatabaseMigrationServiceClientRes
 }
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws

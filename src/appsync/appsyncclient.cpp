@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace AppSync {
 
 /**
@@ -503,4 +503,4 @@ AppSyncClientPrivate::AppSyncClientPrivate(AppSyncClient * const q)
 }
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws

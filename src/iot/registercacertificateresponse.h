@@ -23,8 +23,7 @@
 #include "iotresponse.h"
 #include "registercacertificaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IoT {
 
 class RegisterCACertificateResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws
 
 #endif

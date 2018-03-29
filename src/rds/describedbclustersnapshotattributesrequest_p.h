@@ -23,8 +23,7 @@
 #include "rds_p.h"
 #include "describedbclustersnapshotattributesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace RDS {
 
 class DescribeDBClusterSnapshotAttributesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

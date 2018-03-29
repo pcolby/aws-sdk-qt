@@ -23,8 +23,7 @@
 #include "mturkresponse.h"
 #include "listhitsforqualificationtyperequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MTurk {
 
 class ListHITsForQualificationTypeResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

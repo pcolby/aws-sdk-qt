@@ -22,7 +22,7 @@
 #include "clonereceiptrulesetresponse.h"
 #include "sesrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SES {
 
 /**
@@ -116,4 +116,4 @@ CloneReceiptRuleSetRequestPrivate::CloneReceiptRuleSetRequestPrivate(
 }
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws

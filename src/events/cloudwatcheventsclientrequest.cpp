@@ -20,7 +20,7 @@
 #include "cloudwatcheventsclientrequest.h"
 #include "cloudwatcheventsclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudWatchEvents {
 
 /**
@@ -337,4 +337,4 @@ QString CloudWatchEventsClientRequestPrivate::toString(const CloudWatchEventsCli
 }
 
 } // namespace CloudWatchEvents
-} // namespace AWS
+} // namespace QtAws

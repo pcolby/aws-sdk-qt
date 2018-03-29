@@ -23,8 +23,7 @@
 #include "autoscalingplans_p.h"
 #include "describescalingplansrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AutoScalingPlans {
 
 class DescribeScalingPlansRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace AutoScalingPlans
-} // namespace AWS
+} // namespace QtAws
 
 #endif

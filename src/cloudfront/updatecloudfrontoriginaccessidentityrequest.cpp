@@ -22,7 +22,7 @@
 #include "updatecloudfrontoriginaccessidentityresponse.h"
 #include "cloudfrontrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFront {
 
 /**
@@ -116,4 +116,4 @@ UpdateCloudFrontOriginAccessIdentityRequestPrivate::UpdateCloudFrontOriginAccess
 }
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws

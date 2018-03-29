@@ -22,7 +22,7 @@
 #include "updaterequestvalidatorresponse.h"
 #include "apigatewayrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace APIGateway {
 
 /**
@@ -116,4 +116,4 @@ UpdateRequestValidatorRequestPrivate::UpdateRequestValidatorRequestPrivate(
 }
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws

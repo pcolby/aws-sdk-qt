@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CodeStar {
 
 /**
@@ -103,4 +103,4 @@ void UpdateProjectResponsePrivate::UpdateProjectResponse(QXmlStreamReader &xml)
 }
 
 } // namespace CodeStar
-} // namespace AWS
+} // namespace QtAws

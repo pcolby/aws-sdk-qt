@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SNS {
 
 /**
@@ -103,4 +103,4 @@ void SetTopicAttributesResponsePrivate::SetTopicAttributesResponse(QXmlStreamRea
 }
 
 } // namespace SNS
-} // namespace AWS
+} // namespace QtAws

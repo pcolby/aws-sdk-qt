@@ -23,8 +23,7 @@
 #include "lexmodelbuildingservice_p.h"
 #include "getbuiltinintentsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace LexModelBuildingService {
 
 class GetBuiltinIntentsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace LexModelBuildingService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

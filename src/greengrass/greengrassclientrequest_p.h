@@ -23,8 +23,7 @@
 #include "greengrass_p.h"
 #include "greengrassclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Greengrass {
 
 class GreengrassClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws
 
 #endif

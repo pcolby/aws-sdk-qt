@@ -22,7 +22,7 @@
 #include "describereplicationinstancesresponse.h"
 #include "databasemigrationservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DatabaseMigrationService {
 
 /**
@@ -116,4 +116,4 @@ DescribeReplicationInstancesRequestPrivate::DescribeReplicationInstancesRequestP
 }
 
 } // namespace DatabaseMigrationService
-} // namespace AWS
+} // namespace QtAws

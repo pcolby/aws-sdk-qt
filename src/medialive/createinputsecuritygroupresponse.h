@@ -23,8 +23,7 @@
 #include "medialiveresponse.h"
 #include "createinputsecuritygrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaLive {
 
 class CreateInputSecurityGroupResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MediaLive
-} // namespace AWS
+} // namespace QtAws
 
 #endif

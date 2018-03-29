@@ -23,8 +23,7 @@
 #include "apigatewayresponse.h"
 #include "getbasepathmappingsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace APIGateway {
 
 class GetBasePathMappingsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,8 +22,7 @@
 
 #include "cognitoidentityproviderrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 class DeleteUserPoolRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws
 
 #endif

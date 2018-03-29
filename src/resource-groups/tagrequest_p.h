@@ -23,8 +23,7 @@
 #include "resourcegroups_p.h"
 #include "tagrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ResourceGroups {
 
 class TagRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ResourceGroups
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -20,7 +20,7 @@
 #include "ecrclientrequest.h"
 #include "ecrclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ECR {
 
 /**
@@ -337,4 +337,4 @@ QString EcrClientRequestPrivate::toString(const EcrClientRequest::Action &action
 }
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws

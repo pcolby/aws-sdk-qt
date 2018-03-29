@@ -22,7 +22,7 @@
 #include "modifydbsnapshotresponse.h"
 #include "rdsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -116,4 +116,4 @@ ModifyDBSnapshotRequestPrivate::ModifyDBSnapshotRequestPrivate(
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

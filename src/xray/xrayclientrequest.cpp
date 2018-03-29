@@ -20,7 +20,7 @@
 #include "xrayclientrequest.h"
 #include "xrayclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace XRay {
 
 /**
@@ -337,4 +337,4 @@ QString XRayClientRequestPrivate::toString(const XRayClientRequest::Action &acti
 }
 
 } // namespace XRay
-} // namespace AWS
+} // namespace QtAws

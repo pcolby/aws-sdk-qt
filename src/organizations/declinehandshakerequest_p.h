@@ -23,8 +23,7 @@
 #include "organizations_p.h"
 #include "declinehandshakerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Organizations {
 
 class DeclineHandshakeRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws
 
 #endif

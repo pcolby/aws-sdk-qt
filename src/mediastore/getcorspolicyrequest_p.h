@@ -23,8 +23,7 @@
 #include "mediastore_p.h"
 #include "getcorspolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaStore {
 
 class GetCorsPolicyRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace MediaStore
-} // namespace AWS
+} // namespace QtAws
 
 #endif

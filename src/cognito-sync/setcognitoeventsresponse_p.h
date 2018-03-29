@@ -23,8 +23,7 @@
 #include "cognitosyncresponse.h"
 #include "setcognitoeventsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoSync {
 
 class SetCognitoEventsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CognitoSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -20,7 +20,7 @@
 #include "rdsclientrequest.h"
 #include "rdsclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -337,4 +337,4 @@ QString RdsClientRequestPrivate::toString(const RdsClientRequest::Action &action
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

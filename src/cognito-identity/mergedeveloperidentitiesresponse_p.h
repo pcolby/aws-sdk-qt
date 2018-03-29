@@ -23,8 +23,7 @@
 #include "cognitoidentityresponse.h"
 #include "mergedeveloperidentitiesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentity {
 
 class MergeDeveloperIdentitiesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CognitoIdentity
-} // namespace AWS
+} // namespace QtAws
 
 #endif

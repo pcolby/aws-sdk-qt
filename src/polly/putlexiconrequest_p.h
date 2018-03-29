@@ -23,8 +23,7 @@
 #include "polly_p.h"
 #include "putlexiconrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Polly {
 
 class PutLexiconRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Polly
-} // namespace AWS
+} // namespace QtAws
 
 #endif

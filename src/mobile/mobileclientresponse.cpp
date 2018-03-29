@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Mobile {
 
 /**
@@ -67,4 +67,4 @@ MobileClientResponsePrivate::MobileClientResponsePrivate(
 }
 
 } // namespace Mobile
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "codebuild_p.h"
 #include "codebuildclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeBuild {
 
 class CodeBuildClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeBuild
-} // namespace AWS
+} // namespace QtAws
 
 #endif

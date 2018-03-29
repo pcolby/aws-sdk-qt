@@ -23,8 +23,7 @@
 #include "cloudhsm_p.h"
 #include "listavailablezonesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSM {
 
 class ListAvailableZonesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

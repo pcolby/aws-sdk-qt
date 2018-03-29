@@ -23,8 +23,7 @@
 #include "supportresponse.h"
 #include "describecommunicationsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Support {
 
 class DescribeCommunicationsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Support
-} // namespace AWS
+} // namespace QtAws
 
 #endif

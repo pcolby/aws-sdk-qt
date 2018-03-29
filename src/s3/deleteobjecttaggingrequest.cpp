@@ -22,7 +22,7 @@
 #include "deleteobjecttaggingresponse.h"
 #include "s3request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace S3 {
 
 /**
@@ -116,4 +116,4 @@ DeleteObjectTaggingRequestPrivate::DeleteObjectTaggingRequestPrivate(
 }
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws

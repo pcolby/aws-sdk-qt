@@ -20,7 +20,7 @@
 #include "healthclientrequest.h"
 #include "healthclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Health {
 
 /**
@@ -337,4 +337,4 @@ QString HealthClientRequestPrivate::toString(const HealthClientRequest::Action &
 }
 
 } // namespace Health
-} // namespace AWS
+} // namespace QtAws

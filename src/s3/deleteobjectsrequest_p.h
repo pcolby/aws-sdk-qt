@@ -23,8 +23,7 @@
 #include "s3_p.h"
 #include "deleteobjectsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace S3 {
 
 class DeleteObjectsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws
 
 #endif

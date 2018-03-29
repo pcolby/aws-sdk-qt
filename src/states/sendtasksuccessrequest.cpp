@@ -22,7 +22,7 @@
 #include "sendtasksuccessresponse.h"
 #include "sfnrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SFN {
 
 /**
@@ -116,4 +116,4 @@ SendTaskSuccessRequestPrivate::SendTaskSuccessRequestPrivate(
 }
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws

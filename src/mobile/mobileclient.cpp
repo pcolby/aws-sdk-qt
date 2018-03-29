@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Mobile {
 
 /**
@@ -246,4 +246,4 @@ MobileClientPrivate::MobileClientPrivate(MobileClient * const q)
 }
 
 } // namespace Mobile
-} // namespace AWS
+} // namespace QtAws

@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Health {
 
 /**
@@ -67,4 +67,4 @@ HealthClientResponsePrivate::HealthClientResponsePrivate(
 }
 
 } // namespace Health
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "batchdetectdominantlanguageresponse.h"
 #include "comprehendrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Comprehend {
 
 /**
@@ -116,4 +116,4 @@ BatchDetectDominantLanguageRequestPrivate::BatchDetectDominantLanguageRequestPri
 }
 
 } // namespace Comprehend
-} // namespace AWS
+} // namespace QtAws

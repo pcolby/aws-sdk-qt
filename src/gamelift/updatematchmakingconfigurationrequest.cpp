@@ -22,7 +22,7 @@
 #include "updatematchmakingconfigurationresponse.h"
 #include "gameliftrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace GameLift {
 
 /**
@@ -116,4 +116,4 @@ UpdateMatchmakingConfigurationRequestPrivate::UpdateMatchmakingConfigurationRequ
 }
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws

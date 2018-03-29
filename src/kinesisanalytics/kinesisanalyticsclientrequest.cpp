@@ -20,7 +20,7 @@
 #include "kinesisanalyticsclientrequest.h"
 #include "kinesisanalyticsclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisAnalytics {
 
 /**
@@ -337,4 +337,4 @@ QString KinesisAnalyticsClientRequestPrivate::toString(const KinesisAnalyticsCli
 }
 
 } // namespace KinesisAnalytics
-} // namespace AWS
+} // namespace QtAws

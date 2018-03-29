@@ -22,8 +22,7 @@
 
 #include "ecsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ECS {
 
 class ListTaskDefinitionFamiliesRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace ECS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

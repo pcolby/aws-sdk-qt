@@ -23,8 +23,7 @@
 #include "iamresponse.h"
 #include "listsamlprovidersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace IAM {
 
 class ListSAMLProvidersResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

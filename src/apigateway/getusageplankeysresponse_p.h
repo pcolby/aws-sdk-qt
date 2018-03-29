@@ -23,8 +23,7 @@
 #include "apigatewayresponse.h"
 #include "getusageplankeysrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace APIGateway {
 
 class GetUsagePlanKeysResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

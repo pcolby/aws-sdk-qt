@@ -22,8 +22,7 @@
 
 #include "route53domainsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53Domains {
 
 class CheckDomainTransferabilityRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Route53Domains
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,8 +22,7 @@
 
 #include "greengrassrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Greengrass {
 
 class GetGroupVersionRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws
 
 #endif

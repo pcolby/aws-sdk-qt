@@ -23,8 +23,7 @@
 #include "cloudhsmresponse.h"
 #include "addtagstoresourcerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSM {
 
 class AddTagsToResourceResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

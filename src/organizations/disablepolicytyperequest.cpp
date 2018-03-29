@@ -22,7 +22,7 @@
 #include "disablepolicytyperesponse.h"
 #include "organizationsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Organizations {
 
 /**
@@ -116,4 +116,4 @@ DisablePolicyTypeRequestPrivate::DisablePolicyTypeRequestPrivate(
 }
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws

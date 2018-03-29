@@ -23,8 +23,7 @@
 #include "swf_p.h"
 #include "swfclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SWF {
 
 class SwfClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

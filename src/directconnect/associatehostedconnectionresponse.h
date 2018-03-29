@@ -23,8 +23,7 @@
 #include "directconnectresponse.h"
 #include "associatehostedconnectionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectConnect {
 
 class AssociateHostedConnectionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws
 
 #endif

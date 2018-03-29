@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SimpleDB {
 
 /**
@@ -67,4 +67,4 @@ SimpleDBClientResponsePrivate::SimpleDBClientResponsePrivate(
 }
 
 } // namespace SimpleDB
-} // namespace AWS
+} // namespace QtAws

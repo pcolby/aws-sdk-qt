@@ -22,7 +22,7 @@
 #include "disablestagetransitionresponse.h"
 #include "codepipelinerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodePipeline {
 
 /**
@@ -116,4 +116,4 @@ DisableStageTransitionRequestPrivate::DisableStageTransitionRequestPrivate(
 }
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws

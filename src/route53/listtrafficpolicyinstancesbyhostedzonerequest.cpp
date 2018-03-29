@@ -22,7 +22,7 @@
 #include "listtrafficpolicyinstancesbyhostedzoneresponse.h"
 #include "route53request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Route53 {
 
 /**
@@ -116,4 +116,4 @@ ListTrafficPolicyInstancesByHostedZoneRequestPrivate::ListTrafficPolicyInstances
 }
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws

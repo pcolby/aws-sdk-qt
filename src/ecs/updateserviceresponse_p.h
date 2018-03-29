@@ -23,8 +23,7 @@
 #include "ecsresponse.h"
 #include "updateservicerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ECS {
 
 class UpdateServiceResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ECS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

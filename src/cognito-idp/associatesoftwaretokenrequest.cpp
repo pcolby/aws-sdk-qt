@@ -22,7 +22,7 @@
 #include "associatesoftwaretokenresponse.h"
 #include "cognitoidentityproviderrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 /**
@@ -116,4 +116,4 @@ AssociateSoftwareTokenRequestPrivate::AssociateSoftwareTokenRequestPrivate(
 }
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace S3 {
 
 /**
@@ -103,4 +103,4 @@ void GetBucketLifecycleResponsePrivate::GetBucketLifecycleResponse(QXmlStreamRea
 }
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws

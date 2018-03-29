@@ -23,8 +23,7 @@
 #include "serverlessapplicationrepository_p.h"
 #include "putapplicationpolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServerlessApplicationRepository {
 
 class PutApplicationPolicyRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ServerlessApplicationRepository
-} // namespace AWS
+} // namespace QtAws
 
 #endif

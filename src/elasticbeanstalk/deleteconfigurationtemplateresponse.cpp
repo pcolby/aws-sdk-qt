@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 /**
@@ -103,4 +103,4 @@ void DeleteConfigurationTemplateResponsePrivate::DeleteConfigurationTemplateResp
 }
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws

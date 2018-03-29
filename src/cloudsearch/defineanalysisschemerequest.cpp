@@ -22,7 +22,7 @@
 #include "defineanalysisschemeresponse.h"
 #include "cloudsearchrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudSearch {
 
 /**
@@ -116,4 +116,4 @@ DefineAnalysisSchemeRequestPrivate::DefineAnalysisSchemeRequestPrivate(
 }
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws

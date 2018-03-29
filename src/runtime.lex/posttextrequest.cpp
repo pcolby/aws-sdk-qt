@@ -22,7 +22,7 @@
 #include "posttextresponse.h"
 #include "lexruntimeservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace LexRuntimeService {
 
 /**
@@ -116,4 +116,4 @@ PostTextRequestPrivate::PostTextRequestPrivate(
 }
 
 } // namespace LexRuntimeService
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "appsyncresponse.h"
 #include "deleteapikeyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppSync {
 
 class DeleteApiKeyResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

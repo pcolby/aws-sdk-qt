@@ -23,8 +23,7 @@
 #include "lambdaresponse.h"
 #include "listversionsbyfunctionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lambda {
 
 class ListVersionsByFunctionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Lambda
-} // namespace AWS
+} // namespace QtAws
 
 #endif

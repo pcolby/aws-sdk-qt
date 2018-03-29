@@ -23,8 +23,7 @@
 #include "emr_p.h"
 #include "modifyinstancefleetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EMR {
 
 class ModifyInstanceFleetRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

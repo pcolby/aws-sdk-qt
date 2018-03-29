@@ -2,7 +2,7 @@
 #include "{{ClassName|lower}}.h"
 #include "{{ClassName|lower}}_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace {{NameSpaceName}} {
 
 /**
@@ -319,4 +319,4 @@ QString {{ClassName}}Private::toString(const {{ClassName}}::Action &action)
 }
 
 } // namespace {{NameSpaceName}}
-} // namespace AWS
+} // namespace QtAws

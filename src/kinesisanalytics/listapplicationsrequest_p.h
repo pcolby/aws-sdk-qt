@@ -23,8 +23,7 @@
 #include "kinesisanalytics_p.h"
 #include "listapplicationsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KinesisAnalytics {
 
 class ListApplicationsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace KinesisAnalytics
-} // namespace AWS
+} // namespace QtAws
 
 #endif

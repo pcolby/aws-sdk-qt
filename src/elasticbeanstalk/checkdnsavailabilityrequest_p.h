@@ -23,8 +23,7 @@
 #include "elasticbeanstalk_p.h"
 #include "checkdnsavailabilityrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 class CheckDNSAvailabilityRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

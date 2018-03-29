@@ -22,8 +22,7 @@
 
 #include "cloudfrontrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFront {
 
 class GetCloudFrontOriginAccessIdentityRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "glacier_p.h"
 #include "removetagsfromvaultrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glacier {
 
 class RemoveTagsFromVaultRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws
 
 #endif

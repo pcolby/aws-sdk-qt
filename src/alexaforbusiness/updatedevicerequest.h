@@ -22,8 +22,7 @@
 
 #include "alexaforbusinessrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AlexaForBusiness {
 
 class UpdateDeviceRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws
 
 #endif

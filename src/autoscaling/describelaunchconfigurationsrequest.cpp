@@ -22,7 +22,7 @@
 #include "describelaunchconfigurationsresponse.h"
 #include "autoscalingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScaling {
 
 /**
@@ -116,4 +116,4 @@ DescribeLaunchConfigurationsRequestPrivate::DescribeLaunchConfigurationsRequestP
 }
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws

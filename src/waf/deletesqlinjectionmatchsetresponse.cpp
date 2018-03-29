@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace WAF {
 
 /**
@@ -103,4 +103,4 @@ void DeleteSqlInjectionMatchSetResponsePrivate::DeleteSqlInjectionMatchSetRespon
 }
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws

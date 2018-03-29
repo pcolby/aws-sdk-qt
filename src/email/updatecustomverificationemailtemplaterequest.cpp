@@ -22,7 +22,7 @@
 #include "updatecustomverificationemailtemplateresponse.h"
 #include "sesrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SES {
 
 /**
@@ -116,4 +116,4 @@ UpdateCustomVerificationEmailTemplateRequestPrivate::UpdateCustomVerificationEma
 }
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws

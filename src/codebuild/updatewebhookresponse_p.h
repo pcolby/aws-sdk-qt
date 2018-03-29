@@ -23,8 +23,7 @@
 #include "codebuildresponse.h"
 #include "updatewebhookrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeBuild {
 
 class UpdateWebhookResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CodeBuild
-} // namespace AWS
+} // namespace QtAws
 
 #endif

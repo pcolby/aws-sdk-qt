@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Rekognition {
 
 /**
@@ -67,4 +67,4 @@ RekognitionClientResponsePrivate::RekognitionClientResponsePrivate(
 }
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws

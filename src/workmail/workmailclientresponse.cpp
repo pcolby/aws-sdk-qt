@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace WorkMail {
 
 /**
@@ -67,4 +67,4 @@ WorkMailClientResponsePrivate::WorkMailClientResponsePrivate(
 }
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws

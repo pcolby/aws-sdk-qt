@@ -23,8 +23,7 @@
 #include "swfresponse.h"
 #include "pollfordecisiontaskrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SWF {
 
 class PollForDecisionTaskResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Redshift {
 
 /**
@@ -67,4 +67,4 @@ RedshiftClientResponsePrivate::RedshiftClientResponsePrivate(
 }
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws

@@ -22,8 +22,7 @@
 
 #include "daxrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DAX {
 
 class CreateClusterRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws
 
 #endif

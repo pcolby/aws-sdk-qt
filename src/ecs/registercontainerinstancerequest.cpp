@@ -22,7 +22,7 @@
 #include "registercontainerinstanceresponse.h"
 #include "ecsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ECS {
 
 /**
@@ -116,4 +116,4 @@ RegisterContainerInstanceRequestPrivate::RegisterContainerInstanceRequestPrivate
 }
 
 } // namespace ECS
-} // namespace AWS
+} // namespace QtAws

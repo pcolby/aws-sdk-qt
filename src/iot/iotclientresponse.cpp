@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace IoT {
 
 /**
@@ -67,4 +67,4 @@ IoTClientResponsePrivate::IoTClientResponsePrivate(
 }
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws

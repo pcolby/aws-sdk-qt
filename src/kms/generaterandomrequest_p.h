@@ -23,8 +23,7 @@
 #include "kms_p.h"
 #include "generaterandomrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KMS {
 
 class GenerateRandomRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace KMS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

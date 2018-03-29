@@ -23,8 +23,7 @@
 #include "emrresponse.h"
 #include "deletesecurityconfigurationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EMR {
 
 class DeleteSecurityConfigurationResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

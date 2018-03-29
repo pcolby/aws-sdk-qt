@@ -23,8 +23,7 @@
 #include "importexportresponse.h"
 #include "getshippinglabelrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ImportExport {
 
 class GetShippingLabelResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ImportExport
-} // namespace AWS
+} // namespace QtAws
 
 #endif

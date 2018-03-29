@@ -23,8 +23,7 @@
 #include "costandusagereportservice_p.h"
 #include "costandusagereportserviceclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CostandUsageReportService {
 
 class CostandUsageReportServiceClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CostandUsageReportService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

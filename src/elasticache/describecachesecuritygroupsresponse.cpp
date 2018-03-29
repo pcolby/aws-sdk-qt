@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ElastiCache {
 
 /**
@@ -103,4 +103,4 @@ void DescribeCacheSecurityGroupsResponsePrivate::DescribeCacheSecurityGroupsResp
 }
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws

@@ -20,7 +20,7 @@
 #include "elastictranscoderclientrequest.h"
 #include "elastictranscoderclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticTranscoder {
 
 /**
@@ -337,4 +337,4 @@ QString ElasticTranscoderClientRequestPrivate::toString(const ElasticTranscoderC
 }
 
 } // namespace ElasticTranscoder
-} // namespace AWS
+} // namespace QtAws

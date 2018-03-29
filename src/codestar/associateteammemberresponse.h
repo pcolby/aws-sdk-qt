@@ -23,8 +23,7 @@
 #include "codestarresponse.h"
 #include "associateteammemberrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeStar {
 
 class AssociateTeamMemberResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeStar
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "adminuserglobalsignoutresponse.h"
 #include "cognitoidentityproviderrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 /**
@@ -116,4 +116,4 @@ AdminUserGlobalSignOutRequestPrivate::AdminUserGlobalSignOutRequestPrivate(
 }
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws

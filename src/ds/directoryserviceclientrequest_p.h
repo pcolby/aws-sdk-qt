@@ -23,8 +23,7 @@
 #include "directoryservice_p.h"
 #include "directoryserviceclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectoryService {
 
 class DirectoryServiceClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

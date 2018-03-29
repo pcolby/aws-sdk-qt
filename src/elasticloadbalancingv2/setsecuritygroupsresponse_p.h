@@ -23,8 +23,7 @@
 #include "elasticloadbalancingv2response.h"
 #include "setsecuritygroupsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
 class SetSecurityGroupsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ElasticLoadBalancingv2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

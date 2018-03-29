@@ -22,7 +22,7 @@
 #include "generatedatasetresponse.h"
 #include "marketplacecommerceanalyticsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
 /**
@@ -116,4 +116,4 @@ GenerateDataSetRequestPrivate::GenerateDataSetRequestPrivate(
 }
 
 } // namespace MarketplaceCommerceAnalytics
-} // namespace AWS
+} // namespace QtAws

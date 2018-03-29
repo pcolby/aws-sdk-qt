@@ -23,8 +23,7 @@
 #include "rekognitionresponse.h"
 #include "startlabeldetectionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Rekognition {
 
 class StartLabelDetectionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "terminateinstanceinautoscalinggroupresponse.h"
 #include "autoscalingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScaling {
 
 /**
@@ -116,4 +116,4 @@ TerminateInstanceInAutoScalingGroupRequestPrivate::TerminateInstanceInAutoScalin
 }
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws

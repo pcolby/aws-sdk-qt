@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoSync {
 
 /**
@@ -475,4 +475,4 @@ CognitoSyncClientPrivate::CognitoSyncClientPrivate(CognitoSyncClient * const q)
 }
 
 } // namespace CognitoSync
-} // namespace AWS
+} // namespace QtAws

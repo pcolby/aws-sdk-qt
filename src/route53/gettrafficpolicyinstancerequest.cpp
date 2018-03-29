@@ -22,7 +22,7 @@
 #include "gettrafficpolicyinstanceresponse.h"
 #include "route53request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Route53 {
 
 /**
@@ -116,4 +116,4 @@ GetTrafficPolicyInstanceRequestPrivate::GetTrafficPolicyInstanceRequestPrivate(
 }
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws

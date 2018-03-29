@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudSearchDomain {
 
 /**
@@ -103,4 +103,4 @@ void UploadDocumentsResponsePrivate::UploadDocumentsResponse(QXmlStreamReader &x
 }
 
 } // namespace CloudSearchDomain
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "updatejobresponse.h"
 #include "importexportrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ImportExport {
 
 /**
@@ -116,4 +116,4 @@ UpdateJobRequestPrivate::UpdateJobRequestPrivate(
 }
 
 } // namespace ImportExport
-} // namespace AWS
+} // namespace QtAws

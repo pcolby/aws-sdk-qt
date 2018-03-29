@@ -23,8 +23,7 @@
 #include "cloudtrail_p.h"
 #include "cloudtrailclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudTrail {
 
 class CloudTrailClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudTrail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

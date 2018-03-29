@@ -23,8 +23,7 @@
 #include "autoscalingresponse.h"
 #include "detachloadbalancersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AutoScaling {
 
 class DetachLoadBalancersResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

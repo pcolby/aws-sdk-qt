@@ -23,8 +23,7 @@
 #include "cloudwatchlogs_p.h"
 #include "associatekmskeyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatchLogs {
 
 class AssociateKmsKeyRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudWatchLogs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

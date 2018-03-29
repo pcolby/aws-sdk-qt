@@ -23,8 +23,7 @@
 #include "redshift_p.h"
 #include "restoretablefromclustersnapshotrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Redshift {
 
 class RestoreTableFromClusterSnapshotRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

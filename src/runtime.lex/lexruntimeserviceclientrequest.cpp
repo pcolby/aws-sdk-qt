@@ -20,7 +20,7 @@
 #include "lexruntimeserviceclientrequest.h"
 #include "lexruntimeserviceclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace LexRuntimeService {
 
 /**
@@ -337,4 +337,4 @@ QString LexRuntimeServiceClientRequestPrivate::toString(const LexRuntimeServiceC
 }
 
 } // namespace LexRuntimeService
-} // namespace AWS
+} // namespace QtAws

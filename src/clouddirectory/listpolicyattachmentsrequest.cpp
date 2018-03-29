@@ -22,7 +22,7 @@
 #include "listpolicyattachmentsresponse.h"
 #include "clouddirectoryrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudDirectory {
 
 /**
@@ -116,4 +116,4 @@ ListPolicyAttachmentsRequestPrivate::ListPolicyAttachmentsRequestPrivate(
 }
 
 } // namespace CloudDirectory
-} // namespace AWS
+} // namespace QtAws

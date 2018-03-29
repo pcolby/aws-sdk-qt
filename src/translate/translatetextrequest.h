@@ -22,8 +22,7 @@
 
 #include "translaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Translate {
 
 class TranslateTextRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Translate
-} // namespace AWS
+} // namespace QtAws
 
 #endif

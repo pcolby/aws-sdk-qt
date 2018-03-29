@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Snowball {
 
 /**
@@ -103,4 +103,4 @@ void DescribeAddressesResponsePrivate::DescribeAddressesResponse(QXmlStreamReade
 }
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws

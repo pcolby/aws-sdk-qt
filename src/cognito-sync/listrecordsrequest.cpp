@@ -22,7 +22,7 @@
 #include "listrecordsresponse.h"
 #include "cognitosyncrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoSync {
 
 /**
@@ -116,4 +116,4 @@ ListRecordsRequestPrivate::ListRecordsRequestPrivate(
 }
 
 } // namespace CognitoSync
-} // namespace AWS
+} // namespace QtAws

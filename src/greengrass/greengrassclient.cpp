@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -1094,4 +1094,4 @@ GreengrassClientPrivate::GreengrassClientPrivate(GreengrassClient * const q)
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "mqresponse.h"
 #include "listbrokersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MQ {
 
 class ListBrokersResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MQ
-} // namespace AWS
+} // namespace QtAws
 
 #endif

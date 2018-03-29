@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MTurk {
 
 /**
@@ -103,4 +103,4 @@ void NotifyWorkersResponsePrivate::NotifyWorkersResponse(QXmlStreamReader &xml)
 }
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws

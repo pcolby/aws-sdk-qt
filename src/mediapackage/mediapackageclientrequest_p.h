@@ -23,8 +23,7 @@
 #include "mediapackage_p.h"
 #include "mediapackageclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaPackage {
 
 class MediaPackageClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MediaPackage
-} // namespace AWS
+} // namespace QtAws
 
 #endif

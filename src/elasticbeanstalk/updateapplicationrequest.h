@@ -22,8 +22,7 @@
 
 #include "elasticbeanstalkrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 class UpdateApplicationRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "alexaforbusinessresponse.h"
 #include "deleteskillgrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AlexaForBusiness {
 
 class DeleteSkillGroupResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "getdomainsuggestionsresponse.h"
 #include "route53domainsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Route53Domains {
 
 /**
@@ -116,4 +116,4 @@ GetDomainSuggestionsRequestPrivate::GetDomainSuggestionsRequestPrivate(
 }
 
 } // namespace Route53Domains
-} // namespace AWS
+} // namespace QtAws

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Rekognition {
 
 /**
@@ -103,4 +103,4 @@ void StartFaceDetectionResponsePrivate::StartFaceDetectionResponse(QXmlStreamRea
 }
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SSM {
 
 /**
@@ -103,4 +103,4 @@ void DeregisterTargetFromMaintenanceWindowResponsePrivate::DeregisterTargetFromM
 }
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws

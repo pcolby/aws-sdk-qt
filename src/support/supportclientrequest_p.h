@@ -23,8 +23,7 @@
 #include "support_p.h"
 #include "supportclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Support {
 
 class SupportClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Support
-} // namespace AWS
+} // namespace QtAws
 
 #endif

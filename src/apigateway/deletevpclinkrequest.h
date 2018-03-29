@@ -22,8 +22,7 @@
 
 #include "apigatewayrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace APIGateway {
 
 class DeleteVpcLinkRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

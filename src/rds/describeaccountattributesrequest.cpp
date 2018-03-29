@@ -22,7 +22,7 @@
 #include "describeaccountattributesresponse.h"
 #include "rdsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -116,4 +116,4 @@ DescribeAccountAttributesRequestPrivate::DescribeAccountAttributesRequestPrivate
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

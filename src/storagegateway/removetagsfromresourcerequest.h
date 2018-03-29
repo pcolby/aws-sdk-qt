@@ -22,8 +22,7 @@
 
 #include "storagegatewayrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace StorageGateway {
 
 class RemoveTagsFromResourceRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

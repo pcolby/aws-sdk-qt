@@ -23,8 +23,7 @@
 #include "costandusagereportserviceresponse.h"
 #include "deletereportdefinitionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CostandUsageReportService {
 
 class DeleteReportDefinitionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CostandUsageReportService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

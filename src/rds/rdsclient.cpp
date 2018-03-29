@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -2061,4 +2061,4 @@ RdsClientPrivate::RdsClientPrivate(RdsClient * const q)
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "daxresponse.h"
 #include "increasereplicationfactorrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DAX {
 
 class IncreaseReplicationFactorResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "deleteapplicationcloudwatchloggingoptionresponse.h"
 #include "kinesisanalyticsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisAnalytics {
 
 /**
@@ -116,4 +116,4 @@ DeleteApplicationCloudWatchLoggingOptionRequestPrivate::DeleteApplicationCloudWa
 }
 
 } // namespace KinesisAnalytics
-} // namespace AWS
+} // namespace QtAws

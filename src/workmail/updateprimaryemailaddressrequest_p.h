@@ -23,8 +23,7 @@
 #include "workmail_p.h"
 #include "updateprimaryemailaddressrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkMail {
 
 class UpdatePrimaryEmailAddressRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws
 
 #endif

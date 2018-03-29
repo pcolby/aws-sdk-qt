@@ -23,8 +23,7 @@
 #include "migrationhubresponse.h"
 #include "deleteprogressupdatestreamrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MigrationHub {
 
 class DeleteProgressUpdateStreamResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,8 +22,7 @@
 
 #include "migrationhubrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MigrationHub {
 
 class DisassociateDiscoveredResourceRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws
 
 #endif

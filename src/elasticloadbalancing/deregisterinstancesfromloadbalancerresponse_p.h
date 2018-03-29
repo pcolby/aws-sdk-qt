@@ -23,8 +23,7 @@
 #include "elasticloadbalancingresponse.h"
 #include "deregisterinstancesfromloadbalancerrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticLoadBalancing {
 
 class DeregisterInstancesFromLoadBalancerResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ElasticLoadBalancing
-} // namespace AWS
+} // namespace QtAws
 
 #endif

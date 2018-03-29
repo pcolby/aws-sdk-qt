@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceCommerceAnalytics {
 
 /**
@@ -103,4 +103,4 @@ void StartSupportDataExportResponsePrivate::StartSupportDataExportResponse(QXmlS
 }
 
 } // namespace MarketplaceCommerceAnalytics
-} // namespace AWS
+} // namespace QtAws

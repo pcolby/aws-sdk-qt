@@ -22,7 +22,7 @@
 #include "updatecrawlerresponse.h"
 #include "gluerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Glue {
 
 /**
@@ -116,4 +116,4 @@ UpdateCrawlerRequestPrivate::UpdateCrawlerRequestPrivate(
 }
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws

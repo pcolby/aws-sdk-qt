@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace SageMaker {
 
 /**
@@ -824,4 +824,4 @@ SageMakerClientPrivate::SageMakerClientPrivate(SageMakerClient * const q)
 }
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws

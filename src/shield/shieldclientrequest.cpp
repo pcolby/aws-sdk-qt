@@ -20,7 +20,7 @@
 #include "shieldclientrequest.h"
 #include "shieldclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Shield {
 
 /**
@@ -337,4 +337,4 @@ QString ShieldClientRequestPrivate::toString(const ShieldClientRequest::Action &
 }
 
 } // namespace Shield
-} // namespace AWS
+} // namespace QtAws

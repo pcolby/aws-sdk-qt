@@ -23,8 +23,7 @@
 #include "opsworks_p.h"
 #include "describeloadbasedautoscalingrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorks {
 
 class DescribeLoadBasedAutoScalingRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace OpsWorks
-} // namespace AWS
+} // namespace QtAws
 
 #endif

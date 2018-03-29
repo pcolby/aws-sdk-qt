@@ -23,8 +23,7 @@
 #include "route53domainsresponse.h"
 #include "disabledomainautorenewrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53Domains {
 
 class DisableDomainAutoRenewResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Route53Domains
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,8 +22,7 @@
 
 #include "ec2request.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EC2 {
 
 class DescribeNetworkAclsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

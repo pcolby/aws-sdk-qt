@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Inspector {
 
 /**
@@ -67,4 +67,4 @@ InspectorClientResponsePrivate::InspectorClientResponsePrivate(
 }
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws

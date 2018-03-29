@@ -22,7 +22,7 @@
 #include "deleteinputsecuritygroupresponse.h"
 #include "medialiverequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MediaLive {
 
 /**
@@ -116,4 +116,4 @@ DeleteInputSecurityGroupRequestPrivate::DeleteInputSecurityGroupRequestPrivate(
 }
 
 } // namespace MediaLive
-} // namespace AWS
+} // namespace QtAws

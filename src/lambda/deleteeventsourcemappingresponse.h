@@ -23,8 +23,7 @@
 #include "lambdaresponse.h"
 #include "deleteeventsourcemappingrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lambda {
 
 class DeleteEventSourceMappingResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Lambda
-} // namespace AWS
+} // namespace QtAws
 
 #endif

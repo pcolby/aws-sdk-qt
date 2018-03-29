@@ -23,8 +23,7 @@
 #include "elasticbeanstalkresponse.h"
 #include "createconfigurationtemplaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 class CreateConfigurationTemplateResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

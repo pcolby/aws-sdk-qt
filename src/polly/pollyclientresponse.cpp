@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Polly {
 
 /**
@@ -67,4 +67,4 @@ PollyClientResponsePrivate::PollyClientResponsePrivate(
 }
 
 } // namespace Polly
-} // namespace AWS
+} // namespace QtAws

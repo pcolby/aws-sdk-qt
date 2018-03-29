@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace IoTDataPlane {
 
 /**
@@ -103,4 +103,4 @@ void PublishResponsePrivate::PublishResponse(QXmlStreamReader &xml)
 }
 
 } // namespace IoTDataPlane
-} // namespace AWS
+} // namespace QtAws

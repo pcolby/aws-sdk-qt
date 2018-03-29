@@ -23,8 +23,7 @@
 #include "cloudwatchlogs_p.h"
 #include "cloudwatchlogsclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatchLogs {
 
 class CloudWatchLogsClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudWatchLogs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

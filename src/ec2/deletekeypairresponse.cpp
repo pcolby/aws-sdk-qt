@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace EC2 {
 
 /**
@@ -103,4 +103,4 @@ void DeleteKeyPairResponsePrivate::DeleteKeyPairResponse(QXmlStreamReader &xml)
 }
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "configserviceresponse.h"
 #include "getdiscoveredresourcecountsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ConfigService {
 
 class GetDiscoveredResourceCountsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

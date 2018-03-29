@@ -22,7 +22,7 @@
 #include "deletedirectoryconfigresponse.h"
 #include "appstreamrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AppStream {
 
 /**
@@ -116,4 +116,4 @@ DeleteDirectoryConfigRequestPrivate::DeleteDirectoryConfigRequestPrivate(
 }
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws

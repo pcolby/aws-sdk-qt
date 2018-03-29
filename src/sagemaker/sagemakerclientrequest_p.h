@@ -23,8 +23,7 @@
 #include "sagemaker_p.h"
 #include "sagemakerclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SageMaker {
 
 class SageMakerClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws
 
 #endif

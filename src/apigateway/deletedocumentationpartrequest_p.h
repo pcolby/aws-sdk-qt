@@ -23,8 +23,7 @@
 #include "apigateway_p.h"
 #include "deletedocumentationpartrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace APIGateway {
 
 class DeleteDocumentationPartRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws
 
 #endif

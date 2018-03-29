@@ -23,8 +23,7 @@
 #include "efsresponse.h"
 #include "deletemounttargetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EFS {
 
 class DeleteMountTargetResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

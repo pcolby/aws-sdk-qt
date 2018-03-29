@@ -22,7 +22,7 @@
 #include "describejobexecutionresponse.h"
 #include "iotjobsdataplanerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IoTJobsDataPlane {
 
 /**
@@ -116,4 +116,4 @@ DescribeJobExecutionRequestPrivate::DescribeJobExecutionRequestPrivate(
 }
 
 } // namespace IoTJobsDataPlane
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "listobjectsv2response.h"
 #include "s3request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace S3 {
 
 /**
@@ -116,4 +116,4 @@ ListObjectsV2RequestPrivate::ListObjectsV2RequestPrivate(
 }
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws

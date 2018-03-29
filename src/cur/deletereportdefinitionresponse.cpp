@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CostandUsageReportService {
 
 /**
@@ -103,4 +103,4 @@ void DeleteReportDefinitionResponsePrivate::DeleteReportDefinitionResponse(QXmlS
 }
 
 } // namespace CostandUsageReportService
-} // namespace AWS
+} // namespace QtAws

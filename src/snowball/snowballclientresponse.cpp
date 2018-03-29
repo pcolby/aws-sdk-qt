@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Snowball {
 
 /**
@@ -67,4 +67,4 @@ SnowballClientResponsePrivate::SnowballClientResponsePrivate(
 }
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws

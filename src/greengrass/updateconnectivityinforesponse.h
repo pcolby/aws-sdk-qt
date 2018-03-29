@@ -23,8 +23,7 @@
 #include "greengrassresponse.h"
 #include "updateconnectivityinforequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Greengrass {
 
 class UpdateConnectivityInfoResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws
 
 #endif

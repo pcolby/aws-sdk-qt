@@ -6,7 +6,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace {{NameSpaceName}} {
 
 /**
@@ -85,4 +85,4 @@ void {{ClassName}}Private::{{ClassName}}(QXmlStreamReader &xml)
 }
 
 } // namespace {{NameSpaceName}}
-} // namespace AWS
+} // namespace QtAws

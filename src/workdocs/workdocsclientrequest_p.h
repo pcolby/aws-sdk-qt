@@ -23,8 +23,7 @@
 #include "workdocs_p.h"
 #include "workdocsclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkDocs {
 
 class WorkDocsClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "describelistenercertificatesresponse.h"
 #include "elasticloadbalancingv2request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
 /**
@@ -116,4 +116,4 @@ DescribeListenerCertificatesRequestPrivate::DescribeListenerCertificatesRequestP
 }
 
 } // namespace ElasticLoadBalancingv2
-} // namespace AWS
+} // namespace QtAws

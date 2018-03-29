@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CostandUsageReportService {
 
 /**
@@ -154,4 +154,4 @@ CostandUsageReportServiceClientPrivate::CostandUsageReportServiceClientPrivate(C
 }
 
 } // namespace CostandUsageReportService
-} // namespace AWS
+} // namespace QtAws

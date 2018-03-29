@@ -23,8 +23,7 @@
 #include "cloudfront_p.h"
 #include "cloudfrontclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudFront {
 
 class CloudFrontClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws
 
 #endif

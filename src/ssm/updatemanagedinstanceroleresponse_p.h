@@ -23,8 +23,7 @@
 #include "ssmresponse.h"
 #include "updatemanagedinstancerolerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SSM {
 
 class UpdateManagedInstanceRoleResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

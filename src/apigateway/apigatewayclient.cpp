@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace APIGateway {
 
 /**
@@ -1808,4 +1808,4 @@ APIGatewayClientPrivate::APIGatewayClientPrivate(APIGatewayClient * const q)
 }
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws

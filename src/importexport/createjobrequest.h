@@ -22,8 +22,7 @@
 
 #include "importexportrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ImportExport {
 
 class CreateJobRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace ImportExport
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "sqsresponse.h"
 #include "tagqueuerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SQS {
 
 class TagQueueResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

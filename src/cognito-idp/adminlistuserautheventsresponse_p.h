@@ -23,8 +23,7 @@
 #include "cognitoidentityproviderresponse.h"
 #include "adminlistuserautheventsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoIdentityProvider {
 
 class AdminListUserAuthEventsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CognitoIdentityProvider
-} // namespace AWS
+} // namespace QtAws
 
 #endif

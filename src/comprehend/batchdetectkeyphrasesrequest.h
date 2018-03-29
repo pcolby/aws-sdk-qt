@@ -22,8 +22,7 @@
 
 #include "comprehendrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Comprehend {
 
 class BatchDetectKeyPhrasesRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Comprehend
-} // namespace AWS
+} // namespace QtAws
 
 #endif

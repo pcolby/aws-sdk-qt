@@ -23,8 +23,7 @@
 #include "emr_p.h"
 #include "listbootstrapactionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EMR {
 
 class ListBootstrapActionsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

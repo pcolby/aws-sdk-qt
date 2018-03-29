@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScaling {
 
 /**
@@ -1242,4 +1242,4 @@ AutoScalingClientPrivate::AutoScalingClientPrivate(AutoScalingClient * const q)
 }
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws

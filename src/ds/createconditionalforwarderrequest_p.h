@@ -23,8 +23,7 @@
 #include "directoryservice_p.h"
 #include "createconditionalforwarderrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectoryService {
 
 class CreateConditionalForwarderRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace DirectoryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,8 +22,7 @@
 
 #include "resourcegroupsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ResourceGroups {
 
 class GetGroupRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace ResourceGroups
-} // namespace AWS
+} // namespace QtAws
 
 #endif

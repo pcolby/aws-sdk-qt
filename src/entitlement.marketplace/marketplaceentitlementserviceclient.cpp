@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceEntitlementService {
 
 /**
@@ -147,4 +147,4 @@ MarketplaceEntitlementServiceClientPrivate::MarketplaceEntitlementServiceClientP
 }
 
 } // namespace MarketplaceEntitlementService
-} // namespace AWS
+} // namespace QtAws

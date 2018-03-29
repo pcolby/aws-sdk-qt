@@ -23,8 +23,7 @@
 #include "appstreamresponse.h"
 #include "copyimagerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppStream {
 
 class CopyImageResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws
 
 #endif

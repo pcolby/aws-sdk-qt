@@ -22,7 +22,7 @@
 #include "updatepullrequestdescriptionresponse.h"
 #include "codecommitrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeCommit {
 
 /**
@@ -116,4 +116,4 @@ UpdatePullRequestDescriptionRequestPrivate::UpdatePullRequestDescriptionRequestP
 }
 
 } // namespace CodeCommit
-} // namespace AWS
+} // namespace QtAws

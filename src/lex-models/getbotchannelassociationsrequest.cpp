@@ -22,7 +22,7 @@
 #include "getbotchannelassociationsresponse.h"
 #include "lexmodelbuildingservicerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace LexModelBuildingService {
 
 /**
@@ -116,4 +116,4 @@ GetBotChannelAssociationsRequestPrivate::GetBotChannelAssociationsRequestPrivate
 }
 
 } // namespace LexModelBuildingService
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "efsresponse.h"
 #include "createtagsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EFS {
 
 class CreateTagsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "mediaconvert_p.h"
 #include "listjobtemplatesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaConvert {
 
 class ListJobTemplatesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws
 
 #endif

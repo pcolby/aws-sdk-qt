@@ -22,7 +22,7 @@
 #include "updateprojectresponse.h"
 #include "mobilerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Mobile {
 
 /**
@@ -116,4 +116,4 @@ UpdateProjectRequestPrivate::UpdateProjectRequestPrivate(
 }
 
 } // namespace Mobile
-} // namespace AWS
+} // namespace QtAws

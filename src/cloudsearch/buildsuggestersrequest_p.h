@@ -23,8 +23,7 @@
 #include "cloudsearch_p.h"
 #include "buildsuggestersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudSearch {
 
 class BuildSuggestersRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "route53domainsresponse.h"
 #include "listoperationsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53Domains {
 
 class ListOperationsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Route53Domains
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -20,7 +20,7 @@
 #include "kinesisvideomediaclientrequest.h"
 #include "kinesisvideomediaclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace KinesisVideoMedia {
 
 /**
@@ -337,4 +337,4 @@ QString KinesisVideoMediaClientRequestPrivate::toString(const KinesisVideoMediaC
 }
 
 } // namespace KinesisVideoMedia
-} // namespace AWS
+} // namespace QtAws

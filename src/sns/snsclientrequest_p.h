@@ -23,8 +23,7 @@
 #include "sns_p.h"
 #include "snsclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SNS {
 
 class SnsClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SNS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

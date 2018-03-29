@@ -23,8 +23,7 @@
 #include "dynamodbstreamsresponse.h"
 #include "getsharditeratorrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DynamoDBStreams {
 
 class GetShardIteratorResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DynamoDBStreams
-} // namespace AWS
+} // namespace QtAws
 
 #endif

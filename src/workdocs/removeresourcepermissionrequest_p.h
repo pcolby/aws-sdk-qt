@@ -23,8 +23,7 @@
 #include "workdocs_p.h"
 #include "removeresourcepermissionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkDocs {
 
 class RemoveResourcePermissionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

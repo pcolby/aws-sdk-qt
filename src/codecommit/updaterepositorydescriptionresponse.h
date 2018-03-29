@@ -23,8 +23,7 @@
 #include "codecommitresponse.h"
 #include "updaterepositorydescriptionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeCommit {
 
 class UpdateRepositoryDescriptionResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeCommit
-} // namespace AWS
+} // namespace QtAws
 
 #endif

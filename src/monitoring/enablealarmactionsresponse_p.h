@@ -23,8 +23,7 @@
 #include "cloudwatchresponse.h"
 #include "enablealarmactionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatch {
 
 class EnableAlarmActionsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CloudWatch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

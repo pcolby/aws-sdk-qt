@@ -23,8 +23,7 @@
 #include "costexplorer_p.h"
 #include "getreservationcoveragerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CostExplorer {
 
 class GetReservationCoverageRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CostExplorer
-} // namespace AWS
+} // namespace QtAws
 
 #endif

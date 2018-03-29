@@ -22,7 +22,7 @@
 #include "getapnsvoipsandboxchannelresponse.h"
 #include "pinpointrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Pinpoint {
 
 /**
@@ -116,4 +116,4 @@ GetApnsVoipSandboxChannelRequestPrivate::GetApnsVoipSandboxChannelRequestPrivate
 }
 
 } // namespace Pinpoint
-} // namespace AWS
+} // namespace QtAws

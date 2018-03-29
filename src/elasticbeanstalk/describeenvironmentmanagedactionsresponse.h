@@ -23,8 +23,7 @@
 #include "elasticbeanstalkresponse.h"
 #include "describeenvironmentmanagedactionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 class DescribeEnvironmentManagedActionsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "describeservicesresponse.h"
 #include "pricingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Pricing {
 
 /**
@@ -116,4 +116,4 @@ DescribeServicesRequestPrivate::DescribeServicesRequestPrivate(
 }
 
 } // namespace Pricing
-} // namespace AWS
+} // namespace QtAws

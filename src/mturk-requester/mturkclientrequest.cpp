@@ -20,7 +20,7 @@
 #include "mturkclientrequest.h"
 #include "mturkclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MTurk {
 
 /**
@@ -337,4 +337,4 @@ QString MTurkClientRequestPrivate::toString(const MTurkClientRequest::Action &ac
 }
 
 } // namespace MTurk
-} // namespace AWS
+} // namespace QtAws

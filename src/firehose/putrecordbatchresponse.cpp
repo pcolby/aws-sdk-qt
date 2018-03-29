@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Firehose {
 
 /**
@@ -103,4 +103,4 @@ void PutRecordBatchResponsePrivate::PutRecordBatchResponse(QXmlStreamReader &xml
 }
 
 } // namespace Firehose
-} // namespace AWS
+} // namespace QtAws

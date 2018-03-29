@@ -22,7 +22,7 @@
 #include "startpersontrackingresponse.h"
 #include "rekognitionrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Rekognition {
 
 /**
@@ -116,4 +116,4 @@ StartPersonTrackingRequestPrivate::StartPersonTrackingRequestPrivate(
 }
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws

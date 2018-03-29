@@ -20,7 +20,7 @@
 #include "codepipelineclientrequest.h"
 #include "codepipelineclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodePipeline {
 
 /**
@@ -337,4 +337,4 @@ QString CodePipelineClientRequestPrivate::toString(const CodePipelineClientReque
 }
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Kinesis {
 
 /**
@@ -103,4 +103,4 @@ void UpdateShardCountResponsePrivate::UpdateShardCountResponse(QXmlStreamReader 
 }
 
 } // namespace Kinesis
-} // namespace AWS
+} // namespace QtAws

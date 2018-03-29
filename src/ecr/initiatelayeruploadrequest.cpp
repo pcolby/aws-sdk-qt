@@ -22,7 +22,7 @@
 #include "initiatelayeruploadresponse.h"
 #include "ecrrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ECR {
 
 /**
@@ -116,4 +116,4 @@ InitiateLayerUploadRequestPrivate::InitiateLayerUploadRequestPrivate(
 }
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws

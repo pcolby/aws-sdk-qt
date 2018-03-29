@@ -23,8 +23,7 @@
 #include "cognitosyncresponse.h"
 #include "getbulkpublishdetailsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CognitoSync {
 
 class GetBulkPublishDetailsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CognitoSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

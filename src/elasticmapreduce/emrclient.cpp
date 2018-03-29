@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace EMR {
 
 /**
@@ -644,4 +644,4 @@ EmrClientPrivate::EmrClientPrivate(EmrClient * const q)
 }
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws

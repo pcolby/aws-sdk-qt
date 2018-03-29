@@ -22,7 +22,7 @@
 #include "getsnowballusageresponse.h"
 #include "snowballrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Snowball {
 
 /**
@@ -116,4 +116,4 @@ GetSnowballUsageRequestPrivate::GetSnowballUsageRequestPrivate(
 }
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws

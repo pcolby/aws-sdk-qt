@@ -22,7 +22,7 @@
 #include "completemultipartuploadresponse.h"
 #include "glacierrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Glacier {
 
 /**
@@ -116,4 +116,4 @@ CompleteMultipartUploadRequestPrivate::CompleteMultipartUploadRequestPrivate(
 }
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws

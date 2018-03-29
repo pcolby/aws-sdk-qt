@@ -22,8 +22,7 @@
 
 #include "supportrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Support {
 
 class DescribeTrustedAdvisorCheckResultRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Support
-} // namespace AWS
+} // namespace QtAws
 
 #endif

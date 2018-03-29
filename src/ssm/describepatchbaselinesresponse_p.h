@@ -23,8 +23,7 @@
 #include "ssmresponse.h"
 #include "describepatchbaselinesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SSM {
 
 class DescribePatchBaselinesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

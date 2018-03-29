@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace IAM {
 
 /**
@@ -103,4 +103,4 @@ void GetGroupResponsePrivate::GetGroupResponse(QXmlStreamReader &xml)
 }
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws

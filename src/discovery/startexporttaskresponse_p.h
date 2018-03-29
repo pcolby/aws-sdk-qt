@@ -23,8 +23,7 @@
 #include "applicationdiscoveryserviceresponse.h"
 #include "startexporttaskrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 class StartExportTaskResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ApplicationDiscoveryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

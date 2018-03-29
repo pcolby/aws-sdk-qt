@@ -23,8 +23,7 @@
 #include "kms_p.h"
 #include "generatedatakeyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace KMS {
 
 class GenerateDataKeyRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace KMS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

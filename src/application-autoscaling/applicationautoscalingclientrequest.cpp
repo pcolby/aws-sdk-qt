@@ -20,7 +20,7 @@
 #include "applicationautoscalingclientrequest.h"
 #include "applicationautoscalingclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ApplicationAutoScaling {
 
 /**
@@ -337,4 +337,4 @@ QString ApplicationAutoScalingClientRequestPrivate::toString(const ApplicationAu
 }
 
 } // namespace ApplicationAutoScaling
-} // namespace AWS
+} // namespace QtAws

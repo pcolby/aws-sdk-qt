@@ -23,8 +23,7 @@
 #include "batch_p.h"
 #include "deregisterjobdefinitionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Batch {
 
 class DeregisterJobDefinitionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Batch
-} // namespace AWS
+} // namespace QtAws
 
 #endif

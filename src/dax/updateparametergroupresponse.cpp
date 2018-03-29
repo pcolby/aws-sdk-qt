@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DAX {
 
 /**
@@ -103,4 +103,4 @@ void UpdateParameterGroupResponsePrivate::UpdateParameterGroupResponse(QXmlStrea
 }
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws

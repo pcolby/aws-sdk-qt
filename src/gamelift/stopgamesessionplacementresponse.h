@@ -23,8 +23,7 @@
 #include "gameliftresponse.h"
 #include "stopgamesessionplacementrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace GameLift {
 
 class StopGameSessionPlacementResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,7 +22,7 @@
 #include "deletegamesessionqueueresponse.h"
 #include "gameliftrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace GameLift {
 
 /**
@@ -116,4 +116,4 @@ DeleteGameSessionQueueRequestPrivate::DeleteGameSessionQueueRequestPrivate(
 }
 
 } // namespace GameLift
-} // namespace AWS
+} // namespace QtAws

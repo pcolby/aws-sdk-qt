@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace WAFRegional {
 
 /**
@@ -103,4 +103,4 @@ void GetRateBasedRuleResponsePrivate::GetRateBasedRuleResponse(QXmlStreamReader 
 }
 
 } // namespace WAFRegional
-} // namespace AWS
+} // namespace QtAws

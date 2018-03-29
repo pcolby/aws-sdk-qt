@@ -23,8 +23,7 @@
 #include "servicediscoveryresponse.h"
 #include "listinstancesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceDiscovery {
 
 class ListInstancesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ServiceDiscovery
-} // namespace AWS
+} // namespace QtAws
 
 #endif

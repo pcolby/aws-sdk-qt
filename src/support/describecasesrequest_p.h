@@ -23,8 +23,7 @@
 #include "support_p.h"
 #include "describecasesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Support {
 
 class DescribeCasesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Support
-} // namespace AWS
+} // namespace QtAws
 
 #endif

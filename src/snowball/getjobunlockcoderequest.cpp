@@ -22,7 +22,7 @@
 #include "getjobunlockcoderesponse.h"
 #include "snowballrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Snowball {
 
 /**
@@ -116,4 +116,4 @@ GetJobUnlockCodeRequestPrivate::GetJobUnlockCodeRequestPrivate(
 }
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws

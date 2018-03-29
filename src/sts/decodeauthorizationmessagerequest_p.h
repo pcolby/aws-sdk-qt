@@ -23,8 +23,7 @@
 #include "sts_p.h"
 #include "decodeauthorizationmessagerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace STS {
 
 class DecodeAuthorizationMessageRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace STS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

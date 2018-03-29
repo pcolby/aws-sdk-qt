@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace KMS {
 
 /**
@@ -1138,4 +1138,4 @@ KmsClientPrivate::KmsClientPrivate(KmsClient * const q)
 }
 
 } // namespace KMS
-} // namespace AWS
+} // namespace QtAws

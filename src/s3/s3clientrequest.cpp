@@ -20,7 +20,7 @@
 #include "s3clientrequest.h"
 #include "s3clientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace S3 {
 
 /**
@@ -337,4 +337,4 @@ QString S3ClientRequestPrivate::toString(const S3ClientRequest::Action &action)
 }
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws

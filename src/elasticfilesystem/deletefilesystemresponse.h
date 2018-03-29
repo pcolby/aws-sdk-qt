@@ -23,8 +23,7 @@
 #include "efsresponse.h"
 #include "deletefilesystemrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EFS {
 
 class DeleteFileSystemResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

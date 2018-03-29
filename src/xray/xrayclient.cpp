@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace XRay {
 
 /**
@@ -285,4 +285,4 @@ XRayClientPrivate::XRayClientPrivate(XRayClient * const q)
 }
 
 } // namespace XRay
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "directconnectresponse.h"
 #include "describedirectconnectgatewaysrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DirectConnect {
 
 class DescribeDirectConnectGatewaysResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace DirectConnect
-} // namespace AWS
+} // namespace QtAws
 
 #endif

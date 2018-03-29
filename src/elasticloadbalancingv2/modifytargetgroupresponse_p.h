@@ -23,8 +23,7 @@
 #include "elasticloadbalancingv2response.h"
 #include "modifytargetgrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElasticLoadBalancingv2 {
 
 class ModifyTargetGroupResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ElasticLoadBalancingv2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

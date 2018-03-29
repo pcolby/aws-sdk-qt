@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Snowball {
 
 /**
@@ -103,4 +103,4 @@ void GetSnowballUsageResponsePrivate::GetSnowballUsageResponse(QXmlStreamReader 
 }
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws

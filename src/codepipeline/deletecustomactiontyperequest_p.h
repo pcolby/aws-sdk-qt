@@ -23,8 +23,7 @@
 #include "codepipeline_p.h"
 #include "deletecustomactiontyperequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodePipeline {
 
 class DeleteCustomActionTypeRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace CodePipeline
-} // namespace AWS
+} // namespace QtAws
 
 #endif

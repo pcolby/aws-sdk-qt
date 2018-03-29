@@ -22,7 +22,7 @@
 #include "listresourcedelegatesresponse.h"
 #include "workmailrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WorkMail {
 
 /**
@@ -116,4 +116,4 @@ ListResourceDelegatesRequestPrivate::ListResourceDelegatesRequestPrivate(
 }
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws

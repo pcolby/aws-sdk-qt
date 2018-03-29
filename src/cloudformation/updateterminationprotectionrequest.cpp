@@ -22,7 +22,7 @@
 #include "updateterminationprotectionresponse.h"
 #include "cloudformationrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFormation {
 
 /**
@@ -116,4 +116,4 @@ UpdateTerminationProtectionRequestPrivate::UpdateTerminationProtectionRequestPri
 }
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws

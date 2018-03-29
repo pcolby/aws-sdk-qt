@@ -20,7 +20,7 @@
 #include "codecommitclientrequest.h"
 #include "codecommitclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeCommit {
 
 /**
@@ -337,4 +337,4 @@ QString CodeCommitClientRequestPrivate::toString(const CodeCommitClientRequest::
 }
 
 } // namespace CodeCommit
-} // namespace AWS
+} // namespace QtAws

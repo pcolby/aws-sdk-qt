@@ -22,8 +22,7 @@
 
 #include "lambdarequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Lambda {
 
 class GetAliasRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Lambda
-} // namespace AWS
+} // namespace QtAws
 
 #endif

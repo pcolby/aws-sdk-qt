@@ -22,7 +22,7 @@
 #include "attachloadbalancertargetgroupsresponse.h"
 #include "autoscalingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScaling {
 
 /**
@@ -116,4 +116,4 @@ AttachLoadBalancerTargetGroupsRequestPrivate::AttachLoadBalancerTargetGroupsRequ
 }
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws

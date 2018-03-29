@@ -22,7 +22,7 @@
 #include "describeseveritylevelsresponse.h"
 #include "supportrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Support {
 
 /**
@@ -116,4 +116,4 @@ DescribeSeverityLevelsRequestPrivate::DescribeSeverityLevelsRequestPrivate(
 }
 
 } // namespace Support
-} // namespace AWS
+} // namespace QtAws

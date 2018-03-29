@@ -22,7 +22,7 @@
 #include "describeavailabilityoptionsresponse.h"
 #include "cloudsearchrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudSearch {
 
 /**
@@ -116,4 +116,4 @@ DescribeAvailabilityOptionsRequestPrivate::DescribeAvailabilityOptionsRequestPri
 }
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws

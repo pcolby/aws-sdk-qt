@@ -24,7 +24,7 @@
 
 class QNetworkAccessManager;
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceEntitlementService {
 
 class MarketplaceEntitlementServiceClient;
@@ -41,6 +41,6 @@ private:
 };
 
 } // namespace MarketplaceEntitlementService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoSync {
 
 /**
@@ -67,4 +67,4 @@ CognitoSyncClientResponsePrivate::CognitoSyncClientResponsePrivate(
 }
 
 } // namespace CognitoSync
-} // namespace AWS
+} // namespace QtAws

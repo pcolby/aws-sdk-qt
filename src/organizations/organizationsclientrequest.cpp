@@ -20,7 +20,7 @@
 #include "organizationsclientrequest.h"
 #include "organizationsclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Organizations {
 
 /**
@@ -337,4 +337,4 @@ QString OrganizationsClientRequestPrivate::toString(const OrganizationsClientReq
 }
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws

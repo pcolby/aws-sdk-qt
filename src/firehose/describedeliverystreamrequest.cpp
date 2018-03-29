@@ -22,7 +22,7 @@
 #include "describedeliverystreamresponse.h"
 #include "firehoserequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Firehose {
 
 /**
@@ -116,4 +116,4 @@ DescribeDeliveryStreamRequestPrivate::DescribeDeliveryStreamRequestPrivate(
 }
 
 } // namespace Firehose
-} // namespace AWS
+} // namespace QtAws

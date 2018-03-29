@@ -22,7 +22,7 @@
 #include "canceljobresponse.h"
 #include "importexportrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ImportExport {
 
 /**
@@ -116,4 +116,4 @@ CancelJobRequestPrivate::CancelJobRequestPrivate(
 }
 
 } // namespace ImportExport
-} // namespace AWS
+} // namespace QtAws

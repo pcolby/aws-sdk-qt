@@ -22,7 +22,7 @@
 #include "cancelhandshakeresponse.h"
 #include "organizationsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Organizations {
 
 /**
@@ -116,4 +116,4 @@ CancelHandshakeRequestPrivate::CancelHandshakeRequestPrivate(
 }
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws

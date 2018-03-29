@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MachineLearning {
 
 /**
@@ -103,4 +103,4 @@ void DeleteDataSourceResponsePrivate::DeleteDataSourceResponse(QXmlStreamReader 
 }
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws

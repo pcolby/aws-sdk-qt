@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Pricing {
 
 /**
@@ -67,4 +67,4 @@ PricingClientResponsePrivate::PricingClientResponsePrivate(
 }
 
 } // namespace Pricing
-} // namespace AWS
+} // namespace QtAws

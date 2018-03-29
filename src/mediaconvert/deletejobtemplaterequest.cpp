@@ -22,7 +22,7 @@
 #include "deletejobtemplateresponse.h"
 #include "mediaconvertrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MediaConvert {
 
 /**
@@ -116,4 +116,4 @@ DeleteJobTemplateRequestPrivate::DeleteJobTemplateRequestPrivate(
 }
 
 } // namespace MediaConvert
-} // namespace AWS
+} // namespace QtAws

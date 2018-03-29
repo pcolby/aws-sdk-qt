@@ -22,7 +22,7 @@
 #include "updatedirectoryconfigresponse.h"
 #include "appstreamrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AppStream {
 
 /**
@@ -116,4 +116,4 @@ UpdateDirectoryConfigRequestPrivate::UpdateDirectoryConfigRequestPrivate(
 }
 
 } // namespace AppStream
-} // namespace AWS
+} // namespace QtAws

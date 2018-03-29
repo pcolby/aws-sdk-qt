@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Organizations {
 
 /**
@@ -1485,4 +1485,4 @@ OrganizationsClientPrivate::OrganizationsClientPrivate(OrganizationsClient * con
 }
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws

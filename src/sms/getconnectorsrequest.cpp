@@ -22,7 +22,7 @@
 #include "getconnectorsresponse.h"
 #include "smsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SMS {
 
 /**
@@ -116,4 +116,4 @@ GetConnectorsRequestPrivate::GetConnectorsRequestPrivate(
 }
 
 } // namespace SMS
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "deletenotificationsubscriptionresponse.h"
 #include "workdocsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WorkDocs {
 
 /**
@@ -116,4 +116,4 @@ DeleteNotificationSubscriptionRequestPrivate::DeleteNotificationSubscriptionRequ
 }
 
 } // namespace WorkDocs
-} // namespace AWS
+} // namespace QtAws

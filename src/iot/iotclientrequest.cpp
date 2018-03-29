@@ -20,7 +20,7 @@
 #include "iotclientrequest.h"
 #include "iotclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace IoT {
 
 /**
@@ -337,4 +337,4 @@ QString IoTClientRequestPrivate::toString(const IoTClientRequest::Action &action
 }
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws

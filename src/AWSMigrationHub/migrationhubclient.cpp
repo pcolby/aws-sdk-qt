@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace MigrationHub {
 
 /**
@@ -463,4 +463,4 @@ MigrationHubClientPrivate::MigrationHubClientPrivate(MigrationHubClient * const 
 }
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws

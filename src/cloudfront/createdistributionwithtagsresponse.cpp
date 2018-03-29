@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFront {
 
 /**
@@ -103,4 +103,4 @@ void CreateDistributionWithTagsResponsePrivate::CreateDistributionWithTagsRespon
 }
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws

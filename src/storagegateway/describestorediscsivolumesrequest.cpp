@@ -22,7 +22,7 @@
 #include "describestorediscsivolumesresponse.h"
 #include "storagegatewayrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace StorageGateway {
 
 /**
@@ -116,4 +116,4 @@ DescribeStorediSCSIVolumesRequestPrivate::DescribeStorediSCSIVolumesRequestPriva
 }
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws

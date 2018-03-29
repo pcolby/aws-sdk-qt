@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace ConfigService {
 
 /**
@@ -869,4 +869,4 @@ ConfigServiceClientPrivate::ConfigServiceClientPrivate(ConfigServiceClient * con
 }
 
 } // namespace ConfigService
-} // namespace AWS
+} // namespace QtAws

@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace ResourceGroups {
 
 /**
@@ -330,4 +330,4 @@ ResourceGroupsClientPrivate::ResourceGroupsClientPrivate(ResourceGroupsClient * 
 }
 
 } // namespace ResourceGroups
-} // namespace AWS
+} // namespace QtAws

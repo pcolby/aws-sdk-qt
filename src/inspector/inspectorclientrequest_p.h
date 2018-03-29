@@ -23,8 +23,7 @@
 #include "inspector_p.h"
 #include "inspectorclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Inspector {
 
 class InspectorClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws
 
 #endif

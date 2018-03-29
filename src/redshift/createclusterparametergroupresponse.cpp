@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Redshift {
 
 /**
@@ -103,4 +103,4 @@ void CreateClusterParameterGroupResponsePrivate::CreateClusterParameterGroupResp
 }
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws

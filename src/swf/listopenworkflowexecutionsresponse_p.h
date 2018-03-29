@@ -23,8 +23,7 @@
 #include "swfresponse.h"
 #include "listopenworkflowexecutionsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SWF {
 
 class ListOpenWorkflowExecutionsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

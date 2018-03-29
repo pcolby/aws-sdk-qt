@@ -22,7 +22,7 @@
 #include "getobjectresponse.h"
 #include "mediastoredatarequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MediaStoreData {
 
 /**
@@ -116,4 +116,4 @@ GetObjectRequestPrivate::GetObjectRequestPrivate(
 }
 
 } // namespace MediaStoreData
-} // namespace AWS
+} // namespace QtAws

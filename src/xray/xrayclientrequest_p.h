@@ -23,8 +23,7 @@
 #include "xray_p.h"
 #include "xrayclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace XRay {
 
 class XRayClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace XRay
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "simpledb_p.h"
 #include "batchputattributesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SimpleDB {
 
 class BatchPutAttributesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SimpleDB
-} // namespace AWS
+} // namespace QtAws
 
 #endif

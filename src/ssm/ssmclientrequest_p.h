@@ -23,8 +23,7 @@
 #include "ssm_p.h"
 #include "ssmclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SSM {
 
 class SsmClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

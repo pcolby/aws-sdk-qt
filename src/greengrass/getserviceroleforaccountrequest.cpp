@@ -22,7 +22,7 @@
 #include "getserviceroleforaccountresponse.h"
 #include "greengrassrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -116,4 +116,4 @@ GetServiceRoleForAccountRequestPrivate::GetServiceRoleForAccountRequestPrivate(
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

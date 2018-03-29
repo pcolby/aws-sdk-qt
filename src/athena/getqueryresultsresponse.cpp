@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Athena {
 
 /**
@@ -103,4 +103,4 @@ void GetQueryResultsResponsePrivate::GetQueryResultsResponse(QXmlStreamReader &x
 }
 
 } // namespace Athena
-} // namespace AWS
+} // namespace QtAws

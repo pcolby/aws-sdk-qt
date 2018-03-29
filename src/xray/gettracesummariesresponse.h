@@ -23,8 +23,7 @@
 #include "xrayresponse.h"
 #include "gettracesummariesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace XRay {
 
 class GetTraceSummariesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace XRay
-} // namespace AWS
+} // namespace QtAws
 
 #endif

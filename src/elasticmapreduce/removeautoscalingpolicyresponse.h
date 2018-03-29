@@ -23,8 +23,7 @@
 #include "emrresponse.h"
 #include "removeautoscalingpolicyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EMR {
 
 class RemoveAutoScalingPolicyResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace EMR
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "sqs_p.h"
 #include "removepermissionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SQS {
 
 class RemovePermissionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

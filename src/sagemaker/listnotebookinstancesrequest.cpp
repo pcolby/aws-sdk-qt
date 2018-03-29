@@ -22,7 +22,7 @@
 #include "listnotebookinstancesresponse.h"
 #include "sagemakerrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SageMaker {
 
 /**
@@ -116,4 +116,4 @@ ListNotebookInstancesRequestPrivate::ListNotebookInstancesRequestPrivate(
 }
 
 } // namespace SageMaker
-} // namespace AWS
+} // namespace QtAws

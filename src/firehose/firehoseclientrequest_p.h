@@ -23,8 +23,7 @@
 #include "firehose_p.h"
 #include "firehoseclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Firehose {
 
 class FirehoseClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Firehose
-} // namespace AWS
+} // namespace QtAws
 
 #endif

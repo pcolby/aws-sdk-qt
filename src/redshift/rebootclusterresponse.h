@@ -23,8 +23,7 @@
 #include "redshiftresponse.h"
 #include "rebootclusterrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Redshift {
 
 class RebootClusterResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

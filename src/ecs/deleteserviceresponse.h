@@ -23,8 +23,7 @@
 #include "ecsresponse.h"
 #include "deleteservicerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ECS {
 
 class DeleteServiceResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ECS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

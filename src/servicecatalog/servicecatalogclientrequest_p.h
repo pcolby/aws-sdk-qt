@@ -23,8 +23,7 @@
 #include "servicecatalog_p.h"
 #include "servicecatalogclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ServiceCatalog {
 
 class ServiceCatalogClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace MediaLive {
 
 /**
@@ -336,4 +336,4 @@ MediaLiveClientPrivate::MediaLiveClientPrivate(MediaLiveClient * const q)
 }
 
 } // namespace MediaLive
-} // namespace AWS
+} // namespace QtAws

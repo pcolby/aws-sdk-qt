@@ -23,8 +23,7 @@
 #include "applicationdiscoveryserviceresponse.h"
 #include "exportconfigurationsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ApplicationDiscoveryService {
 
 class ExportConfigurationsResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ApplicationDiscoveryService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

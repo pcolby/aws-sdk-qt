@@ -23,8 +23,7 @@
 #include "swfresponse.h"
 #include "countpendingactivitytasksrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SWF {
 
 class CountPendingActivityTasksResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "opsworkscmresponse.h"
 #include "describeaccountattributesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorksCM {
 
 class DescribeAccountAttributesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

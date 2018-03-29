@@ -23,8 +23,7 @@
 #include "sesresponse.h"
 #include "deletereceiptfilterrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SES {
 
 class DeleteReceiptFilterResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws
 
 #endif

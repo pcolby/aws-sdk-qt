@@ -20,7 +20,7 @@
 #include "guarddutyclientrequest.h"
 #include "guarddutyclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace GuardDuty {
 
 /**
@@ -337,4 +337,4 @@ QString GuardDutyClientRequestPrivate::toString(const GuardDutyClientRequest::Ac
 }
 
 } // namespace GuardDuty
-} // namespace AWS
+} // namespace QtAws

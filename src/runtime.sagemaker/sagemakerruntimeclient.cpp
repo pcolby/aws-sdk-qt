@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace SageMakerRuntime {
 
 /**
@@ -141,4 +141,4 @@ SageMakerRuntimeClientPrivate::SageMakerRuntimeClientPrivate(SageMakerRuntimeCli
 }
 
 } // namespace SageMakerRuntime
-} // namespace AWS
+} // namespace QtAws

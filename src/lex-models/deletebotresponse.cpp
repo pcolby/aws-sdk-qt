@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace LexModelBuildingService {
 
 /**
@@ -103,4 +103,4 @@ void DeleteBotResponsePrivate::DeleteBotResponse(QXmlStreamReader &xml)
 }
 
 } // namespace LexModelBuildingService
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "liststatemachinesresponse.h"
 #include "sfnrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SFN {
 
 /**
@@ -116,4 +116,4 @@ ListStateMachinesRequestPrivate::ListStateMachinesRequestPrivate(
 }
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws

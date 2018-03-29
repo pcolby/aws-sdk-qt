@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SMS {
 
 /**
@@ -103,4 +103,4 @@ void StartOnDemandReplicationRunResponsePrivate::StartOnDemandReplicationRunResp
 }
 
 } // namespace SMS
-} // namespace AWS
+} // namespace QtAws

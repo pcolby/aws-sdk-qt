@@ -22,7 +22,7 @@
 #include "importservercatalogresponse.h"
 #include "smsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SMS {
 
 /**
@@ -116,4 +116,4 @@ ImportServerCatalogRequestPrivate::ImportServerCatalogRequestPrivate(
 }
 
 } // namespace SMS
-} // namespace AWS
+} // namespace QtAws

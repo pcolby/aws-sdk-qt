@@ -23,8 +23,7 @@
 #include "cloudhsm_p.h"
 #include "cloudhsmclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudHSM {
 
 class CloudHSMClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

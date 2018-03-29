@@ -22,7 +22,7 @@
 #include "getbucketaclresponse.h"
 #include "s3request_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace S3 {
 
 /**
@@ -116,4 +116,4 @@ GetBucketAclRequestPrivate::GetBucketAclRequestPrivate(
 }
 
 } // namespace S3
-} // namespace AWS
+} // namespace QtAws

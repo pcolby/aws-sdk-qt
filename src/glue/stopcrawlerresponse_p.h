@@ -23,8 +23,7 @@
 #include "glueresponse.h"
 #include "stopcrawlerrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Glue {
 
 class StopCrawlerResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws
 
 #endif

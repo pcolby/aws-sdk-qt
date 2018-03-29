@@ -23,8 +23,7 @@
 #include "redshiftresponse.h"
 #include "revokeclustersecuritygroupingressrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Redshift {
 
 class RevokeClusterSecurityGroupIngressResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws
 
 #endif

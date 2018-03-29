@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Redshift {
 
 /**
@@ -1514,4 +1514,4 @@ RedshiftClientPrivate::RedshiftClientPrivate(RedshiftClient * const q)
 }
 
 } // namespace Redshift
-} // namespace AWS
+} // namespace QtAws

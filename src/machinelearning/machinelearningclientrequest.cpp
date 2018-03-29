@@ -20,7 +20,7 @@
 #include "machinelearningclientrequest.h"
 #include "machinelearningclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MachineLearning {
 
 /**
@@ -337,4 +337,4 @@ QString MachineLearningClientRequestPrivate::toString(const MachineLearningClien
 }
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws

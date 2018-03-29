@@ -23,8 +23,7 @@
 #include "ecs_p.h"
 #include "submitcontainerstatechangerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ECS {
 
 class SubmitContainerStateChangeRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ECS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

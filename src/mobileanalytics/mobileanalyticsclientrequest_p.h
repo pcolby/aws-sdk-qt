@@ -23,8 +23,7 @@
 #include "mobileanalytics_p.h"
 #include "mobileanalyticsclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MobileAnalytics {
 
 class MobileAnalyticsClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MobileAnalytics
-} // namespace AWS
+} // namespace QtAws
 
 #endif

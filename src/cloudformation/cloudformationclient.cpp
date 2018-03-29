@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFormation {
 
 /**
@@ -910,4 +910,4 @@ CloudFormationClientPrivate::CloudFormationClientPrivate(CloudFormationClient * 
 }
 
 } // namespace CloudFormation
-} // namespace AWS
+} // namespace QtAws

@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CostExplorer {
 
 /**
@@ -257,4 +257,4 @@ CostExplorerClientPrivate::CostExplorerClientPrivate(CostExplorerClient * const 
 }
 
 } // namespace CostExplorer
-} // namespace AWS
+} // namespace QtAws

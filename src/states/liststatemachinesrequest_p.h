@@ -23,8 +23,7 @@
 #include "sfn_p.h"
 #include "liststatemachinesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SFN {
 
 class ListStateMachinesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws
 
 #endif

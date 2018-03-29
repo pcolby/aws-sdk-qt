@@ -22,7 +22,7 @@
 #include "listdeploymentconfigsresponse.h"
 #include "codedeployrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeDeploy {
 
 /**
@@ -116,4 +116,4 @@ ListDeploymentConfigsRequestPrivate::ListDeploymentConfigsRequestPrivate(
 }
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws

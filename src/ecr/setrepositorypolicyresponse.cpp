@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ECR {
 
 /**
@@ -103,4 +103,4 @@ void SetRepositoryPolicyResponsePrivate::SetRepositoryPolicyResponse(QXmlStreamR
 }
 
 } // namespace ECR
-} // namespace AWS
+} // namespace QtAws

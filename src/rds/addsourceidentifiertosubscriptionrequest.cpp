@@ -22,7 +22,7 @@
 #include "addsourceidentifiertosubscriptionresponse.h"
 #include "rdsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -116,4 +116,4 @@ AddSourceIdentifierToSubscriptionRequestPrivate::AddSourceIdentifierToSubscripti
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

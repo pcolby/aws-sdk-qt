@@ -22,8 +22,7 @@
 
 #include "simpledbrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SimpleDB {
 
 class ListDomainsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace SimpleDB
-} // namespace AWS
+} // namespace QtAws
 
 #endif

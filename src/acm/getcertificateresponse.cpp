@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ACM {
 
 /**
@@ -103,4 +103,4 @@ void GetCertificateResponsePrivate::GetCertificateResponse(QXmlStreamReader &xml
 }
 
 } // namespace ACM
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "dax_p.h"
 #include "daxclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace DAX {
 
 class DaxClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws
 
 #endif

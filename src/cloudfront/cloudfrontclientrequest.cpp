@@ -20,7 +20,7 @@
 #include "cloudfrontclientrequest.h"
 #include "cloudfrontclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CloudFront {
 
 /**
@@ -337,4 +337,4 @@ QString CloudFrontClientRequestPrivate::toString(const CloudFrontClientRequest::
 }
 
 } // namespace CloudFront
-} // namespace AWS
+} // namespace QtAws

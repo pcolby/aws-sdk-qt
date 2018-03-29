@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Glacier {
 
 /**
@@ -1345,4 +1345,4 @@ GlacierClientPrivate::GlacierClientPrivate(GlacierClient * const q)
 }
 
 } // namespace Glacier
-} // namespace AWS
+} // namespace QtAws

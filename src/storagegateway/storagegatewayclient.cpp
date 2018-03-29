@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace StorageGateway {
 
 /**
@@ -1556,4 +1556,4 @@ StorageGatewayClientPrivate::StorageGatewayClientPrivate(StorageGatewayClient * 
 }
 
 } // namespace StorageGateway
-} // namespace AWS
+} // namespace QtAws

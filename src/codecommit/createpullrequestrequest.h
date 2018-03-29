@@ -22,8 +22,7 @@
 
 #include "codecommitrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeCommit {
 
 class CreatePullRequestRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace CodeCommit
-} // namespace AWS
+} // namespace QtAws
 
 #endif

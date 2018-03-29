@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace STS {
 
 /**
@@ -770,4 +770,4 @@ StsClientPrivate::StsClientPrivate(StsClient * const q)
 }
 
 } // namespace STS
-} // namespace AWS
+} // namespace QtAws

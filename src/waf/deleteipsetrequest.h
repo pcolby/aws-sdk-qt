@@ -22,8 +22,7 @@
 
 #include "wafrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class DeleteIPSetRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

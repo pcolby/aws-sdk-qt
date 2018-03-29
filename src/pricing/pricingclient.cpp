@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Pricing {
 
 /**
@@ -191,4 +191,4 @@ PricingClientPrivate::PricingClientPrivate(PricingClient * const q)
 }
 
 } // namespace Pricing
-} // namespace AWS
+} // namespace QtAws

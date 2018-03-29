@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SWF {
 
 /**
@@ -103,4 +103,4 @@ void RegisterDomainResponsePrivate::RegisterDomainResponse(QXmlStreamReader &xml
 }
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws

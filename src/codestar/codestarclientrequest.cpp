@@ -20,7 +20,7 @@
 #include "codestarclientrequest.h"
 #include "codestarclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeStar {
 
 /**
@@ -337,4 +337,4 @@ QString CodeStarClientRequestPrivate::toString(const CodeStarClientRequest::Acti
 }
 
 } // namespace CodeStar
-} // namespace AWS
+} // namespace QtAws

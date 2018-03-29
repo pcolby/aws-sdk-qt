@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Rekognition {
 
 /**
@@ -103,4 +103,4 @@ void DetectModerationLabelsResponsePrivate::DetectModerationLabelsResponse(QXmlS
 }
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws

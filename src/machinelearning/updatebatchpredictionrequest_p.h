@@ -23,8 +23,7 @@
 #include "machinelearning_p.h"
 #include "updatebatchpredictionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MachineLearning {
 
 class UpdateBatchPredictionRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace MachineLearning
-} // namespace AWS
+} // namespace QtAws
 
 #endif

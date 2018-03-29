@@ -23,8 +23,7 @@
 #include "organizationsresponse.h"
 #include "organizationsclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Organizations {
 
 class OrganizationsClientResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws
 
 #endif

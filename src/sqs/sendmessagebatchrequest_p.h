@@ -23,8 +23,7 @@
 #include "sqs_p.h"
 #include "sendmessagebatchrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SQS {
 
 class SendMessageBatchRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -23,8 +23,7 @@
 #include "rekognitionresponse.h"
 #include "searchfacesbyimagerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Rekognition {
 
 class SearchFacesByImageResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws
 
 #endif

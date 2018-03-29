@@ -23,8 +23,7 @@
 #include "efs_p.h"
 #include "createfilesystemrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EFS {
 
 class CreateFileSystemRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace EFS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

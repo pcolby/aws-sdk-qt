@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace DAX {
 
 /**
@@ -103,4 +103,4 @@ void DescribeParameterGroupsResponsePrivate::DescribeParameterGroupsResponse(QXm
 }
 
 } // namespace DAX
-} // namespace AWS
+} // namespace QtAws

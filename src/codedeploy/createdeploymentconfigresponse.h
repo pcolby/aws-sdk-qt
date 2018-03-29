@@ -23,8 +23,7 @@
 #include "codedeployresponse.h"
 #include "createdeploymentconfigrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeDeploy {
 
 class CreateDeploymentConfigResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws
 
 #endif

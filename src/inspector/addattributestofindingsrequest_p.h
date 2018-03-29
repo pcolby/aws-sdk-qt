@@ -23,8 +23,7 @@
 #include "inspector_p.h"
 #include "addattributestofindingsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Inspector {
 
 class AddAttributesToFindingsRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws
 
 #endif

@@ -22,8 +22,7 @@
 
 #include "sfnrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SFN {
 
 class DeleteStateMachineRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws
 
 #endif

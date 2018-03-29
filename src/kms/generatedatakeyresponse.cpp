@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace KMS {
 
 /**
@@ -103,4 +103,4 @@ void GenerateDataKeyResponsePrivate::GenerateDataKeyResponse(QXmlStreamReader &x
 }
 
 } // namespace KMS
-} // namespace AWS
+} // namespace QtAws

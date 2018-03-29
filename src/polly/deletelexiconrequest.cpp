@@ -22,7 +22,7 @@
 #include "deletelexiconresponse.h"
 #include "pollyrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Polly {
 
 /**
@@ -116,4 +116,4 @@ DeleteLexiconRequestPrivate::DeleteLexiconRequestPrivate(
 }
 
 } // namespace Polly
-} // namespace AWS
+} // namespace QtAws

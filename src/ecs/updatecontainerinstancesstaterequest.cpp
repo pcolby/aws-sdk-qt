@@ -22,7 +22,7 @@
 #include "updatecontainerinstancesstateresponse.h"
 #include "ecsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ECS {
 
 /**
@@ -116,4 +116,4 @@ UpdateContainerInstancesStateRequestPrivate::UpdateContainerInstancesStateReques
 }
 
 } // namespace ECS
-} // namespace AWS
+} // namespace QtAws

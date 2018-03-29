@@ -20,7 +20,7 @@
 #include "wafregionalclientrequest.h"
 #include "wafregionalclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WAFRegional {
 
 /**
@@ -337,4 +337,4 @@ QString WAFRegionalClientRequestPrivate::toString(const WAFRegionalClientRequest
 }
 
 } // namespace WAFRegional
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "cloudwatchlogsresponse.h"
 #include "tagloggrouprequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CloudWatchLogs {
 
 class TagLogGroupResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace CloudWatchLogs
-} // namespace AWS
+} // namespace QtAws
 
 #endif

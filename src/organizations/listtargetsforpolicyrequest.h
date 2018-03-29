@@ -22,8 +22,7 @@
 
 #include "organizationsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Organizations {
 
 class ListTargetsForPolicyRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws
 
 #endif

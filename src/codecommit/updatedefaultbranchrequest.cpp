@@ -22,7 +22,7 @@
 #include "updatedefaultbranchresponse.h"
 #include "codecommitrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeCommit {
 
 /**
@@ -116,4 +116,4 @@ UpdateDefaultBranchRequestPrivate::UpdateDefaultBranchRequestPrivate(
 }
 
 } // namespace CodeCommit
-} // namespace AWS
+} // namespace QtAws

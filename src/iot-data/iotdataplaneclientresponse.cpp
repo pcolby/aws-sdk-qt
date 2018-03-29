@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace IoTDataPlane {
 
 /**
@@ -67,4 +67,4 @@ IoTDataPlaneClientResponsePrivate::IoTDataPlaneClientResponsePrivate(
 }
 
 } // namespace IoTDataPlane
-} // namespace AWS
+} // namespace QtAws

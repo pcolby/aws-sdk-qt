@@ -20,7 +20,7 @@
 #include "elasticbeanstalkclientrequest.h"
 #include "elasticbeanstalkclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticBeanstalk {
 
 /**
@@ -337,4 +337,4 @@ QString ElasticBeanstalkClientRequestPrivate::toString(const ElasticBeanstalkCli
 }
 
 } // namespace ElasticBeanstalk
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "putpipelinedefinitionresponse.h"
 #include "datapipelinerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DataPipeline {
 
 /**
@@ -116,4 +116,4 @@ PutPipelineDefinitionRequestPrivate::PutPipelineDefinitionRequestPrivate(
 }
 
 } // namespace DataPipeline
-} // namespace AWS
+} // namespace QtAws

@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudWatchEvents {
 
 /**
@@ -103,4 +103,4 @@ void PutPermissionResponsePrivate::PutPermissionResponse(QXmlStreamReader &xml)
 }
 
 } // namespace CloudWatchEvents
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "createstreamprocessorresponse.h"
 #include "rekognitionrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Rekognition {
 
 /**
@@ -116,4 +116,4 @@ CreateStreamProcessorRequestPrivate::CreateStreamProcessorRequestPrivate(
 }
 
 } // namespace Rekognition
-} // namespace AWS
+} // namespace QtAws

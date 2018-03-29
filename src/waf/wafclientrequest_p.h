@@ -23,8 +23,7 @@
 #include "waf_p.h"
 #include "wafclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WAF {
 
 class WafClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WAF
-} // namespace AWS
+} // namespace QtAws
 
 #endif

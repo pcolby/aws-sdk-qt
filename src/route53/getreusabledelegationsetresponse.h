@@ -23,8 +23,7 @@
 #include "route53response.h"
 #include "getreusabledelegationsetrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53 {
 
 class GetReusableDelegationSetResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Route53
-} // namespace AWS
+} // namespace QtAws
 
 #endif

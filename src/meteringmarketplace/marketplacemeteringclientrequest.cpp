@@ -20,7 +20,7 @@
 #include "marketplacemeteringclientrequest.h"
 #include "marketplacemeteringclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace MarketplaceMetering {
 
 /**
@@ -337,4 +337,4 @@ QString MarketplaceMeteringClientRequestPrivate::toString(const MarketplaceMeter
 }
 
 } // namespace MarketplaceMetering
-} // namespace AWS
+} // namespace QtAws

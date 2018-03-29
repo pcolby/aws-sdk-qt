@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CostExplorer {
 
 /**
@@ -103,4 +103,4 @@ void GetReservationUtilizationResponsePrivate::GetReservationUtilizationResponse
 }
 
 } // namespace CostExplorer
-} // namespace AWS
+} // namespace QtAws

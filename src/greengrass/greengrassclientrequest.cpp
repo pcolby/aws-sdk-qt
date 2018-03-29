@@ -20,7 +20,7 @@
 #include "greengrassclientrequest.h"
 #include "greengrassclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Greengrass {
 
 /**
@@ -337,4 +337,4 @@ QString GreengrassClientRequestPrivate::toString(const GreengrassClientRequest::
 }
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws

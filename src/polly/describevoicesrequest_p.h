@@ -23,8 +23,7 @@
 #include "polly_p.h"
 #include "describevoicesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Polly {
 
 class DescribeVoicesRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Polly
-} // namespace AWS
+} // namespace QtAws
 
 #endif

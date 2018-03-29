@@ -22,7 +22,7 @@
 #include "listportfoliosforproductresponse.h"
 #include "servicecatalogrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceCatalog {
 
 /**
@@ -116,4 +116,4 @@ ListPortfoliosForProductRequestPrivate::ListPortfoliosForProductRequestPrivate(
 }
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws

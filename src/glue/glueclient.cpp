@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Glue {
 
 /**
@@ -1216,4 +1216,4 @@ GlueClientPrivate::GlueClientPrivate(GlueClient * const q)
 }
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws

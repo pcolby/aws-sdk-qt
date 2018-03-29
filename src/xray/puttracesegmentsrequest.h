@@ -22,8 +22,7 @@
 
 #include "xrayrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace XRay {
 
 class PutTraceSegmentsRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace XRay
-} // namespace AWS
+} // namespace QtAws
 
 #endif

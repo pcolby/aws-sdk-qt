@@ -23,8 +23,7 @@
 #include "migrationhubresponse.h"
 #include "listcreatedartifactsrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MigrationHub {
 
 class ListCreatedArtifactsResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws
 
 #endif

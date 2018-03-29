@@ -22,7 +22,7 @@
 #include "setinstanceprotectionresponse.h"
 #include "autoscalingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScaling {
 
 /**
@@ -116,4 +116,4 @@ SetInstanceProtectionRequestPrivate::SetInstanceProtectionRequestPrivate(
 }
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws

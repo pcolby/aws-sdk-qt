@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace AutoScalingPlans {
 
 /**
@@ -103,4 +103,4 @@ void DescribeScalingPlanResourcesResponsePrivate::DescribeScalingPlanResourcesRe
 }
 
 } // namespace AutoScalingPlans
-} // namespace AWS
+} // namespace QtAws

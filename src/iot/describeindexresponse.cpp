@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace IoT {
 
 /**
@@ -103,4 +103,4 @@ void DescribeIndexResponsePrivate::DescribeIndexResponse(QXmlStreamReader &xml)
 }
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws

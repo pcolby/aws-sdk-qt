@@ -23,8 +23,7 @@
 #include "mobile_p.h"
 #include "mobileclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Mobile {
 
 class MobileClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Mobile
-} // namespace AWS
+} // namespace QtAws
 
 #endif

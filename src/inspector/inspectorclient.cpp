@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Inspector {
 
 /**
@@ -599,4 +599,4 @@ InspectorClientPrivate::InspectorClientPrivate(InspectorClient * const q)
 }
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "migrationhub_p.h"
 #include "createprogressupdatestreamrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MigrationHub {
 
 class CreateProgressUpdateStreamRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws
 
 #endif

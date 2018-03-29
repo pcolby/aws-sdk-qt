@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -67,4 +67,4 @@ RdsClientResponsePrivate::RdsClientResponsePrivate(
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

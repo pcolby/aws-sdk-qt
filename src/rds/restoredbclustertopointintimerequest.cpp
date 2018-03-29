@@ -22,7 +22,7 @@
 #include "restoredbclustertopointintimeresponse.h"
 #include "rdsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -116,4 +116,4 @@ RestoreDBClusterToPointInTimeRequestPrivate::RestoreDBClusterToPointInTimeReques
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

@@ -22,7 +22,7 @@
 #include "attachloadbalancertosubnetsresponse.h"
 #include "elasticloadbalancingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElasticLoadBalancing {
 
 /**
@@ -116,4 +116,4 @@ AttachLoadBalancerToSubnetsRequestPrivate::AttachLoadBalancerToSubnetsRequestPri
 }
 
 } // namespace ElasticLoadBalancing
-} // namespace AWS
+} // namespace QtAws

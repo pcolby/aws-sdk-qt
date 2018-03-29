@@ -22,8 +22,7 @@
 
 #include "transcribeservicerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace TranscribeService {
 
 class GetTranscriptionJobRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace TranscribeService
-} // namespace AWS
+} // namespace QtAws
 
 #endif

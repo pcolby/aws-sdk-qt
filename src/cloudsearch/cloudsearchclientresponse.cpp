@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudSearch {
 
 /**
@@ -67,4 +67,4 @@ CloudSearchClientResponsePrivate::CloudSearchClientResponsePrivate(
 }
 
 } // namespace CloudSearch
-} // namespace AWS
+} // namespace QtAws

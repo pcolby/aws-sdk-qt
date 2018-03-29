@@ -23,8 +23,7 @@
 #include "greengrass_p.h"
 #include "creategroupcertificateauthorityrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Greengrass {
 
 class CreateGroupCertificateAuthorityRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace Greengrass
-} // namespace AWS
+} // namespace QtAws
 
 #endif

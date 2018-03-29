@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace MigrationHub {
 
 /**
@@ -67,4 +67,4 @@ MigrationHubClientResponsePrivate::MigrationHubClientResponsePrivate(
 }
 
 } // namespace MigrationHub
-} // namespace AWS
+} // namespace QtAws

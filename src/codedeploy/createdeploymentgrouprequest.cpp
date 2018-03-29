@@ -22,7 +22,7 @@
 #include "createdeploymentgroupresponse.h"
 #include "codedeployrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CodeDeploy {
 
 /**
@@ -116,4 +116,4 @@ CreateDeploymentGroupRequestPrivate::CreateDeploymentGroupRequestPrivate(
 }
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws

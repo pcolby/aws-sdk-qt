@@ -22,7 +22,7 @@
 #include "describeenginedefaultparametersresponse.h"
 #include "rdsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace RDS {
 
 /**
@@ -116,4 +116,4 @@ DescribeEngineDefaultParametersRequestPrivate::DescribeEngineDefaultParametersRe
 }
 
 } // namespace RDS
-} // namespace AWS
+} // namespace QtAws

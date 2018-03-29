@@ -22,7 +22,7 @@
 #include "installtoremoteaccesssessionresponse.h"
 #include "devicefarmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace DeviceFarm {
 
 /**
@@ -116,4 +116,4 @@ InstallToRemoteAccessSessionRequestPrivate::InstallToRemoteAccessSessionRequestP
 }
 
 } // namespace DeviceFarm
-} // namespace AWS
+} // namespace QtAws

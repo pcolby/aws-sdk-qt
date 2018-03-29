@@ -20,7 +20,7 @@
 #include "firehoseclientrequest.h"
 #include "firehoseclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Firehose {
 
 /**
@@ -337,4 +337,4 @@ QString FirehoseClientRequestPrivate::toString(const FirehoseClientRequest::Acti
 }
 
 } // namespace Firehose
-} // namespace AWS
+} // namespace QtAws

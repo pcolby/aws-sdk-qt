@@ -23,8 +23,7 @@
 #include "organizationsresponse.h"
 #include "removeaccountfromorganizationrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Organizations {
 
 class RemoveAccountFromOrganizationResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace Organizations
-} // namespace AWS
+} // namespace QtAws
 
 #endif

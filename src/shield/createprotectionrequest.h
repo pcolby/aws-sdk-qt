@@ -22,8 +22,7 @@
 
 #include "shieldrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Shield {
 
 class CreateProtectionRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Shield
-} // namespace AWS
+} // namespace QtAws
 
 #endif

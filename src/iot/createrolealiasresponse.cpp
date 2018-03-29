@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace IoT {
 
 /**
@@ -103,4 +103,4 @@ void CreateRoleAliasResponsePrivate::CreateRoleAliasResponse(QXmlStreamReader &x
 }
 
 } // namespace IoT
-} // namespace AWS
+} // namespace QtAws

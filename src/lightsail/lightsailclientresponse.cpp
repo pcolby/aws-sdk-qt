@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Lightsail {
 
 /**
@@ -67,4 +67,4 @@ LightsailClientResponsePrivate::LightsailClientResponsePrivate(
 }
 
 } // namespace Lightsail
-} // namespace AWS
+} // namespace QtAws

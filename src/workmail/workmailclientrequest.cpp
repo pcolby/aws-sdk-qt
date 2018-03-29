@@ -20,7 +20,7 @@
 #include "workmailclientrequest.h"
 #include "workmailclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace WorkMail {
 
 /**
@@ -337,4 +337,4 @@ QString WorkMailClientRequestPrivate::toString(const WorkMailClientRequest::Acti
 }
 
 } // namespace WorkMail
-} // namespace AWS
+} // namespace QtAws

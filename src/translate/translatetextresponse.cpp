@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Translate {
 
 /**
@@ -103,4 +103,4 @@ void TranslateTextResponsePrivate::TranslateTextResponse(QXmlStreamReader &xml)
 }
 
 } // namespace Translate
-} // namespace AWS
+} // namespace QtAws

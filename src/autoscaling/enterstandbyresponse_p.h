@@ -23,8 +23,7 @@
 #include "autoscalingresponse.h"
 #include "enterstandbyrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AutoScaling {
 
 class EnterStandbyResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

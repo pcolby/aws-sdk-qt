@@ -22,7 +22,7 @@
 #include "settagsforresourceresponse.h"
 #include "inspectorrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Inspector {
 
 /**
@@ -116,4 +116,4 @@ SetTagsForResourceRequestPrivate::SetTagsForResourceRequestPrivate(
 }
 
 } // namespace Inspector
-} // namespace AWS
+} // namespace QtAws

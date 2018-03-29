@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace LexRuntimeService {
 
 /**
@@ -67,4 +67,4 @@ LexRuntimeServiceClientResponsePrivate::LexRuntimeServiceClientResponsePrivate(
 }
 
 } // namespace LexRuntimeService
-} // namespace AWS
+} // namespace QtAws

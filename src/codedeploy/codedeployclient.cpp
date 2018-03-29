@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace CodeDeploy {
 
 /**
@@ -774,4 +774,4 @@ CodeDeployClientPrivate::CodeDeployClientPrivate(CodeDeployClient * const q)
 }
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws

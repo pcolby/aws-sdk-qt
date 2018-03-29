@@ -23,8 +23,7 @@
 #include "sqsresponse.h"
 #include "listqueuesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SQS {
 
 class ListQueuesResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SQS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

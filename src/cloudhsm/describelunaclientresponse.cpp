@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CloudHSM {
 
 /**
@@ -103,4 +103,4 @@ void DescribeLunaClientResponsePrivate::DescribeLunaClientResponse(QXmlStreamRea
 }
 
 } // namespace CloudHSM
-} // namespace AWS
+} // namespace QtAws

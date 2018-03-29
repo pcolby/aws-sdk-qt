@@ -23,8 +23,7 @@
 #include "mediapackageresponse.h"
 #include "deleteoriginendpointrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace MediaPackage {
 
 class DeleteOriginEndpointResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace MediaPackage
-} // namespace AWS
+} // namespace QtAws
 
 #endif

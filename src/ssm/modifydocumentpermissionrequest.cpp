@@ -22,7 +22,7 @@
 #include "modifydocumentpermissionresponse.h"
 #include "ssmrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SSM {
 
 /**
@@ -116,4 +116,4 @@ ModifyDocumentPermissionRequestPrivate::ModifyDocumentPermissionRequestPrivate(
 }
 
 } // namespace SSM
-} // namespace AWS
+} // namespace QtAws

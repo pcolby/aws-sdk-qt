@@ -22,7 +22,7 @@
 #include "lookupdeveloperidentityresponse.h"
 #include "cognitoidentityrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace CognitoIdentity {
 
 /**
@@ -116,4 +116,4 @@ LookupDeveloperIdentityRequestPrivate::LookupDeveloperIdentityRequestPrivate(
 }
 
 } // namespace CognitoIdentity
-} // namespace AWS
+} // namespace QtAws

@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace Budgets {
 
 /**
@@ -67,4 +67,4 @@ BudgetsClientResponsePrivate::BudgetsClientResponsePrivate(
 }
 
 } // namespace Budgets
-} // namespace AWS
+} // namespace QtAws

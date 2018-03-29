@@ -22,7 +22,7 @@
 #include "batchdeleteconnectionresponse.h"
 #include "gluerequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Glue {
 
 /**
@@ -116,4 +116,4 @@ BatchDeleteConnectionRequestPrivate::BatchDeleteConnectionRequestPrivate(
 }
 
 } // namespace Glue
-} // namespace AWS
+} // namespace QtAws

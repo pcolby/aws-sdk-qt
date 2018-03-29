@@ -23,8 +23,7 @@
 #include "workspaces_p.h"
 #include "workspacesclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace WorkSpaces {
 
 class WorkSpacesClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace WorkSpaces
-} // namespace AWS
+} // namespace QtAws
 
 #endif

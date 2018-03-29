@@ -23,8 +23,7 @@
 #include "snsresponse.h"
 #include "confirmsubscriptionrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SNS {
 
 class ConfirmSubscriptionResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SNS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

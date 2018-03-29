@@ -23,8 +23,7 @@
 #include "codedeployresponse.h"
 #include "registeronpremisesinstancerequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace CodeDeploy {
 
 class RegisterOnPremisesInstanceResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace CodeDeploy
-} // namespace AWS
+} // namespace QtAws
 
 #endif

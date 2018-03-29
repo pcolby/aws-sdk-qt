@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace IAM {
 
 /**
@@ -67,4 +67,4 @@ IamClientResponsePrivate::IamClientResponsePrivate(
 }
 
 } // namespace IAM
-} // namespace AWS
+} // namespace QtAws

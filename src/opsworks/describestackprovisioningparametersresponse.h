@@ -23,8 +23,7 @@
 #include "opsworksresponse.h"
 #include "describestackprovisioningparametersrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorks {
 
 class DescribeStackProvisioningParametersResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace OpsWorks
-} // namespace AWS
+} // namespace QtAws
 
 #endif

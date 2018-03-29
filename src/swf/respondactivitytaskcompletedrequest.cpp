@@ -22,7 +22,7 @@
 #include "respondactivitytaskcompletedresponse.h"
 #include "swfrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SWF {
 
 /**
@@ -116,4 +116,4 @@ RespondActivityTaskCompletedRequestPrivate::RespondActivityTaskCompletedRequestP
 }
 
 } // namespace SWF
-} // namespace AWS
+} // namespace QtAws

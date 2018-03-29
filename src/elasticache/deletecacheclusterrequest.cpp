@@ -22,7 +22,7 @@
 #include "deletecacheclusterresponse.h"
 #include "elasticacherequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ElastiCache {
 
 /**
@@ -116,4 +116,4 @@ DeleteCacheClusterRequestPrivate::DeleteCacheClusterRequestPrivate(
 }
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws

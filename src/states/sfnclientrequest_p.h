@@ -23,8 +23,7 @@
 #include "sfn_p.h"
 #include "sfnclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SFN {
 
 class SfnClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws
 
 #endif

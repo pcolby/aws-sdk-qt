@@ -23,8 +23,7 @@
 #include "acmresponse.h"
 #include "deletecertificaterequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ACM {
 
 class DeleteCertificateResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace ACM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

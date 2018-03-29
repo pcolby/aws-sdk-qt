@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceCatalog {
 
 /**
@@ -103,4 +103,4 @@ void ListResourcesForTagOptionResponsePrivate::ListResourcesForTagOptionResponse
 }
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws

@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace SES {
 
 /**
@@ -67,4 +67,4 @@ SesClientResponsePrivate::SesClientResponsePrivate(
 }
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws

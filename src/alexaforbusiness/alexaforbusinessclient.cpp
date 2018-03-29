@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace AlexaForBusiness {
 
 /**
@@ -628,4 +628,4 @@ AlexaForBusinessClientPrivate::AlexaForBusinessClientPrivate(AlexaForBusinessCli
 }
 
 } // namespace AlexaForBusiness
-} // namespace AWS
+} // namespace QtAws

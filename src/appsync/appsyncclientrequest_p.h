@@ -23,8 +23,7 @@
 #include "appsync_p.h"
 #include "appsyncclientrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AppSync {
 
 class AppSyncClientRequest;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace AppSync
-} // namespace AWS
+} // namespace QtAws
 
 #endif

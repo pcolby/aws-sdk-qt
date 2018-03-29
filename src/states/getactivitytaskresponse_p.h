@@ -23,8 +23,7 @@
 #include "sfnresponse.h"
 #include "getactivitytaskrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SFN {
 
 class GetActivityTaskResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SFN
-} // namespace AWS
+} // namespace QtAws
 
 #endif

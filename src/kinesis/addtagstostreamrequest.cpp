@@ -22,7 +22,7 @@
 #include "addtagstostreamresponse.h"
 #include "kinesisrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Kinesis {
 
 /**
@@ -116,4 +116,4 @@ AddTagsToStreamRequestPrivate::AddTagsToStreamRequestPrivate(
 }
 
 } // namespace Kinesis
-} // namespace AWS
+} // namespace QtAws

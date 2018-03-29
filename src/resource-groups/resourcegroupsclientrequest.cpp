@@ -20,7 +20,7 @@
 #include "resourcegroupsclientrequest.h"
 #include "resourcegroupsclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ResourceGroups {
 
 /**
@@ -337,4 +337,4 @@ QString ResourceGroupsClientRequestPrivate::toString(const ResourceGroupsClientR
 }
 
 } // namespace ResourceGroups
-} // namespace AWS
+} // namespace QtAws

@@ -20,7 +20,7 @@
 #include "sesclientrequest.h"
 #include "sesclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SES {
 
 /**
@@ -337,4 +337,4 @@ QString SesClientRequestPrivate::toString(const SesClientRequest::Action &action
 }
 
 } // namespace SES
-} // namespace AWS
+} // namespace QtAws

@@ -23,8 +23,7 @@
 #include "route53domainsresponse.h"
 #include "transferdomainrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Route53Domains {
 
 class TransferDomainResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace Route53Domains
-} // namespace AWS
+} // namespace QtAws
 
 #endif

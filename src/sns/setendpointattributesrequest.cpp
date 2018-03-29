@@ -22,7 +22,7 @@
 #include "setendpointattributesresponse.h"
 #include "snsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SNS {
 
 /**
@@ -116,4 +116,4 @@ SetEndpointAttributesRequestPrivate::SetEndpointAttributesRequestPrivate(
 }
 
 } // namespace SNS
-} // namespace AWS
+} // namespace QtAws

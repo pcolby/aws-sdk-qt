@@ -22,7 +22,7 @@
 #include "registerjobdefinitionresponse.h"
 #include "batchrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Batch {
 
 /**
@@ -116,4 +116,4 @@ RegisterJobDefinitionRequestPrivate::RegisterJobDefinitionRequestPrivate(
 }
 
 } // namespace Batch
-} // namespace AWS
+} // namespace QtAws

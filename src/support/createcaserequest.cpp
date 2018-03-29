@@ -22,7 +22,7 @@
 #include "createcaseresponse.h"
 #include "supportrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Support {
 
 /**
@@ -116,4 +116,4 @@ CreateCaseRequestPrivate::CreateCaseRequestPrivate(
 }
 
 } // namespace Support
-} // namespace AWS
+} // namespace QtAws

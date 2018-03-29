@@ -23,8 +23,7 @@
 #include "opsworkscm_p.h"
 #include "deleteserverrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace OpsWorksCM {
 
 class DeleteServerRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace OpsWorksCM
-} // namespace AWS
+} // namespace QtAws
 
 #endif

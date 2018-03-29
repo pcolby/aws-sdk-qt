@@ -22,8 +22,7 @@
 
 #include "firehoserequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace Firehose {
 
 class DeleteDeliveryStreamRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace Firehose
-} // namespace AWS
+} // namespace QtAws
 
 #endif

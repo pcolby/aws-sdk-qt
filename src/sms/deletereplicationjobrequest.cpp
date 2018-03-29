@@ -22,7 +22,7 @@
 #include "deletereplicationjobresponse.h"
 #include "smsrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace SMS {
 
 /**
@@ -116,4 +116,4 @@ DeleteReplicationJobRequestPrivate::DeleteReplicationJobRequestPrivate(
 }
 
 } // namespace SMS
-} // namespace AWS
+} // namespace QtAws

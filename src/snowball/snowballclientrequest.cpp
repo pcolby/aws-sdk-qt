@@ -20,7 +20,7 @@
 #include "snowballclientrequest.h"
 #include "snowballclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace Snowball {
 
 /**
@@ -337,4 +337,4 @@ QString SnowballClientRequestPrivate::toString(const SnowballClientRequest::Acti
 }
 
 } // namespace Snowball
-} // namespace AWS
+} // namespace QtAws

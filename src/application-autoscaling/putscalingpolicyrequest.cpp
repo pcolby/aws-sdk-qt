@@ -22,7 +22,7 @@
 #include "putscalingpolicyresponse.h"
 #include "applicationautoscalingrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ApplicationAutoScaling {
 
 /**
@@ -116,4 +116,4 @@ PutScalingPolicyRequestPrivate::PutScalingPolicyRequestPrivate(
 }
 
 } // namespace ApplicationAutoScaling
-} // namespace AWS
+} // namespace QtAws

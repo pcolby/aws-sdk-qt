@@ -23,7 +23,7 @@
 #include <QDebug>
 #include <QXmlStreamReader>
 
-namespace AWS {
+namespace QtAws {
 namespace CodeBuild {
 
 /**
@@ -67,4 +67,4 @@ CodeBuildClientResponsePrivate::CodeBuildClientResponsePrivate(
 }
 
 } // namespace CodeBuild
-} // namespace AWS
+} // namespace QtAws

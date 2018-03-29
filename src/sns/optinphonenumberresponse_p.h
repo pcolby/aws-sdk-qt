@@ -23,8 +23,7 @@
 #include "snsresponse.h"
 #include "optinphonenumberrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SNS {
 
 class OptInPhoneNumberResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace SNS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

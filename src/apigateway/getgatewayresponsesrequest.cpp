@@ -22,7 +22,7 @@
 #include "getgatewayresponsesresponse.h"
 #include "apigatewayrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace APIGateway {
 
 /**
@@ -116,4 +116,4 @@ GetGatewayResponsesRequestPrivate::GetGatewayResponsesRequestPrivate(
 }
 
 } // namespace APIGateway
-} // namespace AWS
+} // namespace QtAws

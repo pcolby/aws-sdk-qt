@@ -20,7 +20,7 @@
 #include "servicecatalogclientrequest.h"
 #include "servicecatalogclientrequest_p.h"
 
-namespace AWS {
+namespace QtAws {
 namespace ServiceCatalog {
 
 /**
@@ -337,4 +337,4 @@ QString ServiceCatalogClientRequestPrivate::toString(const ServiceCatalogClientR
 }
 
 } // namespace ServiceCatalog
-} // namespace AWS
+} // namespace QtAws

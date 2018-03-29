@@ -23,8 +23,7 @@
 #include "ec2response.h"
 #include "unassignipv6addressesrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace EC2 {
 
 class UnassignIpv6AddressesResponse;
@@ -45,6 +44,6 @@ private:
 };
 
 } // namespace EC2
-} // namespace AWS
+} // namespace QtAws
 
 #endif

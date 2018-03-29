@@ -22,8 +22,7 @@
 
 #include "autoscalingrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace AutoScaling {
 
 class AttachInstancesRequestPrivate;
@@ -46,6 +45,6 @@ private:
 }
 
 } // namespace AutoScaling
-} // namespace AWS
+} // namespace QtAws
 
 #endif

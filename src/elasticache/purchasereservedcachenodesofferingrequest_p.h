@@ -23,8 +23,7 @@
 #include "elasticache_p.h"
 #include "purchasereservedcachenodesofferingrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace ElastiCache {
 
 class PurchaseReservedCacheNodesOfferingRequest;
@@ -43,6 +42,6 @@ private:
 };
 
 } // namespace ElastiCache
-} // namespace AWS
+} // namespace QtAws
 
 #endif

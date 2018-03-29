@@ -23,8 +23,7 @@
 #include "smsresponse.h"
 #include "deleteservercatalogrequest.h"
 
-namespace AWS {
-
+namespace QtAws {
 namespace SMS {
 
 class DeleteServerCatalogResponsePrivate;
@@ -47,6 +46,6 @@ private:
 };
 
 } // namespace SMS
-} // namespace AWS
+} // namespace QtAws
 
 #endif

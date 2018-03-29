@@ -25,7 +25,7 @@
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
 
-namespace AWS {
+namespace QtAws {
 namespace Translate {
 
 /**
@@ -155,4 +155,4 @@ TranslateClientPrivate::TranslateClientPrivate(TranslateClient * const q)
 }
 
 } // namespace Translate
-} // namespace AWS
+} // namespace QtAws
