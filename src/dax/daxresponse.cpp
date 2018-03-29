@@ -82,7 +82,7 @@ void DAXResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public DAXResponse instance.
  */
 DAXResponsePrivate::DAXResponsePrivate(
-    DAXResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    DAXResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

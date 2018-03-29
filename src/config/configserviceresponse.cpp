@@ -82,7 +82,7 @@ void ConfigServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ConfigServiceResponse instance.
  */
 ConfigServiceResponsePrivate::ConfigServiceResponsePrivate(
-    ConfigServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ConfigServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

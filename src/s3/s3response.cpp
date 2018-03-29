@@ -82,7 +82,7 @@ void S3Response::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public S3Response instance.
  */
 S3ResponsePrivate::S3ResponsePrivate(
-    S3Response * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    S3Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

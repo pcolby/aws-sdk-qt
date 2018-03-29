@@ -82,7 +82,7 @@ void SimpleDBResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SimpleDBResponse instance.
  */
 SimpleDBResponsePrivate::SimpleDBResponsePrivate(
-    SimpleDBResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    SimpleDBResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

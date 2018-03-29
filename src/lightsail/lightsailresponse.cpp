@@ -82,7 +82,7 @@ void LightsailResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public LightsailResponse instance.
  */
 LightsailResponsePrivate::LightsailResponsePrivate(
-    LightsailResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    LightsailResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

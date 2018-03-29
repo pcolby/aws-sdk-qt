@@ -82,7 +82,7 @@ void ElasticBeanstalkResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ElasticBeanstalkResponse instance.
  */
 ElasticBeanstalkResponsePrivate::ElasticBeanstalkResponsePrivate(
-    ElasticBeanstalkResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ElasticBeanstalkResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

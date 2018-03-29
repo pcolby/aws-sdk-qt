@@ -82,7 +82,7 @@ void StorageGatewayResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public StorageGatewayResponse instance.
  */
 StorageGatewayResponsePrivate::StorageGatewayResponsePrivate(
-    StorageGatewayResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    StorageGatewayResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -82,7 +82,7 @@ void LexRuntimeServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public LexRuntimeServiceResponse instance.
  */
 LexRuntimeServiceResponsePrivate::LexRuntimeServiceResponsePrivate(
-    LexRuntimeServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    LexRuntimeServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

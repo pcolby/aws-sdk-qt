@@ -82,7 +82,7 @@ void GlacierResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public GlacierResponse instance.
  */
 GlacierResponsePrivate::GlacierResponsePrivate(
-    GlacierResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    GlacierResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

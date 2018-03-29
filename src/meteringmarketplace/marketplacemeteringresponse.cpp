@@ -82,7 +82,7 @@ void MarketplaceMeteringResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MarketplaceMeteringResponse instance.
  */
 MarketplaceMeteringResponsePrivate::MarketplaceMeteringResponsePrivate(
-    MarketplaceMeteringResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    MarketplaceMeteringResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

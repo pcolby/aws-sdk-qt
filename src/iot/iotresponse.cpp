@@ -82,7 +82,7 @@ void IoTResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public IoTResponse instance.
  */
 IoTResponsePrivate::IoTResponsePrivate(
-    IoTResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    IoTResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

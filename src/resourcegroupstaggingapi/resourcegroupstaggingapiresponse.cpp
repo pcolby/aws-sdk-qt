@@ -82,7 +82,7 @@ void ResourceGroupsTaggingAPIResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ResourceGroupsTaggingAPIResponse instance.
  */
 ResourceGroupsTaggingAPIResponsePrivate::ResourceGroupsTaggingAPIResponsePrivate(
-    ResourceGroupsTaggingAPIResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ResourceGroupsTaggingAPIResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

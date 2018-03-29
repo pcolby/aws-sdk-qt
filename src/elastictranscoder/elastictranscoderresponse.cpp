@@ -82,7 +82,7 @@ void ElasticTranscoderResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ElasticTranscoderResponse instance.
  */
 ElasticTranscoderResponsePrivate::ElasticTranscoderResponsePrivate(
-    ElasticTranscoderResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ElasticTranscoderResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

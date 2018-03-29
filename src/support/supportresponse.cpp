@@ -82,7 +82,7 @@ void SupportResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SupportResponse instance.
  */
 SupportResponsePrivate::SupportResponsePrivate(
-    SupportResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    SupportResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

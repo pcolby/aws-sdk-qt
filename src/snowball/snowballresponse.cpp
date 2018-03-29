@@ -82,7 +82,7 @@ void SnowballResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SnowballResponse instance.
  */
 SnowballResponsePrivate::SnowballResponsePrivate(
-    SnowballResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    SnowballResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

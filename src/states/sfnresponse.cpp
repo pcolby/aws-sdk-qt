@@ -82,7 +82,7 @@ void SFNResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SFNResponse instance.
  */
 SFNResponsePrivate::SFNResponsePrivate(
-    SFNResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    SFNResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

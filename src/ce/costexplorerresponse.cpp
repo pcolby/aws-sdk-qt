@@ -82,7 +82,7 @@ void CostExplorerResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CostExplorerResponse instance.
  */
 CostExplorerResponsePrivate::CostExplorerResponsePrivate(
-    CostExplorerResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CostExplorerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

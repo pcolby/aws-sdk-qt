@@ -82,7 +82,7 @@ void PinpointResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public PinpointResponse instance.
  */
 PinpointResponsePrivate::PinpointResponsePrivate(
-    PinpointResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    PinpointResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

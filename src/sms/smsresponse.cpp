@@ -82,7 +82,7 @@ void SMSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SMSResponse instance.
  */
 SMSResponsePrivate::SMSResponsePrivate(
-    SMSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    SMSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

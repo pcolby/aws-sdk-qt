@@ -82,7 +82,7 @@ void WorkSpacesResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public WorkSpacesResponse instance.
  */
 WorkSpacesResponsePrivate::WorkSpacesResponsePrivate(
-    WorkSpacesResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    WorkSpacesResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

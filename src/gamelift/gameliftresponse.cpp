@@ -82,7 +82,7 @@ void GameLiftResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public GameLiftResponse instance.
  */
 GameLiftResponsePrivate::GameLiftResponsePrivate(
-    GameLiftResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    GameLiftResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

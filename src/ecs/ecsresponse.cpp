@@ -82,7 +82,7 @@ void ECSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ECSResponse instance.
  */
 ECSResponsePrivate::ECSResponsePrivate(
-    ECSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ECSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

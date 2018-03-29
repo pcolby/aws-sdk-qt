@@ -82,7 +82,7 @@ void MachineLearningResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MachineLearningResponse instance.
  */
 MachineLearningResponsePrivate::MachineLearningResponsePrivate(
-    MachineLearningResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    MachineLearningResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

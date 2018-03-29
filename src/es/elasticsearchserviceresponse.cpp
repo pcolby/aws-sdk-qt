@@ -82,7 +82,7 @@ void ElasticsearchServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ElasticsearchServiceResponse instance.
  */
 ElasticsearchServiceResponsePrivate::ElasticsearchServiceResponsePrivate(
-    ElasticsearchServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ElasticsearchServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

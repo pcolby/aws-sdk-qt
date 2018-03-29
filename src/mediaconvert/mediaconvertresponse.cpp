@@ -82,7 +82,7 @@ void MediaConvertResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MediaConvertResponse instance.
  */
 MediaConvertResponsePrivate::MediaConvertResponsePrivate(
-    MediaConvertResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    MediaConvertResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

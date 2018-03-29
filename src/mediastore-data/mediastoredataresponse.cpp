@@ -82,7 +82,7 @@ void MediaStoreDataResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MediaStoreDataResponse instance.
  */
 MediaStoreDataResponsePrivate::MediaStoreDataResponsePrivate(
-    MediaStoreDataResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    MediaStoreDataResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

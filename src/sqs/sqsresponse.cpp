@@ -82,7 +82,7 @@ void SQSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SQSResponse instance.
  */
 SQSResponsePrivate::SQSResponsePrivate(
-    SQSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    SQSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

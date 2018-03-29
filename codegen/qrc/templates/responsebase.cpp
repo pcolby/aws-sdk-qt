@@ -64,7 +64,7 @@ void {{ClassName}}::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public {{ClassName}} instance.
  */
 {{ClassName}}Private::{{ClassName}}Private(
-    {{ClassName}} * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    {{ClassName}} * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

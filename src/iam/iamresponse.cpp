@@ -82,7 +82,7 @@ void IAMResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public IAMResponse instance.
  */
 IAMResponsePrivate::IAMResponsePrivate(
-    IAMResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    IAMResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

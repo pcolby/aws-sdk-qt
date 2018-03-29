@@ -82,7 +82,7 @@ void MigrationHubResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MigrationHubResponse instance.
  */
 MigrationHubResponsePrivate::MigrationHubResponsePrivate(
-    MigrationHubResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    MigrationHubResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

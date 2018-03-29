@@ -82,7 +82,7 @@ void EC2Response::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public EC2Response instance.
  */
 EC2ResponsePrivate::EC2ResponsePrivate(
-    EC2Response * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    EC2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

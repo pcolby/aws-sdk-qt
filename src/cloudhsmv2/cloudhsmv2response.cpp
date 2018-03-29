@@ -82,7 +82,7 @@ void CloudHSMV2Response::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudHSMV2Response instance.
  */
 CloudHSMV2ResponsePrivate::CloudHSMV2ResponsePrivate(
-    CloudHSMV2Response * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CloudHSMV2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

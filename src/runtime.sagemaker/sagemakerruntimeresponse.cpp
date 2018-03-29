@@ -82,7 +82,7 @@ void SageMakerRuntimeResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SageMakerRuntimeResponse instance.
  */
 SageMakerRuntimeResponsePrivate::SageMakerRuntimeResponsePrivate(
-    SageMakerRuntimeResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    SageMakerRuntimeResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

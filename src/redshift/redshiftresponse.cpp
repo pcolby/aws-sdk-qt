@@ -82,7 +82,7 @@ void RedshiftResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public RedshiftResponse instance.
  */
 RedshiftResponsePrivate::RedshiftResponsePrivate(
-    RedshiftResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    RedshiftResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -82,7 +82,7 @@ void OrganizationsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public OrganizationsResponse instance.
  */
 OrganizationsResponsePrivate::OrganizationsResponsePrivate(
-    OrganizationsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    OrganizationsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

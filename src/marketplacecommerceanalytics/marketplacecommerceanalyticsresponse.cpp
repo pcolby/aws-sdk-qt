@@ -82,7 +82,7 @@ void MarketplaceCommerceAnalyticsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MarketplaceCommerceAnalyticsResponse instance.
  */
 MarketplaceCommerceAnalyticsResponsePrivate::MarketplaceCommerceAnalyticsResponsePrivate(
-    MarketplaceCommerceAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    MarketplaceCommerceAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

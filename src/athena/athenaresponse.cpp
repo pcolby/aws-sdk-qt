@@ -82,7 +82,7 @@ void AthenaResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public AthenaResponse instance.
  */
 AthenaResponsePrivate::AthenaResponsePrivate(
-    AthenaResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    AthenaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

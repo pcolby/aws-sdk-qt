@@ -82,7 +82,7 @@ void DynamoDBStreamsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public DynamoDBStreamsResponse instance.
  */
 DynamoDBStreamsResponsePrivate::DynamoDBStreamsResponsePrivate(
-    DynamoDBStreamsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    DynamoDBStreamsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

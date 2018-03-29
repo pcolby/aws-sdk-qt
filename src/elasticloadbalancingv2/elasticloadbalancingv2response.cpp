@@ -82,7 +82,7 @@ void ElasticLoadBalancingv2Response::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ElasticLoadBalancingv2Response instance.
  */
 ElasticLoadBalancingv2ResponsePrivate::ElasticLoadBalancingv2ResponsePrivate(
-    ElasticLoadBalancingv2Response * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ElasticLoadBalancingv2Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

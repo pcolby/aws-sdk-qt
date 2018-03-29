@@ -82,7 +82,7 @@ void CodePipelineResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CodePipelineResponse instance.
  */
 CodePipelineResponsePrivate::CodePipelineResponsePrivate(
-    CodePipelineResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CodePipelineResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

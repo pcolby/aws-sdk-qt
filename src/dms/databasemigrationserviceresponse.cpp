@@ -82,7 +82,7 @@ void DatabaseMigrationServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public DatabaseMigrationServiceResponse instance.
  */
 DatabaseMigrationServiceResponsePrivate::DatabaseMigrationServiceResponsePrivate(
-    DatabaseMigrationServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    DatabaseMigrationServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -82,7 +82,7 @@ void CodeStarResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CodeStarResponse instance.
  */
 CodeStarResponsePrivate::CodeStarResponsePrivate(
-    CodeStarResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CodeStarResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

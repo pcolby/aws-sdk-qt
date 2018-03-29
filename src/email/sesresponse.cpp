@@ -82,7 +82,7 @@ void SESResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SESResponse instance.
  */
 SESResponsePrivate::SESResponsePrivate(
-    SESResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    SESResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

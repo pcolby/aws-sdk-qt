@@ -82,7 +82,7 @@ void GlueResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public GlueResponse instance.
  */
 GlueResponsePrivate::GlueResponsePrivate(
-    GlueResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    GlueResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

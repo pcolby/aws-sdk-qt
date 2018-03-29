@@ -82,7 +82,7 @@ void Cloud9Response::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public Cloud9Response instance.
  */
 Cloud9ResponsePrivate::Cloud9ResponsePrivate(
-    Cloud9Response * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    Cloud9Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

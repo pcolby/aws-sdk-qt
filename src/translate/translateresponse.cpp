@@ -82,7 +82,7 @@ void TranslateResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public TranslateResponse instance.
  */
 TranslateResponsePrivate::TranslateResponsePrivate(
-    TranslateResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    TranslateResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

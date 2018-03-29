@@ -82,7 +82,7 @@ void BudgetsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public BudgetsResponse instance.
  */
 BudgetsResponsePrivate::BudgetsResponsePrivate(
-    BudgetsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    BudgetsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -82,7 +82,7 @@ void Route53Response::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public Route53Response instance.
  */
 Route53ResponsePrivate::Route53ResponsePrivate(
-    Route53Response * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    Route53Response * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

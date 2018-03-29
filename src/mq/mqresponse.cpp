@@ -82,7 +82,7 @@ void MQResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MQResponse instance.
  */
 MQResponsePrivate::MQResponsePrivate(
-    MQResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    MQResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

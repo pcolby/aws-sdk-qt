@@ -82,7 +82,7 @@ void LexModelBuildingServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public LexModelBuildingServiceResponse instance.
  */
 LexModelBuildingServiceResponsePrivate::LexModelBuildingServiceResponsePrivate(
-    LexModelBuildingServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    LexModelBuildingServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -82,7 +82,7 @@ void ComprehendResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ComprehendResponse instance.
  */
 ComprehendResponsePrivate::ComprehendResponsePrivate(
-    ComprehendResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ComprehendResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

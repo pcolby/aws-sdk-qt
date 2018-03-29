@@ -82,7 +82,7 @@ void InspectorResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public InspectorResponse instance.
  */
 InspectorResponsePrivate::InspectorResponsePrivate(
-    InspectorResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    InspectorResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

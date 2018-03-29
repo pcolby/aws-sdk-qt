@@ -82,7 +82,7 @@ void CodeBuildResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CodeBuildResponse instance.
  */
 CodeBuildResponsePrivate::CodeBuildResponsePrivate(
-    CodeBuildResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CodeBuildResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

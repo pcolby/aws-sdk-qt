@@ -82,7 +82,7 @@ void DirectoryServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public DirectoryServiceResponse instance.
  */
 DirectoryServiceResponsePrivate::DirectoryServiceResponsePrivate(
-    DirectoryServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    DirectoryServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

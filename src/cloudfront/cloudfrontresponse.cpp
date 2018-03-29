@@ -82,7 +82,7 @@ void CloudFrontResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudFrontResponse instance.
  */
 CloudFrontResponsePrivate::CloudFrontResponsePrivate(
-    CloudFrontResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CloudFrontResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

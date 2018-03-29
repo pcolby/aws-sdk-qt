@@ -82,7 +82,7 @@ void ACMResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ACMResponse instance.
  */
 ACMResponsePrivate::ACMResponsePrivate(
-    ACMResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ACMResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

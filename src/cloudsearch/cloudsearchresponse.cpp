@@ -82,7 +82,7 @@ void CloudSearchResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudSearchResponse instance.
  */
 CloudSearchResponsePrivate::CloudSearchResponsePrivate(
-    CloudSearchResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CloudSearchResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

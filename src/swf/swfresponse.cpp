@@ -82,7 +82,7 @@ void SWFResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SWFResponse instance.
  */
 SWFResponsePrivate::SWFResponsePrivate(
-    SWFResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    SWFResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

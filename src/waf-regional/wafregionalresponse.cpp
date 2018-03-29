@@ -82,7 +82,7 @@ void WAFRegionalResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public WAFRegionalResponse instance.
  */
 WAFRegionalResponsePrivate::WAFRegionalResponsePrivate(
-    WAFRegionalResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    WAFRegionalResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

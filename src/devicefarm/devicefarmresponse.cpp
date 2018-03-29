@@ -82,7 +82,7 @@ void DeviceFarmResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public DeviceFarmResponse instance.
  */
 DeviceFarmResponsePrivate::DeviceFarmResponsePrivate(
-    DeviceFarmResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    DeviceFarmResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

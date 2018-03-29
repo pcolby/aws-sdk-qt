@@ -82,7 +82,7 @@ void FirehoseResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public FirehoseResponse instance.
  */
 FirehoseResponsePrivate::FirehoseResponsePrivate(
-    FirehoseResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    FirehoseResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

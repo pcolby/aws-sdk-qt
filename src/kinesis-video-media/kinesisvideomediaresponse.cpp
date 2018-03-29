@@ -82,7 +82,7 @@ void KinesisVideoMediaResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public KinesisVideoMediaResponse instance.
  */
 KinesisVideoMediaResponsePrivate::KinesisVideoMediaResponsePrivate(
-    KinesisVideoMediaResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    KinesisVideoMediaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

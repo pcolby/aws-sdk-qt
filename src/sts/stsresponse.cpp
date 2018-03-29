@@ -82,7 +82,7 @@ void STSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public STSResponse instance.
  */
 STSResponsePrivate::STSResponsePrivate(
-    STSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    STSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

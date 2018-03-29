@@ -82,7 +82,7 @@ void ECRResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ECRResponse instance.
  */
 ECRResponsePrivate::ECRResponsePrivate(
-    ECRResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ECRResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

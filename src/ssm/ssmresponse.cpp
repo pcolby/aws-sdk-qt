@@ -82,7 +82,7 @@ void SSMResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SSMResponse instance.
  */
 SSMResponsePrivate::SSMResponsePrivate(
-    SSMResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    SSMResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

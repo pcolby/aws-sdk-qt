@@ -82,7 +82,7 @@ void AppStreamResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public AppStreamResponse instance.
  */
 AppStreamResponsePrivate::AppStreamResponsePrivate(
-    AppStreamResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    AppStreamResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

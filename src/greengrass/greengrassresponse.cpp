@@ -82,7 +82,7 @@ void GreengrassResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public GreengrassResponse instance.
  */
 GreengrassResponsePrivate::GreengrassResponsePrivate(
-    GreengrassResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    GreengrassResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

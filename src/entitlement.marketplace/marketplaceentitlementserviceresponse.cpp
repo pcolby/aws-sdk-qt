@@ -82,7 +82,7 @@ void MarketplaceEntitlementServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MarketplaceEntitlementServiceResponse instance.
  */
 MarketplaceEntitlementServiceResponsePrivate::MarketplaceEntitlementServiceResponsePrivate(
-    MarketplaceEntitlementServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    MarketplaceEntitlementServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

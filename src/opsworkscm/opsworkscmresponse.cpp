@@ -82,7 +82,7 @@ void OpsWorksCMResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public OpsWorksCMResponse instance.
  */
 OpsWorksCMResponsePrivate::OpsWorksCMResponsePrivate(
-    OpsWorksCMResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    OpsWorksCMResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

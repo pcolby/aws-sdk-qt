@@ -82,7 +82,7 @@ void BatchResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public BatchResponse instance.
  */
 BatchResponsePrivate::BatchResponsePrivate(
-    BatchResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    BatchResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

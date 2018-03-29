@@ -82,7 +82,7 @@ void MobileAnalyticsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public MobileAnalyticsResponse instance.
  */
 MobileAnalyticsResponsePrivate::MobileAnalyticsResponsePrivate(
-    MobileAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    MobileAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -82,7 +82,7 @@ void ApplicationAutoScalingResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ApplicationAutoScalingResponse instance.
  */
 ApplicationAutoScalingResponsePrivate::ApplicationAutoScalingResponsePrivate(
-    ApplicationAutoScalingResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ApplicationAutoScalingResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

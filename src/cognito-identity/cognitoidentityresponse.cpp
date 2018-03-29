@@ -82,7 +82,7 @@ void CognitoIdentityResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CognitoIdentityResponse instance.
  */
 CognitoIdentityResponsePrivate::CognitoIdentityResponsePrivate(
-    CognitoIdentityResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CognitoIdentityResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

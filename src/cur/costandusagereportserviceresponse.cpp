@@ -82,7 +82,7 @@ void CostandUsageReportServiceResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CostandUsageReportServiceResponse instance.
  */
 CostandUsageReportServiceResponsePrivate::CostandUsageReportServiceResponsePrivate(
-    CostandUsageReportServiceResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CostandUsageReportServiceResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

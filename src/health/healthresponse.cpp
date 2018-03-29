@@ -82,7 +82,7 @@ void HealthResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public HealthResponse instance.
  */
 HealthResponsePrivate::HealthResponsePrivate(
-    HealthResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    HealthResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

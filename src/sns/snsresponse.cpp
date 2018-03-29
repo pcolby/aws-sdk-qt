@@ -82,7 +82,7 @@ void SNSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SNSResponse instance.
  */
 SNSResponsePrivate::SNSResponsePrivate(
-    SNSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    SNSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

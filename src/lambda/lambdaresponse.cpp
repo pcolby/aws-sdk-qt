@@ -82,7 +82,7 @@ void LambdaResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public LambdaResponse instance.
  */
 LambdaResponsePrivate::LambdaResponsePrivate(
-    LambdaResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    LambdaResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

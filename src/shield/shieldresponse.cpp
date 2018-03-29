@@ -82,7 +82,7 @@ void ShieldResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ShieldResponse instance.
  */
 ShieldResponsePrivate::ShieldResponsePrivate(
-    ShieldResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ShieldResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

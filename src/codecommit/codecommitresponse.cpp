@@ -82,7 +82,7 @@ void CodeCommitResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CodeCommitResponse instance.
  */
 CodeCommitResponsePrivate::CodeCommitResponsePrivate(
-    CodeCommitResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CodeCommitResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -82,7 +82,7 @@ void ServiceCatalogResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ServiceCatalogResponse instance.
  */
 ServiceCatalogResponsePrivate::ServiceCatalogResponsePrivate(
-    ServiceCatalogResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ServiceCatalogResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

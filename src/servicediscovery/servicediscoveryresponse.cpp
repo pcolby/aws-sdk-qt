@@ -82,7 +82,7 @@ void ServiceDiscoveryResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ServiceDiscoveryResponse instance.
  */
 ServiceDiscoveryResponsePrivate::ServiceDiscoveryResponsePrivate(
-    ServiceDiscoveryResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ServiceDiscoveryResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

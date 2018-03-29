@@ -82,7 +82,7 @@ void AppSyncResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public AppSyncResponse instance.
  */
 AppSyncResponsePrivate::AppSyncResponsePrivate(
-    AppSyncResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    AppSyncResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

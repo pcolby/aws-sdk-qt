@@ -82,7 +82,7 @@ void CloudTrailResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudTrailResponse instance.
  */
 CloudTrailResponsePrivate::CloudTrailResponsePrivate(
-    CloudTrailResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CloudTrailResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

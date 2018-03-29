@@ -82,7 +82,7 @@ void IoTJobsDataPlaneResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public IoTJobsDataPlaneResponse instance.
  */
 IoTJobsDataPlaneResponsePrivate::IoTJobsDataPlaneResponsePrivate(
-    IoTJobsDataPlaneResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    IoTJobsDataPlaneResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -82,7 +82,7 @@ void RDSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public RDSResponse instance.
  */
 RDSResponsePrivate::RDSResponsePrivate(
-    RDSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    RDSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

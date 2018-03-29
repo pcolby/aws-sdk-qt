@@ -82,7 +82,7 @@ void CloudDirectoryResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudDirectoryResponse instance.
  */
 CloudDirectoryResponsePrivate::CloudDirectoryResponsePrivate(
-    CloudDirectoryResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CloudDirectoryResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

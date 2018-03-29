@@ -82,7 +82,7 @@ void SageMakerResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public SageMakerResponse instance.
  */
 SageMakerResponsePrivate::SageMakerResponsePrivate(
-    SageMakerResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    SageMakerResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

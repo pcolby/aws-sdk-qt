@@ -82,7 +82,7 @@ void PricingResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public PricingResponse instance.
  */
 PricingResponsePrivate::PricingResponsePrivate(
-    PricingResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    PricingResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

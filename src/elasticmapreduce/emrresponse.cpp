@@ -82,7 +82,7 @@ void EMRResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public EMRResponse instance.
  */
 EMRResponsePrivate::EMRResponsePrivate(
-    EMRResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    EMRResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

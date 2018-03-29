@@ -82,7 +82,7 @@ void ServerlessApplicationRepositoryResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ServerlessApplicationRepositoryResponse instance.
  */
 ServerlessApplicationRepositoryResponsePrivate::ServerlessApplicationRepositoryResponsePrivate(
-    ServerlessApplicationRepositoryResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ServerlessApplicationRepositoryResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -82,7 +82,7 @@ void PollyResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public PollyResponse instance.
  */
 PollyResponsePrivate::PollyResponsePrivate(
-    PollyResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    PollyResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -82,7 +82,7 @@ void KinesisAnalyticsResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public KinesisAnalyticsResponse instance.
  */
 KinesisAnalyticsResponsePrivate::KinesisAnalyticsResponsePrivate(
-    KinesisAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    KinesisAnalyticsResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

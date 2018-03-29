@@ -82,7 +82,7 @@ void AutoScalingPlansResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public AutoScalingPlansResponse instance.
  */
 AutoScalingPlansResponsePrivate::AutoScalingPlansResponsePrivate(
-    AutoScalingPlansResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    AutoScalingPlansResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

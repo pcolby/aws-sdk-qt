@@ -82,7 +82,7 @@ void EFSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public EFSResponse instance.
  */
 EFSResponsePrivate::EFSResponsePrivate(
-    EFSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    EFSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

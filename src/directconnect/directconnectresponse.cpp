@@ -82,7 +82,7 @@ void DirectConnectResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public DirectConnectResponse instance.
  */
 DirectConnectResponsePrivate::DirectConnectResponsePrivate(
-    DirectConnectResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    DirectConnectResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

@@ -82,7 +82,7 @@ void ElastiCacheResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ElastiCacheResponse instance.
  */
 ElastiCacheResponsePrivate::ElastiCacheResponsePrivate(
-    ElastiCacheResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ElastiCacheResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

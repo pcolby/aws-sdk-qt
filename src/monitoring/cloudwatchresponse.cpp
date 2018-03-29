@@ -82,7 +82,7 @@ void CloudWatchResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudWatchResponse instance.
  */
 CloudWatchResponsePrivate::CloudWatchResponsePrivate(
-    CloudWatchResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CloudWatchResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

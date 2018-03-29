@@ -82,7 +82,7 @@ void KMSResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public KMSResponse instance.
  */
 KMSResponsePrivate::KMSResponsePrivate(
-    KMSResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    KMSResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

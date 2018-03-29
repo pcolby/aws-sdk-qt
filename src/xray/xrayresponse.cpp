@@ -82,7 +82,7 @@ void XRayResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public XRayResponse instance.
  */
 XRayResponsePrivate::XRayResponsePrivate(
-    XRayResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    XRayResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

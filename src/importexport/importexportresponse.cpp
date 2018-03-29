@@ -82,7 +82,7 @@ void ImportExportResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public ImportExportResponse instance.
  */
 ImportExportResponsePrivate::ImportExportResponsePrivate(
-    ImportExportResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    ImportExportResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

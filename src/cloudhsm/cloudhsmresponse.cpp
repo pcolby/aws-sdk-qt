@@ -82,7 +82,7 @@ void CloudHSMResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public CloudHSMResponse instance.
  */
 CloudHSMResponsePrivate::CloudHSMResponsePrivate(
-    CloudHSMResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    CloudHSMResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }

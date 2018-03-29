@@ -82,7 +82,7 @@ void GuardDutyResponse::parseFailure(QIODevice &response)
  * @param  q  Pointer to this object's public GuardDutyResponse instance.
  */
 GuardDutyResponsePrivate::GuardDutyResponsePrivate(
-    GuardDutyResponse * const q) : QtAws::Core::AwsAbstractResponePrivate(q)
+    GuardDutyResponse * const q) : QtAws::Core::AwsAbstractResponsePrivate(q)
 {
 
 }
