@@ -328,7 +328,7 @@ QString DirectoryServiceRequestPrivate::toString(const DirectoryServiceRequest::
     #define ActionToString(action) \
         case DirectoryServiceRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

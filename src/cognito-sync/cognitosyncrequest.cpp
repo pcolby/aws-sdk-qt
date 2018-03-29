@@ -328,7 +328,7 @@ QString CognitoSyncRequestPrivate::toString(const CognitoSyncRequest::Action &ac
     #define ActionToString(action) \
         case CognitoSyncRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

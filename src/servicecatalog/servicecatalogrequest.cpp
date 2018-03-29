@@ -328,7 +328,7 @@ QString ServiceCatalogRequestPrivate::toString(const ServiceCatalogRequest::Acti
     #define ActionToString(action) \
         case ServiceCatalogRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

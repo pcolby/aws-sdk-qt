@@ -328,7 +328,7 @@ QString CognitoIdentityProviderRequestPrivate::toString(const CognitoIdentityPro
     #define ActionToString(action) \
         case CognitoIdentityProviderRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

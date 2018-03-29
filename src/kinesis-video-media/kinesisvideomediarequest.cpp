@@ -328,7 +328,7 @@ QString KinesisVideoMediaRequestPrivate::toString(const KinesisVideoMediaRequest
     #define ActionToString(action) \
         case KinesisVideoMediaRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

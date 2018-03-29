@@ -328,7 +328,7 @@ QString CloudHSMV2RequestPrivate::toString(const CloudHSMV2Request::Action &acti
     #define ActionToString(action) \
         case CloudHSMV2Request::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

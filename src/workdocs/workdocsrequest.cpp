@@ -328,7 +328,7 @@ QString WorkDocsRequestPrivate::toString(const WorkDocsRequest::Action &action)
     #define ActionToString(action) \
         case WorkDocsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

@@ -328,7 +328,7 @@ QString ApplicationAutoScalingRequestPrivate::toString(const ApplicationAutoScal
     #define ActionToString(action) \
         case ApplicationAutoScalingRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

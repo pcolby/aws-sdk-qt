@@ -328,7 +328,7 @@ QString EC2RequestPrivate::toString(const EC2Request::Action &action)
     #define ActionToString(action) \
         case EC2Request::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

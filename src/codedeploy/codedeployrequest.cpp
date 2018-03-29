@@ -328,7 +328,7 @@ QString CodeDeployRequestPrivate::toString(const CodeDeployRequest::Action &acti
     #define ActionToString(action) \
         case CodeDeployRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

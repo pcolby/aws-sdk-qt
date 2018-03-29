@@ -328,7 +328,7 @@ QString BudgetsRequestPrivate::toString(const BudgetsRequest::Action &action)
     #define ActionToString(action) \
         case BudgetsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

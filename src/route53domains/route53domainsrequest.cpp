@@ -328,7 +328,7 @@ QString Route53DomainsRequestPrivate::toString(const Route53DomainsRequest::Acti
     #define ActionToString(action) \
         case Route53DomainsRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

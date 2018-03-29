@@ -328,7 +328,7 @@ QString Cloud9RequestPrivate::toString(const Cloud9Request::Action &action)
     #define ActionToString(action) \
         case Cloud9Request::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }

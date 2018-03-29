@@ -328,7 +328,7 @@ QString SQSRequestPrivate::toString(const SQSRequest::Action &action)
     #define ActionToString(action) \
         case SQSRequest::action##Action: return QStringLiteral(#action)
     switch (action) {
-        ActionToString(/*todo*/);
+        //ActionToString(/*todo*/);
         default:
             Q_ASSERT_X(false, Q_FUNC_INFO, "invalid action");
     }
