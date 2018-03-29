@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class CloudWatchResponsePrivate;
 
-class QTAWS_EXPORT CloudWatchResponse : public CloudWatchResponse {
+class QTAWS_EXPORT CloudWatchResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

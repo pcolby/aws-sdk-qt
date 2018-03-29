@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class DeviceFarmResponsePrivate;
 
-class QTAWS_EXPORT DeviceFarmResponse : public DeviceFarmResponse {
+class QTAWS_EXPORT DeviceFarmResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

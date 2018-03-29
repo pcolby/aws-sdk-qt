@@ -28,7 +28,7 @@ namespace Glacier {
 
 class GlacierResponsePrivate;
 
-class QTAWS_EXPORT GlacierResponse : public GlacierResponse {
+class QTAWS_EXPORT GlacierResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class DirectConnectResponsePrivate;
 
-class QTAWS_EXPORT DirectConnectResponse : public DirectConnectResponse {
+class QTAWS_EXPORT DirectConnectResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

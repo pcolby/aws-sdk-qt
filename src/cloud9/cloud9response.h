@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class Cloud9ResponsePrivate;
 
-class QTAWS_EXPORT Cloud9Response : public Cloud9Response {
+class QTAWS_EXPORT Cloud9Response : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

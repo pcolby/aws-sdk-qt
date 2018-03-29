@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class LexModelBuildingServiceResponsePrivate;
 
-class QTAWS_EXPORT LexModelBuildingServiceResponse : public LexModelBuildingServiceResponse {
+class QTAWS_EXPORT LexModelBuildingServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

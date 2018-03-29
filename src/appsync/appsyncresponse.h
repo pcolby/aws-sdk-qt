@@ -28,7 +28,7 @@ namespace AppSync {
 
 class AppSyncResponsePrivate;
 
-class QTAWS_EXPORT AppSyncResponse : public AppSyncResponse {
+class QTAWS_EXPORT AppSyncResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace ECS {
 
 class ECSResponsePrivate;
 
-class QTAWS_EXPORT ECSResponse : public ECSResponse {
+class QTAWS_EXPORT ECSResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

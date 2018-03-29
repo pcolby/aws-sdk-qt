@@ -28,7 +28,7 @@ namespace GameLift {
 
 class GameLiftResponsePrivate;
 
-class QTAWS_EXPORT GameLiftResponse : public GameLiftResponse {
+class QTAWS_EXPORT GameLiftResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

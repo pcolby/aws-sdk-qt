@@ -28,7 +28,7 @@ namespace STS {
 
 class STSResponsePrivate;
 
-class QTAWS_EXPORT STSResponse : public STSResponse {
+class QTAWS_EXPORT STSResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

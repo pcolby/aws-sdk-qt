@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class WorkSpacesResponsePrivate;
 
-class QTAWS_EXPORT WorkSpacesResponse : public WorkSpacesResponse {
+class QTAWS_EXPORT WorkSpacesResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

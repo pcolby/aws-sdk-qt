@@ -28,7 +28,7 @@ namespace IoTDataPlane {
 
 class IoTDataPlaneResponsePrivate;
 
-class QTAWS_EXPORT IoTDataPlaneResponse : public IoTDataPlaneResponse {
+class QTAWS_EXPORT IoTDataPlaneResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

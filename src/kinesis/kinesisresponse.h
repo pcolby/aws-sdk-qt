@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class KinesisResponsePrivate;
 
-class QTAWS_EXPORT KinesisResponse : public KinesisResponse {
+class QTAWS_EXPORT KinesisResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

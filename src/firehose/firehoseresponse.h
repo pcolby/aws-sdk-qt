@@ -28,7 +28,7 @@ namespace Firehose {
 
 class FirehoseResponsePrivate;
 
-class QTAWS_EXPORT FirehoseResponse : public FirehoseResponse {
+class QTAWS_EXPORT FirehoseResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace Support {
 
 class SupportResponsePrivate;
 
-class QTAWS_EXPORT SupportResponse : public SupportResponse {
+class QTAWS_EXPORT SupportResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class RekognitionResponsePrivate;
 
-class QTAWS_EXPORT RekognitionResponse : public RekognitionResponse {
+class QTAWS_EXPORT RekognitionResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

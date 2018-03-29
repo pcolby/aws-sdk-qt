@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class APIGatewayResponsePrivate;
 
-class QTAWS_EXPORT APIGatewayResponse : public APIGatewayResponse {
+class QTAWS_EXPORT APIGatewayResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

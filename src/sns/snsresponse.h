@@ -28,7 +28,7 @@ namespace SNS {
 
 class SNSResponsePrivate;
 
-class QTAWS_EXPORT SNSResponse : public SNSResponse {
+class QTAWS_EXPORT SNSResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

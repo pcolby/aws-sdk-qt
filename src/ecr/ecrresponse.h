@@ -28,7 +28,7 @@ namespace ECR {
 
 class ECRResponsePrivate;
 
-class QTAWS_EXPORT ECRResponse : public ECRResponse {
+class QTAWS_EXPORT ECRResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

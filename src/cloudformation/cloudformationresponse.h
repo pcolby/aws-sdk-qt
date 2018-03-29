@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class CloudFormationResponsePrivate;
 
-class QTAWS_EXPORT CloudFormationResponse : public CloudFormationResponse {
+class QTAWS_EXPORT CloudFormationResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

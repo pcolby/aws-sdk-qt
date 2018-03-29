@@ -28,7 +28,7 @@ namespace ACM {
 
 class ACMResponsePrivate;
 
-class QTAWS_EXPORT ACMResponse : public ACMResponse {
+class QTAWS_EXPORT ACMResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

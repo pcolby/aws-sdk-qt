@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ServiceCatalogResponsePrivate;
 
-class QTAWS_EXPORT ServiceCatalogResponse : public ServiceCatalogResponse {
+class QTAWS_EXPORT ServiceCatalogResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

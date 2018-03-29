@@ -28,7 +28,7 @@ namespace SSM {
 
 class SSMResponsePrivate;
 
-class QTAWS_EXPORT SSMResponse : public SSMResponse {
+class QTAWS_EXPORT SSMResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

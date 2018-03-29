@@ -28,7 +28,7 @@ namespace Budgets {
 
 class BudgetsResponsePrivate;
 
-class QTAWS_EXPORT BudgetsResponse : public BudgetsResponse {
+class QTAWS_EXPORT BudgetsResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

@@ -28,7 +28,7 @@ namespace Redshift {
 
 class RedshiftResponsePrivate;
 
-class QTAWS_EXPORT RedshiftResponse : public RedshiftResponse {
+class QTAWS_EXPORT RedshiftResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

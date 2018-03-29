@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class CodePipelineResponsePrivate;
 
-class QTAWS_EXPORT CodePipelineResponse : public CodePipelineResponse {
+class QTAWS_EXPORT CodePipelineResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

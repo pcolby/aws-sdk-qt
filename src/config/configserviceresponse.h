@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class ConfigServiceResponsePrivate;
 
-class QTAWS_EXPORT ConfigServiceResponse : public ConfigServiceResponse {
+class QTAWS_EXPORT ConfigServiceResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:

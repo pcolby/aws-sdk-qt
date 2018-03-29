@@ -28,7 +28,7 @@ namespace EFS {
 
 class EFSResponsePrivate;
 
-class QTAWS_EXPORT EFSResponse : public EFSResponse {
+class QTAWS_EXPORT EFSResponse : public QtAws::Core::AwsAbstractResponse {
     Q_OBJECT
 
 public:
