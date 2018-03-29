@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CreateDBSecurityGroupRequest)
 
-}
+};
 
 } // namespace RDS
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteDhcpOptionsRequest)
 
-}
+};
 
 } // namespace EC2
 } // namespace QtAws

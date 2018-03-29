@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ResetJobBookmarkRequest)
 
-}
+};
 
 } // namespace Glue
 } // namespace QtAws

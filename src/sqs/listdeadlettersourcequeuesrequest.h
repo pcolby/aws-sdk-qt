@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListDeadLetterSourceQueuesRequest)
 
-}
+};
 
 } // namespace SQS
 } // namespace QtAws

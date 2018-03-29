@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DescribeOriginEndpointRequest)
 
-}
+};
 
 } // namespace MediaPackage
 } // namespace QtAws

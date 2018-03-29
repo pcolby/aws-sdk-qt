@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CreateResourceServerRequest)
 
-}
+};
 
 } // namespace CognitoIdentityProvider
 } // namespace QtAws

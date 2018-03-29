@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(VerifyDomainIdentityRequest)
 
-}
+};
 
 } // namespace SES
 } // namespace QtAws

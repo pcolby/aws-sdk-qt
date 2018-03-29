@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(StopConfigurationRecorderRequest)
 
-}
+};
 
 } // namespace ConfigService
 } // namespace QtAws

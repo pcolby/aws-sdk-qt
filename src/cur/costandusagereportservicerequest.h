@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CostandUsageReportServiceRequest)
 
-}
+};
 
 } // namespace CostandUsageReportService
 } // namespace QtAws

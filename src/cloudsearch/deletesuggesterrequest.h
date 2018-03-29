@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteSuggesterRequest)
 
-}
+};
 
 } // namespace CloudSearch
 } // namespace QtAws

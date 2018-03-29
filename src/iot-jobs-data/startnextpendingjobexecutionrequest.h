@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(StartNextPendingJobExecutionRequest)
 
-}
+};
 
 } // namespace IoTJobsDataPlane
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListSubscribedRuleGroupsRequest)
 
-}
+};
 
 } // namespace WAF
 } // namespace QtAws

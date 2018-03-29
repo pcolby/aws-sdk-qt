@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(RestoreDBClusterFromS3Request)
 
-}
+};
 
 } // namespace RDS
 } // namespace QtAws

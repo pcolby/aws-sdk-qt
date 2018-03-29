@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DisassociateConnectorRequest)
 
-}
+};
 
 } // namespace SMS
 } // namespace QtAws

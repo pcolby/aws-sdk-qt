@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(SignalWorkflowExecutionRequest)
 
-}
+};
 
 } // namespace SWF
 } // namespace QtAws

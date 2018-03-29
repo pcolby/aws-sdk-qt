@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(FirehoseRequest)
 
-}
+};
 
 } // namespace Firehose
 } // namespace QtAws

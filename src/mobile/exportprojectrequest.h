@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ExportProjectRequest)
 
-}
+};
 
 } // namespace Mobile
 } // namespace QtAws

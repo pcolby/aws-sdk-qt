@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListCloudFrontOriginAccessIdentitiesRequest)
 
-}
+};
 
 } // namespace CloudFront
 } // namespace QtAws

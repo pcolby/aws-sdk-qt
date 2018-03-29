@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ReportTaskRunnerHeartbeatRequest)
 
-}
+};
 
 } // namespace DataPipeline
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetIdentityPoolConfigurationRequest)
 
-}
+};
 
 } // namespace CognitoSync
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(AddInstanceGroupsRequest)
 
-}
+};
 
 } // namespace EMR
 } // namespace QtAws

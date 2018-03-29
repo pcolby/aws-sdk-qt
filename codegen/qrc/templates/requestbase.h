@@ -55,7 +55,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE({{ClassName}})
 
-}
+};
 
 } // namespace {{NameSpaceName}}
 } // namespace QtAws

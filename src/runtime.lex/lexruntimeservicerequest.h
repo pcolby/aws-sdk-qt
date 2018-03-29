@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(LexRuntimeServiceRequest)
 
-}
+};
 
 } // namespace LexRuntimeService
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(UpdateStreamRequest)
 
-}
+};
 
 } // namespace KinesisVideo
 } // namespace QtAws

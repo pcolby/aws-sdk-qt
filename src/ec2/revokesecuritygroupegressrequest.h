@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(RevokeSecurityGroupEgressRequest)
 
-}
+};
 
 } // namespace EC2
 } // namespace QtAws

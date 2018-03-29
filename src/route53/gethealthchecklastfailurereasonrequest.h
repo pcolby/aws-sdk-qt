@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetHealthCheckLastFailureReasonRequest)
 
-}
+};
 
 } // namespace Route53
 } // namespace QtAws

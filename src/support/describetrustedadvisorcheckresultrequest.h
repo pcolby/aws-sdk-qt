@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DescribeTrustedAdvisorCheckResultRequest)
 
-}
+};
 
 } // namespace Support
 } // namespace QtAws

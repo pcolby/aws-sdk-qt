@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteSnapshotRequest)
 
-}
+};
 
 } // namespace ElastiCache
 } // namespace QtAws

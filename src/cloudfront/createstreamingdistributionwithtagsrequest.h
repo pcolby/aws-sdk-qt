@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CreateStreamingDistributionWithTagsRequest)
 
-}
+};
 
 } // namespace CloudFront
 } // namespace QtAws

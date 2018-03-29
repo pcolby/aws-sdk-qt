@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(AcknowledgeJobRequest)
 
-}
+};
 
 } // namespace CodePipeline
 } // namespace QtAws

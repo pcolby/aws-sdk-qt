@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CreateSubscriberRequest)
 
-}
+};
 
 } // namespace Budgets
 } // namespace QtAws

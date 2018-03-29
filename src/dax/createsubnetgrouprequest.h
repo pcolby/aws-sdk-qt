@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CreateSubnetGroupRequest)
 
-}
+};
 
 } // namespace DAX
 } // namespace QtAws

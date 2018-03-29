@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListSubscriptionDefinitionsRequest)
 
-}
+};
 
 } // namespace Greengrass
 } // namespace QtAws

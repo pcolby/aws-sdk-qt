@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DescribeGatewayInformationRequest)
 
-}
+};
 
 } // namespace StorageGateway
 } // namespace QtAws

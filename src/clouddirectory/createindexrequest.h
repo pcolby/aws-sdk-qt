@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CreateIndexRequest)
 
-}
+};
 
 } // namespace CloudDirectory
 } // namespace QtAws

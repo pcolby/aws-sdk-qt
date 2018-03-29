@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DefineAnalysisSchemeRequest)
 
-}
+};
 
 } // namespace CloudSearch
 } // namespace QtAws

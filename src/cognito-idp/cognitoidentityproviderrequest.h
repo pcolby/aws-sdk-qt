@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CognitoIdentityProviderRequest)
 
-}
+};
 
 } // namespace CognitoIdentityProvider
 } // namespace QtAws

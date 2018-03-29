@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListActivatedRulesInRuleGroupRequest)
 
-}
+};
 
 } // namespace WAFRegional
 } // namespace QtAws

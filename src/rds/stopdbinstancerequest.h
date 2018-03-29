@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(StopDBInstanceRequest)
 
-}
+};
 
 } // namespace RDS
 } // namespace QtAws

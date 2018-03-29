@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetAccountLimitRequest)
 
-}
+};
 
 } // namespace Route53
 } // namespace QtAws

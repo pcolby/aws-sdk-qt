@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ChangePasswordRequest)
 
-}
+};
 
 } // namespace CognitoIdentityProvider
 } // namespace QtAws

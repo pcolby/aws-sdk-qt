@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetPasswordDataRequest)
 
-}
+};
 
 } // namespace EC2
 } // namespace QtAws

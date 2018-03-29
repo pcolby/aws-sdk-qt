@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteHapgRequest)
 
-}
+};
 
 } // namespace CloudHSM
 } // namespace QtAws

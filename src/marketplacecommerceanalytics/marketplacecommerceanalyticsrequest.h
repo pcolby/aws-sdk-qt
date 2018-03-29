@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(MarketplaceCommerceAnalyticsRequest)
 
-}
+};
 
 } // namespace MarketplaceCommerceAnalytics
 } // namespace QtAws

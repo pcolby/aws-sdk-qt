@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListImagesRequest)
 
-}
+};
 
 } // namespace ECR
 } // namespace QtAws

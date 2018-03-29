@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DescribeLoggingStatusRequest)
 
-}
+};
 
 } // namespace Redshift
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListPullRequestsRequest)
 
-}
+};
 
 } // namespace CodeCommit
 } // namespace QtAws

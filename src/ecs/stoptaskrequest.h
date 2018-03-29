@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(StopTaskRequest)
 
-}
+};
 
 } // namespace ECS
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DescribeCustomerGatewaysRequest)
 
-}
+};
 
 } // namespace EC2
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteCacheSubnetGroupRequest)
 
-}
+};
 
 } // namespace ElastiCache
 } // namespace QtAws

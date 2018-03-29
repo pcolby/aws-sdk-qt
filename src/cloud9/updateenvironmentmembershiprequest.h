@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(UpdateEnvironmentMembershipRequest)
 
-}
+};
 
 } // namespace Cloud9
 } // namespace QtAws

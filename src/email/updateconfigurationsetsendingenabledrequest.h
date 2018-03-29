@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(UpdateConfigurationSetSendingEnabledRequest)
 
-}
+};
 
 } // namespace SES
 } // namespace QtAws

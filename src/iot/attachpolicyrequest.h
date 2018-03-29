@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(AttachPolicyRequest)
 
-}
+};
 
 } // namespace IoT
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(RemoveUserFromGroupRequest)
 
-}
+};
 
 } // namespace IAM
 } // namespace QtAws

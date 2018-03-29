@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(EncryptRequest)
 
-}
+};
 
 } // namespace KMS
 } // namespace QtAws

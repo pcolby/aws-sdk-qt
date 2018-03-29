@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(UpdateStateMachineRequest)
 
-}
+};
 
 } // namespace SFN
 } // namespace QtAws

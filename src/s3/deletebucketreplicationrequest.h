@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteBucketReplicationRequest)
 
-}
+};
 
 } // namespace S3
 } // namespace QtAws

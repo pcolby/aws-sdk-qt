@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(VerifyEmailAddressRequest)
 
-}
+};
 
 } // namespace SES
 } // namespace QtAws

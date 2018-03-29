@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListTagsForResourceRequest)
 
-}
+};
 
 } // namespace ElastiCache
 } // namespace QtAws

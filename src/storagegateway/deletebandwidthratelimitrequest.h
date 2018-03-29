@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteBandwidthRateLimitRequest)
 
-}
+};
 
 } // namespace StorageGateway
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(UpdateConfigurationTemplateRequest)
 
-}
+};
 
 } // namespace ElasticBeanstalk
 } // namespace QtAws

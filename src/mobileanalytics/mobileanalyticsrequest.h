@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(MobileAnalyticsRequest)
 
-}
+};
 
 } // namespace MobileAnalytics
 } // namespace QtAws

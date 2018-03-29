@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CreateVolumeRequest)
 
-}
+};
 
 } // namespace EC2
 } // namespace QtAws

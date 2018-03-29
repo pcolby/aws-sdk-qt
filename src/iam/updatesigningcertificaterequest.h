@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(UpdateSigningCertificateRequest)
 
-}
+};
 
 } // namespace IAM
 } // namespace QtAws

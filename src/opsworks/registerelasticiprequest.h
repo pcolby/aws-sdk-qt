@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(RegisterElasticIpRequest)
 
-}
+};
 
 } // namespace OpsWorks
 } // namespace QtAws

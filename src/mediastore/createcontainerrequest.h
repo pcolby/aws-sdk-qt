@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CreateContainerRequest)
 
-}
+};
 
 } // namespace MediaStore
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(AttachGroupPolicyRequest)
 
-}
+};
 
 } // namespace IAM
 } // namespace QtAws

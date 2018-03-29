@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DatabaseMigrationServiceRequest)
 
-}
+};
 
 } // namespace DatabaseMigrationService
 } // namespace QtAws

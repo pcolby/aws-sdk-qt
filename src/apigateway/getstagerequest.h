@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetStageRequest)
 
-}
+};
 
 } // namespace APIGateway
 } // namespace QtAws

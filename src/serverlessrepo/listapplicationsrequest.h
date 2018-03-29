@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListApplicationsRequest)
 
-}
+};
 
 } // namespace ServerlessApplicationRepository
 } // namespace QtAws

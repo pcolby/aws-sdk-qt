@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ACMRequest)
 
-}
+};
 
 } // namespace ACM
 } // namespace QtAws

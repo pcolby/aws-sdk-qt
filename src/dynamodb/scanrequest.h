@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ScanRequest)
 
-}
+};
 
 } // namespace DynamoDB
 } // namespace QtAws

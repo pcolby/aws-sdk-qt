@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(UpdateTagOptionRequest)
 
-}
+};
 
 } // namespace ServiceCatalog
 } // namespace QtAws

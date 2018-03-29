@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CloudHSMV2Request)
 
-}
+};
 
 } // namespace CloudHSMV2
 } // namespace QtAws

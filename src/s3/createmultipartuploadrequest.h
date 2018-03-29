@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CreateMultipartUploadRequest)
 
-}
+};
 
 } // namespace S3
 } // namespace QtAws

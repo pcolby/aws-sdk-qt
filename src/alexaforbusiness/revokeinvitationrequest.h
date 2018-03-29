@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(RevokeInvitationRequest)
 
-}
+};
 
 } // namespace AlexaForBusiness
 } // namespace QtAws

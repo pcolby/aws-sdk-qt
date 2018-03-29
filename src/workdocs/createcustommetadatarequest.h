@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CreateCustomMetadataRequest)
 
-}
+};
 
 } // namespace WorkDocs
 } // namespace QtAws

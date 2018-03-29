@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(SendUsersMessagesRequest)
 
-}
+};
 
 } // namespace Pinpoint
 } // namespace QtAws

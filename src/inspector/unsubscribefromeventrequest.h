@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(UnsubscribeFromEventRequest)
 
-}
+};
 
 } // namespace Inspector
 } // namespace QtAws

@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(PricingRequest)
 
-}
+};
 
 } // namespace Pricing
 } // namespace QtAws

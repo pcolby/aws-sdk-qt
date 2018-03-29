@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeregisterInstanceRequest)
 
-}
+};
 
 } // namespace ServiceDiscovery
 } // namespace QtAws

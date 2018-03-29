@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListLocalDisksRequest)
 
-}
+};
 
 } // namespace StorageGateway
 } // namespace QtAws

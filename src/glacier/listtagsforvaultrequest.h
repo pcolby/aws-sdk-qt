@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListTagsForVaultRequest)
 
-}
+};
 
 } // namespace Glacier
 } // namespace QtAws

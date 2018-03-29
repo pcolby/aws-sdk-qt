@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(OrganizationsRequest)
 
-}
+};
 
 } // namespace Organizations
 } // namespace QtAws

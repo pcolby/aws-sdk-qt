@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetBucketLoggingRequest)
 
-}
+};
 
 } // namespace S3
 } // namespace QtAws

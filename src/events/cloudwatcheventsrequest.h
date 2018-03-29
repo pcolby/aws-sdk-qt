@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CloudWatchEventsRequest)
 
-}
+};
 
 } // namespace CloudWatchEvents
 } // namespace QtAws

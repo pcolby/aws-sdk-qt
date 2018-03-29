@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ElasticsearchServiceRequest)
 
-}
+};
 
 } // namespace ElasticsearchService
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(RegisterContainerInstanceRequest)
 
-}
+};
 
 } // namespace ECS
 } // namespace QtAws

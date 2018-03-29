@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteApplicationInputProcessingConfigurationRequest)
 
-}
+};
 
 } // namespace KinesisAnalytics
 } // namespace QtAws

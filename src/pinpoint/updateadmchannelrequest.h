@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(UpdateAdmChannelRequest)
 
-}
+};
 
 } // namespace Pinpoint
 } // namespace QtAws

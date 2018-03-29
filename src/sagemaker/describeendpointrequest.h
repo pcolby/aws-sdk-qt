@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DescribeEndpointRequest)
 
-}
+};
 
 } // namespace SageMaker
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DescribeEC2InstanceLimitsRequest)
 
-}
+};
 
 } // namespace GameLift
 } // namespace QtAws

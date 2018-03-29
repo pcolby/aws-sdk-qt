@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(BatchDeleteBuildsRequest)
 
-}
+};
 
 } // namespace CodeBuild
 } // namespace QtAws

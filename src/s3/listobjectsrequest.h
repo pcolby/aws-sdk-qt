@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListObjectsRequest)
 
-}
+};
 
 } // namespace S3
 } // namespace QtAws

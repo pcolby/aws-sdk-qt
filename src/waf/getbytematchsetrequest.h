@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetByteMatchSetRequest)
 
-}
+};
 
 } // namespace WAF
 } // namespace QtAws

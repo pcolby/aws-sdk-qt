@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteRegexPatternSetRequest)
 
-}
+};
 
 } // namespace WAFRegional
 } // namespace QtAws

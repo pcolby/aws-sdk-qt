@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(LightsailRequest)
 
-}
+};
 
 } // namespace Lightsail
 } // namespace QtAws

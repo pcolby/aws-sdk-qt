@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DescribeResizeRequest)
 
-}
+};
 
 } // namespace Redshift
 } // namespace QtAws

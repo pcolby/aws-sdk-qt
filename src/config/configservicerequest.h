@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ConfigServiceRequest)
 
-}
+};
 
 } // namespace ConfigService
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetDeviceRequest)
 
-}
+};
 
 } // namespace DeviceFarm
 } // namespace QtAws

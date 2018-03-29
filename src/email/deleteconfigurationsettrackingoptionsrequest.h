@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteConfigurationSetTrackingOptionsRequest)
 
-}
+};
 
 } // namespace SES
 } // namespace QtAws

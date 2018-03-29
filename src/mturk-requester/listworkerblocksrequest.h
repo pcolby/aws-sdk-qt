@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListWorkerBlocksRequest)
 
-}
+};
 
 } // namespace MTurk
 } // namespace QtAws

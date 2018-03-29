@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CreateWebhookRequest)
 
-}
+};
 
 } // namespace CodeBuild
 } // namespace QtAws

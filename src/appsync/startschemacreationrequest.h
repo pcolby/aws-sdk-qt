@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(StartSchemaCreationRequest)
 
-}
+};
 
 } // namespace AppSync
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListStreamProcessorsRequest)
 
-}
+};
 
 } // namespace Rekognition
 } // namespace QtAws

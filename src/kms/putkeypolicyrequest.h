@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(PutKeyPolicyRequest)
 
-}
+};
 
 } // namespace KMS
 } // namespace QtAws

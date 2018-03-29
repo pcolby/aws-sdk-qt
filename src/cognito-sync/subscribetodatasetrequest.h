@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(SubscribeToDatasetRequest)
 
-}
+};
 
 } // namespace CognitoSync
 } // namespace QtAws

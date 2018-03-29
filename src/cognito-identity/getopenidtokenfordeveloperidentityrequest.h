@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetOpenIdTokenForDeveloperIdentityRequest)
 
-}
+};
 
 } // namespace CognitoIdentity
 } // namespace QtAws

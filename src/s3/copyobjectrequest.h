@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CopyObjectRequest)
 
-}
+};
 
 } // namespace S3
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(StartNotebookInstanceRequest)
 
-}
+};
 
 } // namespace SageMaker
 } // namespace QtAws

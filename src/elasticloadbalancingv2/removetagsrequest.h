@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(RemoveTagsRequest)
 
-}
+};
 
 } // namespace ElasticLoadBalancingv2
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CancelSpotFleetRequestsRequest)
 
-}
+};
 
 } // namespace EC2
 } // namespace QtAws

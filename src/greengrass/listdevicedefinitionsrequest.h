@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListDeviceDefinitionsRequest)
 
-}
+};
 
 } // namespace Greengrass
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteAttributesRequest)
 
-}
+};
 
 } // namespace ECS
 } // namespace QtAws

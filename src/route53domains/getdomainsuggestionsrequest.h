@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetDomainSuggestionsRequest)
 
-}
+};
 
 } // namespace Route53Domains
 } // namespace QtAws

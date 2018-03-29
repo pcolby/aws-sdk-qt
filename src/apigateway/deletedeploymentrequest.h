@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteDeploymentRequest)
 
-}
+};
 
 } // namespace APIGateway
 } // namespace QtAws

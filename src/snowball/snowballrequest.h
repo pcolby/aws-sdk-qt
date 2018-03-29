@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(SnowballRequest)
 
-}
+};
 
 } // namespace Snowball
 } // namespace QtAws

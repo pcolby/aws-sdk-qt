@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(MediaConvertRequest)
 
-}
+};
 
 } // namespace MediaConvert
 } // namespace QtAws

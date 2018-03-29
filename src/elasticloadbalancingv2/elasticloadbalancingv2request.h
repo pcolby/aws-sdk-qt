@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ElasticLoadBalancingv2Request)
 
-}
+};
 
 } // namespace ElasticLoadBalancingv2
 } // namespace QtAws

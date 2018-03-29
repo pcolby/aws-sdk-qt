@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(PromoteReadReplicaDBClusterRequest)
 
-}
+};
 
 } // namespace RDS
 } // namespace QtAws

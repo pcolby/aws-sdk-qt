@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(SetSubnetsRequest)
 
-}
+};
 
 } // namespace ElasticLoadBalancingv2
 } // namespace QtAws

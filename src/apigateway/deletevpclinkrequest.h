@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteVpcLinkRequest)
 
-}
+};
 
 } // namespace APIGateway
 } // namespace QtAws

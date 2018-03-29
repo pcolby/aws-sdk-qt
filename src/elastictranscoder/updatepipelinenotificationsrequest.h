@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(UpdatePipelineNotificationsRequest)
 
-}
+};
 
 } // namespace ElasticTranscoder
 } // namespace QtAws

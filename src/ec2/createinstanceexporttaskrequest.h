@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CreateInstanceExportTaskRequest)
 
-}
+};
 
 } // namespace EC2
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(FlushStageAuthorizersCacheRequest)
 
-}
+};
 
 } // namespace APIGateway
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(AdminGetUserRequest)
 
-}
+};
 
 } // namespace CognitoIdentityProvider
 } // namespace QtAws

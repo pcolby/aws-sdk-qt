@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(InviteMembersRequest)
 
-}
+};
 
 } // namespace GuardDuty
 } // namespace QtAws

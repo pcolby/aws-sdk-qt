@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetConsoleScreenshotRequest)
 
-}
+};
 
 } // namespace EC2
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetDatabaseRequest)
 
-}
+};
 
 } // namespace Glue
 } // namespace QtAws

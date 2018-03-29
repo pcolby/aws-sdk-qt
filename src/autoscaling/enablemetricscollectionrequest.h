@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(EnableMetricsCollectionRequest)
 
-}
+};
 
 } // namespace AutoScaling
 } // namespace QtAws

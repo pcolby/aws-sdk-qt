@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteClusterRequest)
 
-}
+};
 
 } // namespace CloudHSMV2
 } // namespace QtAws

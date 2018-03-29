@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(SendTemplatedEmailRequest)
 
-}
+};
 
 } // namespace SES
 } // namespace QtAws

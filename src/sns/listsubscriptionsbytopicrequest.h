@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ListSubscriptionsByTopicRequest)
 
-}
+};
 
 } // namespace SNS
 } // namespace QtAws

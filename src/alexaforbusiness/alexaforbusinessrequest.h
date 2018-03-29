@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(AlexaForBusinessRequest)
 
-}
+};
 
 } // namespace AlexaForBusiness
 } // namespace QtAws

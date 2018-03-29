@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(RestoreDBInstanceFromS3Request)
 
-}
+};
 
 } // namespace RDS
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetCrawlersRequest)
 
-}
+};
 
 } // namespace Glue
 } // namespace QtAws

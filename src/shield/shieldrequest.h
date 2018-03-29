@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ShieldRequest)
 
-}
+};
 
 } // namespace Shield
 } // namespace QtAws

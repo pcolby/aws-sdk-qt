@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(CreateEnvironmentEC2Request)
 
-}
+};
 
 } // namespace Cloud9
 } // namespace QtAws

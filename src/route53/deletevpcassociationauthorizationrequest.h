@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteVPCAssociationAuthorizationRequest)
 
-}
+};
 
 } // namespace Route53
 } // namespace QtAws

@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(StartCelebrityRecognitionRequest)
 
-}
+};
 
 } // namespace Rekognition
 } // namespace QtAws

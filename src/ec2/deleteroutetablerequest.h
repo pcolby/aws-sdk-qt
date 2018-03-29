@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteRouteTableRequest)
 
-}
+};
 
 } // namespace EC2
 } // namespace QtAws

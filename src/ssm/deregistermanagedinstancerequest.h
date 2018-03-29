@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeregisterManagedInstanceRequest)
 
-}
+};
 
 } // namespace SSM
 } // namespace QtAws

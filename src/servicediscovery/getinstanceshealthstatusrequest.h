@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetInstancesHealthStatusRequest)
 
-}
+};
 
 } // namespace ServiceDiscovery
 } // namespace QtAws

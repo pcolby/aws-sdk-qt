@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteBucketMetricsConfigurationRequest)
 
-}
+};
 
 } // namespace S3
 } // namespace QtAws

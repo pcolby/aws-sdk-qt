@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(KinesisRequest)
 
-}
+};
 
 } // namespace Kinesis
 } // namespace QtAws

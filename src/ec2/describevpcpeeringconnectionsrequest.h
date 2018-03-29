@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DescribeVpcPeeringConnectionsRequest)
 
-}
+};
 
 } // namespace EC2
 } // namespace QtAws

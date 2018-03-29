@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(AttachObjectRequest)
 
-}
+};
 
 } // namespace CloudDirectory
 } // namespace QtAws

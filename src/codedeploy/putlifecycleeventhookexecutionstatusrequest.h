@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(PutLifecycleEventHookExecutionStatusRequest)
 
-}
+};
 
 } // namespace CodeDeploy
 } // namespace QtAws

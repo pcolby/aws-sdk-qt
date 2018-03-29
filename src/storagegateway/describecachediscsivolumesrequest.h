@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DescribeCachediSCSIVolumesRequest)
 
-}
+};
 
 } // namespace StorageGateway
 } // namespace QtAws

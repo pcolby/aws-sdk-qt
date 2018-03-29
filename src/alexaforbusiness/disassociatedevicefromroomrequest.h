@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DisassociateDeviceFromRoomRequest)
 
-}
+};
 
 } // namespace AlexaForBusiness
 } // namespace QtAws

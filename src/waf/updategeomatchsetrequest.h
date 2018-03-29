@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(UpdateGeoMatchSetRequest)
 
-}
+};
 
 } // namespace WAF
 } // namespace QtAws

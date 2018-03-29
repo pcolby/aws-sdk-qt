@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ApplicationDiscoveryServiceRequest)
 
-}
+};
 
 } // namespace ApplicationDiscoveryService
 } // namespace QtAws

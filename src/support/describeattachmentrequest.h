@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DescribeAttachmentRequest)
 
-}
+};
 
 } // namespace Support
 } // namespace QtAws

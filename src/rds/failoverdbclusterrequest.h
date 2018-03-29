@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(FailoverDBClusterRequest)
 
-}
+};
 
 } // namespace RDS
 } // namespace QtAws

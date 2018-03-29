@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeleteResolverRequest)
 
-}
+};
 
 } // namespace AppSync
 } // namespace QtAws

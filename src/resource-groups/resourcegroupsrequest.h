@@ -72,7 +72,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(ResourceGroupsRequest)
 
-}
+};
 
 } // namespace ResourceGroups
 } // namespace QtAws

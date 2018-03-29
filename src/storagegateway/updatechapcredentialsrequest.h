@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(UpdateChapCredentialsRequest)
 
-}
+};
 
 } // namespace StorageGateway
 } // namespace QtAws

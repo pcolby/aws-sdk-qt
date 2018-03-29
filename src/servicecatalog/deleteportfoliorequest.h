@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(DeletePortfolioRequest)
 
-}
+};
 
 } // namespace ServiceCatalog
 } // namespace QtAws

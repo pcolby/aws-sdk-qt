@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(GetBucketWebsiteRequest)
 
-}
+};
 
 } // namespace S3
 } // namespace QtAws

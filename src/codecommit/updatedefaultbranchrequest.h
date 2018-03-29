@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(UpdateDefaultBranchRequest)
 
-}
+};
 
 } // namespace CodeCommit
 } // namespace QtAws

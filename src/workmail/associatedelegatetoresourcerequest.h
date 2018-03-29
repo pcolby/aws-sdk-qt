@@ -42,7 +42,7 @@ protected:
 private:
     Q_DECLARE_PRIVATE(AssociateDelegateToResourceRequest)
 
-}
+};
 
 } // namespace WorkMail
 } // namespace QtAws
