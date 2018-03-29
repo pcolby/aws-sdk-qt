@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ACM {
 
-class QtAws::Core::AwsAbstractClient;
 class ACMRequestPrivate;
 
 class QTAWS_EXPORT ACMRequest : public QtAws::Core::AwsAbstractRequest {

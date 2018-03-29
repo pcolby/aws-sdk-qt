@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace WorkMail {
 
-class QtAws::Core::AwsAbstractClient;
 class WorkMailRequestPrivate;
 
 class QTAWS_EXPORT WorkMailRequest : public QtAws::Core::AwsAbstractRequest {

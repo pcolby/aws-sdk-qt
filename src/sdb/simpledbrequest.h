@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SimpleDB {
 
-class QtAws::Core::AwsAbstractClient;
 class SimpleDBRequestPrivate;
 
 class QTAWS_EXPORT SimpleDBRequest : public QtAws::Core::AwsAbstractRequest {

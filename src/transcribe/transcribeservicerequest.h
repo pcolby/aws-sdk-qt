@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace TranscribeService {
 
-class QtAws::Core::AwsAbstractClient;
 class TranscribeServiceRequestPrivate;
 
 class QTAWS_EXPORT TranscribeServiceRequest : public QtAws::Core::AwsAbstractRequest {

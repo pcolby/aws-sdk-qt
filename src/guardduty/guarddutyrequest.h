@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace GuardDuty {
 
-class QtAws::Core::AwsAbstractClient;
 class GuardDutyRequestPrivate;
 
 class QTAWS_EXPORT GuardDutyRequest : public QtAws::Core::AwsAbstractRequest {

@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MTurk {
 
-class QtAws::Core::AwsAbstractClient;
 class MTurkRequestPrivate;
 
 class QTAWS_EXPORT MTurkRequest : public QtAws::Core::AwsAbstractRequest {

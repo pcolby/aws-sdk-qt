@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace IoT {
 
-class QtAws::Core::AwsAbstractClient;
 class IoTRequestPrivate;
 
 class QTAWS_EXPORT IoTRequest : public QtAws::Core::AwsAbstractRequest {

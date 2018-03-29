@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Batch {
 
-class QtAws::Core::AwsAbstractClient;
 class BatchRequestPrivate;
 
 class QTAWS_EXPORT BatchRequest : public QtAws::Core::AwsAbstractRequest {

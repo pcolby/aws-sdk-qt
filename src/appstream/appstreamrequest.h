@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace AppStream {
 
-class QtAws::Core::AwsAbstractClient;
 class AppStreamRequestPrivate;
 
 class QTAWS_EXPORT AppStreamRequest : public QtAws::Core::AwsAbstractRequest {

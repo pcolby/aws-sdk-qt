@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MarketplaceMetering {
 
-class QtAws::Core::AwsAbstractClient;
 class MarketplaceMeteringRequestPrivate;
 
 class QTAWS_EXPORT MarketplaceMeteringRequest : public QtAws::Core::AwsAbstractRequest {

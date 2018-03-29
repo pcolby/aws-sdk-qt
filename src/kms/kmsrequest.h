@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace KMS {
 
-class QtAws::Core::AwsAbstractClient;
 class KMSRequestPrivate;
 
 class QTAWS_EXPORT KMSRequest : public QtAws::Core::AwsAbstractRequest {

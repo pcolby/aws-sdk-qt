@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ServiceDiscovery {
 
-class QtAws::Core::AwsAbstractClient;
 class ServiceDiscoveryRequestPrivate;
 
 class QTAWS_EXPORT ServiceDiscoveryRequest : public QtAws::Core::AwsAbstractRequest {

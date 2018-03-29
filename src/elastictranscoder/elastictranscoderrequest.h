@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ElasticTranscoder {
 
-class QtAws::Core::AwsAbstractClient;
 class ElasticTranscoderRequestPrivate;
 
 class QTAWS_EXPORT ElasticTranscoderRequest : public QtAws::Core::AwsAbstractRequest {

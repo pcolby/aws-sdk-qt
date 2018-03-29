@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Comprehend {
 
-class QtAws::Core::AwsAbstractClient;
 class ComprehendRequestPrivate;
 
 class QTAWS_EXPORT ComprehendRequest : public QtAws::Core::AwsAbstractRequest {

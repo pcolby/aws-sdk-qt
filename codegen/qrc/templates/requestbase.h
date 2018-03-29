@@ -12,7 +12,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace {{NameSpaceName}} {
 
-class QtAws::Core::AwsAbstractClient;
 class {{ClassName}}Private;
 
 class QTAWS_EXPORT {{ClassName}} : public QtAws::Core::AwsAbstractRequest {

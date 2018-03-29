@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace IAM {
 
-class QtAws::Core::AwsAbstractClient;
 class IAMRequestPrivate;
 
 class QTAWS_EXPORT IAMRequest : public QtAws::Core::AwsAbstractRequest {

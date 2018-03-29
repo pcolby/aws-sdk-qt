@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CodeDeploy {
 
-class QtAws::Core::AwsAbstractClient;
 class CodeDeployRequestPrivate;
 
 class QTAWS_EXPORT CodeDeployRequest : public QtAws::Core::AwsAbstractRequest {

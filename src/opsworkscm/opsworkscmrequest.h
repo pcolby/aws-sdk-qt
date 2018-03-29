@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace OpsWorksCM {
 
-class QtAws::Core::AwsAbstractClient;
 class OpsWorksCMRequestPrivate;
 
 class QTAWS_EXPORT OpsWorksCMRequest : public QtAws::Core::AwsAbstractRequest {

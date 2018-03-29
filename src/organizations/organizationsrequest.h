@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Organizations {
 
-class QtAws::Core::AwsAbstractClient;
 class OrganizationsRequestPrivate;
 
 class QTAWS_EXPORT OrganizationsRequest : public QtAws::Core::AwsAbstractRequest {

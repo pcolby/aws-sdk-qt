@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace GameLift {
 
-class QtAws::Core::AwsAbstractClient;
 class GameLiftRequestPrivate;
 
 class QTAWS_EXPORT GameLiftRequest : public QtAws::Core::AwsAbstractRequest {

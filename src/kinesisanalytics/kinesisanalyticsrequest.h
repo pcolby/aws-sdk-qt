@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace KinesisAnalytics {
 
-class QtAws::Core::AwsAbstractClient;
 class KinesisAnalyticsRequestPrivate;
 
 class QTAWS_EXPORT KinesisAnalyticsRequest : public QtAws::Core::AwsAbstractRequest {

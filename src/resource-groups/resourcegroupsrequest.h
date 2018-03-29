@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ResourceGroups {
 
-class QtAws::Core::AwsAbstractClient;
 class ResourceGroupsRequestPrivate;
 
 class QTAWS_EXPORT ResourceGroupsRequest : public QtAws::Core::AwsAbstractRequest {

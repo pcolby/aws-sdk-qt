@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ElasticBeanstalk {
 
-class QtAws::Core::AwsAbstractClient;
 class ElasticBeanstalkRequestPrivate;
 
 class QTAWS_EXPORT ElasticBeanstalkRequest : public QtAws::Core::AwsAbstractRequest {

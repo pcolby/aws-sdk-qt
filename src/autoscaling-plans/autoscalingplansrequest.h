@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace AutoScalingPlans {
 
-class QtAws::Core::AwsAbstractClient;
 class AutoScalingPlansRequestPrivate;
 
 class QTAWS_EXPORT AutoScalingPlansRequest : public QtAws::Core::AwsAbstractRequest {

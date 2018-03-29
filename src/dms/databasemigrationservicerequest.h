@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace DatabaseMigrationService {
 
-class QtAws::Core::AwsAbstractClient;
 class DatabaseMigrationServiceRequestPrivate;
 
 class QTAWS_EXPORT DatabaseMigrationServiceRequest : public QtAws::Core::AwsAbstractRequest {

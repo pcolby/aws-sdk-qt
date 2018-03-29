@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace WorkDocs {
 
-class QtAws::Core::AwsAbstractClient;
 class WorkDocsRequestPrivate;
 
 class QTAWS_EXPORT WorkDocsRequest : public QtAws::Core::AwsAbstractRequest {

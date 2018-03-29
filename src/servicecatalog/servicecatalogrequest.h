@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ServiceCatalog {
 
-class QtAws::Core::AwsAbstractClient;
 class ServiceCatalogRequestPrivate;
 
 class QTAWS_EXPORT ServiceCatalogRequest : public QtAws::Core::AwsAbstractRequest {

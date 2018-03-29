@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Cloud9 {
 
-class QtAws::Core::AwsAbstractClient;
 class Cloud9RequestPrivate;
 
 class QTAWS_EXPORT Cloud9Request : public QtAws::Core::AwsAbstractRequest {

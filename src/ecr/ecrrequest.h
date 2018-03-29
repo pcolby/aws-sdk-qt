@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ECR {
 
-class QtAws::Core::AwsAbstractClient;
 class ECRRequestPrivate;
 
 class QTAWS_EXPORT ECRRequest : public QtAws::Core::AwsAbstractRequest {

@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ElasticLoadBalancing {
 
-class QtAws::Core::AwsAbstractClient;
 class ElasticLoadBalancingRequestPrivate;
 
 class QTAWS_EXPORT ElasticLoadBalancingRequest : public QtAws::Core::AwsAbstractRequest {

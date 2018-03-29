@@ -24,9 +24,6 @@
 
 class QNetworkReply;
 
-class QtAws::Core::AwsAbstractClient;
-class QtAws::Core::AwsAbstractCredentials;
-
 namespace QtAws {
 namespace Redshift {
 

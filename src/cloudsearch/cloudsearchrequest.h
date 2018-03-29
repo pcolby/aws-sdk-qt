@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CloudSearch {
 
-class QtAws::Core::AwsAbstractClient;
 class CloudSearchRequestPrivate;
 
 class QTAWS_EXPORT CloudSearchRequest : public QtAws::Core::AwsAbstractRequest {

@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace AlexaForBusiness {
 
-class QtAws::Core::AwsAbstractClient;
 class AlexaForBusinessRequestPrivate;
 
 class QTAWS_EXPORT AlexaForBusinessRequest : public QtAws::Core::AwsAbstractRequest {

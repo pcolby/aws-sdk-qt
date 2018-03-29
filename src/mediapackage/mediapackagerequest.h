@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MediaPackage {
 
-class QtAws::Core::AwsAbstractClient;
 class MediaPackageRequestPrivate;
 
 class QTAWS_EXPORT MediaPackageRequest : public QtAws::Core::AwsAbstractRequest {

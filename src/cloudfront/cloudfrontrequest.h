@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CloudFront {
 
-class QtAws::Core::AwsAbstractClient;
 class CloudFrontRequestPrivate;
 
 class QTAWS_EXPORT CloudFrontRequest : public QtAws::Core::AwsAbstractRequest {

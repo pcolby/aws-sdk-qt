@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CostandUsageReportService {
 
-class QtAws::Core::AwsAbstractClient;
 class CostandUsageReportServiceRequestPrivate;
 
 class QTAWS_EXPORT CostandUsageReportServiceRequest : public QtAws::Core::AwsAbstractRequest {

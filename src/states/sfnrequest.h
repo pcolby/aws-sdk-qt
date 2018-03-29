@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SFN {
 
-class QtAws::Core::AwsAbstractClient;
 class SFNRequestPrivate;
 
 class QTAWS_EXPORT SFNRequest : public QtAws::Core::AwsAbstractRequest {

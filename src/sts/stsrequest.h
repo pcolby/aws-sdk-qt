@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace STS {
 
-class QtAws::Core::AwsAbstractClient;
 class STSRequestPrivate;
 
 class QTAWS_EXPORT STSRequest : public QtAws::Core::AwsAbstractRequest {

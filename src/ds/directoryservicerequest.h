@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace DirectoryService {
 
-class QtAws::Core::AwsAbstractClient;
 class DirectoryServiceRequestPrivate;
 
 class QTAWS_EXPORT DirectoryServiceRequest : public QtAws::Core::AwsAbstractRequest {

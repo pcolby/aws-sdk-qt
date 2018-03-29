@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Firehose {
 
-class QtAws::Core::AwsAbstractClient;
 class FirehoseRequestPrivate;
 
 class QTAWS_EXPORT FirehoseRequest : public QtAws::Core::AwsAbstractRequest {

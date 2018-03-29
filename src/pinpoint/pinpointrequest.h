@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Pinpoint {
 
-class QtAws::Core::AwsAbstractClient;
 class PinpointRequestPrivate;
 
 class QTAWS_EXPORT PinpointRequest : public QtAws::Core::AwsAbstractRequest {

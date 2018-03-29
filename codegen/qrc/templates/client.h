@@ -6,10 +6,6 @@
 
 class QNetworkReply;
 
-{# @todo Consistent namespacing #}
-class QtAws::Core::AwsAbstractClient;
-class QtAws::Core::AwsAbstractCredentials;
-
 namespace QtAws {
 namespace {{NameSpaceName}} {
 

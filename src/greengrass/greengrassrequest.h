@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Greengrass {
 
-class QtAws::Core::AwsAbstractClient;
 class GreengrassRequestPrivate;
 
 class QTAWS_EXPORT GreengrassRequest : public QtAws::Core::AwsAbstractRequest {

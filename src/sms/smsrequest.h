@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SMS {
 
-class QtAws::Core::AwsAbstractClient;
 class SMSRequestPrivate;
 
 class QTAWS_EXPORT SMSRequest : public QtAws::Core::AwsAbstractRequest {

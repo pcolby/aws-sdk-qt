@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Athena {
 
-class QtAws::Core::AwsAbstractClient;
 class AthenaRequestPrivate;
 
 class QTAWS_EXPORT AthenaRequest : public QtAws::Core::AwsAbstractRequest {

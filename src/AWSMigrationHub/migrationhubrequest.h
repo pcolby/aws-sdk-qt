@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MigrationHub {
 
-class QtAws::Core::AwsAbstractClient;
 class MigrationHubRequestPrivate;
 
 class QTAWS_EXPORT MigrationHubRequest : public QtAws::Core::AwsAbstractRequest {

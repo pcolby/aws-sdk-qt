@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace SageMaker {
 
-class QtAws::Core::AwsAbstractClient;
 class SageMakerRequestPrivate;
 
 class QTAWS_EXPORT SageMakerRequest : public QtAws::Core::AwsAbstractRequest {

@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Inspector {
 
-class QtAws::Core::AwsAbstractClient;
 class InspectorRequestPrivate;
 
 class QTAWS_EXPORT InspectorRequest : public QtAws::Core::AwsAbstractRequest {

@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace DynamoDBStreams {
 
-class QtAws::Core::AwsAbstractClient;
 class DynamoDBStreamsRequestPrivate;
 
 class QTAWS_EXPORT DynamoDBStreamsRequest : public QtAws::Core::AwsAbstractRequest {

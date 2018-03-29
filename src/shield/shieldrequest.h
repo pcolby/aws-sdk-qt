@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Shield {
 
-class QtAws::Core::AwsAbstractClient;
 class ShieldRequestPrivate;
 
 class QTAWS_EXPORT ShieldRequest : public QtAws::Core::AwsAbstractRequest {

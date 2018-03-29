@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace WAFRegional {
 
-class QtAws::Core::AwsAbstractClient;
 class WAFRegionalRequestPrivate;
 
 class QTAWS_EXPORT WAFRegionalRequest : public QtAws::Core::AwsAbstractRequest {

@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MachineLearning {
 
-class QtAws::Core::AwsAbstractClient;
 class MachineLearningRequestPrivate;
 
 class QTAWS_EXPORT MachineLearningRequest : public QtAws::Core::AwsAbstractRequest {

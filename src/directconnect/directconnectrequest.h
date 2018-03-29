@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace DirectConnect {
 
-class QtAws::Core::AwsAbstractClient;
 class DirectConnectRequestPrivate;
 
 class QTAWS_EXPORT DirectConnectRequest : public QtAws::Core::AwsAbstractRequest {

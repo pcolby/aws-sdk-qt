@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace KinesisVideoMedia {
 
-class QtAws::Core::AwsAbstractClient;
 class KinesisVideoMediaRequestPrivate;
 
 class QTAWS_EXPORT KinesisVideoMediaRequest : public QtAws::Core::AwsAbstractRequest {

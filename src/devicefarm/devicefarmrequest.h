@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace DeviceFarm {
 
-class QtAws::Core::AwsAbstractClient;
 class DeviceFarmRequestPrivate;
 
 class QTAWS_EXPORT DeviceFarmRequest : public QtAws::Core::AwsAbstractRequest {

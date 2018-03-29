@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace MobileAnalytics {
 
-class QtAws::Core::AwsAbstractClient;
 class MobileAnalyticsRequestPrivate;
 
 class QTAWS_EXPORT MobileAnalyticsRequest : public QtAws::Core::AwsAbstractRequest {

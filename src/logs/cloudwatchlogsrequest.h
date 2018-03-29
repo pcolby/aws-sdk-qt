@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CloudWatchLogs {
 
-class QtAws::Core::AwsAbstractClient;
 class CloudWatchLogsRequestPrivate;
 
 class QTAWS_EXPORT CloudWatchLogsRequest : public QtAws::Core::AwsAbstractRequest {

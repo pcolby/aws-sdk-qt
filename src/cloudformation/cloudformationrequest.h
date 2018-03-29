@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CloudFormation {
 
-class QtAws::Core::AwsAbstractClient;
 class CloudFormationRequestPrivate;
 
 class QTAWS_EXPORT CloudFormationRequest : public QtAws::Core::AwsAbstractRequest {

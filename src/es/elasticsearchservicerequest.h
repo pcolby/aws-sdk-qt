@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ElasticsearchService {
 
-class QtAws::Core::AwsAbstractClient;
 class ElasticsearchServiceRequestPrivate;
 
 class QTAWS_EXPORT ElasticsearchServiceRequest : public QtAws::Core::AwsAbstractRequest {

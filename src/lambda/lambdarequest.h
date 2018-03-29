@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Lambda {
 
-class QtAws::Core::AwsAbstractClient;
 class LambdaRequestPrivate;
 
 class QTAWS_EXPORT LambdaRequest : public QtAws::Core::AwsAbstractRequest {

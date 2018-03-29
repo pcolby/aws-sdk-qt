@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace LexRuntimeService {
 
-class QtAws::Core::AwsAbstractClient;
 class LexRuntimeServiceRequestPrivate;
 
 class QTAWS_EXPORT LexRuntimeServiceRequest : public QtAws::Core::AwsAbstractRequest {

@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace APIGateway {
 
-class QtAws::Core::AwsAbstractClient;
 class APIGatewayRequestPrivate;
 
 class QTAWS_EXPORT APIGatewayRequest : public QtAws::Core::AwsAbstractRequest {

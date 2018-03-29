@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace Route53 {
 
-class QtAws::Core::AwsAbstractClient;
 class Route53RequestPrivate;
 
 class QTAWS_EXPORT Route53Request : public QtAws::Core::AwsAbstractRequest {

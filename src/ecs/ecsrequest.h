@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace ECS {
 
-class QtAws::Core::AwsAbstractClient;
 class ECSRequestPrivate;
 
 class QTAWS_EXPORT ECSRequest : public QtAws::Core::AwsAbstractRequest {

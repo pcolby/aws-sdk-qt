@@ -30,7 +30,6 @@ class QNetworkRequest;
 namespace QtAws {
 namespace CloudDirectory {
 
-class QtAws::Core::AwsAbstractClient;
 class CloudDirectoryRequestPrivate;
 
 class QTAWS_EXPORT CloudDirectoryRequest : public QtAws::Core::AwsAbstractRequest {
