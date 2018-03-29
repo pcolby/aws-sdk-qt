@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEOTAUPDATEREQUEST_P_H
 #define QTAWS_CREATEOTAUPDATEREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "createotaupdaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class CreateOTAUpdateRequest;
 
-class QTAWS_EXPORT CreateOTAUpdateRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT CreateOTAUpdateRequestPrivate : public IoTRequestPrivate {
 
 public:
     CreateOTAUpdateRequestPrivate(const IoT::Action action,

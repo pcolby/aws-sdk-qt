@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTFACETNAMESREQUEST_P_H
 #define QTAWS_LISTFACETNAMESREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "listfacetnamesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class ListFacetNamesRequest;
 
-class QTAWS_EXPORT ListFacetNamesRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT ListFacetNamesRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     ListFacetNamesRequestPrivate(const CloudDirectory::Action action,

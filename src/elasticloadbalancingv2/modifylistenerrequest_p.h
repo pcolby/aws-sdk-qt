@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYLISTENERREQUEST_P_H
 #define QTAWS_MODIFYLISTENERREQUEST_P_H
 
-#include "elasticloadbalancingv2_p.h"
+#include "elasticloadbalancingv2request_p.h"
 #include "modifylistenerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class ModifyListenerRequest;
 
-class QTAWS_EXPORT ModifyListenerRequestPrivate : public ElasticLoadBalancingv2Private {
+class QTAWS_EXPORT ModifyListenerRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     ModifyListenerRequestPrivate(const ElasticLoadBalancingv2::Action action,

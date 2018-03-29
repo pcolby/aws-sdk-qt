@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEREGISTERTASKDEFINITIONREQUEST_P_H
 #define QTAWS_DEREGISTERTASKDEFINITIONREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "deregistertaskdefinitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class DeregisterTaskDefinitionRequest;
 
-class QTAWS_EXPORT DeregisterTaskDefinitionRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT DeregisterTaskDefinitionRequestPrivate : public ECSRequestPrivate {
 
 public:
     DeregisterTaskDefinitionRequestPrivate(const ECS::Action action,

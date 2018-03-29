@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCSVHEADERREQUEST_P_H
 #define QTAWS_GETCSVHEADERREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "getcsvheaderrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class GetCSVHeaderRequest;
 
-class QTAWS_EXPORT GetCSVHeaderRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT GetCSVHeaderRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     GetCSVHeaderRequestPrivate(const CognitoIdentityProvider::Action action,

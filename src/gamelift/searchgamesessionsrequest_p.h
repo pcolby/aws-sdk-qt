@@ -20,7 +20,7 @@
 #ifndef QTAWS_SEARCHGAMESESSIONSREQUEST_P_H
 #define QTAWS_SEARCHGAMESESSIONSREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "searchgamesessionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class SearchGameSessionsRequest;
 
-class QTAWS_EXPORT SearchGameSessionsRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT SearchGameSessionsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     SearchGameSessionsRequestPrivate(const GameLift::Action action,

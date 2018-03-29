@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDEPLOYMENTSTATUSREQUEST_P_H
 #define QTAWS_GETDEPLOYMENTSTATUSREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "getdeploymentstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetDeploymentStatusRequest;
 
-class QTAWS_EXPORT GetDeploymentStatusRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT GetDeploymentStatusRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     GetDeploymentStatusRequestPrivate(const Greengrass::Action action,

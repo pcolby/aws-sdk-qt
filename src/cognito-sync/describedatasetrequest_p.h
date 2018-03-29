@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEDATASETREQUEST_P_H
 #define QTAWS_DESCRIBEDATASETREQUEST_P_H
 
-#include "cognitosync_p.h"
+#include "cognitosyncrequest_p.h"
 #include "describedatasetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class DescribeDatasetRequest;
 
-class QTAWS_EXPORT DescribeDatasetRequestPrivate : public CognitoSyncPrivate {
+class QTAWS_EXPORT DescribeDatasetRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     DescribeDatasetRequestPrivate(const CognitoSync::Action action,

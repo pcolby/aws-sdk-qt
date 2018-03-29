@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETAPPSREQUEST_P_H
 #define QTAWS_GETAPPSREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "getappsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetAppsRequest;
 
-class QTAWS_EXPORT GetAppsRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT GetAppsRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetAppsRequestPrivate(const Pinpoint::Action action,

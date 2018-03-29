@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTNOTIFICATIONCONFIGURATIONREQUEST_P_H
 #define QTAWS_PUTNOTIFICATIONCONFIGURATIONREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "putnotificationconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class PutNotificationConfigurationRequest;
 
-class QTAWS_EXPORT PutNotificationConfigurationRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT PutNotificationConfigurationRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     PutNotificationConfigurationRequestPrivate(const AutoScaling::Action action,

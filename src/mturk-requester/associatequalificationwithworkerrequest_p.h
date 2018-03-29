@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSOCIATEQUALIFICATIONWITHWORKERREQUEST_P_H
 #define QTAWS_ASSOCIATEQUALIFICATIONWITHWORKERREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "associatequalificationwithworkerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class AssociateQualificationWithWorkerRequest;
 
-class QTAWS_EXPORT AssociateQualificationWithWorkerRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT AssociateQualificationWithWorkerRequestPrivate : public MTurkRequestPrivate {
 
 public:
     AssociateQualificationWithWorkerRequestPrivate(const MTurk::Action action,

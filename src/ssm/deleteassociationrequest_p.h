@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEASSOCIATIONREQUEST_P_H
 #define QTAWS_DELETEASSOCIATIONREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "deleteassociationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DeleteAssociationRequest;
 
-class QTAWS_EXPORT DeleteAssociationRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DeleteAssociationRequestPrivate : public SSMRequestPrivate {
 
 public:
     DeleteAssociationRequestPrivate(const SSM::Action action,

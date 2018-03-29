@@ -20,7 +20,7 @@
 #ifndef QTAWS_PURCHASESCHEDULEDINSTANCESREQUEST_P_H
 #define QTAWS_PURCHASESCHEDULEDINSTANCESREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "purchasescheduledinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class PurchaseScheduledInstancesRequest;
 
-class QTAWS_EXPORT PurchaseScheduledInstancesRequestPrivate : public EC2Private {
+class QTAWS_EXPORT PurchaseScheduledInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
     PurchaseScheduledInstancesRequestPrivate(const EC2::Action action,

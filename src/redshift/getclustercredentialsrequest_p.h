@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCLUSTERCREDENTIALSREQUEST_P_H
 #define QTAWS_GETCLUSTERCREDENTIALSREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "getclustercredentialsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class GetClusterCredentialsRequest;
 
-class QTAWS_EXPORT GetClusterCredentialsRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT GetClusterCredentialsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     GetClusterCredentialsRequestPrivate(const Redshift::Action action,

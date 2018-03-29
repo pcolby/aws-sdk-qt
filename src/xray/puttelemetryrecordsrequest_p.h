@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTTELEMETRYRECORDSREQUEST_P_H
 #define QTAWS_PUTTELEMETRYRECORDSREQUEST_P_H
 
-#include "xray_p.h"
+#include "xrayrequest_p.h"
 #include "puttelemetryrecordsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace XRay {
 
 class PutTelemetryRecordsRequest;
 
-class QTAWS_EXPORT PutTelemetryRecordsRequestPrivate : public XRayPrivate {
+class QTAWS_EXPORT PutTelemetryRecordsRequestPrivate : public XRayRequestPrivate {
 
 public:
     PutTelemetryRecordsRequestPrivate(const XRay::Action action,

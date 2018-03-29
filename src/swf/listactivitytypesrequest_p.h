@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTACTIVITYTYPESREQUEST_P_H
 #define QTAWS_LISTACTIVITYTYPESREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "listactivitytypesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class ListActivityTypesRequest;
 
-class QTAWS_EXPORT ListActivityTypesRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT ListActivityTypesRequestPrivate : public SWFRequestPrivate {
 
 public:
     ListActivityTypesRequestPrivate(const SWF::Action action,

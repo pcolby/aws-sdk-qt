@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 #define QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 
-#include "serverlessapplicationrepository_p.h"
+#include "serverlessapplicationrepositoryrequest_p.h"
 #include "updateapplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 
 class UpdateApplicationRequest;
 
-class QTAWS_EXPORT UpdateApplicationRequestPrivate : public ServerlessApplicationRepositoryPrivate {
+class QTAWS_EXPORT UpdateApplicationRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
     UpdateApplicationRequestPrivate(const ServerlessApplicationRepository::Action action,

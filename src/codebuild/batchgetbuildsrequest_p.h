@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHGETBUILDSREQUEST_P_H
 #define QTAWS_BATCHGETBUILDSREQUEST_P_H
 
-#include "codebuild_p.h"
+#include "codebuildrequest_p.h"
 #include "batchgetbuildsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class BatchGetBuildsRequest;
 
-class QTAWS_EXPORT BatchGetBuildsRequestPrivate : public CodeBuildPrivate {
+class QTAWS_EXPORT BatchGetBuildsRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     BatchGetBuildsRequestPrivate(const CodeBuild::Action action,

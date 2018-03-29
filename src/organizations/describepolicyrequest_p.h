@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEPOLICYREQUEST_P_H
 #define QTAWS_DESCRIBEPOLICYREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "describepolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class DescribePolicyRequest;
 
-class QTAWS_EXPORT DescribePolicyRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT DescribePolicyRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     DescribePolicyRequestPrivate(const Organizations::Action action,

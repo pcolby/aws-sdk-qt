@@ -20,7 +20,7 @@
 #ifndef QTAWS_RETRYSTAGEEXECUTIONREQUEST_P_H
 #define QTAWS_RETRYSTAGEEXECUTIONREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "retrystageexecutionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class RetryStageExecutionRequest;
 
-class QTAWS_EXPORT RetryStageExecutionRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT RetryStageExecutionRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     RetryStageExecutionRequestPrivate(const CodePipeline::Action action,

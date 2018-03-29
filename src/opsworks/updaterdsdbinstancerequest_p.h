@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATERDSDBINSTANCEREQUEST_P_H
 #define QTAWS_UPDATERDSDBINSTANCEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "updaterdsdbinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class UpdateRdsDbInstanceRequest;
 
-class QTAWS_EXPORT UpdateRdsDbInstanceRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT UpdateRdsDbInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     UpdateRdsDbInstanceRequestPrivate(const OpsWorks::Action action,

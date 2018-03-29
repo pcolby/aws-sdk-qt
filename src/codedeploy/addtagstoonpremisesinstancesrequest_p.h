@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDTAGSTOONPREMISESINSTANCESREQUEST_P_H
 #define QTAWS_ADDTAGSTOONPREMISESINSTANCESREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "addtagstoonpremisesinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class AddTagsToOnPremisesInstancesRequest;
 
-class QTAWS_EXPORT AddTagsToOnPremisesInstancesRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT AddTagsToOnPremisesInstancesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     AddTagsToOnPremisesInstancesRequestPrivate(const CodeDeploy::Action action,

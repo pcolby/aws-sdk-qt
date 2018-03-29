@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETXSSMATCHSETREQUEST_P_H
 #define QTAWS_GETXSSMATCHSETREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "getxssmatchsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class GetXssMatchSetRequest;
 
-class QTAWS_EXPORT GetXssMatchSetRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT GetXssMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     GetXssMatchSetRequestPrivate(const WAFRegional::Action action,

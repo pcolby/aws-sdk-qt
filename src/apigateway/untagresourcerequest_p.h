@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_P_H
 #define QTAWS_UNTAGRESOURCEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "untagresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT UntagResourceRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const APIGateway::Action action,

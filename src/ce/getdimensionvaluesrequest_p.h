@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDIMENSIONVALUESREQUEST_P_H
 #define QTAWS_GETDIMENSIONVALUESREQUEST_P_H
 
-#include "costexplorer_p.h"
+#include "costexplorerrequest_p.h"
 #include "getdimensionvaluesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class GetDimensionValuesRequest;
 
-class QTAWS_EXPORT GetDimensionValuesRequestPrivate : public CostExplorerPrivate {
+class QTAWS_EXPORT GetDimensionValuesRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
     GetDimensionValuesRequestPrivate(const CostExplorer::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATTACHPOLICYREQUEST_P_H
 #define QTAWS_ATTACHPOLICYREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "attachpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class AttachPolicyRequest;
 
-class QTAWS_EXPORT AttachPolicyRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT AttachPolicyRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     AttachPolicyRequestPrivate(const Organizations::Action action,

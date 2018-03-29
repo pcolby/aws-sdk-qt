@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEHOSTSREQUEST_P_H
 #define QTAWS_DESCRIBEHOSTSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describehostsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeHostsRequest;
 
-class QTAWS_EXPORT DescribeHostsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeHostsRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeHostsRequestPrivate(const EC2::Action action,

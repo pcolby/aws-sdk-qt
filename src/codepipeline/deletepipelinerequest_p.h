@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPIPELINEREQUEST_P_H
 #define QTAWS_DELETEPIPELINEREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "deletepipelinerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class DeletePipelineRequest;
 
-class QTAWS_EXPORT DeletePipelineRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT DeletePipelineRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     DeletePipelineRequestPrivate(const CodePipeline::Action action,

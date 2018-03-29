@@ -20,7 +20,7 @@
 #ifndef QTAWS_REVOKEINVITATIONREQUEST_P_H
 #define QTAWS_REVOKEINVITATIONREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "revokeinvitationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class RevokeInvitationRequest;
 
-class QTAWS_EXPORT RevokeInvitationRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT RevokeInvitationRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     RevokeInvitationRequestPrivate(const AlexaForBusiness::Action action,

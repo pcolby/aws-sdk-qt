@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERJOBDEFINITIONREQUEST_P_H
 #define QTAWS_REGISTERJOBDEFINITIONREQUEST_P_H
 
-#include "batch_p.h"
+#include "batchrequest_p.h"
 #include "registerjobdefinitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Batch {
 
 class RegisterJobDefinitionRequest;
 
-class QTAWS_EXPORT RegisterJobDefinitionRequestPrivate : public BatchPrivate {
+class QTAWS_EXPORT RegisterJobDefinitionRequestPrivate : public BatchRequestPrivate {
 
 public:
     RegisterJobDefinitionRequestPrivate(const Batch::Action action,

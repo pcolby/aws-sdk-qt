@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDTAGSTOSTREAMREQUEST_P_H
 #define QTAWS_ADDTAGSTOSTREAMREQUEST_P_H
 
-#include "kinesis_p.h"
+#include "kinesisrequest_p.h"
 #include "addtagstostreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class AddTagsToStreamRequest;
 
-class QTAWS_EXPORT AddTagsToStreamRequestPrivate : public KinesisPrivate {
+class QTAWS_EXPORT AddTagsToStreamRequestPrivate : public KinesisRequestPrivate {
 
 public:
     AddTagsToStreamRequestPrivate(const Kinesis::Action action,

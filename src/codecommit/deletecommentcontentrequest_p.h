@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECOMMENTCONTENTREQUEST_P_H
 #define QTAWS_DELETECOMMENTCONTENTREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "deletecommentcontentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class DeleteCommentContentRequest;
 
-class QTAWS_EXPORT DeleteCommentContentRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT DeleteCommentContentRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     DeleteCommentContentRequestPrivate(const CodeCommit::Action action,

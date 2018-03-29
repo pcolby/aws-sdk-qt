@@ -20,7 +20,7 @@
 #ifndef QTAWS_PROMOTEREADREPLICAREQUEST_P_H
 #define QTAWS_PROMOTEREADREPLICAREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "promotereadreplicarequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class PromoteReadReplicaRequest;
 
-class QTAWS_EXPORT PromoteReadReplicaRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT PromoteReadReplicaRequestPrivate : public RDSRequestPrivate {
 
 public:
     PromoteReadReplicaRequestPrivate(const RDS::Action action,

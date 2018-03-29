@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPUSERIMPORTJOBREQUEST_P_H
 #define QTAWS_STOPUSERIMPORTJOBREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "stopuserimportjobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class StopUserImportJobRequest;
 
-class QTAWS_EXPORT StopUserImportJobRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT StopUserImportJobRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     StopUserImportJobRequestPrivate(const CognitoIdentityProvider::Action action,

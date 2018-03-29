@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTRECORDSREQUEST_P_H
 #define QTAWS_LISTRECORDSREQUEST_P_H
 
-#include "cognitosync_p.h"
+#include "cognitosyncrequest_p.h"
 #include "listrecordsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class ListRecordsRequest;
 
-class QTAWS_EXPORT ListRecordsRequestPrivate : public CognitoSyncPrivate {
+class QTAWS_EXPORT ListRecordsRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     ListRecordsRequestPrivate(const CognitoSync::Action action,

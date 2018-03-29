@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETENOTIFICATIONREQUEST_P_H
 #define QTAWS_DELETENOTIFICATIONREQUEST_P_H
 
-#include "budgets_p.h"
+#include "budgetsrequest_p.h"
 #include "deletenotificationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Budgets {
 
 class DeleteNotificationRequest;
 
-class QTAWS_EXPORT DeleteNotificationRequestPrivate : public BudgetsPrivate {
+class QTAWS_EXPORT DeleteNotificationRequestPrivate : public BudgetsRequestPrivate {
 
 public:
     DeleteNotificationRequestPrivate(const Budgets::Action action,

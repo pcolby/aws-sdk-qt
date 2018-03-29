@@ -20,7 +20,7 @@
 #ifndef QTAWS_SWFREQUEST_P_H
 #define QTAWS_SWFREQUEST_P_H
 
-#include "swf_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "swfrequest.h"
 
 namespace QtAws {

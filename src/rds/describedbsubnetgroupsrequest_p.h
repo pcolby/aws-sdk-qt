@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEDBSUBNETGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEDBSUBNETGROUPSREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describedbsubnetgroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeDBSubnetGroupsRequest;
 
-class QTAWS_EXPORT DescribeDBSubnetGroupsRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeDBSubnetGroupsRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeDBSubnetGroupsRequestPrivate(const RDS::Action action,

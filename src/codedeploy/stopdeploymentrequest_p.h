@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPDEPLOYMENTREQUEST_P_H
 #define QTAWS_STOPDEPLOYMENTREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "stopdeploymentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class StopDeploymentRequest;
 
-class QTAWS_EXPORT StopDeploymentRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT StopDeploymentRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     StopDeploymentRequestPrivate(const CodeDeploy::Action action,

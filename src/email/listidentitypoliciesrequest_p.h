@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTIDENTITYPOLICIESREQUEST_P_H
 #define QTAWS_LISTIDENTITYPOLICIESREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "listidentitypoliciesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class ListIdentityPoliciesRequest;
 
-class QTAWS_EXPORT ListIdentityPoliciesRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT ListIdentityPoliciesRequestPrivate : public SESRequestPrivate {
 
 public:
     ListIdentityPoliciesRequestPrivate(const SES::Action action,

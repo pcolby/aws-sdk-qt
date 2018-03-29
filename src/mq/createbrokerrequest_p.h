@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEBROKERREQUEST_P_H
 #define QTAWS_CREATEBROKERREQUEST_P_H
 
-#include "mq_p.h"
+#include "mqrequest_p.h"
 #include "createbrokerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MQ {
 
 class CreateBrokerRequest;
 
-class QTAWS_EXPORT CreateBrokerRequestPrivate : public MQPrivate {
+class QTAWS_EXPORT CreateBrokerRequestPrivate : public MQRequestPrivate {
 
 public:
     CreateBrokerRequestPrivate(const MQ::Action action,

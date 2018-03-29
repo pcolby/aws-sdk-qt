@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPEXECUTIONREQUEST_P_H
 #define QTAWS_STOPEXECUTIONREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "stopexecutionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class StopExecutionRequest;
 
-class QTAWS_EXPORT StopExecutionRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT StopExecutionRequestPrivate : public SFNRequestPrivate {
 
 public:
     StopExecutionRequestPrivate(const SFN::Action action,

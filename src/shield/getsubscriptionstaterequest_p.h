@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSUBSCRIPTIONSTATEREQUEST_P_H
 #define QTAWS_GETSUBSCRIPTIONSTATEREQUEST_P_H
 
-#include "shield_p.h"
+#include "shieldrequest_p.h"
 #include "getsubscriptionstaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Shield {
 
 class GetSubscriptionStateRequest;
 
-class QTAWS_EXPORT GetSubscriptionStateRequestPrivate : public ShieldPrivate {
+class QTAWS_EXPORT GetSubscriptionStateRequestPrivate : public ShieldRequestPrivate {
 
 public:
     GetSubscriptionStateRequestPrivate(const Shield::Action action,

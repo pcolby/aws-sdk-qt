@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEMETHODREQUEST_P_H
 #define QTAWS_UPDATEMETHODREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "updatemethodrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class UpdateMethodRequest;
 
-class QTAWS_EXPORT UpdateMethodRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT UpdateMethodRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     UpdateMethodRequestPrivate(const APIGateway::Action action,

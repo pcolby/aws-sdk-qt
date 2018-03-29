@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSERVICELINKEDROLEDELETIONSTATUSREQUEST_P_H
 #define QTAWS_GETSERVICELINKEDROLEDELETIONSTATUSREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "getservicelinkedroledeletionstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetServiceLinkedRoleDeletionStatusRequest;
 
-class QTAWS_EXPORT GetServiceLinkedRoleDeletionStatusRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT GetServiceLinkedRoleDeletionStatusRequestPrivate : public IAMRequestPrivate {
 
 public:
     GetServiceLinkedRoleDeletionStatusRequestPrivate(const IAM::Action action,

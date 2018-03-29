@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEACTIVITYREQUEST_P_H
 #define QTAWS_DESCRIBEACTIVITYREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "describeactivityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class DescribeActivityRequest;
 
-class QTAWS_EXPORT DescribeActivityRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT DescribeActivityRequestPrivate : public SFNRequestPrivate {
 
 public:
     DescribeActivityRequestPrivate(const SFN::Action action,

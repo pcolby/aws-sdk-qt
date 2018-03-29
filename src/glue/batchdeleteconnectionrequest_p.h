@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHDELETECONNECTIONREQUEST_P_H
 #define QTAWS_BATCHDELETECONNECTIONREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "batchdeleteconnectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class BatchDeleteConnectionRequest;
 
-class QTAWS_EXPORT BatchDeleteConnectionRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT BatchDeleteConnectionRequestPrivate : public GlueRequestPrivate {
 
 public:
     BatchDeleteConnectionRequestPrivate(const Glue::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSOCIATEDHCPOPTIONSREQUEST_P_H
 #define QTAWS_ASSOCIATEDHCPOPTIONSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "associatedhcpoptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AssociateDhcpOptionsRequest;
 
-class QTAWS_EXPORT AssociateDhcpOptionsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT AssociateDhcpOptionsRequestPrivate : public EC2RequestPrivate {
 
 public:
     AssociateDhcpOptionsRequestPrivate(const EC2::Action action,

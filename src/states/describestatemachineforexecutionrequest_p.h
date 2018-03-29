@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESTATEMACHINEFOREXECUTIONREQUEST_P_H
 #define QTAWS_DESCRIBESTATEMACHINEFOREXECUTIONREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "describestatemachineforexecutionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class DescribeStateMachineForExecutionRequest;
 
-class QTAWS_EXPORT DescribeStateMachineForExecutionRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT DescribeStateMachineForExecutionRequestPrivate : public SFNRequestPrivate {
 
 public:
     DescribeStateMachineForExecutionRequestPrivate(const SFN::Action action,

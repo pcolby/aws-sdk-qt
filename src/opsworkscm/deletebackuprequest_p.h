@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBACKUPREQUEST_P_H
 #define QTAWS_DELETEBACKUPREQUEST_P_H
 
-#include "opsworkscm_p.h"
+#include "opsworkscmrequest_p.h"
 #include "deletebackuprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class DeleteBackupRequest;
 
-class QTAWS_EXPORT DeleteBackupRequestPrivate : public OpsWorksCMPrivate {
+class QTAWS_EXPORT DeleteBackupRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     DeleteBackupRequestPrivate(const OpsWorksCM::Action action,

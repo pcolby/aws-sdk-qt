@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCESREQUEST_P_H
 #define QTAWS_UNTAGRESOURCESREQUEST_P_H
 
-#include "resourcegroupstaggingapi_p.h"
+#include "resourcegroupstaggingapirequest_p.h"
 #include "untagresourcesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ResourceGroupsTaggingAPI {
 
 class UntagResourcesRequest;
 
-class QTAWS_EXPORT UntagResourcesRequestPrivate : public ResourceGroupsTaggingAPIPrivate {
+class QTAWS_EXPORT UntagResourcesRequestPrivate : public ResourceGroupsTaggingAPIRequestPrivate {
 
 public:
     UntagResourcesRequestPrivate(const ResourceGroupsTaggingAPI::Action action,

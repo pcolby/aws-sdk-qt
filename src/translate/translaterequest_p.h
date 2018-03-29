@@ -20,7 +20,7 @@
 #ifndef QTAWS_TRANSLATEREQUEST_P_H
 #define QTAWS_TRANSLATEREQUEST_P_H
 
-#include "translate_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "translaterequest.h"
 
 namespace QtAws {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEOBJECTATTRIBUTESREQUEST_P_H
 #define QTAWS_UPDATEOBJECTATTRIBUTESREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "updateobjectattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class UpdateObjectAttributesRequest;
 
-class QTAWS_EXPORT UpdateObjectAttributesRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT UpdateObjectAttributesRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     UpdateObjectAttributesRequestPrivate(const CloudDirectory::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEIDENTITYPOOLREQUEST_P_H
 #define QTAWS_CREATEIDENTITYPOOLREQUEST_P_H
 
-#include "cognitoidentity_p.h"
+#include "cognitoidentityrequest_p.h"
 #include "createidentitypoolrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class CreateIdentityPoolRequest;
 
-class QTAWS_EXPORT CreateIdentityPoolRequestPrivate : public CognitoIdentityPrivate {
+class QTAWS_EXPORT CreateIdentityPoolRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     CreateIdentityPoolRequestPrivate(const CognitoIdentity::Action action,

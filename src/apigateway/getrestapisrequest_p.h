@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETRESTAPISREQUEST_P_H
 #define QTAWS_GETRESTAPISREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "getrestapisrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetRestApisRequest;
 
-class QTAWS_EXPORT GetRestApisRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetRestApisRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetRestApisRequestPrivate(const APIGateway::Action action,

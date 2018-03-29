@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECOMPLIANCEBYCONFIGRULEREQUEST_P_H
 #define QTAWS_DESCRIBECOMPLIANCEBYCONFIGRULEREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "describecompliancebyconfigrulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DescribeComplianceByConfigRuleRequest;
 
-class QTAWS_EXPORT DescribeComplianceByConfigRuleRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT DescribeComplianceByConfigRuleRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DescribeComplianceByConfigRuleRequestPrivate(const ConfigService::Action action,

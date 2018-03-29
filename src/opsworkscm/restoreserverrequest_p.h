@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESTORESERVERREQUEST_P_H
 #define QTAWS_RESTORESERVERREQUEST_P_H
 
-#include "opsworkscm_p.h"
+#include "opsworkscmrequest_p.h"
 #include "restoreserverrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class RestoreServerRequest;
 
-class QTAWS_EXPORT RestoreServerRequestPrivate : public OpsWorksCMPrivate {
+class QTAWS_EXPORT RestoreServerRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     RestoreServerRequestPrivate(const OpsWorksCM::Action action,

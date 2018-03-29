@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEORGANIZATIONALUNITREQUEST_P_H
 #define QTAWS_UPDATEORGANIZATIONALUNITREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "updateorganizationalunitrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class UpdateOrganizationalUnitRequest;
 
-class QTAWS_EXPORT UpdateOrganizationalUnitRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT UpdateOrganizationalUnitRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     UpdateOrganizationalUnitRequestPrivate(const Organizations::Action action,

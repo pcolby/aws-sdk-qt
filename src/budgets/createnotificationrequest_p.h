@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATENOTIFICATIONREQUEST_P_H
 #define QTAWS_CREATENOTIFICATIONREQUEST_P_H
 
-#include "budgets_p.h"
+#include "budgetsrequest_p.h"
 #include "createnotificationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Budgets {
 
 class CreateNotificationRequest;
 
-class QTAWS_EXPORT CreateNotificationRequestPrivate : public BudgetsPrivate {
+class QTAWS_EXPORT CreateNotificationRequestPrivate : public BudgetsRequestPrivate {
 
 public:
     CreateNotificationRequestPrivate(const Budgets::Action action,

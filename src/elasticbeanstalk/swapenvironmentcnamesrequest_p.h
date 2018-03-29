@@ -20,7 +20,7 @@
 #ifndef QTAWS_SWAPENVIRONMENTCNAMESREQUEST_P_H
 #define QTAWS_SWAPENVIRONMENTCNAMESREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "swapenvironmentcnamesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class SwapEnvironmentCNAMEsRequest;
 
-class QTAWS_EXPORT SwapEnvironmentCNAMEsRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT SwapEnvironmentCNAMEsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     SwapEnvironmentCNAMEsRequestPrivate(const ElasticBeanstalk::Action action,

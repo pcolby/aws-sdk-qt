@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETBUCKETWEBSITEREQUEST_P_H
 #define QTAWS_GETBUCKETWEBSITEREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "getbucketwebsiterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class GetBucketWebsiteRequest;
 
-class QTAWS_EXPORT GetBucketWebsiteRequestPrivate : public S3Private {
+class QTAWS_EXPORT GetBucketWebsiteRequestPrivate : public S3RequestPrivate {
 
 public:
     GetBucketWebsiteRequestPrivate(const S3::Action action,

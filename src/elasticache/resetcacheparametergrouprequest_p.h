@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESETCACHEPARAMETERGROUPREQUEST_P_H
 #define QTAWS_RESETCACHEPARAMETERGROUPREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "resetcacheparametergrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class ResetCacheParameterGroupRequest;
 
-class QTAWS_EXPORT ResetCacheParameterGroupRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT ResetCacheParameterGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     ResetCacheParameterGroupRequestPrivate(const ElastiCache::Action action,

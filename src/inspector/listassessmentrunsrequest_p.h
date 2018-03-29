@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTASSESSMENTRUNSREQUEST_P_H
 #define QTAWS_LISTASSESSMENTRUNSREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "listassessmentrunsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class ListAssessmentRunsRequest;
 
-class QTAWS_EXPORT ListAssessmentRunsRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT ListAssessmentRunsRequestPrivate : public InspectorRequestPrivate {
 
 public:
     ListAssessmentRunsRequestPrivate(const Inspector::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATELAYERREQUEST_P_H
 #define QTAWS_CREATELAYERREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "createlayerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class CreateLayerRequest;
 
-class QTAWS_EXPORT CreateLayerRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT CreateLayerRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     CreateLayerRequestPrivate(const OpsWorks::Action action,

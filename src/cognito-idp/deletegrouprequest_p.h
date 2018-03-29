@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEGROUPREQUEST_P_H
 #define QTAWS_DELETEGROUPREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "deletegrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class DeleteGroupRequest;
 
-class QTAWS_EXPORT DeleteGroupRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT DeleteGroupRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     DeleteGroupRequestPrivate(const CognitoIdentityProvider::Action action,

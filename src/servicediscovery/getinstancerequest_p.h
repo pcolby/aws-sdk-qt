@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETINSTANCEREQUEST_P_H
 #define QTAWS_GETINSTANCEREQUEST_P_H
 
-#include "servicediscovery_p.h"
+#include "servicediscoveryrequest_p.h"
 #include "getinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class GetInstanceRequest;
 
-class QTAWS_EXPORT GetInstanceRequestPrivate : public ServiceDiscoveryPrivate {
+class QTAWS_EXPORT GetInstanceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     GetInstanceRequestPrivate(const ServiceDiscovery::Action action,

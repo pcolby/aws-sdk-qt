@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEHITTYPEREQUEST_P_H
 #define QTAWS_CREATEHITTYPEREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "createhittyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class CreateHITTypeRequest;
 
-class QTAWS_EXPORT CreateHITTypeRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT CreateHITTypeRequestPrivate : public MTurkRequestPrivate {
 
 public:
     CreateHITTypeRequestPrivate(const MTurk::Action action,

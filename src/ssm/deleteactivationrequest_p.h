@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEACTIVATIONREQUEST_P_H
 #define QTAWS_DELETEACTIVATIONREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "deleteactivationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DeleteActivationRequest;
 
-class QTAWS_EXPORT DeleteActivationRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DeleteActivationRequestPrivate : public SSMRequestPrivate {
 
 public:
     DeleteActivationRequestPrivate(const SSM::Action action,

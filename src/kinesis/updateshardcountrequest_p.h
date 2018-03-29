@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESHARDCOUNTREQUEST_P_H
 #define QTAWS_UPDATESHARDCOUNTREQUEST_P_H
 
-#include "kinesis_p.h"
+#include "kinesisrequest_p.h"
 #include "updateshardcountrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class UpdateShardCountRequest;
 
-class QTAWS_EXPORT UpdateShardCountRequestPrivate : public KinesisPrivate {
+class QTAWS_EXPORT UpdateShardCountRequestPrivate : public KinesisRequestPrivate {
 
 public:
     UpdateShardCountRequestPrivate(const Kinesis::Action action,

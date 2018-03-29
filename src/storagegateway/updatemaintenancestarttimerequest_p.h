@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEMAINTENANCESTARTTIMEREQUEST_P_H
 #define QTAWS_UPDATEMAINTENANCESTARTTIMEREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "updatemaintenancestarttimerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class UpdateMaintenanceStartTimeRequest;
 
-class QTAWS_EXPORT UpdateMaintenanceStartTimeRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT UpdateMaintenanceStartTimeRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     UpdateMaintenanceStartTimeRequestPrivate(const StorageGateway::Action action,

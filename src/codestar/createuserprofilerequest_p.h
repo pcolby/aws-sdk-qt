@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEUSERPROFILEREQUEST_P_H
 #define QTAWS_CREATEUSERPROFILEREQUEST_P_H
 
-#include "codestar_p.h"
+#include "codestarrequest_p.h"
 #include "createuserprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class CreateUserProfileRequest;
 
-class QTAWS_EXPORT CreateUserProfileRequestPrivate : public CodeStarPrivate {
+class QTAWS_EXPORT CreateUserProfileRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     CreateUserProfileRequestPrivate(const CodeStar::Action action,

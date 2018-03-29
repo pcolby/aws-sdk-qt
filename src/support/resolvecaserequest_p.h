@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESOLVECASEREQUEST_P_H
 #define QTAWS_RESOLVECASEREQUEST_P_H
 
-#include "support_p.h"
+#include "supportrequest_p.h"
 #include "resolvecaserequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Support {
 
 class ResolveCaseRequest;
 
-class QTAWS_EXPORT ResolveCaseRequestPrivate : public SupportPrivate {
+class QTAWS_EXPORT ResolveCaseRequestPrivate : public SupportRequestPrivate {
 
 public:
     ResolveCaseRequestPrivate(const Support::Action action,

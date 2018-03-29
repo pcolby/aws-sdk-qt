@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDATASOURCEFROMS3REQUEST_P_H
 #define QTAWS_CREATEDATASOURCEFROMS3REQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "createdatasourcefroms3request.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class CreateDataSourceFromS3Request;
 
-class QTAWS_EXPORT CreateDataSourceFromS3RequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT CreateDataSourceFromS3RequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     CreateDataSourceFromS3RequestPrivate(const MachineLearning::Action action,

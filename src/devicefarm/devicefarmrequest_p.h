@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEVICEFARMREQUEST_P_H
 #define QTAWS_DEVICEFARMREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "devicefarmrequest.h"
 
 namespace QtAws {

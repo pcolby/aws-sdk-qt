@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTJOBFAILURERESULTREQUEST_P_H
 #define QTAWS_PUTJOBFAILURERESULTREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "putjobfailureresultrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class PutJobFailureResultRequest;
 
-class QTAWS_EXPORT PutJobFailureResultRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT PutJobFailureResultRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     PutJobFailureResultRequestPrivate(const CodePipeline::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTRESOURCEDEFINITIONVERSIONSREQUEST_P_H
 #define QTAWS_LISTRESOURCEDEFINITIONVERSIONSREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "listresourcedefinitionversionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class ListResourceDefinitionVersionsRequest;
 
-class QTAWS_EXPORT ListResourceDefinitionVersionsRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT ListResourceDefinitionVersionsRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     ListResourceDefinitionVersionsRequestPrivate(const Greengrass::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETBUCKETTAGGINGREQUEST_P_H
 #define QTAWS_GETBUCKETTAGGINGREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "getbuckettaggingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class GetBucketTaggingRequest;
 
-class QTAWS_EXPORT GetBucketTaggingRequestPrivate : public S3Private {
+class QTAWS_EXPORT GetBucketTaggingRequestPrivate : public S3RequestPrivate {
 
 public:
     GetBucketTaggingRequestPrivate(const S3::Action action,

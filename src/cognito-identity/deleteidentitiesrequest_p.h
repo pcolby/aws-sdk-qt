@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEIDENTITIESREQUEST_P_H
 #define QTAWS_DELETEIDENTITIESREQUEST_P_H
 
-#include "cognitoidentity_p.h"
+#include "cognitoidentityrequest_p.h"
 #include "deleteidentitiesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class DeleteIdentitiesRequest;
 
-class QTAWS_EXPORT DeleteIdentitiesRequestPrivate : public CognitoIdentityPrivate {
+class QTAWS_EXPORT DeleteIdentitiesRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     DeleteIdentitiesRequestPrivate(const CognitoIdentity::Action action,

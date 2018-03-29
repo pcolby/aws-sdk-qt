@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEROLEPOLICYREQUEST_P_H
 #define QTAWS_DELETEROLEPOLICYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "deleterolepolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteRolePolicyRequest;
 
-class QTAWS_EXPORT DeleteRolePolicyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT DeleteRolePolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
     DeleteRolePolicyRequestPrivate(const IAM::Action action,

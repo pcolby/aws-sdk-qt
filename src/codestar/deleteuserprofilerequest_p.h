@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEUSERPROFILEREQUEST_P_H
 #define QTAWS_DELETEUSERPROFILEREQUEST_P_H
 
-#include "codestar_p.h"
+#include "codestarrequest_p.h"
 #include "deleteuserprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class DeleteUserProfileRequest;
 
-class QTAWS_EXPORT DeleteUserProfileRequestPrivate : public CodeStarPrivate {
+class QTAWS_EXPORT DeleteUserProfileRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     DeleteUserProfileRequestPrivate(const CodeStar::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETREGIONSREQUEST_P_H
 #define QTAWS_GETREGIONSREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "getregionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetRegionsRequest;
 
-class QTAWS_EXPORT GetRegionsRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT GetRegionsRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetRegionsRequestPrivate(const Lightsail::Action action,

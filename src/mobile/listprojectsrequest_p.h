@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTPROJECTSREQUEST_P_H
 #define QTAWS_LISTPROJECTSREQUEST_P_H
 
-#include "mobile_p.h"
+#include "mobilerequest_p.h"
 #include "listprojectsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Mobile {
 
 class ListProjectsRequest;
 
-class QTAWS_EXPORT ListProjectsRequestPrivate : public MobilePrivate {
+class QTAWS_EXPORT ListProjectsRequestPrivate : public MobileRequestPrivate {
 
 public:
     ListProjectsRequestPrivate(const Mobile::Action action,

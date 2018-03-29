@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATELOGGERDEFINITIONVERSIONREQUEST_P_H
 #define QTAWS_CREATELOGGERDEFINITIONVERSIONREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "createloggerdefinitionversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class CreateLoggerDefinitionVersionRequest;
 
-class QTAWS_EXPORT CreateLoggerDefinitionVersionRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT CreateLoggerDefinitionVersionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     CreateLoggerDefinitionVersionRequestPrivate(const Greengrass::Action action,

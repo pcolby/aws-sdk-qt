@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEDOCUMENTVERSIONSREQUEST_P_H
 #define QTAWS_DESCRIBEDOCUMENTVERSIONSREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "describedocumentversionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DescribeDocumentVersionsRequest;
 
-class QTAWS_EXPORT DescribeDocumentVersionsRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT DescribeDocumentVersionsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DescribeDocumentVersionsRequestPrivate(const WorkDocs::Action action,

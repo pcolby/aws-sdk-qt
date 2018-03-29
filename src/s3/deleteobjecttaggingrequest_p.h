@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEOBJECTTAGGINGREQUEST_P_H
 #define QTAWS_DELETEOBJECTTAGGINGREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "deleteobjecttaggingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class DeleteObjectTaggingRequest;
 
-class QTAWS_EXPORT DeleteObjectTaggingRequestPrivate : public S3Private {
+class QTAWS_EXPORT DeleteObjectTaggingRequestPrivate : public S3RequestPrivate {
 
 public:
     DeleteObjectTaggingRequestPrivate(const S3::Action action,

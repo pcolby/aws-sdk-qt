@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTHOSTEDZONESREQUEST_P_H
 #define QTAWS_LISTHOSTEDZONESREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "listhostedzonesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class ListHostedZonesRequest;
 
-class QTAWS_EXPORT ListHostedZonesRequestPrivate : public Route53Private {
+class QTAWS_EXPORT ListHostedZonesRequestPrivate : public Route53RequestPrivate {
 
 public:
     ListHostedZonesRequestPrivate(const Route53::Action action,

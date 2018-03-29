@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTKEYPOLICYREQUEST_P_H
 #define QTAWS_PUTKEYPOLICYREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "putkeypolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class PutKeyPolicyRequest;
 
-class QTAWS_EXPORT PutKeyPolicyRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT PutKeyPolicyRequestPrivate : public KMSRequestPrivate {
 
 public:
     PutKeyPolicyRequestPrivate(const KMS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEDEFAULTBRANCHREQUEST_P_H
 #define QTAWS_UPDATEDEFAULTBRANCHREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "updatedefaultbranchrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class UpdateDefaultBranchRequest;
 
-class QTAWS_EXPORT UpdateDefaultBranchRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT UpdateDefaultBranchRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     UpdateDefaultBranchRequestPrivate(const CodeCommit::Action action,

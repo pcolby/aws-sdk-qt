@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECLUSTERREQUEST_P_H
 #define QTAWS_CREATECLUSTERREQUEST_P_H
 
-#include "cloudhsmv2_p.h"
+#include "cloudhsmv2request_p.h"
 #include "createclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class CreateClusterRequest;
 
-class QTAWS_EXPORT CreateClusterRequestPrivate : public CloudHSMV2Private {
+class QTAWS_EXPORT CreateClusterRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
     CreateClusterRequestPrivate(const CloudHSMV2::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETETAGSREQUEST_P_H
 #define QTAWS_DELETETAGSREQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "deletetagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class DeleteTagsRequest;
 
-class QTAWS_EXPORT DeleteTagsRequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT DeleteTagsRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     DeleteTagsRequestPrivate(const MachineLearning::Action action,

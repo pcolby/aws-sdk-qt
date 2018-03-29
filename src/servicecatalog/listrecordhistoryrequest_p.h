@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTRECORDHISTORYREQUEST_P_H
 #define QTAWS_LISTRECORDHISTORYREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "listrecordhistoryrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ListRecordHistoryRequest;
 
-class QTAWS_EXPORT ListRecordHistoryRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT ListRecordHistoryRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     ListRecordHistoryRequestPrivate(const ServiceCatalog::Action action,

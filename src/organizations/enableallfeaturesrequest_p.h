@@ -20,7 +20,7 @@
 #ifndef QTAWS_ENABLEALLFEATURESREQUEST_P_H
 #define QTAWS_ENABLEALLFEATURESREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "enableallfeaturesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class EnableAllFeaturesRequest;
 
-class QTAWS_EXPORT EnableAllFeaturesRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT EnableAllFeaturesRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     EnableAllFeaturesRequestPrivate(const Organizations::Action action,

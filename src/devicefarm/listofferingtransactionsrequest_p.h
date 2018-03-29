@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTOFFERINGTRANSACTIONSREQUEST_P_H
 #define QTAWS_LISTOFFERINGTRANSACTIONSREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "listofferingtransactionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class ListOfferingTransactionsRequest;
 
-class QTAWS_EXPORT ListOfferingTransactionsRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT ListOfferingTransactionsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     ListOfferingTransactionsRequestPrivate(const DeviceFarm::Action action,

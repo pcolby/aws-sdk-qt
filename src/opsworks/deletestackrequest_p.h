@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESTACKREQUEST_P_H
 #define QTAWS_DELETESTACKREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "deletestackrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DeleteStackRequest;
 
-class QTAWS_EXPORT DeleteStackRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DeleteStackRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DeleteStackRequestPrivate(const OpsWorks::Action action,

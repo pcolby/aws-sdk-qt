@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATERULEGROUPREQUEST_P_H
 #define QTAWS_UPDATERULEGROUPREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "updaterulegrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class UpdateRuleGroupRequest;
 
-class QTAWS_EXPORT UpdateRuleGroupRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT UpdateRuleGroupRequestPrivate : public WAFRequestPrivate {
 
 public:
     UpdateRuleGroupRequestPrivate(const WAF::Action action,

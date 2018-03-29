@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEUSERREQUEST_P_H
 #define QTAWS_DELETEUSERREQUEST_P_H
 
-#include "mq_p.h"
+#include "mqrequest_p.h"
 #include "deleteuserrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MQ {
 
 class DeleteUserRequest;
 
-class QTAWS_EXPORT DeleteUserRequestPrivate : public MQPrivate {
+class QTAWS_EXPORT DeleteUserRequestPrivate : public MQRequestPrivate {
 
 public:
     DeleteUserRequestPrivate(const MQ::Action action,

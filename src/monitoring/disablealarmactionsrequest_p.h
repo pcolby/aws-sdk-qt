@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISABLEALARMACTIONSREQUEST_P_H
 #define QTAWS_DISABLEALARMACTIONSREQUEST_P_H
 
-#include "cloudwatch_p.h"
+#include "cloudwatchrequest_p.h"
 #include "disablealarmactionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class DisableAlarmActionsRequest;
 
-class QTAWS_EXPORT DisableAlarmActionsRequestPrivate : public CloudWatchPrivate {
+class QTAWS_EXPORT DisableAlarmActionsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     DisableAlarmActionsRequestPrivate(const CloudWatch::Action action,

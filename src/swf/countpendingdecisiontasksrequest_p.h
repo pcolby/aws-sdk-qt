@@ -20,7 +20,7 @@
 #ifndef QTAWS_COUNTPENDINGDECISIONTASKSREQUEST_P_H
 #define QTAWS_COUNTPENDINGDECISIONTASKSREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "countpendingdecisiontasksrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class CountPendingDecisionTasksRequest;
 
-class QTAWS_EXPORT CountPendingDecisionTasksRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT CountPendingDecisionTasksRequestPrivate : public SWFRequestPrivate {
 
 public:
     CountPendingDecisionTasksRequestPrivate(const SWF::Action action,

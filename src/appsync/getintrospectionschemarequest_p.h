@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETINTROSPECTIONSCHEMAREQUEST_P_H
 #define QTAWS_GETINTROSPECTIONSCHEMAREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "getintrospectionschemarequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class GetIntrospectionSchemaRequest;
 
-class QTAWS_EXPORT GetIntrospectionSchemaRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT GetIntrospectionSchemaRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     GetIntrospectionSchemaRequestPrivate(const AppSync::Action action,

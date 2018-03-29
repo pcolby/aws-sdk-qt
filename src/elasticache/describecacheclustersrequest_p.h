@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECACHECLUSTERSREQUEST_P_H
 #define QTAWS_DESCRIBECACHECLUSTERSREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "describecacheclustersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DescribeCacheClustersRequest;
 
-class QTAWS_EXPORT DescribeCacheClustersRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT DescribeCacheClustersRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DescribeCacheClustersRequestPrivate(const ElastiCache::Action action,

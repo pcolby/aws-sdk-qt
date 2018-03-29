@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETETAGSREQUEST_P_H
 #define QTAWS_DELETETAGSREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "deletetagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeleteTagsRequest;
 
-class QTAWS_EXPORT DeleteTagsRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT DeleteTagsRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DeleteTagsRequestPrivate(const SageMaker::Action action,

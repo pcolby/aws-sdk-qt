@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESQLINJECTIONMATCHSETREQUEST_P_H
 #define QTAWS_UPDATESQLINJECTIONMATCHSETREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "updatesqlinjectionmatchsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class UpdateSqlInjectionMatchSetRequest;
 
-class QTAWS_EXPORT UpdateSqlInjectionMatchSetRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT UpdateSqlInjectionMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     UpdateSqlInjectionMatchSetRequestPrivate(const WAFRegional::Action action,

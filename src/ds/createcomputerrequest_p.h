@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECOMPUTERREQUEST_P_H
 #define QTAWS_CREATECOMPUTERREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "createcomputerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class CreateComputerRequest;
 
-class QTAWS_EXPORT CreateComputerRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT CreateComputerRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     CreateComputerRequestPrivate(const DirectoryService::Action action,

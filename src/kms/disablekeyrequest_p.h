@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISABLEKEYREQUEST_P_H
 #define QTAWS_DISABLEKEYREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "disablekeyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class DisableKeyRequest;
 
-class QTAWS_EXPORT DisableKeyRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT DisableKeyRequestPrivate : public KMSRequestPrivate {
 
 public:
     DisableKeyRequestPrivate(const KMS::Action action,

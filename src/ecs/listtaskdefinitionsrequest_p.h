@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTASKDEFINITIONSREQUEST_P_H
 #define QTAWS_LISTTASKDEFINITIONSREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "listtaskdefinitionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class ListTaskDefinitionsRequest;
 
-class QTAWS_EXPORT ListTaskDefinitionsRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT ListTaskDefinitionsRequestPrivate : public ECSRequestPrivate {
 
 public:
     ListTaskDefinitionsRequestPrivate(const ECS::Action action,

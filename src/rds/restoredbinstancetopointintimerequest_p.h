@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESTOREDBINSTANCETOPOINTINTIMEREQUEST_P_H
 #define QTAWS_RESTOREDBINSTANCETOPOINTINTIMEREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "restoredbinstancetopointintimerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class RestoreDBInstanceToPointInTimeRequest;
 
-class QTAWS_EXPORT RestoreDBInstanceToPointInTimeRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT RestoreDBInstanceToPointInTimeRequestPrivate : public RDSRequestPrivate {
 
 public:
     RestoreDBInstanceToPointInTimeRequestPrivate(const RDS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDISKREQUEST_P_H
 #define QTAWS_CREATEDISKREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "creatediskrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class CreateDiskRequest;
 
-class QTAWS_EXPORT CreateDiskRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT CreateDiskRequestPrivate : public LightsailRequestPrivate {
 
 public:
     CreateDiskRequestPrivate(const Lightsail::Action action,

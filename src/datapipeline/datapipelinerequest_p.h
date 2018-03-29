@@ -20,7 +20,7 @@
 #ifndef QTAWS_DATAPIPELINEREQUEST_P_H
 #define QTAWS_DATAPIPELINEREQUEST_P_H
 
-#include "datapipeline_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "datapipelinerequest.h"
 
 namespace QtAws {

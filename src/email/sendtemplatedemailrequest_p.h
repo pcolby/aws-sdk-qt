@@ -20,7 +20,7 @@
 #ifndef QTAWS_SENDTEMPLATEDEMAILREQUEST_P_H
 #define QTAWS_SENDTEMPLATEDEMAILREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "sendtemplatedemailrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class SendTemplatedEmailRequest;
 
-class QTAWS_EXPORT SendTemplatedEmailRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT SendTemplatedEmailRequestPrivate : public SESRequestPrivate {
 
 public:
     SendTemplatedEmailRequestPrivate(const SES::Action action,

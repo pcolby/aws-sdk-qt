@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEDBPARAMETERGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEDBPARAMETERGROUPSREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describedbparametergroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeDBParameterGroupsRequest;
 
-class QTAWS_EXPORT DescribeDBParameterGroupsRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeDBParameterGroupsRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeDBParameterGroupsRequestPrivate(const RDS::Action action,

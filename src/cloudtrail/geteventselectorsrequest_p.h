@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETEVENTSELECTORSREQUEST_P_H
 #define QTAWS_GETEVENTSELECTORSREQUEST_P_H
 
-#include "cloudtrail_p.h"
+#include "cloudtrailrequest_p.h"
 #include "geteventselectorsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudTrail {
 
 class GetEventSelectorsRequest;
 
-class QTAWS_EXPORT GetEventSelectorsRequestPrivate : public CloudTrailPrivate {
+class QTAWS_EXPORT GetEventSelectorsRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
     GetEventSelectorsRequestPrivate(const CloudTrail::Action action,

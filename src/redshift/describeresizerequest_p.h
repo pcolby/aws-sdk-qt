@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBERESIZEREQUEST_P_H
 #define QTAWS_DESCRIBERESIZEREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "describeresizerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeResizeRequest;
 
-class QTAWS_EXPORT DescribeResizeRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DescribeResizeRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DescribeResizeRequestPrivate(const Redshift::Action action,

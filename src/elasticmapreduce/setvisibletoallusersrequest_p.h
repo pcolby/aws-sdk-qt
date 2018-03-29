@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETVISIBLETOALLUSERSREQUEST_P_H
 #define QTAWS_SETVISIBLETOALLUSERSREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "setvisibletoallusersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class SetVisibleToAllUsersRequest;
 
-class QTAWS_EXPORT SetVisibleToAllUsersRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT SetVisibleToAllUsersRequestPrivate : public EMRRequestPrivate {
 
 public:
     SetVisibleToAllUsersRequestPrivate(const EMR::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ISVPCPEEREDREQUEST_P_H
 #define QTAWS_ISVPCPEEREDREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "isvpcpeeredrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class IsVpcPeeredRequest;
 
-class QTAWS_EXPORT IsVpcPeeredRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT IsVpcPeeredRequestPrivate : public LightsailRequestPrivate {
 
 public:
     IsVpcPeeredRequestPrivate(const Lightsail::Action action,

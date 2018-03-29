@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESTACKSREQUEST_P_H
 #define QTAWS_DESCRIBESTACKSREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "describestacksrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DescribeStacksRequest;
 
-class QTAWS_EXPORT DescribeStacksRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DescribeStacksRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DescribeStacksRequestPrivate(const OpsWorks::Action action,

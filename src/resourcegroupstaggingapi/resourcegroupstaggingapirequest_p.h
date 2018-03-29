@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESOURCEGROUPSTAGGINGAPIREQUEST_P_H
 #define QTAWS_RESOURCEGROUPSTAGGINGAPIREQUEST_P_H
 
-#include "resourcegroupstaggingapi_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "resourcegroupstaggingapirequest.h"
 
 namespace QtAws {

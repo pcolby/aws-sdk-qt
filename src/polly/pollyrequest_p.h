@@ -20,7 +20,7 @@
 #ifndef QTAWS_POLLYREQUEST_P_H
 #define QTAWS_POLLYREQUEST_P_H
 
-#include "polly_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "pollyrequest.h"
 
 namespace QtAws {

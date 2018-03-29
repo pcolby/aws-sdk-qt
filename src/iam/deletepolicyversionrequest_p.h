@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPOLICYVERSIONREQUEST_P_H
 #define QTAWS_DELETEPOLICYVERSIONREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "deletepolicyversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeletePolicyVersionRequest;
 
-class QTAWS_EXPORT DeletePolicyVersionRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT DeletePolicyVersionRequestPrivate : public IAMRequestPrivate {
 
 public:
     DeletePolicyVersionRequestPrivate(const IAM::Action action,

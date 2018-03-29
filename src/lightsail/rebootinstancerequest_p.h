@@ -20,7 +20,7 @@
 #ifndef QTAWS_REBOOTINSTANCEREQUEST_P_H
 #define QTAWS_REBOOTINSTANCEREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "rebootinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class RebootInstanceRequest;
 
-class QTAWS_EXPORT RebootInstanceRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT RebootInstanceRequestPrivate : public LightsailRequestPrivate {
 
 public:
     RebootInstanceRequestPrivate(const Lightsail::Action action,

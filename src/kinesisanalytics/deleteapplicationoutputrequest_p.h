@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEAPPLICATIONOUTPUTREQUEST_P_H
 #define QTAWS_DELETEAPPLICATIONOUTPUTREQUEST_P_H
 
-#include "kinesisanalytics_p.h"
+#include "kinesisanalyticsrequest_p.h"
 #include "deleteapplicationoutputrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class DeleteApplicationOutputRequest;
 
-class QTAWS_EXPORT DeleteApplicationOutputRequestPrivate : public KinesisAnalyticsPrivate {
+class QTAWS_EXPORT DeleteApplicationOutputRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
     DeleteApplicationOutputRequestPrivate(const KinesisAnalytics::Action action,

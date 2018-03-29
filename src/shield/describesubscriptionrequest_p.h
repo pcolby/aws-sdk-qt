@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESUBSCRIPTIONREQUEST_P_H
 #define QTAWS_DESCRIBESUBSCRIPTIONREQUEST_P_H
 
-#include "shield_p.h"
+#include "shieldrequest_p.h"
 #include "describesubscriptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Shield {
 
 class DescribeSubscriptionRequest;
 
-class QTAWS_EXPORT DescribeSubscriptionRequestPrivate : public ShieldPrivate {
+class QTAWS_EXPORT DescribeSubscriptionRequestPrivate : public ShieldRequestPrivate {
 
 public:
     DescribeSubscriptionRequestPrivate(const Shield::Action action,

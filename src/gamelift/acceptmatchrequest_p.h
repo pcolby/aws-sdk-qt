@@ -20,7 +20,7 @@
 #ifndef QTAWS_ACCEPTMATCHREQUEST_P_H
 #define QTAWS_ACCEPTMATCHREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "acceptmatchrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class AcceptMatchRequest;
 
-class QTAWS_EXPORT AcceptMatchRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT AcceptMatchRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     AcceptMatchRequestPrivate(const GameLift::Action action,

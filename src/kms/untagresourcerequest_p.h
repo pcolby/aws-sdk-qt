@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_P_H
 #define QTAWS_UNTAGRESOURCEREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "untagresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT UntagResourceRequestPrivate : public KMSRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const KMS::Action action,

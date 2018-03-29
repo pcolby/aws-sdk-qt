@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEDOCUMENTREQUEST_P_H
 #define QTAWS_UPDATEDOCUMENTREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "updatedocumentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class UpdateDocumentRequest;
 
-class QTAWS_EXPORT UpdateDocumentRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT UpdateDocumentRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     UpdateDocumentRequestPrivate(const WorkDocs::Action action,

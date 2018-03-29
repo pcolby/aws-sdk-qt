@@ -20,7 +20,7 @@
 #ifndef QTAWS_APPLICATIONAUTOSCALINGREQUEST_P_H
 #define QTAWS_APPLICATIONAUTOSCALINGREQUEST_P_H
 
-#include "applicationautoscaling_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "applicationautoscalingrequest.h"
 
 namespace QtAws {

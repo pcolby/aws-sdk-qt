@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEENVIRONMENTREQUEST_P_H
 #define QTAWS_DELETEENVIRONMENTREQUEST_P_H
 
-#include "cloud9_p.h"
+#include "cloud9request_p.h"
 #include "deleteenvironmentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class DeleteEnvironmentRequest;
 
-class QTAWS_EXPORT DeleteEnvironmentRequestPrivate : public Cloud9Private {
+class QTAWS_EXPORT DeleteEnvironmentRequestPrivate : public Cloud9RequestPrivate {
 
 public:
     DeleteEnvironmentRequestPrivate(const Cloud9::Action action,

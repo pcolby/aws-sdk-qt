@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETACHGROUPPOLICYREQUEST_P_H
 #define QTAWS_DETACHGROUPPOLICYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "detachgrouppolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class DetachGroupPolicyRequest;
 
-class QTAWS_EXPORT DetachGroupPolicyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT DetachGroupPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
     DetachGroupPolicyRequestPrivate(const IAM::Action action,

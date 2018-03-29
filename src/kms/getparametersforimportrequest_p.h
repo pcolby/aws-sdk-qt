@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETPARAMETERSFORIMPORTREQUEST_P_H
 #define QTAWS_GETPARAMETERSFORIMPORTREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "getparametersforimportrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class GetParametersForImportRequest;
 
-class QTAWS_EXPORT GetParametersForImportRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT GetParametersForImportRequestPrivate : public KMSRequestPrivate {
 
 public:
     GetParametersForImportRequestPrivate(const KMS::Action action,

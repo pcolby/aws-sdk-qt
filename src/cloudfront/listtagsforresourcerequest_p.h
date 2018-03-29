@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 
-#include "cloudfront_p.h"
+#include "cloudfrontrequest_p.h"
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public CloudFrontPrivate {
+class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const CloudFront::Action action,

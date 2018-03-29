@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETETHREATINTELSETREQUEST_P_H
 #define QTAWS_DELETETHREATINTELSETREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "deletethreatintelsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DeleteThreatIntelSetRequest;
 
-class QTAWS_EXPORT DeleteThreatIntelSetRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT DeleteThreatIntelSetRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     DeleteThreatIntelSetRequestPrivate(const GuardDuty::Action action,

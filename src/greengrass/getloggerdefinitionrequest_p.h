@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETLOGGERDEFINITIONREQUEST_P_H
 #define QTAWS_GETLOGGERDEFINITIONREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "getloggerdefinitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetLoggerDefinitionRequest;
 
-class QTAWS_EXPORT GetLoggerDefinitionRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT GetLoggerDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     GetLoggerDefinitionRequestPrivate(const Greengrass::Action action,

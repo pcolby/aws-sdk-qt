@@ -20,7 +20,7 @@
 #ifndef QTAWS_SYNTHESIZESPEECHREQUEST_P_H
 #define QTAWS_SYNTHESIZESPEECHREQUEST_P_H
 
-#include "polly_p.h"
+#include "pollyrequest_p.h"
 #include "synthesizespeechrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Polly {
 
 class SynthesizeSpeechRequest;
 
-class QTAWS_EXPORT SynthesizeSpeechRequestPrivate : public PollyPrivate {
+class QTAWS_EXPORT SynthesizeSpeechRequestPrivate : public PollyRequestPrivate {
 
 public:
     SynthesizeSpeechRequestPrivate(const Polly::Action action,

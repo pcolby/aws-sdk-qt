@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERWORKFLOWTYPEREQUEST_P_H
 #define QTAWS_REGISTERWORKFLOWTYPEREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "registerworkflowtyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class RegisterWorkflowTypeRequest;
 
-class QTAWS_EXPORT RegisterWorkflowTypeRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT RegisterWorkflowTypeRequestPrivate : public SWFRequestPrivate {
 
 public:
     RegisterWorkflowTypeRequestPrivate(const SWF::Action action,

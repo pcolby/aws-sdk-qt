@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETLOGINPROFILEREQUEST_P_H
 #define QTAWS_GETLOGINPROFILEREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "getloginprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetLoginProfileRequest;
 
-class QTAWS_EXPORT GetLoginProfileRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT GetLoginProfileRequestPrivate : public IAMRequestPrivate {
 
 public:
     GetLoginProfileRequestPrivate(const IAM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETAUTHORIZATIONTOKENREQUEST_P_H
 #define QTAWS_GETAUTHORIZATIONTOKENREQUEST_P_H
 
-#include "ecr_p.h"
+#include "ecrrequest_p.h"
 #include "getauthorizationtokenrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECR {
 
 class GetAuthorizationTokenRequest;
 
-class QTAWS_EXPORT GetAuthorizationTokenRequestPrivate : public ECRPrivate {
+class QTAWS_EXPORT GetAuthorizationTokenRequestPrivate : public ECRRequestPrivate {
 
 public:
     GetAuthorizationTokenRequestPrivate(const ECR::Action action,

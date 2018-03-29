@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDUSERTOGROUPREQUEST_P_H
 #define QTAWS_ADDUSERTOGROUPREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "addusertogrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class AddUserToGroupRequest;
 
-class QTAWS_EXPORT AddUserToGroupRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT AddUserToGroupRequestPrivate : public IAMRequestPrivate {
 
 public:
     AddUserToGroupRequestPrivate(const IAM::Action action,

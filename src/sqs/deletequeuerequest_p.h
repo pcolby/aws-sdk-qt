@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEQUEUEREQUEST_P_H
 #define QTAWS_DELETEQUEUEREQUEST_P_H
 
-#include "sqs_p.h"
+#include "sqsrequest_p.h"
 #include "deletequeuerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SQS {
 
 class DeleteQueueRequest;
 
-class QTAWS_EXPORT DeleteQueueRequestPrivate : public SQSPrivate {
+class QTAWS_EXPORT DeleteQueueRequestPrivate : public SQSRequestPrivate {
 
 public:
     DeleteQueueRequestPrivate(const SQS::Action action,

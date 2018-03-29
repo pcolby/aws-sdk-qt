@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATETERMINATIONPROTECTIONREQUEST_P_H
 #define QTAWS_UPDATETERMINATIONPROTECTIONREQUEST_P_H
 
-#include "cloudformation_p.h"
+#include "cloudformationrequest_p.h"
 #include "updateterminationprotectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class UpdateTerminationProtectionRequest;
 
-class QTAWS_EXPORT UpdateTerminationProtectionRequestPrivate : public CloudFormationPrivate {
+class QTAWS_EXPORT UpdateTerminationProtectionRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     UpdateTerminationProtectionRequestPrivate(const CloudFormation::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEFROMMASTERACCOUNTREQUEST_P_H
 #define QTAWS_DISASSOCIATEFROMMASTERACCOUNTREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "disassociatefrommasteraccountrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DisassociateFromMasterAccountRequest;
 
-class QTAWS_EXPORT DisassociateFromMasterAccountRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT DisassociateFromMasterAccountRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     DisassociateFromMasterAccountRequestPrivate(const GuardDuty::Action action,

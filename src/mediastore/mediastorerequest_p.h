@@ -20,7 +20,7 @@
 #ifndef QTAWS_MEDIASTOREREQUEST_P_H
 #define QTAWS_MEDIASTOREREQUEST_P_H
 
-#include "mediastore_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "mediastorerequest.h"
 
 namespace QtAws {

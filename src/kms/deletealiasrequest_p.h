@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEALIASREQUEST_P_H
 #define QTAWS_DELETEALIASREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "deletealiasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class DeleteAliasRequest;
 
-class QTAWS_EXPORT DeleteAliasRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT DeleteAliasRequestPrivate : public KMSRequestPrivate {
 
 public:
     DeleteAliasRequestPrivate(const KMS::Action action,

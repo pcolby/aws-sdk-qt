@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETV2LOGGINGLEVELREQUEST_P_H
 #define QTAWS_SETV2LOGGINGLEVELREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "setv2logginglevelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class SetV2LoggingLevelRequest;
 
-class QTAWS_EXPORT SetV2LoggingLevelRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT SetV2LoggingLevelRequestPrivate : public IoTRequestPrivate {
 
 public:
     SetV2LoggingLevelRequestPrivate(const IoT::Action action,

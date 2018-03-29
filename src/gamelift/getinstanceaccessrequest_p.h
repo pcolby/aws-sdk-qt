@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETINSTANCEACCESSREQUEST_P_H
 #define QTAWS_GETINSTANCEACCESSREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "getinstanceaccessrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class GetInstanceAccessRequest;
 
-class QTAWS_EXPORT GetInstanceAccessRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT GetInstanceAccessRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     GetInstanceAccessRequestPrivate(const GameLift::Action action,

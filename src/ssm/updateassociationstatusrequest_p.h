@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEASSOCIATIONSTATUSREQUEST_P_H
 #define QTAWS_UPDATEASSOCIATIONSTATUSREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "updateassociationstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class UpdateAssociationStatusRequest;
 
-class QTAWS_EXPORT UpdateAssociationStatusRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT UpdateAssociationStatusRequestPrivate : public SSMRequestPrivate {
 
 public:
     UpdateAssociationStatusRequestPrivate(const SSM::Action action,

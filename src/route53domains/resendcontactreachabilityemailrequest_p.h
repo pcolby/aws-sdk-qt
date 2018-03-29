@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESENDCONTACTREACHABILITYEMAILREQUEST_P_H
 #define QTAWS_RESENDCONTACTREACHABILITYEMAILREQUEST_P_H
 
-#include "route53domains_p.h"
+#include "route53domainsrequest_p.h"
 #include "resendcontactreachabilityemailrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class ResendContactReachabilityEmailRequest;
 
-class QTAWS_EXPORT ResendContactReachabilityEmailRequestPrivate : public Route53DomainsPrivate {
+class QTAWS_EXPORT ResendContactReachabilityEmailRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     ResendContactReachabilityEmailRequestPrivate(const Route53Domains::Action action,

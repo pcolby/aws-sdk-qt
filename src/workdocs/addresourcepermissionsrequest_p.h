@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDRESOURCEPERMISSIONSREQUEST_P_H
 #define QTAWS_ADDRESOURCEPERMISSIONSREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "addresourcepermissionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class AddResourcePermissionsRequest;
 
-class QTAWS_EXPORT AddResourcePermissionsRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT AddResourcePermissionsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     AddResourcePermissionsRequestPrivate(const WorkDocs::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECLUSTERPARAMETERGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBECLUSTERPARAMETERGROUPSREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "describeclusterparametergroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeClusterParameterGroupsRequest;
 
-class QTAWS_EXPORT DescribeClusterParameterGroupsRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DescribeClusterParameterGroupsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DescribeClusterParameterGroupsRequestPrivate(const Redshift::Action action,

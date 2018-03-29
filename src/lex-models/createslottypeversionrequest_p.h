@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESLOTTYPEVERSIONREQUEST_P_H
 #define QTAWS_CREATESLOTTYPEVERSIONREQUEST_P_H
 
-#include "lexmodelbuildingservice_p.h"
+#include "lexmodelbuildingservicerequest_p.h"
 #include "createslottypeversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class CreateSlotTypeVersionRequest;
 
-class QTAWS_EXPORT CreateSlotTypeVersionRequestPrivate : public LexModelBuildingServicePrivate {
+class QTAWS_EXPORT CreateSlotTypeVersionRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
     CreateSlotTypeVersionRequestPrivate(const LexModelBuildingService::Action action,

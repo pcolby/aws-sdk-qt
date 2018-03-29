@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATTACHGROUPPOLICYREQUEST_P_H
 #define QTAWS_ATTACHGROUPPOLICYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "attachgrouppolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class AttachGroupPolicyRequest;
 
-class QTAWS_EXPORT AttachGroupPolicyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT AttachGroupPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
     AttachGroupPolicyRequestPrivate(const IAM::Action action,

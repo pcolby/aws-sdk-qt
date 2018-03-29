@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTATTRIBUTESREQUEST_P_H
 #define QTAWS_LISTATTRIBUTESREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "listattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class ListAttributesRequest;
 
-class QTAWS_EXPORT ListAttributesRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT ListAttributesRequestPrivate : public ECSRequestPrivate {
 
 public:
     ListAttributesRequestPrivate(const ECS::Action action,

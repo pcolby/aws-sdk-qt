@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDHSMV2REQUEST_P_H
 #define QTAWS_CLOUDHSMV2REQUEST_P_H
 
-#include "cloudhsmv2_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "cloudhsmv2request.h"
 
 namespace QtAws {

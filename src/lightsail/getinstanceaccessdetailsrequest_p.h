@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETINSTANCEACCESSDETAILSREQUEST_P_H
 #define QTAWS_GETINSTANCEACCESSDETAILSREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "getinstanceaccessdetailsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetInstanceAccessDetailsRequest;
 
-class QTAWS_EXPORT GetInstanceAccessDetailsRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT GetInstanceAccessDetailsRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetInstanceAccessDetailsRequestPrivate(const Lightsail::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELIMPORTTASKREQUEST_P_H
 #define QTAWS_CANCELIMPORTTASKREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "cancelimporttaskrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CancelImportTaskRequest;
 
-class QTAWS_EXPORT CancelImportTaskRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CancelImportTaskRequestPrivate : public EC2RequestPrivate {
 
 public:
     CancelImportTaskRequestPrivate(const EC2::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESSLPOLICIESREQUEST_P_H
 #define QTAWS_DESCRIBESSLPOLICIESREQUEST_P_H
 
-#include "elasticloadbalancingv2_p.h"
+#include "elasticloadbalancingv2request_p.h"
 #include "describesslpoliciesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DescribeSSLPoliciesRequest;
 
-class QTAWS_EXPORT DescribeSSLPoliciesRequestPrivate : public ElasticLoadBalancingv2Private {
+class QTAWS_EXPORT DescribeSSLPoliciesRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     DescribeSSLPoliciesRequestPrivate(const ElasticLoadBalancingv2::Action action,

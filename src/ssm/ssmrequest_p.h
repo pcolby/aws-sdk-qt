@@ -20,7 +20,7 @@
 #ifndef QTAWS_SSMREQUEST_P_H
 #define QTAWS_SSMREQUEST_P_H
 
-#include "ssm_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "ssmrequest.h"
 
 namespace QtAws {

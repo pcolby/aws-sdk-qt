@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESIGNINGCERTIFICATEREQUEST_P_H
 #define QTAWS_UPDATESIGNINGCERTIFICATEREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "updatesigningcertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class UpdateSigningCertificateRequest;
 
-class QTAWS_EXPORT UpdateSigningCertificateRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT UpdateSigningCertificateRequestPrivate : public IAMRequestPrivate {
 
 public:
     UpdateSigningCertificateRequestPrivate(const IAM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEUPLOADBUFFERREQUEST_P_H
 #define QTAWS_DESCRIBEUPLOADBUFFERREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "describeuploadbufferrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeUploadBufferRequest;
 
-class QTAWS_EXPORT DescribeUploadBufferRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT DescribeUploadBufferRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DescribeUploadBufferRequestPrivate(const StorageGateway::Action action,

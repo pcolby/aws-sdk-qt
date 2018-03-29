@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTIMAGEBUILDERREQUEST_P_H
 #define QTAWS_STARTIMAGEBUILDERREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "startimagebuilderrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class StartImageBuilderRequest;
 
-class QTAWS_EXPORT StartImageBuilderRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT StartImageBuilderRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     StartImageBuilderRequestPrivate(const AppStream::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTREGEXPATTERNSETSREQUEST_P_H
 #define QTAWS_LISTREGEXPATTERNSETSREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "listregexpatternsetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class ListRegexPatternSetsRequest;
 
-class QTAWS_EXPORT ListRegexPatternSetsRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT ListRegexPatternSetsRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     ListRegexPatternSetsRequestPrivate(const WAFRegional::Action action,

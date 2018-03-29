@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEPROFILEREQUEST_P_H
 #define QTAWS_UPDATEPROFILEREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "updateprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class UpdateProfileRequest;
 
-class QTAWS_EXPORT UpdateProfileRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT UpdateProfileRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     UpdateProfileRequestPrivate(const AlexaForBusiness::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERDOMAINREQUEST_P_H
 #define QTAWS_REGISTERDOMAINREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "registerdomainrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class RegisterDomainRequest;
 
-class QTAWS_EXPORT RegisterDomainRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT RegisterDomainRequestPrivate : public SWFRequestPrivate {
 
 public:
     RegisterDomainRequestPrivate(const SWF::Action action,

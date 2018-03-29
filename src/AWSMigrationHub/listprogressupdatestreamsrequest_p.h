@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTPROGRESSUPDATESTREAMSREQUEST_P_H
 #define QTAWS_LISTPROGRESSUPDATESTREAMSREQUEST_P_H
 
-#include "migrationhub_p.h"
+#include "migrationhubrequest_p.h"
 #include "listprogressupdatestreamsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class ListProgressUpdateStreamsRequest;
 
-class QTAWS_EXPORT ListProgressUpdateStreamsRequestPrivate : public MigrationHubPrivate {
+class QTAWS_EXPORT ListProgressUpdateStreamsRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     ListProgressUpdateStreamsRequestPrivate(const MigrationHub::Action action,

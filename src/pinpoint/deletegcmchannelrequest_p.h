@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEGCMCHANNELREQUEST_P_H
 #define QTAWS_DELETEGCMCHANNELREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "deletegcmchannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class DeleteGcmChannelRequest;
 
-class QTAWS_EXPORT DeleteGcmChannelRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT DeleteGcmChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     DeleteGcmChannelRequestPrivate(const Pinpoint::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ALEXAFORBUSINESSREQUEST_P_H
 #define QTAWS_ALEXAFORBUSINESSREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "alexaforbusinessrequest.h"
 
 namespace QtAws {

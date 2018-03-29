@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTCATEGORIESREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTCATEGORIESREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describeeventcategoriesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeEventCategoriesRequest;
 
-class QTAWS_EXPORT DescribeEventCategoriesRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeEventCategoriesRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeEventCategoriesRequestPrivate(const RDS::Action action,

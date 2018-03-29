@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECLUSTERREQUEST_P_H
 #define QTAWS_DELETECLUSTERREQUEST_P_H
 
-#include "dax_p.h"
+#include "daxrequest_p.h"
 #include "deleteclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DAX {
 
 class DeleteClusterRequest;
 
-class QTAWS_EXPORT DeleteClusterRequestPrivate : public DAXPrivate {
+class QTAWS_EXPORT DeleteClusterRequestPrivate : public DAXRequestPrivate {
 
 public:
     DeleteClusterRequestPrivate(const DAX::Action action,

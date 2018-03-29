@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECACERTIFICATEREQUEST_P_H
 #define QTAWS_UPDATECACERTIFICATEREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "updatecacertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class UpdateCACertificateRequest;
 
-class QTAWS_EXPORT UpdateCACertificateRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT UpdateCACertificateRequestPrivate : public IoTRequestPrivate {
 
 public:
     UpdateCACertificateRequestPrivate(const IoT::Action action,

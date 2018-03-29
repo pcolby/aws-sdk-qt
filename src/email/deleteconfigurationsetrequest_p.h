@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECONFIGURATIONSETREQUEST_P_H
 #define QTAWS_DELETECONFIGURATIONSETREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "deleteconfigurationsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class DeleteConfigurationSetRequest;
 
-class QTAWS_EXPORT DeleteConfigurationSetRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT DeleteConfigurationSetRequestPrivate : public SESRequestPrivate {
 
 public:
     DeleteConfigurationSetRequestPrivate(const SES::Action action,

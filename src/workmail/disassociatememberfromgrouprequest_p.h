@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEMEMBERFROMGROUPREQUEST_P_H
 #define QTAWS_DISASSOCIATEMEMBERFROMGROUPREQUEST_P_H
 
-#include "workmail_p.h"
+#include "workmailrequest_p.h"
 #include "disassociatememberfromgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class DisassociateMemberFromGroupRequest;
 
-class QTAWS_EXPORT DisassociateMemberFromGroupRequestPrivate : public WorkMailPrivate {
+class QTAWS_EXPORT DisassociateMemberFromGroupRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     DisassociateMemberFromGroupRequestPrivate(const WorkMail::Action action,

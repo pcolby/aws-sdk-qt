@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESOURCEREGIONSREQUEST_P_H
 #define QTAWS_DESCRIBESOURCEREGIONSREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describesourceregionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeSourceRegionsRequest;
 
-class QTAWS_EXPORT DescribeSourceRegionsRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeSourceRegionsRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeSourceRegionsRequestPrivate(const RDS::Action action,

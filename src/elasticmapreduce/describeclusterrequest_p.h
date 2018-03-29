@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECLUSTERREQUEST_P_H
 #define QTAWS_DESCRIBECLUSTERREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "describeclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class DescribeClusterRequest;
 
-class QTAWS_EXPORT DescribeClusterRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT DescribeClusterRequestPrivate : public EMRRequestPrivate {
 
 public:
     DescribeClusterRequestPrivate(const EMR::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SCHEDULERUNREQUEST_P_H
 #define QTAWS_SCHEDULERUNREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "schedulerunrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class ScheduleRunRequest;
 
-class QTAWS_EXPORT ScheduleRunRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT ScheduleRunRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     ScheduleRunRequestPrivate(const DeviceFarm::Action action,

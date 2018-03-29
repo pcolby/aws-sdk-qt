@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESPONDDECISIONTASKCOMPLETEDREQUEST_P_H
 #define QTAWS_RESPONDDECISIONTASKCOMPLETEDREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "responddecisiontaskcompletedrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class RespondDecisionTaskCompletedRequest;
 
-class QTAWS_EXPORT RespondDecisionTaskCompletedRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT RespondDecisionTaskCompletedRequestPrivate : public SWFRequestPrivate {
 
 public:
     RespondDecisionTaskCompletedRequestPrivate(const SWF::Action action,

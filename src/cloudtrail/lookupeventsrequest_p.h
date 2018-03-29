@@ -20,7 +20,7 @@
 #ifndef QTAWS_LOOKUPEVENTSREQUEST_P_H
 #define QTAWS_LOOKUPEVENTSREQUEST_P_H
 
-#include "cloudtrail_p.h"
+#include "cloudtrailrequest_p.h"
 #include "lookupeventsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudTrail {
 
 class LookupEventsRequest;
 
-class QTAWS_EXPORT LookupEventsRequestPrivate : public CloudTrailPrivate {
+class QTAWS_EXPORT LookupEventsRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
     LookupEventsRequestPrivate(const CloudTrail::Action action,

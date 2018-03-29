@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTUSERIMPORTJOBSREQUEST_P_H
 #define QTAWS_LISTUSERIMPORTJOBSREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "listuserimportjobsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class ListUserImportJobsRequest;
 
-class QTAWS_EXPORT ListUserImportJobsRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT ListUserImportJobsRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     ListUserImportJobsRequestPrivate(const CognitoIdentityProvider::Action action,

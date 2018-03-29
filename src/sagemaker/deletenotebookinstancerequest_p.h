@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETENOTEBOOKINSTANCEREQUEST_P_H
 #define QTAWS_DELETENOTEBOOKINSTANCEREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "deletenotebookinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeleteNotebookInstanceRequest;
 
-class QTAWS_EXPORT DeleteNotebookInstanceRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT DeleteNotebookInstanceRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DeleteNotebookInstanceRequestPrivate(const SageMaker::Action action,

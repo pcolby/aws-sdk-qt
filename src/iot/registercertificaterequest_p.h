@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERCERTIFICATEREQUEST_P_H
 #define QTAWS_REGISTERCERTIFICATEREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "registercertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class RegisterCertificateRequest;
 
-class QTAWS_EXPORT RegisterCertificateRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT RegisterCertificateRequestPrivate : public IoTRequestPrivate {
 
 public:
     RegisterCertificateRequestPrivate(const IoT::Action action,

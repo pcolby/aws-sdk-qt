@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETETHINGREQUEST_P_H
 #define QTAWS_DELETETHINGREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "deletethingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeleteThingRequest;
 
-class QTAWS_EXPORT DeleteThingRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT DeleteThingRequestPrivate : public IoTRequestPrivate {
 
 public:
     DeleteThingRequestPrivate(const IoT::Action action,

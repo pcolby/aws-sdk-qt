@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESETJOBBOOKMARKREQUEST_P_H
 #define QTAWS_RESETJOBBOOKMARKREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "resetjobbookmarkrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class ResetJobBookmarkRequest;
 
-class QTAWS_EXPORT ResetJobBookmarkRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT ResetJobBookmarkRequestPrivate : public GlueRequestPrivate {
 
 public:
     ResetJobBookmarkRequestPrivate(const Glue::Action action,

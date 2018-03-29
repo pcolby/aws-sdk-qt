@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEJOBREQUEST_P_H
 #define QTAWS_UPDATEJOBREQUEST_P_H
 
-#include "importexport_p.h"
+#include "importexportrequest_p.h"
 #include "updatejobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ImportExport {
 
 class UpdateJobRequest;
 
-class QTAWS_EXPORT UpdateJobRequestPrivate : public ImportExportPrivate {
+class QTAWS_EXPORT UpdateJobRequestPrivate : public ImportExportRequestPrivate {
 
 public:
     UpdateJobRequestPrivate(const ImportExport::Action action,

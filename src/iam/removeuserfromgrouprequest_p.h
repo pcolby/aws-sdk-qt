@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVEUSERFROMGROUPREQUEST_P_H
 #define QTAWS_REMOVEUSERFROMGROUPREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "removeuserfromgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class RemoveUserFromGroupRequest;
 
-class QTAWS_EXPORT RemoveUserFromGroupRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT RemoveUserFromGroupRequestPrivate : public IAMRequestPrivate {
 
 public:
     RemoveUserFromGroupRequestPrivate(const IAM::Action action,

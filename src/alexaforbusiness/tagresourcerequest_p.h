@@ -20,7 +20,7 @@
 #ifndef QTAWS_TAGRESOURCEREQUEST_P_H
 #define QTAWS_TAGRESOURCEREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "tagresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT TagResourceRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const AlexaForBusiness::Action action,

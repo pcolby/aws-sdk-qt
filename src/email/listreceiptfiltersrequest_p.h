@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTRECEIPTFILTERSREQUEST_P_H
 #define QTAWS_LISTRECEIPTFILTERSREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "listreceiptfiltersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class ListReceiptFiltersRequest;
 
-class QTAWS_EXPORT ListReceiptFiltersRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT ListReceiptFiltersRequestPrivate : public SESRequestPrivate {
 
 public:
     ListReceiptFiltersRequestPrivate(const SES::Action action,

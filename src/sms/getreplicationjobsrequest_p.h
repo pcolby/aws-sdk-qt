@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETREPLICATIONJOBSREQUEST_P_H
 #define QTAWS_GETREPLICATIONJOBSREQUEST_P_H
 
-#include "sms_p.h"
+#include "smsrequest_p.h"
 #include "getreplicationjobsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SMS {
 
 class GetReplicationJobsRequest;
 
-class QTAWS_EXPORT GetReplicationJobsRequestPrivate : public SMSPrivate {
+class QTAWS_EXPORT GetReplicationJobsRequestPrivate : public SMSRequestPrivate {
 
 public:
     GetReplicationJobsRequestPrivate(const SMS::Action action,

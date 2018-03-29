@@ -20,7 +20,7 @@
 #ifndef QTAWS_TERMINATEENVIRONMENTREQUEST_P_H
 #define QTAWS_TERMINATEENVIRONMENTREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "terminateenvironmentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class TerminateEnvironmentRequest;
 
-class QTAWS_EXPORT TerminateEnvironmentRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT TerminateEnvironmentRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     TerminateEnvironmentRequestPrivate(const ElasticBeanstalk::Action action,

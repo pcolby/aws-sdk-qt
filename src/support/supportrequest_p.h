@@ -20,7 +20,7 @@
 #ifndef QTAWS_SUPPORTREQUEST_P_H
 #define QTAWS_SUPPORTREQUEST_P_H
 
-#include "support_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "supportrequest.h"
 
 namespace QtAws {

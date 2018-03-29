@@ -20,7 +20,7 @@
 #ifndef QTAWS_NOTIFYMIGRATIONTASKSTATEREQUEST_P_H
 #define QTAWS_NOTIFYMIGRATIONTASKSTATEREQUEST_P_H
 
-#include "migrationhub_p.h"
+#include "migrationhubrequest_p.h"
 #include "notifymigrationtaskstaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class NotifyMigrationTaskStateRequest;
 
-class QTAWS_EXPORT NotifyMigrationTaskStateRequestPrivate : public MigrationHubPrivate {
+class QTAWS_EXPORT NotifyMigrationTaskStateRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     NotifyMigrationTaskStateRequestPrivate(const MigrationHub::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_IMPORTCATALOGTOGLUEREQUEST_P_H
 #define QTAWS_IMPORTCATALOGTOGLUEREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "importcatalogtogluerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class ImportCatalogToGlueRequest;
 
-class QTAWS_EXPORT ImportCatalogToGlueRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT ImportCatalogToGlueRequestPrivate : public GlueRequestPrivate {
 
 public:
     ImportCatalogToGlueRequestPrivate(const Glue::Action action,

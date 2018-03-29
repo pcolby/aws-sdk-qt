@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESESSIONSREQUEST_P_H
 #define QTAWS_DESCRIBESESSIONSREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "describesessionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DescribeSessionsRequest;
 
-class QTAWS_EXPORT DescribeSessionsRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT DescribeSessionsRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     DescribeSessionsRequestPrivate(const AppStream::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTARTIFACTSREQUEST_P_H
 #define QTAWS_LISTARTIFACTSREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "listartifactsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class ListArtifactsRequest;
 
-class QTAWS_EXPORT ListArtifactsRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT ListArtifactsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     ListArtifactsRequestPrivate(const DeviceFarm::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEUSERPOOLDOMAINREQUEST_P_H
 #define QTAWS_DESCRIBEUSERPOOLDOMAINREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "describeuserpooldomainrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class DescribeUserPoolDomainRequest;
 
-class QTAWS_EXPORT DescribeUserPoolDomainRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT DescribeUserPoolDomainRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     DescribeUserPoolDomainRequestPrivate(const CognitoIdentityProvider::Action action,

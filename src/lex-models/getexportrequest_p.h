@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETEXPORTREQUEST_P_H
 #define QTAWS_GETEXPORTREQUEST_P_H
 
-#include "lexmodelbuildingservice_p.h"
+#include "lexmodelbuildingservicerequest_p.h"
 #include "getexportrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class GetExportRequest;
 
-class QTAWS_EXPORT GetExportRequestPrivate : public LexModelBuildingServicePrivate {
+class QTAWS_EXPORT GetExportRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
     GetExportRequestPrivate(const LexModelBuildingService::Action action,

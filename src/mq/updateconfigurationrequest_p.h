@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECONFIGURATIONREQUEST_P_H
 #define QTAWS_UPDATECONFIGURATIONREQUEST_P_H
 
-#include "mq_p.h"
+#include "mqrequest_p.h"
 #include "updateconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MQ {
 
 class UpdateConfigurationRequest;
 
-class QTAWS_EXPORT UpdateConfigurationRequestPrivate : public MQPrivate {
+class QTAWS_EXPORT UpdateConfigurationRequestPrivate : public MQRequestPrivate {
 
 public:
     UpdateConfigurationRequestPrivate(const MQ::Action action,

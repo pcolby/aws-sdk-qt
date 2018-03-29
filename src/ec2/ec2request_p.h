@@ -20,7 +20,7 @@
 #ifndef QTAWS_EC2REQUEST_P_H
 #define QTAWS_EC2REQUEST_P_H
 
-#include "ec2_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "ec2request.h"
 
 namespace QtAws {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEACTIVITYREQUEST_P_H
 #define QTAWS_CREATEACTIVITYREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "createactivityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class CreateActivityRequest;
 
-class QTAWS_EXPORT CreateActivityRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT CreateActivityRequestPrivate : public SFNRequestPrivate {
 
 public:
     CreateActivityRequestPrivate(const SFN::Action action,

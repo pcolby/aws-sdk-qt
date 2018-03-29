@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEROLEALIASREQUEST_P_H
 #define QTAWS_DESCRIBEROLEALIASREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "describerolealiasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class DescribeRoleAliasRequest;
 
-class QTAWS_EXPORT DescribeRoleAliasRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT DescribeRoleAliasRequestPrivate : public IoTRequestPrivate {
 
 public:
     DescribeRoleAliasRequestPrivate(const IoT::Action action,

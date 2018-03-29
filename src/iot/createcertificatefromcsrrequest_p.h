@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECERTIFICATEFROMCSRREQUEST_P_H
 #define QTAWS_CREATECERTIFICATEFROMCSRREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "createcertificatefromcsrrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class CreateCertificateFromCsrRequest;
 
-class QTAWS_EXPORT CreateCertificateFromCsrRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT CreateCertificateFromCsrRequestPrivate : public IoTRequestPrivate {
 
 public:
     CreateCertificateFromCsrRequestPrivate(const IoT::Action action,

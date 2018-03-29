@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEVOLUMESREQUEST_P_H
 #define QTAWS_DESCRIBEVOLUMESREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "describevolumesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DescribeVolumesRequest;
 
-class QTAWS_EXPORT DescribeVolumesRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DescribeVolumesRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DescribeVolumesRequestPrivate(const OpsWorks::Action action,

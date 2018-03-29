@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEINSTANCEREQUEST_P_H
 #define QTAWS_CREATEINSTANCEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "createinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class CreateInstanceRequest;
 
-class QTAWS_EXPORT CreateInstanceRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT CreateInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     CreateInstanceRequestPrivate(const OpsWorks::Action action,

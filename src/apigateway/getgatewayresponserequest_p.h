@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETGATEWAYRESPONSEREQUEST_P_H
 #define QTAWS_GETGATEWAYRESPONSEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "getgatewayresponserequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetGatewayResponseRequest;
 
-class QTAWS_EXPORT GetGatewayResponseRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetGatewayResponseRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetGatewayResponseRequestPrivate(const APIGateway::Action action,

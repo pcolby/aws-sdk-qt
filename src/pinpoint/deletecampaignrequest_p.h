@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECAMPAIGNREQUEST_P_H
 #define QTAWS_DELETECAMPAIGNREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "deletecampaignrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class DeleteCampaignRequest;
 
-class QTAWS_EXPORT DeleteCampaignRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT DeleteCampaignRequestPrivate : public PinpointRequestPrivate {
 
 public:
     DeleteCampaignRequestPrivate(const Pinpoint::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTORGANIZATIONSREQUEST_P_H
 #define QTAWS_LISTORGANIZATIONSREQUEST_P_H
 
-#include "workmail_p.h"
+#include "workmailrequest_p.h"
 #include "listorganizationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class ListOrganizationsRequest;
 
-class QTAWS_EXPORT ListOrganizationsRequestPrivate : public WorkMailPrivate {
+class QTAWS_EXPORT ListOrganizationsRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     ListOrganizationsRequestPrivate(const WorkMail::Action action,

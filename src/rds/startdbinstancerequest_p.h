@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTDBINSTANCEREQUEST_P_H
 #define QTAWS_STARTDBINSTANCEREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "startdbinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class StartDBInstanceRequest;
 
-class QTAWS_EXPORT StartDBInstanceRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT StartDBInstanceRequestPrivate : public RDSRequestPrivate {
 
 public:
     StartDBInstanceRequestPrivate(const RDS::Action action,

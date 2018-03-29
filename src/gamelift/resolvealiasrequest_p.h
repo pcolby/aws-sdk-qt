@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESOLVEALIASREQUEST_P_H
 #define QTAWS_RESOLVEALIASREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "resolvealiasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class ResolveAliasRequest;
 
-class QTAWS_EXPORT ResolveAliasRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT ResolveAliasRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     ResolveAliasRequestPrivate(const GameLift::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTHINGPRINCIPALSREQUEST_P_H
 #define QTAWS_LISTTHINGPRINCIPALSREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "listthingprincipalsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListThingPrincipalsRequest;
 
-class QTAWS_EXPORT ListThingPrincipalsRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT ListThingPrincipalsRequestPrivate : public IoTRequestPrivate {
 
 public:
     ListThingPrincipalsRequestPrivate(const IoT::Action action,

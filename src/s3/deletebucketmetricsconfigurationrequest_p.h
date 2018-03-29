@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBUCKETMETRICSCONFIGURATIONREQUEST_P_H
 #define QTAWS_DELETEBUCKETMETRICSCONFIGURATIONREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "deletebucketmetricsconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class DeleteBucketMetricsConfigurationRequest;
 
-class QTAWS_EXPORT DeleteBucketMetricsConfigurationRequestPrivate : public S3Private {
+class QTAWS_EXPORT DeleteBucketMetricsConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
     DeleteBucketMetricsConfigurationRequestPrivate(const S3::Action action,

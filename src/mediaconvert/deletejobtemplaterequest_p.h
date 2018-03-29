@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEJOBTEMPLATEREQUEST_P_H
 #define QTAWS_DELETEJOBTEMPLATEREQUEST_P_H
 
-#include "mediaconvert_p.h"
+#include "mediaconvertrequest_p.h"
 #include "deletejobtemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class DeleteJobTemplateRequest;
 
-class QTAWS_EXPORT DeleteJobTemplateRequestPrivate : public MediaConvertPrivate {
+class QTAWS_EXPORT DeleteJobTemplateRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     DeleteJobTemplateRequestPrivate(const MediaConvert::Action action,

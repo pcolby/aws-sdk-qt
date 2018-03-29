@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATELAUNCHTEMPLATEVERSIONREQUEST_P_H
 #define QTAWS_CREATELAUNCHTEMPLATEVERSIONREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "createlaunchtemplateversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateLaunchTemplateVersionRequest;
 
-class QTAWS_EXPORT CreateLaunchTemplateVersionRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CreateLaunchTemplateVersionRequestPrivate : public EC2RequestPrivate {
 
 public:
     CreateLaunchTemplateVersionRequestPrivate(const EC2::Action action,

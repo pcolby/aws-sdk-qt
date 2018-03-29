@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCEREQUEST_P_H
 #define QTAWS_REMOVETAGSFROMRESOURCEREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "removetagsfromresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class RemoveTagsFromResourceRequest;
 
-class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     RemoveTagsFromResourceRequestPrivate(const DirectoryService::Action action,

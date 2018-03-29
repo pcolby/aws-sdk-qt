@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEAPPLICATIONREQUEST_P_H
 #define QTAWS_CREATEAPPLICATIONREQUEST_P_H
 
-#include "applicationdiscoveryservice_p.h"
+#include "applicationdiscoveryservicerequest_p.h"
 #include "createapplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class CreateApplicationRequest;
 
-class QTAWS_EXPORT CreateApplicationRequestPrivate : public ApplicationDiscoveryServicePrivate {
+class QTAWS_EXPORT CreateApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
     CreateApplicationRequestPrivate(const ApplicationDiscoveryService::Action action,

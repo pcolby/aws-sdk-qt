@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATHENAREQUEST_P_H
 #define QTAWS_ATHENAREQUEST_P_H
 
-#include "athena_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "athenarequest.h"
 
 namespace QtAws {

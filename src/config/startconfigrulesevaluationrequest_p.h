@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTCONFIGRULESEVALUATIONREQUEST_P_H
 #define QTAWS_STARTCONFIGRULESEVALUATIONREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "startconfigrulesevaluationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class StartConfigRulesEvaluationRequest;
 
-class QTAWS_EXPORT StartConfigRulesEvaluationRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT StartConfigRulesEvaluationRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     StartConfigRulesEvaluationRequestPrivate(const ConfigService::Action action,

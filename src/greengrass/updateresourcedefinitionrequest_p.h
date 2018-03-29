@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATERESOURCEDEFINITIONREQUEST_P_H
 #define QTAWS_UPDATERESOURCEDEFINITIONREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "updateresourcedefinitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class UpdateResourceDefinitionRequest;
 
-class QTAWS_EXPORT UpdateResourceDefinitionRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT UpdateResourceDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     UpdateResourceDefinitionRequestPrivate(const Greengrass::Action action,

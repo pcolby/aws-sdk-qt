@@ -20,7 +20,7 @@
 #ifndef QTAWS_XRAYREQUEST_P_H
 #define QTAWS_XRAYREQUEST_P_H
 
-#include "xray_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "xrayrequest.h"
 
 namespace QtAws {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEOBJECTREQUEST_P_H
 #define QTAWS_DESCRIBEOBJECTREQUEST_P_H
 
-#include "mediastoredata_p.h"
+#include "mediastoredatarequest_p.h"
 #include "describeobjectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaStoreData {
 
 class DescribeObjectRequest;
 
-class QTAWS_EXPORT DescribeObjectRequestPrivate : public MediaStoreDataPrivate {
+class QTAWS_EXPORT DescribeObjectRequestPrivate : public MediaStoreDataRequestPrivate {
 
 public:
     DescribeObjectRequestPrivate(const MediaStoreData::Action action,

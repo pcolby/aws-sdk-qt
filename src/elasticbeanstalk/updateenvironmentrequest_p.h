@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEENVIRONMENTREQUEST_P_H
 #define QTAWS_UPDATEENVIRONMENTREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "updateenvironmentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class UpdateEnvironmentRequest;
 
-class QTAWS_EXPORT UpdateEnvironmentRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT UpdateEnvironmentRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     UpdateEnvironmentRequestPrivate(const ElasticBeanstalk::Action action,

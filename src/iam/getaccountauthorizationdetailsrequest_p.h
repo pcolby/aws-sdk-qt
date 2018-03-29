@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETACCOUNTAUTHORIZATIONDETAILSREQUEST_P_H
 #define QTAWS_GETACCOUNTAUTHORIZATIONDETAILSREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "getaccountauthorizationdetailsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetAccountAuthorizationDetailsRequest;
 
-class QTAWS_EXPORT GetAccountAuthorizationDetailsRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT GetAccountAuthorizationDetailsRequestPrivate : public IAMRequestPrivate {
 
 public:
     GetAccountAuthorizationDetailsRequestPrivate(const IAM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTEMPLATESREQUEST_P_H
 #define QTAWS_LISTTEMPLATESREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "listtemplatesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class ListTemplatesRequest;
 
-class QTAWS_EXPORT ListTemplatesRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT ListTemplatesRequestPrivate : public SESRequestPrivate {
 
 public:
     ListTemplatesRequestPrivate(const SES::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEREGISTERINSTANCEREQUEST_P_H
 #define QTAWS_DEREGISTERINSTANCEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "deregisterinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DeregisterInstanceRequest;
 
-class QTAWS_EXPORT DeregisterInstanceRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DeregisterInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DeregisterInstanceRequestPrivate(const OpsWorks::Action action,

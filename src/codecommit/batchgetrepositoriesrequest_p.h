@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHGETREPOSITORIESREQUEST_P_H
 #define QTAWS_BATCHGETREPOSITORIESREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "batchgetrepositoriesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class BatchGetRepositoriesRequest;
 
-class QTAWS_EXPORT BatchGetRepositoriesRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT BatchGetRepositoriesRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     BatchGetRepositoriesRequestPrivate(const CodeCommit::Action action,

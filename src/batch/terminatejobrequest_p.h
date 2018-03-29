@@ -20,7 +20,7 @@
 #ifndef QTAWS_TERMINATEJOBREQUEST_P_H
 #define QTAWS_TERMINATEJOBREQUEST_P_H
 
-#include "batch_p.h"
+#include "batchrequest_p.h"
 #include "terminatejobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Batch {
 
 class TerminateJobRequest;
 
-class QTAWS_EXPORT TerminateJobRequestPrivate : public BatchPrivate {
+class QTAWS_EXPORT TerminateJobRequestPrivate : public BatchRequestPrivate {
 
 public:
     TerminateJobRequestPrivate(const Batch::Action action,

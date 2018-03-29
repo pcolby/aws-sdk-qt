@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEORGANIZATIONALUNITREQUEST_P_H
 #define QTAWS_CREATEORGANIZATIONALUNITREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "createorganizationalunitrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class CreateOrganizationalUnitRequest;
 
-class QTAWS_EXPORT CreateOrganizationalUnitRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT CreateOrganizationalUnitRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     CreateOrganizationalUnitRequestPrivate(const Organizations::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSHARDITERATORREQUEST_P_H
 #define QTAWS_GETSHARDITERATORREQUEST_P_H
 
-#include "kinesis_p.h"
+#include "kinesisrequest_p.h"
 #include "getsharditeratorrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class GetShardIteratorRequest;
 
-class QTAWS_EXPORT GetShardIteratorRequestPrivate : public KinesisPrivate {
+class QTAWS_EXPORT GetShardIteratorRequestPrivate : public KinesisRequestPrivate {
 
 public:
     GetShardIteratorRequestPrivate(const Kinesis::Action action,

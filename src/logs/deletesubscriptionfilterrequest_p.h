@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONFILTERREQUEST_P_H
 #define QTAWS_DELETESUBSCRIPTIONFILTERREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "deletesubscriptionfilterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DeleteSubscriptionFilterRequest;
 
-class QTAWS_EXPORT DeleteSubscriptionFilterRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT DeleteSubscriptionFilterRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DeleteSubscriptionFilterRequestPrivate(const CloudWatchLogs::Action action,

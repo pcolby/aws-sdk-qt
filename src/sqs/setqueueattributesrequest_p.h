@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETQUEUEATTRIBUTESREQUEST_P_H
 #define QTAWS_SETQUEUEATTRIBUTESREQUEST_P_H
 
-#include "sqs_p.h"
+#include "sqsrequest_p.h"
 #include "setqueueattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SQS {
 
 class SetQueueAttributesRequest;
 
-class QTAWS_EXPORT SetQueueAttributesRequestPrivate : public SQSPrivate {
+class QTAWS_EXPORT SetQueueAttributesRequestPrivate : public SQSRequestPrivate {
 
 public:
     SetQueueAttributesRequestPrivate(const SQS::Action action,

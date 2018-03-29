@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATERULEREQUEST_P_H
 #define QTAWS_UPDATERULEREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "updaterulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class UpdateRuleRequest;
 
-class QTAWS_EXPORT UpdateRuleRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT UpdateRuleRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     UpdateRuleRequestPrivate(const WAFRegional::Action action,

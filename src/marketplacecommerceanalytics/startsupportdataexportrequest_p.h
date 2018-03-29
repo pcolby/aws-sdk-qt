@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTSUPPORTDATAEXPORTREQUEST_P_H
 #define QTAWS_STARTSUPPORTDATAEXPORTREQUEST_P_H
 
-#include "marketplacecommerceanalytics_p.h"
+#include "marketplacecommerceanalyticsrequest_p.h"
 #include "startsupportdataexportrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MarketplaceCommerceAnalytics {
 
 class StartSupportDataExportRequest;
 
-class QTAWS_EXPORT StartSupportDataExportRequestPrivate : public MarketplaceCommerceAnalyticsPrivate {
+class QTAWS_EXPORT StartSupportDataExportRequestPrivate : public MarketplaceCommerceAnalyticsRequestPrivate {
 
 public:
     StartSupportDataExportRequestPrivate(const MarketplaceCommerceAnalytics::Action action,

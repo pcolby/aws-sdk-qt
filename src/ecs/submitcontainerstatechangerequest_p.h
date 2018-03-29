@@ -20,7 +20,7 @@
 #ifndef QTAWS_SUBMITCONTAINERSTATECHANGEREQUEST_P_H
 #define QTAWS_SUBMITCONTAINERSTATECHANGEREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "submitcontainerstatechangerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class SubmitContainerStateChangeRequest;
 
-class QTAWS_EXPORT SubmitContainerStateChangeRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT SubmitContainerStateChangeRequestPrivate : public ECSRequestPrivate {
 
 public:
     SubmitContainerStateChangeRequestPrivate(const ECS::Action action,

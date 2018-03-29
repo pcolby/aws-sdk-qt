@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTUSERSINGROUPREQUEST_P_H
 #define QTAWS_LISTUSERSINGROUPREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "listusersingrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class ListUsersInGroupRequest;
 
-class QTAWS_EXPORT ListUsersInGroupRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT ListUsersInGroupRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     ListUsersInGroupRequestPrivate(const CognitoIdentityProvider::Action action,

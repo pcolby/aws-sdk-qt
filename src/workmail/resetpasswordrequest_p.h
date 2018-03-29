@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESETPASSWORDREQUEST_P_H
 #define QTAWS_RESETPASSWORDREQUEST_P_H
 
-#include "workmail_p.h"
+#include "workmailrequest_p.h"
 #include "resetpasswordrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class ResetPasswordRequest;
 
-class QTAWS_EXPORT ResetPasswordRequestPrivate : public WorkMailPrivate {
+class QTAWS_EXPORT ResetPasswordRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     ResetPasswordRequestPrivate(const WorkMail::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYLAUNCHTEMPLATEREQUEST_P_H
 #define QTAWS_MODIFYLAUNCHTEMPLATEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "modifylaunchtemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyLaunchTemplateRequest;
 
-class QTAWS_EXPORT ModifyLaunchTemplateRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ModifyLaunchTemplateRequestPrivate : public EC2RequestPrivate {
 
 public:
     ModifyLaunchTemplateRequestPrivate(const EC2::Action action,

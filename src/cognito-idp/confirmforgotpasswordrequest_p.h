@@ -20,7 +20,7 @@
 #ifndef QTAWS_CONFIRMFORGOTPASSWORDREQUEST_P_H
 #define QTAWS_CONFIRMFORGOTPASSWORDREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "confirmforgotpasswordrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class ConfirmForgotPasswordRequest;
 
-class QTAWS_EXPORT ConfirmForgotPasswordRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT ConfirmForgotPasswordRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     ConfirmForgotPasswordRequestPrivate(const CognitoIdentityProvider::Action action,

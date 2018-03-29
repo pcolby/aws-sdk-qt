@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSHARDSREQUEST_P_H
 #define QTAWS_LISTSHARDSREQUEST_P_H
 
-#include "kinesis_p.h"
+#include "kinesisrequest_p.h"
 #include "listshardsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class ListShardsRequest;
 
-class QTAWS_EXPORT ListShardsRequestPrivate : public KinesisPrivate {
+class QTAWS_EXPORT ListShardsRequestPrivate : public KinesisRequestPrivate {
 
 public:
     ListShardsRequestPrivate(const Kinesis::Action action,

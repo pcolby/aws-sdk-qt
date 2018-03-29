@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public SSMRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const SSM::Action action,

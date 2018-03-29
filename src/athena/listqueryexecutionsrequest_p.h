@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTQUERYEXECUTIONSREQUEST_P_H
 #define QTAWS_LISTQUERYEXECUTIONSREQUEST_P_H
 
-#include "athena_p.h"
+#include "athenarequest_p.h"
 #include "listqueryexecutionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Athena {
 
 class ListQueryExecutionsRequest;
 
-class QTAWS_EXPORT ListQueryExecutionsRequestPrivate : public AthenaPrivate {
+class QTAWS_EXPORT ListQueryExecutionsRequestPrivate : public AthenaRequestPrivate {
 
 public:
     ListQueryExecutionsRequestPrivate(const Athena::Action action,

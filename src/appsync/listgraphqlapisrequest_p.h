@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTGRAPHQLAPISREQUEST_P_H
 #define QTAWS_LISTGRAPHQLAPISREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "listgraphqlapisrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class ListGraphqlApisRequest;
 
-class QTAWS_EXPORT ListGraphqlApisRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT ListGraphqlApisRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     ListGraphqlApisRequestPrivate(const AppSync::Action action,

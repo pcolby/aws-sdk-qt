@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSOCIATEKMSKEYREQUEST_P_H
 #define QTAWS_ASSOCIATEKMSKEYREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "associatekmskeyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class AssociateKmsKeyRequest;
 
-class QTAWS_EXPORT AssociateKmsKeyRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT AssociateKmsKeyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     AssociateKmsKeyRequestPrivate(const CloudWatchLogs::Action action,

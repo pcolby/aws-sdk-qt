@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYCACHESUBNETGROUPREQUEST_P_H
 #define QTAWS_MODIFYCACHESUBNETGROUPREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "modifycachesubnetgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class ModifyCacheSubnetGroupRequest;
 
-class QTAWS_EXPORT ModifyCacheSubnetGroupRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT ModifyCacheSubnetGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     ModifyCacheSubnetGroupRequestPrivate(const ElastiCache::Action action,

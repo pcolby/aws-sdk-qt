@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETSTATUSREQUEST_P_H
 #define QTAWS_SETSTATUSREQUEST_P_H
 
-#include "datapipeline_p.h"
+#include "datapipelinerequest_p.h"
 #include "setstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class SetStatusRequest;
 
-class QTAWS_EXPORT SetStatusRequestPrivate : public DataPipelinePrivate {
+class QTAWS_EXPORT SetStatusRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     SetStatusRequestPrivate(const DataPipeline::Action action,

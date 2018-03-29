@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDAPPLICATIONINPUTREQUEST_P_H
 #define QTAWS_ADDAPPLICATIONINPUTREQUEST_P_H
 
-#include "kinesisanalytics_p.h"
+#include "kinesisanalyticsrequest_p.h"
 #include "addapplicationinputrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class AddApplicationInputRequest;
 
-class QTAWS_EXPORT AddApplicationInputRequestPrivate : public KinesisAnalyticsPrivate {
+class QTAWS_EXPORT AddApplicationInputRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
     AddApplicationInputRequestPrivate(const KinesisAnalytics::Action action,

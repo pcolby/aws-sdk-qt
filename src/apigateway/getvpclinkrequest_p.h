@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETVPCLINKREQUEST_P_H
 #define QTAWS_GETVPCLINKREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "getvpclinkrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetVpcLinkRequest;
 
-class QTAWS_EXPORT GetVpcLinkRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetVpcLinkRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetVpcLinkRequestPrivate(const APIGateway::Action action,

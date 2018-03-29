@@ -20,7 +20,7 @@
 #ifndef QTAWS_REQUESTSPOTFLEETREQUEST_P_H
 #define QTAWS_REQUESTSPOTFLEETREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "requestspotfleetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class RequestSpotFleetRequest;
 
-class QTAWS_EXPORT RequestSpotFleetRequestPrivate : public EC2Private {
+class QTAWS_EXPORT RequestSpotFleetRequestPrivate : public EC2RequestPrivate {
 
 public:
     RequestSpotFleetRequestPrivate(const EC2::Action action,

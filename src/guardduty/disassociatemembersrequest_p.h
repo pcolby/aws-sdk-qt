@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEMEMBERSREQUEST_P_H
 #define QTAWS_DISASSOCIATEMEMBERSREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "disassociatemembersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DisassociateMembersRequest;
 
-class QTAWS_EXPORT DisassociateMembersRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT DisassociateMembersRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     DisassociateMembersRequestPrivate(const GuardDuty::Action action,

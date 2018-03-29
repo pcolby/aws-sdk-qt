@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDBSNAPSHOTREQUEST_P_H
 #define QTAWS_CREATEDBSNAPSHOTREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "createdbsnapshotrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class CreateDBSnapshotRequest;
 
-class QTAWS_EXPORT CreateDBSnapshotRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT CreateDBSnapshotRequestPrivate : public RDSRequestPrivate {
 
 public:
     CreateDBSnapshotRequestPrivate(const RDS::Action action,

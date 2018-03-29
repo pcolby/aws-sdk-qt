@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETREUSABLEDELEGATIONSETREQUEST_P_H
 #define QTAWS_GETREUSABLEDELEGATIONSETREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "getreusabledelegationsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetReusableDelegationSetRequest;
 
-class QTAWS_EXPORT GetReusableDelegationSetRequestPrivate : public Route53Private {
+class QTAWS_EXPORT GetReusableDelegationSetRequestPrivate : public Route53RequestPrivate {
 
 public:
     GetReusableDelegationSetRequestPrivate(const Route53::Action action,

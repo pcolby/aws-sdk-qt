@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATETABLEREQUEST_P_H
 #define QTAWS_UPDATETABLEREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "updatetablerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class UpdateTableRequest;
 
-class QTAWS_EXPORT UpdateTableRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT UpdateTableRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     UpdateTableRequestPrivate(const DynamoDB::Action action,

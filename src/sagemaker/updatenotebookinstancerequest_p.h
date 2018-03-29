@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATENOTEBOOKINSTANCEREQUEST_P_H
 #define QTAWS_UPDATENOTEBOOKINSTANCEREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "updatenotebookinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class UpdateNotebookInstanceRequest;
 
-class QTAWS_EXPORT UpdateNotebookInstanceRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT UpdateNotebookInstanceRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     UpdateNotebookInstanceRequestPrivate(const SageMaker::Action action,

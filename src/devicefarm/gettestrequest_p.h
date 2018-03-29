@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTESTREQUEST_P_H
 #define QTAWS_GETTESTREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "gettestrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetTestRequest;
 
-class QTAWS_EXPORT GetTestRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT GetTestRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     GetTestRequestPrivate(const DeviceFarm::Action action,

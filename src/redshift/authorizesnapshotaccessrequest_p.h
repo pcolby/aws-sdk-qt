@@ -20,7 +20,7 @@
 #ifndef QTAWS_AUTHORIZESNAPSHOTACCESSREQUEST_P_H
 #define QTAWS_AUTHORIZESNAPSHOTACCESSREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "authorizesnapshotaccessrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class AuthorizeSnapshotAccessRequest;
 
-class QTAWS_EXPORT AuthorizeSnapshotAccessRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT AuthorizeSnapshotAccessRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     AuthorizeSnapshotAccessRequestPrivate(const Redshift::Action action,

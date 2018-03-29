@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATETYPEREQUEST_P_H
 #define QTAWS_CREATETYPEREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "createtyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class CreateTypeRequest;
 
-class QTAWS_EXPORT CreateTypeRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT CreateTypeRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     CreateTypeRequestPrivate(const AppSync::Action action,

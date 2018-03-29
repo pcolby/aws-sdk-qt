@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECOMPUTEENVIRONMENTREQUEST_P_H
 #define QTAWS_UPDATECOMPUTEENVIRONMENTREQUEST_P_H
 
-#include "batch_p.h"
+#include "batchrequest_p.h"
 #include "updatecomputeenvironmentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Batch {
 
 class UpdateComputeEnvironmentRequest;
 
-class QTAWS_EXPORT UpdateComputeEnvironmentRequestPrivate : public BatchPrivate {
+class QTAWS_EXPORT UpdateComputeEnvironmentRequestPrivate : public BatchRequestPrivate {
 
 public:
     UpdateComputeEnvironmentRequestPrivate(const Batch::Action action,

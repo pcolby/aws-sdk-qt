@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEUSERREQUEST_P_H
 #define QTAWS_DELETEUSERREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "deleteuserrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DeleteUserRequest;
 
-class QTAWS_EXPORT DeleteUserRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT DeleteUserRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DeleteUserRequestPrivate(const WorkDocs::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEROLEFROMGROUPREQUEST_P_H
 #define QTAWS_DISASSOCIATEROLEFROMGROUPREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "disassociaterolefromgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class DisassociateRoleFromGroupRequest;
 
-class QTAWS_EXPORT DisassociateRoleFromGroupRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT DisassociateRoleFromGroupRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     DisassociateRoleFromGroupRequestPrivate(const Greengrass::Action action,

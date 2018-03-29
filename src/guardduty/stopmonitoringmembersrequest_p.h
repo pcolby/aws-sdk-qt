@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPMONITORINGMEMBERSREQUEST_P_H
 #define QTAWS_STOPMONITORINGMEMBERSREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "stopmonitoringmembersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class StopMonitoringMembersRequest;
 
-class QTAWS_EXPORT StopMonitoringMembersRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT StopMonitoringMembersRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     StopMonitoringMembersRequestPrivate(const GuardDuty::Action action,

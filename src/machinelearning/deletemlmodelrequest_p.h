@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEMLMODELREQUEST_P_H
 #define QTAWS_DELETEMLMODELREQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "deletemlmodelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class DeleteMLModelRequest;
 
-class QTAWS_EXPORT DeleteMLModelRequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT DeleteMLModelRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     DeleteMLModelRequestPrivate(const MachineLearning::Action action,

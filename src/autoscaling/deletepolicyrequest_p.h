@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPOLICYREQUEST_P_H
 #define QTAWS_DELETEPOLICYREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "deletepolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DeletePolicyRequest;
 
-class QTAWS_EXPORT DeletePolicyRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT DeletePolicyRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DeletePolicyRequestPrivate(const AutoScaling::Action action,

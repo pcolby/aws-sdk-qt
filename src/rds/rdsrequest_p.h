@@ -20,7 +20,7 @@
 #ifndef QTAWS_RDSREQUEST_P_H
 #define QTAWS_RDSREQUEST_P_H
 
-#include "rds_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "rdsrequest.h"
 
 namespace QtAws {

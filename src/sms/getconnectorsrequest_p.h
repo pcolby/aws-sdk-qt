@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCONNECTORSREQUEST_P_H
 #define QTAWS_GETCONNECTORSREQUEST_P_H
 
-#include "sms_p.h"
+#include "smsrequest_p.h"
 #include "getconnectorsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SMS {
 
 class GetConnectorsRequest;
 
-class QTAWS_EXPORT GetConnectorsRequestPrivate : public SMSPrivate {
+class QTAWS_EXPORT GetConnectorsRequestPrivate : public SMSRequestPrivate {
 
 public:
     GetConnectorsRequestPrivate(const SMS::Action action,

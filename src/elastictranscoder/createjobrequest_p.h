@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEJOBREQUEST_P_H
 #define QTAWS_CREATEJOBREQUEST_P_H
 
-#include "elastictranscoder_p.h"
+#include "elastictranscoderrequest_p.h"
 #include "createjobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class CreateJobRequest;
 
-class QTAWS_EXPORT CreateJobRequestPrivate : public ElasticTranscoderPrivate {
+class QTAWS_EXPORT CreateJobRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     CreateJobRequestPrivate(const ElasticTranscoder::Action action,

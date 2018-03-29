@@ -20,7 +20,7 @@
 #ifndef QTAWS_INITIATEDOCUMENTVERSIONUPLOADREQUEST_P_H
 #define QTAWS_INITIATEDOCUMENTVERSIONUPLOADREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "initiatedocumentversionuploadrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class InitiateDocumentVersionUploadRequest;
 
-class QTAWS_EXPORT InitiateDocumentVersionUploadRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT InitiateDocumentVersionUploadRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     InitiateDocumentVersionUploadRequestPrivate(const WorkDocs::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEQUALIFICATIONTYPEREQUEST_P_H
 #define QTAWS_DELETEQUALIFICATIONTYPEREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "deletequalificationtyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class DeleteQualificationTypeRequest;
 
-class QTAWS_EXPORT DeleteQualificationTypeRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT DeleteQualificationTypeRequestPrivate : public MTurkRequestPrivate {
 
 public:
     DeleteQualificationTypeRequestPrivate(const MTurk::Action action,

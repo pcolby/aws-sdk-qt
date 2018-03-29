@@ -20,7 +20,7 @@
 #ifndef QTAWS_SEARCHPROVISIONEDPRODUCTSREQUEST_P_H
 #define QTAWS_SEARCHPROVISIONEDPRODUCTSREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "searchprovisionedproductsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class SearchProvisionedProductsRequest;
 
-class QTAWS_EXPORT SearchProvisionedProductsRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT SearchProvisionedProductsRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     SearchProvisionedProductsRequestPrivate(const ServiceCatalog::Action action,

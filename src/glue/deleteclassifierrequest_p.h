@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECLASSIFIERREQUEST_P_H
 #define QTAWS_DELETECLASSIFIERREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "deleteclassifierrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteClassifierRequest;
 
-class QTAWS_EXPORT DeleteClassifierRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT DeleteClassifierRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteClassifierRequestPrivate(const Glue::Action action,

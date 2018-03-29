@@ -20,7 +20,7 @@
 #ifndef QTAWS_LIGHTSAILREQUEST_P_H
 #define QTAWS_LIGHTSAILREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "lightsailrequest.h"
 
 namespace QtAws {

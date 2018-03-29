@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETBYTEMATCHSETREQUEST_P_H
 #define QTAWS_GETBYTEMATCHSETREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "getbytematchsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class GetByteMatchSetRequest;
 
-class QTAWS_EXPORT GetByteMatchSetRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT GetByteMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
     GetByteMatchSetRequestPrivate(const WAF::Action action,

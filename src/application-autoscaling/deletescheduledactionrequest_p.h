@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESCHEDULEDACTIONREQUEST_P_H
 #define QTAWS_DELETESCHEDULEDACTIONREQUEST_P_H
 
-#include "applicationautoscaling_p.h"
+#include "applicationautoscalingrequest_p.h"
 #include "deletescheduledactionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 
 class DeleteScheduledActionRequest;
 
-class QTAWS_EXPORT DeleteScheduledActionRequestPrivate : public ApplicationAutoScalingPrivate {
+class QTAWS_EXPORT DeleteScheduledActionRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
     DeleteScheduledActionRequestPrivate(const ApplicationAutoScaling::Action action,

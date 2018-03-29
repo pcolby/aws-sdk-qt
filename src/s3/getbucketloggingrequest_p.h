@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETBUCKETLOGGINGREQUEST_P_H
 #define QTAWS_GETBUCKETLOGGINGREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "getbucketloggingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class GetBucketLoggingRequest;
 
-class QTAWS_EXPORT GetBucketLoggingRequestPrivate : public S3Private {
+class QTAWS_EXPORT GetBucketLoggingRequestPrivate : public S3RequestPrivate {
 
 public:
     GetBucketLoggingRequestPrivate(const S3::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATENODEREQUEST_P_H
 #define QTAWS_DISASSOCIATENODEREQUEST_P_H
 
-#include "opsworkscm_p.h"
+#include "opsworkscmrequest_p.h"
 #include "disassociatenoderequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class DisassociateNodeRequest;
 
-class QTAWS_EXPORT DisassociateNodeRequestPrivate : public OpsWorksCMPrivate {
+class QTAWS_EXPORT DisassociateNodeRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     DisassociateNodeRequestPrivate(const OpsWorksCM::Action action,

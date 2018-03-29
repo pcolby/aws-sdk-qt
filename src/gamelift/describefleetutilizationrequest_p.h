@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEFLEETUTILIZATIONREQUEST_P_H
 #define QTAWS_DESCRIBEFLEETUTILIZATIONREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "describefleetutilizationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribeFleetUtilizationRequest;
 
-class QTAWS_EXPORT DescribeFleetUtilizationRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT DescribeFleetUtilizationRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DescribeFleetUtilizationRequestPrivate(const GameLift::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEFILESYSTEMREQUEST_P_H
 #define QTAWS_DELETEFILESYSTEMREQUEST_P_H
 
-#include "efs_p.h"
+#include "efsrequest_p.h"
 #include "deletefilesystemrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EFS {
 
 class DeleteFileSystemRequest;
 
-class QTAWS_EXPORT DeleteFileSystemRequestPrivate : public EFSPrivate {
+class QTAWS_EXPORT DeleteFileSystemRequestPrivate : public EFSRequestPrivate {
 
 public:
     DeleteFileSystemRequestPrivate(const EFS::Action action,

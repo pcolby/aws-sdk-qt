@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPINSTANCEREQUEST_P_H
 #define QTAWS_STOPINSTANCEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "stopinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class StopInstanceRequest;
 
-class QTAWS_EXPORT StopInstanceRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT StopInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     StopInstanceRequestPrivate(const OpsWorks::Action action,

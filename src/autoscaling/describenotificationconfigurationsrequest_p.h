@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBENOTIFICATIONCONFIGURATIONSREQUEST_P_H
 #define QTAWS_DESCRIBENOTIFICATIONCONFIGURATIONSREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "describenotificationconfigurationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DescribeNotificationConfigurationsRequest;
 
-class QTAWS_EXPORT DescribeNotificationConfigurationsRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT DescribeNotificationConfigurationsRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DescribeNotificationConfigurationsRequestPrivate(const AutoScaling::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETJOBTEMPLATEREQUEST_P_H
 #define QTAWS_GETJOBTEMPLATEREQUEST_P_H
 
-#include "mediaconvert_p.h"
+#include "mediaconvertrequest_p.h"
 #include "getjobtemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class GetJobTemplateRequest;
 
-class QTAWS_EXPORT GetJobTemplateRequestPrivate : public MediaConvertPrivate {
+class QTAWS_EXPORT GetJobTemplateRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     GetJobTemplateRequestPrivate(const MediaConvert::Action action,

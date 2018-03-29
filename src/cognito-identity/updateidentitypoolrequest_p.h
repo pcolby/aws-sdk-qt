@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEIDENTITYPOOLREQUEST_P_H
 #define QTAWS_UPDATEIDENTITYPOOLREQUEST_P_H
 
-#include "cognitoidentity_p.h"
+#include "cognitoidentityrequest_p.h"
 #include "updateidentitypoolrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class UpdateIdentityPoolRequest;
 
-class QTAWS_EXPORT UpdateIdentityPoolRequestPrivate : public CognitoIdentityPrivate {
+class QTAWS_EXPORT UpdateIdentityPoolRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     UpdateIdentityPoolRequestPrivate(const CognitoIdentity::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETERECEIPTFILTERREQUEST_P_H
 #define QTAWS_DELETERECEIPTFILTERREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "deletereceiptfilterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class DeleteReceiptFilterRequest;
 
-class QTAWS_EXPORT DeleteReceiptFilterRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT DeleteReceiptFilterRequestPrivate : public SESRequestPrivate {
 
 public:
     DeleteReceiptFilterRequestPrivate(const SES::Action action,

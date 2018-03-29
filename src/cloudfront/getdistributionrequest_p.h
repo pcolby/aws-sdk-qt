@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDISTRIBUTIONREQUEST_P_H
 #define QTAWS_GETDISTRIBUTIONREQUEST_P_H
 
-#include "cloudfront_p.h"
+#include "cloudfrontrequest_p.h"
 #include "getdistributionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class GetDistributionRequest;
 
-class QTAWS_EXPORT GetDistributionRequestPrivate : public CloudFrontPrivate {
+class QTAWS_EXPORT GetDistributionRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     GetDistributionRequestPrivate(const CloudFront::Action action,

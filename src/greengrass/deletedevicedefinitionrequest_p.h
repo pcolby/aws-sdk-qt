@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDEVICEDEFINITIONREQUEST_P_H
 #define QTAWS_DELETEDEVICEDEFINITIONREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "deletedevicedefinitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class DeleteDeviceDefinitionRequest;
 
-class QTAWS_EXPORT DeleteDeviceDefinitionRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT DeleteDeviceDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     DeleteDeviceDefinitionRequestPrivate(const Greengrass::Action action,

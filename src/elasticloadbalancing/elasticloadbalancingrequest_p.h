@@ -20,7 +20,7 @@
 #ifndef QTAWS_ELASTICLOADBALANCINGREQUEST_P_H
 #define QTAWS_ELASTICLOADBALANCINGREQUEST_P_H
 
-#include "elasticloadbalancing_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "elasticloadbalancingrequest.h"
 
 namespace QtAws {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPROVISIONINGARTIFACTREQUEST_P_H
 #define QTAWS_DELETEPROVISIONINGARTIFACTREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "deleteprovisioningartifactrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DeleteProvisioningArtifactRequest;
 
-class QTAWS_EXPORT DeleteProvisioningArtifactRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT DeleteProvisioningArtifactRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DeleteProvisioningArtifactRequestPrivate(const ServiceCatalog::Action action,

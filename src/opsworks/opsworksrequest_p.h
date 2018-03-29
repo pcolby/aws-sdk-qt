@@ -20,7 +20,7 @@
 #ifndef QTAWS_OPSWORKSREQUEST_P_H
 #define QTAWS_OPSWORKSREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "opsworksrequest.h"
 
 namespace QtAws {

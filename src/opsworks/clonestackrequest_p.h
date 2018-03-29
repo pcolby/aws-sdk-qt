@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLONESTACKREQUEST_P_H
 #define QTAWS_CLONESTACKREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "clonestackrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class CloneStackRequest;
 
-class QTAWS_EXPORT CloneStackRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT CloneStackRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     CloneStackRequestPrivate(const OpsWorks::Action action,

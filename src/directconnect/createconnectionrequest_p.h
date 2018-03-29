@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECONNECTIONREQUEST_P_H
 #define QTAWS_CREATECONNECTIONREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "createconnectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class CreateConnectionRequest;
 
-class QTAWS_EXPORT CreateConnectionRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT CreateConnectionRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     CreateConnectionRequestPrivate(const DirectConnect::Action action,

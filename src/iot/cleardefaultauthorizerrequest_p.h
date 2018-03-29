@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLEARDEFAULTAUTHORIZERREQUEST_P_H
 #define QTAWS_CLEARDEFAULTAUTHORIZERREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "cleardefaultauthorizerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class ClearDefaultAuthorizerRequest;
 
-class QTAWS_EXPORT ClearDefaultAuthorizerRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT ClearDefaultAuthorizerRequestPrivate : public IoTRequestPrivate {
 
 public:
     ClearDefaultAuthorizerRequestPrivate(const IoT::Action action,

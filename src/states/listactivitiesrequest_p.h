@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTACTIVITIESREQUEST_P_H
 #define QTAWS_LISTACTIVITIESREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "listactivitiesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class ListActivitiesRequest;
 
-class QTAWS_EXPORT ListActivitiesRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT ListActivitiesRequestPrivate : public SFNRequestPrivate {
 
 public:
     ListActivitiesRequestPrivate(const SFN::Action action,

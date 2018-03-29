@@ -20,7 +20,7 @@
 #ifndef QTAWS_WORKMAILREQUEST_P_H
 #define QTAWS_WORKMAILREQUEST_P_H
 
-#include "workmail_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "workmailrequest.h"
 
 namespace QtAws {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDBINSTANCEREADREPLICAREQUEST_P_H
 #define QTAWS_CREATEDBINSTANCEREADREPLICAREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "createdbinstancereadreplicarequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class CreateDBInstanceReadReplicaRequest;
 
-class QTAWS_EXPORT CreateDBInstanceReadReplicaRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT CreateDBInstanceReadReplicaRequestPrivate : public RDSRequestPrivate {
 
 public:
     CreateDBInstanceReadReplicaRequestPrivate(const RDS::Action action,

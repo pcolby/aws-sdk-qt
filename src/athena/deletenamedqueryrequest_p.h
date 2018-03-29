@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETENAMEDQUERYREQUEST_P_H
 #define QTAWS_DELETENAMEDQUERYREQUEST_P_H
 
-#include "athena_p.h"
+#include "athenarequest_p.h"
 #include "deletenamedqueryrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Athena {
 
 class DeleteNamedQueryRequest;
 
-class QTAWS_EXPORT DeleteNamedQueryRequestPrivate : public AthenaPrivate {
+class QTAWS_EXPORT DeleteNamedQueryRequestPrivate : public AthenaRequestPrivate {
 
 public:
     DeleteNamedQueryRequestPrivate(const Athena::Action action,

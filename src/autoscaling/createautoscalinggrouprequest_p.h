@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEAUTOSCALINGGROUPREQUEST_P_H
 #define QTAWS_CREATEAUTOSCALINGGROUPREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "createautoscalinggrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class CreateAutoScalingGroupRequest;
 
-class QTAWS_EXPORT CreateAutoScalingGroupRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT CreateAutoScalingGroupRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     CreateAutoScalingGroupRequestPrivate(const AutoScaling::Action action,

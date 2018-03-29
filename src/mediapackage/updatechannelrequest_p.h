@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECHANNELREQUEST_P_H
 #define QTAWS_UPDATECHANNELREQUEST_P_H
 
-#include "mediapackage_p.h"
+#include "mediapackagerequest_p.h"
 #include "updatechannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaPackage {
 
 class UpdateChannelRequest;
 
-class QTAWS_EXPORT UpdateChannelRequestPrivate : public MediaPackagePrivate {
+class QTAWS_EXPORT UpdateChannelRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
     UpdateChannelRequestPrivate(const MediaPackage::Action action,

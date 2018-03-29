@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETTERMINATIONPROTECTIONREQUEST_P_H
 #define QTAWS_SETTERMINATIONPROTECTIONREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "setterminationprotectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class SetTerminationProtectionRequest;
 
-class QTAWS_EXPORT SetTerminationProtectionRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT SetTerminationProtectionRequestPrivate : public EMRRequestPrivate {
 
 public:
     SetTerminationProtectionRequestPrivate(const EMR::Action action,

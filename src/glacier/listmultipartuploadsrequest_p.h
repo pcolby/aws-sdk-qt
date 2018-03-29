@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTMULTIPARTUPLOADSREQUEST_P_H
 #define QTAWS_LISTMULTIPARTUPLOADSREQUEST_P_H
 
-#include "glacier_p.h"
+#include "glacierrequest_p.h"
 #include "listmultipartuploadsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glacier {
 
 class ListMultipartUploadsRequest;
 
-class QTAWS_EXPORT ListMultipartUploadsRequestPrivate : public GlacierPrivate {
+class QTAWS_EXPORT ListMultipartUploadsRequestPrivate : public GlacierRequestPrivate {
 
 public:
     ListMultipartUploadsRequestPrivate(const Glacier::Action action,

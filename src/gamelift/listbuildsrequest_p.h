@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTBUILDSREQUEST_P_H
 #define QTAWS_LISTBUILDSREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "listbuildsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class ListBuildsRequest;
 
-class QTAWS_EXPORT ListBuildsRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT ListBuildsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     ListBuildsRequestPrivate(const GameLift::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEPIPELINESTATUSREQUEST_P_H
 #define QTAWS_UPDATEPIPELINESTATUSREQUEST_P_H
 
-#include "elastictranscoder_p.h"
+#include "elastictranscoderrequest_p.h"
 #include "updatepipelinestatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class UpdatePipelineStatusRequest;
 
-class QTAWS_EXPORT UpdatePipelineStatusRequestPrivate : public ElasticTranscoderPrivate {
+class QTAWS_EXPORT UpdatePipelineStatusRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     UpdatePipelineStatusRequestPrivate(const ElasticTranscoder::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEBUCKETREQUEST_P_H
 #define QTAWS_CREATEBUCKETREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "createbucketrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class CreateBucketRequest;
 
-class QTAWS_EXPORT CreateBucketRequestPrivate : public S3Private {
+class QTAWS_EXPORT CreateBucketRequestPrivate : public S3RequestPrivate {
 
 public:
     CreateBucketRequestPrivate(const S3::Action action,

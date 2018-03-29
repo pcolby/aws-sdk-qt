@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCONTACTREACHABILITYSTATUSREQUEST_P_H
 #define QTAWS_GETCONTACTREACHABILITYSTATUSREQUEST_P_H
 
-#include "route53domains_p.h"
+#include "route53domainsrequest_p.h"
 #include "getcontactreachabilitystatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class GetContactReachabilityStatusRequest;
 
-class QTAWS_EXPORT GetContactReachabilityStatusRequestPrivate : public Route53DomainsPrivate {
+class QTAWS_EXPORT GetContactReachabilityStatusRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     GetContactReachabilityStatusRequestPrivate(const Route53Domains::Action action,

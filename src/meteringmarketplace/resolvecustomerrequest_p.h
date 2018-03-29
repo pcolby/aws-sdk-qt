@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESOLVECUSTOMERREQUEST_P_H
 #define QTAWS_RESOLVECUSTOMERREQUEST_P_H
 
-#include "marketplacemetering_p.h"
+#include "marketplacemeteringrequest_p.h"
 #include "resolvecustomerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MarketplaceMetering {
 
 class ResolveCustomerRequest;
 
-class QTAWS_EXPORT ResolveCustomerRequestPrivate : public MarketplaceMeteringPrivate {
+class QTAWS_EXPORT ResolveCustomerRequestPrivate : public MarketplaceMeteringRequestPrivate {
 
 public:
     ResolveCustomerRequestPrivate(const MarketplaceMetering::Action action,

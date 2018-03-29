@@ -20,7 +20,7 @@
 #ifndef QTAWS_TESTCONNECTIONREQUEST_P_H
 #define QTAWS_TESTCONNECTIONREQUEST_P_H
 
-#include "databasemigrationservice_p.h"
+#include "databasemigrationservicerequest_p.h"
 #include "testconnectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class TestConnectionRequest;
 
-class QTAWS_EXPORT TestConnectionRequestPrivate : public DatabaseMigrationServicePrivate {
+class QTAWS_EXPORT TestConnectionRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     TestConnectionRequestPrivate(const DatabaseMigrationService::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTFLEETSREQUEST_P_H
 #define QTAWS_LISTFLEETSREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "listfleetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class ListFleetsRequest;
 
-class QTAWS_EXPORT ListFleetsRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT ListFleetsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     ListFleetsRequestPrivate(const GameLift::Action action,

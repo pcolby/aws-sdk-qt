@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEPOLICYVERSIONREQUEST_P_H
 #define QTAWS_CREATEPOLICYVERSIONREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "createpolicyversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class CreatePolicyVersionRequest;
 
-class QTAWS_EXPORT CreatePolicyVersionRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT CreatePolicyVersionRequestPrivate : public IoTRequestPrivate {
 
 public:
     CreatePolicyVersionRequestPrivate(const IoT::Action action,

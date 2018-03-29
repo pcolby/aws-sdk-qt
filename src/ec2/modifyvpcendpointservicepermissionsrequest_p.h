@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYVPCENDPOINTSERVICEPERMISSIONSREQUEST_P_H
 #define QTAWS_MODIFYVPCENDPOINTSERVICEPERMISSIONSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "modifyvpcendpointservicepermissionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyVpcEndpointServicePermissionsRequest;
 
-class QTAWS_EXPORT ModifyVpcEndpointServicePermissionsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ModifyVpcEndpointServicePermissionsRequestPrivate : public EC2RequestPrivate {
 
 public:
     ModifyVpcEndpointServicePermissionsRequestPrivate(const EC2::Action action,

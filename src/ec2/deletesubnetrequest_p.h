@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESUBNETREQUEST_P_H
 #define QTAWS_DELETESUBNETREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "deletesubnetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteSubnetRequest;
 
-class QTAWS_EXPORT DeleteSubnetRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DeleteSubnetRequestPrivate : public EC2RequestPrivate {
 
 public:
     DeleteSubnetRequestPrivate(const EC2::Action action,

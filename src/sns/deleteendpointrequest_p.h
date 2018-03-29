@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEENDPOINTREQUEST_P_H
 #define QTAWS_DELETEENDPOINTREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "deleteendpointrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class DeleteEndpointRequest;
 
-class QTAWS_EXPORT DeleteEndpointRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT DeleteEndpointRequestPrivate : public SNSRequestPrivate {
 
 public:
     DeleteEndpointRequestPrivate(const SNS::Action action,

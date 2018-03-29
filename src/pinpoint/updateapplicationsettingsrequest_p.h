@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEAPPLICATIONSETTINGSREQUEST_P_H
 #define QTAWS_UPDATEAPPLICATIONSETTINGSREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "updateapplicationsettingsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class UpdateApplicationSettingsRequest;
 
-class QTAWS_EXPORT UpdateApplicationSettingsRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT UpdateApplicationSettingsRequestPrivate : public PinpointRequestPrivate {
 
 public:
     UpdateApplicationSettingsRequestPrivate(const Pinpoint::Action action,

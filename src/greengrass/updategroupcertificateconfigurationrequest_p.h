@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEGROUPCERTIFICATECONFIGURATIONREQUEST_P_H
 #define QTAWS_UPDATEGROUPCERTIFICATECONFIGURATIONREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "updategroupcertificateconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class UpdateGroupCertificateConfigurationRequest;
 
-class QTAWS_EXPORT UpdateGroupCertificateConfigurationRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT UpdateGroupCertificateConfigurationRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     UpdateGroupCertificateConfigurationRequestPrivate(const Greengrass::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEKEYREQUEST_P_H
 #define QTAWS_CREATEKEYREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "createkeyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class CreateKeyRequest;
 
-class QTAWS_EXPORT CreateKeyRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT CreateKeyRequestPrivate : public KMSRequestPrivate {
 
 public:
     CreateKeyRequestPrivate(const KMS::Action action,

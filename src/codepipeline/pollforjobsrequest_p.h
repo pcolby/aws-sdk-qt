@@ -20,7 +20,7 @@
 #ifndef QTAWS_POLLFORJOBSREQUEST_P_H
 #define QTAWS_POLLFORJOBSREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "pollforjobsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class PollForJobsRequest;
 
-class QTAWS_EXPORT PollForJobsRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT PollForJobsRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     PollForJobsRequestPrivate(const CodePipeline::Action action,

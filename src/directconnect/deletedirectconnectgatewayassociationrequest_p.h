@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDIRECTCONNECTGATEWAYASSOCIATIONREQUEST_P_H
 #define QTAWS_DELETEDIRECTCONNECTGATEWAYASSOCIATIONREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "deletedirectconnectgatewayassociationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class DeleteDirectConnectGatewayAssociationRequest;
 
-class QTAWS_EXPORT DeleteDirectConnectGatewayAssociationRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT DeleteDirectConnectGatewayAssociationRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     DeleteDirectConnectGatewayAssociationRequestPrivate(const DirectConnect::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETETOPICREQUEST_P_H
 #define QTAWS_DELETETOPICREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "deletetopicrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class DeleteTopicRequest;
 
-class QTAWS_EXPORT DeleteTopicRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT DeleteTopicRequestPrivate : public SNSRequestPrivate {
 
 public:
     DeleteTopicRequestPrivate(const SNS::Action action,

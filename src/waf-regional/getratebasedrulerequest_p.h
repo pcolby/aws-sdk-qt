@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETRATEBASEDRULEREQUEST_P_H
 #define QTAWS_GETRATEBASEDRULEREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "getratebasedrulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class GetRateBasedRuleRequest;
 
-class QTAWS_EXPORT GetRateBasedRuleRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT GetRateBasedRuleRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     GetRateBasedRuleRequestPrivate(const WAFRegional::Action action,

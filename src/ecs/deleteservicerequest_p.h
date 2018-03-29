@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESERVICEREQUEST_P_H
 #define QTAWS_DELETESERVICEREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "deleteservicerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class DeleteServiceRequest;
 
-class QTAWS_EXPORT DeleteServiceRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT DeleteServiceRequestPrivate : public ECSRequestPrivate {
 
 public:
     DeleteServiceRequestPrivate(const ECS::Action action,

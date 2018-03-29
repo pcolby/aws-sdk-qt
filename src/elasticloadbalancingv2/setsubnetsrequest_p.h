@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETSUBNETSREQUEST_P_H
 #define QTAWS_SETSUBNETSREQUEST_P_H
 
-#include "elasticloadbalancingv2_p.h"
+#include "elasticloadbalancingv2request_p.h"
 #include "setsubnetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class SetSubnetsRequest;
 
-class QTAWS_EXPORT SetSubnetsRequestPrivate : public ElasticLoadBalancingv2Private {
+class QTAWS_EXPORT SetSubnetsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     SetSubnetsRequestPrivate(const ElasticLoadBalancingv2::Action action,

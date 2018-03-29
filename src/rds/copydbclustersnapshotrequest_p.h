@@ -20,7 +20,7 @@
 #ifndef QTAWS_COPYDBCLUSTERSNAPSHOTREQUEST_P_H
 #define QTAWS_COPYDBCLUSTERSNAPSHOTREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "copydbclustersnapshotrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class CopyDBClusterSnapshotRequest;
 
-class QTAWS_EXPORT CopyDBClusterSnapshotRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT CopyDBClusterSnapshotRequestPrivate : public RDSRequestPrivate {
 
 public:
     CopyDBClusterSnapshotRequestPrivate(const RDS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERTOWORKMAILREQUEST_P_H
 #define QTAWS_REGISTERTOWORKMAILREQUEST_P_H
 
-#include "workmail_p.h"
+#include "workmailrequest_p.h"
 #include "registertoworkmailrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class RegisterToWorkMailRequest;
 
-class QTAWS_EXPORT RegisterToWorkMailRequestPrivate : public WorkMailPrivate {
+class QTAWS_EXPORT RegisterToWorkMailRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     RegisterToWorkMailRequestPrivate(const WorkMail::Action action,

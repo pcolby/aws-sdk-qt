@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETARGETGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBETARGETGROUPSREQUEST_P_H
 
-#include "elasticloadbalancingv2_p.h"
+#include "elasticloadbalancingv2request_p.h"
 #include "describetargetgroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DescribeTargetGroupsRequest;
 
-class QTAWS_EXPORT DescribeTargetGroupsRequestPrivate : public ElasticLoadBalancingv2Private {
+class QTAWS_EXPORT DescribeTargetGroupsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     DescribeTargetGroupsRequestPrivate(const ElasticLoadBalancingv2::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETIDENTITYMAILFROMDOMAINATTRIBUTESREQUEST_P_H
 #define QTAWS_GETIDENTITYMAILFROMDOMAINATTRIBUTESREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "getidentitymailfromdomainattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class GetIdentityMailFromDomainAttributesRequest;
 
-class QTAWS_EXPORT GetIdentityMailFromDomainAttributesRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT GetIdentityMailFromDomainAttributesRequestPrivate : public SESRequestPrivate {
 
 public:
     GetIdentityMailFromDomainAttributesRequestPrivate(const SES::Action action,

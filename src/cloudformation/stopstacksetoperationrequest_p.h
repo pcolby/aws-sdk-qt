@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPSTACKSETOPERATIONREQUEST_P_H
 #define QTAWS_STOPSTACKSETOPERATIONREQUEST_P_H
 
-#include "cloudformation_p.h"
+#include "cloudformationrequest_p.h"
 #include "stopstacksetoperationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class StopStackSetOperationRequest;
 
-class QTAWS_EXPORT StopStackSetOperationRequestPrivate : public CloudFormationPrivate {
+class QTAWS_EXPORT StopStackSetOperationRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     StopStackSetOperationRequestPrivate(const CloudFormation::Action action,

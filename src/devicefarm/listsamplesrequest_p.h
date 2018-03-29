@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSAMPLESREQUEST_P_H
 #define QTAWS_LISTSAMPLESREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "listsamplesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class ListSamplesRequest;
 
-class QTAWS_EXPORT ListSamplesRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT ListSamplesRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     ListSamplesRequestPrivate(const DeviceFarm::Action action,

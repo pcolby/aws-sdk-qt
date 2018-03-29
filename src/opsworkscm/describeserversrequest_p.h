@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESERVERSREQUEST_P_H
 #define QTAWS_DESCRIBESERVERSREQUEST_P_H
 
-#include "opsworkscm_p.h"
+#include "opsworkscmrequest_p.h"
 #include "describeserversrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class DescribeServersRequest;
 
-class QTAWS_EXPORT DescribeServersRequestPrivate : public OpsWorksCMPrivate {
+class QTAWS_EXPORT DescribeServersRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     DescribeServersRequestPrivate(const OpsWorksCM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEOPTIONGROUPREQUEST_P_H
 #define QTAWS_DELETEOPTIONGROUPREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "deleteoptiongrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteOptionGroupRequest;
 
-class QTAWS_EXPORT DeleteOptionGroupRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DeleteOptionGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
     DeleteOptionGroupRequestPrivate(const RDS::Action action,

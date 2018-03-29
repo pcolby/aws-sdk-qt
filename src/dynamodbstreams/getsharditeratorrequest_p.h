@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSHARDITERATORREQUEST_P_H
 #define QTAWS_GETSHARDITERATORREQUEST_P_H
 
-#include "dynamodbstreams_p.h"
+#include "dynamodbstreamsrequest_p.h"
 #include "getsharditeratorrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDBStreams {
 
 class GetShardIteratorRequest;
 
-class QTAWS_EXPORT GetShardIteratorRequestPrivate : public DynamoDBStreamsPrivate {
+class QTAWS_EXPORT GetShardIteratorRequestPrivate : public DynamoDBStreamsRequestPrivate {
 
 public:
     GetShardIteratorRequestPrivate(const DynamoDBStreams::Action action,

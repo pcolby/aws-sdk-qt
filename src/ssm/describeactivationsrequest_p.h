@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEACTIVATIONSREQUEST_P_H
 #define QTAWS_DESCRIBEACTIVATIONSREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "describeactivationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeActivationsRequest;
 
-class QTAWS_EXPORT DescribeActivationsRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DescribeActivationsRequestPrivate : public SSMRequestPrivate {
 
 public:
     DescribeActivationsRequestPrivate(const SSM::Action action,

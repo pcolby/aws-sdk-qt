@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEDBLOGFILESREQUEST_P_H
 #define QTAWS_DESCRIBEDBLOGFILESREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describedblogfilesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeDBLogFilesRequest;
 
-class QTAWS_EXPORT DescribeDBLogFilesRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeDBLogFilesRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeDBLogFilesRequestPrivate(const RDS::Action action,

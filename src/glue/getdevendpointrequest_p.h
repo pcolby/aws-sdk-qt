@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDEVENDPOINTREQUEST_P_H
 #define QTAWS_GETDEVENDPOINTREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "getdevendpointrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetDevEndpointRequest;
 
-class QTAWS_EXPORT GetDevEndpointRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT GetDevEndpointRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetDevEndpointRequestPrivate(const Glue::Action action,

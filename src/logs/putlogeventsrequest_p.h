@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTLOGEVENTSREQUEST_P_H
 #define QTAWS_PUTLOGEVENTSREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "putlogeventsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class PutLogEventsRequest;
 
-class QTAWS_EXPORT PutLogEventsRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT PutLogEventsRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     PutLogEventsRequestPrivate(const CloudWatchLogs::Action action,

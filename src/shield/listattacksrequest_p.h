@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTATTACKSREQUEST_P_H
 #define QTAWS_LISTATTACKSREQUEST_P_H
 
-#include "shield_p.h"
+#include "shieldrequest_p.h"
 #include "listattacksrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Shield {
 
 class ListAttacksRequest;
 
-class QTAWS_EXPORT ListAttacksRequestPrivate : public ShieldPrivate {
+class QTAWS_EXPORT ListAttacksRequestPrivate : public ShieldRequestPrivate {
 
 public:
     ListAttacksRequestPrivate(const Shield::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CODECOMMITREQUEST_P_H
 #define QTAWS_CODECOMMITREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "codecommitrequest.h"
 
 namespace QtAws {

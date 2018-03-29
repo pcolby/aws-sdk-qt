@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETAGSREQUEST_P_H
 #define QTAWS_DESCRIBETAGSREQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "describetagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class DescribeTagsRequest;
 
-class QTAWS_EXPORT DescribeTagsRequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT DescribeTagsRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     DescribeTagsRequestPrivate(const MachineLearning::Action action,

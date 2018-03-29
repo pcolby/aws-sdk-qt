@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEREGEXPATTERNSETREQUEST_P_H
 #define QTAWS_CREATEREGEXPATTERNSETREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "createregexpatternsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class CreateRegexPatternSetRequest;
 
-class QTAWS_EXPORT CreateRegexPatternSetRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT CreateRegexPatternSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     CreateRegexPatternSetRequestPrivate(const WAFRegional::Action action,

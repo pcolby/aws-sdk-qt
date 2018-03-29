@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPROJECTREQUEST_P_H
 #define QTAWS_DELETEPROJECTREQUEST_P_H
 
-#include "codebuild_p.h"
+#include "codebuildrequest_p.h"
 #include "deleteprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class DeleteProjectRequest;
 
-class QTAWS_EXPORT DeleteProjectRequestPrivate : public CodeBuildPrivate {
+class QTAWS_EXPORT DeleteProjectRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     DeleteProjectRequestPrivate(const CodeBuild::Action action,

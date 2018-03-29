@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_P_H
 #define QTAWS_UNTAGRESOURCEREQUEST_P_H
 
-#include "cloudhsmv2_p.h"
+#include "cloudhsmv2request_p.h"
 #include "untagresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public CloudHSMV2Private {
+class QTAWS_EXPORT UntagResourceRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const CloudHSMV2::Action action,

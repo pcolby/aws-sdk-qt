@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDPERMISSIONREQUEST_P_H
 #define QTAWS_ADDPERMISSIONREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "addpermissionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class AddPermissionRequest;
 
-class QTAWS_EXPORT AddPermissionRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT AddPermissionRequestPrivate : public SNSRequestPrivate {
 
 public:
     AddPermissionRequestPrivate(const SNS::Action action,

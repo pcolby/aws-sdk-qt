@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETIDENTITYVERIFICATIONATTRIBUTESREQUEST_P_H
 #define QTAWS_GETIDENTITYVERIFICATIONATTRIBUTESREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "getidentityverificationattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class GetIdentityVerificationAttributesRequest;
 
-class QTAWS_EXPORT GetIdentityVerificationAttributesRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT GetIdentityVerificationAttributesRequestPrivate : public SESRequestPrivate {
 
 public:
     GetIdentityVerificationAttributesRequestPrivate(const SES::Action action,

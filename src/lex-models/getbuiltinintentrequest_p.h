@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETBUILTININTENTREQUEST_P_H
 #define QTAWS_GETBUILTININTENTREQUEST_P_H
 
-#include "lexmodelbuildingservice_p.h"
+#include "lexmodelbuildingservicerequest_p.h"
 #include "getbuiltinintentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class GetBuiltinIntentRequest;
 
-class QTAWS_EXPORT GetBuiltinIntentRequestPrivate : public LexModelBuildingServicePrivate {
+class QTAWS_EXPORT GetBuiltinIntentRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
     GetBuiltinIntentRequestPrivate(const LexModelBuildingService::Action action,

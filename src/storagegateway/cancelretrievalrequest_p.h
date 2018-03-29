@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELRETRIEVALREQUEST_P_H
 #define QTAWS_CANCELRETRIEVALREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "cancelretrievalrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class CancelRetrievalRequest;
 
-class QTAWS_EXPORT CancelRetrievalRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT CancelRetrievalRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     CancelRetrievalRequestPrivate(const StorageGateway::Action action,

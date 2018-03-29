@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECACHESUBNETGROUPREQUEST_P_H
 #define QTAWS_DELETECACHESUBNETGROUPREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "deletecachesubnetgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DeleteCacheSubnetGroupRequest;
 
-class QTAWS_EXPORT DeleteCacheSubnetGroupRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT DeleteCacheSubnetGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DeleteCacheSubnetGroupRequestPrivate(const ElastiCache::Action action,

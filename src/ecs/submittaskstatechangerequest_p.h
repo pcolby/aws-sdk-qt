@@ -20,7 +20,7 @@
 #ifndef QTAWS_SUBMITTASKSTATECHANGEREQUEST_P_H
 #define QTAWS_SUBMITTASKSTATECHANGEREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "submittaskstatechangerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class SubmitTaskStateChangeRequest;
 
-class QTAWS_EXPORT SubmitTaskStateChangeRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT SubmitTaskStateChangeRequestPrivate : public ECSRequestPrivate {
 
 public:
     SubmitTaskStateChangeRequestPrivate(const ECS::Action action,

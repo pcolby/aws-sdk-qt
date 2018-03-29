@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEVPCPEERINGCONNECTIONREQUEST_P_H
 #define QTAWS_DELETEVPCPEERINGCONNECTIONREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "deletevpcpeeringconnectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteVpcPeeringConnectionRequest;
 
-class QTAWS_EXPORT DeleteVpcPeeringConnectionRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DeleteVpcPeeringConnectionRequestPrivate : public EC2RequestPrivate {
 
 public:
     DeleteVpcPeeringConnectionRequestPrivate(const EC2::Action action,

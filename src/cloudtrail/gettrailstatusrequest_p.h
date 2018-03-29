@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTRAILSTATUSREQUEST_P_H
 #define QTAWS_GETTRAILSTATUSREQUEST_P_H
 
-#include "cloudtrail_p.h"
+#include "cloudtrailrequest_p.h"
 #include "gettrailstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudTrail {
 
 class GetTrailStatusRequest;
 
-class QTAWS_EXPORT GetTrailStatusRequestPrivate : public CloudTrailPrivate {
+class QTAWS_EXPORT GetTrailStatusRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
     GetTrailStatusRequestPrivate(const CloudTrail::Action action,

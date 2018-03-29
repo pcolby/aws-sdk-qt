@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTFUNCTIONCONCURRENCYREQUEST_P_H
 #define QTAWS_PUTFUNCTIONCONCURRENCYREQUEST_P_H
 
-#include "lambda_p.h"
+#include "lambdarequest_p.h"
 #include "putfunctionconcurrencyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lambda {
 
 class PutFunctionConcurrencyRequest;
 
-class QTAWS_EXPORT PutFunctionConcurrencyRequestPrivate : public LambdaPrivate {
+class QTAWS_EXPORT PutFunctionConcurrencyRequestPrivate : public LambdaRequestPrivate {
 
 public:
     PutFunctionConcurrencyRequestPrivate(const Lambda::Action action,

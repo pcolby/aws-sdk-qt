@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_P_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_P_H
 
-#include "opsworkscm_p.h"
+#include "opsworkscmrequest_p.h"
 #include "describeaccountattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class DescribeAccountAttributesRequest;
 
-class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public OpsWorksCMPrivate {
+class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     DescribeAccountAttributesRequestPrivate(const OpsWorksCM::Action action,

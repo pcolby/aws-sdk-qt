@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEDIRECTORYCONFIGREQUEST_P_H
 #define QTAWS_UPDATEDIRECTORYCONFIGREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "updatedirectoryconfigrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class UpdateDirectoryConfigRequest;
 
-class QTAWS_EXPORT UpdateDirectoryConfigRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT UpdateDirectoryConfigRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     UpdateDirectoryConfigRequestPrivate(const AppStream::Action action,

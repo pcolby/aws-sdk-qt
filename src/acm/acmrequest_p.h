@@ -20,7 +20,7 @@
 #ifndef QTAWS_ACMREQUEST_P_H
 #define QTAWS_ACMREQUEST_P_H
 
-#include "acm_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "acmrequest.h"
 
 namespace QtAws {

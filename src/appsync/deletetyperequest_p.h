@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETETYPEREQUEST_P_H
 #define QTAWS_DELETETYPEREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "deletetyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class DeleteTypeRequest;
 
-class QTAWS_EXPORT DeleteTypeRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT DeleteTypeRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     DeleteTypeRequestPrivate(const AppSync::Action action,

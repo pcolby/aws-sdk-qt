@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEFUNCTIONCONCURRENCYREQUEST_P_H
 #define QTAWS_DELETEFUNCTIONCONCURRENCYREQUEST_P_H
 
-#include "lambda_p.h"
+#include "lambdarequest_p.h"
 #include "deletefunctionconcurrencyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lambda {
 
 class DeleteFunctionConcurrencyRequest;
 
-class QTAWS_EXPORT DeleteFunctionConcurrencyRequestPrivate : public LambdaPrivate {
+class QTAWS_EXPORT DeleteFunctionConcurrencyRequestPrivate : public LambdaRequestPrivate {
 
 public:
     DeleteFunctionConcurrencyRequestPrivate(const Lambda::Action action,

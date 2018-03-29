@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBERECEIPTRULESETREQUEST_P_H
 #define QTAWS_DESCRIBERECEIPTRULESETREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "describereceiptrulesetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class DescribeReceiptRuleSetRequest;
 
-class QTAWS_EXPORT DescribeReceiptRuleSetRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT DescribeReceiptRuleSetRequestPrivate : public SESRequestPrivate {
 
 public:
     DescribeReceiptRuleSetRequestPrivate(const SES::Action action,

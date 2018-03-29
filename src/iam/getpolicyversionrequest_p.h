@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETPOLICYVERSIONREQUEST_P_H
 #define QTAWS_GETPOLICYVERSIONREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "getpolicyversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetPolicyVersionRequest;
 
-class QTAWS_EXPORT GetPolicyVersionRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT GetPolicyVersionRequestPrivate : public IAMRequestPrivate {
 
 public:
     GetPolicyVersionRequestPrivate(const IAM::Action action,

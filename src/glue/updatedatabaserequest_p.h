@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEDATABASEREQUEST_P_H
 #define QTAWS_UPDATEDATABASEREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "updatedatabaserequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class UpdateDatabaseRequest;
 
-class QTAWS_EXPORT UpdateDatabaseRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT UpdateDatabaseRequestPrivate : public GlueRequestPrivate {
 
 public:
     UpdateDatabaseRequestPrivate(const Glue::Action action,

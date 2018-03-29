@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESTREAMREQUEST_P_H
 #define QTAWS_UPDATESTREAMREQUEST_P_H
 
-#include "kinesisvideo_p.h"
+#include "kinesisvideorequest_p.h"
 #include "updatestreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KinesisVideo {
 
 class UpdateStreamRequest;
 
-class QTAWS_EXPORT UpdateStreamRequestPrivate : public KinesisVideoPrivate {
+class QTAWS_EXPORT UpdateStreamRequestPrivate : public KinesisVideoRequestPrivate {
 
 public:
     UpdateStreamRequestPrivate(const KinesisVideo::Action action,

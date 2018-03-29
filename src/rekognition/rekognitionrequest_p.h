@@ -20,7 +20,7 @@
 #ifndef QTAWS_REKOGNITIONREQUEST_P_H
 #define QTAWS_REKOGNITIONREQUEST_P_H
 
-#include "rekognition_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "rekognitionrequest.h"
 
 namespace QtAws {

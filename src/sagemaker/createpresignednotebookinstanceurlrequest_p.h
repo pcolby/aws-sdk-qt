@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEPRESIGNEDNOTEBOOKINSTANCEURLREQUEST_P_H
 #define QTAWS_CREATEPRESIGNEDNOTEBOOKINSTANCEURLREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "createpresignednotebookinstanceurlrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreatePresignedNotebookInstanceUrlRequest;
 
-class QTAWS_EXPORT CreatePresignedNotebookInstanceUrlRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT CreatePresignedNotebookInstanceUrlRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     CreatePresignedNotebookInstanceUrlRequestPrivate(const SageMaker::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECHAPCREDENTIALSREQUEST_P_H
 #define QTAWS_DESCRIBECHAPCREDENTIALSREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "describechapcredentialsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeChapCredentialsRequest;
 
-class QTAWS_EXPORT DescribeChapCredentialsRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT DescribeChapCredentialsRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DescribeChapCredentialsRequestPrivate(const StorageGateway::Action action,

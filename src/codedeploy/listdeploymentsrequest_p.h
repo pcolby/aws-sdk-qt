@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTDEPLOYMENTSREQUEST_P_H
 #define QTAWS_LISTDEPLOYMENTSREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "listdeploymentsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class ListDeploymentsRequest;
 
-class QTAWS_EXPORT ListDeploymentsRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT ListDeploymentsRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     ListDeploymentsRequestPrivate(const CodeDeploy::Action action,

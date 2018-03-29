@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEAPPLICATIONVERSIONSREQUEST_P_H
 #define QTAWS_DESCRIBEAPPLICATIONVERSIONSREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "describeapplicationversionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class DescribeApplicationVersionsRequest;
 
-class QTAWS_EXPORT DescribeApplicationVersionsRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT DescribeApplicationVersionsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     DescribeApplicationVersionsRequestPrivate(const ElasticBeanstalk::Action action,

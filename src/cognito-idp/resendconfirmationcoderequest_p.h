@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESENDCONFIRMATIONCODEREQUEST_P_H
 #define QTAWS_RESENDCONFIRMATIONCODEREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "resendconfirmationcoderequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class ResendConfirmationCodeRequest;
 
-class QTAWS_EXPORT ResendConfirmationCodeRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT ResendConfirmationCodeRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     ResendConfirmationCodeRequestPrivate(const CognitoIdentityProvider::Action action,

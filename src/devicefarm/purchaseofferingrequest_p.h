@@ -20,7 +20,7 @@
 #ifndef QTAWS_PURCHASEOFFERINGREQUEST_P_H
 #define QTAWS_PURCHASEOFFERINGREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "purchaseofferingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class PurchaseOfferingRequest;
 
-class QTAWS_EXPORT PurchaseOfferingRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT PurchaseOfferingRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     PurchaseOfferingRequestPrivate(const DeviceFarm::Action action,

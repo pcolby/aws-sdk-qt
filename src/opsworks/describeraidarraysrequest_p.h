@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBERAIDARRAYSREQUEST_P_H
 #define QTAWS_DESCRIBERAIDARRAYSREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "describeraidarraysrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DescribeRaidArraysRequest;
 
-class QTAWS_EXPORT DescribeRaidArraysRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DescribeRaidArraysRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DescribeRaidArraysRequestPrivate(const OpsWorks::Action action,

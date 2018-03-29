@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEREGISTERECSCLUSTERREQUEST_P_H
 #define QTAWS_DEREGISTERECSCLUSTERREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "deregisterecsclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DeregisterEcsClusterRequest;
 
-class QTAWS_EXPORT DeregisterEcsClusterRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DeregisterEcsClusterRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DeregisterEcsClusterRequestPrivate(const OpsWorks::Action action,

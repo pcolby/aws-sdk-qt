@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEVTLDEVICETYPEREQUEST_P_H
 #define QTAWS_UPDATEVTLDEVICETYPEREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "updatevtldevicetyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class UpdateVTLDeviceTypeRequest;
 
-class QTAWS_EXPORT UpdateVTLDeviceTypeRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT UpdateVTLDeviceTypeRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     UpdateVTLDeviceTypeRequestPrivate(const StorageGateway::Action action,

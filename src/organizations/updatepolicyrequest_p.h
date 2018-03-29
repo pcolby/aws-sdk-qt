@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEPOLICYREQUEST_P_H
 #define QTAWS_UPDATEPOLICYREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "updatepolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class UpdatePolicyRequest;
 
-class QTAWS_EXPORT UpdatePolicyRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT UpdatePolicyRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     UpdatePolicyRequestPrivate(const Organizations::Action action,

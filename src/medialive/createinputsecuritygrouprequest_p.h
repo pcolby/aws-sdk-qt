@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEINPUTSECURITYGROUPREQUEST_P_H
 #define QTAWS_CREATEINPUTSECURITYGROUPREQUEST_P_H
 
-#include "medialive_p.h"
+#include "medialiverequest_p.h"
 #include "createinputsecuritygrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class CreateInputSecurityGroupRequest;
 
-class QTAWS_EXPORT CreateInputSecurityGroupRequestPrivate : public MediaLivePrivate {
+class QTAWS_EXPORT CreateInputSecurityGroupRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     CreateInputSecurityGroupRequestPrivate(const MediaLive::Action action,

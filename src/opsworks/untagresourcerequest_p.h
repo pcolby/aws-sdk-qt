@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_P_H
 #define QTAWS_UNTAGRESOURCEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "untagresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT UntagResourceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const OpsWorks::Action action,

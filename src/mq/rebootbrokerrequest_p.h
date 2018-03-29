@@ -20,7 +20,7 @@
 #ifndef QTAWS_REBOOTBROKERREQUEST_P_H
 #define QTAWS_REBOOTBROKERREQUEST_P_H
 
-#include "mq_p.h"
+#include "mqrequest_p.h"
 #include "rebootbrokerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MQ {
 
 class RebootBrokerRequest;
 
-class QTAWS_EXPORT RebootBrokerRequestPrivate : public MQPrivate {
+class QTAWS_EXPORT RebootBrokerRequestPrivate : public MQRequestPrivate {
 
 public:
     RebootBrokerRequestPrivate(const MQ::Action action,

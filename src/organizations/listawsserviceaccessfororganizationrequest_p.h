@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTAWSSERVICEACCESSFORORGANIZATIONREQUEST_P_H
 #define QTAWS_LISTAWSSERVICEACCESSFORORGANIZATIONREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "listawsserviceaccessfororganizationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class ListAWSServiceAccessForOrganizationRequest;
 
-class QTAWS_EXPORT ListAWSServiceAccessForOrganizationRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT ListAWSServiceAccessForOrganizationRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     ListAWSServiceAccessForOrganizationRequestPrivate(const Organizations::Action action,

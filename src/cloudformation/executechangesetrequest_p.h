@@ -20,7 +20,7 @@
 #ifndef QTAWS_EXECUTECHANGESETREQUEST_P_H
 #define QTAWS_EXECUTECHANGESETREQUEST_P_H
 
-#include "cloudformation_p.h"
+#include "cloudformationrequest_p.h"
 #include "executechangesetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class ExecuteChangeSetRequest;
 
-class QTAWS_EXPORT ExecuteChangeSetRequestPrivate : public CloudFormationPrivate {
+class QTAWS_EXPORT ExecuteChangeSetRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     ExecuteChangeSetRequestPrivate(const CloudFormation::Action action,

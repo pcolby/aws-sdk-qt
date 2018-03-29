@@ -20,7 +20,7 @@
 #ifndef QTAWS_COSTEXPLORERREQUEST_P_H
 #define QTAWS_COSTEXPLORERREQUEST_P_H
 
-#include "costexplorer_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "costexplorerrequest.h"
 
 namespace QtAws {

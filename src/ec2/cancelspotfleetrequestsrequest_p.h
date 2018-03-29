@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELSPOTFLEETREQUESTSREQUEST_P_H
 #define QTAWS_CANCELSPOTFLEETREQUESTSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "cancelspotfleetrequestsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CancelSpotFleetRequestsRequest;
 
-class QTAWS_EXPORT CancelSpotFleetRequestsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CancelSpotFleetRequestsRequestPrivate : public EC2RequestPrivate {
 
 public:
     CancelSpotFleetRequestsRequestPrivate(const EC2::Action action,

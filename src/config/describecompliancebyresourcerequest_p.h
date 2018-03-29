@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECOMPLIANCEBYRESOURCEREQUEST_P_H
 #define QTAWS_DESCRIBECOMPLIANCEBYRESOURCEREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "describecompliancebyresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DescribeComplianceByResourceRequest;
 
-class QTAWS_EXPORT DescribeComplianceByResourceRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT DescribeComplianceByResourceRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DescribeComplianceByResourceRequestPrivate(const ConfigService::Action action,

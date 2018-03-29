@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESTOREDBINSTANCEFROMS3REQUEST_P_H
 #define QTAWS_RESTOREDBINSTANCEFROMS3REQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "restoredbinstancefroms3request.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class RestoreDBInstanceFromS3Request;
 
-class QTAWS_EXPORT RestoreDBInstanceFromS3RequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT RestoreDBInstanceFromS3RequestPrivate : public RDSRequestPrivate {
 
 public:
     RestoreDBInstanceFromS3RequestPrivate(const RDS::Action action,

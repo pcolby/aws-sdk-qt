@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEACTIVITIESREQUEST_P_H
 #define QTAWS_DESCRIBEACTIVITIESREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "describeactivitiesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DescribeActivitiesRequest;
 
-class QTAWS_EXPORT DescribeActivitiesRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT DescribeActivitiesRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DescribeActivitiesRequestPrivate(const WorkDocs::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDBSECURITYGROUPREQUEST_P_H
 #define QTAWS_DELETEDBSECURITYGROUPREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "deletedbsecuritygrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteDBSecurityGroupRequest;
 
-class QTAWS_EXPORT DeleteDBSecurityGroupRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DeleteDBSecurityGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
     DeleteDBSecurityGroupRequestPrivate(const RDS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETPROJECTREQUEST_P_H
 #define QTAWS_GETPROJECTREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "getprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetProjectRequest;
 
-class QTAWS_EXPORT GetProjectRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT GetProjectRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     GetProjectRequestPrivate(const DeviceFarm::Action action,

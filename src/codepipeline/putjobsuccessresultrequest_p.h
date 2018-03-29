@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTJOBSUCCESSRESULTREQUEST_P_H
 #define QTAWS_PUTJOBSUCCESSRESULTREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "putjobsuccessresultrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class PutJobSuccessResultRequest;
 
-class QTAWS_EXPORT PutJobSuccessResultRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT PutJobSuccessResultRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     PutJobSuccessResultRequestPrivate(const CodePipeline::Action action,

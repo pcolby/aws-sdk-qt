@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTROOTSREQUEST_P_H
 #define QTAWS_LISTROOTSREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "listrootsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class ListRootsRequest;
 
-class QTAWS_EXPORT ListRootsRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT ListRootsRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     ListRootsRequestPrivate(const Organizations::Action action,

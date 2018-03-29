@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDREQUEST_P_H
 #define QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "updateconfigurationsetreputationmetricsenabledrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateConfigurationSetReputationMetricsEnabledRequest;
 
-class QTAWS_EXPORT UpdateConfigurationSetReputationMetricsEnabledRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT UpdateConfigurationSetReputationMetricsEnabledRequestPrivate : public SESRequestPrivate {
 
 public:
     UpdateConfigurationSetReputationMetricsEnabledRequestPrivate(const SES::Action action,

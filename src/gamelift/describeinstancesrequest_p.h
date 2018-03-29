@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEINSTANCESREQUEST_P_H
 #define QTAWS_DESCRIBEINSTANCESREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "describeinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribeInstancesRequest;
 
-class QTAWS_EXPORT DescribeInstancesRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT DescribeInstancesRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DescribeInstancesRequestPrivate(const GameLift::Action action,

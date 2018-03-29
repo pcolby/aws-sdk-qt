@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETAPERECOVERYPOINTSREQUEST_P_H
 #define QTAWS_DESCRIBETAPERECOVERYPOINTSREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "describetaperecoverypointsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeTapeRecoveryPointsRequest;
 
-class QTAWS_EXPORT DescribeTapeRecoveryPointsRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT DescribeTapeRecoveryPointsRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DescribeTapeRecoveryPointsRequestPrivate(const StorageGateway::Action action,

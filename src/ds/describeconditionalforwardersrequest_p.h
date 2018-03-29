@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECONDITIONALFORWARDERSREQUEST_P_H
 #define QTAWS_DESCRIBECONDITIONALFORWARDERSREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "describeconditionalforwardersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DescribeConditionalForwardersRequest;
 
-class QTAWS_EXPORT DescribeConditionalForwardersRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT DescribeConditionalForwardersRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     DescribeConditionalForwardersRequestPrivate(const DirectoryService::Action action,

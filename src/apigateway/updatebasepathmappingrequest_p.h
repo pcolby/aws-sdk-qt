@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEBASEPATHMAPPINGREQUEST_P_H
 #define QTAWS_UPDATEBASEPATHMAPPINGREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "updatebasepathmappingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class UpdateBasePathMappingRequest;
 
-class QTAWS_EXPORT UpdateBasePathMappingRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT UpdateBasePathMappingRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     UpdateBasePathMappingRequestPrivate(const APIGateway::Action action,

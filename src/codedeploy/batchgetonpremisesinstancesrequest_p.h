@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHGETONPREMISESINSTANCESREQUEST_P_H
 #define QTAWS_BATCHGETONPREMISESINSTANCESREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "batchgetonpremisesinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class BatchGetOnPremisesInstancesRequest;
 
-class QTAWS_EXPORT BatchGetOnPremisesInstancesRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT BatchGetOnPremisesInstancesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     BatchGetOnPremisesInstancesRequestPrivate(const CodeDeploy::Action action,

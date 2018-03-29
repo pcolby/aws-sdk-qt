@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEROUTEREQUEST_P_H
 #define QTAWS_CREATEROUTEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "createrouterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateRouteRequest;
 
-class QTAWS_EXPORT CreateRouteRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CreateRouteRequestPrivate : public EC2RequestPrivate {
 
 public:
     CreateRouteRequestPrivate(const EC2::Action action,

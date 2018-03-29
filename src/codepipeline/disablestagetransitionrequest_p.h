@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISABLESTAGETRANSITIONREQUEST_P_H
 #define QTAWS_DISABLESTAGETRANSITIONREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "disablestagetransitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class DisableStageTransitionRequest;
 
-class QTAWS_EXPORT DisableStageTransitionRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT DisableStageTransitionRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     DisableStageTransitionRequestPrivate(const CodePipeline::Action action,

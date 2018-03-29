@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEROOTFOLDERSREQUEST_P_H
 #define QTAWS_DESCRIBEROOTFOLDERSREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "describerootfoldersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DescribeRootFoldersRequest;
 
-class QTAWS_EXPORT DescribeRootFoldersRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT DescribeRootFoldersRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DescribeRootFoldersRequestPrivate(const WorkDocs::Action action,

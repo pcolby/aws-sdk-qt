@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTOPICSDETECTIONJOBSREQUEST_P_H
 #define QTAWS_LISTTOPICSDETECTIONJOBSREQUEST_P_H
 
-#include "comprehend_p.h"
+#include "comprehendrequest_p.h"
 #include "listtopicsdetectionjobsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class ListTopicsDetectionJobsRequest;
 
-class QTAWS_EXPORT ListTopicsDetectionJobsRequestPrivate : public ComprehendPrivate {
+class QTAWS_EXPORT ListTopicsDetectionJobsRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     ListTopicsDetectionJobsRequestPrivate(const Comprehend::Action action,

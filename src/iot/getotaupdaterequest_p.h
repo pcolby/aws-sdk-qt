@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETOTAUPDATEREQUEST_P_H
 #define QTAWS_GETOTAUPDATEREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "getotaupdaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class GetOTAUpdateRequest;
 
-class QTAWS_EXPORT GetOTAUpdateRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT GetOTAUpdateRequestPrivate : public IoTRequestPrivate {
 
 public:
     GetOTAUpdateRequestPrivate(const IoT::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETAGSREQUEST_P_H
 #define QTAWS_DESCRIBETAGSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describetagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeTagsRequest;
 
-class QTAWS_EXPORT DescribeTagsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeTagsRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeTagsRequestPrivate(const EC2::Action action,

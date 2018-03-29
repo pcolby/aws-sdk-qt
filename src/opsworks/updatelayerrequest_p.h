@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATELAYERREQUEST_P_H
 #define QTAWS_UPDATELAYERREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "updatelayerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class UpdateLayerRequest;
 
-class QTAWS_EXPORT UpdateLayerRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT UpdateLayerRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     UpdateLayerRequestPrivate(const OpsWorks::Action action,

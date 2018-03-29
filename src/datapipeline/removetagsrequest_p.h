@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVETAGSREQUEST_P_H
 #define QTAWS_REMOVETAGSREQUEST_P_H
 
-#include "datapipeline_p.h"
+#include "datapipelinerequest_p.h"
 #include "removetagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class RemoveTagsRequest;
 
-class QTAWS_EXPORT RemoveTagsRequestPrivate : public DataPipelinePrivate {
+class QTAWS_EXPORT RemoveTagsRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     RemoveTagsRequestPrivate(const DataPipeline::Action action,

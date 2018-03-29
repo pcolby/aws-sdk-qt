@@ -20,7 +20,7 @@
 #ifndef QTAWS_QUERYREQUEST_P_H
 #define QTAWS_QUERYREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "queryrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class QueryRequest;
 
-class QTAWS_EXPORT QueryRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT QueryRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     QueryRequestPrivate(const DynamoDB::Action action,

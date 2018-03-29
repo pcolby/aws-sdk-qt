@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEFLEETEVENTSREQUEST_P_H
 #define QTAWS_DESCRIBEFLEETEVENTSREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "describefleeteventsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribeFleetEventsRequest;
 
-class QTAWS_EXPORT DescribeFleetEventsRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT DescribeFleetEventsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DescribeFleetEventsRequestPrivate(const GameLift::Action action,

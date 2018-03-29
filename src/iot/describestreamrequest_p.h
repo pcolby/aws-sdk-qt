@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESTREAMREQUEST_P_H
 #define QTAWS_DESCRIBESTREAMREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "describestreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class DescribeStreamRequest;
 
-class QTAWS_EXPORT DescribeStreamRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT DescribeStreamRequestPrivate : public IoTRequestPrivate {
 
 public:
     DescribeStreamRequestPrivate(const IoT::Action action,

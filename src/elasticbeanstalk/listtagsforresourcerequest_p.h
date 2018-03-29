@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const ElasticBeanstalk::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTINSTANCESREQUEST_P_H
 #define QTAWS_LISTINSTANCESREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "listinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class ListInstancesRequest;
 
-class QTAWS_EXPORT ListInstancesRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT ListInstancesRequestPrivate : public EMRRequestPrivate {
 
 public:
     ListInstancesRequestPrivate(const EMR::Action action,

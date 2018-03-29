@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTRULESPACKAGESREQUEST_P_H
 #define QTAWS_LISTRULESPACKAGESREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "listrulespackagesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class ListRulesPackagesRequest;
 
-class QTAWS_EXPORT ListRulesPackagesRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT ListRulesPackagesRequestPrivate : public InspectorRequestPrivate {
 
 public:
     ListRulesPackagesRequestPrivate(const Inspector::Action action,

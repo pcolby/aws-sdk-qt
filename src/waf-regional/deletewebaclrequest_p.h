@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEWEBACLREQUEST_P_H
 #define QTAWS_DELETEWEBACLREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "deletewebaclrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class DeleteWebACLRequest;
 
-class QTAWS_EXPORT DeleteWebACLRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT DeleteWebACLRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     DeleteWebACLRequestPrivate(const WAFRegional::Action action,

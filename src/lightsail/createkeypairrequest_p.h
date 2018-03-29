@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEKEYPAIRREQUEST_P_H
 #define QTAWS_CREATEKEYPAIRREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "createkeypairrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class CreateKeyPairRequest;
 
-class QTAWS_EXPORT CreateKeyPairRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT CreateKeyPairRequestPrivate : public LightsailRequestPrivate {
 
 public:
     CreateKeyPairRequestPrivate(const Lightsail::Action action,

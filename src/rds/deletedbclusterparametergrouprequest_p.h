@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDBCLUSTERPARAMETERGROUPREQUEST_P_H
 #define QTAWS_DELETEDBCLUSTERPARAMETERGROUPREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "deletedbclusterparametergrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteDBClusterParameterGroupRequest;
 
-class QTAWS_EXPORT DeleteDBClusterParameterGroupRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DeleteDBClusterParameterGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
     DeleteDBClusterParameterGroupRequestPrivate(const RDS::Action action,

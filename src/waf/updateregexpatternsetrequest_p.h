@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEREGEXPATTERNSETREQUEST_P_H
 #define QTAWS_UPDATEREGEXPATTERNSETREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "updateregexpatternsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class UpdateRegexPatternSetRequest;
 
-class QTAWS_EXPORT UpdateRegexPatternSetRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT UpdateRegexPatternSetRequestPrivate : public WAFRequestPrivate {
 
 public:
     UpdateRegexPatternSetRequestPrivate(const WAF::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETEVENTSTREAMREQUEST_P_H
 #define QTAWS_GETEVENTSTREAMREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "geteventstreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetEventStreamRequest;
 
-class QTAWS_EXPORT GetEventStreamRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT GetEventStreamRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetEventStreamRequestPrivate(const Pinpoint::Action action,

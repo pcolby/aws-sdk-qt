@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETRULEREQUEST_P_H
 #define QTAWS_GETRULEREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "getrulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class GetRuleRequest;
 
-class QTAWS_EXPORT GetRuleRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT GetRuleRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     GetRuleRequestPrivate(const WAFRegional::Action action,

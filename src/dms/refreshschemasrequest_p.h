@@ -20,7 +20,7 @@
 #ifndef QTAWS_REFRESHSCHEMASREQUEST_P_H
 #define QTAWS_REFRESHSCHEMASREQUEST_P_H
 
-#include "databasemigrationservice_p.h"
+#include "databasemigrationservicerequest_p.h"
 #include "refreshschemasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class RefreshSchemasRequest;
 
-class QTAWS_EXPORT RefreshSchemasRequestPrivate : public DatabaseMigrationServicePrivate {
+class QTAWS_EXPORT RefreshSchemasRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     RefreshSchemasRequestPrivate(const DatabaseMigrationService::Action action,

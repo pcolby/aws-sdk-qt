@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETOPERATIONREQUEST_P_H
 #define QTAWS_GETOPERATIONREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "getoperationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetOperationRequest;
 
-class QTAWS_EXPORT GetOperationRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT GetOperationRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetOperationRequestPrivate(const Lightsail::Action action,

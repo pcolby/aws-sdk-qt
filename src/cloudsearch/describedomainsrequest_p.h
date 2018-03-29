@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEDOMAINSREQUEST_P_H
 #define QTAWS_DESCRIBEDOMAINSREQUEST_P_H
 
-#include "cloudsearch_p.h"
+#include "cloudsearchrequest_p.h"
 #include "describedomainsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DescribeDomainsRequest;
 
-class QTAWS_EXPORT DescribeDomainsRequestPrivate : public CloudSearchPrivate {
+class QTAWS_EXPORT DescribeDomainsRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     DescribeDomainsRequestPrivate(const CloudSearch::Action action,

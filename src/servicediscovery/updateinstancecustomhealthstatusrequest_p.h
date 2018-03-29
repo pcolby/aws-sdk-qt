@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEINSTANCECUSTOMHEALTHSTATUSREQUEST_P_H
 #define QTAWS_UPDATEINSTANCECUSTOMHEALTHSTATUSREQUEST_P_H
 
-#include "servicediscovery_p.h"
+#include "servicediscoveryrequest_p.h"
 #include "updateinstancecustomhealthstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class UpdateInstanceCustomHealthStatusRequest;
 
-class QTAWS_EXPORT UpdateInstanceCustomHealthStatusRequestPrivate : public ServiceDiscoveryPrivate {
+class QTAWS_EXPORT UpdateInstanceCustomHealthStatusRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     UpdateInstanceCustomHealthStatusRequestPrivate(const ServiceDiscovery::Action action,

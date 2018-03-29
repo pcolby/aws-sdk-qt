@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHSTOPJOBRUNREQUEST_P_H
 #define QTAWS_BATCHSTOPJOBRUNREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "batchstopjobrunrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class BatchStopJobRunRequest;
 
-class QTAWS_EXPORT BatchStopJobRunRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT BatchStopJobRunRequestPrivate : public GlueRequestPrivate {
 
 public:
     BatchStopJobRunRequestPrivate(const Glue::Action action,

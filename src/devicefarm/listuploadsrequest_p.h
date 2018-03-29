@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTUPLOADSREQUEST_P_H
 #define QTAWS_LISTUPLOADSREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "listuploadsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class ListUploadsRequest;
 
-class QTAWS_EXPORT ListUploadsRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT ListUploadsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     ListUploadsRequestPrivate(const DeviceFarm::Action action,

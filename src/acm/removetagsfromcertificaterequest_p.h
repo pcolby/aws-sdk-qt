@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVETAGSFROMCERTIFICATEREQUEST_P_H
 #define QTAWS_REMOVETAGSFROMCERTIFICATEREQUEST_P_H
 
-#include "acm_p.h"
+#include "acmrequest_p.h"
 #include "removetagsfromcertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ACM {
 
 class RemoveTagsFromCertificateRequest;
 
-class QTAWS_EXPORT RemoveTagsFromCertificateRequestPrivate : public ACMPrivate {
+class QTAWS_EXPORT RemoveTagsFromCertificateRequestPrivate : public ACMRequestPrivate {
 
 public:
     RemoveTagsFromCertificateRequestPrivate(const ACM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATETRAILREQUEST_P_H
 #define QTAWS_UPDATETRAILREQUEST_P_H
 
-#include "cloudtrail_p.h"
+#include "cloudtrailrequest_p.h"
 #include "updatetrailrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudTrail {
 
 class UpdateTrailRequest;
 
-class QTAWS_EXPORT UpdateTrailRequestPrivate : public CloudTrailPrivate {
+class QTAWS_EXPORT UpdateTrailRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
     UpdateTrailRequestPrivate(const CloudTrail::Action action,

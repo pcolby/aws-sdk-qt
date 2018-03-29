@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTCHANNELREQUEST_P_H
 #define QTAWS_STARTCHANNELREQUEST_P_H
 
-#include "medialive_p.h"
+#include "medialiverequest_p.h"
 #include "startchannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class StartChannelRequest;
 
-class QTAWS_EXPORT StartChannelRequestPrivate : public MediaLivePrivate {
+class QTAWS_EXPORT StartChannelRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     StartChannelRequestPrivate(const MediaLive::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBERESERVEDINSTANCESMODIFICATIONSREQUEST_P_H
 #define QTAWS_DESCRIBERESERVEDINSTANCESMODIFICATIONSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describereservedinstancesmodificationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeReservedInstancesModificationsRequest;
 
-class QTAWS_EXPORT DescribeReservedInstancesModificationsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeReservedInstancesModificationsRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeReservedInstancesModificationsRequestPrivate(const EC2::Action action,

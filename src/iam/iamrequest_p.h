@@ -20,7 +20,7 @@
 #ifndef QTAWS_IAMREQUEST_P_H
 #define QTAWS_IAMREQUEST_P_H
 
-#include "iam_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "iamrequest.h"
 
 namespace QtAws {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEPENDINGMAINTENANCEACTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEPENDINGMAINTENANCEACTIONSREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describependingmaintenanceactionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribePendingMaintenanceActionsRequest;
 
-class QTAWS_EXPORT DescribePendingMaintenanceActionsRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribePendingMaintenanceActionsRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribePendingMaintenanceActionsRequestPrivate(const RDS::Action action,

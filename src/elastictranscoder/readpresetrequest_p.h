@@ -20,7 +20,7 @@
 #ifndef QTAWS_READPRESETREQUEST_P_H
 #define QTAWS_READPRESETREQUEST_P_H
 
-#include "elastictranscoder_p.h"
+#include "elastictranscoderrequest_p.h"
 #include "readpresetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class ReadPresetRequest;
 
-class QTAWS_EXPORT ReadPresetRequestPrivate : public ElasticTranscoderPrivate {
+class QTAWS_EXPORT ReadPresetRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     ReadPresetRequestPrivate(const ElasticTranscoder::Action action,

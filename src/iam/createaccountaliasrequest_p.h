@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEACCOUNTALIASREQUEST_P_H
 #define QTAWS_CREATEACCOUNTALIASREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "createaccountaliasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class CreateAccountAliasRequest;
 
-class QTAWS_EXPORT CreateAccountAliasRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT CreateAccountAliasRequestPrivate : public IAMRequestPrivate {
 
 public:
     CreateAccountAliasRequestPrivate(const IAM::Action action,

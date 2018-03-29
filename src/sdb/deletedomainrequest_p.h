@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDOMAINREQUEST_P_H
 #define QTAWS_DELETEDOMAINREQUEST_P_H
 
-#include "simpledb_p.h"
+#include "simpledbrequest_p.h"
 #include "deletedomainrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SimpleDB {
 
 class DeleteDomainRequest;
 
-class QTAWS_EXPORT DeleteDomainRequestPrivate : public SimpleDBPrivate {
+class QTAWS_EXPORT DeleteDomainRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
     DeleteDomainRequestPrivate(const SimpleDB::Action action,

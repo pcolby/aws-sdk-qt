@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEPIPELINEREQUEST_P_H
 #define QTAWS_UPDATEPIPELINEREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "updatepipelinerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class UpdatePipelineRequest;
 
-class QTAWS_EXPORT UpdatePipelineRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT UpdatePipelineRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     UpdatePipelineRequestPrivate(const CodePipeline::Action action,

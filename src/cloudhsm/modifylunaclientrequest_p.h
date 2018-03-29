@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYLUNACLIENTREQUEST_P_H
 #define QTAWS_MODIFYLUNACLIENTREQUEST_P_H
 
-#include "cloudhsm_p.h"
+#include "cloudhsmrequest_p.h"
 #include "modifylunaclientrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class ModifyLunaClientRequest;
 
-class QTAWS_EXPORT ModifyLunaClientRequestPrivate : public CloudHSMPrivate {
+class QTAWS_EXPORT ModifyLunaClientRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     ModifyLunaClientRequestPrivate(const CloudHSM::Action action,

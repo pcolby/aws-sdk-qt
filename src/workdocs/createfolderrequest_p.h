@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEFOLDERREQUEST_P_H
 #define QTAWS_CREATEFOLDERREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "createfolderrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class CreateFolderRequest;
 
-class QTAWS_EXPORT CreateFolderRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT CreateFolderRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     CreateFolderRequestPrivate(const WorkDocs::Action action,

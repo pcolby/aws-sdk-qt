@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELRESERVEDINSTANCESLISTINGREQUEST_P_H
 #define QTAWS_CANCELRESERVEDINSTANCESLISTINGREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "cancelreservedinstanceslistingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CancelReservedInstancesListingRequest;
 
-class QTAWS_EXPORT CancelReservedInstancesListingRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CancelReservedInstancesListingRequestPrivate : public EC2RequestPrivate {
 
 public:
     CancelReservedInstancesListingRequestPrivate(const EC2::Action action,

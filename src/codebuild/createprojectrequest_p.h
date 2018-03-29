@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEPROJECTREQUEST_P_H
 #define QTAWS_CREATEPROJECTREQUEST_P_H
 
-#include "codebuild_p.h"
+#include "codebuildrequest_p.h"
 #include "createprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class CreateProjectRequest;
 
-class QTAWS_EXPORT CreateProjectRequestPrivate : public CodeBuildPrivate {
+class QTAWS_EXPORT CreateProjectRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     CreateProjectRequestPrivate(const CodeBuild::Action action,

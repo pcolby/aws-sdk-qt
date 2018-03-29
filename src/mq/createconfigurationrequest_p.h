@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECONFIGURATIONREQUEST_P_H
 #define QTAWS_CREATECONFIGURATIONREQUEST_P_H
 
-#include "mq_p.h"
+#include "mqrequest_p.h"
 #include "createconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MQ {
 
 class CreateConfigurationRequest;
 
-class QTAWS_EXPORT CreateConfigurationRequestPrivate : public MQPrivate {
+class QTAWS_EXPORT CreateConfigurationRequestPrivate : public MQRequestPrivate {
 
 public:
     CreateConfigurationRequestPrivate(const MQ::Action action,

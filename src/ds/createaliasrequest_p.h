@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEALIASREQUEST_P_H
 #define QTAWS_CREATEALIASREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "createaliasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class CreateAliasRequest;
 
-class QTAWS_EXPORT CreateAliasRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT CreateAliasRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     CreateAliasRequestPrivate(const DirectoryService::Action action,

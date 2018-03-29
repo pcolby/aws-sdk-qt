@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETIDENTITYFEEDBACKFORWARDINGENABLEDREQUEST_P_H
 #define QTAWS_SETIDENTITYFEEDBACKFORWARDINGENABLEDREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "setidentityfeedbackforwardingenabledrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class SetIdentityFeedbackForwardingEnabledRequest;
 
-class QTAWS_EXPORT SetIdentityFeedbackForwardingEnabledRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT SetIdentityFeedbackForwardingEnabledRequestPrivate : public SESRequestPrivate {
 
 public:
     SetIdentityFeedbackForwardingEnabledRequestPrivate(const SES::Action action,

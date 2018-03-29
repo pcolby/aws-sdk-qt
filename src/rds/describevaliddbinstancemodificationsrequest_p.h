@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEVALIDDBINSTANCEMODIFICATIONSREQUEST_P_H
 #define QTAWS_DESCRIBEVALIDDBINSTANCEMODIFICATIONSREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describevaliddbinstancemodificationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeValidDBInstanceModificationsRequest;
 
-class QTAWS_EXPORT DescribeValidDBInstanceModificationsRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeValidDBInstanceModificationsRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeValidDBInstanceModificationsRequestPrivate(const RDS::Action action,

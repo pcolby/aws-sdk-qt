@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTROLEPOLICIESREQUEST_P_H
 #define QTAWS_LISTROLEPOLICIESREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "listrolepoliciesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class ListRolePoliciesRequest;
 
-class QTAWS_EXPORT ListRolePoliciesRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT ListRolePoliciesRequestPrivate : public IAMRequestPrivate {
 
 public:
     ListRolePoliciesRequestPrivate(const IAM::Action action,

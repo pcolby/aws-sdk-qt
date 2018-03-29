@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDISTRIBUTIONWITHTAGSREQUEST_P_H
 #define QTAWS_CREATEDISTRIBUTIONWITHTAGSREQUEST_P_H
 
-#include "cloudfront_p.h"
+#include "cloudfrontrequest_p.h"
 #include "createdistributionwithtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class CreateDistributionWithTagsRequest;
 
-class QTAWS_EXPORT CreateDistributionWithTagsRequestPrivate : public CloudFrontPrivate {
+class QTAWS_EXPORT CreateDistributionWithTagsRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     CreateDistributionWithTagsRequestPrivate(const CloudFront::Action action,

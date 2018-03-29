@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHGETIMAGEREQUEST_P_H
 #define QTAWS_BATCHGETIMAGEREQUEST_P_H
 
-#include "ecr_p.h"
+#include "ecrrequest_p.h"
 #include "batchgetimagerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECR {
 
 class BatchGetImageRequest;
 
-class QTAWS_EXPORT BatchGetImageRequestPrivate : public ECRPrivate {
+class QTAWS_EXPORT BatchGetImageRequestPrivate : public ECRRequestPrivate {
 
 public:
     BatchGetImageRequestPrivate(const ECR::Action action,

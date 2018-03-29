@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTHAPGSREQUEST_P_H
 #define QTAWS_LISTHAPGSREQUEST_P_H
 
-#include "cloudhsm_p.h"
+#include "cloudhsmrequest_p.h"
 #include "listhapgsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class ListHapgsRequest;
 
-class QTAWS_EXPORT ListHapgsRequestPrivate : public CloudHSMPrivate {
+class QTAWS_EXPORT ListHapgsRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     ListHapgsRequestPrivate(const CloudHSM::Action action,

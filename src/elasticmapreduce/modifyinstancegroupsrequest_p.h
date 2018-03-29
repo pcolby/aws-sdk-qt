@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYINSTANCEGROUPSREQUEST_P_H
 #define QTAWS_MODIFYINSTANCEGROUPSREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "modifyinstancegroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class ModifyInstanceGroupsRequest;
 
-class QTAWS_EXPORT ModifyInstanceGroupsRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT ModifyInstanceGroupsRequestPrivate : public EMRRequestPrivate {
 
 public:
     ModifyInstanceGroupsRequestPrivate(const EMR::Action action,

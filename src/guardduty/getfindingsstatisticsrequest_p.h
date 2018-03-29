@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETFINDINGSSTATISTICSREQUEST_P_H
 #define QTAWS_GETFINDINGSSTATISTICSREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "getfindingsstatisticsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class GetFindingsStatisticsRequest;
 
-class QTAWS_EXPORT GetFindingsStatisticsRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT GetFindingsStatisticsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     GetFindingsStatisticsRequestPrivate(const GuardDuty::Action action,

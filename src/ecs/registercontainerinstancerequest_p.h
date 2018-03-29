@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERCONTAINERINSTANCEREQUEST_P_H
 #define QTAWS_REGISTERCONTAINERINSTANCEREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "registercontainerinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class RegisterContainerInstanceRequest;
 
-class QTAWS_EXPORT RegisterContainerInstanceRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT RegisterContainerInstanceRequestPrivate : public ECSRequestPrivate {
 
 public:
     RegisterContainerInstanceRequestPrivate(const ECS::Action action,

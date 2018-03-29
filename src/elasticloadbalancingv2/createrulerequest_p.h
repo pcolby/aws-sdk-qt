@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATERULEREQUEST_P_H
 #define QTAWS_CREATERULEREQUEST_P_H
 
-#include "elasticloadbalancingv2_p.h"
+#include "elasticloadbalancingv2request_p.h"
 #include "createrulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class CreateRuleRequest;
 
-class QTAWS_EXPORT CreateRuleRequestPrivate : public ElasticLoadBalancingv2Private {
+class QTAWS_EXPORT CreateRuleRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     CreateRuleRequestPrivate(const ElasticLoadBalancingv2::Action action,

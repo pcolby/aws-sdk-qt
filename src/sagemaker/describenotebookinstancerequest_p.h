@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBENOTEBOOKINSTANCEREQUEST_P_H
 #define QTAWS_DESCRIBENOTEBOOKINSTANCEREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "describenotebookinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DescribeNotebookInstanceRequest;
 
-class QTAWS_EXPORT DescribeNotebookInstanceRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT DescribeNotebookInstanceRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DescribeNotebookInstanceRequestPrivate(const SageMaker::Action action,

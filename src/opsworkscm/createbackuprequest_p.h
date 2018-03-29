@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEBACKUPREQUEST_P_H
 #define QTAWS_CREATEBACKUPREQUEST_P_H
 
-#include "opsworkscm_p.h"
+#include "opsworkscmrequest_p.h"
 #include "createbackuprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class CreateBackupRequest;
 
-class QTAWS_EXPORT CreateBackupRequestPrivate : public OpsWorksCMPrivate {
+class QTAWS_EXPORT CreateBackupRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     CreateBackupRequestPrivate(const OpsWorksCM::Action action,

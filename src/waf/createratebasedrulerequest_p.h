@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATERATEBASEDRULEREQUEST_P_H
 #define QTAWS_CREATERATEBASEDRULEREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "createratebasedrulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class CreateRateBasedRuleRequest;
 
-class QTAWS_EXPORT CreateRateBasedRuleRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT CreateRateBasedRuleRequestPrivate : public WAFRequestPrivate {
 
 public:
     CreateRateBasedRuleRequestPrivate(const WAF::Action action,

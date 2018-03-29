@@ -20,7 +20,7 @@
 #ifndef QTAWS_POLLFORDECISIONTASKREQUEST_P_H
 #define QTAWS_POLLFORDECISIONTASKREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "pollfordecisiontaskrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class PollForDecisionTaskRequest;
 
-class QTAWS_EXPORT PollForDecisionTaskRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT PollForDecisionTaskRequestPrivate : public SWFRequestPrivate {
 
 public:
     PollForDecisionTaskRequestPrivate(const SWF::Action action,

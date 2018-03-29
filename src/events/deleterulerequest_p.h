@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETERULEREQUEST_P_H
 #define QTAWS_DELETERULEREQUEST_P_H
 
-#include "cloudwatchevents_p.h"
+#include "cloudwatcheventsrequest_p.h"
 #include "deleterulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class DeleteRuleRequest;
 
-class QTAWS_EXPORT DeleteRuleRequestPrivate : public CloudWatchEventsPrivate {
+class QTAWS_EXPORT DeleteRuleRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     DeleteRuleRequestPrivate(const CloudWatchEvents::Action action,

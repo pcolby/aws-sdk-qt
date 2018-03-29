@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTEAMMEMBERSREQUEST_P_H
 #define QTAWS_LISTTEAMMEMBERSREQUEST_P_H
 
-#include "codestar_p.h"
+#include "codestarrequest_p.h"
 #include "listteammembersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class ListTeamMembersRequest;
 
-class QTAWS_EXPORT ListTeamMembersRequestPrivate : public CodeStarPrivate {
+class QTAWS_EXPORT ListTeamMembersRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     ListTeamMembersRequestPrivate(const CodeStar::Action action,

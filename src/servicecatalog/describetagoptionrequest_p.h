@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETAGOPTIONREQUEST_P_H
 #define QTAWS_DESCRIBETAGOPTIONREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "describetagoptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DescribeTagOptionRequest;
 
-class QTAWS_EXPORT DescribeTagOptionRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT DescribeTagOptionRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DescribeTagOptionRequestPrivate(const ServiceCatalog::Action action,

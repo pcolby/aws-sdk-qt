@@ -20,7 +20,7 @@
 #ifndef QTAWS_VALIDATEPIPELINEDEFINITIONREQUEST_P_H
 #define QTAWS_VALIDATEPIPELINEDEFINITIONREQUEST_P_H
 
-#include "datapipeline_p.h"
+#include "datapipelinerequest_p.h"
 #include "validatepipelinedefinitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class ValidatePipelineDefinitionRequest;
 
-class QTAWS_EXPORT ValidatePipelineDefinitionRequestPrivate : public DataPipelinePrivate {
+class QTAWS_EXPORT ValidatePipelineDefinitionRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     ValidatePipelineDefinitionRequestPrivate(const DataPipeline::Action action,

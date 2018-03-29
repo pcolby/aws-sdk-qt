@@ -20,7 +20,7 @@
 #ifndef QTAWS_APPSYNCREQUEST_P_H
 #define QTAWS_APPSYNCREQUEST_P_H
 
-#include "appsync_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "appsyncrequest.h"
 
 namespace QtAws {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBAIDUCHANNELREQUEST_P_H
 #define QTAWS_DELETEBAIDUCHANNELREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "deletebaiduchannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class DeleteBaiduChannelRequest;
 
-class QTAWS_EXPORT DeleteBaiduChannelRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT DeleteBaiduChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     DeleteBaiduChannelRequestPrivate(const Pinpoint::Action action,

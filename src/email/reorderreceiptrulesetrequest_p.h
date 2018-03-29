@@ -20,7 +20,7 @@
 #ifndef QTAWS_REORDERRECEIPTRULESETREQUEST_P_H
 #define QTAWS_REORDERRECEIPTRULESETREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "reorderreceiptrulesetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class ReorderReceiptRuleSetRequest;
 
-class QTAWS_EXPORT ReorderReceiptRuleSetRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT ReorderReceiptRuleSetRequestPrivate : public SESRequestPrivate {
 
 public:
     ReorderReceiptRuleSetRequestPrivate(const SES::Action action,

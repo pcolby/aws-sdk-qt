@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTRESOLVERSREQUEST_P_H
 #define QTAWS_LISTRESOLVERSREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "listresolversrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class ListResolversRequest;
 
-class QTAWS_EXPORT ListResolversRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT ListResolversRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     ListResolversRequestPrivate(const AppSync::Action action,

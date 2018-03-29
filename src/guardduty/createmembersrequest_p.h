@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEMEMBERSREQUEST_P_H
 #define QTAWS_CREATEMEMBERSREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "createmembersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class CreateMembersRequest;
 
-class QTAWS_EXPORT CreateMembersRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT CreateMembersRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     CreateMembersRequestPrivate(const GuardDuty::Action action,

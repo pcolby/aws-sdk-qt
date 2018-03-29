@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESERVICESREQUEST_P_H
 #define QTAWS_DESCRIBESERVICESREQUEST_P_H
 
-#include "support_p.h"
+#include "supportrequest_p.h"
 #include "describeservicesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Support {
 
 class DescribeServicesRequest;
 
-class QTAWS_EXPORT DescribeServicesRequestPrivate : public SupportPrivate {
+class QTAWS_EXPORT DescribeServicesRequestPrivate : public SupportRequestPrivate {
 
 public:
     DescribeServicesRequestPrivate(const Support::Action action,

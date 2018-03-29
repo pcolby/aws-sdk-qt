@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPBUILDREQUEST_P_H
 #define QTAWS_STOPBUILDREQUEST_P_H
 
-#include "codebuild_p.h"
+#include "codebuildrequest_p.h"
 #include "stopbuildrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class StopBuildRequest;
 
-class QTAWS_EXPORT StopBuildRequestPrivate : public CodeBuildPrivate {
+class QTAWS_EXPORT StopBuildRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     StopBuildRequestPrivate(const CodeBuild::Action action,

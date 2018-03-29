@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPLOADPARTREQUEST_P_H
 #define QTAWS_UPLOADPARTREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "uploadpartrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class UploadPartRequest;
 
-class QTAWS_EXPORT UploadPartRequestPrivate : public S3Private {
+class QTAWS_EXPORT UploadPartRequestPrivate : public S3RequestPrivate {
 
 public:
     UploadPartRequestPrivate(const S3::Action action,

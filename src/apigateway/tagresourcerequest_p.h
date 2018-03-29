@@ -20,7 +20,7 @@
 #ifndef QTAWS_TAGRESOURCEREQUEST_P_H
 #define QTAWS_TAGRESOURCEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "tagresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT TagResourceRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const APIGateway::Action action,

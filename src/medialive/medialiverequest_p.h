@@ -20,7 +20,7 @@
 #ifndef QTAWS_MEDIALIVEREQUEST_P_H
 #define QTAWS_MEDIALIVEREQUEST_P_H
 
-#include "medialive_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "medialiverequest.h"
 
 namespace QtAws {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_MOVEACCOUNTREQUEST_P_H
 #define QTAWS_MOVEACCOUNTREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "moveaccountrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class MoveAccountRequest;
 
-class QTAWS_EXPORT MoveAccountRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT MoveAccountRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     MoveAccountRequestPrivate(const Organizations::Action action,

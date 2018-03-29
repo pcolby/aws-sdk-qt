@@ -20,7 +20,7 @@
 #ifndef QTAWS_CONFIRMCONNECTIONREQUEST_P_H
 #define QTAWS_CONFIRMCONNECTIONREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "confirmconnectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class ConfirmConnectionRequest;
 
-class QTAWS_EXPORT ConfirmConnectionRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT ConfirmConnectionRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     ConfirmConnectionRequestPrivate(const DirectConnect::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDTAGSTORESOURCEREQUEST_P_H
 #define QTAWS_ADDTAGSTORESOURCEREQUEST_P_H
 
-#include "cloudhsm_p.h"
+#include "cloudhsmrequest_p.h"
 #include "addtagstoresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class AddTagsToResourceRequest;
 
-class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public CloudHSMPrivate {
+class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     AddTagsToResourceRequestPrivate(const CloudHSM::Action action,

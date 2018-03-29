@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEENDPOINTSREQUEST_P_H
 #define QTAWS_DESCRIBEENDPOINTSREQUEST_P_H
 
-#include "mediaconvert_p.h"
+#include "mediaconvertrequest_p.h"
 #include "describeendpointsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class DescribeEndpointsRequest;
 
-class QTAWS_EXPORT DescribeEndpointsRequestPrivate : public MediaConvertPrivate {
+class QTAWS_EXPORT DescribeEndpointsRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     DescribeEndpointsRequestPrivate(const MediaConvert::Action action,

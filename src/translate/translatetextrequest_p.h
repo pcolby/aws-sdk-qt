@@ -20,7 +20,7 @@
 #ifndef QTAWS_TRANSLATETEXTREQUEST_P_H
 #define QTAWS_TRANSLATETEXTREQUEST_P_H
 
-#include "translate_p.h"
+#include "translaterequest_p.h"
 #include "translatetextrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Translate {
 
 class TranslateTextRequest;
 
-class QTAWS_EXPORT TranslateTextRequestPrivate : public TranslatePrivate {
+class QTAWS_EXPORT TranslateTextRequestPrivate : public TranslateRequestPrivate {
 
 public:
     TranslateTextRequestPrivate(const Translate::Action action,

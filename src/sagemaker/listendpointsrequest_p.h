@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTENDPOINTSREQUEST_P_H
 #define QTAWS_LISTENDPOINTSREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "listendpointsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class ListEndpointsRequest;
 
-class QTAWS_EXPORT ListEndpointsRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT ListEndpointsRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     ListEndpointsRequestPrivate(const SageMaker::Action action,

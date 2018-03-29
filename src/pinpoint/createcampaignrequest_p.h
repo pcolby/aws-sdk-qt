@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECAMPAIGNREQUEST_P_H
 #define QTAWS_CREATECAMPAIGNREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "createcampaignrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class CreateCampaignRequest;
 
-class QTAWS_EXPORT CreateCampaignRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT CreateCampaignRequestPrivate : public PinpointRequestPrivate {
 
 public:
     CreateCampaignRequestPrivate(const Pinpoint::Action action,

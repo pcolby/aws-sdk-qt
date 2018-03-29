@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTSCALINGPOLICYREQUEST_P_H
 #define QTAWS_PUTSCALINGPOLICYREQUEST_P_H
 
-#include "applicationautoscaling_p.h"
+#include "applicationautoscalingrequest_p.h"
 #include "putscalingpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 
 class PutScalingPolicyRequest;
 
-class QTAWS_EXPORT PutScalingPolicyRequestPrivate : public ApplicationAutoScalingPrivate {
+class QTAWS_EXPORT PutScalingPolicyRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
     PutScalingPolicyRequestPrivate(const ApplicationAutoScaling::Action action,

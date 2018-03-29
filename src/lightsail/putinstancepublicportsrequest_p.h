@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTINSTANCEPUBLICPORTSREQUEST_P_H
 #define QTAWS_PUTINSTANCEPUBLICPORTSREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "putinstancepublicportsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class PutInstancePublicPortsRequest;
 
-class QTAWS_EXPORT PutInstancePublicPortsRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT PutInstancePublicPortsRequestPrivate : public LightsailRequestPrivate {
 
 public:
     PutInstancePublicPortsRequestPrivate(const Lightsail::Action action,

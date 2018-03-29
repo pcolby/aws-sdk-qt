@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETINSTANCESHEALTHSTATUSREQUEST_P_H
 #define QTAWS_GETINSTANCESHEALTHSTATUSREQUEST_P_H
 
-#include "servicediscovery_p.h"
+#include "servicediscoveryrequest_p.h"
 #include "getinstanceshealthstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class GetInstancesHealthStatusRequest;
 
-class QTAWS_EXPORT GetInstancesHealthStatusRequestPrivate : public ServiceDiscoveryPrivate {
+class QTAWS_EXPORT GetInstancesHealthStatusRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     GetInstancesHealthStatusRequestPrivate(const ServiceDiscovery::Action action,

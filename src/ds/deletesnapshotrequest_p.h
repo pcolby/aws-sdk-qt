@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESNAPSHOTREQUEST_P_H
 #define QTAWS_DELETESNAPSHOTREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "deletesnapshotrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DeleteSnapshotRequest;
 
-class QTAWS_EXPORT DeleteSnapshotRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT DeleteSnapshotRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     DeleteSnapshotRequestPrivate(const DirectoryService::Action action,

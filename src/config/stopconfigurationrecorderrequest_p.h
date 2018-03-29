@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPCONFIGURATIONRECORDERREQUEST_P_H
 #define QTAWS_STOPCONFIGURATIONRECORDERREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "stopconfigurationrecorderrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class StopConfigurationRecorderRequest;
 
-class QTAWS_EXPORT StopConfigurationRecorderRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT StopConfigurationRecorderRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     StopConfigurationRecorderRequestPrivate(const ConfigService::Action action,

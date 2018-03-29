@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECACHEPARAMETERGROUPREQUEST_P_H
 #define QTAWS_DELETECACHEPARAMETERGROUPREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "deletecacheparametergrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DeleteCacheParameterGroupRequest;
 
-class QTAWS_EXPORT DeleteCacheParameterGroupRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT DeleteCacheParameterGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DeleteCacheParameterGroupRequestPrivate(const ElastiCache::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTROLEPOLICYREQUEST_P_H
 #define QTAWS_PUTROLEPOLICYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "putrolepolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class PutRolePolicyRequest;
 
-class QTAWS_EXPORT PutRolePolicyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT PutRolePolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
     PutRolePolicyRequestPrivate(const IAM::Action action,

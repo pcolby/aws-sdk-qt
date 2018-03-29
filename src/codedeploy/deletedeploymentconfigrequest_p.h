@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDEPLOYMENTCONFIGREQUEST_P_H
 #define QTAWS_DELETEDEPLOYMENTCONFIGREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "deletedeploymentconfigrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class DeleteDeploymentConfigRequest;
 
-class QTAWS_EXPORT DeleteDeploymentConfigRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT DeleteDeploymentConfigRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     DeleteDeploymentConfigRequestPrivate(const CodeDeploy::Action action,

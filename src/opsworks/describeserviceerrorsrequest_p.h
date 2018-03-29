@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESERVICEERRORSREQUEST_P_H
 #define QTAWS_DESCRIBESERVICEERRORSREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "describeserviceerrorsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DescribeServiceErrorsRequest;
 
-class QTAWS_EXPORT DescribeServiceErrorsRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DescribeServiceErrorsRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DescribeServiceErrorsRequestPrivate(const OpsWorks::Action action,

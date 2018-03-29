@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEFACETREQUEST_P_H
 #define QTAWS_UPDATEFACETREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "updatefacetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class UpdateFacetRequest;
 
-class QTAWS_EXPORT UpdateFacetRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT UpdateFacetRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     UpdateFacetRequestPrivate(const CloudDirectory::Action action,

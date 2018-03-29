@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECONSTRAINTREQUEST_P_H
 #define QTAWS_UPDATECONSTRAINTREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "updateconstraintrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class UpdateConstraintRequest;
 
-class QTAWS_EXPORT UpdateConstraintRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT UpdateConstraintRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     UpdateConstraintRequestPrivate(const ServiceCatalog::Action action,

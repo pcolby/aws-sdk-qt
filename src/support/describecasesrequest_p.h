@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECASESREQUEST_P_H
 #define QTAWS_DESCRIBECASESREQUEST_P_H
 
-#include "support_p.h"
+#include "supportrequest_p.h"
 #include "describecasesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Support {
 
 class DescribeCasesRequest;
 
-class QTAWS_EXPORT DescribeCasesRequestPrivate : public SupportPrivate {
+class QTAWS_EXPORT DescribeCasesRequestPrivate : public SupportRequestPrivate {
 
 public:
     DescribeCasesRequestPrivate(const Support::Action action,

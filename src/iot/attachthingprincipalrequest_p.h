@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATTACHTHINGPRINCIPALREQUEST_P_H
 #define QTAWS_ATTACHTHINGPRINCIPALREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "attachthingprincipalrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class AttachThingPrincipalRequest;
 
-class QTAWS_EXPORT AttachThingPrincipalRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT AttachThingPrincipalRequestPrivate : public IoTRequestPrivate {
 
 public:
     AttachThingPrincipalRequestPrivate(const IoT::Action action,

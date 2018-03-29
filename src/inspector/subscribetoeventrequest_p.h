@@ -20,7 +20,7 @@
 #ifndef QTAWS_SUBSCRIBETOEVENTREQUEST_P_H
 #define QTAWS_SUBSCRIBETOEVENTREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "subscribetoeventrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class SubscribeToEventRequest;
 
-class QTAWS_EXPORT SubscribeToEventRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT SubscribeToEventRequestPrivate : public InspectorRequestPrivate {
 
 public:
     SubscribeToEventRequestPrivate(const Inspector::Action action,

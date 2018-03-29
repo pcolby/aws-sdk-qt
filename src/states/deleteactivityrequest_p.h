@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEACTIVITYREQUEST_P_H
 #define QTAWS_DELETEACTIVITYREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "deleteactivityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class DeleteActivityRequest;
 
-class QTAWS_EXPORT DeleteActivityRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT DeleteActivityRequestPrivate : public SFNRequestPrivate {
 
 public:
     DeleteActivityRequestPrivate(const SFN::Action action,

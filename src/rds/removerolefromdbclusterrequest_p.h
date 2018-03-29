@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVEROLEFROMDBCLUSTERREQUEST_P_H
 #define QTAWS_REMOVEROLEFROMDBCLUSTERREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "removerolefromdbclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class RemoveRoleFromDBClusterRequest;
 
-class QTAWS_EXPORT RemoveRoleFromDBClusterRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT RemoveRoleFromDBClusterRequestPrivate : public RDSRequestPrivate {
 
 public:
     RemoveRoleFromDBClusterRequestPrivate(const RDS::Action action,

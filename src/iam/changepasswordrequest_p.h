@@ -20,7 +20,7 @@
 #ifndef QTAWS_CHANGEPASSWORDREQUEST_P_H
 #define QTAWS_CHANGEPASSWORDREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "changepasswordrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class ChangePasswordRequest;
 
-class QTAWS_EXPORT ChangePasswordRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT ChangePasswordRequestPrivate : public IAMRequestPrivate {
 
 public:
     ChangePasswordRequestPrivate(const IAM::Action action,

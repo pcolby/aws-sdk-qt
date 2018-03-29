@@ -20,7 +20,7 @@
 #ifndef QTAWS_MTURKREQUEST_P_H
 #define QTAWS_MTURKREQUEST_P_H
 
-#include "mturk_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "mturkrequest.h"
 
 namespace QtAws {

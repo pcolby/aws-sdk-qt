@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESAMLPROVIDERREQUEST_P_H
 #define QTAWS_CREATESAMLPROVIDERREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "createsamlproviderrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class CreateSAMLProviderRequest;
 
-class QTAWS_EXPORT CreateSAMLProviderRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT CreateSAMLProviderRequestPrivate : public IAMRequestPrivate {
 
 public:
     CreateSAMLProviderRequestPrivate(const IAM::Action action,

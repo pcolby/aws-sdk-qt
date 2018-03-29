@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTABLESREQUEST_P_H
 #define QTAWS_GETTABLESREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "gettablesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetTablesRequest;
 
-class QTAWS_EXPORT GetTablesRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT GetTablesRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetTablesRequestPrivate(const Glue::Action action,

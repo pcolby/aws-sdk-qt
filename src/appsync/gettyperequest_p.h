@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTYPEREQUEST_P_H
 #define QTAWS_GETTYPEREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "gettyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class GetTypeRequest;
 
-class QTAWS_EXPORT GetTypeRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT GetTypeRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     GetTypeRequestPrivate(const AppSync::Action action,

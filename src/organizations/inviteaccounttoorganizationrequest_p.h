@@ -20,7 +20,7 @@
 #ifndef QTAWS_INVITEACCOUNTTOORGANIZATIONREQUEST_P_H
 #define QTAWS_INVITEACCOUNTTOORGANIZATIONREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "inviteaccounttoorganizationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class InviteAccountToOrganizationRequest;
 
-class QTAWS_EXPORT InviteAccountToOrganizationRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT InviteAccountToOrganizationRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     InviteAccountToOrganizationRequestPrivate(const Organizations::Action action,

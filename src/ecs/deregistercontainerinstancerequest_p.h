@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEREGISTERCONTAINERINSTANCEREQUEST_P_H
 #define QTAWS_DEREGISTERCONTAINERINSTANCEREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "deregistercontainerinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class DeregisterContainerInstanceRequest;
 
-class QTAWS_EXPORT DeregisterContainerInstanceRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT DeregisterContainerInstanceRequestPrivate : public ECSRequestPrivate {
 
 public:
     DeregisterContainerInstanceRequestPrivate(const ECS::Action action,

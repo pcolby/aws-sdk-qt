@@ -20,7 +20,7 @@
 #ifndef QTAWS_APPLICATIONDISCOVERYSERVICEREQUEST_P_H
 #define QTAWS_APPLICATIONDISCOVERYSERVICEREQUEST_P_H
 
-#include "applicationdiscoveryservice_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "applicationdiscoveryservicerequest.h"
 
 namespace QtAws {

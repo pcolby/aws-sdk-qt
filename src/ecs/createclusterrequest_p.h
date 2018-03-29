@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECLUSTERREQUEST_P_H
 #define QTAWS_CREATECLUSTERREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "createclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class CreateClusterRequest;
 
-class QTAWS_EXPORT CreateClusterRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT CreateClusterRequestPrivate : public ECSRequestPrivate {
 
 public:
     CreateClusterRequestPrivate(const ECS::Action action,

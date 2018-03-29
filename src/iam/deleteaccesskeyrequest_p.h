@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEACCESSKEYREQUEST_P_H
 #define QTAWS_DELETEACCESSKEYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "deleteaccesskeyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteAccessKeyRequest;
 
-class QTAWS_EXPORT DeleteAccessKeyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT DeleteAccessKeyRequestPrivate : public IAMRequestPrivate {
 
 public:
     DeleteAccessKeyRequestPrivate(const IAM::Action action,

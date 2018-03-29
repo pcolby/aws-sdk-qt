@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDETECTORREQUEST_P_H
 #define QTAWS_DELETEDETECTORREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "deletedetectorrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DeleteDetectorRequest;
 
-class QTAWS_EXPORT DeleteDetectorRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT DeleteDetectorRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     DeleteDetectorRequestPrivate(const GuardDuty::Action action,

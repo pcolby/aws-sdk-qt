@@ -20,7 +20,7 @@
 #ifndef QTAWS_COMPAREFACESREQUEST_P_H
 #define QTAWS_COMPAREFACESREQUEST_P_H
 
-#include "rekognition_p.h"
+#include "rekognitionrequest_p.h"
 #include "comparefacesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class CompareFacesRequest;
 
-class QTAWS_EXPORT CompareFacesRequestPrivate : public RekognitionPrivate {
+class QTAWS_EXPORT CompareFacesRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     CompareFacesRequestPrivate(const Rekognition::Action action,

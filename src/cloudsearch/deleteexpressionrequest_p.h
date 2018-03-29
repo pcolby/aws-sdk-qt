@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEEXPRESSIONREQUEST_P_H
 #define QTAWS_DELETEEXPRESSIONREQUEST_P_H
 
-#include "cloudsearch_p.h"
+#include "cloudsearchrequest_p.h"
 #include "deleteexpressionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DeleteExpressionRequest;
 
-class QTAWS_EXPORT DeleteExpressionRequestPrivate : public CloudSearchPrivate {
+class QTAWS_EXPORT DeleteExpressionRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     DeleteExpressionRequestPrivate(const CloudSearch::Action action,

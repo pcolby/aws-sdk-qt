@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTSLOTTYPEREQUEST_P_H
 #define QTAWS_PUTSLOTTYPEREQUEST_P_H
 
-#include "lexmodelbuildingservice_p.h"
+#include "lexmodelbuildingservicerequest_p.h"
 #include "putslottyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class PutSlotTypeRequest;
 
-class QTAWS_EXPORT PutSlotTypeRequestPrivate : public LexModelBuildingServicePrivate {
+class QTAWS_EXPORT PutSlotTypeRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
     PutSlotTypeRequestPrivate(const LexModelBuildingService::Action action,

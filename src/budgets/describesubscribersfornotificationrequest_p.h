@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESUBSCRIBERSFORNOTIFICATIONREQUEST_P_H
 #define QTAWS_DESCRIBESUBSCRIBERSFORNOTIFICATIONREQUEST_P_H
 
-#include "budgets_p.h"
+#include "budgetsrequest_p.h"
 #include "describesubscribersfornotificationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Budgets {
 
 class DescribeSubscribersForNotificationRequest;
 
-class QTAWS_EXPORT DescribeSubscribersForNotificationRequestPrivate : public BudgetsPrivate {
+class QTAWS_EXPORT DescribeSubscribersForNotificationRequestPrivate : public BudgetsRequestPrivate {
 
 public:
     DescribeSubscribersForNotificationRequestPrivate(const Budgets::Action action,

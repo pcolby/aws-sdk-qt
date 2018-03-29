@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPGRADEAPPLIEDSCHEMAREQUEST_P_H
 #define QTAWS_UPGRADEAPPLIEDSCHEMAREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "upgradeappliedschemarequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class UpgradeAppliedSchemaRequest;
 
-class QTAWS_EXPORT UpgradeAppliedSchemaRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT UpgradeAppliedSchemaRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     UpgradeAppliedSchemaRequestPrivate(const CloudDirectory::Action action,

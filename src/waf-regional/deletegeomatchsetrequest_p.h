@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEGEOMATCHSETREQUEST_P_H
 #define QTAWS_DELETEGEOMATCHSETREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "deletegeomatchsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class DeleteGeoMatchSetRequest;
 
-class QTAWS_EXPORT DeleteGeoMatchSetRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT DeleteGeoMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     DeleteGeoMatchSetRequestPrivate(const WAFRegional::Action action,

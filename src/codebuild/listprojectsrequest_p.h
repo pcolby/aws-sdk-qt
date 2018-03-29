@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTPROJECTSREQUEST_P_H
 #define QTAWS_LISTPROJECTSREQUEST_P_H
 
-#include "codebuild_p.h"
+#include "codebuildrequest_p.h"
 #include "listprojectsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class ListProjectsRequest;
 
-class QTAWS_EXPORT ListProjectsRequestPrivate : public CodeBuildPrivate {
+class QTAWS_EXPORT ListProjectsRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     ListProjectsRequestPrivate(const CodeBuild::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEMODELREQUEST_P_H
 #define QTAWS_DELETEMODELREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "deletemodelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteModelRequest;
 
-class QTAWS_EXPORT DeleteModelRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT DeleteModelRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteModelRequestPrivate(const APIGateway::Action action,

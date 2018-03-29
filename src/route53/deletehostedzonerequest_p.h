@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEHOSTEDZONEREQUEST_P_H
 #define QTAWS_DELETEHOSTEDZONEREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "deletehostedzonerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class DeleteHostedZoneRequest;
 
-class QTAWS_EXPORT DeleteHostedZoneRequestPrivate : public Route53Private {
+class QTAWS_EXPORT DeleteHostedZoneRequestPrivate : public Route53RequestPrivate {
 
 public:
     DeleteHostedZoneRequestPrivate(const Route53::Action action,

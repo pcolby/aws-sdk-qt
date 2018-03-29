@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPARTITIONREQUEST_P_H
 #define QTAWS_DELETEPARTITIONREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "deletepartitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeletePartitionRequest;
 
-class QTAWS_EXPORT DeletePartitionRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT DeletePartitionRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeletePartitionRequestPrivate(const Glue::Action action,

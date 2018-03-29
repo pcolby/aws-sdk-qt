@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPINSTANCESREQUEST_P_H
 #define QTAWS_STOPINSTANCESREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "stopinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class StopInstancesRequest;
 
-class QTAWS_EXPORT StopInstancesRequestPrivate : public EC2Private {
+class QTAWS_EXPORT StopInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
     StopInstancesRequestPrivate(const EC2::Action action,

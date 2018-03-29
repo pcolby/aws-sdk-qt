@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVEROLEFROMINSTANCEPROFILEREQUEST_P_H
 #define QTAWS_REMOVEROLEFROMINSTANCEPROFILEREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "removerolefrominstanceprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class RemoveRoleFromInstanceProfileRequest;
 
-class QTAWS_EXPORT RemoveRoleFromInstanceProfileRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT RemoveRoleFromInstanceProfileRequestPrivate : public IAMRequestPrivate {
 
 public:
     RemoveRoleFromInstanceProfileRequestPrivate(const IAM::Action action,

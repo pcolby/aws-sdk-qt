@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETETRUSTREQUEST_P_H
 #define QTAWS_DELETETRUSTREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "deletetrustrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DeleteTrustRequest;
 
-class QTAWS_EXPORT DeleteTrustRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT DeleteTrustRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     DeleteTrustRequestPrivate(const DirectoryService::Action action,

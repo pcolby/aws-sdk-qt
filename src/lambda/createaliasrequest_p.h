@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEALIASREQUEST_P_H
 #define QTAWS_CREATEALIASREQUEST_P_H
 
-#include "lambda_p.h"
+#include "lambdarequest_p.h"
 #include "createaliasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lambda {
 
 class CreateAliasRequest;
 
-class QTAWS_EXPORT CreateAliasRequestPrivate : public LambdaPrivate {
+class QTAWS_EXPORT CreateAliasRequestPrivate : public LambdaRequestPrivate {
 
 public:
     CreateAliasRequestPrivate(const Lambda::Action action,

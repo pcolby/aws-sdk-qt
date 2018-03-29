@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTACCEPTEDPORTFOLIOSHARESREQUEST_P_H
 #define QTAWS_LISTACCEPTEDPORTFOLIOSHARESREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "listacceptedportfoliosharesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ListAcceptedPortfolioSharesRequest;
 
-class QTAWS_EXPORT ListAcceptedPortfolioSharesRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT ListAcceptedPortfolioSharesRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     ListAcceptedPortfolioSharesRequestPrivate(const ServiceCatalog::Action action,

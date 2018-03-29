@@ -20,7 +20,7 @@
 #ifndef QTAWS_CHANGEPASSWORDREQUEST_P_H
 #define QTAWS_CHANGEPASSWORDREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "changepasswordrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class ChangePasswordRequest;
 
-class QTAWS_EXPORT ChangePasswordRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT ChangePasswordRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     ChangePasswordRequestPrivate(const CognitoIdentityProvider::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTLIFECYCLEEVENTHOOKEXECUTIONSTATUSREQUEST_P_H
 #define QTAWS_PUTLIFECYCLEEVENTHOOKEXECUTIONSTATUSREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "putlifecycleeventhookexecutionstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class PutLifecycleEventHookExecutionStatusRequest;
 
-class QTAWS_EXPORT PutLifecycleEventHookExecutionStatusRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT PutLifecycleEventHookExecutionStatusRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     PutLifecycleEventHookExecutionStatusRequestPrivate(const CodeDeploy::Action action,

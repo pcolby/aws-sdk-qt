@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTIPSETSREQUEST_P_H
 #define QTAWS_LISTIPSETSREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "listipsetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class ListIPSetsRequest;
 
-class QTAWS_EXPORT ListIPSetsRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT ListIPSetsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     ListIPSetsRequestPrivate(const GuardDuty::Action action,

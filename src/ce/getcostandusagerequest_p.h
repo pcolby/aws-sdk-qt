@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCOSTANDUSAGEREQUEST_P_H
 #define QTAWS_GETCOSTANDUSAGEREQUEST_P_H
 
-#include "costexplorer_p.h"
+#include "costexplorerrequest_p.h"
 #include "getcostandusagerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class GetCostAndUsageRequest;
 
-class QTAWS_EXPORT GetCostAndUsageRequestPrivate : public CostExplorerPrivate {
+class QTAWS_EXPORT GetCostAndUsageRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
     GetCostAndUsageRequestPrivate(const CostExplorer::Action action,

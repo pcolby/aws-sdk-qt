@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESUBNETGROUPREQUEST_P_H
 #define QTAWS_UPDATESUBNETGROUPREQUEST_P_H
 
-#include "dax_p.h"
+#include "daxrequest_p.h"
 #include "updatesubnetgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DAX {
 
 class UpdateSubnetGroupRequest;
 
-class QTAWS_EXPORT UpdateSubnetGroupRequestPrivate : public DAXPrivate {
+class QTAWS_EXPORT UpdateSubnetGroupRequestPrivate : public DAXRequestPrivate {
 
 public:
     UpdateSubnetGroupRequestPrivate(const DAX::Action action,

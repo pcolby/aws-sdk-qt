@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTBYTEMATCHSETSREQUEST_P_H
 #define QTAWS_LISTBYTEMATCHSETSREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "listbytematchsetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class ListByteMatchSetsRequest;
 
-class QTAWS_EXPORT ListByteMatchSetsRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT ListByteMatchSetsRequestPrivate : public WAFRequestPrivate {
 
 public:
     ListByteMatchSetsRequestPrivate(const WAF::Action action,

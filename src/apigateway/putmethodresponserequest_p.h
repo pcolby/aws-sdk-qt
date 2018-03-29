@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTMETHODRESPONSEREQUEST_P_H
 #define QTAWS_PUTMETHODRESPONSEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "putmethodresponserequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class PutMethodResponseRequest;
 
-class QTAWS_EXPORT PutMethodResponseRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT PutMethodResponseRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     PutMethodResponseRequestPrivate(const APIGateway::Action action,

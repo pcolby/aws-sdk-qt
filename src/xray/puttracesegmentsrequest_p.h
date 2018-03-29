@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTTRACESEGMENTSREQUEST_P_H
 #define QTAWS_PUTTRACESEGMENTSREQUEST_P_H
 
-#include "xray_p.h"
+#include "xrayrequest_p.h"
 #include "puttracesegmentsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace XRay {
 
 class PutTraceSegmentsRequest;
 
-class QTAWS_EXPORT PutTraceSegmentsRequestPrivate : public XRayPrivate {
+class QTAWS_EXPORT PutTraceSegmentsRequestPrivate : public XRayRequestPrivate {
 
 public:
     PutTraceSegmentsRequestPrivate(const XRay::Action action,

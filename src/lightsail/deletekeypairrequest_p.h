@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEKEYPAIRREQUEST_P_H
 #define QTAWS_DELETEKEYPAIRREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "deletekeypairrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteKeyPairRequest;
 
-class QTAWS_EXPORT DeleteKeyPairRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT DeleteKeyPairRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DeleteKeyPairRequestPrivate(const Lightsail::Action action,

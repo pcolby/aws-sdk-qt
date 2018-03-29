@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUBLISHREQUEST_P_H
 #define QTAWS_PUBLISHREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "publishrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class PublishRequest;
 
-class QTAWS_EXPORT PublishRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT PublishRequestPrivate : public SNSRequestPrivate {
 
 public:
     PublishRequestPrivate(const SNS::Action action,

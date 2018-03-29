@@ -20,7 +20,7 @@
 #ifndef QTAWS_CODESTARREQUEST_P_H
 #define QTAWS_CODESTARREQUEST_P_H
 
-#include "codestar_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "codestarrequest.h"
 
 namespace QtAws {

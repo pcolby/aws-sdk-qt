@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSERVERNEIGHBORSREQUEST_P_H
 #define QTAWS_LISTSERVERNEIGHBORSREQUEST_P_H
 
-#include "applicationdiscoveryservice_p.h"
+#include "applicationdiscoveryservicerequest_p.h"
 #include "listserverneighborsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class ListServerNeighborsRequest;
 
-class QTAWS_EXPORT ListServerNeighborsRequestPrivate : public ApplicationDiscoveryServicePrivate {
+class QTAWS_EXPORT ListServerNeighborsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
     ListServerNeighborsRequestPrivate(const ApplicationDiscoveryService::Action action,

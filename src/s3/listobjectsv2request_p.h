@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTOBJECTSV2REQUEST_P_H
 #define QTAWS_LISTOBJECTSV2REQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "listobjectsv2request.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class ListObjectsV2Request;
 
-class QTAWS_EXPORT ListObjectsV2RequestPrivate : public S3Private {
+class QTAWS_EXPORT ListObjectsV2RequestPrivate : public S3RequestPrivate {
 
 public:
     ListObjectsV2RequestPrivate(const S3::Action action,

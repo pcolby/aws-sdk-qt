@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTRACEGRAPHREQUEST_P_H
 #define QTAWS_GETTRACEGRAPHREQUEST_P_H
 
-#include "xray_p.h"
+#include "xrayrequest_p.h"
 #include "gettracegraphrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace XRay {
 
 class GetTraceGraphRequest;
 
-class QTAWS_EXPORT GetTraceGraphRequestPrivate : public XRayPrivate {
+class QTAWS_EXPORT GetTraceGraphRequestPrivate : public XRayRequestPrivate {
 
 public:
     GetTraceGraphRequestPrivate(const XRay::Action action,

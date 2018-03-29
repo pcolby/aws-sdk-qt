@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECUSTOMERGATEWAYREQUEST_P_H
 #define QTAWS_DELETECUSTOMERGATEWAYREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "deletecustomergatewayrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteCustomerGatewayRequest;
 
-class QTAWS_EXPORT DeleteCustomerGatewayRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DeleteCustomerGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
     DeleteCustomerGatewayRequestPrivate(const EC2::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETJOBDOCUMENTREQUEST_P_H
 #define QTAWS_GETJOBDOCUMENTREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "getjobdocumentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class GetJobDocumentRequest;
 
-class QTAWS_EXPORT GetJobDocumentRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT GetJobDocumentRequestPrivate : public IoTRequestPrivate {
 
 public:
     GetJobDocumentRequestPrivate(const IoT::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTPRESETSREQUEST_P_H
 #define QTAWS_LISTPRESETSREQUEST_P_H
 
-#include "mediaconvert_p.h"
+#include "mediaconvertrequest_p.h"
 #include "listpresetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class ListPresetsRequest;
 
-class QTAWS_EXPORT ListPresetsRequestPrivate : public MediaConvertPrivate {
+class QTAWS_EXPORT ListPresetsRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     ListPresetsRequestPrivate(const MediaConvert::Action action,

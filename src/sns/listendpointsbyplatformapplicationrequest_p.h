@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTENDPOINTSBYPLATFORMAPPLICATIONREQUEST_P_H
 #define QTAWS_LISTENDPOINTSBYPLATFORMAPPLICATIONREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "listendpointsbyplatformapplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class ListEndpointsByPlatformApplicationRequest;
 
-class QTAWS_EXPORT ListEndpointsByPlatformApplicationRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT ListEndpointsByPlatformApplicationRequestPrivate : public SNSRequestPrivate {
 
 public:
     ListEndpointsByPlatformApplicationRequestPrivate(const SNS::Action action,

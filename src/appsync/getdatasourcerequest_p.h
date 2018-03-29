@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDATASOURCEREQUEST_P_H
 #define QTAWS_GETDATASOURCEREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "getdatasourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class GetDataSourceRequest;
 
-class QTAWS_EXPORT GetDataSourceRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT GetDataSourceRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     GetDataSourceRequestPrivate(const AppSync::Action action,

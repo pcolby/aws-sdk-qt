@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSOCIATESUBNETCIDRBLOCKREQUEST_P_H
 #define QTAWS_ASSOCIATESUBNETCIDRBLOCKREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "associatesubnetcidrblockrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AssociateSubnetCidrBlockRequest;
 
-class QTAWS_EXPORT AssociateSubnetCidrBlockRequestPrivate : public EC2Private {
+class QTAWS_EXPORT AssociateSubnetCidrBlockRequestPrivate : public EC2RequestPrivate {
 
 public:
     AssociateSubnetCidrBlockRequestPrivate(const EC2::Action action,

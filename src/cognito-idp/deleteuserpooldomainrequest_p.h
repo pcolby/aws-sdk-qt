@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEUSERPOOLDOMAINREQUEST_P_H
 #define QTAWS_DELETEUSERPOOLDOMAINREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "deleteuserpooldomainrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class DeleteUserPoolDomainRequest;
 
-class QTAWS_EXPORT DeleteUserPoolDomainRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT DeleteUserPoolDomainRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     DeleteUserPoolDomainRequestPrivate(const CognitoIdentityProvider::Action action,

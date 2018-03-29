@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEINTERNETGATEWAYREQUEST_P_H
 #define QTAWS_CREATEINTERNETGATEWAYREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "createinternetgatewayrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateInternetGatewayRequest;
 
-class QTAWS_EXPORT CreateInternetGatewayRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CreateInternetGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
     CreateInternetGatewayRequestPrivate(const EC2::Action action,

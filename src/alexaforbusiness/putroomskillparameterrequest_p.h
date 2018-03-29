@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTROOMSKILLPARAMETERREQUEST_P_H
 #define QTAWS_PUTROOMSKILLPARAMETERREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "putroomskillparameterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class PutRoomSkillParameterRequest;
 
-class QTAWS_EXPORT PutRoomSkillParameterRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT PutRoomSkillParameterRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     PutRoomSkillParameterRequestPrivate(const AlexaForBusiness::Action action,

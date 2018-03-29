@@ -20,7 +20,7 @@
 #ifndef QTAWS_TERMINATEINSTANCEINAUTOSCALINGGROUPREQUEST_P_H
 #define QTAWS_TERMINATEINSTANCEINAUTOSCALINGGROUPREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "terminateinstanceinautoscalinggrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class TerminateInstanceInAutoScalingGroupRequest;
 
-class QTAWS_EXPORT TerminateInstanceInAutoScalingGroupRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT TerminateInstanceInAutoScalingGroupRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     TerminateInstanceInAutoScalingGroupRequestPrivate(const AutoScaling::Action action,

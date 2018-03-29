@@ -20,7 +20,7 @@
 #ifndef QTAWS_COPYFPGAIMAGEREQUEST_P_H
 #define QTAWS_COPYFPGAIMAGEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "copyfpgaimagerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CopyFpgaImageRequest;
 
-class QTAWS_EXPORT CopyFpgaImageRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CopyFpgaImageRequestPrivate : public EC2RequestPrivate {
 
 public:
     CopyFpgaImageRequestPrivate(const EC2::Action action,

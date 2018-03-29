@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTAGSREQUEST_P_H
 #define QTAWS_LISTTAGSREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "listtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class ListTagsRequest;
 
-class QTAWS_EXPORT ListTagsRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT ListTagsRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     ListTagsRequestPrivate(const AlexaForBusiness::Action action,

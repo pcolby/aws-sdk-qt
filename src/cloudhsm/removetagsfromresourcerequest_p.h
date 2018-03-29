@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCEREQUEST_P_H
 #define QTAWS_REMOVETAGSFROMRESOURCEREQUEST_P_H
 
-#include "cloudhsm_p.h"
+#include "cloudhsmrequest_p.h"
 #include "removetagsfromresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class RemoveTagsFromResourceRequest;
 
-class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public CloudHSMPrivate {
+class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     RemoveTagsFromResourceRequestPrivate(const CloudHSM::Action action,

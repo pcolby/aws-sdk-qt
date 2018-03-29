@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDIRECTCONNECTGATEWAYASSOCIATIONREQUEST_P_H
 #define QTAWS_CREATEDIRECTCONNECTGATEWAYASSOCIATIONREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "createdirectconnectgatewayassociationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class CreateDirectConnectGatewayAssociationRequest;
 
-class QTAWS_EXPORT CreateDirectConnectGatewayAssociationRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT CreateDirectConnectGatewayAssociationRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     CreateDirectConnectGatewayAssociationRequestPrivate(const DirectConnect::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEFACETREQUEST_P_H
 #define QTAWS_DELETEFACETREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "deletefacetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class DeleteFacetRequest;
 
-class QTAWS_EXPORT DeleteFacetRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT DeleteFacetRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     DeleteFacetRequestPrivate(const CloudDirectory::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESIZECONSTRAINTSETREQUEST_P_H
 #define QTAWS_DELETESIZECONSTRAINTSETREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "deletesizeconstraintsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class DeleteSizeConstraintSetRequest;
 
-class QTAWS_EXPORT DeleteSizeConstraintSetRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT DeleteSizeConstraintSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     DeleteSizeConstraintSetRequestPrivate(const WAFRegional::Action action,

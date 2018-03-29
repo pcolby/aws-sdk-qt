@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEADDRESSESREQUEST_P_H
 #define QTAWS_DESCRIBEADDRESSESREQUEST_P_H
 
-#include "snowball_p.h"
+#include "snowballrequest_p.h"
 #include "describeaddressesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Snowball {
 
 class DescribeAddressesRequest;
 
-class QTAWS_EXPORT DescribeAddressesRequestPrivate : public SnowballPrivate {
+class QTAWS_EXPORT DescribeAddressesRequestPrivate : public SnowballRequestPrivate {
 
 public:
     DescribeAddressesRequestPrivate(const Snowball::Action action,

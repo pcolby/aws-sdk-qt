@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTAGSREQUEST_P_H
 #define QTAWS_GETTAGSREQUEST_P_H
 
-#include "resourcegroups_p.h"
+#include "resourcegroupsrequest_p.h"
 #include "gettagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class GetTagsRequest;
 
-class QTAWS_EXPORT GetTagsRequestPrivate : public ResourceGroupsPrivate {
+class QTAWS_EXPORT GetTagsRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
     GetTagsRequestPrivate(const ResourceGroups::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEHEALTHCHECKREQUEST_P_H
 #define QTAWS_DELETEHEALTHCHECKREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "deletehealthcheckrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class DeleteHealthCheckRequest;
 
-class QTAWS_EXPORT DeleteHealthCheckRequestPrivate : public Route53Private {
+class QTAWS_EXPORT DeleteHealthCheckRequestPrivate : public Route53RequestPrivate {
 
 public:
     DeleteHealthCheckRequestPrivate(const Route53::Action action,

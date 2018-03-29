@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSTREAMSREQUEST_P_H
 #define QTAWS_LISTSTREAMSREQUEST_P_H
 
-#include "dynamodbstreams_p.h"
+#include "dynamodbstreamsrequest_p.h"
 #include "liststreamsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDBStreams {
 
 class ListStreamsRequest;
 
-class QTAWS_EXPORT ListStreamsRequestPrivate : public DynamoDBStreamsPrivate {
+class QTAWS_EXPORT ListStreamsRequestPrivate : public DynamoDBStreamsRequestPrivate {
 
 public:
     ListStreamsRequestPrivate(const DynamoDBStreams::Action action,

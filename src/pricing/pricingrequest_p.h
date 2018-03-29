@@ -20,7 +20,7 @@
 #ifndef QTAWS_PRICINGREQUEST_P_H
 #define QTAWS_PRICINGREQUEST_P_H
 
-#include "pricing_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "pricingrequest.h"
 
 namespace QtAws {

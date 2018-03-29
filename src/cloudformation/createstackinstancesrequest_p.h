@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESTACKINSTANCESREQUEST_P_H
 #define QTAWS_CREATESTACKINSTANCESREQUEST_P_H
 
-#include "cloudformation_p.h"
+#include "cloudformationrequest_p.h"
 #include "createstackinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class CreateStackInstancesRequest;
 
-class QTAWS_EXPORT CreateStackInstancesRequestPrivate : public CloudFormationPrivate {
+class QTAWS_EXPORT CreateStackInstancesRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     CreateStackInstancesRequestPrivate(const CloudFormation::Action action,

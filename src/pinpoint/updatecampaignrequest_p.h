@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECAMPAIGNREQUEST_P_H
 #define QTAWS_UPDATECAMPAIGNREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "updatecampaignrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class UpdateCampaignRequest;
 
-class QTAWS_EXPORT UpdateCampaignRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT UpdateCampaignRequestPrivate : public PinpointRequestPrivate {
 
 public:
     UpdateCampaignRequestPrivate(const Pinpoint::Action action,

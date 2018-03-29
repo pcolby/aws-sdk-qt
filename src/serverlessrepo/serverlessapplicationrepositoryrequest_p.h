@@ -20,7 +20,7 @@
 #ifndef QTAWS_SERVERLESSAPPLICATIONREPOSITORYREQUEST_P_H
 #define QTAWS_SERVERLESSAPPLICATIONREPOSITORYREQUEST_P_H
 
-#include "serverlessapplicationrepository_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "serverlessapplicationrepositoryrequest.h"
 
 namespace QtAws {

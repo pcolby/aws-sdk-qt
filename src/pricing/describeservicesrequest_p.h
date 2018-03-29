@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESERVICESREQUEST_P_H
 #define QTAWS_DESCRIBESERVICESREQUEST_P_H
 
-#include "pricing_p.h"
+#include "pricingrequest_p.h"
 #include "describeservicesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pricing {
 
 class DescribeServicesRequest;
 
-class QTAWS_EXPORT DescribeServicesRequestPrivate : public PricingPrivate {
+class QTAWS_EXPORT DescribeServicesRequestPrivate : public PricingRequestPrivate {
 
 public:
     DescribeServicesRequestPrivate(const Pricing::Action action,

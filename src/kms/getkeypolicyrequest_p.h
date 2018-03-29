@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETKEYPOLICYREQUEST_P_H
 #define QTAWS_GETKEYPOLICYREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "getkeypolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class GetKeyPolicyRequest;
 
-class QTAWS_EXPORT GetKeyPolicyRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT GetKeyPolicyRequestPrivate : public KMSRequestPrivate {
 
 public:
     GetKeyPolicyRequestPrivate(const KMS::Action action,

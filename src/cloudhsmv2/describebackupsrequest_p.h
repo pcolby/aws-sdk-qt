@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEBACKUPSREQUEST_P_H
 #define QTAWS_DESCRIBEBACKUPSREQUEST_P_H
 
-#include "cloudhsmv2_p.h"
+#include "cloudhsmv2request_p.h"
 #include "describebackupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class DescribeBackupsRequest;
 
-class QTAWS_EXPORT DescribeBackupsRequestPrivate : public CloudHSMV2Private {
+class QTAWS_EXPORT DescribeBackupsRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
     DescribeBackupsRequestPrivate(const CloudHSMV2::Action action,

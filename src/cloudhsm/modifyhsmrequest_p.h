@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYHSMREQUEST_P_H
 #define QTAWS_MODIFYHSMREQUEST_P_H
 
-#include "cloudhsm_p.h"
+#include "cloudhsmrequest_p.h"
 #include "modifyhsmrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class ModifyHsmRequest;
 
-class QTAWS_EXPORT ModifyHsmRequestPrivate : public CloudHSMPrivate {
+class QTAWS_EXPORT ModifyHsmRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     ModifyHsmRequestPrivate(const CloudHSM::Action action,

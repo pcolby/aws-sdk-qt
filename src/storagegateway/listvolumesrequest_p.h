@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTVOLUMESREQUEST_P_H
 #define QTAWS_LISTVOLUMESREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "listvolumesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class ListVolumesRequest;
 
-class QTAWS_EXPORT ListVolumesRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT ListVolumesRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     ListVolumesRequestPrivate(const StorageGateway::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTMETRICFILTERREQUEST_P_H
 #define QTAWS_PUTMETRICFILTERREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "putmetricfilterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class PutMetricFilterRequest;
 
-class QTAWS_EXPORT PutMetricFilterRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT PutMetricFilterRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     PutMetricFilterRequestPrivate(const CloudWatchLogs::Action action,

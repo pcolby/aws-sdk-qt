@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDTAGSTOCERTIFICATEREQUEST_P_H
 #define QTAWS_ADDTAGSTOCERTIFICATEREQUEST_P_H
 
-#include "acm_p.h"
+#include "acmrequest_p.h"
 #include "addtagstocertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ACM {
 
 class AddTagsToCertificateRequest;
 
-class QTAWS_EXPORT AddTagsToCertificateRequestPrivate : public ACMPrivate {
+class QTAWS_EXPORT AddTagsToCertificateRequestPrivate : public ACMRequestPrivate {
 
 public:
     AddTagsToCertificateRequestPrivate(const ACM::Action action,

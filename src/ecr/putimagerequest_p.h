@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTIMAGEREQUEST_P_H
 #define QTAWS_PUTIMAGEREQUEST_P_H
 
-#include "ecr_p.h"
+#include "ecrrequest_p.h"
 #include "putimagerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECR {
 
 class PutImageRequest;
 
-class QTAWS_EXPORT PutImageRequestPrivate : public ECRPrivate {
+class QTAWS_EXPORT PutImageRequestPrivate : public ECRRequestPrivate {
 
 public:
     PutImageRequestPrivate(const ECR::Action action,

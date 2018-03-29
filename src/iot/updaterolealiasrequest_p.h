@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEROLEALIASREQUEST_P_H
 #define QTAWS_UPDATEROLEALIASREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "updaterolealiasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class UpdateRoleAliasRequest;
 
-class QTAWS_EXPORT UpdateRoleAliasRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT UpdateRoleAliasRequestPrivate : public IoTRequestPrivate {
 
 public:
     UpdateRoleAliasRequestPrivate(const IoT::Action action,

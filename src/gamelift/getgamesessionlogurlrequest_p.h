@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETGAMESESSIONLOGURLREQUEST_P_H
 #define QTAWS_GETGAMESESSIONLOGURLREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "getgamesessionlogurlrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class GetGameSessionLogUrlRequest;
 
-class QTAWS_EXPORT GetGameSessionLogUrlRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT GetGameSessionLogUrlRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     GetGameSessionLogUrlRequestPrivate(const GameLift::Action action,

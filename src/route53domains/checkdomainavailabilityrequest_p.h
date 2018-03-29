@@ -20,7 +20,7 @@
 #ifndef QTAWS_CHECKDOMAINAVAILABILITYREQUEST_P_H
 #define QTAWS_CHECKDOMAINAVAILABILITYREQUEST_P_H
 
-#include "route53domains_p.h"
+#include "route53domainsrequest_p.h"
 #include "checkdomainavailabilityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class CheckDomainAvailabilityRequest;
 
-class QTAWS_EXPORT CheckDomainAvailabilityRequestPrivate : public Route53DomainsPrivate {
+class QTAWS_EXPORT CheckDomainAvailabilityRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     CheckDomainAvailabilityRequestPrivate(const Route53Domains::Action action,

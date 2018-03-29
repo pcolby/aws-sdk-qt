@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCELEBRITYINFOREQUEST_P_H
 #define QTAWS_GETCELEBRITYINFOREQUEST_P_H
 
-#include "rekognition_p.h"
+#include "rekognitionrequest_p.h"
 #include "getcelebrityinforequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class GetCelebrityInfoRequest;
 
-class QTAWS_EXPORT GetCelebrityInfoRequestPrivate : public RekognitionPrivate {
+class QTAWS_EXPORT GetCelebrityInfoRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     GetCelebrityInfoRequestPrivate(const Rekognition::Action action,

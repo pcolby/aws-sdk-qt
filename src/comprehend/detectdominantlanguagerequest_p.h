@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETECTDOMINANTLANGUAGEREQUEST_P_H
 #define QTAWS_DETECTDOMINANTLANGUAGEREQUEST_P_H
 
-#include "comprehend_p.h"
+#include "comprehendrequest_p.h"
 #include "detectdominantlanguagerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class DetectDominantLanguageRequest;
 
-class QTAWS_EXPORT DetectDominantLanguageRequestPrivate : public ComprehendPrivate {
+class QTAWS_EXPORT DetectDominantLanguageRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     DetectDominantLanguageRequestPrivate(const Comprehend::Action action,

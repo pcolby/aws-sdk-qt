@@ -20,7 +20,7 @@
 #ifndef QTAWS_RETRIEVEDOMAINAUTHCODEREQUEST_P_H
 #define QTAWS_RETRIEVEDOMAINAUTHCODEREQUEST_P_H
 
-#include "route53domains_p.h"
+#include "route53domainsrequest_p.h"
 #include "retrievedomainauthcoderequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class RetrieveDomainAuthCodeRequest;
 
-class QTAWS_EXPORT RetrieveDomainAuthCodeRequestPrivate : public Route53DomainsPrivate {
+class QTAWS_EXPORT RetrieveDomainAuthCodeRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     RetrieveDomainAuthCodeRequestPrivate(const Route53Domains::Action action,

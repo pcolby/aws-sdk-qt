@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEVPCENDPOINTREQUEST_P_H
 #define QTAWS_CREATEVPCENDPOINTREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "createvpcendpointrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateVpcEndpointRequest;
 
-class QTAWS_EXPORT CreateVpcEndpointRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CreateVpcEndpointRequestPrivate : public EC2RequestPrivate {
 
 public:
     CreateVpcEndpointRequestPrivate(const EC2::Action action,

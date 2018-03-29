@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSERVICEROLEFORACCOUNTREQUEST_P_H
 #define QTAWS_GETSERVICEROLEFORACCOUNTREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "getserviceroleforaccountrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetServiceRoleForAccountRequest;
 
-class QTAWS_EXPORT GetServiceRoleForAccountRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT GetServiceRoleForAccountRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     GetServiceRoleForAccountRequestPrivate(const Greengrass::Action action,

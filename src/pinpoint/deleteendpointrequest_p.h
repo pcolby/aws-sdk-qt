@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEENDPOINTREQUEST_P_H
 #define QTAWS_DELETEENDPOINTREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "deleteendpointrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class DeleteEndpointRequest;
 
-class QTAWS_EXPORT DeleteEndpointRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT DeleteEndpointRequestPrivate : public PinpointRequestPrivate {
 
 public:
     DeleteEndpointRequestPrivate(const Pinpoint::Action action,

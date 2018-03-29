@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESYNCMFADEVICEREQUEST_P_H
 #define QTAWS_RESYNCMFADEVICEREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "resyncmfadevicerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class ResyncMFADeviceRequest;
 
-class QTAWS_EXPORT ResyncMFADeviceRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT ResyncMFADeviceRequestPrivate : public IAMRequestPrivate {
 
 public:
     ResyncMFADeviceRequestPrivate(const IAM::Action action,

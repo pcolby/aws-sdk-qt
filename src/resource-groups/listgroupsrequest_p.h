@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTGROUPSREQUEST_P_H
 #define QTAWS_LISTGROUPSREQUEST_P_H
 
-#include "resourcegroups_p.h"
+#include "resourcegroupsrequest_p.h"
 #include "listgroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class ListGroupsRequest;
 
-class QTAWS_EXPORT ListGroupsRequestPrivate : public ResourceGroupsPrivate {
+class QTAWS_EXPORT ListGroupsRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
     ListGroupsRequestPrivate(const ResourceGroups::Action action,

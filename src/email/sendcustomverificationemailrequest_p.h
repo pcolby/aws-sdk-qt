@@ -20,7 +20,7 @@
 #ifndef QTAWS_SENDCUSTOMVERIFICATIONEMAILREQUEST_P_H
 #define QTAWS_SENDCUSTOMVERIFICATIONEMAILREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "sendcustomverificationemailrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class SendCustomVerificationEmailRequest;
 
-class QTAWS_EXPORT SendCustomVerificationEmailRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT SendCustomVerificationEmailRequestPrivate : public SESRequestPrivate {
 
 public:
     SendCustomVerificationEmailRequestPrivate(const SES::Action action,

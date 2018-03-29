@@ -20,7 +20,7 @@
 #ifndef QTAWS_SENDINVITATIONREQUEST_P_H
 #define QTAWS_SENDINVITATIONREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "sendinvitationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class SendInvitationRequest;
 
-class QTAWS_EXPORT SendInvitationRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT SendInvitationRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     SendInvitationRequestPrivate(const AlexaForBusiness::Action action,

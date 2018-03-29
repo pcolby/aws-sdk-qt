@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEMICROSOFTADREQUEST_P_H
 #define QTAWS_CREATEMICROSOFTADREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "createmicrosoftadrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class CreateMicrosoftADRequest;
 
-class QTAWS_EXPORT CreateMicrosoftADRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT CreateMicrosoftADRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     CreateMicrosoftADRequestPrivate(const DirectoryService::Action action,

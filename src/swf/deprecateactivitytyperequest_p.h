@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEPRECATEACTIVITYTYPEREQUEST_P_H
 #define QTAWS_DEPRECATEACTIVITYTYPEREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "deprecateactivitytyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class DeprecateActivityTypeRequest;
 
-class QTAWS_EXPORT DeprecateActivityTypeRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT DeprecateActivityTypeRequestPrivate : public SWFRequestPrivate {
 
 public:
     DeprecateActivityTypeRequestPrivate(const SWF::Action action,

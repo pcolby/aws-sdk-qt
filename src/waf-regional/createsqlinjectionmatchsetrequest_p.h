@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESQLINJECTIONMATCHSETREQUEST_P_H
 #define QTAWS_CREATESQLINJECTIONMATCHSETREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "createsqlinjectionmatchsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class CreateSqlInjectionMatchSetRequest;
 
-class QTAWS_EXPORT CreateSqlInjectionMatchSetRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT CreateSqlInjectionMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     CreateSqlInjectionMatchSetRequestPrivate(const WAFRegional::Action action,

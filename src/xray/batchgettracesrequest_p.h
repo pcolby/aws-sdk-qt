@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHGETTRACESREQUEST_P_H
 #define QTAWS_BATCHGETTRACESREQUEST_P_H
 
-#include "xray_p.h"
+#include "xrayrequest_p.h"
 #include "batchgettracesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace XRay {
 
 class BatchGetTracesRequest;
 
-class QTAWS_EXPORT BatchGetTracesRequestPrivate : public XRayPrivate {
+class QTAWS_EXPORT BatchGetTracesRequestPrivate : public XRayRequestPrivate {
 
 public:
     BatchGetTracesRequestPrivate(const XRay::Action action,

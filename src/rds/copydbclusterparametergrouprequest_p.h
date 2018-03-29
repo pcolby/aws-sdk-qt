@@ -20,7 +20,7 @@
 #ifndef QTAWS_COPYDBCLUSTERPARAMETERGROUPREQUEST_P_H
 #define QTAWS_COPYDBCLUSTERPARAMETERGROUPREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "copydbclusterparametergrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class CopyDBClusterParameterGroupRequest;
 
-class QTAWS_EXPORT CopyDBClusterParameterGroupRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT CopyDBClusterParameterGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
     CopyDBClusterParameterGroupRequestPrivate(const RDS::Action action,

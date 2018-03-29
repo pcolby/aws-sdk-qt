@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEGEOMATCHSETREQUEST_P_H
 #define QTAWS_CREATEGEOMATCHSETREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "creategeomatchsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class CreateGeoMatchSetRequest;
 
-class QTAWS_EXPORT CreateGeoMatchSetRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT CreateGeoMatchSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     CreateGeoMatchSetRequestPrivate(const WAFRegional::Action action,

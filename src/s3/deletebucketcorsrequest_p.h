@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBUCKETCORSREQUEST_P_H
 #define QTAWS_DELETEBUCKETCORSREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "deletebucketcorsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class DeleteBucketCorsRequest;
 
-class QTAWS_EXPORT DeleteBucketCorsRequestPrivate : public S3Private {
+class QTAWS_EXPORT DeleteBucketCorsRequestPrivate : public S3RequestPrivate {
 
 public:
     DeleteBucketCorsRequestPrivate(const S3::Action action,

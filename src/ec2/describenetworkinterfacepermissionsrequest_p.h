@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBENETWORKINTERFACEPERMISSIONSREQUEST_P_H
 #define QTAWS_DESCRIBENETWORKINTERFACEPERMISSIONSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describenetworkinterfacepermissionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeNetworkInterfacePermissionsRequest;
 
-class QTAWS_EXPORT DescribeNetworkInterfacePermissionsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeNetworkInterfacePermissionsRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeNetworkInterfacePermissionsRequestPrivate(const EC2::Action action,

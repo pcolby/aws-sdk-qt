@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTAPPLICATIONREVISIONSREQUEST_P_H
 #define QTAWS_LISTAPPLICATIONREVISIONSREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "listapplicationrevisionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class ListApplicationRevisionsRequest;
 
-class QTAWS_EXPORT ListApplicationRevisionsRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT ListApplicationRevisionsRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     ListApplicationRevisionsRequestPrivate(const CodeDeploy::Action action,

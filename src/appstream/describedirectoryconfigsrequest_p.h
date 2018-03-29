@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEDIRECTORYCONFIGSREQUEST_P_H
 #define QTAWS_DESCRIBEDIRECTORYCONFIGSREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "describedirectoryconfigsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DescribeDirectoryConfigsRequest;
 
-class QTAWS_EXPORT DescribeDirectoryConfigsRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT DescribeDirectoryConfigsRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     DescribeDirectoryConfigsRequestPrivate(const AppStream::Action action,

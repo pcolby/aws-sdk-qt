@@ -20,7 +20,7 @@
 #ifndef QTAWS_MERGEPULLREQUESTBYFASTFORWARDREQUEST_P_H
 #define QTAWS_MERGEPULLREQUESTBYFASTFORWARDREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "mergepullrequestbyfastforwardrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class MergePullRequestByFastForwardRequest;
 
-class QTAWS_EXPORT MergePullRequestByFastForwardRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT MergePullRequestByFastForwardRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     MergePullRequestByFastForwardRequestPrivate(const CodeCommit::Action action,

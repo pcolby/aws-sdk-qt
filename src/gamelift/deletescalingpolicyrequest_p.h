@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESCALINGPOLICYREQUEST_P_H
 #define QTAWS_DELETESCALINGPOLICYREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "deletescalingpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DeleteScalingPolicyRequest;
 
-class QTAWS_EXPORT DeleteScalingPolicyRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT DeleteScalingPolicyRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DeleteScalingPolicyRequestPrivate(const GameLift::Action action,

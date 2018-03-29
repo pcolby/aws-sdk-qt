@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEUSERPOLICYREQUEST_P_H
 #define QTAWS_DELETEUSERPOLICYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "deleteuserpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteUserPolicyRequest;
 
-class QTAWS_EXPORT DeleteUserPolicyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT DeleteUserPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
     DeleteUserPolicyRequestPrivate(const IAM::Action action,

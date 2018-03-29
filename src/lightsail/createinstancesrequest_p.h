@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEINSTANCESREQUEST_P_H
 #define QTAWS_CREATEINSTANCESREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "createinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class CreateInstancesRequest;
 
-class QTAWS_EXPORT CreateInstancesRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT CreateInstancesRequestPrivate : public LightsailRequestPrivate {
 
 public:
     CreateInstancesRequestPrivate(const Lightsail::Action action,

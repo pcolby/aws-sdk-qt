@@ -20,7 +20,7 @@
 #ifndef QTAWS_CONFIGSERVICEREQUEST_P_H
 #define QTAWS_CONFIGSERVICEREQUEST_P_H
 
-#include "configservice_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "configservicerequest.h"
 
 namespace QtAws {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBENODEASSOCIATIONSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBENODEASSOCIATIONSTATUSREQUEST_P_H
 
-#include "opsworkscm_p.h"
+#include "opsworkscmrequest_p.h"
 #include "describenodeassociationstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class DescribeNodeAssociationStatusRequest;
 
-class QTAWS_EXPORT DescribeNodeAssociationStatusRequestPrivate : public OpsWorksCMPrivate {
+class QTAWS_EXPORT DescribeNodeAssociationStatusRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     DescribeNodeAssociationStatusRequestPrivate(const OpsWorksCM::Action action,

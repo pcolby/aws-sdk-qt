@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEHSMREQUEST_P_H
 #define QTAWS_CREATEHSMREQUEST_P_H
 
-#include "cloudhsm_p.h"
+#include "cloudhsmrequest_p.h"
 #include "createhsmrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class CreateHsmRequest;
 
-class QTAWS_EXPORT CreateHsmRequestPrivate : public CloudHSMPrivate {
+class QTAWS_EXPORT CreateHsmRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     CreateHsmRequestPrivate(const CloudHSM::Action action,

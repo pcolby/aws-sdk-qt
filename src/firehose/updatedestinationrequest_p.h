@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEDESTINATIONREQUEST_P_H
 #define QTAWS_UPDATEDESTINATIONREQUEST_P_H
 
-#include "firehose_p.h"
+#include "firehoserequest_p.h"
 #include "updatedestinationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Firehose {
 
 class UpdateDestinationRequest;
 
-class QTAWS_EXPORT UpdateDestinationRequestPrivate : public FirehosePrivate {
+class QTAWS_EXPORT UpdateDestinationRequestPrivate : public FirehoseRequestPrivate {
 
 public:
     UpdateDestinationRequestPrivate(const Firehose::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCRAWLERMETRICSREQUEST_P_H
 #define QTAWS_GETCRAWLERMETRICSREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "getcrawlermetricsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetCrawlerMetricsRequest;
 
-class QTAWS_EXPORT GetCrawlerMetricsRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT GetCrawlerMetricsRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetCrawlerMetricsRequestPrivate(const Glue::Action action,

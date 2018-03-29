@@ -20,7 +20,7 @@
 #ifndef QTAWS_CONFIRMSIGNUPREQUEST_P_H
 #define QTAWS_CONFIRMSIGNUPREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "confirmsignuprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class ConfirmSignUpRequest;
 
-class QTAWS_EXPORT ConfirmSignUpRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT ConfirmSignUpRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     ConfirmSignUpRequestPrivate(const CognitoIdentityProvider::Action action,

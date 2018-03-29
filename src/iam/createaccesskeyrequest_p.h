@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEACCESSKEYREQUEST_P_H
 #define QTAWS_CREATEACCESSKEYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "createaccesskeyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class CreateAccessKeyRequest;
 
-class QTAWS_EXPORT CreateAccessKeyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT CreateAccessKeyRequestPrivate : public IAMRequestPrivate {
 
 public:
     CreateAccessKeyRequestPrivate(const IAM::Action action,

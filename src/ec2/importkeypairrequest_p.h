@@ -20,7 +20,7 @@
 #ifndef QTAWS_IMPORTKEYPAIRREQUEST_P_H
 #define QTAWS_IMPORTKEYPAIRREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "importkeypairrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ImportKeyPairRequest;
 
-class QTAWS_EXPORT ImportKeyPairRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ImportKeyPairRequestPrivate : public EC2RequestPrivate {
 
 public:
     ImportKeyPairRequestPrivate(const EC2::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESTORETABLETOPOINTINTIMEREQUEST_P_H
 #define QTAWS_RESTORETABLETOPOINTINTIMEREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "restoretabletopointintimerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class RestoreTableToPointInTimeRequest;
 
-class QTAWS_EXPORT RestoreTableToPointInTimeRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT RestoreTableToPointInTimeRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     RestoreTableToPointInTimeRequestPrivate(const DynamoDB::Action action,

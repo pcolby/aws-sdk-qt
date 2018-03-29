@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATETEAMMEMBERREQUEST_P_H
 #define QTAWS_DISASSOCIATETEAMMEMBERREQUEST_P_H
 
-#include "codestar_p.h"
+#include "codestarrequest_p.h"
 #include "disassociateteammemberrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class DisassociateTeamMemberRequest;
 
-class QTAWS_EXPORT DisassociateTeamMemberRequestPrivate : public CodeStarPrivate {
+class QTAWS_EXPORT DisassociateTeamMemberRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     DisassociateTeamMemberRequestPrivate(const CodeStar::Action action,

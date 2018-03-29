@@ -20,7 +20,7 @@
 #ifndef QTAWS_COMPOSEENVIRONMENTSREQUEST_P_H
 #define QTAWS_COMPOSEENVIRONMENTSREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "composeenvironmentsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class ComposeEnvironmentsRequest;
 
-class QTAWS_EXPORT ComposeEnvironmentsRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT ComposeEnvironmentsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     ComposeEnvironmentsRequestPrivate(const ElasticBeanstalk::Action action,

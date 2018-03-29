@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTBUCKETPOLICYREQUEST_P_H
 #define QTAWS_PUTBUCKETPOLICYREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "putbucketpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class PutBucketPolicyRequest;
 
-class QTAWS_EXPORT PutBucketPolicyRequestPrivate : public S3Private {
+class QTAWS_EXPORT PutBucketPolicyRequestPrivate : public S3RequestPrivate {
 
 public:
     PutBucketPolicyRequestPrivate(const S3::Action action,

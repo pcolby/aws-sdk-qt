@@ -20,7 +20,7 @@
 #ifndef QTAWS_SHIELDREQUEST_P_H
 #define QTAWS_SHIELDREQUEST_P_H
 
-#include "shield_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "shieldrequest.h"
 
 namespace QtAws {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEMATCHMAKINGRULESETSREQUEST_P_H
 #define QTAWS_DESCRIBEMATCHMAKINGRULESETSREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "describematchmakingrulesetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribeMatchmakingRuleSetsRequest;
 
-class QTAWS_EXPORT DescribeMatchmakingRuleSetsRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT DescribeMatchmakingRuleSetsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DescribeMatchmakingRuleSetsRequestPrivate(const GameLift::Action action,

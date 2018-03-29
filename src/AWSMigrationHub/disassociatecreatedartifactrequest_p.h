@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATECREATEDARTIFACTREQUEST_P_H
 #define QTAWS_DISASSOCIATECREATEDARTIFACTREQUEST_P_H
 
-#include "migrationhub_p.h"
+#include "migrationhubrequest_p.h"
 #include "disassociatecreatedartifactrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class DisassociateCreatedArtifactRequest;
 
-class QTAWS_EXPORT DisassociateCreatedArtifactRequestPrivate : public MigrationHubPrivate {
+class QTAWS_EXPORT DisassociateCreatedArtifactRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     DisassociateCreatedArtifactRequestPrivate(const MigrationHub::Action action,

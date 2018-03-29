@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEPRIVATEVIRTUALINTERFACEREQUEST_P_H
 #define QTAWS_CREATEPRIVATEVIRTUALINTERFACEREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "createprivatevirtualinterfacerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class CreatePrivateVirtualInterfaceRequest;
 
-class QTAWS_EXPORT CreatePrivateVirtualInterfaceRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT CreatePrivateVirtualInterfaceRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     CreatePrivateVirtualInterfaceRequestPrivate(const DirectConnect::Action action,

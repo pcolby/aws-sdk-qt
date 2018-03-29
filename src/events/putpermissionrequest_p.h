@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTPERMISSIONREQUEST_P_H
 #define QTAWS_PUTPERMISSIONREQUEST_P_H
 
-#include "cloudwatchevents_p.h"
+#include "cloudwatcheventsrequest_p.h"
 #include "putpermissionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class PutPermissionRequest;
 
-class QTAWS_EXPORT PutPermissionRequestPrivate : public CloudWatchEventsPrivate {
+class QTAWS_EXPORT PutPermissionRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     PutPermissionRequestPrivate(const CloudWatchEvents::Action action,

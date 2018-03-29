@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTWORKERSWITHQUALIFICATIONTYPEREQUEST_P_H
 #define QTAWS_LISTWORKERSWITHQUALIFICATIONTYPEREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "listworkerswithqualificationtyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class ListWorkersWithQualificationTypeRequest;
 
-class QTAWS_EXPORT ListWorkersWithQualificationTypeRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT ListWorkersWithQualificationTypeRequestPrivate : public MTurkRequestPrivate {
 
 public:
     ListWorkersWithQualificationTypeRequestPrivate(const MTurk::Action action,

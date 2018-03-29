@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEVPCENDPOINTCONNECTIONNOTIFICATIONREQUEST_P_H
 #define QTAWS_CREATEVPCENDPOINTCONNECTIONNOTIFICATIONREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "createvpcendpointconnectionnotificationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateVpcEndpointConnectionNotificationRequest;
 
-class QTAWS_EXPORT CreateVpcEndpointConnectionNotificationRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CreateVpcEndpointConnectionNotificationRequestPrivate : public EC2RequestPrivate {
 
 public:
     CreateVpcEndpointConnectionNotificationRequestPrivate(const EC2::Action action,

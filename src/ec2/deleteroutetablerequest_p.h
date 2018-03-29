@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEROUTETABLEREQUEST_P_H
 #define QTAWS_DELETEROUTETABLEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "deleteroutetablerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteRouteTableRequest;
 
-class QTAWS_EXPORT DeleteRouteTableRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DeleteRouteTableRequestPrivate : public EC2RequestPrivate {
 
 public:
     DeleteRouteTableRequestPrivate(const EC2::Action action,

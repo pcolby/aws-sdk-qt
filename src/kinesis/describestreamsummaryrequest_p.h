@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESTREAMSUMMARYREQUEST_P_H
 #define QTAWS_DESCRIBESTREAMSUMMARYREQUEST_P_H
 
-#include "kinesis_p.h"
+#include "kinesisrequest_p.h"
 #include "describestreamsummaryrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class DescribeStreamSummaryRequest;
 
-class QTAWS_EXPORT DescribeStreamSummaryRequestPrivate : public KinesisPrivate {
+class QTAWS_EXPORT DescribeStreamSummaryRequestPrivate : public KinesisRequestPrivate {
 
 public:
     DescribeStreamSummaryRequestPrivate(const Kinesis::Action action,

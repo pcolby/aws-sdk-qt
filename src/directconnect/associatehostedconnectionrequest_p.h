@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSOCIATEHOSTEDCONNECTIONREQUEST_P_H
 #define QTAWS_ASSOCIATEHOSTEDCONNECTIONREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "associatehostedconnectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class AssociateHostedConnectionRequest;
 
-class QTAWS_EXPORT AssociateHostedConnectionRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT AssociateHostedConnectionRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     AssociateHostedConnectionRequestPrivate(const DirectConnect::Action action,

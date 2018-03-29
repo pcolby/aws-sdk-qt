@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHGETPARTITIONREQUEST_P_H
 #define QTAWS_BATCHGETPARTITIONREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "batchgetpartitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class BatchGetPartitionRequest;
 
-class QTAWS_EXPORT BatchGetPartitionRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT BatchGetPartitionRequestPrivate : public GlueRequestPrivate {
 
 public:
     BatchGetPartitionRequestPrivate(const Glue::Action action,

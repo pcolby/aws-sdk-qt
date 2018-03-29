@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEVAULTREQUEST_P_H
 #define QTAWS_DESCRIBEVAULTREQUEST_P_H
 
-#include "glacier_p.h"
+#include "glacierrequest_p.h"
 #include "describevaultrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glacier {
 
 class DescribeVaultRequest;
 
-class QTAWS_EXPORT DescribeVaultRequestPrivate : public GlacierPrivate {
+class QTAWS_EXPORT DescribeVaultRequestPrivate : public GlacierRequestPrivate {
 
 public:
     DescribeVaultRequestPrivate(const Glacier::Action action,

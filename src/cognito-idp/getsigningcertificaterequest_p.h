@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSIGNINGCERTIFICATEREQUEST_P_H
 #define QTAWS_GETSIGNINGCERTIFICATEREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "getsigningcertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class GetSigningCertificateRequest;
 
-class QTAWS_EXPORT GetSigningCertificateRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT GetSigningCertificateRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     GetSigningCertificateRequestPrivate(const CognitoIdentityProvider::Action action,

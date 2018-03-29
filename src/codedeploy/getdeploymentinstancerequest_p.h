@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDEPLOYMENTINSTANCEREQUEST_P_H
 #define QTAWS_GETDEPLOYMENTINSTANCEREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "getdeploymentinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class GetDeploymentInstanceRequest;
 
-class QTAWS_EXPORT GetDeploymentInstanceRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT GetDeploymentInstanceRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     GetDeploymentInstanceRequestPrivate(const CodeDeploy::Action action,

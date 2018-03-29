@@ -20,7 +20,7 @@
 #ifndef QTAWS_MERGEDEVELOPERIDENTITIESREQUEST_P_H
 #define QTAWS_MERGEDEVELOPERIDENTITIESREQUEST_P_H
 
-#include "cognitoidentity_p.h"
+#include "cognitoidentityrequest_p.h"
 #include "mergedeveloperidentitiesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class MergeDeveloperIdentitiesRequest;
 
-class QTAWS_EXPORT MergeDeveloperIdentitiesRequestPrivate : public CognitoIdentityPrivate {
+class QTAWS_EXPORT MergeDeveloperIdentitiesRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     MergeDeveloperIdentitiesRequestPrivate(const CognitoIdentity::Action action,

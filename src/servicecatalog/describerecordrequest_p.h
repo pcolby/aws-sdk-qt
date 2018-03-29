@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBERECORDREQUEST_P_H
 #define QTAWS_DESCRIBERECORDREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "describerecordrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DescribeRecordRequest;
 
-class QTAWS_EXPORT DescribeRecordRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT DescribeRecordRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DescribeRecordRequestPrivate(const ServiceCatalog::Action action,

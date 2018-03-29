@@ -20,7 +20,7 @@
 #ifndef QTAWS_SEARCHINDEXREQUEST_P_H
 #define QTAWS_SEARCHINDEXREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "searchindexrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class SearchIndexRequest;
 
-class QTAWS_EXPORT SearchIndexRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT SearchIndexRequestPrivate : public IoTRequestPrivate {
 
 public:
     SearchIndexRequestPrivate(const IoT::Action action,

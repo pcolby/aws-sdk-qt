@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTSREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTSREQUEST_P_H
 
-#include "opsworkscm_p.h"
+#include "opsworkscmrequest_p.h"
 #include "describeeventsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class DescribeEventsRequest;
 
-class QTAWS_EXPORT DescribeEventsRequestPrivate : public OpsWorksCMPrivate {
+class QTAWS_EXPORT DescribeEventsRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     DescribeEventsRequestPrivate(const OpsWorksCM::Action action,

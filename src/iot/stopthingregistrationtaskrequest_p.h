@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPTHINGREGISTRATIONTASKREQUEST_P_H
 #define QTAWS_STOPTHINGREGISTRATIONTASKREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "stopthingregistrationtaskrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class StopThingRegistrationTaskRequest;
 
-class QTAWS_EXPORT StopThingRegistrationTaskRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT StopThingRegistrationTaskRequestPrivate : public IoTRequestPrivate {
 
 public:
     StopThingRegistrationTaskRequestPrivate(const IoT::Action action,

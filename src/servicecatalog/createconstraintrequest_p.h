@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECONSTRAINTREQUEST_P_H
 #define QTAWS_CREATECONSTRAINTREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "createconstraintrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class CreateConstraintRequest;
 
-class QTAWS_EXPORT CreateConstraintRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT CreateConstraintRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     CreateConstraintRequestPrivate(const ServiceCatalog::Action action,

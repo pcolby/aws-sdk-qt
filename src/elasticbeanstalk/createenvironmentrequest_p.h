@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEENVIRONMENTREQUEST_P_H
 #define QTAWS_CREATEENVIRONMENTREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "createenvironmentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class CreateEnvironmentRequest;
 
-class QTAWS_EXPORT CreateEnvironmentRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT CreateEnvironmentRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     CreateEnvironmentRequestPrivate(const ElasticBeanstalk::Action action,

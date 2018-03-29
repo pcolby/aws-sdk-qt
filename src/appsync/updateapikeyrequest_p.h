@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEAPIKEYREQUEST_P_H
 #define QTAWS_UPDATEAPIKEYREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "updateapikeyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class UpdateApiKeyRequest;
 
-class QTAWS_EXPORT UpdateApiKeyRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT UpdateApiKeyRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     UpdateApiKeyRequestPrivate(const AppSync::Action action,

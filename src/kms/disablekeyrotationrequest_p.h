@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISABLEKEYROTATIONREQUEST_P_H
 #define QTAWS_DISABLEKEYROTATIONREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "disablekeyrotationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class DisableKeyRotationRequest;
 
-class QTAWS_EXPORT DisableKeyRotationRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT DisableKeyRotationRequestPrivate : public KMSRequestPrivate {
 
 public:
     DisableKeyRotationRequestPrivate(const KMS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DOWNLOADDEFAULTKEYPAIRREQUEST_P_H
 #define QTAWS_DOWNLOADDEFAULTKEYPAIRREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "downloaddefaultkeypairrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DownloadDefaultKeyPairRequest;
 
-class QTAWS_EXPORT DownloadDefaultKeyPairRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT DownloadDefaultKeyPairRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DownloadDefaultKeyPairRequestPrivate(const Lightsail::Action action,

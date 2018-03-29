@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETACCOUNTREQUEST_P_H
 #define QTAWS_GETACCOUNTREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "getaccountrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetAccountRequest;
 
-class QTAWS_EXPORT GetAccountRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetAccountRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetAccountRequestPrivate(const APIGateway::Action action,

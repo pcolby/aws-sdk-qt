@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATECONNECTIONFROMLAGREQUEST_P_H
 #define QTAWS_DISASSOCIATECONNECTIONFROMLAGREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "disassociateconnectionfromlagrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class DisassociateConnectionFromLagRequest;
 
-class QTAWS_EXPORT DisassociateConnectionFromLagRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT DisassociateConnectionFromLagRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     DisassociateConnectionFromLagRequestPrivate(const DirectConnect::Action action,

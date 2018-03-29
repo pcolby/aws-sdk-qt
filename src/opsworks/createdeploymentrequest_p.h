@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDEPLOYMENTREQUEST_P_H
 #define QTAWS_CREATEDEPLOYMENTREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "createdeploymentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class CreateDeploymentRequest;
 
-class QTAWS_EXPORT CreateDeploymentRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT CreateDeploymentRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     CreateDeploymentRequestPrivate(const OpsWorks::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEFILESYSTEMSREQUEST_P_H
 #define QTAWS_DESCRIBEFILESYSTEMSREQUEST_P_H
 
-#include "efs_p.h"
+#include "efsrequest_p.h"
 #include "describefilesystemsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EFS {
 
 class DescribeFileSystemsRequest;
 
-class QTAWS_EXPORT DescribeFileSystemsRequestPrivate : public EFSPrivate {
+class QTAWS_EXPORT DescribeFileSystemsRequestPrivate : public EFSRequestPrivate {
 
 public:
     DescribeFileSystemsRequestPrivate(const EFS::Action action,

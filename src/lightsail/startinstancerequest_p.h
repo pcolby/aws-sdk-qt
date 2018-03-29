@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTINSTANCEREQUEST_P_H
 #define QTAWS_STARTINSTANCEREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "startinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class StartInstanceRequest;
 
-class QTAWS_EXPORT StartInstanceRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT StartInstanceRequestPrivate : public LightsailRequestPrivate {
 
 public:
     StartInstanceRequestPrivate(const Lightsail::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEFILESHAREREQUEST_P_H
 #define QTAWS_DELETEFILESHAREREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "deletefilesharerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DeleteFileShareRequest;
 
-class QTAWS_EXPORT DeleteFileShareRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT DeleteFileShareRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DeleteFileShareRequestPrivate(const StorageGateway::Action action,

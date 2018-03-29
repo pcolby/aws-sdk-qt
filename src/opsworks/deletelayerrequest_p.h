@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETELAYERREQUEST_P_H
 #define QTAWS_DELETELAYERREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "deletelayerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DeleteLayerRequest;
 
-class QTAWS_EXPORT DeleteLayerRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DeleteLayerRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DeleteLayerRequestPrivate(const OpsWorks::Action action,

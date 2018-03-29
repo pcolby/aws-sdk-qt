@@ -20,7 +20,7 @@
 #ifndef QTAWS_PURGEQUEUEREQUEST_P_H
 #define QTAWS_PURGEQUEUEREQUEST_P_H
 
-#include "sqs_p.h"
+#include "sqsrequest_p.h"
 #include "purgequeuerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SQS {
 
 class PurgeQueueRequest;
 
-class QTAWS_EXPORT PurgeQueueRequestPrivate : public SQSPrivate {
+class QTAWS_EXPORT PurgeQueueRequestPrivate : public SQSRequestPrivate {
 
 public:
     PurgeQueueRequestPrivate(const SQS::Action action,

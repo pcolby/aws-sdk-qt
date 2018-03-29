@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEHITREQUEST_P_H
 #define QTAWS_DELETEHITREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "deletehitrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class DeleteHITRequest;
 
-class QTAWS_EXPORT DeleteHITRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT DeleteHITRequestPrivate : public MTurkRequestPrivate {
 
 public:
     DeleteHITRequestPrivate(const MTurk::Action action,

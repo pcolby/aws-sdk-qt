@@ -20,7 +20,7 @@
 #ifndef QTAWS_ESTIMATETEMPLATECOSTREQUEST_P_H
 #define QTAWS_ESTIMATETEMPLATECOSTREQUEST_P_H
 
-#include "cloudformation_p.h"
+#include "cloudformationrequest_p.h"
 #include "estimatetemplatecostrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class EstimateTemplateCostRequest;
 
-class QTAWS_EXPORT EstimateTemplateCostRequestPrivate : public CloudFormationPrivate {
+class QTAWS_EXPORT EstimateTemplateCostRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     EstimateTemplateCostRequestPrivate(const CloudFormation::Action action,

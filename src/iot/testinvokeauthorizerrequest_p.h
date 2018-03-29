@@ -20,7 +20,7 @@
 #ifndef QTAWS_TESTINVOKEAUTHORIZERREQUEST_P_H
 #define QTAWS_TESTINVOKEAUTHORIZERREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "testinvokeauthorizerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class TestInvokeAuthorizerRequest;
 
-class QTAWS_EXPORT TestInvokeAuthorizerRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT TestInvokeAuthorizerRequestPrivate : public IoTRequestPrivate {
 
 public:
     TestInvokeAuthorizerRequestPrivate(const IoT::Action action,

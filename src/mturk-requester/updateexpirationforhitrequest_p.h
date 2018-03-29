@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEEXPIRATIONFORHITREQUEST_P_H
 #define QTAWS_UPDATEEXPIRATIONFORHITREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "updateexpirationforhitrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class UpdateExpirationForHITRequest;
 
-class QTAWS_EXPORT UpdateExpirationForHITRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT UpdateExpirationForHITRequestPrivate : public MTurkRequestPrivate {
 
 public:
     UpdateExpirationForHITRequestPrivate(const MTurk::Action action,

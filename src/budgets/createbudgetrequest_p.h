@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEBUDGETREQUEST_P_H
 #define QTAWS_CREATEBUDGETREQUEST_P_H
 
-#include "budgets_p.h"
+#include "budgetsrequest_p.h"
 #include "createbudgetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Budgets {
 
 class CreateBudgetRequest;
 
-class QTAWS_EXPORT CreateBudgetRequestPrivate : public BudgetsPrivate {
+class QTAWS_EXPORT CreateBudgetRequestPrivate : public BudgetsRequestPrivate {
 
 public:
     CreateBudgetRequestPrivate(const Budgets::Action action,

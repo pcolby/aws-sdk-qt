@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEINPUTSECURITYGROUPREQUEST_P_H
 #define QTAWS_UPDATEINPUTSECURITYGROUPREQUEST_P_H
 
-#include "medialive_p.h"
+#include "medialiverequest_p.h"
 #include "updateinputsecuritygrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class UpdateInputSecurityGroupRequest;
 
-class QTAWS_EXPORT UpdateInputSecurityGroupRequestPrivate : public MediaLivePrivate {
+class QTAWS_EXPORT UpdateInputSecurityGroupRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     UpdateInputSecurityGroupRequestPrivate(const MediaLive::Action action,

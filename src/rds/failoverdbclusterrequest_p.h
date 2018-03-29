@@ -20,7 +20,7 @@
 #ifndef QTAWS_FAILOVERDBCLUSTERREQUEST_P_H
 #define QTAWS_FAILOVERDBCLUSTERREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "failoverdbclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class FailoverDBClusterRequest;
 
-class QTAWS_EXPORT FailoverDBClusterRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT FailoverDBClusterRequestPrivate : public RDSRequestPrivate {
 
 public:
     FailoverDBClusterRequestPrivate(const RDS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESNAPSHOTCOPYGRANTSREQUEST_P_H
 #define QTAWS_DESCRIBESNAPSHOTCOPYGRANTSREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "describesnapshotcopygrantsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeSnapshotCopyGrantsRequest;
 
-class QTAWS_EXPORT DescribeSnapshotCopyGrantsRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DescribeSnapshotCopyGrantsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DescribeSnapshotCopyGrantsRequestPrivate(const Redshift::Action action,

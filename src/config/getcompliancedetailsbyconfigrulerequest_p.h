@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCOMPLIANCEDETAILSBYCONFIGRULEREQUEST_P_H
 #define QTAWS_GETCOMPLIANCEDETAILSBYCONFIGRULEREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "getcompliancedetailsbyconfigrulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class GetComplianceDetailsByConfigRuleRequest;
 
-class QTAWS_EXPORT GetComplianceDetailsByConfigRuleRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT GetComplianceDetailsByConfigRuleRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     GetComplianceDetailsByConfigRuleRequestPrivate(const ConfigService::Action action,

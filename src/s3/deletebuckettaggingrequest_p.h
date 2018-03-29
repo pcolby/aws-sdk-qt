@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBUCKETTAGGINGREQUEST_P_H
 #define QTAWS_DELETEBUCKETTAGGINGREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "deletebuckettaggingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class DeleteBucketTaggingRequest;
 
-class QTAWS_EXPORT DeleteBucketTaggingRequestPrivate : public S3Private {
+class QTAWS_EXPORT DeleteBucketTaggingRequestPrivate : public S3RequestPrivate {
 
 public:
     DeleteBucketTaggingRequestPrivate(const S3::Action action,

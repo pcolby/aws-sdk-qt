@@ -20,7 +20,7 @@
 #ifndef QTAWS_SAGEMAKERREQUEST_P_H
 #define QTAWS_SAGEMAKERREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "sagemakerrequest.h"
 
 namespace QtAws {

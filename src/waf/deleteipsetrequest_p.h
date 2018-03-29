@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEIPSETREQUEST_P_H
 #define QTAWS_DELETEIPSETREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "deleteipsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class DeleteIPSetRequest;
 
-class QTAWS_EXPORT DeleteIPSetRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT DeleteIPSetRequestPrivate : public WAFRequestPrivate {
 
 public:
     DeleteIPSetRequestPrivate(const WAF::Action action,

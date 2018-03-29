@@ -20,7 +20,7 @@
 #ifndef QTAWS_GENERATEDATAKEYWITHOUTPLAINTEXTREQUEST_P_H
 #define QTAWS_GENERATEDATAKEYWITHOUTPLAINTEXTREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "generatedatakeywithoutplaintextrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class GenerateDataKeyWithoutPlaintextRequest;
 
-class QTAWS_EXPORT GenerateDataKeyWithoutPlaintextRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT GenerateDataKeyWithoutPlaintextRequestPrivate : public KMSRequestPrivate {
 
 public:
     GenerateDataKeyWithoutPlaintextRequestPrivate(const KMS::Action action,

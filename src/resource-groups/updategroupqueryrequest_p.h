@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEGROUPQUERYREQUEST_P_H
 #define QTAWS_UPDATEGROUPQUERYREQUEST_P_H
 
-#include "resourcegroups_p.h"
+#include "resourcegroupsrequest_p.h"
 #include "updategroupqueryrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class UpdateGroupQueryRequest;
 
-class QTAWS_EXPORT UpdateGroupQueryRequestPrivate : public ResourceGroupsPrivate {
+class QTAWS_EXPORT UpdateGroupQueryRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
     UpdateGroupQueryRequestPrivate(const ResourceGroups::Action action,

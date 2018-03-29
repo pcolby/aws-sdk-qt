@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTOPENWORKFLOWEXECUTIONSREQUEST_P_H
 #define QTAWS_LISTOPENWORKFLOWEXECUTIONSREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "listopenworkflowexecutionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class ListOpenWorkflowExecutionsRequest;
 
-class QTAWS_EXPORT ListOpenWorkflowExecutionsRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT ListOpenWorkflowExecutionsRequestPrivate : public SWFRequestPrivate {
 
 public:
     ListOpenWorkflowExecutionsRequestPrivate(const SWF::Action action,

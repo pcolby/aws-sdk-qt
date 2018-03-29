@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTMODELSREQUEST_P_H
 #define QTAWS_LISTMODELSREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "listmodelsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class ListModelsRequest;
 
-class QTAWS_EXPORT ListModelsRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT ListModelsRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     ListModelsRequestPrivate(const SageMaker::Action action,

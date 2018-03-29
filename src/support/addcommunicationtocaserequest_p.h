@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDCOMMUNICATIONTOCASEREQUEST_P_H
 #define QTAWS_ADDCOMMUNICATIONTOCASEREQUEST_P_H
 
-#include "support_p.h"
+#include "supportrequest_p.h"
 #include "addcommunicationtocaserequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Support {
 
 class AddCommunicationToCaseRequest;
 
-class QTAWS_EXPORT AddCommunicationToCaseRequestPrivate : public SupportPrivate {
+class QTAWS_EXPORT AddCommunicationToCaseRequestPrivate : public SupportRequestPrivate {
 
 public:
     AddCommunicationToCaseRequestPrivate(const Support::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEENGINEDEFAULTCLUSTERPARAMETERSREQUEST_P_H
 #define QTAWS_DESCRIBEENGINEDEFAULTCLUSTERPARAMETERSREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describeenginedefaultclusterparametersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeEngineDefaultClusterParametersRequest;
 
-class QTAWS_EXPORT DescribeEngineDefaultClusterParametersRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeEngineDefaultClusterParametersRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeEngineDefaultClusterParametersRequestPrivate(const RDS::Action action,

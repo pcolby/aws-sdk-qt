@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTCONFIGURATIONSREQUEST_P_H
 #define QTAWS_LISTCONFIGURATIONSREQUEST_P_H
 
-#include "applicationdiscoveryservice_p.h"
+#include "applicationdiscoveryservicerequest_p.h"
 #include "listconfigurationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class ListConfigurationsRequest;
 
-class QTAWS_EXPORT ListConfigurationsRequestPrivate : public ApplicationDiscoveryServicePrivate {
+class QTAWS_EXPORT ListConfigurationsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
     ListConfigurationsRequestPrivate(const ApplicationDiscoveryService::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETENDPOINTATTRIBUTESREQUEST_P_H
 #define QTAWS_GETENDPOINTATTRIBUTESREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "getendpointattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class GetEndpointAttributesRequest;
 
-class QTAWS_EXPORT GetEndpointAttributesRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT GetEndpointAttributesRequestPrivate : public SNSRequestPrivate {
 
 public:
     GetEndpointAttributesRequestPrivate(const SNS::Action action,

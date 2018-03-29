@@ -20,7 +20,7 @@
 #ifndef QTAWS_DIRECTCONNECTREQUEST_P_H
 #define QTAWS_DIRECTCONNECTREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "directconnectrequest.h"
 
 namespace QtAws {

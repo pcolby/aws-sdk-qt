@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCONSOLEOUTPUTREQUEST_P_H
 #define QTAWS_GETCONSOLEOUTPUTREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "getconsoleoutputrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetConsoleOutputRequest;
 
-class QTAWS_EXPORT GetConsoleOutputRequestPrivate : public EC2Private {
+class QTAWS_EXPORT GetConsoleOutputRequestPrivate : public EC2RequestPrivate {
 
 public:
     GetConsoleOutputRequestPrivate(const EC2::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDEPLOYMENTREQUEST_P_H
 #define QTAWS_CREATEDEPLOYMENTREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "createdeploymentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class CreateDeploymentRequest;
 
-class QTAWS_EXPORT CreateDeploymentRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT CreateDeploymentRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     CreateDeploymentRequestPrivate(const APIGateway::Action action,

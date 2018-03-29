@@ -20,7 +20,7 @@
 #ifndef QTAWS_IMPORTEXPORTREQUEST_P_H
 #define QTAWS_IMPORTEXPORTREQUEST_P_H
 
-#include "importexport_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "importexportrequest.h"
 
 namespace QtAws {

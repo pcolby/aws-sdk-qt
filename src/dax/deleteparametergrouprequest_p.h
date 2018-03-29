@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPARAMETERGROUPREQUEST_P_H
 #define QTAWS_DELETEPARAMETERGROUPREQUEST_P_H
 
-#include "dax_p.h"
+#include "daxrequest_p.h"
 #include "deleteparametergrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DAX {
 
 class DeleteParameterGroupRequest;
 
-class QTAWS_EXPORT DeleteParameterGroupRequestPrivate : public DAXPrivate {
+class QTAWS_EXPORT DeleteParameterGroupRequestPrivate : public DAXRequestPrivate {
 
 public:
     DeleteParameterGroupRequestPrivate(const DAX::Action action,

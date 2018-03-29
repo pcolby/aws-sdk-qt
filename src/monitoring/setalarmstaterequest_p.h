@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETALARMSTATEREQUEST_P_H
 #define QTAWS_SETALARMSTATEREQUEST_P_H
 
-#include "cloudwatch_p.h"
+#include "cloudwatchrequest_p.h"
 #include "setalarmstaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class SetAlarmStateRequest;
 
-class QTAWS_EXPORT SetAlarmStateRequestPrivate : public CloudWatchPrivate {
+class QTAWS_EXPORT SetAlarmStateRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     SetAlarmStateRequestPrivate(const CloudWatch::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESTOREOBJECTREQUEST_P_H
 #define QTAWS_RESTOREOBJECTREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "restoreobjectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class RestoreObjectRequest;
 
-class QTAWS_EXPORT RestoreObjectRequestPrivate : public S3Private {
+class QTAWS_EXPORT RestoreObjectRequestPrivate : public S3RequestPrivate {
 
 public:
     RestoreObjectRequestPrivate(const S3::Action action,

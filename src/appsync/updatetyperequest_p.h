@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATETYPEREQUEST_P_H
 #define QTAWS_UPDATETYPEREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "updatetyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class UpdateTypeRequest;
 
-class QTAWS_EXPORT UpdateTypeRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT UpdateTypeRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     UpdateTypeRequestPrivate(const AppSync::Action action,

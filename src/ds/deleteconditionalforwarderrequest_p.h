@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECONDITIONALFORWARDERREQUEST_P_H
 #define QTAWS_DELETECONDITIONALFORWARDERREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "deleteconditionalforwarderrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DeleteConditionalForwarderRequest;
 
-class QTAWS_EXPORT DeleteConditionalForwarderRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT DeleteConditionalForwarderRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     DeleteConditionalForwarderRequestPrivate(const DirectoryService::Action action,

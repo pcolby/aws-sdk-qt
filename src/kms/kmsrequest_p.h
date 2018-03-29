@@ -20,7 +20,7 @@
 #ifndef QTAWS_KMSREQUEST_P_H
 #define QTAWS_KMSREQUEST_P_H
 
-#include "kms_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "kmsrequest.h"
 
 namespace QtAws {

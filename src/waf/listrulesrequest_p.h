@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTRULESREQUEST_P_H
 #define QTAWS_LISTRULESREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "listrulesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class ListRulesRequest;
 
-class QTAWS_EXPORT ListRulesRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT ListRulesRequestPrivate : public WAFRequestPrivate {
 
 public:
     ListRulesRequestPrivate(const WAF::Action action,

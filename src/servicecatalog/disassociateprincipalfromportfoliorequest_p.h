@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEPRINCIPALFROMPORTFOLIOREQUEST_P_H
 #define QTAWS_DISASSOCIATEPRINCIPALFROMPORTFOLIOREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "disassociateprincipalfromportfoliorequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DisassociatePrincipalFromPortfolioRequest;
 
-class QTAWS_EXPORT DisassociatePrincipalFromPortfolioRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT DisassociatePrincipalFromPortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DisassociatePrincipalFromPortfolioRequestPrivate(const ServiceCatalog::Action action,

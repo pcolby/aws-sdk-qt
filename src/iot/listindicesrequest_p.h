@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTINDICESREQUEST_P_H
 #define QTAWS_LISTINDICESREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "listindicesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListIndicesRequest;
 
-class QTAWS_EXPORT ListIndicesRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT ListIndicesRequestPrivate : public IoTRequestPrivate {
 
 public:
     ListIndicesRequestPrivate(const IoT::Action action,

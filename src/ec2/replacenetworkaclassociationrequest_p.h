@@ -20,7 +20,7 @@
 #ifndef QTAWS_REPLACENETWORKACLASSOCIATIONREQUEST_P_H
 #define QTAWS_REPLACENETWORKACLASSOCIATIONREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "replacenetworkaclassociationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ReplaceNetworkAclAssociationRequest;
 
-class QTAWS_EXPORT ReplaceNetworkAclAssociationRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ReplaceNetworkAclAssociationRequestPrivate : public EC2RequestPrivate {
 
 public:
     ReplaceNetworkAclAssociationRequestPrivate(const EC2::Action action,

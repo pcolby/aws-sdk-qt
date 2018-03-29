@@ -20,7 +20,7 @@
 #ifndef QTAWS_TAGPROJECTREQUEST_P_H
 #define QTAWS_TAGPROJECTREQUEST_P_H
 
-#include "codestar_p.h"
+#include "codestarrequest_p.h"
 #include "tagprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class TagProjectRequest;
 
-class QTAWS_EXPORT TagProjectRequestPrivate : public CodeStarPrivate {
+class QTAWS_EXPORT TagProjectRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     TagProjectRequestPrivate(const CodeStar::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_TESTROLEREQUEST_P_H
 #define QTAWS_TESTROLEREQUEST_P_H
 
-#include "elastictranscoder_p.h"
+#include "elastictranscoderrequest_p.h"
 #include "testrolerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class TestRoleRequest;
 
-class QTAWS_EXPORT TestRoleRequestPrivate : public ElasticTranscoderPrivate {
+class QTAWS_EXPORT TestRoleRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     TestRoleRequestPrivate(const ElasticTranscoder::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELCONVERSIONTASKREQUEST_P_H
 #define QTAWS_CANCELCONVERSIONTASKREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "cancelconversiontaskrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CancelConversionTaskRequest;
 
-class QTAWS_EXPORT CancelConversionTaskRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CancelConversionTaskRequestPrivate : public EC2RequestPrivate {
 
 public:
     CancelConversionTaskRequestPrivate(const EC2::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETUSAGEPLANKEYSREQUEST_P_H
 #define QTAWS_GETUSAGEPLANKEYSREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "getusageplankeysrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetUsagePlanKeysRequest;
 
-class QTAWS_EXPORT GetUsagePlanKeysRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetUsagePlanKeysRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetUsagePlanKeysRequestPrivate(const APIGateway::Action action,

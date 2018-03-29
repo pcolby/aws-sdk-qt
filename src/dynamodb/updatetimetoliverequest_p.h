@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATETIMETOLIVEREQUEST_P_H
 #define QTAWS_UPDATETIMETOLIVEREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "updatetimetoliverequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class UpdateTimeToLiveRequest;
 
-class QTAWS_EXPORT UpdateTimeToLiveRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT UpdateTimeToLiveRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     UpdateTimeToLiveRequestPrivate(const DynamoDB::Action action,

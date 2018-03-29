@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATENUMBEROFDOMAINCONTROLLERSREQUEST_P_H
 #define QTAWS_UPDATENUMBEROFDOMAINCONTROLLERSREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "updatenumberofdomaincontrollersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class UpdateNumberOfDomainControllersRequest;
 
-class QTAWS_EXPORT UpdateNumberOfDomainControllersRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT UpdateNumberOfDomainControllersRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     UpdateNumberOfDomainControllersRequestPrivate(const DirectoryService::Action action,

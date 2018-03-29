@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEAPPSREQUEST_P_H
 #define QTAWS_DESCRIBEAPPSREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "describeappsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DescribeAppsRequest;
 
-class QTAWS_EXPORT DescribeAppsRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DescribeAppsRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DescribeAppsRequestPrivate(const OpsWorks::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_EXECUTEPROVISIONEDPRODUCTPLANREQUEST_P_H
 #define QTAWS_EXECUTEPROVISIONEDPRODUCTPLANREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "executeprovisionedproductplanrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ExecuteProvisionedProductPlanRequest;
 
-class QTAWS_EXPORT ExecuteProvisionedProductPlanRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT ExecuteProvisionedProductPlanRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     ExecuteProvisionedProductPlanRequestPrivate(const ServiceCatalog::Action action,

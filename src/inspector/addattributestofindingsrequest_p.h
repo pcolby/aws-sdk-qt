@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDATTRIBUTESTOFINDINGSREQUEST_P_H
 #define QTAWS_ADDATTRIBUTESTOFINDINGSREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "addattributestofindingsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class AddAttributesToFindingsRequest;
 
-class QTAWS_EXPORT AddAttributesToFindingsRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT AddAttributesToFindingsRequestPrivate : public InspectorRequestPrivate {
 
 public:
     AddAttributesToFindingsRequestPrivate(const Inspector::Action action,

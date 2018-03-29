@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHGETITEMREQUEST_P_H
 #define QTAWS_BATCHGETITEMREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "batchgetitemrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class BatchGetItemRequest;
 
-class QTAWS_EXPORT BatchGetItemRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT BatchGetItemRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     BatchGetItemRequestPrivate(const DynamoDB::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_WAFREGIONALREQUEST_P_H
 #define QTAWS_WAFREGIONALREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "wafregionalrequest.h"
 
 namespace QtAws {

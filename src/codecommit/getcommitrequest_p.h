@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCOMMITREQUEST_P_H
 #define QTAWS_GETCOMMITREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "getcommitrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class GetCommitRequest;
 
-class QTAWS_EXPORT GetCommitRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT GetCommitRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     GetCommitRequestPrivate(const CodeCommit::Action action,

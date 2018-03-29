@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPROJECTREQUEST_P_H
 #define QTAWS_DELETEPROJECTREQUEST_P_H
 
-#include "mobile_p.h"
+#include "mobilerequest_p.h"
 #include "deleteprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Mobile {
 
 class DeleteProjectRequest;
 
-class QTAWS_EXPORT DeleteProjectRequestPrivate : public MobilePrivate {
+class QTAWS_EXPORT DeleteProjectRequestPrivate : public MobileRequestPrivate {
 
 public:
     DeleteProjectRequestPrivate(const Mobile::Action action,

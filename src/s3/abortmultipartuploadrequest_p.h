@@ -20,7 +20,7 @@
 #ifndef QTAWS_ABORTMULTIPARTUPLOADREQUEST_P_H
 #define QTAWS_ABORTMULTIPARTUPLOADREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "abortmultipartuploadrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class AbortMultipartUploadRequest;
 
-class QTAWS_EXPORT AbortMultipartUploadRequestPrivate : public S3Private {
+class QTAWS_EXPORT AbortMultipartUploadRequestPrivate : public S3RequestPrivate {
 
 public:
     AbortMultipartUploadRequestPrivate(const S3::Action action,

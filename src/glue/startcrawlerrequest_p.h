@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTCRAWLERREQUEST_P_H
 #define QTAWS_STARTCRAWLERREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "startcrawlerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class StartCrawlerRequest;
 
-class QTAWS_EXPORT StartCrawlerRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT StartCrawlerRequestPrivate : public GlueRequestPrivate {
 
 public:
     StartCrawlerRequestPrivate(const Glue::Action action,

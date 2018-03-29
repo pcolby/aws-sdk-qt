@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTACTIVATEDRULESINRULEGROUPREQUEST_P_H
 #define QTAWS_LISTACTIVATEDRULESINRULEGROUPREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "listactivatedrulesinrulegrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class ListActivatedRulesInRuleGroupRequest;
 
-class QTAWS_EXPORT ListActivatedRulesInRuleGroupRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT ListActivatedRulesInRuleGroupRequestPrivate : public WAFRequestPrivate {
 
 public:
     ListActivatedRulesInRuleGroupRequestPrivate(const WAF::Action action,

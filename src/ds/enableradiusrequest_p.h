@@ -20,7 +20,7 @@
 #ifndef QTAWS_ENABLERADIUSREQUEST_P_H
 #define QTAWS_ENABLERADIUSREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "enableradiusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class EnableRadiusRequest;
 
-class QTAWS_EXPORT EnableRadiusRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT EnableRadiusRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     EnableRadiusRequestPrivate(const DirectoryService::Action action,

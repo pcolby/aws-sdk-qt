@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEGROUPREQUEST_P_H
 #define QTAWS_DELETEGROUPREQUEST_P_H
 
-#include "resourcegroups_p.h"
+#include "resourcegroupsrequest_p.h"
 #include "deletegrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class DeleteGroupRequest;
 
-class QTAWS_EXPORT DeleteGroupRequestPrivate : public ResourceGroupsPrivate {
+class QTAWS_EXPORT DeleteGroupRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
     DeleteGroupRequestPrivate(const ResourceGroups::Action action,

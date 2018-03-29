@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETJOBRUNSREQUEST_P_H
 #define QTAWS_GETJOBRUNSREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "getjobrunsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetJobRunsRequest;
 
-class QTAWS_EXPORT GetJobRunsRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT GetJobRunsRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetJobRunsRequestPrivate(const Glue::Action action,

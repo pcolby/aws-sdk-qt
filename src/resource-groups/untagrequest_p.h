@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNTAGREQUEST_P_H
 #define QTAWS_UNTAGREQUEST_P_H
 
-#include "resourcegroups_p.h"
+#include "resourcegroupsrequest_p.h"
 #include "untagrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class UntagRequest;
 
-class QTAWS_EXPORT UntagRequestPrivate : public ResourceGroupsPrivate {
+class QTAWS_EXPORT UntagRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
     UntagRequestPrivate(const ResourceGroups::Action action,

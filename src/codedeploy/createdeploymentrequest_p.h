@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDEPLOYMENTREQUEST_P_H
 #define QTAWS_CREATEDEPLOYMENTREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "createdeploymentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class CreateDeploymentRequest;
 
-class QTAWS_EXPORT CreateDeploymentRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT CreateDeploymentRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     CreateDeploymentRequestPrivate(const CodeDeploy::Action action,

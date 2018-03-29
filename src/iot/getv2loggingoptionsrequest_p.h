@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETV2LOGGINGOPTIONSREQUEST_P_H
 #define QTAWS_GETV2LOGGINGOPTIONSREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "getv2loggingoptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class GetV2LoggingOptionsRequest;
 
-class QTAWS_EXPORT GetV2LoggingOptionsRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT GetV2LoggingOptionsRequestPrivate : public IoTRequestPrivate {
 
 public:
     GetV2LoggingOptionsRequestPrivate(const IoT::Action action,

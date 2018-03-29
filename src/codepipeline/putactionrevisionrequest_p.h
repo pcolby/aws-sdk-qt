@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTACTIONREVISIONREQUEST_P_H
 #define QTAWS_PUTACTIONREVISIONREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "putactionrevisionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class PutActionRevisionRequest;
 
-class QTAWS_EXPORT PutActionRevisionRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT PutActionRevisionRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     PutActionRevisionRequestPrivate(const CodePipeline::Action action,

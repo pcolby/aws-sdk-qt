@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEOPENIDCONNECTPROVIDERREQUEST_P_H
 #define QTAWS_CREATEOPENIDCONNECTPROVIDERREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "createopenidconnectproviderrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class CreateOpenIDConnectProviderRequest;
 
-class QTAWS_EXPORT CreateOpenIDConnectProviderRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT CreateOpenIDConnectProviderRequestPrivate : public IAMRequestPrivate {
 
 public:
     CreateOpenIDConnectProviderRequestPrivate(const IAM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEITEMREQUEST_P_H
 #define QTAWS_DELETEITEMREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "deleteitemrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class DeleteItemRequest;
 
-class QTAWS_EXPORT DeleteItemRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT DeleteItemRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     DeleteItemRequestPrivate(const DynamoDB::Action action,

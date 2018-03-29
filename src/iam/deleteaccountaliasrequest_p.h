@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEACCOUNTALIASREQUEST_P_H
 #define QTAWS_DELETEACCOUNTALIASREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "deleteaccountaliasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteAccountAliasRequest;
 
-class QTAWS_EXPORT DeleteAccountAliasRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT DeleteAccountAliasRequestPrivate : public IAMRequestPrivate {
 
 public:
     DeleteAccountAliasRequestPrivate(const IAM::Action action,

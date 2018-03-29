@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATTACHLOADBALANCERTLSCERTIFICATEREQUEST_P_H
 #define QTAWS_ATTACHLOADBALANCERTLSCERTIFICATEREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "attachloadbalancertlscertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class AttachLoadBalancerTlsCertificateRequest;
 
-class QTAWS_EXPORT AttachLoadBalancerTlsCertificateRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT AttachLoadBalancerTlsCertificateRequestPrivate : public LightsailRequestPrivate {
 
 public:
     AttachLoadBalancerTlsCertificateRequestPrivate(const Lightsail::Action action,

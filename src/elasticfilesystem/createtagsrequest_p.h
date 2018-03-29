@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATETAGSREQUEST_P_H
 #define QTAWS_CREATETAGSREQUEST_P_H
 
-#include "efs_p.h"
+#include "efsrequest_p.h"
 #include "createtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EFS {
 
 class CreateTagsRequest;
 
-class QTAWS_EXPORT CreateTagsRequestPrivate : public EFSPrivate {
+class QTAWS_EXPORT CreateTagsRequestPrivate : public EFSRequestPrivate {
 
 public:
     CreateTagsRequestPrivate(const EFS::Action action,

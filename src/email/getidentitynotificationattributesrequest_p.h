@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETIDENTITYNOTIFICATIONATTRIBUTESREQUEST_P_H
 #define QTAWS_GETIDENTITYNOTIFICATIONATTRIBUTESREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "getidentitynotificationattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class GetIdentityNotificationAttributesRequest;
 
-class QTAWS_EXPORT GetIdentityNotificationAttributesRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT GetIdentityNotificationAttributesRequestPrivate : public SESRequestPrivate {
 
 public:
     GetIdentityNotificationAttributesRequestPrivate(const SES::Action action,

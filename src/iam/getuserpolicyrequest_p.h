@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETUSERPOLICYREQUEST_P_H
 #define QTAWS_GETUSERPOLICYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "getuserpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetUserPolicyRequest;
 
-class QTAWS_EXPORT GetUserPolicyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT GetUserPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
     GetUserPolicyRequestPrivate(const IAM::Action action,

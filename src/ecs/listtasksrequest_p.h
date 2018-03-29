@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTASKSREQUEST_P_H
 #define QTAWS_LISTTASKSREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "listtasksrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class ListTasksRequest;
 
-class QTAWS_EXPORT ListTasksRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT ListTasksRequestPrivate : public ECSRequestPrivate {
 
 public:
     ListTasksRequestPrivate(const ECS::Action action,

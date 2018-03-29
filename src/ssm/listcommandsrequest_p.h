@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTCOMMANDSREQUEST_P_H
 #define QTAWS_LISTCOMMANDSREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "listcommandsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class ListCommandsRequest;
 
-class QTAWS_EXPORT ListCommandsRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT ListCommandsRequestPrivate : public SSMRequestPrivate {
 
 public:
     ListCommandsRequestPrivate(const SSM::Action action,

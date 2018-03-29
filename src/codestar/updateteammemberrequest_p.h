@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATETEAMMEMBERREQUEST_P_H
 #define QTAWS_UPDATETEAMMEMBERREQUEST_P_H
 
-#include "codestar_p.h"
+#include "codestarrequest_p.h"
 #include "updateteammemberrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class UpdateTeamMemberRequest;
 
-class QTAWS_EXPORT UpdateTeamMemberRequestPrivate : public CodeStarPrivate {
+class QTAWS_EXPORT UpdateTeamMemberRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     UpdateTeamMemberRequestPrivate(const CodeStar::Action action,

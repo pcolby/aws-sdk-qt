@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELHANDSHAKEREQUEST_P_H
 #define QTAWS_CANCELHANDSHAKEREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "cancelhandshakerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class CancelHandshakeRequest;
 
-class QTAWS_EXPORT CancelHandshakeRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT CancelHandshakeRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     CancelHandshakeRequestPrivate(const Organizations::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECONFIGURATIONTEMPLATEREQUEST_P_H
 #define QTAWS_UPDATECONFIGURATIONTEMPLATEREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "updateconfigurationtemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class UpdateConfigurationTemplateRequest;
 
-class QTAWS_EXPORT UpdateConfigurationTemplateRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT UpdateConfigurationTemplateRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     UpdateConfigurationTemplateRequestPrivate(const ElasticBeanstalk::Action action,

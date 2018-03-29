@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERONPREMISESINSTANCEREQUEST_P_H
 #define QTAWS_REGISTERONPREMISESINSTANCEREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "registeronpremisesinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class RegisterOnPremisesInstanceRequest;
 
-class QTAWS_EXPORT RegisterOnPremisesInstanceRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT RegisterOnPremisesInstanceRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     RegisterOnPremisesInstanceRequestPrivate(const CodeDeploy::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESERVICELINKEDROLEREQUEST_P_H
 #define QTAWS_DELETESERVICELINKEDROLEREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "deleteservicelinkedrolerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteServiceLinkedRoleRequest;
 
-class QTAWS_EXPORT DeleteServiceLinkedRoleRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT DeleteServiceLinkedRoleRequestPrivate : public IAMRequestPrivate {
 
 public:
     DeleteServiceLinkedRoleRequestPrivate(const IAM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_VERIFYSOFTWARETOKENREQUEST_P_H
 #define QTAWS_VERIFYSOFTWARETOKENREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "verifysoftwaretokenrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class VerifySoftwareTokenRequest;
 
-class QTAWS_EXPORT VerifySoftwareTokenRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT VerifySoftwareTokenRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     VerifySoftwareTokenRequestPrivate(const CognitoIdentityProvider::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEROOMREQUEST_P_H
 #define QTAWS_CREATEROOMREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "createroomrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class CreateRoomRequest;
 
-class QTAWS_EXPORT CreateRoomRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT CreateRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     CreateRoomRequestPrivate(const AlexaForBusiness::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTFILEREQUEST_P_H
 #define QTAWS_PUTFILEREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "putfilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class PutFileRequest;
 
-class QTAWS_EXPORT PutFileRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT PutFileRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     PutFileRequestPrivate(const CodeCommit::Action action,

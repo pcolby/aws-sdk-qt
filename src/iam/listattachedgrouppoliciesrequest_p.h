@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTATTACHEDGROUPPOLICIESREQUEST_P_H
 #define QTAWS_LISTATTACHEDGROUPPOLICIESREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "listattachedgrouppoliciesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class ListAttachedGroupPoliciesRequest;
 
-class QTAWS_EXPORT ListAttachedGroupPoliciesRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT ListAttachedGroupPoliciesRequestPrivate : public IAMRequestPrivate {
 
 public:
     ListAttachedGroupPoliciesRequestPrivate(const IAM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTGROUPVERSIONSREQUEST_P_H
 #define QTAWS_LISTGROUPVERSIONSREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "listgroupversionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class ListGroupVersionsRequest;
 
-class QTAWS_EXPORT ListGroupVersionsRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT ListGroupVersionsRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     ListGroupVersionsRequestPrivate(const Greengrass::Action action,

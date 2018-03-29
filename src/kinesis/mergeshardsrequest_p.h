@@ -20,7 +20,7 @@
 #ifndef QTAWS_MERGESHARDSREQUEST_P_H
 #define QTAWS_MERGESHARDSREQUEST_P_H
 
-#include "kinesis_p.h"
+#include "kinesisrequest_p.h"
 #include "mergeshardsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class MergeShardsRequest;
 
-class QTAWS_EXPORT MergeShardsRequestPrivate : public KinesisPrivate {
+class QTAWS_EXPORT MergeShardsRequestPrivate : public KinesisRequestPrivate {
 
 public:
     MergeShardsRequestPrivate(const Kinesis::Action action,

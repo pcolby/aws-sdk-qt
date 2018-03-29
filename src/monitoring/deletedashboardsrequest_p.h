@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDASHBOARDSREQUEST_P_H
 #define QTAWS_DELETEDASHBOARDSREQUEST_P_H
 
-#include "cloudwatch_p.h"
+#include "cloudwatchrequest_p.h"
 #include "deletedashboardsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class DeleteDashboardsRequest;
 
-class QTAWS_EXPORT DeleteDashboardsRequestPrivate : public CloudWatchPrivate {
+class QTAWS_EXPORT DeleteDashboardsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     DeleteDashboardsRequestPrivate(const CloudWatch::Action action,

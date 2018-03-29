@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCOGNITOEVENTSREQUEST_P_H
 #define QTAWS_GETCOGNITOEVENTSREQUEST_P_H
 
-#include "cognitosync_p.h"
+#include "cognitosyncrequest_p.h"
 #include "getcognitoeventsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class GetCognitoEventsRequest;
 
-class QTAWS_EXPORT GetCognitoEventsRequestPrivate : public CognitoSyncPrivate {
+class QTAWS_EXPORT GetCognitoEventsRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     GetCognitoEventsRequestPrivate(const CognitoSync::Action action,

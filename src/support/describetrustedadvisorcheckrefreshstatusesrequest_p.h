@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETRUSTEDADVISORCHECKREFRESHSTATUSESREQUEST_P_H
 #define QTAWS_DESCRIBETRUSTEDADVISORCHECKREFRESHSTATUSESREQUEST_P_H
 
-#include "support_p.h"
+#include "supportrequest_p.h"
 #include "describetrustedadvisorcheckrefreshstatusesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Support {
 
 class DescribeTrustedAdvisorCheckRefreshStatusesRequest;
 
-class QTAWS_EXPORT DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate : public SupportPrivate {
+class QTAWS_EXPORT DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate : public SupportRequestPrivate {
 
 public:
     DescribeTrustedAdvisorCheckRefreshStatusesRequestPrivate(const Support::Action action,

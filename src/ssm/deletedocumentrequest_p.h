@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDOCUMENTREQUEST_P_H
 #define QTAWS_DELETEDOCUMENTREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "deletedocumentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DeleteDocumentRequest;
 
-class QTAWS_EXPORT DeleteDocumentRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DeleteDocumentRequestPrivate : public SSMRequestPrivate {
 
 public:
     DeleteDocumentRequestPrivate(const SSM::Action action,

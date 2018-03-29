@@ -20,7 +20,7 @@
 #ifndef QTAWS_COMPLETEVAULTLOCKREQUEST_P_H
 #define QTAWS_COMPLETEVAULTLOCKREQUEST_P_H
 
-#include "glacier_p.h"
+#include "glacierrequest_p.h"
 #include "completevaultlockrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glacier {
 
 class CompleteVaultLockRequest;
 
-class QTAWS_EXPORT CompleteVaultLockRequestPrivate : public GlacierPrivate {
+class QTAWS_EXPORT CompleteVaultLockRequestPrivate : public GlacierRequestPrivate {
 
 public:
     CompleteVaultLockRequestPrivate(const Glacier::Action action,

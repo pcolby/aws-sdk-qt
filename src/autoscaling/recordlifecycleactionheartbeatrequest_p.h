@@ -20,7 +20,7 @@
 #ifndef QTAWS_RECORDLIFECYCLEACTIONHEARTBEATREQUEST_P_H
 #define QTAWS_RECORDLIFECYCLEACTIONHEARTBEATREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "recordlifecycleactionheartbeatrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class RecordLifecycleActionHeartbeatRequest;
 
-class QTAWS_EXPORT RecordLifecycleActionHeartbeatRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT RecordLifecycleActionHeartbeatRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     RecordLifecycleActionHeartbeatRequestPrivate(const AutoScaling::Action action,

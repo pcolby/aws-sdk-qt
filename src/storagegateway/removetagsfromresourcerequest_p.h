@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCEREQUEST_P_H
 #define QTAWS_REMOVETAGSFROMRESOURCEREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "removetagsfromresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class RemoveTagsFromResourceRequest;
 
-class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT RemoveTagsFromResourceRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     RemoveTagsFromResourceRequestPrivate(const StorageGateway::Action action,

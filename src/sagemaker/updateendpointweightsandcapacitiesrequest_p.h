@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEENDPOINTWEIGHTSANDCAPACITIESREQUEST_P_H
 #define QTAWS_UPDATEENDPOINTWEIGHTSANDCAPACITIESREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "updateendpointweightsandcapacitiesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class UpdateEndpointWeightsAndCapacitiesRequest;
 
-class QTAWS_EXPORT UpdateEndpointWeightsAndCapacitiesRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT UpdateEndpointWeightsAndCapacitiesRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     UpdateEndpointWeightsAndCapacitiesRequestPrivate(const SageMaker::Action action,

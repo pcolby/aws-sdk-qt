@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTOBJECTPOLICIESREQUEST_P_H
 #define QTAWS_LISTOBJECTPOLICIESREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "listobjectpoliciesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class ListObjectPoliciesRequest;
 
-class QTAWS_EXPORT ListObjectPoliciesRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT ListObjectPoliciesRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     ListObjectPoliciesRequestPrivate(const CloudDirectory::Action action,

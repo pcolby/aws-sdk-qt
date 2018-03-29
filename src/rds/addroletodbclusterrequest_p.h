@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDROLETODBCLUSTERREQUEST_P_H
 #define QTAWS_ADDROLETODBCLUSTERREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "addroletodbclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class AddRoleToDBClusterRequest;
 
-class QTAWS_EXPORT AddRoleToDBClusterRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT AddRoleToDBClusterRequestPrivate : public RDSRequestPrivate {
 
 public:
     AddRoleToDBClusterRequestPrivate(const RDS::Action action,

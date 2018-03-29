@@ -20,7 +20,7 @@
 #ifndef QTAWS_SERVICECATALOGREQUEST_P_H
 #define QTAWS_SERVICECATALOGREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "servicecatalogrequest.h"
 
 namespace QtAws {

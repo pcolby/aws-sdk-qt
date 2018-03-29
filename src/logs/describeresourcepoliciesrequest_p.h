@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBERESOURCEPOLICIESREQUEST_P_H
 #define QTAWS_DESCRIBERESOURCEPOLICIESREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "describeresourcepoliciesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DescribeResourcePoliciesRequest;
 
-class QTAWS_EXPORT DescribeResourcePoliciesRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT DescribeResourcePoliciesRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DescribeResourcePoliciesRequestPrivate(const CloudWatchLogs::Action action,

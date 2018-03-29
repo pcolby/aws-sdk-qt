@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDSEARCHDOMAINREQUEST_P_H
 #define QTAWS_CLOUDSEARCHDOMAINREQUEST_P_H
 
-#include "cloudsearchdomain_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "cloudsearchdomainrequest.h"
 
 namespace QtAws {

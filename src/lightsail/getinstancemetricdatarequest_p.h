@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETINSTANCEMETRICDATAREQUEST_P_H
 #define QTAWS_GETINSTANCEMETRICDATAREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "getinstancemetricdatarequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetInstanceMetricDataRequest;
 
-class QTAWS_EXPORT GetInstanceMetricDataRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT GetInstanceMetricDataRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetInstanceMetricDataRequestPrivate(const Lightsail::Action action,

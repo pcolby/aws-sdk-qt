@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATELOGGERDEFINITIONREQUEST_P_H
 #define QTAWS_CREATELOGGERDEFINITIONREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "createloggerdefinitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class CreateLoggerDefinitionRequest;
 
-class QTAWS_EXPORT CreateLoggerDefinitionRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT CreateLoggerDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     CreateLoggerDefinitionRequestPrivate(const Greengrass::Action action,

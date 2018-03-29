@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSCHEMACREATIONSTATUSREQUEST_P_H
 #define QTAWS_GETSCHEMACREATIONSTATUSREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "getschemacreationstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class GetSchemaCreationStatusRequest;
 
-class QTAWS_EXPORT GetSchemaCreationStatusRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT GetSchemaCreationStatusRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     GetSchemaCreationStatusRequestPrivate(const AppSync::Action action,

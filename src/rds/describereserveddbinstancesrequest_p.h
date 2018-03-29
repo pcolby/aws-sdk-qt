@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBERESERVEDDBINSTANCESREQUEST_P_H
 #define QTAWS_DESCRIBERESERVEDDBINSTANCESREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describereserveddbinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeReservedDBInstancesRequest;
 
-class QTAWS_EXPORT DescribeReservedDBInstancesRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeReservedDBInstancesRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeReservedDBInstancesRequestPrivate(const RDS::Action action,

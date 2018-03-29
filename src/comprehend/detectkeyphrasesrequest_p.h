@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETECTKEYPHRASESREQUEST_P_H
 #define QTAWS_DETECTKEYPHRASESREQUEST_P_H
 
-#include "comprehend_p.h"
+#include "comprehendrequest_p.h"
 #include "detectkeyphrasesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class DetectKeyPhrasesRequest;
 
-class QTAWS_EXPORT DetectKeyPhrasesRequestPrivate : public ComprehendPrivate {
+class QTAWS_EXPORT DetectKeyPhrasesRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     DetectKeyPhrasesRequestPrivate(const Comprehend::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESENDVALIDATIONEMAILREQUEST_P_H
 #define QTAWS_RESENDVALIDATIONEMAILREQUEST_P_H
 
-#include "acm_p.h"
+#include "acmrequest_p.h"
 #include "resendvalidationemailrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ACM {
 
 class ResendValidationEmailRequest;
 
-class QTAWS_EXPORT ResendValidationEmailRequestPrivate : public ACMPrivate {
+class QTAWS_EXPORT ResendValidationEmailRequestPrivate : public ACMRequestPrivate {
 
 public:
     ResendValidationEmailRequestPrivate(const ACM::Action action,

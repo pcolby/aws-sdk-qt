@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEBATCHPREDICTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEBATCHPREDICTIONSREQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "describebatchpredictionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class DescribeBatchPredictionsRequest;
 
-class QTAWS_EXPORT DescribeBatchPredictionsRequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT DescribeBatchPredictionsRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     DescribeBatchPredictionsRequestPrivate(const MachineLearning::Action action,

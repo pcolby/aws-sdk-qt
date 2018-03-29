@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEPLATFORMAPPLICATIONREQUEST_P_H
 #define QTAWS_CREATEPLATFORMAPPLICATIONREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "createplatformapplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class CreatePlatformApplicationRequest;
 
-class QTAWS_EXPORT CreatePlatformApplicationRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT CreatePlatformApplicationRequestPrivate : public SNSRequestPrivate {
 
 public:
     CreatePlatformApplicationRequestPrivate(const SNS::Action action,

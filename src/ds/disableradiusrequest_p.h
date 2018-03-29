@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISABLERADIUSREQUEST_P_H
 #define QTAWS_DISABLERADIUSREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "disableradiusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DisableRadiusRequest;
 
-class QTAWS_EXPORT DisableRadiusRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT DisableRadiusRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     DisableRadiusRequestPrivate(const DirectoryService::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEORDERABLEDBINSTANCEOPTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEORDERABLEDBINSTANCEOPTIONSREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describeorderabledbinstanceoptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeOrderableDBInstanceOptionsRequest;
 
-class QTAWS_EXPORT DescribeOrderableDBInstanceOptionsRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeOrderableDBInstanceOptionsRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeOrderableDBInstanceOptionsRequestPrivate(const RDS::Action action,

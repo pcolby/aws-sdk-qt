@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESUMEPROCESSESREQUEST_P_H
 #define QTAWS_RESUMEPROCESSESREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "resumeprocessesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class ResumeProcessesRequest;
 
-class QTAWS_EXPORT ResumeProcessesRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT ResumeProcessesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     ResumeProcessesRequestPrivate(const AutoScaling::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEAPPREQUEST_P_H
 #define QTAWS_CREATEAPPREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "createapprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class CreateAppRequest;
 
-class QTAWS_EXPORT CreateAppRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT CreateAppRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     CreateAppRequestPrivate(const OpsWorks::Action action,

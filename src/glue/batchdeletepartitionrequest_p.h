@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHDELETEPARTITIONREQUEST_P_H
 #define QTAWS_BATCHDELETEPARTITIONREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "batchdeletepartitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class BatchDeletePartitionRequest;
 
-class QTAWS_EXPORT BatchDeletePartitionRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT BatchDeletePartitionRequestPrivate : public GlueRequestPrivate {
 
 public:
     BatchDeletePartitionRequestPrivate(const Glue::Action action,

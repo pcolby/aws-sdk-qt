@@ -20,7 +20,7 @@
 #ifndef QTAWS_COUNTCLOSEDWORKFLOWEXECUTIONSREQUEST_P_H
 #define QTAWS_COUNTCLOSEDWORKFLOWEXECUTIONSREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "countclosedworkflowexecutionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class CountClosedWorkflowExecutionsRequest;
 
-class QTAWS_EXPORT CountClosedWorkflowExecutionsRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT CountClosedWorkflowExecutionsRequestPrivate : public SWFRequestPrivate {
 
 public:
     CountClosedWorkflowExecutionsRequestPrivate(const SWF::Action action,

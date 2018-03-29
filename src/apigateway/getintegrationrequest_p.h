@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETINTEGRATIONREQUEST_P_H
 #define QTAWS_GETINTEGRATIONREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "getintegrationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetIntegrationRequest;
 
-class QTAWS_EXPORT GetIntegrationRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetIntegrationRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetIntegrationRequestPrivate(const APIGateway::Action action,

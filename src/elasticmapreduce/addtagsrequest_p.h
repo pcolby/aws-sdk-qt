@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDTAGSREQUEST_P_H
 #define QTAWS_ADDTAGSREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "addtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class AddTagsRequest;
 
-class QTAWS_EXPORT AddTagsRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT AddTagsRequestPrivate : public EMRRequestPrivate {
 
 public:
     AddTagsRequestPrivate(const EMR::Action action,

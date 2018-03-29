@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEALIASREQUEST_P_H
 #define QTAWS_UPDATEALIASREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "updatealiasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class UpdateAliasRequest;
 
-class QTAWS_EXPORT UpdateAliasRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT UpdateAliasRequestPrivate : public KMSRequestPrivate {
 
 public:
     UpdateAliasRequestPrivate(const KMS::Action action,

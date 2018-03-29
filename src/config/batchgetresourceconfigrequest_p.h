@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHGETRESOURCECONFIGREQUEST_P_H
 #define QTAWS_BATCHGETRESOURCECONFIGREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "batchgetresourceconfigrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class BatchGetResourceConfigRequest;
 
-class QTAWS_EXPORT BatchGetResourceConfigRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT BatchGetResourceConfigRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     BatchGetResourceConfigRequestPrivate(const ConfigService::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEUSERSREQUEST_P_H
 #define QTAWS_DESCRIBEUSERSREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "describeusersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DescribeUsersRequest;
 
-class QTAWS_EXPORT DescribeUsersRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT DescribeUsersRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DescribeUsersRequestPrivate(const WorkDocs::Action action,

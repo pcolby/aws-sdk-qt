@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTCLUSTERSREQUEST_P_H
 #define QTAWS_LISTCLUSTERSREQUEST_P_H
 
-#include "snowball_p.h"
+#include "snowballrequest_p.h"
 #include "listclustersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Snowball {
 
 class ListClustersRequest;
 
-class QTAWS_EXPORT ListClustersRequestPrivate : public SnowballPrivate {
+class QTAWS_EXPORT ListClustersRequestPrivate : public SnowballRequestPrivate {
 
 public:
     ListClustersRequestPrivate(const Snowball::Action action,

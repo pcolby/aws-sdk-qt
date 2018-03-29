@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETJOBUNLOCKCODEREQUEST_P_H
 #define QTAWS_GETJOBUNLOCKCODEREQUEST_P_H
 
-#include "snowball_p.h"
+#include "snowballrequest_p.h"
 #include "getjobunlockcoderequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Snowball {
 
 class GetJobUnlockCodeRequest;
 
-class QTAWS_EXPORT GetJobUnlockCodeRequestPrivate : public SnowballPrivate {
+class QTAWS_EXPORT GetJobUnlockCodeRequestPrivate : public SnowballRequestPrivate {
 
 public:
     GetJobUnlockCodeRequestPrivate(const Snowball::Action action,

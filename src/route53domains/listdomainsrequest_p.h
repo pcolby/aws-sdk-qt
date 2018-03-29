@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTDOMAINSREQUEST_P_H
 #define QTAWS_LISTDOMAINSREQUEST_P_H
 
-#include "route53domains_p.h"
+#include "route53domainsrequest_p.h"
 #include "listdomainsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class ListDomainsRequest;
 
-class QTAWS_EXPORT ListDomainsRequestPrivate : public Route53DomainsPrivate {
+class QTAWS_EXPORT ListDomainsRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     ListDomainsRequestPrivate(const Route53Domains::Action action,

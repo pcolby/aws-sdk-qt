@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSHIPPINGLABELREQUEST_P_H
 #define QTAWS_GETSHIPPINGLABELREQUEST_P_H
 
-#include "importexport_p.h"
+#include "importexportrequest_p.h"
 #include "getshippinglabelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ImportExport {
 
 class GetShippingLabelRequest;
 
-class QTAWS_EXPORT GetShippingLabelRequestPrivate : public ImportExportPrivate {
+class QTAWS_EXPORT GetShippingLabelRequestPrivate : public ImportExportRequestPrivate {
 
 public:
     GetShippingLabelRequestPrivate(const ImportExport::Action action,

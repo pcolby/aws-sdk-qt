@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNSUBSCRIBEFROMEVENTREQUEST_P_H
 #define QTAWS_UNSUBSCRIBEFROMEVENTREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "unsubscribefromeventrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class UnsubscribeFromEventRequest;
 
-class QTAWS_EXPORT UnsubscribeFromEventRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT UnsubscribeFromEventRequestPrivate : public InspectorRequestPrivate {
 
 public:
     UnsubscribeFromEventRequestPrivate(const Inspector::Action action,

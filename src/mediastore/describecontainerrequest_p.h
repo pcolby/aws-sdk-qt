@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECONTAINERREQUEST_P_H
 #define QTAWS_DESCRIBECONTAINERREQUEST_P_H
 
-#include "mediastore_p.h"
+#include "mediastorerequest_p.h"
 #include "describecontainerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class DescribeContainerRequest;
 
-class QTAWS_EXPORT DescribeContainerRequestPrivate : public MediaStorePrivate {
+class QTAWS_EXPORT DescribeContainerRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
     DescribeContainerRequestPrivate(const MediaStore::Action action,

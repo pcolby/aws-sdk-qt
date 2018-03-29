@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETINSTANCEPROTECTIONREQUEST_P_H
 #define QTAWS_SETINSTANCEPROTECTIONREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "setinstanceprotectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class SetInstanceProtectionRequest;
 
-class QTAWS_EXPORT SetInstanceProtectionRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT SetInstanceProtectionRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     SetInstanceProtectionRequestPrivate(const AutoScaling::Action action,

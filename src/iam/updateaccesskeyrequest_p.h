@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEACCESSKEYREQUEST_P_H
 #define QTAWS_UPDATEACCESSKEYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "updateaccesskeyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class UpdateAccessKeyRequest;
 
-class QTAWS_EXPORT UpdateAccessKeyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT UpdateAccessKeyRequestPrivate : public IAMRequestPrivate {
 
 public:
     UpdateAccessKeyRequestPrivate(const IAM::Action action,

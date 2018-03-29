@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETMLMODELREQUEST_P_H
 #define QTAWS_GETMLMODELREQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "getmlmodelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class GetMLModelRequest;
 
-class QTAWS_EXPORT GetMLModelRequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT GetMLModelRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     GetMLModelRequestPrivate(const MachineLearning::Action action,

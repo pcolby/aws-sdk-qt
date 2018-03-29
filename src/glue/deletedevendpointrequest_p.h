@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDEVENDPOINTREQUEST_P_H
 #define QTAWS_DELETEDEVENDPOINTREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "deletedevendpointrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteDevEndpointRequest;
 
-class QTAWS_EXPORT DeleteDevEndpointRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT DeleteDevEndpointRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteDevEndpointRequestPrivate(const Glue::Action action,

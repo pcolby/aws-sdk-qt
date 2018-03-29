@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPWORKSPACESREQUEST_P_H
 #define QTAWS_STOPWORKSPACESREQUEST_P_H
 
-#include "workspaces_p.h"
+#include "workspacesrequest_p.h"
 #include "stopworkspacesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class StopWorkspacesRequest;
 
-class QTAWS_EXPORT StopWorkspacesRequestPrivate : public WorkSpacesPrivate {
+class QTAWS_EXPORT StopWorkspacesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     StopWorkspacesRequestPrivate(const WorkSpaces::Action action,

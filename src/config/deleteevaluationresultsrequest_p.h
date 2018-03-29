@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEEVALUATIONRESULTSREQUEST_P_H
 #define QTAWS_DELETEEVALUATIONRESULTSREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "deleteevaluationresultsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeleteEvaluationResultsRequest;
 
-class QTAWS_EXPORT DeleteEvaluationResultsRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT DeleteEvaluationResultsRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DeleteEvaluationResultsRequestPrivate(const ConfigService::Action action,

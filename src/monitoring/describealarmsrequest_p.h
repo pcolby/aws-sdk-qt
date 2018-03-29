@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEALARMSREQUEST_P_H
 #define QTAWS_DESCRIBEALARMSREQUEST_P_H
 
-#include "cloudwatch_p.h"
+#include "cloudwatchrequest_p.h"
 #include "describealarmsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class DescribeAlarmsRequest;
 
-class QTAWS_EXPORT DescribeAlarmsRequestPrivate : public CloudWatchPrivate {
+class QTAWS_EXPORT DescribeAlarmsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     DescribeAlarmsRequestPrivate(const CloudWatch::Action action,

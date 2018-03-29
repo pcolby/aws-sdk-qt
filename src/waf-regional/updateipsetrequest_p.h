@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEIPSETREQUEST_P_H
 #define QTAWS_UPDATEIPSETREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "updateipsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class UpdateIPSetRequest;
 
-class QTAWS_EXPORT UpdateIPSetRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT UpdateIPSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     UpdateIPSetRequestPrivate(const WAFRegional::Action action,

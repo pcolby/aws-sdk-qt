@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYEVENTSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_MODIFYEVENTSUBSCRIPTIONREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "modifyeventsubscriptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class ModifyEventSubscriptionRequest;
 
-class QTAWS_EXPORT ModifyEventSubscriptionRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT ModifyEventSubscriptionRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     ModifyEventSubscriptionRequestPrivate(const Redshift::Action action,

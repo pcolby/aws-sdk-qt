@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTDATASOURCESREQUEST_P_H
 #define QTAWS_LISTDATASOURCESREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "listdatasourcesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class ListDataSourcesRequest;
 
-class QTAWS_EXPORT ListDataSourcesRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT ListDataSourcesRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     ListDataSourcesRequestPrivate(const AppSync::Action action,

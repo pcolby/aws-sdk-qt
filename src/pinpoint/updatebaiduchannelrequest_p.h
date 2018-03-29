@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEBAIDUCHANNELREQUEST_P_H
 #define QTAWS_UPDATEBAIDUCHANNELREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "updatebaiduchannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class UpdateBaiduChannelRequest;
 
-class QTAWS_EXPORT UpdateBaiduChannelRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT UpdateBaiduChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     UpdateBaiduChannelRequestPrivate(const Pinpoint::Action action,

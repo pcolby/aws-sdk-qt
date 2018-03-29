@@ -20,7 +20,7 @@
 #ifndef QTAWS_VERIFYTRUSTREQUEST_P_H
 #define QTAWS_VERIFYTRUSTREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "verifytrustrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class VerifyTrustRequest;
 
-class QTAWS_EXPORT VerifyTrustRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT VerifyTrustRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     VerifyTrustRequestPrivate(const DirectoryService::Action action,

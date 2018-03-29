@@ -20,7 +20,7 @@
 #ifndef QTAWS_SENDTASKSUCCESSREQUEST_P_H
 #define QTAWS_SENDTASKSUCCESSREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "sendtasksuccessrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class SendTaskSuccessRequest;
 
-class QTAWS_EXPORT SendTaskSuccessRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT SendTaskSuccessRequestPrivate : public SFNRequestPrivate {
 
 public:
     SendTaskSuccessRequestPrivate(const SFN::Action action,

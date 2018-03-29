@@ -20,7 +20,7 @@
 #ifndef QTAWS_EXPORTPROJECTREQUEST_P_H
 #define QTAWS_EXPORTPROJECTREQUEST_P_H
 
-#include "mobile_p.h"
+#include "mobilerequest_p.h"
 #include "exportprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Mobile {
 
 class ExportProjectRequest;
 
-class QTAWS_EXPORT ExportProjectRequestPrivate : public MobilePrivate {
+class QTAWS_EXPORT ExportProjectRequestPrivate : public MobileRequestPrivate {
 
 public:
     ExportProjectRequestPrivate(const Mobile::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTRESOURCEATTRIBUTESREQUEST_P_H
 #define QTAWS_PUTRESOURCEATTRIBUTESREQUEST_P_H
 
-#include "migrationhub_p.h"
+#include "migrationhubrequest_p.h"
 #include "putresourceattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class PutResourceAttributesRequest;
 
-class QTAWS_EXPORT PutResourceAttributesRequestPrivate : public MigrationHubPrivate {
+class QTAWS_EXPORT PutResourceAttributesRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     PutResourceAttributesRequestPrivate(const MigrationHub::Action action,

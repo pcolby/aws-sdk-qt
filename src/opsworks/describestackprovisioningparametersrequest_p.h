@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESTACKPROVISIONINGPARAMETERSREQUEST_P_H
 #define QTAWS_DESCRIBESTACKPROVISIONINGPARAMETERSREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "describestackprovisioningparametersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DescribeStackProvisioningParametersRequest;
 
-class QTAWS_EXPORT DescribeStackProvisioningParametersRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DescribeStackProvisioningParametersRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DescribeStackProvisioningParametersRequestPrivate(const OpsWorks::Action action,

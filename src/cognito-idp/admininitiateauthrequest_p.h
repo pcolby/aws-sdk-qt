@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADMININITIATEAUTHREQUEST_P_H
 #define QTAWS_ADMININITIATEAUTHREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "admininitiateauthrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminInitiateAuthRequest;
 
-class QTAWS_EXPORT AdminInitiateAuthRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT AdminInitiateAuthRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AdminInitiateAuthRequestPrivate(const CognitoIdentityProvider::Action action,

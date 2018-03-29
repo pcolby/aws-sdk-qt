@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTAPPROVALRESULTREQUEST_P_H
 #define QTAWS_PUTAPPROVALRESULTREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "putapprovalresultrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class PutApprovalResultRequest;
 
-class QTAWS_EXPORT PutApprovalResultRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT PutApprovalResultRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     PutApprovalResultRequestPrivate(const CodePipeline::Action action,

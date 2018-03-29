@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTRESOURCESREQUEST_P_H
 #define QTAWS_LISTRESOURCESREQUEST_P_H
 
-#include "codestar_p.h"
+#include "codestarrequest_p.h"
 #include "listresourcesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class ListResourcesRequest;
 
-class QTAWS_EXPORT ListResourcesRequestPrivate : public CodeStarPrivate {
+class QTAWS_EXPORT ListResourcesRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     ListResourcesRequestPrivate(const CodeStar::Action action,

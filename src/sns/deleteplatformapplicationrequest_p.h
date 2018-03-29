@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPLATFORMAPPLICATIONREQUEST_P_H
 #define QTAWS_DELETEPLATFORMAPPLICATIONREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "deleteplatformapplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class DeletePlatformApplicationRequest;
 
-class QTAWS_EXPORT DeletePlatformApplicationRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT DeletePlatformApplicationRequestPrivate : public SNSRequestPrivate {
 
 public:
     DeletePlatformApplicationRequestPrivate(const SNS::Action action,

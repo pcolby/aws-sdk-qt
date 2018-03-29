@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEFINDINGSFEEDBACKREQUEST_P_H
 #define QTAWS_UPDATEFINDINGSFEEDBACKREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "updatefindingsfeedbackrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class UpdateFindingsFeedbackRequest;
 
-class QTAWS_EXPORT UpdateFindingsFeedbackRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT UpdateFindingsFeedbackRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     UpdateFindingsFeedbackRequestPrivate(const GuardDuty::Action action,

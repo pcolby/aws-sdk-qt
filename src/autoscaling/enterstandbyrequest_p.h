@@ -20,7 +20,7 @@
 #ifndef QTAWS_ENTERSTANDBYREQUEST_P_H
 #define QTAWS_ENTERSTANDBYREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "enterstandbyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class EnterStandbyRequest;
 
-class QTAWS_EXPORT EnterStandbyRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT EnterStandbyRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     EnterStandbyRequestPrivate(const AutoScaling::Action action,

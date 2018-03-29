@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETGROUPREQUEST_P_H
 #define QTAWS_GETGROUPREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "getgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetGroupRequest;
 
-class QTAWS_EXPORT GetGroupRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT GetGroupRequestPrivate : public IAMRequestPrivate {
 
 public:
     GetGroupRequestPrivate(const IAM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONREVISIONREQUEST_P_H
 #define QTAWS_DESCRIBECONFIGURATIONREVISIONREQUEST_P_H
 
-#include "mq_p.h"
+#include "mqrequest_p.h"
 #include "describeconfigurationrevisionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MQ {
 
 class DescribeConfigurationRevisionRequest;
 
-class QTAWS_EXPORT DescribeConfigurationRevisionRequestPrivate : public MQPrivate {
+class QTAWS_EXPORT DescribeConfigurationRevisionRequestPrivate : public MQRequestPrivate {
 
 public:
     DescribeConfigurationRevisionRequestPrivate(const MQ::Action action,

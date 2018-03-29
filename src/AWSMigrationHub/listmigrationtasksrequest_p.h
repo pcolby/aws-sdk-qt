@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTMIGRATIONTASKSREQUEST_P_H
 #define QTAWS_LISTMIGRATIONTASKSREQUEST_P_H
 
-#include "migrationhub_p.h"
+#include "migrationhubrequest_p.h"
 #include "listmigrationtasksrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class ListMigrationTasksRequest;
 
-class QTAWS_EXPORT ListMigrationTasksRequestPrivate : public MigrationHubPrivate {
+class QTAWS_EXPORT ListMigrationTasksRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     ListMigrationTasksRequestPrivate(const MigrationHub::Action action,

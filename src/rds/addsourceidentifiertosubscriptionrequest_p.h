@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDSOURCEIDENTIFIERTOSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_ADDSOURCEIDENTIFIERTOSUBSCRIPTIONREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "addsourceidentifiertosubscriptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class AddSourceIdentifierToSubscriptionRequest;
 
-class QTAWS_EXPORT AddSourceIdentifierToSubscriptionRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT AddSourceIdentifierToSubscriptionRequestPrivate : public RDSRequestPrivate {
 
 public:
     AddSourceIdentifierToSubscriptionRequestPrivate(const RDS::Action action,

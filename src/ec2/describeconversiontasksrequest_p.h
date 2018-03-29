@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECONVERSIONTASKSREQUEST_P_H
 #define QTAWS_DESCRIBECONVERSIONTASKSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describeconversiontasksrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeConversionTasksRequest;
 
-class QTAWS_EXPORT DescribeConversionTasksRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeConversionTasksRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeConversionTasksRequestPrivate(const EC2::Action action,

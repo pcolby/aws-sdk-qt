@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECLUSTERREQUEST_P_H
 #define QTAWS_UPDATECLUSTERREQUEST_P_H
 
-#include "snowball_p.h"
+#include "snowballrequest_p.h"
 #include "updateclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Snowball {
 
 class UpdateClusterRequest;
 
-class QTAWS_EXPORT UpdateClusterRequestPrivate : public SnowballPrivate {
+class QTAWS_EXPORT UpdateClusterRequestPrivate : public SnowballRequestPrivate {
 
 public:
     UpdateClusterRequestPrivate(const Snowball::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETRISKCONFIGURATIONREQUEST_P_H
 #define QTAWS_SETRISKCONFIGURATIONREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "setriskconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class SetRiskConfigurationRequest;
 
-class QTAWS_EXPORT SetRiskConfigurationRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT SetRiskConfigurationRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     SetRiskConfigurationRequestPrivate(const CognitoIdentityProvider::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SENDRAWEMAILREQUEST_P_H
 #define QTAWS_SENDRAWEMAILREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "sendrawemailrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class SendRawEmailRequest;
 
-class QTAWS_EXPORT SendRawEmailRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT SendRawEmailRequestPrivate : public SESRequestPrivate {
 
 public:
     SendRawEmailRequestPrivate(const SES::Action action,

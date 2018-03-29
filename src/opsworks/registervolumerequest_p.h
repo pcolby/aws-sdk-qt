@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERVOLUMEREQUEST_P_H
 #define QTAWS_REGISTERVOLUMEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "registervolumerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class RegisterVolumeRequest;
 
-class QTAWS_EXPORT RegisterVolumeRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT RegisterVolumeRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     RegisterVolumeRequestPrivate(const OpsWorks::Action action,

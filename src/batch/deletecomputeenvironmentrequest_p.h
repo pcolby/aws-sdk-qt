@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECOMPUTEENVIRONMENTREQUEST_P_H
 #define QTAWS_DELETECOMPUTEENVIRONMENTREQUEST_P_H
 
-#include "batch_p.h"
+#include "batchrequest_p.h"
 #include "deletecomputeenvironmentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Batch {
 
 class DeleteComputeEnvironmentRequest;
 
-class QTAWS_EXPORT DeleteComputeEnvironmentRequestPrivate : public BatchPrivate {
+class QTAWS_EXPORT DeleteComputeEnvironmentRequestPrivate : public BatchRequestPrivate {
 
 public:
     DeleteComputeEnvironmentRequestPrivate(const Batch::Action action,

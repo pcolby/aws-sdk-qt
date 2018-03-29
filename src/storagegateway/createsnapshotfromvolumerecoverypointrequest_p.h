@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESNAPSHOTFROMVOLUMERECOVERYPOINTREQUEST_P_H
 #define QTAWS_CREATESNAPSHOTFROMVOLUMERECOVERYPOINTREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "createsnapshotfromvolumerecoverypointrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class CreateSnapshotFromVolumeRecoveryPointRequest;
 
-class QTAWS_EXPORT CreateSnapshotFromVolumeRecoveryPointRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT CreateSnapshotFromVolumeRecoveryPointRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     CreateSnapshotFromVolumeRecoveryPointRequestPrivate(const StorageGateway::Action action,

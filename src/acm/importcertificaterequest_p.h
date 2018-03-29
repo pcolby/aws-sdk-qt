@@ -20,7 +20,7 @@
 #ifndef QTAWS_IMPORTCERTIFICATEREQUEST_P_H
 #define QTAWS_IMPORTCERTIFICATEREQUEST_P_H
 
-#include "acm_p.h"
+#include "acmrequest_p.h"
 #include "importcertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ACM {
 
 class ImportCertificateRequest;
 
-class QTAWS_EXPORT ImportCertificateRequestPrivate : public ACMPrivate {
+class QTAWS_EXPORT ImportCertificateRequestPrivate : public ACMRequestPrivate {
 
 public:
     ImportCertificateRequestPrivate(const ACM::Action action,

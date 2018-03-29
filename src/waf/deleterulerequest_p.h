@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETERULEREQUEST_P_H
 #define QTAWS_DELETERULEREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "deleterulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class DeleteRuleRequest;
 
-class QTAWS_EXPORT DeleteRuleRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT DeleteRuleRequestPrivate : public WAFRequestPrivate {
 
 public:
     DeleteRuleRequestPrivate(const WAF::Action action,

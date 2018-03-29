@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESCALINGPARAMETERSREQUEST_P_H
 #define QTAWS_DESCRIBESCALINGPARAMETERSREQUEST_P_H
 
-#include "cloudsearch_p.h"
+#include "cloudsearchrequest_p.h"
 #include "describescalingparametersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DescribeScalingParametersRequest;
 
-class QTAWS_EXPORT DescribeScalingParametersRequestPrivate : public CloudSearchPrivate {
+class QTAWS_EXPORT DescribeScalingParametersRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     DescribeScalingParametersRequestPrivate(const CloudSearch::Action action,

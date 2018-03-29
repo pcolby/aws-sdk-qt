@@ -20,7 +20,7 @@
 #ifndef QTAWS_REPLACETOPICRULEREQUEST_P_H
 #define QTAWS_REPLACETOPICRULEREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "replacetopicrulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class ReplaceTopicRuleRequest;
 
-class QTAWS_EXPORT ReplaceTopicRuleRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT ReplaceTopicRuleRequestPrivate : public IoTRequestPrivate {
 
 public:
     ReplaceTopicRuleRequestPrivate(const IoT::Action action,

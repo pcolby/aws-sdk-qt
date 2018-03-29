@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCHANGEREQUEST_P_H
 #define QTAWS_GETCHANGEREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "getchangerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetChangeRequest;
 
-class QTAWS_EXPORT GetChangeRequestPrivate : public Route53Private {
+class QTAWS_EXPORT GetChangeRequestPrivate : public Route53RequestPrivate {
 
 public:
     GetChangeRequestPrivate(const Route53::Action action,

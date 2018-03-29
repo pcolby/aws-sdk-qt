@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETETRIGGERREQUEST_P_H
 #define QTAWS_DELETETRIGGERREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "deletetriggerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteTriggerRequest;
 
-class QTAWS_EXPORT DeleteTriggerRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT DeleteTriggerRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteTriggerRequestPrivate(const Glue::Action action,

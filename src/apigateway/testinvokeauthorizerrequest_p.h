@@ -20,7 +20,7 @@
 #ifndef QTAWS_TESTINVOKEAUTHORIZERREQUEST_P_H
 #define QTAWS_TESTINVOKEAUTHORIZERREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "testinvokeauthorizerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class TestInvokeAuthorizerRequest;
 
-class QTAWS_EXPORT TestInvokeAuthorizerRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT TestInvokeAuthorizerRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     TestInvokeAuthorizerRequestPrivate(const APIGateway::Action action,

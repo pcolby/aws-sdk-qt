@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLONERECEIPTRULESETREQUEST_P_H
 #define QTAWS_CLONERECEIPTRULESETREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "clonereceiptrulesetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class CloneReceiptRuleSetRequest;
 
-class QTAWS_EXPORT CloneReceiptRuleSetRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT CloneReceiptRuleSetRequestPrivate : public SESRequestPrivate {
 
 public:
     CloneReceiptRuleSetRequestPrivate(const SES::Action action,

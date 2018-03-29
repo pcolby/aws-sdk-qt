@@ -20,7 +20,7 @@
 #ifndef QTAWS_SNSREQUEST_P_H
 #define QTAWS_SNSREQUEST_P_H
 
-#include "sns_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "snsrequest.h"
 
 namespace QtAws {

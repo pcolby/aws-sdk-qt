@@ -20,7 +20,7 @@
 #ifndef QTAWS_SENDCOMMANDREQUEST_P_H
 #define QTAWS_SENDCOMMANDREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "sendcommandrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class SendCommandRequest;
 
-class QTAWS_EXPORT SendCommandRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT SendCommandRequestPrivate : public SSMRequestPrivate {
 
 public:
     SendCommandRequestPrivate(const SSM::Action action,

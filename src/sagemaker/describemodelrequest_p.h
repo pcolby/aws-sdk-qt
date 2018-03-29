@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEMODELREQUEST_P_H
 #define QTAWS_DESCRIBEMODELREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "describemodelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DescribeModelRequest;
 
-class QTAWS_EXPORT DescribeModelRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT DescribeModelRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DescribeModelRequestPrivate(const SageMaker::Action action,

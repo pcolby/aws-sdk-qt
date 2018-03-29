@@ -20,7 +20,7 @@
 #ifndef QTAWS_IOTJOBSDATAPLANEREQUEST_P_H
 #define QTAWS_IOTJOBSDATAPLANEREQUEST_P_H
 
-#include "iotjobsdataplane_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "iotjobsdataplanerequest.h"
 
 namespace QtAws {

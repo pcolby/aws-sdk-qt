@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEREGEXMATCHSETREQUEST_P_H
 #define QTAWS_DELETEREGEXMATCHSETREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "deleteregexmatchsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class DeleteRegexMatchSetRequest;
 
-class QTAWS_EXPORT DeleteRegexMatchSetRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT DeleteRegexMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
     DeleteRegexMatchSetRequestPrivate(const WAF::Action action,

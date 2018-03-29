@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEUSERREQUEST_P_H
 #define QTAWS_CREATEUSERREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "createuserrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class CreateUserRequest;
 
-class QTAWS_EXPORT CreateUserRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT CreateUserRequestPrivate : public IAMRequestPrivate {
 
 public:
     CreateUserRequestPrivate(const IAM::Action action,

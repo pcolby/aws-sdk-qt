@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATERESOURCESERVERREQUEST_P_H
 #define QTAWS_UPDATERESOURCESERVERREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "updateresourceserverrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class UpdateResourceServerRequest;
 
-class QTAWS_EXPORT UpdateResourceServerRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT UpdateResourceServerRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     UpdateResourceServerRequestPrivate(const CognitoIdentityProvider::Action action,

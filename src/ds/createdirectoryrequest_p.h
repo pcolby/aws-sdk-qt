@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDIRECTORYREQUEST_P_H
 #define QTAWS_CREATEDIRECTORYREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "createdirectoryrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class CreateDirectoryRequest;
 
-class QTAWS_EXPORT CreateDirectoryRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT CreateDirectoryRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     CreateDirectoryRequestPrivate(const DirectoryService::Action action,

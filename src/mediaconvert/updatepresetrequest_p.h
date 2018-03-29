@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEPRESETREQUEST_P_H
 #define QTAWS_UPDATEPRESETREQUEST_P_H
 
-#include "mediaconvert_p.h"
+#include "mediaconvertrequest_p.h"
 #include "updatepresetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class UpdatePresetRequest;
 
-class QTAWS_EXPORT UpdatePresetRequestPrivate : public MediaConvertPrivate {
+class QTAWS_EXPORT UpdatePresetRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     UpdatePresetRequestPrivate(const MediaConvert::Action action,

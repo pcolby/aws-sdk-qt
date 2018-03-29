@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETETRAFFICPOLICYREQUEST_P_H
 #define QTAWS_DELETETRAFFICPOLICYREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "deletetrafficpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class DeleteTrafficPolicyRequest;
 
-class QTAWS_EXPORT DeleteTrafficPolicyRequestPrivate : public Route53Private {
+class QTAWS_EXPORT DeleteTrafficPolicyRequestPrivate : public Route53RequestPrivate {
 
 public:
     DeleteTrafficPolicyRequestPrivate(const Route53::Action action,

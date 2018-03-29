@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTVERSIONSBYFUNCTIONREQUEST_P_H
 #define QTAWS_LISTVERSIONSBYFUNCTIONREQUEST_P_H
 
-#include "lambda_p.h"
+#include "lambdarequest_p.h"
 #include "listversionsbyfunctionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lambda {
 
 class ListVersionsByFunctionRequest;
 
-class QTAWS_EXPORT ListVersionsByFunctionRequestPrivate : public LambdaPrivate {
+class QTAWS_EXPORT ListVersionsByFunctionRequestPrivate : public LambdaRequestPrivate {
 
 public:
     ListVersionsByFunctionRequestPrivate(const Lambda::Action action,

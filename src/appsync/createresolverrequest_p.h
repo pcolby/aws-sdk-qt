@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATERESOLVERREQUEST_P_H
 #define QTAWS_CREATERESOLVERREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "createresolverrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class CreateResolverRequest;
 
-class QTAWS_EXPORT CreateResolverRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT CreateResolverRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     CreateResolverRequestPrivate(const AppSync::Action action,

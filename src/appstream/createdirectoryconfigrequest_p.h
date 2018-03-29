@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDIRECTORYCONFIGREQUEST_P_H
 #define QTAWS_CREATEDIRECTORYCONFIGREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "createdirectoryconfigrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class CreateDirectoryConfigRequest;
 
-class QTAWS_EXPORT CreateDirectoryConfigRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT CreateDirectoryConfigRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     CreateDirectoryConfigRequestPrivate(const AppStream::Action action,

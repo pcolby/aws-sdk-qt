@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADMINENABLEUSERREQUEST_P_H
 #define QTAWS_ADMINENABLEUSERREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "adminenableuserrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminEnableUserRequest;
 
-class QTAWS_EXPORT AdminEnableUserRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT AdminEnableUserRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AdminEnableUserRequestPrivate(const CognitoIdentityProvider::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPLOADLAYERPARTREQUEST_P_H
 #define QTAWS_UPLOADLAYERPARTREQUEST_P_H
 
-#include "ecr_p.h"
+#include "ecrrequest_p.h"
 #include "uploadlayerpartrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECR {
 
 class UploadLayerPartRequest;
 
-class QTAWS_EXPORT UploadLayerPartRequestPrivate : public ECRPrivate {
+class QTAWS_EXPORT UploadLayerPartRequestPrivate : public ECRRequestPrivate {
 
 public:
     UploadLayerPartRequestPrivate(const ECR::Action action,

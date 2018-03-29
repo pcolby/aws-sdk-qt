@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTCACERTIFICATESREQUEST_P_H
 #define QTAWS_LISTCACERTIFICATESREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "listcacertificatesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListCACertificatesRequest;
 
-class QTAWS_EXPORT ListCACertificatesRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT ListCACertificatesRequestPrivate : public IoTRequestPrivate {
 
 public:
     ListCACertificatesRequestPrivate(const IoT::Action action,

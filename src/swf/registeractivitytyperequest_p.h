@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERACTIVITYTYPEREQUEST_P_H
 #define QTAWS_REGISTERACTIVITYTYPEREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "registeractivitytyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class RegisterActivityTypeRequest;
 
-class QTAWS_EXPORT RegisterActivityTypeRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT RegisterActivityTypeRequestPrivate : public SWFRequestPrivate {
 
 public:
     RegisterActivityTypeRequestPrivate(const SWF::Action action,

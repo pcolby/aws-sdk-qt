@@ -20,7 +20,7 @@
 #ifndef QTAWS_CONTINUEDEPLOYMENTREQUEST_P_H
 #define QTAWS_CONTINUEDEPLOYMENTREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "continuedeploymentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class ContinueDeploymentRequest;
 
-class QTAWS_EXPORT ContinueDeploymentRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT ContinueDeploymentRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     ContinueDeploymentRequestPrivate(const CodeDeploy::Action action,

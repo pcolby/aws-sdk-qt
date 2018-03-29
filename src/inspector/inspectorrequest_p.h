@@ -20,7 +20,7 @@
 #ifndef QTAWS_INSPECTORREQUEST_P_H
 #define QTAWS_INSPECTORREQUEST_P_H
 
-#include "inspector_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "inspectorrequest.h"
 
 namespace QtAws {

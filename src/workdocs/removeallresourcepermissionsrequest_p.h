@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVEALLRESOURCEPERMISSIONSREQUEST_P_H
 #define QTAWS_REMOVEALLRESOURCEPERMISSIONSREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "removeallresourcepermissionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class RemoveAllResourcePermissionsRequest;
 
-class QTAWS_EXPORT RemoveAllResourcePermissionsRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT RemoveAllResourcePermissionsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     RemoveAllResourcePermissionsRequestPrivate(const WorkDocs::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_OPTINPHONENUMBERREQUEST_P_H
 #define QTAWS_OPTINPHONENUMBERREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "optinphonenumberrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class OptInPhoneNumberRequest;
 
-class QTAWS_EXPORT OptInPhoneNumberRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT OptInPhoneNumberRequestPrivate : public SNSRequestPrivate {
 
 public:
     OptInPhoneNumberRequestPrivate(const SNS::Action action,

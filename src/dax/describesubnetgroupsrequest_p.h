@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESUBNETGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBESUBNETGROUPSREQUEST_P_H
 
-#include "dax_p.h"
+#include "daxrequest_p.h"
 #include "describesubnetgroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DAX {
 
 class DescribeSubnetGroupsRequest;
 
-class QTAWS_EXPORT DescribeSubnetGroupsRequestPrivate : public DAXPrivate {
+class QTAWS_EXPORT DescribeSubnetGroupsRequestPrivate : public DAXRequestPrivate {
 
 public:
     DescribeSubnetGroupsRequestPrivate(const DAX::Action action,

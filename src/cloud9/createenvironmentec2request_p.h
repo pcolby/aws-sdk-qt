@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEENVIRONMENTEC2REQUEST_P_H
 #define QTAWS_CREATEENVIRONMENTEC2REQUEST_P_H
 
-#include "cloud9_p.h"
+#include "cloud9request_p.h"
 #include "createenvironmentec2request.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class CreateEnvironmentEC2Request;
 
-class QTAWS_EXPORT CreateEnvironmentEC2RequestPrivate : public Cloud9Private {
+class QTAWS_EXPORT CreateEnvironmentEC2RequestPrivate : public Cloud9RequestPrivate {
 
 public:
     CreateEnvironmentEC2RequestPrivate(const Cloud9::Action action,

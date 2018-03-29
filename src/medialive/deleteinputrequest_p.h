@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEINPUTREQUEST_P_H
 #define QTAWS_DELETEINPUTREQUEST_P_H
 
-#include "medialive_p.h"
+#include "medialiverequest_p.h"
 #include "deleteinputrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DeleteInputRequest;
 
-class QTAWS_EXPORT DeleteInputRequestPrivate : public MediaLivePrivate {
+class QTAWS_EXPORT DeleteInputRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     DeleteInputRequestPrivate(const MediaLive::Action action,

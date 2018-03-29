@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADMINUPDATEUSERATTRIBUTESREQUEST_P_H
 #define QTAWS_ADMINUPDATEUSERATTRIBUTESREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "adminupdateuserattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminUpdateUserAttributesRequest;
 
-class QTAWS_EXPORT AdminUpdateUserAttributesRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT AdminUpdateUserAttributesRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AdminUpdateUserAttributesRequestPrivate(const CognitoIdentityProvider::Action action,

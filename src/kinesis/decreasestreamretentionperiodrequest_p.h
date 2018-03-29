@@ -20,7 +20,7 @@
 #ifndef QTAWS_DECREASESTREAMRETENTIONPERIODREQUEST_P_H
 #define QTAWS_DECREASESTREAMRETENTIONPERIODREQUEST_P_H
 
-#include "kinesis_p.h"
+#include "kinesisrequest_p.h"
 #include "decreasestreamretentionperiodrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class DecreaseStreamRetentionPeriodRequest;
 
-class QTAWS_EXPORT DecreaseStreamRetentionPeriodRequestPrivate : public KinesisPrivate {
+class QTAWS_EXPORT DecreaseStreamRetentionPeriodRequestPrivate : public KinesisRequestPrivate {
 
 public:
     DecreaseStreamRetentionPeriodRequestPrivate(const Kinesis::Action action,

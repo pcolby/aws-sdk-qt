@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETIPADDRESSTYPEREQUEST_P_H
 #define QTAWS_SETIPADDRESSTYPEREQUEST_P_H
 
-#include "elasticloadbalancingv2_p.h"
+#include "elasticloadbalancingv2request_p.h"
 #include "setipaddresstyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class SetIpAddressTypeRequest;
 
-class QTAWS_EXPORT SetIpAddressTypeRequestPrivate : public ElasticLoadBalancingv2Private {
+class QTAWS_EXPORT SetIpAddressTypeRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     SetIpAddressTypeRequestPrivate(const ElasticLoadBalancingv2::Action action,

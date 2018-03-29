@@ -20,7 +20,7 @@
 #ifndef QTAWS_ELASTICBEANSTALKREQUEST_P_H
 #define QTAWS_ELASTICBEANSTALKREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "elasticbeanstalkrequest.h"
 
 namespace QtAws {

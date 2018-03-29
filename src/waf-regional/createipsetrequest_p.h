@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEIPSETREQUEST_P_H
 #define QTAWS_CREATEIPSETREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "createipsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class CreateIPSetRequest;
 
-class QTAWS_EXPORT CreateIPSetRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT CreateIPSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     CreateIPSetRequestPrivate(const WAFRegional::Action action,

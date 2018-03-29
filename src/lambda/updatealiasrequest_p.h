@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEALIASREQUEST_P_H
 #define QTAWS_UPDATEALIASREQUEST_P_H
 
-#include "lambda_p.h"
+#include "lambdarequest_p.h"
 #include "updatealiasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lambda {
 
 class UpdateAliasRequest;
 
-class QTAWS_EXPORT UpdateAliasRequestPrivate : public LambdaPrivate {
+class QTAWS_EXPORT UpdateAliasRequestPrivate : public LambdaRequestPrivate {
 
 public:
     UpdateAliasRequestPrivate(const Lambda::Action action,

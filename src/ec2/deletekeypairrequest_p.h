@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEKEYPAIRREQUEST_P_H
 #define QTAWS_DELETEKEYPAIRREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "deletekeypairrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteKeyPairRequest;
 
-class QTAWS_EXPORT DeleteKeyPairRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DeleteKeyPairRequestPrivate : public EC2RequestPrivate {
 
 public:
     DeleteKeyPairRequestPrivate(const EC2::Action action,

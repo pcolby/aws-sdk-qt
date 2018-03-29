@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETRAILSREQUEST_P_H
 #define QTAWS_DESCRIBETRAILSREQUEST_P_H
 
-#include "cloudtrail_p.h"
+#include "cloudtrailrequest_p.h"
 #include "describetrailsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudTrail {
 
 class DescribeTrailsRequest;
 
-class QTAWS_EXPORT DescribeTrailsRequestPrivate : public CloudTrailPrivate {
+class QTAWS_EXPORT DescribeTrailsRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
     DescribeTrailsRequestPrivate(const CloudTrail::Action action,

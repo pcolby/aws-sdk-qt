@@ -20,7 +20,7 @@
 #ifndef QTAWS_GREENGRASSREQUEST_P_H
 #define QTAWS_GREENGRASSREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "greengrassrequest.h"
 
 namespace QtAws {

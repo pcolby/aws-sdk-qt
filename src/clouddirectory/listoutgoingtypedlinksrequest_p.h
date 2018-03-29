@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTOUTGOINGTYPEDLINKSREQUEST_P_H
 #define QTAWS_LISTOUTGOINGTYPEDLINKSREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "listoutgoingtypedlinksrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class ListOutgoingTypedLinksRequest;
 
-class QTAWS_EXPORT ListOutgoingTypedLinksRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT ListOutgoingTypedLinksRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     ListOutgoingTypedLinksRequestPrivate(const CloudDirectory::Action action,

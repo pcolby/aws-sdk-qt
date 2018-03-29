@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVEFACETFROMOBJECTREQUEST_P_H
 #define QTAWS_REMOVEFACETFROMOBJECTREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "removefacetfromobjectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class RemoveFacetFromObjectRequest;
 
-class QTAWS_EXPORT RemoveFacetFromObjectRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT RemoveFacetFromObjectRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     RemoveFacetFromObjectRequestPrivate(const CloudDirectory::Action action,

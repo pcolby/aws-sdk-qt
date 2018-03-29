@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNTAGQUEUEREQUEST_P_H
 #define QTAWS_UNTAGQUEUEREQUEST_P_H
 
-#include "sqs_p.h"
+#include "sqsrequest_p.h"
 #include "untagqueuerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SQS {
 
 class UntagQueueRequest;
 
-class QTAWS_EXPORT UntagQueueRequestPrivate : public SQSPrivate {
+class QTAWS_EXPORT UntagQueueRequestPrivate : public SQSRequestPrivate {
 
 public:
     UntagQueueRequestPrivate(const SQS::Action action,

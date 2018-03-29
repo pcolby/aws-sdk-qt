@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEJOBREQUEST_P_H
 #define QTAWS_CREATEJOBREQUEST_P_H
 
-#include "importexport_p.h"
+#include "importexportrequest_p.h"
 #include "createjobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ImportExport {
 
 class CreateJobRequest;
 
-class QTAWS_EXPORT CreateJobRequestPrivate : public ImportExportPrivate {
+class QTAWS_EXPORT CreateJobRequestPrivate : public ImportExportRequestPrivate {
 
 public:
     CreateJobRequestPrivate(const ImportExport::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ALLOCATESTATICIPREQUEST_P_H
 #define QTAWS_ALLOCATESTATICIPREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "allocatestaticiprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class AllocateStaticIpRequest;
 
-class QTAWS_EXPORT AllocateStaticIpRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT AllocateStaticIpRequestPrivate : public LightsailRequestPrivate {
 
 public:
     AllocateStaticIpRequestPrivate(const Lightsail::Action action,

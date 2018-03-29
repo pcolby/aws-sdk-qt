@@ -20,7 +20,7 @@
 #ifndef QTAWS_INITIATEJOBREQUEST_P_H
 #define QTAWS_INITIATEJOBREQUEST_P_H
 
-#include "glacier_p.h"
+#include "glacierrequest_p.h"
 #include "initiatejobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glacier {
 
 class InitiateJobRequest;
 
-class QTAWS_EXPORT InitiateJobRequestPrivate : public GlacierPrivate {
+class QTAWS_EXPORT InitiateJobRequestPrivate : public GlacierRequestPrivate {
 
 public:
     InitiateJobRequestPrivate(const Glacier::Action action,

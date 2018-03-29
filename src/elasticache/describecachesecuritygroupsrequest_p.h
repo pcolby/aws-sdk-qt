@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECACHESECURITYGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBECACHESECURITYGROUPSREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "describecachesecuritygroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DescribeCacheSecurityGroupsRequest;
 
-class QTAWS_EXPORT DescribeCacheSecurityGroupsRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT DescribeCacheSecurityGroupsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DescribeCacheSecurityGroupsRequestPrivate(const ElastiCache::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETIDENTITYPOOLCONFIGURATIONREQUEST_P_H
 #define QTAWS_SETIDENTITYPOOLCONFIGURATIONREQUEST_P_H
 
-#include "cognitosync_p.h"
+#include "cognitosyncrequest_p.h"
 #include "setidentitypoolconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class SetIdentityPoolConfigurationRequest;
 
-class QTAWS_EXPORT SetIdentityPoolConfigurationRequestPrivate : public CognitoSyncPrivate {
+class QTAWS_EXPORT SetIdentityPoolConfigurationRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     SetIdentityPoolConfigurationRequestPrivate(const CognitoSync::Action action,

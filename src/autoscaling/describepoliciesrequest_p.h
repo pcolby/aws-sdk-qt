@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEPOLICIESREQUEST_P_H
 #define QTAWS_DESCRIBEPOLICIESREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "describepoliciesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DescribePoliciesRequest;
 
-class QTAWS_EXPORT DescribePoliciesRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT DescribePoliciesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DescribePoliciesRequestPrivate(const AutoScaling::Action action,

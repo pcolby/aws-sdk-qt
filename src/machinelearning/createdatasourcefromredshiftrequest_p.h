@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDATASOURCEFROMREDSHIFTREQUEST_P_H
 #define QTAWS_CREATEDATASOURCEFROMREDSHIFTREQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "createdatasourcefromredshiftrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class CreateDataSourceFromRedshiftRequest;
 
-class QTAWS_EXPORT CreateDataSourceFromRedshiftRequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT CreateDataSourceFromRedshiftRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     CreateDataSourceFromRedshiftRequestPrivate(const MachineLearning::Action action,

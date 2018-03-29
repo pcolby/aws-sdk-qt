@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELJOBREQUEST_P_H
 #define QTAWS_CANCELJOBREQUEST_P_H
 
-#include "elastictranscoder_p.h"
+#include "elastictranscoderrequest_p.h"
 #include "canceljobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class CancelJobRequest;
 
-class QTAWS_EXPORT CancelJobRequestPrivate : public ElasticTranscoderPrivate {
+class QTAWS_EXPORT CancelJobRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     CancelJobRequestPrivate(const ElasticTranscoder::Action action,

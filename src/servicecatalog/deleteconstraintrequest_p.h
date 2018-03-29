@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECONSTRAINTREQUEST_P_H
 #define QTAWS_DELETECONSTRAINTREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "deleteconstraintrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DeleteConstraintRequest;
 
-class QTAWS_EXPORT DeleteConstraintRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT DeleteConstraintRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DeleteConstraintRequestPrivate(const ServiceCatalog::Action action,

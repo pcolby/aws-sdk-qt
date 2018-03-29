@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEPIPELINEREQUEST_P_H
 #define QTAWS_CREATEPIPELINEREQUEST_P_H
 
-#include "datapipeline_p.h"
+#include "datapipelinerequest_p.h"
 #include "createpipelinerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class CreatePipelineRequest;
 
-class QTAWS_EXPORT CreatePipelineRequestPrivate : public DataPipelinePrivate {
+class QTAWS_EXPORT CreatePipelineRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     CreatePipelineRequestPrivate(const DataPipeline::Action action,

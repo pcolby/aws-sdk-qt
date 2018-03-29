@@ -20,7 +20,7 @@
 #ifndef QTAWS_SENDTASKHEARTBEATREQUEST_P_H
 #define QTAWS_SENDTASKHEARTBEATREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "sendtaskheartbeatrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class SendTaskHeartbeatRequest;
 
-class QTAWS_EXPORT SendTaskHeartbeatRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT SendTaskHeartbeatRequestPrivate : public SFNRequestPrivate {
 
 public:
     SendTaskHeartbeatRequestPrivate(const SFN::Action action,

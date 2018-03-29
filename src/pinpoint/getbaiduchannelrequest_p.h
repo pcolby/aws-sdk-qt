@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETBAIDUCHANNELREQUEST_P_H
 #define QTAWS_GETBAIDUCHANNELREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "getbaiduchannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetBaiduChannelRequest;
 
-class QTAWS_EXPORT GetBaiduChannelRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT GetBaiduChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetBaiduChannelRequestPrivate(const Pinpoint::Action action,

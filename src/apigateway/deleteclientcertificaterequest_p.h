@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECLIENTCERTIFICATEREQUEST_P_H
 #define QTAWS_DELETECLIENTCERTIFICATEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "deleteclientcertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteClientCertificateRequest;
 
-class QTAWS_EXPORT DeleteClientCertificateRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT DeleteClientCertificateRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteClientCertificateRequestPrivate(const APIGateway::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SEARCHROOMSREQUEST_P_H
 #define QTAWS_SEARCHROOMSREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "searchroomsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class SearchRoomsRequest;
 
-class QTAWS_EXPORT SearchRoomsRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT SearchRoomsRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     SearchRoomsRequestPrivate(const AlexaForBusiness::Action action,

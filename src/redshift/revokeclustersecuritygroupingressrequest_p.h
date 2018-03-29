@@ -20,7 +20,7 @@
 #ifndef QTAWS_REVOKECLUSTERSECURITYGROUPINGRESSREQUEST_P_H
 #define QTAWS_REVOKECLUSTERSECURITYGROUPINGRESSREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "revokeclustersecuritygroupingressrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class RevokeClusterSecurityGroupIngressRequest;
 
-class QTAWS_EXPORT RevokeClusterSecurityGroupIngressRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT RevokeClusterSecurityGroupIngressRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     RevokeClusterSecurityGroupIngressRequestPrivate(const Redshift::Action action,

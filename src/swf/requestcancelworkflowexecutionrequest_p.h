@@ -20,7 +20,7 @@
 #ifndef QTAWS_REQUESTCANCELWORKFLOWEXECUTIONREQUEST_P_H
 #define QTAWS_REQUESTCANCELWORKFLOWEXECUTIONREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "requestcancelworkflowexecutionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class RequestCancelWorkflowExecutionRequest;
 
-class QTAWS_EXPORT RequestCancelWorkflowExecutionRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT RequestCancelWorkflowExecutionRequestPrivate : public SWFRequestPrivate {
 
 public:
     RequestCancelWorkflowExecutionRequestPrivate(const SWF::Action action,

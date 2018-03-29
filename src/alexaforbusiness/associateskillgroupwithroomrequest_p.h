@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSOCIATESKILLGROUPWITHROOMREQUEST_P_H
 #define QTAWS_ASSOCIATESKILLGROUPWITHROOMREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "associateskillgroupwithroomrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class AssociateSkillGroupWithRoomRequest;
 
-class QTAWS_EXPORT AssociateSkillGroupWithRoomRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT AssociateSkillGroupWithRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     AssociateSkillGroupWithRoomRequestPrivate(const AlexaForBusiness::Action action,

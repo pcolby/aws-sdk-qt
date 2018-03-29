@@ -20,7 +20,7 @@
 #ifndef QTAWS_REBOOTREPLICATIONINSTANCEREQUEST_P_H
 #define QTAWS_REBOOTREPLICATIONINSTANCEREQUEST_P_H
 
-#include "databasemigrationservice_p.h"
+#include "databasemigrationservicerequest_p.h"
 #include "rebootreplicationinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class RebootReplicationInstanceRequest;
 
-class QTAWS_EXPORT RebootReplicationInstanceRequestPrivate : public DatabaseMigrationServicePrivate {
+class QTAWS_EXPORT RebootReplicationInstanceRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     RebootReplicationInstanceRequestPrivate(const DatabaseMigrationService::Action action,

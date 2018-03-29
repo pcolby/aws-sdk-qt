@@ -20,7 +20,7 @@
 #ifndef QTAWS_VERIFYEMAILIDENTITYREQUEST_P_H
 #define QTAWS_VERIFYEMAILIDENTITYREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "verifyemailidentityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class VerifyEmailIdentityRequest;
 
-class QTAWS_EXPORT VerifyEmailIdentityRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT VerifyEmailIdentityRequestPrivate : public SESRequestPrivate {
 
 public:
     VerifyEmailIdentityRequestPrivate(const SES::Action action,

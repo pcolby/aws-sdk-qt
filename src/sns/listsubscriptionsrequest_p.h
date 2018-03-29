@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSUBSCRIPTIONSREQUEST_P_H
 #define QTAWS_LISTSUBSCRIPTIONSREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "listsubscriptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class ListSubscriptionsRequest;
 
-class QTAWS_EXPORT ListSubscriptionsRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT ListSubscriptionsRequestPrivate : public SNSRequestPrivate {
 
 public:
     ListSubscriptionsRequestPrivate(const SNS::Action action,

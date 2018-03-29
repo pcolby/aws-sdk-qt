@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETABLESTATISTICSREQUEST_P_H
 #define QTAWS_DESCRIBETABLESTATISTICSREQUEST_P_H
 
-#include "databasemigrationservice_p.h"
+#include "databasemigrationservicerequest_p.h"
 #include "describetablestatisticsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DescribeTableStatisticsRequest;
 
-class QTAWS_EXPORT DescribeTableStatisticsRequestPrivate : public DatabaseMigrationServicePrivate {
+class QTAWS_EXPORT DescribeTableStatisticsRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     DescribeTableStatisticsRequestPrivate(const DatabaseMigrationService::Action action,

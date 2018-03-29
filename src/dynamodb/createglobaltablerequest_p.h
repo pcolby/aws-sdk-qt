@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEGLOBALTABLEREQUEST_P_H
 #define QTAWS_CREATEGLOBALTABLEREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "createglobaltablerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class CreateGlobalTableRequest;
 
-class QTAWS_EXPORT CreateGlobalTableRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT CreateGlobalTableRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     CreateGlobalTableRequestPrivate(const DynamoDB::Action action,

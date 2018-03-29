@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEAPIKEYREQUEST_P_H
 #define QTAWS_CREATEAPIKEYREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "createapikeyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class CreateApiKeyRequest;
 
-class QTAWS_EXPORT CreateApiKeyRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT CreateApiKeyRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     CreateApiKeyRequestPrivate(const AppSync::Action action,

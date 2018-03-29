@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATENETWORKPROFILEREQUEST_P_H
 #define QTAWS_UPDATENETWORKPROFILEREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "updatenetworkprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class UpdateNetworkProfileRequest;
 
-class QTAWS_EXPORT UpdateNetworkProfileRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT UpdateNetworkProfileRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     UpdateNetworkProfileRequestPrivate(const DeviceFarm::Action action,

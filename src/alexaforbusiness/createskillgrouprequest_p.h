@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESKILLGROUPREQUEST_P_H
 #define QTAWS_CREATESKILLGROUPREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "createskillgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class CreateSkillGroupRequest;
 
-class QTAWS_EXPORT CreateSkillGroupRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT CreateSkillGroupRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     CreateSkillGroupRequestPrivate(const AlexaForBusiness::Action action,

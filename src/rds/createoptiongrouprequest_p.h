@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEOPTIONGROUPREQUEST_P_H
 #define QTAWS_CREATEOPTIONGROUPREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "createoptiongrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class CreateOptionGroupRequest;
 
-class QTAWS_EXPORT CreateOptionGroupRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT CreateOptionGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
     CreateOptionGroupRequestPrivate(const RDS::Action action,

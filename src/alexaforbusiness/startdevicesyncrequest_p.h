@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTDEVICESYNCREQUEST_P_H
 #define QTAWS_STARTDEVICESYNCREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "startdevicesyncrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class StartDeviceSyncRequest;
 
-class QTAWS_EXPORT StartDeviceSyncRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT StartDeviceSyncRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     StartDeviceSyncRequestPrivate(const AlexaForBusiness::Action action,

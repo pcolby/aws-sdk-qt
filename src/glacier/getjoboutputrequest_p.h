@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETJOBOUTPUTREQUEST_P_H
 #define QTAWS_GETJOBOUTPUTREQUEST_P_H
 
-#include "glacier_p.h"
+#include "glacierrequest_p.h"
 #include "getjoboutputrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glacier {
 
 class GetJobOutputRequest;
 
-class QTAWS_EXPORT GetJobOutputRequestPrivate : public GlacierPrivate {
+class QTAWS_EXPORT GetJobOutputRequestPrivate : public GlacierRequestPrivate {
 
 public:
     GetJobOutputRequestPrivate(const Glacier::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBELOADBALANCERPOLICIESREQUEST_P_H
 #define QTAWS_DESCRIBELOADBALANCERPOLICIESREQUEST_P_H
 
-#include "elasticloadbalancing_p.h"
+#include "elasticloadbalancingrequest_p.h"
 #include "describeloadbalancerpoliciesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class DescribeLoadBalancerPoliciesRequest;
 
-class QTAWS_EXPORT DescribeLoadBalancerPoliciesRequestPrivate : public ElasticLoadBalancingPrivate {
+class QTAWS_EXPORT DescribeLoadBalancerPoliciesRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
     DescribeLoadBalancerPoliciesRequestPrivate(const ElasticLoadBalancing::Action action,

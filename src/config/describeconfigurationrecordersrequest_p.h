@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONRECORDERSREQUEST_P_H
 #define QTAWS_DESCRIBECONFIGURATIONRECORDERSREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "describeconfigurationrecordersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DescribeConfigurationRecordersRequest;
 
-class QTAWS_EXPORT DescribeConfigurationRecordersRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT DescribeConfigurationRecordersRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DescribeConfigurationRecordersRequestPrivate(const ConfigService::Action action,

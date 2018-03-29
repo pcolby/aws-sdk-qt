@@ -20,7 +20,7 @@
 #ifndef QTAWS_CHECKDNSAVAILABILITYREQUEST_P_H
 #define QTAWS_CHECKDNSAVAILABILITYREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "checkdnsavailabilityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class CheckDNSAvailabilityRequest;
 
-class QTAWS_EXPORT CheckDNSAvailabilityRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT CheckDNSAvailabilityRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     CheckDNSAvailabilityRequestPrivate(const ElasticBeanstalk::Action action,

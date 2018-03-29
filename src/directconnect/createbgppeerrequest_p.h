@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEBGPPEERREQUEST_P_H
 #define QTAWS_CREATEBGPPEERREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "createbgppeerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class CreateBGPPeerRequest;
 
-class QTAWS_EXPORT CreateBGPPeerRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT CreateBGPPeerRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     CreateBGPPeerRequestPrivate(const DirectConnect::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_MQREQUEST_P_H
 #define QTAWS_MQREQUEST_P_H
 
-#include "mq_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "mqrequest.h"
 
 namespace QtAws {

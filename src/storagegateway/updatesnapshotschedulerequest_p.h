@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESNAPSHOTSCHEDULEREQUEST_P_H
 #define QTAWS_UPDATESNAPSHOTSCHEDULEREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "updatesnapshotschedulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class UpdateSnapshotScheduleRequest;
 
-class QTAWS_EXPORT UpdateSnapshotScheduleRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT UpdateSnapshotScheduleRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     UpdateSnapshotScheduleRequestPrivate(const StorageGateway::Action action,

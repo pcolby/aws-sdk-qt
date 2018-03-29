@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEUSAGEPLANREQUEST_P_H
 #define QTAWS_DELETEUSAGEPLANREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "deleteusageplanrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteUsagePlanRequest;
 
-class QTAWS_EXPORT DeleteUsagePlanRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT DeleteUsagePlanRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteUsagePlanRequestPrivate(const APIGateway::Action action,

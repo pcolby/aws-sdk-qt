@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETMASTERACCOUNTREQUEST_P_H
 #define QTAWS_GETMASTERACCOUNTREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "getmasteraccountrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class GetMasterAccountRequest;
 
-class QTAWS_EXPORT GetMasterAccountRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT GetMasterAccountRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     GetMasterAccountRequestPrivate(const GuardDuty::Action action,

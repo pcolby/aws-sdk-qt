@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTREGEXMATCHSETSREQUEST_P_H
 #define QTAWS_LISTREGEXMATCHSETSREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "listregexmatchsetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class ListRegexMatchSetsRequest;
 
-class QTAWS_EXPORT ListRegexMatchSetsRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT ListRegexMatchSetsRequestPrivate : public WAFRequestPrivate {
 
 public:
     ListRegexMatchSetsRequestPrivate(const WAF::Action action,

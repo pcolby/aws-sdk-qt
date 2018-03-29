@@ -20,7 +20,7 @@
 #ifndef QTAWS_ENABLEAWSSERVICEACCESSREQUEST_P_H
 #define QTAWS_ENABLEAWSSERVICEACCESSREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "enableawsserviceaccessrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class EnableAWSServiceAccessRequest;
 
-class QTAWS_EXPORT EnableAWSServiceAccessRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT EnableAWSServiceAccessRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     EnableAWSServiceAccessRequestPrivate(const Organizations::Action action,

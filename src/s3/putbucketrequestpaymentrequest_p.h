@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTBUCKETREQUESTPAYMENTREQUEST_P_H
 #define QTAWS_PUTBUCKETREQUESTPAYMENTREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "putbucketrequestpaymentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class PutBucketRequestPaymentRequest;
 
-class QTAWS_EXPORT PutBucketRequestPaymentRequestPrivate : public S3Private {
+class QTAWS_EXPORT PutBucketRequestPaymentRequestPrivate : public S3RequestPrivate {
 
 public:
     PutBucketRequestPaymentRequestPrivate(const S3::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEHSMREQUEST_P_H
 #define QTAWS_DELETEHSMREQUEST_P_H
 
-#include "cloudhsmv2_p.h"
+#include "cloudhsmv2request_p.h"
 #include "deletehsmrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class DeleteHsmRequest;
 
-class QTAWS_EXPORT DeleteHsmRequestPrivate : public CloudHSMV2Private {
+class QTAWS_EXPORT DeleteHsmRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
     DeleteHsmRequestPrivate(const CloudHSMV2::Action action,

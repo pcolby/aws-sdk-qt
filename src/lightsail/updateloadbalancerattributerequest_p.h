@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATELOADBALANCERATTRIBUTEREQUEST_P_H
 #define QTAWS_UPDATELOADBALANCERATTRIBUTEREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "updateloadbalancerattributerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class UpdateLoadBalancerAttributeRequest;
 
-class QTAWS_EXPORT UpdateLoadBalancerAttributeRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT UpdateLoadBalancerAttributeRequestPrivate : public LightsailRequestPrivate {
 
 public:
     UpdateLoadBalancerAttributeRequestPrivate(const Lightsail::Action action,

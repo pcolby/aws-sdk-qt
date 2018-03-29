@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSAMLPROVIDERREQUEST_P_H
 #define QTAWS_GETSAMLPROVIDERREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "getsamlproviderrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetSAMLProviderRequest;
 
-class QTAWS_EXPORT GetSAMLProviderRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT GetSAMLProviderRequestPrivate : public IAMRequestPrivate {
 
 public:
     GetSAMLProviderRequestPrivate(const IAM::Action action,

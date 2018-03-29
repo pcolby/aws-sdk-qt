@@ -20,7 +20,7 @@
 #ifndef QTAWS_SENDMESSAGEREQUEST_P_H
 #define QTAWS_SENDMESSAGEREQUEST_P_H
 
-#include "sqs_p.h"
+#include "sqsrequest_p.h"
 #include "sendmessagerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SQS {
 
 class SendMessageRequest;
 
-class QTAWS_EXPORT SendMessageRequestPrivate : public SQSPrivate {
+class QTAWS_EXPORT SendMessageRequestPrivate : public SQSRequestPrivate {
 
 public:
     SendMessageRequestPrivate(const SQS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETLOADBALANCERREQUEST_P_H
 #define QTAWS_GETLOADBALANCERREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "getloadbalancerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetLoadBalancerRequest;
 
-class QTAWS_EXPORT GetLoadBalancerRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT GetLoadBalancerRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetLoadBalancerRequestPrivate(const Lightsail::Action action,

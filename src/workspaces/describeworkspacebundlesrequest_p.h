@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEWORKSPACEBUNDLESREQUEST_P_H
 #define QTAWS_DESCRIBEWORKSPACEBUNDLESREQUEST_P_H
 
-#include "workspaces_p.h"
+#include "workspacesrequest_p.h"
 #include "describeworkspacebundlesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class DescribeWorkspaceBundlesRequest;
 
-class QTAWS_EXPORT DescribeWorkspaceBundlesRequestPrivate : public WorkSpacesPrivate {
+class QTAWS_EXPORT DescribeWorkspaceBundlesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     DescribeWorkspaceBundlesRequestPrivate(const WorkSpaces::Action action,

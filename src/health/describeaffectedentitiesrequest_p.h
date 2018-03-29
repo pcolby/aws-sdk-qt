@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEAFFECTEDENTITIESREQUEST_P_H
 #define QTAWS_DESCRIBEAFFECTEDENTITIESREQUEST_P_H
 
-#include "health_p.h"
+#include "healthrequest_p.h"
 #include "describeaffectedentitiesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Health {
 
 class DescribeAffectedEntitiesRequest;
 
-class QTAWS_EXPORT DescribeAffectedEntitiesRequestPrivate : public HealthPrivate {
+class QTAWS_EXPORT DescribeAffectedEntitiesRequestPrivate : public HealthRequestPrivate {
 
 public:
     DescribeAffectedEntitiesRequestPrivate(const Health::Action action,

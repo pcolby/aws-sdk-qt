@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTDOCUMENTSREQUEST_P_H
 #define QTAWS_LISTDOCUMENTSREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "listdocumentsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class ListDocumentsRequest;
 
-class QTAWS_EXPORT ListDocumentsRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT ListDocumentsRequestPrivate : public SSMRequestPrivate {
 
 public:
     ListDocumentsRequestPrivate(const SSM::Action action,

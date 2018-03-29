@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEJOBTEMPLATEREQUEST_P_H
 #define QTAWS_UPDATEJOBTEMPLATEREQUEST_P_H
 
-#include "mediaconvert_p.h"
+#include "mediaconvertrequest_p.h"
 #include "updatejobtemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class UpdateJobTemplateRequest;
 
-class QTAWS_EXPORT UpdateJobTemplateRequestPrivate : public MediaConvertPrivate {
+class QTAWS_EXPORT UpdateJobTemplateRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     UpdateJobTemplateRequestPrivate(const MediaConvert::Action action,

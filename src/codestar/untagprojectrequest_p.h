@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNTAGPROJECTREQUEST_P_H
 #define QTAWS_UNTAGPROJECTREQUEST_P_H
 
-#include "codestar_p.h"
+#include "codestarrequest_p.h"
 #include "untagprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class UntagProjectRequest;
 
-class QTAWS_EXPORT UntagProjectRequestPrivate : public CodeStarPrivate {
+class QTAWS_EXPORT UntagProjectRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     UntagProjectRequestPrivate(const CodeStar::Action action,

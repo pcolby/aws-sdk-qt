@@ -20,7 +20,7 @@
 #ifndef QTAWS_REENCRYPTREQUEST_P_H
 #define QTAWS_REENCRYPTREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "reencryptrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class ReEncryptRequest;
 
-class QTAWS_EXPORT ReEncryptRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT ReEncryptRequestPrivate : public KMSRequestPrivate {
 
 public:
     ReEncryptRequestPrivate(const KMS::Action action,

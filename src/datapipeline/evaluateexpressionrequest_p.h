@@ -20,7 +20,7 @@
 #ifndef QTAWS_EVALUATEEXPRESSIONREQUEST_P_H
 #define QTAWS_EVALUATEEXPRESSIONREQUEST_P_H
 
-#include "datapipeline_p.h"
+#include "datapipelinerequest_p.h"
 #include "evaluateexpressionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class EvaluateExpressionRequest;
 
-class QTAWS_EXPORT EvaluateExpressionRequestPrivate : public DataPipelinePrivate {
+class QTAWS_EXPORT EvaluateExpressionRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     EvaluateExpressionRequestPrivate(const DataPipeline::Action action,

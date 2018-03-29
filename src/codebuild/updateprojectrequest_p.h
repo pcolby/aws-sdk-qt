@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEPROJECTREQUEST_P_H
 #define QTAWS_UPDATEPROJECTREQUEST_P_H
 
-#include "codebuild_p.h"
+#include "codebuildrequest_p.h"
 #include "updateprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class UpdateProjectRequest;
 
-class QTAWS_EXPORT UpdateProjectRequestPrivate : public CodeBuildPrivate {
+class QTAWS_EXPORT UpdateProjectRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     UpdateProjectRequestPrivate(const CodeBuild::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETAPNSVOIPCHANNELREQUEST_P_H
 #define QTAWS_GETAPNSVOIPCHANNELREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "getapnsvoipchannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetApnsVoipChannelRequest;
 
-class QTAWS_EXPORT GetApnsVoipChannelRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT GetApnsVoipChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetApnsVoipChannelRequestPrivate(const Pinpoint::Action action,

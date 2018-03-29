@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDATASOURCEFROMRDSREQUEST_P_H
 #define QTAWS_CREATEDATASOURCEFROMRDSREQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "createdatasourcefromrdsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class CreateDataSourceFromRDSRequest;
 
-class QTAWS_EXPORT CreateDataSourceFromRDSRequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT CreateDataSourceFromRDSRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     CreateDataSourceFromRDSRequestPrivate(const MachineLearning::Action action,

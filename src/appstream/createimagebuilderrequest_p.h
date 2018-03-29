@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEIMAGEBUILDERREQUEST_P_H
 #define QTAWS_CREATEIMAGEBUILDERREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "createimagebuilderrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class CreateImageBuilderRequest;
 
-class QTAWS_EXPORT CreateImageBuilderRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT CreateImageBuilderRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     CreateImageBuilderRequestPrivate(const AppStream::Action action,

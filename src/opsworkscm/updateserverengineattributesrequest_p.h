@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESERVERENGINEATTRIBUTESREQUEST_P_H
 #define QTAWS_UPDATESERVERENGINEATTRIBUTESREQUEST_P_H
 
-#include "opsworkscm_p.h"
+#include "opsworkscmrequest_p.h"
 #include "updateserverengineattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class UpdateServerEngineAttributesRequest;
 
-class QTAWS_EXPORT UpdateServerEngineAttributesRequestPrivate : public OpsWorksCMPrivate {
+class QTAWS_EXPORT UpdateServerEngineAttributesRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     UpdateServerEngineAttributesRequestPrivate(const OpsWorksCM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISABLEMETRICSCOLLECTIONREQUEST_P_H
 #define QTAWS_DISABLEMETRICSCOLLECTIONREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "disablemetricscollectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DisableMetricsCollectionRequest;
 
-class QTAWS_EXPORT DisableMetricsCollectionRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT DisableMetricsCollectionRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DisableMetricsCollectionRequestPrivate(const AutoScaling::Action action,

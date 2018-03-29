@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEJOBREQUEST_P_H
 #define QTAWS_DESCRIBEJOBREQUEST_P_H
 
-#include "glacier_p.h"
+#include "glacierrequest_p.h"
 #include "describejobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glacier {
 
 class DescribeJobRequest;
 
-class QTAWS_EXPORT DescribeJobRequestPrivate : public GlacierPrivate {
+class QTAWS_EXPORT DescribeJobRequestPrivate : public GlacierRequestPrivate {
 
 public:
     DescribeJobRequestPrivate(const Glacier::Action action,

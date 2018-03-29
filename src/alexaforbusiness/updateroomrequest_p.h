@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEROOMREQUEST_P_H
 #define QTAWS_UPDATEROOMREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "updateroomrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class UpdateRoomRequest;
 
-class QTAWS_EXPORT UpdateRoomRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT UpdateRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     UpdateRoomRequestPrivate(const AlexaForBusiness::Action action,

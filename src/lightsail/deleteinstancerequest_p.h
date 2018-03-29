@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEINSTANCEREQUEST_P_H
 #define QTAWS_DELETEINSTANCEREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "deleteinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteInstanceRequest;
 
-class QTAWS_EXPORT DeleteInstanceRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT DeleteInstanceRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DeleteInstanceRequestPrivate(const Lightsail::Action action,

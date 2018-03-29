@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEGROUPPOLICYREQUEST_P_H
 #define QTAWS_DELETEGROUPPOLICYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "deletegrouppolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteGroupPolicyRequest;
 
-class QTAWS_EXPORT DeleteGroupPolicyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT DeleteGroupPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
     DeleteGroupPolicyRequestPrivate(const IAM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESERVICEACCESSPOLICIESREQUEST_P_H
 #define QTAWS_UPDATESERVICEACCESSPOLICIESREQUEST_P_H
 
-#include "cloudsearch_p.h"
+#include "cloudsearchrequest_p.h"
 #include "updateserviceaccesspoliciesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class UpdateServiceAccessPoliciesRequest;
 
-class QTAWS_EXPORT UpdateServiceAccessPoliciesRequestPrivate : public CloudSearchPrivate {
+class QTAWS_EXPORT UpdateServiceAccessPoliciesRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     UpdateServiceAccessPoliciesRequestPrivate(const CloudSearch::Action action,

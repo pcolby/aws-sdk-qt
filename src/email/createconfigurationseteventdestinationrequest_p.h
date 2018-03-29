@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECONFIGURATIONSETEVENTDESTINATIONREQUEST_P_H
 #define QTAWS_CREATECONFIGURATIONSETEVENTDESTINATIONREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "createconfigurationseteventdestinationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class CreateConfigurationSetEventDestinationRequest;
 
-class QTAWS_EXPORT CreateConfigurationSetEventDestinationRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT CreateConfigurationSetEventDestinationRequestPrivate : public SESRequestPrivate {
 
 public:
     CreateConfigurationSetEventDestinationRequestPrivate(const SES::Action action,

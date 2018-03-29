@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDELIVERYCHANNELREQUEST_P_H
 #define QTAWS_DELETEDELIVERYCHANNELREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "deletedeliverychannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeleteDeliveryChannelRequest;
 
-class QTAWS_EXPORT DeleteDeliveryChannelRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT DeleteDeliveryChannelRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DeleteDeliveryChannelRequestPrivate(const ConfigService::Action action,

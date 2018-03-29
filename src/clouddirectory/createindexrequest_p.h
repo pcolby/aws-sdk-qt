@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEINDEXREQUEST_P_H
 #define QTAWS_CREATEINDEXREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "createindexrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class CreateIndexRequest;
 
-class QTAWS_EXPORT CreateIndexRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT CreateIndexRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     CreateIndexRequestPrivate(const CloudDirectory::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESTATEMACHINEREQUEST_P_H
 #define QTAWS_UPDATESTATEMACHINEREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "updatestatemachinerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class UpdateStateMachineRequest;
 
-class QTAWS_EXPORT UpdateStateMachineRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT UpdateStateMachineRequestPrivate : public SFNRequestPrivate {
 
 public:
     UpdateStateMachineRequestPrivate(const SFN::Action action,

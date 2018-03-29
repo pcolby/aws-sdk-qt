@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSIGNVOLUMEREQUEST_P_H
 #define QTAWS_ASSIGNVOLUMEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "assignvolumerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class AssignVolumeRequest;
 
-class QTAWS_EXPORT AssignVolumeRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT AssignVolumeRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     AssignVolumeRequestPrivate(const OpsWorks::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEPORTFOLIOREQUEST_P_H
 #define QTAWS_DESCRIBEPORTFOLIOREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "describeportfoliorequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DescribePortfolioRequest;
 
-class QTAWS_EXPORT DescribePortfolioRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT DescribePortfolioRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DescribePortfolioRequestPrivate(const ServiceCatalog::Action action,

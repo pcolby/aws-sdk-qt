@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEUPLOADREQUEST_P_H
 #define QTAWS_CREATEUPLOADREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "createuploadrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class CreateUploadRequest;
 
-class QTAWS_EXPORT CreateUploadRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT CreateUploadRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     CreateUploadRequestPrivate(const DeviceFarm::Action action,

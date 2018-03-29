@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNLINKDEVELOPERIDENTITYREQUEST_P_H
 #define QTAWS_UNLINKDEVELOPERIDENTITYREQUEST_P_H
 
-#include "cognitoidentity_p.h"
+#include "cognitoidentityrequest_p.h"
 #include "unlinkdeveloperidentityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class UnlinkDeveloperIdentityRequest;
 
-class QTAWS_EXPORT UnlinkDeveloperIdentityRequestPrivate : public CognitoIdentityPrivate {
+class QTAWS_EXPORT UnlinkDeveloperIdentityRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     UnlinkDeveloperIdentityRequestPrivate(const CognitoIdentity::Action action,

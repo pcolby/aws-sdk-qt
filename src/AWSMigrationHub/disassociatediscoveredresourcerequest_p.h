@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEDISCOVEREDRESOURCEREQUEST_P_H
 #define QTAWS_DISASSOCIATEDISCOVEREDRESOURCEREQUEST_P_H
 
-#include "migrationhub_p.h"
+#include "migrationhubrequest_p.h"
 #include "disassociatediscoveredresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class DisassociateDiscoveredResourceRequest;
 
-class QTAWS_EXPORT DisassociateDiscoveredResourceRequestPrivate : public MigrationHubPrivate {
+class QTAWS_EXPORT DisassociateDiscoveredResourceRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     DisassociateDiscoveredResourceRequestPrivate(const MigrationHub::Action action,

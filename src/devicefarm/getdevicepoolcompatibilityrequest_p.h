@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDEVICEPOOLCOMPATIBILITYREQUEST_P_H
 #define QTAWS_GETDEVICEPOOLCOMPATIBILITYREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "getdevicepoolcompatibilityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetDevicePoolCompatibilityRequest;
 
-class QTAWS_EXPORT GetDevicePoolCompatibilityRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT GetDevicePoolCompatibilityRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     GetDevicePoolCompatibilityRequestPrivate(const DeviceFarm::Action action,

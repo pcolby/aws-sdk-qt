@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECHANNELREQUEST_P_H
 #define QTAWS_DELETECHANNELREQUEST_P_H
 
-#include "medialive_p.h"
+#include "medialiverequest_p.h"
 #include "deletechannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DeleteChannelRequest;
 
-class QTAWS_EXPORT DeleteChannelRequestPrivate : public MediaLivePrivate {
+class QTAWS_EXPORT DeleteChannelRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     DeleteChannelRequestPrivate(const MediaLive::Action action,

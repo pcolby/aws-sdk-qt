@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESAMLPROVIDERREQUEST_P_H
 #define QTAWS_DELETESAMLPROVIDERREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "deletesamlproviderrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteSAMLProviderRequest;
 
-class QTAWS_EXPORT DeleteSAMLProviderRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT DeleteSAMLProviderRequestPrivate : public IAMRequestPrivate {
 
 public:
     DeleteSAMLProviderRequestPrivate(const IAM::Action action,

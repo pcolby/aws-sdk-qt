@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVEPERMISSIONREQUEST_P_H
 #define QTAWS_REMOVEPERMISSIONREQUEST_P_H
 
-#include "cloudwatchevents_p.h"
+#include "cloudwatcheventsrequest_p.h"
 #include "removepermissionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class RemovePermissionRequest;
 
-class QTAWS_EXPORT RemovePermissionRequestPrivate : public CloudWatchEventsPrivate {
+class QTAWS_EXPORT RemovePermissionRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     RemovePermissionRequestPrivate(const CloudWatchEvents::Action action,

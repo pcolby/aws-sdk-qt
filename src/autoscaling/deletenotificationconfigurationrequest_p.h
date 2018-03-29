@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETENOTIFICATIONCONFIGURATIONREQUEST_P_H
 #define QTAWS_DELETENOTIFICATIONCONFIGURATIONREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "deletenotificationconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DeleteNotificationConfigurationRequest;
 
-class QTAWS_EXPORT DeleteNotificationConfigurationRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT DeleteNotificationConfigurationRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DeleteNotificationConfigurationRequestPrivate(const AutoScaling::Action action,

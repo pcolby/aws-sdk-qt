@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETRESERVATIONUTILIZATIONREQUEST_P_H
 #define QTAWS_GETRESERVATIONUTILIZATIONREQUEST_P_H
 
-#include "costexplorer_p.h"
+#include "costexplorerrequest_p.h"
 #include "getreservationutilizationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class GetReservationUtilizationRequest;
 
-class QTAWS_EXPORT GetReservationUtilizationRequestPrivate : public CostExplorerPrivate {
+class QTAWS_EXPORT GetReservationUtilizationRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
     GetReservationUtilizationRequestPrivate(const CostExplorer::Action action,

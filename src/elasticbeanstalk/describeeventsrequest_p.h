@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTSREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTSREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "describeeventsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class DescribeEventsRequest;
 
-class QTAWS_EXPORT DescribeEventsRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT DescribeEventsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     DescribeEventsRequestPrivate(const ElasticBeanstalk::Action action,

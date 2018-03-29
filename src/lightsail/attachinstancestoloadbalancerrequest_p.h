@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATTACHINSTANCESTOLOADBALANCERREQUEST_P_H
 #define QTAWS_ATTACHINSTANCESTOLOADBALANCERREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "attachinstancestoloadbalancerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class AttachInstancesToLoadBalancerRequest;
 
-class QTAWS_EXPORT AttachInstancesToLoadBalancerRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT AttachInstancesToLoadBalancerRequestPrivate : public LightsailRequestPrivate {
 
 public:
     AttachInstancesToLoadBalancerRequestPrivate(const Lightsail::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSERVICEGRAPHREQUEST_P_H
 #define QTAWS_GETSERVICEGRAPHREQUEST_P_H
 
-#include "xray_p.h"
+#include "xrayrequest_p.h"
 #include "getservicegraphrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace XRay {
 
 class GetServiceGraphRequest;
 
-class QTAWS_EXPORT GetServiceGraphRequestPrivate : public XRayPrivate {
+class QTAWS_EXPORT GetServiceGraphRequestPrivate : public XRayRequestPrivate {
 
 public:
     GetServiceGraphRequestPrivate(const XRay::Action action,

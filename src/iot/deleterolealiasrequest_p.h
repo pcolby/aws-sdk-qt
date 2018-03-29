@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEROLEALIASREQUEST_P_H
 #define QTAWS_DELETEROLEALIASREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "deleterolealiasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeleteRoleAliasRequest;
 
-class QTAWS_EXPORT DeleteRoleAliasRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT DeleteRoleAliasRequestPrivate : public IoTRequestPrivate {
 
 public:
     DeleteRoleAliasRequestPrivate(const IoT::Action action,

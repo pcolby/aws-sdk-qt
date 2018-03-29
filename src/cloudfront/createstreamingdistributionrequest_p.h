@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESTREAMINGDISTRIBUTIONREQUEST_P_H
 #define QTAWS_CREATESTREAMINGDISTRIBUTIONREQUEST_P_H
 
-#include "cloudfront_p.h"
+#include "cloudfrontrequest_p.h"
 #include "createstreamingdistributionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class CreateStreamingDistributionRequest;
 
-class QTAWS_EXPORT CreateStreamingDistributionRequestPrivate : public CloudFrontPrivate {
+class QTAWS_EXPORT CreateStreamingDistributionRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     CreateStreamingDistributionRequestPrivate(const CloudFront::Action action,

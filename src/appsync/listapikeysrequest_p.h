@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTAPIKEYSREQUEST_P_H
 #define QTAWS_LISTAPIKEYSREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "listapikeysrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class ListApiKeysRequest;
 
-class QTAWS_EXPORT ListApiKeysRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT ListApiKeysRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     ListApiKeysRequestPrivate(const AppSync::Action action,

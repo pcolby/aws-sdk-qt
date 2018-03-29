@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETACHINSTANCESREQUEST_P_H
 #define QTAWS_DETACHINSTANCESREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "detachinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DetachInstancesRequest;
 
-class QTAWS_EXPORT DetachInstancesRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT DetachInstancesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DetachInstancesRequestPrivate(const AutoScaling::Action action,

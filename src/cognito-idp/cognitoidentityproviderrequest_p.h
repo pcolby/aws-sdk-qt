@@ -20,7 +20,7 @@
 #ifndef QTAWS_COGNITOIDENTITYPROVIDERREQUEST_P_H
 #define QTAWS_COGNITOIDENTITYPROVIDERREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "cognitoidentityproviderrequest.h"
 
 namespace QtAws {

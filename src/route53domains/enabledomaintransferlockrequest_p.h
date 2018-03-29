@@ -20,7 +20,7 @@
 #ifndef QTAWS_ENABLEDOMAINTRANSFERLOCKREQUEST_P_H
 #define QTAWS_ENABLEDOMAINTRANSFERLOCKREQUEST_P_H
 
-#include "route53domains_p.h"
+#include "route53domainsrequest_p.h"
 #include "enabledomaintransferlockrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class EnableDomainTransferLockRequest;
 
-class QTAWS_EXPORT EnableDomainTransferLockRequestPrivate : public Route53DomainsPrivate {
+class QTAWS_EXPORT EnableDomainTransferLockRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     EnableDomainTransferLockRequestPrivate(const Route53Domains::Action action,

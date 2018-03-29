@@ -20,7 +20,7 @@
 #ifndef QTAWS_REJECTPORTFOLIOSHAREREQUEST_P_H
 #define QTAWS_REJECTPORTFOLIOSHAREREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "rejectportfoliosharerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class RejectPortfolioShareRequest;
 
-class QTAWS_EXPORT RejectPortfolioShareRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT RejectPortfolioShareRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     RejectPortfolioShareRequestPrivate(const ServiceCatalog::Action action,

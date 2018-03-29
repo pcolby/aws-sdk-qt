@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEVOLUMEREQUEST_P_H
 #define QTAWS_UPDATEVOLUMEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "updatevolumerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class UpdateVolumeRequest;
 
-class QTAWS_EXPORT UpdateVolumeRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT UpdateVolumeRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     UpdateVolumeRequestPrivate(const OpsWorks::Action action,

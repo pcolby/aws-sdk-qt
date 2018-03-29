@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESERVICEREQUEST_P_H
 #define QTAWS_DELETESERVICEREQUEST_P_H
 
-#include "servicediscovery_p.h"
+#include "servicediscoveryrequest_p.h"
 #include "deleteservicerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class DeleteServiceRequest;
 
-class QTAWS_EXPORT DeleteServiceRequestPrivate : public ServiceDiscoveryPrivate {
+class QTAWS_EXPORT DeleteServiceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     DeleteServiceRequestPrivate(const ServiceDiscovery::Action action,

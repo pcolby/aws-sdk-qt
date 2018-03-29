@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEENDPOINTREQUEST_P_H
 #define QTAWS_DELETEENDPOINTREQUEST_P_H
 
-#include "databasemigrationservice_p.h"
+#include "databasemigrationservicerequest_p.h"
 #include "deleteendpointrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DeleteEndpointRequest;
 
-class QTAWS_EXPORT DeleteEndpointRequestPrivate : public DatabaseMigrationServicePrivate {
+class QTAWS_EXPORT DeleteEndpointRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     DeleteEndpointRequestPrivate(const DatabaseMigrationService::Action action,

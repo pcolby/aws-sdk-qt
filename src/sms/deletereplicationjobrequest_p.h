@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEREPLICATIONJOBREQUEST_P_H
 #define QTAWS_DELETEREPLICATIONJOBREQUEST_P_H
 
-#include "sms_p.h"
+#include "smsrequest_p.h"
 #include "deletereplicationjobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SMS {
 
 class DeleteReplicationJobRequest;
 
-class QTAWS_EXPORT DeleteReplicationJobRequestPrivate : public SMSPrivate {
+class QTAWS_EXPORT DeleteReplicationJobRequestPrivate : public SMSRequestPrivate {
 
 public:
     DeleteReplicationJobRequestPrivate(const SMS::Action action,

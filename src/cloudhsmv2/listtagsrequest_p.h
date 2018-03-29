@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTAGSREQUEST_P_H
 #define QTAWS_LISTTAGSREQUEST_P_H
 
-#include "cloudhsmv2_p.h"
+#include "cloudhsmv2request_p.h"
 #include "listtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 
 class ListTagsRequest;
 
-class QTAWS_EXPORT ListTagsRequestPrivate : public CloudHSMV2Private {
+class QTAWS_EXPORT ListTagsRequestPrivate : public CloudHSMV2RequestPrivate {
 
 public:
     ListTagsRequestPrivate(const CloudHSMV2::Action action,

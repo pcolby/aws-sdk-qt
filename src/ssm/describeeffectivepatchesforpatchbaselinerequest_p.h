@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEEFFECTIVEPATCHESFORPATCHBASELINEREQUEST_P_H
 #define QTAWS_DESCRIBEEFFECTIVEPATCHESFORPATCHBASELINEREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "describeeffectivepatchesforpatchbaselinerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeEffectivePatchesForPatchBaselineRequest;
 
-class QTAWS_EXPORT DescribeEffectivePatchesForPatchBaselineRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DescribeEffectivePatchesForPatchBaselineRequestPrivate : public SSMRequestPrivate {
 
 public:
     DescribeEffectivePatchesForPatchBaselineRequestPrivate(const SSM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTOTAUPDATESREQUEST_P_H
 #define QTAWS_LISTOTAUPDATESREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "listotaupdatesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListOTAUpdatesRequest;
 
-class QTAWS_EXPORT ListOTAUpdatesRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT ListOTAUpdatesRequestPrivate : public IoTRequestPrivate {
 
 public:
     ListOTAUpdatesRequestPrivate(const IoT::Action action,

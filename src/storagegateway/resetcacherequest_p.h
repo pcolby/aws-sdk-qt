@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESETCACHEREQUEST_P_H
 #define QTAWS_RESETCACHEREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "resetcacherequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class ResetCacheRequest;
 
-class QTAWS_EXPORT ResetCacheRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT ResetCacheRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     ResetCacheRequestPrivate(const StorageGateway::Action action,

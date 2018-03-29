@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEVPCPEERINGCONNECTIONREQUEST_P_H
 #define QTAWS_CREATEVPCPEERINGCONNECTIONREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "createvpcpeeringconnectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class CreateVpcPeeringConnectionRequest;
 
-class QTAWS_EXPORT CreateVpcPeeringConnectionRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT CreateVpcPeeringConnectionRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     CreateVpcPeeringConnectionRequestPrivate(const GameLift::Action action,

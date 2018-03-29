@@ -20,7 +20,7 @@
 #ifndef QTAWS_ACCEPTCERTIFICATETRANSFERREQUEST_P_H
 #define QTAWS_ACCEPTCERTIFICATETRANSFERREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "acceptcertificatetransferrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class AcceptCertificateTransferRequest;
 
-class QTAWS_EXPORT AcceptCertificateTransferRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT AcceptCertificateTransferRequestPrivate : public IoTRequestPrivate {
 
 public:
     AcceptCertificateTransferRequestPrivate(const IoT::Action action,

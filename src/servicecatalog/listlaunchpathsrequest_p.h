@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTLAUNCHPATHSREQUEST_P_H
 #define QTAWS_LISTLAUNCHPATHSREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "listlaunchpathsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ListLaunchPathsRequest;
 
-class QTAWS_EXPORT ListLaunchPathsRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT ListLaunchPathsRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     ListLaunchPathsRequestPrivate(const ServiceCatalog::Action action,

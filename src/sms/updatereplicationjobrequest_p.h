@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEREPLICATIONJOBREQUEST_P_H
 #define QTAWS_UPDATEREPLICATIONJOBREQUEST_P_H
 
-#include "sms_p.h"
+#include "smsrequest_p.h"
 #include "updatereplicationjobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SMS {
 
 class UpdateReplicationJobRequest;
 
-class QTAWS_EXPORT UpdateReplicationJobRequestPrivate : public SMSPrivate {
+class QTAWS_EXPORT UpdateReplicationJobRequestPrivate : public SMSRequestPrivate {
 
 public:
     UpdateReplicationJobRequestPrivate(const SMS::Action action,

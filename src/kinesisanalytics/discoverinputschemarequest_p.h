@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISCOVERINPUTSCHEMAREQUEST_P_H
 #define QTAWS_DISCOVERINPUTSCHEMAREQUEST_P_H
 
-#include "kinesisanalytics_p.h"
+#include "kinesisanalyticsrequest_p.h"
 #include "discoverinputschemarequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class DiscoverInputSchemaRequest;
 
-class QTAWS_EXPORT DiscoverInputSchemaRequestPrivate : public KinesisAnalyticsPrivate {
+class QTAWS_EXPORT DiscoverInputSchemaRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
     DiscoverInputSchemaRequestPrivate(const KinesisAnalytics::Action action,

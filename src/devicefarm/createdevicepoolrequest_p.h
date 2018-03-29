@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDEVICEPOOLREQUEST_P_H
 #define QTAWS_CREATEDEVICEPOOLREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "createdevicepoolrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class CreateDevicePoolRequest;
 
-class QTAWS_EXPORT CreateDevicePoolRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT CreateDevicePoolRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     CreateDevicePoolRequestPrivate(const DeviceFarm::Action action,

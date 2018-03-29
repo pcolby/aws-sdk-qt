@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEVOLUMEREQUEST_P_H
 #define QTAWS_DELETEVOLUMEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "deletevolumerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteVolumeRequest;
 
-class QTAWS_EXPORT DeleteVolumeRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DeleteVolumeRequestPrivate : public EC2RequestPrivate {
 
 public:
     DeleteVolumeRequestPrivate(const EC2::Action action,

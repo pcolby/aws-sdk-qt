@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDROLETOINSTANCEPROFILEREQUEST_P_H
 #define QTAWS_ADDROLETOINSTANCEPROFILEREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "addroletoinstanceprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class AddRoleToInstanceProfileRequest;
 
-class QTAWS_EXPORT AddRoleToInstanceProfileRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT AddRoleToInstanceProfileRequestPrivate : public IAMRequestPrivate {
 
 public:
     AddRoleToInstanceProfileRequestPrivate(const IAM::Action action,

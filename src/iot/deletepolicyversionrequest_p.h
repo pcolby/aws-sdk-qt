@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPOLICYVERSIONREQUEST_P_H
 #define QTAWS_DELETEPOLICYVERSIONREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "deletepolicyversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeletePolicyVersionRequest;
 
-class QTAWS_EXPORT DeletePolicyVersionRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT DeletePolicyVersionRequestPrivate : public IoTRequestPrivate {
 
 public:
     DeletePolicyVersionRequestPrivate(const IoT::Action action,

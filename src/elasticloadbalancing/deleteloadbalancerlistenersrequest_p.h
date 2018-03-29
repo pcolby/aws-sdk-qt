@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETELOADBALANCERLISTENERSREQUEST_P_H
 #define QTAWS_DELETELOADBALANCERLISTENERSREQUEST_P_H
 
-#include "elasticloadbalancing_p.h"
+#include "elasticloadbalancingrequest_p.h"
 #include "deleteloadbalancerlistenersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class DeleteLoadBalancerListenersRequest;
 
-class QTAWS_EXPORT DeleteLoadBalancerListenersRequestPrivate : public ElasticLoadBalancingPrivate {
+class QTAWS_EXPORT DeleteLoadBalancerListenersRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
     DeleteLoadBalancerListenersRequestPrivate(const ElasticLoadBalancing::Action action,

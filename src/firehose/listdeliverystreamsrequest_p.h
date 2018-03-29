@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTDELIVERYSTREAMSREQUEST_P_H
 #define QTAWS_LISTDELIVERYSTREAMSREQUEST_P_H
 
-#include "firehose_p.h"
+#include "firehoserequest_p.h"
 #include "listdeliverystreamsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Firehose {
 
 class ListDeliveryStreamsRequest;
 
-class QTAWS_EXPORT ListDeliveryStreamsRequestPrivate : public FirehosePrivate {
+class QTAWS_EXPORT ListDeliveryStreamsRequestPrivate : public FirehoseRequestPrivate {
 
 public:
     ListDeliveryStreamsRequestPrivate(const Firehose::Action action,

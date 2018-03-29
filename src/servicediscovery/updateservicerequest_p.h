@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESERVICEREQUEST_P_H
 #define QTAWS_UPDATESERVICEREQUEST_P_H
 
-#include "servicediscovery_p.h"
+#include "servicediscoveryrequest_p.h"
 #include "updateservicerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class UpdateServiceRequest;
 
-class QTAWS_EXPORT UpdateServiceRequestPrivate : public ServiceDiscoveryPrivate {
+class QTAWS_EXPORT UpdateServiceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     UpdateServiceRequestPrivate(const ServiceDiscovery::Action action,

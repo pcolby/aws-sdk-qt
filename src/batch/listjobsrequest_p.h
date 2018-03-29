@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTJOBSREQUEST_P_H
 #define QTAWS_LISTJOBSREQUEST_P_H
 
-#include "batch_p.h"
+#include "batchrequest_p.h"
 #include "listjobsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Batch {
 
 class ListJobsRequest;
 
-class QTAWS_EXPORT ListJobsRequestPrivate : public BatchPrivate {
+class QTAWS_EXPORT ListJobsRequestPrivate : public BatchRequestPrivate {
 
 public:
     ListJobsRequestPrivate(const Batch::Action action,

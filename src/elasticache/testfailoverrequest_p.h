@@ -20,7 +20,7 @@
 #ifndef QTAWS_TESTFAILOVERREQUEST_P_H
 #define QTAWS_TESTFAILOVERREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "testfailoverrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class TestFailoverRequest;
 
-class QTAWS_EXPORT TestFailoverRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT TestFailoverRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     TestFailoverRequestPrivate(const ElastiCache::Action action,

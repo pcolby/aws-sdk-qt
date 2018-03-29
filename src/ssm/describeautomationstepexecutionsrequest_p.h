@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEAUTOMATIONSTEPEXECUTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEAUTOMATIONSTEPEXECUTIONSREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "describeautomationstepexecutionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeAutomationStepExecutionsRequest;
 
-class QTAWS_EXPORT DescribeAutomationStepExecutionsRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DescribeAutomationStepExecutionsRequestPrivate : public SSMRequestPrivate {
 
 public:
     DescribeAutomationStepExecutionsRequestPrivate(const SSM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETDEFAULTPOLICYVERSIONREQUEST_P_H
 #define QTAWS_SETDEFAULTPOLICYVERSIONREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "setdefaultpolicyversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class SetDefaultPolicyVersionRequest;
 
-class QTAWS_EXPORT SetDefaultPolicyVersionRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT SetDefaultPolicyVersionRequestPrivate : public IoTRequestPrivate {
 
 public:
     SetDefaultPolicyVersionRequestPrivate(const IoT::Action action,

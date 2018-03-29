@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTPERMISSIONPOLICYREQUEST_P_H
 #define QTAWS_PUTPERMISSIONPOLICYREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "putpermissionpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class PutPermissionPolicyRequest;
 
-class QTAWS_EXPORT PutPermissionPolicyRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT PutPermissionPolicyRequestPrivate : public WAFRequestPrivate {
 
 public:
     PutPermissionPolicyRequestPrivate(const WAF::Action action,

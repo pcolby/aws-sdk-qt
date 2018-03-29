@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATETHINGREQUEST_P_H
 #define QTAWS_UPDATETHINGREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "updatethingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class UpdateThingRequest;
 
-class QTAWS_EXPORT UpdateThingRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT UpdateThingRequestPrivate : public IoTRequestPrivate {
 
 public:
     UpdateThingRequestPrivate(const IoT::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ENABLEPOLICYTYPEREQUEST_P_H
 #define QTAWS_ENABLEPOLICYTYPEREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "enablepolicytyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class EnablePolicyTypeRequest;
 
-class QTAWS_EXPORT EnablePolicyTypeRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT EnablePolicyTypeRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     EnablePolicyTypeRequestPrivate(const Organizations::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTYPEDLINKFACETINFORMATIONREQUEST_P_H
 #define QTAWS_GETTYPEDLINKFACETINFORMATIONREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "gettypedlinkfacetinformationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class GetTypedLinkFacetInformationRequest;
 
-class QTAWS_EXPORT GetTypedLinkFacetInformationRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT GetTypedLinkFacetInformationRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     GetTypedLinkFacetInformationRequestPrivate(const CloudDirectory::Action action,

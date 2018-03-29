@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETELAUNCHCONFIGURATIONREQUEST_P_H
 #define QTAWS_DELETELAUNCHCONFIGURATIONREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "deletelaunchconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DeleteLaunchConfigurationRequest;
 
-class QTAWS_EXPORT DeleteLaunchConfigurationRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT DeleteLaunchConfigurationRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DeleteLaunchConfigurationRequestPrivate(const AutoScaling::Action action,

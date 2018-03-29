@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTTHIRDPARTYJOBSUCCESSRESULTREQUEST_P_H
 #define QTAWS_PUTTHIRDPARTYJOBSUCCESSRESULTREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "putthirdpartyjobsuccessresultrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class PutThirdPartyJobSuccessResultRequest;
 
-class QTAWS_EXPORT PutThirdPartyJobSuccessResultRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT PutThirdPartyJobSuccessResultRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     PutThirdPartyJobSuccessResultRequestPrivate(const CodePipeline::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTGROUPSFORUSERREQUEST_P_H
 #define QTAWS_LISTGROUPSFORUSERREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "listgroupsforuserrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class ListGroupsForUserRequest;
 
-class QTAWS_EXPORT ListGroupsForUserRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT ListGroupsForUserRequestPrivate : public IAMRequestPrivate {
 
 public:
     ListGroupsForUserRequestPrivate(const IAM::Action action,

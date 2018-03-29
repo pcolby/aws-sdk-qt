@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESETSNAPSHOTATTRIBUTEREQUEST_P_H
 #define QTAWS_RESETSNAPSHOTATTRIBUTEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "resetsnapshotattributerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ResetSnapshotAttributeRequest;
 
-class QTAWS_EXPORT ResetSnapshotAttributeRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ResetSnapshotAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
     ResetSnapshotAttributeRequestPrivate(const EC2::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDBSUBNETGROUPREQUEST_P_H
 #define QTAWS_DELETEDBSUBNETGROUPREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "deletedbsubnetgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteDBSubnetGroupRequest;
 
-class QTAWS_EXPORT DeleteDBSubnetGroupRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DeleteDBSubnetGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
     DeleteDBSubnetGroupRequestPrivate(const RDS::Action action,

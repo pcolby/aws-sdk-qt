@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECOMMENTREQUEST_P_H
 #define QTAWS_UPDATECOMMENTREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "updatecommentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class UpdateCommentRequest;
 
-class QTAWS_EXPORT UpdateCommentRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT UpdateCommentRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     UpdateCommentRequestPrivate(const CodeCommit::Action action,

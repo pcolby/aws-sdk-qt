@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEPLACEMENTGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEPLACEMENTGROUPSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describeplacementgroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribePlacementGroupsRequest;
 
-class QTAWS_EXPORT DescribePlacementGroupsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribePlacementGroupsRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribePlacementGroupsRequestPrivate(const EC2::Action action,

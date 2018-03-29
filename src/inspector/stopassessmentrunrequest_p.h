@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPASSESSMENTRUNREQUEST_P_H
 #define QTAWS_STOPASSESSMENTRUNREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "stopassessmentrunrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class StopAssessmentRunRequest;
 
-class QTAWS_EXPORT StopAssessmentRunRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT StopAssessmentRunRequestPrivate : public InspectorRequestPrivate {
 
 public:
     StopAssessmentRunRequestPrivate(const Inspector::Action action,

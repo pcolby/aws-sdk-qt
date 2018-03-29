@@ -20,7 +20,7 @@
 #ifndef QTAWS_S3REQUEST_P_H
 #define QTAWS_S3REQUEST_P_H
 
-#include "s3_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "s3request.h"
 
 namespace QtAws {

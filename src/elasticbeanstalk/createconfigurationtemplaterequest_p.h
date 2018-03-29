@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECONFIGURATIONTEMPLATEREQUEST_P_H
 #define QTAWS_CREATECONFIGURATIONTEMPLATEREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "createconfigurationtemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class CreateConfigurationTemplateRequest;
 
-class QTAWS_EXPORT CreateConfigurationTemplateRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT CreateConfigurationTemplateRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     CreateConfigurationTemplateRequestPrivate(const ElasticBeanstalk::Action action,

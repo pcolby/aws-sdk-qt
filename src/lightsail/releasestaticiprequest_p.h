@@ -20,7 +20,7 @@
 #ifndef QTAWS_RELEASESTATICIPREQUEST_P_H
 #define QTAWS_RELEASESTATICIPREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "releasestaticiprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class ReleaseStaticIpRequest;
 
-class QTAWS_EXPORT ReleaseStaticIpRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT ReleaseStaticIpRequestPrivate : public LightsailRequestPrivate {
 
 public:
     ReleaseStaticIpRequestPrivate(const Lightsail::Action action,

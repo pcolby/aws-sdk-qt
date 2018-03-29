@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEEVENTSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_DELETEEVENTSUBSCRIPTIONREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "deleteeventsubscriptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DeleteEventSubscriptionRequest;
 
-class QTAWS_EXPORT DeleteEventSubscriptionRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DeleteEventSubscriptionRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DeleteEventSubscriptionRequestPrivate(const Redshift::Action action,

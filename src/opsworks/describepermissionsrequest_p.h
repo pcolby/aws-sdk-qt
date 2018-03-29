@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEPERMISSIONSREQUEST_P_H
 #define QTAWS_DESCRIBEPERMISSIONSREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "describepermissionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DescribePermissionsRequest;
 
-class QTAWS_EXPORT DescribePermissionsRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DescribePermissionsRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DescribePermissionsRequestPrivate(const OpsWorks::Action action,

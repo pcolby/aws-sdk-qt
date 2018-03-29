@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCOMMENTSFORPULLREQUESTREQUEST_P_H
 #define QTAWS_GETCOMMENTSFORPULLREQUESTREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "getcommentsforpullrequestrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class GetCommentsForPullRequestRequest;
 
-class QTAWS_EXPORT GetCommentsForPullRequestRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT GetCommentsForPullRequestRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     GetCommentsForPullRequestRequestPrivate(const CodeCommit::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTITEMSREQUEST_P_H
 #define QTAWS_LISTITEMSREQUEST_P_H
 
-#include "mediastoredata_p.h"
+#include "mediastoredatarequest_p.h"
 #include "listitemsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaStoreData {
 
 class ListItemsRequest;
 
-class QTAWS_EXPORT ListItemsRequestPrivate : public MediaStoreDataPrivate {
+class QTAWS_EXPORT ListItemsRequestPrivate : public MediaStoreDataRequestPrivate {
 
 public:
     ListItemsRequestPrivate(const MediaStoreData::Action action,

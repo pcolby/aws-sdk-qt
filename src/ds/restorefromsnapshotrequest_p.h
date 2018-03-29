@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESTOREFROMSNAPSHOTREQUEST_P_H
 #define QTAWS_RESTOREFROMSNAPSHOTREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "restorefromsnapshotrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class RestoreFromSnapshotRequest;
 
-class QTAWS_EXPORT RestoreFromSnapshotRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT RestoreFromSnapshotRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     RestoreFromSnapshotRequestPrivate(const DirectoryService::Action action,

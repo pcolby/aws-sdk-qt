@@ -20,7 +20,7 @@
 #ifndef QTAWS_SHUTDOWNGATEWAYREQUEST_P_H
 #define QTAWS_SHUTDOWNGATEWAYREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "shutdowngatewayrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class ShutdownGatewayRequest;
 
-class QTAWS_EXPORT ShutdownGatewayRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT ShutdownGatewayRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     ShutdownGatewayRequestPrivate(const StorageGateway::Action action,

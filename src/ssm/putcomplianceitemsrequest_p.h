@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTCOMPLIANCEITEMSREQUEST_P_H
 #define QTAWS_PUTCOMPLIANCEITEMSREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "putcomplianceitemsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class PutComplianceItemsRequest;
 
-class QTAWS_EXPORT PutComplianceItemsRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT PutComplianceItemsRequestPrivate : public SSMRequestPrivate {
 
 public:
     PutComplianceItemsRequestPrivate(const SSM::Action action,

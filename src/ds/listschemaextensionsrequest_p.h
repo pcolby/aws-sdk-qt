@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSCHEMAEXTENSIONSREQUEST_P_H
 #define QTAWS_LISTSCHEMAEXTENSIONSREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "listschemaextensionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class ListSchemaExtensionsRequest;
 
-class QTAWS_EXPORT ListSchemaExtensionsRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT ListSchemaExtensionsRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     ListSchemaExtensionsRequestPrivate(const DirectoryService::Action action,

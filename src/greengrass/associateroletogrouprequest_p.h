@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSOCIATEROLETOGROUPREQUEST_P_H
 #define QTAWS_ASSOCIATEROLETOGROUPREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "associateroletogrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class AssociateRoleToGroupRequest;
 
-class QTAWS_EXPORT AssociateRoleToGroupRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT AssociateRoleToGroupRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     AssociateRoleToGroupRequestPrivate(const Greengrass::Action action,

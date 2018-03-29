@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTPARTSREQUEST_P_H
 #define QTAWS_LISTPARTSREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "listpartsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class ListPartsRequest;
 
-class QTAWS_EXPORT ListPartsRequestPrivate : public S3Private {
+class QTAWS_EXPORT ListPartsRequestPrivate : public S3RequestPrivate {
 
 public:
     ListPartsRequestPrivate(const S3::Action action,

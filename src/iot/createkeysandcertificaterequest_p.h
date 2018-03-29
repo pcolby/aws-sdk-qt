@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEKEYSANDCERTIFICATEREQUEST_P_H
 #define QTAWS_CREATEKEYSANDCERTIFICATEREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "createkeysandcertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class CreateKeysAndCertificateRequest;
 
-class QTAWS_EXPORT CreateKeysAndCertificateRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT CreateKeysAndCertificateRequestPrivate : public IoTRequestPrivate {
 
 public:
     CreateKeysAndCertificateRequestPrivate(const IoT::Action action,

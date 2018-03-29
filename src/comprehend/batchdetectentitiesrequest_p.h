@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHDETECTENTITIESREQUEST_P_H
 #define QTAWS_BATCHDETECTENTITIESREQUEST_P_H
 
-#include "comprehend_p.h"
+#include "comprehendrequest_p.h"
 #include "batchdetectentitiesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class BatchDetectEntitiesRequest;
 
-class QTAWS_EXPORT BatchDetectEntitiesRequestPrivate : public ComprehendPrivate {
+class QTAWS_EXPORT BatchDetectEntitiesRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     BatchDetectEntitiesRequestPrivate(const Comprehend::Action action,

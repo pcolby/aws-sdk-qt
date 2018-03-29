@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEUSERPROFILEREQUEST_P_H
 #define QTAWS_DELETEUSERPROFILEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "deleteuserprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DeleteUserProfileRequest;
 
-class QTAWS_EXPORT DeleteUserProfileRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DeleteUserProfileRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DeleteUserProfileRequestPrivate(const OpsWorks::Action action,

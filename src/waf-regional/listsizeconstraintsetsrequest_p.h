@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSIZECONSTRAINTSETSREQUEST_P_H
 #define QTAWS_LISTSIZECONSTRAINTSETSREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "listsizeconstraintsetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class ListSizeConstraintSetsRequest;
 
-class QTAWS_EXPORT ListSizeConstraintSetsRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT ListSizeConstraintSetsRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     ListSizeConstraintSetsRequestPrivate(const WAFRegional::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTTRANSCRIPTIONJOBREQUEST_P_H
 #define QTAWS_STARTTRANSCRIPTIONJOBREQUEST_P_H
 
-#include "transcribeservice_p.h"
+#include "transcribeservicerequest_p.h"
 #include "starttranscriptionjobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace TranscribeService {
 
 class StartTranscriptionJobRequest;
 
-class QTAWS_EXPORT StartTranscriptionJobRequestPrivate : public TranscribeServicePrivate {
+class QTAWS_EXPORT StartTranscriptionJobRequestPrivate : public TranscribeServiceRequestPrivate {
 
 public:
     StartTranscriptionJobRequestPrivate(const TranscribeService::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATETEMPLATEREQUEST_P_H
 #define QTAWS_UPDATETEMPLATEREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "updatetemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateTemplateRequest;
 
-class QTAWS_EXPORT UpdateTemplateRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT UpdateTemplateRequestPrivate : public SESRequestPrivate {
 
 public:
     UpdateTemplateRequestPrivate(const SES::Action action,

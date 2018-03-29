@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADMINUSERGLOBALSIGNOUTREQUEST_P_H
 #define QTAWS_ADMINUSERGLOBALSIGNOUTREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "adminuserglobalsignoutrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminUserGlobalSignOutRequest;
 
-class QTAWS_EXPORT AdminUserGlobalSignOutRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT AdminUserGlobalSignOutRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AdminUserGlobalSignOutRequestPrivate(const CognitoIdentityProvider::Action action,

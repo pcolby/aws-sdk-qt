@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESNAPSHOTSREQUEST_P_H
 #define QTAWS_DESCRIBESNAPSHOTSREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "describesnapshotsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DescribeSnapshotsRequest;
 
-class QTAWS_EXPORT DescribeSnapshotsRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT DescribeSnapshotsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DescribeSnapshotsRequestPrivate(const ElastiCache::Action action,

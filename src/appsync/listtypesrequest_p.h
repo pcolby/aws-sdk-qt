@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTYPESREQUEST_P_H
 #define QTAWS_LISTTYPESREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "listtypesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class ListTypesRequest;
 
-class QTAWS_EXPORT ListTypesRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT ListTypesRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     ListTypesRequestPrivate(const AppSync::Action action,

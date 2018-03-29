@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELCERTIFICATETRANSFERREQUEST_P_H
 #define QTAWS_CANCELCERTIFICATETRANSFERREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "cancelcertificatetransferrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class CancelCertificateTransferRequest;
 
-class QTAWS_EXPORT CancelCertificateTransferRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT CancelCertificateTransferRequestPrivate : public IoTRequestPrivate {
 
 public:
     CancelCertificateTransferRequestPrivate(const IoT::Action action,

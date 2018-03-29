@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELCOMMANDREQUEST_P_H
 #define QTAWS_CANCELCOMMANDREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "cancelcommandrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class CancelCommandRequest;
 
-class QTAWS_EXPORT CancelCommandRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT CancelCommandRequestPrivate : public SSMRequestPrivate {
 
 public:
     CancelCommandRequestPrivate(const SSM::Action action,

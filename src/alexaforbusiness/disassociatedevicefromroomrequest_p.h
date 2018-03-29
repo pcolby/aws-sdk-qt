@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEDEVICEFROMROOMREQUEST_P_H
 #define QTAWS_DISASSOCIATEDEVICEFROMROOMREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "disassociatedevicefromroomrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class DisassociateDeviceFromRoomRequest;
 
-class QTAWS_EXPORT DisassociateDeviceFromRoomRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT DisassociateDeviceFromRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     DisassociateDeviceFromRoomRequestPrivate(const AlexaForBusiness::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDTHINGTOTHINGGROUPREQUEST_P_H
 #define QTAWS_ADDTHINGTOTHINGGROUPREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "addthingtothinggrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class AddThingToThingGroupRequest;
 
-class QTAWS_EXPORT AddThingToThingGroupRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT AddThingToThingGroupRequestPrivate : public IoTRequestPrivate {
 
 public:
     AddThingToThingGroupRequestPrivate(const IoT::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEREPOSITORYPOLICYREQUEST_P_H
 #define QTAWS_DELETEREPOSITORYPOLICYREQUEST_P_H
 
-#include "ecr_p.h"
+#include "ecrrequest_p.h"
 #include "deleterepositorypolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECR {
 
 class DeleteRepositoryPolicyRequest;
 
-class QTAWS_EXPORT DeleteRepositoryPolicyRequestPrivate : public ECRPrivate {
+class QTAWS_EXPORT DeleteRepositoryPolicyRequestPrivate : public ECRRequestPrivate {
 
 public:
     DeleteRepositoryPolicyRequestPrivate(const ECR::Action action,

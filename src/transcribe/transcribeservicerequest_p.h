@@ -20,7 +20,7 @@
 #ifndef QTAWS_TRANSCRIBESERVICEREQUEST_P_H
 #define QTAWS_TRANSCRIBESERVICEREQUEST_P_H
 
-#include "transcribeservice_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "transcribeservicerequest.h"
 
 namespace QtAws {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEASSOCIATIONREQUEST_P_H
 #define QTAWS_CREATEASSOCIATIONREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "createassociationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class CreateAssociationRequest;
 
-class QTAWS_EXPORT CreateAssociationRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT CreateAssociationRequestPrivate : public SSMRequestPrivate {
 
 public:
     CreateAssociationRequestPrivate(const SSM::Action action,

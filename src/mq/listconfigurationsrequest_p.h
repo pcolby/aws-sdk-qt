@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTCONFIGURATIONSREQUEST_P_H
 #define QTAWS_LISTCONFIGURATIONSREQUEST_P_H
 
-#include "mq_p.h"
+#include "mqrequest_p.h"
 #include "listconfigurationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MQ {
 
 class ListConfigurationsRequest;
 
-class QTAWS_EXPORT ListConfigurationsRequestPrivate : public MQPrivate {
+class QTAWS_EXPORT ListConfigurationsRequestPrivate : public MQRequestPrivate {
 
 public:
     ListConfigurationsRequestPrivate(const MQ::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYSUBNETATTRIBUTEREQUEST_P_H
 #define QTAWS_MODIFYSUBNETATTRIBUTEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "modifysubnetattributerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifySubnetAttributeRequest;
 
-class QTAWS_EXPORT ModifySubnetAttributeRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ModifySubnetAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
     ModifySubnetAttributeRequestPrivate(const EC2::Action action,

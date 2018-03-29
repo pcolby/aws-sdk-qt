@@ -20,7 +20,7 @@
 #ifndef QTAWS_COMPREHENDREQUEST_P_H
 #define QTAWS_COMPREHENDREQUEST_P_H
 
-#include "comprehend_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "comprehendrequest.h"
 
 namespace QtAws {

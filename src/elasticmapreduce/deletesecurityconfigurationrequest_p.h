@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESECURITYCONFIGURATIONREQUEST_P_H
 #define QTAWS_DELETESECURITYCONFIGURATIONREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "deletesecurityconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class DeleteSecurityConfigurationRequest;
 
-class QTAWS_EXPORT DeleteSecurityConfigurationRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT DeleteSecurityConfigurationRequestPrivate : public EMRRequestPrivate {
 
 public:
     DeleteSecurityConfigurationRequestPrivate(const EMR::Action action,

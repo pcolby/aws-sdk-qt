@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESUBSCRIBERREQUEST_P_H
 #define QTAWS_UPDATESUBSCRIBERREQUEST_P_H
 
-#include "budgets_p.h"
+#include "budgetsrequest_p.h"
 #include "updatesubscriberrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Budgets {
 
 class UpdateSubscriberRequest;
 
-class QTAWS_EXPORT UpdateSubscriberRequestPrivate : public BudgetsPrivate {
+class QTAWS_EXPORT UpdateSubscriberRequestPrivate : public BudgetsRequestPrivate {
 
 public:
     UpdateSubscriberRequestPrivate(const Budgets::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDEFAULTVPCREQUEST_P_H
 #define QTAWS_CREATEDEFAULTVPCREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "createdefaultvpcrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateDefaultVpcRequest;
 
-class QTAWS_EXPORT CreateDefaultVpcRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CreateDefaultVpcRequestPrivate : public EC2RequestPrivate {
 
 public:
     CreateDefaultVpcRequestPrivate(const EC2::Action action,

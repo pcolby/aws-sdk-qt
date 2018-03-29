@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEAPPLICATIONSTATEREQUEST_P_H
 #define QTAWS_DESCRIBEAPPLICATIONSTATEREQUEST_P_H
 
-#include "migrationhub_p.h"
+#include "migrationhubrequest_p.h"
 #include "describeapplicationstaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class DescribeApplicationStateRequest;
 
-class QTAWS_EXPORT DescribeApplicationStateRequestPrivate : public MigrationHubPrivate {
+class QTAWS_EXPORT DescribeApplicationStateRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     DescribeApplicationStateRequestPrivate(const MigrationHub::Action action,

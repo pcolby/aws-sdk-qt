@@ -20,7 +20,7 @@
 #ifndef QTAWS_CHANGERESOURCERECORDSETSREQUEST_P_H
 #define QTAWS_CHANGERESOURCERECORDSETSREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "changeresourcerecordsetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class ChangeResourceRecordSetsRequest;
 
-class QTAWS_EXPORT ChangeResourceRecordSetsRequestPrivate : public Route53Private {
+class QTAWS_EXPORT ChangeResourceRecordSetsRequestPrivate : public Route53RequestPrivate {
 
 public:
     ChangeResourceRecordSetsRequestPrivate(const Route53::Action action,

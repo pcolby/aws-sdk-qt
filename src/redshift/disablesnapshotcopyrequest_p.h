@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISABLESNAPSHOTCOPYREQUEST_P_H
 #define QTAWS_DISABLESNAPSHOTCOPYREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "disablesnapshotcopyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DisableSnapshotCopyRequest;
 
-class QTAWS_EXPORT DisableSnapshotCopyRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DisableSnapshotCopyRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DisableSnapshotCopyRequestPrivate(const Redshift::Action action,

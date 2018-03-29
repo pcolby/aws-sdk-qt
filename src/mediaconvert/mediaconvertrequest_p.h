@@ -20,7 +20,7 @@
 #ifndef QTAWS_MEDIACONVERTREQUEST_P_H
 #define QTAWS_MEDIACONVERTREQUEST_P_H
 
-#include "mediaconvert_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "mediaconvertrequest.h"
 
 namespace QtAws {

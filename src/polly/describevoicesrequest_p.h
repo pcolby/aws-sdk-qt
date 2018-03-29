@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEVOICESREQUEST_P_H
 #define QTAWS_DESCRIBEVOICESREQUEST_P_H
 
-#include "polly_p.h"
+#include "pollyrequest_p.h"
 #include "describevoicesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Polly {
 
 class DescribeVoicesRequest;
 
-class QTAWS_EXPORT DescribeVoicesRequestPrivate : public PollyPrivate {
+class QTAWS_EXPORT DescribeVoicesRequestPrivate : public PollyRequestPrivate {
 
 public:
     DescribeVoicesRequestPrivate(const Polly::Action action,

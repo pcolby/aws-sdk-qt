@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEVPCFROMHOSTEDZONEREQUEST_P_H
 #define QTAWS_DISASSOCIATEVPCFROMHOSTEDZONEREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "disassociatevpcfromhostedzonerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class DisassociateVPCFromHostedZoneRequest;
 
-class QTAWS_EXPORT DisassociateVPCFromHostedZoneRequestPrivate : public Route53Private {
+class QTAWS_EXPORT DisassociateVPCFromHostedZoneRequestPrivate : public Route53RequestPrivate {
 
 public:
     DisassociateVPCFromHostedZoneRequestPrivate(const Route53::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCURRENTUSERREQUEST_P_H
 #define QTAWS_GETCURRENTUSERREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "getcurrentuserrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class GetCurrentUserRequest;
 
-class QTAWS_EXPORT GetCurrentUserRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT GetCurrentUserRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     GetCurrentUserRequestPrivate(const WorkDocs::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETFACEDETECTIONREQUEST_P_H
 #define QTAWS_GETFACEDETECTIONREQUEST_P_H
 
-#include "rekognition_p.h"
+#include "rekognitionrequest_p.h"
 #include "getfacedetectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class GetFaceDetectionRequest;
 
-class QTAWS_EXPORT GetFaceDetectionRequestPrivate : public RekognitionPrivate {
+class QTAWS_EXPORT GetFaceDetectionRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     GetFaceDetectionRequestPrivate(const Rekognition::Action action,

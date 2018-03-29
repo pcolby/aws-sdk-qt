@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSMSCHANNELREQUEST_P_H
 #define QTAWS_GETSMSCHANNELREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "getsmschannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetSmsChannelRequest;
 
-class QTAWS_EXPORT GetSmsChannelRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT GetSmsChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetSmsChannelRequestPrivate(const Pinpoint::Action action,

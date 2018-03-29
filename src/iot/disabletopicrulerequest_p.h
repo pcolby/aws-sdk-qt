@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISABLETOPICRULEREQUEST_P_H
 #define QTAWS_DISABLETOPICRULEREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "disabletopicrulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class DisableTopicRuleRequest;
 
-class QTAWS_EXPORT DisableTopicRuleRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT DisableTopicRuleRequestPrivate : public IoTRequestPrivate {
 
 public:
     DisableTopicRuleRequestPrivate(const IoT::Action action,

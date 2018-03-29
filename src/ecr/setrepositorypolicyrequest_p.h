@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETREPOSITORYPOLICYREQUEST_P_H
 #define QTAWS_SETREPOSITORYPOLICYREQUEST_P_H
 
-#include "ecr_p.h"
+#include "ecrrequest_p.h"
 #include "setrepositorypolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECR {
 
 class SetRepositoryPolicyRequest;
 
-class QTAWS_EXPORT SetRepositoryPolicyRequestPrivate : public ECRPrivate {
+class QTAWS_EXPORT SetRepositoryPolicyRequestPrivate : public ECRRequestPrivate {
 
 public:
     SetRepositoryPolicyRequestPrivate(const ECR::Action action,

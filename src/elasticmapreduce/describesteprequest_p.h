@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESTEPREQUEST_P_H
 #define QTAWS_DESCRIBESTEPREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "describesteprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class DescribeStepRequest;
 
-class QTAWS_EXPORT DescribeStepRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT DescribeStepRequestPrivate : public EMRRequestPrivate {
 
 public:
     DescribeStepRequestPrivate(const EMR::Action action,

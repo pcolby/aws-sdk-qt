@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETUSERATTRIBUTEVERIFICATIONCODEREQUEST_P_H
 #define QTAWS_GETUSERATTRIBUTEVERIFICATIONCODEREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "getuserattributeverificationcoderequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class GetUserAttributeVerificationCodeRequest;
 
-class QTAWS_EXPORT GetUserAttributeVerificationCodeRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT GetUserAttributeVerificationCodeRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     GetUserAttributeVerificationCodeRequestPrivate(const CognitoIdentityProvider::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTTOPICSREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTTOPICSREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "describeeventtopicsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DescribeEventTopicsRequest;
 
-class QTAWS_EXPORT DescribeEventTopicsRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT DescribeEventTopicsRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     DescribeEventTopicsRequestPrivate(const DirectoryService::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_REPLACENETWORKACLENTRYREQUEST_P_H
 #define QTAWS_REPLACENETWORKACLENTRYREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "replacenetworkaclentryrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ReplaceNetworkAclEntryRequest;
 
-class QTAWS_EXPORT ReplaceNetworkAclEntryRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ReplaceNetworkAclEntryRequestPrivate : public EC2RequestPrivate {
 
 public:
     ReplaceNetworkAclEntryRequestPrivate(const EC2::Action action,

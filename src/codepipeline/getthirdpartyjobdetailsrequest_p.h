@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTHIRDPARTYJOBDETAILSREQUEST_P_H
 #define QTAWS_GETTHIRDPARTYJOBDETAILSREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "getthirdpartyjobdetailsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class GetThirdPartyJobDetailsRequest;
 
-class QTAWS_EXPORT GetThirdPartyJobDetailsRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT GetThirdPartyJobDetailsRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     GetThirdPartyJobDetailsRequestPrivate(const CodePipeline::Action action,

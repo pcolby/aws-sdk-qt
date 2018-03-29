@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTJOBSBYPIPELINEREQUEST_P_H
 #define QTAWS_LISTJOBSBYPIPELINEREQUEST_P_H
 
-#include "elastictranscoder_p.h"
+#include "elastictranscoderrequest_p.h"
 #include "listjobsbypipelinerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class ListJobsByPipelineRequest;
 
-class QTAWS_EXPORT ListJobsByPipelineRequestPrivate : public ElasticTranscoderPrivate {
+class QTAWS_EXPORT ListJobsByPipelineRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     ListJobsByPipelineRequestPrivate(const ElasticTranscoder::Action action,

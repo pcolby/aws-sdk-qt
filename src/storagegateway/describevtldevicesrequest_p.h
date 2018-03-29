@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEVTLDEVICESREQUEST_P_H
 #define QTAWS_DESCRIBEVTLDEVICESREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "describevtldevicesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeVTLDevicesRequest;
 
-class QTAWS_EXPORT DescribeVTLDevicesRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT DescribeVTLDevicesRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DescribeVTLDevicesRequestPrivate(const StorageGateway::Action action,

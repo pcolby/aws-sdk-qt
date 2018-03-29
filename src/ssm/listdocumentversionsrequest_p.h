@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTDOCUMENTVERSIONSREQUEST_P_H
 #define QTAWS_LISTDOCUMENTVERSIONSREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "listdocumentversionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class ListDocumentVersionsRequest;
 
-class QTAWS_EXPORT ListDocumentVersionsRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT ListDocumentVersionsRequestPrivate : public SSMRequestPrivate {
 
 public:
     ListDocumentVersionsRequestPrivate(const SSM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_VERIFYDOMAINIDENTITYREQUEST_P_H
 #define QTAWS_VERIFYDOMAINIDENTITYREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "verifydomainidentityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class VerifyDomainIdentityRequest;
 
-class QTAWS_EXPORT VerifyDomainIdentityRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT VerifyDomainIdentityRequestPrivate : public SESRequestPrivate {
 
 public:
     VerifyDomainIdentityRequestPrivate(const SES::Action action,

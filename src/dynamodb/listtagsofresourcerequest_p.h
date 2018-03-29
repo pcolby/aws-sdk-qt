@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTAGSOFRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSOFRESOURCEREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "listtagsofresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class ListTagsOfResourceRequest;
 
-class QTAWS_EXPORT ListTagsOfResourceRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT ListTagsOfResourceRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     ListTagsOfResourceRequestPrivate(const DynamoDB::Action action,

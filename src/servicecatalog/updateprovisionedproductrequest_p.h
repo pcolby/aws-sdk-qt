@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEPROVISIONEDPRODUCTREQUEST_P_H
 #define QTAWS_UPDATEPROVISIONEDPRODUCTREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "updateprovisionedproductrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class UpdateProvisionedProductRequest;
 
-class QTAWS_EXPORT UpdateProvisionedProductRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT UpdateProvisionedProductRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     UpdateProvisionedProductRequestPrivate(const ServiceCatalog::Action action,

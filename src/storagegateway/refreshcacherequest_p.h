@@ -20,7 +20,7 @@
 #ifndef QTAWS_REFRESHCACHEREQUEST_P_H
 #define QTAWS_REFRESHCACHEREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "refreshcacherequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class RefreshCacheRequest;
 
-class QTAWS_EXPORT RefreshCacheRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT RefreshCacheRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     RefreshCacheRequestPrivate(const StorageGateway::Action action,

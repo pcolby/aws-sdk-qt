@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATETAGSREQUEST_P_H
 #define QTAWS_CREATETAGSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "createtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateTagsRequest;
 
-class QTAWS_EXPORT CreateTagsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CreateTagsRequestPrivate : public EC2RequestPrivate {
 
 public:
     CreateTagsRequestPrivate(const EC2::Action action,

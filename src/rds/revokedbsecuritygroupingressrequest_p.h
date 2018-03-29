@@ -20,7 +20,7 @@
 #ifndef QTAWS_REVOKEDBSECURITYGROUPINGRESSREQUEST_P_H
 #define QTAWS_REVOKEDBSECURITYGROUPINGRESSREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "revokedbsecuritygroupingressrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class RevokeDBSecurityGroupIngressRequest;
 
-class QTAWS_EXPORT RevokeDBSecurityGroupIngressRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT RevokeDBSecurityGroupIngressRequestPrivate : public RDSRequestPrivate {
 
 public:
     RevokeDBSecurityGroupIngressRequestPrivate(const RDS::Action action,

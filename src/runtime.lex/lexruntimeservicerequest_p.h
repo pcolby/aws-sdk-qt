@@ -20,7 +20,7 @@
 #ifndef QTAWS_LEXRUNTIMESERVICEREQUEST_P_H
 #define QTAWS_LEXRUNTIMESERVICEREQUEST_P_H
 
-#include "lexruntimeservice_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "lexruntimeservicerequest.h"
 
 namespace QtAws {

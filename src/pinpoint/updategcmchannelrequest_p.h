@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEGCMCHANNELREQUEST_P_H
 #define QTAWS_UPDATEGCMCHANNELREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "updategcmchannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class UpdateGcmChannelRequest;
 
-class QTAWS_EXPORT UpdateGcmChannelRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT UpdateGcmChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     UpdateGcmChannelRequestPrivate(const Pinpoint::Action action,

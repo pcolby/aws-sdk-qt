@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELKEYDELETIONREQUEST_P_H
 #define QTAWS_CANCELKEYDELETIONREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "cancelkeydeletionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class CancelKeyDeletionRequest;
 
-class QTAWS_EXPORT CancelKeyDeletionRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT CancelKeyDeletionRequestPrivate : public KMSRequestPrivate {
 
 public:
     CancelKeyDeletionRequestPrivate(const KMS::Action action,

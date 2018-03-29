@@ -20,7 +20,7 @@
 #ifndef QTAWS_INVALIDATEPROJECTCACHEREQUEST_P_H
 #define QTAWS_INVALIDATEPROJECTCACHEREQUEST_P_H
 
-#include "codebuild_p.h"
+#include "codebuildrequest_p.h"
 #include "invalidateprojectcacherequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class InvalidateProjectCacheRequest;
 
-class QTAWS_EXPORT InvalidateProjectCacheRequestPrivate : public CodeBuildPrivate {
+class QTAWS_EXPORT InvalidateProjectCacheRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     InvalidateProjectCacheRequestPrivate(const CodeBuild::Action action,

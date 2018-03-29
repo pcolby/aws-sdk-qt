@@ -20,7 +20,7 @@
 #ifndef QTAWS_GAMELIFTREQUEST_P_H
 #define QTAWS_GAMELIFTREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "gameliftrequest.h"
 
 namespace QtAws {

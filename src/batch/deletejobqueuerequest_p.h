@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEJOBQUEUEREQUEST_P_H
 #define QTAWS_DELETEJOBQUEUEREQUEST_P_H
 
-#include "batch_p.h"
+#include "batchrequest_p.h"
 #include "deletejobqueuerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Batch {
 
 class DeleteJobQueueRequest;
 
-class QTAWS_EXPORT DeleteJobQueueRequestPrivate : public BatchPrivate {
+class QTAWS_EXPORT DeleteJobQueueRequestPrivate : public BatchRequestPrivate {
 
 public:
     DeleteJobQueueRequestPrivate(const Batch::Action action,

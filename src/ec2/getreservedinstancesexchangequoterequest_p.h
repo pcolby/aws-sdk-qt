@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETRESERVEDINSTANCESEXCHANGEQUOTEREQUEST_P_H
 #define QTAWS_GETRESERVEDINSTANCESEXCHANGEQUOTEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "getreservedinstancesexchangequoterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetReservedInstancesExchangeQuoteRequest;
 
-class QTAWS_EXPORT GetReservedInstancesExchangeQuoteRequestPrivate : public EC2Private {
+class QTAWS_EXPORT GetReservedInstancesExchangeQuoteRequestPrivate : public EC2RequestPrivate {
 
 public:
     GetReservedInstancesExchangeQuoteRequestPrivate(const EC2::Action action,

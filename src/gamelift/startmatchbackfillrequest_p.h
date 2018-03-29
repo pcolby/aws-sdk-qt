@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTMATCHBACKFILLREQUEST_P_H
 #define QTAWS_STARTMATCHBACKFILLREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "startmatchbackfillrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class StartMatchBackfillRequest;
 
-class QTAWS_EXPORT StartMatchBackfillRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT StartMatchBackfillRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     StartMatchBackfillRequestPrivate(const GameLift::Action action,

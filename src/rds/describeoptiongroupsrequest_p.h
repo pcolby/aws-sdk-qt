@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEOPTIONGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEOPTIONGROUPSREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describeoptiongroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeOptionGroupsRequest;
 
-class QTAWS_EXPORT DescribeOptionGroupsRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeOptionGroupsRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeOptionGroupsRequestPrivate(const RDS::Action action,

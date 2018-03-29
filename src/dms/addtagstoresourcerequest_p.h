@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDTAGSTORESOURCEREQUEST_P_H
 #define QTAWS_ADDTAGSTORESOURCEREQUEST_P_H
 
-#include "databasemigrationservice_p.h"
+#include "databasemigrationservicerequest_p.h"
 #include "addtagstoresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class AddTagsToResourceRequest;
 
-class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public DatabaseMigrationServicePrivate {
+class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     AddTagsToResourceRequestPrivate(const DatabaseMigrationService::Action action,

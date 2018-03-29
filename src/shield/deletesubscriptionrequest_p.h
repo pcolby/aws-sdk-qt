@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONREQUEST_P_H
 #define QTAWS_DELETESUBSCRIPTIONREQUEST_P_H
 
-#include "shield_p.h"
+#include "shieldrequest_p.h"
 #include "deletesubscriptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Shield {
 
 class DeleteSubscriptionRequest;
 
-class QTAWS_EXPORT DeleteSubscriptionRequestPrivate : public ShieldPrivate {
+class QTAWS_EXPORT DeleteSubscriptionRequestPrivate : public ShieldRequestPrivate {
 
 public:
     DeleteSubscriptionRequestPrivate(const Shield::Action action,

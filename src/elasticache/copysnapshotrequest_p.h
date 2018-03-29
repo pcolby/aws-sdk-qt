@@ -20,7 +20,7 @@
 #ifndef QTAWS_COPYSNAPSHOTREQUEST_P_H
 #define QTAWS_COPYSNAPSHOTREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "copysnapshotrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class CopySnapshotRequest;
 
-class QTAWS_EXPORT CopySnapshotRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT CopySnapshotRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     CopySnapshotRequestPrivate(const ElastiCache::Action action,

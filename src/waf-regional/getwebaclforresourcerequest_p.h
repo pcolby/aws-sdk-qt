@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETWEBACLFORRESOURCEREQUEST_P_H
 #define QTAWS_GETWEBACLFORRESOURCEREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "getwebaclforresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class GetWebACLForResourceRequest;
 
-class QTAWS_EXPORT GetWebACLForResourceRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT GetWebACLForResourceRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     GetWebACLForResourceRequestPrivate(const WAFRegional::Action action,

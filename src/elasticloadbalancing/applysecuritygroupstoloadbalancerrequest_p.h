@@ -20,7 +20,7 @@
 #ifndef QTAWS_APPLYSECURITYGROUPSTOLOADBALANCERREQUEST_P_H
 #define QTAWS_APPLYSECURITYGROUPSTOLOADBALANCERREQUEST_P_H
 
-#include "elasticloadbalancing_p.h"
+#include "elasticloadbalancingrequest_p.h"
 #include "applysecuritygroupstoloadbalancerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class ApplySecurityGroupsToLoadBalancerRequest;
 
-class QTAWS_EXPORT ApplySecurityGroupsToLoadBalancerRequestPrivate : public ElasticLoadBalancingPrivate {
+class QTAWS_EXPORT ApplySecurityGroupsToLoadBalancerRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
     ApplySecurityGroupsToLoadBalancerRequestPrivate(const ElasticLoadBalancing::Action action,

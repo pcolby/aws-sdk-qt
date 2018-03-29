@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEQUEUEREQUEST_P_H
 #define QTAWS_CREATEQUEUEREQUEST_P_H
 
-#include "sqs_p.h"
+#include "sqsrequest_p.h"
 #include "createqueuerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SQS {
 
 class CreateQueueRequest;
 
-class QTAWS_EXPORT CreateQueueRequestPrivate : public SQSPrivate {
+class QTAWS_EXPORT CreateQueueRequestPrivate : public SQSRequestPrivate {
 
 public:
     CreateQueueRequestPrivate(const SQS::Action action,

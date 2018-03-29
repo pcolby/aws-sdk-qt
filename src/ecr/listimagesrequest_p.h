@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTIMAGESREQUEST_P_H
 #define QTAWS_LISTIMAGESREQUEST_P_H
 
-#include "ecr_p.h"
+#include "ecrrequest_p.h"
 #include "listimagesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECR {
 
 class ListImagesRequest;
 
-class QTAWS_EXPORT ListImagesRequestPrivate : public ECRPrivate {
+class QTAWS_EXPORT ListImagesRequestPrivate : public ECRRequestPrivate {
 
 public:
     ListImagesRequestPrivate(const ECR::Action action,

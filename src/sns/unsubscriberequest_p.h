@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNSUBSCRIBEREQUEST_P_H
 #define QTAWS_UNSUBSCRIBEREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "unsubscriberequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class UnsubscribeRequest;
 
-class QTAWS_EXPORT UnsubscribeRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT UnsubscribeRequestPrivate : public SNSRequestPrivate {
 
 public:
     UnsubscribeRequestPrivate(const SNS::Action action,

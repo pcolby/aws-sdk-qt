@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEREPORTDEFINITIONREQUEST_P_H
 #define QTAWS_DELETEREPORTDEFINITIONREQUEST_P_H
 
-#include "costandusagereportservice_p.h"
+#include "costandusagereportservicerequest_p.h"
 #include "deletereportdefinitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CostandUsageReportService {
 
 class DeleteReportDefinitionRequest;
 
-class QTAWS_EXPORT DeleteReportDefinitionRequestPrivate : public CostandUsageReportServicePrivate {
+class QTAWS_EXPORT DeleteReportDefinitionRequestPrivate : public CostandUsageReportServiceRequestPrivate {
 
 public:
     DeleteReportDefinitionRequestPrivate(const CostandUsageReportService::Action action,

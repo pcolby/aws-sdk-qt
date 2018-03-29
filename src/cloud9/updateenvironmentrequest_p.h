@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEENVIRONMENTREQUEST_P_H
 #define QTAWS_UPDATEENVIRONMENTREQUEST_P_H
 
-#include "cloud9_p.h"
+#include "cloud9request_p.h"
 #include "updateenvironmentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class UpdateEnvironmentRequest;
 
-class QTAWS_EXPORT UpdateEnvironmentRequestPrivate : public Cloud9Private {
+class QTAWS_EXPORT UpdateEnvironmentRequestPrivate : public Cloud9RequestPrivate {
 
 public:
     UpdateEnvironmentRequestPrivate(const Cloud9::Action action,

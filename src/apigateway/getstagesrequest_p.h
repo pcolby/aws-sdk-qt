@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSTAGESREQUEST_P_H
 #define QTAWS_GETSTAGESREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "getstagesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetStagesRequest;
 
-class QTAWS_EXPORT GetStagesRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetStagesRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetStagesRequestPrivate(const APIGateway::Action action,

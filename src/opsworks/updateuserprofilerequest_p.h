@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEUSERPROFILEREQUEST_P_H
 #define QTAWS_UPDATEUSERPROFILEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "updateuserprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class UpdateUserProfileRequest;
 
-class QTAWS_EXPORT UpdateUserProfileRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT UpdateUserProfileRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     UpdateUserProfileRequestPrivate(const OpsWorks::Action action,

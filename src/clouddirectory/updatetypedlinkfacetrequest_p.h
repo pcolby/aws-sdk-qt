@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATETYPEDLINKFACETREQUEST_P_H
 #define QTAWS_UPDATETYPEDLINKFACETREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "updatetypedlinkfacetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class UpdateTypedLinkFacetRequest;
 
-class QTAWS_EXPORT UpdateTypedLinkFacetRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT UpdateTypedLinkFacetRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     UpdateTypedLinkFacetRequestPrivate(const CloudDirectory::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDTAGSTORESOURCEREQUEST_P_H
 #define QTAWS_ADDTAGSTORESOURCEREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "addtagstoresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class AddTagsToResourceRequest;
 
-class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT AddTagsToResourceRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     AddTagsToResourceRequestPrivate(const ElastiCache::Action action,

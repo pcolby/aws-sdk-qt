@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESTREAMPROCESSORREQUEST_P_H
 #define QTAWS_DELETESTREAMPROCESSORREQUEST_P_H
 
-#include "rekognition_p.h"
+#include "rekognitionrequest_p.h"
 #include "deletestreamprocessorrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class DeleteStreamProcessorRequest;
 
-class QTAWS_EXPORT DeleteStreamProcessorRequestPrivate : public RekognitionPrivate {
+class QTAWS_EXPORT DeleteStreamProcessorRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     DeleteStreamProcessorRequestPrivate(const Rekognition::Action action,

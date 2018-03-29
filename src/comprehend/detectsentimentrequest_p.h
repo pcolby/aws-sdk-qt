@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETECTSENTIMENTREQUEST_P_H
 #define QTAWS_DETECTSENTIMENTREQUEST_P_H
 
-#include "comprehend_p.h"
+#include "comprehendrequest_p.h"
 #include "detectsentimentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Comprehend {
 
 class DetectSentimentRequest;
 
-class QTAWS_EXPORT DetectSentimentRequestPrivate : public ComprehendPrivate {
+class QTAWS_EXPORT DetectSentimentRequestPrivate : public ComprehendRequestPrivate {
 
 public:
     DetectSentimentRequestPrivate(const Comprehend::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEBUILDREQUEST_P_H
 #define QTAWS_UPDATEBUILDREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "updatebuildrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class UpdateBuildRequest;
 
-class QTAWS_EXPORT UpdateBuildRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT UpdateBuildRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     UpdateBuildRequestPrivate(const GameLift::Action action,

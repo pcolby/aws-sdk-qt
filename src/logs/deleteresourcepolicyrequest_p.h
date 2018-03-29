@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETERESOURCEPOLICYREQUEST_P_H
 #define QTAWS_DELETERESOURCEPOLICYREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "deleteresourcepolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DeleteResourcePolicyRequest;
 
-class QTAWS_EXPORT DeleteResourcePolicyRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT DeleteResourcePolicyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DeleteResourcePolicyRequestPrivate(const CloudWatchLogs::Action action,

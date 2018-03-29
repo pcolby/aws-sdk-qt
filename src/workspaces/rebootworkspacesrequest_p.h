@@ -20,7 +20,7 @@
 #ifndef QTAWS_REBOOTWORKSPACESREQUEST_P_H
 #define QTAWS_REBOOTWORKSPACESREQUEST_P_H
 
-#include "workspaces_p.h"
+#include "workspacesrequest_p.h"
 #include "rebootworkspacesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class RebootWorkspacesRequest;
 
-class QTAWS_EXPORT RebootWorkspacesRequestPrivate : public WorkSpacesPrivate {
+class QTAWS_EXPORT RebootWorkspacesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     RebootWorkspacesRequestPrivate(const WorkSpaces::Action action,

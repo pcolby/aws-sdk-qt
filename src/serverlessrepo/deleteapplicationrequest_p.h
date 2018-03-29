@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEAPPLICATIONREQUEST_P_H
 #define QTAWS_DELETEAPPLICATIONREQUEST_P_H
 
-#include "serverlessapplicationrepository_p.h"
+#include "serverlessapplicationrepositoryrequest_p.h"
 #include "deleteapplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 
 class DeleteApplicationRequest;
 
-class QTAWS_EXPORT DeleteApplicationRequestPrivate : public ServerlessApplicationRepositoryPrivate {
+class QTAWS_EXPORT DeleteApplicationRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
     DeleteApplicationRequestPrivate(const ServerlessApplicationRepository::Action action,

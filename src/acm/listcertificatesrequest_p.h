@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTCERTIFICATESREQUEST_P_H
 #define QTAWS_LISTCERTIFICATESREQUEST_P_H
 
-#include "acm_p.h"
+#include "acmrequest_p.h"
 #include "listcertificatesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ACM {
 
 class ListCertificatesRequest;
 
-class QTAWS_EXPORT ListCertificatesRequestPrivate : public ACMPrivate {
+class QTAWS_EXPORT ListCertificatesRequestPrivate : public ACMRequestPrivate {
 
 public:
     ListCertificatesRequestPrivate(const ACM::Action action,

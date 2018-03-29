@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVEAUTOSCALINGPOLICYREQUEST_P_H
 #define QTAWS_REMOVEAUTOSCALINGPOLICYREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "removeautoscalingpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class RemoveAutoScalingPolicyRequest;
 
-class QTAWS_EXPORT RemoveAutoScalingPolicyRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT RemoveAutoScalingPolicyRequestPrivate : public EMRRequestPrivate {
 
 public:
     RemoveAutoScalingPolicyRequestPrivate(const EMR::Action action,

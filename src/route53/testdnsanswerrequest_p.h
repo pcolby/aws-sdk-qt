@@ -20,7 +20,7 @@
 #ifndef QTAWS_TESTDNSANSWERREQUEST_P_H
 #define QTAWS_TESTDNSANSWERREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "testdnsanswerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class TestDNSAnswerRequest;
 
-class QTAWS_EXPORT TestDNSAnswerRequestPrivate : public Route53Private {
+class QTAWS_EXPORT TestDNSAnswerRequestPrivate : public Route53RequestPrivate {
 
 public:
     TestDNSAnswerRequestPrivate(const Route53::Action action,

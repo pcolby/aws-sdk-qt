@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETPIPELINEREQUEST_P_H
 #define QTAWS_GETPIPELINEREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "getpipelinerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class GetPipelineRequest;
 
-class QTAWS_EXPORT GetPipelineRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT GetPipelineRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     GetPipelineRequestPrivate(const CodePipeline::Action action,

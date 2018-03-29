@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPROGRESSUPDATESTREAMREQUEST_P_H
 #define QTAWS_DELETEPROGRESSUPDATESTREAMREQUEST_P_H
 
-#include "migrationhub_p.h"
+#include "migrationhubrequest_p.h"
 #include "deleteprogressupdatestreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class DeleteProgressUpdateStreamRequest;
 
-class QTAWS_EXPORT DeleteProgressUpdateStreamRequestPrivate : public MigrationHubPrivate {
+class QTAWS_EXPORT DeleteProgressUpdateStreamRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     DeleteProgressUpdateStreamRequestPrivate(const MigrationHub::Action action,

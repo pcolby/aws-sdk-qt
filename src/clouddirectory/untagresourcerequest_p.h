@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_P_H
 #define QTAWS_UNTAGRESOURCEREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "untagresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT UntagResourceRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const CloudDirectory::Action action,

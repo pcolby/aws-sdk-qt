@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSTATICIPREQUEST_P_H
 #define QTAWS_GETSTATICIPREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "getstaticiprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetStaticIpRequest;
 
-class QTAWS_EXPORT GetStaticIpRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT GetStaticIpRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetStaticIpRequestPrivate(const Lightsail::Action action,

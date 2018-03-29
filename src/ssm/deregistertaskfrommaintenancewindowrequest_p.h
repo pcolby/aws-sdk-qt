@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEREGISTERTASKFROMMAINTENANCEWINDOWREQUEST_P_H
 #define QTAWS_DEREGISTERTASKFROMMAINTENANCEWINDOWREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "deregistertaskfrommaintenancewindowrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DeregisterTaskFromMaintenanceWindowRequest;
 
-class QTAWS_EXPORT DeregisterTaskFromMaintenanceWindowRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DeregisterTaskFromMaintenanceWindowRequestPrivate : public SSMRequestPrivate {
 
 public:
     DeregisterTaskFromMaintenanceWindowRequestPrivate(const SSM::Action action,

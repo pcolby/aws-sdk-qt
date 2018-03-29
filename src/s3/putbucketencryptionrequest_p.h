@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTBUCKETENCRYPTIONREQUEST_P_H
 #define QTAWS_PUTBUCKETENCRYPTIONREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "putbucketencryptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class PutBucketEncryptionRequest;
 
-class QTAWS_EXPORT PutBucketEncryptionRequestPrivate : public S3Private {
+class QTAWS_EXPORT PutBucketEncryptionRequestPrivate : public S3RequestPrivate {
 
 public:
     PutBucketEncryptionRequestPrivate(const S3::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTEMPLATEREQUEST_P_H
 #define QTAWS_GETTEMPLATEREQUEST_P_H
 
-#include "cloudformation_p.h"
+#include "cloudformationrequest_p.h"
 #include "gettemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class GetTemplateRequest;
 
-class QTAWS_EXPORT GetTemplateRequestPrivate : public CloudFormationPrivate {
+class QTAWS_EXPORT GetTemplateRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     GetTemplateRequestPrivate(const CloudFormation::Action action,

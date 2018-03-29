@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONOPTIONSREQUEST_P_H
 #define QTAWS_DESCRIBECONFIGURATIONOPTIONSREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "describeconfigurationoptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class DescribeConfigurationOptionsRequest;
 
-class QTAWS_EXPORT DescribeConfigurationOptionsRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT DescribeConfigurationOptionsRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     DescribeConfigurationOptionsRequestPrivate(const ElasticBeanstalk::Action action,

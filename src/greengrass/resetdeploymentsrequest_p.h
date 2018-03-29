@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESETDEPLOYMENTSREQUEST_P_H
 #define QTAWS_RESETDEPLOYMENTSREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "resetdeploymentsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class ResetDeploymentsRequest;
 
-class QTAWS_EXPORT ResetDeploymentsRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT ResetDeploymentsRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     ResetDeploymentsRequestPrivate(const Greengrass::Action action,

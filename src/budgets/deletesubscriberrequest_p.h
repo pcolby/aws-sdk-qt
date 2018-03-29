@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESUBSCRIBERREQUEST_P_H
 #define QTAWS_DELETESUBSCRIBERREQUEST_P_H
 
-#include "budgets_p.h"
+#include "budgetsrequest_p.h"
 #include "deletesubscriberrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Budgets {
 
 class DeleteSubscriberRequest;
 
-class QTAWS_EXPORT DeleteSubscriberRequestPrivate : public BudgetsPrivate {
+class QTAWS_EXPORT DeleteSubscriberRequestPrivate : public BudgetsRequestPrivate {
 
 public:
     DeleteSubscriberRequestPrivate(const Budgets::Action action,

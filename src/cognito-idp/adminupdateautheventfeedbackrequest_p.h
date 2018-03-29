@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADMINUPDATEAUTHEVENTFEEDBACKREQUEST_P_H
 #define QTAWS_ADMINUPDATEAUTHEVENTFEEDBACKREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "adminupdateautheventfeedbackrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminUpdateAuthEventFeedbackRequest;
 
-class QTAWS_EXPORT AdminUpdateAuthEventFeedbackRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT AdminUpdateAuthEventFeedbackRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AdminUpdateAuthEventFeedbackRequestPrivate(const CognitoIdentityProvider::Action action,

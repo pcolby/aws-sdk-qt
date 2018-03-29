@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUBLISHVERSIONREQUEST_P_H
 #define QTAWS_PUBLISHVERSIONREQUEST_P_H
 
-#include "lambda_p.h"
+#include "lambdarequest_p.h"
 #include "publishversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lambda {
 
 class PublishVersionRequest;
 
-class QTAWS_EXPORT PublishVersionRequestPrivate : public LambdaPrivate {
+class QTAWS_EXPORT PublishVersionRequestPrivate : public LambdaRequestPrivate {
 
 public:
     PublishVersionRequestPrivate(const Lambda::Action action,

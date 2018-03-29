@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTHINGSHADOWREQUEST_P_H
 #define QTAWS_GETTHINGSHADOWREQUEST_P_H
 
-#include "iotdataplane_p.h"
+#include "iotdataplanerequest_p.h"
 #include "getthingshadowrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoTDataPlane {
 
 class GetThingShadowRequest;
 
-class QTAWS_EXPORT GetThingShadowRequestPrivate : public IoTDataPlanePrivate {
+class QTAWS_EXPORT GetThingShadowRequestPrivate : public IoTDataPlaneRequestPrivate {
 
 public:
     GetThingShadowRequestPrivate(const IoTDataPlane::Action action,

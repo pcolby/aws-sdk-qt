@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEVOLUMESMODIFICATIONSREQUEST_P_H
 #define QTAWS_DESCRIBEVOLUMESMODIFICATIONSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describevolumesmodificationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeVolumesModificationsRequest;
 
-class QTAWS_EXPORT DescribeVolumesModificationsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeVolumesModificationsRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeVolumesModificationsRequestPrivate(const EC2::Action action,

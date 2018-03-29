@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEMOVINGADDRESSESREQUEST_P_H
 #define QTAWS_DESCRIBEMOVINGADDRESSESREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describemovingaddressesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeMovingAddressesRequest;
 
-class QTAWS_EXPORT DescribeMovingAddressesRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeMovingAddressesRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeMovingAddressesRequestPrivate(const EC2::Action action,

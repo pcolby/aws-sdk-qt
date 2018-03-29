@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYDBINSTANCEREQUEST_P_H
 #define QTAWS_MODIFYDBINSTANCEREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "modifydbinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class ModifyDBInstanceRequest;
 
-class QTAWS_EXPORT ModifyDBInstanceRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT ModifyDBInstanceRequestPrivate : public RDSRequestPrivate {
 
 public:
     ModifyDBInstanceRequestPrivate(const RDS::Action action,

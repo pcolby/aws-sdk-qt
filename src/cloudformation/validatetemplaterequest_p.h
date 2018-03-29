@@ -20,7 +20,7 @@
 #ifndef QTAWS_VALIDATETEMPLATEREQUEST_P_H
 #define QTAWS_VALIDATETEMPLATEREQUEST_P_H
 
-#include "cloudformation_p.h"
+#include "cloudformationrequest_p.h"
 #include "validatetemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class ValidateTemplateRequest;
 
-class QTAWS_EXPORT ValidateTemplateRequestPrivate : public CloudFormationPrivate {
+class QTAWS_EXPORT ValidateTemplateRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     ValidateTemplateRequestPrivate(const CloudFormation::Action action,

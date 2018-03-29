@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEQUEUEREQUEST_P_H
 #define QTAWS_UPDATEQUEUEREQUEST_P_H
 
-#include "mediaconvert_p.h"
+#include "mediaconvertrequest_p.h"
 #include "updatequeuerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class UpdateQueueRequest;
 
-class QTAWS_EXPORT UpdateQueueRequestPrivate : public MediaConvertPrivate {
+class QTAWS_EXPORT UpdateQueueRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     UpdateQueueRequestPrivate(const MediaConvert::Action action,

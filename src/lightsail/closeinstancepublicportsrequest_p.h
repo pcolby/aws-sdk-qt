@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOSEINSTANCEPUBLICPORTSREQUEST_P_H
 #define QTAWS_CLOSEINSTANCEPUBLICPORTSREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "closeinstancepublicportsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class CloseInstancePublicPortsRequest;
 
-class QTAWS_EXPORT CloseInstancePublicPortsRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT CloseInstancePublicPortsRequestPrivate : public LightsailRequestPrivate {
 
 public:
     CloseInstancePublicPortsRequestPrivate(const Lightsail::Action action,

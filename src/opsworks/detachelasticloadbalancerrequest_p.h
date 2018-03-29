@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETACHELASTICLOADBALANCERREQUEST_P_H
 #define QTAWS_DETACHELASTICLOADBALANCERREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "detachelasticloadbalancerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DetachElasticLoadBalancerRequest;
 
-class QTAWS_EXPORT DetachElasticLoadBalancerRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DetachElasticLoadBalancerRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DetachElasticLoadBalancerRequestPrivate(const OpsWorks::Action action,

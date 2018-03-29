@@ -20,7 +20,7 @@
 #ifndef QTAWS_ABORTDOCUMENTVERSIONUPLOADREQUEST_P_H
 #define QTAWS_ABORTDOCUMENTVERSIONUPLOADREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "abortdocumentversionuploadrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class AbortDocumentVersionUploadRequest;
 
-class QTAWS_EXPORT AbortDocumentVersionUploadRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT AbortDocumentVersionUploadRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     AbortDocumentVersionUploadRequestPrivate(const WorkDocs::Action action,

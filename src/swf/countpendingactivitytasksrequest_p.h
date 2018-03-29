@@ -20,7 +20,7 @@
 #ifndef QTAWS_COUNTPENDINGACTIVITYTASKSREQUEST_P_H
 #define QTAWS_COUNTPENDINGACTIVITYTASKSREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "countpendingactivitytasksrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class CountPendingActivityTasksRequest;
 
-class QTAWS_EXPORT CountPendingActivityTasksRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT CountPendingActivityTasksRequestPrivate : public SWFRequestPrivate {
 
 public:
     CountPendingActivityTasksRequestPrivate(const SWF::Action action,

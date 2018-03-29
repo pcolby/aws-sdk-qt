@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPTASKREQUEST_P_H
 #define QTAWS_STOPTASKREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "stoptaskrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class StopTaskRequest;
 
-class QTAWS_EXPORT StopTaskRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT StopTaskRequestPrivate : public ECSRequestPrivate {
 
 public:
     StopTaskRequestPrivate(const ECS::Action action,

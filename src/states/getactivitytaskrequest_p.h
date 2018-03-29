@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETACTIVITYTASKREQUEST_P_H
 #define QTAWS_GETACTIVITYTASKREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "getactivitytaskrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class GetActivityTaskRequest;
 
-class QTAWS_EXPORT GetActivityTaskRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT GetActivityTaskRequestPrivate : public SFNRequestPrivate {
 
 public:
     GetActivityTaskRequestPrivate(const SFN::Action action,

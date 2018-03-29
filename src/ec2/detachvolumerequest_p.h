@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETACHVOLUMEREQUEST_P_H
 #define QTAWS_DETACHVOLUMEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "detachvolumerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DetachVolumeRequest;
 
-class QTAWS_EXPORT DetachVolumeRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DetachVolumeRequestPrivate : public EC2RequestPrivate {
 
 public:
     DetachVolumeRequestPrivate(const EC2::Action action,

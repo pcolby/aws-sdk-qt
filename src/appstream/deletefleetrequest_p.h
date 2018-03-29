@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEFLEETREQUEST_P_H
 #define QTAWS_DELETEFLEETREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "deletefleetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DeleteFleetRequest;
 
-class QTAWS_EXPORT DeleteFleetRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT DeleteFleetRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     DeleteFleetRequestPrivate(const AppStream::Action action,

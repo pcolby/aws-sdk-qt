@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTRESOURCEDATASYNCREQUEST_P_H
 #define QTAWS_LISTRESOURCEDATASYNCREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "listresourcedatasyncrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class ListResourceDataSyncRequest;
 
-class QTAWS_EXPORT ListResourceDataSyncRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT ListResourceDataSyncRequestPrivate : public SSMRequestPrivate {
 
 public:
     ListResourceDataSyncRequestPrivate(const SSM::Action action,

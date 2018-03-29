@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETUSERMFAPREFERENCEREQUEST_P_H
 #define QTAWS_SETUSERMFAPREFERENCEREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "setusermfapreferencerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class SetUserMFAPreferenceRequest;
 
-class QTAWS_EXPORT SetUserMFAPreferenceRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT SetUserMFAPreferenceRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     SetUserMFAPreferenceRequestPrivate(const CognitoIdentityProvider::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYDBCLUSTERPARAMETERGROUPREQUEST_P_H
 #define QTAWS_MODIFYDBCLUSTERPARAMETERGROUPREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "modifydbclusterparametergrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class ModifyDBClusterParameterGroupRequest;
 
-class QTAWS_EXPORT ModifyDBClusterParameterGroupRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT ModifyDBClusterParameterGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
     ModifyDBClusterParameterGroupRequestPrivate(const RDS::Action action,

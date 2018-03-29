@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEACCOUNTPASSWORDPOLICYREQUEST_P_H
 #define QTAWS_UPDATEACCOUNTPASSWORDPOLICYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "updateaccountpasswordpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class UpdateAccountPasswordPolicyRequest;
 
-class QTAWS_EXPORT UpdateAccountPasswordPolicyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT UpdateAccountPasswordPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
     UpdateAccountPasswordPolicyRequestPrivate(const IAM::Action action,

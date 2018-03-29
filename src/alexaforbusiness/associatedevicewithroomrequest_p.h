@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSOCIATEDEVICEWITHROOMREQUEST_P_H
 #define QTAWS_ASSOCIATEDEVICEWITHROOMREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "associatedevicewithroomrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class AssociateDeviceWithRoomRequest;
 
-class QTAWS_EXPORT AssociateDeviceWithRoomRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT AssociateDeviceWithRoomRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     AssociateDeviceWithRoomRequestPrivate(const AlexaForBusiness::Action action,

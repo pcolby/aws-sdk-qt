@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEUSERREQUEST_P_H
 #define QTAWS_CREATEUSERREQUEST_P_H
 
-#include "mq_p.h"
+#include "mqrequest_p.h"
 #include "createuserrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MQ {
 
 class CreateUserRequest;
 
-class QTAWS_EXPORT CreateUserRequestPrivate : public MQPrivate {
+class QTAWS_EXPORT CreateUserRequestPrivate : public MQRequestPrivate {
 
 public:
     CreateUserRequestPrivate(const MQ::Action action,

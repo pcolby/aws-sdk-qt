@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEGITHUBACCOUNTTOKENREQUEST_P_H
 #define QTAWS_DELETEGITHUBACCOUNTTOKENREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "deletegithubaccounttokenrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class DeleteGitHubAccountTokenRequest;
 
-class QTAWS_EXPORT DeleteGitHubAccountTokenRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT DeleteGitHubAccountTokenRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     DeleteGitHubAccountTokenRequestPrivate(const CodeDeploy::Action action,

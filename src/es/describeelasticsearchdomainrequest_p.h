@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEELASTICSEARCHDOMAINREQUEST_P_H
 #define QTAWS_DESCRIBEELASTICSEARCHDOMAINREQUEST_P_H
 
-#include "elasticsearchservice_p.h"
+#include "elasticsearchservicerequest_p.h"
 #include "describeelasticsearchdomainrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class DescribeElasticsearchDomainRequest;
 
-class QTAWS_EXPORT DescribeElasticsearchDomainRequestPrivate : public ElasticsearchServicePrivate {
+class QTAWS_EXPORT DescribeElasticsearchDomainRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     DescribeElasticsearchDomainRequestPrivate(const ElasticsearchService::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTFUNCTIONSREQUEST_P_H
 #define QTAWS_LISTFUNCTIONSREQUEST_P_H
 
-#include "lambda_p.h"
+#include "lambdarequest_p.h"
 #include "listfunctionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lambda {
 
 class ListFunctionsRequest;
 
-class QTAWS_EXPORT ListFunctionsRequestPrivate : public LambdaPrivate {
+class QTAWS_EXPORT ListFunctionsRequestPrivate : public LambdaRequestPrivate {
 
 public:
     ListFunctionsRequestPrivate(const Lambda::Action action,

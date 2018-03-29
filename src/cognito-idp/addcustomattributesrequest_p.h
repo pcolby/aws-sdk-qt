@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDCUSTOMATTRIBUTESREQUEST_P_H
 #define QTAWS_ADDCUSTOMATTRIBUTESREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "addcustomattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AddCustomAttributesRequest;
 
-class QTAWS_EXPORT AddCustomAttributesRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT AddCustomAttributesRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AddCustomAttributesRequestPrivate(const CognitoIdentityProvider::Action action,

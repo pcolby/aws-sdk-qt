@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDTAGSREQUEST_P_H
 #define QTAWS_ADDTAGSREQUEST_P_H
 
-#include "datapipeline_p.h"
+#include "datapipelinerequest_p.h"
 #include "addtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class AddTagsRequest;
 
-class QTAWS_EXPORT AddTagsRequestPrivate : public DataPipelinePrivate {
+class QTAWS_EXPORT AddTagsRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     AddTagsRequestPrivate(const DataPipeline::Action action,

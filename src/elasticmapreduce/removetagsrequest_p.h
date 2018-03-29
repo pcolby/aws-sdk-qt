@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVETAGSREQUEST_P_H
 #define QTAWS_REMOVETAGSREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "removetagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class RemoveTagsRequest;
 
-class QTAWS_EXPORT RemoveTagsRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT RemoveTagsRequestPrivate : public EMRRequestPrivate {
 
 public:
     RemoveTagsRequestPrivate(const EMR::Action action,

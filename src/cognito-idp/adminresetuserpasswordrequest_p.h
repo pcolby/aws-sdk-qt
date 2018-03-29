@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADMINRESETUSERPASSWORDREQUEST_P_H
 #define QTAWS_ADMINRESETUSERPASSWORDREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "adminresetuserpasswordrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminResetUserPasswordRequest;
 
-class QTAWS_EXPORT AdminResetUserPasswordRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT AdminResetUserPasswordRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AdminResetUserPasswordRequestPrivate(const CognitoIdentityProvider::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTALLOWEDNODETYPEMODIFICATIONSREQUEST_P_H
 #define QTAWS_LISTALLOWEDNODETYPEMODIFICATIONSREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "listallowednodetypemodificationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class ListAllowedNodeTypeModificationsRequest;
 
-class QTAWS_EXPORT ListAllowedNodeTypeModificationsRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT ListAllowedNodeTypeModificationsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     ListAllowedNodeTypeModificationsRequestPrivate(const ElastiCache::Action action,

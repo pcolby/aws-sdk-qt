@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEREGISTERINSTANCEREQUEST_P_H
 #define QTAWS_DEREGISTERINSTANCEREQUEST_P_H
 
-#include "servicediscovery_p.h"
+#include "servicediscoveryrequest_p.h"
 #include "deregisterinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class DeregisterInstanceRequest;
 
-class QTAWS_EXPORT DeregisterInstanceRequestPrivate : public ServiceDiscoveryPrivate {
+class QTAWS_EXPORT DeregisterInstanceRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     DeregisterInstanceRequestPrivate(const ServiceDiscovery::Action action,

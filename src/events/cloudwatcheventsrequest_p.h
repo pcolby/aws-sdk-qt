@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDWATCHEVENTSREQUEST_P_H
 #define QTAWS_CLOUDWATCHEVENTSREQUEST_P_H
 
-#include "cloudwatchevents_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "cloudwatcheventsrequest.h"
 
 namespace QtAws {

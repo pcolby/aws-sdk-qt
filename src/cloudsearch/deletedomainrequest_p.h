@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDOMAINREQUEST_P_H
 #define QTAWS_DELETEDOMAINREQUEST_P_H
 
-#include "cloudsearch_p.h"
+#include "cloudsearchrequest_p.h"
 #include "deletedomainrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DeleteDomainRequest;
 
-class QTAWS_EXPORT DeleteDomainRequestPrivate : public CloudSearchPrivate {
+class QTAWS_EXPORT DeleteDomainRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     DeleteDomainRequestPrivate(const CloudSearch::Action action,

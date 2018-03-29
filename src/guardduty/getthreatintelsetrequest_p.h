@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTHREATINTELSETREQUEST_P_H
 #define QTAWS_GETTHREATINTELSETREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "getthreatintelsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class GetThreatIntelSetRequest;
 
-class QTAWS_EXPORT GetThreatIntelSetRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT GetThreatIntelSetRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     GetThreatIntelSetRequestPrivate(const GuardDuty::Action action,

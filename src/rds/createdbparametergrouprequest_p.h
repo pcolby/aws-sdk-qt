@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDBPARAMETERGROUPREQUEST_P_H
 #define QTAWS_CREATEDBPARAMETERGROUPREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "createdbparametergrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class CreateDBParameterGroupRequest;
 
-class QTAWS_EXPORT CreateDBParameterGroupRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT CreateDBParameterGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
     CreateDBParameterGroupRequestPrivate(const RDS::Action action,

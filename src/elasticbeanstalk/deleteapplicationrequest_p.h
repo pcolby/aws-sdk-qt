@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEAPPLICATIONREQUEST_P_H
 #define QTAWS_DELETEAPPLICATIONREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "deleteapplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class DeleteApplicationRequest;
 
-class QTAWS_EXPORT DeleteApplicationRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT DeleteApplicationRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     DeleteApplicationRequestPrivate(const ElasticBeanstalk::Action action,

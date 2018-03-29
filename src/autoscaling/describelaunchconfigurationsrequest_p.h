@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBELAUNCHCONFIGURATIONSREQUEST_P_H
 #define QTAWS_DESCRIBELAUNCHCONFIGURATIONSREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "describelaunchconfigurationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DescribeLaunchConfigurationsRequest;
 
-class QTAWS_EXPORT DescribeLaunchConfigurationsRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT DescribeLaunchConfigurationsRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DescribeLaunchConfigurationsRequestPrivate(const AutoScaling::Action action,

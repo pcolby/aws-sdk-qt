@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHDELETEBUILDSREQUEST_P_H
 #define QTAWS_BATCHDELETEBUILDSREQUEST_P_H
 
-#include "codebuild_p.h"
+#include "codebuildrequest_p.h"
 #include "batchdeletebuildsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class BatchDeleteBuildsRequest;
 
-class QTAWS_EXPORT BatchDeleteBuildsRequestPrivate : public CodeBuildPrivate {
+class QTAWS_EXPORT BatchDeleteBuildsRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     BatchDeleteBuildsRequestPrivate(const CodeBuild::Action action,

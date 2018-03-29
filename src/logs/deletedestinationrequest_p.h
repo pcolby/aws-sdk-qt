@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDESTINATIONREQUEST_P_H
 #define QTAWS_DELETEDESTINATIONREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "deletedestinationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DeleteDestinationRequest;
 
-class QTAWS_EXPORT DeleteDestinationRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT DeleteDestinationRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DeleteDestinationRequestPrivate(const CloudWatchLogs::Action action,

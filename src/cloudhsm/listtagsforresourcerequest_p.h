@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 
-#include "cloudhsm_p.h"
+#include "cloudhsmrequest_p.h"
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public CloudHSMPrivate {
+class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const CloudHSM::Action action,

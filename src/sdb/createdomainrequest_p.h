@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDOMAINREQUEST_P_H
 #define QTAWS_CREATEDOMAINREQUEST_P_H
 
-#include "simpledb_p.h"
+#include "simpledbrequest_p.h"
 #include "createdomainrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SimpleDB {
 
 class CreateDomainRequest;
 
-class QTAWS_EXPORT CreateDomainRequestPrivate : public SimpleDBPrivate {
+class QTAWS_EXPORT CreateDomainRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
     CreateDomainRequestPrivate(const SimpleDB::Action action,

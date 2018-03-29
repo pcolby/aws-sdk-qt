@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEENGINEDEFAULTPARAMETERSREQUEST_P_H
 #define QTAWS_DESCRIBEENGINEDEFAULTPARAMETERSREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describeenginedefaultparametersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeEngineDefaultParametersRequest;
 
-class QTAWS_EXPORT DescribeEngineDefaultParametersRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeEngineDefaultParametersRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeEngineDefaultParametersRequestPrivate(const RDS::Action action,

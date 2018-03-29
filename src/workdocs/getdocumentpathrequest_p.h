@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDOCUMENTPATHREQUEST_P_H
 #define QTAWS_GETDOCUMENTPATHREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "getdocumentpathrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class GetDocumentPathRequest;
 
-class QTAWS_EXPORT GetDocumentPathRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT GetDocumentPathRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     GetDocumentPathRequestPrivate(const WorkDocs::Action action,

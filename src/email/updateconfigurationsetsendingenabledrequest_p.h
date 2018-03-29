@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETSENDINGENABLEDREQUEST_P_H
 #define QTAWS_UPDATECONFIGURATIONSETSENDINGENABLEDREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "updateconfigurationsetsendingenabledrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateConfigurationSetSendingEnabledRequest;
 
-class QTAWS_EXPORT UpdateConfigurationSetSendingEnabledRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT UpdateConfigurationSetSendingEnabledRequestPrivate : public SESRequestPrivate {
 
 public:
     UpdateConfigurationSetSendingEnabledRequestPrivate(const SES::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETQUERYRESULTSREQUEST_P_H
 #define QTAWS_GETQUERYRESULTSREQUEST_P_H
 
-#include "athena_p.h"
+#include "athenarequest_p.h"
 #include "getqueryresultsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Athena {
 
 class GetQueryResultsRequest;
 
-class QTAWS_EXPORT GetQueryResultsRequestPrivate : public AthenaPrivate {
+class QTAWS_EXPORT GetQueryResultsRequestPrivate : public AthenaRequestPrivate {
 
 public:
     GetQueryResultsRequestPrivate(const Athena::Action action,

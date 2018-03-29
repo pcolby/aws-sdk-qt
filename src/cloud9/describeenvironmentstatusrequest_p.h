@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBEENVIRONMENTSTATUSREQUEST_P_H
 
-#include "cloud9_p.h"
+#include "cloud9request_p.h"
 #include "describeenvironmentstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class DescribeEnvironmentStatusRequest;
 
-class QTAWS_EXPORT DescribeEnvironmentStatusRequestPrivate : public Cloud9Private {
+class QTAWS_EXPORT DescribeEnvironmentStatusRequestPrivate : public Cloud9RequestPrivate {
 
 public:
     DescribeEnvironmentStatusRequestPrivate(const Cloud9::Action action,

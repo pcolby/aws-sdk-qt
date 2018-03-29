@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTACTIONTYPESREQUEST_P_H
 #define QTAWS_LISTACTIONTYPESREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "listactiontypesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class ListActionTypesRequest;
 
-class QTAWS_EXPORT ListActionTypesRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT ListActionTypesRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     ListActionTypesRequestPrivate(const CodePipeline::Action action,

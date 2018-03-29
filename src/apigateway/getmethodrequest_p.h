@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETMETHODREQUEST_P_H
 #define QTAWS_GETMETHODREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "getmethodrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetMethodRequest;
 
-class QTAWS_EXPORT GetMethodRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetMethodRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetMethodRequestPrivate(const APIGateway::Action action,

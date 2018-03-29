@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEAVAILABILITYOPTIONSREQUEST_P_H
 #define QTAWS_UPDATEAVAILABILITYOPTIONSREQUEST_P_H
 
-#include "cloudsearch_p.h"
+#include "cloudsearchrequest_p.h"
 #include "updateavailabilityoptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class UpdateAvailabilityOptionsRequest;
 
-class QTAWS_EXPORT UpdateAvailabilityOptionsRequestPrivate : public CloudSearchPrivate {
+class QTAWS_EXPORT UpdateAvailabilityOptionsRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     UpdateAvailabilityOptionsRequestPrivate(const CloudSearch::Action action,

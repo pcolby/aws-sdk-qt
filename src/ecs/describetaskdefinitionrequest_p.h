@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETASKDEFINITIONREQUEST_P_H
 #define QTAWS_DESCRIBETASKDEFINITIONREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "describetaskdefinitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class DescribeTaskDefinitionRequest;
 
-class QTAWS_EXPORT DescribeTaskDefinitionRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT DescribeTaskDefinitionRequestPrivate : public ECSRequestPrivate {
 
 public:
     DescribeTaskDefinitionRequestPrivate(const ECS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEJOBEXECUTIONREQUEST_P_H
 #define QTAWS_DESCRIBEJOBEXECUTIONREQUEST_P_H
 
-#include "iotjobsdataplane_p.h"
+#include "iotjobsdataplanerequest_p.h"
 #include "describejobexecutionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoTJobsDataPlane {
 
 class DescribeJobExecutionRequest;
 
-class QTAWS_EXPORT DescribeJobExecutionRequestPrivate : public IoTJobsDataPlanePrivate {
+class QTAWS_EXPORT DescribeJobExecutionRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
 
 public:
     DescribeJobExecutionRequestPrivate(const IoTJobsDataPlane::Action action,

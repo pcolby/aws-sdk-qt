@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEBANDWIDTHRATELIMITREQUEST_P_H
 #define QTAWS_DESCRIBEBANDWIDTHRATELIMITREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "describebandwidthratelimitrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeBandwidthRateLimitRequest;
 
-class QTAWS_EXPORT DescribeBandwidthRateLimitRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT DescribeBandwidthRateLimitRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DescribeBandwidthRateLimitRequestPrivate(const StorageGateway::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDTRAILREQUEST_P_H
 #define QTAWS_CLOUDTRAILREQUEST_P_H
 
-#include "cloudtrail_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "cloudtrailrequest.h"
 
 namespace QtAws {

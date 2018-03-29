@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHWRITEREQUEST_P_H
 #define QTAWS_BATCHWRITEREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "batchwriterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class BatchWriteRequest;
 
-class QTAWS_EXPORT BatchWriteRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT BatchWriteRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     BatchWriteRequestPrivate(const CloudDirectory::Action action,

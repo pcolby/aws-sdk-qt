@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEWEBHOOKREQUEST_P_H
 #define QTAWS_CREATEWEBHOOKREQUEST_P_H
 
-#include "codebuild_p.h"
+#include "codebuildrequest_p.h"
 #include "createwebhookrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class CreateWebhookRequest;
 
-class QTAWS_EXPORT CreateWebhookRequestPrivate : public CodeBuildPrivate {
+class QTAWS_EXPORT CreateWebhookRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     CreateWebhookRequestPrivate(const CodeBuild::Action action,

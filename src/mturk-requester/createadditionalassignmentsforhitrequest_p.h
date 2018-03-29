@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEADDITIONALASSIGNMENTSFORHITREQUEST_P_H
 #define QTAWS_CREATEADDITIONALASSIGNMENTSFORHITREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "createadditionalassignmentsforhitrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class CreateAdditionalAssignmentsForHITRequest;
 
-class QTAWS_EXPORT CreateAdditionalAssignmentsForHITRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT CreateAdditionalAssignmentsForHITRequestPrivate : public MTurkRequestPrivate {
 
 public:
     CreateAdditionalAssignmentsForHITRequestPrivate(const MTurk::Action action,

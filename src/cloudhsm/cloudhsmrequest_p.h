@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDHSMREQUEST_P_H
 #define QTAWS_CLOUDHSMREQUEST_P_H
 
-#include "cloudhsm_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "cloudhsmrequest.h"
 
 namespace QtAws {

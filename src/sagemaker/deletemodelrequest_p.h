@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEMODELREQUEST_P_H
 #define QTAWS_DELETEMODELREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "deletemodelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeleteModelRequest;
 
-class QTAWS_EXPORT DeleteModelRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT DeleteModelRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DeleteModelRequestPrivate(const SageMaker::Action action,

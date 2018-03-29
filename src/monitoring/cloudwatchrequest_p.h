@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDWATCHREQUEST_P_H
 #define QTAWS_CLOUDWATCHREQUEST_P_H
 
-#include "cloudwatch_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "cloudwatchrequest.h"
 
 namespace QtAws {

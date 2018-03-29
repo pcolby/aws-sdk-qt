@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATTACHOBJECTREQUEST_P_H
 #define QTAWS_ATTACHOBJECTREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "attachobjectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class AttachObjectRequest;
 
-class QTAWS_EXPORT AttachObjectRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT AttachObjectRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     AttachObjectRequestPrivate(const CloudDirectory::Action action,

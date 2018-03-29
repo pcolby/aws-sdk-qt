@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESPONDACTIVITYTASKCANCELEDREQUEST_P_H
 #define QTAWS_RESPONDACTIVITYTASKCANCELEDREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "respondactivitytaskcanceledrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class RespondActivityTaskCanceledRequest;
 
-class QTAWS_EXPORT RespondActivityTaskCanceledRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT RespondActivityTaskCanceledRequestPrivate : public SWFRequestPrivate {
 
 public:
     RespondActivityTaskCanceledRequestPrivate(const SWF::Action action,

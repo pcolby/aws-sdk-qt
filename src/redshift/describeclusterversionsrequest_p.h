@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECLUSTERVERSIONSREQUEST_P_H
 #define QTAWS_DESCRIBECLUSTERVERSIONSREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "describeclusterversionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeClusterVersionsRequest;
 
-class QTAWS_EXPORT DescribeClusterVersionsRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DescribeClusterVersionsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DescribeClusterVersionsRequestPrivate(const Redshift::Action action,

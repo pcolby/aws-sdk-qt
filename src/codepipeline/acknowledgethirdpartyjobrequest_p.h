@@ -20,7 +20,7 @@
 #ifndef QTAWS_ACKNOWLEDGETHIRDPARTYJOBREQUEST_P_H
 #define QTAWS_ACKNOWLEDGETHIRDPARTYJOBREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "acknowledgethirdpartyjobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class AcknowledgeThirdPartyJobRequest;
 
-class QTAWS_EXPORT AcknowledgeThirdPartyJobRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT AcknowledgeThirdPartyJobRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     AcknowledgeThirdPartyJobRequestPrivate(const CodePipeline::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTHANDSHAKESFORACCOUNTREQUEST_P_H
 #define QTAWS_LISTHANDSHAKESFORACCOUNTREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "listhandshakesforaccountrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class ListHandshakesForAccountRequest;
 
-class QTAWS_EXPORT ListHandshakesForAccountRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT ListHandshakesForAccountRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     ListHandshakesForAccountRequestPrivate(const Organizations::Action action,

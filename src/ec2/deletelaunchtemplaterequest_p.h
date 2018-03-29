@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETELAUNCHTEMPLATEREQUEST_P_H
 #define QTAWS_DELETELAUNCHTEMPLATEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "deletelaunchtemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteLaunchTemplateRequest;
 
-class QTAWS_EXPORT DeleteLaunchTemplateRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DeleteLaunchTemplateRequestPrivate : public EC2RequestPrivate {
 
 public:
     DeleteLaunchTemplateRequestPrivate(const EC2::Action action,

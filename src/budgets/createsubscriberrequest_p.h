@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESUBSCRIBERREQUEST_P_H
 #define QTAWS_CREATESUBSCRIBERREQUEST_P_H
 
-#include "budgets_p.h"
+#include "budgetsrequest_p.h"
 #include "createsubscriberrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Budgets {
 
 class CreateSubscriberRequest;
 
-class QTAWS_EXPORT CreateSubscriberRequestPrivate : public BudgetsPrivate {
+class QTAWS_EXPORT CreateSubscriberRequestPrivate : public BudgetsRequestPrivate {
 
 public:
     CreateSubscriberRequestPrivate(const Budgets::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECONNECTIONSONINTERCONNECTREQUEST_P_H
 #define QTAWS_DESCRIBECONNECTIONSONINTERCONNECTREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "describeconnectionsoninterconnectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class DescribeConnectionsOnInterconnectRequest;
 
-class QTAWS_EXPORT DescribeConnectionsOnInterconnectRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT DescribeConnectionsOnInterconnectRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     DescribeConnectionsOnInterconnectRequestPrivate(const DirectConnect::Action action,

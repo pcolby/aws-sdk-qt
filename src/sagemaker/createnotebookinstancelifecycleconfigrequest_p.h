@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATENOTEBOOKINSTANCELIFECYCLECONFIGREQUEST_P_H
 #define QTAWS_CREATENOTEBOOKINSTANCELIFECYCLECONFIGREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "createnotebookinstancelifecycleconfigrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreateNotebookInstanceLifecycleConfigRequest;
 
-class QTAWS_EXPORT CreateNotebookInstanceLifecycleConfigRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT CreateNotebookInstanceLifecycleConfigRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     CreateNotebookInstanceLifecycleConfigRequestPrivate(const SageMaker::Action action,

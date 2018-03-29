@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEFINDINGSREQUEST_P_H
 #define QTAWS_DESCRIBEFINDINGSREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "describefindingsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class DescribeFindingsRequest;
 
-class QTAWS_EXPORT DescribeFindingsRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT DescribeFindingsRequestPrivate : public InspectorRequestPrivate {
 
 public:
     DescribeFindingsRequestPrivate(const Inspector::Action action,

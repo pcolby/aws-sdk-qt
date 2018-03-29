@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECOLLECTIONREQUEST_P_H
 #define QTAWS_CREATECOLLECTIONREQUEST_P_H
 
-#include "rekognition_p.h"
+#include "rekognitionrequest_p.h"
 #include "createcollectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class CreateCollectionRequest;
 
-class QTAWS_EXPORT CreateCollectionRequestPrivate : public RekognitionPrivate {
+class QTAWS_EXPORT CreateCollectionRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     CreateCollectionRequestPrivate(const Rekognition::Action action,

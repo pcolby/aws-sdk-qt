@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDIRECTORYCONFIGREQUEST_P_H
 #define QTAWS_DELETEDIRECTORYCONFIGREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "deletedirectoryconfigrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DeleteDirectoryConfigRequest;
 
-class QTAWS_EXPORT DeleteDirectoryConfigRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT DeleteDirectoryConfigRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     DeleteDirectoryConfigRequestPrivate(const AppStream::Action action,

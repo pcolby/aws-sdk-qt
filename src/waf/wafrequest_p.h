@@ -20,7 +20,7 @@
 #ifndef QTAWS_WAFREQUEST_P_H
 #define QTAWS_WAFREQUEST_P_H
 
-#include "waf_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "wafrequest.h"
 
 namespace QtAws {

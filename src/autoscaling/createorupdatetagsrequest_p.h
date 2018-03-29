@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEORUPDATETAGSREQUEST_P_H
 #define QTAWS_CREATEORUPDATETAGSREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "createorupdatetagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class CreateOrUpdateTagsRequest;
 
-class QTAWS_EXPORT CreateOrUpdateTagsRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT CreateOrUpdateTagsRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     CreateOrUpdateTagsRequestPrivate(const AutoScaling::Action action,

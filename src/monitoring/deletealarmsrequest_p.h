@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEALARMSREQUEST_P_H
 #define QTAWS_DELETEALARMSREQUEST_P_H
 
-#include "cloudwatch_p.h"
+#include "cloudwatchrequest_p.h"
 #include "deletealarmsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class DeleteAlarmsRequest;
 
-class QTAWS_EXPORT DeleteAlarmsRequestPrivate : public CloudWatchPrivate {
+class QTAWS_EXPORT DeleteAlarmsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     DeleteAlarmsRequestPrivate(const CloudWatch::Action action,

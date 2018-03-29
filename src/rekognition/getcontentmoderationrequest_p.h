@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCONTENTMODERATIONREQUEST_P_H
 #define QTAWS_GETCONTENTMODERATIONREQUEST_P_H
 
-#include "rekognition_p.h"
+#include "rekognitionrequest_p.h"
 #include "getcontentmoderationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class GetContentModerationRequest;
 
-class QTAWS_EXPORT GetContentModerationRequestPrivate : public RekognitionPrivate {
+class QTAWS_EXPORT GetContentModerationRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     GetContentModerationRequestPrivate(const Rekognition::Action action,

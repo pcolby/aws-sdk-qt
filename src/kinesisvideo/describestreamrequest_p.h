@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESTREAMREQUEST_P_H
 #define QTAWS_DESCRIBESTREAMREQUEST_P_H
 
-#include "kinesisvideo_p.h"
+#include "kinesisvideorequest_p.h"
 #include "describestreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KinesisVideo {
 
 class DescribeStreamRequest;
 
-class QTAWS_EXPORT DescribeStreamRequestPrivate : public KinesisVideoPrivate {
+class QTAWS_EXPORT DescribeStreamRequestPrivate : public KinesisVideoRequestPrivate {
 
 public:
     DescribeStreamRequestPrivate(const KinesisVideo::Action action,

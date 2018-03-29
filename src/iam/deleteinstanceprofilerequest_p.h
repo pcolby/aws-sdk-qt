@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEINSTANCEPROFILEREQUEST_P_H
 #define QTAWS_DELETEINSTANCEPROFILEREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "deleteinstanceprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteInstanceProfileRequest;
 
-class QTAWS_EXPORT DeleteInstanceProfileRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT DeleteInstanceProfileRequestPrivate : public IAMRequestPrivate {
 
 public:
     DeleteInstanceProfileRequestPrivate(const IAM::Action action,

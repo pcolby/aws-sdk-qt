@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETACHFROMINDEXREQUEST_P_H
 #define QTAWS_DETACHFROMINDEXREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "detachfromindexrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class DetachFromIndexRequest;
 
-class QTAWS_EXPORT DetachFromIndexRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT DetachFromIndexRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     DetachFromIndexRequestPrivate(const CloudDirectory::Action action,

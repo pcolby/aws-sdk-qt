@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETAPPLICATIONSETTINGSREQUEST_P_H
 #define QTAWS_GETAPPLICATIONSETTINGSREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "getapplicationsettingsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetApplicationSettingsRequest;
 
-class QTAWS_EXPORT GetApplicationSettingsRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT GetApplicationSettingsRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetApplicationSettingsRequestPrivate(const Pinpoint::Action action,

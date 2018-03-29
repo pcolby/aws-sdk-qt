@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESKILLGROUPREQUEST_P_H
 #define QTAWS_UPDATESKILLGROUPREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "updateskillgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class UpdateSkillGroupRequest;
 
-class QTAWS_EXPORT UpdateSkillGroupRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT UpdateSkillGroupRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     UpdateSkillGroupRequestPrivate(const AlexaForBusiness::Action action,

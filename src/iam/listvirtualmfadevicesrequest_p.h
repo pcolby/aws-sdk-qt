@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTVIRTUALMFADEVICESREQUEST_P_H
 #define QTAWS_LISTVIRTUALMFADEVICESREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "listvirtualmfadevicesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class ListVirtualMFADevicesRequest;
 
-class QTAWS_EXPORT ListVirtualMFADevicesRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT ListVirtualMFADevicesRequestPrivate : public IAMRequestPrivate {
 
 public:
     ListVirtualMFADevicesRequestPrivate(const IAM::Action action,

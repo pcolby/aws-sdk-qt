@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTOBJECTPARENTPATHSREQUEST_P_H
 #define QTAWS_LISTOBJECTPARENTPATHSREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "listobjectparentpathsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class ListObjectParentPathsRequest;
 
-class QTAWS_EXPORT ListObjectParentPathsRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT ListObjectParentPathsRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     ListObjectParentPathsRequestPrivate(const CloudDirectory::Action action,

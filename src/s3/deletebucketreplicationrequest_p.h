@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBUCKETREPLICATIONREQUEST_P_H
 #define QTAWS_DELETEBUCKETREPLICATIONREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "deletebucketreplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class DeleteBucketReplicationRequest;
 
-class QTAWS_EXPORT DeleteBucketReplicationRequestPrivate : public S3Private {
+class QTAWS_EXPORT DeleteBucketReplicationRequestPrivate : public S3RequestPrivate {
 
 public:
     DeleteBucketReplicationRequestPrivate(const S3::Action action,

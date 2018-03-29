@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECLUSTERSECURITYGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBECLUSTERSECURITYGROUPSREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "describeclustersecuritygroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeClusterSecurityGroupsRequest;
 
-class QTAWS_EXPORT DescribeClusterSecurityGroupsRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DescribeClusterSecurityGroupsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DescribeClusterSecurityGroupsRequestPrivate(const Redshift::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEJOBQUEUEREQUEST_P_H
 #define QTAWS_UPDATEJOBQUEUEREQUEST_P_H
 
-#include "batch_p.h"
+#include "batchrequest_p.h"
 #include "updatejobqueuerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Batch {
 
 class UpdateJobQueueRequest;
 
-class QTAWS_EXPORT UpdateJobQueueRequestPrivate : public BatchPrivate {
+class QTAWS_EXPORT UpdateJobQueueRequestPrivate : public BatchRequestPrivate {
 
 public:
     UpdateJobQueueRequestPrivate(const Batch::Action action,

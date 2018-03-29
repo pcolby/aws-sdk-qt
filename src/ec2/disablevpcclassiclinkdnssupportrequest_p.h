@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISABLEVPCCLASSICLINKDNSSUPPORTREQUEST_P_H
 #define QTAWS_DISABLEVPCCLASSICLINKDNSSUPPORTREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "disablevpcclassiclinkdnssupportrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DisableVpcClassicLinkDnsSupportRequest;
 
-class QTAWS_EXPORT DisableVpcClassicLinkDnsSupportRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DisableVpcClassicLinkDnsSupportRequestPrivate : public EC2RequestPrivate {
 
 public:
     DisableVpcClassicLinkDnsSupportRequestPrivate(const EC2::Action action,

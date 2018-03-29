@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATETAPEWITHBARCODEREQUEST_P_H
 #define QTAWS_CREATETAPEWITHBARCODEREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "createtapewithbarcoderequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class CreateTapeWithBarcodeRequest;
 
-class QTAWS_EXPORT CreateTapeWithBarcodeRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT CreateTapeWithBarcodeRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     CreateTapeWithBarcodeRequestPrivate(const StorageGateway::Action action,

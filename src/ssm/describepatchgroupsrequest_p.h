@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEPATCHGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEPATCHGROUPSREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "describepatchgroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribePatchGroupsRequest;
 
-class QTAWS_EXPORT DescribePatchGroupsRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DescribePatchGroupsRequestPrivate : public SSMRequestPrivate {
 
 public:
     DescribePatchGroupsRequestPrivate(const SSM::Action action,

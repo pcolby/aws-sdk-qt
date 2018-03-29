@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEJOBDEFINITIONSREQUEST_P_H
 #define QTAWS_DESCRIBEJOBDEFINITIONSREQUEST_P_H
 
-#include "batch_p.h"
+#include "batchrequest_p.h"
 #include "describejobdefinitionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Batch {
 
 class DescribeJobDefinitionsRequest;
 
-class QTAWS_EXPORT DescribeJobDefinitionsRequestPrivate : public BatchPrivate {
+class QTAWS_EXPORT DescribeJobDefinitionsRequestPrivate : public BatchRequestPrivate {
 
 public:
     DescribeJobDefinitionsRequestPrivate(const Batch::Action action,

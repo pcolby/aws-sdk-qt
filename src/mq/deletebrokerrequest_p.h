@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBROKERREQUEST_P_H
 #define QTAWS_DELETEBROKERREQUEST_P_H
 
-#include "mq_p.h"
+#include "mqrequest_p.h"
 #include "deletebrokerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MQ {
 
 class DeleteBrokerRequest;
 
-class QTAWS_EXPORT DeleteBrokerRequestPrivate : public MQPrivate {
+class QTAWS_EXPORT DeleteBrokerRequestPrivate : public MQRequestPrivate {
 
 public:
     DeleteBrokerRequestPrivate(const MQ::Action action,

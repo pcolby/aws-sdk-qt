@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDTAGSREQUEST_P_H
 #define QTAWS_ADDTAGSREQUEST_P_H
 
-#include "elasticloadbalancing_p.h"
+#include "elasticloadbalancingrequest_p.h"
 #include "addtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class AddTagsRequest;
 
-class QTAWS_EXPORT AddTagsRequestPrivate : public ElasticLoadBalancingPrivate {
+class QTAWS_EXPORT AddTagsRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
     AddTagsRequestPrivate(const ElasticLoadBalancing::Action action,

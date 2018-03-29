@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDASHBOARDREQUEST_P_H
 #define QTAWS_GETDASHBOARDREQUEST_P_H
 
-#include "cloudwatch_p.h"
+#include "cloudwatchrequest_p.h"
 #include "getdashboardrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class GetDashboardRequest;
 
-class QTAWS_EXPORT GetDashboardRequestPrivate : public CloudWatchPrivate {
+class QTAWS_EXPORT GetDashboardRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     GetDashboardRequestPrivate(const CloudWatch::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATELAGREQUEST_P_H
 #define QTAWS_CREATELAGREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "createlagrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class CreateLagRequest;
 
-class QTAWS_EXPORT CreateLagRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT CreateLagRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     CreateLagRequestPrivate(const DirectConnect::Action action,

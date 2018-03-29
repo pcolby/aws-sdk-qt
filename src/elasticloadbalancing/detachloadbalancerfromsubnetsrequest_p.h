@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETACHLOADBALANCERFROMSUBNETSREQUEST_P_H
 #define QTAWS_DETACHLOADBALANCERFROMSUBNETSREQUEST_P_H
 
-#include "elasticloadbalancing_p.h"
+#include "elasticloadbalancingrequest_p.h"
 #include "detachloadbalancerfromsubnetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class DetachLoadBalancerFromSubnetsRequest;
 
-class QTAWS_EXPORT DetachLoadBalancerFromSubnetsRequestPrivate : public ElasticLoadBalancingPrivate {
+class QTAWS_EXPORT DetachLoadBalancerFromSubnetsRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
     DetachLoadBalancerFromSubnetsRequestPrivate(const ElasticLoadBalancing::Action action,

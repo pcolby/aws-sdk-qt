@@ -20,7 +20,7 @@
 #ifndef QTAWS_APPLYSCHEMAREQUEST_P_H
 #define QTAWS_APPLYSCHEMAREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "applyschemarequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class ApplySchemaRequest;
 
-class QTAWS_EXPORT ApplySchemaRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT ApplySchemaRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     ApplySchemaRequestPrivate(const CloudDirectory::Action action,

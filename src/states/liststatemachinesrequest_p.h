@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSTATEMACHINESREQUEST_P_H
 #define QTAWS_LISTSTATEMACHINESREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "liststatemachinesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class ListStateMachinesRequest;
 
-class QTAWS_EXPORT ListStateMachinesRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT ListStateMachinesRequestPrivate : public SFNRequestPrivate {
 
 public:
     ListStateMachinesRequestPrivate(const SFN::Action action,

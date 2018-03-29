@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESTOREDISCSIVOLUMESREQUEST_P_H
 #define QTAWS_DESCRIBESTOREDISCSIVOLUMESREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "describestorediscsivolumesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeStorediSCSIVolumesRequest;
 
-class QTAWS_EXPORT DescribeStorediSCSIVolumesRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT DescribeStorediSCSIVolumesRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DescribeStorediSCSIVolumesRequestPrivate(const StorageGateway::Action action,

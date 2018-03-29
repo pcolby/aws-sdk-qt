@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERTASKWITHMAINTENANCEWINDOWREQUEST_P_H
 #define QTAWS_REGISTERTASKWITHMAINTENANCEWINDOWREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "registertaskwithmaintenancewindowrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class RegisterTaskWithMaintenanceWindowRequest;
 
-class QTAWS_EXPORT RegisterTaskWithMaintenanceWindowRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT RegisterTaskWithMaintenanceWindowRequestPrivate : public SSMRequestPrivate {
 
 public:
     RegisterTaskWithMaintenanceWindowRequestPrivate(const SSM::Action action,

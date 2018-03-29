@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSTREAMSREQUEST_P_H
 #define QTAWS_LISTSTREAMSREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "liststreamsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListStreamsRequest;
 
-class QTAWS_EXPORT ListStreamsRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT ListStreamsRequestPrivate : public IoTRequestPrivate {
 
 public:
     ListStreamsRequestPrivate(const IoT::Action action,

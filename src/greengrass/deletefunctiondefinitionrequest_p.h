@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEFUNCTIONDEFINITIONREQUEST_P_H
 #define QTAWS_DELETEFUNCTIONDEFINITIONREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "deletefunctiondefinitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class DeleteFunctionDefinitionRequest;
 
-class QTAWS_EXPORT DeleteFunctionDefinitionRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT DeleteFunctionDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     DeleteFunctionDefinitionRequestPrivate(const Greengrass::Action action,

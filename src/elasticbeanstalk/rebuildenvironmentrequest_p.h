@@ -20,7 +20,7 @@
 #ifndef QTAWS_REBUILDENVIRONMENTREQUEST_P_H
 #define QTAWS_REBUILDENVIRONMENTREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "rebuildenvironmentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class RebuildEnvironmentRequest;
 
-class QTAWS_EXPORT RebuildEnvironmentRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT RebuildEnvironmentRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     RebuildEnvironmentRequestPrivate(const ElasticBeanstalk::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEHSMCONFIGURATIONREQUEST_P_H
 #define QTAWS_DELETEHSMCONFIGURATIONREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "deletehsmconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DeleteHsmConfigurationRequest;
 
-class QTAWS_EXPORT DeleteHsmConfigurationRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DeleteHsmConfigurationRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DeleteHsmConfigurationRequestPrivate(const Redshift::Action action,

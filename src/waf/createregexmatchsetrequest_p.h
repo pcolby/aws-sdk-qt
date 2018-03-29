@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEREGEXMATCHSETREQUEST_P_H
 #define QTAWS_CREATEREGEXMATCHSETREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "createregexmatchsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class CreateRegexMatchSetRequest;
 
-class QTAWS_EXPORT CreateRegexMatchSetRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT CreateRegexMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
     CreateRegexMatchSetRequestPrivate(const WAF::Action action,

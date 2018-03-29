@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVETHINGFROMTHINGGROUPREQUEST_P_H
 #define QTAWS_REMOVETHINGFROMTHINGGROUPREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "removethingfromthinggrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class RemoveThingFromThingGroupRequest;
 
-class QTAWS_EXPORT RemoveThingFromThingGroupRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT RemoveThingFromThingGroupRequestPrivate : public IoTRequestPrivate {
 
 public:
     RemoveThingFromThingGroupRequestPrivate(const IoT::Action action,

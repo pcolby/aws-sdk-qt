@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESSHPUBLICKEYREQUEST_P_H
 #define QTAWS_UPDATESSHPUBLICKEYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "updatesshpublickeyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class UpdateSSHPublicKeyRequest;
 
-class QTAWS_EXPORT UpdateSSHPublicKeyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT UpdateSSHPublicKeyRequestPrivate : public IAMRequestPrivate {
 
 public:
     UpdateSSHPublicKeyRequestPrivate(const IAM::Action action,

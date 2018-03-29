@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECONNECTIONREQUEST_P_H
 #define QTAWS_UPDATECONNECTIONREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "updateconnectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class UpdateConnectionRequest;
 
-class QTAWS_EXPORT UpdateConnectionRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT UpdateConnectionRequestPrivate : public GlueRequestPrivate {
 
 public:
     UpdateConnectionRequestPrivate(const Glue::Action action,

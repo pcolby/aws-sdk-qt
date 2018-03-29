@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEAUTOSCALINGGROUPREQUEST_P_H
 #define QTAWS_DELETEAUTOSCALINGGROUPREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "deleteautoscalinggrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DeleteAutoScalingGroupRequest;
 
-class QTAWS_EXPORT DeleteAutoScalingGroupRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT DeleteAutoScalingGroupRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DeleteAutoScalingGroupRequestPrivate(const AutoScaling::Action action,

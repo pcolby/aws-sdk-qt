@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETRECORDSREQUEST_P_H
 #define QTAWS_GETRECORDSREQUEST_P_H
 
-#include "dynamodbstreams_p.h"
+#include "dynamodbstreamsrequest_p.h"
 #include "getrecordsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDBStreams {
 
 class GetRecordsRequest;
 
-class QTAWS_EXPORT GetRecordsRequestPrivate : public DynamoDBStreamsPrivate {
+class QTAWS_EXPORT GetRecordsRequestPrivate : public DynamoDBStreamsRequestPrivate {
 
 public:
     GetRecordsRequestPrivate(const DynamoDBStreams::Action action,

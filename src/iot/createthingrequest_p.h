@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATETHINGREQUEST_P_H
 #define QTAWS_CREATETHINGREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "createthingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class CreateThingRequest;
 
-class QTAWS_EXPORT CreateThingRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT CreateThingRequestPrivate : public IoTRequestPrivate {
 
 public:
     CreateThingRequestPrivate(const IoT::Action action,

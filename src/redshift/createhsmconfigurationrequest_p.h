@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEHSMCONFIGURATIONREQUEST_P_H
 #define QTAWS_CREATEHSMCONFIGURATIONREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "createhsmconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class CreateHsmConfigurationRequest;
 
-class QTAWS_EXPORT CreateHsmConfigurationRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT CreateHsmConfigurationRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     CreateHsmConfigurationRequestPrivate(const Redshift::Action action,

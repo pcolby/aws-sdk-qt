@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEREGISTRATIONCODEREQUEST_P_H
 #define QTAWS_DELETEREGISTRATIONCODEREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "deleteregistrationcoderequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeleteRegistrationCodeRequest;
 
-class QTAWS_EXPORT DeleteRegistrationCodeRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT DeleteRegistrationCodeRequestPrivate : public IoTRequestPrivate {
 
 public:
     DeleteRegistrationCodeRequestPrivate(const IoT::Action action,

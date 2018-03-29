@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEDBCLUSTERSREQUEST_P_H
 #define QTAWS_DESCRIBEDBCLUSTERSREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describedbclustersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeDBClustersRequest;
 
-class QTAWS_EXPORT DescribeDBClustersRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeDBClustersRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeDBClustersRequestPrivate(const RDS::Action action,

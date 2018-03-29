@@ -20,7 +20,7 @@
 #ifndef QTAWS_ACCEPTINVITATIONREQUEST_P_H
 #define QTAWS_ACCEPTINVITATIONREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "acceptinvitationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class AcceptInvitationRequest;
 
-class QTAWS_EXPORT AcceptInvitationRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT AcceptInvitationRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     AcceptInvitationRequestPrivate(const GuardDuty::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESTREAMREQUEST_P_H
 #define QTAWS_CREATESTREAMREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "createstreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class CreateStreamRequest;
 
-class QTAWS_EXPORT CreateStreamRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT CreateStreamRequestPrivate : public IoTRequestPrivate {
 
 public:
     CreateStreamRequestPrivate(const IoT::Action action,

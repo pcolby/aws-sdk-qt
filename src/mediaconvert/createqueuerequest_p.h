@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEQUEUEREQUEST_P_H
 #define QTAWS_CREATEQUEUEREQUEST_P_H
 
-#include "mediaconvert_p.h"
+#include "mediaconvertrequest_p.h"
 #include "createqueuerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class CreateQueueRequest;
 
-class QTAWS_EXPORT CreateQueueRequestPrivate : public MediaConvertPrivate {
+class QTAWS_EXPORT CreateQueueRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     CreateQueueRequestPrivate(const MediaConvert::Action action,

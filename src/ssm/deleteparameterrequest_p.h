@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPARAMETERREQUEST_P_H
 #define QTAWS_DELETEPARAMETERREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "deleteparameterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DeleteParameterRequest;
 
-class QTAWS_EXPORT DeleteParameterRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DeleteParameterRequestPrivate : public SSMRequestPrivate {
 
 public:
     DeleteParameterRequestPrivate(const SSM::Action action,

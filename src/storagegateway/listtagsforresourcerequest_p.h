@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_LISTTAGSFORRESOURCEREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "listtagsforresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class ListTagsForResourceRequest;
 
-class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT ListTagsForResourceRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     ListTagsForResourceRequestPrivate(const StorageGateway::Action action,

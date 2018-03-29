@@ -20,7 +20,7 @@
 #ifndef QTAWS_DOMAINMETADATAREQUEST_P_H
 #define QTAWS_DOMAINMETADATAREQUEST_P_H
 
-#include "simpledb_p.h"
+#include "simpledbrequest_p.h"
 #include "domainmetadatarequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SimpleDB {
 
 class DomainMetadataRequest;
 
-class QTAWS_EXPORT DomainMetadataRequestPrivate : public SimpleDBPrivate {
+class QTAWS_EXPORT DomainMetadataRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
     DomainMetadataRequestPrivate(const SimpleDB::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBENOTIFICATIONSUBSCRIPTIONSREQUEST_P_H
 #define QTAWS_DESCRIBENOTIFICATIONSUBSCRIPTIONSREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "describenotificationsubscriptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DescribeNotificationSubscriptionsRequest;
 
-class QTAWS_EXPORT DescribeNotificationSubscriptionsRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT DescribeNotificationSubscriptionsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DescribeNotificationSubscriptionsRequestPrivate(const WorkDocs::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETERUNREQUEST_P_H
 #define QTAWS_DELETERUNREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "deleterunrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class DeleteRunRequest;
 
-class QTAWS_EXPORT DeleteRunRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT DeleteRunRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     DeleteRunRequestPrivate(const DeviceFarm::Action action,

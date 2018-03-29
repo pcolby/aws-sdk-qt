@@ -20,7 +20,7 @@
 #ifndef QTAWS_ENABLEENHANCEDMONITORINGREQUEST_P_H
 #define QTAWS_ENABLEENHANCEDMONITORINGREQUEST_P_H
 
-#include "kinesis_p.h"
+#include "kinesisrequest_p.h"
 #include "enableenhancedmonitoringrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class EnableEnhancedMonitoringRequest;
 
-class QTAWS_EXPORT EnableEnhancedMonitoringRequestPrivate : public KinesisPrivate {
+class QTAWS_EXPORT EnableEnhancedMonitoringRequestPrivate : public KinesisRequestPrivate {
 
 public:
     EnableEnhancedMonitoringRequestPrivate(const Kinesis::Action action,

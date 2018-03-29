@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTCONTAINERSREQUEST_P_H
 #define QTAWS_LISTCONTAINERSREQUEST_P_H
 
-#include "mediastore_p.h"
+#include "mediastorerequest_p.h"
 #include "listcontainersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class ListContainersRequest;
 
-class QTAWS_EXPORT ListContainersRequestPrivate : public MediaStorePrivate {
+class QTAWS_EXPORT ListContainersRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
     ListContainersRequestPrivate(const MediaStore::Action action,

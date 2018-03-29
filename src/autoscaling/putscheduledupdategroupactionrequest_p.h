@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTSCHEDULEDUPDATEGROUPACTIONREQUEST_P_H
 #define QTAWS_PUTSCHEDULEDUPDATEGROUPACTIONREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "putscheduledupdategroupactionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class PutScheduledUpdateGroupActionRequest;
 
-class QTAWS_EXPORT PutScheduledUpdateGroupActionRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT PutScheduledUpdateGroupActionRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     PutScheduledUpdateGroupActionRequestPrivate(const AutoScaling::Action action,

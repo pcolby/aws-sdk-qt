@@ -20,7 +20,7 @@
 #ifndef QTAWS_SIGNALRESOURCEREQUEST_P_H
 #define QTAWS_SIGNALRESOURCEREQUEST_P_H
 
-#include "cloudformation_p.h"
+#include "cloudformationrequest_p.h"
 #include "signalresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class SignalResourceRequest;
 
-class QTAWS_EXPORT SignalResourceRequestPrivate : public CloudFormationPrivate {
+class QTAWS_EXPORT SignalResourceRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     SignalResourceRequestPrivate(const CloudFormation::Action action,

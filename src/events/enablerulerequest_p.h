@@ -20,7 +20,7 @@
 #ifndef QTAWS_ENABLERULEREQUEST_P_H
 #define QTAWS_ENABLERULEREQUEST_P_H
 
-#include "cloudwatchevents_p.h"
+#include "cloudwatcheventsrequest_p.h"
 #include "enablerulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class EnableRuleRequest;
 
-class QTAWS_EXPORT EnableRuleRequestPrivate : public CloudWatchEventsPrivate {
+class QTAWS_EXPORT EnableRuleRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     EnableRuleRequestPrivate(const CloudWatchEvents::Action action,

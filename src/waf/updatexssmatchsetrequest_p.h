@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEXSSMATCHSETREQUEST_P_H
 #define QTAWS_UPDATEXSSMATCHSETREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "updatexssmatchsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class UpdateXssMatchSetRequest;
 
-class QTAWS_EXPORT UpdateXssMatchSetRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT UpdateXssMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
     UpdateXssMatchSetRequestPrivate(const WAF::Action action,

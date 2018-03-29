@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSERVERCERTIFICATESREQUEST_P_H
 #define QTAWS_LISTSERVERCERTIFICATESREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "listservercertificatesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class ListServerCertificatesRequest;
 
-class QTAWS_EXPORT ListServerCertificatesRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT ListServerCertificatesRequestPrivate : public IAMRequestPrivate {
 
 public:
     ListServerCertificatesRequestPrivate(const IAM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEDOMAINCONTACTPRIVACYREQUEST_P_H
 #define QTAWS_UPDATEDOMAINCONTACTPRIVACYREQUEST_P_H
 
-#include "route53domains_p.h"
+#include "route53domainsrequest_p.h"
 #include "updatedomaincontactprivacyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class UpdateDomainContactPrivacyRequest;
 
-class QTAWS_EXPORT UpdateDomainContactPrivacyRequestPrivate : public Route53DomainsPrivate {
+class QTAWS_EXPORT UpdateDomainContactPrivacyRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     UpdateDomainContactPrivacyRequestPrivate(const Route53Domains::Action action,

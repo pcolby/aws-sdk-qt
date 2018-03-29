@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETLIFECYCLEPOLICYREQUEST_P_H
 #define QTAWS_GETLIFECYCLEPOLICYREQUEST_P_H
 
-#include "ecr_p.h"
+#include "ecrrequest_p.h"
 #include "getlifecyclepolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECR {
 
 class GetLifecyclePolicyRequest;
 
-class QTAWS_EXPORT GetLifecyclePolicyRequestPrivate : public ECRPrivate {
+class QTAWS_EXPORT GetLifecyclePolicyRequestPrivate : public ECRRequestPrivate {
 
 public:
     GetLifecyclePolicyRequestPrivate(const ECR::Action action,

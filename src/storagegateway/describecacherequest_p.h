@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECACHEREQUEST_P_H
 #define QTAWS_DESCRIBECACHEREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "describecacherequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DescribeCacheRequest;
 
-class QTAWS_EXPORT DescribeCacheRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT DescribeCacheRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DescribeCacheRequestPrivate(const StorageGateway::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDISCOVEREDRESOURCECOUNTSREQUEST_P_H
 #define QTAWS_GETDISCOVEREDRESOURCECOUNTSREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "getdiscoveredresourcecountsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class GetDiscoveredResourceCountsRequest;
 
-class QTAWS_EXPORT GetDiscoveredResourceCountsRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT GetDiscoveredResourceCountsRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     GetDiscoveredResourceCountsRequestPrivate(const ConfigService::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETLAUNCHTEMPLATEDATAREQUEST_P_H
 #define QTAWS_GETLAUNCHTEMPLATEDATAREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "getlaunchtemplatedatarequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class GetLaunchTemplateDataRequest;
 
-class QTAWS_EXPORT GetLaunchTemplateDataRequestPrivate : public EC2Private {
+class QTAWS_EXPORT GetLaunchTemplateDataRequestPrivate : public EC2RequestPrivate {
 
 public:
     GetLaunchTemplateDataRequestPrivate(const EC2::Action action,

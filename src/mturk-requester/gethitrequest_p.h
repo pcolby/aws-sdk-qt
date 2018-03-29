@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETHITREQUEST_P_H
 #define QTAWS_GETHITREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "gethitrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class GetHITRequest;
 
-class QTAWS_EXPORT GetHITRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT GetHITRequestPrivate : public MTurkRequestPrivate {
 
 public:
     GetHITRequestPrivate(const MTurk::Action action,

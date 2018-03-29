@@ -20,7 +20,7 @@
 #ifndef QTAWS_SKIPWAITTIMEFORINSTANCETERMINATIONREQUEST_P_H
 #define QTAWS_SKIPWAITTIMEFORINSTANCETERMINATIONREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "skipwaittimeforinstanceterminationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class SkipWaitTimeForInstanceTerminationRequest;
 
-class QTAWS_EXPORT SkipWaitTimeForInstanceTerminationRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT SkipWaitTimeForInstanceTerminationRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     SkipWaitTimeForInstanceTerminationRequestPrivate(const CodeDeploy::Action action,

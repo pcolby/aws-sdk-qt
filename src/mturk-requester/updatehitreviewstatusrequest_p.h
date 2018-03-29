@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEHITREVIEWSTATUSREQUEST_P_H
 #define QTAWS_UPDATEHITREVIEWSTATUSREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "updatehitreviewstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class UpdateHITReviewStatusRequest;
 
-class QTAWS_EXPORT UpdateHITReviewStatusRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT UpdateHITReviewStatusRequestPrivate : public MTurkRequestPrivate {
 
 public:
     UpdateHITReviewStatusRequestPrivate(const MTurk::Action action,

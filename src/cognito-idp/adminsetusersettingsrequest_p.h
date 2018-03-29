@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADMINSETUSERSETTINGSREQUEST_P_H
 #define QTAWS_ADMINSETUSERSETTINGSREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "adminsetusersettingsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminSetUserSettingsRequest;
 
-class QTAWS_EXPORT AdminSetUserSettingsRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT AdminSetUserSettingsRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AdminSetUserSettingsRequestPrivate(const CognitoIdentityProvider::Action action,

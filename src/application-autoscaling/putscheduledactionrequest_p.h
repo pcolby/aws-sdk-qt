@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTSCHEDULEDACTIONREQUEST_P_H
 #define QTAWS_PUTSCHEDULEDACTIONREQUEST_P_H
 
-#include "applicationautoscaling_p.h"
+#include "applicationautoscalingrequest_p.h"
 #include "putscheduledactionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 
 class PutScheduledActionRequest;
 
-class QTAWS_EXPORT PutScheduledActionRequestPrivate : public ApplicationAutoScalingPrivate {
+class QTAWS_EXPORT PutScheduledActionRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
     PutScheduledActionRequestPrivate(const ApplicationAutoScaling::Action action,

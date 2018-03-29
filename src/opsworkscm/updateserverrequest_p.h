@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESERVERREQUEST_P_H
 #define QTAWS_UPDATESERVERREQUEST_P_H
 
-#include "opsworkscm_p.h"
+#include "opsworkscmrequest_p.h"
 #include "updateserverrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class UpdateServerRequest;
 
-class QTAWS_EXPORT UpdateServerRequestPrivate : public OpsWorksCMPrivate {
+class QTAWS_EXPORT UpdateServerRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     UpdateServerRequestPrivate(const OpsWorksCM::Action action,

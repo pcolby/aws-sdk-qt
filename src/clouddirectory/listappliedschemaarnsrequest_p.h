@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTAPPLIEDSCHEMAARNSREQUEST_P_H
 #define QTAWS_LISTAPPLIEDSCHEMAARNSREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "listappliedschemaarnsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class ListAppliedSchemaArnsRequest;
 
-class QTAWS_EXPORT ListAppliedSchemaArnsRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT ListAppliedSchemaArnsRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     ListAppliedSchemaArnsRequestPrivate(const CloudDirectory::Action action,

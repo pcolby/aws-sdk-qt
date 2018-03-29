@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTELEMETRYMETADATAREQUEST_P_H
 #define QTAWS_GETTELEMETRYMETADATAREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "gettelemetrymetadatarequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class GetTelemetryMetadataRequest;
 
-class QTAWS_EXPORT GetTelemetryMetadataRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT GetTelemetryMetadataRequestPrivate : public InspectorRequestPrivate {
 
 public:
     GetTelemetryMetadataRequestPrivate(const Inspector::Action action,

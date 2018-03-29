@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETELOADBALANCERTLSCERTIFICATEREQUEST_P_H
 #define QTAWS_DELETELOADBALANCERTLSCERTIFICATEREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "deleteloadbalancertlscertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteLoadBalancerTlsCertificateRequest;
 
-class QTAWS_EXPORT DeleteLoadBalancerTlsCertificateRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT DeleteLoadBalancerTlsCertificateRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DeleteLoadBalancerTlsCertificateRequestPrivate(const Lightsail::Action action,

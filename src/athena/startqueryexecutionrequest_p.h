@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTQUERYEXECUTIONREQUEST_P_H
 #define QTAWS_STARTQUERYEXECUTIONREQUEST_P_H
 
-#include "athena_p.h"
+#include "athenarequest_p.h"
 #include "startqueryexecutionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Athena {
 
 class StartQueryExecutionRequest;
 
-class QTAWS_EXPORT StartQueryExecutionRequestPrivate : public AthenaPrivate {
+class QTAWS_EXPORT StartQueryExecutionRequestPrivate : public AthenaRequestPrivate {
 
 public:
     StartQueryExecutionRequestPrivate(const Athena::Action action,

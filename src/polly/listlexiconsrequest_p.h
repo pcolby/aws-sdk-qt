@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTLEXICONSREQUEST_P_H
 #define QTAWS_LISTLEXICONSREQUEST_P_H
 
-#include "polly_p.h"
+#include "pollyrequest_p.h"
 #include "listlexiconsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Polly {
 
 class ListLexiconsRequest;
 
-class QTAWS_EXPORT ListLexiconsRequestPrivate : public PollyPrivate {
+class QTAWS_EXPORT ListLexiconsRequestPrivate : public PollyRequestPrivate {
 
 public:
     ListLexiconsRequestPrivate(const Polly::Action action,

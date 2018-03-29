@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEENDPOINTSBATCHREQUEST_P_H
 #define QTAWS_UPDATEENDPOINTSBATCHREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "updateendpointsbatchrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class UpdateEndpointsBatchRequest;
 
-class QTAWS_EXPORT UpdateEndpointsBatchRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT UpdateEndpointsBatchRequestPrivate : public PinpointRequestPrivate {
 
 public:
     UpdateEndpointsBatchRequestPrivate(const Pinpoint::Action action,

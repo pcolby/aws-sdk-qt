@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSUBSCRIBEDRULEGROUPSREQUEST_P_H
 #define QTAWS_LISTSUBSCRIBEDRULEGROUPSREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "listsubscribedrulegroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class ListSubscribedRuleGroupsRequest;
 
-class QTAWS_EXPORT ListSubscribedRuleGroupsRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT ListSubscribedRuleGroupsRequestPrivate : public WAFRequestPrivate {
 
 public:
     ListSubscribedRuleGroupsRequestPrivate(const WAF::Action action,

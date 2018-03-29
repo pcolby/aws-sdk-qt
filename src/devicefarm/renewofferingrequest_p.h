@@ -20,7 +20,7 @@
 #ifndef QTAWS_RENEWOFFERINGREQUEST_P_H
 #define QTAWS_RENEWOFFERINGREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "renewofferingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class RenewOfferingRequest;
 
-class QTAWS_EXPORT RenewOfferingRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT RenewOfferingRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     RenewOfferingRequestPrivate(const DeviceFarm::Action action,

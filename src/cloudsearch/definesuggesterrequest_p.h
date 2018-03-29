@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEFINESUGGESTERREQUEST_P_H
 #define QTAWS_DEFINESUGGESTERREQUEST_P_H
 
-#include "cloudsearch_p.h"
+#include "cloudsearchrequest_p.h"
 #include "definesuggesterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DefineSuggesterRequest;
 
-class QTAWS_EXPORT DefineSuggesterRequestPrivate : public CloudSearchPrivate {
+class QTAWS_EXPORT DefineSuggesterRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     DefineSuggesterRequestPrivate(const CloudSearch::Action action,

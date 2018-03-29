@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECLOUDFRONTORIGINACCESSIDENTITYREQUEST_P_H
 #define QTAWS_UPDATECLOUDFRONTORIGINACCESSIDENTITYREQUEST_P_H
 
-#include "cloudfront_p.h"
+#include "cloudfrontrequest_p.h"
 #include "updatecloudfrontoriginaccessidentityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class UpdateCloudFrontOriginAccessIdentityRequest;
 
-class QTAWS_EXPORT UpdateCloudFrontOriginAccessIdentityRequestPrivate : public CloudFrontPrivate {
+class QTAWS_EXPORT UpdateCloudFrontOriginAccessIdentityRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     UpdateCloudFrontOriginAccessIdentityRequestPrivate(const CloudFront::Action action,

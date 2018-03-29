@@ -20,7 +20,7 @@
 #ifndef QTAWS_REQUESTUPLOADCREDENTIALSREQUEST_P_H
 #define QTAWS_REQUESTUPLOADCREDENTIALSREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "requestuploadcredentialsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class RequestUploadCredentialsRequest;
 
-class QTAWS_EXPORT RequestUploadCredentialsRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT RequestUploadCredentialsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     RequestUploadCredentialsRequestPrivate(const GameLift::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_MOBILEREQUEST_P_H
 #define QTAWS_MOBILEREQUEST_P_H
 
-#include "mobile_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "mobilerequest.h"
 
 namespace QtAws {

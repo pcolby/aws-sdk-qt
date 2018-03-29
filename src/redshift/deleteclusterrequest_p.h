@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECLUSTERREQUEST_P_H
 #define QTAWS_DELETECLUSTERREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "deleteclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DeleteClusterRequest;
 
-class QTAWS_EXPORT DeleteClusterRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DeleteClusterRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DeleteClusterRequestPrivate(const Redshift::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDIRECTORYLIMITSREQUEST_P_H
 #define QTAWS_GETDIRECTORYLIMITSREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "getdirectorylimitsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class GetDirectoryLimitsRequest;
 
-class QTAWS_EXPORT GetDirectoryLimitsRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT GetDirectoryLimitsRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     GetDirectoryLimitsRequestPrivate(const DirectoryService::Action action,

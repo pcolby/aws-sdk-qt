@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESECURITYCONFIGURATIONREQUEST_P_H
 #define QTAWS_CREATESECURITYCONFIGURATIONREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "createsecurityconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class CreateSecurityConfigurationRequest;
 
-class QTAWS_EXPORT CreateSecurityConfigurationRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT CreateSecurityConfigurationRequestPrivate : public EMRRequestPrivate {
 
 public:
     CreateSecurityConfigurationRequestPrivate(const EMR::Action action,

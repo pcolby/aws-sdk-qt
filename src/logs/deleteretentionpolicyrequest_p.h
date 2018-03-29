@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETERETENTIONPOLICYREQUEST_P_H
 #define QTAWS_DELETERETENTIONPOLICYREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "deleteretentionpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DeleteRetentionPolicyRequest;
 
-class QTAWS_EXPORT DeleteRetentionPolicyRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT DeleteRetentionPolicyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DeleteRetentionPolicyRequestPrivate(const CloudWatchLogs::Action action,

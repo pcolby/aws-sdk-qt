@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEKEYREQUEST_P_H
 #define QTAWS_DESCRIBEKEYREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "describekeyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class DescribeKeyRequest;
 
-class QTAWS_EXPORT DescribeKeyRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT DescribeKeyRequestPrivate : public KMSRequestPrivate {
 
 public:
     DescribeKeyRequestPrivate(const KMS::Action action,

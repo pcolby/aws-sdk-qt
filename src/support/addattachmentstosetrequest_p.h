@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDATTACHMENTSTOSETREQUEST_P_H
 #define QTAWS_ADDATTACHMENTSTOSETREQUEST_P_H
 
-#include "support_p.h"
+#include "supportrequest_p.h"
 #include "addattachmentstosetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Support {
 
 class AddAttachmentsToSetRequest;
 
-class QTAWS_EXPORT AddAttachmentsToSetRequestPrivate : public SupportPrivate {
+class QTAWS_EXPORT AddAttachmentsToSetRequestPrivate : public SupportRequestPrivate {
 
 public:
     AddAttachmentsToSetRequestPrivate(const Support::Action action,

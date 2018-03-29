@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEPROJECTREQUEST_P_H
 #define QTAWS_UPDATEPROJECTREQUEST_P_H
 
-#include "mobile_p.h"
+#include "mobilerequest_p.h"
 #include "updateprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Mobile {
 
 class UpdateProjectRequest;
 
-class QTAWS_EXPORT UpdateProjectRequestPrivate : public MobilePrivate {
+class QTAWS_EXPORT UpdateProjectRequestPrivate : public MobileRequestPrivate {
 
 public:
     UpdateProjectRequestPrivate(const Mobile::Action action,

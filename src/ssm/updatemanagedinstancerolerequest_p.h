@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEMANAGEDINSTANCEROLEREQUEST_P_H
 #define QTAWS_UPDATEMANAGEDINSTANCEROLEREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "updatemanagedinstancerolerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class UpdateManagedInstanceRoleRequest;
 
-class QTAWS_EXPORT UpdateManagedInstanceRoleRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT UpdateManagedInstanceRoleRequestPrivate : public SSMRequestPrivate {
 
 public:
     UpdateManagedInstanceRoleRequestPrivate(const SSM::Action action,

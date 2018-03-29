@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEFLEETCAPACITYREQUEST_P_H
 #define QTAWS_UPDATEFLEETCAPACITYREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "updatefleetcapacityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class UpdateFleetCapacityRequest;
 
-class QTAWS_EXPORT UpdateFleetCapacityRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT UpdateFleetCapacityRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     UpdateFleetCapacityRequestPrivate(const GameLift::Action action,

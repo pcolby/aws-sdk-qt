@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEUSERDEFINEDFUNCTIONREQUEST_P_H
 #define QTAWS_UPDATEUSERDEFINEDFUNCTIONREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "updateuserdefinedfunctionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class UpdateUserDefinedFunctionRequest;
 
-class QTAWS_EXPORT UpdateUserDefinedFunctionRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT UpdateUserDefinedFunctionRequestPrivate : public GlueRequestPrivate {
 
 public:
     UpdateUserDefinedFunctionRequestPrivate(const Glue::Action action,

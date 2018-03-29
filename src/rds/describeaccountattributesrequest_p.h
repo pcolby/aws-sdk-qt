@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_P_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describeaccountattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeAccountAttributesRequest;
 
-class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeAccountAttributesRequestPrivate(const RDS::Action action,

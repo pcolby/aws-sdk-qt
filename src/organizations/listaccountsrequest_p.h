@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTACCOUNTSREQUEST_P_H
 #define QTAWS_LISTACCOUNTSREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "listaccountsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class ListAccountsRequest;
 
-class QTAWS_EXPORT ListAccountsRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT ListAccountsRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     ListAccountsRequestPrivate(const Organizations::Action action,

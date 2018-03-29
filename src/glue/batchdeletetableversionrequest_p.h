@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHDELETETABLEVERSIONREQUEST_P_H
 #define QTAWS_BATCHDELETETABLEVERSIONREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "batchdeletetableversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class BatchDeleteTableVersionRequest;
 
-class QTAWS_EXPORT BatchDeleteTableVersionRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT BatchDeleteTableVersionRequestPrivate : public GlueRequestPrivate {
 
 public:
     BatchDeleteTableVersionRequestPrivate(const Glue::Action action,

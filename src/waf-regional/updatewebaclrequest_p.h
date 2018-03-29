@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEWEBACLREQUEST_P_H
 #define QTAWS_UPDATEWEBACLREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "updatewebaclrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class UpdateWebACLRequest;
 
-class QTAWS_EXPORT UpdateWebACLRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT UpdateWebACLRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     UpdateWebACLRequestPrivate(const WAFRegional::Action action,

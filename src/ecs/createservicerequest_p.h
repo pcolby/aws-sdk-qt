@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESERVICEREQUEST_P_H
 #define QTAWS_CREATESERVICEREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "createservicerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class CreateServiceRequest;
 
-class QTAWS_EXPORT CreateServiceRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT CreateServiceRequestPrivate : public ECSRequestPrivate {
 
 public:
     CreateServiceRequestPrivate(const ECS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTCONFIGURATIONRECORDERREQUEST_P_H
 #define QTAWS_STARTCONFIGURATIONRECORDERREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "startconfigurationrecorderrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class StartConfigurationRecorderRequest;
 
-class QTAWS_EXPORT StartConfigurationRecorderRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT StartConfigurationRecorderRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     StartConfigurationRecorderRequestPrivate(const ConfigService::Action action,

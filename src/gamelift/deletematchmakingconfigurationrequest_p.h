@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEMATCHMAKINGCONFIGURATIONREQUEST_P_H
 #define QTAWS_DELETEMATCHMAKINGCONFIGURATIONREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "deletematchmakingconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DeleteMatchmakingConfigurationRequest;
 
-class QTAWS_EXPORT DeleteMatchmakingConfigurationRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT DeleteMatchmakingConfigurationRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DeleteMatchmakingConfigurationRequestPrivate(const GameLift::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTAVAILABLEZONESREQUEST_P_H
 #define QTAWS_LISTAVAILABLEZONESREQUEST_P_H
 
-#include "cloudhsm_p.h"
+#include "cloudhsmrequest_p.h"
 #include "listavailablezonesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class ListAvailableZonesRequest;
 
-class QTAWS_EXPORT ListAvailableZonesRequestPrivate : public CloudHSMPrivate {
+class QTAWS_EXPORT ListAvailableZonesRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     ListAvailableZonesRequestPrivate(const CloudHSM::Action action,

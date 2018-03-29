@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTPARENTSREQUEST_P_H
 #define QTAWS_LISTPARENTSREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "listparentsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class ListParentsRequest;
 
-class QTAWS_EXPORT ListParentsRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT ListParentsRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     ListParentsRequestPrivate(const Organizations::Action action,

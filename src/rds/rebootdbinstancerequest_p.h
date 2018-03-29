@@ -20,7 +20,7 @@
 #ifndef QTAWS_REBOOTDBINSTANCEREQUEST_P_H
 #define QTAWS_REBOOTDBINSTANCEREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "rebootdbinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class RebootDBInstanceRequest;
 
-class QTAWS_EXPORT RebootDBInstanceRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT RebootDBInstanceRequestPrivate : public RDSRequestPrivate {
 
 public:
     RebootDBInstanceRequestPrivate(const RDS::Action action,

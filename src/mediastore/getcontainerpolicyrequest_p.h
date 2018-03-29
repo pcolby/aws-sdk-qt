@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCONTAINERPOLICYREQUEST_P_H
 #define QTAWS_GETCONTAINERPOLICYREQUEST_P_H
 
-#include "mediastore_p.h"
+#include "mediastorerequest_p.h"
 #include "getcontainerpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class GetContainerPolicyRequest;
 
-class QTAWS_EXPORT GetContainerPolicyRequestPrivate : public MediaStorePrivate {
+class QTAWS_EXPORT GetContainerPolicyRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
     GetContainerPolicyRequestPrivate(const MediaStore::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETABLEREQUEST_P_H
 #define QTAWS_DESCRIBETABLEREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "describetablerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class DescribeTableRequest;
 
-class QTAWS_EXPORT DescribeTableRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT DescribeTableRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     DescribeTableRequestPrivate(const DynamoDB::Action action,

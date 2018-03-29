@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETNETWORKPROFILEREQUEST_P_H
 #define QTAWS_GETNETWORKPROFILEREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "getnetworkprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetNetworkProfileRequest;
 
-class QTAWS_EXPORT GetNetworkProfileRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT GetNetworkProfileRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     GetNetworkProfileRequestPrivate(const DeviceFarm::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEMETHODRESPONSEREQUEST_P_H
 #define QTAWS_DELETEMETHODRESPONSEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "deletemethodresponserequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteMethodResponseRequest;
 
-class QTAWS_EXPORT DeleteMethodResponseRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT DeleteMethodResponseRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteMethodResponseRequestPrivate(const APIGateway::Action action,

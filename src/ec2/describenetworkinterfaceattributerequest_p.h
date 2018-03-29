@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBENETWORKINTERFACEATTRIBUTEREQUEST_P_H
 #define QTAWS_DESCRIBENETWORKINTERFACEATTRIBUTEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describenetworkinterfaceattributerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeNetworkInterfaceAttributeRequest;
 
-class QTAWS_EXPORT DescribeNetworkInterfaceAttributeRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeNetworkInterfaceAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeNetworkInterfaceAttributeRequestPrivate(const EC2::Action action,

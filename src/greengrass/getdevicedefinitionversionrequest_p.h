@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDEVICEDEFINITIONVERSIONREQUEST_P_H
 #define QTAWS_GETDEVICEDEFINITIONVERSIONREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "getdevicedefinitionversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetDeviceDefinitionVersionRequest;
 
-class QTAWS_EXPORT GetDeviceDefinitionVersionRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT GetDeviceDefinitionVersionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     GetDeviceDefinitionVersionRequestPrivate(const Greengrass::Action action,

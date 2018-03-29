@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDEPLOYMENTGROUPREQUEST_P_H
 #define QTAWS_DELETEDEPLOYMENTGROUPREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "deletedeploymentgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class DeleteDeploymentGroupRequest;
 
-class QTAWS_EXPORT DeleteDeploymentGroupRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT DeleteDeploymentGroupRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     DeleteDeploymentGroupRequestPrivate(const CodeDeploy::Action action,

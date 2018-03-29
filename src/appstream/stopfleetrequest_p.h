@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPFLEETREQUEST_P_H
 #define QTAWS_STOPFLEETREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "stopfleetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class StopFleetRequest;
 
-class QTAWS_EXPORT StopFleetRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT StopFleetRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     StopFleetRequestPrivate(const AppStream::Action action,

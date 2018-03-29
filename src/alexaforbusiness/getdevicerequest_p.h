@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDEVICEREQUEST_P_H
 #define QTAWS_GETDEVICEREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "getdevicerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class GetDeviceRequest;
 
-class QTAWS_EXPORT GetDeviceRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT GetDeviceRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     GetDeviceRequestPrivate(const AlexaForBusiness::Action action,

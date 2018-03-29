@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTMONITORINGMEMBERSREQUEST_P_H
 #define QTAWS_STARTMONITORINGMEMBERSREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "startmonitoringmembersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class StartMonitoringMembersRequest;
 
-class QTAWS_EXPORT StartMonitoringMembersRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT StartMonitoringMembersRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     StartMonitoringMembersRequestPrivate(const GuardDuty::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETPULLREQUESTREQUEST_P_H
 #define QTAWS_GETPULLREQUESTREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "getpullrequestrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class GetPullRequestRequest;
 
-class QTAWS_EXPORT GetPullRequestRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT GetPullRequestRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     GetPullRequestRequestPrivate(const CodeCommit::Action action,

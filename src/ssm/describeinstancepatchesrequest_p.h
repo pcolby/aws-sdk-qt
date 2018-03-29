@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEINSTANCEPATCHESREQUEST_P_H
 #define QTAWS_DESCRIBEINSTANCEPATCHESREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "describeinstancepatchesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeInstancePatchesRequest;
 
-class QTAWS_EXPORT DescribeInstancePatchesRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DescribeInstancePatchesRequestPrivate : public SSMRequestPrivate {
 
 public:
     DescribeInstancePatchesRequestPrivate(const SSM::Action action,

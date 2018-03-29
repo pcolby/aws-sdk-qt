@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEADDRESSREQUEST_P_H
 #define QTAWS_DISASSOCIATEADDRESSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "disassociateaddressrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DisassociateAddressRequest;
 
-class QTAWS_EXPORT DisassociateAddressRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DisassociateAddressRequestPrivate : public EC2RequestPrivate {
 
 public:
     DisassociateAddressRequestPrivate(const EC2::Action action,

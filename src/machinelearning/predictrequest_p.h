@@ -20,7 +20,7 @@
 #ifndef QTAWS_PREDICTREQUEST_P_H
 #define QTAWS_PREDICTREQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "predictrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class PredictRequest;
 
-class QTAWS_EXPORT PredictRequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT PredictRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     PredictRequestPrivate(const MachineLearning::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTEXECUTIONSREQUEST_P_H
 #define QTAWS_LISTEXECUTIONSREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "listexecutionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class ListExecutionsRequest;
 
-class QTAWS_EXPORT ListExecutionsRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT ListExecutionsRequestPrivate : public SFNRequestPrivate {
 
 public:
     ListExecutionsRequestPrivate(const SFN::Action action,

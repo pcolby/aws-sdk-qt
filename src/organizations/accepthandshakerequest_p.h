@@ -20,7 +20,7 @@
 #ifndef QTAWS_ACCEPTHANDSHAKEREQUEST_P_H
 #define QTAWS_ACCEPTHANDSHAKEREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "accepthandshakerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class AcceptHandshakeRequest;
 
-class QTAWS_EXPORT AcceptHandshakeRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT AcceptHandshakeRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     AcceptHandshakeRequestPrivate(const Organizations::Action action,

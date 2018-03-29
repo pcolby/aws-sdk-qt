@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTNEXTPENDINGJOBEXECUTIONREQUEST_P_H
 #define QTAWS_STARTNEXTPENDINGJOBEXECUTIONREQUEST_P_H
 
-#include "iotjobsdataplane_p.h"
+#include "iotjobsdataplanerequest_p.h"
 #include "startnextpendingjobexecutionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoTJobsDataPlane {
 
 class StartNextPendingJobExecutionRequest;
 
-class QTAWS_EXPORT StartNextPendingJobExecutionRequestPrivate : public IoTJobsDataPlanePrivate {
+class QTAWS_EXPORT StartNextPendingJobExecutionRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
 
 public:
     StartNextPendingJobExecutionRequestPrivate(const IoTJobsDataPlane::Action action,

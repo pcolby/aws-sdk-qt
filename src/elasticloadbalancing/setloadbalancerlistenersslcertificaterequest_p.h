@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETLOADBALANCERLISTENERSSLCERTIFICATEREQUEST_P_H
 #define QTAWS_SETLOADBALANCERLISTENERSSLCERTIFICATEREQUEST_P_H
 
-#include "elasticloadbalancing_p.h"
+#include "elasticloadbalancingrequest_p.h"
 #include "setloadbalancerlistenersslcertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class SetLoadBalancerListenerSSLCertificateRequest;
 
-class QTAWS_EXPORT SetLoadBalancerListenerSSLCertificateRequestPrivate : public ElasticLoadBalancingPrivate {
+class QTAWS_EXPORT SetLoadBalancerListenerSSLCertificateRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
     SetLoadBalancerListenerSSLCertificateRequestPrivate(const ElasticLoadBalancing::Action action,

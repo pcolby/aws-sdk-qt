@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEJOBREQUEST_P_H
 #define QTAWS_DESCRIBEJOBREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "describejobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class DescribeJobRequest;
 
-class QTAWS_EXPORT DescribeJobRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT DescribeJobRequestPrivate : public IoTRequestPrivate {
 
 public:
     DescribeJobRequestPrivate(const IoT::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SNOWBALLREQUEST_P_H
 #define QTAWS_SNOWBALLREQUEST_P_H
 
-#include "snowball_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "snowballrequest.h"
 
 namespace QtAws {

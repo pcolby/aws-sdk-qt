@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEORDERABLECLUSTEROPTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEORDERABLECLUSTEROPTIONSREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "describeorderableclusteroptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeOrderableClusterOptionsRequest;
 
-class QTAWS_EXPORT DescribeOrderableClusterOptionsRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DescribeOrderableClusterOptionsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DescribeOrderableClusterOptionsRequestPrivate(const Redshift::Action action,

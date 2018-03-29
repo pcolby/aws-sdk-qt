@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETRUNREQUEST_P_H
 #define QTAWS_GETRUNREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "getrunrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetRunRequest;
 
-class QTAWS_EXPORT GetRunRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT GetRunRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     GetRunRequestPrivate(const DeviceFarm::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEEVENTSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_DELETEEVENTSUBSCRIPTIONREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "deleteeventsubscriptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteEventSubscriptionRequest;
 
-class QTAWS_EXPORT DeleteEventSubscriptionRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DeleteEventSubscriptionRequestPrivate : public RDSRequestPrivate {
 
 public:
     DeleteEventSubscriptionRequestPrivate(const RDS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEAPNSVOIPCHANNELREQUEST_P_H
 #define QTAWS_DELETEAPNSVOIPCHANNELREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "deleteapnsvoipchannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class DeleteApnsVoipChannelRequest;
 
-class QTAWS_EXPORT DeleteApnsVoipChannelRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT DeleteApnsVoipChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     DeleteApnsVoipChannelRequestPrivate(const Pinpoint::Action action,

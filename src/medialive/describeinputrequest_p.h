@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEINPUTREQUEST_P_H
 #define QTAWS_DESCRIBEINPUTREQUEST_P_H
 
-#include "medialive_p.h"
+#include "medialiverequest_p.h"
 #include "describeinputrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DescribeInputRequest;
 
-class QTAWS_EXPORT DescribeInputRequestPrivate : public MediaLivePrivate {
+class QTAWS_EXPORT DescribeInputRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     DescribeInputRequestPrivate(const MediaLive::Action action,

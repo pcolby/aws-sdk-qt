@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCORSPOLICYREQUEST_P_H
 #define QTAWS_GETCORSPOLICYREQUEST_P_H
 
-#include "mediastore_p.h"
+#include "mediastorerequest_p.h"
 #include "getcorspolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaStore {
 
 class GetCorsPolicyRequest;
 
-class QTAWS_EXPORT GetCorsPolicyRequestPrivate : public MediaStorePrivate {
+class QTAWS_EXPORT GetCorsPolicyRequestPrivate : public MediaStoreRequestPrivate {
 
 public:
     GetCorsPolicyRequestPrivate(const MediaStore::Action action,

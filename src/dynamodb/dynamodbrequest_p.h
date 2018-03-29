@@ -20,7 +20,7 @@
 #ifndef QTAWS_DYNAMODBREQUEST_P_H
 #define QTAWS_DYNAMODBREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "dynamodbrequest.h"
 
 namespace QtAws {

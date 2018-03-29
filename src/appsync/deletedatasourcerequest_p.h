@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDATASOURCEREQUEST_P_H
 #define QTAWS_DELETEDATASOURCEREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "deletedatasourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class DeleteDataSourceRequest;
 
-class QTAWS_EXPORT DeleteDataSourceRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT DeleteDataSourceRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     DeleteDataSourceRequestPrivate(const AppSync::Action action,

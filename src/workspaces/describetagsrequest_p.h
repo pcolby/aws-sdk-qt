@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETAGSREQUEST_P_H
 #define QTAWS_DESCRIBETAGSREQUEST_P_H
 
-#include "workspaces_p.h"
+#include "workspacesrequest_p.h"
 #include "describetagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class DescribeTagsRequest;
 
-class QTAWS_EXPORT DescribeTagsRequestPrivate : public WorkSpacesPrivate {
+class QTAWS_EXPORT DescribeTagsRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     DescribeTagsRequestPrivate(const WorkSpaces::Action action,

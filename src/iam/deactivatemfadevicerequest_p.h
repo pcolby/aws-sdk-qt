@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEACTIVATEMFADEVICEREQUEST_P_H
 #define QTAWS_DEACTIVATEMFADEVICEREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "deactivatemfadevicerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeactivateMFADeviceRequest;
 
-class QTAWS_EXPORT DeactivateMFADeviceRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT DeactivateMFADeviceRequestPrivate : public IAMRequestPrivate {
 
 public:
     DeactivateMFADeviceRequestPrivate(const IAM::Action action,

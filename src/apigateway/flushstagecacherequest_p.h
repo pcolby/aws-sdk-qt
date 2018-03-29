@@ -20,7 +20,7 @@
 #ifndef QTAWS_FLUSHSTAGECACHEREQUEST_P_H
 #define QTAWS_FLUSHSTAGECACHEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "flushstagecacherequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class FlushStageCacheRequest;
 
-class QTAWS_EXPORT FlushStageCacheRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT FlushStageCacheRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     FlushStageCacheRequestPrivate(const APIGateway::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEPROJECTREQUEST_P_H
 #define QTAWS_UPDATEPROJECTREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "updateprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class UpdateProjectRequest;
 
-class QTAWS_EXPORT UpdateProjectRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT UpdateProjectRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     UpdateProjectRequestPrivate(const DeviceFarm::Action action,

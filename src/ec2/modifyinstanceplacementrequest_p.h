@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYINSTANCEPLACEMENTREQUEST_P_H
 #define QTAWS_MODIFYINSTANCEPLACEMENTREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "modifyinstanceplacementrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyInstancePlacementRequest;
 
-class QTAWS_EXPORT ModifyInstancePlacementRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ModifyInstancePlacementRequestPrivate : public EC2RequestPrivate {
 
 public:
     ModifyInstancePlacementRequestPrivate(const EC2::Action action,

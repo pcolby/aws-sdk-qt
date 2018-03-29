@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATETAGOPTIONREQUEST_P_H
 #define QTAWS_CREATETAGOPTIONREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "createtagoptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class CreateTagOptionRequest;
 
-class QTAWS_EXPORT CreateTagOptionRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT CreateTagOptionRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     CreateTagOptionRequestPrivate(const ServiceCatalog::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEWEBHOOKREQUEST_P_H
 #define QTAWS_DELETEWEBHOOKREQUEST_P_H
 
-#include "codebuild_p.h"
+#include "codebuildrequest_p.h"
 #include "deletewebhookrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class DeleteWebhookRequest;
 
-class QTAWS_EXPORT DeleteWebhookRequestPrivate : public CodeBuildPrivate {
+class QTAWS_EXPORT DeleteWebhookRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     DeleteWebhookRequestPrivate(const CodeBuild::Action action,

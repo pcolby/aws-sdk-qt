@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSUBSCRIPTIONDEFINITIONSREQUEST_P_H
 #define QTAWS_LISTSUBSCRIPTIONDEFINITIONSREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "listsubscriptiondefinitionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class ListSubscriptionDefinitionsRequest;
 
-class QTAWS_EXPORT ListSubscriptionDefinitionsRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT ListSubscriptionDefinitionsRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     ListSubscriptionDefinitionsRequestPrivate(const Greengrass::Action action,

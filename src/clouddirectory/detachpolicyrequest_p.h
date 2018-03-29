@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETACHPOLICYREQUEST_P_H
 #define QTAWS_DETACHPOLICYREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "detachpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class DetachPolicyRequest;
 
-class QTAWS_EXPORT DetachPolicyRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT DetachPolicyRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     DetachPolicyRequestPrivate(const CloudDirectory::Action action,

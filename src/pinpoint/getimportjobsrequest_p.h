@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETIMPORTJOBSREQUEST_P_H
 #define QTAWS_GETIMPORTJOBSREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "getimportjobsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetImportJobsRequest;
 
-class QTAWS_EXPORT GetImportJobsRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT GetImportJobsRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetImportJobsRequestPrivate(const Pinpoint::Action action,

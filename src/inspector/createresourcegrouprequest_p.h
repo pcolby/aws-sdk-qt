@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATERESOURCEGROUPREQUEST_P_H
 #define QTAWS_CREATERESOURCEGROUPREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "createresourcegrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class CreateResourceGroupRequest;
 
-class QTAWS_EXPORT CreateResourceGroupRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT CreateResourceGroupRequestPrivate : public InspectorRequestPrivate {
 
 public:
     CreateResourceGroupRequestPrivate(const Inspector::Action action,

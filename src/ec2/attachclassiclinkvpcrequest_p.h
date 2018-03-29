@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATTACHCLASSICLINKVPCREQUEST_P_H
 #define QTAWS_ATTACHCLASSICLINKVPCREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "attachclassiclinkvpcrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AttachClassicLinkVpcRequest;
 
-class QTAWS_EXPORT AttachClassicLinkVpcRequestPrivate : public EC2Private {
+class QTAWS_EXPORT AttachClassicLinkVpcRequestPrivate : public EC2RequestPrivate {
 
 public:
     AttachClassicLinkVpcRequestPrivate(const EC2::Action action,

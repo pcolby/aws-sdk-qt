@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCALLERIDENTITYREQUEST_P_H
 #define QTAWS_GETCALLERIDENTITYREQUEST_P_H
 
-#include "sts_p.h"
+#include "stsrequest_p.h"
 #include "getcalleridentityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace STS {
 
 class GetCallerIdentityRequest;
 
-class QTAWS_EXPORT GetCallerIdentityRequestPrivate : public STSPrivate {
+class QTAWS_EXPORT GetCallerIdentityRequestPrivate : public STSRequestPrivate {
 
 public:
     GetCallerIdentityRequestPrivate(const STS::Action action,

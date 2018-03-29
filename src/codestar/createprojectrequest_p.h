@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEPROJECTREQUEST_P_H
 #define QTAWS_CREATEPROJECTREQUEST_P_H
 
-#include "codestar_p.h"
+#include "codestarrequest_p.h"
 #include "createprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class CreateProjectRequest;
 
-class QTAWS_EXPORT CreateProjectRequestPrivate : public CodeStarPrivate {
+class QTAWS_EXPORT CreateProjectRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     CreateProjectRequestPrivate(const CodeStar::Action action,

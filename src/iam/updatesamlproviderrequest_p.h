@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESAMLPROVIDERREQUEST_P_H
 #define QTAWS_UPDATESAMLPROVIDERREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "updatesamlproviderrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class UpdateSAMLProviderRequest;
 
-class QTAWS_EXPORT UpdateSAMLProviderRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT UpdateSAMLProviderRequestPrivate : public IAMRequestPrivate {
 
 public:
     UpdateSAMLProviderRequestPrivate(const IAM::Action action,

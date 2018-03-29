@@ -20,7 +20,7 @@
 #ifndef QTAWS_PURCHASERESERVEDNODEOFFERINGREQUEST_P_H
 #define QTAWS_PURCHASERESERVEDNODEOFFERINGREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "purchasereservednodeofferingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class PurchaseReservedNodeOfferingRequest;
 
-class QTAWS_EXPORT PurchaseReservedNodeOfferingRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT PurchaseReservedNodeOfferingRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     PurchaseReservedNodeOfferingRequestPrivate(const Redshift::Action action,

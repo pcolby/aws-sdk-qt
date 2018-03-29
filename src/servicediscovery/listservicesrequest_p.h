@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSERVICESREQUEST_P_H
 #define QTAWS_LISTSERVICESREQUEST_P_H
 
-#include "servicediscovery_p.h"
+#include "servicediscoveryrequest_p.h"
 #include "listservicesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 
 class ListServicesRequest;
 
-class QTAWS_EXPORT ListServicesRequestPrivate : public ServiceDiscoveryPrivate {
+class QTAWS_EXPORT ListServicesRequestPrivate : public ServiceDiscoveryRequestPrivate {
 
 public:
     ListServicesRequestPrivate(const ServiceDiscovery::Action action,

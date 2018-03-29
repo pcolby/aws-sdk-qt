@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEKEYDESCRIPTIONREQUEST_P_H
 #define QTAWS_UPDATEKEYDESCRIPTIONREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "updatekeydescriptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class UpdateKeyDescriptionRequest;
 
-class QTAWS_EXPORT UpdateKeyDescriptionRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT UpdateKeyDescriptionRequestPrivate : public KMSRequestPrivate {
 
 public:
     UpdateKeyDescriptionRequestPrivate(const KMS::Action action,

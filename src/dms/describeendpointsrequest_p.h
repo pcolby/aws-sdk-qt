@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEENDPOINTSREQUEST_P_H
 #define QTAWS_DESCRIBEENDPOINTSREQUEST_P_H
 
-#include "databasemigrationservice_p.h"
+#include "databasemigrationservicerequest_p.h"
 #include "describeendpointsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DescribeEndpointsRequest;
 
-class QTAWS_EXPORT DescribeEndpointsRequestPrivate : public DatabaseMigrationServicePrivate {
+class QTAWS_EXPORT DescribeEndpointsRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     DescribeEndpointsRequestPrivate(const DatabaseMigrationService::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTOFFERINGPROMOTIONSREQUEST_P_H
 #define QTAWS_LISTOFFERINGPROMOTIONSREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "listofferingpromotionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class ListOfferingPromotionsRequest;
 
-class QTAWS_EXPORT ListOfferingPromotionsRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT ListOfferingPromotionsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     ListOfferingPromotionsRequestPrivate(const DeviceFarm::Action action,

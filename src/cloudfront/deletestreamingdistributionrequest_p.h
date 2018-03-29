@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESTREAMINGDISTRIBUTIONREQUEST_P_H
 #define QTAWS_DELETESTREAMINGDISTRIBUTIONREQUEST_P_H
 
-#include "cloudfront_p.h"
+#include "cloudfrontrequest_p.h"
 #include "deletestreamingdistributionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class DeleteStreamingDistributionRequest;
 
-class QTAWS_EXPORT DeleteStreamingDistributionRequestPrivate : public CloudFrontPrivate {
+class QTAWS_EXPORT DeleteStreamingDistributionRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     DeleteStreamingDistributionRequestPrivate(const CloudFront::Action action,

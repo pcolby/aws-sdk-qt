@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEVIRTUALINTERFACEREQUEST_P_H
 #define QTAWS_DELETEVIRTUALINTERFACEREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "deletevirtualinterfacerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class DeleteVirtualInterfaceRequest;
 
-class QTAWS_EXPORT DeleteVirtualInterfaceRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT DeleteVirtualInterfaceRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     DeleteVirtualInterfaceRequestPrivate(const DirectConnect::Action action,

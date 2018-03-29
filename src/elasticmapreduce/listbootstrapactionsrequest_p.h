@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTBOOTSTRAPACTIONSREQUEST_P_H
 #define QTAWS_LISTBOOTSTRAPACTIONSREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "listbootstrapactionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class ListBootstrapActionsRequest;
 
-class QTAWS_EXPORT ListBootstrapActionsRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT ListBootstrapActionsRequestPrivate : public EMRRequestPrivate {
 
 public:
     ListBootstrapActionsRequestPrivate(const EMR::Action action,

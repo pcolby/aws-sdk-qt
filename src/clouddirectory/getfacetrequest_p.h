@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETFACETREQUEST_P_H
 #define QTAWS_GETFACETREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "getfacetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class GetFacetRequest;
 
-class QTAWS_EXPORT GetFacetRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT GetFacetRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     GetFacetRequestPrivate(const CloudDirectory::Action action,

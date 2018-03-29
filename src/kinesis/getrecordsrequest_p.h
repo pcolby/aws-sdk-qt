@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETRECORDSREQUEST_P_H
 #define QTAWS_GETRECORDSREQUEST_P_H
 
-#include "kinesis_p.h"
+#include "kinesisrequest_p.h"
 #include "getrecordsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Kinesis {
 
 class GetRecordsRequest;
 
-class QTAWS_EXPORT GetRecordsRequestPrivate : public KinesisPrivate {
+class QTAWS_EXPORT GetRecordsRequestPrivate : public KinesisRequestPrivate {
 
 public:
     GetRecordsRequestPrivate(const Kinesis::Action action,

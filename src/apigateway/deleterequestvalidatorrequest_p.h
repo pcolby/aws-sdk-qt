@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEREQUESTVALIDATORREQUEST_P_H
 #define QTAWS_DELETEREQUESTVALIDATORREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "deleterequestvalidatorrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteRequestValidatorRequest;
 
-class QTAWS_EXPORT DeleteRequestValidatorRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT DeleteRequestValidatorRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteRequestValidatorRequestPrivate(const APIGateway::Action action,

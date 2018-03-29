@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEACCOUNTREQUEST_P_H
 #define QTAWS_DESCRIBEACCOUNTREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "describeaccountrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class DescribeAccountRequest;
 
-class QTAWS_EXPORT DescribeAccountRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT DescribeAccountRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     DescribeAccountRequestPrivate(const Organizations::Action action,

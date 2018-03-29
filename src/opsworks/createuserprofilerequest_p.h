@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEUSERPROFILEREQUEST_P_H
 #define QTAWS_CREATEUSERPROFILEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "createuserprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class CreateUserProfileRequest;
 
-class QTAWS_EXPORT CreateUserProfileRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT CreateUserProfileRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     CreateUserProfileRequestPrivate(const OpsWorks::Action action,

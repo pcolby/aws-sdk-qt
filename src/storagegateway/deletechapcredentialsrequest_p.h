@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECHAPCREDENTIALSREQUEST_P_H
 #define QTAWS_DELETECHAPCREDENTIALSREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "deletechapcredentialsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DeleteChapCredentialsRequest;
 
-class QTAWS_EXPORT DeleteChapCredentialsRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT DeleteChapCredentialsRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DeleteChapCredentialsRequestPrivate(const StorageGateway::Action action,

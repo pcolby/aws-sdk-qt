@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCHANGETOKENREQUEST_P_H
 #define QTAWS_GETCHANGETOKENREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "getchangetokenrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class GetChangeTokenRequest;
 
-class QTAWS_EXPORT GetChangeTokenRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT GetChangeTokenRequestPrivate : public WAFRequestPrivate {
 
 public:
     GetChangeTokenRequestPrivate(const WAF::Action action,

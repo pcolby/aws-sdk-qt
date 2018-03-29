@@ -20,7 +20,7 @@
 #ifndef QTAWS_SIGNUPREQUEST_P_H
 #define QTAWS_SIGNUPREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "signuprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class SignUpRequest;
 
-class QTAWS_EXPORT SignUpRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT SignUpRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     SignUpRequestPrivate(const CognitoIdentityProvider::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTHEALTHREQUEST_P_H
 #define QTAWS_DESCRIBEENVIRONMENTHEALTHREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "describeenvironmenthealthrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class DescribeEnvironmentHealthRequest;
 
-class QTAWS_EXPORT DescribeEnvironmentHealthRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT DescribeEnvironmentHealthRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     DescribeEnvironmentHealthRequestPrivate(const ElasticBeanstalk::Action action,

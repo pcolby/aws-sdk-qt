@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBYTEMATCHSETREQUEST_P_H
 #define QTAWS_DELETEBYTEMATCHSETREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "deletebytematchsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class DeleteByteMatchSetRequest;
 
-class QTAWS_EXPORT DeleteByteMatchSetRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT DeleteByteMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
     DeleteByteMatchSetRequestPrivate(const WAF::Action action,

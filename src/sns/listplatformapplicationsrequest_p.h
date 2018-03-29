@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTPLATFORMAPPLICATIONSREQUEST_P_H
 #define QTAWS_LISTPLATFORMAPPLICATIONSREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "listplatformapplicationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class ListPlatformApplicationsRequest;
 
-class QTAWS_EXPORT ListPlatformApplicationsRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT ListPlatformApplicationsRequestPrivate : public SNSRequestPrivate {
 
 public:
     ListPlatformApplicationsRequestPrivate(const SNS::Action action,

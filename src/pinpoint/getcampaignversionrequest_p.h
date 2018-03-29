@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCAMPAIGNVERSIONREQUEST_P_H
 #define QTAWS_GETCAMPAIGNVERSIONREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "getcampaignversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetCampaignVersionRequest;
 
-class QTAWS_EXPORT GetCampaignVersionRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT GetCampaignVersionRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetCampaignVersionRequestPrivate(const Pinpoint::Action action,

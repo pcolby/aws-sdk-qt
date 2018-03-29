@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSIGNPRIVATEIPADDRESSESREQUEST_P_H
 #define QTAWS_ASSIGNPRIVATEIPADDRESSESREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "assignprivateipaddressesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AssignPrivateIpAddressesRequest;
 
-class QTAWS_EXPORT AssignPrivateIpAddressesRequestPrivate : public EC2Private {
+class QTAWS_EXPORT AssignPrivateIpAddressesRequestPrivate : public EC2RequestPrivate {
 
 public:
     AssignPrivateIpAddressesRequestPrivate(const EC2::Action action,

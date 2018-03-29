@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETFEDERATIONTOKENREQUEST_P_H
 #define QTAWS_GETFEDERATIONTOKENREQUEST_P_H
 
-#include "sts_p.h"
+#include "stsrequest_p.h"
 #include "getfederationtokenrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace STS {
 
 class GetFederationTokenRequest;
 
-class QTAWS_EXPORT GetFederationTokenRequestPrivate : public STSPrivate {
+class QTAWS_EXPORT GetFederationTokenRequestPrivate : public STSRequestPrivate {
 
 public:
     GetFederationTokenRequestPrivate(const STS::Action action,

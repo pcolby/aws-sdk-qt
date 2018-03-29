@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCONNECTIONREQUEST_P_H
 #define QTAWS_GETCONNECTIONREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "getconnectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetConnectionRequest;
 
-class QTAWS_EXPORT GetConnectionRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT GetConnectionRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetConnectionRequestPrivate(const Glue::Action action,

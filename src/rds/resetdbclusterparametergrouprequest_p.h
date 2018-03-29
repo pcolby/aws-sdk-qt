@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESETDBCLUSTERPARAMETERGROUPREQUEST_P_H
 #define QTAWS_RESETDBCLUSTERPARAMETERGROUPREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "resetdbclusterparametergrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class ResetDBClusterParameterGroupRequest;
 
-class QTAWS_EXPORT ResetDBClusterParameterGroupRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT ResetDBClusterParameterGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
     ResetDBClusterParameterGroupRequestPrivate(const RDS::Action action,

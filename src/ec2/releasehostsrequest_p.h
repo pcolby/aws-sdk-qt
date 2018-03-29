@@ -20,7 +20,7 @@
 #ifndef QTAWS_RELEASEHOSTSREQUEST_P_H
 #define QTAWS_RELEASEHOSTSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "releasehostsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ReleaseHostsRequest;
 
-class QTAWS_EXPORT ReleaseHostsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ReleaseHostsRequestPrivate : public EC2RequestPrivate {
 
 public:
     ReleaseHostsRequestPrivate(const EC2::Action action,

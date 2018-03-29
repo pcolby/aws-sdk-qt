@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEAUTHORIZERREQUEST_P_H
 #define QTAWS_DELETEAUTHORIZERREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "deleteauthorizerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeleteAuthorizerRequest;
 
-class QTAWS_EXPORT DeleteAuthorizerRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT DeleteAuthorizerRequestPrivate : public IoTRequestPrivate {
 
 public:
     DeleteAuthorizerRequestPrivate(const IoT::Action action,

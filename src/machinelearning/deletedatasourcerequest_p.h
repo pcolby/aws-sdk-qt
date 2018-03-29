@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDATASOURCEREQUEST_P_H
 #define QTAWS_DELETEDATASOURCEREQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "deletedatasourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class DeleteDataSourceRequest;
 
-class QTAWS_EXPORT DeleteDataSourceRequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT DeleteDataSourceRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     DeleteDataSourceRequestPrivate(const MachineLearning::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_TAGSTREAMREQUEST_P_H
 #define QTAWS_TAGSTREAMREQUEST_P_H
 
-#include "kinesisvideo_p.h"
+#include "kinesisvideorequest_p.h"
 #include "tagstreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KinesisVideo {
 
 class TagStreamRequest;
 
-class QTAWS_EXPORT TagStreamRequestPrivate : public KinesisVideoPrivate {
+class QTAWS_EXPORT TagStreamRequestPrivate : public KinesisVideoRequestPrivate {
 
 public:
     TagStreamRequestPrivate(const KinesisVideo::Action action,

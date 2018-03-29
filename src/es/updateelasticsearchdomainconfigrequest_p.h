@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEELASTICSEARCHDOMAINCONFIGREQUEST_P_H
 #define QTAWS_UPDATEELASTICSEARCHDOMAINCONFIGREQUEST_P_H
 
-#include "elasticsearchservice_p.h"
+#include "elasticsearchservicerequest_p.h"
 #include "updateelasticsearchdomainconfigrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class UpdateElasticsearchDomainConfigRequest;
 
-class QTAWS_EXPORT UpdateElasticsearchDomainConfigRequestPrivate : public ElasticsearchServicePrivate {
+class QTAWS_EXPORT UpdateElasticsearchDomainConfigRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     UpdateElasticsearchDomainConfigRequestPrivate(const ElasticsearchService::Action action,

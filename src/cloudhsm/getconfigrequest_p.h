@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCONFIGREQUEST_P_H
 #define QTAWS_GETCONFIGREQUEST_P_H
 
-#include "cloudhsm_p.h"
+#include "cloudhsmrequest_p.h"
 #include "getconfigrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudHSM {
 
 class GetConfigRequest;
 
-class QTAWS_EXPORT GetConfigRequestPrivate : public CloudHSMPrivate {
+class QTAWS_EXPORT GetConfigRequestPrivate : public CloudHSMRequestPrivate {
 
 public:
     GetConfigRequestPrivate(const CloudHSM::Action action,

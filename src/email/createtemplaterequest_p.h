@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATETEMPLATEREQUEST_P_H
 #define QTAWS_CREATETEMPLATEREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "createtemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class CreateTemplateRequest;
 
-class QTAWS_EXPORT CreateTemplateRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT CreateTemplateRequestPrivate : public SESRequestPrivate {
 
 public:
     CreateTemplateRequestPrivate(const SES::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDOCUMENTREQUEST_P_H
 #define QTAWS_GETDOCUMENTREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "getdocumentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class GetDocumentRequest;
 
-class QTAWS_EXPORT GetDocumentRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT GetDocumentRequestPrivate : public SSMRequestPrivate {
 
 public:
     GetDocumentRequestPrivate(const SSM::Action action,

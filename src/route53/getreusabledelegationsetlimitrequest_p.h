@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETREUSABLEDELEGATIONSETLIMITREQUEST_P_H
 #define QTAWS_GETREUSABLEDELEGATIONSETLIMITREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "getreusabledelegationsetlimitrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetReusableDelegationSetLimitRequest;
 
-class QTAWS_EXPORT GetReusableDelegationSetLimitRequestPrivate : public Route53Private {
+class QTAWS_EXPORT GetReusableDelegationSetLimitRequestPrivate : public Route53RequestPrivate {
 
 public:
     GetReusableDelegationSetLimitRequestPrivate(const Route53::Action action,

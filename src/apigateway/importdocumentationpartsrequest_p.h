@@ -20,7 +20,7 @@
 #ifndef QTAWS_IMPORTDOCUMENTATIONPARTSREQUEST_P_H
 #define QTAWS_IMPORTDOCUMENTATIONPARTSREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "importdocumentationpartsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class ImportDocumentationPartsRequest;
 
-class QTAWS_EXPORT ImportDocumentationPartsRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT ImportDocumentationPartsRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     ImportDocumentationPartsRequestPrivate(const APIGateway::Action action,

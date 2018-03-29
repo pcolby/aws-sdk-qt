@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATETAGOPTIONREQUEST_P_H
 #define QTAWS_UPDATETAGOPTIONREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "updatetagoptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class UpdateTagOptionRequest;
 
-class QTAWS_EXPORT UpdateTagOptionRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT UpdateTagOptionRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     UpdateTagOptionRequestPrivate(const ServiceCatalog::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESTREAMREQUEST_P_H
 #define QTAWS_UPDATESTREAMREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "updatestreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class UpdateStreamRequest;
 
-class QTAWS_EXPORT UpdateStreamRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT UpdateStreamRequestPrivate : public IoTRequestPrivate {
 
 public:
     UpdateStreamRequestPrivate(const IoT::Action action,

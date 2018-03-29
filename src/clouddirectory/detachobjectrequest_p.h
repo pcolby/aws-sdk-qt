@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETACHOBJECTREQUEST_P_H
 #define QTAWS_DETACHOBJECTREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "detachobjectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class DetachObjectRequest;
 
-class QTAWS_EXPORT DetachObjectRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT DetachObjectRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     DetachObjectRequestPrivate(const CloudDirectory::Action action,

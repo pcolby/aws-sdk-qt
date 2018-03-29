@@ -20,7 +20,7 @@
 #ifndef QTAWS_CODEPIPELINEREQUEST_P_H
 #define QTAWS_CODEPIPELINEREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "codepipelinerequest.h"
 
 namespace QtAws {

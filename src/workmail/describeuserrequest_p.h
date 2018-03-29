@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEUSERREQUEST_P_H
 #define QTAWS_DESCRIBEUSERREQUEST_P_H
 
-#include "workmail_p.h"
+#include "workmailrequest_p.h"
 #include "describeuserrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class DescribeUserRequest;
 
-class QTAWS_EXPORT DescribeUserRequestPrivate : public WorkMailPrivate {
+class QTAWS_EXPORT DescribeUserRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     DescribeUserRequestPrivate(const WorkMail::Action action,

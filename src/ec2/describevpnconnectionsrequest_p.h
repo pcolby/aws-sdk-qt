@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEVPNCONNECTIONSREQUEST_P_H
 #define QTAWS_DESCRIBEVPNCONNECTIONSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describevpnconnectionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeVpnConnectionsRequest;
 
-class QTAWS_EXPORT DescribeVpnConnectionsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeVpnConnectionsRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeVpnConnectionsRequestPrivate(const EC2::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEWORKERBLOCKREQUEST_P_H
 #define QTAWS_CREATEWORKERBLOCKREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "createworkerblockrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class CreateWorkerBlockRequest;
 
-class QTAWS_EXPORT CreateWorkerBlockRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT CreateWorkerBlockRequestPrivate : public MTurkRequestPrivate {
 
 public:
     CreateWorkerBlockRequestPrivate(const MTurk::Action action,

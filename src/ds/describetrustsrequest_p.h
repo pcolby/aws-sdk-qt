@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETRUSTSREQUEST_P_H
 #define QTAWS_DESCRIBETRUSTSREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "describetrustsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class DescribeTrustsRequest;
 
-class QTAWS_EXPORT DescribeTrustsRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT DescribeTrustsRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     DescribeTrustsRequestPrivate(const DirectoryService::Action action,

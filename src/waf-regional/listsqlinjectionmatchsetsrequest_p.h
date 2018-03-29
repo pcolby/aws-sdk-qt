@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSQLINJECTIONMATCHSETSREQUEST_P_H
 #define QTAWS_LISTSQLINJECTIONMATCHSETSREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "listsqlinjectionmatchsetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class ListSqlInjectionMatchSetsRequest;
 
-class QTAWS_EXPORT ListSqlInjectionMatchSetsRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT ListSqlInjectionMatchSetsRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     ListSqlInjectionMatchSetsRequestPrivate(const WAFRegional::Action action,

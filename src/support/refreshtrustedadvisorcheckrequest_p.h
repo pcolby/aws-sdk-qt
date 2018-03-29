@@ -20,7 +20,7 @@
 #ifndef QTAWS_REFRESHTRUSTEDADVISORCHECKREQUEST_P_H
 #define QTAWS_REFRESHTRUSTEDADVISORCHECKREQUEST_P_H
 
-#include "support_p.h"
+#include "supportrequest_p.h"
 #include "refreshtrustedadvisorcheckrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Support {
 
 class RefreshTrustedAdvisorCheckRequest;
 
-class QTAWS_EXPORT RefreshTrustedAdvisorCheckRequestPrivate : public SupportPrivate {
+class QTAWS_EXPORT RefreshTrustedAdvisorCheckRequestPrivate : public SupportRequestPrivate {
 
 public:
     RefreshTrustedAdvisorCheckRequestPrivate(const Support::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPROJECTREQUEST_P_H
 #define QTAWS_DELETEPROJECTREQUEST_P_H
 
-#include "codestar_p.h"
+#include "codestarrequest_p.h"
 #include "deleteprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class DeleteProjectRequest;
 
-class QTAWS_EXPORT DeleteProjectRequestPrivate : public CodeStarPrivate {
+class QTAWS_EXPORT DeleteProjectRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     DeleteProjectRequestPrivate(const CodeStar::Action action,

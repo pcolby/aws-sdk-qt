@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBACKUPREQUEST_P_H
 #define QTAWS_DELETEBACKUPREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "deletebackuprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class DeleteBackupRequest;
 
-class QTAWS_EXPORT DeleteBackupRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT DeleteBackupRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     DeleteBackupRequestPrivate(const DynamoDB::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_REBOOTCACHECLUSTERREQUEST_P_H
 #define QTAWS_REBOOTCACHECLUSTERREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "rebootcacheclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class RebootCacheClusterRequest;
 
-class QTAWS_EXPORT RebootCacheClusterRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT RebootCacheClusterRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     RebootCacheClusterRequestPrivate(const ElastiCache::Action action,

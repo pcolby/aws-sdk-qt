@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEBUDGETREQUEST_P_H
 #define QTAWS_UPDATEBUDGETREQUEST_P_H
 
-#include "budgets_p.h"
+#include "budgetsrequest_p.h"
 #include "updatebudgetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Budgets {
 
 class UpdateBudgetRequest;
 
-class QTAWS_EXPORT UpdateBudgetRequestPrivate : public BudgetsPrivate {
+class QTAWS_EXPORT UpdateBudgetRequestPrivate : public BudgetsRequestPrivate {
 
 public:
     UpdateBudgetRequestPrivate(const Budgets::Action action,

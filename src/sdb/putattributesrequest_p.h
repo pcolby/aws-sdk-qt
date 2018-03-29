@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTATTRIBUTESREQUEST_P_H
 #define QTAWS_PUTATTRIBUTESREQUEST_P_H
 
-#include "simpledb_p.h"
+#include "simpledbrequest_p.h"
 #include "putattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SimpleDB {
 
 class PutAttributesRequest;
 
-class QTAWS_EXPORT PutAttributesRequestPrivate : public SimpleDBPrivate {
+class QTAWS_EXPORT PutAttributesRequestPrivate : public SimpleDBRequestPrivate {
 
 public:
     PutAttributesRequestPrivate(const SimpleDB::Action action,

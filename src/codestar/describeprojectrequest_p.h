@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEPROJECTREQUEST_P_H
 #define QTAWS_DESCRIBEPROJECTREQUEST_P_H
 
-#include "codestar_p.h"
+#include "codestarrequest_p.h"
 #include "describeprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class DescribeProjectRequest;
 
-class QTAWS_EXPORT DescribeProjectRequestPrivate : public CodeStarPrivate {
+class QTAWS_EXPORT DescribeProjectRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     DescribeProjectRequestPrivate(const CodeStar::Action action,

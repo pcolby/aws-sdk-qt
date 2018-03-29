@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBERDSDBINSTANCESREQUEST_P_H
 #define QTAWS_DESCRIBERDSDBINSTANCESREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "describerdsdbinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class DescribeRdsDbInstancesRequest;
 
-class QTAWS_EXPORT DescribeRdsDbInstancesRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT DescribeRdsDbInstancesRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     DescribeRdsDbInstancesRequestPrivate(const OpsWorks::Action action,

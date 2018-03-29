@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETRUSTEDADVISORCHECKSUMMARIESREQUEST_P_H
 #define QTAWS_DESCRIBETRUSTEDADVISORCHECKSUMMARIESREQUEST_P_H
 
-#include "support_p.h"
+#include "supportrequest_p.h"
 #include "describetrustedadvisorchecksummariesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Support {
 
 class DescribeTrustedAdvisorCheckSummariesRequest;
 
-class QTAWS_EXPORT DescribeTrustedAdvisorCheckSummariesRequestPrivate : public SupportPrivate {
+class QTAWS_EXPORT DescribeTrustedAdvisorCheckSummariesRequestPrivate : public SupportRequestPrivate {
 
 public:
     DescribeTrustedAdvisorCheckSummariesRequestPrivate(const Support::Action action,

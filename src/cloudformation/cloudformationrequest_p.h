@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDFORMATIONREQUEST_P_H
 #define QTAWS_CLOUDFORMATIONREQUEST_P_H
 
-#include "cloudformation_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "cloudformationrequest.h"
 
 namespace QtAws {

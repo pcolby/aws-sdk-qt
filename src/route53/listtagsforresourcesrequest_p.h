@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCESREQUEST_P_H
 #define QTAWS_LISTTAGSFORRESOURCESREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "listtagsforresourcesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class ListTagsForResourcesRequest;
 
-class QTAWS_EXPORT ListTagsForResourcesRequestPrivate : public Route53Private {
+class QTAWS_EXPORT ListTagsForResourcesRequestPrivate : public Route53RequestPrivate {
 
 public:
     ListTagsForResourcesRequestPrivate(const Route53::Action action,

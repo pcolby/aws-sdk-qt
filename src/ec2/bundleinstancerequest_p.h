@@ -20,7 +20,7 @@
 #ifndef QTAWS_BUNDLEINSTANCEREQUEST_P_H
 #define QTAWS_BUNDLEINSTANCEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "bundleinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class BundleInstanceRequest;
 
-class QTAWS_EXPORT BundleInstanceRequestPrivate : public EC2Private {
+class QTAWS_EXPORT BundleInstanceRequestPrivate : public EC2RequestPrivate {
 
 public:
     BundleInstanceRequestPrivate(const EC2::Action action,

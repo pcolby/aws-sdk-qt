@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTBRANCHESREQUEST_P_H
 #define QTAWS_LISTBRANCHESREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "listbranchesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class ListBranchesRequest;
 
-class QTAWS_EXPORT ListBranchesRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT ListBranchesRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     ListBranchesRequestPrivate(const CodeCommit::Action action,

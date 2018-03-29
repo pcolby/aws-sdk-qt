@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPGAMESESSIONPLACEMENTREQUEST_P_H
 #define QTAWS_STOPGAMESESSIONPLACEMENTREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "stopgamesessionplacementrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class StopGameSessionPlacementRequest;
 
-class QTAWS_EXPORT StopGameSessionPlacementRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT StopGameSessionPlacementRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     StopGameSessionPlacementRequestPrivate(const GameLift::Action action,

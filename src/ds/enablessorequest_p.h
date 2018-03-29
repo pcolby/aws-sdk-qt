@@ -20,7 +20,7 @@
 #ifndef QTAWS_ENABLESSOREQUEST_P_H
 #define QTAWS_ENABLESSOREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "enablessorequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class EnableSsoRequest;
 
-class QTAWS_EXPORT EnableSsoRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT EnableSsoRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     EnableSsoRequestPrivate(const DirectoryService::Action action,

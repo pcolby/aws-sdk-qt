@@ -20,7 +20,7 @@
 #ifndef QTAWS_CONNECTDIRECTORYREQUEST_P_H
 #define QTAWS_CONNECTDIRECTORYREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "connectdirectoryrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class ConnectDirectoryRequest;
 
-class QTAWS_EXPORT ConnectDirectoryRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT ConnectDirectoryRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     ConnectDirectoryRequestPrivate(const DirectoryService::Action action,

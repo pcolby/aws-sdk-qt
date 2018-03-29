@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETECTMODERATIONLABELSREQUEST_P_H
 #define QTAWS_DETECTMODERATIONLABELSREQUEST_P_H
 
-#include "rekognition_p.h"
+#include "rekognitionrequest_p.h"
 #include "detectmoderationlabelsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class DetectModerationLabelsRequest;
 
-class QTAWS_EXPORT DetectModerationLabelsRequestPrivate : public RekognitionPrivate {
+class QTAWS_EXPORT DetectModerationLabelsRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     DetectModerationLabelsRequestPrivate(const Rekognition::Action action,

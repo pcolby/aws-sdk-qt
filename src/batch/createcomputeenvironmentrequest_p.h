@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECOMPUTEENVIRONMENTREQUEST_P_H
 #define QTAWS_CREATECOMPUTEENVIRONMENTREQUEST_P_H
 
-#include "batch_p.h"
+#include "batchrequest_p.h"
 #include "createcomputeenvironmentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Batch {
 
 class CreateComputeEnvironmentRequest;
 
-class QTAWS_EXPORT CreateComputeEnvironmentRequestPrivate : public BatchPrivate {
+class QTAWS_EXPORT CreateComputeEnvironmentRequestPrivate : public BatchRequestPrivate {
 
 public:
     CreateComputeEnvironmentRequestPrivate(const Batch::Action action,

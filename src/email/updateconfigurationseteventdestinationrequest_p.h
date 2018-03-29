@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETEVENTDESTINATIONREQUEST_P_H
 #define QTAWS_UPDATECONFIGURATIONSETEVENTDESTINATIONREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "updateconfigurationseteventdestinationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateConfigurationSetEventDestinationRequest;
 
-class QTAWS_EXPORT UpdateConfigurationSetEventDestinationRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT UpdateConfigurationSetEventDestinationRequestPrivate : public SESRequestPrivate {
 
 public:
     UpdateConfigurationSetEventDestinationRequestPrivate(const SES::Action action,

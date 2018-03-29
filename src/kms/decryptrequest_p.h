@@ -20,7 +20,7 @@
 #ifndef QTAWS_DECRYPTREQUEST_P_H
 #define QTAWS_DECRYPTREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "decryptrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class DecryptRequest;
 
-class QTAWS_EXPORT DecryptRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT DecryptRequestPrivate : public KMSRequestPrivate {
 
 public:
     DecryptRequestPrivate(const KMS::Action action,

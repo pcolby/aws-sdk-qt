@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETARGETHEALTHREQUEST_P_H
 #define QTAWS_DESCRIBETARGETHEALTHREQUEST_P_H
 
-#include "elasticloadbalancingv2_p.h"
+#include "elasticloadbalancingv2request_p.h"
 #include "describetargethealthrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DescribeTargetHealthRequest;
 
-class QTAWS_EXPORT DescribeTargetHealthRequestPrivate : public ElasticLoadBalancingv2Private {
+class QTAWS_EXPORT DescribeTargetHealthRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     DescribeTargetHealthRequestPrivate(const ElasticLoadBalancingv2::Action action,

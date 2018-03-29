@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETBASEPATHMAPPINGREQUEST_P_H
 #define QTAWS_GETBASEPATHMAPPINGREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "getbasepathmappingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetBasePathMappingRequest;
 
-class QTAWS_EXPORT GetBasePathMappingRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetBasePathMappingRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetBasePathMappingRequestPrivate(const APIGateway::Action action,

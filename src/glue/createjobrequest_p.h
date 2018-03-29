@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEJOBREQUEST_P_H
 #define QTAWS_CREATEJOBREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "createjobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class CreateJobRequest;
 
-class QTAWS_EXPORT CreateJobRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT CreateJobRequestPrivate : public GlueRequestPrivate {
 
 public:
     CreateJobRequestPrivate(const Glue::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEGROUPREQUEST_P_H
 #define QTAWS_DELETEGROUPREQUEST_P_H
 
-#include "workmail_p.h"
+#include "workmailrequest_p.h"
 #include "deletegrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class DeleteGroupRequest;
 
-class QTAWS_EXPORT DeleteGroupRequestPrivate : public WorkMailPrivate {
+class QTAWS_EXPORT DeleteGroupRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     DeleteGroupRequestPrivate(const WorkMail::Action action,

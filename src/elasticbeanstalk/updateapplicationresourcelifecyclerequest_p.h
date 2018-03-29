@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEAPPLICATIONRESOURCELIFECYCLEREQUEST_P_H
 #define QTAWS_UPDATEAPPLICATIONRESOURCELIFECYCLEREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "updateapplicationresourcelifecyclerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class UpdateApplicationResourceLifecycleRequest;
 
-class QTAWS_EXPORT UpdateApplicationResourceLifecycleRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT UpdateApplicationResourceLifecycleRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     UpdateApplicationResourceLifecycleRequestPrivate(const ElasticBeanstalk::Action action,

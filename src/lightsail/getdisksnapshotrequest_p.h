@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDISKSNAPSHOTREQUEST_P_H
 #define QTAWS_GETDISKSNAPSHOTREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "getdisksnapshotrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetDiskSnapshotRequest;
 
-class QTAWS_EXPORT GetDiskSnapshotRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT GetDiskSnapshotRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetDiskSnapshotRequestPrivate(const Lightsail::Action action,

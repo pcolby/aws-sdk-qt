@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETACCOUNTSETTINGSREQUEST_P_H
 #define QTAWS_GETACCOUNTSETTINGSREQUEST_P_H
 
-#include "lambda_p.h"
+#include "lambdarequest_p.h"
 #include "getaccountsettingsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lambda {
 
 class GetAccountSettingsRequest;
 
-class QTAWS_EXPORT GetAccountSettingsRequestPrivate : public LambdaPrivate {
+class QTAWS_EXPORT GetAccountSettingsRequestPrivate : public LambdaRequestPrivate {
 
 public:
     GetAccountSettingsRequestPrivate(const Lambda::Action action,

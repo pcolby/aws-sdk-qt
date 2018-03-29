@@ -20,7 +20,7 @@
 #ifndef QTAWS_TESTEVENTPATTERNREQUEST_P_H
 #define QTAWS_TESTEVENTPATTERNREQUEST_P_H
 
-#include "cloudwatchevents_p.h"
+#include "cloudwatcheventsrequest_p.h"
 #include "testeventpatternrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class TestEventPatternRequest;
 
-class QTAWS_EXPORT TestEventPatternRequestPrivate : public CloudWatchEventsPrivate {
+class QTAWS_EXPORT TestEventPatternRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     TestEventPatternRequestPrivate(const CloudWatchEvents::Action action,

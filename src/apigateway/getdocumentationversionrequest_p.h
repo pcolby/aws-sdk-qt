@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDOCUMENTATIONVERSIONREQUEST_P_H
 #define QTAWS_GETDOCUMENTATIONVERSIONREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "getdocumentationversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetDocumentationVersionRequest;
 
-class QTAWS_EXPORT GetDocumentationVersionRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetDocumentationVersionRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetDocumentationVersionRequestPrivate(const APIGateway::Action action,

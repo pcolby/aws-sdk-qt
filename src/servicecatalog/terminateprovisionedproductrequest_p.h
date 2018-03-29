@@ -20,7 +20,7 @@
 #ifndef QTAWS_TERMINATEPROVISIONEDPRODUCTREQUEST_P_H
 #define QTAWS_TERMINATEPROVISIONEDPRODUCTREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "terminateprovisionedproductrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class TerminateProvisionedProductRequest;
 
-class QTAWS_EXPORT TerminateProvisionedProductRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT TerminateProvisionedProductRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     TerminateProvisionedProductRequestPrivate(const ServiceCatalog::Action action,

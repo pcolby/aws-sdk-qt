@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTASSOCIATEDSTACKSREQUEST_P_H
 #define QTAWS_LISTASSOCIATEDSTACKSREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "listassociatedstacksrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class ListAssociatedStacksRequest;
 
-class QTAWS_EXPORT ListAssociatedStacksRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT ListAssociatedStacksRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     ListAssociatedStacksRequestPrivate(const AppStream::Action action,

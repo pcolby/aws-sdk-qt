@@ -20,7 +20,7 @@
 #ifndef QTAWS_TAGLOGGROUPREQUEST_P_H
 #define QTAWS_TAGLOGGROUPREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "tagloggrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class TagLogGroupRequest;
 
-class QTAWS_EXPORT TagLogGroupRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT TagLogGroupRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     TagLogGroupRequestPrivate(const CloudWatchLogs::Action action,

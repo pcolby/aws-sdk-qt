@@ -20,7 +20,7 @@
 #ifndef QTAWS_NOTIFYWORKERSREQUEST_P_H
 #define QTAWS_NOTIFYWORKERSREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "notifyworkersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class NotifyWorkersRequest;
 
-class QTAWS_EXPORT NotifyWorkersRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT NotifyWorkersRequestPrivate : public MTurkRequestPrivate {
 
 public:
     NotifyWorkersRequestPrivate(const MTurk::Action action,

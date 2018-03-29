@@ -20,7 +20,7 @@
 #ifndef QTAWS_FLUSHSTAGEAUTHORIZERSCACHEREQUEST_P_H
 #define QTAWS_FLUSHSTAGEAUTHORIZERSCACHEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "flushstageauthorizerscacherequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class FlushStageAuthorizersCacheRequest;
 
-class QTAWS_EXPORT FlushStageAuthorizersCacheRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT FlushStageAuthorizersCacheRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     FlushStageAuthorizersCacheRequestPrivate(const APIGateway::Action action,

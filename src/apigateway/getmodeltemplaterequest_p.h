@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETMODELTEMPLATEREQUEST_P_H
 #define QTAWS_GETMODELTEMPLATEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "getmodeltemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetModelTemplateRequest;
 
-class QTAWS_EXPORT GetModelTemplateRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetModelTemplateRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetModelTemplateRequestPrivate(const APIGateway::Action action,

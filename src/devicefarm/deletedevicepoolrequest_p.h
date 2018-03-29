@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDEVICEPOOLREQUEST_P_H
 #define QTAWS_DELETEDEVICEPOOLREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "deletedevicepoolrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class DeleteDevicePoolRequest;
 
-class QTAWS_EXPORT DeleteDevicePoolRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT DeleteDevicePoolRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     DeleteDevicePoolRequestPrivate(const DeviceFarm::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBERESOURCEGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBERESOURCEGROUPSREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "describeresourcegroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class DescribeResourceGroupsRequest;
 
-class QTAWS_EXPORT DescribeResourceGroupsRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT DescribeResourceGroupsRequestPrivate : public InspectorRequestPrivate {
 
 public:
     DescribeResourceGroupsRequestPrivate(const Inspector::Action action,

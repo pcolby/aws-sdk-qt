@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYWORKSPACEPROPERTIESREQUEST_P_H
 #define QTAWS_MODIFYWORKSPACEPROPERTIESREQUEST_P_H
 
-#include "workspaces_p.h"
+#include "workspacesrequest_p.h"
 #include "modifyworkspacepropertiesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class ModifyWorkspacePropertiesRequest;
 
-class QTAWS_EXPORT ModifyWorkspacePropertiesRequestPrivate : public WorkSpacesPrivate {
+class QTAWS_EXPORT ModifyWorkspacePropertiesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     ModifyWorkspacePropertiesRequestPrivate(const WorkSpaces::Action action,

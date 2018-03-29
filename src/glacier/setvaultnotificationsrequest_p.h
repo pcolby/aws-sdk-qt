@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETVAULTNOTIFICATIONSREQUEST_P_H
 #define QTAWS_SETVAULTNOTIFICATIONSREQUEST_P_H
 
-#include "glacier_p.h"
+#include "glacierrequest_p.h"
 #include "setvaultnotificationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glacier {
 
 class SetVaultNotificationsRequest;
 
-class QTAWS_EXPORT SetVaultNotificationsRequestPrivate : public GlacierPrivate {
+class QTAWS_EXPORT SetVaultNotificationsRequestPrivate : public GlacierRequestPrivate {
 
 public:
     SetVaultNotificationsRequestPrivate(const Glacier::Action action,

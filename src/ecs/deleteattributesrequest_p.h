@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEATTRIBUTESREQUEST_P_H
 #define QTAWS_DELETEATTRIBUTESREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "deleteattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class DeleteAttributesRequest;
 
-class QTAWS_EXPORT DeleteAttributesRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT DeleteAttributesRequestPrivate : public ECSRequestPrivate {
 
 public:
     DeleteAttributesRequestPrivate(const ECS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEAPPLICATIONREQUEST_P_H
 #define QTAWS_CREATEAPPLICATIONREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "createapplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class CreateApplicationRequest;
 
-class QTAWS_EXPORT CreateApplicationRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT CreateApplicationRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     CreateApplicationRequestPrivate(const ElasticBeanstalk::Action action,

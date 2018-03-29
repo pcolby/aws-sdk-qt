@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETADMCHANNELREQUEST_P_H
 #define QTAWS_GETADMCHANNELREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "getadmchannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetAdmChannelRequest;
 
-class QTAWS_EXPORT GetAdmChannelRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT GetAdmChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetAdmChannelRequestPrivate(const Pinpoint::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEDOCUMENTREQUEST_P_H
 #define QTAWS_UPDATEDOCUMENTREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "updatedocumentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class UpdateDocumentRequest;
 
-class QTAWS_EXPORT UpdateDocumentRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT UpdateDocumentRequestPrivate : public SSMRequestPrivate {
 
 public:
     UpdateDocumentRequestPrivate(const SSM::Action action,

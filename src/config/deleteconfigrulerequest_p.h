@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECONFIGRULEREQUEST_P_H
 #define QTAWS_DELETECONFIGRULEREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "deleteconfigrulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeleteConfigRuleRequest;
 
-class QTAWS_EXPORT DeleteConfigRuleRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT DeleteConfigRuleRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DeleteConfigRuleRequestPrivate(const ConfigService::Action action,

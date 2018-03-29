@@ -20,7 +20,7 @@
 #ifndef QTAWS_GENERATECLIENTCERTIFICATEREQUEST_P_H
 #define QTAWS_GENERATECLIENTCERTIFICATEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "generateclientcertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GenerateClientCertificateRequest;
 
-class QTAWS_EXPORT GenerateClientCertificateRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GenerateClientCertificateRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GenerateClientCertificateRequestPrivate(const APIGateway::Action action,

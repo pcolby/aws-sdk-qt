@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECLASSIFIERREQUEST_P_H
 #define QTAWS_CREATECLASSIFIERREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "createclassifierrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class CreateClassifierRequest;
 
-class QTAWS_EXPORT CreateClassifierRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT CreateClassifierRequestPrivate : public GlueRequestPrivate {
 
 public:
     CreateClassifierRequestPrivate(const Glue::Action action,

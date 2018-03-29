@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECLUSTERREQUEST_P_H
 #define QTAWS_UPDATECLUSTERREQUEST_P_H
 
-#include "dax_p.h"
+#include "daxrequest_p.h"
 #include "updateclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DAX {
 
 class UpdateClusterRequest;
 
-class QTAWS_EXPORT UpdateClusterRequestPrivate : public DAXPrivate {
+class QTAWS_EXPORT UpdateClusterRequestPrivate : public DAXRequestPrivate {
 
 public:
     UpdateClusterRequestPrivate(const DAX::Action action,

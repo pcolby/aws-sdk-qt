@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTGRANTSREQUEST_P_H
 #define QTAWS_LISTGRANTSREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "listgrantsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class ListGrantsRequest;
 
-class QTAWS_EXPORT ListGrantsRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT ListGrantsRequestPrivate : public KMSRequestPrivate {
 
 public:
     ListGrantsRequestPrivate(const KMS::Action action,

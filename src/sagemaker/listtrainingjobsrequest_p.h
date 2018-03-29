@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTRAININGJOBSREQUEST_P_H
 #define QTAWS_LISTTRAININGJOBSREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "listtrainingjobsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class ListTrainingJobsRequest;
 
-class QTAWS_EXPORT ListTrainingJobsRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT ListTrainingJobsRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     ListTrainingJobsRequestPrivate(const SageMaker::Action action,

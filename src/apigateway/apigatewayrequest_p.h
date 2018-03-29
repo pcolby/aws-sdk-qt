@@ -20,7 +20,7 @@
 #ifndef QTAWS_APIGATEWAYREQUEST_P_H
 #define QTAWS_APIGATEWAYREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "apigatewayrequest.h"
 
 namespace QtAws {

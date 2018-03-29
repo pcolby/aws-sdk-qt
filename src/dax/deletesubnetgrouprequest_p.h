@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESUBNETGROUPREQUEST_P_H
 #define QTAWS_DELETESUBNETGROUPREQUEST_P_H
 
-#include "dax_p.h"
+#include "daxrequest_p.h"
 #include "deletesubnetgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DAX {
 
 class DeleteSubnetGroupRequest;
 
-class QTAWS_EXPORT DeleteSubnetGroupRequestPrivate : public DAXPrivate {
+class QTAWS_EXPORT DeleteSubnetGroupRequestPrivate : public DAXRequestPrivate {
 
 public:
     DeleteSubnetGroupRequestPrivate(const DAX::Action action,

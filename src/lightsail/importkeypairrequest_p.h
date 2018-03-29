@@ -20,7 +20,7 @@
 #ifndef QTAWS_IMPORTKEYPAIRREQUEST_P_H
 #define QTAWS_IMPORTKEYPAIRREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "importkeypairrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class ImportKeyPairRequest;
 
-class QTAWS_EXPORT ImportKeyPairRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT ImportKeyPairRequestPrivate : public LightsailRequestPrivate {
 
 public:
     ImportKeyPairRequestPrivate(const Lightsail::Action action,

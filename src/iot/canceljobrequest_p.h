@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELJOBREQUEST_P_H
 #define QTAWS_CANCELJOBREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "canceljobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class CancelJobRequest;
 
-class QTAWS_EXPORT CancelJobRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT CancelJobRequestPrivate : public IoTRequestPrivate {
 
 public:
     CancelJobRequestPrivate(const IoT::Action action,

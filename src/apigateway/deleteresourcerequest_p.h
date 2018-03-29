@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETERESOURCEREQUEST_P_H
 #define QTAWS_DELETERESOURCEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "deleteresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteResourceRequest;
 
-class QTAWS_EXPORT DeleteResourceRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT DeleteResourceRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteResourceRequestPrivate(const APIGateway::Action action,

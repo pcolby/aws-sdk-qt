@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELJOBREQUEST_P_H
 #define QTAWS_CANCELJOBREQUEST_P_H
 
-#include "importexport_p.h"
+#include "importexportrequest_p.h"
 #include "canceljobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ImportExport {
 
 class CancelJobRequest;
 
-class QTAWS_EXPORT CancelJobRequestPrivate : public ImportExportPrivate {
+class QTAWS_EXPORT CancelJobRequestPrivate : public ImportExportRequestPrivate {
 
 public:
     CancelJobRequestPrivate(const ImportExport::Action action,

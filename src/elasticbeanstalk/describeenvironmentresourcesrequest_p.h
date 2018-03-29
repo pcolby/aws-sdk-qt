@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTRESOURCESREQUEST_P_H
 #define QTAWS_DESCRIBEENVIRONMENTRESOURCESREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "describeenvironmentresourcesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class DescribeEnvironmentResourcesRequest;
 
-class QTAWS_EXPORT DescribeEnvironmentResourcesRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT DescribeEnvironmentResourcesRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     DescribeEnvironmentResourcesRequestPrivate(const ElasticBeanstalk::Action action,

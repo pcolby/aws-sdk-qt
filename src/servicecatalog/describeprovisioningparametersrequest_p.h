@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEPROVISIONINGPARAMETERSREQUEST_P_H
 #define QTAWS_DESCRIBEPROVISIONINGPARAMETERSREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "describeprovisioningparametersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DescribeProvisioningParametersRequest;
 
-class QTAWS_EXPORT DescribeProvisioningParametersRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT DescribeProvisioningParametersRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DescribeProvisioningParametersRequestPrivate(const ServiceCatalog::Action action,

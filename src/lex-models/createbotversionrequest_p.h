@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEBOTVERSIONREQUEST_P_H
 #define QTAWS_CREATEBOTVERSIONREQUEST_P_H
 
-#include "lexmodelbuildingservice_p.h"
+#include "lexmodelbuildingservicerequest_p.h"
 #include "createbotversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class CreateBotVersionRequest;
 
-class QTAWS_EXPORT CreateBotVersionRequestPrivate : public LexModelBuildingServicePrivate {
+class QTAWS_EXPORT CreateBotVersionRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
     CreateBotVersionRequestPrivate(const LexModelBuildingService::Action action,

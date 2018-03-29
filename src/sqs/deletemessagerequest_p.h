@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEMESSAGEREQUEST_P_H
 #define QTAWS_DELETEMESSAGEREQUEST_P_H
 
-#include "sqs_p.h"
+#include "sqsrequest_p.h"
 #include "deletemessagerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SQS {
 
 class DeleteMessageRequest;
 
-class QTAWS_EXPORT DeleteMessageRequestPrivate : public SQSPrivate {
+class QTAWS_EXPORT DeleteMessageRequestPrivate : public SQSRequestPrivate {
 
 public:
     DeleteMessageRequestPrivate(const SQS::Action action,

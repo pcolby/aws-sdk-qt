@@ -20,7 +20,7 @@
 #ifndef QTAWS_SCHEDULEKEYDELETIONREQUEST_P_H
 #define QTAWS_SCHEDULEKEYDELETIONREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "schedulekeydeletionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class ScheduleKeyDeletionRequest;
 
-class QTAWS_EXPORT ScheduleKeyDeletionRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT ScheduleKeyDeletionRequestPrivate : public KMSRequestPrivate {
 
 public:
     ScheduleKeyDeletionRequestPrivate(const KMS::Action action,

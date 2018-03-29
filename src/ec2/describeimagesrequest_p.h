@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEIMAGESREQUEST_P_H
 #define QTAWS_DESCRIBEIMAGESREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describeimagesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeImagesRequest;
 
-class QTAWS_EXPORT DescribeImagesRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeImagesRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeImagesRequestPrivate(const EC2::Action action,

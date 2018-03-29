@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEVAULTACCESSPOLICYREQUEST_P_H
 #define QTAWS_DELETEVAULTACCESSPOLICYREQUEST_P_H
 
-#include "glacier_p.h"
+#include "glacierrequest_p.h"
 #include "deletevaultaccesspolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glacier {
 
 class DeleteVaultAccessPolicyRequest;
 
-class QTAWS_EXPORT DeleteVaultAccessPolicyRequestPrivate : public GlacierPrivate {
+class QTAWS_EXPORT DeleteVaultAccessPolicyRequestPrivate : public GlacierRequestPrivate {
 
 public:
     DeleteVaultAccessPolicyRequestPrivate(const Glacier::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEREQUESTVALIDATORREQUEST_P_H
 #define QTAWS_CREATEREQUESTVALIDATORREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "createrequestvalidatorrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class CreateRequestValidatorRequest;
 
-class QTAWS_EXPORT CreateRequestValidatorRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT CreateRequestValidatorRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     CreateRequestValidatorRequestPrivate(const APIGateway::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 #define QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "updateapplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class UpdateApplicationRequest;
 
-class QTAWS_EXPORT UpdateApplicationRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT UpdateApplicationRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     UpdateApplicationRequestPrivate(const CodeDeploy::Action action,

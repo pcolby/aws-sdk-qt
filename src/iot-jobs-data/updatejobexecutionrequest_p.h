@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEJOBEXECUTIONREQUEST_P_H
 #define QTAWS_UPDATEJOBEXECUTIONREQUEST_P_H
 
-#include "iotjobsdataplane_p.h"
+#include "iotjobsdataplanerequest_p.h"
 #include "updatejobexecutionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoTJobsDataPlane {
 
 class UpdateJobExecutionRequest;
 
-class QTAWS_EXPORT UpdateJobExecutionRequestPrivate : public IoTJobsDataPlanePrivate {
+class QTAWS_EXPORT UpdateJobExecutionRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
 
 public:
     UpdateJobExecutionRequestPrivate(const IoTJobsDataPlane::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SEARCHRESOURCESREQUEST_P_H
 #define QTAWS_SEARCHRESOURCESREQUEST_P_H
 
-#include "resourcegroups_p.h"
+#include "resourcegroupsrequest_p.h"
 #include "searchresourcesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class SearchResourcesRequest;
 
-class QTAWS_EXPORT SearchResourcesRequestPrivate : public ResourceGroupsPrivate {
+class QTAWS_EXPORT SearchResourcesRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
     SearchResourcesRequestPrivate(const ResourceGroups::Action action,

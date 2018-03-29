@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETINDEXINGCONFIGURATIONREQUEST_P_H
 #define QTAWS_GETINDEXINGCONFIGURATIONREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "getindexingconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class GetIndexingConfigurationRequest;
 
-class QTAWS_EXPORT GetIndexingConfigurationRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT GetIndexingConfigurationRequestPrivate : public IoTRequestPrivate {
 
 public:
     GetIndexingConfigurationRequestPrivate(const IoT::Action action,

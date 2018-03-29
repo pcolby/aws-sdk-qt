@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTTHINGREGISTRATIONTASKREQUEST_P_H
 #define QTAWS_STARTTHINGREGISTRATIONTASKREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "startthingregistrationtaskrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class StartThingRegistrationTaskRequest;
 
-class QTAWS_EXPORT StartThingRegistrationTaskRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT StartThingRegistrationTaskRequestPrivate : public IoTRequestPrivate {
 
 public:
     StartThingRegistrationTaskRequestPrivate(const IoT::Action action,

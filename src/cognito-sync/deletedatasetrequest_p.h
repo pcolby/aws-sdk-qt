@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDATASETREQUEST_P_H
 #define QTAWS_DELETEDATASETREQUEST_P_H
 
-#include "cognitosync_p.h"
+#include "cognitosyncrequest_p.h"
 #include "deletedatasetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class DeleteDatasetRequest;
 
-class QTAWS_EXPORT DeleteDatasetRequestPrivate : public CognitoSyncPrivate {
+class QTAWS_EXPORT DeleteDatasetRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     DeleteDatasetRequestPrivate(const CognitoSync::Action action,

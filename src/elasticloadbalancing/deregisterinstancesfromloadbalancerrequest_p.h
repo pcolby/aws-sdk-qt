@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEREGISTERINSTANCESFROMLOADBALANCERREQUEST_P_H
 #define QTAWS_DEREGISTERINSTANCESFROMLOADBALANCERREQUEST_P_H
 
-#include "elasticloadbalancing_p.h"
+#include "elasticloadbalancingrequest_p.h"
 #include "deregisterinstancesfromloadbalancerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class DeregisterInstancesFromLoadBalancerRequest;
 
-class QTAWS_EXPORT DeregisterInstancesFromLoadBalancerRequestPrivate : public ElasticLoadBalancingPrivate {
+class QTAWS_EXPORT DeregisterInstancesFromLoadBalancerRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
     DeregisterInstancesFromLoadBalancerRequestPrivate(const ElasticLoadBalancing::Action action,

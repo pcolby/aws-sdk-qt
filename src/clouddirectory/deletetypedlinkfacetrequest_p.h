@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETETYPEDLINKFACETREQUEST_P_H
 #define QTAWS_DELETETYPEDLINKFACETREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "deletetypedlinkfacetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class DeleteTypedLinkFacetRequest;
 
-class QTAWS_EXPORT DeleteTypedLinkFacetRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT DeleteTypedLinkFacetRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     DeleteTypedLinkFacetRequestPrivate(const CloudDirectory::Action action,

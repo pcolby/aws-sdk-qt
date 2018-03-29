@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATETAGSREQUEST_P_H
 #define QTAWS_CREATETAGSREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "createtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class CreateTagsRequest;
 
-class QTAWS_EXPORT CreateTagsRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT CreateTagsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     CreateTagsRequestPrivate(const Redshift::Action action,

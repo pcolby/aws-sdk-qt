@@ -20,7 +20,7 @@
 #ifndef QTAWS_ENABLEKEYREQUEST_P_H
 #define QTAWS_ENABLEKEYREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "enablekeyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class EnableKeyRequest;
 
-class QTAWS_EXPORT EnableKeyRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT EnableKeyRequestPrivate : public KMSRequestPrivate {
 
 public:
     EnableKeyRequestPrivate(const KMS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEAUTHORIZERREQUEST_P_H
 #define QTAWS_DELETEAUTHORIZERREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "deleteauthorizerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteAuthorizerRequest;
 
-class QTAWS_EXPORT DeleteAuthorizerRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT DeleteAuthorizerRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteAuthorizerRequestPrivate(const APIGateway::Action action,

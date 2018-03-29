@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEPROVISIONINGARTIFACTREQUEST_P_H
 #define QTAWS_DESCRIBEPROVISIONINGARTIFACTREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "describeprovisioningartifactrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DescribeProvisioningArtifactRequest;
 
-class QTAWS_EXPORT DescribeProvisioningArtifactRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT DescribeProvisioningArtifactRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DescribeProvisioningArtifactRequestPrivate(const ServiceCatalog::Action action,

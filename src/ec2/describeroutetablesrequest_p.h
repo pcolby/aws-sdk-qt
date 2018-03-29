@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEROUTETABLESREQUEST_P_H
 #define QTAWS_DESCRIBEROUTETABLESREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describeroutetablesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeRouteTablesRequest;
 
-class QTAWS_EXPORT DescribeRouteTablesRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeRouteTablesRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeRouteTablesRequestPrivate(const EC2::Action action,

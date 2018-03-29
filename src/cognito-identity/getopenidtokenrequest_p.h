@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETOPENIDTOKENREQUEST_P_H
 #define QTAWS_GETOPENIDTOKENREQUEST_P_H
 
-#include "cognitoidentity_p.h"
+#include "cognitoidentityrequest_p.h"
 #include "getopenidtokenrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class GetOpenIdTokenRequest;
 
-class QTAWS_EXPORT GetOpenIdTokenRequestPrivate : public CognitoIdentityPrivate {
+class QTAWS_EXPORT GetOpenIdTokenRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     GetOpenIdTokenRequestPrivate(const CognitoIdentity::Action action,

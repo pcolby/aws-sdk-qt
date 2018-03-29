@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETTRACKINGOPTIONSREQUEST_P_H
 #define QTAWS_UPDATECONFIGURATIONSETTRACKINGOPTIONSREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "updateconfigurationsettrackingoptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateConfigurationSetTrackingOptionsRequest;
 
-class QTAWS_EXPORT UpdateConfigurationSetTrackingOptionsRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT UpdateConfigurationSetTrackingOptionsRequestPrivate : public SESRequestPrivate {
 
 public:
     UpdateConfigurationSetTrackingOptionsRequestPrivate(const SES::Action action,

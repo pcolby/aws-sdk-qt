@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSERVICESPECIFICCREDENTIALSREQUEST_P_H
 #define QTAWS_LISTSERVICESPECIFICCREDENTIALSREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "listservicespecificcredentialsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class ListServiceSpecificCredentialsRequest;
 
-class QTAWS_EXPORT ListServiceSpecificCredentialsRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT ListServiceSpecificCredentialsRequestPrivate : public IAMRequestPrivate {
 
 public:
     ListServiceSpecificCredentialsRequestPrivate(const IAM::Action action,

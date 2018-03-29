@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATECONFIGURATIONITEMSFROMAPPLICATIONREQUEST_P_H
 #define QTAWS_DISASSOCIATECONFIGURATIONITEMSFROMAPPLICATIONREQUEST_P_H
 
-#include "applicationdiscoveryservice_p.h"
+#include "applicationdiscoveryservicerequest_p.h"
 #include "disassociateconfigurationitemsfromapplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class DisassociateConfigurationItemsFromApplicationRequest;
 
-class QTAWS_EXPORT DisassociateConfigurationItemsFromApplicationRequestPrivate : public ApplicationDiscoveryServicePrivate {
+class QTAWS_EXPORT DisassociateConfigurationItemsFromApplicationRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
     DisassociateConfigurationItemsFromApplicationRequestPrivate(const ApplicationDiscoveryService::Action action,

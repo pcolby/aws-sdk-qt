@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTEVENTSTREAMREQUEST_P_H
 #define QTAWS_PUTEVENTSTREAMREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "puteventstreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class PutEventStreamRequest;
 
-class QTAWS_EXPORT PutEventStreamRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT PutEventStreamRequestPrivate : public PinpointRequestPrivate {
 
 public:
     PutEventStreamRequestPrivate(const Pinpoint::Action action,

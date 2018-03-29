@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHDELETETABLEREQUEST_P_H
 #define QTAWS_BATCHDELETETABLEREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "batchdeletetablerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class BatchDeleteTableRequest;
 
-class QTAWS_EXPORT BatchDeleteTableRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT BatchDeleteTableRequestPrivate : public GlueRequestPrivate {
 
 public:
     BatchDeleteTableRequestPrivate(const Glue::Action action,

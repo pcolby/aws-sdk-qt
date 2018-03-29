@@ -20,7 +20,7 @@
 #ifndef QTAWS_ROTATECHANNELCREDENTIALSREQUEST_P_H
 #define QTAWS_ROTATECHANNELCREDENTIALSREQUEST_P_H
 
-#include "mediapackage_p.h"
+#include "mediapackagerequest_p.h"
 #include "rotatechannelcredentialsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaPackage {
 
 class RotateChannelCredentialsRequest;
 
-class QTAWS_EXPORT RotateChannelCredentialsRequestPrivate : public MediaPackagePrivate {
+class QTAWS_EXPORT RotateChannelCredentialsRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
     RotateChannelCredentialsRequestPrivate(const MediaPackage::Action action,

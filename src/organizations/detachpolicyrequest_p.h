@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETACHPOLICYREQUEST_P_H
 #define QTAWS_DETACHPOLICYREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "detachpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class DetachPolicyRequest;
 
-class QTAWS_EXPORT DetachPolicyRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT DetachPolicyRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     DetachPolicyRequestPrivate(const Organizations::Action action,

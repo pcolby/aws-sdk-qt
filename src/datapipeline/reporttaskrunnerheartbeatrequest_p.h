@@ -20,7 +20,7 @@
 #ifndef QTAWS_REPORTTASKRUNNERHEARTBEATREQUEST_P_H
 #define QTAWS_REPORTTASKRUNNERHEARTBEATREQUEST_P_H
 
-#include "datapipeline_p.h"
+#include "datapipelinerequest_p.h"
 #include "reporttaskrunnerheartbeatrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class ReportTaskRunnerHeartbeatRequest;
 
-class QTAWS_EXPORT ReportTaskRunnerHeartbeatRequestPrivate : public DataPipelinePrivate {
+class QTAWS_EXPORT ReportTaskRunnerHeartbeatRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     ReportTaskRunnerHeartbeatRequestPrivate(const DataPipeline::Action action,

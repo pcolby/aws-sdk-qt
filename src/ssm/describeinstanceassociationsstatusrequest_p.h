@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEINSTANCEASSOCIATIONSSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBEINSTANCEASSOCIATIONSSTATUSREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "describeinstanceassociationsstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeInstanceAssociationsStatusRequest;
 
-class QTAWS_EXPORT DescribeInstanceAssociationsStatusRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DescribeInstanceAssociationsStatusRequestPrivate : public SSMRequestPrivate {
 
 public:
     DescribeInstanceAssociationsStatusRequestPrivate(const SSM::Action action,

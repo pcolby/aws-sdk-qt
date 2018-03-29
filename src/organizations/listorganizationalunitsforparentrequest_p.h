@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTORGANIZATIONALUNITSFORPARENTREQUEST_P_H
 #define QTAWS_LISTORGANIZATIONALUNITSFORPARENTREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "listorganizationalunitsforparentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class ListOrganizationalUnitsForParentRequest;
 
-class QTAWS_EXPORT ListOrganizationalUnitsForParentRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT ListOrganizationalUnitsForParentRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     ListOrganizationalUnitsForParentRequestPrivate(const Organizations::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSOCIATEVPCWITHHOSTEDZONEREQUEST_P_H
 #define QTAWS_ASSOCIATEVPCWITHHOSTEDZONEREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "associatevpcwithhostedzonerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class AssociateVPCWithHostedZoneRequest;
 
-class QTAWS_EXPORT AssociateVPCWithHostedZoneRequestPrivate : public Route53Private {
+class QTAWS_EXPORT AssociateVPCWithHostedZoneRequestPrivate : public Route53RequestPrivate {
 
 public:
     AssociateVPCWithHostedZoneRequestPrivate(const Route53::Action action,

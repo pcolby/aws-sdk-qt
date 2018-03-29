@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDHCPOPTIONSREQUEST_P_H
 #define QTAWS_CREATEDHCPOPTIONSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "createdhcpoptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateDhcpOptionsRequest;
 
-class QTAWS_EXPORT CreateDhcpOptionsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CreateDhcpOptionsRequestPrivate : public EC2RequestPrivate {
 
 public:
     CreateDhcpOptionsRequestPrivate(const EC2::Action action,

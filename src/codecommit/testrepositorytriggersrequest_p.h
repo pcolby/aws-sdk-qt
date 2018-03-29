@@ -20,7 +20,7 @@
 #ifndef QTAWS_TESTREPOSITORYTRIGGERSREQUEST_P_H
 #define QTAWS_TESTREPOSITORYTRIGGERSREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "testrepositorytriggersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class TestRepositoryTriggersRequest;
 
-class QTAWS_EXPORT TestRepositoryTriggersRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT TestRepositoryTriggersRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     TestRepositoryTriggersRequestPrivate(const CodeCommit::Action action,

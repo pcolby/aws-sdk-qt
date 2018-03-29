@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESERVICESPECIFICCREDENTIALREQUEST_P_H
 #define QTAWS_DELETESERVICESPECIFICCREDENTIALREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "deleteservicespecificcredentialrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class DeleteServiceSpecificCredentialRequest;
 
-class QTAWS_EXPORT DeleteServiceSpecificCredentialRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT DeleteServiceSpecificCredentialRequestPrivate : public IAMRequestPrivate {
 
 public:
     DeleteServiceSpecificCredentialRequestPrivate(const IAM::Action action,

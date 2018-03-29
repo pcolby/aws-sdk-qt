@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSUITEREQUEST_P_H
 #define QTAWS_GETSUITEREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "getsuiterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetSuiteRequest;
 
-class QTAWS_EXPORT GetSuiteRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT GetSuiteRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     GetSuiteRequestPrivate(const DeviceFarm::Action action,

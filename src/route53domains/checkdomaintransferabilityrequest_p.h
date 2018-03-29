@@ -20,7 +20,7 @@
 #ifndef QTAWS_CHECKDOMAINTRANSFERABILITYREQUEST_P_H
 #define QTAWS_CHECKDOMAINTRANSFERABILITYREQUEST_P_H
 
-#include "route53domains_p.h"
+#include "route53domainsrequest_p.h"
 #include "checkdomaintransferabilityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class CheckDomainTransferabilityRequest;
 
-class QTAWS_EXPORT CheckDomainTransferabilityRequestPrivate : public Route53DomainsPrivate {
+class QTAWS_EXPORT CheckDomainTransferabilityRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     CheckDomainTransferabilityRequestPrivate(const Route53Domains::Action action,

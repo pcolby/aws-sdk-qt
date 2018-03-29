@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDISKREQUEST_P_H
 #define QTAWS_DELETEDISKREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "deletediskrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteDiskRequest;
 
-class QTAWS_EXPORT DeleteDiskRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT DeleteDiskRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DeleteDiskRequestPrivate(const Lightsail::Action action,

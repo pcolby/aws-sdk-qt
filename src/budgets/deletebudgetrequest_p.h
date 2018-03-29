@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBUDGETREQUEST_P_H
 #define QTAWS_DELETEBUDGETREQUEST_P_H
 
-#include "budgets_p.h"
+#include "budgetsrequest_p.h"
 #include "deletebudgetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Budgets {
 
 class DeleteBudgetRequest;
 
-class QTAWS_EXPORT DeleteBudgetRequestPrivate : public BudgetsPrivate {
+class QTAWS_EXPORT DeleteBudgetRequestPrivate : public BudgetsRequestPrivate {
 
 public:
     DeleteBudgetRequestPrivate(const Budgets::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTINSTANCESREQUEST_P_H
 #define QTAWS_STARTINSTANCESREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "startinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class StartInstancesRequest;
 
-class QTAWS_EXPORT StartInstancesRequestPrivate : public EC2Private {
+class QTAWS_EXPORT StartInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
     StartInstancesRequestPrivate(const EC2::Action action,

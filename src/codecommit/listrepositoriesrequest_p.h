@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTREPOSITORIESREQUEST_P_H
 #define QTAWS_LISTREPOSITORIESREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "listrepositoriesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class ListRepositoriesRequest;
 
-class QTAWS_EXPORT ListRepositoriesRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT ListRepositoriesRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     ListRepositoriesRequestPrivate(const CodeCommit::Action action,

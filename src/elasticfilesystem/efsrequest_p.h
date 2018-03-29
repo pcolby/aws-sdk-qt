@@ -20,7 +20,7 @@
 #ifndef QTAWS_EFSREQUEST_P_H
 #define QTAWS_EFSREQUEST_P_H
 
-#include "efs_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "efsrequest.h"
 
 namespace QtAws {

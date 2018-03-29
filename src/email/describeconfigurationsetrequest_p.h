@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONSETREQUEST_P_H
 #define QTAWS_DESCRIBECONFIGURATIONSETREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "describeconfigurationsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class DescribeConfigurationSetRequest;
 
-class QTAWS_EXPORT DescribeConfigurationSetRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT DescribeConfigurationSetRequestPrivate : public SESRequestPrivate {
 
 public:
     DescribeConfigurationSetRequestPrivate(const SES::Action action,

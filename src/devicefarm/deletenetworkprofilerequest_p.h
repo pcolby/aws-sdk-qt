@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETENETWORKPROFILEREQUEST_P_H
 #define QTAWS_DELETENETWORKPROFILEREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "deletenetworkprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class DeleteNetworkProfileRequest;
 
-class QTAWS_EXPORT DeleteNetworkProfileRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT DeleteNetworkProfileRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     DeleteNetworkProfileRequestPrivate(const DeviceFarm::Action action,

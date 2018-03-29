@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTPHONENUMBERSOPTEDOUTREQUEST_P_H
 #define QTAWS_LISTPHONENUMBERSOPTEDOUTREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "listphonenumbersoptedoutrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class ListPhoneNumbersOptedOutRequest;
 
-class QTAWS_EXPORT ListPhoneNumbersOptedOutRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT ListPhoneNumbersOptedOutRequestPrivate : public SNSRequestPrivate {
 
 public:
     ListPhoneNumbersOptedOutRequestPrivate(const SNS::Action action,

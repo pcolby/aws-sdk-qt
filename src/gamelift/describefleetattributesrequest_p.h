@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEFLEETATTRIBUTESREQUEST_P_H
 #define QTAWS_DESCRIBEFLEETATTRIBUTESREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "describefleetattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribeFleetAttributesRequest;
 
-class QTAWS_EXPORT DescribeFleetAttributesRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT DescribeFleetAttributesRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DescribeFleetAttributesRequestPrivate(const GameLift::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESUBSCRIPTIONFILTERSREQUEST_P_H
 #define QTAWS_DESCRIBESUBSCRIPTIONFILTERSREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "describesubscriptionfiltersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DescribeSubscriptionFiltersRequest;
 
-class QTAWS_EXPORT DescribeSubscriptionFiltersRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT DescribeSubscriptionFiltersRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DescribeSubscriptionFiltersRequestPrivate(const CloudWatchLogs::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDEPLOYMENTREQUEST_P_H
 #define QTAWS_GETDEPLOYMENTREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "getdeploymentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetDeploymentRequest;
 
-class QTAWS_EXPORT GetDeploymentRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetDeploymentRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetDeploymentRequestPrivate(const APIGateway::Action action,

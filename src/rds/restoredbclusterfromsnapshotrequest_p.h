@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESTOREDBCLUSTERFROMSNAPSHOTREQUEST_P_H
 #define QTAWS_RESTOREDBCLUSTERFROMSNAPSHOTREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "restoredbclusterfromsnapshotrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class RestoreDBClusterFromSnapshotRequest;
 
-class QTAWS_EXPORT RestoreDBClusterFromSnapshotRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT RestoreDBClusterFromSnapshotRequestPrivate : public RDSRequestPrivate {
 
 public:
     RestoreDBClusterFromSnapshotRequestPrivate(const RDS::Action action,

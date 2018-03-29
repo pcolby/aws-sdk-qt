@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERRDSDBINSTANCEREQUEST_P_H
 #define QTAWS_REGISTERRDSDBINSTANCEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "registerrdsdbinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class RegisterRdsDbInstanceRequest;
 
-class QTAWS_EXPORT RegisterRdsDbInstanceRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT RegisterRdsDbInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     RegisterRdsDbInstanceRequestPrivate(const OpsWorks::Action action,

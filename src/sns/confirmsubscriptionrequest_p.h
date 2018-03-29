@@ -20,7 +20,7 @@
 #ifndef QTAWS_CONFIRMSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_CONFIRMSUBSCRIPTIONREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "confirmsubscriptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class ConfirmSubscriptionRequest;
 
-class QTAWS_EXPORT ConfirmSubscriptionRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT ConfirmSubscriptionRequestPrivate : public SNSRequestPrivate {
 
 public:
     ConfirmSubscriptionRequestPrivate(const SNS::Action action,

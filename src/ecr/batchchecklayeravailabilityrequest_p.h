@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHCHECKLAYERAVAILABILITYREQUEST_P_H
 #define QTAWS_BATCHCHECKLAYERAVAILABILITYREQUEST_P_H
 
-#include "ecr_p.h"
+#include "ecrrequest_p.h"
 #include "batchchecklayeravailabilityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECR {
 
 class BatchCheckLayerAvailabilityRequest;
 
-class QTAWS_EXPORT BatchCheckLayerAvailabilityRequestPrivate : public ECRPrivate {
+class QTAWS_EXPORT BatchCheckLayerAvailabilityRequestPrivate : public ECRRequestPrivate {
 
 public:
     BatchCheckLayerAvailabilityRequestPrivate(const ECR::Action action,

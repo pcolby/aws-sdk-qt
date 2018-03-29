@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBERESOURCESERVERREQUEST_P_H
 #define QTAWS_DESCRIBERESOURCESERVERREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "describeresourceserverrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class DescribeResourceServerRequest;
 
-class QTAWS_EXPORT DescribeResourceServerRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT DescribeResourceServerRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     DescribeResourceServerRequestPrivate(const CognitoIdentityProvider::Action action,

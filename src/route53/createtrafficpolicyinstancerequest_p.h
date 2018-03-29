@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATETRAFFICPOLICYINSTANCEREQUEST_P_H
 #define QTAWS_CREATETRAFFICPOLICYINSTANCEREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "createtrafficpolicyinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class CreateTrafficPolicyInstanceRequest;
 
-class QTAWS_EXPORT CreateTrafficPolicyInstanceRequestPrivate : public Route53Private {
+class QTAWS_EXPORT CreateTrafficPolicyInstanceRequestPrivate : public Route53RequestPrivate {
 
 public:
     CreateTrafficPolicyInstanceRequestPrivate(const Route53::Action action,

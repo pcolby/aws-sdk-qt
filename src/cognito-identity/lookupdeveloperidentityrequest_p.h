@@ -20,7 +20,7 @@
 #ifndef QTAWS_LOOKUPDEVELOPERIDENTITYREQUEST_P_H
 #define QTAWS_LOOKUPDEVELOPERIDENTITYREQUEST_P_H
 
-#include "cognitoidentity_p.h"
+#include "cognitoidentityrequest_p.h"
 #include "lookupdeveloperidentityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class LookupDeveloperIdentityRequest;
 
-class QTAWS_EXPORT LookupDeveloperIdentityRequestPrivate : public CognitoIdentityPrivate {
+class QTAWS_EXPORT LookupDeveloperIdentityRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     LookupDeveloperIdentityRequestPrivate(const CognitoIdentity::Action action,

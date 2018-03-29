@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDDIRECTORYREQUEST_P_H
 #define QTAWS_CLOUDDIRECTORYREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "clouddirectoryrequest.h"
 
 namespace QtAws {

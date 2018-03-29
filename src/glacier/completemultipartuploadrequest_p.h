@@ -20,7 +20,7 @@
 #ifndef QTAWS_COMPLETEMULTIPARTUPLOADREQUEST_P_H
 #define QTAWS_COMPLETEMULTIPARTUPLOADREQUEST_P_H
 
-#include "glacier_p.h"
+#include "glacierrequest_p.h"
 #include "completemultipartuploadrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glacier {
 
 class CompleteMultipartUploadRequest;
 
-class QTAWS_EXPORT CompleteMultipartUploadRequestPrivate : public GlacierPrivate {
+class QTAWS_EXPORT CompleteMultipartUploadRequestPrivate : public GlacierRequestPrivate {
 
 public:
     CompleteMultipartUploadRequestPrivate(const Glacier::Action action,

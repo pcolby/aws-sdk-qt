@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEIPSETREQUEST_P_H
 #define QTAWS_UPDATEIPSETREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "updateipsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class UpdateIPSetRequest;
 
-class QTAWS_EXPORT UpdateIPSetRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT UpdateIPSetRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     UpdateIPSetRequestPrivate(const GuardDuty::Action action,

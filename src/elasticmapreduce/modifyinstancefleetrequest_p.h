@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYINSTANCEFLEETREQUEST_P_H
 #define QTAWS_MODIFYINSTANCEFLEETREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "modifyinstancefleetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class ModifyInstanceFleetRequest;
 
-class QTAWS_EXPORT ModifyInstanceFleetRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT ModifyInstanceFleetRequestPrivate : public EMRRequestPrivate {
 
 public:
     ModifyInstanceFleetRequestPrivate(const EMR::Action action,

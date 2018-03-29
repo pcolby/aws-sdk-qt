@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEJOBREQUEST_P_H
 #define QTAWS_UPDATEJOBREQUEST_P_H
 
-#include "snowball_p.h"
+#include "snowballrequest_p.h"
 #include "updatejobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Snowball {
 
 class UpdateJobRequest;
 
-class QTAWS_EXPORT UpdateJobRequestPrivate : public SnowballPrivate {
+class QTAWS_EXPORT UpdateJobRequestPrivate : public SnowballRequestPrivate {
 
 public:
     UpdateJobRequestPrivate(const Snowball::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESTACKINSTANCESREQUEST_P_H
 #define QTAWS_UPDATESTACKINSTANCESREQUEST_P_H
 
-#include "cloudformation_p.h"
+#include "cloudformationrequest_p.h"
 #include "updatestackinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class UpdateStackInstancesRequest;
 
-class QTAWS_EXPORT UpdateStackInstancesRequestPrivate : public CloudFormationPrivate {
+class QTAWS_EXPORT UpdateStackInstancesRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     UpdateStackInstancesRequestPrivate(const CloudFormation::Action action,

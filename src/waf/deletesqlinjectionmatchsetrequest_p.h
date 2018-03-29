@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESQLINJECTIONMATCHSETREQUEST_P_H
 #define QTAWS_DELETESQLINJECTIONMATCHSETREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "deletesqlinjectionmatchsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class DeleteSqlInjectionMatchSetRequest;
 
-class QTAWS_EXPORT DeleteSqlInjectionMatchSetRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT DeleteSqlInjectionMatchSetRequestPrivate : public WAFRequestPrivate {
 
 public:
     DeleteSqlInjectionMatchSetRequestPrivate(const WAF::Action action,

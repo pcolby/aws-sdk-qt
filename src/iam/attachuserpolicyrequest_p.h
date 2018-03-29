@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATTACHUSERPOLICYREQUEST_P_H
 #define QTAWS_ATTACHUSERPOLICYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "attachuserpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class AttachUserPolicyRequest;
 
-class QTAWS_EXPORT AttachUserPolicyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT AttachUserPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
     AttachUserPolicyRequestPrivate(const IAM::Action action,

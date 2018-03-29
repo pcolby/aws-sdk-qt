@@ -20,7 +20,7 @@
 #ifndef QTAWS_GLUEREQUEST_P_H
 #define QTAWS_GLUEREQUEST_P_H
 
-#include "glue_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "gluerequest.h"
 
 namespace QtAws {

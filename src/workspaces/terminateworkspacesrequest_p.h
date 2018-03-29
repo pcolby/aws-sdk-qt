@@ -20,7 +20,7 @@
 #ifndef QTAWS_TERMINATEWORKSPACESREQUEST_P_H
 #define QTAWS_TERMINATEWORKSPACESREQUEST_P_H
 
-#include "workspaces_p.h"
+#include "workspacesrequest_p.h"
 #include "terminateworkspacesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class TerminateWorkspacesRequest;
 
-class QTAWS_EXPORT TerminateWorkspacesRequestPrivate : public WorkSpacesPrivate {
+class QTAWS_EXPORT TerminateWorkspacesRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     TerminateWorkspacesRequestPrivate(const WorkSpaces::Action action,

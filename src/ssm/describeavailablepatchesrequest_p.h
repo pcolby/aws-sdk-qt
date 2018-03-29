@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEAVAILABLEPATCHESREQUEST_P_H
 #define QTAWS_DESCRIBEAVAILABLEPATCHESREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "describeavailablepatchesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeAvailablePatchesRequest;
 
-class QTAWS_EXPORT DescribeAvailablePatchesRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DescribeAvailablePatchesRequestPrivate : public SSMRequestPrivate {
 
 public:
     DescribeAvailablePatchesRequestPrivate(const SSM::Action action,

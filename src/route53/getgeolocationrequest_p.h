@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETGEOLOCATIONREQUEST_P_H
 #define QTAWS_GETGEOLOCATIONREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "getgeolocationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetGeoLocationRequest;
 
-class QTAWS_EXPORT GetGeoLocationRequestPrivate : public Route53Private {
+class QTAWS_EXPORT GetGeoLocationRequestPrivate : public Route53RequestPrivate {
 
 public:
     GetGeoLocationRequestPrivate(const Route53::Action action,

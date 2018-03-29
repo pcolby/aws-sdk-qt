@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBELISTENERSREQUEST_P_H
 #define QTAWS_DESCRIBELISTENERSREQUEST_P_H
 
-#include "elasticloadbalancingv2_p.h"
+#include "elasticloadbalancingv2request_p.h"
 #include "describelistenersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DescribeListenersRequest;
 
-class QTAWS_EXPORT DescribeListenersRequestPrivate : public ElasticLoadBalancingv2Private {
+class QTAWS_EXPORT DescribeListenersRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     DescribeListenersRequestPrivate(const ElasticLoadBalancingv2::Action action,

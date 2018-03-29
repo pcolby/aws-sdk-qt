@@ -20,7 +20,7 @@
 #ifndef QTAWS_EMRREQUEST_P_H
 #define QTAWS_EMRREQUEST_P_H
 
-#include "emr_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "emrrequest.h"
 
 namespace QtAws {

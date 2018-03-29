@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPLOADDOCUMENTSREQUEST_P_H
 #define QTAWS_UPLOADDOCUMENTSREQUEST_P_H
 
-#include "cloudsearchdomain_p.h"
+#include "cloudsearchdomainrequest_p.h"
 #include "uploaddocumentsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudSearchDomain {
 
 class UploadDocumentsRequest;
 
-class QTAWS_EXPORT UploadDocumentsRequestPrivate : public CloudSearchDomainPrivate {
+class QTAWS_EXPORT UploadDocumentsRequestPrivate : public CloudSearchDomainRequestPrivate {
 
 public:
     UploadDocumentsRequestPrivate(const CloudSearchDomain::Action action,

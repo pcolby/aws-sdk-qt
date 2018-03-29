@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTRECORDBATCHREQUEST_P_H
 #define QTAWS_PUTRECORDBATCHREQUEST_P_H
 
-#include "firehose_p.h"
+#include "firehoserequest_p.h"
 #include "putrecordbatchrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Firehose {
 
 class PutRecordBatchRequest;
 
-class QTAWS_EXPORT PutRecordBatchRequestPrivate : public FirehosePrivate {
+class QTAWS_EXPORT PutRecordBatchRequestPrivate : public FirehoseRequestPrivate {
 
 public:
     PutRecordBatchRequestPrivate(const Firehose::Action action,

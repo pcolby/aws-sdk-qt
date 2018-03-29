@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETHEALTHCHECKREQUEST_P_H
 #define QTAWS_GETHEALTHCHECKREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "gethealthcheckrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetHealthCheckRequest;
 
-class QTAWS_EXPORT GetHealthCheckRequestPrivate : public Route53Private {
+class QTAWS_EXPORT GetHealthCheckRequestPrivate : public Route53RequestPrivate {
 
 public:
     GetHealthCheckRequestPrivate(const Route53::Action action,

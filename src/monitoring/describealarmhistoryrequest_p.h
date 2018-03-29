@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEALARMHISTORYREQUEST_P_H
 #define QTAWS_DESCRIBEALARMHISTORYREQUEST_P_H
 
-#include "cloudwatch_p.h"
+#include "cloudwatchrequest_p.h"
 #include "describealarmhistoryrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class DescribeAlarmHistoryRequest;
 
-class QTAWS_EXPORT DescribeAlarmHistoryRequestPrivate : public CloudWatchPrivate {
+class QTAWS_EXPORT DescribeAlarmHistoryRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     DescribeAlarmHistoryRequestPrivate(const CloudWatch::Action action,

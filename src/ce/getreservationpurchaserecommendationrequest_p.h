@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETRESERVATIONPURCHASERECOMMENDATIONREQUEST_P_H
 #define QTAWS_GETRESERVATIONPURCHASERECOMMENDATIONREQUEST_P_H
 
-#include "costexplorer_p.h"
+#include "costexplorerrequest_p.h"
 #include "getreservationpurchaserecommendationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class GetReservationPurchaseRecommendationRequest;
 
-class QTAWS_EXPORT GetReservationPurchaseRecommendationRequestPrivate : public CostExplorerPrivate {
+class QTAWS_EXPORT GetReservationPurchaseRecommendationRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
     GetReservationPurchaseRecommendationRequestPrivate(const CostExplorer::Action action,

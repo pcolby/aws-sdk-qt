@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATERESOURCEDATASYNCREQUEST_P_H
 #define QTAWS_CREATERESOURCEDATASYNCREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "createresourcedatasyncrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class CreateResourceDataSyncRequest;
 
-class QTAWS_EXPORT CreateResourceDataSyncRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT CreateResourceDataSyncRequestPrivate : public SSMRequestPrivate {
 
 public:
     CreateResourceDataSyncRequestPrivate(const SSM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTVOLUMERECOVERYPOINTSREQUEST_P_H
 #define QTAWS_LISTVOLUMERECOVERYPOINTSREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "listvolumerecoverypointsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class ListVolumeRecoveryPointsRequest;
 
-class QTAWS_EXPORT ListVolumeRecoveryPointsRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT ListVolumeRecoveryPointsRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     ListVolumeRecoveryPointsRequestPrivate(const StorageGateway::Action action,

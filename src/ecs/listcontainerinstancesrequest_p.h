@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTCONTAINERINSTANCESREQUEST_P_H
 #define QTAWS_LISTCONTAINERINSTANCESREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "listcontainerinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class ListContainerInstancesRequest;
 
-class QTAWS_EXPORT ListContainerInstancesRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT ListContainerInstancesRequestPrivate : public ECSRequestPrivate {
 
 public:
     ListContainerInstancesRequestPrivate(const ECS::Action action,

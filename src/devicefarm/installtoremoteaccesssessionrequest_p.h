@@ -20,7 +20,7 @@
 #ifndef QTAWS_INSTALLTOREMOTEACCESSSESSIONREQUEST_P_H
 #define QTAWS_INSTALLTOREMOTEACCESSSESSIONREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "installtoremoteaccesssessionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class InstallToRemoteAccessSessionRequest;
 
-class QTAWS_EXPORT InstallToRemoteAccessSessionRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT InstallToRemoteAccessSessionRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     InstallToRemoteAccessSessionRequestPrivate(const DeviceFarm::Action action,

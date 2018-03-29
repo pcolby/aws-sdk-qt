@@ -20,7 +20,7 @@
 #ifndef QTAWS_CONFIRMDEVICEREQUEST_P_H
 #define QTAWS_CONFIRMDEVICEREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "confirmdevicerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class ConfirmDeviceRequest;
 
-class QTAWS_EXPORT ConfirmDeviceRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT ConfirmDeviceRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     ConfirmDeviceRequestPrivate(const CognitoIdentityProvider::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEGROUPSREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "describegroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DescribeGroupsRequest;
 
-class QTAWS_EXPORT DescribeGroupsRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT DescribeGroupsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DescribeGroupsRequestPrivate(const WorkDocs::Action action,

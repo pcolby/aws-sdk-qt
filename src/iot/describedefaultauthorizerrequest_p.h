@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEDEFAULTAUTHORIZERREQUEST_P_H
 #define QTAWS_DESCRIBEDEFAULTAUTHORIZERREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "describedefaultauthorizerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class DescribeDefaultAuthorizerRequest;
 
-class QTAWS_EXPORT DescribeDefaultAuthorizerRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT DescribeDefaultAuthorizerRequestPrivate : public IoTRequestPrivate {
 
 public:
     DescribeDefaultAuthorizerRequestPrivate(const IoT::Action action,

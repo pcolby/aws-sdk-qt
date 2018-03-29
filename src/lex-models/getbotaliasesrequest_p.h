@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETBOTALIASESREQUEST_P_H
 #define QTAWS_GETBOTALIASESREQUEST_P_H
 
-#include "lexmodelbuildingservice_p.h"
+#include "lexmodelbuildingservicerequest_p.h"
 #include "getbotaliasesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class GetBotAliasesRequest;
 
-class QTAWS_EXPORT GetBotAliasesRequestPrivate : public LexModelBuildingServicePrivate {
+class QTAWS_EXPORT GetBotAliasesRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
     GetBotAliasesRequestPrivate(const LexModelBuildingService::Action action,

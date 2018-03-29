@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETUTTERANCESVIEWREQUEST_P_H
 #define QTAWS_GETUTTERANCESVIEWREQUEST_P_H
 
-#include "lexmodelbuildingservice_p.h"
+#include "lexmodelbuildingservicerequest_p.h"
 #include "getutterancesviewrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class GetUtterancesViewRequest;
 
-class QTAWS_EXPORT GetUtterancesViewRequestPrivate : public LexModelBuildingServicePrivate {
+class QTAWS_EXPORT GetUtterancesViewRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
     GetUtterancesViewRequestPrivate(const LexModelBuildingService::Action action,

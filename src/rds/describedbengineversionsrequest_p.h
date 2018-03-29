@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEDBENGINEVERSIONSREQUEST_P_H
 #define QTAWS_DESCRIBEDBENGINEVERSIONSREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describedbengineversionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeDBEngineVersionsRequest;
 
-class QTAWS_EXPORT DescribeDBEngineVersionsRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeDBEngineVersionsRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeDBEngineVersionsRequestPrivate(const RDS::Action action,

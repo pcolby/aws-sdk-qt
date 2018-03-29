@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEDOMAINREQUEST_P_H
 #define QTAWS_DESCRIBEDOMAINREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "describedomainrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class DescribeDomainRequest;
 
-class QTAWS_EXPORT DescribeDomainRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT DescribeDomainRequestPrivate : public SWFRequestPrivate {
 
 public:
     DescribeDomainRequestPrivate(const SWF::Action action,

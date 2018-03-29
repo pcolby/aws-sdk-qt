@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTRESOURCESFORTAGOPTIONREQUEST_P_H
 #define QTAWS_LISTRESOURCESFORTAGOPTIONREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "listresourcesfortagoptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class ListResourcesForTagOptionRequest;
 
-class QTAWS_EXPORT ListResourcesForTagOptionRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT ListResourcesForTagOptionRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     ListResourcesForTagOptionRequestPrivate(const ServiceCatalog::Action action,

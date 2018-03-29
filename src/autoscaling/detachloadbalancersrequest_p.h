@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETACHLOADBALANCERSREQUEST_P_H
 #define QTAWS_DETACHLOADBALANCERSREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "detachloadbalancersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DetachLoadBalancersRequest;
 
-class QTAWS_EXPORT DetachLoadBalancersRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT DetachLoadBalancersRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DetachLoadBalancersRequestPrivate(const AutoScaling::Action action,

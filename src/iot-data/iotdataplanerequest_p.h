@@ -20,7 +20,7 @@
 #ifndef QTAWS_IOTDATAPLANEREQUEST_P_H
 #define QTAWS_IOTDATAPLANEREQUEST_P_H
 
-#include "iotdataplane_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "iotdataplanerequest.h"
 
 namespace QtAws {

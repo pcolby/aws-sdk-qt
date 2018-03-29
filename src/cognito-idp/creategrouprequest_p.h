@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEGROUPREQUEST_P_H
 #define QTAWS_CREATEGROUPREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "creategrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class CreateGroupRequest;
 
-class QTAWS_EXPORT CreateGroupRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT CreateGroupRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     CreateGroupRequestPrivate(const CognitoIdentityProvider::Action action,

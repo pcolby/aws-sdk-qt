@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTLOCALDISKSREQUEST_P_H
 #define QTAWS_LISTLOCALDISKSREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "listlocaldisksrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class ListLocalDisksRequest;
 
-class QTAWS_EXPORT ListLocalDisksRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT ListLocalDisksRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     ListLocalDisksRequestPrivate(const StorageGateway::Action action,

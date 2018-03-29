@@ -20,7 +20,7 @@
 #ifndef QTAWS_COPYOPTIONGROUPREQUEST_P_H
 #define QTAWS_COPYOPTIONGROUPREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "copyoptiongrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class CopyOptionGroupRequest;
 
-class QTAWS_EXPORT CopyOptionGroupRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT CopyOptionGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
     CopyOptionGroupRequestPrivate(const RDS::Action action,

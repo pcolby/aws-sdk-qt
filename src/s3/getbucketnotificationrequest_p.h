@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETBUCKETNOTIFICATIONREQUEST_P_H
 #define QTAWS_GETBUCKETNOTIFICATIONREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "getbucketnotificationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class GetBucketNotificationRequest;
 
-class QTAWS_EXPORT GetBucketNotificationRequestPrivate : public S3Private {
+class QTAWS_EXPORT GetBucketNotificationRequestPrivate : public S3RequestPrivate {
 
 public:
     GetBucketNotificationRequestPrivate(const S3::Action action,

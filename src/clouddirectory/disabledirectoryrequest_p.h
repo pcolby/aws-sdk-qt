@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISABLEDIRECTORYREQUEST_P_H
 #define QTAWS_DISABLEDIRECTORYREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "disabledirectoryrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class DisableDirectoryRequest;
 
-class QTAWS_EXPORT DisableDirectoryRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT DisableDirectoryRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     DisableDirectoryRequestPrivate(const CloudDirectory::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTREVIEWPOLICYRESULTSFORHITREQUEST_P_H
 #define QTAWS_LISTREVIEWPOLICYRESULTSFORHITREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "listreviewpolicyresultsforhitrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class ListReviewPolicyResultsForHITRequest;
 
-class QTAWS_EXPORT ListReviewPolicyResultsForHITRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT ListReviewPolicyResultsForHITRequestPrivate : public MTurkRequestPrivate {
 
 public:
     ListReviewPolicyResultsForHITRequestPrivate(const MTurk::Action action,

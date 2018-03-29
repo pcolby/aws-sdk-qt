@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPSTREAMPROCESSORREQUEST_P_H
 #define QTAWS_STOPSTREAMPROCESSORREQUEST_P_H
 
-#include "rekognition_p.h"
+#include "rekognitionrequest_p.h"
 #include "stopstreamprocessorrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class StopStreamProcessorRequest;
 
-class QTAWS_EXPORT StopStreamProcessorRequestPrivate : public RekognitionPrivate {
+class QTAWS_EXPORT StopStreamProcessorRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     StopStreamProcessorRequestPrivate(const Rekognition::Action action,

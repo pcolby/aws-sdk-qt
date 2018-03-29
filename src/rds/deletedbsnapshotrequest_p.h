@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDBSNAPSHOTREQUEST_P_H
 #define QTAWS_DELETEDBSNAPSHOTREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "deletedbsnapshotrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteDBSnapshotRequest;
 
-class QTAWS_EXPORT DeleteDBSnapshotRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DeleteDBSnapshotRequestPrivate : public RDSRequestPrivate {
 
 public:
     DeleteDBSnapshotRequestPrivate(const RDS::Action action,

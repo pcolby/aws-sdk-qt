@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEGROUPREQUEST_P_H
 #define QTAWS_CREATEGROUPREQUEST_P_H
 
-#include "workmail_p.h"
+#include "workmailrequest_p.h"
 #include "creategrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class CreateGroupRequest;
 
-class QTAWS_EXPORT CreateGroupRequestPrivate : public WorkMailPrivate {
+class QTAWS_EXPORT CreateGroupRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     CreateGroupRequestPrivate(const WorkMail::Action action,

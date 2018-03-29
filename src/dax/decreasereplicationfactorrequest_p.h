@@ -20,7 +20,7 @@
 #ifndef QTAWS_DECREASEREPLICATIONFACTORREQUEST_P_H
 #define QTAWS_DECREASEREPLICATIONFACTORREQUEST_P_H
 
-#include "dax_p.h"
+#include "daxrequest_p.h"
 #include "decreasereplicationfactorrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DAX {
 
 class DecreaseReplicationFactorRequest;
 
-class QTAWS_EXPORT DecreaseReplicationFactorRequestPrivate : public DAXPrivate {
+class QTAWS_EXPORT DecreaseReplicationFactorRequestPrivate : public DAXRequestPrivate {
 
 public:
     DecreaseReplicationFactorRequestPrivate(const DAX::Action action,

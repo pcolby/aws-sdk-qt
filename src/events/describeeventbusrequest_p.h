@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTBUSREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTBUSREQUEST_P_H
 
-#include "cloudwatchevents_p.h"
+#include "cloudwatcheventsrequest_p.h"
 #include "describeeventbusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class DescribeEventBusRequest;
 
-class QTAWS_EXPORT DescribeEventBusRequestPrivate : public CloudWatchEventsPrivate {
+class QTAWS_EXPORT DescribeEventBusRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     DescribeEventBusRequestPrivate(const CloudWatchEvents::Action action,

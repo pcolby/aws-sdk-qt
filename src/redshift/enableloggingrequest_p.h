@@ -20,7 +20,7 @@
 #ifndef QTAWS_ENABLELOGGINGREQUEST_P_H
 #define QTAWS_ENABLELOGGINGREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "enableloggingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class EnableLoggingRequest;
 
-class QTAWS_EXPORT EnableLoggingRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT EnableLoggingRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     EnableLoggingRequestPrivate(const Redshift::Action action,

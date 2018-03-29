@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECACHEPARAMETERGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBECACHEPARAMETERGROUPSREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "describecacheparametergroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DescribeCacheParameterGroupsRequest;
 
-class QTAWS_EXPORT DescribeCacheParameterGroupsRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT DescribeCacheParameterGroupsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DescribeCacheParameterGroupsRequestPrivate(const ElastiCache::Action action,

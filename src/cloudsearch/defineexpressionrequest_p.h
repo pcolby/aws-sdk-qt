@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEFINEEXPRESSIONREQUEST_P_H
 #define QTAWS_DEFINEEXPRESSIONREQUEST_P_H
 
-#include "cloudsearch_p.h"
+#include "cloudsearchrequest_p.h"
 #include "defineexpressionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DefineExpressionRequest;
 
-class QTAWS_EXPORT DefineExpressionRequestPrivate : public CloudSearchPrivate {
+class QTAWS_EXPORT DefineExpressionRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     DefineExpressionRequestPrivate(const CloudSearch::Action action,

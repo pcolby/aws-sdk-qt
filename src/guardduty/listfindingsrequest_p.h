@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTFINDINGSREQUEST_P_H
 #define QTAWS_LISTFINDINGSREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "listfindingsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class ListFindingsRequest;
 
-class QTAWS_EXPORT ListFindingsRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT ListFindingsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     ListFindingsRequestPrivate(const GuardDuty::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETIMETOLIVEREQUEST_P_H
 #define QTAWS_DESCRIBETIMETOLIVEREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "describetimetoliverequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class DescribeTimeToLiveRequest;
 
-class QTAWS_EXPORT DescribeTimeToLiveRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT DescribeTimeToLiveRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     DescribeTimeToLiveRequestPrivate(const DynamoDB::Action action,

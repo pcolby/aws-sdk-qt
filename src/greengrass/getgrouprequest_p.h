@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETGROUPREQUEST_P_H
 #define QTAWS_GETGROUPREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "getgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetGroupRequest;
 
-class QTAWS_EXPORT GetGroupRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT GetGroupRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     GetGroupRequestPrivate(const Greengrass::Action action,

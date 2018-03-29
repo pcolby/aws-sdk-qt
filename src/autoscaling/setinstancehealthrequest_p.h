@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETINSTANCEHEALTHREQUEST_P_H
 #define QTAWS_SETINSTANCEHEALTHREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "setinstancehealthrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class SetInstanceHealthRequest;
 
-class QTAWS_EXPORT SetInstanceHealthRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT SetInstanceHealthRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     SetInstanceHealthRequestPrivate(const AutoScaling::Action action,

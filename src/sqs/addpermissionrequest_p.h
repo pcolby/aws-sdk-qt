@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDPERMISSIONREQUEST_P_H
 #define QTAWS_ADDPERMISSIONREQUEST_P_H
 
-#include "sqs_p.h"
+#include "sqsrequest_p.h"
 #include "addpermissionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SQS {
 
 class AddPermissionRequest;
 
-class QTAWS_EXPORT AddPermissionRequestPrivate : public SQSPrivate {
+class QTAWS_EXPORT AddPermissionRequestPrivate : public SQSRequestPrivate {
 
 public:
     AddPermissionRequestPrivate(const SQS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESTACKSETREQUEST_P_H
 #define QTAWS_DELETESTACKSETREQUEST_P_H
 
-#include "cloudformation_p.h"
+#include "cloudformationrequest_p.h"
 #include "deletestacksetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class DeleteStackSetRequest;
 
-class QTAWS_EXPORT DeleteStackSetRequestPrivate : public CloudFormationPrivate {
+class QTAWS_EXPORT DeleteStackSetRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     DeleteStackSetRequestPrivate(const CloudFormation::Action action,

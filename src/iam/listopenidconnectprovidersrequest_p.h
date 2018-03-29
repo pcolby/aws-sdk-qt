@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTOPENIDCONNECTPROVIDERSREQUEST_P_H
 #define QTAWS_LISTOPENIDCONNECTPROVIDERSREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "listopenidconnectprovidersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class ListOpenIDConnectProvidersRequest;
 
-class QTAWS_EXPORT ListOpenIDConnectProvidersRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT ListOpenIDConnectProvidersRequestPrivate : public IAMRequestPrivate {
 
 public:
     ListOpenIDConnectProvidersRequestPrivate(const IAM::Action action,

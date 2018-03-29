@@ -20,7 +20,7 @@
 #ifndef QTAWS_TERMINATEINSTANCESREQUEST_P_H
 #define QTAWS_TERMINATEINSTANCESREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "terminateinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class TerminateInstancesRequest;
 
-class QTAWS_EXPORT TerminateInstancesRequestPrivate : public EC2Private {
+class QTAWS_EXPORT TerminateInstancesRequestPrivate : public EC2RequestPrivate {
 
 public:
     TerminateInstancesRequestPrivate(const EC2::Action action,

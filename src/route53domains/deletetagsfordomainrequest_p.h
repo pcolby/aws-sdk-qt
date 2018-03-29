@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETETAGSFORDOMAINREQUEST_P_H
 #define QTAWS_DELETETAGSFORDOMAINREQUEST_P_H
 
-#include "route53domains_p.h"
+#include "route53domainsrequest_p.h"
 #include "deletetagsfordomainrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class DeleteTagsForDomainRequest;
 
-class QTAWS_EXPORT DeleteTagsForDomainRequestPrivate : public Route53DomainsPrivate {
+class QTAWS_EXPORT DeleteTagsForDomainRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     DeleteTagsForDomainRequestPrivate(const Route53Domains::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_STSREQUEST_P_H
 #define QTAWS_STSREQUEST_P_H
 
-#include "sts_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "stsrequest.h"
 
 namespace QtAws {

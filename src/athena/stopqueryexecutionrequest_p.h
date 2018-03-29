@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPQUERYEXECUTIONREQUEST_P_H
 #define QTAWS_STOPQUERYEXECUTIONREQUEST_P_H
 
-#include "athena_p.h"
+#include "athenarequest_p.h"
 #include "stopqueryexecutionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Athena {
 
 class StopQueryExecutionRequest;
 
-class QTAWS_EXPORT StopQueryExecutionRequestPrivate : public AthenaPrivate {
+class QTAWS_EXPORT StopQueryExecutionRequestPrivate : public AthenaRequestPrivate {
 
 public:
     StopQueryExecutionRequestPrivate(const Athena::Action action,

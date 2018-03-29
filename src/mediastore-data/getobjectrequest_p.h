@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETOBJECTREQUEST_P_H
 #define QTAWS_GETOBJECTREQUEST_P_H
 
-#include "mediastoredata_p.h"
+#include "mediastoredatarequest_p.h"
 #include "getobjectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaStoreData {
 
 class GetObjectRequest;
 
-class QTAWS_EXPORT GetObjectRequestPrivate : public MediaStoreDataPrivate {
+class QTAWS_EXPORT GetObjectRequestPrivate : public MediaStoreDataRequestPrivate {
 
 public:
     GetObjectRequestPrivate(const MediaStoreData::Action action,

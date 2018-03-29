@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSOCIATEVIRTUALINTERFACEREQUEST_P_H
 #define QTAWS_ASSOCIATEVIRTUALINTERFACEREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "associatevirtualinterfacerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class AssociateVirtualInterfaceRequest;
 
-class QTAWS_EXPORT AssociateVirtualInterfaceRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT AssociateVirtualInterfaceRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     AssociateVirtualInterfaceRequestPrivate(const DirectConnect::Action action,

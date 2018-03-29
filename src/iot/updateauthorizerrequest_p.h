@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEAUTHORIZERREQUEST_P_H
 #define QTAWS_UPDATEAUTHORIZERREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "updateauthorizerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class UpdateAuthorizerRequest;
 
-class QTAWS_EXPORT UpdateAuthorizerRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT UpdateAuthorizerRequestPrivate : public IoTRequestPrivate {
 
 public:
     UpdateAuthorizerRequestPrivate(const IoT::Action action,

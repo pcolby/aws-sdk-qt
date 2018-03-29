@@ -20,7 +20,7 @@
 #ifndef QTAWS_MOBILEANALYTICSREQUEST_P_H
 #define QTAWS_MOBILEANALYTICSREQUEST_P_H
 
-#include "mobileanalytics_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "mobileanalyticsrequest.h"
 
 namespace QtAws {

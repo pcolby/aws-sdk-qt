@@ -20,7 +20,7 @@
 #ifndef QTAWS_VERIFYDOMAINDKIMREQUEST_P_H
 #define QTAWS_VERIFYDOMAINDKIMREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "verifydomaindkimrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class VerifyDomainDkimRequest;
 
-class QTAWS_EXPORT VerifyDomainDkimRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT VerifyDomainDkimRequestPrivate : public SESRequestPrivate {
 
 public:
     VerifyDomainDkimRequestPrivate(const SES::Action action,

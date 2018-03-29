@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTUNIQUEPROBLEMSREQUEST_P_H
 #define QTAWS_LISTUNIQUEPROBLEMSREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "listuniqueproblemsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class ListUniqueProblemsRequest;
 
-class QTAWS_EXPORT ListUniqueProblemsRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT ListUniqueProblemsRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     ListUniqueProblemsRequestPrivate(const DeviceFarm::Action action,

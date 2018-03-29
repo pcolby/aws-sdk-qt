@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATTACHPOLICYREQUEST_P_H
 #define QTAWS_ATTACHPOLICYREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "attachpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class AttachPolicyRequest;
 
-class QTAWS_EXPORT AttachPolicyRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT AttachPolicyRequestPrivate : public IoTRequestPrivate {
 
 public:
     AttachPolicyRequestPrivate(const IoT::Action action,

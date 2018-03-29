@@ -20,7 +20,7 @@
 #ifndef QTAWS_PEERVPCREQUEST_P_H
 #define QTAWS_PEERVPCREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "peervpcrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class PeerVpcRequest;
 
-class QTAWS_EXPORT PeerVpcRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT PeerVpcRequestPrivate : public LightsailRequestPrivate {
 
 public:
     PeerVpcRequestPrivate(const Lightsail::Action action,

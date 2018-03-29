@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTAGSREQUEST_P_H
 #define QTAWS_LISTTAGSREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "listtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class ListTagsRequest;
 
-class QTAWS_EXPORT ListTagsRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT ListTagsRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     ListTagsRequestPrivate(const OpsWorks::Action action,

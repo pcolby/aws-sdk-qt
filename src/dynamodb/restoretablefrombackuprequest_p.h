@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESTORETABLEFROMBACKUPREQUEST_P_H
 #define QTAWS_RESTORETABLEFROMBACKUPREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "restoretablefrombackuprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class RestoreTableFromBackupRequest;
 
-class QTAWS_EXPORT RestoreTableFromBackupRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT RestoreTableFromBackupRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     RestoreTableFromBackupRequestPrivate(const DynamoDB::Action action,

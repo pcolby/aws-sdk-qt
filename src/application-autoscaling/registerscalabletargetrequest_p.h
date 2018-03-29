@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERSCALABLETARGETREQUEST_P_H
 #define QTAWS_REGISTERSCALABLETARGETREQUEST_P_H
 
-#include "applicationautoscaling_p.h"
+#include "applicationautoscalingrequest_p.h"
 #include "registerscalabletargetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 
 class RegisterScalableTargetRequest;
 
-class QTAWS_EXPORT RegisterScalableTargetRequestPrivate : public ApplicationAutoScalingPrivate {
+class QTAWS_EXPORT RegisterScalableTargetRequestPrivate : public ApplicationAutoScalingRequestPrivate {
 
 public:
     RegisterScalableTargetRequestPrivate(const ApplicationAutoScaling::Action action,

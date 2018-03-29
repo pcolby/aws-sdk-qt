@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEAPPLICATIONREQUEST_P_H
 #define QTAWS_DELETEAPPLICATIONREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "deleteapplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class DeleteApplicationRequest;
 
-class QTAWS_EXPORT DeleteApplicationRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT DeleteApplicationRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     DeleteApplicationRequestPrivate(const CodeDeploy::Action action,

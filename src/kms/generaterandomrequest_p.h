@@ -20,7 +20,7 @@
 #ifndef QTAWS_GENERATERANDOMREQUEST_P_H
 #define QTAWS_GENERATERANDOMREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "generaterandomrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class GenerateRandomRequest;
 
-class QTAWS_EXPORT GenerateRandomRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT GenerateRandomRequestPrivate : public KMSRequestPrivate {
 
 public:
     GenerateRandomRequestPrivate(const KMS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_TERMINATEJOBFLOWSREQUEST_P_H
 #define QTAWS_TERMINATEJOBFLOWSREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "terminatejobflowsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class TerminateJobFlowsRequest;
 
-class QTAWS_EXPORT TerminateJobFlowsRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT TerminateJobFlowsRequestPrivate : public EMRRequestPrivate {
 
 public:
     TerminateJobFlowsRequestPrivate(const EMR::Action action,

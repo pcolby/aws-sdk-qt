@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATTACHTYPEDLINKREQUEST_P_H
 #define QTAWS_ATTACHTYPEDLINKREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "attachtypedlinkrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class AttachTypedLinkRequest;
 
-class QTAWS_EXPORT AttachTypedLinkRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT AttachTypedLinkRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     AttachTypedLinkRequestPrivate(const CloudDirectory::Action action,

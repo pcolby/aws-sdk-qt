@@ -20,7 +20,7 @@
 #ifndef QTAWS_REBOOTINSTANCEREQUEST_P_H
 #define QTAWS_REBOOTINSTANCEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "rebootinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class RebootInstanceRequest;
 
-class QTAWS_EXPORT RebootInstanceRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT RebootInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     RebootInstanceRequestPrivate(const OpsWorks::Action action,

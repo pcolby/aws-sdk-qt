@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEMOUNTTARGETSECURITYGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEMOUNTTARGETSECURITYGROUPSREQUEST_P_H
 
-#include "efs_p.h"
+#include "efsrequest_p.h"
 #include "describemounttargetsecuritygroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EFS {
 
 class DescribeMountTargetSecurityGroupsRequest;
 
-class QTAWS_EXPORT DescribeMountTargetSecurityGroupsRequestPrivate : public EFSPrivate {
+class QTAWS_EXPORT DescribeMountTargetSecurityGroupsRequestPrivate : public EFSRequestPrivate {
 
 public:
     DescribeMountTargetSecurityGroupsRequestPrivate(const EFS::Action action,

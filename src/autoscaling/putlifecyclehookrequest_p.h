@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTLIFECYCLEHOOKREQUEST_P_H
 #define QTAWS_PUTLIFECYCLEHOOKREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "putlifecyclehookrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class PutLifecycleHookRequest;
 
-class QTAWS_EXPORT PutLifecycleHookRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT PutLifecycleHookRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     PutLifecycleHookRequestPrivate(const AutoScaling::Action action,

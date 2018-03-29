@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECONFIGURATIONSETTRACKINGOPTIONSREQUEST_P_H
 #define QTAWS_DELETECONFIGURATIONSETTRACKINGOPTIONSREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "deleteconfigurationsettrackingoptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class DeleteConfigurationSetTrackingOptionsRequest;
 
-class QTAWS_EXPORT DeleteConfigurationSetTrackingOptionsRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT DeleteConfigurationSetTrackingOptionsRequestPrivate : public SESRequestPrivate {
 
 public:
     DeleteConfigurationSetTrackingOptionsRequestPrivate(const SES::Action action,

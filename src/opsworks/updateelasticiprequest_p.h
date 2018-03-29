@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEELASTICIPREQUEST_P_H
 #define QTAWS_UPDATEELASTICIPREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "updateelasticiprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class UpdateElasticIpRequest;
 
-class QTAWS_EXPORT UpdateElasticIpRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT UpdateElasticIpRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     UpdateElasticIpRequestPrivate(const OpsWorks::Action action,

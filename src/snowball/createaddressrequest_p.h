@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEADDRESSREQUEST_P_H
 #define QTAWS_CREATEADDRESSREQUEST_P_H
 
-#include "snowball_p.h"
+#include "snowballrequest_p.h"
 #include "createaddressrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Snowball {
 
 class CreateAddressRequest;
 
-class QTAWS_EXPORT CreateAddressRequestPrivate : public SnowballPrivate {
+class QTAWS_EXPORT CreateAddressRequestPrivate : public SnowballRequestPrivate {
 
 public:
     CreateAddressRequestPrivate(const Snowball::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECRAWLERREQUEST_P_H
 #define QTAWS_DELETECRAWLERREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "deletecrawlerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class DeleteCrawlerRequest;
 
-class QTAWS_EXPORT DeleteCrawlerRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT DeleteCrawlerRequestPrivate : public GlueRequestPrivate {
 
 public:
     DeleteCrawlerRequestPrivate(const Glue::Action action,

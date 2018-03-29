@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCOREDEFINITIONREQUEST_P_H
 #define QTAWS_GETCOREDEFINITIONREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "getcoredefinitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetCoreDefinitionRequest;
 
-class QTAWS_EXPORT GetCoreDefinitionRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT GetCoreDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     GetCoreDefinitionRequestPrivate(const Greengrass::Action action,

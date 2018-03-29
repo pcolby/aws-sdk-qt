@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETACHSTATICIPREQUEST_P_H
 #define QTAWS_DETACHSTATICIPREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "detachstaticiprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DetachStaticIpRequest;
 
-class QTAWS_EXPORT DetachStaticIpRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT DetachStaticIpRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DetachStaticIpRequestPrivate(const Lightsail::Action action,

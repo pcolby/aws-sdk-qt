@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECLUSTERSREQUEST_P_H
 #define QTAWS_DESCRIBECLUSTERSREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "describeclustersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class DescribeClustersRequest;
 
-class QTAWS_EXPORT DescribeClustersRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT DescribeClustersRequestPrivate : public ECSRequestPrivate {
 
 public:
     DescribeClustersRequestPrivate(const ECS::Action action,

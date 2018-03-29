@@ -20,7 +20,7 @@
 #ifndef QTAWS_ACTIVATEGATEWAYREQUEST_P_H
 #define QTAWS_ACTIVATEGATEWAYREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "activategatewayrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class ActivateGatewayRequest;
 
-class QTAWS_EXPORT ActivateGatewayRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT ActivateGatewayRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     ActivateGatewayRequestPrivate(const StorageGateway::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECONFIGURATIONSETREQUEST_P_H
 #define QTAWS_CREATECONFIGURATIONSETREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "createconfigurationsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class CreateConfigurationSetRequest;
 
-class QTAWS_EXPORT CreateConfigurationSetRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT CreateConfigurationSetRequestPrivate : public SESRequestPrivate {
 
 public:
     CreateConfigurationSetRequestPrivate(const SES::Action action,

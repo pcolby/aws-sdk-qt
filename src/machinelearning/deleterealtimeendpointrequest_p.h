@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEREALTIMEENDPOINTREQUEST_P_H
 #define QTAWS_DELETEREALTIMEENDPOINTREQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "deleterealtimeendpointrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class DeleteRealtimeEndpointRequest;
 
-class QTAWS_EXPORT DeleteRealtimeEndpointRequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT DeleteRealtimeEndpointRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     DeleteRealtimeEndpointRequestPrivate(const MachineLearning::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATTACHNETWORKINTERFACEREQUEST_P_H
 #define QTAWS_ATTACHNETWORKINTERFACEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "attachnetworkinterfacerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AttachNetworkInterfaceRequest;
 
-class QTAWS_EXPORT AttachNetworkInterfaceRequestPrivate : public EC2Private {
+class QTAWS_EXPORT AttachNetworkInterfaceRequestPrivate : public EC2RequestPrivate {
 
 public:
     AttachNetworkInterfaceRequestPrivate(const EC2::Action action,

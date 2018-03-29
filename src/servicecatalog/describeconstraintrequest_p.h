@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECONSTRAINTREQUEST_P_H
 #define QTAWS_DESCRIBECONSTRAINTREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "describeconstraintrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DescribeConstraintRequest;
 
-class QTAWS_EXPORT DescribeConstraintRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT DescribeConstraintRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DescribeConstraintRequestPrivate(const ServiceCatalog::Action action,

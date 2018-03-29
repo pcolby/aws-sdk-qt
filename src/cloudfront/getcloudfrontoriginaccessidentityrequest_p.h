@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCLOUDFRONTORIGINACCESSIDENTITYREQUEST_P_H
 #define QTAWS_GETCLOUDFRONTORIGINACCESSIDENTITYREQUEST_P_H
 
-#include "cloudfront_p.h"
+#include "cloudfrontrequest_p.h"
 #include "getcloudfrontoriginaccessidentityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class GetCloudFrontOriginAccessIdentityRequest;
 
-class QTAWS_EXPORT GetCloudFrontOriginAccessIdentityRequestPrivate : public CloudFrontPrivate {
+class QTAWS_EXPORT GetCloudFrontOriginAccessIdentityRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     GetCloudFrontOriginAccessIdentityRequestPrivate(const CloudFront::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SENDMESSAGEBATCHREQUEST_P_H
 #define QTAWS_SENDMESSAGEBATCHREQUEST_P_H
 
-#include "sqs_p.h"
+#include "sqsrequest_p.h"
 #include "sendmessagebatchrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SQS {
 
 class SendMessageBatchRequest;
 
-class QTAWS_EXPORT SendMessageBatchRequestPrivate : public SQSPrivate {
+class QTAWS_EXPORT SendMessageBatchRequestPrivate : public SQSRequestPrivate {
 
 public:
     SendMessageBatchRequestPrivate(const SQS::Action action,

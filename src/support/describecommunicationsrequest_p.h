@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECOMMUNICATIONSREQUEST_P_H
 #define QTAWS_DESCRIBECOMMUNICATIONSREQUEST_P_H
 
-#include "support_p.h"
+#include "supportrequest_p.h"
 #include "describecommunicationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Support {
 
 class DescribeCommunicationsRequest;
 
-class QTAWS_EXPORT DescribeCommunicationsRequestPrivate : public SupportPrivate {
+class QTAWS_EXPORT DescribeCommunicationsRequestPrivate : public SupportRequestPrivate {
 
 public:
     DescribeCommunicationsRequestPrivate(const Support::Action action,

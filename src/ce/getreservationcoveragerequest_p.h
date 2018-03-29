@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETRESERVATIONCOVERAGEREQUEST_P_H
 #define QTAWS_GETRESERVATIONCOVERAGEREQUEST_P_H
 
-#include "costexplorer_p.h"
+#include "costexplorerrequest_p.h"
 #include "getreservationcoveragerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class GetReservationCoverageRequest;
 
-class QTAWS_EXPORT GetReservationCoverageRequestPrivate : public CostExplorerPrivate {
+class QTAWS_EXPORT GetReservationCoverageRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
     GetReservationCoverageRequestPrivate(const CostExplorer::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_COMPLETELIFECYCLEACTIONREQUEST_P_H
 #define QTAWS_COMPLETELIFECYCLEACTIONREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "completelifecycleactionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class CompleteLifecycleActionRequest;
 
-class QTAWS_EXPORT CompleteLifecycleActionRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT CompleteLifecycleActionRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     CompleteLifecycleActionRequestPrivate(const AutoScaling::Action action,

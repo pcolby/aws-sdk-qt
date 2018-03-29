@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBOTVERSIONREQUEST_P_H
 #define QTAWS_DELETEBOTVERSIONREQUEST_P_H
 
-#include "lexmodelbuildingservice_p.h"
+#include "lexmodelbuildingservicerequest_p.h"
 #include "deletebotversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 
 class DeleteBotVersionRequest;
 
-class QTAWS_EXPORT DeleteBotVersionRequestPrivate : public LexModelBuildingServicePrivate {
+class QTAWS_EXPORT DeleteBotVersionRequestPrivate : public LexModelBuildingServiceRequestPrivate {
 
 public:
     DeleteBotVersionRequestPrivate(const LexModelBuildingService::Action action,

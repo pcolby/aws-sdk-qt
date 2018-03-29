@@ -20,7 +20,7 @@
 #ifndef QTAWS_WORKSPACESREQUEST_P_H
 #define QTAWS_WORKSPACESREQUEST_P_H
 
-#include "workspaces_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "workspacesrequest.h"
 
 namespace QtAws {

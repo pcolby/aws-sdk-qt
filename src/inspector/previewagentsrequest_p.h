@@ -20,7 +20,7 @@
 #ifndef QTAWS_PREVIEWAGENTSREQUEST_P_H
 #define QTAWS_PREVIEWAGENTSREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "previewagentsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class PreviewAgentsRequest;
 
-class QTAWS_EXPORT PreviewAgentsRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT PreviewAgentsRequestPrivate : public InspectorRequestPrivate {
 
 public:
     PreviewAgentsRequestPrivate(const Inspector::Action action,

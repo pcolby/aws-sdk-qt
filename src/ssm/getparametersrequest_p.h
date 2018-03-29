@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETPARAMETERSREQUEST_P_H
 #define QTAWS_GETPARAMETERSREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "getparametersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class GetParametersRequest;
 
-class QTAWS_EXPORT GetParametersRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT GetParametersRequestPrivate : public SSMRequestPrivate {
 
 public:
     GetParametersRequestPrivate(const SSM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTRESOURCETAGSREQUEST_P_H
 #define QTAWS_LISTRESOURCETAGSREQUEST_P_H
 
-#include "kms_p.h"
+#include "kmsrequest_p.h"
 #include "listresourcetagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KMS {
 
 class ListResourceTagsRequest;
 
-class QTAWS_EXPORT ListResourceTagsRequestPrivate : public KMSPrivate {
+class QTAWS_EXPORT ListResourceTagsRequestPrivate : public KMSRequestPrivate {
 
 public:
     ListResourceTagsRequestPrivate(const KMS::Action action,

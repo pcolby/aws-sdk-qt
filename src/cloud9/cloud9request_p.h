@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUD9REQUEST_P_H
 #define QTAWS_CLOUD9REQUEST_P_H
 
-#include "cloud9_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "cloud9request.h"
 
 namespace QtAws {

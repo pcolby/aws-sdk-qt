@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEBACKUPREQUEST_P_H
 #define QTAWS_CREATEBACKUPREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "createbackuprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class CreateBackupRequest;
 
-class QTAWS_EXPORT CreateBackupRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT CreateBackupRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     CreateBackupRequestPrivate(const DynamoDB::Action action,

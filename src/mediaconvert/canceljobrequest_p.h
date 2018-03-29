@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELJOBREQUEST_P_H
 #define QTAWS_CANCELJOBREQUEST_P_H
 
-#include "mediaconvert_p.h"
+#include "mediaconvertrequest_p.h"
 #include "canceljobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class CancelJobRequest;
 
-class QTAWS_EXPORT CancelJobRequestPrivate : public MediaConvertPrivate {
+class QTAWS_EXPORT CancelJobRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     CancelJobRequestPrivate(const MediaConvert::Action action,

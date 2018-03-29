@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETBUCKETANALYTICSCONFIGURATIONREQUEST_P_H
 #define QTAWS_GETBUCKETANALYTICSCONFIGURATIONREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "getbucketanalyticsconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class GetBucketAnalyticsConfigurationRequest;
 
-class QTAWS_EXPORT GetBucketAnalyticsConfigurationRequestPrivate : public S3Private {
+class QTAWS_EXPORT GetBucketAnalyticsConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
     GetBucketAnalyticsConfigurationRequestPrivate(const S3::Action action,

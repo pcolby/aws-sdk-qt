@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELJOBREQUEST_P_H
 #define QTAWS_CANCELJOBREQUEST_P_H
 
-#include "batch_p.h"
+#include "batchrequest_p.h"
 #include "canceljobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Batch {
 
 class CancelJobRequest;
 
-class QTAWS_EXPORT CancelJobRequestPrivate : public BatchPrivate {
+class QTAWS_EXPORT CancelJobRequestPrivate : public BatchRequestPrivate {
 
 public:
     CancelJobRequestPrivate(const Batch::Action action,

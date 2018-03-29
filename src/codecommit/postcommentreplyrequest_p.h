@@ -20,7 +20,7 @@
 #ifndef QTAWS_POSTCOMMENTREPLYREQUEST_P_H
 #define QTAWS_POSTCOMMENTREPLYREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "postcommentreplyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class PostCommentReplyRequest;
 
-class QTAWS_EXPORT PostCommentReplyRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT PostCommentReplyRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     PostCommentReplyRequestPrivate(const CodeCommit::Action action,

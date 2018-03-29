@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEDEPLOYMENTREQUEST_P_H
 #define QTAWS_UPDATEDEPLOYMENTREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "updatedeploymentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class UpdateDeploymentRequest;
 
-class QTAWS_EXPORT UpdateDeploymentRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT UpdateDeploymentRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     UpdateDeploymentRequestPrivate(const APIGateway::Action action,

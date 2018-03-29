@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCHECKERIPRANGESREQUEST_P_H
 #define QTAWS_GETCHECKERIPRANGESREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "getcheckeriprangesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class GetCheckerIpRangesRequest;
 
-class QTAWS_EXPORT GetCheckerIpRangesRequestPrivate : public Route53Private {
+class QTAWS_EXPORT GetCheckerIpRangesRequestPrivate : public Route53RequestPrivate {
 
 public:
     GetCheckerIpRangesRequestPrivate(const Route53::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEORDERABLEREPLICATIONINSTANCESREQUEST_P_H
 #define QTAWS_DESCRIBEORDERABLEREPLICATIONINSTANCESREQUEST_P_H
 
-#include "databasemigrationservice_p.h"
+#include "databasemigrationservicerequest_p.h"
 #include "describeorderablereplicationinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DescribeOrderableReplicationInstancesRequest;
 
-class QTAWS_EXPORT DescribeOrderableReplicationInstancesRequestPrivate : public DatabaseMigrationServicePrivate {
+class QTAWS_EXPORT DescribeOrderableReplicationInstancesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     DescribeOrderableReplicationInstancesRequestPrivate(const DatabaseMigrationService::Action action,

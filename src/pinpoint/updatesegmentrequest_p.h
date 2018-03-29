@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATESEGMENTREQUEST_P_H
 #define QTAWS_UPDATESEGMENTREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "updatesegmentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class UpdateSegmentRequest;
 
-class QTAWS_EXPORT UpdateSegmentRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT UpdateSegmentRequestPrivate : public PinpointRequestPrivate {
 
 public:
     UpdateSegmentRequestPrivate(const Pinpoint::Action action,

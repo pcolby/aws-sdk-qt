@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTGLOBALTABLESREQUEST_P_H
 #define QTAWS_LISTGLOBALTABLESREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "listglobaltablesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class ListGlobalTablesRequest;
 
-class QTAWS_EXPORT ListGlobalTablesRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT ListGlobalTablesRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     ListGlobalTablesRequestPrivate(const DynamoDB::Action action,

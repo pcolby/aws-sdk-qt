@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETJOBDETAILSREQUEST_P_H
 #define QTAWS_GETJOBDETAILSREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "getjobdetailsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class GetJobDetailsRequest;
 
-class QTAWS_EXPORT GetJobDetailsRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT GetJobDetailsRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     GetJobDetailsRequestPrivate(const CodePipeline::Action action,

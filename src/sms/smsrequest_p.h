@@ -20,7 +20,7 @@
 #ifndef QTAWS_SMSREQUEST_P_H
 #define QTAWS_SMSREQUEST_P_H
 
-#include "sms_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "smsrequest.h"
 
 namespace QtAws {

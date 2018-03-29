@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDWORKINGSTORAGEREQUEST_P_H
 #define QTAWS_ADDWORKINGSTORAGEREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "addworkingstoragerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class AddWorkingStorageRequest;
 
-class QTAWS_EXPORT AddWorkingStorageRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT AddWorkingStorageRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     AddWorkingStorageRequestPrivate(const StorageGateway::Action action,

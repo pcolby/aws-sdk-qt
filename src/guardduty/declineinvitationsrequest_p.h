@@ -20,7 +20,7 @@
 #ifndef QTAWS_DECLINEINVITATIONSREQUEST_P_H
 #define QTAWS_DECLINEINVITATIONSREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "declineinvitationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DeclineInvitationsRequest;
 
-class QTAWS_EXPORT DeclineInvitationsRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT DeclineInvitationsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     DeclineInvitationsRequestPrivate(const GuardDuty::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETIPSETREQUEST_P_H
 #define QTAWS_GETIPSETREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "getipsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class GetIPSetRequest;
 
-class QTAWS_EXPORT GetIPSetRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT GetIPSetRequestPrivate : public WAFRequestPrivate {
 
 public:
     GetIPSetRequestPrivate(const WAF::Action action,

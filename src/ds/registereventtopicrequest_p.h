@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTEREVENTTOPICREQUEST_P_H
 #define QTAWS_REGISTEREVENTTOPICREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "registereventtopicrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class RegisterEventTopicRequest;
 
-class QTAWS_EXPORT RegisterEventTopicRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT RegisterEventTopicRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     RegisterEventTopicRequestPrivate(const DirectoryService::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTQUEUESREQUEST_P_H
 #define QTAWS_LISTQUEUESREQUEST_P_H
 
-#include "mediaconvert_p.h"
+#include "mediaconvertrequest_p.h"
 #include "listqueuesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class ListQueuesRequest;
 
-class QTAWS_EXPORT ListQueuesRequestPrivate : public MediaConvertPrivate {
+class QTAWS_EXPORT ListQueuesRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     ListQueuesRequestPrivate(const MediaConvert::Action action,

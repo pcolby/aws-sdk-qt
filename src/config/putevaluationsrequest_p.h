@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTEVALUATIONSREQUEST_P_H
 #define QTAWS_PUTEVALUATIONSREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "putevaluationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class PutEvaluationsRequest;
 
-class QTAWS_EXPORT PutEvaluationsRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT PutEvaluationsRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     PutEvaluationsRequestPrivate(const ConfigService::Action action,

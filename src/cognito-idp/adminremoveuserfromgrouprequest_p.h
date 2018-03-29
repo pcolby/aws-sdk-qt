@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADMINREMOVEUSERFROMGROUPREQUEST_P_H
 #define QTAWS_ADMINREMOVEUSERFROMGROUPREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "adminremoveuserfromgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminRemoveUserFromGroupRequest;
 
-class QTAWS_EXPORT AdminRemoveUserFromGroupRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT AdminRemoveUserFromGroupRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AdminRemoveUserFromGroupRequestPrivate(const CognitoIdentityProvider::Action action,

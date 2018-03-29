@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEPIPELINEREQUEST_P_H
 #define QTAWS_CREATEPIPELINEREQUEST_P_H
 
-#include "elastictranscoder_p.h"
+#include "elastictranscoderrequest_p.h"
 #include "createpipelinerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class CreatePipelineRequest;
 
-class QTAWS_EXPORT CreatePipelineRequestPrivate : public ElasticTranscoderPrivate {
+class QTAWS_EXPORT CreatePipelineRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     CreatePipelineRequestPrivate(const ElasticTranscoder::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SESREQUEST_P_H
 #define QTAWS_SESREQUEST_P_H
 
-#include "ses_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "sesrequest.h"
 
 namespace QtAws {

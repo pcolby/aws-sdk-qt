@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETLOGGINGOPTIONSREQUEST_P_H
 #define QTAWS_SETLOGGINGOPTIONSREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "setloggingoptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class SetLoggingOptionsRequest;
 
-class QTAWS_EXPORT SetLoggingOptionsRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT SetLoggingOptionsRequestPrivate : public IoTRequestPrivate {
 
 public:
     SetLoggingOptionsRequestPrivate(const IoT::Action action,

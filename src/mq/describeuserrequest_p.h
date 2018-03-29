@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEUSERREQUEST_P_H
 #define QTAWS_DESCRIBEUSERREQUEST_P_H
 
-#include "mq_p.h"
+#include "mqrequest_p.h"
 #include "describeuserrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MQ {
 
 class DescribeUserRequest;
 
-class QTAWS_EXPORT DescribeUserRequestPrivate : public MQPrivate {
+class QTAWS_EXPORT DescribeUserRequestPrivate : public MQRequestPrivate {
 
 public:
     DescribeUserRequestPrivate(const MQ::Action action,

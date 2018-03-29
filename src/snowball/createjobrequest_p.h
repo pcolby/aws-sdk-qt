@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEJOBREQUEST_P_H
 #define QTAWS_CREATEJOBREQUEST_P_H
 
-#include "snowball_p.h"
+#include "snowballrequest_p.h"
 #include "createjobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Snowball {
 
 class CreateJobRequest;
 
-class QTAWS_EXPORT CreateJobRequestPrivate : public SnowballPrivate {
+class QTAWS_EXPORT CreateJobRequestPrivate : public SnowballRequestPrivate {
 
 public:
     CreateJobRequestPrivate(const Snowball::Action action,

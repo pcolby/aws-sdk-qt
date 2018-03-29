@@ -20,7 +20,7 @@
 #ifndef QTAWS_EXITSTANDBYREQUEST_P_H
 #define QTAWS_EXITSTANDBYREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "exitstandbyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class ExitStandbyRequest;
 
-class QTAWS_EXPORT ExitStandbyRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT ExitStandbyRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     ExitStandbyRequestPrivate(const AutoScaling::Action action,

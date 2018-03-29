@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECHAPCREDENTIALSREQUEST_P_H
 #define QTAWS_UPDATECHAPCREDENTIALSREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "updatechapcredentialsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class UpdateChapCredentialsRequest;
 
-class QTAWS_EXPORT UpdateChapCredentialsRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT UpdateChapCredentialsRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     UpdateChapCredentialsRequestPrivate(const StorageGateway::Action action,

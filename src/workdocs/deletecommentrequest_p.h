@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECOMMENTREQUEST_P_H
 #define QTAWS_DELETECOMMENTREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "deletecommentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DeleteCommentRequest;
 
-class QTAWS_EXPORT DeleteCommentRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT DeleteCommentRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DeleteCommentRequestPrivate(const WorkDocs::Action action,

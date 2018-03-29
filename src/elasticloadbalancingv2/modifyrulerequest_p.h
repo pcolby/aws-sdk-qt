@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYRULEREQUEST_P_H
 #define QTAWS_MODIFYRULEREQUEST_P_H
 
-#include "elasticloadbalancingv2_p.h"
+#include "elasticloadbalancingv2request_p.h"
 #include "modifyrulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class ModifyRuleRequest;
 
-class QTAWS_EXPORT ModifyRuleRequestPrivate : public ElasticLoadBalancingv2Private {
+class QTAWS_EXPORT ModifyRuleRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     ModifyRuleRequestPrivate(const ElasticLoadBalancingv2::Action action,

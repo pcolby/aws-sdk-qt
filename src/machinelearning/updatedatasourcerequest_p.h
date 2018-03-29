@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEDATASOURCEREQUEST_P_H
 #define QTAWS_UPDATEDATASOURCEREQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "updatedatasourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class UpdateDataSourceRequest;
 
-class QTAWS_EXPORT UpdateDataSourceRequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT UpdateDataSourceRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     UpdateDataSourceRequestPrivate(const MachineLearning::Action action,

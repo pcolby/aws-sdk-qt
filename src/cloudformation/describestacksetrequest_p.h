@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESTACKSETREQUEST_P_H
 #define QTAWS_DESCRIBESTACKSETREQUEST_P_H
 
-#include "cloudformation_p.h"
+#include "cloudformationrequest_p.h"
 #include "describestacksetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class DescribeStackSetRequest;
 
-class QTAWS_EXPORT DescribeStackSetRequestPrivate : public CloudFormationPrivate {
+class QTAWS_EXPORT DescribeStackSetRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     DescribeStackSetRequestPrivate(const CloudFormation::Action action,

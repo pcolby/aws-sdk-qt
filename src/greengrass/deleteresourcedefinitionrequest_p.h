@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETERESOURCEDEFINITIONREQUEST_P_H
 #define QTAWS_DELETERESOURCEDEFINITIONREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "deleteresourcedefinitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class DeleteResourceDefinitionRequest;
 
-class QTAWS_EXPORT DeleteResourceDefinitionRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT DeleteResourceDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     DeleteResourceDefinitionRequestPrivate(const Greengrass::Action action,

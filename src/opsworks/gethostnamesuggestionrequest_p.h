@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETHOSTNAMESUGGESTIONREQUEST_P_H
 #define QTAWS_GETHOSTNAMESUGGESTIONREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "gethostnamesuggestionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class GetHostnameSuggestionRequest;
 
-class QTAWS_EXPORT GetHostnameSuggestionRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT GetHostnameSuggestionRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     GetHostnameSuggestionRequestPrivate(const OpsWorks::Action action,

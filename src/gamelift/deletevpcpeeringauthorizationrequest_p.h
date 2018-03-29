@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEVPCPEERINGAUTHORIZATIONREQUEST_P_H
 #define QTAWS_DELETEVPCPEERINGAUTHORIZATIONREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "deletevpcpeeringauthorizationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DeleteVpcPeeringAuthorizationRequest;
 
-class QTAWS_EXPORT DeleteVpcPeeringAuthorizationRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT DeleteVpcPeeringAuthorizationRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DeleteVpcPeeringAuthorizationRequestPrivate(const GameLift::Action action,

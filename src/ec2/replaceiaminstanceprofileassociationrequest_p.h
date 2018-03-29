@@ -20,7 +20,7 @@
 #ifndef QTAWS_REPLACEIAMINSTANCEPROFILEASSOCIATIONREQUEST_P_H
 #define QTAWS_REPLACEIAMINSTANCEPROFILEASSOCIATIONREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "replaceiaminstanceprofileassociationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ReplaceIamInstanceProfileAssociationRequest;
 
-class QTAWS_EXPORT ReplaceIamInstanceProfileAssociationRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ReplaceIamInstanceProfileAssociationRequestPrivate : public EC2RequestPrivate {
 
 public:
     ReplaceIamInstanceProfileAssociationRequestPrivate(const EC2::Action action,

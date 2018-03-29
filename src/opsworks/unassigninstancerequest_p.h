@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNASSIGNINSTANCEREQUEST_P_H
 #define QTAWS_UNASSIGNINSTANCEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "unassigninstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class UnassignInstanceRequest;
 
-class QTAWS_EXPORT UnassignInstanceRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT UnassignInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     UnassignInstanceRequestPrivate(const OpsWorks::Action action,

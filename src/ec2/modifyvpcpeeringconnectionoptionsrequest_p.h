@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYVPCPEERINGCONNECTIONOPTIONSREQUEST_P_H
 #define QTAWS_MODIFYVPCPEERINGCONNECTIONOPTIONSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "modifyvpcpeeringconnectionoptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyVpcPeeringConnectionOptionsRequest;
 
-class QTAWS_EXPORT ModifyVpcPeeringConnectionOptionsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ModifyVpcPeeringConnectionOptionsRequestPrivate : public EC2RequestPrivate {
 
 public:
     ModifyVpcPeeringConnectionOptionsRequestPrivate(const EC2::Action action,

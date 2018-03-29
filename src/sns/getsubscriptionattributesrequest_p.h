@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSUBSCRIPTIONATTRIBUTESREQUEST_P_H
 #define QTAWS_GETSUBSCRIPTIONATTRIBUTESREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "getsubscriptionattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class GetSubscriptionAttributesRequest;
 
-class QTAWS_EXPORT GetSubscriptionAttributesRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT GetSubscriptionAttributesRequestPrivate : public SNSRequestPrivate {
 
 public:
     GetSubscriptionAttributesRequestPrivate(const SNS::Action action,

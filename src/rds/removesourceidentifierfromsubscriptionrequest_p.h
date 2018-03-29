@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVESOURCEIDENTIFIERFROMSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_REMOVESOURCEIDENTIFIERFROMSUBSCRIPTIONREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "removesourceidentifierfromsubscriptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class RemoveSourceIdentifierFromSubscriptionRequest;
 
-class QTAWS_EXPORT RemoveSourceIdentifierFromSubscriptionRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT RemoveSourceIdentifierFromSubscriptionRequestPrivate : public RDSRequestPrivate {
 
 public:
     RemoveSourceIdentifierFromSubscriptionRequestPrivate(const RDS::Action action,

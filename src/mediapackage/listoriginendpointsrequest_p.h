@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTORIGINENDPOINTSREQUEST_P_H
 #define QTAWS_LISTORIGINENDPOINTSREQUEST_P_H
 
-#include "mediapackage_p.h"
+#include "mediapackagerequest_p.h"
 #include "listoriginendpointsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaPackage {
 
 class ListOriginEndpointsRequest;
 
-class QTAWS_EXPORT ListOriginEndpointsRequestPrivate : public MediaPackagePrivate {
+class QTAWS_EXPORT ListOriginEndpointsRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
     ListOriginEndpointsRequestPrivate(const MediaPackage::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEVPCLINKREQUEST_P_H
 #define QTAWS_DELETEVPCLINKREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "deletevpclinkrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteVpcLinkRequest;
 
-class QTAWS_EXPORT DeleteVpcLinkRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT DeleteVpcLinkRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteVpcLinkRequestPrivate(const APIGateway::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATERESOURCEREQUEST_P_H
 #define QTAWS_UPDATERESOURCEREQUEST_P_H
 
-#include "workmail_p.h"
+#include "workmailrequest_p.h"
 #include "updateresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class UpdateResourceRequest;
 
-class QTAWS_EXPORT UpdateResourceRequestPrivate : public WorkMailPrivate {
+class QTAWS_EXPORT UpdateResourceRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     UpdateResourceRequestPrivate(const WorkMail::Action action,

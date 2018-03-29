@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEWEBACLREQUEST_P_H
 #define QTAWS_UPDATEWEBACLREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "updatewebaclrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class UpdateWebACLRequest;
 
-class QTAWS_EXPORT UpdateWebACLRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT UpdateWebACLRequestPrivate : public WAFRequestPrivate {
 
 public:
     UpdateWebACLRequestPrivate(const WAF::Action action,

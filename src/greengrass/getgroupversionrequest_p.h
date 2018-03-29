@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETGROUPVERSIONREQUEST_P_H
 #define QTAWS_GETGROUPVERSIONREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "getgroupversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetGroupVersionRequest;
 
-class QTAWS_EXPORT GetGroupVersionRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT GetGroupVersionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     GetGroupVersionRequestPrivate(const Greengrass::Action action,

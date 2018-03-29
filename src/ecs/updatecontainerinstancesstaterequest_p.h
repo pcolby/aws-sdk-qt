@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECONTAINERINSTANCESSTATEREQUEST_P_H
 #define QTAWS_UPDATECONTAINERINSTANCESSTATEREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "updatecontainerinstancesstaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class UpdateContainerInstancesStateRequest;
 
-class QTAWS_EXPORT UpdateContainerInstancesStateRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT UpdateContainerInstancesStateRequestPrivate : public ECSRequestPrivate {
 
 public:
     UpdateContainerInstancesStateRequestPrivate(const ECS::Action action,

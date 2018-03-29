@@ -20,7 +20,7 @@
 #ifndef QTAWS_IMPORTSERVERCATALOGREQUEST_P_H
 #define QTAWS_IMPORTSERVERCATALOGREQUEST_P_H
 
-#include "sms_p.h"
+#include "smsrequest_p.h"
 #include "importservercatalogrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SMS {
 
 class ImportServerCatalogRequest;
 
-class QTAWS_EXPORT ImportServerCatalogRequestPrivate : public SMSPrivate {
+class QTAWS_EXPORT ImportServerCatalogRequestPrivate : public SMSRequestPrivate {
 
 public:
     ImportServerCatalogRequestPrivate(const SMS::Action action,

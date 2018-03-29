@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEBROKERREQUEST_P_H
 #define QTAWS_DESCRIBEBROKERREQUEST_P_H
 
-#include "mq_p.h"
+#include "mqrequest_p.h"
 #include "describebrokerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MQ {
 
 class DescribeBrokerRequest;
 
-class QTAWS_EXPORT DescribeBrokerRequestPrivate : public MQPrivate {
+class QTAWS_EXPORT DescribeBrokerRequestPrivate : public MQRequestPrivate {
 
 public:
     DescribeBrokerRequestPrivate(const MQ::Action action,

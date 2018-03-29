@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEROOMSKILLPARAMETERREQUEST_P_H
 #define QTAWS_DELETEROOMSKILLPARAMETERREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "deleteroomskillparameterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class DeleteRoomSkillParameterRequest;
 
-class QTAWS_EXPORT DeleteRoomSkillParameterRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT DeleteRoomSkillParameterRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     DeleteRoomSkillParameterRequestPrivate(const AlexaForBusiness::Action action,

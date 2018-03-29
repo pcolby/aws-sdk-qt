@@ -20,7 +20,7 @@
 #ifndef QTAWS_SENDTESTEVENTNOTIFICATIONREQUEST_P_H
 #define QTAWS_SENDTESTEVENTNOTIFICATIONREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "sendtesteventnotificationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class SendTestEventNotificationRequest;
 
-class QTAWS_EXPORT SendTestEventNotificationRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT SendTestEventNotificationRequestPrivate : public MTurkRequestPrivate {
 
 public:
     SendTestEventNotificationRequestPrivate(const MTurk::Action action,

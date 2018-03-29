@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATETRUSTREQUEST_P_H
 #define QTAWS_CREATETRUSTREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "createtrustrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class CreateTrustRequest;
 
-class QTAWS_EXPORT CreateTrustRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT CreateTrustRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     CreateTrustRequestPrivate(const DirectoryService::Action action,

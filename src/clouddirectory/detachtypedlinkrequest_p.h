@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETACHTYPEDLINKREQUEST_P_H
 #define QTAWS_DETACHTYPEDLINKREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "detachtypedlinkrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class DetachTypedLinkRequest;
 
-class QTAWS_EXPORT DetachTypedLinkRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT DetachTypedLinkRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     DetachTypedLinkRequestPrivate(const CloudDirectory::Action action,

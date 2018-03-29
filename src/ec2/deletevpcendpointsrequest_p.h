@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEVPCENDPOINTSREQUEST_P_H
 #define QTAWS_DELETEVPCENDPOINTSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "deletevpcendpointsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteVpcEndpointsRequest;
 
-class QTAWS_EXPORT DeleteVpcEndpointsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DeleteVpcEndpointsRequestPrivate : public EC2RequestPrivate {
 
 public:
     DeleteVpcEndpointsRequestPrivate(const EC2::Action action,

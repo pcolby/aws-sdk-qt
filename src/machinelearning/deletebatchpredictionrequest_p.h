@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBATCHPREDICTIONREQUEST_P_H
 #define QTAWS_DELETEBATCHPREDICTIONREQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "deletebatchpredictionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class DeleteBatchPredictionRequest;
 
-class QTAWS_EXPORT DeleteBatchPredictionRequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT DeleteBatchPredictionRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     DeleteBatchPredictionRequestPrivate(const MachineLearning::Action action,

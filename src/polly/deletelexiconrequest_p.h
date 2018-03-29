@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETELEXICONREQUEST_P_H
 #define QTAWS_DELETELEXICONREQUEST_P_H
 
-#include "polly_p.h"
+#include "pollyrequest_p.h"
 #include "deletelexiconrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Polly {
 
 class DeleteLexiconRequest;
 
-class QTAWS_EXPORT DeleteLexiconRequestPrivate : public PollyPrivate {
+class QTAWS_EXPORT DeleteLexiconRequestPrivate : public PollyRequestPrivate {
 
 public:
     DeleteLexiconRequestPrivate(const Polly::Action action,

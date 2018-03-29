@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSOCIATESOFTWARETOKENREQUEST_P_H
 #define QTAWS_ASSOCIATESOFTWARETOKENREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "associatesoftwaretokenrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AssociateSoftwareTokenRequest;
 
-class QTAWS_EXPORT AssociateSoftwareTokenRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT AssociateSoftwareTokenRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AssociateSoftwareTokenRequestPrivate(const CognitoIdentityProvider::Action action,

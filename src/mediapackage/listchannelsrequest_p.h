@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTCHANNELSREQUEST_P_H
 #define QTAWS_LISTCHANNELSREQUEST_P_H
 
-#include "mediapackage_p.h"
+#include "mediapackagerequest_p.h"
 #include "listchannelsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaPackage {
 
 class ListChannelsRequest;
 
-class QTAWS_EXPORT ListChannelsRequestPrivate : public MediaPackagePrivate {
+class QTAWS_EXPORT ListChannelsRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
     ListChannelsRequestPrivate(const MediaPackage::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEASSESSMENTTARGETREQUEST_P_H
 #define QTAWS_UPDATEASSESSMENTTARGETREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "updateassessmenttargetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class UpdateAssessmentTargetRequest;
 
-class QTAWS_EXPORT UpdateAssessmentTargetRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT UpdateAssessmentTargetRequestPrivate : public InspectorRequestPrivate {
 
 public:
     UpdateAssessmentTargetRequestPrivate(const Inspector::Action action,

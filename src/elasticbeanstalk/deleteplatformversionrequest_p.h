@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPLATFORMVERSIONREQUEST_P_H
 #define QTAWS_DELETEPLATFORMVERSIONREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "deleteplatformversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class DeletePlatformVersionRequest;
 
-class QTAWS_EXPORT DeletePlatformVersionRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT DeletePlatformVersionRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     DeletePlatformVersionRequestPrivate(const ElasticBeanstalk::Action action,

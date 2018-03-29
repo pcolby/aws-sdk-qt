@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESEVERITYLEVELSREQUEST_P_H
 #define QTAWS_DESCRIBESEVERITYLEVELSREQUEST_P_H
 
-#include "support_p.h"
+#include "supportrequest_p.h"
 #include "describeseveritylevelsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Support {
 
 class DescribeSeverityLevelsRequest;
 
-class QTAWS_EXPORT DescribeSeverityLevelsRequestPrivate : public SupportPrivate {
+class QTAWS_EXPORT DescribeSeverityLevelsRequestPrivate : public SupportRequestPrivate {
 
 public:
     DescribeSeverityLevelsRequestPrivate(const Support::Action action,

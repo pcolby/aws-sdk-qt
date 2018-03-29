@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEPROGRESSUPDATESTREAMREQUEST_P_H
 #define QTAWS_CREATEPROGRESSUPDATESTREAMREQUEST_P_H
 
-#include "migrationhub_p.h"
+#include "migrationhubrequest_p.h"
 #include "createprogressupdatestreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class CreateProgressUpdateStreamRequest;
 
-class QTAWS_EXPORT CreateProgressUpdateStreamRequestPrivate : public MigrationHubPrivate {
+class QTAWS_EXPORT CreateProgressUpdateStreamRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     CreateProgressUpdateStreamRequestPrivate(const MigrationHub::Action action,

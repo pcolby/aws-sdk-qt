@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEFILESYSTEMREQUEST_P_H
 #define QTAWS_CREATEFILESYSTEMREQUEST_P_H
 
-#include "efs_p.h"
+#include "efsrequest_p.h"
 #include "createfilesystemrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EFS {
 
 class CreateFileSystemRequest;
 
-class QTAWS_EXPORT CreateFileSystemRequestPrivate : public EFSPrivate {
+class QTAWS_EXPORT CreateFileSystemRequestPrivate : public EFSRequestPrivate {
 
 public:
     CreateFileSystemRequestPrivate(const EFS::Action action,

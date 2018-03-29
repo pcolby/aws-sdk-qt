@@ -20,7 +20,7 @@
 #ifndef QTAWS_TESTMETRICFILTERREQUEST_P_H
 #define QTAWS_TESTMETRICFILTERREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "testmetricfilterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class TestMetricFilterRequest;
 
-class QTAWS_EXPORT TestMetricFilterRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT TestMetricFilterRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     TestMetricFilterRequestPrivate(const CloudWatchLogs::Action action,

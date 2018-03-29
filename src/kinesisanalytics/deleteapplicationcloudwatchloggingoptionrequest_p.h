@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEAPPLICATIONCLOUDWATCHLOGGINGOPTIONREQUEST_P_H
 #define QTAWS_DELETEAPPLICATIONCLOUDWATCHLOGGINGOPTIONREQUEST_P_H
 
-#include "kinesisanalytics_p.h"
+#include "kinesisanalyticsrequest_p.h"
 #include "deleteapplicationcloudwatchloggingoptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class DeleteApplicationCloudWatchLoggingOptionRequest;
 
-class QTAWS_EXPORT DeleteApplicationCloudWatchLoggingOptionRequestPrivate : public KinesisAnalyticsPrivate {
+class QTAWS_EXPORT DeleteApplicationCloudWatchLoggingOptionRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
     DeleteApplicationCloudWatchLoggingOptionRequestPrivate(const KinesisAnalytics::Action action,

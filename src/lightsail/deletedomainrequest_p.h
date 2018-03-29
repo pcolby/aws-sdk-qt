@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDOMAINREQUEST_P_H
 #define QTAWS_DELETEDOMAINREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "deletedomainrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class DeleteDomainRequest;
 
-class QTAWS_EXPORT DeleteDomainRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT DeleteDomainRequestPrivate : public LightsailRequestPrivate {
 
 public:
     DeleteDomainRequestPrivate(const Lightsail::Action action,

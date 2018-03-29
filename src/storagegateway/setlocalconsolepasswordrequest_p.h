@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETLOCALCONSOLEPASSWORDREQUEST_P_H
 #define QTAWS_SETLOCALCONSOLEPASSWORDREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "setlocalconsolepasswordrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class SetLocalConsolePasswordRequest;
 
-class QTAWS_EXPORT SetLocalConsolePasswordRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT SetLocalConsolePasswordRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     SetLocalConsolePasswordRequestPrivate(const StorageGateway::Action action,

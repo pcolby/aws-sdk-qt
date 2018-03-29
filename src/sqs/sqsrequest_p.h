@@ -20,7 +20,7 @@
 #ifndef QTAWS_SQSREQUEST_P_H
 #define QTAWS_SQSREQUEST_P_H
 
-#include "sqs_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "sqsrequest.h"
 
 namespace QtAws {

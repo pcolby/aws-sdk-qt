@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETSTACKPOLICYREQUEST_P_H
 #define QTAWS_SETSTACKPOLICYREQUEST_P_H
 
-#include "cloudformation_p.h"
+#include "cloudformationrequest_p.h"
 #include "setstackpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFormation {
 
 class SetStackPolicyRequest;
 
-class QTAWS_EXPORT SetStackPolicyRequestPrivate : public CloudFormationPrivate {
+class QTAWS_EXPORT SetStackPolicyRequestPrivate : public CloudFormationRequestPrivate {
 
 public:
     SetStackPolicyRequestPrivate(const CloudFormation::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEMETRICFILTERREQUEST_P_H
 #define QTAWS_DELETEMETRICFILTERREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "deletemetricfilterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DeleteMetricFilterRequest;
 
-class QTAWS_EXPORT DeleteMetricFilterRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT DeleteMetricFilterRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DeleteMetricFilterRequestPrivate(const CloudWatchLogs::Action action,

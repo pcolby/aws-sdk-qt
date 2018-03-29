@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPROJECTREQUEST_P_H
 #define QTAWS_DELETEPROJECTREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "deleteprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class DeleteProjectRequest;
 
-class QTAWS_EXPORT DeleteProjectRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT DeleteProjectRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     DeleteProjectRequestPrivate(const DeviceFarm::Action action,

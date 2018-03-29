@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEAPIKEYREQUEST_P_H
 #define QTAWS_DELETEAPIKEYREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "deleteapikeyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class DeleteApiKeyRequest;
 
-class QTAWS_EXPORT DeleteApiKeyRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT DeleteApiKeyRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     DeleteApiKeyRequestPrivate(const AppSync::Action action,

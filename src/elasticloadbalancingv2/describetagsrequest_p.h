@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETAGSREQUEST_P_H
 #define QTAWS_DESCRIBETAGSREQUEST_P_H
 
-#include "elasticloadbalancingv2_p.h"
+#include "elasticloadbalancingv2request_p.h"
 #include "describetagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class DescribeTagsRequest;
 
-class QTAWS_EXPORT DescribeTagsRequestPrivate : public ElasticLoadBalancingv2Private {
+class QTAWS_EXPORT DescribeTagsRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     DescribeTagsRequestPrivate(const ElasticLoadBalancingv2::Action action,

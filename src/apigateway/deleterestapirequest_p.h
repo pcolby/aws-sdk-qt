@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETERESTAPIREQUEST_P_H
 #define QTAWS_DELETERESTAPIREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "deleterestapirequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteRestApiRequest;
 
-class QTAWS_EXPORT DeleteRestApiRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT DeleteRestApiRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteRestApiRequestPrivate(const APIGateway::Action action,

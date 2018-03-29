@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETDESIREDCAPACITYREQUEST_P_H
 #define QTAWS_SETDESIREDCAPACITYREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "setdesiredcapacityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class SetDesiredCapacityRequest;
 
-class QTAWS_EXPORT SetDesiredCapacityRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT SetDesiredCapacityRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     SetDesiredCapacityRequestPrivate(const AutoScaling::Action action,

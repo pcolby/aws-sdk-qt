@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEFINEINDEXFIELDREQUEST_P_H
 #define QTAWS_DEFINEINDEXFIELDREQUEST_P_H
 
-#include "cloudsearch_p.h"
+#include "cloudsearchrequest_p.h"
 #include "defineindexfieldrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class DefineIndexFieldRequest;
 
-class QTAWS_EXPORT DefineIndexFieldRequestPrivate : public CloudSearchPrivate {
+class QTAWS_EXPORT DefineIndexFieldRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     DefineIndexFieldRequestPrivate(const CloudSearch::Action action,

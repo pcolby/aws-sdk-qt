@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETINVALIDATIONREQUEST_P_H
 #define QTAWS_GETINVALIDATIONREQUEST_P_H
 
-#include "cloudfront_p.h"
+#include "cloudfrontrequest_p.h"
 #include "getinvalidationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudFront {
 
 class GetInvalidationRequest;
 
-class QTAWS_EXPORT GetInvalidationRequestPrivate : public CloudFrontPrivate {
+class QTAWS_EXPORT GetInvalidationRequestPrivate : public CloudFrontRequestPrivate {
 
 public:
     GetInvalidationRequestPrivate(const CloudFront::Action action,

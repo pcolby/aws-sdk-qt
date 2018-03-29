@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELIVERCONFIGSNAPSHOTREQUEST_P_H
 #define QTAWS_DELIVERCONFIGSNAPSHOTREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "deliverconfigsnapshotrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeliverConfigSnapshotRequest;
 
-class QTAWS_EXPORT DeliverConfigSnapshotRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT DeliverConfigSnapshotRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DeliverConfigSnapshotRequestPrivate(const ConfigService::Action action,

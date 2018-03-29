@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESOURCEGROUPSREQUEST_P_H
 #define QTAWS_RESOURCEGROUPSREQUEST_P_H
 
-#include "resourcegroups_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "resourcegroupsrequest.h"
 
 namespace QtAws {

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETIDENTITYDKIMENABLEDREQUEST_P_H
 #define QTAWS_SETIDENTITYDKIMENABLEDREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "setidentitydkimenabledrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class SetIdentityDkimEnabledRequest;
 
-class QTAWS_EXPORT SetIdentityDkimEnabledRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT SetIdentityDkimEnabledRequestPrivate : public SESRequestPrivate {
 
 public:
     SetIdentityDkimEnabledRequestPrivate(const SES::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTROLEALIASESREQUEST_P_H
 #define QTAWS_LISTROLEALIASESREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "listrolealiasesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListRoleAliasesRequest;
 
-class QTAWS_EXPORT ListRoleAliasesRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT ListRoleAliasesRequestPrivate : public IoTRequestPrivate {
 
 public:
     ListRoleAliasesRequestPrivate(const IoT::Action action,

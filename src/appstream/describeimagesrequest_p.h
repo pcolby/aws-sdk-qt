@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEIMAGESREQUEST_P_H
 #define QTAWS_DESCRIBEIMAGESREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "describeimagesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class DescribeImagesRequest;
 
-class QTAWS_EXPORT DescribeImagesRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT DescribeImagesRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     DescribeImagesRequestPrivate(const AppStream::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTIPSETSREQUEST_P_H
 #define QTAWS_LISTIPSETSREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "listipsetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class ListIPSetsRequest;
 
-class QTAWS_EXPORT ListIPSetsRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT ListIPSetsRequestPrivate : public WAFRequestPrivate {
 
 public:
     ListIPSetsRequestPrivate(const WAF::Action action,

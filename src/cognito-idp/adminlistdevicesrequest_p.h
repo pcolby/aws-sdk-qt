@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADMINLISTDEVICESREQUEST_P_H
 #define QTAWS_ADMINLISTDEVICESREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "adminlistdevicesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminListDevicesRequest;
 
-class QTAWS_EXPORT AdminListDevicesRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT AdminListDevicesRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AdminListDevicesRequestPrivate(const CognitoIdentityProvider::Action action,

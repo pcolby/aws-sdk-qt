@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETFILEUPLOADURLREQUEST_P_H
 #define QTAWS_GETFILEUPLOADURLREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "getfileuploadurlrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class GetFileUploadURLRequest;
 
-class QTAWS_EXPORT GetFileUploadURLRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT GetFileUploadURLRequestPrivate : public MTurkRequestPrivate {
 
 public:
     GetFileUploadURLRequestPrivate(const MTurk::Action action,

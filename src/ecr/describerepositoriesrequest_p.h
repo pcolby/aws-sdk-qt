@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEREPOSITORIESREQUEST_P_H
 #define QTAWS_DESCRIBEREPOSITORIESREQUEST_P_H
 
-#include "ecr_p.h"
+#include "ecrrequest_p.h"
 #include "describerepositoriesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECR {
 
 class DescribeRepositoriesRequest;
 
-class QTAWS_EXPORT DescribeRepositoriesRequestPrivate : public ECRPrivate {
+class QTAWS_EXPORT DescribeRepositoriesRequestPrivate : public ECRRequestPrivate {
 
 public:
     DescribeRepositoriesRequestPrivate(const ECR::Action action,

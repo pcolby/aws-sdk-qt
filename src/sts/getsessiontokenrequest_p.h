@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSESSIONTOKENREQUEST_P_H
 #define QTAWS_GETSESSIONTOKENREQUEST_P_H
 
-#include "sts_p.h"
+#include "stsrequest_p.h"
 #include "getsessiontokenrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace STS {
 
 class GetSessionTokenRequest;
 
-class QTAWS_EXPORT GetSessionTokenRequestPrivate : public STSPrivate {
+class QTAWS_EXPORT GetSessionTokenRequestPrivate : public STSRequestPrivate {
 
 public:
     GetSessionTokenRequestPrivate(const STS::Action action,

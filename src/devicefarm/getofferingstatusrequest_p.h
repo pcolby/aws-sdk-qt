@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETOFFERINGSTATUSREQUEST_P_H
 #define QTAWS_GETOFFERINGSTATUSREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "getofferingstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetOfferingStatusRequest;
 
-class QTAWS_EXPORT GetOfferingStatusRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT GetOfferingStatusRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     GetOfferingStatusRequestPrivate(const DeviceFarm::Action action,

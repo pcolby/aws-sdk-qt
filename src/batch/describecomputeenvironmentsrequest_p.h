@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECOMPUTEENVIRONMENTSREQUEST_P_H
 #define QTAWS_DESCRIBECOMPUTEENVIRONMENTSREQUEST_P_H
 
-#include "batch_p.h"
+#include "batchrequest_p.h"
 #include "describecomputeenvironmentsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Batch {
 
 class DescribeComputeEnvironmentsRequest;
 
-class QTAWS_EXPORT DescribeComputeEnvironmentsRequestPrivate : public BatchPrivate {
+class QTAWS_EXPORT DescribeComputeEnvironmentsRequestPrivate : public BatchRequestPrivate {
 
 public:
     DescribeComputeEnvironmentsRequestPrivate(const Batch::Action action,

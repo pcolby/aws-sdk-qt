@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTAPPLICATIONPOLICYREQUEST_P_H
 #define QTAWS_PUTAPPLICATIONPOLICYREQUEST_P_H
 
-#include "serverlessapplicationrepository_p.h"
+#include "serverlessapplicationrepositoryrequest_p.h"
 #include "putapplicationpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 
 class PutApplicationPolicyRequest;
 
-class QTAWS_EXPORT PutApplicationPolicyRequestPrivate : public ServerlessApplicationRepositoryPrivate {
+class QTAWS_EXPORT PutApplicationPolicyRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
     PutApplicationPolicyRequestPrivate(const ServerlessApplicationRepository::Action action,

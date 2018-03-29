@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBELIMITSREQUEST_P_H
 #define QTAWS_DESCRIBELIMITSREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "describelimitsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class DescribeLimitsRequest;
 
-class QTAWS_EXPORT DescribeLimitsRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT DescribeLimitsRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     DescribeLimitsRequestPrivate(const DynamoDB::Action action,

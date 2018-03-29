@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEBROKERREQUEST_P_H
 #define QTAWS_UPDATEBROKERREQUEST_P_H
 
-#include "mq_p.h"
+#include "mqrequest_p.h"
 #include "updatebrokerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MQ {
 
 class UpdateBrokerRequest;
 
-class QTAWS_EXPORT UpdateBrokerRequestPrivate : public MQPrivate {
+class QTAWS_EXPORT UpdateBrokerRequestPrivate : public MQRequestPrivate {
 
 public:
     UpdateBrokerRequestPrivate(const MQ::Action action,

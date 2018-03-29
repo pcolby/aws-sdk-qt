@@ -20,7 +20,7 @@
 #ifndef QTAWS_INVOKEASYNCREQUEST_P_H
 #define QTAWS_INVOKEASYNCREQUEST_P_H
 
-#include "lambda_p.h"
+#include "lambdarequest_p.h"
 #include "invokeasyncrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lambda {
 
 class InvokeAsyncRequest;
 
-class QTAWS_EXPORT InvokeAsyncRequestPrivate : public LambdaPrivate {
+class QTAWS_EXPORT InvokeAsyncRequestPrivate : public LambdaRequestPrivate {
 
 public:
     InvokeAsyncRequestPrivate(const Lambda::Action action,

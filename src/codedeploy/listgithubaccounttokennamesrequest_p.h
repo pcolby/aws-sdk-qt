@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTGITHUBACCOUNTTOKENNAMESREQUEST_P_H
 #define QTAWS_LISTGITHUBACCOUNTTOKENNAMESREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "listgithubaccounttokennamesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class ListGitHubAccountTokenNamesRequest;
 
-class QTAWS_EXPORT ListGitHubAccountTokenNamesRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT ListGitHubAccountTokenNamesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     ListGitHubAccountTokenNamesRequestPrivate(const CodeDeploy::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATENFSFILESHAREREQUEST_P_H
 #define QTAWS_UPDATENFSFILESHAREREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "updatenfsfilesharerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class UpdateNFSFileShareRequest;
 
-class QTAWS_EXPORT UpdateNFSFileShareRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT UpdateNFSFileShareRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     UpdateNFSFileShareRequestPrivate(const StorageGateway::Action action,

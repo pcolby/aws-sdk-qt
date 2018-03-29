@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELSTEPSREQUEST_P_H
 #define QTAWS_CANCELSTEPSREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "cancelstepsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class CancelStepsRequest;
 
-class QTAWS_EXPORT CancelStepsRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT CancelStepsRequestPrivate : public EMRRequestPrivate {
 
 public:
     CancelStepsRequestPrivate(const EMR::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEEC2INSTANCELIMITSREQUEST_P_H
 #define QTAWS_DESCRIBEEC2INSTANCELIMITSREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "describeec2instancelimitsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribeEC2InstanceLimitsRequest;
 
-class QTAWS_EXPORT DescribeEC2InstanceLimitsRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT DescribeEC2InstanceLimitsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DescribeEC2InstanceLimitsRequestPrivate(const GameLift::Action action,

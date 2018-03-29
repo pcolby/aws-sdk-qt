@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATETHINGSHADOWREQUEST_P_H
 #define QTAWS_UPDATETHINGSHADOWREQUEST_P_H
 
-#include "iotdataplane_p.h"
+#include "iotdataplanerequest_p.h"
 #include "updatethingshadowrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoTDataPlane {
 
 class UpdateThingShadowRequest;
 
-class QTAWS_EXPORT UpdateThingShadowRequestPrivate : public IoTDataPlanePrivate {
+class QTAWS_EXPORT UpdateThingShadowRequestPrivate : public IoTDataPlaneRequestPrivate {
 
 public:
     UpdateThingShadowRequestPrivate(const IoTDataPlane::Action action,

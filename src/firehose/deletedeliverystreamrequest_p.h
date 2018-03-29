@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDELIVERYSTREAMREQUEST_P_H
 #define QTAWS_DELETEDELIVERYSTREAMREQUEST_P_H
 
-#include "firehose_p.h"
+#include "firehoserequest_p.h"
 #include "deletedeliverystreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Firehose {
 
 class DeleteDeliveryStreamRequest;
 
-class QTAWS_EXPORT DeleteDeliveryStreamRequestPrivate : public FirehosePrivate {
+class QTAWS_EXPORT DeleteDeliveryStreamRequestPrivate : public FirehoseRequestPrivate {
 
 public:
     DeleteDeliveryStreamRequestPrivate(const Firehose::Action action,

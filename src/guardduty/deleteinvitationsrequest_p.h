@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEINVITATIONSREQUEST_P_H
 #define QTAWS_DELETEINVITATIONSREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "deleteinvitationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class DeleteInvitationsRequest;
 
-class QTAWS_EXPORT DeleteInvitationsRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT DeleteInvitationsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     DeleteInvitationsRequestPrivate(const GuardDuty::Action action,

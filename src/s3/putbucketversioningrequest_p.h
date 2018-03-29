@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTBUCKETVERSIONINGREQUEST_P_H
 #define QTAWS_PUTBUCKETVERSIONINGREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "putbucketversioningrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class PutBucketVersioningRequest;
 
-class QTAWS_EXPORT PutBucketVersioningRequestPrivate : public S3Private {
+class QTAWS_EXPORT PutBucketVersioningRequestPrivate : public S3RequestPrivate {
 
 public:
     PutBucketVersioningRequestPrivate(const S3::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEALIASREQUEST_P_H
 #define QTAWS_UPDATEALIASREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "updatealiasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class UpdateAliasRequest;
 
-class QTAWS_EXPORT UpdateAliasRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT UpdateAliasRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     UpdateAliasRequestPrivate(const GameLift::Action action,

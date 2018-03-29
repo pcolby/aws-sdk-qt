@@ -20,7 +20,7 @@
 #ifndef QTAWS_IMPORTCERTIFICATEREQUEST_P_H
 #define QTAWS_IMPORTCERTIFICATEREQUEST_P_H
 
-#include "databasemigrationservice_p.h"
+#include "databasemigrationservicerequest_p.h"
 #include "importcertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class ImportCertificateRequest;
 
-class QTAWS_EXPORT ImportCertificateRequestPrivate : public DatabaseMigrationServicePrivate {
+class QTAWS_EXPORT ImportCertificateRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     ImportCertificateRequestPrivate(const DatabaseMigrationService::Action action,

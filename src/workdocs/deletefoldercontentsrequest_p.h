@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEFOLDERCONTENTSREQUEST_P_H
 #define QTAWS_DELETEFOLDERCONTENTSREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "deletefoldercontentsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DeleteFolderContentsRequest;
 
-class QTAWS_EXPORT DeleteFolderContentsRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT DeleteFolderContentsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DeleteFolderContentsRequestPrivate(const WorkDocs::Action action,

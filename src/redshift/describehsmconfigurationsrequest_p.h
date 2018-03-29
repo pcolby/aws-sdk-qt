@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEHSMCONFIGURATIONSREQUEST_P_H
 #define QTAWS_DESCRIBEHSMCONFIGURATIONSREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "describehsmconfigurationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeHsmConfigurationsRequest;
 
-class QTAWS_EXPORT DescribeHsmConfigurationsRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DescribeHsmConfigurationsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DescribeHsmConfigurationsRequestPrivate(const Redshift::Action action,

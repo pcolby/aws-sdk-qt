@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETRATEBASEDRULEMANAGEDKEYSREQUEST_P_H
 #define QTAWS_GETRATEBASEDRULEMANAGEDKEYSREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "getratebasedrulemanagedkeysrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class GetRateBasedRuleManagedKeysRequest;
 
-class QTAWS_EXPORT GetRateBasedRuleManagedKeysRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT GetRateBasedRuleManagedKeysRequestPrivate : public WAFRequestPrivate {
 
 public:
     GetRateBasedRuleManagedKeysRequestPrivate(const WAF::Action action,

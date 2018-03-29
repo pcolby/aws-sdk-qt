@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETENATGATEWAYREQUEST_P_H
 #define QTAWS_DELETENATGATEWAYREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "deletenatgatewayrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteNatGatewayRequest;
 
-class QTAWS_EXPORT DeleteNatGatewayRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DeleteNatGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
     DeleteNatGatewayRequestPrivate(const EC2::Action action,

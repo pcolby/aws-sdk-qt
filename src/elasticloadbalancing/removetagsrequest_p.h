@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVETAGSREQUEST_P_H
 #define QTAWS_REMOVETAGSREQUEST_P_H
 
-#include "elasticloadbalancing_p.h"
+#include "elasticloadbalancingrequest_p.h"
 #include "removetagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 
 class RemoveTagsRequest;
 
-class QTAWS_EXPORT RemoveTagsRequestPrivate : public ElasticLoadBalancingPrivate {
+class QTAWS_EXPORT RemoveTagsRequestPrivate : public ElasticLoadBalancingRequestPrivate {
 
 public:
     RemoveTagsRequestPrivate(const ElasticLoadBalancing::Action action,

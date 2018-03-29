@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETREGISTRATIONCODEREQUEST_P_H
 #define QTAWS_GETREGISTRATIONCODEREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "getregistrationcoderequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class GetRegistrationCodeRequest;
 
-class QTAWS_EXPORT GetRegistrationCodeRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT GetRegistrationCodeRequestPrivate : public IoTRequestPrivate {
 
 public:
     GetRegistrationCodeRequestPrivate(const IoT::Action action,

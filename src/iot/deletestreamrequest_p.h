@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESTREAMREQUEST_P_H
 #define QTAWS_DELETESTREAMREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "deletestreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class DeleteStreamRequest;
 
-class QTAWS_EXPORT DeleteStreamRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT DeleteStreamRequestPrivate : public IoTRequestPrivate {
 
 public:
     DeleteStreamRequestPrivate(const IoT::Action action,

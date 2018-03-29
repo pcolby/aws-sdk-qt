@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCONNECTIVITYINFOREQUEST_P_H
 #define QTAWS_GETCONNECTIVITYINFOREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "getconnectivityinforequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetConnectivityInfoRequest;
 
-class QTAWS_EXPORT GetConnectivityInfoRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT GetConnectivityInfoRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     GetConnectivityInfoRequestPrivate(const Greengrass::Action action,

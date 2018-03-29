@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETPENDINGJOBEXECUTIONSREQUEST_P_H
 #define QTAWS_GETPENDINGJOBEXECUTIONSREQUEST_P_H
 
-#include "iotjobsdataplane_p.h"
+#include "iotjobsdataplanerequest_p.h"
 #include "getpendingjobexecutionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoTJobsDataPlane {
 
 class GetPendingJobExecutionsRequest;
 
-class QTAWS_EXPORT GetPendingJobExecutionsRequestPrivate : public IoTJobsDataPlanePrivate {
+class QTAWS_EXPORT GetPendingJobExecutionsRequestPrivate : public IoTJobsDataPlaneRequestPrivate {
 
 public:
     GetPendingJobExecutionsRequestPrivate(const IoTJobsDataPlane::Action action,

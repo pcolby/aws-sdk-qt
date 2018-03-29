@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECERTIFICATEOPTIONSREQUEST_P_H
 #define QTAWS_UPDATECERTIFICATEOPTIONSREQUEST_P_H
 
-#include "acm_p.h"
+#include "acmrequest_p.h"
 #include "updatecertificateoptionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ACM {
 
 class UpdateCertificateOptionsRequest;
 
-class QTAWS_EXPORT UpdateCertificateOptionsRequestPrivate : public ACMPrivate {
+class QTAWS_EXPORT UpdateCertificateOptionsRequestPrivate : public ACMRequestPrivate {
 
 public:
     UpdateCertificateOptionsRequestPrivate(const ACM::Action action,

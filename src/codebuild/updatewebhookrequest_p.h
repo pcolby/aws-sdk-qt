@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEWEBHOOKREQUEST_P_H
 #define QTAWS_UPDATEWEBHOOKREQUEST_P_H
 
-#include "codebuild_p.h"
+#include "codebuildrequest_p.h"
 #include "updatewebhookrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class UpdateWebhookRequest;
 
-class QTAWS_EXPORT UpdateWebhookRequestPrivate : public CodeBuildPrivate {
+class QTAWS_EXPORT UpdateWebhookRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     UpdateWebhookRequestPrivate(const CodeBuild::Action action,

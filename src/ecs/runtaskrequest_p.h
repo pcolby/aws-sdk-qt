@@ -20,7 +20,7 @@
 #ifndef QTAWS_RUNTASKREQUEST_P_H
 #define QTAWS_RUNTASKREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "runtaskrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class RunTaskRequest;
 
-class QTAWS_EXPORT RunTaskRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT RunTaskRequestPrivate : public ECSRequestPrivate {
 
 public:
     RunTaskRequestPrivate(const ECS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEFUNCTIONREQUEST_P_H
 #define QTAWS_DELETEFUNCTIONREQUEST_P_H
 
-#include "lambda_p.h"
+#include "lambdarequest_p.h"
 #include "deletefunctionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lambda {
 
 class DeleteFunctionRequest;
 
-class QTAWS_EXPORT DeleteFunctionRequestPrivate : public LambdaPrivate {
+class QTAWS_EXPORT DeleteFunctionRequestPrivate : public LambdaRequestPrivate {
 
 public:
     DeleteFunctionRequestPrivate(const Lambda::Action action,

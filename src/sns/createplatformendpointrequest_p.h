@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEPLATFORMENDPOINTREQUEST_P_H
 #define QTAWS_CREATEPLATFORMENDPOINTREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "createplatformendpointrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class CreatePlatformEndpointRequest;
 
-class QTAWS_EXPORT CreatePlatformEndpointRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT CreatePlatformEndpointRequestPrivate : public SNSRequestPrivate {
 
 public:
     CreatePlatformEndpointRequestPrivate(const SNS::Action action,

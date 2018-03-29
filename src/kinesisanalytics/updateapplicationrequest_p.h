@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 #define QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 
-#include "kinesisanalytics_p.h"
+#include "kinesisanalyticsrequest_p.h"
 #include "updateapplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class UpdateApplicationRequest;
 
-class QTAWS_EXPORT UpdateApplicationRequestPrivate : public KinesisAnalyticsPrivate {
+class QTAWS_EXPORT UpdateApplicationRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
     UpdateApplicationRequestPrivate(const KinesisAnalytics::Action action,

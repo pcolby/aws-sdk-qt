@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEINPUTSECURITYGROUPREQUEST_P_H
 #define QTAWS_DELETEINPUTSECURITYGROUPREQUEST_P_H
 
-#include "medialive_p.h"
+#include "medialiverequest_p.h"
 #include "deleteinputsecuritygrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class DeleteInputSecurityGroupRequest;
 
-class QTAWS_EXPORT DeleteInputSecurityGroupRequestPrivate : public MediaLivePrivate {
+class QTAWS_EXPORT DeleteInputSecurityGroupRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     DeleteInputSecurityGroupRequestPrivate(const MediaLive::Action action,

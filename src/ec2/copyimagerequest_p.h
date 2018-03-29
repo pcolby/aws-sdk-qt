@@ -20,7 +20,7 @@
 #ifndef QTAWS_COPYIMAGEREQUEST_P_H
 #define QTAWS_COPYIMAGEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "copyimagerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CopyImageRequest;
 
-class QTAWS_EXPORT CopyImageRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CopyImageRequestPrivate : public EC2RequestPrivate {
 
 public:
     CopyImageRequestPrivate(const EC2::Action action,

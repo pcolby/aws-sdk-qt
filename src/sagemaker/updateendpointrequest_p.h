@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEENDPOINTREQUEST_P_H
 #define QTAWS_UPDATEENDPOINTREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "updateendpointrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class UpdateEndpointRequest;
 
-class QTAWS_EXPORT UpdateEndpointRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT UpdateEndpointRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     UpdateEndpointRequestPrivate(const SageMaker::Action action,

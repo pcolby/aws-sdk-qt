@@ -20,7 +20,7 @@
 #ifndef QTAWS_ATTACHINSTANCESREQUEST_P_H
 #define QTAWS_ATTACHINSTANCESREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "attachinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class AttachInstancesRequest;
 
-class QTAWS_EXPORT AttachInstancesRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT AttachInstancesRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     AttachInstancesRequestPrivate(const AutoScaling::Action action,

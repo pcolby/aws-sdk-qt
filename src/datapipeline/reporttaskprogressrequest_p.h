@@ -20,7 +20,7 @@
 #ifndef QTAWS_REPORTTASKPROGRESSREQUEST_P_H
 #define QTAWS_REPORTTASKPROGRESSREQUEST_P_H
 
-#include "datapipeline_p.h"
+#include "datapipelinerequest_p.h"
 #include "reporttaskprogressrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class ReportTaskProgressRequest;
 
-class QTAWS_EXPORT ReportTaskProgressRequestPrivate : public DataPipelinePrivate {
+class QTAWS_EXPORT ReportTaskProgressRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     ReportTaskProgressRequestPrivate(const DataPipeline::Action action,

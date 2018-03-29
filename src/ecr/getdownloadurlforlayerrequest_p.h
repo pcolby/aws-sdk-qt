@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDOWNLOADURLFORLAYERREQUEST_P_H
 #define QTAWS_GETDOWNLOADURLFORLAYERREQUEST_P_H
 
-#include "ecr_p.h"
+#include "ecrrequest_p.h"
 #include "getdownloadurlforlayerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECR {
 
 class GetDownloadUrlForLayerRequest;
 
-class QTAWS_EXPORT GetDownloadUrlForLayerRequestPrivate : public ECRPrivate {
+class QTAWS_EXPORT GetDownloadUrlForLayerRequestPrivate : public ECRRequestPrivate {
 
 public:
     GetDownloadUrlForLayerRequestPrivate(const ECR::Action action,

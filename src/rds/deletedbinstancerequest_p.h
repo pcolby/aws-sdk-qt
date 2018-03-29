@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDBINSTANCEREQUEST_P_H
 #define QTAWS_DELETEDBINSTANCEREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "deletedbinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteDBInstanceRequest;
 
-class QTAWS_EXPORT DeleteDBInstanceRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DeleteDBInstanceRequestPrivate : public RDSRequestPrivate {
 
 public:
     DeleteDBInstanceRequestPrivate(const RDS::Action action,

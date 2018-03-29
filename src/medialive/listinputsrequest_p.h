@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTINPUTSREQUEST_P_H
 #define QTAWS_LISTINPUTSREQUEST_P_H
 
-#include "medialive_p.h"
+#include "medialiverequest_p.h"
 #include "listinputsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaLive {
 
 class ListInputsRequest;
 
-class QTAWS_EXPORT ListInputsRequestPrivate : public MediaLivePrivate {
+class QTAWS_EXPORT ListInputsRequestPrivate : public MediaLiveRequestPrivate {
 
 public:
     ListInputsRequestPrivate(const MediaLive::Action action,

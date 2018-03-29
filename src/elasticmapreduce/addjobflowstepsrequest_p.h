@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDJOBFLOWSTEPSREQUEST_P_H
 #define QTAWS_ADDJOBFLOWSTEPSREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "addjobflowstepsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class AddJobFlowStepsRequest;
 
-class QTAWS_EXPORT AddJobFlowStepsRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT AddJobFlowStepsRequestPrivate : public EMRRequestPrivate {
 
 public:
     AddJobFlowStepsRequestPrivate(const EMR::Action action,

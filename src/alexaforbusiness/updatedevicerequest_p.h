@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEDEVICEREQUEST_P_H
 #define QTAWS_UPDATEDEVICEREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "updatedevicerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class UpdateDeviceRequest;
 
-class QTAWS_EXPORT UpdateDeviceRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT UpdateDeviceRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     UpdateDeviceRequestPrivate(const AlexaForBusiness::Action action,

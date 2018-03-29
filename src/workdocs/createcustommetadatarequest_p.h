@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATECUSTOMMETADATAREQUEST_P_H
 #define QTAWS_CREATECUSTOMMETADATAREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "createcustommetadatarequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class CreateCustomMetadataRequest;
 
-class QTAWS_EXPORT CreateCustomMetadataRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT CreateCustomMetadataRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     CreateCustomMetadataRequestPrivate(const WorkDocs::Action action,

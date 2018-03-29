@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATETAGOPTIONFROMRESOURCEREQUEST_P_H
 #define QTAWS_DISASSOCIATETAGOPTIONFROMRESOURCEREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "disassociatetagoptionfromresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DisassociateTagOptionFromResourceRequest;
 
-class QTAWS_EXPORT DisassociateTagOptionFromResourceRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT DisassociateTagOptionFromResourceRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DisassociateTagOptionFromResourceRequestPrivate(const ServiceCatalog::Action action,

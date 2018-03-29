@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBANDWIDTHRATELIMITREQUEST_P_H
 #define QTAWS_DELETEBANDWIDTHRATELIMITREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "deletebandwidthratelimitrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DeleteBandwidthRateLimitRequest;
 
-class QTAWS_EXPORT DeleteBandwidthRateLimitRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT DeleteBandwidthRateLimitRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DeleteBandwidthRateLimitRequestPrivate(const StorageGateway::Action action,

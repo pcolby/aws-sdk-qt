@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEDOCUMENTATIONPARTREQUEST_P_H
 #define QTAWS_UPDATEDOCUMENTATIONPARTREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "updatedocumentationpartrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class UpdateDocumentationPartRequest;
 
-class QTAWS_EXPORT UpdateDocumentationPartRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT UpdateDocumentationPartRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     UpdateDocumentationPartRequestPrivate(const APIGateway::Action action,

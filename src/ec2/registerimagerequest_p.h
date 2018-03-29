@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERIMAGEREQUEST_P_H
 #define QTAWS_REGISTERIMAGEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "registerimagerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class RegisterImageRequest;
 
-class QTAWS_EXPORT RegisterImageRequestPrivate : public EC2Private {
+class QTAWS_EXPORT RegisterImageRequestPrivate : public EC2RequestPrivate {
 
 public:
     RegisterImageRequestPrivate(const EC2::Action action,

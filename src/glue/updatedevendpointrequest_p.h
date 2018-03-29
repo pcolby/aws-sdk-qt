@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEDEVENDPOINTREQUEST_P_H
 #define QTAWS_UPDATEDEVENDPOINTREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "updatedevendpointrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class UpdateDevEndpointRequest;
 
-class QTAWS_EXPORT UpdateDevEndpointRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT UpdateDevEndpointRequestPrivate : public GlueRequestPrivate {
 
 public:
     UpdateDevEndpointRequestPrivate(const Glue::Action action,

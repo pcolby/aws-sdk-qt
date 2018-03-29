@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECUSTOMVERIFICATIONEMAILTEMPLATEREQUEST_P_H
 #define QTAWS_DELETECUSTOMVERIFICATIONEMAILTEMPLATEREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "deletecustomverificationemailtemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class DeleteCustomVerificationEmailTemplateRequest;
 
-class QTAWS_EXPORT DeleteCustomVerificationEmailTemplateRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT DeleteCustomVerificationEmailTemplateRequestPrivate : public SESRequestPrivate {
 
 public:
     DeleteCustomVerificationEmailTemplateRequestPrivate(const SES::Action action,

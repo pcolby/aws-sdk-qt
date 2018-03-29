@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEKEYPAIRREQUEST_P_H
 #define QTAWS_CREATEKEYPAIRREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "createkeypairrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateKeyPairRequest;
 
-class QTAWS_EXPORT CreateKeyPairRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CreateKeyPairRequestPrivate : public EC2RequestPrivate {
 
 public:
     CreateKeyPairRequestPrivate(const EC2::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ALLOCATECONNECTIONONINTERCONNECTREQUEST_P_H
 #define QTAWS_ALLOCATECONNECTIONONINTERCONNECTREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "allocateconnectiononinterconnectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class AllocateConnectionOnInterconnectRequest;
 
-class QTAWS_EXPORT AllocateConnectionOnInterconnectRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT AllocateConnectionOnInterconnectRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     AllocateConnectionOnInterconnectRequestPrivate(const DirectConnect::Action action,

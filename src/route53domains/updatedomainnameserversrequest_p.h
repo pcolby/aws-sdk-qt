@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEDOMAINNAMESERVERSREQUEST_P_H
 #define QTAWS_UPDATEDOMAINNAMESERVERSREQUEST_P_H
 
-#include "route53domains_p.h"
+#include "route53domainsrequest_p.h"
 #include "updatedomainnameserversrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53Domains {
 
 class UpdateDomainNameserversRequest;
 
-class QTAWS_EXPORT UpdateDomainNameserversRequestPrivate : public Route53DomainsPrivate {
+class QTAWS_EXPORT UpdateDomainNameserversRequestPrivate : public Route53DomainsRequestPrivate {
 
 public:
     UpdateDomainNameserversRequestPrivate(const Route53Domains::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEACTIVATEUSERREQUEST_P_H
 #define QTAWS_DEACTIVATEUSERREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "deactivateuserrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DeactivateUserRequest;
 
-class QTAWS_EXPORT DeactivateUserRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT DeactivateUserRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DeactivateUserRequestPrivate(const WorkDocs::Action action,

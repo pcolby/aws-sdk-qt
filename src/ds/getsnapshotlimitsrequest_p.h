@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSNAPSHOTLIMITSREQUEST_P_H
 #define QTAWS_GETSNAPSHOTLIMITSREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "getsnapshotlimitsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class GetSnapshotLimitsRequest;
 
-class QTAWS_EXPORT GetSnapshotLimitsRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT GetSnapshotLimitsRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     GetSnapshotLimitsRequestPrivate(const DirectoryService::Action action,

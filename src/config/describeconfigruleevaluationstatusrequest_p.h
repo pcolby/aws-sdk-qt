@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECONFIGRULEEVALUATIONSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBECONFIGRULEEVALUATIONSTATUSREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "describeconfigruleevaluationstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DescribeConfigRuleEvaluationStatusRequest;
 
-class QTAWS_EXPORT DescribeConfigRuleEvaluationStatusRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT DescribeConfigRuleEvaluationStatusRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DescribeConfigRuleEvaluationStatusRequestPrivate(const ConfigService::Action action,

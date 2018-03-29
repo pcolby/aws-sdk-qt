@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEIMAGESREQUEST_P_H
 #define QTAWS_DESCRIBEIMAGESREQUEST_P_H
 
-#include "ecr_p.h"
+#include "ecrrequest_p.h"
 #include "describeimagesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECR {
 
 class DescribeImagesRequest;
 
-class QTAWS_EXPORT DescribeImagesRequestPrivate : public ECRPrivate {
+class QTAWS_EXPORT DescribeImagesRequestPrivate : public ECRRequestPrivate {
 
 public:
     DescribeImagesRequestPrivate(const ECR::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTCREATEDARTIFACTSREQUEST_P_H
 #define QTAWS_LISTCREATEDARTIFACTSREQUEST_P_H
 
-#include "migrationhub_p.h"
+#include "migrationhubrequest_p.h"
 #include "listcreatedartifactsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class ListCreatedArtifactsRequest;
 
-class QTAWS_EXPORT ListCreatedArtifactsRequestPrivate : public MigrationHubPrivate {
+class QTAWS_EXPORT ListCreatedArtifactsRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     ListCreatedArtifactsRequestPrivate(const MigrationHub::Action action,

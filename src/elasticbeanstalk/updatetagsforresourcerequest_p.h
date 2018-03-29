@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATETAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_UPDATETAGSFORRESOURCEREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "updatetagsforresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class UpdateTagsForResourceRequest;
 
-class QTAWS_EXPORT UpdateTagsForResourceRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT UpdateTagsForResourceRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     UpdateTagsForResourceRequestPrivate(const ElasticBeanstalk::Action action,

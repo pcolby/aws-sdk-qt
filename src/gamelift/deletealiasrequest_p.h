@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEALIASREQUEST_P_H
 #define QTAWS_DELETEALIASREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "deletealiasrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DeleteAliasRequest;
 
-class QTAWS_EXPORT DeleteAliasRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT DeleteAliasRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DeleteAliasRequestPrivate(const GameLift::Action action,

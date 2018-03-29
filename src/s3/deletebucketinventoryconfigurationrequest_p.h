@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEBUCKETINVENTORYCONFIGURATIONREQUEST_P_H
 #define QTAWS_DELETEBUCKETINVENTORYCONFIGURATIONREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "deletebucketinventoryconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class DeleteBucketInventoryConfigurationRequest;
 
-class QTAWS_EXPORT DeleteBucketInventoryConfigurationRequestPrivate : public S3Private {
+class QTAWS_EXPORT DeleteBucketInventoryConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
     DeleteBucketInventoryConfigurationRequestPrivate(const S3::Action action,

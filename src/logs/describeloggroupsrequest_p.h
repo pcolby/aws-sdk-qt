@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBELOGGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBELOGGROUPSREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "describeloggroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DescribeLogGroupsRequest;
 
-class QTAWS_EXPORT DescribeLogGroupsRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT DescribeLogGroupsRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DescribeLogGroupsRequestPrivate(const CloudWatchLogs::Action action,

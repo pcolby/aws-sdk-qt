@@ -20,7 +20,7 @@
 #ifndef QTAWS_REDSHIFTREQUEST_P_H
 #define QTAWS_REDSHIFTREQUEST_P_H
 
-#include "redshift_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "redshiftrequest.h"
 
 namespace QtAws {

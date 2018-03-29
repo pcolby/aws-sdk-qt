@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEAPIKEYREQUEST_P_H
 #define QTAWS_CREATEAPIKEYREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "createapikeyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class CreateApiKeyRequest;
 
-class QTAWS_EXPORT CreateApiKeyRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT CreateApiKeyRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     CreateApiKeyRequestPrivate(const APIGateway::Action action,

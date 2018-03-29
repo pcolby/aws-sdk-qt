@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYVPCTENANCYREQUEST_P_H
 #define QTAWS_MODIFYVPCTENANCYREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "modifyvpctenancyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyVpcTenancyRequest;
 
-class QTAWS_EXPORT ModifyVpcTenancyRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ModifyVpcTenancyRequestPrivate : public EC2RequestPrivate {
 
 public:
     ModifyVpcTenancyRequestPrivate(const EC2::Action action,

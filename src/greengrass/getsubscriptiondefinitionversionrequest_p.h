@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSUBSCRIPTIONDEFINITIONVERSIONREQUEST_P_H
 #define QTAWS_GETSUBSCRIPTIONDEFINITIONVERSIONREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "getsubscriptiondefinitionversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetSubscriptionDefinitionVersionRequest;
 
-class QTAWS_EXPORT GetSubscriptionDefinitionVersionRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT GetSubscriptionDefinitionVersionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     GetSubscriptionDefinitionVersionRequestPrivate(const Greengrass::Action action,

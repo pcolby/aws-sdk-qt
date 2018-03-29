@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPLOGGINGREQUEST_P_H
 #define QTAWS_STOPLOGGINGREQUEST_P_H
 
-#include "cloudtrail_p.h"
+#include "cloudtrailrequest_p.h"
 #include "stoploggingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudTrail {
 
 class StopLoggingRequest;
 
-class QTAWS_EXPORT StopLoggingRequestPrivate : public CloudTrailPrivate {
+class QTAWS_EXPORT StopLoggingRequestPrivate : public CloudTrailRequestPrivate {
 
 public:
     StopLoggingRequestPrivate(const CloudTrail::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTCURATEDENVIRONMENTIMAGESREQUEST_P_H
 #define QTAWS_LISTCURATEDENVIRONMENTIMAGESREQUEST_P_H
 
-#include "codebuild_p.h"
+#include "codebuildrequest_p.h"
 #include "listcuratedenvironmentimagesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class ListCuratedEnvironmentImagesRequest;
 
-class QTAWS_EXPORT ListCuratedEnvironmentImagesRequestPrivate : public CodeBuildPrivate {
+class QTAWS_EXPORT ListCuratedEnvironmentImagesRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     ListCuratedEnvironmentImagesRequestPrivate(const CodeBuild::Action action,

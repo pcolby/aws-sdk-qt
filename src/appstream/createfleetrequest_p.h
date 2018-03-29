@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEFLEETREQUEST_P_H
 #define QTAWS_CREATEFLEETREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "createfleetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class CreateFleetRequest;
 
-class QTAWS_EXPORT CreateFleetRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT CreateFleetRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     CreateFleetRequestPrivate(const AppStream::Action action,

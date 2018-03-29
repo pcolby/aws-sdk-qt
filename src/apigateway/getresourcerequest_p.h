@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETRESOURCEREQUEST_P_H
 #define QTAWS_GETRESOURCEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "getresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetResourceRequest;
 
-class QTAWS_EXPORT GetResourceRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetResourceRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetResourceRequestPrivate(const APIGateway::Action action,

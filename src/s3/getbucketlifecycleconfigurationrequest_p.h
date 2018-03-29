@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETBUCKETLIFECYCLECONFIGURATIONREQUEST_P_H
 #define QTAWS_GETBUCKETLIFECYCLECONFIGURATIONREQUEST_P_H
 
-#include "s3_p.h"
+#include "s3request_p.h"
 #include "getbucketlifecycleconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace S3 {
 
 class GetBucketLifecycleConfigurationRequest;
 
-class QTAWS_EXPORT GetBucketLifecycleConfigurationRequestPrivate : public S3Private {
+class QTAWS_EXPORT GetBucketLifecycleConfigurationRequestPrivate : public S3RequestPrivate {
 
 public:
     GetBucketLifecycleConfigurationRequestPrivate(const S3::Action action,

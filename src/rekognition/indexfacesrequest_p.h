@@ -20,7 +20,7 @@
 #ifndef QTAWS_INDEXFACESREQUEST_P_H
 #define QTAWS_INDEXFACESREQUEST_P_H
 
-#include "rekognition_p.h"
+#include "rekognitionrequest_p.h"
 #include "indexfacesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class IndexFacesRequest;
 
-class QTAWS_EXPORT IndexFacesRequestPrivate : public RekognitionPrivate {
+class QTAWS_EXPORT IndexFacesRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     IndexFacesRequestPrivate(const Rekognition::Action action,

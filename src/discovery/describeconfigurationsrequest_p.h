@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONSREQUEST_P_H
 #define QTAWS_DESCRIBECONFIGURATIONSREQUEST_P_H
 
-#include "applicationdiscoveryservice_p.h"
+#include "applicationdiscoveryservicerequest_p.h"
 #include "describeconfigurationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class DescribeConfigurationsRequest;
 
-class QTAWS_EXPORT DescribeConfigurationsRequestPrivate : public ApplicationDiscoveryServicePrivate {
+class QTAWS_EXPORT DescribeConfigurationsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
     DescribeConfigurationsRequestPrivate(const ApplicationDiscoveryService::Action action,

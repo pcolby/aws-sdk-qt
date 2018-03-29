@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERPATCHBASELINEFORPATCHGROUPREQUEST_P_H
 #define QTAWS_REGISTERPATCHBASELINEFORPATCHGROUPREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "registerpatchbaselineforpatchgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class RegisterPatchBaselineForPatchGroupRequest;
 
-class QTAWS_EXPORT RegisterPatchBaselineForPatchGroupRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT RegisterPatchBaselineForPatchGroupRequestPrivate : public SSMRequestPrivate {
 
 public:
     RegisterPatchBaselineForPatchGroupRequestPrivate(const SSM::Action action,

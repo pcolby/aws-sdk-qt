@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATELAGREQUEST_P_H
 #define QTAWS_UPDATELAGREQUEST_P_H
 
-#include "directconnect_p.h"
+#include "directconnectrequest_p.h"
 #include "updatelagrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectConnect {
 
 class UpdateLagRequest;
 
-class QTAWS_EXPORT UpdateLagRequestPrivate : public DirectConnectPrivate {
+class QTAWS_EXPORT UpdateLagRequestPrivate : public DirectConnectRequestPrivate {
 
 public:
     UpdateLagRequestPrivate(const DirectConnect::Action action,

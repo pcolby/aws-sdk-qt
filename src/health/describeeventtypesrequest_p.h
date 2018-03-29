@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTTYPESREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTTYPESREQUEST_P_H
 
-#include "health_p.h"
+#include "healthrequest_p.h"
 #include "describeeventtypesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Health {
 
 class DescribeEventTypesRequest;
 
-class QTAWS_EXPORT DescribeEventTypesRequestPrivate : public HealthPrivate {
+class QTAWS_EXPORT DescribeEventTypesRequestPrivate : public HealthRequestPrivate {
 
 public:
     DescribeEventTypesRequestPrivate(const Health::Action action,

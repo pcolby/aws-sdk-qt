@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELARCHIVALREQUEST_P_H
 #define QTAWS_CANCELARCHIVALREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "cancelarchivalrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class CancelArchivalRequest;
 
-class QTAWS_EXPORT CancelArchivalRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT CancelArchivalRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     CancelArchivalRequestPrivate(const StorageGateway::Action action,

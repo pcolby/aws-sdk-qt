@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETQUEUEREQUEST_P_H
 #define QTAWS_GETQUEUEREQUEST_P_H
 
-#include "mediaconvert_p.h"
+#include "mediaconvertrequest_p.h"
 #include "getqueuerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class GetQueueRequest;
 
-class QTAWS_EXPORT GetQueueRequestPrivate : public MediaConvertPrivate {
+class QTAWS_EXPORT GetQueueRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     GetQueueRequestPrivate(const MediaConvert::Action action,

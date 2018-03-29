@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATECONNECTORREQUEST_P_H
 #define QTAWS_DISASSOCIATECONNECTORREQUEST_P_H
 
-#include "sms_p.h"
+#include "smsrequest_p.h"
 #include "disassociateconnectorrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SMS {
 
 class DisassociateConnectorRequest;
 
-class QTAWS_EXPORT DisassociateConnectorRequestPrivate : public SMSPrivate {
+class QTAWS_EXPORT DisassociateConnectorRequestPrivate : public SMSRequestPrivate {
 
 public:
     DisassociateConnectorRequestPrivate(const SMS::Action action,

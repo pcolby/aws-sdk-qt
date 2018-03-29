@@ -20,7 +20,7 @@
 #ifndef QTAWS_SIMPLEDBREQUEST_P_H
 #define QTAWS_SIMPLEDBREQUEST_P_H
 
-#include "simpledb_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "simpledbrequest.h"
 
 namespace QtAws {

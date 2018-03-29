@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEBUDGETREQUEST_P_H
 #define QTAWS_DESCRIBEBUDGETREQUEST_P_H
 
-#include "budgets_p.h"
+#include "budgetsrequest_p.h"
 #include "describebudgetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Budgets {
 
 class DescribeBudgetRequest;
 
-class QTAWS_EXPORT DescribeBudgetRequestPrivate : public BudgetsPrivate {
+class QTAWS_EXPORT DescribeBudgetRequestPrivate : public BudgetsRequestPrivate {
 
 public:
     DescribeBudgetRequestPrivate(const Budgets::Action action,

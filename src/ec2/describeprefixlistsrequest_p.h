@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEPREFIXLISTSREQUEST_P_H
 #define QTAWS_DESCRIBEPREFIXLISTSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describeprefixlistsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribePrefixListsRequest;
 
-class QTAWS_EXPORT DescribePrefixListsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribePrefixListsRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribePrefixListsRequestPrivate(const EC2::Action action,

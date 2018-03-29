@@ -20,7 +20,7 @@
 #ifndef QTAWS_SENDBOUNCEREQUEST_P_H
 #define QTAWS_SENDBOUNCEREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "sendbouncerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class SendBounceRequest;
 
-class QTAWS_EXPORT SendBounceRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT SendBounceRequestPrivate : public SESRequestPrivate {
 
 public:
     SendBounceRequestPrivate(const SES::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTINVENTORYENTRIESREQUEST_P_H
 #define QTAWS_LISTINVENTORYENTRIESREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "listinventoryentriesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class ListInventoryEntriesRequest;
 
-class QTAWS_EXPORT ListInventoryEntriesRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT ListInventoryEntriesRequestPrivate : public SSMRequestPrivate {
 
 public:
     ListInventoryEntriesRequestPrivate(const SSM::Action action,

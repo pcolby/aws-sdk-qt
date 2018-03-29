@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYREPLICATIONGROUPREQUEST_P_H
 #define QTAWS_MODIFYREPLICATIONGROUPREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "modifyreplicationgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class ModifyReplicationGroupRequest;
 
-class QTAWS_EXPORT ModifyReplicationGroupRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT ModifyReplicationGroupRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     ModifyReplicationGroupRequestPrivate(const ElastiCache::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CHANGEMESSAGEVISIBILITYBATCHREQUEST_P_H
 #define QTAWS_CHANGEMESSAGEVISIBILITYBATCHREQUEST_P_H
 
-#include "sqs_p.h"
+#include "sqsrequest_p.h"
 #include "changemessagevisibilitybatchrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SQS {
 
 class ChangeMessageVisibilityBatchRequest;
 
-class QTAWS_EXPORT ChangeMessageVisibilityBatchRequestPrivate : public SQSPrivate {
+class QTAWS_EXPORT ChangeMessageVisibilityBatchRequestPrivate : public SQSRequestPrivate {
 
 public:
     ChangeMessageVisibilityBatchRequestPrivate(const SQS::Action action,

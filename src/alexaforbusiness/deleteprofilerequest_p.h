@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPROFILEREQUEST_P_H
 #define QTAWS_DELETEPROFILEREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "deleteprofilerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class DeleteProfileRequest;
 
-class QTAWS_EXPORT DeleteProfileRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT DeleteProfileRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     DeleteProfileRequestPrivate(const AlexaForBusiness::Action action,

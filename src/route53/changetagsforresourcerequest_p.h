@@ -20,7 +20,7 @@
 #ifndef QTAWS_CHANGETAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_CHANGETAGSFORRESOURCEREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "changetagsforresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class ChangeTagsForResourceRequest;
 
-class QTAWS_EXPORT ChangeTagsForResourceRequestPrivate : public Route53Private {
+class QTAWS_EXPORT ChangeTagsForResourceRequestPrivate : public Route53RequestPrivate {
 
 public:
     ChangeTagsForResourceRequestPrivate(const Route53::Action action,

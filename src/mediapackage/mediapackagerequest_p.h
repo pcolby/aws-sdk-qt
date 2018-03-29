@@ -20,7 +20,7 @@
 #ifndef QTAWS_MEDIAPACKAGEREQUEST_P_H
 #define QTAWS_MEDIAPACKAGEREQUEST_P_H
 
-#include "mediapackage_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "mediapackagerequest.h"
 
 namespace QtAws {

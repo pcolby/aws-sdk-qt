@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETMAPPINGREQUEST_P_H
 #define QTAWS_GETMAPPINGREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "getmappingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class GetMappingRequest;
 
-class QTAWS_EXPORT GetMappingRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT GetMappingRequestPrivate : public GlueRequestPrivate {
 
 public:
     GetMappingRequestPrivate(const Glue::Action action,

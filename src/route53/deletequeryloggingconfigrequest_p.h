@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEQUERYLOGGINGCONFIGREQUEST_P_H
 #define QTAWS_DELETEQUERYLOGGINGCONFIGREQUEST_P_H
 
-#include "route53_p.h"
+#include "route53request_p.h"
 #include "deletequeryloggingconfigrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Route53 {
 
 class DeleteQueryLoggingConfigRequest;
 
-class QTAWS_EXPORT DeleteQueryLoggingConfigRequestPrivate : public Route53Private {
+class QTAWS_EXPORT DeleteQueryLoggingConfigRequestPrivate : public Route53RequestPrivate {
 
 public:
     DeleteQueryLoggingConfigRequestPrivate(const Route53::Action action,

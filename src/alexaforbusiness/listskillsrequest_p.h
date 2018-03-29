@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSKILLSREQUEST_P_H
 #define QTAWS_LISTSKILLSREQUEST_P_H
 
-#include "alexaforbusiness_p.h"
+#include "alexaforbusinessrequest_p.h"
 #include "listskillsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 
 class ListSkillsRequest;
 
-class QTAWS_EXPORT ListSkillsRequestPrivate : public AlexaForBusinessPrivate {
+class QTAWS_EXPORT ListSkillsRequestPrivate : public AlexaForBusinessRequestPrivate {
 
 public:
     ListSkillsRequestPrivate(const AlexaForBusiness::Action action,

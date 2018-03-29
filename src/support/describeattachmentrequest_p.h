@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEATTACHMENTREQUEST_P_H
 #define QTAWS_DESCRIBEATTACHMENTREQUEST_P_H
 
-#include "support_p.h"
+#include "supportrequest_p.h"
 #include "describeattachmentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Support {
 
 class DescribeAttachmentRequest;
 
-class QTAWS_EXPORT DescribeAttachmentRequestPrivate : public SupportPrivate {
+class QTAWS_EXPORT DescribeAttachmentRequestPrivate : public SupportRequestPrivate {
 
 public:
     DescribeAttachmentRequestPrivate(const Support::Action action,

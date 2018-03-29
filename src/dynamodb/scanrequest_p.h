@@ -20,7 +20,7 @@
 #ifndef QTAWS_SCANREQUEST_P_H
 #define QTAWS_SCANREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "scanrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class ScanRequest;
 
-class QTAWS_EXPORT ScanRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT ScanRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     ScanRequestPrivate(const DynamoDB::Action action,

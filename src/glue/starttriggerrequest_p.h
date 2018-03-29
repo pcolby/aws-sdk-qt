@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTTRIGGERREQUEST_P_H
 #define QTAWS_STARTTRIGGERREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "starttriggerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class StartTriggerRequest;
 
-class QTAWS_EXPORT StartTriggerRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT StartTriggerRequestPrivate : public GlueRequestPrivate {
 
 public:
     StartTriggerRequestPrivate(const Glue::Action action,

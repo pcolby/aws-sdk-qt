@@ -20,7 +20,7 @@
 #ifndef QTAWS_DIRECTORYSERVICEREQUEST_P_H
 #define QTAWS_DIRECTORYSERVICEREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "directoryservicerequest.h"
 
 namespace QtAws {

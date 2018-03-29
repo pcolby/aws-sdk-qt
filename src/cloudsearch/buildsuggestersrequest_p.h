@@ -20,7 +20,7 @@
 #ifndef QTAWS_BUILDSUGGESTERSREQUEST_P_H
 #define QTAWS_BUILDSUGGESTERSREQUEST_P_H
 
-#include "cloudsearch_p.h"
+#include "cloudsearchrequest_p.h"
 #include "buildsuggestersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudSearch {
 
 class BuildSuggestersRequest;
 
-class QTAWS_EXPORT BuildSuggestersRequestPrivate : public CloudSearchPrivate {
+class QTAWS_EXPORT BuildSuggestersRequestPrivate : public CloudSearchRequestPrivate {
 
 public:
     BuildSuggestersRequestPrivate(const CloudSearch::Action action,

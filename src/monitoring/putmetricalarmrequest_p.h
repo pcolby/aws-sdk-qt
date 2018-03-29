@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTMETRICALARMREQUEST_P_H
 #define QTAWS_PUTMETRICALARMREQUEST_P_H
 
-#include "cloudwatch_p.h"
+#include "cloudwatchrequest_p.h"
 #include "putmetricalarmrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class PutMetricAlarmRequest;
 
-class QTAWS_EXPORT PutMetricAlarmRequestPrivate : public CloudWatchPrivate {
+class QTAWS_EXPORT PutMetricAlarmRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     PutMetricAlarmRequestPrivate(const CloudWatch::Action action,

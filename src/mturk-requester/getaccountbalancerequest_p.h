@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETACCOUNTBALANCEREQUEST_P_H
 #define QTAWS_GETACCOUNTBALANCEREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "getaccountbalancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class GetAccountBalanceRequest;
 
-class QTAWS_EXPORT GetAccountBalanceRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT GetAccountBalanceRequestPrivate : public MTurkRequestPrivate {
 
 public:
     GetAccountBalanceRequestPrivate(const MTurk::Action action,

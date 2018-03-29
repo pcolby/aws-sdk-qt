@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETIDENTITYDKIMATTRIBUTESREQUEST_P_H
 #define QTAWS_GETIDENTITYDKIMATTRIBUTESREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "getidentitydkimattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class GetIdentityDkimAttributesRequest;
 
-class QTAWS_EXPORT GetIdentityDkimAttributesRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT GetIdentityDkimAttributesRequestPrivate : public SESRequestPrivate {
 
 public:
     GetIdentityDkimAttributesRequestPrivate(const SES::Action action,

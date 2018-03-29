@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTLABELDETECTIONREQUEST_P_H
 #define QTAWS_STARTLABELDETECTIONREQUEST_P_H
 
-#include "rekognition_p.h"
+#include "rekognitionrequest_p.h"
 #include "startlabeldetectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class StartLabelDetectionRequest;
 
-class QTAWS_EXPORT StartLabelDetectionRequestPrivate : public RekognitionPrivate {
+class QTAWS_EXPORT StartLabelDetectionRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     StartLabelDetectionRequestPrivate(const Rekognition::Action action,

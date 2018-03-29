@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATERECORDSREQUEST_P_H
 #define QTAWS_UPDATERECORDSREQUEST_P_H
 
-#include "cognitosync_p.h"
+#include "cognitosyncrequest_p.h"
 #include "updaterecordsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class UpdateRecordsRequest;
 
-class QTAWS_EXPORT UpdateRecordsRequestPrivate : public CognitoSyncPrivate {
+class QTAWS_EXPORT UpdateRecordsRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     UpdateRecordsRequestPrivate(const CognitoSync::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEPULLREQUESTDESCRIPTIONREQUEST_P_H
 #define QTAWS_UPDATEPULLREQUESTDESCRIPTIONREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "updatepullrequestdescriptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class UpdatePullRequestDescriptionRequest;
 
-class QTAWS_EXPORT UpdatePullRequestDescriptionRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT UpdatePullRequestDescriptionRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     UpdatePullRequestDescriptionRequestPrivate(const CodeCommit::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEPRECATEWORKFLOWTYPEREQUEST_P_H
 #define QTAWS_DEPRECATEWORKFLOWTYPEREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "deprecateworkflowtyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class DeprecateWorkflowTypeRequest;
 
-class QTAWS_EXPORT DeprecateWorkflowTypeRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT DeprecateWorkflowTypeRequestPrivate : public SWFRequestPrivate {
 
 public:
     DeprecateWorkflowTypeRequestPrivate(const SWF::Action action,

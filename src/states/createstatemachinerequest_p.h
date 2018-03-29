@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESTATEMACHINEREQUEST_P_H
 #define QTAWS_CREATESTATEMACHINEREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "createstatemachinerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class CreateStateMachineRequest;
 
-class QTAWS_EXPORT CreateStateMachineRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT CreateStateMachineRequestPrivate : public SFNRequestPrivate {
 
 public:
     CreateStateMachineRequestPrivate(const SFN::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETJOBREQUEST_P_H
 #define QTAWS_GETJOBREQUEST_P_H
 
-#include "mediaconvert_p.h"
+#include "mediaconvertrequest_p.h"
 #include "getjobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaConvert {
 
 class GetJobRequest;
 
-class QTAWS_EXPORT GetJobRequestPrivate : public MediaConvertPrivate {
+class QTAWS_EXPORT GetJobRequestPrivate : public MediaConvertRequestPrivate {
 
 public:
     GetJobRequestPrivate(const MediaConvert::Action action,

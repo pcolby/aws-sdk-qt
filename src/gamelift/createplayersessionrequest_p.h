@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEPLAYERSESSIONREQUEST_P_H
 #define QTAWS_CREATEPLAYERSESSIONREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "createplayersessionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class CreatePlayerSessionRequest;
 
-class QTAWS_EXPORT CreatePlayerSessionRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT CreatePlayerSessionRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     CreatePlayerSessionRequestPrivate(const GameLift::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEVPCENDPOINTSERVICESREQUEST_P_H
 #define QTAWS_DESCRIBEVPCENDPOINTSERVICESREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describevpcendpointservicesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeVpcEndpointServicesRequest;
 
-class QTAWS_EXPORT DescribeVpcEndpointServicesRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeVpcEndpointServicesRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeVpcEndpointServicesRequestPrivate(const EC2::Action action,

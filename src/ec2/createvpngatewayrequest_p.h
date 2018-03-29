@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEVPNGATEWAYREQUEST_P_H
 #define QTAWS_CREATEVPNGATEWAYREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "createvpngatewayrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateVpnGatewayRequest;
 
-class QTAWS_EXPORT CreateVpnGatewayRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CreateVpnGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
     CreateVpnGatewayRequestPrivate(const EC2::Action action,

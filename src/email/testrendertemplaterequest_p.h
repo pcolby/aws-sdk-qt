@@ -20,7 +20,7 @@
 #ifndef QTAWS_TESTRENDERTEMPLATEREQUEST_P_H
 #define QTAWS_TESTRENDERTEMPLATEREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "testrendertemplaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class TestRenderTemplateRequest;
 
-class QTAWS_EXPORT TestRenderTemplateRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT TestRenderTemplateRequestPrivate : public SESRequestPrivate {
 
 public:
     TestRenderTemplateRequestPrivate(const SES::Action action,

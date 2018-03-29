@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDUPLOADBUFFERREQUEST_P_H
 #define QTAWS_ADDUPLOADBUFFERREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "adduploadbufferrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class AddUploadBufferRequest;
 
-class QTAWS_EXPORT AddUploadBufferRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT AddUploadBufferRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     AddUploadBufferRequestPrivate(const StorageGateway::Action action,

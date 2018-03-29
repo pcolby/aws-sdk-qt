@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTXSSMATCHSETSREQUEST_P_H
 #define QTAWS_LISTXSSMATCHSETSREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "listxssmatchsetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class ListXssMatchSetsRequest;
 
-class QTAWS_EXPORT ListXssMatchSetsRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT ListXssMatchSetsRequestPrivate : public WAFRequestPrivate {
 
 public:
     ListXssMatchSetsRequestPrivate(const WAF::Action action,

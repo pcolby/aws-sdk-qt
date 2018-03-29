@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTAGSREQUEST_P_H
 #define QTAWS_LISTTAGSREQUEST_P_H
 
-#include "dax_p.h"
+#include "daxrequest_p.h"
 #include "listtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DAX {
 
 class ListTagsRequest;
 
-class QTAWS_EXPORT ListTagsRequestPrivate : public DAXPrivate {
+class QTAWS_EXPORT ListTagsRequestPrivate : public DAXRequestPrivate {
 
 public:
     ListTagsRequestPrivate(const DAX::Action action,

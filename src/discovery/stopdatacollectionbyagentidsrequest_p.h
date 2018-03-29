@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPDATACOLLECTIONBYAGENTIDSREQUEST_P_H
 #define QTAWS_STOPDATACOLLECTIONBYAGENTIDSREQUEST_P_H
 
-#include "applicationdiscoveryservice_p.h"
+#include "applicationdiscoveryservicerequest_p.h"
 #include "stopdatacollectionbyagentidsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class StopDataCollectionByAgentIdsRequest;
 
-class QTAWS_EXPORT StopDataCollectionByAgentIdsRequestPrivate : public ApplicationDiscoveryServicePrivate {
+class QTAWS_EXPORT StopDataCollectionByAgentIdsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
     StopDataCollectionByAgentIdsRequestPrivate(const ApplicationDiscoveryService::Action action,

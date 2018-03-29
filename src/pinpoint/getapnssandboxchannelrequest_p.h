@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETAPNSSANDBOXCHANNELREQUEST_P_H
 #define QTAWS_GETAPNSSANDBOXCHANNELREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "getapnssandboxchannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class GetApnsSandboxChannelRequest;
 
-class QTAWS_EXPORT GetApnsSandboxChannelRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT GetApnsSandboxChannelRequestPrivate : public PinpointRequestPrivate {
 
 public:
     GetApnsSandboxChannelRequestPrivate(const Pinpoint::Action action,

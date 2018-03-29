@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATERECEIPTRULEREQUEST_P_H
 #define QTAWS_UPDATERECEIPTRULEREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "updatereceiptrulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateReceiptRuleRequest;
 
-class QTAWS_EXPORT UpdateReceiptRuleRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT UpdateReceiptRuleRequestPrivate : public SESRequestPrivate {
 
 public:
     UpdateReceiptRuleRequestPrivate(const SES::Action action,

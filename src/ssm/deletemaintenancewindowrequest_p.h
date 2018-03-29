@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEMAINTENANCEWINDOWREQUEST_P_H
 #define QTAWS_DELETEMAINTENANCEWINDOWREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "deletemaintenancewindowrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DeleteMaintenanceWindowRequest;
 
-class QTAWS_EXPORT DeleteMaintenanceWindowRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DeleteMaintenanceWindowRequestPrivate : public SSMRequestPrivate {
 
 public:
     DeleteMaintenanceWindowRequestPrivate(const SSM::Action action,

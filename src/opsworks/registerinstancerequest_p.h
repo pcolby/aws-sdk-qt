@@ -20,7 +20,7 @@
 #ifndef QTAWS_REGISTERINSTANCEREQUEST_P_H
 #define QTAWS_REGISTERINSTANCEREQUEST_P_H
 
-#include "opsworks_p.h"
+#include "opsworksrequest_p.h"
 #include "registerinstancerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorks {
 
 class RegisterInstanceRequest;
 
-class QTAWS_EXPORT RegisterInstanceRequestPrivate : public OpsWorksPrivate {
+class QTAWS_EXPORT RegisterInstanceRequestPrivate : public OpsWorksRequestPrivate {
 
 public:
     RegisterInstanceRequestPrivate(const OpsWorks::Action action,

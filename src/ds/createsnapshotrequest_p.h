@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESNAPSHOTREQUEST_P_H
 #define QTAWS_CREATESNAPSHOTREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "createsnapshotrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class CreateSnapshotRequest;
 
-class QTAWS_EXPORT CreateSnapshotRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT CreateSnapshotRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     CreateSnapshotRequestPrivate(const DirectoryService::Action action,

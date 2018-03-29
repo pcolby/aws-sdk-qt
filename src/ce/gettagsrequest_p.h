@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTAGSREQUEST_P_H
 #define QTAWS_GETTAGSREQUEST_P_H
 
-#include "costexplorer_p.h"
+#include "costexplorerrequest_p.h"
 #include "gettagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CostExplorer {
 
 class GetTagsRequest;
 
-class QTAWS_EXPORT GetTagsRequestPrivate : public CostExplorerPrivate {
+class QTAWS_EXPORT GetTagsRequestPrivate : public CostExplorerRequestPrivate {
 
 public:
     GetTagsRequestPrivate(const CostExplorer::Action action,

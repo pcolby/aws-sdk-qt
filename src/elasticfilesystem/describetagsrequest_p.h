@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBETAGSREQUEST_P_H
 #define QTAWS_DESCRIBETAGSREQUEST_P_H
 
-#include "efs_p.h"
+#include "efsrequest_p.h"
 #include "describetagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EFS {
 
 class DescribeTagsRequest;
 
-class QTAWS_EXPORT DescribeTagsRequestPrivate : public EFSPrivate {
+class QTAWS_EXPORT DescribeTagsRequestPrivate : public EFSRequestPrivate {
 
 public:
     DescribeTagsRequestPrivate(const EFS::Action action,

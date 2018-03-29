@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECLUSTERSNAPSHOTSREQUEST_P_H
 #define QTAWS_DESCRIBECLUSTERSNAPSHOTSREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "describeclustersnapshotsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DescribeClusterSnapshotsRequest;
 
-class QTAWS_EXPORT DescribeClusterSnapshotsRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DescribeClusterSnapshotsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DescribeClusterSnapshotsRequestPrivate(const Redshift::Action action,

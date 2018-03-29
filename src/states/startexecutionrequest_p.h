@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTEXECUTIONREQUEST_P_H
 #define QTAWS_STARTEXECUTIONREQUEST_P_H
 
-#include "sfn_p.h"
+#include "sfnrequest_p.h"
 #include "startexecutionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SFN {
 
 class StartExecutionRequest;
 
-class QTAWS_EXPORT StartExecutionRequestPrivate : public SFNPrivate {
+class QTAWS_EXPORT StartExecutionRequestPrivate : public SFNRequestPrivate {
 
 public:
     StartExecutionRequestPrivate(const SFN::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADMINRESPONDTOAUTHCHALLENGEREQUEST_P_H
 #define QTAWS_ADMINRESPONDTOAUTHCHALLENGEREQUEST_P_H
 
-#include "cognitoidentityprovider_p.h"
+#include "cognitoidentityproviderrequest_p.h"
 #include "adminrespondtoauthchallengerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 
 class AdminRespondToAuthChallengeRequest;
 
-class QTAWS_EXPORT AdminRespondToAuthChallengeRequestPrivate : public CognitoIdentityProviderPrivate {
+class QTAWS_EXPORT AdminRespondToAuthChallengeRequestPrivate : public CognitoIdentityProviderRequestPrivate {
 
 public:
     AdminRespondToAuthChallengeRequestPrivate(const CognitoIdentityProvider::Action action,

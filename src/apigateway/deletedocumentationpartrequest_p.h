@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDOCUMENTATIONPARTREQUEST_P_H
 #define QTAWS_DELETEDOCUMENTATIONPARTREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "deletedocumentationpartrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteDocumentationPartRequest;
 
-class QTAWS_EXPORT DeleteDocumentationPartRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT DeleteDocumentationPartRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteDocumentationPartRequestPrivate(const APIGateway::Action action,

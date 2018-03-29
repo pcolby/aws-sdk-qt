@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYTARGETGROUPREQUEST_P_H
 #define QTAWS_MODIFYTARGETGROUPREQUEST_P_H
 
-#include "elasticloadbalancingv2_p.h"
+#include "elasticloadbalancingv2request_p.h"
 #include "modifytargetgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class ModifyTargetGroupRequest;
 
-class QTAWS_EXPORT ModifyTargetGroupRequestPrivate : public ElasticLoadBalancingv2Private {
+class QTAWS_EXPORT ModifyTargetGroupRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     ModifyTargetGroupRequestPrivate(const ElasticLoadBalancingv2::Action action,

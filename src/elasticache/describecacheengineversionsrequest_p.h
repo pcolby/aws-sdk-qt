@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECACHEENGINEVERSIONSREQUEST_P_H
 #define QTAWS_DESCRIBECACHEENGINEVERSIONSREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "describecacheengineversionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DescribeCacheEngineVersionsRequest;
 
-class QTAWS_EXPORT DescribeCacheEngineVersionsRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT DescribeCacheEngineVersionsRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DescribeCacheEngineVersionsRequestPrivate(const ElastiCache::Action action,

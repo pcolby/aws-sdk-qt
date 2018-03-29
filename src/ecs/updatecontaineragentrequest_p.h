@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATECONTAINERAGENTREQUEST_P_H
 #define QTAWS_UPDATECONTAINERAGENTREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "updatecontaineragentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class UpdateContainerAgentRequest;
 
-class QTAWS_EXPORT UpdateContainerAgentRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT UpdateContainerAgentRequestPrivate : public ECSRequestPrivate {
 
 public:
     UpdateContainerAgentRequestPrivate(const ECS::Action action,

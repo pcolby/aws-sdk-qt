@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATENOTIFICATIONSETTINGSREQUEST_P_H
 #define QTAWS_UPDATENOTIFICATIONSETTINGSREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "updatenotificationsettingsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class UpdateNotificationSettingsRequest;
 
-class QTAWS_EXPORT UpdateNotificationSettingsRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT UpdateNotificationSettingsRequestPrivate : public MTurkRequestPrivate {
 
 public:
     UpdateNotificationSettingsRequestPrivate(const MTurk::Action action,

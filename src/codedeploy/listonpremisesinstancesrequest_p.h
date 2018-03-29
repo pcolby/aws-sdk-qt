@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTONPREMISESINSTANCESREQUEST_P_H
 #define QTAWS_LISTONPREMISESINSTANCESREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "listonpremisesinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class ListOnPremisesInstancesRequest;
 
-class QTAWS_EXPORT ListOnPremisesInstancesRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT ListOnPremisesInstancesRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     ListOnPremisesInstancesRequestPrivate(const CodeDeploy::Action action,

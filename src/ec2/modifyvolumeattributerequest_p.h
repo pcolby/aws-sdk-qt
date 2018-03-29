@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYVOLUMEATTRIBUTEREQUEST_P_H
 #define QTAWS_MODIFYVOLUMEATTRIBUTEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "modifyvolumeattributerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyVolumeAttributeRequest;
 
-class QTAWS_EXPORT ModifyVolumeAttributeRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ModifyVolumeAttributeRequestPrivate : public EC2RequestPrivate {
 
 public:
     ModifyVolumeAttributeRequestPrivate(const EC2::Action action,

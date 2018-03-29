@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEFPGAIMAGEREQUEST_P_H
 #define QTAWS_CREATEFPGAIMAGEREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "createfpgaimagerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateFpgaImageRequest;
 
-class QTAWS_EXPORT CreateFpgaImageRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CreateFpgaImageRequestPrivate : public EC2RequestPrivate {
 
 public:
     CreateFpgaImageRequestPrivate(const EC2::Action action,

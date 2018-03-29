@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEDESTINATIONSREQUEST_P_H
 #define QTAWS_DESCRIBEDESTINATIONSREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "describedestinationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class DescribeDestinationsRequest;
 
-class QTAWS_EXPORT DescribeDestinationsRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT DescribeDestinationsRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     DescribeDestinationsRequestPrivate(const CloudWatchLogs::Action action,

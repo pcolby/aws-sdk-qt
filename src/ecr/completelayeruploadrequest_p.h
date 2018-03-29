@@ -20,7 +20,7 @@
 #ifndef QTAWS_COMPLETELAYERUPLOADREQUEST_P_H
 #define QTAWS_COMPLETELAYERUPLOADREQUEST_P_H
 
-#include "ecr_p.h"
+#include "ecrrequest_p.h"
 #include "completelayeruploadrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECR {
 
 class CompleteLayerUploadRequest;
 
-class QTAWS_EXPORT CompleteLayerUploadRequestPrivate : public ECRPrivate {
+class QTAWS_EXPORT CompleteLayerUploadRequestPrivate : public ECRRequestPrivate {
 
 public:
     CompleteLayerUploadRequestPrivate(const ECR::Action action,

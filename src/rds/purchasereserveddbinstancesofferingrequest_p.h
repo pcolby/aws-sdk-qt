@@ -20,7 +20,7 @@
 #ifndef QTAWS_PURCHASERESERVEDDBINSTANCESOFFERINGREQUEST_P_H
 #define QTAWS_PURCHASERESERVEDDBINSTANCESOFFERINGREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "purchasereserveddbinstancesofferingrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class PurchaseReservedDBInstancesOfferingRequest;
 
-class QTAWS_EXPORT PurchaseReservedDBInstancesOfferingRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT PurchaseReservedDBInstancesOfferingRequestPrivate : public RDSRequestPrivate {
 
 public:
     PurchaseReservedDBInstancesOfferingRequestPrivate(const RDS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECACHECLUSTERREQUEST_P_H
 #define QTAWS_DELETECACHECLUSTERREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "deletecacheclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DeleteCacheClusterRequest;
 
-class QTAWS_EXPORT DeleteCacheClusterRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT DeleteCacheClusterRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DeleteCacheClusterRequestPrivate(const ElastiCache::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_IMPORTAPIKEYSREQUEST_P_H
 #define QTAWS_IMPORTAPIKEYSREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "importapikeysrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class ImportApiKeysRequest;
 
-class QTAWS_EXPORT ImportApiKeysRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT ImportApiKeysRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     ImportApiKeysRequestPrivate(const APIGateway::Action action,

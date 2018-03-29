@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDBPARAMETERGROUPREQUEST_P_H
 #define QTAWS_DELETEDBPARAMETERGROUPREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "deletedbparametergrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DeleteDBParameterGroupRequest;
 
-class QTAWS_EXPORT DeleteDBParameterGroupRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DeleteDBParameterGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
     DeleteDBParameterGroupRequestPrivate(const RDS::Action action,

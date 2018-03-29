@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATESECURITYGROUPREQUEST_P_H
 #define QTAWS_CREATESECURITYGROUPREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "createsecuritygrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class CreateSecurityGroupRequest;
 
-class QTAWS_EXPORT CreateSecurityGroupRequestPrivate : public EC2Private {
+class QTAWS_EXPORT CreateSecurityGroupRequestPrivate : public EC2RequestPrivate {
 
 public:
     CreateSecurityGroupRequestPrivate(const EC2::Action action,

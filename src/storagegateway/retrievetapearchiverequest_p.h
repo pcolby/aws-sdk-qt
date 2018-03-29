@@ -20,7 +20,7 @@
 #ifndef QTAWS_RETRIEVETAPEARCHIVEREQUEST_P_H
 #define QTAWS_RETRIEVETAPEARCHIVEREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "retrievetapearchiverequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class RetrieveTapeArchiveRequest;
 
-class QTAWS_EXPORT RetrieveTapeArchiveRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT RetrieveTapeArchiveRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     RetrieveTapeArchiveRequestPrivate(const StorageGateway::Action action,

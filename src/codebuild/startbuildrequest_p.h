@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTBUILDREQUEST_P_H
 #define QTAWS_STARTBUILDREQUEST_P_H
 
-#include "codebuild_p.h"
+#include "codebuildrequest_p.h"
 #include "startbuildrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeBuild {
 
 class StartBuildRequest;
 
-class QTAWS_EXPORT StartBuildRequestPrivate : public CodeBuildPrivate {
+class QTAWS_EXPORT StartBuildRequestPrivate : public CodeBuildRequestPrivate {
 
 public:
     StartBuildRequestPrivate(const CodeBuild::Action action,

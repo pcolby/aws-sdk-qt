@@ -20,7 +20,7 @@
 #ifndef QTAWS_QUERYOBJECTSREQUEST_P_H
 #define QTAWS_QUERYOBJECTSREQUEST_P_H
 
-#include "datapipeline_p.h"
+#include "datapipelinerequest_p.h"
 #include "queryobjectsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DataPipeline {
 
 class QueryObjectsRequest;
 
-class QTAWS_EXPORT QueryObjectsRequestPrivate : public DataPipelinePrivate {
+class QTAWS_EXPORT QueryObjectsRequestPrivate : public DataPipelineRequestPrivate {
 
 public:
     QueryObjectsRequestPrivate(const DataPipeline::Action action,

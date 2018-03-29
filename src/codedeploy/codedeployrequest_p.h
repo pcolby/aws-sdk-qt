@@ -20,7 +20,7 @@
 #ifndef QTAWS_CODEDEPLOYREQUEST_P_H
 #define QTAWS_CODEDEPLOYREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "codedeployrequest.h"
 
 namespace QtAws {

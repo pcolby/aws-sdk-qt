@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTPRESETSREQUEST_P_H
 #define QTAWS_LISTPRESETSREQUEST_P_H
 
-#include "elastictranscoder_p.h"
+#include "elastictranscoderrequest_p.h"
 #include "listpresetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class ListPresetsRequest;
 
-class QTAWS_EXPORT ListPresetsRequestPrivate : public ElasticTranscoderPrivate {
+class QTAWS_EXPORT ListPresetsRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     ListPresetsRequestPrivate(const ElasticTranscoder::Action action,

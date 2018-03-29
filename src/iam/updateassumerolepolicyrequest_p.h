@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEASSUMEROLEPOLICYREQUEST_P_H
 #define QTAWS_UPDATEASSUMEROLEPOLICYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "updateassumerolepolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class UpdateAssumeRolePolicyRequest;
 
-class QTAWS_EXPORT UpdateAssumeRolePolicyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT UpdateAssumeRolePolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
     UpdateAssumeRolePolicyRequestPrivate(const IAM::Action action,

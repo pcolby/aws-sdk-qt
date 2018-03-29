@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTPOLICIESFORTARGETREQUEST_P_H
 #define QTAWS_LISTPOLICIESFORTARGETREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "listpoliciesfortargetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class ListPoliciesForTargetRequest;
 
-class QTAWS_EXPORT ListPoliciesForTargetRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT ListPoliciesForTargetRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     ListPoliciesForTargetRequestPrivate(const Organizations::Action action,

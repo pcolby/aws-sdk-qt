@@ -2,7 +2,7 @@
 #ifndef QTAWS_{{ClassName|upper}}_P_H
 #define QTAWS_{{ClassName|upper}}_P_H
 
-#include "{{ServiceName|lower}}_p.h"
+#include "{{ServiceName|lower}}request_p.h"
 #include "{{ClassName|lower}}.h"
 
 namespace QtAws {
@@ -10,7 +10,7 @@ namespace {{NameSpaceName}} {
 
 class {{ClassName}};
 
-class QTAWS_EXPORT {{ClassName}}Private : public {{ServiceName}}Private {
+class QTAWS_EXPORT {{ClassName}}Private : public {{ServiceName}}RequestPrivate {
 
 public:
     {{ClassName}}Private(const {{ServiceName}}::Action action,

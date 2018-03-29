@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTFRAGMENTSREQUEST_P_H
 #define QTAWS_LISTFRAGMENTSREQUEST_P_H
 
-#include "kinesisvideoarchivedmedia_p.h"
+#include "kinesisvideoarchivedmediarequest_p.h"
 #include "listfragmentsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KinesisVideoArchivedMedia {
 
 class ListFragmentsRequest;
 
-class QTAWS_EXPORT ListFragmentsRequestPrivate : public KinesisVideoArchivedMediaPrivate {
+class QTAWS_EXPORT ListFragmentsRequestPrivate : public KinesisVideoArchivedMediaRequestPrivate {
 
 public:
     ListFragmentsRequestPrivate(const KinesisVideoArchivedMedia::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETTAGSREQUEST_P_H
 #define QTAWS_GETTAGSREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "gettagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class GetTagsRequest;
 
-class QTAWS_EXPORT GetTagsRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT GetTagsRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     GetTagsRequestPrivate(const APIGateway::Action action,

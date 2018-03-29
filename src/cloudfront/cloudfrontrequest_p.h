@@ -20,7 +20,7 @@
 #ifndef QTAWS_CLOUDFRONTREQUEST_P_H
 #define QTAWS_CLOUDFRONTREQUEST_P_H
 
-#include "cloudfront_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "cloudfrontrequest.h"
 
 namespace QtAws {

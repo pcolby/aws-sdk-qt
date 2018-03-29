@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETINSTANCESREQUEST_P_H
 #define QTAWS_GETINSTANCESREQUEST_P_H
 
-#include "lightsail_p.h"
+#include "lightsailrequest_p.h"
 #include "getinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lightsail {
 
 class GetInstancesRequest;
 
-class QTAWS_EXPORT GetInstancesRequestPrivate : public LightsailPrivate {
+class QTAWS_EXPORT GetInstancesRequestPrivate : public LightsailRequestPrivate {
 
 public:
     GetInstancesRequestPrivate(const Lightsail::Action action,

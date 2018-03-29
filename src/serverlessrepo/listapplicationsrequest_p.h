@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTAPPLICATIONSREQUEST_P_H
 #define QTAWS_LISTAPPLICATIONSREQUEST_P_H
 
-#include "serverlessapplicationrepository_p.h"
+#include "serverlessapplicationrepositoryrequest_p.h"
 #include "listapplicationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 
 class ListApplicationsRequest;
 
-class QTAWS_EXPORT ListApplicationsRequestPrivate : public ServerlessApplicationRepositoryPrivate {
+class QTAWS_EXPORT ListApplicationsRequestPrivate : public ServerlessApplicationRepositoryRequestPrivate {
 
 public:
     ListApplicationsRequestPrivate(const ServerlessApplicationRepository::Action action,

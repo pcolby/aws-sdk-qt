@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_P_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESREQUEST_P_H
 
-#include "databasemigrationservice_p.h"
+#include "databasemigrationservicerequest_p.h"
 #include "describeaccountattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DescribeAccountAttributesRequest;
 
-class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public DatabaseMigrationServicePrivate {
+class QTAWS_EXPORT DescribeAccountAttributesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     DescribeAccountAttributesRequestPrivate(const DatabaseMigrationService::Action action,

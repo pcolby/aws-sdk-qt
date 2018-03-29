@@ -20,7 +20,7 @@
 #ifndef QTAWS_ASSOCIATENODEREQUEST_P_H
 #define QTAWS_ASSOCIATENODEREQUEST_P_H
 
-#include "opsworkscm_p.h"
+#include "opsworkscmrequest_p.h"
 #include "associatenoderequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class AssociateNodeRequest;
 
-class QTAWS_EXPORT AssociateNodeRequestPrivate : public OpsWorksCMPrivate {
+class QTAWS_EXPORT AssociateNodeRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     AssociateNodeRequestPrivate(const OpsWorksCM::Action action,

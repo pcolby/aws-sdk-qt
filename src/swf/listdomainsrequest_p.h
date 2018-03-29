@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTDOMAINSREQUEST_P_H
 #define QTAWS_LISTDOMAINSREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "listdomainsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class ListDomainsRequest;
 
-class QTAWS_EXPORT ListDomainsRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT ListDomainsRequestPrivate : public SWFRequestPrivate {
 
 public:
     ListDomainsRequestPrivate(const SWF::Action action,

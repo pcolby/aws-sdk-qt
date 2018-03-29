@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEENDPOINTREQUEST_P_H
 #define QTAWS_DESCRIBEENDPOINTREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "describeendpointrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class DescribeEndpointRequest;
 
-class QTAWS_EXPORT DescribeEndpointRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT DescribeEndpointRequestPrivate : public IoTRequestPrivate {
 
 public:
     DescribeEndpointRequestPrivate(const IoT::Action action,

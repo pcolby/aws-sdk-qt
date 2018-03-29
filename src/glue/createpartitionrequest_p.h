@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEPARTITIONREQUEST_P_H
 #define QTAWS_CREATEPARTITIONREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "createpartitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class CreatePartitionRequest;
 
-class QTAWS_EXPORT CreatePartitionRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT CreatePartitionRequestPrivate : public GlueRequestPrivate {
 
 public:
     CreatePartitionRequestPrivate(const Glue::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATERATEBASEDRULEREQUEST_P_H
 #define QTAWS_UPDATERATEBASEDRULEREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "updateratebasedrulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class UpdateRateBasedRuleRequest;
 
-class QTAWS_EXPORT UpdateRateBasedRuleRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT UpdateRateBasedRuleRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     UpdateRateBasedRuleRequestPrivate(const WAFRegional::Action action,

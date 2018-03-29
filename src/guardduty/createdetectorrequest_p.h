@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDETECTORREQUEST_P_H
 #define QTAWS_CREATEDETECTORREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "createdetectorrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class CreateDetectorRequest;
 
-class QTAWS_EXPORT CreateDetectorRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT CreateDetectorRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     CreateDetectorRequestPrivate(const GuardDuty::Action action,

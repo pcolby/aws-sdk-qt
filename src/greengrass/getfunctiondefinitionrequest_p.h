@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETFUNCTIONDEFINITIONREQUEST_P_H
 #define QTAWS_GETFUNCTIONDEFINITIONREQUEST_P_H
 
-#include "greengrass_p.h"
+#include "greengrassrequest_p.h"
 #include "getfunctiondefinitionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Greengrass {
 
 class GetFunctionDefinitionRequest;
 
-class QTAWS_EXPORT GetFunctionDefinitionRequestPrivate : public GreengrassPrivate {
+class QTAWS_EXPORT GetFunctionDefinitionRequestPrivate : public GreengrassRequestPrivate {
 
 public:
     GetFunctionDefinitionRequestPrivate(const Greengrass::Action action,

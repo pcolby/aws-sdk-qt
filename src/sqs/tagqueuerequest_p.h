@@ -20,7 +20,7 @@
 #ifndef QTAWS_TAGQUEUEREQUEST_P_H
 #define QTAWS_TAGQUEUEREQUEST_P_H
 
-#include "sqs_p.h"
+#include "sqsrequest_p.h"
 #include "tagqueuerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SQS {
 
 class TagQueueRequest;
 
-class QTAWS_EXPORT TagQueueRequestPrivate : public SQSPrivate {
+class QTAWS_EXPORT TagQueueRequestPrivate : public SQSRequestPrivate {
 
 public:
     TagQueueRequestPrivate(const SQS::Action action,

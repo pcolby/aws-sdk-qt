@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYINSTANCECREDITSPECIFICATIONREQUEST_P_H
 #define QTAWS_MODIFYINSTANCECREDITSPECIFICATIONREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "modifyinstancecreditspecificationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class ModifyInstanceCreditSpecificationRequest;
 
-class QTAWS_EXPORT ModifyInstanceCreditSpecificationRequestPrivate : public EC2Private {
+class QTAWS_EXPORT ModifyInstanceCreditSpecificationRequestPrivate : public EC2RequestPrivate {
 
 public:
     ModifyInstanceCreditSpecificationRequestPrivate(const EC2::Action action,

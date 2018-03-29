@@ -20,7 +20,7 @@
 #ifndef QTAWS_GLACIERREQUEST_P_H
 #define QTAWS_GLACIERREQUEST_P_H
 
-#include "glacier_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "glacierrequest.h"
 
 namespace QtAws {

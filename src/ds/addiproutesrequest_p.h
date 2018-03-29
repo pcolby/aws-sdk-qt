@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDIPROUTESREQUEST_P_H
 #define QTAWS_ADDIPROUTESREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "addiproutesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class AddIpRoutesRequest;
 
-class QTAWS_EXPORT AddIpRoutesRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT AddIpRoutesRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     AddIpRoutesRequestPrivate(const DirectoryService::Action action,

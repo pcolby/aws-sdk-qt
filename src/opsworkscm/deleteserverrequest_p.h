@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESERVERREQUEST_P_H
 #define QTAWS_DELETESERVERREQUEST_P_H
 
-#include "opsworkscm_p.h"
+#include "opsworkscmrequest_p.h"
 #include "deleteserverrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 
 class DeleteServerRequest;
 
-class QTAWS_EXPORT DeleteServerRequestPrivate : public OpsWorksCMPrivate {
+class QTAWS_EXPORT DeleteServerRequestPrivate : public OpsWorksCMRequestPrivate {
 
 public:
     DeleteServerRequestPrivate(const OpsWorksCM::Action action,

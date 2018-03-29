@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 #define QTAWS_UPDATEAPPLICATIONREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "updateapplicationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class UpdateApplicationRequest;
 
-class QTAWS_EXPORT UpdateApplicationRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT UpdateApplicationRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     UpdateApplicationRequestPrivate(const ElasticBeanstalk::Action action,

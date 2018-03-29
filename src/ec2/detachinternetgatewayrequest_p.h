@@ -20,7 +20,7 @@
 #ifndef QTAWS_DETACHINTERNETGATEWAYREQUEST_P_H
 #define QTAWS_DETACHINTERNETGATEWAYREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "detachinternetgatewayrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DetachInternetGatewayRequest;
 
-class QTAWS_EXPORT DetachInternetGatewayRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DetachInternetGatewayRequestPrivate : public EC2RequestPrivate {
 
 public:
     DetachInternetGatewayRequestPrivate(const EC2::Action action,

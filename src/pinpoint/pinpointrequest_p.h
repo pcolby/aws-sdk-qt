@@ -20,7 +20,7 @@
 #ifndef QTAWS_PINPOINTREQUEST_P_H
 #define QTAWS_PINPOINTREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "pinpointrequest.h"
 
 namespace QtAws {

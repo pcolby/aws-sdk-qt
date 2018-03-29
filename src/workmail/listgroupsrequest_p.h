@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTGROUPSREQUEST_P_H
 #define QTAWS_LISTGROUPSREQUEST_P_H
 
-#include "workmail_p.h"
+#include "workmailrequest_p.h"
 #include "listgroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class ListGroupsRequest;
 
-class QTAWS_EXPORT ListGroupsRequestPrivate : public WorkMailPrivate {
+class QTAWS_EXPORT ListGroupsRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     ListGroupsRequestPrivate(const WorkMail::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORPROJECTREQUEST_P_H
 #define QTAWS_LISTTAGSFORPROJECTREQUEST_P_H
 
-#include "codestar_p.h"
+#include "codestarrequest_p.h"
 #include "listtagsforprojectrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeStar {
 
 class ListTagsForProjectRequest;
 
-class QTAWS_EXPORT ListTagsForProjectRequestPrivate : public CodeStarPrivate {
+class QTAWS_EXPORT ListTagsForProjectRequestPrivate : public CodeStarRequestPrivate {
 
 public:
     ListTagsForProjectRequestPrivate(const CodeStar::Action action,

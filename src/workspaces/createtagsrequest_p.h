@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATETAGSREQUEST_P_H
 #define QTAWS_CREATETAGSREQUEST_P_H
 
-#include "workspaces_p.h"
+#include "workspacesrequest_p.h"
 #include "createtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class CreateTagsRequest;
 
-class QTAWS_EXPORT CreateTagsRequestPrivate : public WorkSpacesPrivate {
+class QTAWS_EXPORT CreateTagsRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     CreateTagsRequestPrivate(const WorkSpaces::Action action,

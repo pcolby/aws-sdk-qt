@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATETOPICRULEREQUEST_P_H
 #define QTAWS_CREATETOPICRULEREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "createtopicrulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class CreateTopicRuleRequest;
 
-class QTAWS_EXPORT CreateTopicRuleRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT CreateTopicRuleRequestPrivate : public IoTRequestPrivate {
 
 public:
     CreateTopicRuleRequestPrivate(const IoT::Action action,

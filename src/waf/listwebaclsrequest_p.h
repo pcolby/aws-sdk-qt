@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTWEBACLSREQUEST_P_H
 #define QTAWS_LISTWEBACLSREQUEST_P_H
 
-#include "waf_p.h"
+#include "wafrequest_p.h"
 #include "listwebaclsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAF {
 
 class ListWebACLsRequest;
 
-class QTAWS_EXPORT ListWebACLsRequestPrivate : public WAFPrivate {
+class QTAWS_EXPORT ListWebACLsRequestPrivate : public WAFRequestPrivate {
 
 public:
     ListWebACLsRequestPrivate(const WAF::Action action,

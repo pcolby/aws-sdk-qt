@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEMIGRATIONTASKREQUEST_P_H
 #define QTAWS_DESCRIBEMIGRATIONTASKREQUEST_P_H
 
-#include "migrationhub_p.h"
+#include "migrationhubrequest_p.h"
 #include "describemigrationtaskrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MigrationHub {
 
 class DescribeMigrationTaskRequest;
 
-class QTAWS_EXPORT DescribeMigrationTaskRequestPrivate : public MigrationHubPrivate {
+class QTAWS_EXPORT DescribeMigrationTaskRequestPrivate : public MigrationHubRequestPrivate {
 
 public:
     DescribeMigrationTaskRequestPrivate(const MigrationHub::Action action,

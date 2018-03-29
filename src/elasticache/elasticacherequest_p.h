@@ -20,7 +20,7 @@
 #ifndef QTAWS_ELASTICACHEREQUEST_P_H
 #define QTAWS_ELASTICACHEREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "elasticacherequest.h"
 
 namespace QtAws {

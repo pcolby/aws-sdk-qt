@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNARCHIVEFINDINGSREQUEST_P_H
 #define QTAWS_UNARCHIVEFINDINGSREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "unarchivefindingsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class UnarchiveFindingsRequest;
 
-class QTAWS_EXPORT UnarchiveFindingsRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT UnarchiveFindingsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     UnarchiveFindingsRequestPrivate(const GuardDuty::Action action,

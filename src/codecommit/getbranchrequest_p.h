@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETBRANCHREQUEST_P_H
 #define QTAWS_GETBRANCHREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "getbranchrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class GetBranchRequest;
 
-class QTAWS_EXPORT GetBranchRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT GetBranchRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     GetBranchRequestPrivate(const CodeCommit::Action action,

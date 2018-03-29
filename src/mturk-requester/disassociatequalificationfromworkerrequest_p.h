@@ -20,7 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEQUALIFICATIONFROMWORKERREQUEST_P_H
 #define QTAWS_DISASSOCIATEQUALIFICATIONFROMWORKERREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "disassociatequalificationfromworkerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class DisassociateQualificationFromWorkerRequest;
 
-class QTAWS_EXPORT DisassociateQualificationFromWorkerRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT DisassociateQualificationFromWorkerRequestPrivate : public MTurkRequestPrivate {
 
 public:
     DisassociateQualificationFromWorkerRequestPrivate(const MTurk::Action action,

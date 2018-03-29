@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTDEADLETTERSOURCEQUEUESREQUEST_P_H
 #define QTAWS_LISTDEADLETTERSOURCEQUEUESREQUEST_P_H
 
-#include "sqs_p.h"
+#include "sqsrequest_p.h"
 #include "listdeadlettersourcequeuesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SQS {
 
 class ListDeadLetterSourceQueuesRequest;
 
-class QTAWS_EXPORT ListDeadLetterSourceQueuesRequestPrivate : public SQSPrivate {
+class QTAWS_EXPORT ListDeadLetterSourceQueuesRequestPrivate : public SQSRequestPrivate {
 
 public:
     ListDeadLetterSourceQueuesRequestPrivate(const SQS::Action action,

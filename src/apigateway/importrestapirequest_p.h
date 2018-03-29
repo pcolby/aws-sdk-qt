@@ -20,7 +20,7 @@
 #ifndef QTAWS_IMPORTRESTAPIREQUEST_P_H
 #define QTAWS_IMPORTRESTAPIREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "importrestapirequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class ImportRestApiRequest;
 
-class QTAWS_EXPORT ImportRestApiRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT ImportRestApiRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     ImportRestApiRequestPrivate(const APIGateway::Action action,

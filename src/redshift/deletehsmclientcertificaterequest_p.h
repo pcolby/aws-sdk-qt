@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEHSMCLIENTCERTIFICATEREQUEST_P_H
 #define QTAWS_DELETEHSMCLIENTCERTIFICATEREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "deletehsmclientcertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DeleteHsmClientCertificateRequest;
 
-class QTAWS_EXPORT DeleteHsmClientCertificateRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DeleteHsmClientCertificateRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DeleteHsmClientCertificateRequestPrivate(const Redshift::Action action,

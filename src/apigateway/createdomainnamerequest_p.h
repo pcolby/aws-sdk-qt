@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDOMAINNAMEREQUEST_P_H
 #define QTAWS_CREATEDOMAINNAMEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "createdomainnamerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class CreateDomainNameRequest;
 
-class QTAWS_EXPORT CreateDomainNameRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT CreateDomainNameRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     CreateDomainNameRequestPrivate(const APIGateway::Action action,

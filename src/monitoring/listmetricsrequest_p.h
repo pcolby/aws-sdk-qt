@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTMETRICSREQUEST_P_H
 #define QTAWS_LISTMETRICSREQUEST_P_H
 
-#include "cloudwatch_p.h"
+#include "cloudwatchrequest_p.h"
 #include "listmetricsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatch {
 
 class ListMetricsRequest;
 
-class QTAWS_EXPORT ListMetricsRequestPrivate : public CloudWatchPrivate {
+class QTAWS_EXPORT ListMetricsRequestPrivate : public CloudWatchRequestPrivate {
 
 public:
     ListMetricsRequestPrivate(const CloudWatch::Action action,

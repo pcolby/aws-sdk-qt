@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEAGENTSREQUEST_P_H
 #define QTAWS_DESCRIBEAGENTSREQUEST_P_H
 
-#include "applicationdiscoveryservice_p.h"
+#include "applicationdiscoveryservicerequest_p.h"
 #include "describeagentsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 
 class DescribeAgentsRequest;
 
-class QTAWS_EXPORT DescribeAgentsRequestPrivate : public ApplicationDiscoveryServicePrivate {
+class QTAWS_EXPORT DescribeAgentsRequestPrivate : public ApplicationDiscoveryServiceRequestPrivate {
 
 public:
     DescribeAgentsRequestPrivate(const ApplicationDiscoveryService::Action action,

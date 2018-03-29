@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTMEMBERSHIPSREQUEST_P_H
 #define QTAWS_DESCRIBEENVIRONMENTMEMBERSHIPSREQUEST_P_H
 
-#include "cloud9_p.h"
+#include "cloud9request_p.h"
 #include "describeenvironmentmembershipsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Cloud9 {
 
 class DescribeEnvironmentMembershipsRequest;
 
-class QTAWS_EXPORT DescribeEnvironmentMembershipsRequestPrivate : public Cloud9Private {
+class QTAWS_EXPORT DescribeEnvironmentMembershipsRequestPrivate : public Cloud9RequestPrivate {
 
 public:
     DescribeEnvironmentMembershipsRequestPrivate(const Cloud9::Action action,

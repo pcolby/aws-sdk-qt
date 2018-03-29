@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTHITSFORQUALIFICATIONTYPEREQUEST_P_H
 #define QTAWS_LISTHITSFORQUALIFICATIONTYPEREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "listhitsforqualificationtyperequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class ListHITsForQualificationTypeRequest;
 
-class QTAWS_EXPORT ListHITsForQualificationTypeRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT ListHITsForQualificationTypeRequestPrivate : public MTurkRequestPrivate {
 
 public:
     ListHITsForQualificationTypeRequestPrivate(const MTurk::Action action,

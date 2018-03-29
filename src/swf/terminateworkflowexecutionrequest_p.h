@@ -20,7 +20,7 @@
 #ifndef QTAWS_TERMINATEWORKFLOWEXECUTIONREQUEST_P_H
 #define QTAWS_TERMINATEWORKFLOWEXECUTIONREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "terminateworkflowexecutionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class TerminateWorkflowExecutionRequest;
 
-class QTAWS_EXPORT TerminateWorkflowExecutionRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT TerminateWorkflowExecutionRequestPrivate : public SWFRequestPrivate {
 
 public:
     TerminateWorkflowExecutionRequestPrivate(const SWF::Action action,

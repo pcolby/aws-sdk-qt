@@ -20,7 +20,7 @@
 #ifndef QTAWS_DECLINEHANDSHAKEREQUEST_P_H
 #define QTAWS_DECLINEHANDSHAKEREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "declinehandshakerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class DeclineHandshakeRequest;
 
-class QTAWS_EXPORT DeclineHandshakeRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT DeclineHandshakeRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     DeclineHandshakeRequestPrivate(const Organizations::Action action,

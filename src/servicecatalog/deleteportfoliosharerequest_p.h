@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPORTFOLIOSHAREREQUEST_P_H
 #define QTAWS_DELETEPORTFOLIOSHAREREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "deleteportfoliosharerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DeletePortfolioShareRequest;
 
-class QTAWS_EXPORT DeletePortfolioShareRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT DeletePortfolioShareRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DeletePortfolioShareRequestPrivate(const ServiceCatalog::Action action,

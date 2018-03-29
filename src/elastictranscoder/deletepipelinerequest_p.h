@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPIPELINEREQUEST_P_H
 #define QTAWS_DELETEPIPELINEREQUEST_P_H
 
-#include "elastictranscoder_p.h"
+#include "elastictranscoderrequest_p.h"
 #include "deletepipelinerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 
 class DeletePipelineRequest;
 
-class QTAWS_EXPORT DeletePipelineRequestPrivate : public ElasticTranscoderPrivate {
+class QTAWS_EXPORT DeletePipelineRequestPrivate : public ElasticTranscoderRequestPrivate {
 
 public:
     DeletePipelineRequestPrivate(const ElasticTranscoder::Action action,

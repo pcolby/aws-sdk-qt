@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEFUNCTIONCONFIGURATIONREQUEST_P_H
 #define QTAWS_UPDATEFUNCTIONCONFIGURATIONREQUEST_P_H
 
-#include "lambda_p.h"
+#include "lambdarequest_p.h"
 #include "updatefunctionconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Lambda {
 
 class UpdateFunctionConfigurationRequest;
 
-class QTAWS_EXPORT UpdateFunctionConfigurationRequestPrivate : public LambdaPrivate {
+class QTAWS_EXPORT UpdateFunctionConfigurationRequestPrivate : public LambdaRequestPrivate {
 
 public:
     UpdateFunctionConfigurationRequestPrivate(const Lambda::Action action,

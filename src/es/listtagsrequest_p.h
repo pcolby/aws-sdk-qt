@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTTAGSREQUEST_P_H
 #define QTAWS_LISTTAGSREQUEST_P_H
 
-#include "elasticsearchservice_p.h"
+#include "elasticsearchservicerequest_p.h"
 #include "listtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class ListTagsRequest;
 
-class QTAWS_EXPORT ListTagsRequestPrivate : public ElasticsearchServicePrivate {
+class QTAWS_EXPORT ListTagsRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     ListTagsRequestPrivate(const ElasticsearchService::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDTAGSREQUEST_P_H
 #define QTAWS_ADDTAGSREQUEST_P_H
 
-#include "elasticsearchservice_p.h"
+#include "elasticsearchservicerequest_p.h"
 #include "addtagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 
 class AddTagsRequest;
 
-class QTAWS_EXPORT AddTagsRequestPrivate : public ElasticsearchServicePrivate {
+class QTAWS_EXPORT AddTagsRequestPrivate : public ElasticsearchServiceRequestPrivate {
 
 public:
     AddTagsRequestPrivate(const ElasticsearchService::Action action,

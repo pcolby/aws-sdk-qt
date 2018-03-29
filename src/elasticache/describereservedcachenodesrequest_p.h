@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBERESERVEDCACHENODESREQUEST_P_H
 #define QTAWS_DESCRIBERESERVEDCACHENODESREQUEST_P_H
 
-#include "elasticache_p.h"
+#include "elasticacherequest_p.h"
 #include "describereservedcachenodesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElastiCache {
 
 class DescribeReservedCacheNodesRequest;
 
-class QTAWS_EXPORT DescribeReservedCacheNodesRequestPrivate : public ElastiCachePrivate {
+class QTAWS_EXPORT DescribeReservedCacheNodesRequestPrivate : public ElastiCacheRequestPrivate {
 
 public:
     DescribeReservedCacheNodesRequestPrivate(const ElastiCache::Action action,

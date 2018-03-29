@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCONTEXTKEYSFORCUSTOMPOLICYREQUEST_P_H
 #define QTAWS_GETCONTEXTKEYSFORCUSTOMPOLICYREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "getcontextkeysforcustompolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class GetContextKeysForCustomPolicyRequest;
 
-class QTAWS_EXPORT GetContextKeysForCustomPolicyRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT GetContextKeysForCustomPolicyRequestPrivate : public IAMRequestPrivate {
 
 public:
     GetContextKeysForCustomPolicyRequestPrivate(const IAM::Action action,

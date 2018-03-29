@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBERESOURCEPERMISSIONSREQUEST_P_H
 #define QTAWS_DESCRIBERESOURCEPERMISSIONSREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "describeresourcepermissionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class DescribeResourcePermissionsRequest;
 
-class QTAWS_EXPORT DescribeResourcePermissionsRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT DescribeResourcePermissionsRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     DescribeResourcePermissionsRequestPrivate(const WorkDocs::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_BATCHREQUEST_P_H
 #define QTAWS_BATCHREQUEST_P_H
 
-#include "batch_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "batchrequest.h"
 
 namespace QtAws {

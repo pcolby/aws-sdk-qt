@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBELIFECYCLEHOOKSREQUEST_P_H
 #define QTAWS_DESCRIBELIFECYCLEHOOKSREQUEST_P_H
 
-#include "autoscaling_p.h"
+#include "autoscalingrequest_p.h"
 #include "describelifecyclehooksrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScaling {
 
 class DescribeLifecycleHooksRequest;
 
-class QTAWS_EXPORT DescribeLifecycleHooksRequestPrivate : public AutoScalingPrivate {
+class QTAWS_EXPORT DescribeLifecycleHooksRequestPrivate : public AutoScalingRequestPrivate {
 
 public:
     DescribeLifecycleHooksRequestPrivate(const AutoScaling::Action action,

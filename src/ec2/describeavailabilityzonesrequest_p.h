@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEAVAILABILITYZONESREQUEST_P_H
 #define QTAWS_DESCRIBEAVAILABILITYZONESREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describeavailabilityzonesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeAvailabilityZonesRequest;
 
-class QTAWS_EXPORT DescribeAvailabilityZonesRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeAvailabilityZonesRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeAvailabilityZonesRequestPrivate(const EC2::Action action,

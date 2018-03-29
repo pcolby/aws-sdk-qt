@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEAPPLICATIONREFERENCEDATASOURCEREQUEST_P_H
 #define QTAWS_DELETEAPPLICATIONREFERENCEDATASOURCEREQUEST_P_H
 
-#include "kinesisanalytics_p.h"
+#include "kinesisanalyticsrequest_p.h"
 #include "deleteapplicationreferencedatasourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class DeleteApplicationReferenceDataSourceRequest;
 
-class QTAWS_EXPORT DeleteApplicationReferenceDataSourceRequestPrivate : public KinesisAnalyticsPrivate {
+class QTAWS_EXPORT DeleteApplicationReferenceDataSourceRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
     DeleteApplicationReferenceDataSourceRequestPrivate(const KinesisAnalytics::Action action,

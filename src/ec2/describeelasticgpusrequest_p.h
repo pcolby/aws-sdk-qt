@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEELASTICGPUSREQUEST_P_H
 #define QTAWS_DESCRIBEELASTICGPUSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describeelasticgpusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeElasticGpusRequest;
 
-class QTAWS_EXPORT DescribeElasticGpusRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeElasticGpusRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeElasticGpusRequestPrivate(const EC2::Action action,

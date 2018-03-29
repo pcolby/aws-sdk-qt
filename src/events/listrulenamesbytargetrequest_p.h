@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTRULENAMESBYTARGETREQUEST_P_H
 #define QTAWS_LISTRULENAMESBYTARGETREQUEST_P_H
 
-#include "cloudwatchevents_p.h"
+#include "cloudwatcheventsrequest_p.h"
 #include "listrulenamesbytargetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class ListRuleNamesByTargetRequest;
 
-class QTAWS_EXPORT ListRuleNamesByTargetRequestPrivate : public CloudWatchEventsPrivate {
+class QTAWS_EXPORT ListRuleNamesByTargetRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     ListRuleNamesByTargetRequestPrivate(const CloudWatchEvents::Action action,

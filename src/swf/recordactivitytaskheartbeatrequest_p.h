@@ -20,7 +20,7 @@
 #ifndef QTAWS_RECORDACTIVITYTASKHEARTBEATREQUEST_P_H
 #define QTAWS_RECORDACTIVITYTASKHEARTBEATREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "recordactivitytaskheartbeatrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class RecordActivityTaskHeartbeatRequest;
 
-class QTAWS_EXPORT RecordActivityTaskHeartbeatRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT RecordActivityTaskHeartbeatRequestPrivate : public SWFRequestPrivate {
 
 public:
     RecordActivityTaskHeartbeatRequestPrivate(const SWF::Action action,

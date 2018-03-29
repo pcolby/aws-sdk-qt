@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTJOBEXECUTIONSFORJOBREQUEST_P_H
 #define QTAWS_LISTJOBEXECUTIONSFORJOBREQUEST_P_H
 
-#include "iot_p.h"
+#include "iotrequest_p.h"
 #include "listjobexecutionsforjobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoT {
 
 class ListJobExecutionsForJobRequest;
 
-class QTAWS_EXPORT ListJobExecutionsForJobRequestPrivate : public IoTPrivate {
+class QTAWS_EXPORT ListJobExecutionsForJobRequestPrivate : public IoTRequestPrivate {
 
 public:
     ListJobExecutionsForJobRequestPrivate(const IoT::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESNAPSHOTSCHEDULEREQUEST_P_H
 #define QTAWS_DELETESNAPSHOTSCHEDULEREQUEST_P_H
 
-#include "storagegateway_p.h"
+#include "storagegatewayrequest_p.h"
 #include "deletesnapshotschedulerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace StorageGateway {
 
 class DeleteSnapshotScheduleRequest;
 
-class QTAWS_EXPORT DeleteSnapshotScheduleRequestPrivate : public StorageGatewayPrivate {
+class QTAWS_EXPORT DeleteSnapshotScheduleRequestPrivate : public StorageGatewayRequestPrivate {
 
 public:
     DeleteSnapshotScheduleRequestPrivate(const StorageGateway::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_ENABLEMFADEVICEREQUEST_P_H
 #define QTAWS_ENABLEMFADEVICEREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "enablemfadevicerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class EnableMFADeviceRequest;
 
-class QTAWS_EXPORT EnableMFADeviceRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT EnableMFADeviceRequestPrivate : public IAMRequestPrivate {
 
 public:
     EnableMFADeviceRequestPrivate(const IAM::Action action,

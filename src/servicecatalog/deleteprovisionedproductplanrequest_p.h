@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPROVISIONEDPRODUCTPLANREQUEST_P_H
 #define QTAWS_DELETEPROVISIONEDPRODUCTPLANREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "deleteprovisionedproductplanrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DeleteProvisionedProductPlanRequest;
 
-class QTAWS_EXPORT DeleteProvisionedProductPlanRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT DeleteProvisionedProductPlanRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DeleteProvisionedProductPlanRequestPrivate(const ServiceCatalog::Action action,

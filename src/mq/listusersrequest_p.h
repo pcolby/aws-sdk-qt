@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTUSERSREQUEST_P_H
 #define QTAWS_LISTUSERSREQUEST_P_H
 
-#include "mq_p.h"
+#include "mqrequest_p.h"
 #include "listusersrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MQ {
 
 class ListUsersRequest;
 
-class QTAWS_EXPORT ListUsersRequestPrivate : public MQPrivate {
+class QTAWS_EXPORT ListUsersRequestPrivate : public MQRequestPrivate {
 
 public:
     ListUsersRequestPrivate(const MQ::Action action,

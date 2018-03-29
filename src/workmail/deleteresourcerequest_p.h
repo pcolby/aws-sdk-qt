@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETERESOURCEREQUEST_P_H
 #define QTAWS_DELETERESOURCEREQUEST_P_H
 
-#include "workmail_p.h"
+#include "workmailrequest_p.h"
 #include "deleteresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class DeleteResourceRequest;
 
-class QTAWS_EXPORT DeleteResourceRequestPrivate : public WorkMailPrivate {
+class QTAWS_EXPORT DeleteResourceRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     DeleteResourceRequestPrivate(const WorkMail::Action action,

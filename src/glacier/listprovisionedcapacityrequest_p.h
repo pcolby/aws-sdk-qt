@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTPROVISIONEDCAPACITYREQUEST_P_H
 #define QTAWS_LISTPROVISIONEDCAPACITYREQUEST_P_H
 
-#include "glacier_p.h"
+#include "glacierrequest_p.h"
 #include "listprovisionedcapacityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glacier {
 
 class ListProvisionedCapacityRequest;
 
-class QTAWS_EXPORT ListProvisionedCapacityRequestPrivate : public GlacierPrivate {
+class QTAWS_EXPORT ListProvisionedCapacityRequestPrivate : public GlacierRequestPrivate {
 
 public:
     ListProvisionedCapacityRequestPrivate(const Glacier::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEDBSUBNETGROUPREQUEST_P_H
 #define QTAWS_CREATEDBSUBNETGROUPREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "createdbsubnetgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class CreateDBSubnetGroupRequest;
 
-class QTAWS_EXPORT CreateDBSubnetGroupRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT CreateDBSubnetGroupRequestPrivate : public RDSRequestPrivate {
 
 public:
     CreateDBSubnetGroupRequestPrivate(const RDS::Action action,

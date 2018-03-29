@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESERVERCATALOGREQUEST_P_H
 #define QTAWS_DELETESERVERCATALOGREQUEST_P_H
 
-#include "sms_p.h"
+#include "smsrequest_p.h"
 #include "deleteservercatalogrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SMS {
 
 class DeleteServerCatalogRequest;
 
-class QTAWS_EXPORT DeleteServerCatalogRequestPrivate : public SMSPrivate {
+class QTAWS_EXPORT DeleteServerCatalogRequestPrivate : public SMSRequestPrivate {
 
 public:
     DeleteServerCatalogRequestPrivate(const SMS::Action action,

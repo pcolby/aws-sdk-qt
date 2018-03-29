@@ -20,7 +20,7 @@
 #ifndef QTAWS_LOOKUPPOLICYREQUEST_P_H
 #define QTAWS_LOOKUPPOLICYREQUEST_P_H
 
-#include "clouddirectory_p.h"
+#include "clouddirectoryrequest_p.h"
 #include "lookuppolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudDirectory {
 
 class LookupPolicyRequest;
 
-class QTAWS_EXPORT LookupPolicyRequestPrivate : public CloudDirectoryPrivate {
+class QTAWS_EXPORT LookupPolicyRequestPrivate : public CloudDirectoryRequestPrivate {
 
 public:
     LookupPolicyRequestPrivate(const CloudDirectory::Action action,

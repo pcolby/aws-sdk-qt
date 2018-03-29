@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETETAGOPTIONREQUEST_P_H
 #define QTAWS_DELETETAGOPTIONREQUEST_P_H
 
-#include "servicecatalog_p.h"
+#include "servicecatalogrequest_p.h"
 #include "deletetagoptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 
 class DeleteTagOptionRequest;
 
-class QTAWS_EXPORT DeleteTagOptionRequestPrivate : public ServiceCatalogPrivate {
+class QTAWS_EXPORT DeleteTagOptionRequestPrivate : public ServiceCatalogRequestPrivate {
 
 public:
     DeleteTagOptionRequestPrivate(const ServiceCatalog::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETQUALIFICATIONSCOREREQUEST_P_H
 #define QTAWS_GETQUALIFICATIONSCOREREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "getqualificationscorerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class GetQualificationScoreRequest;
 
-class QTAWS_EXPORT GetQualificationScoreRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT GetQualificationScoreRequestPrivate : public MTurkRequestPrivate {
 
 public:
     GetQualificationScoreRequestPrivate(const MTurk::Action action,

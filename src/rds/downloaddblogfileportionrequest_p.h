@@ -20,7 +20,7 @@
 #ifndef QTAWS_DOWNLOADDBLOGFILEPORTIONREQUEST_P_H
 #define QTAWS_DOWNLOADDBLOGFILEPORTIONREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "downloaddblogfileportionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DownloadDBLogFilePortionRequest;
 
-class QTAWS_EXPORT DownloadDBLogFilePortionRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DownloadDBLogFilePortionRequestPrivate : public RDSRequestPrivate {
 
 public:
     DownloadDBLogFilePortionRequestPrivate(const RDS::Action action,

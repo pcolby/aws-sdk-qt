@@ -20,7 +20,7 @@
 #ifndef QTAWS_HEALTHREQUEST_P_H
 #define QTAWS_HEALTHREQUEST_P_H
 
-#include "health_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "healthrequest.h"
 
 namespace QtAws {

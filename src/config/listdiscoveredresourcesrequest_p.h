@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTDISCOVEREDRESOURCESREQUEST_P_H
 #define QTAWS_LISTDISCOVEREDRESOURCESREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "listdiscoveredresourcesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class ListDiscoveredResourcesRequest;
 
-class QTAWS_EXPORT ListDiscoveredResourcesRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT ListDiscoveredResourcesRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     ListDiscoveredResourcesRequestPrivate(const ConfigService::Action action,

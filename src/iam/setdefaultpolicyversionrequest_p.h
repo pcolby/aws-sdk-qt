@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETDEFAULTPOLICYVERSIONREQUEST_P_H
 #define QTAWS_SETDEFAULTPOLICYVERSIONREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "setdefaultpolicyversionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class SetDefaultPolicyVersionRequest;
 
-class QTAWS_EXPORT SetDefaultPolicyVersionRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT SetDefaultPolicyVersionRequestPrivate : public IAMRequestPrivate {
 
 public:
     SetDefaultPolicyVersionRequestPrivate(const IAM::Action action,

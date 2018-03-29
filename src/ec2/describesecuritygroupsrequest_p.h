@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESECURITYGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBESECURITYGROUPSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describesecuritygroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeSecurityGroupsRequest;
 
-class QTAWS_EXPORT DescribeSecurityGroupsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeSecurityGroupsRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeSecurityGroupsRequestPrivate(const EC2::Action action,

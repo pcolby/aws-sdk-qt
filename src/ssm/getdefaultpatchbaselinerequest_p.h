@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDEFAULTPATCHBASELINEREQUEST_P_H
 #define QTAWS_GETDEFAULTPATCHBASELINEREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "getdefaultpatchbaselinerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class GetDefaultPatchBaselineRequest;
 
-class QTAWS_EXPORT GetDefaultPatchBaselineRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT GetDefaultPatchBaselineRequestPrivate : public SSMRequestPrivate {
 
 public:
     GetDefaultPatchBaselineRequestPrivate(const SSM::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_COPYIMAGEREQUEST_P_H
 #define QTAWS_COPYIMAGEREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "copyimagerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class CopyImageRequest;
 
-class QTAWS_EXPORT CopyImageRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT CopyImageRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     CopyImageRequestPrivate(const AppStream::Action action,

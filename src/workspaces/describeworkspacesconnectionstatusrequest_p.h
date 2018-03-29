@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEWORKSPACESCONNECTIONSTATUSREQUEST_P_H
 #define QTAWS_DESCRIBEWORKSPACESCONNECTIONSTATUSREQUEST_P_H
 
-#include "workspaces_p.h"
+#include "workspacesrequest_p.h"
 #include "describeworkspacesconnectionstatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkSpaces {
 
 class DescribeWorkspacesConnectionStatusRequest;
 
-class QTAWS_EXPORT DescribeWorkspacesConnectionStatusRequestPrivate : public WorkSpacesPrivate {
+class QTAWS_EXPORT DescribeWorkspacesConnectionStatusRequestPrivate : public WorkSpacesRequestPrivate {
 
 public:
     DescribeWorkspacesConnectionStatusRequestPrivate(const WorkSpaces::Action action,

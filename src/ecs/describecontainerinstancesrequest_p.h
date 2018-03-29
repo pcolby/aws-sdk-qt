@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECONTAINERINSTANCESREQUEST_P_H
 #define QTAWS_DESCRIBECONTAINERINSTANCESREQUEST_P_H
 
-#include "ecs_p.h"
+#include "ecsrequest_p.h"
 #include "describecontainerinstancesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ECS {
 
 class DescribeContainerInstancesRequest;
 
-class QTAWS_EXPORT DescribeContainerInstancesRequestPrivate : public ECSPrivate {
+class QTAWS_EXPORT DescribeContainerInstancesRequestPrivate : public ECSRequestPrivate {
 
 public:
     DescribeContainerInstancesRequestPrivate(const ECS::Action action,

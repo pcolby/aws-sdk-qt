@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECERTIFICATEREQUEST_P_H
 #define QTAWS_DELETECERTIFICATEREQUEST_P_H
 
-#include "databasemigrationservice_p.h"
+#include "databasemigrationservicerequest_p.h"
 #include "deletecertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DeleteCertificateRequest;
 
-class QTAWS_EXPORT DeleteCertificateRequestPrivate : public DatabaseMigrationServicePrivate {
+class QTAWS_EXPORT DeleteCertificateRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     DeleteCertificateRequestPrivate(const DatabaseMigrationService::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEAGGREGATEIDFORMATREQUEST_P_H
 #define QTAWS_DESCRIBEAGGREGATEIDFORMATREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describeaggregateidformatrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeAggregateIdFormatRequest;
 
-class QTAWS_EXPORT DescribeAggregateIdFormatRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeAggregateIdFormatRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeAggregateIdFormatRequestPrivate(const EC2::Action action,

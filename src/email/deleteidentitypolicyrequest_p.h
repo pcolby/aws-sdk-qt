@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEIDENTITYPOLICYREQUEST_P_H
 #define QTAWS_DELETEIDENTITYPOLICYREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "deleteidentitypolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class DeleteIdentityPolicyRequest;
 
-class QTAWS_EXPORT DeleteIdentityPolicyRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT DeleteIdentityPolicyRequestPrivate : public SESRequestPrivate {
 
 public:
     DeleteIdentityPolicyRequestPrivate(const SES::Action action,

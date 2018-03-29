@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETDEPLOYMENTGROUPREQUEST_P_H
 #define QTAWS_GETDEPLOYMENTGROUPREQUEST_P_H
 
-#include "codedeploy_p.h"
+#include "codedeployrequest_p.h"
 #include "getdeploymentgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeDeploy {
 
 class GetDeploymentGroupRequest;
 
-class QTAWS_EXPORT GetDeploymentGroupRequestPrivate : public CodeDeployPrivate {
+class QTAWS_EXPORT GetDeploymentGroupRequestPrivate : public CodeDeployRequestPrivate {
 
 public:
     GetDeploymentGroupRequestPrivate(const CodeDeploy::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETQUEUEURLREQUEST_P_H
 #define QTAWS_GETQUEUEURLREQUEST_P_H
 
-#include "sqs_p.h"
+#include "sqsrequest_p.h"
 #include "getqueueurlrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SQS {
 
 class GetQueueUrlRequest;
 
-class QTAWS_EXPORT GetQueueUrlRequestPrivate : public SQSPrivate {
+class QTAWS_EXPORT GetQueueUrlRequestPrivate : public SQSRequestPrivate {
 
 public:
     GetQueueUrlRequestPrivate(const SQS::Action action,

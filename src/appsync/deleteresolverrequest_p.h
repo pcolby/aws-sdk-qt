@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETERESOLVERREQUEST_P_H
 #define QTAWS_DELETERESOLVERREQUEST_P_H
 
-#include "appsync_p.h"
+#include "appsyncrequest_p.h"
 #include "deleteresolverrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppSync {
 
 class DeleteResolverRequest;
 
-class QTAWS_EXPORT DeleteResolverRequestPrivate : public AppSyncPrivate {
+class QTAWS_EXPORT DeleteResolverRequestPrivate : public AppSyncRequestPrivate {
 
 public:
     DeleteResolverRequestPrivate(const AppSync::Action action,

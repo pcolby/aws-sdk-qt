@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEINSTANCESTATUSREQUEST_P_H
 #define QTAWS_DESCRIBEINSTANCESTATUSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describeinstancestatusrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeInstanceStatusRequest;
 
-class QTAWS_EXPORT DescribeInstanceStatusRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeInstanceStatusRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeInstanceStatusRequestPrivate(const EC2::Action action,

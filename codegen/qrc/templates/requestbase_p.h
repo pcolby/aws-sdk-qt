@@ -2,7 +2,7 @@
 #ifndef QTAWS_{{ClassName|upper}}_P_H
 #define QTAWS_{{ClassName|upper}}_P_H
 
-#include "{{ServiceName|lower}}_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "{{ClassName|lower}}.h"
 
 namespace QtAws {

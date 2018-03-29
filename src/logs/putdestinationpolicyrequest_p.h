@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUTDESTINATIONPOLICYREQUEST_P_H
 #define QTAWS_PUTDESTINATIONPOLICYREQUEST_P_H
 
-#include "cloudwatchlogs_p.h"
+#include "cloudwatchlogsrequest_p.h"
 #include "putdestinationpolicyrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 
 class PutDestinationPolicyRequest;
 
-class QTAWS_EXPORT PutDestinationPolicyRequestPrivate : public CloudWatchLogsPrivate {
+class QTAWS_EXPORT PutDestinationPolicyRequestPrivate : public CloudWatchLogsRequestPrivate {
 
 public:
     PutDestinationPolicyRequestPrivate(const CloudWatchLogs::Action action,

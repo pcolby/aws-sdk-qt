@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESTARTAPPSERVERREQUEST_P_H
 #define QTAWS_RESTARTAPPSERVERREQUEST_P_H
 
-#include "elasticbeanstalk_p.h"
+#include "elasticbeanstalkrequest_p.h"
 #include "restartappserverrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 
 class RestartAppServerRequest;
 
-class QTAWS_EXPORT RestartAppServerRequestPrivate : public ElasticBeanstalkPrivate {
+class QTAWS_EXPORT RestartAppServerRequestPrivate : public ElasticBeanstalkRequestPrivate {
 
 public:
     RestartAppServerRequestPrivate(const ElasticBeanstalk::Action action,

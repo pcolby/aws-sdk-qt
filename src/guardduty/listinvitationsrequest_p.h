@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTINVITATIONSREQUEST_P_H
 #define QTAWS_LISTINVITATIONSREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "guarddutyrequest_p.h"
 #include "listinvitationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GuardDuty {
 
 class ListInvitationsRequest;
 
-class QTAWS_EXPORT ListInvitationsRequestPrivate : public GuardDutyPrivate {
+class QTAWS_EXPORT ListInvitationsRequestPrivate : public GuardDutyRequestPrivate {
 
 public:
     ListInvitationsRequestPrivate(const GuardDuty::Action action,

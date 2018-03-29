@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNASSIGNPRIVATEIPADDRESSESREQUEST_P_H
 #define QTAWS_UNASSIGNPRIVATEIPADDRESSESREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "unassignprivateipaddressesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class UnassignPrivateIpAddressesRequest;
 
-class QTAWS_EXPORT UnassignPrivateIpAddressesRequestPrivate : public EC2Private {
+class QTAWS_EXPORT UnassignPrivateIpAddressesRequestPrivate : public EC2RequestPrivate {
 
 public:
     UnassignPrivateIpAddressesRequestPrivate(const EC2::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_PUBLISHREQUEST_P_H
 #define QTAWS_PUBLISHREQUEST_P_H
 
-#include "iotdataplane_p.h"
+#include "iotdataplanerequest_p.h"
 #include "publishrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IoTDataPlane {
 
 class PublishRequest;
 
-class QTAWS_EXPORT PublishRequestPrivate : public IoTDataPlanePrivate {
+class QTAWS_EXPORT PublishRequestPrivate : public IoTDataPlaneRequestPrivate {
 
 public:
     PublishRequestPrivate(const IoTDataPlane::Action action,

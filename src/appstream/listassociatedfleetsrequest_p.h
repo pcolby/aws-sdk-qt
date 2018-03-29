@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTASSOCIATEDFLEETSREQUEST_P_H
 #define QTAWS_LISTASSOCIATEDFLEETSREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "listassociatedfleetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class ListAssociatedFleetsRequest;
 
-class QTAWS_EXPORT ListAssociatedFleetsRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT ListAssociatedFleetsRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     ListAssociatedFleetsRequestPrivate(const AppStream::Action action,

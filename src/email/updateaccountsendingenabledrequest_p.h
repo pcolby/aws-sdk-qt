@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEACCOUNTSENDINGENABLEDREQUEST_P_H
 #define QTAWS_UPDATEACCOUNTSENDINGENABLEDREQUEST_P_H
 
-#include "ses_p.h"
+#include "sesrequest_p.h"
 #include "updateaccountsendingenabledrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SES {
 
 class UpdateAccountSendingEnabledRequest;
 
-class QTAWS_EXPORT UpdateAccountSendingEnabledRequestPrivate : public SESPrivate {
+class QTAWS_EXPORT UpdateAccountSendingEnabledRequestPrivate : public SESRequestPrivate {
 
 public:
     UpdateAccountSendingEnabledRequestPrivate(const SES::Action action,

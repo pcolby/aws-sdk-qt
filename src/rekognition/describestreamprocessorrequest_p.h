@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESTREAMPROCESSORREQUEST_P_H
 #define QTAWS_DESCRIBESTREAMPROCESSORREQUEST_P_H
 
-#include "rekognition_p.h"
+#include "rekognitionrequest_p.h"
 #include "describestreamprocessorrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class DescribeStreamProcessorRequest;
 
-class QTAWS_EXPORT DescribeStreamProcessorRequestPrivate : public RekognitionPrivate {
+class QTAWS_EXPORT DescribeStreamProcessorRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     DescribeStreamProcessorRequestPrivate(const Rekognition::Action action,

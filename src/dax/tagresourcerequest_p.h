@@ -20,7 +20,7 @@
 #ifndef QTAWS_TAGRESOURCEREQUEST_P_H
 #define QTAWS_TAGRESOURCEREQUEST_P_H
 
-#include "dax_p.h"
+#include "daxrequest_p.h"
 #include "tagresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DAX {
 
 class TagResourceRequest;
 
-class QTAWS_EXPORT TagResourceRequestPrivate : public DAXPrivate {
+class QTAWS_EXPORT TagResourceRequestPrivate : public DAXRequestPrivate {
 
 public:
     TagResourceRequestPrivate(const DAX::Action action,

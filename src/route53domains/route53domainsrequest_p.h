@@ -20,7 +20,7 @@
 #ifndef QTAWS_ROUTE53DOMAINSREQUEST_P_H
 #define QTAWS_ROUTE53DOMAINSREQUEST_P_H
 
-#include "route53domains_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "route53domainsrequest.h"
 
 namespace QtAws {

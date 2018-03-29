@@ -20,7 +20,7 @@
 #ifndef QTAWS_MARKETPLACECOMMERCEANALYTICSREQUEST_P_H
 #define QTAWS_MARKETPLACECOMMERCEANALYTICSREQUEST_P_H
 
-#include "marketplacecommerceanalytics_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "marketplacecommerceanalyticsrequest.h"
 
 namespace QtAws {

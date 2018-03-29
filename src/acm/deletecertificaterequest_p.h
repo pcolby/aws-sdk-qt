@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECERTIFICATEREQUEST_P_H
 #define QTAWS_DELETECERTIFICATEREQUEST_P_H
 
-#include "acm_p.h"
+#include "acmrequest_p.h"
 #include "deletecertificaterequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ACM {
 
 class DeleteCertificateRequest;
 
-class QTAWS_EXPORT DeleteCertificateRequestPrivate : public ACMPrivate {
+class QTAWS_EXPORT DeleteCertificateRequestPrivate : public ACMRequestPrivate {
 
 public:
     DeleteCertificateRequestPrivate(const ACM::Action action,

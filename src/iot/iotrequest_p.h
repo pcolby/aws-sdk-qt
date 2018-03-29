@@ -20,7 +20,7 @@
 #ifndef QTAWS_IOTREQUEST_P_H
 #define QTAWS_IOTREQUEST_P_H
 
-#include "iot_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "iotrequest.h"
 
 namespace QtAws {

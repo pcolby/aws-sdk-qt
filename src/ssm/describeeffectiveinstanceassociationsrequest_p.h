@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEEFFECTIVEINSTANCEASSOCIATIONSREQUEST_P_H
 #define QTAWS_DESCRIBEEFFECTIVEINSTANCEASSOCIATIONSREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "describeeffectiveinstanceassociationsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeEffectiveInstanceAssociationsRequest;
 
-class QTAWS_EXPORT DescribeEffectiveInstanceAssociationsRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DescribeEffectiveInstanceAssociationsRequestPrivate : public SSMRequestPrivate {
 
 public:
     DescribeEffectiveInstanceAssociationsRequestPrivate(const SSM::Action action,

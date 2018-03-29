@@ -20,7 +20,7 @@
 #ifndef QTAWS_REVOKESNAPSHOTACCESSREQUEST_P_H
 #define QTAWS_REVOKESNAPSHOTACCESSREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "revokesnapshotaccessrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class RevokeSnapshotAccessRequest;
 
-class QTAWS_EXPORT RevokeSnapshotAccessRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT RevokeSnapshotAccessRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     RevokeSnapshotAccessRequestPrivate(const Redshift::Action action,

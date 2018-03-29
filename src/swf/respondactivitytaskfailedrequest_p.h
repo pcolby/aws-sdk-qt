@@ -20,7 +20,7 @@
 #ifndef QTAWS_RESPONDACTIVITYTASKFAILEDREQUEST_P_H
 #define QTAWS_RESPONDACTIVITYTASKFAILEDREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "respondactivitytaskfailedrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class RespondActivityTaskFailedRequest;
 
-class QTAWS_EXPORT RespondActivityTaskFailedRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT RespondActivityTaskFailedRequestPrivate : public SWFRequestPrivate {
 
 public:
     RespondActivityTaskFailedRequestPrivate(const SWF::Action action,

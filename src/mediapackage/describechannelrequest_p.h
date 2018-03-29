@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECHANNELREQUEST_P_H
 #define QTAWS_DESCRIBECHANNELREQUEST_P_H
 
-#include "mediapackage_p.h"
+#include "mediapackagerequest_p.h"
 #include "describechannelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MediaPackage {
 
 class DescribeChannelRequest;
 
-class QTAWS_EXPORT DescribeChannelRequestPrivate : public MediaPackagePrivate {
+class QTAWS_EXPORT DescribeChannelRequestPrivate : public MediaPackageRequestPrivate {
 
 public:
     DescribeChannelRequestPrivate(const MediaPackage::Action action,

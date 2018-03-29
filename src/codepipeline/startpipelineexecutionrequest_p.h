@@ -20,7 +20,7 @@
 #ifndef QTAWS_STARTPIPELINEEXECUTIONREQUEST_P_H
 #define QTAWS_STARTPIPELINEEXECUTIONREQUEST_P_H
 
-#include "codepipeline_p.h"
+#include "codepipelinerequest_p.h"
 #include "startpipelineexecutionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodePipeline {
 
 class StartPipelineExecutionRequest;
 
-class QTAWS_EXPORT StartPipelineExecutionRequestPrivate : public CodePipelinePrivate {
+class QTAWS_EXPORT StartPipelineExecutionRequestPrivate : public CodePipelineRequestPrivate {
 
 public:
     StartPipelineExecutionRequestPrivate(const CodePipeline::Action action,

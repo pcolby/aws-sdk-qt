@@ -20,7 +20,7 @@
 #ifndef QTAWS_BULKPUBLISHREQUEST_P_H
 #define QTAWS_BULKPUBLISHREQUEST_P_H
 
-#include "cognitosync_p.h"
+#include "cognitosyncrequest_p.h"
 #include "bulkpublishrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoSync {
 
 class BulkPublishRequest;
 
-class QTAWS_EXPORT BulkPublishRequestPrivate : public CognitoSyncPrivate {
+class QTAWS_EXPORT BulkPublishRequestPrivate : public CognitoSyncRequestPrivate {
 
 public:
     BulkPublishRequestPrivate(const CognitoSync::Action action,

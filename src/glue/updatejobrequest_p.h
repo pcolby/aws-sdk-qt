@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEJOBREQUEST_P_H
 #define QTAWS_UPDATEJOBREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "updatejobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class UpdateJobRequest;
 
-class QTAWS_EXPORT UpdateJobRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT UpdateJobRequestPrivate : public GlueRequestPrivate {
 
 public:
     UpdateJobRequestPrivate(const Glue::Action action,

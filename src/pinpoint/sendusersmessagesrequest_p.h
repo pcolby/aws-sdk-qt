@@ -20,7 +20,7 @@
 #ifndef QTAWS_SENDUSERSMESSAGESREQUEST_P_H
 #define QTAWS_SENDUSERSMESSAGESREQUEST_P_H
 
-#include "pinpoint_p.h"
+#include "pinpointrequest_p.h"
 #include "sendusersmessagesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Pinpoint {
 
 class SendUsersMessagesRequest;
 
-class QTAWS_EXPORT SendUsersMessagesRequestPrivate : public PinpointPrivate {
+class QTAWS_EXPORT SendUsersMessagesRequestPrivate : public PinpointRequestPrivate {
 
 public:
     SendUsersMessagesRequestPrivate(const Pinpoint::Action action,

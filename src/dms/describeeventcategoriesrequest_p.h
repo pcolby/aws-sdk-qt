@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTCATEGORIESREQUEST_P_H
 #define QTAWS_DESCRIBEEVENTCATEGORIESREQUEST_P_H
 
-#include "databasemigrationservice_p.h"
+#include "databasemigrationservicerequest_p.h"
 #include "describeeventcategoriesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class DescribeEventCategoriesRequest;
 
-class QTAWS_EXPORT DescribeEventCategoriesRequestPrivate : public DatabaseMigrationServicePrivate {
+class QTAWS_EXPORT DescribeEventCategoriesRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     DescribeEventCategoriesRequestPrivate(const DatabaseMigrationService::Action action,

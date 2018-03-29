@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYCLUSTERREQUEST_P_H
 #define QTAWS_MODIFYCLUSTERREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "modifyclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class ModifyClusterRequest;
 
-class QTAWS_EXPORT ModifyClusterRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT ModifyClusterRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     ModifyClusterRequestPrivate(const Redshift::Action action,

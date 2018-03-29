@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBECERTIFICATESREQUEST_P_H
 #define QTAWS_DESCRIBECERTIFICATESREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "describecertificatesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class DescribeCertificatesRequest;
 
-class QTAWS_EXPORT DescribeCertificatesRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT DescribeCertificatesRequestPrivate : public RDSRequestPrivate {
 
 public:
     DescribeCertificatesRequestPrivate(const RDS::Action action,

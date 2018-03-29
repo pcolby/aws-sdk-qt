@@ -20,7 +20,7 @@
 #ifndef QTAWS_ABORTVAULTLOCKREQUEST_P_H
 #define QTAWS_ABORTVAULTLOCKREQUEST_P_H
 
-#include "glacier_p.h"
+#include "glacierrequest_p.h"
 #include "abortvaultlockrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glacier {
 
 class AbortVaultLockRequest;
 
-class QTAWS_EXPORT AbortVaultLockRequestPrivate : public GlacierPrivate {
+class QTAWS_EXPORT AbortVaultLockRequestPrivate : public GlacierRequestPrivate {
 
 public:
     AbortVaultLockRequestPrivate(const Glacier::Action action,

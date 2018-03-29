@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEENDPOINTCONFIGREQUEST_P_H
 #define QTAWS_DELETEENDPOINTCONFIGREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "deleteendpointconfigrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class DeleteEndpointConfigRequest;
 
-class QTAWS_EXPORT DeleteEndpointConfigRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT DeleteEndpointConfigRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     DeleteEndpointConfigRequestPrivate(const SageMaker::Action action,

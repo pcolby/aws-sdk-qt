@@ -20,7 +20,7 @@
 #ifndef QTAWS_PURCHASEPROVISIONEDCAPACITYREQUEST_P_H
 #define QTAWS_PURCHASEPROVISIONEDCAPACITYREQUEST_P_H
 
-#include "glacier_p.h"
+#include "glacierrequest_p.h"
 #include "purchaseprovisionedcapacityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glacier {
 
 class PurchaseProvisionedCapacityRequest;
 
-class QTAWS_EXPORT PurchaseProvisionedCapacityRequestPrivate : public GlacierPrivate {
+class QTAWS_EXPORT PurchaseProvisionedCapacityRequestPrivate : public GlacierRequestPrivate {
 
 public:
     PurchaseProvisionedCapacityRequestPrivate(const Glacier::Action action,

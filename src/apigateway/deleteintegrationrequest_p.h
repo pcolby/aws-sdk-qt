@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEINTEGRATIONREQUEST_P_H
 #define QTAWS_DELETEINTEGRATIONREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "deleteintegrationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteIntegrationRequest;
 
-class QTAWS_EXPORT DeleteIntegrationRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT DeleteIntegrationRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteIntegrationRequestPrivate(const APIGateway::Action action,

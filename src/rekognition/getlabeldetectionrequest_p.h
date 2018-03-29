@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETLABELDETECTIONREQUEST_P_H
 #define QTAWS_GETLABELDETECTIONREQUEST_P_H
 
-#include "rekognition_p.h"
+#include "rekognitionrequest_p.h"
 #include "getlabeldetectionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Rekognition {
 
 class GetLabelDetectionRequest;
 
-class QTAWS_EXPORT GetLabelDetectionRequestPrivate : public RekognitionPrivate {
+class QTAWS_EXPORT GetLabelDetectionRequestPrivate : public RekognitionRequestPrivate {
 
 public:
     GetLabelDetectionRequestPrivate(const Rekognition::Action action,

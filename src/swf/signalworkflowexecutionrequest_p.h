@@ -20,7 +20,7 @@
 #ifndef QTAWS_SIGNALWORKFLOWEXECUTIONREQUEST_P_H
 #define QTAWS_SIGNALWORKFLOWEXECUTIONREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "signalworkflowexecutionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class SignalWorkflowExecutionRequest;
 
-class QTAWS_EXPORT SignalWorkflowExecutionRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT SignalWorkflowExecutionRequestPrivate : public SWFRequestPrivate {
 
 public:
     SignalWorkflowExecutionRequestPrivate(const SWF::Action action,

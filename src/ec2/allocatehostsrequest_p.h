@@ -20,7 +20,7 @@
 #ifndef QTAWS_ALLOCATEHOSTSREQUEST_P_H
 #define QTAWS_ALLOCATEHOSTSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "allocatehostsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class AllocateHostsRequest;
 
-class QTAWS_EXPORT AllocateHostsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT AllocateHostsRequestPrivate : public EC2RequestPrivate {
 
 public:
     AllocateHostsRequestPrivate(const EC2::Action action,

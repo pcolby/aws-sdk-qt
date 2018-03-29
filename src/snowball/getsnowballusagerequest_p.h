@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSNOWBALLUSAGEREQUEST_P_H
 #define QTAWS_GETSNOWBALLUSAGEREQUEST_P_H
 
-#include "snowball_p.h"
+#include "snowballrequest_p.h"
 #include "getsnowballusagerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Snowball {
 
 class GetSnowballUsageRequest;
 
-class QTAWS_EXPORT GetSnowballUsageRequestPrivate : public SnowballPrivate {
+class QTAWS_EXPORT GetSnowballUsageRequestPrivate : public SnowballRequestPrivate {
 
 public:
     GetSnowballUsageRequestPrivate(const Snowball::Action action,

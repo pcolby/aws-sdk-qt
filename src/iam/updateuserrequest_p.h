@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEUSERREQUEST_P_H
 #define QTAWS_UPDATEUSERREQUEST_P_H
 
-#include "iam_p.h"
+#include "iamrequest_p.h"
 #include "updateuserrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace IAM {
 
 class UpdateUserRequest;
 
-class QTAWS_EXPORT UpdateUserRequestPrivate : public IAMPrivate {
+class QTAWS_EXPORT UpdateUserRequestPrivate : public IAMRequestPrivate {
 
 public:
     UpdateUserRequestPrivate(const IAM::Action action,

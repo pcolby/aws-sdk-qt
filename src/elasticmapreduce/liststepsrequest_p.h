@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTSTEPSREQUEST_P_H
 #define QTAWS_LISTSTEPSREQUEST_P_H
 
-#include "emr_p.h"
+#include "emrrequest_p.h"
 #include "liststepsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EMR {
 
 class ListStepsRequest;
 
-class QTAWS_EXPORT ListStepsRequestPrivate : public EMRPrivate {
+class QTAWS_EXPORT ListStepsRequestPrivate : public EMRRequestPrivate {
 
 public:
     ListStepsRequestPrivate(const EMR::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEACCOUNTREQUEST_P_H
 #define QTAWS_CREATEACCOUNTREQUEST_P_H
 
-#include "organizations_p.h"
+#include "organizationsrequest_p.h"
 #include "createaccountrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Organizations {
 
 class CreateAccountRequest;
 
-class QTAWS_EXPORT CreateAccountRequestPrivate : public OrganizationsPrivate {
+class QTAWS_EXPORT CreateAccountRequestPrivate : public OrganizationsRequestPrivate {
 
 public:
     CreateAccountRequestPrivate(const Organizations::Action action,

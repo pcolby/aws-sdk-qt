@@ -20,7 +20,7 @@
 #ifndef QTAWS_GUARDDUTYREQUEST_P_H
 #define QTAWS_GUARDDUTYREQUEST_P_H
 
-#include "guardduty_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "guarddutyrequest.h"
 
 namespace QtAws {

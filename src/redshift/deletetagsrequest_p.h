@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETETAGSREQUEST_P_H
 #define QTAWS_DELETETAGSREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "deletetagsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class DeleteTagsRequest;
 
-class QTAWS_EXPORT DeleteTagsRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT DeleteTagsRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     DeleteTagsRequestPrivate(const Redshift::Action action,

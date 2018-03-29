@@ -20,7 +20,7 @@
 #ifndef QTAWS_POSTCOMMENTFORCOMPAREDCOMMITREQUEST_P_H
 #define QTAWS_POSTCOMMENTFORCOMPAREDCOMMITREQUEST_P_H
 
-#include "codecommit_p.h"
+#include "codecommitrequest_p.h"
 #include "postcommentforcomparedcommitrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CodeCommit {
 
 class PostCommentForComparedCommitRequest;
 
-class QTAWS_EXPORT PostCommentForComparedCommitRequestPrivate : public CodeCommitPrivate {
+class QTAWS_EXPORT PostCommentForComparedCommitRequestPrivate : public CodeCommitRequestPrivate {
 
 public:
     PostCommentForComparedCommitRequestPrivate(const CodeCommit::Action action,

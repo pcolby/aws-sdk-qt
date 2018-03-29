@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETGROUPREQUEST_P_H
 #define QTAWS_GETGROUPREQUEST_P_H
 
-#include "resourcegroups_p.h"
+#include "resourcegroupsrequest_p.h"
 #include "getgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ResourceGroups {
 
 class GetGroupRequest;
 
-class QTAWS_EXPORT GetGroupRequestPrivate : public ResourceGroupsPrivate {
+class QTAWS_EXPORT GetGroupRequestPrivate : public ResourceGroupsRequestPrivate {
 
 public:
     GetGroupRequestPrivate(const ResourceGroups::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPLACEMENTGROUPREQUEST_P_H
 #define QTAWS_DELETEPLACEMENTGROUPREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "deleteplacementgrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeletePlacementGroupRequest;
 
-class QTAWS_EXPORT DeletePlacementGroupRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DeletePlacementGroupRequestPrivate : public EC2RequestPrivate {
 
 public:
     DeletePlacementGroupRequestPrivate(const EC2::Action action,

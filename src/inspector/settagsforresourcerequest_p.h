@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETTAGSFORRESOURCEREQUEST_P_H
 #define QTAWS_SETTAGSFORRESOURCEREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "settagsforresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class SetTagsForResourceRequest;
 
-class QTAWS_EXPORT SetTagsForResourceRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT SetTagsForResourceRequestPrivate : public InspectorRequestPrivate {
 
 public:
     SetTagsForResourceRequestPrivate(const Inspector::Action action,

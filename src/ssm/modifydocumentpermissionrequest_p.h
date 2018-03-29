@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYDOCUMENTPERMISSIONREQUEST_P_H
 #define QTAWS_MODIFYDOCUMENTPERMISSIONREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "modifydocumentpermissionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class ModifyDocumentPermissionRequest;
 
-class QTAWS_EXPORT ModifyDocumentPermissionRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT ModifyDocumentPermissionRequestPrivate : public SSMRequestPrivate {
 
 public:
     ModifyDocumentPermissionRequestPrivate(const SSM::Action action,

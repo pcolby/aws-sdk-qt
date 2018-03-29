@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETCREDENTIALSFORIDENTITYREQUEST_P_H
 #define QTAWS_GETCREDENTIALSFORIDENTITYREQUEST_P_H
 
-#include "cognitoidentity_p.h"
+#include "cognitoidentityrequest_p.h"
 #include "getcredentialsforidentityrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 
 class GetCredentialsForIdentityRequest;
 
-class QTAWS_EXPORT GetCredentialsForIdentityRequestPrivate : public CognitoIdentityPrivate {
+class QTAWS_EXPORT GetCredentialsForIdentityRequestPrivate : public CognitoIdentityRequestPrivate {
 
 public:
     GetCredentialsForIdentityRequestPrivate(const CognitoIdentity::Action action,

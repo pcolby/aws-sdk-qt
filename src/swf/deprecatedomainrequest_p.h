@@ -20,7 +20,7 @@
 #ifndef QTAWS_DEPRECATEDOMAINREQUEST_P_H
 #define QTAWS_DEPRECATEDOMAINREQUEST_P_H
 
-#include "swf_p.h"
+#include "swfrequest_p.h"
 #include "deprecatedomainrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SWF {
 
 class DeprecateDomainRequest;
 
-class QTAWS_EXPORT DeprecateDomainRequestPrivate : public SWFPrivate {
+class QTAWS_EXPORT DeprecateDomainRequestPrivate : public SWFRequestPrivate {
 
 public:
     DeprecateDomainRequestPrivate(const SWF::Action action,

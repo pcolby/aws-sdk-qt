@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEDATASOURCESREQUEST_P_H
 #define QTAWS_DESCRIBEDATASOURCESREQUEST_P_H
 
-#include "machinelearning_p.h"
+#include "machinelearningrequest_p.h"
 #include "describedatasourcesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MachineLearning {
 
 class DescribeDataSourcesRequest;
 
-class QTAWS_EXPORT DescribeDataSourcesRequestPrivate : public MachineLearningPrivate {
+class QTAWS_EXPORT DescribeDataSourcesRequestPrivate : public MachineLearningRequestPrivate {
 
 public:
     DescribeDataSourcesRequestPrivate(const MachineLearning::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETPLATFORMAPPLICATIONATTRIBUTESREQUEST_P_H
 #define QTAWS_SETPLATFORMAPPLICATIONATTRIBUTESREQUEST_P_H
 
-#include "sns_p.h"
+#include "snsrequest_p.h"
 #include "setplatformapplicationattributesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SNS {
 
 class SetPlatformApplicationAttributesRequest;
 
-class QTAWS_EXPORT SetPlatformApplicationAttributesRequestPrivate : public SNSPrivate {
+class QTAWS_EXPORT SetPlatformApplicationAttributesRequestPrivate : public SNSRequestPrivate {
 
 public:
     SetPlatformApplicationAttributesRequestPrivate(const SNS::Action action,

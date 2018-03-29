@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYCLUSTERIAMROLESREQUEST_P_H
 #define QTAWS_MODIFYCLUSTERIAMROLESREQUEST_P_H
 
-#include "redshift_p.h"
+#include "redshiftrequest_p.h"
 #include "modifyclusteriamrolesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Redshift {
 
 class ModifyClusterIamRolesRequest;
 
-class QTAWS_EXPORT ModifyClusterIamRolesRequestPrivate : public RedshiftPrivate {
+class QTAWS_EXPORT ModifyClusterIamRolesRequestPrivate : public RedshiftRequestPrivate {
 
 public:
     ModifyClusterIamRolesRequestPrivate(const Redshift::Action action,

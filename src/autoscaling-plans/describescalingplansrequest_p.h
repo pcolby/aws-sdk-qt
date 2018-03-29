@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBESCALINGPLANSREQUEST_P_H
 #define QTAWS_DESCRIBESCALINGPLANSREQUEST_P_H
 
-#include "autoscalingplans_p.h"
+#include "autoscalingplansrequest_p.h"
 #include "describescalingplansrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AutoScalingPlans {
 
 class DescribeScalingPlansRequest;
 
-class QTAWS_EXPORT DescribeScalingPlansRequestPrivate : public AutoScalingPlansPrivate {
+class QTAWS_EXPORT DescribeScalingPlansRequestPrivate : public AutoScalingPlansRequestPrivate {
 
 public:
     DescribeScalingPlansRequestPrivate(const AutoScalingPlans::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_UPDATEFLEETREQUEST_P_H
 #define QTAWS_UPDATEFLEETREQUEST_P_H
 
-#include "appstream_p.h"
+#include "appstreamrequest_p.h"
 #include "updatefleetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace AppStream {
 
 class UpdateFleetRequest;
 
-class QTAWS_EXPORT UpdateFleetRequestPrivate : public AppStreamPrivate {
+class QTAWS_EXPORT UpdateFleetRequestPrivate : public AppStreamRequestPrivate {
 
 public:
     UpdateFleetRequestPrivate(const AppStream::Action action,

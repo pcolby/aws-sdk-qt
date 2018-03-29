@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETESECURITYGROUPREQUEST_P_H
 #define QTAWS_DELETESECURITYGROUPREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "deletesecuritygrouprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DeleteSecurityGroupRequest;
 
-class QTAWS_EXPORT DeleteSecurityGroupRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DeleteSecurityGroupRequestPrivate : public EC2RequestPrivate {
 
 public:
     DeleteSecurityGroupRequestPrivate(const EC2::Action action,

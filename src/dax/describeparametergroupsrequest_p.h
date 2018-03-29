@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEPARAMETERGROUPSREQUEST_P_H
 #define QTAWS_DESCRIBEPARAMETERGROUPSREQUEST_P_H
 
-#include "dax_p.h"
+#include "daxrequest_p.h"
 #include "describeparametergroupsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DAX {
 
 class DescribeParameterGroupsRequest;
 
-class QTAWS_EXPORT DescribeParameterGroupsRequestPrivate : public DAXPrivate {
+class QTAWS_EXPORT DescribeParameterGroupsRequestPrivate : public DAXRequestPrivate {
 
 public:
     DescribeParameterGroupsRequestPrivate(const DAX::Action action,

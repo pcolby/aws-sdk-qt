@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNTAGSTREAMREQUEST_P_H
 #define QTAWS_UNTAGSTREAMREQUEST_P_H
 
-#include "kinesisvideo_p.h"
+#include "kinesisvideorequest_p.h"
 #include "untagstreamrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KinesisVideo {
 
 class UntagStreamRequest;
 
-class QTAWS_EXPORT UntagStreamRequestPrivate : public KinesisVideoPrivate {
+class QTAWS_EXPORT UntagStreamRequestPrivate : public KinesisVideoRequestPrivate {
 
 public:
     UntagStreamRequestPrivate(const KinesisVideo::Action action,

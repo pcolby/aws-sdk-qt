@@ -20,7 +20,7 @@
 #ifndef QTAWS_ACTIVATEUSERREQUEST_P_H
 #define QTAWS_ACTIVATEUSERREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "workdocsrequest_p.h"
 #include "activateuserrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkDocs {
 
 class ActivateUserRequest;
 
-class QTAWS_EXPORT ActivateUserRequestPrivate : public WorkDocsPrivate {
+class QTAWS_EXPORT ActivateUserRequestPrivate : public WorkDocsRequestPrivate {
 
 public:
     ActivateUserRequestPrivate(const WorkDocs::Action action,

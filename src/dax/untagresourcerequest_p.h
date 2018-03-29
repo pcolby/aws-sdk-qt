@@ -20,7 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCEREQUEST_P_H
 #define QTAWS_UNTAGRESOURCEREQUEST_P_H
 
-#include "dax_p.h"
+#include "daxrequest_p.h"
 #include "untagresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DAX {
 
 class UntagResourceRequest;
 
-class QTAWS_EXPORT UntagResourceRequestPrivate : public DAXPrivate {
+class QTAWS_EXPORT UntagResourceRequestPrivate : public DAXRequestPrivate {
 
 public:
     UntagResourceRequestPrivate(const DAX::Action action,

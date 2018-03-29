@@ -20,7 +20,7 @@
 #ifndef QTAWS_ADDAPPLICATIONINPUTPROCESSINGCONFIGURATIONREQUEST_P_H
 #define QTAWS_ADDAPPLICATIONINPUTPROCESSINGCONFIGURATIONREQUEST_P_H
 
-#include "kinesisanalytics_p.h"
+#include "kinesisanalyticsrequest_p.h"
 #include "addapplicationinputprocessingconfigurationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 
 class AddApplicationInputProcessingConfigurationRequest;
 
-class QTAWS_EXPORT AddApplicationInputProcessingConfigurationRequestPrivate : public KinesisAnalyticsPrivate {
+class QTAWS_EXPORT AddApplicationInputProcessingConfigurationRequestPrivate : public KinesisAnalyticsRequestPrivate {
 
 public:
     AddApplicationInputProcessingConfigurationRequestPrivate(const KinesisAnalytics::Action action,

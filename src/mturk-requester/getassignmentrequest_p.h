@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETASSIGNMENTREQUEST_P_H
 #define QTAWS_GETASSIGNMENTREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "getassignmentrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class GetAssignmentRequest;
 
-class QTAWS_EXPORT GetAssignmentRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT GetAssignmentRequestPrivate : public MTurkRequestPrivate {
 
 public:
     GetAssignmentRequestPrivate(const MTurk::Action action,

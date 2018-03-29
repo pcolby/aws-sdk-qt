@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEENDPOINTCONFIGREQUEST_P_H
 #define QTAWS_CREATEENDPOINTCONFIGREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "createendpointconfigrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreateEndpointConfigRequest;
 
-class QTAWS_EXPORT CreateEndpointConfigRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT CreateEndpointConfigRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     CreateEndpointConfigRequestPrivate(const SageMaker::Action action,

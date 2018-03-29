@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETJOBREQUEST_P_H
 #define QTAWS_GETJOBREQUEST_P_H
 
-#include "devicefarm_p.h"
+#include "devicefarmrequest_p.h"
 #include "getjobrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DeviceFarm {
 
 class GetJobRequest;
 
-class QTAWS_EXPORT GetJobRequestPrivate : public DeviceFarmPrivate {
+class QTAWS_EXPORT GetJobRequestPrivate : public DeviceFarmRequestPrivate {
 
 public:
     GetJobRequestPrivate(const DeviceFarm::Action action,

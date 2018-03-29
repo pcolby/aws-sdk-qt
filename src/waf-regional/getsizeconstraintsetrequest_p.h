@@ -20,7 +20,7 @@
 #ifndef QTAWS_GETSIZECONSTRAINTSETREQUEST_P_H
 #define QTAWS_GETSIZECONSTRAINTSETREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "getsizeconstraintsetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class GetSizeConstraintSetRequest;
 
-class QTAWS_EXPORT GetSizeConstraintSetRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT GetSizeConstraintSetRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     GetSizeConstraintSetRequestPrivate(const WAFRegional::Action action,

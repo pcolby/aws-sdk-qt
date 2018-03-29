@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEVPCPEERINGAUTHORIZATIONREQUEST_P_H
 #define QTAWS_CREATEVPCPEERINGAUTHORIZATIONREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "createvpcpeeringauthorizationrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class CreateVpcPeeringAuthorizationRequest;
 
-class QTAWS_EXPORT CreateVpcPeeringAuthorizationRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT CreateVpcPeeringAuthorizationRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     CreateVpcPeeringAuthorizationRequestPrivate(const GameLift::Action action,

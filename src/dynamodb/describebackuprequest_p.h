@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEBACKUPREQUEST_P_H
 #define QTAWS_DESCRIBEBACKUPREQUEST_P_H
 
-#include "dynamodb_p.h"
+#include "dynamodbrequest_p.h"
 #include "describebackuprequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DynamoDB {
 
 class DescribeBackupRequest;
 
-class QTAWS_EXPORT DescribeBackupRequestPrivate : public DynamoDBPrivate {
+class QTAWS_EXPORT DescribeBackupRequestPrivate : public DynamoDBRequestPrivate {
 
 public:
     DescribeBackupRequestPrivate(const DynamoDB::Action action,

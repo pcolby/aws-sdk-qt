@@ -20,7 +20,7 @@
 #ifndef QTAWS_SETRULEPRIORITIESREQUEST_P_H
 #define QTAWS_SETRULEPRIORITIESREQUEST_P_H
 
-#include "elasticloadbalancingv2_p.h"
+#include "elasticloadbalancingv2request_p.h"
 #include "setruleprioritiesrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 
 class SetRulePrioritiesRequest;
 
-class QTAWS_EXPORT SetRulePrioritiesRequestPrivate : public ElasticLoadBalancingv2Private {
+class QTAWS_EXPORT SetRulePrioritiesRequestPrivate : public ElasticLoadBalancingv2RequestPrivate {
 
 public:
     SetRulePrioritiesRequestPrivate(const ElasticLoadBalancingv2::Action action,

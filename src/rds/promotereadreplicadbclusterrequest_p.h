@@ -20,7 +20,7 @@
 #ifndef QTAWS_PROMOTEREADREPLICADBCLUSTERREQUEST_P_H
 #define QTAWS_PROMOTEREADREPLICADBCLUSTERREQUEST_P_H
 
-#include "rds_p.h"
+#include "rdsrequest_p.h"
 #include "promotereadreplicadbclusterrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace RDS {
 
 class PromoteReadReplicaDBClusterRequest;
 
-class QTAWS_EXPORT PromoteReadReplicaDBClusterRequestPrivate : public RDSPrivate {
+class QTAWS_EXPORT PromoteReadReplicaDBClusterRequestPrivate : public RDSRequestPrivate {
 
 public:
     PromoteReadReplicaDBClusterRequestPrivate(const RDS::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEMAINTENANCEWINDOWTARGETSREQUEST_P_H
 #define QTAWS_DESCRIBEMAINTENANCEWINDOWTARGETSREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "describemaintenancewindowtargetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DescribeMaintenanceWindowTargetsRequest;
 
-class QTAWS_EXPORT DescribeMaintenanceWindowTargetsRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DescribeMaintenanceWindowTargetsRequestPrivate : public SSMRequestPrivate {
 
 public:
     DescribeMaintenanceWindowTargetsRequestPrivate(const SSM::Action action,

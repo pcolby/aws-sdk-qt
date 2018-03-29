@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEDOMAINNAMEREQUEST_P_H
 #define QTAWS_DELETEDOMAINNAMEREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "deletedomainnamerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class DeleteDomainNameRequest;
 
-class QTAWS_EXPORT DeleteDomainNameRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT DeleteDomainNameRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     DeleteDomainNameRequestPrivate(const APIGateway::Action action,

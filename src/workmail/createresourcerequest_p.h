@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATERESOURCEREQUEST_P_H
 #define QTAWS_CREATERESOURCEREQUEST_P_H
 
-#include "workmail_p.h"
+#include "workmailrequest_p.h"
 #include "createresourcerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WorkMail {
 
 class CreateResourceRequest;
 
-class QTAWS_EXPORT CreateResourceRequestPrivate : public WorkMailPrivate {
+class QTAWS_EXPORT CreateResourceRequestPrivate : public WorkMailRequestPrivate {
 
 public:
     CreateResourceRequestPrivate(const WorkMail::Action action,

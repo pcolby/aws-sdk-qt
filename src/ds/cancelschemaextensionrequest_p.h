@@ -20,7 +20,7 @@
 #ifndef QTAWS_CANCELSCHEMAEXTENSIONREQUEST_P_H
 #define QTAWS_CANCELSCHEMAEXTENSIONREQUEST_P_H
 
-#include "directoryservice_p.h"
+#include "directoryservicerequest_p.h"
 #include "cancelschemaextensionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DirectoryService {
 
 class CancelSchemaExtensionRequest;
 
-class QTAWS_EXPORT CancelSchemaExtensionRequestPrivate : public DirectoryServicePrivate {
+class QTAWS_EXPORT CancelSchemaExtensionRequestPrivate : public DirectoryServiceRequestPrivate {
 
 public:
     CancelSchemaExtensionRequestPrivate(const DirectoryService::Action action,

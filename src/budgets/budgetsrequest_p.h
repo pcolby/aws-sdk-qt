@@ -20,7 +20,7 @@
 #ifndef QTAWS_BUDGETSREQUEST_P_H
 #define QTAWS_BUDGETSREQUEST_P_H
 
-#include "budgets_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "budgetsrequest.h"
 
 namespace QtAws {

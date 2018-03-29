@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEWEBACLREQUEST_P_H
 #define QTAWS_CREATEWEBACLREQUEST_P_H
 
-#include "wafregional_p.h"
+#include "wafregionalrequest_p.h"
 #include "createwebaclrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace WAFRegional {
 
 class CreateWebACLRequest;
 
-class QTAWS_EXPORT CreateWebACLRequestPrivate : public WAFRegionalPrivate {
+class QTAWS_EXPORT CreateWebACLRequestPrivate : public WAFRegionalRequestPrivate {
 
 public:
     CreateWebACLRequestPrivate(const WAFRegional::Action action,

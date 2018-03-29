@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEFLEETPORTSETTINGSREQUEST_P_H
 #define QTAWS_DESCRIBEFLEETPORTSETTINGSREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "describefleetportsettingsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribeFleetPortSettingsRequest;
 
-class QTAWS_EXPORT DescribeFleetPortSettingsRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT DescribeFleetPortSettingsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DescribeFleetPortSettingsRequestPrivate(const GameLift::Action action,

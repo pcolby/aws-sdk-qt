@@ -20,7 +20,7 @@
 #ifndef QTAWS_STOPTRIGGERREQUEST_P_H
 #define QTAWS_STOPTRIGGERREQUEST_P_H
 
-#include "glue_p.h"
+#include "gluerequest_p.h"
 #include "stoptriggerrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Glue {
 
 class StopTriggerRequest;
 
-class QTAWS_EXPORT StopTriggerRequestPrivate : public GluePrivate {
+class QTAWS_EXPORT StopTriggerRequestPrivate : public GlueRequestPrivate {
 
 public:
     StopTriggerRequestPrivate(const Glue::Action action,

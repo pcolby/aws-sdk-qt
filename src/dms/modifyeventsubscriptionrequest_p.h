@@ -20,7 +20,7 @@
 #ifndef QTAWS_MODIFYEVENTSUBSCRIPTIONREQUEST_P_H
 #define QTAWS_MODIFYEVENTSUBSCRIPTIONREQUEST_P_H
 
-#include "databasemigrationservice_p.h"
+#include "databasemigrationservicerequest_p.h"
 #include "modifyeventsubscriptionrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 
 class ModifyEventSubscriptionRequest;
 
-class QTAWS_EXPORT ModifyEventSubscriptionRequestPrivate : public DatabaseMigrationServicePrivate {
+class QTAWS_EXPORT ModifyEventSubscriptionRequestPrivate : public DatabaseMigrationServiceRequestPrivate {
 
 public:
     ModifyEventSubscriptionRequestPrivate(const DatabaseMigrationService::Action action,

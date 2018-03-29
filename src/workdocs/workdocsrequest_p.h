@@ -20,7 +20,7 @@
 #ifndef QTAWS_WORKDOCSREQUEST_P_H
 #define QTAWS_WORKDOCSREQUEST_P_H
 
-#include "workdocs_p.h"
+#include "core/awsabstractrequest_p.h"
 #include "workdocsrequest.h"
 
 namespace QtAws {

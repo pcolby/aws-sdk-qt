@@ -20,7 +20,7 @@
 #ifndef QTAWS_TESTINVOKEMETHODREQUEST_P_H
 #define QTAWS_TESTINVOKEMETHODREQUEST_P_H
 
-#include "apigateway_p.h"
+#include "apigatewayrequest_p.h"
 #include "testinvokemethodrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace APIGateway {
 
 class TestInvokeMethodRequest;
 
-class QTAWS_EXPORT TestInvokeMethodRequestPrivate : public APIGatewayPrivate {
+class QTAWS_EXPORT TestInvokeMethodRequestPrivate : public APIGatewayRequestPrivate {
 
 public:
     TestInvokeMethodRequestPrivate(const APIGateway::Action action,

@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETEPATCHBASELINEREQUEST_P_H
 #define QTAWS_DELETEPATCHBASELINEREQUEST_P_H
 
-#include "ssm_p.h"
+#include "ssmrequest_p.h"
 #include "deletepatchbaselinerequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SSM {
 
 class DeletePatchBaselineRequest;
 
-class QTAWS_EXPORT DeletePatchBaselineRequestPrivate : public SSMPrivate {
+class QTAWS_EXPORT DeletePatchBaselineRequestPrivate : public SSMRequestPrivate {
 
 public:
     DeletePatchBaselineRequestPrivate(const SSM::Action action,

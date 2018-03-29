@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEREGIONSREQUEST_P_H
 #define QTAWS_DESCRIBEREGIONSREQUEST_P_H
 
-#include "ec2_p.h"
+#include "ec2request_p.h"
 #include "describeregionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace EC2 {
 
 class DescribeRegionsRequest;
 
-class QTAWS_EXPORT DescribeRegionsRequestPrivate : public EC2Private {
+class QTAWS_EXPORT DescribeRegionsRequestPrivate : public EC2RequestPrivate {
 
 public:
     DescribeRegionsRequestPrivate(const EC2::Action action,

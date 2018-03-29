@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEASSESSMENTTARGETREQUEST_P_H
 #define QTAWS_CREATEASSESSMENTTARGETREQUEST_P_H
 
-#include "inspector_p.h"
+#include "inspectorrequest_p.h"
 #include "createassessmenttargetrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace Inspector {
 
 class CreateAssessmentTargetRequest;
 
-class QTAWS_EXPORT CreateAssessmentTargetRequestPrivate : public InspectorPrivate {
+class QTAWS_EXPORT CreateAssessmentTargetRequestPrivate : public InspectorRequestPrivate {
 
 public:
     CreateAssessmentTargetRequestPrivate(const Inspector::Action action,

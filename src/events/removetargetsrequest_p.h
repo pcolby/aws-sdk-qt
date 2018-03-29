@@ -20,7 +20,7 @@
 #ifndef QTAWS_REMOVETARGETSREQUEST_P_H
 #define QTAWS_REMOVETARGETSREQUEST_P_H
 
-#include "cloudwatchevents_p.h"
+#include "cloudwatcheventsrequest_p.h"
 #include "removetargetsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 
 class RemoveTargetsRequest;
 
-class QTAWS_EXPORT RemoveTargetsRequestPrivate : public CloudWatchEventsPrivate {
+class QTAWS_EXPORT RemoveTargetsRequestPrivate : public CloudWatchEventsRequestPrivate {
 
 public:
     RemoveTargetsRequestPrivate(const CloudWatchEvents::Action action,

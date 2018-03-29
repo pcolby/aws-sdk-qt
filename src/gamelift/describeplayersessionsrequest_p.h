@@ -20,7 +20,7 @@
 #ifndef QTAWS_DESCRIBEPLAYERSESSIONSREQUEST_P_H
 #define QTAWS_DESCRIBEPLAYERSESSIONSREQUEST_P_H
 
-#include "gamelift_p.h"
+#include "gameliftrequest_p.h"
 #include "describeplayersessionsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace GameLift {
 
 class DescribePlayerSessionsRequest;
 
-class QTAWS_EXPORT DescribePlayerSessionsRequestPrivate : public GameLiftPrivate {
+class QTAWS_EXPORT DescribePlayerSessionsRequestPrivate : public GameLiftRequestPrivate {
 
 public:
     DescribePlayerSessionsRequestPrivate(const GameLift::Action action,

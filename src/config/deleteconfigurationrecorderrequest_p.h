@@ -20,7 +20,7 @@
 #ifndef QTAWS_DELETECONFIGURATIONRECORDERREQUEST_P_H
 #define QTAWS_DELETECONFIGURATIONRECORDERREQUEST_P_H
 
-#include "configservice_p.h"
+#include "configservicerequest_p.h"
 #include "deleteconfigurationrecorderrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace ConfigService {
 
 class DeleteConfigurationRecorderRequest;
 
-class QTAWS_EXPORT DeleteConfigurationRecorderRequestPrivate : public ConfigServicePrivate {
+class QTAWS_EXPORT DeleteConfigurationRecorderRequestPrivate : public ConfigServiceRequestPrivate {
 
 public:
     DeleteConfigurationRecorderRequestPrivate(const ConfigService::Action action,

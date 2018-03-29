@@ -20,7 +20,7 @@
 #ifndef QTAWS_CREATEMODELREQUEST_P_H
 #define QTAWS_CREATEMODELREQUEST_P_H
 
-#include "sagemaker_p.h"
+#include "sagemakerrequest_p.h"
 #include "createmodelrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace SageMaker {
 
 class CreateModelRequest;
 
-class QTAWS_EXPORT CreateModelRequestPrivate : public SageMakerPrivate {
+class QTAWS_EXPORT CreateModelRequestPrivate : public SageMakerRequestPrivate {
 
 public:
     CreateModelRequestPrivate(const SageMaker::Action action,

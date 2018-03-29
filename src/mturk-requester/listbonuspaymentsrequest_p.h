@@ -20,7 +20,7 @@
 #ifndef QTAWS_LISTBONUSPAYMENTSREQUEST_P_H
 #define QTAWS_LISTBONUSPAYMENTSREQUEST_P_H
 
-#include "mturk_p.h"
+#include "mturkrequest_p.h"
 #include "listbonuspaymentsrequest.h"
 
 namespace QtAws {
@@ -28,7 +28,7 @@ namespace MTurk {
 
 class ListBonusPaymentsRequest;
 
-class QTAWS_EXPORT ListBonusPaymentsRequestPrivate : public MTurkPrivate {
+class QTAWS_EXPORT ListBonusPaymentsRequestPrivate : public MTurkRequestPrivate {
 
 public:
     ListBonusPaymentsRequestPrivate(const MTurk::Action action,
