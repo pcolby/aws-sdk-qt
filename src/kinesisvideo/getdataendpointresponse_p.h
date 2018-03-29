@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDATAENDPOINTRESPONSE_P_H
 #define QTAWS_GETDATAENDPOINTRESPONSE_P_H
 
-#include "kinesisvideoresponse.h"
-#include "getdataendpointrequest.h"
+#include "kinesisvideoresponse_p.h"
 
 namespace QtAws {
 namespace KinesisVideo {

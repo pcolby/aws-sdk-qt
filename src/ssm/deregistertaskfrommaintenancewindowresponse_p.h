@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEREGISTERTASKFROMMAINTENANCEWINDOWRESPONSE_P_H
 #define QTAWS_DEREGISTERTASKFROMMAINTENANCEWINDOWRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "deregistertaskfrommaintenancewindowrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

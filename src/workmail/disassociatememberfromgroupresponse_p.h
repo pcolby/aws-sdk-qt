@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEMEMBERFROMGROUPRESPONSE_P_H
 #define QTAWS_DISASSOCIATEMEMBERFROMGROUPRESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "disassociatememberfromgrouprequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

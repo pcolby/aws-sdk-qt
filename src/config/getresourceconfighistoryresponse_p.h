@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETRESOURCECONFIGHISTORYRESPONSE_P_H
 #define QTAWS_GETRESOURCECONFIGHISTORYRESPONSE_P_H
 
-#include "configserviceresponse.h"
-#include "getresourceconfighistoryrequest.h"
+#include "configserviceresponse_p.h"
 
 namespace QtAws {
 namespace ConfigService {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEHAPGRESPONSE_P_H
 #define QTAWS_DELETEHAPGRESPONSE_P_H
 
-#include "cloudhsmresponse.h"
-#include "deletehapgrequest.h"
+#include "cloudhsmresponse_p.h"
 
 namespace QtAws {
 namespace CloudHSM {

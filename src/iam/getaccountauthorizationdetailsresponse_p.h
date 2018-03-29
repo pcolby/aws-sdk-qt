@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETACCOUNTAUTHORIZATIONDETAILSRESPONSE_P_H
 #define QTAWS_GETACCOUNTAUTHORIZATIONDETAILSRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "getaccountauthorizationdetailsrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

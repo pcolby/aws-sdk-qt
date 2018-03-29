@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTGRAPHQLAPISRESPONSE_P_H
 #define QTAWS_LISTGRAPHQLAPISRESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "listgraphqlapisrequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

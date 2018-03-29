@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEDBCLUSTERPARAMETERSRESPONSE_P_H
 #define QTAWS_DESCRIBEDBCLUSTERPARAMETERSRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describedbclusterparametersrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

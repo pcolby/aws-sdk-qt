@@ -20,8 +20,7 @@
 #ifndef QTAWS_CANCELJOBRESPONSE_P_H
 #define QTAWS_CANCELJOBRESPONSE_P_H
 
-#include "elastictranscoderresponse.h"
-#include "canceljobrequest.h"
+#include "elastictranscoderresponse_p.h"
 
 namespace QtAws {
 namespace ElasticTranscoder {

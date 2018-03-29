@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHCHECKLAYERAVAILABILITYRESPONSE_P_H
 #define QTAWS_BATCHCHECKLAYERAVAILABILITYRESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "batchchecklayeravailabilityrequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

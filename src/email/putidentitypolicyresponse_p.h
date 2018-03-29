@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTIDENTITYPOLICYRESPONSE_P_H
 #define QTAWS_PUTIDENTITYPOLICYRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "putidentitypolicyrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

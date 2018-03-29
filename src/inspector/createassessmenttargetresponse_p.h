@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEASSESSMENTTARGETRESPONSE_P_H
 #define QTAWS_CREATEASSESSMENTTARGETRESPONSE_P_H
 
-#include "inspectorresponse.h"
-#include "createassessmenttargetrequest.h"
+#include "inspectorresponse_p.h"
 
 namespace QtAws {
 namespace Inspector {

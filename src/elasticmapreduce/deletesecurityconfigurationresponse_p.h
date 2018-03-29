@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESECURITYCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DELETESECURITYCONFIGURATIONRESPONSE_P_H
 
-#include "emrresponse.h"
-#include "deletesecurityconfigurationrequest.h"
+#include "emrresponse_p.h"
 
 namespace QtAws {
 namespace EMR {

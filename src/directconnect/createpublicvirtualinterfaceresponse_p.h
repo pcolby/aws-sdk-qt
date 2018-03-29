@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEPUBLICVIRTUALINTERFACERESPONSE_P_H
 #define QTAWS_CREATEPUBLICVIRTUALINTERFACERESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "createpublicvirtualinterfacerequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

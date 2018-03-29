@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTSAMLPROVIDERSRESPONSE_P_H
 #define QTAWS_LISTSAMLPROVIDERSRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "listsamlprovidersrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

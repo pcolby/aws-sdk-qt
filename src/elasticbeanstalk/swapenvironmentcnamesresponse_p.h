@@ -20,8 +20,7 @@
 #ifndef QTAWS_SWAPENVIRONMENTCNAMESRESPONSE_P_H
 #define QTAWS_SWAPENVIRONMENTCNAMESRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "swapenvironmentcnamesrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

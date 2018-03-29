@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETPLATFORMAPPLICATIONATTRIBUTESRESPONSE_P_H
 #define QTAWS_GETPLATFORMAPPLICATIONATTRIBUTESRESPONSE_P_H
 
-#include "snsresponse.h"
-#include "getplatformapplicationattributesrequest.h"
+#include "snsresponse_p.h"
 
 namespace QtAws {
 namespace SNS {

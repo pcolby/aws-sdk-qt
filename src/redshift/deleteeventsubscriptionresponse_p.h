@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEEVENTSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_DELETEEVENTSUBSCRIPTIONRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "deleteeventsubscriptionrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

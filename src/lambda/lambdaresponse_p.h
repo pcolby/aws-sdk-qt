@@ -20,8 +20,7 @@
 #ifndef QTAWS_LAMBDARESPONSE_P_H
 #define QTAWS_LAMBDARESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "lambdarequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

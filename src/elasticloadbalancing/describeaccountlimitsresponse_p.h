@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEACCOUNTLIMITSRESPONSE_P_H
 #define QTAWS_DESCRIBEACCOUNTLIMITSRESPONSE_P_H
 
-#include "elasticloadbalancingresponse.h"
-#include "describeaccountlimitsrequest.h"
+#include "elasticloadbalancingresponse_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancing {

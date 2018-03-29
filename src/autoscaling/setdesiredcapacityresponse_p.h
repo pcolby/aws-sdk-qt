@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETDESIREDCAPACITYRESPONSE_P_H
 #define QTAWS_SETDESIREDCAPACITYRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "setdesiredcapacityrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

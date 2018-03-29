@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPROTECTIONRESPONSE_P_H
 #define QTAWS_DELETEPROTECTIONRESPONSE_P_H
 
-#include "shieldresponse.h"
-#include "deleteprotectionrequest.h"
+#include "shieldresponse_p.h"
 
 namespace QtAws {
 namespace Shield {

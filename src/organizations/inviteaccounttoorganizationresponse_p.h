@@ -20,8 +20,7 @@
 #ifndef QTAWS_INVITEACCOUNTTOORGANIZATIONRESPONSE_P_H
 #define QTAWS_INVITEACCOUNTTOORGANIZATIONRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "inviteaccounttoorganizationrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

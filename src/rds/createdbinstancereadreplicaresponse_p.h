@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDBINSTANCEREADREPLICARESPONSE_P_H
 #define QTAWS_CREATEDBINSTANCEREADREPLICARESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "createdbinstancereadreplicarequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

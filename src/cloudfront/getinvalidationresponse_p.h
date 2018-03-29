@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETINVALIDATIONRESPONSE_P_H
 #define QTAWS_GETINVALIDATIONRESPONSE_P_H
 
-#include "cloudfrontresponse.h"
-#include "getinvalidationrequest.h"
+#include "cloudfrontresponse_p.h"
 
 namespace QtAws {
 namespace CloudFront {

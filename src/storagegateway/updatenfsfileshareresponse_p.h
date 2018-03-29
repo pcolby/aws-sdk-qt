@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATENFSFILESHARERESPONSE_P_H
 #define QTAWS_UPDATENFSFILESHARERESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "updatenfsfilesharerequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

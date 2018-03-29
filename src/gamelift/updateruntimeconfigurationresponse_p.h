@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATERUNTIMECONFIGURATIONRESPONSE_P_H
 #define QTAWS_UPDATERUNTIMECONFIGURATIONRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "updateruntimeconfigurationrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

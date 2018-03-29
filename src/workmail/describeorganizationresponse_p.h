@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEORGANIZATIONRESPONSE_P_H
 #define QTAWS_DESCRIBEORGANIZATIONRESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "describeorganizationrequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTDEADLETTERSOURCEQUEUESRESPONSE_P_H
 #define QTAWS_LISTDEADLETTERSOURCEQUEUESRESPONSE_P_H
 
-#include "sqsresponse.h"
-#include "listdeadlettersourcequeuesrequest.h"
+#include "sqsresponse_p.h"
 
 namespace QtAws {
 namespace SQS {

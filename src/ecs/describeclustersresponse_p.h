@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECLUSTERSRESPONSE_P_H
 #define QTAWS_DESCRIBECLUSTERSRESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "describeclustersrequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

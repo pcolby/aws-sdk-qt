@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATESIGNINGCERTIFICATERESPONSE_P_H
 #define QTAWS_UPDATESIGNINGCERTIFICATERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "updatesigningcertificaterequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

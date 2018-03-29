@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISCOVERPOLLENDPOINTRESPONSE_P_H
 #define QTAWS_DISCOVERPOLLENDPOINTRESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "discoverpollendpointrequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETREUSABLEDELEGATIONSETLIMITRESPONSE_P_H
 #define QTAWS_GETREUSABLEDELEGATIONSETLIMITRESPONSE_P_H
 
-#include "route53response.h"
-#include "getreusabledelegationsetlimitrequest.h"
+#include "route53response_p.h"
 
 namespace QtAws {
 namespace Route53 {

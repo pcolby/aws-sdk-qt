@@ -20,8 +20,7 @@
 #ifndef QTAWS_VERIFYSOFTWARETOKENRESPONSE_P_H
 #define QTAWS_VERIFYSOFTWARETOKENRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "verifysoftwaretokenrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

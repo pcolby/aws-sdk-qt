@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECACHEENGINEVERSIONSRESPONSE_P_H
 #define QTAWS_DESCRIBECACHEENGINEVERSIONSRESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "describecacheengineversionsrequest.h"
+#include "elasticacheresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

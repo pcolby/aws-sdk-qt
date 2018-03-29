@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDTAGSTORESOURCERESPONSE_P_H
 #define QTAWS_ADDTAGSTORESOURCERESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "addtagstoresourcerequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

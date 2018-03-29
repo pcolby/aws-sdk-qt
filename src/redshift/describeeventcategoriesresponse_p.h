@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTCATEGORIESRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTCATEGORIESRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "describeeventcategoriesrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

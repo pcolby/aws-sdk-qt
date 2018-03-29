@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSOCIATETAGOPTIONWITHRESOURCERESPONSE_P_H
 #define QTAWS_ASSOCIATETAGOPTIONWITHRESOURCERESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "associatetagoptionwithresourcerequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

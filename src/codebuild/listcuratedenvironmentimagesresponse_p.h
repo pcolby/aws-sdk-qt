@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTCURATEDENVIRONMENTIMAGESRESPONSE_P_H
 #define QTAWS_LISTCURATEDENVIRONMENTIMAGESRESPONSE_P_H
 
-#include "codebuildresponse.h"
-#include "listcuratedenvironmentimagesrequest.h"
+#include "codebuildresponse_p.h"
 
 namespace QtAws {
 namespace CodeBuild {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_ATTACHVOLUMERESPONSE_P_H
 #define QTAWS_ATTACHVOLUMERESPONSE_P_H
 
-#include "ec2response.h"
-#include "attachvolumerequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

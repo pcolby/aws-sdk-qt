@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNTAGSTREAMRESPONSE_P_H
 #define QTAWS_UNTAGSTREAMRESPONSE_P_H
 
-#include "kinesisvideoresponse.h"
-#include "untagstreamrequest.h"
+#include "kinesisvideoresponse_p.h"
 
 namespace QtAws {
 namespace KinesisVideo {

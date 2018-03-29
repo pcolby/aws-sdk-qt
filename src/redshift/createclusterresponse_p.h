@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECLUSTERRESPONSE_P_H
 #define QTAWS_CREATECLUSTERRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "createclusterrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

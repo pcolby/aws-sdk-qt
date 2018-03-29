@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEINSTANCEATTRIBUTERESPONSE_P_H
 #define QTAWS_DESCRIBEINSTANCEATTRIBUTERESPONSE_P_H
 
-#include "ec2response.h"
-#include "describeinstanceattributerequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_TAGRESOURCERESPONSE_P_H
 #define QTAWS_TAGRESOURCERESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "tagresourcerequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

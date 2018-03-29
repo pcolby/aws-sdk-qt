@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTCONSTRAINTSFORPORTFOLIORESPONSE_P_H
 #define QTAWS_LISTCONSTRAINTSFORPORTFOLIORESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "listconstraintsforportfoliorequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

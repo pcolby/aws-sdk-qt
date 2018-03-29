@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEJOBRESPONSE_P_H
 #define QTAWS_DELETEJOBRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "deletejobrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

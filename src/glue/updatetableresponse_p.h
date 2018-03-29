@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATETABLERESPONSE_P_H
 #define QTAWS_UPDATETABLERESPONSE_P_H
 
-#include "glueresponse.h"
-#include "updatetablerequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

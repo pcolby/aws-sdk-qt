@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEACTIVITYTYPERESPONSE_P_H
 #define QTAWS_DESCRIBEACTIVITYTYPERESPONSE_P_H
 
-#include "swfresponse.h"
-#include "describeactivitytyperequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

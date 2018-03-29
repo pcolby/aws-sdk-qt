@@ -20,8 +20,7 @@
 #ifndef QTAWS_TAGRESOURCERESPONSE_P_H
 #define QTAWS_TAGRESOURCERESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "tagresourcerequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

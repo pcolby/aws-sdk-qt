@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEPIPELINESRESPONSE_P_H
 #define QTAWS_DESCRIBEPIPELINESRESPONSE_P_H
 
-#include "datapipelineresponse.h"
-#include "describepipelinesrequest.h"
+#include "datapipelineresponse_p.h"
 
 namespace QtAws {
 namespace DataPipeline {

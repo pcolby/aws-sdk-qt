@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESUGGESTERRESPONSE_P_H
 #define QTAWS_DELETESUGGESTERRESPONSE_P_H
 
-#include "cloudsearchresponse.h"
-#include "deletesuggesterrequest.h"
+#include "cloudsearchresponse_p.h"
 
 namespace QtAws {
 namespace CloudSearch {

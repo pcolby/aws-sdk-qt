@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEJOBQUEUERESPONSE_P_H
 #define QTAWS_CREATEJOBQUEUERESPONSE_P_H
 
-#include "batchresponse.h"
-#include "createjobqueuerequest.h"
+#include "batchresponse_p.h"
 
 namespace QtAws {
 namespace Batch {

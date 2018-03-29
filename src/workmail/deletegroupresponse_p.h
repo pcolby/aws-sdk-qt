@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEGROUPRESPONSE_P_H
 #define QTAWS_DELETEGROUPRESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "deletegrouprequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

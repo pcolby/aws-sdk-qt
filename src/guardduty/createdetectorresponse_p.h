@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDETECTORRESPONSE_P_H
 #define QTAWS_CREATEDETECTORRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "createdetectorrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

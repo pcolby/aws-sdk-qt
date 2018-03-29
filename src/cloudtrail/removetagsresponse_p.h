@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVETAGSRESPONSE_P_H
 #define QTAWS_REMOVETAGSRESPONSE_P_H
 
-#include "cloudtrailresponse.h"
-#include "removetagsrequest.h"
+#include "cloudtrailresponse_p.h"
 
 namespace QtAws {
 namespace CloudTrail {

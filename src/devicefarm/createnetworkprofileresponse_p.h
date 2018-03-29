@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATENETWORKPROFILERESPONSE_P_H
 #define QTAWS_CREATENETWORKPROFILERESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "createnetworkprofilerequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

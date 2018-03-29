@@ -20,8 +20,7 @@
 #ifndef QTAWS_LOOKUPDEVELOPERIDENTITYRESPONSE_P_H
 #define QTAWS_LOOKUPDEVELOPERIDENTITYRESPONSE_P_H
 
-#include "cognitoidentityresponse.h"
-#include "lookupdeveloperidentityrequest.h"
+#include "cognitoidentityresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentity {

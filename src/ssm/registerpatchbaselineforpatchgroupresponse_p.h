@@ -20,8 +20,7 @@
 #ifndef QTAWS_REGISTERPATCHBASELINEFORPATCHGROUPRESPONSE_P_H
 #define QTAWS_REGISTERPATCHBASELINEFORPATCHGROUPRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "registerpatchbaselineforpatchgrouprequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

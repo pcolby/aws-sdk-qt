@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEBACKUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEBACKUPSRESPONSE_P_H
 
-#include "opsworkscmresponse.h"
-#include "describebackupsrequest.h"
+#include "opsworkscmresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorksCM {

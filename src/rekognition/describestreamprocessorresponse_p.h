@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESTREAMPROCESSORRESPONSE_P_H
 #define QTAWS_DESCRIBESTREAMPROCESSORRESPONSE_P_H
 
-#include "rekognitionresponse.h"
-#include "describestreamprocessorrequest.h"
+#include "rekognitionresponse_p.h"
 
 namespace QtAws {
 namespace Rekognition {

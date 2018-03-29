@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEUSERDEFINEDFUNCTIONRESPONSE_P_H
 #define QTAWS_UPDATEUSERDEFINEDFUNCTIONRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "updateuserdefinedfunctionrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

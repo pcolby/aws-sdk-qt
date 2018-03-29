@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTSRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTSRESPONSE_P_H
 
-#include "daxresponse.h"
-#include "describeeventsrequest.h"
+#include "daxresponse_p.h"
 
 namespace QtAws {
 namespace DAX {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDTAGSTOVAULTRESPONSE_P_H
 #define QTAWS_ADDTAGSTOVAULTRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "addtagstovaultrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

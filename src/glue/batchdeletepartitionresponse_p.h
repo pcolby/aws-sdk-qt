@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHDELETEPARTITIONRESPONSE_P_H
 #define QTAWS_BATCHDELETEPARTITIONRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "batchdeletepartitionrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

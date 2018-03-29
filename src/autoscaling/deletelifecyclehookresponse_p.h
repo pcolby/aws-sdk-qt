@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETELIFECYCLEHOOKRESPONSE_P_H
 #define QTAWS_DELETELIFECYCLEHOOKRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "deletelifecyclehookrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

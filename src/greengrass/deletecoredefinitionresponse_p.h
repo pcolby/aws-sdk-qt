@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECOREDEFINITIONRESPONSE_P_H
 #define QTAWS_DELETECOREDEFINITIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "deletecoredefinitionrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

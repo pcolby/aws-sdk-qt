@@ -20,8 +20,7 @@
 #ifndef QTAWS_INVOKERESPONSE_P_H
 #define QTAWS_INVOKERESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "invokerequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

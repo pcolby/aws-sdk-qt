@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEVOICESRESPONSE_P_H
 #define QTAWS_DESCRIBEVOICESRESPONSE_P_H
 
-#include "pollyresponse.h"
-#include "describevoicesrequest.h"
+#include "pollyresponse_p.h"
 
 namespace QtAws {
 namespace Polly {

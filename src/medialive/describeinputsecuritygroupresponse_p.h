@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEINPUTSECURITYGROUPRESPONSE_P_H
 #define QTAWS_DESCRIBEINPUTSECURITYGROUPRESPONSE_P_H
 
-#include "medialiveresponse.h"
-#include "describeinputsecuritygrouprequest.h"
+#include "medialiveresponse_p.h"
 
 namespace QtAws {
 namespace MediaLive {

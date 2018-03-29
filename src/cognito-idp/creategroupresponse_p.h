@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEGROUPRESPONSE_P_H
 #define QTAWS_CREATEGROUPRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "creategrouprequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

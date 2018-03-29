@@ -20,8 +20,7 @@
 #ifndef QTAWS_REBOOTINSTANCERESPONSE_P_H
 #define QTAWS_REBOOTINSTANCERESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "rebootinstancerequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

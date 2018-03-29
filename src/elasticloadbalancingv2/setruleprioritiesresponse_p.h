@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETRULEPRIORITIESRESPONSE_P_H
 #define QTAWS_SETRULEPRIORITIESRESPONSE_P_H
 
-#include "elasticloadbalancingv2response.h"
-#include "setruleprioritiesrequest.h"
+#include "elasticloadbalancingv2response_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancingv2 {

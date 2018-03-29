@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORPROJECTRESPONSE_P_H
 #define QTAWS_LISTTAGSFORPROJECTRESPONSE_P_H
 
-#include "codestarresponse.h"
-#include "listtagsforprojectrequest.h"
+#include "codestarresponse_p.h"
 
 namespace QtAws {
 namespace CodeStar {

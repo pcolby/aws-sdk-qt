@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETLOADBALANCERPOLICIESOFLISTENERRESPONSE_P_H
 #define QTAWS_SETLOADBALANCERPOLICIESOFLISTENERRESPONSE_P_H
 
-#include "elasticloadbalancingresponse.h"
-#include "setloadbalancerpoliciesoflistenerrequest.h"
+#include "elasticloadbalancingresponse_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancing {

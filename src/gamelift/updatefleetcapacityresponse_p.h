@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEFLEETCAPACITYRESPONSE_P_H
 #define QTAWS_UPDATEFLEETCAPACITYRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "updatefleetcapacityrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

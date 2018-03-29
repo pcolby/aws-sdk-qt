@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVEUSERFROMGROUPRESPONSE_P_H
 #define QTAWS_REMOVEUSERFROMGROUPRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "removeuserfromgrouprequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

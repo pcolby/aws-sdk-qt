@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTGLOBALTABLESRESPONSE_P_H
 #define QTAWS_LISTGLOBALTABLESRESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "listglobaltablesrequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEENVIRONMENTRESPONSE_P_H
 #define QTAWS_CREATEENVIRONMENTRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "createenvironmentrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

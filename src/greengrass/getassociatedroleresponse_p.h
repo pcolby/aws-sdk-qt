@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETASSOCIATEDROLERESPONSE_P_H
 #define QTAWS_GETASSOCIATEDROLERESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "getassociatedrolerequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

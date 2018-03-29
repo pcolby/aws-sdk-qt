@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETLIFECYCLEPOLICYRESPONSE_P_H
 #define QTAWS_GETLIFECYCLEPOLICYRESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "getlifecyclepolicyrequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

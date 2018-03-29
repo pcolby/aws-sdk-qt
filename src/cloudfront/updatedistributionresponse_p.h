@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEDISTRIBUTIONRESPONSE_P_H
 #define QTAWS_UPDATEDISTRIBUTIONRESPONSE_P_H
 
-#include "cloudfrontresponse.h"
-#include "updatedistributionrequest.h"
+#include "cloudfrontresponse_p.h"
 
 namespace QtAws {
 namespace CloudFront {

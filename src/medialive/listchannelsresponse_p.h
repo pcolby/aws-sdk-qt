@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTCHANNELSRESPONSE_P_H
 #define QTAWS_LISTCHANNELSRESPONSE_P_H
 
-#include "medialiveresponse.h"
-#include "listchannelsrequest.h"
+#include "medialiveresponse_p.h"
 
 namespace QtAws {
 namespace MediaLive {

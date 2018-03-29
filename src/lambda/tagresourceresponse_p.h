@@ -20,8 +20,7 @@
 #ifndef QTAWS_TAGRESOURCERESPONSE_P_H
 #define QTAWS_TAGRESOURCERESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "tagresourcerequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

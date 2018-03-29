@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETTRAILSTATUSRESPONSE_P_H
 #define QTAWS_GETTRAILSTATUSRESPONSE_P_H
 
-#include "cloudtrailresponse.h"
-#include "gettrailstatusrequest.h"
+#include "cloudtrailresponse_p.h"
 
 namespace QtAws {
 namespace CloudTrail {

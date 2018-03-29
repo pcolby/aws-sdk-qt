@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATENOTIFICATIONSETTINGSRESPONSE_P_H
 #define QTAWS_UPDATENOTIFICATIONSETTINGSRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "updatenotificationsettingsrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

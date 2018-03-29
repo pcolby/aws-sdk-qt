@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECONDITIONALFORWARDERSRESPONSE_P_H
 #define QTAWS_DESCRIBECONDITIONALFORWARDERSRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "describeconditionalforwardersrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

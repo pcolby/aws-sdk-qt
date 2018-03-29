@@ -20,8 +20,7 @@
 #ifndef QTAWS_SIMPLEDBRESPONSE_P_H
 #define QTAWS_SIMPLEDBRESPONSE_P_H
 
-#include "simpledbresponse.h"
-#include "simpledbrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace SimpleDB {

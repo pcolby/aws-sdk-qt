@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTSERVERCERTIFICATESRESPONSE_P_H
 #define QTAWS_LISTSERVERCERTIFICATESRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "listservercertificatesrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

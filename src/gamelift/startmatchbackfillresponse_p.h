@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTMATCHBACKFILLRESPONSE_P_H
 #define QTAWS_STARTMATCHBACKFILLRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "startmatchbackfillrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

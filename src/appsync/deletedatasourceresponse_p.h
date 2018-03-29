@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDATASOURCERESPONSE_P_H
 #define QTAWS_DELETEDATASOURCERESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "deletedatasourcerequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

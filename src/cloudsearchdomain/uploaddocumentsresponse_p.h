@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPLOADDOCUMENTSRESPONSE_P_H
 #define QTAWS_UPLOADDOCUMENTSRESPONSE_P_H
 
-#include "cloudsearchdomainresponse.h"
-#include "uploaddocumentsrequest.h"
+#include "cloudsearchdomainresponse_p.h"
 
 namespace QtAws {
 namespace CloudSearchDomain {

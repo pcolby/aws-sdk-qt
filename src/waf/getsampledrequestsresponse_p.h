@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSAMPLEDREQUESTSRESPONSE_P_H
 #define QTAWS_GETSAMPLEDREQUESTSRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "getsampledrequestsrequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

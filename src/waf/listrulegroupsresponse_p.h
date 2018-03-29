@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTRULEGROUPSRESPONSE_P_H
 #define QTAWS_LISTRULEGROUPSRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "listrulegroupsrequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_AUTHORIZECACHESECURITYGROUPINGRESSRESPONSE_P_H
 #define QTAWS_AUTHORIZECACHESECURITYGROUPINGRESSRESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "authorizecachesecuritygroupingressrequest.h"
+#include "elasticacheresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEMETRICCOLLECTIONTYPESRESPONSE_P_H
 #define QTAWS_DESCRIBEMETRICCOLLECTIONTYPESRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "describemetriccollectiontypesrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

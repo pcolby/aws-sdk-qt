@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEBACKUPRESPONSE_P_H
 #define QTAWS_DESCRIBEBACKUPRESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "describebackuprequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

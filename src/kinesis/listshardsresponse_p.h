@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTSHARDSRESPONSE_P_H
 #define QTAWS_LISTSHARDSRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "listshardsrequest.h"
+#include "kinesisresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

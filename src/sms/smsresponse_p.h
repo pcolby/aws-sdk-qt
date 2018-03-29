@@ -20,8 +20,7 @@
 #ifndef QTAWS_SMSRESPONSE_P_H
 #define QTAWS_SMSRESPONSE_P_H
 
-#include "smsresponse.h"
-#include "smsrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace SMS {

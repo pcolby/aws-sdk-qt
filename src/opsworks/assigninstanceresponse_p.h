@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSIGNINSTANCERESPONSE_P_H
 #define QTAWS_ASSIGNINSTANCERESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "assigninstancerequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

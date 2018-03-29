@@ -20,8 +20,7 @@
 #ifndef QTAWS_DECODEAUTHORIZATIONMESSAGERESPONSE_P_H
 #define QTAWS_DECODEAUTHORIZATIONMESSAGERESPONSE_P_H
 
-#include "stsresponse.h"
-#include "decodeauthorizationmessagerequest.h"
+#include "stsresponse_p.h"
 
 namespace QtAws {
 namespace STS {

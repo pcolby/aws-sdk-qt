@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHGETIMAGERESPONSE_P_H
 #define QTAWS_BATCHGETIMAGERESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "batchgetimagerequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

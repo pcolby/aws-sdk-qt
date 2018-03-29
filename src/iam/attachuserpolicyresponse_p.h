@@ -20,8 +20,7 @@
 #ifndef QTAWS_ATTACHUSERPOLICYRESPONSE_P_H
 #define QTAWS_ATTACHUSERPOLICYRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "attachuserpolicyrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDLISTENERCERTIFICATESRESPONSE_P_H
 #define QTAWS_ADDLISTENERCERTIFICATESRESPONSE_P_H
 
-#include "elasticloadbalancingv2response.h"
-#include "addlistenercertificatesrequest.h"
+#include "elasticloadbalancingv2response_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancingv2 {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETVAULTACCESSPOLICYRESPONSE_P_H
 #define QTAWS_GETVAULTACCESSPOLICYRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "getvaultaccesspolicyrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

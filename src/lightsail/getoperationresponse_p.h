@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETOPERATIONRESPONSE_P_H
 #define QTAWS_GETOPERATIONRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "getoperationrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

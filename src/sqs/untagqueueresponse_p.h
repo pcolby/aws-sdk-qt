@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNTAGQUEUERESPONSE_P_H
 #define QTAWS_UNTAGQUEUERESPONSE_P_H
 
-#include "sqsresponse.h"
-#include "untagqueuerequest.h"
+#include "sqsresponse_p.h"
 
 namespace QtAws {
 namespace SQS {

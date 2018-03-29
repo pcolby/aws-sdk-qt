@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPDBINSTANCERESPONSE_P_H
 #define QTAWS_STOPDBINSTANCERESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "stopdbinstancerequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

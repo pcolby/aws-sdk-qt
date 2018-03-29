@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADMINUSERGLOBALSIGNOUTRESPONSE_P_H
 #define QTAWS_ADMINUSERGLOBALSIGNOUTRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "adminuserglobalsignoutrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

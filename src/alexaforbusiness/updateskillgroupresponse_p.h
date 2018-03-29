@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATESKILLGROUPRESPONSE_P_H
 #define QTAWS_UPDATESKILLGROUPRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "updateskillgrouprequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

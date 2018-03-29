@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEMLMODELRESPONSE_P_H
 #define QTAWS_CREATEMLMODELRESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "createmlmodelrequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATETIMETOLIVERESPONSE_P_H
 #define QTAWS_UPDATETIMETOLIVERESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "updatetimetoliverequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

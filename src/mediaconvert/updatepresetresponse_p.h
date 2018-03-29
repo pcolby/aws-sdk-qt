@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEPRESETRESPONSE_P_H
 #define QTAWS_UPDATEPRESETRESPONSE_P_H
 
-#include "mediaconvertresponse.h"
-#include "updatepresetrequest.h"
+#include "mediaconvertresponse_p.h"
 
 namespace QtAws {
 namespace MediaConvert {

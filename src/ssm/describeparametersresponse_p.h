@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEPARAMETERSRESPONSE_P_H
 #define QTAWS_DESCRIBEPARAMETERSRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "describeparametersrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

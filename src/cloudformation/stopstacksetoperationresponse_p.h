@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPSTACKSETOPERATIONRESPONSE_P_H
 #define QTAWS_STOPSTACKSETOPERATIONRESPONSE_P_H
 
-#include "cloudformationresponse.h"
-#include "stopstacksetoperationrequest.h"
+#include "cloudformationresponse_p.h"
 
 namespace QtAws {
 namespace CloudFormation {

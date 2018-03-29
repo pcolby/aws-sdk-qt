@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETJOBRUNSRESPONSE_P_H
 #define QTAWS_GETJOBRUNSRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "getjobrunsrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

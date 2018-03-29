@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEAPPLICATIONRESPONSE_P_H
 #define QTAWS_UPDATEAPPLICATIONRESPONSE_P_H
 
-#include "codedeployresponse.h"
-#include "updateapplicationrequest.h"
+#include "codedeployresponse_p.h"
 
 namespace QtAws {
 namespace CodeDeploy {

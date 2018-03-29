@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBERESOURCEPOLICIESRESPONSE_P_H
 #define QTAWS_DESCRIBERESOURCEPOLICIESRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "describeresourcepoliciesrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

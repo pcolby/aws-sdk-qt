@@ -20,8 +20,7 @@
 #ifndef QTAWS_SCHEDULEKEYDELETIONRESPONSE_P_H
 #define QTAWS_SCHEDULEKEYDELETIONRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "schedulekeydeletionrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

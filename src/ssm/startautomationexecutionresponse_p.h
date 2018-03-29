@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTAUTOMATIONEXECUTIONRESPONSE_P_H
 #define QTAWS_STARTAUTOMATIONEXECUTIONRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "startautomationexecutionrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

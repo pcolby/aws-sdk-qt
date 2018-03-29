@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTAVAILABLEZONESRESPONSE_P_H
 #define QTAWS_LISTAVAILABLEZONESRESPONSE_P_H
 
-#include "cloudhsmresponse.h"
-#include "listavailablezonesrequest.h"
+#include "cloudhsmresponse_p.h"
 
 namespace QtAws {
 namespace CloudHSM {

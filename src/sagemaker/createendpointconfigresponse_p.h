@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEENDPOINTCONFIGRESPONSE_P_H
 #define QTAWS_CREATEENDPOINTCONFIGRESPONSE_P_H
 
-#include "sagemakerresponse.h"
-#include "createendpointconfigrequest.h"
+#include "sagemakerresponse_p.h"
 
 namespace QtAws {
 namespace SageMaker {

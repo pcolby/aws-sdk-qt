@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYDBSNAPSHOTATTRIBUTERESPONSE_P_H
 #define QTAWS_MODIFYDBSNAPSHOTATTRIBUTERESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "modifydbsnapshotattributerequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

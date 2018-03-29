@@ -20,8 +20,7 @@
 #ifndef QTAWS_ABORTENVIRONMENTUPDATERESPONSE_P_H
 #define QTAWS_ABORTENVIRONMENTUPDATERESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "abortenvironmentupdaterequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

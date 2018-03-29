@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTSCHEMACREATIONRESPONSE_P_H
 #define QTAWS_STARTSCHEMACREATIONRESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "startschemacreationrequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

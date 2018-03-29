@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETTAGSRESPONSE_P_H
 #define QTAWS_GETTAGSRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "gettagsrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

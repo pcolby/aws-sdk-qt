@@ -20,8 +20,7 @@
 #ifndef QTAWS_SENDINVITATIONRESPONSE_P_H
 #define QTAWS_SENDINVITATIONRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "sendinvitationrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

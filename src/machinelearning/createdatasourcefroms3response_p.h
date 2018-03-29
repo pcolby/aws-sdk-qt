@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDATASOURCEFROMS3RESPONSE_P_H
 #define QTAWS_CREATEDATASOURCEFROMS3RESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "createdatasourcefroms3request.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

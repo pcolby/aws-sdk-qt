@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETLOCALCONSOLEPASSWORDRESPONSE_P_H
 #define QTAWS_SETLOCALCONSOLEPASSWORDRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "setlocalconsolepasswordrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

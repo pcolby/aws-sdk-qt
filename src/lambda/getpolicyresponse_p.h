@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETPOLICYRESPONSE_P_H
 #define QTAWS_GETPOLICYRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "getpolicyrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

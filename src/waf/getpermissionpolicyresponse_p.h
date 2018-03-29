@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETPERMISSIONPOLICYRESPONSE_P_H
 #define QTAWS_GETPERMISSIONPOLICYRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "getpermissionpolicyrequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

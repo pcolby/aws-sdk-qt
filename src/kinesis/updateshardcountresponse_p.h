@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATESHARDCOUNTRESPONSE_P_H
 #define QTAWS_UPDATESHARDCOUNTRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "updateshardcountrequest.h"
+#include "kinesisresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEACCOUNTPASSWORDPOLICYRESPONSE_P_H
 #define QTAWS_UPDATEACCOUNTPASSWORDPOLICYRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "updateaccountpasswordpolicyrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

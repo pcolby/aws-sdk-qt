@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEJOBRESPONSE_P_H
 #define QTAWS_UPDATEJOBRESPONSE_P_H
 
-#include "snowballresponse.h"
-#include "updatejobrequest.h"
+#include "snowballresponse_p.h"
 
 namespace QtAws {
 namespace Snowball {

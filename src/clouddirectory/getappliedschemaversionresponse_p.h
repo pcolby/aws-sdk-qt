@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETAPPLIEDSCHEMAVERSIONRESPONSE_P_H
 #define QTAWS_GETAPPLIEDSCHEMAVERSIONRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "getappliedschemaversionrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

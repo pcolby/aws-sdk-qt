@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETIDENTITYVERIFICATIONATTRIBUTESRESPONSE_P_H
 #define QTAWS_GETIDENTITYVERIFICATIONATTRIBUTESRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "getidentityverificationattributesrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTWORKERSWITHQUALIFICATIONTYPERESPONSE_P_H
 #define QTAWS_LISTWORKERSWITHQUALIFICATIONTYPERESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "listworkerswithqualificationtyperequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

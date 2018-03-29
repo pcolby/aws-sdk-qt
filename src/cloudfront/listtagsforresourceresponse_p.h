@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCERESPONSE_P_H
 #define QTAWS_LISTTAGSFORRESOURCERESPONSE_P_H
 
-#include "cloudfrontresponse.h"
-#include "listtagsforresourcerequest.h"
+#include "cloudfrontresponse_p.h"
 
 namespace QtAws {
 namespace CloudFront {

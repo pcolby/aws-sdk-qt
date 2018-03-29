@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEAUTHEVENTFEEDBACKRESPONSE_P_H
 #define QTAWS_UPDATEAUTHEVENTFEEDBACKRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "updateautheventfeedbackrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

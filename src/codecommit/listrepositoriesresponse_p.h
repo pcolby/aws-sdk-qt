@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTREPOSITORIESRESPONSE_P_H
 #define QTAWS_LISTREPOSITORIESRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "listrepositoriesrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATERULEGROUPRESPONSE_P_H
 #define QTAWS_CREATERULEGROUPRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "createrulegrouprequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

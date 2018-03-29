@@ -20,8 +20,7 @@
 #ifndef QTAWS_COUNTCLOSEDWORKFLOWEXECUTIONSRESPONSE_P_H
 #define QTAWS_COUNTCLOSEDWORKFLOWEXECUTIONSRESPONSE_P_H
 
-#include "swfresponse.h"
-#include "countclosedworkflowexecutionsrequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

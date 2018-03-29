@@ -20,8 +20,7 @@
 #ifndef QTAWS_SAGEMAKERRUNTIMERESPONSE_P_H
 #define QTAWS_SAGEMAKERRUNTIMERESPONSE_P_H
 
-#include "sagemakerruntimeresponse.h"
-#include "sagemakerruntimerequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace SageMakerRuntime {

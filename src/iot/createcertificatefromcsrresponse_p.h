@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECERTIFICATEFROMCSRRESPONSE_P_H
 #define QTAWS_CREATECERTIFICATEFROMCSRRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "createcertificatefromcsrrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

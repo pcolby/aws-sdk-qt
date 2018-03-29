@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETXSSMATCHSETRESPONSE_P_H
 #define QTAWS_GETXSSMATCHSETRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "getxssmatchsetrequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

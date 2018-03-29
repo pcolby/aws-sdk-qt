@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDBPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_DELETEDBPARAMETERGROUPRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "deletedbparametergrouprequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

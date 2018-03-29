@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEPLATFORMENDPOINTRESPONSE_P_H
 #define QTAWS_CREATEPLATFORMENDPOINTRESPONSE_P_H
 
-#include "snsresponse.h"
-#include "createplatformendpointrequest.h"
+#include "snsresponse_p.h"
 
 namespace QtAws {
 namespace SNS {

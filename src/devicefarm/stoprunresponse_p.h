@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPRUNRESPONSE_P_H
 #define QTAWS_STOPRUNRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "stoprunrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVETAGSFROMSTREAMRESPONSE_P_H
 #define QTAWS_REMOVETAGSFROMSTREAMRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "removetagsfromstreamrequest.h"
+#include "kinesisresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

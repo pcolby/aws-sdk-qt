@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHGETQUERYEXECUTIONRESPONSE_P_H
 #define QTAWS_BATCHGETQUERYEXECUTIONRESPONSE_P_H
 
-#include "athenaresponse.h"
-#include "batchgetqueryexecutionrequest.h"
+#include "athenaresponse_p.h"
 
 namespace QtAws {
 namespace Athena {

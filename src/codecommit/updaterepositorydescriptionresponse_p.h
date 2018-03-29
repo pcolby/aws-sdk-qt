@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEREPOSITORYDESCRIPTIONRESPONSE_P_H
 #define QTAWS_UPDATEREPOSITORYDESCRIPTIONRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "updaterepositorydescriptionrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATESUBSCRIPTIONDEFINITIONRESPONSE_P_H
 #define QTAWS_UPDATESUBSCRIPTIONDEFINITIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "updatesubscriptiondefinitionrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

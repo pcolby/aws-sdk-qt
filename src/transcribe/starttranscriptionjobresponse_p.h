@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTTRANSCRIPTIONJOBRESPONSE_P_H
 #define QTAWS_STARTTRANSCRIPTIONJOBRESPONSE_P_H
 
-#include "transcribeserviceresponse.h"
-#include "starttranscriptionjobrequest.h"
+#include "transcribeserviceresponse_p.h"
 
 namespace QtAws {
 namespace TranscribeService {

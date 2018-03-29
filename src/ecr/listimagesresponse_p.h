@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTIMAGESRESPONSE_P_H
 #define QTAWS_LISTIMAGESRESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "listimagesrequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEOBJECTATTRIBUTESRESPONSE_P_H
 #define QTAWS_UPDATEOBJECTATTRIBUTESRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "updateobjectattributesrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

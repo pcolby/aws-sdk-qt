@@ -20,8 +20,7 @@
 #ifndef QTAWS_SIMULATEPRINCIPALPOLICYRESPONSE_P_H
 #define QTAWS_SIMULATEPRINCIPALPOLICYRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "simulateprincipalpolicyrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

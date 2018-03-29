@@ -20,8 +20,7 @@
 #ifndef QTAWS_LOOKUPEVENTSRESPONSE_P_H
 #define QTAWS_LOOKUPEVENTSRESPONSE_P_H
 
-#include "cloudtrailresponse.h"
-#include "lookupeventsrequest.h"
+#include "cloudtrailresponse_p.h"
 
 namespace QtAws {
 namespace CloudTrail {

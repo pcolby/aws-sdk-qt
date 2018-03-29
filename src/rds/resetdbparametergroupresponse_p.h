@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESETDBPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_RESETDBPARAMETERGROUPRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "resetdbparametergrouprequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

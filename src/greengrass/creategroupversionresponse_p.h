@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEGROUPVERSIONRESPONSE_P_H
 #define QTAWS_CREATEGROUPVERSIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "creategroupversionrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

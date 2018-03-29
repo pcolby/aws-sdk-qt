@@ -20,8 +20,7 @@
 #ifndef QTAWS_INCREASESTREAMRETENTIONPERIODRESPONSE_P_H
 #define QTAWS_INCREASESTREAMRETENTIONPERIODRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "increasestreamretentionperiodrequest.h"
+#include "kinesisresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESCALINGPOLICYRESPONSE_P_H
 #define QTAWS_DELETESCALINGPOLICYRESPONSE_P_H
 
-#include "applicationautoscalingresponse.h"
-#include "deletescalingpolicyrequest.h"
+#include "applicationautoscalingresponse_p.h"
 
 namespace QtAws {
 namespace ApplicationAutoScaling {

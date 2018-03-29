@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEENGINEDEFAULTPARAMETERSRESPONSE_P_H
 #define QTAWS_DESCRIBEENGINEDEFAULTPARAMETERSRESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "describeenginedefaultparametersrequest.h"
+#include "elasticacheresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

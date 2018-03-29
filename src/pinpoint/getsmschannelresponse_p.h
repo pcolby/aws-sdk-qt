@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSMSCHANNELRESPONSE_P_H
 #define QTAWS_GETSMSCHANNELRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "getsmschannelrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTPIPELINEEXECUTIONSRESPONSE_P_H
 #define QTAWS_LISTPIPELINEEXECUTIONSRESPONSE_P_H
 
-#include "codepipelineresponse.h"
-#include "listpipelineexecutionsrequest.h"
+#include "codepipelineresponse_p.h"
 
 namespace QtAws {
 namespace CodePipeline {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATELOADBALANCERTLSCERTIFICATERESPONSE_P_H
 #define QTAWS_CREATELOADBALANCERTLSCERTIFICATERESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "createloadbalancertlscertificaterequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

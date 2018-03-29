@@ -20,8 +20,7 @@
 #ifndef QTAWS_VALIDATECONFIGURATIONSETTINGSRESPONSE_P_H
 #define QTAWS_VALIDATECONFIGURATIONSETTINGSRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "validateconfigurationsettingsrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

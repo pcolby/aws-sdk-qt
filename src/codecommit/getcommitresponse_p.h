@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCOMMITRESPONSE_P_H
 #define QTAWS_GETCOMMITRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "getcommitrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

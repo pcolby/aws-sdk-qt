@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESTREAMRESPONSE_P_H
 #define QTAWS_DESCRIBESTREAMRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "describestreamrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

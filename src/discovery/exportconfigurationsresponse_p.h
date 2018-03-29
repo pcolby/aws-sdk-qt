@@ -20,8 +20,7 @@
 #ifndef QTAWS_EXPORTCONFIGURATIONSRESPONSE_P_H
 #define QTAWS_EXPORTCONFIGURATIONSRESPONSE_P_H
 
-#include "applicationdiscoveryserviceresponse.h"
-#include "exportconfigurationsrequest.h"
+#include "applicationdiscoveryserviceresponse_p.h"
 
 namespace QtAws {
 namespace ApplicationDiscoveryService {

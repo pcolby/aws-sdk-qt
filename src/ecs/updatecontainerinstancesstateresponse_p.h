@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATECONTAINERINSTANCESSTATERESPONSE_P_H
 #define QTAWS_UPDATECONTAINERINSTANCESSTATERESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "updatecontainerinstancesstaterequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

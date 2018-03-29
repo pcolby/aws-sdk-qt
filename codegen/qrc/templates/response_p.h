@@ -2,8 +2,7 @@
 #ifndef QTAWS_{{ClassName|upper}}_P_H
 #define QTAWS_{{ClassName|upper}}_P_H
 
-#include "{{ServiceName|lower}}response.h"
-#include "{{ClassName|lower|slice:"00:-8"}}request.h"
+#include "{{ServiceName|lower}}response_p.h"
 
 namespace QtAws {
 namespace {{NameSpaceName}} {

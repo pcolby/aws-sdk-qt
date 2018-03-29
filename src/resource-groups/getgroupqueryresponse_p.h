@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETGROUPQUERYRESPONSE_P_H
 #define QTAWS_GETGROUPQUERYRESPONSE_P_H
 
-#include "resourcegroupsresponse.h"
-#include "getgroupqueryrequest.h"
+#include "resourcegroupsresponse_p.h"
 
 namespace QtAws {
 namespace ResourceGroups {

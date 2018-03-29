@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEINSTANCECUSTOMHEALTHSTATUSRESPONSE_P_H
 #define QTAWS_UPDATEINSTANCECUSTOMHEALTHSTATUSRESPONSE_P_H
 
-#include "servicediscoveryresponse.h"
-#include "updateinstancecustomhealthstatusrequest.h"
+#include "servicediscoveryresponse_p.h"
 
 namespace QtAws {
 namespace ServiceDiscovery {

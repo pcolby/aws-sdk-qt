@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETACHOBJECTRESPONSE_P_H
 #define QTAWS_DETACHOBJECTRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "detachobjectrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

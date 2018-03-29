@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETACCOUNTSETTINGSRESPONSE_P_H
 #define QTAWS_GETACCOUNTSETTINGSRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "getaccountsettingsrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

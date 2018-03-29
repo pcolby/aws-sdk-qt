@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCERESPONSE_P_H
 #define QTAWS_LISTTAGSFORRESOURCERESPONSE_P_H
 
-#include "cloudhsmresponse.h"
-#include "listtagsforresourcerequest.h"
+#include "cloudhsmresponse_p.h"
 
 namespace QtAws {
 namespace CloudHSM {

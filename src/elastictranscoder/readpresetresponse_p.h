@@ -20,8 +20,7 @@
 #ifndef QTAWS_READPRESETRESPONSE_P_H
 #define QTAWS_READPRESETRESPONSE_P_H
 
-#include "elastictranscoderresponse.h"
-#include "readpresetrequest.h"
+#include "elastictranscoderresponse_p.h"
 
 namespace QtAws {
 namespace ElasticTranscoder {

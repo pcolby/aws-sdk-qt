@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESPONDACTIVITYTASKCOMPLETEDRESPONSE_P_H
 #define QTAWS_RESPONDACTIVITYTASKCOMPLETEDRESPONSE_P_H
 
-#include "swfresponse.h"
-#include "respondactivitytaskcompletedrequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEVAULTRESPONSE_P_H
 #define QTAWS_DELETEVAULTRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "deletevaultrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

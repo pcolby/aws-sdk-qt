@@ -20,8 +20,7 @@
 #ifndef QTAWS_POLLFORDECISIONTASKRESPONSE_P_H
 #define QTAWS_POLLFORDECISIONTASKRESPONSE_P_H
 
-#include "swfresponse.h"
-#include "pollfordecisiontaskrequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDEVICEPOOLCOMPATIBILITYRESPONSE_P_H
 #define QTAWS_GETDEVICEPOOLCOMPATIBILITYRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "getdevicepoolcompatibilityrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

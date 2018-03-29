@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTSUBSCRIPTIONDEFINITIONSRESPONSE_P_H
 #define QTAWS_LISTSUBSCRIPTIONDEFINITIONSRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "listsubscriptiondefinitionsrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

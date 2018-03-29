@@ -20,8 +20,7 @@
 #ifndef QTAWS_COMPREHENDRESPONSE_P_H
 #define QTAWS_COMPREHENDRESPONSE_P_H
 
-#include "comprehendresponse.h"
-#include "comprehendrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Comprehend {

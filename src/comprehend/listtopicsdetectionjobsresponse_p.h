@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTOPICSDETECTIONJOBSRESPONSE_P_H
 #define QTAWS_LISTTOPICSDETECTIONJOBSRESPONSE_P_H
 
-#include "comprehendresponse.h"
-#include "listtopicsdetectionjobsrequest.h"
+#include "comprehendresponse_p.h"
 
 namespace QtAws {
 namespace Comprehend {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTQUEUETAGSRESPONSE_P_H
 #define QTAWS_LISTQUEUETAGSRESPONSE_P_H
 
-#include "sqsresponse.h"
-#include "listqueuetagsrequest.h"
+#include "sqsresponse_p.h"
 
 namespace QtAws {
 namespace SQS {

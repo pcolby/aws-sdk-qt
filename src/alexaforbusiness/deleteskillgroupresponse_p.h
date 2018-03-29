@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESKILLGROUPRESPONSE_P_H
 #define QTAWS_DELETESKILLGROUPRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "deleteskillgrouprequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETJOBUNLOCKCODERESPONSE_P_H
 #define QTAWS_GETJOBUNLOCKCODERESPONSE_P_H
 
-#include "snowballresponse.h"
-#include "getjobunlockcoderequest.h"
+#include "snowballresponse_p.h"
 
 namespace QtAws {
 namespace Snowball {

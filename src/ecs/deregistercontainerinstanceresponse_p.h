@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEREGISTERCONTAINERINSTANCERESPONSE_P_H
 #define QTAWS_DEREGISTERCONTAINERINSTANCERESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "deregistercontainerinstancerequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

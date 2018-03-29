@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEUSERIMPORTJOBRESPONSE_P_H
 #define QTAWS_CREATEUSERIMPORTJOBRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "createuserimportjobrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

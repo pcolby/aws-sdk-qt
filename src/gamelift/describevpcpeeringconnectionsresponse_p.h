@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEVPCPEERINGCONNECTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEVPCPEERINGCONNECTIONSRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "describevpcpeeringconnectionsrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

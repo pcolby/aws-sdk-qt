@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADMINREMOVEUSERFROMGROUPRESPONSE_P_H
 #define QTAWS_ADMINREMOVEUSERFROMGROUPRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "adminremoveuserfromgrouprequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

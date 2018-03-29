@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEINDEXFIELDSRESPONSE_P_H
 #define QTAWS_DESCRIBEINDEXFIELDSRESPONSE_P_H
 
-#include "cloudsearchresponse.h"
-#include "describeindexfieldsrequest.h"
+#include "cloudsearchresponse_p.h"
 
 namespace QtAws {
 namespace CloudSearch {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTCONTAINERSRESPONSE_P_H
 #define QTAWS_LISTCONTAINERSRESPONSE_P_H
 
-#include "mediastoreresponse.h"
-#include "listcontainersrequest.h"
+#include "mediastoreresponse_p.h"
 
 namespace QtAws {
 namespace MediaStore {

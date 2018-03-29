@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETELOGSTREAMRESPONSE_P_H
 #define QTAWS_DELETELOGSTREAMRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "deletelogstreamrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

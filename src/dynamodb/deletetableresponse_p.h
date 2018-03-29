@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETABLERESPONSE_P_H
 #define QTAWS_DELETETABLERESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "deletetablerequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

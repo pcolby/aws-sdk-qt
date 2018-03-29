@@ -20,8 +20,7 @@
 #ifndef QTAWS_MOBILERESPONSE_P_H
 #define QTAWS_MOBILERESPONSE_P_H
 
-#include "mobileresponse.h"
-#include "mobilerequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Mobile {

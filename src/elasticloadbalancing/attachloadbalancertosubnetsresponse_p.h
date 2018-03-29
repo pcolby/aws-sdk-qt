@@ -20,8 +20,7 @@
 #ifndef QTAWS_ATTACHLOADBALANCERTOSUBNETSRESPONSE_P_H
 #define QTAWS_ATTACHLOADBALANCERTOSUBNETSRESPONSE_P_H
 
-#include "elasticloadbalancingresponse.h"
-#include "attachloadbalancertosubnetsrequest.h"
+#include "elasticloadbalancingresponse_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancing {

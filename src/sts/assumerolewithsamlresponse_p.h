@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSUMEROLEWITHSAMLRESPONSE_P_H
 #define QTAWS_ASSUMEROLEWITHSAMLRESPONSE_P_H
 
-#include "stsresponse.h"
-#include "assumerolewithsamlrequest.h"
+#include "stsresponse_p.h"
 
 namespace QtAws {
 namespace STS {

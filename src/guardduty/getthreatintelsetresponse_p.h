@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETTHREATINTELSETRESPONSE_P_H
 #define QTAWS_GETTHREATINTELSETRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "getthreatintelsetrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

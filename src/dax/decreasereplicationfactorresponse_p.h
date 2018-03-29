@@ -20,8 +20,7 @@
 #ifndef QTAWS_DECREASEREPLICATIONFACTORRESPONSE_P_H
 #define QTAWS_DECREASEREPLICATIONFACTORRESPONSE_P_H
 
-#include "daxresponse.h"
-#include "decreasereplicationfactorrequest.h"
+#include "daxresponse_p.h"
 
 namespace QtAws {
 namespace DAX {

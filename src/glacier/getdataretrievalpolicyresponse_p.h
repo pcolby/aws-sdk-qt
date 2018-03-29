@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDATARETRIEVALPOLICYRESPONSE_P_H
 #define QTAWS_GETDATARETRIEVALPOLICYRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "getdataretrievalpolicyrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

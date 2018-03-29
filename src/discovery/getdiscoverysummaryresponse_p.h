@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDISCOVERYSUMMARYRESPONSE_P_H
 #define QTAWS_GETDISCOVERYSUMMARYRESPONSE_P_H
 
-#include "applicationdiscoveryserviceresponse.h"
-#include "getdiscoverysummaryrequest.h"
+#include "applicationdiscoveryserviceresponse_p.h"
 
 namespace QtAws {
 namespace ApplicationDiscoveryService {

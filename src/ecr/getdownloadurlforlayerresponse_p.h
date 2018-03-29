@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDOWNLOADURLFORLAYERRESPONSE_P_H
 #define QTAWS_GETDOWNLOADURLFORLAYERRESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "getdownloadurlforlayerrequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_COPYIMAGERESPONSE_P_H
 #define QTAWS_COPYIMAGERESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "copyimagerequest.h"
+#include "appstreamresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

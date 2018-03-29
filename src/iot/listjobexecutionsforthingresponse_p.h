@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTJOBEXECUTIONSFORTHINGRESPONSE_P_H
 #define QTAWS_LISTJOBEXECUTIONSFORTHINGRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "listjobexecutionsforthingrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

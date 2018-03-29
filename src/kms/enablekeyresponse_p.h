@@ -20,8 +20,7 @@
 #ifndef QTAWS_ENABLEKEYRESPONSE_P_H
 #define QTAWS_ENABLEKEYRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "enablekeyrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

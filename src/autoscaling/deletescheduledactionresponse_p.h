@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESCHEDULEDACTIONRESPONSE_P_H
 #define QTAWS_DELETESCHEDULEDACTIONRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "deletescheduledactionrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

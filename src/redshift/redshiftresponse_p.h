@@ -20,8 +20,7 @@
 #ifndef QTAWS_REDSHIFTRESPONSE_P_H
 #define QTAWS_REDSHIFTRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "redshiftrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

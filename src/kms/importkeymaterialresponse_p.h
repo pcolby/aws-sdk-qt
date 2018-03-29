@@ -20,8 +20,7 @@
 #ifndef QTAWS_IMPORTKEYMATERIALRESPONSE_P_H
 #define QTAWS_IMPORTKEYMATERIALRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "importkeymaterialrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

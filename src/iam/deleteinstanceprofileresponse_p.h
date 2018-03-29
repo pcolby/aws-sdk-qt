@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEINSTANCEPROFILERESPONSE_P_H
 #define QTAWS_DELETEINSTANCEPROFILERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "deleteinstanceprofilerequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

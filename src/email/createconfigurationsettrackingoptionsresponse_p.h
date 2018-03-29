@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_P_H
 #define QTAWS_CREATECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "createconfigurationsettrackingoptionsrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

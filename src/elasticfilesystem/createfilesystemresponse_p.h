@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEFILESYSTEMRESPONSE_P_H
 #define QTAWS_CREATEFILESYSTEMRESPONSE_P_H
 
-#include "efsresponse.h"
-#include "createfilesystemrequest.h"
+#include "efsresponse_p.h"
 
 namespace QtAws {
 namespace EFS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEALARMHISTORYRESPONSE_P_H
 #define QTAWS_DESCRIBEALARMHISTORYRESPONSE_P_H
 
-#include "cloudwatchresponse.h"
-#include "describealarmhistoryrequest.h"
+#include "cloudwatchresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatch {

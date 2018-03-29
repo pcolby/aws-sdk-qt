@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTLOGGERDEFINITIONSRESPONSE_P_H
 #define QTAWS_LISTLOGGERDEFINITIONSRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "listloggerdefinitionsrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

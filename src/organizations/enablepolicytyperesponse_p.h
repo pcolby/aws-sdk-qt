@@ -20,8 +20,7 @@
 #ifndef QTAWS_ENABLEPOLICYTYPERESPONSE_P_H
 #define QTAWS_ENABLEPOLICYTYPERESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "enablepolicytyperequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

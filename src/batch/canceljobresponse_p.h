@@ -20,8 +20,7 @@
 #ifndef QTAWS_CANCELJOBRESPONSE_P_H
 #define QTAWS_CANCELJOBRESPONSE_P_H
 
-#include "batchresponse.h"
-#include "canceljobrequest.h"
+#include "batchresponse_p.h"
 
 namespace QtAws {
 namespace Batch {

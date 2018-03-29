@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETACHPOLICYRESPONSE_P_H
 #define QTAWS_DETACHPOLICYRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "detachpolicyrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

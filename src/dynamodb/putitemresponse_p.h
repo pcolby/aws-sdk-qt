@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTITEMRESPONSE_P_H
 #define QTAWS_PUTITEMRESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "putitemrequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

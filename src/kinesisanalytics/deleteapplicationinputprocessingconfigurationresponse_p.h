@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEAPPLICATIONINPUTPROCESSINGCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DELETEAPPLICATIONINPUTPROCESSINGCONFIGURATIONRESPONSE_P_H
 
-#include "kinesisanalyticsresponse.h"
-#include "deleteapplicationinputprocessingconfigurationrequest.h"
+#include "kinesisanalyticsresponse_p.h"
 
 namespace QtAws {
 namespace KinesisAnalytics {

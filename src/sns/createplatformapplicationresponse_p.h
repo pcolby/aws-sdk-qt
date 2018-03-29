@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEPLATFORMAPPLICATIONRESPONSE_P_H
 #define QTAWS_CREATEPLATFORMAPPLICATIONRESPONSE_P_H
 
-#include "snsresponse.h"
-#include "createplatformapplicationrequest.h"
+#include "snsresponse_p.h"
 
 namespace QtAws {
 namespace SNS {

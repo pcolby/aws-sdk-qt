@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETHINGGROUPRESPONSE_P_H
 #define QTAWS_DELETETHINGGROUPRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "deletethinggrouprequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

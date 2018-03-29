@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECUSTOMACTIONTYPERESPONSE_P_H
 #define QTAWS_CREATECUSTOMACTIONTYPERESPONSE_P_H
 
-#include "codepipelineresponse.h"
-#include "createcustomactiontyperequest.h"
+#include "codepipelineresponse_p.h"
 
 namespace QtAws {
 namespace CodePipeline {

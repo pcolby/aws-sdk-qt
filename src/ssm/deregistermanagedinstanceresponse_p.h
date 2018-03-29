@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEREGISTERMANAGEDINSTANCERESPONSE_P_H
 #define QTAWS_DEREGISTERMANAGEDINSTANCERESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "deregistermanagedinstancerequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

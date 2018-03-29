@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEVIRTUALMFADEVICERESPONSE_P_H
 #define QTAWS_CREATEVIRTUALMFADEVICERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "createvirtualmfadevicerequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

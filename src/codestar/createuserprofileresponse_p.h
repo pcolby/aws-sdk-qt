@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEUSERPROFILERESPONSE_P_H
 #define QTAWS_CREATEUSERPROFILERESPONSE_P_H
 
-#include "codestarresponse.h"
-#include "createuserprofilerequest.h"
+#include "codestarresponse_p.h"
 
 namespace QtAws {
 namespace CodeStar {

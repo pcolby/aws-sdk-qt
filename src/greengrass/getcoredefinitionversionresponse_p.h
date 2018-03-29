@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCOREDEFINITIONVERSIONRESPONSE_P_H
 #define QTAWS_GETCOREDEFINITIONVERSIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "getcoredefinitionversionrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESTACKRESPONSE_P_H
 #define QTAWS_DELETESTACKRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "deletestackrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

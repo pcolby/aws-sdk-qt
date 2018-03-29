@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORVAULTRESPONSE_P_H
 #define QTAWS_LISTTAGSFORVAULTRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "listtagsforvaultrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETQUERYEXECUTIONRESPONSE_P_H
 #define QTAWS_GETQUERYEXECUTIONRESPONSE_P_H
 
-#include "athenaresponse.h"
-#include "getqueryexecutionrequest.h"
+#include "athenaresponse_p.h"
 
 namespace QtAws {
 namespace Athena {

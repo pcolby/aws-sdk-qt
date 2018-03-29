@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTASSESSMENTTEMPLATESRESPONSE_P_H
 #define QTAWS_LISTASSESSMENTTEMPLATESRESPONSE_P_H
 
-#include "inspectorresponse.h"
-#include "listassessmenttemplatesrequest.h"
+#include "inspectorresponse_p.h"
 
 namespace QtAws {
 namespace Inspector {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEUPLOADRESPONSE_P_H
 #define QTAWS_CREATEUPLOADRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "createuploadrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

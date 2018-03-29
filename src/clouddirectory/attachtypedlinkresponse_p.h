@@ -20,8 +20,7 @@
 #ifndef QTAWS_ATTACHTYPEDLINKRESPONSE_P_H
 #define QTAWS_ATTACHTYPEDLINKRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "attachtypedlinkrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

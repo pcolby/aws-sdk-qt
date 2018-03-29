@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPARTITIONRESPONSE_P_H
 #define QTAWS_DELETEPARTITIONRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "deletepartitionrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

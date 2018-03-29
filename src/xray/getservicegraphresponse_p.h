@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSERVICEGRAPHRESPONSE_P_H
 #define QTAWS_GETSERVICEGRAPHRESPONSE_P_H
 
-#include "xrayresponse.h"
-#include "getservicegraphrequest.h"
+#include "xrayresponse_p.h"
 
 namespace QtAws {
 namespace XRay {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEGROUPPOLICYRESPONSE_P_H
 #define QTAWS_DELETEGROUPPOLICYRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "deletegrouppolicyrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

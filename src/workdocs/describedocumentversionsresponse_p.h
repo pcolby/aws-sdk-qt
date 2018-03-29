@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEDOCUMENTVERSIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEDOCUMENTVERSIONSRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "describedocumentversionsrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

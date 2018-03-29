@@ -20,8 +20,7 @@
 #ifndef QTAWS_MERGEPULLREQUESTBYFASTFORWARDRESPONSE_P_H
 #define QTAWS_MERGEPULLREQUESTBYFASTFORWARDRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "mergepullrequestbyfastforwardrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

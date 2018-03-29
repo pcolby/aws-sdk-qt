@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECLOUDFRONTORIGINACCESSIDENTITYRESPONSE_P_H
 #define QTAWS_DELETECLOUDFRONTORIGINACCESSIDENTITYRESPONSE_P_H
 
-#include "cloudfrontresponse.h"
-#include "deletecloudfrontoriginaccessidentityrequest.h"
+#include "cloudfrontresponse_p.h"
 
 namespace QtAws {
 namespace CloudFront {

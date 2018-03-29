@@ -20,8 +20,7 @@
 #ifndef QTAWS_OPSWORKSRESPONSE_P_H
 #define QTAWS_OPSWORKSRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "opsworksrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LIGHTSAILRESPONSE_P_H
 #define QTAWS_LIGHTSAILRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "lightsailrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

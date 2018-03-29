@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDEVICERESPONSE_P_H
 #define QTAWS_GETDEVICERESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "getdevicerequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

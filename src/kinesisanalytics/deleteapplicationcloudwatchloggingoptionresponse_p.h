@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEAPPLICATIONCLOUDWATCHLOGGINGOPTIONRESPONSE_P_H
 #define QTAWS_DELETEAPPLICATIONCLOUDWATCHLOGGINGOPTIONRESPONSE_P_H
 
-#include "kinesisanalyticsresponse.h"
-#include "deleteapplicationcloudwatchloggingoptionrequest.h"
+#include "kinesisanalyticsresponse_p.h"
 
 namespace QtAws {
 namespace KinesisAnalytics {

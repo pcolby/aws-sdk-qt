@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTDEVICESYNCRESPONSE_P_H
 #define QTAWS_STARTDEVICESYNCRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "startdevicesyncrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

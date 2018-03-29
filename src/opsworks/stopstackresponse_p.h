@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPSTACKRESPONSE_P_H
 #define QTAWS_STOPSTACKRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "stopstackrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

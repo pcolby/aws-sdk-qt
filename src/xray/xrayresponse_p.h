@@ -20,8 +20,7 @@
 #ifndef QTAWS_XRAYRESPONSE_P_H
 #define QTAWS_XRAYRESPONSE_P_H
 
-#include "xrayresponse.h"
-#include "xrayrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace XRay {

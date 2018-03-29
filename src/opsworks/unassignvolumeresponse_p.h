@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNASSIGNVOLUMERESPONSE_P_H
 #define QTAWS_UNASSIGNVOLUMERESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "unassignvolumerequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

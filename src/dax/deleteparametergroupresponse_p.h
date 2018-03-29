@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_DELETEPARAMETERGROUPRESPONSE_P_H
 
-#include "daxresponse.h"
-#include "deleteparametergrouprequest.h"
+#include "daxresponse_p.h"
 
 namespace QtAws {
 namespace DAX {

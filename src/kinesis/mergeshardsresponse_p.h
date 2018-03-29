@@ -20,8 +20,7 @@
 #ifndef QTAWS_MERGESHARDSRESPONSE_P_H
 #define QTAWS_MERGESHARDSRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "mergeshardsrequest.h"
+#include "kinesisresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

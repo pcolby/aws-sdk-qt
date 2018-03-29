@@ -20,8 +20,7 @@
 #ifndef QTAWS_VERIFYDOMAINDKIMRESPONSE_P_H
 #define QTAWS_VERIFYDOMAINDKIMRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "verifydomaindkimrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

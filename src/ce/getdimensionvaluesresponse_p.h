@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDIMENSIONVALUESRESPONSE_P_H
 #define QTAWS_GETDIMENSIONVALUESRESPONSE_P_H
 
-#include "costexplorerresponse.h"
-#include "getdimensionvaluesrequest.h"
+#include "costexplorerresponse_p.h"
 
 namespace QtAws {
 namespace CostExplorer {

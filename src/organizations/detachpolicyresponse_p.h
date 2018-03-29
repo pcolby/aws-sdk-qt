@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETACHPOLICYRESPONSE_P_H
 #define QTAWS_DETACHPOLICYRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "detachpolicyrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

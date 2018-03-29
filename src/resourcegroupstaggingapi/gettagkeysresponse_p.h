@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETTAGKEYSRESPONSE_P_H
 #define QTAWS_GETTAGKEYSRESPONSE_P_H
 
-#include "resourcegroupstaggingapiresponse.h"
-#include "gettagkeysrequest.h"
+#include "resourcegroupstaggingapiresponse_p.h"
 
 namespace QtAws {
 namespace ResourceGroupsTaggingAPI {

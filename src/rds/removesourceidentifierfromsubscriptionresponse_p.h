@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVESOURCEIDENTIFIERFROMSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_REMOVESOURCEIDENTIFIERFROMSUBSCRIPTIONRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "removesourceidentifierfromsubscriptionrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

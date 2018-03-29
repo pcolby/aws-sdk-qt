@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCERESPONSE_P_H
 #define QTAWS_LISTTAGSFORRESOURCERESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "listtagsforresourcerequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

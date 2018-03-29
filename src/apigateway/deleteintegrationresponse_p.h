@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEINTEGRATIONRESPONSE_P_H
 #define QTAWS_DELETEINTEGRATIONRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "deleteintegrationrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

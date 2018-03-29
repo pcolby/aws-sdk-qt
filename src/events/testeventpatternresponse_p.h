@@ -20,8 +20,7 @@
 #ifndef QTAWS_TESTEVENTPATTERNRESPONSE_P_H
 #define QTAWS_TESTEVENTPATTERNRESPONSE_P_H
 
-#include "cloudwatcheventsresponse.h"
-#include "testeventpatternrequest.h"
+#include "cloudwatcheventsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchEvents {

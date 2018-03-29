@@ -20,8 +20,7 @@
 #ifndef QTAWS_REBOOTDBINSTANCERESPONSE_P_H
 #define QTAWS_REBOOTDBINSTANCERESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "rebootdbinstancerequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

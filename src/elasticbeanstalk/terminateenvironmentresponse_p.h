@@ -20,8 +20,7 @@
 #ifndef QTAWS_TERMINATEENVIRONMENTRESPONSE_P_H
 #define QTAWS_TERMINATEENVIRONMENTRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "terminateenvironmentrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEPIPELINERESPONSE_P_H
 #define QTAWS_CREATEPIPELINERESPONSE_P_H
 
-#include "codepipelineresponse.h"
-#include "createpipelinerequest.h"
+#include "codepipelineresponse_p.h"
 
 namespace QtAws {
 namespace CodePipeline {

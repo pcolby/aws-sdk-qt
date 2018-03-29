@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVETAGSFROMCERTIFICATERESPONSE_P_H
 #define QTAWS_REMOVETAGSFROMCERTIFICATERESPONSE_P_H
 
-#include "acmresponse.h"
-#include "removetagsfromcertificaterequest.h"
+#include "acmresponse_p.h"
 
 namespace QtAws {
 namespace ACM {

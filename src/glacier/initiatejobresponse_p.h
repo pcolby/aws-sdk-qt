@@ -20,8 +20,7 @@
 #ifndef QTAWS_INITIATEJOBRESPONSE_P_H
 #define QTAWS_INITIATEJOBRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "initiatejobrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

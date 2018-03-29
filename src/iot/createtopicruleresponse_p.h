@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATETOPICRULERESPONSE_P_H
 #define QTAWS_CREATETOPICRULERESPONSE_P_H
 
-#include "iotresponse.h"
-#include "createtopicrulerequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

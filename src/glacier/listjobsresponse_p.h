@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTJOBSRESPONSE_P_H
 #define QTAWS_LISTJOBSRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "listjobsrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

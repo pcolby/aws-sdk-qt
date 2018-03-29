@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHRESPONSE_P_H
 #define QTAWS_BATCHRESPONSE_P_H
 
-#include "batchresponse.h"
-#include "batchrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Batch {

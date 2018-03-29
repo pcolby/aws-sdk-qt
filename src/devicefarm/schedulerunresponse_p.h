@@ -20,8 +20,7 @@
 #ifndef QTAWS_SCHEDULERUNRESPONSE_P_H
 #define QTAWS_SCHEDULERUNRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "schedulerunrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

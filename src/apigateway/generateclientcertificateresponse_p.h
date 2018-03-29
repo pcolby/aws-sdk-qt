@@ -20,8 +20,7 @@
 #ifndef QTAWS_GENERATECLIENTCERTIFICATERESPONSE_P_H
 #define QTAWS_GENERATECLIENTCERTIFICATERESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "generateclientcertificaterequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

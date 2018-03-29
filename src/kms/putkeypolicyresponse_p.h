@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTKEYPOLICYRESPONSE_P_H
 #define QTAWS_PUTKEYPOLICYRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "putkeypolicyrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

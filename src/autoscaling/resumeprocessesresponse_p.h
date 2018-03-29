@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESUMEPROCESSESRESPONSE_P_H
 #define QTAWS_RESUMEPROCESSESRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "resumeprocessesrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

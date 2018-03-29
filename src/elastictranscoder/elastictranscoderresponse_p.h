@@ -20,8 +20,7 @@
 #ifndef QTAWS_ELASTICTRANSCODERRESPONSE_P_H
 #define QTAWS_ELASTICTRANSCODERRESPONSE_P_H
 
-#include "elastictranscoderresponse.h"
-#include "elastictranscoderrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace ElasticTranscoder {

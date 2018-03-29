@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEPRINCIPALFROMPORTFOLIORESPONSE_P_H
 #define QTAWS_DISASSOCIATEPRINCIPALFROMPORTFOLIORESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "disassociateprincipalfromportfoliorequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

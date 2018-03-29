@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTGROUPSRESPONSE_P_H
 #define QTAWS_LISTGROUPSRESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "listgroupsrequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

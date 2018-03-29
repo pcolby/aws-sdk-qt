@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDOMAINNAMERESPONSE_P_H
 #define QTAWS_CREATEDOMAINNAMERESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "createdomainnamerequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

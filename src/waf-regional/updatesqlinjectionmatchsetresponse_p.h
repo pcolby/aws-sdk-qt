@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATESQLINJECTIONMATCHSETRESPONSE_P_H
 #define QTAWS_UPDATESQLINJECTIONMATCHSETRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "updatesqlinjectionmatchsetrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

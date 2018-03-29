@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETRATEBASEDRULEMANAGEDKEYSRESPONSE_P_H
 #define QTAWS_GETRATEBASEDRULEMANAGEDKEYSRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "getratebasedrulemanagedkeysrequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

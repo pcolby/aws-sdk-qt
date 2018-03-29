@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTAGSRESPONSE_P_H
 #define QTAWS_LISTTAGSRESPONSE_P_H
 
-#include "daxresponse.h"
-#include "listtagsrequest.h"
+#include "daxresponse_p.h"
 
 namespace QtAws {
 namespace DAX {

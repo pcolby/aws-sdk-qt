@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTCUSTOMVERIFICATIONEMAILTEMPLATESRESPONSE_P_H
 #define QTAWS_LISTCUSTOMVERIFICATIONEMAILTEMPLATESRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "listcustomverificationemailtemplatesrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEDBSUBNETGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEDBSUBNETGROUPSRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describedbsubnetgroupsrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

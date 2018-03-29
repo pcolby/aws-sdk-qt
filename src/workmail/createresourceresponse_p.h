@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATERESOURCERESPONSE_P_H
 #define QTAWS_CREATERESOURCERESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "createresourcerequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCLUSTERCREDENTIALSRESPONSE_P_H
 #define QTAWS_GETCLUSTERCREDENTIALSRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "getclustercredentialsrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

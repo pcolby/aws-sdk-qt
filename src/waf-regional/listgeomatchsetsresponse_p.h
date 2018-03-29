@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTGEOMATCHSETSRESPONSE_P_H
 #define QTAWS_LISTGEOMATCHSETSRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "listgeomatchsetsrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

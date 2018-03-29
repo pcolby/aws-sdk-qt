@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETTEMPLATERESPONSE_P_H
 #define QTAWS_GETTEMPLATERESPONSE_P_H
 
-#include "sesresponse.h"
-#include "gettemplaterequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEUSERRESPONSE_P_H
 #define QTAWS_DELETEUSERRESPONSE_P_H
 
-#include "mqresponse.h"
-#include "deleteuserrequest.h"
+#include "mqresponse_p.h"
 
 namespace QtAws {
 namespace MQ {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEREGISTRATIONCODERESPONSE_P_H
 #define QTAWS_DELETEREGISTRATIONCODERESPONSE_P_H
 
-#include "iotresponse.h"
-#include "deleteregistrationcoderequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

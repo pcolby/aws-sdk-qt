@@ -20,8 +20,7 @@
 #ifndef QTAWS_REQUESTSPOTFLEETRESPONSE_P_H
 #define QTAWS_REQUESTSPOTFLEETRESPONSE_P_H
 
-#include "ec2response.h"
-#include "requestspotfleetrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

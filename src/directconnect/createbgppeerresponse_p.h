@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEBGPPEERRESPONSE_P_H
 #define QTAWS_CREATEBGPPEERRESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "createbgppeerrequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

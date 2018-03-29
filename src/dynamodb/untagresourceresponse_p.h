@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCERESPONSE_P_H
 #define QTAWS_UNTAGRESOURCERESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "untagresourcerequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

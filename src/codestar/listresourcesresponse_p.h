@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTRESOURCESRESPONSE_P_H
 #define QTAWS_LISTRESOURCESRESPONSE_P_H
 
-#include "codestarresponse.h"
-#include "listresourcesrequest.h"
+#include "codestarresponse_p.h"
 
 namespace QtAws {
 namespace CodeStar {

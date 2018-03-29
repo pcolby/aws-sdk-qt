@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEWORKSPACEDIRECTORIESRESPONSE_P_H
 #define QTAWS_DESCRIBEWORKSPACEDIRECTORIESRESPONSE_P_H
 
-#include "workspacesresponse.h"
-#include "describeworkspacedirectoriesrequest.h"
+#include "workspacesresponse_p.h"
 
 namespace QtAws {
 namespace WorkSpaces {

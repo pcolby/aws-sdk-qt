@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTAWSSERVICEACCESSFORORGANIZATIONRESPONSE_P_H
 #define QTAWS_LISTAWSSERVICEACCESSFORORGANIZATIONRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "listawsserviceaccessfororganizationrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

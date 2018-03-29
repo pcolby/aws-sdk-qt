@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEUSERPOOLDOMAINRESPONSE_P_H
 #define QTAWS_DESCRIBEUSERPOOLDOMAINRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "describeuserpooldomainrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

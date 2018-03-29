@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECAMPAIGNRESPONSE_P_H
 #define QTAWS_CREATECAMPAIGNRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "createcampaignrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETABLEVERSIONRESPONSE_P_H
 #define QTAWS_DELETETABLEVERSIONRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "deletetableversionrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_TRANSLATERESPONSE_P_H
 #define QTAWS_TRANSLATERESPONSE_P_H
 
-#include "translateresponse.h"
-#include "translaterequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Translate {

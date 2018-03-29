@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPQUERYEXECUTIONRESPONSE_P_H
 #define QTAWS_STOPQUERYEXECUTIONRESPONSE_P_H
 
-#include "athenaresponse.h"
-#include "stopqueryexecutionrequest.h"
+#include "athenaresponse_p.h"
 
 namespace QtAws {
 namespace Athena {

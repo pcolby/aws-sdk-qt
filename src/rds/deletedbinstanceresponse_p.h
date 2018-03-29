@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDBINSTANCERESPONSE_P_H
 #define QTAWS_DELETEDBINSTANCERESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "deletedbinstancerequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

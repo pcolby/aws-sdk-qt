@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETACHINSTANCESFROMLOADBALANCERRESPONSE_P_H
 #define QTAWS_DETACHINSTANCESFROMLOADBALANCERRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "detachinstancesfromloadbalancerrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESUBSCRIBERRESPONSE_P_H
 #define QTAWS_DELETESUBSCRIBERRESPONSE_P_H
 
-#include "budgetsresponse.h"
-#include "deletesubscriberrequest.h"
+#include "budgetsresponse_p.h"
 
 namespace QtAws {
 namespace Budgets {

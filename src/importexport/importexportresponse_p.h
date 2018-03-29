@@ -20,8 +20,7 @@
 #ifndef QTAWS_IMPORTEXPORTRESPONSE_P_H
 #define QTAWS_IMPORTEXPORTRESPONSE_P_H
 
-#include "importexportresponse.h"
-#include "importexportrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace ImportExport {

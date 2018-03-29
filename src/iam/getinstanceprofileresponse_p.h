@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETINSTANCEPROFILERESPONSE_P_H
 #define QTAWS_GETINSTANCEPROFILERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "getinstanceprofilerequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEGLOBALTABLERESPONSE_P_H
 #define QTAWS_UPDATEGLOBALTABLERESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "updateglobaltablerequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

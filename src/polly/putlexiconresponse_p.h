@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTLEXICONRESPONSE_P_H
 #define QTAWS_PUTLEXICONRESPONSE_P_H
 
-#include "pollyresponse.h"
-#include "putlexiconrequest.h"
+#include "pollyresponse_p.h"
 
 namespace QtAws {
 namespace Polly {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPNOTEBOOKINSTANCERESPONSE_P_H
 #define QTAWS_STOPNOTEBOOKINSTANCERESPONSE_P_H
 
-#include "sagemakerresponse.h"
-#include "stopnotebookinstancerequest.h"
+#include "sagemakerresponse_p.h"
 
 namespace QtAws {
 namespace SageMaker {

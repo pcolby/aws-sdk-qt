@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATESNAPSHOTRESPONSE_P_H
 #define QTAWS_CREATESNAPSHOTRESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "createsnapshotrequest.h"
+#include "elasticacheresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

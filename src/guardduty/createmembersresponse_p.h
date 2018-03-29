@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEMEMBERSRESPONSE_P_H
 #define QTAWS_CREATEMEMBERSRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "createmembersrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

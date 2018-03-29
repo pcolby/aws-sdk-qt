@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTPROVISIONEDCAPACITYRESPONSE_P_H
 #define QTAWS_LISTPROVISIONEDCAPACITYRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "listprovisionedcapacityrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

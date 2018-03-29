@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETJOBMANIFESTRESPONSE_P_H
 #define QTAWS_GETJOBMANIFESTRESPONSE_P_H
 
-#include "snowballresponse.h"
-#include "getjobmanifestrequest.h"
+#include "snowballresponse_p.h"
 
 namespace QtAws {
 namespace Snowball {

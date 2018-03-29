@@ -20,8 +20,7 @@
 #ifndef QTAWS_CANCELRETRIEVALRESPONSE_P_H
 #define QTAWS_CANCELRETRIEVALRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "cancelretrievalrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

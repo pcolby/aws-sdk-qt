@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYCLUSTERSUBNETGROUPRESPONSE_P_H
 #define QTAWS_MODIFYCLUSTERSUBNETGROUPRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "modifyclustersubnetgrouprequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

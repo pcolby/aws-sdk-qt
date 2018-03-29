@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPATCHBASELINERESPONSE_P_H
 #define QTAWS_DELETEPATCHBASELINERESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "deletepatchbaselinerequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

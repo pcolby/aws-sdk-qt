@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEUSERRESPONSE_P_H
 #define QTAWS_DESCRIBEUSERRESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "describeuserrequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

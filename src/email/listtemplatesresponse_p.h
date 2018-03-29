@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTEMPLATESRESPONSE_P_H
 #define QTAWS_LISTTEMPLATESRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "listtemplatesrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

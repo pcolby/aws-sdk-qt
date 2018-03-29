@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESPOTDATAFEEDSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_DESCRIBESPOTDATAFEEDSUBSCRIPTIONRESPONSE_P_H
 
-#include "ec2response.h"
-#include "describespotdatafeedsubscriptionrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATETABLERESPONSE_P_H
 #define QTAWS_CREATETABLERESPONSE_P_H
 
-#include "glueresponse.h"
-#include "createtablerequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

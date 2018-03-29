@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSNAPSHOTLIMITSRESPONSE_P_H
 #define QTAWS_GETSNAPSHOTLIMITSRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "getsnapshotlimitsrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

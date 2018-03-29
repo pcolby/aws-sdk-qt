@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTATTRIBUTESRESPONSE_P_H
 #define QTAWS_PUTATTRIBUTESRESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "putattributesrequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

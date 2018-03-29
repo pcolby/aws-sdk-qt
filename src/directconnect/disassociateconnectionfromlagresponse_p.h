@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISASSOCIATECONNECTIONFROMLAGRESPONSE_P_H
 #define QTAWS_DISASSOCIATECONNECTIONFROMLAGRESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "disassociateconnectionfromlagrequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

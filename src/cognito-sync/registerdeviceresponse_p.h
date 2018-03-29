@@ -20,8 +20,7 @@
 #ifndef QTAWS_REGISTERDEVICERESPONSE_P_H
 #define QTAWS_REGISTERDEVICERESPONSE_P_H
 
-#include "cognitosyncresponse.h"
-#include "registerdevicerequest.h"
+#include "cognitosyncresponse_p.h"
 
 namespace QtAws {
 namespace CognitoSync {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEBROKERRESPONSE_P_H
 #define QTAWS_CREATEBROKERRESPONSE_P_H
 
-#include "mqresponse.h"
-#include "createbrokerrequest.h"
+#include "mqresponse_p.h"
 
 namespace QtAws {
 namespace MQ {

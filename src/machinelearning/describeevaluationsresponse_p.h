@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVALUATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEEVALUATIONSRESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "describeevaluationsrequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

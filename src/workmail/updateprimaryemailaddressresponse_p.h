@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEPRIMARYEMAILADDRESSRESPONSE_P_H
 #define QTAWS_UPDATEPRIMARYEMAILADDRESSRESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "updateprimaryemailaddressrequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

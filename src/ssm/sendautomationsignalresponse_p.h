@@ -20,8 +20,7 @@
 #ifndef QTAWS_SENDAUTOMATIONSIGNALRESPONSE_P_H
 #define QTAWS_SENDAUTOMATIONSIGNALRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "sendautomationsignalrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

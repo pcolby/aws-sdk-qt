@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEENVIRONMENTRESPONSE_P_H
 #define QTAWS_UPDATEENVIRONMENTRESPONSE_P_H
 
-#include "cloud9response.h"
-#include "updateenvironmentrequest.h"
+#include "cloud9response_p.h"
 
 namespace QtAws {
 namespace Cloud9 {

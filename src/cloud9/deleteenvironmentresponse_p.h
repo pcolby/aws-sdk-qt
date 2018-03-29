@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEENVIRONMENTRESPONSE_P_H
 #define QTAWS_DELETEENVIRONMENTRESPONSE_P_H
 
-#include "cloud9response.h"
-#include "deleteenvironmentrequest.h"
+#include "cloud9response_p.h"
 
 namespace QtAws {
 namespace Cloud9 {

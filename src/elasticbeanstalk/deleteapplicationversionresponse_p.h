@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEAPPLICATIONVERSIONRESPONSE_P_H
 #define QTAWS_DELETEAPPLICATIONVERSIONRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "deleteapplicationversionrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTJOBSRESPONSE_P_H
 #define QTAWS_LISTJOBSRESPONSE_P_H
 
-#include "importexportresponse.h"
-#include "listjobsrequest.h"
+#include "importexportresponse_p.h"
 
 namespace QtAws {
 namespace ImportExport {

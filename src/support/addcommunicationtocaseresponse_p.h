@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDCOMMUNICATIONTOCASERESPONSE_P_H
 #define QTAWS_ADDCOMMUNICATIONTOCASERESPONSE_P_H
 
-#include "supportresponse.h"
-#include "addcommunicationtocaserequest.h"
+#include "supportresponse_p.h"
 
 namespace QtAws {
 namespace Support {

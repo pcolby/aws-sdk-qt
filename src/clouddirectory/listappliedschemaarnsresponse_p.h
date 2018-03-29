@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTAPPLIEDSCHEMAARNSRESPONSE_P_H
 #define QTAWS_LISTAPPLIEDSCHEMAARNSRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "listappliedschemaarnsrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

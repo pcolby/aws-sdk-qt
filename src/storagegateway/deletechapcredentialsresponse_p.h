@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECHAPCREDENTIALSRESPONSE_P_H
 #define QTAWS_DELETECHAPCREDENTIALSRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "deletechapcredentialsrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

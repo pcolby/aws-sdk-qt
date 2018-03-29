@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEJOBEXECUTIONRESPONSE_P_H
 #define QTAWS_UPDATEJOBEXECUTIONRESPONSE_P_H
 
-#include "iotjobsdataplaneresponse.h"
-#include "updatejobexecutionrequest.h"
+#include "iotjobsdataplaneresponse_p.h"
 
 namespace QtAws {
 namespace IoTJobsDataPlane {

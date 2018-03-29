@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTCOMMANDINVOCATIONSRESPONSE_P_H
 #define QTAWS_LISTCOMMANDINVOCATIONSRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "listcommandinvocationsrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

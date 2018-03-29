@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEPROJECTRESPONSE_P_H
 #define QTAWS_UPDATEPROJECTRESPONSE_P_H
 
-#include "codebuildresponse.h"
-#include "updateprojectrequest.h"
+#include "codebuildresponse_p.h"
 
 namespace QtAws {
 namespace CodeBuild {

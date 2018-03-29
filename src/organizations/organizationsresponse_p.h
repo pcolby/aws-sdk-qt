@@ -20,8 +20,7 @@
 #ifndef QTAWS_ORGANIZATIONSRESPONSE_P_H
 #define QTAWS_ORGANIZATIONSRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "organizationsrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

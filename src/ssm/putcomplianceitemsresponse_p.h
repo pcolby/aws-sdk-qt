@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTCOMPLIANCEITEMSRESPONSE_P_H
 #define QTAWS_PUTCOMPLIANCEITEMSRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "putcomplianceitemsrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

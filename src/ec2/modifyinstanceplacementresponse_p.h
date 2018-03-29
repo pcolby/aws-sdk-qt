@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYINSTANCEPLACEMENTRESPONSE_P_H
 #define QTAWS_MODIFYINSTANCEPLACEMENTRESPONSE_P_H
 
-#include "ec2response.h"
-#include "modifyinstanceplacementrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

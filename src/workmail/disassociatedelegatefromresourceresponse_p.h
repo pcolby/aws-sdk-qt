@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEDELEGATEFROMRESOURCERESPONSE_P_H
 #define QTAWS_DISASSOCIATEDELEGATEFROMRESOURCERESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "disassociatedelegatefromresourcerequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

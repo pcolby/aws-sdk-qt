@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDATAFLOWGRAPHRESPONSE_P_H
 #define QTAWS_GETDATAFLOWGRAPHRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "getdataflowgraphrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_P_H
 #define QTAWS_DELETECONFIGURATIONSETTRACKINGOPTIONSRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "deleteconfigurationsettrackingoptionsrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEREPOSITORYRESPONSE_P_H
 #define QTAWS_CREATEREPOSITORYRESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "createrepositoryrequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

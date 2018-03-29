@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEMETRICFILTERRESPONSE_P_H
 #define QTAWS_DELETEMETRICFILTERRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "deletemetricfilterrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

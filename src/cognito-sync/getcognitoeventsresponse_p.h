@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCOGNITOEVENTSRESPONSE_P_H
 #define QTAWS_GETCOGNITOEVENTSRESPONSE_P_H
 
-#include "cognitosyncresponse.h"
-#include "getcognitoeventsrequest.h"
+#include "cognitosyncresponse_p.h"
 
 namespace QtAws {
 namespace CognitoSync {

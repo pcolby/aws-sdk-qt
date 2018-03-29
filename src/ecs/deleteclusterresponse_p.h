@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECLUSTERRESPONSE_P_H
 #define QTAWS_DELETECLUSTERRESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "deleteclusterrequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

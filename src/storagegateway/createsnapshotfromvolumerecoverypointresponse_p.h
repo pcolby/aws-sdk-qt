@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATESNAPSHOTFROMVOLUMERECOVERYPOINTRESPONSE_P_H
 #define QTAWS_CREATESNAPSHOTFROMVOLUMERECOVERYPOINTRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "createsnapshotfromvolumerecoverypointrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

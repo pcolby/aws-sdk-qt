@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEINSTANCEHEALTHRESPONSE_P_H
 #define QTAWS_DESCRIBEINSTANCEHEALTHRESPONSE_P_H
 
-#include "elasticloadbalancingresponse.h"
-#include "describeinstancehealthrequest.h"
+#include "elasticloadbalancingresponse_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancing {

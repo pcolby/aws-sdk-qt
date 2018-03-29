@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDRESPONSE_P_H
 #define QTAWS_UPDATECONFIGURATIONSETREPUTATIONMETRICSENABLEDRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "updateconfigurationsetreputationmetricsenabledrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEHITRESPONSE_P_H
 #define QTAWS_DELETEHITRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "deletehitrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

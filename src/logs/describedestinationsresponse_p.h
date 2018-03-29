@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEDESTINATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEDESTINATIONSRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "describedestinationsrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

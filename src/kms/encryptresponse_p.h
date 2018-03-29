@@ -20,8 +20,7 @@
 #ifndef QTAWS_ENCRYPTRESPONSE_P_H
 #define QTAWS_ENCRYPTRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "encryptrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

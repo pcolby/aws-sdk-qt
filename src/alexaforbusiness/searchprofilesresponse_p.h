@@ -20,8 +20,7 @@
 #ifndef QTAWS_SEARCHPROFILESRESPONSE_P_H
 #define QTAWS_SEARCHPROFILESRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "searchprofilesrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

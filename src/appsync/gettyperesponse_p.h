@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETTYPERESPONSE_P_H
 #define QTAWS_GETTYPERESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "gettyperequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

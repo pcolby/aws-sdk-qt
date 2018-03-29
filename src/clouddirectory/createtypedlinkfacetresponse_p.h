@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATETYPEDLINKFACETRESPONSE_P_H
 #define QTAWS_CREATETYPEDLINKFACETRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "createtypedlinkfacetrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

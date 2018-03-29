@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEGEOMATCHSETRESPONSE_P_H
 #define QTAWS_UPDATEGEOMATCHSETRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "updategeomatchsetrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

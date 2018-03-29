@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATESTREAMINGDISTRIBUTIONRESPONSE_P_H
 #define QTAWS_CREATESTREAMINGDISTRIBUTIONRESPONSE_P_H
 
-#include "cloudfrontresponse.h"
-#include "createstreamingdistributionrequest.h"
+#include "cloudfrontresponse_p.h"
 
 namespace QtAws {
 namespace CloudFront {

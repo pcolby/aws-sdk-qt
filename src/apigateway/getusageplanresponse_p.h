@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETUSAGEPLANRESPONSE_P_H
 #define QTAWS_GETUSAGEPLANRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "getusageplanrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

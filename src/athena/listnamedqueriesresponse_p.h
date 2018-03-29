@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTNAMEDQUERIESRESPONSE_P_H
 #define QTAWS_LISTNAMEDQUERIESRESPONSE_P_H
 
-#include "athenaresponse.h"
-#include "listnamedqueriesrequest.h"
+#include "athenaresponse_p.h"
 
 namespace QtAws {
 namespace Athena {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTASKDEFINITIONFAMILIESRESPONSE_P_H
 #define QTAWS_LISTTASKDEFINITIONFAMILIESRESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "listtaskdefinitionfamiliesrequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

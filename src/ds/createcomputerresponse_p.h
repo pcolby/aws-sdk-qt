@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECOMPUTERRESPONSE_P_H
 #define QTAWS_CREATECOMPUTERRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "createcomputerrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

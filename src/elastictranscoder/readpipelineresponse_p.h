@@ -20,8 +20,7 @@
 #ifndef QTAWS_READPIPELINERESPONSE_P_H
 #define QTAWS_READPIPELINERESPONSE_P_H
 
-#include "elastictranscoderresponse.h"
-#include "readpipelinerequest.h"
+#include "elastictranscoderresponse_p.h"
 
 namespace QtAws {
 namespace ElasticTranscoder {

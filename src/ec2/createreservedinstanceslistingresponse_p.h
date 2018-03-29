@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATERESERVEDINSTANCESLISTINGRESPONSE_P_H
 #define QTAWS_CREATERESERVEDINSTANCESLISTINGRESPONSE_P_H
 
-#include "ec2response.h"
-#include "createreservedinstanceslistingrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

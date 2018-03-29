@@ -20,8 +20,7 @@
 #ifndef QTAWS_INITIALIZECLUSTERRESPONSE_P_H
 #define QTAWS_INITIALIZECLUSTERRESPONSE_P_H
 
-#include "cloudhsmv2response.h"
-#include "initializeclusterrequest.h"
+#include "cloudhsmv2response_p.h"
 
 namespace QtAws {
 namespace CloudHSMV2 {

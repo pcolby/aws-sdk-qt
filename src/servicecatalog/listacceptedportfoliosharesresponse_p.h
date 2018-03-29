@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTACCEPTEDPORTFOLIOSHARESRESPONSE_P_H
 #define QTAWS_LISTACCEPTEDPORTFOLIOSHARESRESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "listacceptedportfoliosharesrequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

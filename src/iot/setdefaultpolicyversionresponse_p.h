@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETDEFAULTPOLICYVERSIONRESPONSE_P_H
 #define QTAWS_SETDEFAULTPOLICYVERSIONRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "setdefaultpolicyversionrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

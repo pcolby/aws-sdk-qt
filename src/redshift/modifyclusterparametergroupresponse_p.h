@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYCLUSTERPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_MODIFYCLUSTERPARAMETERGROUPRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "modifyclusterparametergrouprequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

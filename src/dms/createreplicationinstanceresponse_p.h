@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEREPLICATIONINSTANCERESPONSE_P_H
 #define QTAWS_CREATEREPLICATIONINSTANCERESPONSE_P_H
 
-#include "databasemigrationserviceresponse.h"
-#include "createreplicationinstancerequest.h"
+#include "databasemigrationserviceresponse_p.h"
 
 namespace QtAws {
 namespace DatabaseMigrationService {

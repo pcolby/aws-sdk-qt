@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPARAMETERSRESPONSE_P_H
 #define QTAWS_DELETEPARAMETERSRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "deleteparametersrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

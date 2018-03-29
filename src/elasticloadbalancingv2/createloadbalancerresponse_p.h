@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATELOADBALANCERRESPONSE_P_H
 #define QTAWS_CREATELOADBALANCERRESPONSE_P_H
 
-#include "elasticloadbalancingv2response.h"
-#include "createloadbalancerrequest.h"
+#include "elasticloadbalancingv2response_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancingv2 {

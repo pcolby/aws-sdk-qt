@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEEC2INSTANCELIMITSRESPONSE_P_H
 #define QTAWS_DESCRIBEEC2INSTANCELIMITSRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "describeec2instancelimitsrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

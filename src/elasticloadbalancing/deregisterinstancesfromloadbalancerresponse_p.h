@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEREGISTERINSTANCESFROMLOADBALANCERRESPONSE_P_H
 #define QTAWS_DEREGISTERINSTANCESFROMLOADBALANCERRESPONSE_P_H
 
-#include "elasticloadbalancingresponse.h"
-#include "deregisterinstancesfromloadbalancerrequest.h"
+#include "elasticloadbalancingresponse_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancing {

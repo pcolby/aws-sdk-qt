@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBETHINGTYPERESPONSE_P_H
 #define QTAWS_DESCRIBETHINGTYPERESPONSE_P_H
 
-#include "iotresponse.h"
-#include "describethingtyperequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPGRADEAPPLIEDSCHEMARESPONSE_P_H
 #define QTAWS_UPGRADEAPPLIEDSCHEMARESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "upgradeappliedschemarequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTROLEALIASESRESPONSE_P_H
 #define QTAWS_LISTROLEALIASESRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "listrolealiasesrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

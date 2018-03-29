@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEVTLDEVICESRESPONSE_P_H
 #define QTAWS_DESCRIBEVTLDEVICESRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "describevtldevicesrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

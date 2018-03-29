@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETMAPPINGRESPONSE_P_H
 #define QTAWS_GETMAPPINGRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "getmappingrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

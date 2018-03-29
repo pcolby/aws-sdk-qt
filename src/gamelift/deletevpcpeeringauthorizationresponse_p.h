@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEVPCPEERINGAUTHORIZATIONRESPONSE_P_H
 #define QTAWS_DELETEVPCPEERINGAUTHORIZATIONRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "deletevpcpeeringauthorizationrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTSCHEMAEXTENSIONRESPONSE_P_H
 #define QTAWS_STARTSCHEMAEXTENSIONRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "startschemaextensionrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

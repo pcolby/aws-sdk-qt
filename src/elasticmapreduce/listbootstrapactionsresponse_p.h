@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTBOOTSTRAPACTIONSRESPONSE_P_H
 #define QTAWS_LISTBOOTSTRAPACTIONSRESPONSE_P_H
 
-#include "emrresponse.h"
-#include "listbootstrapactionsrequest.h"
+#include "emrresponse_p.h"
 
 namespace QtAws {
 namespace EMR {

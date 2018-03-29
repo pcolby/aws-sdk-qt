@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSTACKPOLICYRESPONSE_P_H
 #define QTAWS_GETSTACKPOLICYRESPONSE_P_H
 
-#include "cloudformationresponse.h"
-#include "getstackpolicyrequest.h"
+#include "cloudformationresponse_p.h"
 
 namespace QtAws {
 namespace CloudFormation {

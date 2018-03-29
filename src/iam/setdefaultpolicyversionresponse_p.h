@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETDEFAULTPOLICYVERSIONRESPONSE_P_H
 #define QTAWS_SETDEFAULTPOLICYVERSIONRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "setdefaultpolicyversionrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

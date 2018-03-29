@@ -20,8 +20,7 @@
 #ifndef QTAWS_AUTHORIZESNAPSHOTACCESSRESPONSE_P_H
 #define QTAWS_AUTHORIZESNAPSHOTACCESSRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "authorizesnapshotaccessrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

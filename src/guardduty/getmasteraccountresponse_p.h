@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETMASTERACCOUNTRESPONSE_P_H
 #define QTAWS_GETMASTERACCOUNTRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "getmasteraccountrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEPARAMETERSRESPONSE_P_H
 #define QTAWS_DESCRIBEPARAMETERSRESPONSE_P_H
 
-#include "daxresponse.h"
-#include "describeparametersrequest.h"
+#include "daxresponse_p.h"
 
 namespace QtAws {
 namespace DAX {

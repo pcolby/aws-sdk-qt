@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESNAPSHOTCOPYGRANTRESPONSE_P_H
 #define QTAWS_DELETESNAPSHOTCOPYGRANTRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "deletesnapshotcopygrantrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

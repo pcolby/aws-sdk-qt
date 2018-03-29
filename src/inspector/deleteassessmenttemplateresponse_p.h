@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEASSESSMENTTEMPLATERESPONSE_P_H
 #define QTAWS_DELETEASSESSMENTTEMPLATERESPONSE_P_H
 
-#include "inspectorresponse.h"
-#include "deleteassessmenttemplaterequest.h"
+#include "inspectorresponse_p.h"
 
 namespace QtAws {
 namespace Inspector {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEEXPORTTASKRESPONSE_P_H
 #define QTAWS_CREATEEXPORTTASKRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "createexporttaskrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

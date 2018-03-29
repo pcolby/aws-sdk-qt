@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEHANDSHAKERESPONSE_P_H
 #define QTAWS_DESCRIBEHANDSHAKERESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "describehandshakerequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

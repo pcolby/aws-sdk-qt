@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTRULENAMESBYTARGETRESPONSE_P_H
 #define QTAWS_LISTRULENAMESBYTARGETRESPONSE_P_H
 
-#include "cloudwatcheventsresponse.h"
-#include "listrulenamesbytargetrequest.h"
+#include "cloudwatcheventsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchEvents {

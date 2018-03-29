@@ -20,8 +20,7 @@
 #ifndef QTAWS_EFSRESPONSE_P_H
 #define QTAWS_EFSRESPONSE_P_H
 
-#include "efsresponse.h"
-#include "efsrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace EFS {

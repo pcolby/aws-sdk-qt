@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTABLESRESPONSE_P_H
 #define QTAWS_LISTTABLESRESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "listtablesrequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

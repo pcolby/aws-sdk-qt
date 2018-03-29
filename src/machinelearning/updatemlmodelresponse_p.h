@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEMLMODELRESPONSE_P_H
 #define QTAWS_UPDATEMLMODELRESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "updatemlmodelrequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

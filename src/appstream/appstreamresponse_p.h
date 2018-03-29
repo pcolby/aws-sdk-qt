@@ -20,8 +20,7 @@
 #ifndef QTAWS_APPSTREAMRESPONSE_P_H
 #define QTAWS_APPSTREAMRESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "appstreamrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

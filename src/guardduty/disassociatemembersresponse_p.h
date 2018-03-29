@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEMEMBERSRESPONSE_P_H
 #define QTAWS_DISASSOCIATEMEMBERSRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "disassociatemembersrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

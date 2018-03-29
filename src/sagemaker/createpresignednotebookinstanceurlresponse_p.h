@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEPRESIGNEDNOTEBOOKINSTANCEURLRESPONSE_P_H
 #define QTAWS_CREATEPRESIGNEDNOTEBOOKINSTANCEURLRESPONSE_P_H
 
-#include "sagemakerresponse.h"
-#include "createpresignednotebookinstanceurlrequest.h"
+#include "sagemakerresponse_p.h"
 
 namespace QtAws {
 namespace SageMaker {

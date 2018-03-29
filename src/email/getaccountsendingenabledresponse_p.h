@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETACCOUNTSENDINGENABLEDRESPONSE_P_H
 #define QTAWS_GETACCOUNTSENDINGENABLEDRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "getaccountsendingenabledrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

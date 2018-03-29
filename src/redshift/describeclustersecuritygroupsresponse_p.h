@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECLUSTERSECURITYGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBECLUSTERSECURITYGROUPSRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "describeclustersecuritygroupsrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

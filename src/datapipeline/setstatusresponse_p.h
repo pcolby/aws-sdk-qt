@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETSTATUSRESPONSE_P_H
 #define QTAWS_SETSTATUSRESPONSE_P_H
 
-#include "datapipelineresponse.h"
-#include "setstatusrequest.h"
+#include "datapipelineresponse_p.h"
 
 namespace QtAws {
 namespace DataPipeline {

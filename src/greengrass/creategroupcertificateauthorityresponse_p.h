@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEGROUPCERTIFICATEAUTHORITYRESPONSE_P_H
 #define QTAWS_CREATEGROUPCERTIFICATEAUTHORITYRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "creategroupcertificateauthorityrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEEVENTSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_CREATEEVENTSUBSCRIPTIONRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "createeventsubscriptionrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

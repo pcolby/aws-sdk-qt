@@ -20,8 +20,7 @@
 #ifndef QTAWS_INITIATELAYERUPLOADRESPONSE_P_H
 #define QTAWS_INITIATELAYERUPLOADRESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "initiatelayeruploadrequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

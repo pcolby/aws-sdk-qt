@@ -20,8 +20,7 @@
 #ifndef QTAWS_RUNJOBFLOWRESPONSE_P_H
 #define QTAWS_RUNJOBFLOWRESPONSE_P_H
 
-#include "emrresponse.h"
-#include "runjobflowrequest.h"
+#include "emrresponse_p.h"
 
 namespace QtAws {
 namespace EMR {

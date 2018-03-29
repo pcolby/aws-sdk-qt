@@ -20,8 +20,7 @@
 #ifndef QTAWS_MERGEDEVELOPERIDENTITIESRESPONSE_P_H
 #define QTAWS_MERGEDEVELOPERIDENTITIESRESPONSE_P_H
 
-#include "cognitoidentityresponse.h"
-#include "mergedeveloperidentitiesrequest.h"
+#include "cognitoidentityresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentity {

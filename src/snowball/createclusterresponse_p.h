@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECLUSTERRESPONSE_P_H
 #define QTAWS_CREATECLUSTERRESPONSE_P_H
 
-#include "snowballresponse.h"
-#include "createclusterrequest.h"
+#include "snowballresponse_p.h"
 
 namespace QtAws {
 namespace Snowball {

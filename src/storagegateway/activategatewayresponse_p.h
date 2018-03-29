@@ -20,8 +20,7 @@
 #ifndef QTAWS_ACTIVATEGATEWAYRESPONSE_P_H
 #define QTAWS_ACTIVATEGATEWAYRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "activategatewayrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

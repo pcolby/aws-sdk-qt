@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTTELEMETRYRECORDSRESPONSE_P_H
 #define QTAWS_PUTTELEMETRYRECORDSRESPONSE_P_H
 
-#include "xrayresponse.h"
-#include "puttelemetryrecordsrequest.h"
+#include "xrayresponse_p.h"
 
 namespace QtAws {
 namespace XRay {

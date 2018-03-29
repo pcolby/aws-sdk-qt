@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECOMPLIANCEBYCONFIGRULERESPONSE_P_H
 #define QTAWS_DESCRIBECOMPLIANCEBYCONFIGRULERESPONSE_P_H
 
-#include "configserviceresponse.h"
-#include "describecompliancebyconfigrulerequest.h"
+#include "configserviceresponse_p.h"
 
 namespace QtAws {
 namespace ConfigService {

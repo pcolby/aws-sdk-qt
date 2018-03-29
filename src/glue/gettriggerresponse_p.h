@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETTRIGGERRESPONSE_P_H
 #define QTAWS_GETTRIGGERRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "gettriggerrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

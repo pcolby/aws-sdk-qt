@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETLOADBALANCERPOLICIESFORBACKENDSERVERRESPONSE_P_H
 #define QTAWS_SETLOADBALANCERPOLICIESFORBACKENDSERVERRESPONSE_P_H
 
-#include "elasticloadbalancingresponse.h"
-#include "setloadbalancerpoliciesforbackendserverrequest.h"
+#include "elasticloadbalancingresponse_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancing {

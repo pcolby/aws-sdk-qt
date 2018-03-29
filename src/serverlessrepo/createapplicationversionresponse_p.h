@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEAPPLICATIONVERSIONRESPONSE_P_H
 #define QTAWS_CREATEAPPLICATIONVERSIONRESPONSE_P_H
 
-#include "serverlessapplicationrepositoryresponse.h"
-#include "createapplicationversionrequest.h"
+#include "serverlessapplicationrepositoryresponse_p.h"
 
 namespace QtAws {
 namespace ServerlessApplicationRepository {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECERTIFICATESRESPONSE_P_H
 #define QTAWS_DESCRIBECERTIFICATESRESPONSE_P_H
 
-#include "databasemigrationserviceresponse.h"
-#include "describecertificatesrequest.h"
+#include "databasemigrationserviceresponse_p.h"
 
 namespace QtAws {
 namespace DatabaseMigrationService {

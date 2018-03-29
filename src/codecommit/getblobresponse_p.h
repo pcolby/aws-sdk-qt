@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETBLOBRESPONSE_P_H
 #define QTAWS_GETBLOBRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "getblobrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

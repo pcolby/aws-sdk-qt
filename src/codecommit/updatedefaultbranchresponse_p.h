@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEDEFAULTBRANCHRESPONSE_P_H
 #define QTAWS_UPDATEDEFAULTBRANCHRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "updatedefaultbranchrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

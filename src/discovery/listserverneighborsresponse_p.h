@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTSERVERNEIGHBORSRESPONSE_P_H
 #define QTAWS_LISTSERVERNEIGHBORSRESPONSE_P_H
 
-#include "applicationdiscoveryserviceresponse.h"
-#include "listserverneighborsrequest.h"
+#include "applicationdiscoveryserviceresponse_p.h"
 
 namespace QtAws {
 namespace ApplicationDiscoveryService {

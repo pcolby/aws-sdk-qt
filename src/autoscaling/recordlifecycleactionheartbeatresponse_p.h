@@ -20,8 +20,7 @@
 #ifndef QTAWS_RECORDLIFECYCLEACTIONHEARTBEATRESPONSE_P_H
 #define QTAWS_RECORDLIFECYCLEACTIONHEARTBEATRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "recordlifecycleactionheartbeatrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

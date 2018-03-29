@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYSNAPSHOTCOPYRETENTIONPERIODRESPONSE_P_H
 #define QTAWS_MODIFYSNAPSHOTCOPYRETENTIONPERIODRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "modifysnapshotcopyretentionperiodrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATECLUSTERRESPONSE_P_H
 #define QTAWS_UPDATECLUSTERRESPONSE_P_H
 
-#include "snowballresponse.h"
-#include "updateclusterrequest.h"
+#include "snowballresponse_p.h"
 
 namespace QtAws {
 namespace Snowball {

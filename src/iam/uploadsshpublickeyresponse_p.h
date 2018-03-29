@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPLOADSSHPUBLICKEYRESPONSE_P_H
 #define QTAWS_UPLOADSSHPUBLICKEYRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "uploadsshpublickeyrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

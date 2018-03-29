@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEREPLICATIONGROUPRESPONSE_P_H
 #define QTAWS_CREATEREPLICATIONGROUPRESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "createreplicationgrouprequest.h"
+#include "elasticacheresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

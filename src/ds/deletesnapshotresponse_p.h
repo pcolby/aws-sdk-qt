@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESNAPSHOTRESPONSE_P_H
 #define QTAWS_DELETESNAPSHOTRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "deletesnapshotrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

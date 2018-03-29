@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTCHILDRENRESPONSE_P_H
 #define QTAWS_LISTCHILDRENRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "listchildrenrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

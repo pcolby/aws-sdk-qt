@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTMAINTENANCERESPONSE_P_H
 #define QTAWS_STARTMAINTENANCERESPONSE_P_H
 
-#include "opsworkscmresponse.h"
-#include "startmaintenancerequest.h"
+#include "opsworkscmresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorksCM {

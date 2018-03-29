@@ -20,8 +20,7 @@
 #ifndef QTAWS_CONFIGSERVICERESPONSE_P_H
 #define QTAWS_CONFIGSERVICERESPONSE_P_H
 
-#include "configserviceresponse.h"
-#include "configservicerequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace ConfigService {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESTOREDBCLUSTERTOPOINTINTIMERESPONSE_P_H
 #define QTAWS_RESTOREDBCLUSTERTOPOINTINTIMERESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "restoredbclustertopointintimerequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

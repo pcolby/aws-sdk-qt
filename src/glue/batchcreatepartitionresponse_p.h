@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHCREATEPARTITIONRESPONSE_P_H
 #define QTAWS_BATCHCREATEPARTITIONRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "batchcreatepartitionrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

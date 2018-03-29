@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEELASTICLOADBALANCERSRESPONSE_P_H
 #define QTAWS_DESCRIBEELASTICLOADBALANCERSRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "describeelasticloadbalancersrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

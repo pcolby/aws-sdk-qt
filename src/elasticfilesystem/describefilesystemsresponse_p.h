@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEFILESYSTEMSRESPONSE_P_H
 #define QTAWS_DESCRIBEFILESYSTEMSRESPONSE_P_H
 
-#include "efsresponse.h"
-#include "describefilesystemsrequest.h"
+#include "efsresponse_p.h"
 
 namespace QtAws {
 namespace EFS {

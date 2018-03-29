@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESPONDACTIVITYTASKFAILEDRESPONSE_P_H
 #define QTAWS_RESPONDACTIVITYTASKFAILEDRESPONSE_P_H
 
-#include "swfresponse.h"
-#include "respondactivitytaskfailedrequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

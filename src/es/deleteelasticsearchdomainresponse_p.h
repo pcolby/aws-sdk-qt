@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEELASTICSEARCHDOMAINRESPONSE_P_H
 #define QTAWS_DELETEELASTICSEARCHDOMAINRESPONSE_P_H
 
-#include "elasticsearchserviceresponse.h"
-#include "deleteelasticsearchdomainrequest.h"
+#include "elasticsearchserviceresponse_p.h"
 
 namespace QtAws {
 namespace ElasticsearchService {

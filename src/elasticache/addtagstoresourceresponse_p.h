@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDTAGSTORESOURCERESPONSE_P_H
 #define QTAWS_ADDTAGSTORESOURCERESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "addtagstoresourcerequest.h"
+#include "elasticacheresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETJOBOUTPUTRESPONSE_P_H
 #define QTAWS_GETJOBOUTPUTRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "getjoboutputrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

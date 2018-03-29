@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEDELIVERYCHANNELSTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBEDELIVERYCHANNELSTATUSRESPONSE_P_H
 
-#include "configserviceresponse.h"
-#include "describedeliverychannelstatusrequest.h"
+#include "configserviceresponse_p.h"
 
 namespace QtAws {
 namespace ConfigService {

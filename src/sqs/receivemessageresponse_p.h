@@ -20,8 +20,7 @@
 #ifndef QTAWS_RECEIVEMESSAGERESPONSE_P_H
 #define QTAWS_RECEIVEMESSAGERESPONSE_P_H
 
-#include "sqsresponse.h"
-#include "receivemessagerequest.h"
+#include "sqsresponse_p.h"
 
 namespace QtAws {
 namespace SQS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_COMPLETEVAULTLOCKRESPONSE_P_H
 #define QTAWS_COMPLETEVAULTLOCKRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "completevaultlockrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

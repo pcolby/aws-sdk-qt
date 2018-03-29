@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEINSTANCESNAPSHOTRESPONSE_P_H
 #define QTAWS_DELETEINSTANCESNAPSHOTRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "deleteinstancesnapshotrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

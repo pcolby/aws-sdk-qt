@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETYPEDLINKFACETRESPONSE_P_H
 #define QTAWS_DELETETYPEDLINKFACETRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "deletetypedlinkfacetrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

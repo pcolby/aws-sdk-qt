@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEPRECATEDOMAINRESPONSE_P_H
 #define QTAWS_DEPRECATEDOMAINRESPONSE_P_H
 
-#include "swfresponse.h"
-#include "deprecatedomainrequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

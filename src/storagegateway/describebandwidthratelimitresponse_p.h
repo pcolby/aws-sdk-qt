@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEBANDWIDTHRATELIMITRESPONSE_P_H
 #define QTAWS_DESCRIBEBANDWIDTHRATELIMITRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "describebandwidthratelimitrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

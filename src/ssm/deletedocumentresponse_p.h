@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDOCUMENTRESPONSE_P_H
 #define QTAWS_DELETEDOCUMENTRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "deletedocumentrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

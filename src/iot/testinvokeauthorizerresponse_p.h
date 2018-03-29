@@ -20,8 +20,7 @@
 #ifndef QTAWS_TESTINVOKEAUTHORIZERRESPONSE_P_H
 #define QTAWS_TESTINVOKEAUTHORIZERRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "testinvokeauthorizerrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

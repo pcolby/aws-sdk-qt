@@ -20,8 +20,7 @@
 #ifndef QTAWS_MEDIAPACKAGERESPONSE_P_H
 #define QTAWS_MEDIAPACKAGERESPONSE_P_H
 
-#include "mediapackageresponse.h"
-#include "mediapackagerequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace MediaPackage {

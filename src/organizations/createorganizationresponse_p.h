@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEORGANIZATIONRESPONSE_P_H
 #define QTAWS_CREATEORGANIZATIONRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "createorganizationrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

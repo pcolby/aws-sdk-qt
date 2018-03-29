@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESTACKSRESPONSE_P_H
 #define QTAWS_DESCRIBESTACKSRESPONSE_P_H
 
-#include "cloudformationresponse.h"
-#include "describestacksrequest.h"
+#include "cloudformationresponse_p.h"
 
 namespace QtAws {
 namespace CloudFormation {

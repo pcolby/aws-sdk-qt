@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTPOLICYPRINCIPALSRESPONSE_P_H
 #define QTAWS_LISTPOLICYPRINCIPALSRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "listpolicyprincipalsrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

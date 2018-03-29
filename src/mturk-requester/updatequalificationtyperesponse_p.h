@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEQUALIFICATIONTYPERESPONSE_P_H
 #define QTAWS_UPDATEQUALIFICATIONTYPERESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "updatequalificationtyperequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

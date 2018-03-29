@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETRULEGROUPRESPONSE_P_H
 #define QTAWS_GETRULEGROUPRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "getrulegrouprequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

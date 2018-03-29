@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBETAGSRESPONSE_P_H
 #define QTAWS_DESCRIBETAGSRESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "describetagsrequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

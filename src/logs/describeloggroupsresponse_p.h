@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBELOGGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBELOGGROUPSRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "describeloggroupsrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

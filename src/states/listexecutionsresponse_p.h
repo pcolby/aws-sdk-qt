@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTEXECUTIONSRESPONSE_P_H
 #define QTAWS_LISTEXECUTIONSRESPONSE_P_H
 
-#include "sfnresponse.h"
-#include "listexecutionsrequest.h"
+#include "sfnresponse_p.h"
 
 namespace QtAws {
 namespace SFN {

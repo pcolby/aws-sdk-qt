@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTSTREAMSRESPONSE_P_H
 #define QTAWS_LISTSTREAMSRESPONSE_P_H
 
-#include "kinesisvideoresponse.h"
-#include "liststreamsrequest.h"
+#include "kinesisvideoresponse_p.h"
 
 namespace QtAws {
 namespace KinesisVideo {

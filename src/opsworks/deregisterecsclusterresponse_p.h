@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEREGISTERECSCLUSTERRESPONSE_P_H
 #define QTAWS_DEREGISTERECSCLUSTERRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "deregisterecsclusterrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDCLIENTIDTOOPENIDCONNECTPROVIDERRESPONSE_P_H
 #define QTAWS_ADDCLIENTIDTOOPENIDCONNECTPROVIDERRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "addclientidtoopenidconnectproviderrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

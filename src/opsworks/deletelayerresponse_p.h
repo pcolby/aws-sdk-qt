@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETELAYERRESPONSE_P_H
 #define QTAWS_DELETELAYERRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "deletelayerrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

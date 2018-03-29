@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBETABLERESTORESTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBETABLERESTORESTATUSRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "describetablerestorestatusrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

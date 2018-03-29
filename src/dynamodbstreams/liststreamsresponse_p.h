@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTSTREAMSRESPONSE_P_H
 #define QTAWS_LISTSTREAMSRESPONSE_P_H
 
-#include "dynamodbstreamsresponse.h"
-#include "liststreamsrequest.h"
+#include "dynamodbstreamsresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDBStreams {

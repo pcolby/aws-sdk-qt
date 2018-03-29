@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEBOTRESPONSE_P_H
 #define QTAWS_DELETEBOTRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "deletebotrequest.h"
+#include "lexmodelbuildingserviceresponse_p.h"
 
 namespace QtAws {
 namespace LexModelBuildingService {

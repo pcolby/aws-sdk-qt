@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYCLUSTERIAMROLESRESPONSE_P_H
 #define QTAWS_MODIFYCLUSTERIAMROLESRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "modifyclusteriamrolesrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

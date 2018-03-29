@@ -20,8 +20,7 @@
 #ifndef QTAWS_BULKPUBLISHRESPONSE_P_H
 #define QTAWS_BULKPUBLISHRESPONSE_P_H
 
-#include "cognitosyncresponse.h"
-#include "bulkpublishrequest.h"
+#include "cognitosyncresponse_p.h"
 
 namespace QtAws {
 namespace CognitoSync {

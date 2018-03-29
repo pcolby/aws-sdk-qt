@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDOMAINENTRYRESPONSE_P_H
 #define QTAWS_CREATEDOMAINENTRYRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "createdomainentryrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

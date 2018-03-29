@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBETAGSRESPONSE_P_H
 #define QTAWS_DESCRIBETAGSRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "describetagsrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

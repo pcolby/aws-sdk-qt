@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESENDVALIDATIONEMAILRESPONSE_P_H
 #define QTAWS_RESENDVALIDATIONEMAILRESPONSE_P_H
 
-#include "acmresponse.h"
-#include "resendvalidationemailrequest.h"
+#include "acmresponse_p.h"
 
 namespace QtAws {
 namespace ACM {

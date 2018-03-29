@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEEVENTSTREAMRESPONSE_P_H
 #define QTAWS_DELETEEVENTSTREAMRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "deleteeventstreamrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

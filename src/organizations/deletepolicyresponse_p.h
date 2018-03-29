@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPOLICYRESPONSE_P_H
 #define QTAWS_DELETEPOLICYRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "deletepolicyrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

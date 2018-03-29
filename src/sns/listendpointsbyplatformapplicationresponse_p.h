@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTENDPOINTSBYPLATFORMAPPLICATIONRESPONSE_P_H
 #define QTAWS_LISTENDPOINTSBYPLATFORMAPPLICATIONRESPONSE_P_H
 
-#include "snsresponse.h"
-#include "listendpointsbyplatformapplicationrequest.h"
+#include "snsresponse_p.h"
 
 namespace QtAws {
 namespace SNS {

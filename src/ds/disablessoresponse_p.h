@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISABLESSORESPONSE_P_H
 #define QTAWS_DISABLESSORESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "disablessorequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

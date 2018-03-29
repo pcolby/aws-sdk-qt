@@ -20,8 +20,7 @@
 #ifndef QTAWS_REGISTERINSTANCERESPONSE_P_H
 #define QTAWS_REGISTERINSTANCERESPONSE_P_H
 
-#include "servicediscoveryresponse.h"
-#include "registerinstancerequest.h"
+#include "servicediscoveryresponse_p.h"
 
 namespace QtAws {
 namespace ServiceDiscovery {

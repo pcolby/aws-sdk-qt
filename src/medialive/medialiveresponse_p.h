@@ -20,8 +20,7 @@
 #ifndef QTAWS_MEDIALIVERESPONSE_P_H
 #define QTAWS_MEDIALIVERESPONSE_P_H
 
-#include "medialiveresponse.h"
-#include "medialiverequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace MediaLive {

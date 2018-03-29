@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECLUSTERRESPONSE_P_H
 #define QTAWS_DELETECLUSTERRESPONSE_P_H
 
-#include "cloudhsmv2response.h"
-#include "deleteclusterrequest.h"
+#include "cloudhsmv2response_p.h"
 
 namespace QtAws {
 namespace CloudHSMV2 {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDTAGSTORESOURCERESPONSE_P_H
 #define QTAWS_ADDTAGSTORESOURCERESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "addtagstoresourcerequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEINTENTVERSIONRESPONSE_P_H
 #define QTAWS_DELETEINTENTVERSIONRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "deleteintentversionrequest.h"
+#include "lexmodelbuildingserviceresponse_p.h"
 
 namespace QtAws {
 namespace LexModelBuildingService {

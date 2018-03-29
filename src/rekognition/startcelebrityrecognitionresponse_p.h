@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTCELEBRITYRECOGNITIONRESPONSE_P_H
 #define QTAWS_STARTCELEBRITYRECOGNITIONRESPONSE_P_H
 
-#include "rekognitionresponse.h"
-#include "startcelebrityrecognitionrequest.h"
+#include "rekognitionresponse_p.h"
 
 namespace QtAws {
 namespace Rekognition {

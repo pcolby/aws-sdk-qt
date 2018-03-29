@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTRECORDSRESPONSE_P_H
 #define QTAWS_PUTRECORDSRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "putrecordsrequest.h"
+#include "kinesisresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

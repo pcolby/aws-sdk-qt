@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETERESOURCERESPONSE_P_H
 #define QTAWS_DELETERESOURCERESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "deleteresourcerequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

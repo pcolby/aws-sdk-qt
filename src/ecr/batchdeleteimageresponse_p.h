@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHDELETEIMAGERESPONSE_P_H
 #define QTAWS_BATCHDELETEIMAGERESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "batchdeleteimagerequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

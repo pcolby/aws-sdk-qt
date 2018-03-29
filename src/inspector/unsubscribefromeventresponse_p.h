@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNSUBSCRIBEFROMEVENTRESPONSE_P_H
 #define QTAWS_UNSUBSCRIBEFROMEVENTRESPONSE_P_H
 
-#include "inspectorresponse.h"
-#include "unsubscribefromeventrequest.h"
+#include "inspectorresponse_p.h"
 
 namespace QtAws {
 namespace Inspector {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTDOCUMENTVERSIONSRESPONSE_P_H
 #define QTAWS_LISTDOCUMENTVERSIONSRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "listdocumentversionsrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

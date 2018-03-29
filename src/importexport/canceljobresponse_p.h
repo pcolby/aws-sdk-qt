@@ -20,8 +20,7 @@
 #ifndef QTAWS_CANCELJOBRESPONSE_P_H
 #define QTAWS_CANCELJOBRESPONSE_P_H
 
-#include "importexportresponse.h"
-#include "canceljobrequest.h"
+#include "importexportresponse_p.h"
 
 namespace QtAws {
 namespace ImportExport {

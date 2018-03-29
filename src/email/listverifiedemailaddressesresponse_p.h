@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTVERIFIEDEMAILADDRESSESRESPONSE_P_H
 #define QTAWS_LISTVERIFIEDEMAILADDRESSESRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "listverifiedemailaddressesrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

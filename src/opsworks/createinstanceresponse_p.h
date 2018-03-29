@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEINSTANCERESPONSE_P_H
 #define QTAWS_CREATEINSTANCERESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "createinstancerequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

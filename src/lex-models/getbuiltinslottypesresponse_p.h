@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETBUILTINSLOTTYPESRESPONSE_P_H
 #define QTAWS_GETBUILTINSLOTTYPESRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "getbuiltinslottypesrequest.h"
+#include "lexmodelbuildingserviceresponse_p.h"
 
 namespace QtAws {
 namespace LexModelBuildingService {

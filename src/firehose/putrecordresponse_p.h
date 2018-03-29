@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTRECORDRESPONSE_P_H
 #define QTAWS_PUTRECORDRESPONSE_P_H
 
-#include "firehoseresponse.h"
-#include "putrecordrequest.h"
+#include "firehoseresponse_p.h"
 
 namespace QtAws {
 namespace Firehose {

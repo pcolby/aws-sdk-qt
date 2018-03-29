@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADMINLISTDEVICESRESPONSE_P_H
 #define QTAWS_ADMINLISTDEVICESRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "adminlistdevicesrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

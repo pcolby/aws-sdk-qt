@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTEVENTSRESPONSE_P_H
 #define QTAWS_PUTEVENTSRESPONSE_P_H
 
-#include "mobileanalyticsresponse.h"
-#include "puteventsrequest.h"
+#include "mobileanalyticsresponse_p.h"
 
 namespace QtAws {
 namespace MobileAnalytics {

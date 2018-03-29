@@ -20,8 +20,7 @@
 #ifndef QTAWS_EC2RESPONSE_P_H
 #define QTAWS_EC2RESPONSE_P_H
 
-#include "ec2response.h"
-#include "ec2request.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace EC2 {

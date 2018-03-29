@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEIMAGESRESPONSE_P_H
 #define QTAWS_DESCRIBEIMAGESRESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "describeimagesrequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

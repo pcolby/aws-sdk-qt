@@ -20,8 +20,7 @@
 #ifndef QTAWS_ESTIMATETEMPLATECOSTRESPONSE_P_H
 #define QTAWS_ESTIMATETEMPLATECOSTRESPONSE_P_H
 
-#include "cloudformationresponse.h"
-#include "estimatetemplatecostrequest.h"
+#include "cloudformationresponse_p.h"
 
 namespace QtAws {
 namespace CloudFormation {

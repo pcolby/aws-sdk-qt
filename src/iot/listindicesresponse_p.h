@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTINDICESRESPONSE_P_H
 #define QTAWS_LISTINDICESRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "listindicesrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

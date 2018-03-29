@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBETAGSRESPONSE_P_H
 #define QTAWS_DESCRIBETAGSRESPONSE_P_H
 
-#include "applicationdiscoveryserviceresponse.h"
-#include "describetagsrequest.h"
+#include "applicationdiscoveryserviceresponse_p.h"
 
 namespace QtAws {
 namespace ApplicationDiscoveryService {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDEVICEPOOLRESPONSE_P_H
 #define QTAWS_GETDEVICEPOOLRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "getdevicepoolrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

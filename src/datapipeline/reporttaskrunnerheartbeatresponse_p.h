@@ -20,8 +20,7 @@
 #ifndef QTAWS_REPORTTASKRUNNERHEARTBEATRESPONSE_P_H
 #define QTAWS_REPORTTASKRUNNERHEARTBEATRESPONSE_P_H
 
-#include "datapipelineresponse.h"
-#include "reporttaskrunnerheartbeatrequest.h"
+#include "datapipelineresponse_p.h"
 
 namespace QtAws {
 namespace DataPipeline {

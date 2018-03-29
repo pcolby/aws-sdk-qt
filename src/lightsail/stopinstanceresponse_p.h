@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPINSTANCERESPONSE_P_H
 #define QTAWS_STOPINSTANCERESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "stopinstancerequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEBYTEMATCHSETRESPONSE_P_H
 #define QTAWS_CREATEBYTEMATCHSETRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "createbytematchsetrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

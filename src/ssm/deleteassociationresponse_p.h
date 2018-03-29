@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEASSOCIATIONRESPONSE_P_H
 #define QTAWS_DELETEASSOCIATIONRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "deleteassociationrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

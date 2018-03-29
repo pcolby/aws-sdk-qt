@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCONFIGRESPONSE_P_H
 #define QTAWS_GETCONFIGRESPONSE_P_H
 
-#include "cloudhsmresponse.h"
-#include "getconfigrequest.h"
+#include "cloudhsmresponse_p.h"
 
 namespace QtAws {
 namespace CloudHSM {

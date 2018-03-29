@@ -20,8 +20,7 @@
 #ifndef QTAWS_SENDTASKHEARTBEATRESPONSE_P_H
 #define QTAWS_SENDTASKHEARTBEATRESPONSE_P_H
 
-#include "sfnresponse.h"
-#include "sendtaskheartbeatrequest.h"
+#include "sfnresponse_p.h"
 
 namespace QtAws {
 namespace SFN {

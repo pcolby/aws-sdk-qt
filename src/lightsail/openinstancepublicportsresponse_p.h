@@ -20,8 +20,7 @@
 #ifndef QTAWS_OPENINSTANCEPUBLICPORTSRESPONSE_P_H
 #define QTAWS_OPENINSTANCEPUBLICPORTSRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "openinstancepublicportsrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

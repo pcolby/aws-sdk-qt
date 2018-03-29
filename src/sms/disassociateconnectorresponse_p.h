@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISASSOCIATECONNECTORRESPONSE_P_H
 #define QTAWS_DISASSOCIATECONNECTORRESPONSE_P_H
 
-#include "smsresponse.h"
-#include "disassociateconnectorrequest.h"
+#include "smsresponse_p.h"
 
 namespace QtAws {
 namespace SMS {

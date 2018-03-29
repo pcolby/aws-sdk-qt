@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDTAGSTORESOURCERESPONSE_P_H
 #define QTAWS_ADDTAGSTORESOURCERESPONSE_P_H
 
-#include "databasemigrationserviceresponse.h"
-#include "addtagstoresourcerequest.h"
+#include "databasemigrationserviceresponse_p.h"
 
 namespace QtAws {
 namespace DatabaseMigrationService {

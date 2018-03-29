@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETERESOURCERESPONSE_P_H
 #define QTAWS_DELETERESOURCERESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "deleteresourcerequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

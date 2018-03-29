@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEACCESSKEYRESPONSE_P_H
 #define QTAWS_CREATEACCESSKEYRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "createaccesskeyrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

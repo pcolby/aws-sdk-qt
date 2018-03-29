@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEINSTANCERESPONSE_P_H
 #define QTAWS_DELETEINSTANCERESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "deleteinstancerequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

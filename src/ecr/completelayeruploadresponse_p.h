@@ -20,8 +20,7 @@
 #ifndef QTAWS_COMPLETELAYERUPLOADRESPONSE_P_H
 #define QTAWS_COMPLETELAYERUPLOADRESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "completelayeruploadrequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

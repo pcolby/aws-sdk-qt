@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECLASSIFIERRESPONSE_P_H
 #define QTAWS_DELETECLASSIFIERRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "deleteclassifierrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

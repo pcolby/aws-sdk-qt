@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEDELIVERYSTREAMRESPONSE_P_H
 #define QTAWS_DESCRIBEDELIVERYSTREAMRESPONSE_P_H
 
-#include "firehoseresponse.h"
-#include "describedeliverystreamrequest.h"
+#include "firehoseresponse_p.h"
 
 namespace QtAws {
 namespace Firehose {

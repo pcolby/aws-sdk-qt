@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTCONFIGURATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTCONFIGURATIONSRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "describeeventconfigurationsrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETKEYROTATIONSTATUSRESPONSE_P_H
 #define QTAWS_GETKEYROTATIONSTATUSRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "getkeyrotationstatusrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

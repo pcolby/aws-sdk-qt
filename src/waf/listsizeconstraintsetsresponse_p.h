@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTSIZECONSTRAINTSETSRESPONSE_P_H
 #define QTAWS_LISTSIZECONSTRAINTSETSRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "listsizeconstraintsetsrequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

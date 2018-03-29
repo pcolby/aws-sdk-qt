@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETMETRICSTATISTICSRESPONSE_P_H
 #define QTAWS_GETMETRICSTATISTICSRESPONSE_P_H
 
-#include "cloudwatchresponse.h"
-#include "getmetricstatisticsrequest.h"
+#include "cloudwatchresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatch {

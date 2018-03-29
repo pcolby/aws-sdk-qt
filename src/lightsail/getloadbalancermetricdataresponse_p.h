@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETLOADBALANCERMETRICDATARESPONSE_P_H
 #define QTAWS_GETLOADBALANCERMETRICDATARESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "getloadbalancermetricdatarequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

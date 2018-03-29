@@ -20,8 +20,7 @@
 #ifndef QTAWS_RECORDACTIVITYTASKHEARTBEATRESPONSE_P_H
 #define QTAWS_RECORDACTIVITYTASKHEARTBEATRESPONSE_P_H
 
-#include "swfresponse.h"
-#include "recordactivitytaskheartbeatrequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

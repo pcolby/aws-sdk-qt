@@ -20,8 +20,7 @@
 #ifndef QTAWS_REGISTERCERTIFICATERESPONSE_P_H
 #define QTAWS_REGISTERCERTIFICATERESPONSE_P_H
 
-#include "iotresponse.h"
-#include "registercertificaterequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

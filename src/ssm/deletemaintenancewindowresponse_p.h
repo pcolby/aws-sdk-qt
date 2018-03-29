@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEMAINTENANCEWINDOWRESPONSE_P_H
 #define QTAWS_DELETEMAINTENANCEWINDOWRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "deletemaintenancewindowrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETFILEUPLOADURLRESPONSE_P_H
 #define QTAWS_GETFILEUPLOADURLRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "getfileuploadurlrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

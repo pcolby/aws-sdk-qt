@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTAUTOSCALINGPOLICYRESPONSE_P_H
 #define QTAWS_PUTAUTOSCALINGPOLICYRESPONSE_P_H
 
-#include "emrresponse.h"
-#include "putautoscalingpolicyrequest.h"
+#include "emrresponse_p.h"
 
 namespace QtAws {
 namespace EMR {

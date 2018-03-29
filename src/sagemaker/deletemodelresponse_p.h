@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEMODELRESPONSE_P_H
 #define QTAWS_DELETEMODELRESPONSE_P_H
 
-#include "sagemakerresponse.h"
-#include "deletemodelrequest.h"
+#include "sagemakerresponse_p.h"
 
 namespace QtAws {
 namespace SageMaker {

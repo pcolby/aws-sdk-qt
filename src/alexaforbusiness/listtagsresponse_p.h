@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTAGSRESPONSE_P_H
 #define QTAWS_LISTTAGSRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "listtagsrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

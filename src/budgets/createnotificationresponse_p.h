@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATENOTIFICATIONRESPONSE_P_H
 #define QTAWS_CREATENOTIFICATIONRESPONSE_P_H
 
-#include "budgetsresponse.h"
-#include "createnotificationrequest.h"
+#include "budgetsresponse_p.h"
 
 namespace QtAws {
 namespace Budgets {

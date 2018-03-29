@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYINSTANCECREDITSPECIFICATIONRESPONSE_P_H
 #define QTAWS_MODIFYINSTANCECREDITSPECIFICATIONRESPONSE_P_H
 
-#include "ec2response.h"
-#include "modifyinstancecreditspecificationrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

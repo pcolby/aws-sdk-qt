@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETGAMESESSIONLOGURLRESPONSE_P_H
 #define QTAWS_GETGAMESESSIONLOGURLRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "getgamesessionlogurlrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

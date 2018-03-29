@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESTATEMACHINERESPONSE_P_H
 #define QTAWS_DELETESTATEMACHINERESPONSE_P_H
 
-#include "sfnresponse.h"
-#include "deletestatemachinerequest.h"
+#include "sfnresponse_p.h"
 
 namespace QtAws {
 namespace SFN {

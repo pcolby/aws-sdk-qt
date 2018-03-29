@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDSOURCEIDENTIFIERTOSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_ADDSOURCEIDENTIFIERTOSUBSCRIPTIONRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "addsourceidentifiertosubscriptionrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

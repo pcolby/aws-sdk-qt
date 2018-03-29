@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEPORTFOLIORESPONSE_P_H
 #define QTAWS_UPDATEPORTFOLIORESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "updateportfoliorequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

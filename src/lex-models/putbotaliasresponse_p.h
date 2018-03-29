@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTBOTALIASRESPONSE_P_H
 #define QTAWS_PUTBOTALIASRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "putbotaliasrequest.h"
+#include "lexmodelbuildingserviceresponse_p.h"
 
 namespace QtAws {
 namespace LexModelBuildingService {

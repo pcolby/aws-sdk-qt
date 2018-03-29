@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETTAGSRESPONSE_P_H
 #define QTAWS_GETTAGSRESPONSE_P_H
 
-#include "costexplorerresponse.h"
-#include "gettagsrequest.h"
+#include "costexplorerresponse_p.h"
 
 namespace QtAws {
 namespace CostExplorer {

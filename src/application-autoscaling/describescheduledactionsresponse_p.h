@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESCHEDULEDACTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBESCHEDULEDACTIONSRESPONSE_P_H
 
-#include "applicationautoscalingresponse.h"
-#include "describescheduledactionsrequest.h"
+#include "applicationautoscalingresponse_p.h"
 
 namespace QtAws {
 namespace ApplicationAutoScaling {

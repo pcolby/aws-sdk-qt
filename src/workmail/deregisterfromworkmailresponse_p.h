@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEREGISTERFROMWORKMAILRESPONSE_P_H
 #define QTAWS_DEREGISTERFROMWORKMAILRESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "deregisterfromworkmailrequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

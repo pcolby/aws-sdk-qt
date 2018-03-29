@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETERESOURCEPOLICYRESPONSE_P_H
 #define QTAWS_DELETERESOURCEPOLICYRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "deleteresourcepolicyrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

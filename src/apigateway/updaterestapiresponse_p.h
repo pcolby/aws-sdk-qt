@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATERESTAPIRESPONSE_P_H
 #define QTAWS_UPDATERESTAPIRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "updaterestapirequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

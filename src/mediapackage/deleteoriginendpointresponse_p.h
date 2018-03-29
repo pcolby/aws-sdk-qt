@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEORIGINENDPOINTRESPONSE_P_H
 #define QTAWS_DELETEORIGINENDPOINTRESPONSE_P_H
 
-#include "mediapackageresponse.h"
-#include "deleteoriginendpointrequest.h"
+#include "mediapackageresponse_p.h"
 
 namespace QtAws {
 namespace MediaPackage {

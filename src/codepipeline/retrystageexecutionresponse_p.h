@@ -20,8 +20,7 @@
 #ifndef QTAWS_RETRYSTAGEEXECUTIONRESPONSE_P_H
 #define QTAWS_RETRYSTAGEEXECUTIONRESPONSE_P_H
 
-#include "codepipelineresponse.h"
-#include "retrystageexecutionrequest.h"
+#include "codepipelineresponse_p.h"
 
 namespace QtAws {
 namespace CodePipeline {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEDOMAINENTRYRESPONSE_P_H
 #define QTAWS_UPDATEDOMAINENTRYRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "updatedomainentryrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

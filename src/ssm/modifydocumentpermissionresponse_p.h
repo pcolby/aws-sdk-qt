@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYDOCUMENTPERMISSIONRESPONSE_P_H
 #define QTAWS_MODIFYDOCUMENTPERMISSIONRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "modifydocumentpermissionrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

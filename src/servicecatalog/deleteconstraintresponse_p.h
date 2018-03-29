@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECONSTRAINTRESPONSE_P_H
 #define QTAWS_DELETECONSTRAINTRESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "deleteconstraintrequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

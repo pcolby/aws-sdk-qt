@@ -20,8 +20,7 @@
 #ifndef QTAWS_SELECTRESPONSE_P_H
 #define QTAWS_SELECTRESPONSE_P_H
 
-#include "simpledbresponse.h"
-#include "selectrequest.h"
+#include "simpledbresponse_p.h"
 
 namespace QtAws {
 namespace SimpleDB {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTTHIRDPARTYJOBSUCCESSRESULTRESPONSE_P_H
 #define QTAWS_PUTTHIRDPARTYJOBSUCCESSRESULTRESPONSE_P_H
 
-#include "codepipelineresponse.h"
-#include "putthirdpartyjobsuccessresultrequest.h"
+#include "codepipelineresponse_p.h"
 
 namespace QtAws {
 namespace CodePipeline {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESTORETABLEFROMCLUSTERSNAPSHOTRESPONSE_P_H
 #define QTAWS_RESTORETABLEFROMCLUSTERSNAPSHOTRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "restoretablefromclustersnapshotrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

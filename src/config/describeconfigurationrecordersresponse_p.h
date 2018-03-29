@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECONFIGURATIONRECORDERSRESPONSE_P_H
 #define QTAWS_DESCRIBECONFIGURATIONRECORDERSRESPONSE_P_H
 
-#include "configserviceresponse.h"
-#include "describeconfigurationrecordersrequest.h"
+#include "configserviceresponse_p.h"
 
 namespace QtAws {
 namespace ConfigService {

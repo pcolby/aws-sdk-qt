@@ -20,8 +20,7 @@
 #ifndef QTAWS_SEARCHROOMSRESPONSE_P_H
 #define QTAWS_SEARCHROOMSRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "searchroomsrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

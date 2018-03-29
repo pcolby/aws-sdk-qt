@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESTACKSUMMARYRESPONSE_P_H
 #define QTAWS_DESCRIBESTACKSUMMARYRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "describestacksummaryrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

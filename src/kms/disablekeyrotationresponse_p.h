@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISABLEKEYROTATIONRESPONSE_P_H
 #define QTAWS_DISABLEKEYROTATIONRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "disablekeyrotationrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

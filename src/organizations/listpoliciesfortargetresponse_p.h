@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTPOLICIESFORTARGETRESPONSE_P_H
 #define QTAWS_LISTPOLICIESFORTARGETRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "listpoliciesfortargetrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

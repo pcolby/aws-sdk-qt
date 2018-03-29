@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETTRAFFICPOLICYRESPONSE_P_H
 #define QTAWS_GETTRAFFICPOLICYRESPONSE_P_H
 
-#include "route53response.h"
-#include "gettrafficpolicyrequest.h"
+#include "route53response_p.h"
 
 namespace QtAws {
 namespace Route53 {

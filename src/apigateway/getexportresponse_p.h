@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETEXPORTRESPONSE_P_H
 #define QTAWS_GETEXPORTRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "getexportrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

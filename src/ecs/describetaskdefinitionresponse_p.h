@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBETASKDEFINITIONRESPONSE_P_H
 #define QTAWS_DESCRIBETASKDEFINITIONRESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "describetaskdefinitionrequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

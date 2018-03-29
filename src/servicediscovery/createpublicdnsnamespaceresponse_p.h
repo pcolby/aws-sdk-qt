@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEPUBLICDNSNAMESPACERESPONSE_P_H
 #define QTAWS_CREATEPUBLICDNSNAMESPACERESPONSE_P_H
 
-#include "servicediscoveryresponse.h"
-#include "createpublicdnsnamespacerequest.h"
+#include "servicediscoveryresponse_p.h"
 
 namespace QtAws {
 namespace ServiceDiscovery {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LOOKUPPOLICYRESPONSE_P_H
 #define QTAWS_LOOKUPPOLICYRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "lookuppolicyrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

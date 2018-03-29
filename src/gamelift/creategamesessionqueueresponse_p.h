@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEGAMESESSIONQUEUERESPONSE_P_H
 #define QTAWS_CREATEGAMESESSIONQUEUERESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "creategamesessionqueuerequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

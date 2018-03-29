@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEAPPRESPONSE_P_H
 #define QTAWS_CREATEAPPRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "createapprequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

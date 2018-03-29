@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETREMOTEACCESSSESSIONRESPONSE_P_H
 #define QTAWS_GETREMOTEACCESSSESSIONRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "getremoteaccesssessionrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

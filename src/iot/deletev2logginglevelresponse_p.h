@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEV2LOGGINGLEVELRESPONSE_P_H
 #define QTAWS_DELETEV2LOGGINGLEVELRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "deletev2logginglevelrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETIDENTITYMAILFROMDOMAINRESPONSE_P_H
 #define QTAWS_SETIDENTITYMAILFROMDOMAINRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "setidentitymailfromdomainrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

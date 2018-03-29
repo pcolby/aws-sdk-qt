@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTPOLICIESRESPONSE_P_H
 #define QTAWS_LISTPOLICIESRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "listpoliciesrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

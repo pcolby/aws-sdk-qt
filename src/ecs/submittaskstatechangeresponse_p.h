@@ -20,8 +20,7 @@
 #ifndef QTAWS_SUBMITTASKSTATECHANGERESPONSE_P_H
 #define QTAWS_SUBMITTASKSTATECHANGERESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "submittaskstatechangerequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETROLERESPONSE_P_H
 #define QTAWS_GETROLERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "getrolerequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

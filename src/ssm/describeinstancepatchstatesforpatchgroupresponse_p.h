@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEINSTANCEPATCHSTATESFORPATCHGROUPRESPONSE_P_H
 #define QTAWS_DESCRIBEINSTANCEPATCHSTATESFORPATCHGROUPRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "describeinstancepatchstatesforpatchgrouprequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

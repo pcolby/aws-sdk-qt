@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETBOTCHANNELASSOCIATIONSRESPONSE_P_H
 #define QTAWS_GETBOTCHANNELASSOCIATIONSRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "getbotchannelassociationsrequest.h"
+#include "lexmodelbuildingserviceresponse_p.h"
 
 namespace QtAws {
 namespace LexModelBuildingService {

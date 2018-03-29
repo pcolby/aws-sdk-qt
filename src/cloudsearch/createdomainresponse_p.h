@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDOMAINRESPONSE_P_H
 #define QTAWS_CREATEDOMAINRESPONSE_P_H
 
-#include "cloudsearchresponse.h"
-#include "createdomainrequest.h"
+#include "cloudsearchresponse_p.h"
 
 namespace QtAws {
 namespace CloudSearch {

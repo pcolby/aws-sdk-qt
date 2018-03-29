@@ -20,8 +20,7 @@
 #ifndef QTAWS_SIGNALRESOURCERESPONSE_P_H
 #define QTAWS_SIGNALRESOURCERESPONSE_P_H
 
-#include "cloudformationresponse.h"
-#include "signalresourcerequest.h"
+#include "cloudformationresponse_p.h"
 
 namespace QtAws {
 namespace CloudFormation {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDEVENDPOINTRESPONSE_P_H
 #define QTAWS_CREATEDEVENDPOINTRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "createdevendpointrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

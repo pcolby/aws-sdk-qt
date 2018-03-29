@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEORDERABLEDBINSTANCEOPTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEORDERABLEDBINSTANCEOPTIONSRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describeorderabledbinstanceoptionsrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

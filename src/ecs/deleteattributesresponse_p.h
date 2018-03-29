@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEATTRIBUTESRESPONSE_P_H
 #define QTAWS_DELETEATTRIBUTESRESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "deleteattributesrequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEPULLREQUESTRESPONSE_P_H
 #define QTAWS_CREATEPULLREQUESTRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "createpullrequestrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

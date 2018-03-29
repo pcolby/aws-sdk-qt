@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTINPUTSRESPONSE_P_H
 #define QTAWS_LISTINPUTSRESPONSE_P_H
 
-#include "medialiveresponse.h"
-#include "listinputsrequest.h"
+#include "medialiveresponse_p.h"
 
 namespace QtAws {
 namespace MediaLive {

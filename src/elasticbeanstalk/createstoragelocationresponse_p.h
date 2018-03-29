@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATESTORAGELOCATIONRESPONSE_P_H
 #define QTAWS_CREATESTORAGELOCATIONRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "createstoragelocationrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

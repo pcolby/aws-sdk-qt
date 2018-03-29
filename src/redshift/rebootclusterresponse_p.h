@@ -20,8 +20,7 @@
 #ifndef QTAWS_REBOOTCLUSTERRESPONSE_P_H
 #define QTAWS_REBOOTCLUSTERRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "rebootclusterrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

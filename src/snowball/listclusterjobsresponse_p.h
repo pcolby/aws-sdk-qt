@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTCLUSTERJOBSRESPONSE_P_H
 #define QTAWS_LISTCLUSTERJOBSRESPONSE_P_H
 
-#include "snowballresponse.h"
-#include "listclusterjobsrequest.h"
+#include "snowballresponse_p.h"
 
 namespace QtAws {
 namespace Snowball {

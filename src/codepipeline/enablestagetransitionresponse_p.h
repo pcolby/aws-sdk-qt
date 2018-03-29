@@ -20,8 +20,7 @@
 #ifndef QTAWS_ENABLESTAGETRANSITIONRESPONSE_P_H
 #define QTAWS_ENABLESTAGETRANSITIONRESPONSE_P_H
 
-#include "codepipelineresponse.h"
-#include "enablestagetransitionrequest.h"
+#include "codepipelineresponse_p.h"
 
 namespace QtAws {
 namespace CodePipeline {

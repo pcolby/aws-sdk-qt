@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESETSERVICESPECIFICCREDENTIALRESPONSE_P_H
 #define QTAWS_RESETSERVICESPECIFICCREDENTIALRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "resetservicespecificcredentialrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

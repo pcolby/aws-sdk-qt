@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDTAGSTOCERTIFICATERESPONSE_P_H
 #define QTAWS_ADDTAGSTOCERTIFICATERESPONSE_P_H
 
-#include "acmresponse.h"
-#include "addtagstocertificaterequest.h"
+#include "acmresponse_p.h"
 
 namespace QtAws {
 namespace ACM {

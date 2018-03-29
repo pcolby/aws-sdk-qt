@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECONTAINERRESPONSE_P_H
 #define QTAWS_DELETECONTAINERRESPONSE_P_H
 
-#include "mediastoreresponse.h"
-#include "deletecontainerrequest.h"
+#include "mediastoreresponse_p.h"
 
 namespace QtAws {
 namespace MediaStore {

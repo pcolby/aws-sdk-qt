@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETOBJECTINFORMATIONRESPONSE_P_H
 #define QTAWS_GETOBJECTINFORMATIONRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "getobjectinformationrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

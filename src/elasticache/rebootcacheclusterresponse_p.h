@@ -20,8 +20,7 @@
 #ifndef QTAWS_REBOOTCACHECLUSTERRESPONSE_P_H
 #define QTAWS_REBOOTCACHECLUSTERRESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "rebootcacheclusterrequest.h"
+#include "elasticacheresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

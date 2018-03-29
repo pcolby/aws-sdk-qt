@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTVERSIONSBYFUNCTIONRESPONSE_P_H
 #define QTAWS_LISTVERSIONSBYFUNCTIONRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "listversionsbyfunctionrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATELUNACLIENTRESPONSE_P_H
 #define QTAWS_CREATELUNACLIENTRESPONSE_P_H
 
-#include "cloudhsmresponse.h"
-#include "createlunaclientrequest.h"
+#include "cloudhsmresponse_p.h"
 
 namespace QtAws {
 namespace CloudHSM {

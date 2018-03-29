@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDATTACHMENTSTOSETRESPONSE_P_H
 #define QTAWS_ADDATTACHMENTSTOSETRESPONSE_P_H
 
-#include "supportresponse.h"
-#include "addattachmentstosetrequest.h"
+#include "supportresponse_p.h"
 
 namespace QtAws {
 namespace Support {

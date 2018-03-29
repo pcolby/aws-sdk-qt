@@ -20,8 +20,7 @@
 #ifndef QTAWS_DECLINEHANDSHAKERESPONSE_P_H
 #define QTAWS_DECLINEHANDSHAKERESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "declinehandshakerequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

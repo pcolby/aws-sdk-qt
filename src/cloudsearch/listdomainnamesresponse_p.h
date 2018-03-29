@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTDOMAINNAMESRESPONSE_P_H
 #define QTAWS_LISTDOMAINNAMESRESPONSE_P_H
 
-#include "cloudsearchresponse.h"
-#include "listdomainnamesrequest.h"
+#include "cloudsearchresponse_p.h"
 
 namespace QtAws {
 namespace CloudSearch {

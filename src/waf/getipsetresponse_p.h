@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETIPSETRESPONSE_P_H
 #define QTAWS_GETIPSETRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "getipsetrequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

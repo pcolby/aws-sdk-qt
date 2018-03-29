@@ -20,8 +20,7 @@
 #ifndef QTAWS_SKIPWAITTIMEFORINSTANCETERMINATIONRESPONSE_P_H
 #define QTAWS_SKIPWAITTIMEFORINSTANCETERMINATIONRESPONSE_P_H
 
-#include "codedeployresponse.h"
-#include "skipwaittimeforinstanceterminationrequest.h"
+#include "codedeployresponse_p.h"
 
 namespace QtAws {
 namespace CodeDeploy {

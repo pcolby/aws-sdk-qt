@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCERESPONSE_P_H
 #define QTAWS_REMOVETAGSFROMRESOURCERESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "removetagsfromresourcerequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

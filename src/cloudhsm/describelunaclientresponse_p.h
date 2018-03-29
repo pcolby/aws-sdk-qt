@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBELUNACLIENTRESPONSE_P_H
 #define QTAWS_DESCRIBELUNACLIENTRESPONSE_P_H
 
-#include "cloudhsmresponse.h"
-#include "describelunaclientrequest.h"
+#include "cloudhsmresponse_p.h"
 
 namespace QtAws {
 namespace CloudHSM {

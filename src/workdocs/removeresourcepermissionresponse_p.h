@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVERESOURCEPERMISSIONRESPONSE_P_H
 #define QTAWS_REMOVERESOURCEPERMISSIONRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "removeresourcepermissionrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

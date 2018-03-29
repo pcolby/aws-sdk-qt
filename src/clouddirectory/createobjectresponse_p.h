@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEOBJECTRESPONSE_P_H
 #define QTAWS_CREATEOBJECTRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "createobjectrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

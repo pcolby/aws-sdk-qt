@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESOLVEROOMRESPONSE_P_H
 #define QTAWS_RESOLVEROOMRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "resolveroomrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

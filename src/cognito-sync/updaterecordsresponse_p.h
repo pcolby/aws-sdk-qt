@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATERECORDSRESPONSE_P_H
 #define QTAWS_UPDATERECORDSRESPONSE_P_H
 
-#include "cognitosyncresponse.h"
-#include "updaterecordsrequest.h"
+#include "cognitosyncresponse_p.h"
 
 namespace QtAws {
 namespace CognitoSync {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_TAGRESOURCERESPONSE_P_H
 #define QTAWS_TAGRESOURCERESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "tagresourcerequest.h"
+#include "appstreamresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

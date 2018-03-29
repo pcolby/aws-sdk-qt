@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDESTINATIONRESPONSE_P_H
 #define QTAWS_DELETEDESTINATIONRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "deletedestinationrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

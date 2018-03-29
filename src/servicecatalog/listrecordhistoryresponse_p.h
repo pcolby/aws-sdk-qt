@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTRECORDHISTORYRESPONSE_P_H
 #define QTAWS_LISTRECORDHISTORYRESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "listrecordhistoryrequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

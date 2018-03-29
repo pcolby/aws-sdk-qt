@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTGROUPRESOURCESRESPONSE_P_H
 #define QTAWS_LISTGROUPRESOURCESRESPONSE_P_H
 
-#include "resourcegroupsresponse.h"
-#include "listgroupresourcesrequest.h"
+#include "resourcegroupsresponse_p.h"
 
 namespace QtAws {
 namespace ResourceGroups {

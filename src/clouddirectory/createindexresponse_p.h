@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEINDEXRESPONSE_P_H
 #define QTAWS_CREATEINDEXRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "createindexrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

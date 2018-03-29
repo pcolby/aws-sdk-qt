@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTIPSETSRESPONSE_P_H
 #define QTAWS_LISTIPSETSRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "listipsetsrequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

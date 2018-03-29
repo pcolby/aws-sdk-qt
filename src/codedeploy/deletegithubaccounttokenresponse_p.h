@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEGITHUBACCOUNTTOKENRESPONSE_P_H
 #define QTAWS_DELETEGITHUBACCOUNTTOKENRESPONSE_P_H
 
-#include "codedeployresponse.h"
-#include "deletegithubaccounttokenrequest.h"
+#include "codedeployresponse_p.h"
 
 namespace QtAws {
 namespace CodeDeploy {

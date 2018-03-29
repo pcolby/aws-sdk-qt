@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATESERVICERESPONSE_P_H
 #define QTAWS_CREATESERVICERESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "createservicerequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPROFILERESPONSE_P_H
 #define QTAWS_DELETEPROFILERESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "deleteprofilerequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

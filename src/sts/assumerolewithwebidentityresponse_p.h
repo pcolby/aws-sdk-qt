@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSUMEROLEWITHWEBIDENTITYRESPONSE_P_H
 #define QTAWS_ASSUMEROLEWITHWEBIDENTITYRESPONSE_P_H
 
-#include "stsresponse.h"
-#include "assumerolewithwebidentityrequest.h"
+#include "stsresponse_p.h"
 
 namespace QtAws {
 namespace STS {

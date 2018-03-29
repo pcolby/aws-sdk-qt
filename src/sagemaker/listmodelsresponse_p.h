@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTMODELSRESPONSE_P_H
 #define QTAWS_LISTMODELSRESPONSE_P_H
 
-#include "sagemakerresponse.h"
-#include "listmodelsrequest.h"
+#include "sagemakerresponse_p.h"
 
 namespace QtAws {
 namespace SageMaker {

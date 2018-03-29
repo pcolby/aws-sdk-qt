@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDUPLOADBUFFERRESPONSE_P_H
 #define QTAWS_ADDUPLOADBUFFERRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "adduploadbufferrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

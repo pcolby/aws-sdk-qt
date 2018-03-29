@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEBUILDRESPONSE_P_H
 #define QTAWS_UPDATEBUILDRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "updatebuildrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBERISKCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DESCRIBERISKCONFIGURATIONRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "describeriskconfigurationrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

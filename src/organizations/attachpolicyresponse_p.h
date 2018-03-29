@@ -20,8 +20,7 @@
 #ifndef QTAWS_ATTACHPOLICYRESPONSE_P_H
 #define QTAWS_ATTACHPOLICYRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "attachpolicyrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

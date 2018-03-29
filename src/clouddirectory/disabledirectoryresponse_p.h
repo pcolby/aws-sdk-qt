@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISABLEDIRECTORYRESPONSE_P_H
 #define QTAWS_DISABLEDIRECTORYRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "disabledirectoryrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

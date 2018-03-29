@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISABLESNAPSHOTCOPYRESPONSE_P_H
 #define QTAWS_DISABLESNAPSHOTCOPYRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "disablesnapshotcopyrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

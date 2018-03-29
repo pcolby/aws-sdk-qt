@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTOFFERINGSRESPONSE_P_H
 #define QTAWS_LISTOFFERINGSRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "listofferingsrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

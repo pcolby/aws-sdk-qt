@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBENOTIFICATIONCONFIGURATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBENOTIFICATIONCONFIGURATIONSRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "describenotificationconfigurationsrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

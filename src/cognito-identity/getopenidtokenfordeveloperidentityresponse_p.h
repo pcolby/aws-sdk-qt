@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETOPENIDTOKENFORDEVELOPERIDENTITYRESPONSE_P_H
 #define QTAWS_GETOPENIDTOKENFORDEVELOPERIDENTITYRESPONSE_P_H
 
-#include "cognitoidentityresponse.h"
-#include "getopenidtokenfordeveloperidentityrequest.h"
+#include "cognitoidentityresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentity {

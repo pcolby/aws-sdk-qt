@@ -20,8 +20,7 @@
 #ifndef QTAWS_PURCHASEOFFERINGRESPONSE_P_H
 #define QTAWS_PURCHASEOFFERINGRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "purchaseofferingrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

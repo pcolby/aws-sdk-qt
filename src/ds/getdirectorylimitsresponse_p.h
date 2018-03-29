@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDIRECTORYLIMITSRESPONSE_P_H
 #define QTAWS_GETDIRECTORYLIMITSRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "getdirectorylimitsrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

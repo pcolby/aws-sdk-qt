@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDELIVERYSTREAMRESPONSE_P_H
 #define QTAWS_CREATEDELIVERYSTREAMRESPONSE_P_H
 
-#include "firehoseresponse.h"
-#include "createdeliverystreamrequest.h"
+#include "firehoseresponse_p.h"
 
 namespace QtAws {
 namespace Firehose {

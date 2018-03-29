@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEIDENTITYUSAGERESPONSE_P_H
 #define QTAWS_DESCRIBEIDENTITYUSAGERESPONSE_P_H
 
-#include "cognitosyncresponse.h"
-#include "describeidentityusagerequest.h"
+#include "cognitosyncresponse_p.h"
 
 namespace QtAws {
 namespace CognitoSync {

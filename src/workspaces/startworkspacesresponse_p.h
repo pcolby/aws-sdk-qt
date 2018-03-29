@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTWORKSPACESRESPONSE_P_H
 #define QTAWS_STARTWORKSPACESRESPONSE_P_H
 
-#include "workspacesresponse.h"
-#include "startworkspacesrequest.h"
+#include "workspacesresponse_p.h"
 
 namespace QtAws {
 namespace WorkSpaces {

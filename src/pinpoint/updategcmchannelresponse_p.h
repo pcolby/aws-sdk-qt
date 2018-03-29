@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEGCMCHANNELRESPONSE_P_H
 #define QTAWS_UPDATEGCMCHANNELRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "updategcmchannelrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

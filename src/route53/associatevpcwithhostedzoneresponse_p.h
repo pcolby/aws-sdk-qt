@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSOCIATEVPCWITHHOSTEDZONERESPONSE_P_H
 #define QTAWS_ASSOCIATEVPCWITHHOSTEDZONERESPONSE_P_H
 
-#include "route53response.h"
-#include "associatevpcwithhostedzonerequest.h"
+#include "route53response_p.h"
 
 namespace QtAws {
 namespace Route53 {

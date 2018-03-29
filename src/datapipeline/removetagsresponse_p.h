@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVETAGSRESPONSE_P_H
 #define QTAWS_REMOVETAGSRESPONSE_P_H
 
-#include "datapipelineresponse.h"
-#include "removetagsrequest.h"
+#include "datapipelineresponse_p.h"
 
 namespace QtAws {
 namespace DataPipeline {

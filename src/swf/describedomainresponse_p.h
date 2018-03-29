@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEDOMAINRESPONSE_P_H
 #define QTAWS_DESCRIBEDOMAINRESPONSE_P_H
 
-#include "swfresponse.h"
-#include "describedomainrequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

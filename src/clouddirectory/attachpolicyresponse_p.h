@@ -20,8 +20,7 @@
 #ifndef QTAWS_ATTACHPOLICYRESPONSE_P_H
 #define QTAWS_ATTACHPOLICYRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "attachpolicyrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

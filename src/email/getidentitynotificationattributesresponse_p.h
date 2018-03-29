@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETIDENTITYNOTIFICATIONATTRIBUTESRESPONSE_P_H
 #define QTAWS_GETIDENTITYNOTIFICATIONATTRIBUTESRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "getidentitynotificationattributesrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

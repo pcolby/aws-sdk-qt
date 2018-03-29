@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATESTREAMINGURLRESPONSE_P_H
 #define QTAWS_CREATESTREAMINGURLRESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "createstreamingurlrequest.h"
+#include "appstreamresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

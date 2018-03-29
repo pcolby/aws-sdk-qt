@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDOMAINSUGGESTIONSRESPONSE_P_H
 #define QTAWS_GETDOMAINSUGGESTIONSRESPONSE_P_H
 
-#include "route53domainsresponse.h"
-#include "getdomainsuggestionsrequest.h"
+#include "route53domainsresponse_p.h"
 
 namespace QtAws {
 namespace Route53Domains {

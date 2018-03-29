@@ -20,8 +20,7 @@
 #ifndef QTAWS_REGISTERINSTANCERESPONSE_P_H
 #define QTAWS_REGISTERINSTANCERESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "registerinstancerequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

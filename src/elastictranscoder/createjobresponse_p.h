@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEJOBRESPONSE_P_H
 #define QTAWS_CREATEJOBRESPONSE_P_H
 
-#include "elastictranscoderresponse.h"
-#include "createjobrequest.h"
+#include "elastictranscoderresponse_p.h"
 
 namespace QtAws {
 namespace ElasticTranscoder {

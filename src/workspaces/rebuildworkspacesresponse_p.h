@@ -20,8 +20,7 @@
 #ifndef QTAWS_REBUILDWORKSPACESRESPONSE_P_H
 #define QTAWS_REBUILDWORKSPACESRESPONSE_P_H
 
-#include "workspacesresponse.h"
-#include "rebuildworkspacesrequest.h"
+#include "workspacesresponse_p.h"
 
 namespace QtAws {
 namespace WorkSpaces {

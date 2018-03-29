@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTLEXICONSRESPONSE_P_H
 #define QTAWS_LISTLEXICONSRESPONSE_P_H
 
-#include "pollyresponse.h"
-#include "listlexiconsrequest.h"
+#include "pollyresponse_p.h"
 
 namespace QtAws {
 namespace Polly {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECONFIGURATIONTEMPLATERESPONSE_P_H
 #define QTAWS_CREATECONFIGURATIONTEMPLATERESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "createconfigurationtemplaterequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

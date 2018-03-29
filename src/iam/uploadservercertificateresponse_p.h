@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPLOADSERVERCERTIFICATERESPONSE_P_H
 #define QTAWS_UPLOADSERVERCERTIFICATERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "uploadservercertificaterequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

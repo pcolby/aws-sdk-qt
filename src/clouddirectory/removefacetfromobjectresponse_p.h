@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVEFACETFROMOBJECTRESPONSE_P_H
 #define QTAWS_REMOVEFACETFROMOBJECTRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "removefacetfromobjectrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

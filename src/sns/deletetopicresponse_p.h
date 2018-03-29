@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETOPICRESPONSE_P_H
 #define QTAWS_DELETETOPICRESPONSE_P_H
 
-#include "snsresponse.h"
-#include "deletetopicrequest.h"
+#include "snsresponse_p.h"
 
 namespace QtAws {
 namespace SNS {

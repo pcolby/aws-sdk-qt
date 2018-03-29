@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTRESOURCECOMPLIANCESUMMARIESRESPONSE_P_H
 #define QTAWS_LISTRESOURCECOMPLIANCESUMMARIESRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "listresourcecompliancesummariesrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

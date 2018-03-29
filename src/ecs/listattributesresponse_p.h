@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTATTRIBUTESRESPONSE_P_H
 #define QTAWS_LISTATTRIBUTESRESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "listattributesrequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTLIFECYCLEEVENTHOOKEXECUTIONSTATUSRESPONSE_P_H
 #define QTAWS_PUTLIFECYCLEEVENTHOOKEXECUTIONSTATUSRESPONSE_P_H
 
-#include "codedeployresponse.h"
-#include "putlifecycleeventhookexecutionstatusrequest.h"
+#include "codedeployresponse_p.h"
 
 namespace QtAws {
 namespace CodeDeploy {

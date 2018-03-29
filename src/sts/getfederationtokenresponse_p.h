@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETFEDERATIONTOKENRESPONSE_P_H
 #define QTAWS_GETFEDERATIONTOKENRESPONSE_P_H
 
-#include "stsresponse.h"
-#include "getfederationtokenrequest.h"
+#include "stsresponse_p.h"
 
 namespace QtAws {
 namespace STS {

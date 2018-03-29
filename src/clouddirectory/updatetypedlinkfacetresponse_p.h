@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATETYPEDLINKFACETRESPONSE_P_H
 #define QTAWS_UPDATETYPEDLINKFACETRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "updatetypedlinkfacetrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

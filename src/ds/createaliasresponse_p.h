@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEALIASRESPONSE_P_H
 #define QTAWS_CREATEALIASRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "createaliasrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

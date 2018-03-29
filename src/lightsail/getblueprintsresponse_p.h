@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETBLUEPRINTSRESPONSE_P_H
 #define QTAWS_GETBLUEPRINTSRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "getblueprintsrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

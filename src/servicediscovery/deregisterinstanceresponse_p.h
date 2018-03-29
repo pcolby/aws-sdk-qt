@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEREGISTERINSTANCERESPONSE_P_H
 #define QTAWS_DEREGISTERINSTANCERESPONSE_P_H
 
-#include "servicediscoveryresponse.h"
-#include "deregisterinstancerequest.h"
+#include "servicediscoveryresponse_p.h"
 
 namespace QtAws {
 namespace ServiceDiscovery {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEIMAGERESPONSE_P_H
 #define QTAWS_DELETEIMAGERESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "deleteimagerequest.h"
+#include "appstreamresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

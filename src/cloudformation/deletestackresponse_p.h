@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESTACKRESPONSE_P_H
 #define QTAWS_DELETESTACKRESPONSE_P_H
 
-#include "cloudformationresponse.h"
-#include "deletestackrequest.h"
+#include "cloudformationresponse_p.h"
 
 namespace QtAws {
 namespace CloudFormation {

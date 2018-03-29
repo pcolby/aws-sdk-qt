@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEAPPLICATIONRESPONSE_P_H
 #define QTAWS_CREATEAPPLICATIONRESPONSE_P_H
 
-#include "applicationdiscoveryserviceresponse.h"
-#include "createapplicationrequest.h"
+#include "applicationdiscoveryserviceresponse_p.h"
 
 namespace QtAws {
 namespace ApplicationDiscoveryService {

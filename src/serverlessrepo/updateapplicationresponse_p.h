@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEAPPLICATIONRESPONSE_P_H
 #define QTAWS_UPDATEAPPLICATIONRESPONSE_P_H
 
-#include "serverlessapplicationrepositoryresponse.h"
-#include "updateapplicationrequest.h"
+#include "serverlessapplicationrepositoryresponse_p.h"
 
 namespace QtAws {
 namespace ServerlessApplicationRepository {

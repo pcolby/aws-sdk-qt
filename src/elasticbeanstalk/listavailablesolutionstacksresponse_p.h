@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTAVAILABLESOLUTIONSTACKSRESPONSE_P_H
 #define QTAWS_LISTAVAILABLESOLUTIONSTACKSRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "listavailablesolutionstacksrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

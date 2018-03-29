@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECAMPAIGNRESPONSE_P_H
 #define QTAWS_DELETECAMPAIGNRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "deletecampaignrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

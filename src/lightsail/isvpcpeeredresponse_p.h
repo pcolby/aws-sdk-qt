@@ -20,8 +20,7 @@
 #ifndef QTAWS_ISVPCPEEREDRESPONSE_P_H
 #define QTAWS_ISVPCPEEREDRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "isvpcpeeredrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

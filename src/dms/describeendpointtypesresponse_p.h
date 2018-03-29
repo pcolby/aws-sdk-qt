@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEENDPOINTTYPESRESPONSE_P_H
 #define QTAWS_DESCRIBEENDPOINTTYPESRESPONSE_P_H
 
-#include "databasemigrationserviceresponse.h"
-#include "describeendpointtypesrequest.h"
+#include "databasemigrationserviceresponse_p.h"
 
 namespace QtAws {
 namespace DatabaseMigrationService {

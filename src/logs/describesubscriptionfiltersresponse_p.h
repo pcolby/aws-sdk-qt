@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESUBSCRIPTIONFILTERSRESPONSE_P_H
 #define QTAWS_DESCRIBESUBSCRIPTIONFILTERSRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "describesubscriptionfiltersrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

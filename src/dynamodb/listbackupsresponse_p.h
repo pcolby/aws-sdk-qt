@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTBACKUPSRESPONSE_P_H
 #define QTAWS_LISTBACKUPSRESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "listbackupsrequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

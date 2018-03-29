@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEDESTINATIONRESPONSE_P_H
 #define QTAWS_UPDATEDESTINATIONRESPONSE_P_H
 
-#include "firehoseresponse.h"
-#include "updatedestinationrequest.h"
+#include "firehoseresponse_p.h"
 
 namespace QtAws {
 namespace Firehose {

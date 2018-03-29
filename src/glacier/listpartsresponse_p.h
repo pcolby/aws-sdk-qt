@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTPARTSRESPONSE_P_H
 #define QTAWS_LISTPARTSRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "listpartsrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATETAGSRESPONSE_P_H
 #define QTAWS_CREATETAGSRESPONSE_P_H
 
-#include "applicationdiscoveryserviceresponse.h"
-#include "createtagsrequest.h"
+#include "applicationdiscoveryserviceresponse_p.h"
 
 namespace QtAws {
 namespace ApplicationDiscoveryService {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTTASKRESPONSE_P_H
 #define QTAWS_STARTTASKRESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "starttaskrequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATESTATEMACHINERESPONSE_P_H
 #define QTAWS_UPDATESTATEMACHINERESPONSE_P_H
 
-#include "sfnresponse.h"
-#include "updatestatemachinerequest.h"
+#include "sfnresponse_p.h"
 
 namespace QtAws {
 namespace SFN {

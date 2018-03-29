@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEREPLICATIONJOBRESPONSE_P_H
 #define QTAWS_DELETEREPLICATIONJOBRESPONSE_P_H
 
-#include "smsresponse.h"
-#include "deletereplicationjobrequest.h"
+#include "smsresponse_p.h"
 
 namespace QtAws {
 namespace SMS {

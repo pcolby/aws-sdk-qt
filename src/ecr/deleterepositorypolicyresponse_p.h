@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEREPOSITORYPOLICYRESPONSE_P_H
 #define QTAWS_DELETEREPOSITORYPOLICYRESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "deleterepositorypolicyrequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

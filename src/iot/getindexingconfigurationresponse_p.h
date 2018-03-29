@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETINDEXINGCONFIGURATIONRESPONSE_P_H
 #define QTAWS_GETINDEXINGCONFIGURATIONRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "getindexingconfigurationrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

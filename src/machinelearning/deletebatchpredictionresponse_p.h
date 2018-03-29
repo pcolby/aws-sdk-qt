@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEBATCHPREDICTIONRESPONSE_P_H
 #define QTAWS_DELETEBATCHPREDICTIONRESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "deletebatchpredictionrequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

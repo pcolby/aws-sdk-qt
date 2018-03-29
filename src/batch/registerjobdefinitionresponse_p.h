@@ -20,8 +20,7 @@
 #ifndef QTAWS_REGISTERJOBDEFINITIONRESPONSE_P_H
 #define QTAWS_REGISTERJOBDEFINITIONRESPONSE_P_H
 
-#include "batchresponse.h"
-#include "registerjobdefinitionrequest.h"
+#include "batchresponse_p.h"
 
 namespace QtAws {
 namespace Batch {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTAPPLICATIONREVISIONSRESPONSE_P_H
 #define QTAWS_LISTAPPLICATIONREVISIONSRESPONSE_P_H
 
-#include "codedeployresponse.h"
-#include "listapplicationrevisionsrequest.h"
+#include "codedeployresponse_p.h"
 
 namespace QtAws {
 namespace CodeDeploy {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSOCIATEELASTICIPRESPONSE_P_H
 #define QTAWS_ASSOCIATEELASTICIPRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "associateelasticiprequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

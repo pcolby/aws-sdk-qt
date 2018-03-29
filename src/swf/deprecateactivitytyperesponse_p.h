@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEPRECATEACTIVITYTYPERESPONSE_P_H
 #define QTAWS_DEPRECATEACTIVITYTYPERESPONSE_P_H
 
-#include "swfresponse.h"
-#include "deprecateactivitytyperequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTWEBACLSRESPONSE_P_H
 #define QTAWS_LISTWEBACLSRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "listwebaclsrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

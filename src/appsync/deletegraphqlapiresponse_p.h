@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEGRAPHQLAPIRESPONSE_P_H
 #define QTAWS_DELETEGRAPHQLAPIRESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "deletegraphqlapirequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEVIRTUALINTERFACERESPONSE_P_H
 #define QTAWS_DELETEVIRTUALINTERFACERESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "deletevirtualinterfacerequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

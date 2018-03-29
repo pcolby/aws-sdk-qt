@@ -20,8 +20,7 @@
 #ifndef QTAWS_KMSRESPONSE_P_H
 #define QTAWS_KMSRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "kmsrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

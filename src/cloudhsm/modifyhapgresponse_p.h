@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYHAPGRESPONSE_P_H
 #define QTAWS_MODIFYHAPGRESPONSE_P_H
 
-#include "cloudhsmresponse.h"
-#include "modifyhapgrequest.h"
+#include "cloudhsmresponse_p.h"
 
 namespace QtAws {
 namespace CloudHSM {

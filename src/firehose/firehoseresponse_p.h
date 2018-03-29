@@ -20,8 +20,7 @@
 #ifndef QTAWS_FIREHOSERESPONSE_P_H
 #define QTAWS_FIREHOSERESPONSE_P_H
 
-#include "firehoseresponse.h"
-#include "firehoserequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Firehose {

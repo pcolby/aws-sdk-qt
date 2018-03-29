@@ -20,8 +20,7 @@
 #ifndef QTAWS_SQSRESPONSE_P_H
 #define QTAWS_SQSRESPONSE_P_H
 
-#include "sqsresponse.h"
-#include "sqsrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace SQS {

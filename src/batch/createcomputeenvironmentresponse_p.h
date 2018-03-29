@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECOMPUTEENVIRONMENTRESPONSE_P_H
 #define QTAWS_CREATECOMPUTEENVIRONMENTRESPONSE_P_H
 
-#include "batchresponse.h"
-#include "createcomputeenvironmentrequest.h"
+#include "batchresponse_p.h"
 
 namespace QtAws {
 namespace Batch {

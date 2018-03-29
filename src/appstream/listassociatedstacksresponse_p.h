@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTASSOCIATEDSTACKSRESPONSE_P_H
 #define QTAWS_LISTASSOCIATEDSTACKSRESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "listassociatedstacksrequest.h"
+#include "appstreamresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

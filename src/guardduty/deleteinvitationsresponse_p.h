@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEINVITATIONSRESPONSE_P_H
 #define QTAWS_DELETEINVITATIONSRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "deleteinvitationsrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

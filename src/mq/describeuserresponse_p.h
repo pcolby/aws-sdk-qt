@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEUSERRESPONSE_P_H
 #define QTAWS_DESCRIBEUSERRESPONSE_P_H
 
-#include "mqresponse.h"
-#include "describeuserrequest.h"
+#include "mqresponse_p.h"
 
 namespace QtAws {
 namespace MQ {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESCALABLETARGETSRESPONSE_P_H
 #define QTAWS_DESCRIBESCALABLETARGETSRESPONSE_P_H
 
-#include "applicationautoscalingresponse.h"
-#include "describescalabletargetsrequest.h"
+#include "applicationautoscalingresponse_p.h"
 
 namespace QtAws {
 namespace ApplicationAutoScaling {

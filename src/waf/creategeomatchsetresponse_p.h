@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEGEOMATCHSETRESPONSE_P_H
 #define QTAWS_CREATEGEOMATCHSETRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "creategeomatchsetrequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

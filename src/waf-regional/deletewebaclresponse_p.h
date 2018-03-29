@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEWEBACLRESPONSE_P_H
 #define QTAWS_DELETEWEBACLRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "deletewebaclrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

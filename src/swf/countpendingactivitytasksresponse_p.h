@@ -20,8 +20,7 @@
 #ifndef QTAWS_COUNTPENDINGACTIVITYTASKSRESPONSE_P_H
 #define QTAWS_COUNTPENDINGACTIVITYTASKSRESPONSE_P_H
 
-#include "swfresponse.h"
-#include "countpendingactivitytasksrequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

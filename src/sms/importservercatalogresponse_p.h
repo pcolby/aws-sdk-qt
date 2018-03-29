@@ -20,8 +20,7 @@
 #ifndef QTAWS_IMPORTSERVERCATALOGRESPONSE_P_H
 #define QTAWS_IMPORTSERVERCATALOGRESPONSE_P_H
 
-#include "smsresponse.h"
-#include "importservercatalogrequest.h"
+#include "smsresponse_p.h"
 
 namespace QtAws {
 namespace SMS {

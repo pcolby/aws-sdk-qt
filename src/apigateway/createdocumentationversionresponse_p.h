@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDOCUMENTATIONVERSIONRESPONSE_P_H
 #define QTAWS_CREATEDOCUMENTATIONVERSIONRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "createdocumentationversionrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

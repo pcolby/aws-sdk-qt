@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECOREDEFINITIONVERSIONRESPONSE_P_H
 #define QTAWS_CREATECOREDEFINITIONVERSIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "createcoredefinitionversionrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

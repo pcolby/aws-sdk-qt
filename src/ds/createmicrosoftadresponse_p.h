@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEMICROSOFTADRESPONSE_P_H
 #define QTAWS_CREATEMICROSOFTADRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "createmicrosoftadrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

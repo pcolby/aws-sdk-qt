@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTCONTAINERPOLICYRESPONSE_P_H
 #define QTAWS_PUTCONTAINERPOLICYRESPONSE_P_H
 
-#include "mediastoreresponse.h"
-#include "putcontainerpolicyrequest.h"
+#include "mediastoreresponse_p.h"
 
 namespace QtAws {
 namespace MediaStore {

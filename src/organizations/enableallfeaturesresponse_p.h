@@ -20,8 +20,7 @@
 #ifndef QTAWS_ENABLEALLFEATURESRESPONSE_P_H
 #define QTAWS_ENABLEALLFEATURESRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "enableallfeaturesrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBELAGSRESPONSE_P_H
 #define QTAWS_DESCRIBELAGSRESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "describelagsrequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

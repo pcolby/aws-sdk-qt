@@ -20,8 +20,7 @@
 #ifndef QTAWS_ELASTICACHERESPONSE_P_H
 #define QTAWS_ELASTICACHERESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "elasticacherequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCERESPONSE_P_H
 #define QTAWS_REMOVETAGSFROMRESOURCERESPONSE_P_H
 
-#include "databasemigrationserviceresponse.h"
-#include "removetagsfromresourcerequest.h"
+#include "databasemigrationserviceresponse_p.h"
 
 namespace QtAws {
 namespace DatabaseMigrationService {

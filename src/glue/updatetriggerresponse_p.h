@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATETRIGGERRESPONSE_P_H
 #define QTAWS_UPDATETRIGGERRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "updatetriggerrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

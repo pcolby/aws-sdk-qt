@@ -20,8 +20,7 @@
 #ifndef QTAWS_REVOKEINVITATIONRESPONSE_P_H
 #define QTAWS_REVOKEINVITATIONRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "revokeinvitationrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

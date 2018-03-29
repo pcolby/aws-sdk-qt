@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEBOTCHANNELASSOCIATIONRESPONSE_P_H
 #define QTAWS_DELETEBOTCHANNELASSOCIATIONRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "deletebotchannelassociationrequest.h"
+#include "lexmodelbuildingserviceresponse_p.h"
 
 namespace QtAws {
 namespace LexModelBuildingService {

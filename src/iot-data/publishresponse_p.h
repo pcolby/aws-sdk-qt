@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUBLISHRESPONSE_P_H
 #define QTAWS_PUBLISHRESPONSE_P_H
 
-#include "iotdataplaneresponse.h"
-#include "publishrequest.h"
+#include "iotdataplaneresponse_p.h"
 
 namespace QtAws {
 namespace IoTDataPlane {

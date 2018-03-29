@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEDEVICEFROMROOMRESPONSE_P_H
 #define QTAWS_DISASSOCIATEDEVICEFROMROOMRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "disassociatedevicefromroomrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

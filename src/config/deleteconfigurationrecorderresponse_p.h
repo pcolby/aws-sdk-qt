@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECONFIGURATIONRECORDERRESPONSE_P_H
 #define QTAWS_DELETECONFIGURATIONRECORDERRESPONSE_P_H
 
-#include "configserviceresponse.h"
-#include "deleteconfigurationrecorderrequest.h"
+#include "configserviceresponse_p.h"
 
 namespace QtAws {
 namespace ConfigService {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSENDQUOTARESPONSE_P_H
 #define QTAWS_GETSENDQUOTARESPONSE_P_H
 
-#include "sesresponse.h"
-#include "getsendquotarequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

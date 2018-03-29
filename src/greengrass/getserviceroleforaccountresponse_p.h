@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSERVICEROLEFORACCOUNTRESPONSE_P_H
 #define QTAWS_GETSERVICEROLEFORACCOUNTRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "getserviceroleforaccountrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

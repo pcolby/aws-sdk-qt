@@ -20,8 +20,7 @@
 #ifndef QTAWS_CANCELJOBRESPONSE_P_H
 #define QTAWS_CANCELJOBRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "canceljobrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEREFRESHSCHEMASSTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBEREFRESHSCHEMASSTATUSRESPONSE_P_H
 
-#include "databasemigrationserviceresponse.h"
-#include "describerefreshschemasstatusrequest.h"
+#include "databasemigrationserviceresponse_p.h"
 
 namespace QtAws {
 namespace DatabaseMigrationService {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_UPDATEPARAMETERGROUPRESPONSE_P_H
 
-#include "daxresponse.h"
-#include "updateparametergrouprequest.h"
+#include "daxresponse_p.h"
 
 namespace QtAws {
 namespace DAX {

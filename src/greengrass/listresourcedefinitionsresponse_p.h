@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTRESOURCEDEFINITIONSRESPONSE_P_H
 #define QTAWS_LISTRESOURCEDEFINITIONSRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "listresourcedefinitionsrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

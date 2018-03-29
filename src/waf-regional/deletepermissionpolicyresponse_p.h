@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPERMISSIONPOLICYRESPONSE_P_H
 #define QTAWS_DELETEPERMISSIONPOLICYRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "deletepermissionpolicyrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

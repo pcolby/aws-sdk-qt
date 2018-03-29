@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEROOTFOLDERSRESPONSE_P_H
 #define QTAWS_DESCRIBEROOTFOLDERSRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "describerootfoldersrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

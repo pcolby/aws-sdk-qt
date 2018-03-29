@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVETAGSFROMVAULTRESPONSE_P_H
 #define QTAWS_REMOVETAGSFROMVAULTRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "removetagsfromvaultrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

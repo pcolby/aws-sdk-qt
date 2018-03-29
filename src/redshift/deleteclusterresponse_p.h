@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECLUSTERRESPONSE_P_H
 #define QTAWS_DELETECLUSTERRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "deleteclusterrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESQLINJECTIONMATCHSETRESPONSE_P_H
 #define QTAWS_DELETESQLINJECTIONMATCHSETRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "deletesqlinjectionmatchsetrequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

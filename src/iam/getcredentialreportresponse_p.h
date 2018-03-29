@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCREDENTIALREPORTRESPONSE_P_H
 #define QTAWS_GETCREDENTIALREPORTRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "getcredentialreportrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

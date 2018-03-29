@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESCHEMASRESPONSE_P_H
 #define QTAWS_DESCRIBESCHEMASRESPONSE_P_H
 
-#include "databasemigrationserviceresponse.h"
-#include "describeschemasrequest.h"
+#include "databasemigrationserviceresponse_p.h"
 
 namespace QtAws {
 namespace DatabaseMigrationService {

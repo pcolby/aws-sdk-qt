@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBELOGGINGSTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBELOGGINGSTATUSRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "describeloggingstatusrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

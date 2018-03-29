@@ -20,8 +20,7 @@
 #ifndef QTAWS_ATTACHLOADBALANCERSRESPONSE_P_H
 #define QTAWS_ATTACHLOADBALANCERSRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "attachloadbalancersrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEFLEETRESPONSE_P_H
 #define QTAWS_DISASSOCIATEFLEETRESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "disassociatefleetrequest.h"
+#include "appstreamresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

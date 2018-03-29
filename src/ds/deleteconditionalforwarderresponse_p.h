@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECONDITIONALFORWARDERRESPONSE_P_H
 #define QTAWS_DELETECONDITIONALFORWARDERRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "deleteconditionalforwarderrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

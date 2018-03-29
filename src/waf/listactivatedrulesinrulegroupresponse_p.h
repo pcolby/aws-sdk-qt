@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTACTIVATEDRULESINRULEGROUPRESPONSE_P_H
 #define QTAWS_LISTACTIVATEDRULESINRULEGROUPRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "listactivatedrulesinrulegrouprequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

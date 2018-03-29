@@ -20,8 +20,7 @@
 #ifndef QTAWS_AUTOSCALINGPLANSRESPONSE_P_H
 #define QTAWS_AUTOSCALINGPLANSRESPONSE_P_H
 
-#include "autoscalingplansresponse.h"
-#include "autoscalingplansrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace AutoScalingPlans {

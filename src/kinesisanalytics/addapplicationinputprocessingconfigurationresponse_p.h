@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDAPPLICATIONINPUTPROCESSINGCONFIGURATIONRESPONSE_P_H
 #define QTAWS_ADDAPPLICATIONINPUTPROCESSINGCONFIGURATIONRESPONSE_P_H
 
-#include "kinesisanalyticsresponse.h"
-#include "addapplicationinputprocessingconfigurationrequest.h"
+#include "kinesisanalyticsresponse_p.h"
 
 namespace QtAws {
 namespace KinesisAnalytics {

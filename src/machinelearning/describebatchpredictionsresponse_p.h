@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEBATCHPREDICTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEBATCHPREDICTIONSRESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "describebatchpredictionsrequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

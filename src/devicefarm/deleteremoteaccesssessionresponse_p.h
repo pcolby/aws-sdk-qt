@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEREMOTEACCESSSESSIONRESPONSE_P_H
 #define QTAWS_DELETEREMOTEACCESSSESSIONRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "deleteremoteaccesssessionrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

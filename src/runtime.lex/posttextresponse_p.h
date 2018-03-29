@@ -20,8 +20,7 @@
 #ifndef QTAWS_POSTTEXTRESPONSE_P_H
 #define QTAWS_POSTTEXTRESPONSE_P_H
 
-#include "lexruntimeserviceresponse.h"
-#include "posttextrequest.h"
+#include "lexruntimeserviceresponse_p.h"
 
 namespace QtAws {
 namespace LexRuntimeService {

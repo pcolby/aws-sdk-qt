@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTACTIVITIESRESPONSE_P_H
 #define QTAWS_LISTACTIVITIESRESPONSE_P_H
 
-#include "sfnresponse.h"
-#include "listactivitiesrequest.h"
+#include "sfnresponse_p.h"
 
 namespace QtAws {
 namespace SFN {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISASSOCIATECONFIGURATIONITEMSFROMAPPLICATIONRESPONSE_P_H
 #define QTAWS_DISASSOCIATECONFIGURATIONITEMSFROMAPPLICATIONRESPONSE_P_H
 
-#include "applicationdiscoveryserviceresponse.h"
-#include "disassociateconfigurationitemsfromapplicationrequest.h"
+#include "applicationdiscoveryserviceresponse_p.h"
 
 namespace QtAws {
 namespace ApplicationDiscoveryService {

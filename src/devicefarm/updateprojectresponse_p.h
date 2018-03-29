@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEPROJECTRESPONSE_P_H
 #define QTAWS_UPDATEPROJECTRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "updateprojectrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

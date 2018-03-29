@@ -20,8 +20,7 @@
 #ifndef QTAWS_EXITSTANDBYRESPONSE_P_H
 #define QTAWS_EXITSTANDBYRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "exitstandbyrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

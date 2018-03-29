@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDEVICEDEFINITIONRESPONSE_P_H
 #define QTAWS_DELETEDEVICEDEFINITIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "deletedevicedefinitionrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

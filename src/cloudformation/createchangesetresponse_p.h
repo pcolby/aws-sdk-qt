@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECHANGESETRESPONSE_P_H
 #define QTAWS_CREATECHANGESETRESPONSE_P_H
 
-#include "cloudformationresponse.h"
-#include "createchangesetrequest.h"
+#include "cloudformationresponse_p.h"
 
 namespace QtAws {
 namespace CloudFormation {

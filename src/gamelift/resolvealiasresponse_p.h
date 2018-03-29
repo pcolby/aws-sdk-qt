@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESOLVEALIASRESPONSE_P_H
 #define QTAWS_RESOLVEALIASRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "resolvealiasrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

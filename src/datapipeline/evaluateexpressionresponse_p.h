@@ -20,8 +20,7 @@
 #ifndef QTAWS_EVALUATEEXPRESSIONRESPONSE_P_H
 #define QTAWS_EVALUATEEXPRESSIONRESPONSE_P_H
 
-#include "datapipelineresponse.h"
-#include "evaluateexpressionrequest.h"
+#include "datapipelineresponse_p.h"
 
 namespace QtAws {
 namespace DataPipeline {

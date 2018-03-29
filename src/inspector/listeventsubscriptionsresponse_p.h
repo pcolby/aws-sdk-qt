@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTEVENTSUBSCRIPTIONSRESPONSE_P_H
 #define QTAWS_LISTEVENTSUBSCRIPTIONSRESPONSE_P_H
 
-#include "inspectorresponse.h"
-#include "listeventsubscriptionsrequest.h"
+#include "inspectorresponse_p.h"
 
 namespace QtAws {
 namespace Inspector {

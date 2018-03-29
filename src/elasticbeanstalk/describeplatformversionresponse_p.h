@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEPLATFORMVERSIONRESPONSE_P_H
 #define QTAWS_DESCRIBEPLATFORMVERSIONRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "describeplatformversionrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

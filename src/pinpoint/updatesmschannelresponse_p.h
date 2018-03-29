@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATESMSCHANNELRESPONSE_P_H
 #define QTAWS_UPDATESMSCHANNELRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "updatesmschannelrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

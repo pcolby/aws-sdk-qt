@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEROOMRESPONSE_P_H
 #define QTAWS_UPDATEROOMRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "updateroomrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

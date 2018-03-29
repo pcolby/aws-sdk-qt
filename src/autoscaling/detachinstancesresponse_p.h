@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETACHINSTANCESRESPONSE_P_H
 #define QTAWS_DETACHINSTANCESRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "detachinstancesrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

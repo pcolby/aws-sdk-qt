@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEORGANIZATIONALUNITRESPONSE_P_H
 #define QTAWS_DESCRIBEORGANIZATIONALUNITRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "describeorganizationalunitrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

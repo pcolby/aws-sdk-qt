@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEIPSETRESPONSE_P_H
 #define QTAWS_DELETEIPSETRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "deleteipsetrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

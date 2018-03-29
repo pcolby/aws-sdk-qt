@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEVPCPEERINGCONNECTIONRESPONSE_P_H
 #define QTAWS_CREATEVPCPEERINGCONNECTIONRESPONSE_P_H
 
-#include "ec2response.h"
-#include "createvpcpeeringconnectionrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

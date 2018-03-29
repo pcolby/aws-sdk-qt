@@ -20,8 +20,7 @@
 #ifndef QTAWS_CANCELCERTIFICATETRANSFERRESPONSE_P_H
 #define QTAWS_CANCELCERTIFICATETRANSFERRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "cancelcertificatetransferrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

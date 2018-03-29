@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTAPESRESPONSE_P_H
 #define QTAWS_LISTTAPESRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "listtapesrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

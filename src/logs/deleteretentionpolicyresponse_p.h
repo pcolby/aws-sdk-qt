@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETERETENTIONPOLICYRESPONSE_P_H
 #define QTAWS_DELETERETENTIONPOLICYRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "deleteretentionpolicyrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

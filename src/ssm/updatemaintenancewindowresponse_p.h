@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEMAINTENANCEWINDOWRESPONSE_P_H
 #define QTAWS_UPDATEMAINTENANCEWINDOWRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "updatemaintenancewindowrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETELOGGROUPRESPONSE_P_H
 #define QTAWS_DELETELOGGROUPRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "deleteloggrouprequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEIPSETRESPONSE_P_H
 #define QTAWS_CREATEIPSETRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "createipsetrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

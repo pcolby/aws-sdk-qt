@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETTERMINATIONPROTECTIONRESPONSE_P_H
 #define QTAWS_SETTERMINATIONPROTECTIONRESPONSE_P_H
 
-#include "emrresponse.h"
-#include "setterminationprotectionrequest.h"
+#include "emrresponse_p.h"
 
 namespace QtAws {
 namespace EMR {

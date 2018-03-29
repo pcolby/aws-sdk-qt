@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYINSTANCEGROUPSRESPONSE_P_H
 #define QTAWS_MODIFYINSTANCEGROUPSRESPONSE_P_H
 
-#include "emrresponse.h"
-#include "modifyinstancegroupsrequest.h"
+#include "emrresponse_p.h"
 
 namespace QtAws {
 namespace EMR {

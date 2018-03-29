@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESTORETABLEFROMBACKUPRESPONSE_P_H
 #define QTAWS_RESTORETABLEFROMBACKUPRESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "restoretablefrombackuprequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

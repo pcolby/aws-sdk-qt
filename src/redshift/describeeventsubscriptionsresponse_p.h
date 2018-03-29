@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTSUBSCRIPTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTSUBSCRIPTIONSRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "describeeventsubscriptionsrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

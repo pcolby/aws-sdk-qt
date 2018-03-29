@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATETRAILRESPONSE_P_H
 #define QTAWS_UPDATETRAILRESPONSE_P_H
 
-#include "cloudtrailresponse.h"
-#include "updatetrailrequest.h"
+#include "cloudtrailresponse_p.h"
 
 namespace QtAws {
 namespace CloudTrail {

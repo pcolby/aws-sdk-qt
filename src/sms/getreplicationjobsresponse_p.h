@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETREPLICATIONJOBSRESPONSE_P_H
 #define QTAWS_GETREPLICATIONJOBSRESPONSE_P_H
 
-#include "smsresponse.h"
-#include "getreplicationjobsrequest.h"
+#include "smsresponse_p.h"
 
 namespace QtAws {
 namespace SMS {

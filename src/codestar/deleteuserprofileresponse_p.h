@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEUSERPROFILERESPONSE_P_H
 #define QTAWS_DELETEUSERPROFILERESPONSE_P_H
 
-#include "codestarresponse.h"
-#include "deleteuserprofilerequest.h"
+#include "codestarresponse_p.h"
 
 namespace QtAws {
 namespace CodeStar {

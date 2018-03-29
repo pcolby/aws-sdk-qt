@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEASSOCIATIONBATCHRESPONSE_P_H
 #define QTAWS_CREATEASSOCIATIONBATCHRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "createassociationbatchrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

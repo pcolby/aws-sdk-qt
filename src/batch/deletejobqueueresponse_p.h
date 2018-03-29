@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEJOBQUEUERESPONSE_P_H
 #define QTAWS_DELETEJOBQUEUERESPONSE_P_H
 
-#include "batchresponse.h"
-#include "deletejobqueuerequest.h"
+#include "batchresponse_p.h"
 
 namespace QtAws {
 namespace Batch {

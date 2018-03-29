@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEPORTFOLIORESPONSE_P_H
 #define QTAWS_DESCRIBEPORTFOLIORESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "describeportfoliorequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

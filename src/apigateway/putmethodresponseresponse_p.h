@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTMETHODRESPONSERESPONSE_P_H
 #define QTAWS_PUTMETHODRESPONSERESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "putmethodresponserequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEROLEDESCRIPTIONRESPONSE_P_H
 #define QTAWS_UPDATEROLEDESCRIPTIONRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "updateroledescriptionrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEADDRESSESRESPONSE_P_H
 #define QTAWS_DESCRIBEADDRESSESRESPONSE_P_H
 
-#include "ec2response.h"
-#include "describeaddressesrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

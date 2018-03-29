@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPWORKSPACESRESPONSE_P_H
 #define QTAWS_STOPWORKSPACESRESPONSE_P_H
 
-#include "workspacesresponse.h"
-#include "stopworkspacesrequest.h"
+#include "workspacesresponse_p.h"
 
 namespace QtAws {
 namespace WorkSpaces {

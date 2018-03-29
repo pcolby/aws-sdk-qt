@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEJOBRESPONSE_P_H
 #define QTAWS_CREATEJOBRESPONSE_P_H
 
-#include "importexportresponse.h"
-#include "createjobrequest.h"
+#include "importexportresponse_p.h"
 
 namespace QtAws {
 namespace ImportExport {

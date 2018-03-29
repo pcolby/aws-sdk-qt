@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTPRESETSRESPONSE_P_H
 #define QTAWS_LISTPRESETSRESPONSE_P_H
 
-#include "mediaconvertresponse.h"
-#include "listpresetsrequest.h"
+#include "mediaconvertresponse_p.h"
 
 namespace QtAws {
 namespace MediaConvert {

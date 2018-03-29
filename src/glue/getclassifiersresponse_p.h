@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCLASSIFIERSRESPONSE_P_H
 #define QTAWS_GETCLASSIFIERSRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "getclassifiersrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

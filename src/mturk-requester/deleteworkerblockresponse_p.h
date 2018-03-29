@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEWORKERBLOCKRESPONSE_P_H
 #define QTAWS_DELETEWORKERBLOCKRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "deleteworkerblockrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

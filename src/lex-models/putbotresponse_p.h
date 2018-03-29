@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTBOTRESPONSE_P_H
 #define QTAWS_PUTBOTRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "putbotrequest.h"
+#include "lexmodelbuildingserviceresponse_p.h"
 
 namespace QtAws {
 namespace LexModelBuildingService {

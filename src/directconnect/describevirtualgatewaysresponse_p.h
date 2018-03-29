@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEVIRTUALGATEWAYSRESPONSE_P_H
 #define QTAWS_DESCRIBEVIRTUALGATEWAYSRESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "describevirtualgatewaysrequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

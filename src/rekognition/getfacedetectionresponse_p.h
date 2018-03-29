@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETFACEDETECTIONRESPONSE_P_H
 #define QTAWS_GETFACEDETECTIONRESPONSE_P_H
 
-#include "rekognitionresponse.h"
-#include "getfacedetectionrequest.h"
+#include "rekognitionresponse_p.h"
 
 namespace QtAws {
 namespace Rekognition {

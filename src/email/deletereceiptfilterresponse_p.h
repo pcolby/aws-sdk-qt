@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETERECEIPTFILTERRESPONSE_P_H
 #define QTAWS_DELETERECEIPTFILTERRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "deletereceiptfilterrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

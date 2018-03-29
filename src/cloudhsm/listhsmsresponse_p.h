@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTHSMSRESPONSE_P_H
 #define QTAWS_LISTHSMSRESPONSE_P_H
 
-#include "cloudhsmresponse.h"
-#include "listhsmsrequest.h"
+#include "cloudhsmresponse_p.h"
 
 namespace QtAws {
 namespace CloudHSM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEKEYSANDCERTIFICATERESPONSE_P_H
 #define QTAWS_CREATEKEYSANDCERTIFICATERESPONSE_P_H
 
-#include "iotresponse.h"
-#include "createkeysandcertificaterequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

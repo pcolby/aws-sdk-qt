@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECLIENTCERTIFICATERESPONSE_P_H
 #define QTAWS_DELETECLIENTCERTIFICATERESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "deleteclientcertificaterequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

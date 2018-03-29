@@ -20,8 +20,7 @@
 #ifndef QTAWS_IOTRESPONSE_P_H
 #define QTAWS_IOTRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "iotrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

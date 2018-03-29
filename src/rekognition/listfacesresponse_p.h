@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTFACESRESPONSE_P_H
 #define QTAWS_LISTFACESRESPONSE_P_H
 
-#include "rekognitionresponse.h"
-#include "listfacesrequest.h"
+#include "rekognitionresponse_p.h"
 
 namespace QtAws {
 namespace Rekognition {

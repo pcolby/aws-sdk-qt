@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEACTIVITYRESPONSE_P_H
 #define QTAWS_DELETEACTIVITYRESPONSE_P_H
 
-#include "sfnresponse.h"
-#include "deleteactivityrequest.h"
+#include "sfnresponse_p.h"
 
 namespace QtAws {
 namespace SFN {

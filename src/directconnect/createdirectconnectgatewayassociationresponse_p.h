@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDIRECTCONNECTGATEWAYASSOCIATIONRESPONSE_P_H
 #define QTAWS_CREATEDIRECTCONNECTGATEWAYASSOCIATIONRESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "createdirectconnectgatewayassociationrequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETRESERVATIONUTILIZATIONRESPONSE_P_H
 #define QTAWS_GETRESERVATIONUTILIZATIONRESPONSE_P_H
 
-#include "costexplorerresponse.h"
-#include "getreservationutilizationrequest.h"
+#include "costexplorerresponse_p.h"
 
 namespace QtAws {
 namespace CostExplorer {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESERVERSRESPONSE_P_H
 #define QTAWS_DESCRIBESERVERSRESPONSE_P_H
 
-#include "opsworkscmresponse.h"
-#include "describeserversrequest.h"
+#include "opsworkscmresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorksCM {

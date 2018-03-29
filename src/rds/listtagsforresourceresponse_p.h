@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCERESPONSE_P_H
 #define QTAWS_LISTTAGSFORRESOURCERESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "listtagsforresourcerequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

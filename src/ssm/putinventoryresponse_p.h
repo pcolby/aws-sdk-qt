@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTINVENTORYRESPONSE_P_H
 #define QTAWS_PUTINVENTORYRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "putinventoryrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

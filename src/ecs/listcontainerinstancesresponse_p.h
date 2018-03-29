@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTCONTAINERINSTANCESRESPONSE_P_H
 #define QTAWS_LISTCONTAINERINSTANCESRESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "listcontainerinstancesrequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

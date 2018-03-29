@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEUSERPROFILERESPONSE_P_H
 #define QTAWS_UPDATEUSERPROFILERESPONSE_P_H
 
-#include "codestarresponse.h"
-#include "updateuserprofilerequest.h"
+#include "codestarresponse_p.h"
 
 namespace QtAws {
 namespace CodeStar {

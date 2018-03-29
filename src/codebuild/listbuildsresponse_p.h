@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTBUILDSRESPONSE_P_H
 #define QTAWS_LISTBUILDSRESPONSE_P_H
 
-#include "codebuildresponse.h"
-#include "listbuildsrequest.h"
+#include "codebuildresponse_p.h"
 
 namespace QtAws {
 namespace CodeBuild {

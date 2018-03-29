@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDIPROUTESRESPONSE_P_H
 #define QTAWS_ADDIPROUTESRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "addiproutesrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

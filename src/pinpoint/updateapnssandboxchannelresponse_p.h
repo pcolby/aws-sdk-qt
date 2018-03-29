@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEAPNSSANDBOXCHANNELRESPONSE_P_H
 #define QTAWS_UPDATEAPNSSANDBOXCHANNELRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "updateapnssandboxchannelrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

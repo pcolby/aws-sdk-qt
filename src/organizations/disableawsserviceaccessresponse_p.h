@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISABLEAWSSERVICEACCESSRESPONSE_P_H
 #define QTAWS_DISABLEAWSSERVICEACCESSRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "disableawsserviceaccessrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

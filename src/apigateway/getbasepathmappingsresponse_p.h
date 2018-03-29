@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETBASEPATHMAPPINGSRESPONSE_P_H
 #define QTAWS_GETBASEPATHMAPPINGSRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "getbasepathmappingsrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

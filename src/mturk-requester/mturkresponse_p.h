@@ -20,8 +20,7 @@
 #ifndef QTAWS_MTURKRESPONSE_P_H
 #define QTAWS_MTURKRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "mturkrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

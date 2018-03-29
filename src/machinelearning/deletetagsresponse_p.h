@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETAGSRESPONSE_P_H
 #define QTAWS_DELETETAGSRESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "deletetagsrequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

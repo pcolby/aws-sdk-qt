@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTINVITATIONSRESPONSE_P_H
 #define QTAWS_LISTINVITATIONSRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "listinvitationsrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETASSIGNMENTRESPONSE_P_H
 #define QTAWS_GETASSIGNMENTRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "getassignmentrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

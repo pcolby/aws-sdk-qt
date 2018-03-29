@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEMYUSERPROFILERESPONSE_P_H
 #define QTAWS_UPDATEMYUSERPROFILERESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "updatemyuserprofilerequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

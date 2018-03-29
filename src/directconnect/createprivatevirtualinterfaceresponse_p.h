@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEPRIVATEVIRTUALINTERFACERESPONSE_P_H
 #define QTAWS_CREATEPRIVATEVIRTUALINTERFACERESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "createprivatevirtualinterfacerequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

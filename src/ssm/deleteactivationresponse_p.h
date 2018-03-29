@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEACTIVATIONRESPONSE_P_H
 #define QTAWS_DELETEACTIVATIONRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "deleteactivationrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

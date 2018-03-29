@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDATABASERESPONSE_P_H
 #define QTAWS_DELETEDATABASERESPONSE_P_H
 
-#include "glueresponse.h"
-#include "deletedatabaserequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

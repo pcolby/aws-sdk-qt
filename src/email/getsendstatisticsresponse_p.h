@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSENDSTATISTICSRESPONSE_P_H
 #define QTAWS_GETSENDSTATISTICSRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "getsendstatisticsrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_REBUILDENVIRONMENTRESPONSE_P_H
 #define QTAWS_REBUILDENVIRONMENTRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "rebuildenvironmentrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

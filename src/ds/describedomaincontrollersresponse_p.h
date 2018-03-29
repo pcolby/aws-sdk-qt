@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEDOMAINCONTROLLERSRESPONSE_P_H
 #define QTAWS_DESCRIBEDOMAINCONTROLLERSRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "describedomaincontrollersrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

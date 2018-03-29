@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTREGEXPATTERNSETSRESPONSE_P_H
 #define QTAWS_LISTREGEXPATTERNSETSRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "listregexpatternsetsrequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

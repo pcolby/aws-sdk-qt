@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETEVENTDESTINATIONRESPONSE_P_H
 #define QTAWS_UPDATECONFIGURATIONSETEVENTDESTINATIONRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "updateconfigurationseteventdestinationrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

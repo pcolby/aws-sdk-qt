@@ -20,8 +20,7 @@
 #ifndef QTAWS_POLLYRESPONSE_P_H
 #define QTAWS_POLLYRESPONSE_P_H
 
-#include "pollyresponse.h"
-#include "pollyrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Polly {

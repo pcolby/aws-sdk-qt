@@ -20,8 +20,7 @@
 #ifndef QTAWS_MARKETPLACEMETERINGRESPONSE_P_H
 #define QTAWS_MARKETPLACEMETERINGRESPONSE_P_H
 
-#include "marketplacemeteringresponse.h"
-#include "marketplacemeteringrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace MarketplaceMetering {

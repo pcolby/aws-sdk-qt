@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATELAGRESPONSE_P_H
 #define QTAWS_UPDATELAGRESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "updatelagrequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

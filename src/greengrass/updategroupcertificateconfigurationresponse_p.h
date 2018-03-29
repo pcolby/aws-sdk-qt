@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEGROUPCERTIFICATECONFIGURATIONRESPONSE_P_H
 #define QTAWS_UPDATEGROUPCERTIFICATECONFIGURATIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "updategroupcertificateconfigurationrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

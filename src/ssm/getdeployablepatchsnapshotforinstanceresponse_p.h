@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDEPLOYABLEPATCHSNAPSHOTFORINSTANCERESPONSE_P_H
 #define QTAWS_GETDEPLOYABLEPATCHSNAPSHOTFORINSTANCERESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "getdeployablepatchsnapshotforinstancerequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTPERMISSIONRESPONSE_P_H
 #define QTAWS_PUTPERMISSIONRESPONSE_P_H
 
-#include "cloudwatcheventsresponse.h"
-#include "putpermissionrequest.h"
+#include "cloudwatcheventsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchEvents {

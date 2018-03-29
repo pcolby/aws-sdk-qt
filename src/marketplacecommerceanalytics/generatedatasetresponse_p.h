@@ -20,8 +20,7 @@
 #ifndef QTAWS_GENERATEDATASETRESPONSE_P_H
 #define QTAWS_GENERATEDATASETRESPONSE_P_H
 
-#include "marketplacecommerceanalyticsresponse.h"
-#include "generatedatasetrequest.h"
+#include "marketplacecommerceanalyticsresponse_p.h"
 
 namespace QtAws {
 namespace MarketplaceCommerceAnalytics {

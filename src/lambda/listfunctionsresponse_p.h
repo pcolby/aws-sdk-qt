@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTFUNCTIONSRESPONSE_P_H
 #define QTAWS_LISTFUNCTIONSRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "listfunctionsrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECONTAINERRESPONSE_P_H
 #define QTAWS_DESCRIBECONTAINERRESPONSE_P_H
 
-#include "mediastoreresponse.h"
-#include "describecontainerrequest.h"
+#include "mediastoreresponse_p.h"
 
 namespace QtAws {
 namespace MediaStore {

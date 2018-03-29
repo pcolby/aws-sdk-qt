@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDEVICEPOOLRESPONSE_P_H
 #define QTAWS_DELETEDEVICEPOOLRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "deletedevicepoolrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

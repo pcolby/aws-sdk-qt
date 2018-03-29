@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEKEYPAIRRESPONSE_P_H
 #define QTAWS_DELETEKEYPAIRRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "deletekeypairrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

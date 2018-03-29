@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETUSERRESPONSE_P_H
 #define QTAWS_GETUSERRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "getuserrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

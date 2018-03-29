@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATETAPESRESPONSE_P_H
 #define QTAWS_CREATETAPESRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "createtapesrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

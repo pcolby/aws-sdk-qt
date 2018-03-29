@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATECERTIFICATEOPTIONSRESPONSE_P_H
 #define QTAWS_UPDATECERTIFICATEOPTIONSRESPONSE_P_H
 
-#include "acmresponse.h"
-#include "updatecertificateoptionsrequest.h"
+#include "acmresponse_p.h"
 
 namespace QtAws {
 namespace ACM {

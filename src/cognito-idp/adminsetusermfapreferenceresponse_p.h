@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADMINSETUSERMFAPREFERENCERESPONSE_P_H
 #define QTAWS_ADMINSETUSERMFAPREFERENCERESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "adminsetusermfapreferencerequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

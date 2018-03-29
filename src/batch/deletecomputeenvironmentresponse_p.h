@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECOMPUTEENVIRONMENTRESPONSE_P_H
 #define QTAWS_DELETECOMPUTEENVIRONMENTRESPONSE_P_H
 
-#include "batchresponse.h"
-#include "deletecomputeenvironmentrequest.h"
+#include "batchresponse_p.h"
 
 namespace QtAws {
 namespace Batch {

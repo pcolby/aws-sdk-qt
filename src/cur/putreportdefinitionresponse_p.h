@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTREPORTDEFINITIONRESPONSE_P_H
 #define QTAWS_PUTREPORTDEFINITIONRESPONSE_P_H
 
-#include "costandusagereportserviceresponse.h"
-#include "putreportdefinitionrequest.h"
+#include "costandusagereportserviceresponse_p.h"
 
 namespace QtAws {
 namespace CostandUsageReportService {

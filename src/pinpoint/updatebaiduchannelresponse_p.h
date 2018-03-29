@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEBAIDUCHANNELRESPONSE_P_H
 #define QTAWS_UPDATEBAIDUCHANNELRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "updatebaiduchannelrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

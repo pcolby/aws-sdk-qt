@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDTAGSRESPONSE_P_H
 #define QTAWS_ADDTAGSRESPONSE_P_H
 
-#include "sagemakerresponse.h"
-#include "addtagsrequest.h"
+#include "sagemakerresponse_p.h"
 
 namespace QtAws {
 namespace SageMaker {

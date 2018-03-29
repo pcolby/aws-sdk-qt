@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBERESIZERESPONSE_P_H
 #define QTAWS_DESCRIBERESIZERESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "describeresizerequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEMANAGEDINSTANCEROLERESPONSE_P_H
 #define QTAWS_UPDATEMANAGEDINSTANCEROLERESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "updatemanagedinstancerolerequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

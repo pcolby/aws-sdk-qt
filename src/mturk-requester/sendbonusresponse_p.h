@@ -20,8 +20,7 @@
 #ifndef QTAWS_SENDBONUSRESPONSE_P_H
 #define QTAWS_SENDBONUSRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "sendbonusrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

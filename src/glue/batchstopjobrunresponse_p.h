@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHSTOPJOBRUNRESPONSE_P_H
 #define QTAWS_BATCHSTOPJOBRUNRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "batchstopjobrunrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

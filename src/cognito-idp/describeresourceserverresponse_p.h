@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBERESOURCESERVERRESPONSE_P_H
 #define QTAWS_DESCRIBERESOURCESERVERRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "describeresourceserverrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

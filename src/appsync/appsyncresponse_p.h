@@ -20,8 +20,7 @@
 #ifndef QTAWS_APPSYNCRESPONSE_P_H
 #define QTAWS_APPSYNCRESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "appsyncrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

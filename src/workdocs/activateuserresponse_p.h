@@ -20,8 +20,7 @@
 #ifndef QTAWS_ACTIVATEUSERRESPONSE_P_H
 #define QTAWS_ACTIVATEUSERRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "activateuserrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

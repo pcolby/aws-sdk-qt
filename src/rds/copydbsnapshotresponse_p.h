@@ -20,8 +20,7 @@
 #ifndef QTAWS_COPYDBSNAPSHOTRESPONSE_P_H
 #define QTAWS_COPYDBSNAPSHOTRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "copydbsnapshotrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

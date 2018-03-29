@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETACTIVITYTASKRESPONSE_P_H
 #define QTAWS_GETACTIVITYTASKRESPONSE_P_H
 
-#include "sfnresponse.h"
-#include "getactivitytaskrequest.h"
+#include "sfnresponse_p.h"
 
 namespace QtAws {
 namespace SFN {

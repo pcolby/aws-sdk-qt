@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTSERVICESPECIFICCREDENTIALSRESPONSE_P_H
 #define QTAWS_LISTSERVICESPECIFICCREDENTIALSRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "listservicespecificcredentialsrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

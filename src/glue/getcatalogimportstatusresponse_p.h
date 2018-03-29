@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCATALOGIMPORTSTATUSRESPONSE_P_H
 #define QTAWS_GETCATALOGIMPORTSTATUSRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "getcatalogimportstatusrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

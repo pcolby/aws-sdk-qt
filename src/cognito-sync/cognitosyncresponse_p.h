@@ -20,8 +20,7 @@
 #ifndef QTAWS_COGNITOSYNCRESPONSE_P_H
 #define QTAWS_COGNITOSYNCRESPONSE_P_H
 
-#include "cognitosyncresponse.h"
-#include "cognitosyncrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace CognitoSync {

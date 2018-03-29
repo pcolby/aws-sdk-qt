@@ -20,8 +20,7 @@
 #ifndef QTAWS_GLACIERRESPONSE_P_H
 #define QTAWS_GLACIERRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "glacierrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

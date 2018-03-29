@@ -20,8 +20,7 @@
 #ifndef QTAWS_COSTANDUSAGEREPORTSERVICERESPONSE_P_H
 #define QTAWS_COSTANDUSAGEREPORTSERVICERESPONSE_P_H
 
-#include "costandusagereportserviceresponse.h"
-#include "costandusagereportservicerequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace CostandUsageReportService {

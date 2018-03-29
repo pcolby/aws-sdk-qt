@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTDESTINATIONPOLICYRESPONSE_P_H
 #define QTAWS_PUTDESTINATIONPOLICYRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "putdestinationpolicyrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

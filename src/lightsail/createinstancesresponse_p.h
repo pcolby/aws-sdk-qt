@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEINSTANCESRESPONSE_P_H
 #define QTAWS_CREATEINSTANCESRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "createinstancesrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

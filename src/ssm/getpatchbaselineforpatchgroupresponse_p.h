@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETPATCHBASELINEFORPATCHGROUPRESPONSE_P_H
 #define QTAWS_GETPATCHBASELINEFORPATCHGROUPRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "getpatchbaselineforpatchgrouprequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSTATUSRESPONSE_P_H
 #define QTAWS_GETSTATUSRESPONSE_P_H
 
-#include "importexportresponse.h"
-#include "getstatusrequest.h"
+#include "importexportresponse_p.h"
 
 namespace QtAws {
 namespace ImportExport {

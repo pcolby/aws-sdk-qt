@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETENOTIFICATIONRESPONSE_P_H
 #define QTAWS_DELETENOTIFICATIONRESPONSE_P_H
 
-#include "budgetsresponse.h"
-#include "deletenotificationrequest.h"
+#include "budgetsresponse_p.h"
 
 namespace QtAws {
 namespace Budgets {

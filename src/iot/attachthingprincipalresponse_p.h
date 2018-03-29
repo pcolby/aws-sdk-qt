@@ -20,8 +20,7 @@
 #ifndef QTAWS_ATTACHTHINGPRINCIPALRESPONSE_P_H
 #define QTAWS_ATTACHTHINGPRINCIPALRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "attachthingprincipalrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

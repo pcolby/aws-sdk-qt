@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATETRAININGJOBRESPONSE_P_H
 #define QTAWS_CREATETRAININGJOBRESPONSE_P_H
 
-#include "sagemakerresponse.h"
-#include "createtrainingjobrequest.h"
+#include "sagemakerresponse_p.h"
 
 namespace QtAws {
 namespace SageMaker {

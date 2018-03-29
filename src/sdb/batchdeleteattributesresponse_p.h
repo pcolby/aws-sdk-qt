@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHDELETEATTRIBUTESRESPONSE_P_H
 #define QTAWS_BATCHDELETEATTRIBUTESRESPONSE_P_H
 
-#include "simpledbresponse.h"
-#include "batchdeleteattributesrequest.h"
+#include "simpledbresponse_p.h"
 
 namespace QtAws {
 namespace SimpleDB {

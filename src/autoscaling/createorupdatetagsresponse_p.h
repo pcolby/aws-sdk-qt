@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEORUPDATETAGSRESPONSE_P_H
 #define QTAWS_CREATEORUPDATETAGSRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "createorupdatetagsrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

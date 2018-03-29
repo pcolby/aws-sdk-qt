@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTRETIRABLEGRANTSRESPONSE_P_H
 #define QTAWS_LISTRETIRABLEGRANTSRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "listretirablegrantsrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

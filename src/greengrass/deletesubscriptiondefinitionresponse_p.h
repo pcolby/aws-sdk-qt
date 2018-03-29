@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONDEFINITIONRESPONSE_P_H
 #define QTAWS_DELETESUBSCRIPTIONDEFINITIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "deletesubscriptiondefinitionrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

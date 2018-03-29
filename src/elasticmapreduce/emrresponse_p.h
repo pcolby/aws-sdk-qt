@@ -20,8 +20,7 @@
 #ifndef QTAWS_EMRRESPONSE_P_H
 #define QTAWS_EMRRESPONSE_P_H
 
-#include "emrresponse.h"
-#include "emrrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace EMR {

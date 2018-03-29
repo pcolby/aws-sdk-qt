@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATECONNECTIVITYINFORESPONSE_P_H
 #define QTAWS_UPDATECONNECTIVITYINFORESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "updateconnectivityinforequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEFLEETPORTSETTINGSRESPONSE_P_H
 #define QTAWS_DESCRIBEFLEETPORTSETTINGSRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "describefleetportsettingsrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

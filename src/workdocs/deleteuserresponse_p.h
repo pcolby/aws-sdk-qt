@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEUSERRESPONSE_P_H
 #define QTAWS_DELETEUSERRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "deleteuserrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

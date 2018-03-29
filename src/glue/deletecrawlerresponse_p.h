@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECRAWLERRESPONSE_P_H
 #define QTAWS_DELETECRAWLERRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "deletecrawlerrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

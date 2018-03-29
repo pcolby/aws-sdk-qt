@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEGATEWAYRESPONSE_P_H
 #define QTAWS_DELETEGATEWAYRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "deletegatewayrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETACCOUNTBALANCERESPONSE_P_H
 #define QTAWS_GETACCOUNTBALANCERESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "getaccountbalancerequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

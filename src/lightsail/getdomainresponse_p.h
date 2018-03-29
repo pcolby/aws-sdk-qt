@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDOMAINRESPONSE_P_H
 #define QTAWS_GETDOMAINRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "getdomainrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATETAPEWITHBARCODERESPONSE_P_H
 #define QTAWS_CREATETAPEWITHBARCODERESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "createtapewithbarcoderequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

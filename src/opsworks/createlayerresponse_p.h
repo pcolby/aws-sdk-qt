@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATELAYERRESPONSE_P_H
 #define QTAWS_CREATELAYERRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "createlayerrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

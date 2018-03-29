@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTSUPPORTDATAEXPORTRESPONSE_P_H
 #define QTAWS_STARTSUPPORTDATAEXPORTRESPONSE_P_H
 
-#include "marketplacecommerceanalyticsresponse.h"
-#include "startsupportdataexportrequest.h"
+#include "marketplacecommerceanalyticsresponse_p.h"
 
 namespace QtAws {
 namespace MarketplaceCommerceAnalytics {

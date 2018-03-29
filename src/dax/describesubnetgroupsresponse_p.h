@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESUBNETGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBESUBNETGROUPSRESPONSE_P_H
 
-#include "daxresponse.h"
-#include "describesubnetgroupsrequest.h"
+#include "daxresponse_p.h"
 
 namespace QtAws {
 namespace DAX {

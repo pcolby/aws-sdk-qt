@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONFILTERRESPONSE_P_H
 #define QTAWS_DELETESUBSCRIPTIONFILTERRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "deletesubscriptionfilterrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

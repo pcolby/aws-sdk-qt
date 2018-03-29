@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEDATASOURCESRESPONSE_P_H
 #define QTAWS_DESCRIBEDATASOURCESRESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "describedatasourcesrequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

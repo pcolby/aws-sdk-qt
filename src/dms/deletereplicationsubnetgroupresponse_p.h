@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEREPLICATIONSUBNETGROUPRESPONSE_P_H
 #define QTAWS_DELETEREPLICATIONSUBNETGROUPRESPONSE_P_H
 
-#include "databasemigrationserviceresponse.h"
-#include "deletereplicationsubnetgrouprequest.h"
+#include "databasemigrationserviceresponse_p.h"
 
 namespace QtAws {
 namespace DatabaseMigrationService {

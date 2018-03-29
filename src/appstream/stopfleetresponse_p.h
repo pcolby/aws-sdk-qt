@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPFLEETRESPONSE_P_H
 #define QTAWS_STOPFLEETRESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "stopfleetrequest.h"
+#include "appstreamresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

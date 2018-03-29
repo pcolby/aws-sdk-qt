@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESTORETABLETOPOINTINTIMERESPONSE_P_H
 #define QTAWS_RESTORETABLETOPOINTINTIMERESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "restoretabletopointintimerequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

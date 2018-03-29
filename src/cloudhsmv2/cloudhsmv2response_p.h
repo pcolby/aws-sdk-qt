@@ -20,8 +20,7 @@
 #ifndef QTAWS_CLOUDHSMV2RESPONSE_P_H
 #define QTAWS_CLOUDHSMV2RESPONSE_P_H
 
-#include "cloudhsmv2response.h"
-#include "cloudhsmv2request.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace CloudHSMV2 {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETREGIONSRESPONSE_P_H
 #define QTAWS_GETREGIONSRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "getregionsrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

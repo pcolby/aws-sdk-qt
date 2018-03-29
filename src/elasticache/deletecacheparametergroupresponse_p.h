@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECACHEPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_DELETECACHEPARAMETERGROUPRESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "deletecacheparametergrouprequest.h"
+#include "elasticacheresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

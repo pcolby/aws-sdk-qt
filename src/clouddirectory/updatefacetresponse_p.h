@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEFACETRESPONSE_P_H
 #define QTAWS_UPDATEFACETRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "updatefacetrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTRESOURCEDATASYNCRESPONSE_P_H
 #define QTAWS_LISTRESOURCEDATASYNCRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "listresourcedatasyncrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

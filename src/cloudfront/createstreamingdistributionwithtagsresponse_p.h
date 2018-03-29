@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATESTREAMINGDISTRIBUTIONWITHTAGSRESPONSE_P_H
 #define QTAWS_CREATESTREAMINGDISTRIBUTIONWITHTAGSRESPONSE_P_H
 
-#include "cloudfrontresponse.h"
-#include "createstreamingdistributionwithtagsrequest.h"
+#include "cloudfrontresponse_p.h"
 
 namespace QtAws {
 namespace CloudFront {

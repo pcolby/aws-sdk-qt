@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDATASETRESPONSE_P_H
 #define QTAWS_DELETEDATASETRESPONSE_P_H
 
-#include "cognitosyncresponse.h"
-#include "deletedatasetrequest.h"
+#include "cognitosyncresponse_p.h"
 
 namespace QtAws {
 namespace CognitoSync {

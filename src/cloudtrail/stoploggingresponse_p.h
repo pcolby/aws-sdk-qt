@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPLOGGINGRESPONSE_P_H
 #define QTAWS_STOPLOGGINGRESPONSE_P_H
 
-#include "cloudtrailresponse.h"
-#include "stoploggingrequest.h"
+#include "cloudtrailresponse_p.h"
 
 namespace QtAws {
 namespace CloudTrail {

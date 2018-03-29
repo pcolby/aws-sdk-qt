@@ -20,8 +20,7 @@
 #ifndef QTAWS_TERMINATEINSTANCEINAUTOSCALINGGROUPRESPONSE_P_H
 #define QTAWS_TERMINATEINSTANCEINAUTOSCALINGGROUPRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "terminateinstanceinautoscalinggrouprequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

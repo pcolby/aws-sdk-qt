@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDTAGSTOONPREMISESINSTANCESRESPONSE_P_H
 #define QTAWS_ADDTAGSTOONPREMISESINSTANCESRESPONSE_P_H
 
-#include "codedeployresponse.h"
-#include "addtagstoonpremisesinstancesrequest.h"
+#include "codedeployresponse_p.h"
 
 namespace QtAws {
 namespace CodeDeploy {

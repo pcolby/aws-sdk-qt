@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISABLEALARMACTIONSRESPONSE_P_H
 #define QTAWS_DISABLEALARMACTIONSRESPONSE_P_H
 
-#include "cloudwatchresponse.h"
-#include "disablealarmactionsrequest.h"
+#include "cloudwatchresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatch {

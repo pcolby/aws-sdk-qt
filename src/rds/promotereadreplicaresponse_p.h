@@ -20,8 +20,7 @@
 #ifndef QTAWS_PROMOTEREADREPLICARESPONSE_P_H
 #define QTAWS_PROMOTEREADREPLICARESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "promotereadreplicarequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

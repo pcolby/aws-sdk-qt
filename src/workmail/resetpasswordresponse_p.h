@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESETPASSWORDRESPONSE_P_H
 #define QTAWS_RESETPASSWORDRESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "resetpasswordrequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

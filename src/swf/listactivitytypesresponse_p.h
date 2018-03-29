@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTACTIVITYTYPESRESPONSE_P_H
 #define QTAWS_LISTACTIVITYTYPESRESPONSE_P_H
 
-#include "swfresponse.h"
-#include "listactivitytypesrequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISASSOCIATESKILLGROUPFROMROOMRESPONSE_P_H
 #define QTAWS_DISASSOCIATESKILLGROUPFROMROOMRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "disassociateskillgroupfromroomrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

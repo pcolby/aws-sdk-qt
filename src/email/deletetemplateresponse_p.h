@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETEMPLATERESPONSE_P_H
 #define QTAWS_DELETETEMPLATERESPONSE_P_H
 
-#include "sesresponse.h"
-#include "deletetemplaterequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

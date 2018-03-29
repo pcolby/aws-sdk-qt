@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEJOBRESPONSE_P_H
 #define QTAWS_CREATEJOBRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "createjobrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

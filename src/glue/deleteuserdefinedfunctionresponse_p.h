@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEUSERDEFINEDFUNCTIONRESPONSE_P_H
 #define QTAWS_DELETEUSERDEFINEDFUNCTIONRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "deleteuserdefinedfunctionrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEDBSECURITYGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEDBSECURITYGROUPSRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describedbsecuritygroupsrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

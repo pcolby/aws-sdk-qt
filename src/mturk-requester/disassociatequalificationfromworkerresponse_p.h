@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISASSOCIATEQUALIFICATIONFROMWORKERRESPONSE_P_H
 #define QTAWS_DISASSOCIATEQUALIFICATIONFROMWORKERRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "disassociatequalificationfromworkerrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

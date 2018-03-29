@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSTAGESRESPONSE_P_H
 #define QTAWS_GETSTAGESRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "getstagesrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

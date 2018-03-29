@@ -20,8 +20,7 @@
 #ifndef QTAWS_MOVEACCOUNTRESPONSE_P_H
 #define QTAWS_MOVEACCOUNTRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "moveaccountrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

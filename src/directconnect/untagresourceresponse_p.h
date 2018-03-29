@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCERESPONSE_P_H
 #define QTAWS_UNTAGRESOURCERESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "untagresourcerequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTINCOMINGTYPEDLINKSRESPONSE_P_H
 #define QTAWS_LISTINCOMINGTYPEDLINKSRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "listincomingtypedlinksrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

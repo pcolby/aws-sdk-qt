@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEFLEETRESPONSE_P_H
 #define QTAWS_UPDATEFLEETRESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "updatefleetrequest.h"
+#include "appstreamresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

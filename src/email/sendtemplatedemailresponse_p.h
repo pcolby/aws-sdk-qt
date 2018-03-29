@@ -20,8 +20,7 @@
 #ifndef QTAWS_SENDTEMPLATEDEMAILRESPONSE_P_H
 #define QTAWS_SENDTEMPLATEDEMAILRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "sendtemplatedemailrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEENVIRONMENTHEALTHRESPONSE_P_H
 #define QTAWS_DESCRIBEENVIRONMENTHEALTHRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "describeenvironmenthealthrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

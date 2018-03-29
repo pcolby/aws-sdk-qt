@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPLOADARCHIVERESPONSE_P_H
 #define QTAWS_UPLOADARCHIVERESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "uploadarchiverequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

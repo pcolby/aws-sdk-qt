@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEAPPCOOKIESTICKINESSPOLICYRESPONSE_P_H
 #define QTAWS_CREATEAPPCOOKIESTICKINESSPOLICYRESPONSE_P_H
 
-#include "elasticloadbalancingresponse.h"
-#include "createappcookiestickinesspolicyrequest.h"
+#include "elasticloadbalancingresponse_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancing {

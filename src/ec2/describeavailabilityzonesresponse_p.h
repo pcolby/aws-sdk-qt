@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEAVAILABILITYZONESRESPONSE_P_H
 #define QTAWS_DESCRIBEAVAILABILITYZONESRESPONSE_P_H
 
-#include "ec2response.h"
-#include "describeavailabilityzonesrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_ATHENARESPONSE_P_H
 #define QTAWS_ATHENARESPONSE_P_H
 
-#include "athenaresponse.h"
-#include "athenarequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Athena {

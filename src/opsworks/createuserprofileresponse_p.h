@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEUSERPROFILERESPONSE_P_H
 #define QTAWS_CREATEUSERPROFILERESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "createuserprofilerequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

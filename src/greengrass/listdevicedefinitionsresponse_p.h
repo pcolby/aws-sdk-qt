@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTDEVICEDEFINITIONSRESPONSE_P_H
 #define QTAWS_LISTDEVICEDEFINITIONSRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "listdevicedefinitionsrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

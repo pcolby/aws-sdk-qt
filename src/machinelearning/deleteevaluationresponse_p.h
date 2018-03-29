@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEEVALUATIONRESPONSE_P_H
 #define QTAWS_DELETEEVALUATIONRESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "deleteevaluationrequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

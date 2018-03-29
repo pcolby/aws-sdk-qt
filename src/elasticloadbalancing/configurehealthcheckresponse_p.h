@@ -20,8 +20,7 @@
 #ifndef QTAWS_CONFIGUREHEALTHCHECKRESPONSE_P_H
 #define QTAWS_CONFIGUREHEALTHCHECKRESPONSE_P_H
 
-#include "elasticloadbalancingresponse.h"
-#include "configurehealthcheckrequest.h"
+#include "elasticloadbalancingresponse_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancing {

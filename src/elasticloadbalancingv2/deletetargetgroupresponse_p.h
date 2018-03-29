@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETARGETGROUPRESPONSE_P_H
 #define QTAWS_DELETETARGETGROUPRESPONSE_P_H
 
-#include "elasticloadbalancingv2response.h"
-#include "deletetargetgrouprequest.h"
+#include "elasticloadbalancingv2response_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancingv2 {

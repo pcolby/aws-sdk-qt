@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETFINDINGSRESPONSE_P_H
 #define QTAWS_GETFINDINGSRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "getfindingsrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETIDENTITYDKIMATTRIBUTESRESPONSE_P_H
 #define QTAWS_GETIDENTITYDKIMATTRIBUTESRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "getidentitydkimattributesrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_TAGRESOURCERESPONSE_P_H
 #define QTAWS_TAGRESOURCERESPONSE_P_H
 
-#include "daxresponse.h"
-#include "tagresourcerequest.h"
+#include "daxresponse_p.h"
 
 namespace QtAws {
 namespace DAX {

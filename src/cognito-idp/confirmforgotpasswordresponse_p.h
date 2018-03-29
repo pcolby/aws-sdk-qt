@@ -20,8 +20,7 @@
 #ifndef QTAWS_CONFIRMFORGOTPASSWORDRESPONSE_P_H
 #define QTAWS_CONFIRMFORGOTPASSWORDRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "confirmforgotpasswordrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

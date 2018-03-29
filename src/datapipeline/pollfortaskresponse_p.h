@@ -20,8 +20,7 @@
 #ifndef QTAWS_POLLFORTASKRESPONSE_P_H
 #define QTAWS_POLLFORTASKRESPONSE_P_H
 
-#include "datapipelineresponse.h"
-#include "pollfortaskrequest.h"
+#include "datapipelineresponse_p.h"
 
 namespace QtAws {
 namespace DataPipeline {

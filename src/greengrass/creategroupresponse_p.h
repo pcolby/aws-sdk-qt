@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEGROUPRESPONSE_P_H
 #define QTAWS_CREATEGROUPRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "creategrouprequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

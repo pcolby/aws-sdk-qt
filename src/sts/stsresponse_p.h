@@ -20,8 +20,7 @@
 #ifndef QTAWS_STSRESPONSE_P_H
 #define QTAWS_STSRESPONSE_P_H
 
-#include "stsresponse.h"
-#include "stsrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace STS {

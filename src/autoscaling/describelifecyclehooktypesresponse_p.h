@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBELIFECYCLEHOOKTYPESRESPONSE_P_H
 #define QTAWS_DESCRIBELIFECYCLEHOOKTYPESRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "describelifecyclehooktypesrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

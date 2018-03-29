@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEAPPLICATIONSTATERESPONSE_P_H
 #define QTAWS_DESCRIBEAPPLICATIONSTATERESPONSE_P_H
 
-#include "migrationhubresponse.h"
-#include "describeapplicationstaterequest.h"
+#include "migrationhubresponse_p.h"
 
 namespace QtAws {
 namespace MigrationHub {

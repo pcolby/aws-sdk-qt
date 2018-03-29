@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEGROUPRESPONSE_P_H
 #define QTAWS_DESCRIBEGROUPRESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "describegrouprequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

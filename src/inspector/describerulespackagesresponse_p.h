@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBERULESPACKAGESRESPONSE_P_H
 #define QTAWS_DESCRIBERULESPACKAGESRESPONSE_P_H
 
-#include "inspectorresponse.h"
-#include "describerulespackagesrequest.h"
+#include "inspectorresponse_p.h"
 
 namespace QtAws {
 namespace Inspector {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESNAPSHOTSRESPONSE_P_H
 #define QTAWS_DESCRIBESNAPSHOTSRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "describesnapshotsrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

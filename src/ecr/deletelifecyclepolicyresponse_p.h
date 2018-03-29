@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETELIFECYCLEPOLICYRESPONSE_P_H
 #define QTAWS_DELETELIFECYCLEPOLICYRESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "deletelifecyclepolicyrequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

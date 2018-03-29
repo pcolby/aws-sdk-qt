@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCONTENTMODERATIONRESPONSE_P_H
 #define QTAWS_GETCONTENTMODERATIONRESPONSE_P_H
 
-#include "rekognitionresponse.h"
-#include "getcontentmoderationrequest.h"
+#include "rekognitionresponse_p.h"
 
 namespace QtAws {
 namespace Rekognition {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHDELETETABLEVERSIONRESPONSE_P_H
 #define QTAWS_BATCHDELETETABLEVERSIONRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "batchdeletetableversionrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

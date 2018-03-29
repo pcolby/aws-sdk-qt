@@ -20,8 +20,7 @@
 #ifndef QTAWS_RETRIEVEDOMAINAUTHCODERESPONSE_P_H
 #define QTAWS_RETRIEVEDOMAINAUTHCODERESPONSE_P_H
 
-#include "route53domainsresponse.h"
-#include "retrievedomainauthcoderequest.h"
+#include "route53domainsresponse_p.h"
 
 namespace QtAws {
 namespace Route53Domains {

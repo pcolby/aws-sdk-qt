@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESERVICESRESPONSE_P_H
 #define QTAWS_DESCRIBESERVICESRESPONSE_P_H
 
-#include "pricingresponse.h"
-#include "describeservicesrequest.h"
+#include "pricingresponse_p.h"
 
 namespace QtAws {
 namespace Pricing {

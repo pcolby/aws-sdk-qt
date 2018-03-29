@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEORDERABLECLUSTEROPTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEORDERABLECLUSTEROPTIONSRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "describeorderableclusteroptionsrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECHAPCREDENTIALSRESPONSE_P_H
 #define QTAWS_DESCRIBECHAPCREDENTIALSRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "describechapcredentialsrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

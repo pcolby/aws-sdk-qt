@@ -20,8 +20,7 @@
 #ifndef QTAWS_CANCELSTEPSRESPONSE_P_H
 #define QTAWS_CANCELSTEPSRESPONSE_P_H
 
-#include "emrresponse.h"
-#include "cancelstepsrequest.h"
+#include "emrresponse_p.h"
 
 namespace QtAws {
 namespace EMR {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEMETRICFILTERSRESPONSE_P_H
 #define QTAWS_DESCRIBEMETRICFILTERSRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "describemetricfiltersrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

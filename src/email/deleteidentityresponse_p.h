@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEIDENTITYRESPONSE_P_H
 #define QTAWS_DELETEIDENTITYRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "deleteidentityrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

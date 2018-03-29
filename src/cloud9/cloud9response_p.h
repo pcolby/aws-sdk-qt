@@ -20,8 +20,7 @@
 #ifndef QTAWS_CLOUD9RESPONSE_P_H
 #define QTAWS_CLOUD9RESPONSE_P_H
 
-#include "cloud9response.h"
-#include "cloud9request.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Cloud9 {

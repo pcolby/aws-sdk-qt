@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEDBLOGFILESRESPONSE_P_H
 #define QTAWS_DESCRIBEDBLOGFILESRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describedblogfilesrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

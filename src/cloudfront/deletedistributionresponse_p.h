@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDISTRIBUTIONRESPONSE_P_H
 #define QTAWS_DELETEDISTRIBUTIONRESPONSE_P_H
 
-#include "cloudfrontresponse.h"
-#include "deletedistributionrequest.h"
+#include "cloudfrontresponse_p.h"
 
 namespace QtAws {
 namespace CloudFront {

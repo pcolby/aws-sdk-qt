@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCERESPONSE_P_H
 #define QTAWS_UNTAGRESOURCERESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "untagresourcerequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

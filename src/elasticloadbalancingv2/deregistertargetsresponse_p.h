@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEREGISTERTARGETSRESPONSE_P_H
 #define QTAWS_DEREGISTERTARGETSRESPONSE_P_H
 
-#include "elasticloadbalancingv2response.h"
-#include "deregistertargetsrequest.h"
+#include "elasticloadbalancingv2response_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancingv2 {

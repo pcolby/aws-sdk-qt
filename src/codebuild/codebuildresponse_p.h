@@ -20,8 +20,7 @@
 #ifndef QTAWS_CODEBUILDRESPONSE_P_H
 #define QTAWS_CODEBUILDRESPONSE_P_H
 
-#include "codebuildresponse.h"
-#include "codebuildrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace CodeBuild {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATENETWORKPROFILERESPONSE_P_H
 #define QTAWS_UPDATENETWORKPROFILERESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "updatenetworkprofilerequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

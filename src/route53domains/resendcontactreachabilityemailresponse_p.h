@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESENDCONTACTREACHABILITYEMAILRESPONSE_P_H
 #define QTAWS_RESENDCONTACTREACHABILITYEMAILRESPONSE_P_H
 
-#include "route53domainsresponse.h"
-#include "resendcontactreachabilityemailrequest.h"
+#include "route53domainsresponse_p.h"
 
 namespace QtAws {
 namespace Route53Domains {

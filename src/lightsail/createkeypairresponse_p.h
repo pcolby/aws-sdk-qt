@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEKEYPAIRRESPONSE_P_H
 #define QTAWS_CREATEKEYPAIRRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "createkeypairrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

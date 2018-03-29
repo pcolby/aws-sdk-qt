@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTORIGINENDPOINTSRESPONSE_P_H
 #define QTAWS_LISTORIGINENDPOINTSRESPONSE_P_H
 
-#include "mediapackageresponse.h"
-#include "listoriginendpointsrequest.h"
+#include "mediapackageresponse_p.h"
 
 namespace QtAws {
 namespace MediaPackage {

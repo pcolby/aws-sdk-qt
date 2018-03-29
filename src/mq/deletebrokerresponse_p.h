@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEBROKERRESPONSE_P_H
 #define QTAWS_DELETEBROKERRESPONSE_P_H
 
-#include "mqresponse.h"
-#include "deletebrokerrequest.h"
+#include "mqresponse_p.h"
 
 namespace QtAws {
 namespace MQ {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_DELETESUBSCRIPTIONRESPONSE_P_H
 
-#include "shieldresponse.h"
-#include "deletesubscriptionrequest.h"
+#include "shieldresponse_p.h"
 
 namespace QtAws {
 namespace Shield {

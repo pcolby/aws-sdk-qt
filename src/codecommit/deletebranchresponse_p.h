@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEBRANCHRESPONSE_P_H
 #define QTAWS_DELETEBRANCHRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "deletebranchrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

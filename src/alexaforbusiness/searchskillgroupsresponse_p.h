@@ -20,8 +20,7 @@
 #ifndef QTAWS_SEARCHSKILLGROUPSRESPONSE_P_H
 #define QTAWS_SEARCHSKILLGROUPSRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "searchskillgroupsrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

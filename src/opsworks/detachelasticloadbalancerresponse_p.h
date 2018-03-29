@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETACHELASTICLOADBALANCERRESPONSE_P_H
 #define QTAWS_DETACHELASTICLOADBALANCERRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "detachelasticloadbalancerrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

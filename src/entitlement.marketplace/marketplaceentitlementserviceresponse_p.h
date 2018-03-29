@@ -20,8 +20,7 @@
 #ifndef QTAWS_MARKETPLACEENTITLEMENTSERVICERESPONSE_P_H
 #define QTAWS_MARKETPLACEENTITLEMENTSERVICERESPONSE_P_H
 
-#include "marketplaceentitlementserviceresponse.h"
-#include "marketplaceentitlementservicerequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace MarketplaceEntitlementService {

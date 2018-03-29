@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETELISTENERRESPONSE_P_H
 #define QTAWS_DELETELISTENERRESPONSE_P_H
 
-#include "elasticloadbalancingv2response.h"
-#include "deletelistenerrequest.h"
+#include "elasticloadbalancingv2response_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancingv2 {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETECTLABELSRESPONSE_P_H
 #define QTAWS_DETECTLABELSRESPONSE_P_H
 
-#include "rekognitionresponse.h"
-#include "detectlabelsrequest.h"
+#include "rekognitionresponse_p.h"
 
 namespace QtAws {
 namespace Rekognition {

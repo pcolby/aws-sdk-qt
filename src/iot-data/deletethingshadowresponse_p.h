@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETHINGSHADOWRESPONSE_P_H
 #define QTAWS_DELETETHINGSHADOWRESPONSE_P_H
 
-#include "iotdataplaneresponse.h"
-#include "deletethingshadowrequest.h"
+#include "iotdataplaneresponse_p.h"
 
 namespace QtAws {
 namespace IoTDataPlane {

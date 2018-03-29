@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEBACKUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEBACKUPSRESPONSE_P_H
 
-#include "cloudhsmv2response.h"
-#include "describebackupsrequest.h"
+#include "cloudhsmv2response_p.h"
 
 namespace QtAws {
 namespace CloudHSMV2 {

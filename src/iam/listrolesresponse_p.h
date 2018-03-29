@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTROLESRESPONSE_P_H
 #define QTAWS_LISTROLESRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "listrolesrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

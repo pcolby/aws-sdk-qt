@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTSTATEMACHINESRESPONSE_P_H
 #define QTAWS_LISTSTATEMACHINESRESPONSE_P_H
 
-#include "sfnresponse.h"
-#include "liststatemachinesrequest.h"
+#include "sfnresponse_p.h"
 
 namespace QtAws {
 namespace SFN {

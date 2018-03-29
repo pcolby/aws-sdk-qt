@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESUBNETGROUPRESPONSE_P_H
 #define QTAWS_DELETESUBNETGROUPRESPONSE_P_H
 
-#include "daxresponse.h"
-#include "deletesubnetgrouprequest.h"
+#include "daxresponse_p.h"
 
 namespace QtAws {
 namespace DAX {

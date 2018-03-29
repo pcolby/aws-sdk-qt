@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTLOCALDISKSRESPONSE_P_H
 #define QTAWS_LISTLOCALDISKSRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "listlocaldisksrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

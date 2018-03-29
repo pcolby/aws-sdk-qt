@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCONNECTORSRESPONSE_P_H
 #define QTAWS_GETCONNECTORSRESPONSE_P_H
 
-#include "smsresponse.h"
-#include "getconnectorsrequest.h"
+#include "smsresponse_p.h"
 
 namespace QtAws {
 namespace SMS {

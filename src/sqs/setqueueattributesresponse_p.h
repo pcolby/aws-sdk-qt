@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETQUEUEATTRIBUTESRESPONSE_P_H
 #define QTAWS_SETQUEUEATTRIBUTESRESPONSE_P_H
 
-#include "sqsresponse.h"
-#include "setqueueattributesrequest.h"
+#include "sqsresponse_p.h"
 
 namespace QtAws {
 namespace SQS {

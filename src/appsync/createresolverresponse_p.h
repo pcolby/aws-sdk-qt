@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATERESOLVERRESPONSE_P_H
 #define QTAWS_CREATERESOLVERRESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "createresolverrequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

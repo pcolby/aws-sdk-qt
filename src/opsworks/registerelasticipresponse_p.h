@@ -20,8 +20,7 @@
 #ifndef QTAWS_REGISTERELASTICIPRESPONSE_P_H
 #define QTAWS_REGISTERELASTICIPRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "registerelasticiprequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

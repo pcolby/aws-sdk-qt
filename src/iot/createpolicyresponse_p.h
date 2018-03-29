@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEPOLICYRESPONSE_P_H
 #define QTAWS_CREATEPOLICYRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "createpolicyrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

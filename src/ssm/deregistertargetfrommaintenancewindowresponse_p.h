@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEREGISTERTARGETFROMMAINTENANCEWINDOWRESPONSE_P_H
 #define QTAWS_DEREGISTERTARGETFROMMAINTENANCEWINDOWRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "deregistertargetfrommaintenancewindowrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

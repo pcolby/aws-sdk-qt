@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSOCIATESERVICEROLETOACCOUNTRESPONSE_P_H
 #define QTAWS_ASSOCIATESERVICEROLETOACCOUNTRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "associateserviceroletoaccountrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

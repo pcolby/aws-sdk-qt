@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDISKRESPONSE_P_H
 #define QTAWS_CREATEDISKRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "creatediskrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

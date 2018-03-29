@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCREDENTIALSFORIDENTITYRESPONSE_P_H
 #define QTAWS_GETCREDENTIALSFORIDENTITYRESPONSE_P_H
 
-#include "cognitoidentityresponse.h"
-#include "getcredentialsforidentityrequest.h"
+#include "cognitoidentityresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentity {

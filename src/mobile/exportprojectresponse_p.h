@@ -20,8 +20,7 @@
 #ifndef QTAWS_EXPORTPROJECTRESPONSE_P_H
 #define QTAWS_EXPORTPROJECTRESPONSE_P_H
 
-#include "mobileresponse.h"
-#include "exportprojectrequest.h"
+#include "mobileresponse_p.h"
 
 namespace QtAws {
 namespace Mobile {

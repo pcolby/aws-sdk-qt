@@ -20,8 +20,7 @@
 #ifndef QTAWS_NOTIFYWORKERSRESPONSE_P_H
 #define QTAWS_NOTIFYWORKERSRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "notifyworkersrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

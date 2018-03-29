@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETAPNSSANDBOXCHANNELRESPONSE_P_H
 #define QTAWS_GETAPNSSANDBOXCHANNELRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "getapnssandboxchannelrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

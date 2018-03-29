@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEINPUTRESPONSE_P_H
 #define QTAWS_DELETEINPUTRESPONSE_P_H
 
-#include "medialiveresponse.h"
-#include "deleteinputrequest.h"
+#include "medialiveresponse_p.h"
 
 namespace QtAws {
 namespace MediaLive {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_BUDGETSRESPONSE_P_H
 #define QTAWS_BUDGETSRESPONSE_P_H
 
-#include "budgetsresponse.h"
-#include "budgetsrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Budgets {

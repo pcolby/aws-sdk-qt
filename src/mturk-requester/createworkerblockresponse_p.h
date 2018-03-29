@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEWORKERBLOCKRESPONSE_P_H
 #define QTAWS_CREATEWORKERBLOCKRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "createworkerblockrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

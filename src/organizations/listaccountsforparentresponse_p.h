@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTACCOUNTSFORPARENTRESPONSE_P_H
 #define QTAWS_LISTACCOUNTSFORPARENTRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "listaccountsforparentrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

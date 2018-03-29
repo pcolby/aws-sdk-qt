@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATETABLERESPONSE_P_H
 #define QTAWS_CREATETABLERESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "createtablerequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEENDPOINTSBATCHRESPONSE_P_H
 #define QTAWS_UPDATEENDPOINTSBATCHRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "updateendpointsbatchrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

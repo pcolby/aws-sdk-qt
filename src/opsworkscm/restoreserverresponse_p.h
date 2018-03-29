@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESTORESERVERRESPONSE_P_H
 #define QTAWS_RESTORESERVERRESPONSE_P_H
 
-#include "opsworkscmresponse.h"
-#include "restoreserverrequest.h"
+#include "opsworkscmresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorksCM {

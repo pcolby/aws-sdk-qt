@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATETAGSRESPONSE_P_H
 #define QTAWS_CREATETAGSRESPONSE_P_H
 
-#include "workspacesresponse.h"
-#include "createtagsrequest.h"
+#include "workspacesresponse_p.h"
 
 namespace QtAws {
 namespace WorkSpaces {

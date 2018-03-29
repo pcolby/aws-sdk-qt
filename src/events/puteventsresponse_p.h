@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTEVENTSRESPONSE_P_H
 #define QTAWS_PUTEVENTSRESPONSE_P_H
 
-#include "cloudwatcheventsresponse.h"
-#include "puteventsrequest.h"
+#include "cloudwatcheventsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchEvents {

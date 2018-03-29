@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATERESOURCERESPONSE_P_H
 #define QTAWS_UPDATERESOURCERESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "updateresourcerequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

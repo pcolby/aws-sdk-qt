@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPROVISIONINGARTIFACTRESPONSE_P_H
 #define QTAWS_DELETEPROVISIONINGARTIFACTRESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "deleteprovisioningartifactrequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECASESRESPONSE_P_H
 #define QTAWS_DESCRIBECASESRESPONSE_P_H
 
-#include "supportresponse.h"
-#include "describecasesrequest.h"
+#include "supportresponse_p.h"
 
 namespace QtAws {
 namespace Support {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEVPCLINKRESPONSE_P_H
 #define QTAWS_CREATEVPCLINKRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "createvpclinkrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECOMMENTCONTENTRESPONSE_P_H
 #define QTAWS_DELETECOMMENTCONTENTRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "deletecommentcontentrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTONPREMISESINSTANCESRESPONSE_P_H
 #define QTAWS_LISTONPREMISESINSTANCESRESPONSE_P_H
 
-#include "codedeployresponse.h"
-#include "listonpremisesinstancesrequest.h"
+#include "codedeployresponse_p.h"
 
 namespace QtAws {
 namespace CodeDeploy {

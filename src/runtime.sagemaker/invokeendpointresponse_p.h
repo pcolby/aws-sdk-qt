@@ -20,8 +20,7 @@
 #ifndef QTAWS_INVOKEENDPOINTRESPONSE_P_H
 #define QTAWS_INVOKEENDPOINTRESPONSE_P_H
 
-#include "sagemakerruntimeresponse.h"
-#include "invokeendpointrequest.h"
+#include "sagemakerruntimeresponse_p.h"
 
 namespace QtAws {
 namespace SageMakerRuntime {

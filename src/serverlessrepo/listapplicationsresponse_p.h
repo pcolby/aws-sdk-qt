@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTAPPLICATIONSRESPONSE_P_H
 #define QTAWS_LISTAPPLICATIONSRESPONSE_P_H
 
-#include "serverlessapplicationrepositoryresponse.h"
-#include "listapplicationsrequest.h"
+#include "serverlessapplicationrepositoryresponse_p.h"
 
 namespace QtAws {
 namespace ServerlessApplicationRepository {

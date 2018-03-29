@@ -20,8 +20,7 @@
 #ifndef QTAWS_CANCELCLUSTERRESPONSE_P_H
 #define QTAWS_CANCELCLUSTERRESPONSE_P_H
 
-#include "snowballresponse.h"
-#include "cancelclusterrequest.h"
+#include "snowballresponse_p.h"
 
 namespace QtAws {
 namespace Snowball {

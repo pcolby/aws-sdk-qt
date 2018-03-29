@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEAUTHORIZERRESPONSE_P_H
 #define QTAWS_UPDATEAUTHORIZERRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "updateauthorizerrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATESKILLGROUPRESPONSE_P_H
 #define QTAWS_CREATESKILLGROUPRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "createskillgrouprequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

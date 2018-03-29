@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEREGEXPATTERNSETRESPONSE_P_H
 #define QTAWS_DELETEREGEXPATTERNSETRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "deleteregexpatternsetrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

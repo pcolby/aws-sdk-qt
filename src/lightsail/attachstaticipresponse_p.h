@@ -20,8 +20,7 @@
 #ifndef QTAWS_ATTACHSTATICIPRESPONSE_P_H
 #define QTAWS_ATTACHSTATICIPRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "attachstaticiprequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

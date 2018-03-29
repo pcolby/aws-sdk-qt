@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPSTREAMENCRYPTIONRESPONSE_P_H
 #define QTAWS_STOPSTREAMENCRYPTIONRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "stopstreamencryptionrequest.h"
+#include "kinesisresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

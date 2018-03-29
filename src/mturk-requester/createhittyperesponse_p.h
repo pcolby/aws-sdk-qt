@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEHITTYPERESPONSE_P_H
 #define QTAWS_CREATEHITTYPERESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "createhittyperequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

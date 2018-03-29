@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTIDENTITYPOOLUSAGERESPONSE_P_H
 #define QTAWS_LISTIDENTITYPOOLUSAGERESPONSE_P_H
 
-#include "cognitosyncresponse.h"
-#include "listidentitypoolusagerequest.h"
+#include "cognitosyncresponse_p.h"
 
 namespace QtAws {
 namespace CognitoSync {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATECLOUDFRONTORIGINACCESSIDENTITYRESPONSE_P_H
 #define QTAWS_UPDATECLOUDFRONTORIGINACCESSIDENTITYRESPONSE_P_H
 
-#include "cloudfrontresponse.h"
-#include "updatecloudfrontoriginaccessidentityrequest.h"
+#include "cloudfrontresponse_p.h"
 
 namespace QtAws {
 namespace CloudFront {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECLUSTERSRESPONSE_P_H
 #define QTAWS_DESCRIBECLUSTERSRESPONSE_P_H
 
-#include "daxresponse.h"
-#include "describeclustersrequest.h"
+#include "daxresponse_p.h"
 
 namespace QtAws {
 namespace DAX {

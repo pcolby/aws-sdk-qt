@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETELUNACLIENTRESPONSE_P_H
 #define QTAWS_DELETELUNACLIENTRESPONSE_P_H
 
-#include "cloudhsmresponse.h"
-#include "deletelunaclientrequest.h"
+#include "cloudhsmresponse_p.h"
 
 namespace QtAws {
 namespace CloudHSM {

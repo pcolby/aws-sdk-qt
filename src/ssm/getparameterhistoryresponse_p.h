@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETPARAMETERHISTORYRESPONSE_P_H
 #define QTAWS_GETPARAMETERHISTORYRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "getparameterhistoryrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

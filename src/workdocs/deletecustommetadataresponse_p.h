@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECUSTOMMETADATARESPONSE_P_H
 #define QTAWS_DELETECUSTOMMETADATARESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "deletecustommetadatarequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

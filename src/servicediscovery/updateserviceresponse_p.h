@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATESERVICERESPONSE_P_H
 #define QTAWS_UPDATESERVICERESPONSE_P_H
 
-#include "servicediscoveryresponse.h"
-#include "updateservicerequest.h"
+#include "servicediscoveryresponse_p.h"
 
 namespace QtAws {
 namespace ServiceDiscovery {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_ABORTVAULTLOCKRESPONSE_P_H
 #define QTAWS_ABORTVAULTLOCKRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "abortvaultlockrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

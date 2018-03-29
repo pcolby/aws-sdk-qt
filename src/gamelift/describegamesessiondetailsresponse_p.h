@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEGAMESESSIONDETAILSRESPONSE_P_H
 #define QTAWS_DESCRIBEGAMESESSIONDETAILSRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "describegamesessiondetailsrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

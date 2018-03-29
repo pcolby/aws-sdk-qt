@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDEVICEDEFINITIONRESPONSE_P_H
 #define QTAWS_CREATEDEVICEDEFINITIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "createdevicedefinitionrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

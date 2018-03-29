@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHPUTATTRIBUTESRESPONSE_P_H
 #define QTAWS_BATCHPUTATTRIBUTESRESPONSE_P_H
 
-#include "simpledbresponse.h"
-#include "batchputattributesrequest.h"
+#include "simpledbresponse_p.h"
 
 namespace QtAws {
 namespace SimpleDB {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATESERVICERESPONSE_P_H
 #define QTAWS_UPDATESERVICERESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "updateservicerequest.h"
+#include "ecsresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

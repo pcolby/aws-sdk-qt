@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDIRECTORYRESPONSE_P_H
 #define QTAWS_CREATEDIRECTORYRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "createdirectoryrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEWEBHOOKRESPONSE_P_H
 #define QTAWS_UPDATEWEBHOOKRESPONSE_P_H
 
-#include "codebuildresponse.h"
-#include "updatewebhookrequest.h"
+#include "codebuildresponse_p.h"
 
 namespace QtAws {
 namespace CodeBuild {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEPRODUCTRESPONSE_P_H
 #define QTAWS_CREATEPRODUCTRESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "createproductrequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEACTIVERECEIPTRULESETRESPONSE_P_H
 #define QTAWS_DESCRIBEACTIVERECEIPTRULESETRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "describeactivereceiptrulesetrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTBUCKETWEBSITERESPONSE_P_H
 #define QTAWS_PUTBUCKETWEBSITERESPONSE_P_H
 
-#include "s3response.h"
-#include "putbucketwebsiterequest.h"
+#include "s3response_p.h"
 
 namespace QtAws {
 namespace S3 {

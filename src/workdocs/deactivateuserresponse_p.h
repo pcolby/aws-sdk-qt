@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEACTIVATEUSERRESPONSE_P_H
 #define QTAWS_DEACTIVATEUSERRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "deactivateuserrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

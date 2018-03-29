@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTBUCKETREQUESTPAYMENTRESPONSE_P_H
 #define QTAWS_PUTBUCKETREQUESTPAYMENTRESPONSE_P_H
 
-#include "s3response.h"
-#include "putbucketrequestpaymentrequest.h"
+#include "s3response_p.h"
 
 namespace QtAws {
 namespace S3 {

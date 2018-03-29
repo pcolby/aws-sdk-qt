@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETJOBDETAILSRESPONSE_P_H
 #define QTAWS_GETJOBDETAILSRESPONSE_P_H
 
-#include "codepipelineresponse.h"
-#include "getjobdetailsrequest.h"
+#include "codepipelineresponse_p.h"
 
 namespace QtAws {
 namespace CodePipeline {

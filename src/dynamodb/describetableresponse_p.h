@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBETABLERESPONSE_P_H
 #define QTAWS_DESCRIBETABLERESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "describetablerequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

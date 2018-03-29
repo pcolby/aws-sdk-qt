@@ -20,8 +20,7 @@
 #ifndef QTAWS_SUBSCRIBERESPONSE_P_H
 #define QTAWS_SUBSCRIBERESPONSE_P_H
 
-#include "snsresponse.h"
-#include "subscriberequest.h"
+#include "snsresponse_p.h"
 
 namespace QtAws {
 namespace SNS {

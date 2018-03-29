@@ -20,8 +20,7 @@
 #ifndef QTAWS_LEXMODELBUILDINGSERVICERESPONSE_P_H
 #define QTAWS_LEXMODELBUILDINGSERVICERESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "lexmodelbuildingservicerequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace LexModelBuildingService {

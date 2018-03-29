@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDRESOURCEPERMISSIONSRESPONSE_P_H
 #define QTAWS_ADDRESOURCEPERMISSIONSRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "addresourcepermissionsrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

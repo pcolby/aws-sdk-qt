@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETVAULTNOTIFICATIONSRESPONSE_P_H
 #define QTAWS_GETVAULTNOTIFICATIONSRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "getvaultnotificationsrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

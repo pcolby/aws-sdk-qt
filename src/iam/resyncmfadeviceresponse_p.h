@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESYNCMFADEVICERESPONSE_P_H
 #define QTAWS_RESYNCMFADEVICERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "resyncmfadevicerequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

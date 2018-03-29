@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESUBSCRIBERSFORNOTIFICATIONRESPONSE_P_H
 #define QTAWS_DESCRIBESUBSCRIBERSFORNOTIFICATIONRESPONSE_P_H
 
-#include "budgetsresponse.h"
-#include "describesubscribersfornotificationrequest.h"
+#include "budgetsresponse_p.h"
 
 namespace QtAws {
 namespace Budgets {

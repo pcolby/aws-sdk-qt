@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEGAMESESSIONPLACEMENTRESPONSE_P_H
 #define QTAWS_DESCRIBEGAMESESSIONPLACEMENTRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "describegamesessionplacementrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

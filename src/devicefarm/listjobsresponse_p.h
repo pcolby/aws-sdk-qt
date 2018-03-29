@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTJOBSRESPONSE_P_H
 #define QTAWS_LISTJOBSRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "listjobsrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTBROKERSRESPONSE_P_H
 #define QTAWS_LISTBROKERSRESPONSE_P_H
 
-#include "mqresponse.h"
-#include "listbrokersrequest.h"
+#include "mqresponse_p.h"
 
 namespace QtAws {
 namespace MQ {

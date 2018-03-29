@@ -20,8 +20,7 @@
 #ifndef QTAWS_ARCHIVEFINDINGSRESPONSE_P_H
 #define QTAWS_ARCHIVEFINDINGSRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "archivefindingsrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

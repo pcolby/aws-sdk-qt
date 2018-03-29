@@ -20,8 +20,7 @@
 #ifndef QTAWS_INVALIDATEPROJECTCACHERESPONSE_P_H
 #define QTAWS_INVALIDATEPROJECTCACHERESPONSE_P_H
 
-#include "codebuildresponse.h"
-#include "invalidateprojectcacherequest.h"
+#include "codebuildresponse_p.h"
 
 namespace QtAws {
 namespace CodeBuild {

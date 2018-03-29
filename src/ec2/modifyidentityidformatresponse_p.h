@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYIDENTITYIDFORMATRESPONSE_P_H
 #define QTAWS_MODIFYIDENTITYIDFORMATRESPONSE_P_H
 
-#include "ec2response.h"
-#include "modifyidentityidformatrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

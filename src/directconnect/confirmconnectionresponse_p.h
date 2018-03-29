@@ -20,8 +20,7 @@
 #ifndef QTAWS_CONFIRMCONNECTIONRESPONSE_P_H
 #define QTAWS_CONFIRMCONNECTIONRESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "confirmconnectionrequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

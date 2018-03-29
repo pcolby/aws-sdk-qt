@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATETEAMMEMBERRESPONSE_P_H
 #define QTAWS_UPDATETEAMMEMBERRESPONSE_P_H
 
-#include "codestarresponse.h"
-#include "updateteammemberrequest.h"
+#include "codestarresponse_p.h"
 
 namespace QtAws {
 namespace CodeStar {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEHITTYPEOFHITRESPONSE_P_H
 #define QTAWS_UPDATEHITTYPEOFHITRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "updatehittypeofhitrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

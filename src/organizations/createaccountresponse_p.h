@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEACCOUNTRESPONSE_P_H
 #define QTAWS_CREATEACCOUNTRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "createaccountrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

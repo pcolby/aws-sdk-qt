@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEAUTHORIZERRESPONSE_P_H
 #define QTAWS_DELETEAUTHORIZERRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "deleteauthorizerrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

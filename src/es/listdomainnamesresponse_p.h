@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTDOMAINNAMESRESPONSE_P_H
 #define QTAWS_LISTDOMAINNAMESRESPONSE_P_H
 
-#include "elasticsearchserviceresponse.h"
-#include "listdomainnamesrequest.h"
+#include "elasticsearchserviceresponse_p.h"
 
 namespace QtAws {
 namespace ElasticsearchService {

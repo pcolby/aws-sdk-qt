@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATETAGOPTIONRESPONSE_P_H
 #define QTAWS_CREATETAGOPTIONRESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "createtagoptionrequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

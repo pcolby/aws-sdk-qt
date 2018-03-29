@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETFOLDERRESPONSE_P_H
 #define QTAWS_GETFOLDERRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "getfolderrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

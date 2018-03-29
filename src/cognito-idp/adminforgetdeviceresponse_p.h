@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADMINFORGETDEVICERESPONSE_P_H
 #define QTAWS_ADMINFORGETDEVICERESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "adminforgetdevicerequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

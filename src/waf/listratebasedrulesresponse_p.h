@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTRATEBASEDRULESRESPONSE_P_H
 #define QTAWS_LISTRATEBASEDRULESRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "listratebasedrulesrequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

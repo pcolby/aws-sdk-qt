@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDHCPOPTIONSRESPONSE_P_H
 #define QTAWS_DELETEDHCPOPTIONSRESPONSE_P_H
 
-#include "ec2response.h"
-#include "deletedhcpoptionsrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEEFFECTIVEPATCHESFORPATCHBASELINERESPONSE_P_H
 #define QTAWS_DESCRIBEEFFECTIVEPATCHESFORPATCHBASELINERESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "describeeffectivepatchesforpatchbaselinerequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

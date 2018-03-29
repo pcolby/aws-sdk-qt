@@ -20,8 +20,7 @@
 #ifndef QTAWS_REBOOTNODERESPONSE_P_H
 #define QTAWS_REBOOTNODERESPONSE_P_H
 
-#include "daxresponse.h"
-#include "rebootnoderequest.h"
+#include "daxresponse_p.h"
 
 namespace QtAws {
 namespace DAX {

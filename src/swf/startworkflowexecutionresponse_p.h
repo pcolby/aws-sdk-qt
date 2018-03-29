@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTWORKFLOWEXECUTIONRESPONSE_P_H
 #define QTAWS_STARTWORKFLOWEXECUTIONRESPONSE_P_H
 
-#include "swfresponse.h"
-#include "startworkflowexecutionrequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

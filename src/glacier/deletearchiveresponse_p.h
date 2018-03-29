@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEARCHIVERESPONSE_P_H
 #define QTAWS_DELETEARCHIVERESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "deletearchiverequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

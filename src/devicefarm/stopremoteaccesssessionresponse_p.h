@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPREMOTEACCESSSESSIONRESPONSE_P_H
 #define QTAWS_STOPREMOTEACCESSSESSIONRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "stopremoteaccesssessionrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

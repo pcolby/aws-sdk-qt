@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEWORKFLOWTYPERESPONSE_P_H
 #define QTAWS_DESCRIBEWORKFLOWTYPERESPONSE_P_H
 
-#include "swfresponse.h"
-#include "describeworkflowtyperequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_P_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_P_H
 
-#include "opsworkscmresponse.h"
-#include "describeaccountattributesrequest.h"
+#include "opsworkscmresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorksCM {

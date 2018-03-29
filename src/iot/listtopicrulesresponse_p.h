@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTOPICRULESRESPONSE_P_H
 #define QTAWS_LISTTOPICRULESRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "listtopicrulesrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

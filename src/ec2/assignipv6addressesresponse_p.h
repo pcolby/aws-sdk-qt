@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSIGNIPV6ADDRESSESRESPONSE_P_H
 #define QTAWS_ASSIGNIPV6ADDRESSESRESPONSE_P_H
 
-#include "ec2response.h"
-#include "assignipv6addressesrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

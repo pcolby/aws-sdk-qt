@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETERESOURCEDEFINITIONRESPONSE_P_H
 #define QTAWS_DELETERESOURCEDEFINITIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "deleteresourcedefinitionrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

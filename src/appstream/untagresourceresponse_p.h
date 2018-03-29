@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCERESPONSE_P_H
 #define QTAWS_UNTAGRESOURCERESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "untagresourcerequest.h"
+#include "appstreamresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTCONFIGURATIONSETSRESPONSE_P_H
 #define QTAWS_LISTCONFIGURATIONSETSRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "listconfigurationsetsrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

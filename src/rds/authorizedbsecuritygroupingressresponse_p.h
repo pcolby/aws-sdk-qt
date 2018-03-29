@@ -20,8 +20,7 @@
 #ifndef QTAWS_AUTHORIZEDBSECURITYGROUPINGRESSRESPONSE_P_H
 #define QTAWS_AUTHORIZEDBSECURITYGROUPINGRESSRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "authorizedbsecuritygroupingressrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

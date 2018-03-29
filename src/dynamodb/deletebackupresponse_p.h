@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEBACKUPRESPONSE_P_H
 #define QTAWS_DELETEBACKUPRESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "deletebackuprequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

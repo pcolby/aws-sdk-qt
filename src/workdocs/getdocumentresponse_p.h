@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDOCUMENTRESPONSE_P_H
 #define QTAWS_GETDOCUMENTRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "getdocumentrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

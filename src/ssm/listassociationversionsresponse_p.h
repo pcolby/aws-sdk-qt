@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTASSOCIATIONVERSIONSRESPONSE_P_H
 #define QTAWS_LISTASSOCIATIONVERSIONSRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "listassociationversionsrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

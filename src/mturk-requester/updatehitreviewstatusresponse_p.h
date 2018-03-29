@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEHITREVIEWSTATUSRESPONSE_P_H
 #define QTAWS_UPDATEHITREVIEWSTATUSRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "updatehitreviewstatusrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

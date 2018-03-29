@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTSLOTTYPERESPONSE_P_H
 #define QTAWS_PUTSLOTTYPERESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "putslottyperequest.h"
+#include "lexmodelbuildingserviceresponse_p.h"
 
 namespace QtAws {
 namespace LexModelBuildingService {

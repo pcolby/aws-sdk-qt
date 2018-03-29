@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECONNECTIONRESPONSE_P_H
 #define QTAWS_DELETECONNECTIONRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "deleteconnectionrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

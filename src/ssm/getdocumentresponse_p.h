@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDOCUMENTRESPONSE_P_H
 #define QTAWS_GETDOCUMENTRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "getdocumentrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

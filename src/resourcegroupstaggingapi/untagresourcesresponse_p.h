@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCESRESPONSE_P_H
 #define QTAWS_UNTAGRESOURCESRESPONSE_P_H
 
-#include "resourcegroupstaggingapiresponse.h"
-#include "untagresourcesrequest.h"
+#include "resourcegroupstaggingapiresponse_p.h"
 
 namespace QtAws {
 namespace ResourceGroupsTaggingAPI {

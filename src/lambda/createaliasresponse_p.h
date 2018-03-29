@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEALIASRESPONSE_P_H
 #define QTAWS_CREATEALIASRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "createaliasrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

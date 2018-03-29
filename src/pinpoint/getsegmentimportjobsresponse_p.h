@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSEGMENTIMPORTJOBSRESPONSE_P_H
 #define QTAWS_GETSEGMENTIMPORTJOBSRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "getsegmentimportjobsrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

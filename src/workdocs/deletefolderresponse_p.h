@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEFOLDERRESPONSE_P_H
 #define QTAWS_DELETEFOLDERRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "deletefolderrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

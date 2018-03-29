@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTRESOURCEDELEGATESRESPONSE_P_H
 #define QTAWS_LISTRESOURCEDELEGATESRESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "listresourcedelegatesrequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

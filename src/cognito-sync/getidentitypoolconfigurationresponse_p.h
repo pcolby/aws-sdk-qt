@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETIDENTITYPOOLCONFIGURATIONRESPONSE_P_H
 #define QTAWS_GETIDENTITYPOOLCONFIGURATIONRESPONSE_P_H
 
-#include "cognitosyncresponse.h"
-#include "getidentitypoolconfigurationrequest.h"
+#include "cognitosyncresponse_p.h"
 
 namespace QtAws {
 namespace CognitoSync {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEREPLICATIONJOBRESPONSE_P_H
 #define QTAWS_CREATEREPLICATIONJOBRESPONSE_P_H
 
-#include "smsresponse.h"
-#include "createreplicationjobrequest.h"
+#include "smsresponse_p.h"
 
 namespace QtAws {
 namespace SMS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEENDPOINTRESPONSE_P_H
 #define QTAWS_DELETEENDPOINTRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "deleteendpointrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

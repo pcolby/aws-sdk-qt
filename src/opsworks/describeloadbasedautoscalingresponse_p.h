@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBELOADBASEDAUTOSCALINGRESPONSE_P_H
 #define QTAWS_DESCRIBELOADBASEDAUTOSCALINGRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "describeloadbasedautoscalingrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

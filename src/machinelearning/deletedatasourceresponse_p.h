@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDATASOURCERESPONSE_P_H
 #define QTAWS_DELETEDATASOURCERESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "deletedatasourcerequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

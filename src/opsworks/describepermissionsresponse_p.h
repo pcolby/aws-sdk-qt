@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEPERMISSIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEPERMISSIONSRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "describepermissionsrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

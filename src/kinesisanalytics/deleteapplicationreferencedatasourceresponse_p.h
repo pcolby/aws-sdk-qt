@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEAPPLICATIONREFERENCEDATASOURCERESPONSE_P_H
 #define QTAWS_DELETEAPPLICATIONREFERENCEDATASOURCERESPONSE_P_H
 
-#include "kinesisanalyticsresponse.h"
-#include "deleteapplicationreferencedatasourcerequest.h"
+#include "kinesisanalyticsresponse_p.h"
 
 namespace QtAws {
 namespace KinesisAnalytics {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTPROGRESSUPDATESTREAMSRESPONSE_P_H
 #define QTAWS_LISTPROGRESSUPDATESTREAMSRESPONSE_P_H
 
-#include "migrationhubresponse.h"
-#include "listprogressupdatestreamsrequest.h"
+#include "migrationhubresponse_p.h"
 
 namespace QtAws {
 namespace MigrationHub {

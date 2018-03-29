@@ -20,8 +20,7 @@
 #ifndef QTAWS_SERVICECATALOGRESPONSE_P_H
 #define QTAWS_SERVICECATALOGRESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "servicecatalogrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

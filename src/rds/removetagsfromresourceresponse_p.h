@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCERESPONSE_P_H
 #define QTAWS_REMOVETAGSFROMRESOURCERESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "removetagsfromresourcerequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

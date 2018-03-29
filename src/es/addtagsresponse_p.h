@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDTAGSRESPONSE_P_H
 #define QTAWS_ADDTAGSRESPONSE_P_H
 
-#include "elasticsearchserviceresponse.h"
-#include "addtagsrequest.h"
+#include "elasticsearchserviceresponse_p.h"
 
 namespace QtAws {
 namespace ElasticsearchService {

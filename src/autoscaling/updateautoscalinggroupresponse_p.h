@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEAUTOSCALINGGROUPRESPONSE_P_H
 #define QTAWS_UPDATEAUTOSCALINGGROUPRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "updateautoscalinggrouprequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

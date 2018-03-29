@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETIDENTITYPROVIDERBYIDENTIFIERRESPONSE_P_H
 #define QTAWS_GETIDENTITYPROVIDERBYIDENTIFIERRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "getidentityproviderbyidentifierrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LEXRUNTIMESERVICERESPONSE_P_H
 #define QTAWS_LEXRUNTIMESERVICERESPONSE_P_H
 
-#include "lexruntimeserviceresponse.h"
-#include "lexruntimeservicerequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace LexRuntimeService {

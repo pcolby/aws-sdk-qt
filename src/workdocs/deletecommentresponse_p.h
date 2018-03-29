@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECOMMENTRESPONSE_P_H
 #define QTAWS_DELETECOMMENTRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "deletecommentrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

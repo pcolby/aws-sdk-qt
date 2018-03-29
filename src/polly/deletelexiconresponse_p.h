@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETELEXICONRESPONSE_P_H
 #define QTAWS_DELETELEXICONRESPONSE_P_H
 
-#include "pollyresponse.h"
-#include "deletelexiconrequest.h"
+#include "pollyresponse_p.h"
 
 namespace QtAws {
 namespace Polly {

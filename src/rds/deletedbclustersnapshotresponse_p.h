@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDBCLUSTERSNAPSHOTRESPONSE_P_H
 #define QTAWS_DELETEDBCLUSTERSNAPSHOTRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "deletedbclustersnapshotrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

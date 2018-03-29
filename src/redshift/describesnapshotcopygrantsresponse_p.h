@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESNAPSHOTCOPYGRANTSRESPONSE_P_H
 #define QTAWS_DESCRIBESNAPSHOTCOPYGRANTSRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "describesnapshotcopygrantsrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

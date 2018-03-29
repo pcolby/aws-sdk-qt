@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETELOGGERDEFINITIONRESPONSE_P_H
 #define QTAWS_DELETELOGGERDEFINITIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "deleteloggerdefinitionrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

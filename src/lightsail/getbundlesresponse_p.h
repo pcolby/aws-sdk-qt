@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETBUNDLESRESPONSE_P_H
 #define QTAWS_GETBUNDLESRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "getbundlesrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

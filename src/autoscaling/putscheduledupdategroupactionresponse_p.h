@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTSCHEDULEDUPDATEGROUPACTIONRESPONSE_P_H
 #define QTAWS_PUTSCHEDULEDUPDATEGROUPACTIONRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "putscheduledupdategroupactionrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

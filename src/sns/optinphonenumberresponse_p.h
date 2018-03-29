@@ -20,8 +20,7 @@
 #ifndef QTAWS_OPTINPHONENUMBERRESPONSE_P_H
 #define QTAWS_OPTINPHONENUMBERRESPONSE_P_H
 
-#include "snsresponse.h"
-#include "optinphonenumberrequest.h"
+#include "snsresponse_p.h"
 
 namespace QtAws {
 namespace SNS {

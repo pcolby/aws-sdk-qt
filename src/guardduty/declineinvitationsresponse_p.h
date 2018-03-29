@@ -20,8 +20,7 @@
 #ifndef QTAWS_DECLINEINVITATIONSRESPONSE_P_H
 #define QTAWS_DECLINEINVITATIONSRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "declineinvitationsrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

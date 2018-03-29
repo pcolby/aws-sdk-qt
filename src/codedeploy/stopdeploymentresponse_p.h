@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPDEPLOYMENTRESPONSE_P_H
 #define QTAWS_STOPDEPLOYMENTRESPONSE_P_H
 
-#include "codedeployresponse.h"
-#include "stopdeploymentrequest.h"
+#include "codedeployresponse_p.h"
 
 namespace QtAws {
 namespace CodeDeploy {

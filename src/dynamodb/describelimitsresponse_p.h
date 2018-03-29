@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBELIMITSRESPONSE_P_H
 #define QTAWS_DESCRIBELIMITSRESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "describelimitsrequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

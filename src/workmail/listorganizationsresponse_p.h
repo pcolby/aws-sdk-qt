@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTORGANIZATIONSRESPONSE_P_H
 #define QTAWS_LISTORGANIZATIONSRESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "listorganizationsrequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

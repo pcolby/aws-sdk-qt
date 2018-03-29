@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSHIPPINGLABELRESPONSE_P_H
 #define QTAWS_GETSHIPPINGLABELRESPONSE_P_H
 
-#include "importexportresponse.h"
-#include "getshippinglabelrequest.h"
+#include "importexportresponse_p.h"
 
 namespace QtAws {
 namespace ImportExport {

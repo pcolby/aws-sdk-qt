@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSOCIATECONFIGURATIONITEMSTOAPPLICATIONRESPONSE_P_H
 #define QTAWS_ASSOCIATECONFIGURATIONITEMSTOAPPLICATIONRESPONSE_P_H
 
-#include "applicationdiscoveryserviceresponse.h"
-#include "associateconfigurationitemstoapplicationrequest.h"
+#include "applicationdiscoveryserviceresponse_p.h"
 
 namespace QtAws {
 namespace ApplicationDiscoveryService {

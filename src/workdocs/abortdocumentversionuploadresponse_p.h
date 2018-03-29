@@ -20,8 +20,7 @@
 #ifndef QTAWS_ABORTDOCUMENTVERSIONUPLOADRESPONSE_P_H
 #define QTAWS_ABORTDOCUMENTVERSIONUPLOADRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "abortdocumentversionuploadrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

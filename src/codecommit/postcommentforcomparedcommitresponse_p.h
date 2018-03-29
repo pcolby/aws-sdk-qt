@@ -20,8 +20,7 @@
 #ifndef QTAWS_POSTCOMMENTFORCOMPAREDCOMMITRESPONSE_P_H
 #define QTAWS_POSTCOMMENTFORCOMPAREDCOMMITRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "postcommentforcomparedcommitrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

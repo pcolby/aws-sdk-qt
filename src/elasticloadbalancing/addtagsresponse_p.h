@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDTAGSRESPONSE_P_H
 #define QTAWS_ADDTAGSRESPONSE_P_H
 
-#include "elasticloadbalancingresponse.h"
-#include "addtagsrequest.h"
+#include "elasticloadbalancingresponse_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancing {

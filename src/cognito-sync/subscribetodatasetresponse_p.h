@@ -20,8 +20,7 @@
 #ifndef QTAWS_SUBSCRIBETODATASETRESPONSE_P_H
 #define QTAWS_SUBSCRIBETODATASETRESPONSE_P_H
 
-#include "cognitosyncresponse.h"
-#include "subscribetodatasetrequest.h"
+#include "cognitosyncresponse_p.h"
 
 namespace QtAws {
 namespace CognitoSync {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_IOTDATAPLANERESPONSE_P_H
 #define QTAWS_IOTDATAPLANERESPONSE_P_H
 
-#include "iotdataplaneresponse.h"
-#include "iotdataplanerequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace IoTDataPlane {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEDOMAINNAMERESPONSE_P_H
 #define QTAWS_UPDATEDOMAINNAMERESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "updatedomainnamerequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETELABELSRESPONSE_P_H
 #define QTAWS_DELETELABELSRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "deletelabelsrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

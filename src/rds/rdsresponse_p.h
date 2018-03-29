@@ -20,8 +20,7 @@
 #ifndef QTAWS_RDSRESPONSE_P_H
 #define QTAWS_RDSRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "rdsrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

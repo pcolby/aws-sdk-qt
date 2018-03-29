@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATELAUNCHTEMPLATEVERSIONRESPONSE_P_H
 #define QTAWS_CREATELAUNCHTEMPLATEVERSIONRESPONSE_P_H
 
-#include "ec2response.h"
-#include "createlaunchtemplateversionrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

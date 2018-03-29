@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATELOGINPROFILERESPONSE_P_H
 #define QTAWS_CREATELOGINPROFILERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "createloginprofilerequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

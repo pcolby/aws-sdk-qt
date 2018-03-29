@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEMOUNTTARGETSECURITYGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEMOUNTTARGETSECURITYGROUPSRESPONSE_P_H
 
-#include "efsresponse.h"
-#include "describemounttargetsecuritygroupsrequest.h"
+#include "efsresponse_p.h"
 
 namespace QtAws {
 namespace EFS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETOPICRULERESPONSE_P_H
 #define QTAWS_DELETETOPICRULERESPONSE_P_H
 
-#include "iotresponse.h"
-#include "deletetopicrulerequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETECTDOMINANTLANGUAGERESPONSE_P_H
 #define QTAWS_DETECTDOMINANTLANGUAGERESPONSE_P_H
 
-#include "comprehendresponse.h"
-#include "detectdominantlanguagerequest.h"
+#include "comprehendresponse_p.h"
 
 namespace QtAws {
 namespace Comprehend {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEMATCHMAKINGRESPONSE_P_H
 #define QTAWS_DESCRIBEMATCHMAKINGRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "describematchmakingrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

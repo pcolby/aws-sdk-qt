@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETOPERATIONDETAILRESPONSE_P_H
 #define QTAWS_GETOPERATIONDETAILRESPONSE_P_H
 
-#include "route53domainsresponse.h"
-#include "getoperationdetailrequest.h"
+#include "route53domainsresponse_p.h"
 
 namespace QtAws {
 namespace Route53Domains {

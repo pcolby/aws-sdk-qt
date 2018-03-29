@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETTEMPLATESUMMARYRESPONSE_P_H
 #define QTAWS_GETTEMPLATESUMMARYRESPONSE_P_H
 
-#include "cloudformationresponse.h"
-#include "gettemplatesummaryrequest.h"
+#include "cloudformationresponse_p.h"
 
 namespace QtAws {
 namespace CloudFormation {

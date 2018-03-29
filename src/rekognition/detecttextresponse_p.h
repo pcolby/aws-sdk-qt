@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETECTTEXTRESPONSE_P_H
 #define QTAWS_DETECTTEXTRESPONSE_P_H
 
-#include "rekognitionresponse.h"
-#include "detecttextrequest.h"
+#include "rekognitionresponse_p.h"
 
 namespace QtAws {
 namespace Rekognition {

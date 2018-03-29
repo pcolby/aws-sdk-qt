@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBERESERVEDNODEOFFERINGSRESPONSE_P_H
 #define QTAWS_DESCRIBERESERVEDNODEOFFERINGSRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "describereservednodeofferingsrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

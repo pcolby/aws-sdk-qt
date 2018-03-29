@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTCATEGORIESRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTCATEGORIESRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describeeventcategoriesrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

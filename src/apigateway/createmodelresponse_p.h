@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEMODELRESPONSE_P_H
 #define QTAWS_CREATEMODELRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "createmodelrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

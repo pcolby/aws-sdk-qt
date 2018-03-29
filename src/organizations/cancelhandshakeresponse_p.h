@@ -20,8 +20,7 @@
 #ifndef QTAWS_CANCELHANDSHAKERESPONSE_P_H
 #define QTAWS_CANCELHANDSHAKERESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "cancelhandshakerequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

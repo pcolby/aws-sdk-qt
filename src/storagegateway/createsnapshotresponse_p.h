@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATESNAPSHOTRESPONSE_P_H
 #define QTAWS_CREATESNAPSHOTRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "createsnapshotrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

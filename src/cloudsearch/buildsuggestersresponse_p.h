@@ -20,8 +20,7 @@
 #ifndef QTAWS_BUILDSUGGESTERSRESPONSE_P_H
 #define QTAWS_BUILDSUGGESTERSRESPONSE_P_H
 
-#include "cloudsearchresponse.h"
-#include "buildsuggestersrequest.h"
+#include "cloudsearchresponse_p.h"
 
 namespace QtAws {
 namespace CloudSearch {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTDETAILSRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTDETAILSRESPONSE_P_H
 
-#include "healthresponse.h"
-#include "describeeventdetailsrequest.h"
+#include "healthresponse_p.h"
 
 namespace QtAws {
 namespace Health {

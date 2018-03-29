@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBELAUNCHCONFIGURATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBELAUNCHCONFIGURATIONSRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "describelaunchconfigurationsrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

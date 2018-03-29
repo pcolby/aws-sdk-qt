@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEIMPORTJOBRESPONSE_P_H
 #define QTAWS_CREATEIMPORTJOBRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "createimportjobrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

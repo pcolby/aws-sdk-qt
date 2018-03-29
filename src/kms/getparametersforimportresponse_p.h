@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETPARAMETERSFORIMPORTRESPONSE_P_H
 #define QTAWS_GETPARAMETERSFORIMPORTRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "getparametersforimportrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

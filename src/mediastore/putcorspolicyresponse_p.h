@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTCORSPOLICYRESPONSE_P_H
 #define QTAWS_PUTCORSPOLICYRESPONSE_P_H
 
-#include "mediastoreresponse.h"
-#include "putcorspolicyrequest.h"
+#include "mediastoreresponse_p.h"
 
 namespace QtAws {
 namespace MediaStore {

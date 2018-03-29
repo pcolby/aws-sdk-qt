@@ -20,8 +20,7 @@
 #ifndef QTAWS_DOWNLOADDEFAULTKEYPAIRRESPONSE_P_H
 #define QTAWS_DOWNLOADDEFAULTKEYPAIRRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "downloaddefaultkeypairrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

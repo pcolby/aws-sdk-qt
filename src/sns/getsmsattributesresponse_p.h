@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSMSATTRIBUTESRESPONSE_P_H
 #define QTAWS_GETSMSATTRIBUTESRESPONSE_P_H
 
-#include "snsresponse.h"
-#include "getsmsattributesrequest.h"
+#include "snsresponse_p.h"
 
 namespace QtAws {
 namespace SNS {

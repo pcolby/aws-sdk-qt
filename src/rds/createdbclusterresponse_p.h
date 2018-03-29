@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDBCLUSTERRESPONSE_P_H
 #define QTAWS_CREATEDBCLUSTERRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "createdbclusterrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

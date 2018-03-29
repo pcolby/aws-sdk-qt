@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETACHUSERPOLICYRESPONSE_P_H
 #define QTAWS_DETACHUSERPOLICYRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "detachuserpolicyrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

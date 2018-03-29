@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETPARAMETERSBYPATHRESPONSE_P_H
 #define QTAWS_GETPARAMETERSBYPATHRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "getparametersbypathrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

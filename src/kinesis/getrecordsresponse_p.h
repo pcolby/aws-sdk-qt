@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETRECORDSRESPONSE_P_H
 #define QTAWS_GETRECORDSRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "getrecordsrequest.h"
+#include "kinesisresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

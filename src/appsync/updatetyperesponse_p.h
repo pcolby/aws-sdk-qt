@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATETYPERESPONSE_P_H
 #define QTAWS_UPDATETYPERESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "updatetyperequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

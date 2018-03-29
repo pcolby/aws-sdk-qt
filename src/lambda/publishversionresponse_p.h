@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUBLISHVERSIONRESPONSE_P_H
 #define QTAWS_PUBLISHVERSIONRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "publishversionrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

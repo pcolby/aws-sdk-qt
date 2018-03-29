@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETERATEBASEDRULERESPONSE_P_H
 #define QTAWS_DELETERATEBASEDRULERESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "deleteratebasedrulerequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

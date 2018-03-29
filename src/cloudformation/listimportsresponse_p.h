@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTIMPORTSRESPONSE_P_H
 #define QTAWS_LISTIMPORTSRESPONSE_P_H
 
-#include "cloudformationresponse.h"
-#include "listimportsrequest.h"
+#include "cloudformationresponse_p.h"
 
 namespace QtAws {
 namespace CloudFormation {

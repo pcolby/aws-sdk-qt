@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBELOGSTREAMSRESPONSE_P_H
 #define QTAWS_DESCRIBELOGSTREAMSRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "describelogstreamsrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

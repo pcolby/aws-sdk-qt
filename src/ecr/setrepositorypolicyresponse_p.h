@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETREPOSITORYPOLICYRESPONSE_P_H
 #define QTAWS_SETREPOSITORYPOLICYRESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "setrepositorypolicyrequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

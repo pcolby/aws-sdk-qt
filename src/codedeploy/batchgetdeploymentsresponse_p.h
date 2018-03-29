@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHGETDEPLOYMENTSRESPONSE_P_H
 #define QTAWS_BATCHGETDEPLOYMENTSRESPONSE_P_H
 
-#include "codedeployresponse.h"
-#include "batchgetdeploymentsrequest.h"
+#include "codedeployresponse_p.h"
 
 namespace QtAws {
 namespace CodeDeploy {

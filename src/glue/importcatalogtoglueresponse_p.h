@@ -20,8 +20,7 @@
 #ifndef QTAWS_IMPORTCATALOGTOGLUERESPONSE_P_H
 #define QTAWS_IMPORTCATALOGTOGLUERESPONSE_P_H
 
-#include "glueresponse.h"
-#include "importcatalogtogluerequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

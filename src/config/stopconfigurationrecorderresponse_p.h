@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPCONFIGURATIONRECORDERRESPONSE_P_H
 #define QTAWS_STOPCONFIGURATIONRECORDERRESPONSE_P_H
 
-#include "configserviceresponse.h"
-#include "stopconfigurationrecorderrequest.h"
+#include "configserviceresponse_p.h"
 
 namespace QtAws {
 namespace ConfigService {

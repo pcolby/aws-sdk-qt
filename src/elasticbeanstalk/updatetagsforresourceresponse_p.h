@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATETAGSFORRESOURCERESPONSE_P_H
 #define QTAWS_UPDATETAGSFORRESOURCERESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "updatetagsforresourcerequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEHSMCLIENTCERTIFICATESRESPONSE_P_H
 #define QTAWS_DESCRIBEHSMCLIENTCERTIFICATESRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "describehsmclientcertificatesrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

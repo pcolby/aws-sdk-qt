@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEUSERRESPONSE_P_H
 #define QTAWS_UPDATEUSERRESPONSE_P_H
 
-#include "mqresponse.h"
-#include "updateuserrequest.h"
+#include "mqresponse_p.h"
 
 namespace QtAws {
 namespace MQ {

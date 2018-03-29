@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEHSMCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DELETEHSMCONFIGURATIONRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "deletehsmconfigurationrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETRATEBASEDRULERESPONSE_P_H
 #define QTAWS_GETRATEBASEDRULERESPONSE_P_H
 
-#include "wafresponse.h"
-#include "getratebasedrulerequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_INVOKEASYNCRESPONSE_P_H
 #define QTAWS_INVOKEASYNCRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "invokeasyncrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

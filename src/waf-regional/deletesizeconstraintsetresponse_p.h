@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESIZECONSTRAINTSETRESPONSE_P_H
 #define QTAWS_DELETESIZECONSTRAINTSETRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "deletesizeconstraintsetrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

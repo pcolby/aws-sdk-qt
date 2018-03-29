@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTYPESRESPONSE_P_H
 #define QTAWS_LISTTYPESRESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "listtypesrequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

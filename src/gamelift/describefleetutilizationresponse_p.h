@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEFLEETUTILIZATIONRESPONSE_P_H
 #define QTAWS_DESCRIBEFLEETUTILIZATIONRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "describefleetutilizationrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

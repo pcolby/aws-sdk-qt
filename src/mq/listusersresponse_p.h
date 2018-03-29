@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTUSERSRESPONSE_P_H
 #define QTAWS_LISTUSERSRESPONSE_P_H
 
-#include "mqresponse.h"
-#include "listusersrequest.h"
+#include "mqresponse_p.h"
 
 namespace QtAws {
 namespace MQ {

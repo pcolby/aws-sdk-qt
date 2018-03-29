@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEBUDGETRESPONSE_P_H
 #define QTAWS_DELETEBUDGETRESPONSE_P_H
 
-#include "budgetsresponse.h"
-#include "deletebudgetrequest.h"
+#include "budgetsresponse_p.h"
 
 namespace QtAws {
 namespace Budgets {

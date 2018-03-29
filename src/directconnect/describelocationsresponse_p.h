@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBELOCATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBELOCATIONSRESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "describelocationsrequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CANCELSCHEMAEXTENSIONRESPONSE_P_H
 #define QTAWS_CANCELSCHEMAEXTENSIONRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "cancelschemaextensionrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

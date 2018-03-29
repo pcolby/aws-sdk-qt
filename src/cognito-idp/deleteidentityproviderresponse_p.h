@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEIDENTITYPROVIDERRESPONSE_P_H
 #define QTAWS_DELETEIDENTITYPROVIDERRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "deleteidentityproviderrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHREADRESPONSE_P_H
 #define QTAWS_BATCHREADRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "batchreadrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

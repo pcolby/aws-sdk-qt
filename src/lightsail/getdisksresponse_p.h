@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDISKSRESPONSE_P_H
 #define QTAWS_GETDISKSRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "getdisksrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

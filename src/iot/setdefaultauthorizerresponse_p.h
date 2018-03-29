@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETDEFAULTAUTHORIZERRESPONSE_P_H
 #define QTAWS_SETDEFAULTAUTHORIZERRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "setdefaultauthorizerrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_APPLYPENDINGMAINTENANCEACTIONRESPONSE_P_H
 #define QTAWS_APPLYPENDINGMAINTENANCEACTIONRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "applypendingmaintenanceactionrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

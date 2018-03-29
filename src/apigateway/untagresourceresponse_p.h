@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCERESPONSE_P_H
 #define QTAWS_UNTAGRESOURCERESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "untagresourcerequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEACTIVITYRESPONSE_P_H
 #define QTAWS_DESCRIBEACTIVITYRESPONSE_P_H
 
-#include "sfnresponse.h"
-#include "describeactivityrequest.h"
+#include "sfnresponse_p.h"
 
 namespace QtAws {
 namespace SFN {

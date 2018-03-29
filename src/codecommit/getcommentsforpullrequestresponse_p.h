@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCOMMENTSFORPULLREQUESTRESPONSE_P_H
 #define QTAWS_GETCOMMENTSFORPULLREQUESTRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "getcommentsforpullrequestrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

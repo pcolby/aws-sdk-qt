@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTIPSETSRESPONSE_P_H
 #define QTAWS_LISTIPSETSRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "listipsetsrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

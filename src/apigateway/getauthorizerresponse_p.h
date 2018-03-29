@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETAUTHORIZERRESPONSE_P_H
 #define QTAWS_GETAUTHORIZERRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "getauthorizerrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

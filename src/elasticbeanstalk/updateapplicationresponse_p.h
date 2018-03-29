@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEAPPLICATIONRESPONSE_P_H
 #define QTAWS_UPDATEAPPLICATIONRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "updateapplicationrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

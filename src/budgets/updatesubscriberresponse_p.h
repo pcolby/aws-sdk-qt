@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATESUBSCRIBERRESPONSE_P_H
 #define QTAWS_UPDATESUBSCRIBERRESPONSE_P_H
 
-#include "budgetsresponse.h"
-#include "updatesubscriberrequest.h"
+#include "budgetsresponse_p.h"
 
 namespace QtAws {
 namespace Budgets {

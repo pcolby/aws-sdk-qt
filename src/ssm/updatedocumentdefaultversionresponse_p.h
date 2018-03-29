@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEDOCUMENTDEFAULTVERSIONRESPONSE_P_H
 #define QTAWS_UPDATEDOCUMENTDEFAULTVERSIONRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "updatedocumentdefaultversionrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEUSERRESPONSE_P_H
 #define QTAWS_CREATEUSERRESPONSE_P_H
 
-#include "mqresponse.h"
-#include "createuserrequest.h"
+#include "mqresponse_p.h"
 
 namespace QtAws {
 namespace MQ {

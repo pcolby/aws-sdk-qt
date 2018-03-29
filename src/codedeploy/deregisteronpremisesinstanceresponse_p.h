@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEREGISTERONPREMISESINSTANCERESPONSE_P_H
 #define QTAWS_DEREGISTERONPREMISESINSTANCERESPONSE_P_H
 
-#include "codedeployresponse.h"
-#include "deregisteronpremisesinstancerequest.h"
+#include "codedeployresponse_p.h"
 
 namespace QtAws {
 namespace CodeDeploy {

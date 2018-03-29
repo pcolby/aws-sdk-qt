@@ -20,8 +20,7 @@
 #ifndef QTAWS_DYNAMODBRESPONSE_P_H
 #define QTAWS_DYNAMODBRESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "dynamodbrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

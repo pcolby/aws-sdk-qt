@@ -20,8 +20,7 @@
 #ifndef QTAWS_KINESISRESPONSE_P_H
 #define QTAWS_KINESISRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "kinesisrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEBOTVERSIONRESPONSE_P_H
 #define QTAWS_CREATEBOTVERSIONRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "createbotversionrequest.h"
+#include "lexmodelbuildingserviceresponse_p.h"
 
 namespace QtAws {
 namespace LexModelBuildingService {

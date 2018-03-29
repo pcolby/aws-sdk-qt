@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSHARDITERATORRESPONSE_P_H
 #define QTAWS_GETSHARDITERATORRESPONSE_P_H
 
-#include "dynamodbstreamsresponse.h"
-#include "getsharditeratorrequest.h"
+#include "dynamodbstreamsresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDBStreams {

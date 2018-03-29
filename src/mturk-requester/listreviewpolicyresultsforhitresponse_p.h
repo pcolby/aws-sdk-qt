@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTREVIEWPOLICYRESULTSFORHITRESPONSE_P_H
 #define QTAWS_LISTREVIEWPOLICYRESULTSFORHITRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "listreviewpolicyresultsforhitrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

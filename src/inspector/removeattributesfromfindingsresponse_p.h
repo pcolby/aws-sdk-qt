@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVEATTRIBUTESFROMFINDINGSRESPONSE_P_H
 #define QTAWS_REMOVEATTRIBUTESFROMFINDINGSRESPONSE_P_H
 
-#include "inspectorresponse.h"
-#include "removeattributesfromfindingsrequest.h"
+#include "inspectorresponse_p.h"
 
 namespace QtAws {
 namespace Inspector {

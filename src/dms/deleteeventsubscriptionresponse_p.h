@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEEVENTSUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_DELETEEVENTSUBSCRIPTIONRESPONSE_P_H
 
-#include "databasemigrationserviceresponse.h"
-#include "deleteeventsubscriptionrequest.h"
+#include "databasemigrationserviceresponse_p.h"
 
 namespace QtAws {
 namespace DatabaseMigrationService {

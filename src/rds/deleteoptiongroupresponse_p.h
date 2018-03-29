@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEOPTIONGROUPRESPONSE_P_H
 #define QTAWS_DELETEOPTIONGROUPRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "deleteoptiongrouprequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

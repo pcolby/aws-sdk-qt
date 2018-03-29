@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVETAGSRESPONSE_P_H
 #define QTAWS_REMOVETAGSRESPONSE_P_H
 
-#include "emrresponse.h"
-#include "removetagsrequest.h"
+#include "emrresponse_p.h"
 
 namespace QtAws {
 namespace EMR {

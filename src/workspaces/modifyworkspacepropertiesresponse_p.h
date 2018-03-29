@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYWORKSPACEPROPERTIESRESPONSE_P_H
 #define QTAWS_MODIFYWORKSPACEPROPERTIESRESPONSE_P_H
 
-#include "workspacesresponse.h"
-#include "modifyworkspacepropertiesrequest.h"
+#include "workspacesresponse_p.h"
 
 namespace QtAws {
 namespace WorkSpaces {

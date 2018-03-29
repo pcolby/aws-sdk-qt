@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDEVENDPOINTRESPONSE_P_H
 #define QTAWS_DELETEDEVENDPOINTRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "deletedevendpointrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBENOTIFICATIONSUBSCRIPTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBENOTIFICATIONSUBSCRIPTIONSRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "describenotificationsubscriptionsrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

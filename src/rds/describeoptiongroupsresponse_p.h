@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEOPTIONGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEOPTIONGROUPSRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describeoptiongroupsrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

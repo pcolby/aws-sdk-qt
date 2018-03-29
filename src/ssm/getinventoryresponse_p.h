@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETINVENTORYRESPONSE_P_H
 #define QTAWS_GETINVENTORYRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "getinventoryrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

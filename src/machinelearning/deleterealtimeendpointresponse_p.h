@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEREALTIMEENDPOINTRESPONSE_P_H
 #define QTAWS_DELETEREALTIMEENDPOINTRESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "deleterealtimeendpointrequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

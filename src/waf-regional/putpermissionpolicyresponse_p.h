@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTPERMISSIONPOLICYRESPONSE_P_H
 #define QTAWS_PUTPERMISSIONPOLICYRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "putpermissionpolicyrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEQUEUERESPONSE_P_H
 #define QTAWS_CREATEQUEUERESPONSE_P_H
 
-#include "sqsresponse.h"
-#include "createqueuerequest.h"
+#include "sqsresponse_p.h"
 
 namespace QtAws {
 namespace SQS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEINSTANCEINFORMATIONRESPONSE_P_H
 #define QTAWS_DESCRIBEINSTANCEINFORMATIONRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "describeinstanceinformationrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

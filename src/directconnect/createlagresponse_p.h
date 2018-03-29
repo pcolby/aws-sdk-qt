@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATELAGRESPONSE_P_H
 #define QTAWS_CREATELAGRESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "createlagrequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTPERSONTRACKINGRESPONSE_P_H
 #define QTAWS_STARTPERSONTRACKINGRESPONSE_P_H
 
-#include "rekognitionresponse.h"
-#include "startpersontrackingrequest.h"
+#include "rekognitionresponse_p.h"
 
 namespace QtAws {
 namespace Rekognition {

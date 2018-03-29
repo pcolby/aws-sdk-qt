@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTAPPROVALRESULTRESPONSE_P_H
 #define QTAWS_PUTAPPROVALRESULTRESPONSE_P_H
 
-#include "codepipelineresponse.h"
-#include "putapprovalresultrequest.h"
+#include "codepipelineresponse_p.h"
 
 namespace QtAws {
 namespace CodePipeline {

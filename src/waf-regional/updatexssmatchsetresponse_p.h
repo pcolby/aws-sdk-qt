@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEXSSMATCHSETRESPONSE_P_H
 #define QTAWS_UPDATEXSSMATCHSETRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "updatexssmatchsetrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

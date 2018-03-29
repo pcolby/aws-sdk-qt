@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPROJECTRESPONSE_P_H
 #define QTAWS_DELETEPROJECTRESPONSE_P_H
 
-#include "mobileresponse.h"
-#include "deleteprojectrequest.h"
+#include "mobileresponse_p.h"
 
 namespace QtAws {
 namespace Mobile {

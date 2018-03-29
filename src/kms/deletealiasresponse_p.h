@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEALIASRESPONSE_P_H
 #define QTAWS_DELETEALIASRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "deletealiasrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

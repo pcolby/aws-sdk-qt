@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETELOADBALANCERRESPONSE_P_H
 #define QTAWS_DELETELOADBALANCERRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "deleteloadbalancerrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTEXPORTTASKRESPONSE_P_H
 #define QTAWS_STARTEXPORTTASKRESPONSE_P_H
 
-#include "applicationdiscoveryserviceresponse.h"
-#include "startexporttaskrequest.h"
+#include "applicationdiscoveryserviceresponse_p.h"
 
 namespace QtAws {
 namespace ApplicationDiscoveryService {

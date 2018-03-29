@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEORGANIZATIONALUNITRESPONSE_P_H
 #define QTAWS_UPDATEORGANIZATIONALUNITRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "updateorganizationalunitrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

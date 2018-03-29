@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTSKILLSRESPONSE_P_H
 #define QTAWS_LISTSKILLSRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "listskillsrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

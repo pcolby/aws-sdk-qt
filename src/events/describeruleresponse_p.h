@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBERULERESPONSE_P_H
 #define QTAWS_DESCRIBERULERESPONSE_P_H
 
-#include "cloudwatcheventsresponse.h"
-#include "describerulerequest.h"
+#include "cloudwatcheventsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchEvents {

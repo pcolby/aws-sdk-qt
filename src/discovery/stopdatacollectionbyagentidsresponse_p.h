@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPDATACOLLECTIONBYAGENTIDSRESPONSE_P_H
 #define QTAWS_STOPDATACOLLECTIONBYAGENTIDSRESPONSE_P_H
 
-#include "applicationdiscoveryserviceresponse.h"
-#include "stopdatacollectionbyagentidsrequest.h"
+#include "applicationdiscoveryserviceresponse_p.h"
 
 namespace QtAws {
 namespace ApplicationDiscoveryService {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEOBJECTRESPONSE_P_H
 #define QTAWS_DELETEOBJECTRESPONSE_P_H
 
-#include "s3response.h"
-#include "deleteobjectrequest.h"
+#include "s3response_p.h"
 
 namespace QtAws {
 namespace S3 {

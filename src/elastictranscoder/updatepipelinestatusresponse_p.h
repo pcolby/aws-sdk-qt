@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEPIPELINESTATUSRESPONSE_P_H
 #define QTAWS_UPDATEPIPELINESTATUSRESPONSE_P_H
 
-#include "elastictranscoderresponse.h"
-#include "updatepipelinestatusrequest.h"
+#include "elastictranscoderresponse_p.h"
 
 namespace QtAws {
 namespace ElasticTranscoder {

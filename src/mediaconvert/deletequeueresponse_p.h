@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEQUEUERESPONSE_P_H
 #define QTAWS_DELETEQUEUERESPONSE_P_H
 
-#include "mediaconvertresponse.h"
-#include "deletequeuerequest.h"
+#include "mediaconvertresponse_p.h"
 
 namespace QtAws {
 namespace MediaConvert {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_SPLITSHARDRESPONSE_P_H
 #define QTAWS_SPLITSHARDRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "splitshardrequest.h"
+#include "kinesisresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

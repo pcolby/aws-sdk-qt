@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETEXPORTRESPONSE_P_H
 #define QTAWS_GETEXPORTRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "getexportrequest.h"
+#include "lexmodelbuildingserviceresponse_p.h"
 
 namespace QtAws {
 namespace LexModelBuildingService {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CANCELCOMMANDRESPONSE_P_H
 #define QTAWS_CANCELCOMMANDRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "cancelcommandrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

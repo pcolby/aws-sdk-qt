@@ -20,8 +20,7 @@
 #ifndef QTAWS_PURCHASERESERVEDCACHENODESOFFERINGRESPONSE_P_H
 #define QTAWS_PURCHASERESERVEDCACHENODESOFFERINGRESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "purchasereservedcachenodesofferingrequest.h"
+#include "elasticacheresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

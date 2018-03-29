@@ -20,8 +20,7 @@
 #ifndef QTAWS_REBOOTINSTANCERESPONSE_P_H
 #define QTAWS_REBOOTINSTANCERESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "rebootinstancerequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

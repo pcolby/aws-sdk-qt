@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEENVIRONMENTCONFIGURATIONRESPONSE_P_H
 #define QTAWS_DELETEENVIRONMENTCONFIGURATIONRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "deleteenvironmentconfigurationrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

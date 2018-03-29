@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTPRESETSRESPONSE_P_H
 #define QTAWS_LISTPRESETSRESPONSE_P_H
 
-#include "elastictranscoderresponse.h"
-#include "listpresetsrequest.h"
+#include "elastictranscoderresponse_p.h"
 
 namespace QtAws {
 namespace ElasticTranscoder {

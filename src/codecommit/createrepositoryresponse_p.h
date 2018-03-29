@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEREPOSITORYRESPONSE_P_H
 #define QTAWS_CREATEREPOSITORYRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "createrepositoryrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

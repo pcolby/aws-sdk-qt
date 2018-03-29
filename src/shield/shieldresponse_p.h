@@ -20,8 +20,7 @@
 #ifndef QTAWS_SHIELDRESPONSE_P_H
 #define QTAWS_SHIELDRESPONSE_P_H
 
-#include "shieldresponse.h"
-#include "shieldrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Shield {

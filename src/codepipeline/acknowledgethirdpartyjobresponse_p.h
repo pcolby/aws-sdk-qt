@@ -20,8 +20,7 @@
 #ifndef QTAWS_ACKNOWLEDGETHIRDPARTYJOBRESPONSE_P_H
 #define QTAWS_ACKNOWLEDGETHIRDPARTYJOBRESPONSE_P_H
 
-#include "codepipelineresponse.h"
-#include "acknowledgethirdpartyjobrequest.h"
+#include "codepipelineresponse_p.h"
 
 namespace QtAws {
 namespace CodePipeline {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPROJECTRESPONSE_P_H
 #define QTAWS_DELETEPROJECTRESPONSE_P_H
 
-#include "codebuildresponse.h"
-#include "deleteprojectrequest.h"
+#include "codebuildresponse_p.h"
 
 namespace QtAws {
 namespace CodeBuild {

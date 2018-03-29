@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPRESETRESPONSE_P_H
 #define QTAWS_DELETEPRESETRESPONSE_P_H
 
-#include "elastictranscoderresponse.h"
-#include "deletepresetrequest.h"
+#include "elastictranscoderresponse_p.h"
 
 namespace QtAws {
 namespace ElasticTranscoder {

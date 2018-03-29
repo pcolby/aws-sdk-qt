@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTEVALUATIONSRESPONSE_P_H
 #define QTAWS_PUTEVALUATIONSRESPONSE_P_H
 
-#include "configserviceresponse.h"
-#include "putevaluationsrequest.h"
+#include "configserviceresponse_p.h"
 
 namespace QtAws {
 namespace ConfigService {

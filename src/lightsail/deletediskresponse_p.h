@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDISKRESPONSE_P_H
 #define QTAWS_DELETEDISKRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "deletediskrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

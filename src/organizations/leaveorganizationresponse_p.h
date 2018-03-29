@@ -20,8 +20,7 @@
 #ifndef QTAWS_LEAVEORGANIZATIONRESPONSE_P_H
 #define QTAWS_LEAVEORGANIZATIONRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "leaveorganizationrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

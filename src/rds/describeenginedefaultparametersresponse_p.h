@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEENGINEDEFAULTPARAMETERSRESPONSE_P_H
 #define QTAWS_DESCRIBEENGINEDEFAULTPARAMETERSRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describeenginedefaultparametersrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

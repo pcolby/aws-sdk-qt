@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEEVENTSOURCEMAPPINGRESPONSE_P_H
 #define QTAWS_UPDATEEVENTSOURCEMAPPINGRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "updateeventsourcemappingrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

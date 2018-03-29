@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEMAINTENANCESTARTTIMERESPONSE_P_H
 #define QTAWS_UPDATEMAINTENANCESTARTTIMERESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "updatemaintenancestarttimerequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

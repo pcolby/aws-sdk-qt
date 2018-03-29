@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATETYPERESPONSE_P_H
 #define QTAWS_CREATETYPERESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "createtyperequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

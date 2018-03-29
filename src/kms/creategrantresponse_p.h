@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEGRANTRESPONSE_P_H
 #define QTAWS_CREATEGRANTRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "creategrantrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

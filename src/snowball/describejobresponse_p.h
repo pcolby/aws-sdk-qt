@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEJOBRESPONSE_P_H
 #define QTAWS_DESCRIBEJOBRESPONSE_P_H
 
-#include "snowballresponse.h"
-#include "describejobrequest.h"
+#include "snowballresponse_p.h"
 
 namespace QtAws {
 namespace Snowball {

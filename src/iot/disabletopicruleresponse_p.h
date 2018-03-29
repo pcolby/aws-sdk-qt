@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISABLETOPICRULERESPONSE_P_H
 #define QTAWS_DISABLETOPICRULERESPONSE_P_H
 
-#include "iotresponse.h"
-#include "disabletopicrulerequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

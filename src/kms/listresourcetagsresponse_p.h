@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTRESOURCETAGSRESPONSE_P_H
 #define QTAWS_LISTRESOURCETAGSRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "listresourcetagsrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

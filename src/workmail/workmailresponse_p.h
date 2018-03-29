@@ -20,8 +20,7 @@
 #ifndef QTAWS_WORKMAILRESPONSE_P_H
 #define QTAWS_WORKMAILRESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "workmailrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

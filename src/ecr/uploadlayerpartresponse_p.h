@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPLOADLAYERPARTRESPONSE_P_H
 #define QTAWS_UPLOADLAYERPARTRESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "uploadlayerpartrequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

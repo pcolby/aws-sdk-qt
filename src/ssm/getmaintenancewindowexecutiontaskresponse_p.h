@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETMAINTENANCEWINDOWEXECUTIONTASKRESPONSE_P_H
 #define QTAWS_GETMAINTENANCEWINDOWEXECUTIONTASKRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "getmaintenancewindowexecutiontaskrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

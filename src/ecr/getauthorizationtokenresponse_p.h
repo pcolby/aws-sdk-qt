@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETAUTHORIZATIONTOKENRESPONSE_P_H
 #define QTAWS_GETAUTHORIZATIONTOKENRESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "getauthorizationtokenrequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

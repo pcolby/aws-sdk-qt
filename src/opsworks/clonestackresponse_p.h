@@ -20,8 +20,7 @@
 #ifndef QTAWS_CLONESTACKRESPONSE_P_H
 #define QTAWS_CLONESTACKRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "clonestackrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

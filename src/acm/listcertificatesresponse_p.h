@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTCERTIFICATESRESPONSE_P_H
 #define QTAWS_LISTCERTIFICATESRESPONSE_P_H
 
-#include "acmresponse.h"
-#include "listcertificatesrequest.h"
+#include "acmresponse_p.h"
 
 namespace QtAws {
 namespace ACM {

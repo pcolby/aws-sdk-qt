@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTCONFIGRULERESPONSE_P_H
 #define QTAWS_PUTCONFIGRULERESPONSE_P_H
 
-#include "configserviceresponse.h"
-#include "putconfigrulerequest.h"
+#include "configserviceresponse_p.h"
 
 namespace QtAws {
 namespace ConfigService {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATELABELSRESPONSE_P_H
 #define QTAWS_CREATELABELSRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "createlabelsrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

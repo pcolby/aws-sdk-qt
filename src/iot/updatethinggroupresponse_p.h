@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATETHINGGROUPRESPONSE_P_H
 #define QTAWS_UPDATETHINGGROUPRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "updatethinggrouprequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

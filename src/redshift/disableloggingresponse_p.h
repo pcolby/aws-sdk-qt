@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISABLELOGGINGRESPONSE_P_H
 #define QTAWS_DISABLELOGGINGRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "disableloggingrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

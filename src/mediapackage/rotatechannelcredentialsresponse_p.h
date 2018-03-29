@@ -20,8 +20,7 @@
 #ifndef QTAWS_ROTATECHANNELCREDENTIALSRESPONSE_P_H
 #define QTAWS_ROTATECHANNELCREDENTIALSRESPONSE_P_H
 
-#include "mediapackageresponse.h"
-#include "rotatechannelcredentialsrequest.h"
+#include "mediapackageresponse_p.h"
 
 namespace QtAws {
 namespace MediaPackage {

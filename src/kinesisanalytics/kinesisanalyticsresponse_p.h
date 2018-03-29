@@ -20,8 +20,7 @@
 #ifndef QTAWS_KINESISANALYTICSRESPONSE_P_H
 #define QTAWS_KINESISANALYTICSRESPONSE_P_H
 
-#include "kinesisanalyticsresponse.h"
-#include "kinesisanalyticsrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace KinesisAnalytics {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYREPLICATIONSUBNETGROUPRESPONSE_P_H
 #define QTAWS_MODIFYREPLICATIONSUBNETGROUPRESPONSE_P_H
 
-#include "databasemigrationserviceresponse.h"
-#include "modifyreplicationsubnetgrouprequest.h"
+#include "databasemigrationserviceresponse_p.h"
 
 namespace QtAws {
 namespace DatabaseMigrationService {

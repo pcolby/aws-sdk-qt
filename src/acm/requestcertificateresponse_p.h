@@ -20,8 +20,7 @@
 #ifndef QTAWS_REQUESTCERTIFICATERESPONSE_P_H
 #define QTAWS_REQUESTCERTIFICATERESPONSE_P_H
 
-#include "acmresponse.h"
-#include "requestcertificaterequest.h"
+#include "acmresponse_p.h"
 
 namespace QtAws {
 namespace ACM {

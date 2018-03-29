@@ -20,8 +20,7 @@
 #ifndef QTAWS_FLUSHSTAGECACHERESPONSE_P_H
 #define QTAWS_FLUSHSTAGECACHERESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "flushstagecacherequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

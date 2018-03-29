@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETTHINGSHADOWRESPONSE_P_H
 #define QTAWS_GETTHINGSHADOWRESPONSE_P_H
 
-#include "iotdataplaneresponse.h"
-#include "getthingshadowrequest.h"
+#include "iotdataplaneresponse_p.h"
 
 namespace QtAws {
 namespace IoTDataPlane {

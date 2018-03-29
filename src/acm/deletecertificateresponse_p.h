@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECERTIFICATERESPONSE_P_H
 #define QTAWS_DELETECERTIFICATERESPONSE_P_H
 
-#include "acmresponse.h"
-#include "deletecertificaterequest.h"
+#include "acmresponse_p.h"
 
 namespace QtAws {
 namespace ACM {

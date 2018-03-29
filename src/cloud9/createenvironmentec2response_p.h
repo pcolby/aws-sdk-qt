@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEENVIRONMENTEC2RESPONSE_P_H
 #define QTAWS_CREATEENVIRONMENTEC2RESPONSE_P_H
 
-#include "cloud9response.h"
-#include "createenvironmentec2request.h"
+#include "cloud9response_p.h"
 
 namespace QtAws {
 namespace Cloud9 {

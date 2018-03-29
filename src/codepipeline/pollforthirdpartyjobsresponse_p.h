@@ -20,8 +20,7 @@
 #ifndef QTAWS_POLLFORTHIRDPARTYJOBSRESPONSE_P_H
 #define QTAWS_POLLFORTHIRDPARTYJOBSRESPONSE_P_H
 
-#include "codepipelineresponse.h"
-#include "pollforthirdpartyjobsrequest.h"
+#include "codepipelineresponse_p.h"
 
 namespace QtAws {
 namespace CodePipeline {

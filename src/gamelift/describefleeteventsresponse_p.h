@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEFLEETEVENTSRESPONSE_P_H
 #define QTAWS_DESCRIBEFLEETEVENTSRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "describefleeteventsrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETYPERESPONSE_P_H
 #define QTAWS_DELETETYPERESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "deletetyperequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

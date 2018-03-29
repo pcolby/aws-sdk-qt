@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETMERGECONFLICTSRESPONSE_P_H
 #define QTAWS_GETMERGECONFLICTSRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "getmergeconflictsrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

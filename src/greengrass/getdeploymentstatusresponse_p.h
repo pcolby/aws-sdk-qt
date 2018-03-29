@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDEPLOYMENTSTATUSRESPONSE_P_H
 #define QTAWS_GETDEPLOYMENTSTATUSRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "getdeploymentstatusrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

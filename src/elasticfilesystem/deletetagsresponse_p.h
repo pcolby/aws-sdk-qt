@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETAGSRESPONSE_P_H
 #define QTAWS_DELETETAGSRESPONSE_P_H
 
-#include "efsresponse.h"
-#include "deletetagsrequest.h"
+#include "efsresponse_p.h"
 
 namespace QtAws {
 namespace EFS {

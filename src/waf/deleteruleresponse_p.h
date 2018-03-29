@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETERULERESPONSE_P_H
 #define QTAWS_DELETERULERESPONSE_P_H
 
-#include "wafresponse.h"
-#include "deleterulerequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

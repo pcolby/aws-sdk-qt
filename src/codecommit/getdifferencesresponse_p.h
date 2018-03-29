@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDIFFERENCESRESPONSE_P_H
 #define QTAWS_GETDIFFERENCESRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "getdifferencesrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

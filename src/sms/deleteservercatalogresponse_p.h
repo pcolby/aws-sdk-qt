@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESERVERCATALOGRESPONSE_P_H
 #define QTAWS_DELETESERVERCATALOGRESPONSE_P_H
 
-#include "smsresponse.h"
-#include "deleteservercatalogrequest.h"
+#include "smsresponse_p.h"
 
 namespace QtAws {
 namespace SMS {

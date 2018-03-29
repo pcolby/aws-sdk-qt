@@ -20,8 +20,7 @@
 #ifndef QTAWS_DIRECTCONNECTRESPONSE_P_H
 #define QTAWS_DIRECTCONNECTRESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "directconnectrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETITEMRESPONSE_P_H
 #define QTAWS_GETITEMRESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "getitemrequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

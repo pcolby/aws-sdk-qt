@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTJOBRUNRESPONSE_P_H
 #define QTAWS_STARTJOBRUNRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "startjobrunrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

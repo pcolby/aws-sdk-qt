@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDTAGSRESPONSE_P_H
 #define QTAWS_ADDTAGSRESPONSE_P_H
 
-#include "cloudtrailresponse.h"
-#include "addtagsrequest.h"
+#include "cloudtrailresponse_p.h"
 
 namespace QtAws {
 namespace CloudTrail {

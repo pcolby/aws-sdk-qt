@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEREMOTEACCESSSESSIONRESPONSE_P_H
 #define QTAWS_CREATEREMOTEACCESSSESSIONRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "createremoteaccesssessionrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

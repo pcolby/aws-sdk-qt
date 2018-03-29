@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEACTIVATIONRESPONSE_P_H
 #define QTAWS_CREATEACTIVATIONRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "createactivationrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEBROKERRESPONSE_P_H
 #define QTAWS_UPDATEBROKERRESPONSE_P_H
 
-#include "mqresponse.h"
-#include "updatebrokerrequest.h"
+#include "mqresponse_p.h"
 
 namespace QtAws {
 namespace MQ {

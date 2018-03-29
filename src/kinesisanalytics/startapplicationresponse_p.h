@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTAPPLICATIONRESPONSE_P_H
 #define QTAWS_STARTAPPLICATIONRESPONSE_P_H
 
-#include "kinesisanalyticsresponse.h"
-#include "startapplicationrequest.h"
+#include "kinesisanalyticsresponse_p.h"
 
 namespace QtAws {
 namespace KinesisAnalytics {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEGROUPRESPONSE_P_H
 #define QTAWS_CREATEGROUPRESPONSE_P_H
 
-#include "workmailresponse.h"
-#include "creategrouprequest.h"
+#include "workmailresponse_p.h"
 
 namespace QtAws {
 namespace WorkMail {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_VALIDATEPIPELINEDEFINITIONRESPONSE_P_H
 #define QTAWS_VALIDATEPIPELINEDEFINITIONRESPONSE_P_H
 
-#include "datapipelineresponse.h"
-#include "validatepipelinedefinitionrequest.h"
+#include "datapipelineresponse_p.h"
 
 namespace QtAws {
 namespace DataPipeline {

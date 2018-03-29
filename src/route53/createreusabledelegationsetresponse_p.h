@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEREUSABLEDELEGATIONSETRESPONSE_P_H
 #define QTAWS_CREATEREUSABLEDELEGATIONSETRESPONSE_P_H
 
-#include "route53response.h"
-#include "createreusabledelegationsetrequest.h"
+#include "route53response_p.h"
 
 namespace QtAws {
 namespace Route53 {

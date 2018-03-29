@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEAPPLICATIONRESPONSE_P_H
 #define QTAWS_DELETEAPPLICATIONRESPONSE_P_H
 
-#include "serverlessapplicationrepositoryresponse.h"
-#include "deleteapplicationrequest.h"
+#include "serverlessapplicationrepositoryresponse_p.h"
 
 namespace QtAws {
 namespace ServerlessApplicationRepository {

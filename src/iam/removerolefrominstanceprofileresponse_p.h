@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVEROLEFROMINSTANCEPROFILERESPONSE_P_H
 #define QTAWS_REMOVEROLEFROMINSTANCEPROFILERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "removerolefrominstanceprofilerequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

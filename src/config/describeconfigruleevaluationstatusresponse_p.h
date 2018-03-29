@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECONFIGRULEEVALUATIONSTATUSRESPONSE_P_H
 #define QTAWS_DESCRIBECONFIGRULEEVALUATIONSTATUSRESPONSE_P_H
 
-#include "configserviceresponse.h"
-#include "describeconfigruleevaluationstatusrequest.h"
+#include "configserviceresponse_p.h"
 
 namespace QtAws {
 namespace ConfigService {

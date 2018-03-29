@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISABLEGATEWAYRESPONSE_P_H
 #define QTAWS_DISABLEGATEWAYRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "disablegatewayrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTDATASOURCESRESPONSE_P_H
 #define QTAWS_LISTDATASOURCESRESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "listdatasourcesrequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

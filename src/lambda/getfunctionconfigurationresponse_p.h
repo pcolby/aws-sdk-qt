@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETFUNCTIONCONFIGURATIONRESPONSE_P_H
 #define QTAWS_GETFUNCTIONCONFIGURATIONRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "getfunctionconfigurationrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

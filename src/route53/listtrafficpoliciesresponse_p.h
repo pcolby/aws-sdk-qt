@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTRAFFICPOLICIESRESPONSE_P_H
 #define QTAWS_LISTTRAFFICPOLICIESRESPONSE_P_H
 
-#include "route53response.h"
-#include "listtrafficpoliciesrequest.h"
+#include "route53response_p.h"
 
 namespace QtAws {
 namespace Route53 {

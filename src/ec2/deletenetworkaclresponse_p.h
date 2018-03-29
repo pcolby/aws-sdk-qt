@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETENETWORKACLRESPONSE_P_H
 #define QTAWS_DELETENETWORKACLRESPONSE_P_H
 
-#include "ec2response.h"
-#include "deletenetworkaclrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

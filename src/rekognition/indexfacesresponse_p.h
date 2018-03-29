@@ -20,8 +20,7 @@
 #ifndef QTAWS_INDEXFACESRESPONSE_P_H
 #define QTAWS_INDEXFACESRESPONSE_P_H
 
-#include "rekognitionresponse.h"
-#include "indexfacesrequest.h"
+#include "rekognitionresponse_p.h"
 
 namespace QtAws {
 namespace Rekognition {

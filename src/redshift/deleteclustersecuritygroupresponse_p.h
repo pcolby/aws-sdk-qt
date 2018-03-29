@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECLUSTERSECURITYGROUPRESPONSE_P_H
 #define QTAWS_DELETECLUSTERSECURITYGROUPRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "deleteclustersecuritygrouprequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

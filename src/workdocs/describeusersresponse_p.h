@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEUSERSRESPONSE_P_H
 #define QTAWS_DESCRIBEUSERSRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "describeusersrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

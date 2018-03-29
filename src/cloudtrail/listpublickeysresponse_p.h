@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTPUBLICKEYSRESPONSE_P_H
 #define QTAWS_LISTPUBLICKEYSRESPONSE_P_H
 
-#include "cloudtrailresponse.h"
-#include "listpublickeysrequest.h"
+#include "cloudtrailresponse_p.h"
 
 namespace QtAws {
 namespace CloudTrail {

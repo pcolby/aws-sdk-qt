@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETV2LOGGINGOPTIONSRESPONSE_P_H
 #define QTAWS_GETV2LOGGINGOPTIONSRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "getv2loggingoptionsrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

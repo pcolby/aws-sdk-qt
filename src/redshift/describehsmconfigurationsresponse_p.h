@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEHSMCONFIGURATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEHSMCONFIGURATIONSRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "describehsmconfigurationsrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

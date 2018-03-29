@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECOLLECTIONRESPONSE_P_H
 #define QTAWS_DELETECOLLECTIONRESPONSE_P_H
 
-#include "rekognitionresponse.h"
-#include "deletecollectionrequest.h"
+#include "rekognitionresponse_p.h"
 
 namespace QtAws {
 namespace Rekognition {

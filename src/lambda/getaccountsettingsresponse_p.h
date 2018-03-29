@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETACCOUNTSETTINGSRESPONSE_P_H
 #define QTAWS_GETACCOUNTSETTINGSRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "getaccountsettingsrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

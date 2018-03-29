@@ -20,8 +20,7 @@
 #ifndef QTAWS_COMPLETELIFECYCLEACTIONRESPONSE_P_H
 #define QTAWS_COMPLETELIFECYCLEACTIONRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "completelifecycleactionrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

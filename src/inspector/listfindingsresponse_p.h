@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTFINDINGSRESPONSE_P_H
 #define QTAWS_LISTFINDINGSRESPONSE_P_H
 
-#include "inspectorresponse.h"
-#include "listfindingsrequest.h"
+#include "inspectorresponse_p.h"
 
 namespace QtAws {
 namespace Inspector {

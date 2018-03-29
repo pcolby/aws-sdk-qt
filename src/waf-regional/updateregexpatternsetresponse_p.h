@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEREGEXPATTERNSETRESPONSE_P_H
 #define QTAWS_UPDATEREGEXPATTERNSETRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "updateregexpatternsetrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

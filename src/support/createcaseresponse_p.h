@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECASERESPONSE_P_H
 #define QTAWS_CREATECASERESPONSE_P_H
 
-#include "supportresponse.h"
-#include "createcaserequest.h"
+#include "supportresponse_p.h"
 
 namespace QtAws {
 namespace Support {

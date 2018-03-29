@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEALARMSFORMETRICRESPONSE_P_H
 #define QTAWS_DESCRIBEALARMSFORMETRICRESPONSE_P_H
 
-#include "cloudwatchresponse.h"
-#include "describealarmsformetricrequest.h"
+#include "cloudwatchresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatch {

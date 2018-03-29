@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEFINEEXPRESSIONRESPONSE_P_H
 #define QTAWS_DEFINEEXPRESSIONRESPONSE_P_H
 
-#include "cloudsearchresponse.h"
-#include "defineexpressionrequest.h"
+#include "cloudsearchresponse_p.h"
 
 namespace QtAws {
 namespace CloudSearch {

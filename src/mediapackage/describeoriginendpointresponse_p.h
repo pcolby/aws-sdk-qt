@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEORIGINENDPOINTRESPONSE_P_H
 #define QTAWS_DESCRIBEORIGINENDPOINTRESPONSE_P_H
 
-#include "mediapackageresponse.h"
-#include "describeoriginendpointrequest.h"
+#include "mediapackageresponse_p.h"
 
 namespace QtAws {
 namespace MediaPackage {

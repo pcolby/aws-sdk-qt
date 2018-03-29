@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTFUNCTIONCONCURRENCYRESPONSE_P_H
 #define QTAWS_PUTFUNCTIONCONCURRENCYRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "putfunctionconcurrencyrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTELASTICSEARCHINSTANCETYPESRESPONSE_P_H
 #define QTAWS_LISTELASTICSEARCHINSTANCETYPESRESPONSE_P_H
 
-#include "elasticsearchserviceresponse.h"
-#include "listelasticsearchinstancetypesrequest.h"
+#include "elasticsearchserviceresponse_p.h"
 
 namespace QtAws {
 namespace ElasticsearchService {

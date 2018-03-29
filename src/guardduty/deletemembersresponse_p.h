@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEMEMBERSRESPONSE_P_H
 #define QTAWS_DELETEMEMBERSRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "deletemembersrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

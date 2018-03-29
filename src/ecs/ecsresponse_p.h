@@ -20,8 +20,7 @@
 #ifndef QTAWS_ECSRESPONSE_P_H
 #define QTAWS_ECSRESPONSE_P_H
 
-#include "ecsresponse.h"
-#include "ecsrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace ECS {

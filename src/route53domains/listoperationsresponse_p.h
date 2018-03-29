@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTOPERATIONSRESPONSE_P_H
 #define QTAWS_LISTOPERATIONSRESPONSE_P_H
 
-#include "route53domainsresponse.h"
-#include "listoperationsrequest.h"
+#include "route53domainsresponse_p.h"
 
 namespace QtAws {
 namespace Route53Domains {

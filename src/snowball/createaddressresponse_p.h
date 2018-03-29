@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEADDRESSRESPONSE_P_H
 #define QTAWS_CREATEADDRESSRESPONSE_P_H
 
-#include "snowballresponse.h"
-#include "createaddressrequest.h"
+#include "snowballresponse_p.h"
 
 namespace QtAws {
 namespace Snowball {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATECOMMENTRESPONSE_P_H
 #define QTAWS_UPDATECOMMENTRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "updatecommentrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

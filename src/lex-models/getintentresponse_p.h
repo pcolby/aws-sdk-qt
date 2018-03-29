@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETINTENTRESPONSE_P_H
 #define QTAWS_GETINTENTRESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "getintentrequest.h"
+#include "lexmodelbuildingserviceresponse_p.h"
 
 namespace QtAws {
 namespace LexModelBuildingService {

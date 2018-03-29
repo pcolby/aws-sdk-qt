@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSOCIATETEAMMEMBERRESPONSE_P_H
 #define QTAWS_ASSOCIATETEAMMEMBERRESPONSE_P_H
 
-#include "codestarresponse.h"
-#include "associateteammemberrequest.h"
+#include "codestarresponse_p.h"
 
 namespace QtAws {
 namespace CodeStar {

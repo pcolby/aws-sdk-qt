@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATERESOURCEGROUPRESPONSE_P_H
 #define QTAWS_CREATERESOURCEGROUPRESPONSE_P_H
 
-#include "inspectorresponse.h"
-#include "createresourcegrouprequest.h"
+#include "inspectorresponse_p.h"
 
 namespace QtAws {
 namespace Inspector {

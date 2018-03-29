@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEATTRIBUTESRESPONSE_P_H
 #define QTAWS_DELETEATTRIBUTESRESPONSE_P_H
 
-#include "simpledbresponse.h"
-#include "deleteattributesrequest.h"
+#include "simpledbresponse_p.h"
 
 namespace QtAws {
 namespace SimpleDB {

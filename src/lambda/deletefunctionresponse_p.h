@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEFUNCTIONRESPONSE_P_H
 #define QTAWS_DELETEFUNCTIONRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "deletefunctionrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

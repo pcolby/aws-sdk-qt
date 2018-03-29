@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDBSECURITYGROUPRESPONSE_P_H
 #define QTAWS_DELETEDBSECURITYGROUPRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "deletedbsecuritygrouprequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

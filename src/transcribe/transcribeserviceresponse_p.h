@@ -20,8 +20,7 @@
 #ifndef QTAWS_TRANSCRIBESERVICERESPONSE_P_H
 #define QTAWS_TRANSCRIBESERVICERESPONSE_P_H
 
-#include "transcribeserviceresponse.h"
-#include "transcribeservicerequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace TranscribeService {

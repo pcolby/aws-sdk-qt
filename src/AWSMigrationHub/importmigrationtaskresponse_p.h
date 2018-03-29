@@ -20,8 +20,7 @@
 #ifndef QTAWS_IMPORTMIGRATIONTASKRESPONSE_P_H
 #define QTAWS_IMPORTMIGRATIONTASKRESPONSE_P_H
 
-#include "migrationhubresponse.h"
-#include "importmigrationtaskrequest.h"
+#include "migrationhubresponse_p.h"
 
 namespace QtAws {
 namespace MigrationHub {

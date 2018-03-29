@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYREPLICATIONTASKRESPONSE_P_H
 #define QTAWS_MODIFYREPLICATIONTASKRESPONSE_P_H
 
-#include "databasemigrationserviceresponse.h"
-#include "modifyreplicationtaskrequest.h"
+#include "databasemigrationserviceresponse_p.h"
 
 namespace QtAws {
 namespace DatabaseMigrationService {

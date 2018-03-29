@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATENUMBEROFDOMAINCONTROLLERSRESPONSE_P_H
 #define QTAWS_UPDATENUMBEROFDOMAINCONTROLLERSRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "updatenumberofdomaincontrollersrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEROLERESPONSE_P_H
 #define QTAWS_DELETEROLERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "deleterolerequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEAVAILABILITYOPTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEAVAILABILITYOPTIONSRESPONSE_P_H
 
-#include "cloudsearchresponse.h"
-#include "describeavailabilityoptionsrequest.h"
+#include "cloudsearchresponse_p.h"
 
 namespace QtAws {
 namespace CloudSearch {

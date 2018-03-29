@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEAPIKEYRESPONSE_P_H
 #define QTAWS_CREATEAPIKEYRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "createapikeyrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

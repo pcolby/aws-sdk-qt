@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBELIMITSRESPONSE_P_H
 #define QTAWS_DESCRIBELIMITSRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "describelimitsrequest.h"
+#include "kinesisresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

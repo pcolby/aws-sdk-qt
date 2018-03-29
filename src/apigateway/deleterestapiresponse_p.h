@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETERESTAPIRESPONSE_P_H
 #define QTAWS_DELETERESTAPIRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "deleterestapirequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

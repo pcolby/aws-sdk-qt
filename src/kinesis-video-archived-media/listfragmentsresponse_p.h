@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTFRAGMENTSRESPONSE_P_H
 #define QTAWS_LISTFRAGMENTSRESPONSE_P_H
 
-#include "kinesisvideoarchivedmediaresponse.h"
-#include "listfragmentsrequest.h"
+#include "kinesisvideoarchivedmediaresponse_p.h"
 
 namespace QtAws {
 namespace KinesisVideoArchivedMedia {

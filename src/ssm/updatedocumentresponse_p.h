@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEDOCUMENTRESPONSE_P_H
 #define QTAWS_UPDATEDOCUMENTRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "updatedocumentrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

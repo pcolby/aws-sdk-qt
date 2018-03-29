@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETAGSRESPONSE_P_H
 #define QTAWS_DELETETAGSRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "deletetagsrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBELOADBALANCERTARGETGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBELOADBALANCERTARGETGROUPSRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "describeloadbalancertargetgroupsrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

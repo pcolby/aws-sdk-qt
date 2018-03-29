@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_P_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_P_H
 
-#include "databasemigrationserviceresponse.h"
-#include "describeaccountattributesrequest.h"
+#include "databasemigrationserviceresponse_p.h"
 
 namespace QtAws {
 namespace DatabaseMigrationService {

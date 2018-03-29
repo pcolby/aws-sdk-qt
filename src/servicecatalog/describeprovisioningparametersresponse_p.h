@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEPROVISIONINGPARAMETERSRESPONSE_P_H
 #define QTAWS_DESCRIBEPROVISIONINGPARAMETERSRESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "describeprovisioningparametersrequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

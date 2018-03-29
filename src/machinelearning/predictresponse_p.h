@@ -20,8 +20,7 @@
 #ifndef QTAWS_PREDICTRESPONSE_P_H
 #define QTAWS_PREDICTRESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "predictrequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

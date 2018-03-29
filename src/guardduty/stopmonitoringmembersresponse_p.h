@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPMONITORINGMEMBERSRESPONSE_P_H
 #define QTAWS_STOPMONITORINGMEMBERSRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "stopmonitoringmembersrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

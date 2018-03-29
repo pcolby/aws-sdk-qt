@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDELIVERYCHANNELRESPONSE_P_H
 #define QTAWS_DELETEDELIVERYCHANNELRESPONSE_P_H
 
-#include "configserviceresponse.h"
-#include "deletedeliverychannelrequest.h"
+#include "configserviceresponse_p.h"
 
 namespace QtAws {
 namespace ConfigService {

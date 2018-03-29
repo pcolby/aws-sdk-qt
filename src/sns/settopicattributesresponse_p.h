@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETTOPICATTRIBUTESRESPONSE_P_H
 #define QTAWS_SETTOPICATTRIBUTESRESPONSE_P_H
 
-#include "snsresponse.h"
-#include "settopicattributesrequest.h"
+#include "snsresponse_p.h"
 
 namespace QtAws {
 namespace SNS {

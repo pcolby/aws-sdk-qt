@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTJOBSBYSTATUSRESPONSE_P_H
 #define QTAWS_LISTJOBSBYSTATUSRESPONSE_P_H
 
-#include "elastictranscoderresponse.h"
-#include "listjobsbystatusrequest.h"
+#include "elastictranscoderresponse_p.h"
 
 namespace QtAws {
 namespace ElasticTranscoder {

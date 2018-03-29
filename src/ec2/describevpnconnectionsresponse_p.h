@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEVPNCONNECTIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEVPNCONNECTIONSRESPONSE_P_H
 
-#include "ec2response.h"
-#include "describevpnconnectionsrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPIMAGEBUILDERRESPONSE_P_H
 #define QTAWS_STOPIMAGEBUILDERRESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "stopimagebuilderrequest.h"
+#include "appstreamresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATECACERTIFICATERESPONSE_P_H
 #define QTAWS_UPDATECACERTIFICATERESPONSE_P_H
 
-#include "iotresponse.h"
-#include "updatecacertificaterequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

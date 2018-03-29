@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVEPERMISSIONRESPONSE_P_H
 #define QTAWS_REMOVEPERMISSIONRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "removepermissionrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

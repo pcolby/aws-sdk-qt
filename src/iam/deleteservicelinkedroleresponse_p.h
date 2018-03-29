@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESERVICELINKEDROLERESPONSE_P_H
 #define QTAWS_DELETESERVICELINKEDROLERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "deleteservicelinkedrolerequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

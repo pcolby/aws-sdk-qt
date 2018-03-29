@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETQUEUERESPONSE_P_H
 #define QTAWS_GETQUEUERESPONSE_P_H
 
-#include "mediaconvertresponse.h"
-#include "getqueuerequest.h"
+#include "mediaconvertresponse_p.h"
 
 namespace QtAws {
 namespace MediaConvert {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_TERMINATEJOBRESPONSE_P_H
 #define QTAWS_TERMINATEJOBRESPONSE_P_H
 
-#include "batchresponse.h"
-#include "terminatejobrequest.h"
+#include "batchresponse_p.h"
 
 namespace QtAws {
 namespace Batch {

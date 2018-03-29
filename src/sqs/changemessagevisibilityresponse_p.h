@@ -20,8 +20,7 @@
 #ifndef QTAWS_CHANGEMESSAGEVISIBILITYRESPONSE_P_H
 #define QTAWS_CHANGEMESSAGEVISIBILITYRESPONSE_P_H
 
-#include "sqsresponse.h"
-#include "changemessagevisibilityrequest.h"
+#include "sqsresponse_p.h"
 
 namespace QtAws {
 namespace SQS {

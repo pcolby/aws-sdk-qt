@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDATASOURCEFROMREDSHIFTRESPONSE_P_H
 #define QTAWS_CREATEDATASOURCEFROMREDSHIFTRESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "createdatasourcefromredshiftrequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

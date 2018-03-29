@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEDBPARAMETERGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEDBPARAMETERGROUPSRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describedbparametergroupsrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

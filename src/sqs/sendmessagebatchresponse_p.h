@@ -20,8 +20,7 @@
 #ifndef QTAWS_SENDMESSAGEBATCHRESPONSE_P_H
 #define QTAWS_SENDMESSAGEBATCHRESPONSE_P_H
 
-#include "sqsresponse.h"
-#include "sendmessagebatchrequest.h"
+#include "sqsresponse_p.h"
 
 namespace QtAws {
 namespace SQS {

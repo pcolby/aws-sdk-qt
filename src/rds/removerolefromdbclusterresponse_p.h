@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVEROLEFROMDBCLUSTERRESPONSE_P_H
 #define QTAWS_REMOVEROLEFROMDBCLUSTERRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "removerolefromdbclusterrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATESAMPLEFINDINGSRESPONSE_P_H
 #define QTAWS_CREATESAMPLEFINDINGSRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "createsamplefindingsrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTATTACKSRESPONSE_P_H
 #define QTAWS_LISTATTACKSRESPONSE_P_H
 
-#include "shieldresponse.h"
-#include "listattacksrequest.h"
+#include "shieldresponse_p.h"
 
 namespace QtAws {
 namespace Shield {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEDBENGINEVERSIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEDBENGINEVERSIONSRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describedbengineversionsrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

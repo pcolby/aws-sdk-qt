@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETPENDINGJOBEXECUTIONSRESPONSE_P_H
 #define QTAWS_GETPENDINGJOBEXECUTIONSRESPONSE_P_H
 
-#include "iotjobsdataplaneresponse.h"
-#include "getpendingjobexecutionsrequest.h"
+#include "iotjobsdataplaneresponse_p.h"
 
 namespace QtAws {
 namespace IoTJobsDataPlane {

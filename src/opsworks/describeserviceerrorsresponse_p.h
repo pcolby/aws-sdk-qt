@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESERVICEERRORSRESPONSE_P_H
 #define QTAWS_DESCRIBESERVICEERRORSRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "describeserviceerrorsrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

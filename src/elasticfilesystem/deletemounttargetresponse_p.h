@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEMOUNTTARGETRESPONSE_P_H
 #define QTAWS_DELETEMOUNTTARGETRESPONSE_P_H
 
-#include "efsresponse.h"
-#include "deletemounttargetrequest.h"
+#include "efsresponse_p.h"
 
 namespace QtAws {
 namespace EFS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_REQUESTCANCELWORKFLOWEXECUTIONRESPONSE_P_H
 #define QTAWS_REQUESTCANCELWORKFLOWEXECUTIONRESPONSE_P_H
 
-#include "swfresponse.h"
-#include "requestcancelworkflowexecutionrequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBETAGSRESPONSE_P_H
 #define QTAWS_DESCRIBETAGSRESPONSE_P_H
 
-#include "efsresponse.h"
-#include "describetagsrequest.h"
+#include "efsresponse_p.h"
 
 namespace QtAws {
 namespace EFS {

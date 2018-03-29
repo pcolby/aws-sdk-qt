@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEMESSAGERESPONSE_P_H
 #define QTAWS_DELETEMESSAGERESPONSE_P_H
 
-#include "sqsresponse.h"
-#include "deletemessagerequest.h"
+#include "sqsresponse_p.h"
 
 namespace QtAws {
 namespace SQS {

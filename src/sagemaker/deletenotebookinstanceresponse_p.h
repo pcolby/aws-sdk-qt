@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETENOTEBOOKINSTANCERESPONSE_P_H
 #define QTAWS_DELETENOTEBOOKINSTANCERESPONSE_P_H
 
-#include "sagemakerresponse.h"
-#include "deletenotebookinstancerequest.h"
+#include "sagemakerresponse_p.h"
 
 namespace QtAws {
 namespace SageMaker {

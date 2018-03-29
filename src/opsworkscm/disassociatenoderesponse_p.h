@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISASSOCIATENODERESPONSE_P_H
 #define QTAWS_DISASSOCIATENODERESPONSE_P_H
 
-#include "opsworkscmresponse.h"
-#include "disassociatenoderequest.h"
+#include "opsworkscmresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorksCM {

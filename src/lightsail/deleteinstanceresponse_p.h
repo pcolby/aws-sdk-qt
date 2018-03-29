@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEINSTANCERESPONSE_P_H
 #define QTAWS_DELETEINSTANCERESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "deleteinstancerequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATESUBSCRIBERRESPONSE_P_H
 #define QTAWS_CREATESUBSCRIBERRESPONSE_P_H
 
-#include "budgetsresponse.h"
-#include "createsubscriberrequest.h"
+#include "budgetsresponse_p.h"
 
 namespace QtAws {
 namespace Budgets {

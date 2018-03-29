@@ -20,8 +20,7 @@
 #ifndef QTAWS_REKOGNITIONRESPONSE_P_H
 #define QTAWS_REKOGNITIONRESPONSE_P_H
 
-#include "rekognitionresponse.h"
-#include "rekognitionrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Rekognition {

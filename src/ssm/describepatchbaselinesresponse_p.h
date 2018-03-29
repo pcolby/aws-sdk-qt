@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEPATCHBASELINESRESPONSE_P_H
 #define QTAWS_DESCRIBEPATCHBASELINESRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "describepatchbaselinesrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

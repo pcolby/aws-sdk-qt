@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETHOSTNAMESUGGESTIONRESPONSE_P_H
 #define QTAWS_GETHOSTNAMESUGGESTIONRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "gethostnamesuggestionrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

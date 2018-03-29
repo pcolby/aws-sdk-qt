@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEJOBRESPONSE_P_H
 #define QTAWS_CREATEJOBRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "createjobrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETGRAPHQLAPIRESPONSE_P_H
 #define QTAWS_GETGRAPHQLAPIRESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "getgraphqlapirequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

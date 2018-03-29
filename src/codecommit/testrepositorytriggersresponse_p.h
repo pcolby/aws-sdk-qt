@@ -20,8 +20,7 @@
 #ifndef QTAWS_TESTREPOSITORYTRIGGERSRESPONSE_P_H
 #define QTAWS_TESTREPOSITORYTRIGGERSRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "testrepositorytriggersrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

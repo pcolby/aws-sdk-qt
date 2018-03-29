@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATERESOURCEDEFINITIONRESPONSE_P_H
 #define QTAWS_CREATERESOURCEDEFINITIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "createresourcedefinitionrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

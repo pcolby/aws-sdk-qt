@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEJOBRESPONSE_P_H
 #define QTAWS_UPDATEJOBRESPONSE_P_H
 
-#include "importexportresponse.h"
-#include "updatejobrequest.h"
+#include "importexportresponse_p.h"
 
 namespace QtAws {
 namespace ImportExport {

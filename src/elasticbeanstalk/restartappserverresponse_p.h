@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESTARTAPPSERVERRESPONSE_P_H
 #define QTAWS_RESTARTAPPSERVERRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "restartappserverrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

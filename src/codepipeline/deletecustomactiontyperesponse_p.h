@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECUSTOMACTIONTYPERESPONSE_P_H
 #define QTAWS_DELETECUSTOMACTIONTYPERESPONSE_P_H
 
-#include "codepipelineresponse.h"
-#include "deletecustomactiontyperequest.h"
+#include "codepipelineresponse_p.h"
 
 namespace QtAws {
 namespace CodePipeline {

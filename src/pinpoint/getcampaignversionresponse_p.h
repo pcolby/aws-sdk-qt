@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCAMPAIGNVERSIONRESPONSE_P_H
 #define QTAWS_GETCAMPAIGNVERSIONRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "getcampaignversionrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

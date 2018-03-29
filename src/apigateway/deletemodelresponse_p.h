@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEMODELRESPONSE_P_H
 #define QTAWS_DELETEMODELRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "deletemodelrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

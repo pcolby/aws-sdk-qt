@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEINDEXFIELDRESPONSE_P_H
 #define QTAWS_DELETEINDEXFIELDRESPONSE_P_H
 
-#include "cloudsearchresponse.h"
-#include "deleteindexfieldrequest.h"
+#include "cloudsearchresponse_p.h"
 
 namespace QtAws {
 namespace CloudSearch {

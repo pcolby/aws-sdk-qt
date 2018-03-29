@@ -20,8 +20,7 @@
 #ifndef QTAWS_CODESTARRESPONSE_P_H
 #define QTAWS_CODESTARRESPONSE_P_H
 
-#include "codestarresponse.h"
-#include "codestarrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace CodeStar {

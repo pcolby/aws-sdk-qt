@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPOLICYVERSIONRESPONSE_P_H
 #define QTAWS_DELETEPOLICYVERSIONRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "deletepolicyversionrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

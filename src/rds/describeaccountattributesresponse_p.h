@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_P_H
 #define QTAWS_DESCRIBEACCOUNTATTRIBUTESRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describeaccountattributesrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

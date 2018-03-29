@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEDEVICESTATUSRESPONSE_P_H
 #define QTAWS_UPDATEDEVICESTATUSRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "updatedevicestatusrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

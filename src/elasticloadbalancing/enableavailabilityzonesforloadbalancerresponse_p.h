@@ -20,8 +20,7 @@
 #ifndef QTAWS_ENABLEAVAILABILITYZONESFORLOADBALANCERRESPONSE_P_H
 #define QTAWS_ENABLEAVAILABILITYZONESFORLOADBALANCERRESPONSE_P_H
 
-#include "elasticloadbalancingresponse.h"
-#include "enableavailabilityzonesforloadbalancerrequest.h"
+#include "elasticloadbalancingresponse_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancing {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESPONDTOAUTHCHALLENGERESPONSE_P_H
 #define QTAWS_RESPONDTOAUTHCHALLENGERESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "respondtoauthchallengerequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

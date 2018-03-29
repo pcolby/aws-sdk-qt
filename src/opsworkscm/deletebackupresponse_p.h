@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEBACKUPRESPONSE_P_H
 #define QTAWS_DELETEBACKUPRESPONSE_P_H
 
-#include "opsworkscmresponse.h"
-#include "deletebackuprequest.h"
+#include "opsworkscmresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorksCM {

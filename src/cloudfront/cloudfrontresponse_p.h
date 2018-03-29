@@ -20,8 +20,7 @@
 #ifndef QTAWS_CLOUDFRONTRESPONSE_P_H
 #define QTAWS_CLOUDFRONTRESPONSE_P_H
 
-#include "cloudfrontresponse.h"
-#include "cloudfrontrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace CloudFront {

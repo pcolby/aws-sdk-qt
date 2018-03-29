@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEBACKUPRESPONSE_P_H
 #define QTAWS_CREATEBACKUPRESPONSE_P_H
 
-#include "opsworkscmresponse.h"
-#include "createbackuprequest.h"
+#include "opsworkscmresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorksCM {

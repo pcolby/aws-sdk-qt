@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATETHINGSHADOWRESPONSE_P_H
 #define QTAWS_UPDATETHINGSHADOWRESPONSE_P_H
 
-#include "iotdataplaneresponse.h"
-#include "updatethingshadowrequest.h"
+#include "iotdataplaneresponse_p.h"
 
 namespace QtAws {
 namespace IoTDataPlane {

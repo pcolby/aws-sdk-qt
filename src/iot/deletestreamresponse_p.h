@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESTREAMRESPONSE_P_H
 #define QTAWS_DELETESTREAMRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "deletestreamrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

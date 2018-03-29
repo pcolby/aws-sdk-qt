@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEFILESYSTEMRESPONSE_P_H
 #define QTAWS_DELETEFILESYSTEMRESPONSE_P_H
 
-#include "efsresponse.h"
-#include "deletefilesystemrequest.h"
+#include "efsresponse_p.h"
 
 namespace QtAws {
 namespace EFS {

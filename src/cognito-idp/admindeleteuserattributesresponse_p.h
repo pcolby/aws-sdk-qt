@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADMINDELETEUSERATTRIBUTESRESPONSE_P_H
 #define QTAWS_ADMINDELETEUSERATTRIBUTESRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "admindeleteuserattributesrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

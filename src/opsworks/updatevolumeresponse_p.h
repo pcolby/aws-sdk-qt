@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEVOLUMERESPONSE_P_H
 #define QTAWS_UPDATEVOLUMERESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "updatevolumerequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

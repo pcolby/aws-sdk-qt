@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEUSERPOOLDOMAINRESPONSE_P_H
 #define QTAWS_DELETEUSERPOOLDOMAINRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "deleteuserpooldomainrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETENDPOINTRESPONSE_P_H
 #define QTAWS_GETENDPOINTRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "getendpointrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

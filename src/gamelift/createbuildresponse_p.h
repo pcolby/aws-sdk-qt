@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEBUILDRESPONSE_P_H
 #define QTAWS_CREATEBUILDRESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "createbuildrequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

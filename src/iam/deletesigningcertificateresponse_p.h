@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESIGNINGCERTIFICATERESPONSE_P_H
 #define QTAWS_DELETESIGNINGCERTIFICATERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "deletesigningcertificaterequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

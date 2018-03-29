@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEGROUPRESPONSE_P_H
 #define QTAWS_UPDATEGROUPRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "updategrouprequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

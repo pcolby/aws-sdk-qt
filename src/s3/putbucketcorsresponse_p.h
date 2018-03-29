@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTBUCKETCORSRESPONSE_P_H
 #define QTAWS_PUTBUCKETCORSRESPONSE_P_H
 
-#include "s3response.h"
-#include "putbucketcorsrequest.h"
+#include "s3response_p.h"
 
 namespace QtAws {
 namespace S3 {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CANCELJOBRESPONSE_P_H
 #define QTAWS_CANCELJOBRESPONSE_P_H
 
-#include "mediaconvertresponse.h"
-#include "canceljobrequest.h"
+#include "mediaconvertresponse_p.h"
 
 namespace QtAws {
 namespace MediaConvert {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEAPNSVOIPCHANNELRESPONSE_P_H
 #define QTAWS_DELETEAPNSVOIPCHANNELRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "deleteapnsvoipchannelrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

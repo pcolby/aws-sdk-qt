@@ -20,8 +20,7 @@
 #ifndef QTAWS_WAFREGIONALRESPONSE_P_H
 #define QTAWS_WAFREGIONALRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "wafregionalrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

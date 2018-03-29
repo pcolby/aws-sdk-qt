@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETINTROSPECTIONSCHEMARESPONSE_P_H
 #define QTAWS_GETINTROSPECTIONSCHEMARESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "getintrospectionschemarequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

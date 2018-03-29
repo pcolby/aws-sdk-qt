@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECERTIFICATESRESPONSE_P_H
 #define QTAWS_DESCRIBECERTIFICATESRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describecertificatesrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESLOTTYPERESPONSE_P_H
 #define QTAWS_DELETESLOTTYPERESPONSE_P_H
 
-#include "lexmodelbuildingserviceresponse.h"
-#include "deleteslottyperequest.h"
+#include "lexmodelbuildingserviceresponse_p.h"
 
 namespace QtAws {
 namespace LexModelBuildingService {

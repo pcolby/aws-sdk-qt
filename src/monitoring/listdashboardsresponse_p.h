@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTDASHBOARDSRESPONSE_P_H
 #define QTAWS_LISTDASHBOARDSRESPONSE_P_H
 
-#include "cloudwatchresponse.h"
-#include "listdashboardsrequest.h"
+#include "cloudwatchresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatch {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETEVENTSELECTORSRESPONSE_P_H
 #define QTAWS_GETEVENTSELECTORSRESPONSE_P_H
 
-#include "cloudtrailresponse.h"
-#include "geteventselectorsrequest.h"
+#include "cloudtrailresponse_p.h"
 
 namespace QtAws {
 namespace CloudTrail {

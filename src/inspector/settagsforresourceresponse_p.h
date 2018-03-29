@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETTAGSFORRESOURCERESPONSE_P_H
 #define QTAWS_SETTAGSFORRESOURCERESPONSE_P_H
 
-#include "inspectorresponse.h"
-#include "settagsforresourcerequest.h"
+#include "inspectorresponse_p.h"
 
 namespace QtAws {
 namespace Inspector {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_ACCEPTCERTIFICATETRANSFERRESPONSE_P_H
 #define QTAWS_ACCEPTCERTIFICATETRANSFERRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "acceptcertificatetransferrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

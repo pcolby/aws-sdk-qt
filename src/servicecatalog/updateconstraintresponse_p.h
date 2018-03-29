@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATECONSTRAINTRESPONSE_P_H
 #define QTAWS_UPDATECONSTRAINTRESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "updateconstraintrequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

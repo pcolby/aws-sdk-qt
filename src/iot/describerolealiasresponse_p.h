@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEROLEALIASRESPONSE_P_H
 #define QTAWS_DESCRIBEROLEALIASRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "describerolealiasrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

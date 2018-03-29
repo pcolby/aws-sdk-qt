@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEAPPLICATIONRESPONSE_P_H
 #define QTAWS_DELETEAPPLICATIONRESPONSE_P_H
 
-#include "codedeployresponse.h"
-#include "deleteapplicationrequest.h"
+#include "codedeployresponse_p.h"
 
 namespace QtAws {
 namespace CodeDeploy {

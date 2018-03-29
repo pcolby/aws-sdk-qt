@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHDELETEBUILDSRESPONSE_P_H
 #define QTAWS_BATCHDELETEBUILDSRESPONSE_P_H
 
-#include "codebuildresponse.h"
-#include "batchdeletebuildsrequest.h"
+#include "codebuildresponse_p.h"
 
 namespace QtAws {
 namespace CodeBuild {

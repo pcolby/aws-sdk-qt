@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTNETWORKPROFILESRESPONSE_P_H
 #define QTAWS_LISTNETWORKPROFILESRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "listnetworkprofilesrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

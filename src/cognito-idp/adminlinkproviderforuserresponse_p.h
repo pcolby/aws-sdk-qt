@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADMINLINKPROVIDERFORUSERRESPONSE_P_H
 #define QTAWS_ADMINLINKPROVIDERFORUSERRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "adminlinkproviderforuserrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

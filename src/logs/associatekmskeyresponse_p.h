@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSOCIATEKMSKEYRESPONSE_P_H
 #define QTAWS_ASSOCIATEKMSKEYRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "associatekmskeyrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

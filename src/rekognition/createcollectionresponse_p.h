@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECOLLECTIONRESPONSE_P_H
 #define QTAWS_CREATECOLLECTIONRESPONSE_P_H
 
-#include "rekognitionresponse.h"
-#include "createcollectionrequest.h"
+#include "rekognitionresponse_p.h"
 
 namespace QtAws {
 namespace Rekognition {

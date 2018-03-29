@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETHEALTHCHECKSTATUSRESPONSE_P_H
 #define QTAWS_GETHEALTHCHECKSTATUSRESPONSE_P_H
 
-#include "route53response.h"
-#include "gethealthcheckstatusrequest.h"
+#include "route53response_p.h"
 
 namespace QtAws {
 namespace Route53 {

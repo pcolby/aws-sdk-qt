@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEENDPOINTWEIGHTSANDCAPACITIESRESPONSE_P_H
 #define QTAWS_UPDATEENDPOINTWEIGHTSANDCAPACITIESRESPONSE_P_H
 
-#include "sagemakerresponse.h"
-#include "updateendpointweightsandcapacitiesrequest.h"
+#include "sagemakerresponse_p.h"
 
 namespace QtAws {
 namespace SageMaker {

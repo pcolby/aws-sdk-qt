@@ -20,8 +20,7 @@
 #ifndef QTAWS_APPLYSECURITYGROUPSTOLOADBALANCERRESPONSE_P_H
 #define QTAWS_APPLYSECURITYGROUPSTOLOADBALANCERRESPONSE_P_H
 
-#include "elasticloadbalancingresponse.h"
-#include "applysecuritygroupstoloadbalancerrequest.h"
+#include "elasticloadbalancingresponse_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancing {

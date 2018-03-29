@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVECLIENTIDFROMOPENIDCONNECTPROVIDERRESPONSE_P_H
 #define QTAWS_REMOVECLIENTIDFROMOPENIDCONNECTPROVIDERRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "removeclientidfromopenidconnectproviderrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

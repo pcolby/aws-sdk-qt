@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETIPSETRESPONSE_P_H
 #define QTAWS_GETIPSETRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "getipsetrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

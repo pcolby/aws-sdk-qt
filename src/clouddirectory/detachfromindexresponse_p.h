@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETACHFROMINDEXRESPONSE_P_H
 #define QTAWS_DETACHFROMINDEXRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "detachfromindexrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

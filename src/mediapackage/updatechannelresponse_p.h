@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATECHANNELRESPONSE_P_H
 #define QTAWS_UPDATECHANNELRESPONSE_P_H
 
-#include "mediapackageresponse.h"
-#include "updatechannelrequest.h"
+#include "mediapackageresponse_p.h"
 
 namespace QtAws {
 namespace MediaPackage {

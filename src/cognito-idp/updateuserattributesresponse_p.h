@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEUSERATTRIBUTESRESPONSE_P_H
 #define QTAWS_UPDATEUSERATTRIBUTESRESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "updateuserattributesrequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

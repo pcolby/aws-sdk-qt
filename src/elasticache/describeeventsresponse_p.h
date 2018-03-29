@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEEVENTSRESPONSE_P_H
 #define QTAWS_DESCRIBEEVENTSRESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "describeeventsrequest.h"
+#include "elasticacheresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

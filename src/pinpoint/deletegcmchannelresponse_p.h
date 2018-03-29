@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEGCMCHANNELRESPONSE_P_H
 #define QTAWS_DELETEGCMCHANNELRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "deletegcmchannelrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

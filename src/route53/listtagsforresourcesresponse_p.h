@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTAGSFORRESOURCESRESPONSE_P_H
 #define QTAWS_LISTTAGSFORRESOURCESRESPONSE_P_H
 
-#include "route53response.h"
-#include "listtagsforresourcesrequest.h"
+#include "route53response_p.h"
 
 namespace QtAws {
 namespace Route53 {

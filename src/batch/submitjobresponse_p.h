@@ -20,8 +20,7 @@
 #ifndef QTAWS_SUBMITJOBRESPONSE_P_H
 #define QTAWS_SUBMITJOBRESPONSE_P_H
 
-#include "batchresponse.h"
-#include "submitjobrequest.h"
+#include "batchresponse_p.h"
 
 namespace QtAws {
 namespace Batch {

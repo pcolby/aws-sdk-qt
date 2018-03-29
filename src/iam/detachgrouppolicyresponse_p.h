@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETACHGROUPPOLICYRESPONSE_P_H
 #define QTAWS_DETACHGROUPPOLICYRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "detachgrouppolicyrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

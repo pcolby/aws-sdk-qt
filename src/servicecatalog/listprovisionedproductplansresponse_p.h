@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTPROVISIONEDPRODUCTPLANSRESPONSE_P_H
 #define QTAWS_LISTPROVISIONEDPRODUCTPLANSRESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "listprovisionedproductplansrequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

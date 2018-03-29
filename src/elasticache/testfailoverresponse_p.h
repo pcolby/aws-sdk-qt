@@ -20,8 +20,7 @@
 #ifndef QTAWS_TESTFAILOVERRESPONSE_P_H
 #define QTAWS_TESTFAILOVERRESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "testfailoverrequest.h"
+#include "elasticacheresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

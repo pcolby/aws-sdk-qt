@@ -20,8 +20,7 @@
 #ifndef QTAWS_SEARCHUSERSRESPONSE_P_H
 #define QTAWS_SEARCHUSERSRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "searchusersrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

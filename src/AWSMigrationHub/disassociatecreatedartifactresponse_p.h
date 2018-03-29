@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISASSOCIATECREATEDARTIFACTRESPONSE_P_H
 #define QTAWS_DISASSOCIATECREATEDARTIFACTRESPONSE_P_H
 
-#include "migrationhubresponse.h"
-#include "disassociatecreatedartifactrequest.h"
+#include "migrationhubresponse_p.h"
 
 namespace QtAws {
 namespace MigrationHub {

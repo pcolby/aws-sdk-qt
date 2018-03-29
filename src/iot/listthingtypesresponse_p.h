@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTHINGTYPESRESPONSE_P_H
 #define QTAWS_LISTTHINGTYPESRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "listthingtypesrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

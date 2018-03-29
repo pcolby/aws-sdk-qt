@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECACHECLUSTERRESPONSE_P_H
 #define QTAWS_CREATECACHECLUSTERRESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "createcacheclusterrequest.h"
+#include "elasticacheresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

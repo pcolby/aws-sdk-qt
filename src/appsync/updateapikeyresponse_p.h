@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEAPIKEYRESPONSE_P_H
 #define QTAWS_UPDATEAPIKEYRESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "updateapikeyrequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

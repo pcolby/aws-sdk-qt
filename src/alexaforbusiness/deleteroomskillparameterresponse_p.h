@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEROOMSKILLPARAMETERRESPONSE_P_H
 #define QTAWS_DELETEROOMSKILLPARAMETERRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "deleteroomskillparameterrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_ENABLEMFADEVICERESPONSE_P_H
 #define QTAWS_ENABLEMFADEVICERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "enablemfadevicerequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

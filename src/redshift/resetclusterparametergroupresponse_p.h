@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESETCLUSTERPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_RESETCLUSTERPARAMETERGROUPRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "resetclusterparametergrouprequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

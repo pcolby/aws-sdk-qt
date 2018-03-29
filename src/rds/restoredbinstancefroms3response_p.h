@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESTOREDBINSTANCEFROMS3RESPONSE_P_H
 #define QTAWS_RESTOREDBINSTANCEFROMS3RESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "restoredbinstancefroms3request.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

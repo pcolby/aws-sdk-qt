@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESTACKPROVISIONINGPARAMETERSRESPONSE_P_H
 #define QTAWS_DESCRIBESTACKPROVISIONINGPARAMETERSRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "describestackprovisioningparametersrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

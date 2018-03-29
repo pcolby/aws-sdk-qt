@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCONNECTIONRESPONSE_P_H
 #define QTAWS_GETCONNECTIONRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "getconnectionrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

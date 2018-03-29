@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSCHEMAASJSONRESPONSE_P_H
 #define QTAWS_GETSCHEMAASJSONRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "getschemaasjsonrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

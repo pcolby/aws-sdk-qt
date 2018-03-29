@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEAPPLICATIONVERSIONRESPONSE_P_H
 #define QTAWS_CREATEAPPLICATIONVERSIONRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "createapplicationversionrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

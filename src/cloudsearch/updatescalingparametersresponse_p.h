@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATESCALINGPARAMETERSRESPONSE_P_H
 #define QTAWS_UPDATESCALINGPARAMETERSRESPONSE_P_H
 
-#include "cloudsearchresponse.h"
-#include "updatescalingparametersrequest.h"
+#include "cloudsearchresponse_p.h"
 
 namespace QtAws {
 namespace CloudSearch {

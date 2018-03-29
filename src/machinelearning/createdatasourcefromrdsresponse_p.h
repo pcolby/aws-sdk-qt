@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDATASOURCEFROMRDSRESPONSE_P_H
 #define QTAWS_CREATEDATASOURCEFROMRDSRESPONSE_P_H
 
-#include "machinelearningresponse.h"
-#include "createdatasourcefromrdsrequest.h"
+#include "machinelearningresponse_p.h"
 
 namespace QtAws {
 namespace MachineLearning {

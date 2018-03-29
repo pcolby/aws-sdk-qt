@@ -20,8 +20,7 @@
 #ifndef QTAWS_REGISTERVOLUMERESPONSE_P_H
 #define QTAWS_REGISTERVOLUMERESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "registervolumerequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

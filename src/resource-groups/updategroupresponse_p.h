@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEGROUPRESPONSE_P_H
 #define QTAWS_UPDATEGROUPRESPONSE_P_H
 
-#include "resourcegroupsresponse.h"
-#include "updategrouprequest.h"
+#include "resourcegroupsresponse_p.h"
 
 namespace QtAws {
 namespace ResourceGroups {

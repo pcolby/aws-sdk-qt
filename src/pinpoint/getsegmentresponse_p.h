@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSEGMENTRESPONSE_P_H
 #define QTAWS_GETSEGMENTRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "getsegmentrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

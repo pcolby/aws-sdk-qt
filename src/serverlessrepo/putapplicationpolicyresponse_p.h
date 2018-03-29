@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTAPPLICATIONPOLICYRESPONSE_P_H
 #define QTAWS_PUTAPPLICATIONPOLICYRESPONSE_P_H
 
-#include "serverlessapplicationrepositoryresponse.h"
-#include "putapplicationpolicyrequest.h"
+#include "serverlessapplicationrepositoryresponse_p.h"
 
 namespace QtAws {
 namespace ServerlessApplicationRepository {

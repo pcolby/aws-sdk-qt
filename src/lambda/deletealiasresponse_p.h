@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEALIASRESPONSE_P_H
 #define QTAWS_DELETEALIASRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "deletealiasrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

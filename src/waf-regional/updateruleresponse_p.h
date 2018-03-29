@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATERULERESPONSE_P_H
 #define QTAWS_UPDATERULERESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "updaterulerequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

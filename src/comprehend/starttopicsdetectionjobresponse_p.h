@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTTOPICSDETECTIONJOBRESPONSE_P_H
 #define QTAWS_STARTTOPICSDETECTIONJOBRESPONSE_P_H
 
-#include "comprehendresponse.h"
-#include "starttopicsdetectionjobrequest.h"
+#include "comprehendresponse_p.h"
 
 namespace QtAws {
 namespace Comprehend {

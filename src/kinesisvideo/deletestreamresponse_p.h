@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESTREAMRESPONSE_P_H
 #define QTAWS_DELETESTREAMRESPONSE_P_H
 
-#include "kinesisvideoresponse.h"
-#include "deletestreamrequest.h"
+#include "kinesisvideoresponse_p.h"
 
 namespace QtAws {
 namespace KinesisVideo {

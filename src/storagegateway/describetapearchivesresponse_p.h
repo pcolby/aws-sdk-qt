@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBETAPEARCHIVESRESPONSE_P_H
 #define QTAWS_DESCRIBETAPEARCHIVESRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "describetapearchivesrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

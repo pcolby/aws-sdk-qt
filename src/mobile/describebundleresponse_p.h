@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEBUNDLERESPONSE_P_H
 #define QTAWS_DESCRIBEBUNDLERESPONSE_P_H
 
-#include "mobileresponse.h"
-#include "describebundlerequest.h"
+#include "mobileresponse_p.h"
 
 namespace QtAws {
 namespace Mobile {

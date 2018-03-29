@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEALIASRESPONSE_P_H
 #define QTAWS_UPDATEALIASRESPONSE_P_H
 
-#include "lambdaresponse.h"
-#include "updatealiasrequest.h"
+#include "lambdaresponse_p.h"
 
 namespace QtAws {
 namespace Lambda {

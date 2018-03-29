@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEFINEANALYSISSCHEMERESPONSE_P_H
 #define QTAWS_DEFINEANALYSISSCHEMERESPONSE_P_H
 
-#include "cloudsearchresponse.h"
-#include "defineanalysisschemerequest.h"
+#include "cloudsearchresponse_p.h"
 
 namespace QtAws {
 namespace CloudSearch {

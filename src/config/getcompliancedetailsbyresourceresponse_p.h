@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCOMPLIANCEDETAILSBYRESOURCERESPONSE_P_H
 #define QTAWS_GETCOMPLIANCEDETAILSBYRESOURCERESPONSE_P_H
 
-#include "configserviceresponse.h"
-#include "getcompliancedetailsbyresourcerequest.h"
+#include "configserviceresponse_p.h"
 
 namespace QtAws {
 namespace ConfigService {

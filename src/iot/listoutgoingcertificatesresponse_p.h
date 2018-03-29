@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTOUTGOINGCERTIFICATESRESPONSE_P_H
 #define QTAWS_LISTOUTGOINGCERTIFICATESRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "listoutgoingcertificatesrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

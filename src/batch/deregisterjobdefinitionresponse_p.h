@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEREGISTERJOBDEFINITIONRESPONSE_P_H
 #define QTAWS_DEREGISTERJOBDEFINITIONRESPONSE_P_H
 
-#include "batchresponse.h"
-#include "deregisterjobdefinitionrequest.h"
+#include "batchresponse_p.h"
 
 namespace QtAws {
 namespace Batch {

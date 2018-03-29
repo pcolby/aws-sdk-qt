@@ -20,8 +20,7 @@
 #ifndef QTAWS_SYNTHESIZESPEECHRESPONSE_P_H
 #define QTAWS_SYNTHESIZESPEECHRESPONSE_P_H
 
-#include "pollyresponse.h"
-#include "synthesizespeechrequest.h"
+#include "pollyresponse_p.h"
 
 namespace QtAws {
 namespace Polly {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEJOBTEMPLATERESPONSE_P_H
 #define QTAWS_UPDATEJOBTEMPLATERESPONSE_P_H
 
-#include "mediaconvertresponse.h"
-#include "updatejobtemplaterequest.h"
+#include "mediaconvertresponse_p.h"
 
 namespace QtAws {
 namespace MediaConvert {

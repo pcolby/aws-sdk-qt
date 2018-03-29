@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTBRANCHESRESPONSE_P_H
 #define QTAWS_LISTBRANCHESRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "listbranchesrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

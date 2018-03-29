@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEOBJECTRESPONSE_P_H
 #define QTAWS_DELETEOBJECTRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "deleteobjectrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_SEARCHPRODUCTSASADMINRESPONSE_P_H
 #define QTAWS_SEARCHPRODUCTSASADMINRESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "searchproductsasadminrequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

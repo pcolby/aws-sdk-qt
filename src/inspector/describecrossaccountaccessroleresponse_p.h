@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECROSSACCOUNTACCESSROLERESPONSE_P_H
 #define QTAWS_DESCRIBECROSSACCOUNTACCESSROLERESPONSE_P_H
 
-#include "inspectorresponse.h"
-#include "describecrossaccountaccessrolerequest.h"
+#include "inspectorresponse_p.h"
 
 namespace QtAws {
 namespace Inspector {

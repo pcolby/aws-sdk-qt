@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEENTITYAGGREGATESRESPONSE_P_H
 #define QTAWS_DESCRIBEENTITYAGGREGATESRESPONSE_P_H
 
-#include "healthresponse.h"
-#include "describeentityaggregatesrequest.h"
+#include "healthresponse_p.h"
 
 namespace QtAws {
 namespace Health {

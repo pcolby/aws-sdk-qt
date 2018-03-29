@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECACHEPARAMETERGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBECACHEPARAMETERGROUPSRESPONSE_P_H
 
-#include "elasticacheresponse.h"
-#include "describecacheparametergroupsrequest.h"
+#include "elasticacheresponse_p.h"
 
 namespace QtAws {
 namespace ElastiCache {

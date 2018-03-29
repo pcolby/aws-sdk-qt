@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEPRECATEWORKFLOWTYPERESPONSE_P_H
 #define QTAWS_DEPRECATEWORKFLOWTYPERESPONSE_P_H
 
-#include "swfresponse.h"
-#include "deprecateworkflowtyperequest.h"
+#include "swfresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

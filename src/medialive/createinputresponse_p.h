@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEINPUTRESPONSE_P_H
 #define QTAWS_CREATEINPUTRESPONSE_P_H
 
-#include "medialiveresponse.h"
-#include "createinputrequest.h"
+#include "medialiveresponse_p.h"
 
 namespace QtAws {
 namespace MediaLive {

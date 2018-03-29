@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEINTERCONNECTSRESPONSE_P_H
 #define QTAWS_DESCRIBEINTERCONNECTSRESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "describeinterconnectsrequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

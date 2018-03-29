@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEALARMSRESPONSE_P_H
 #define QTAWS_DELETEALARMSRESPONSE_P_H
 
-#include "cloudwatchresponse.h"
-#include "deletealarmsrequest.h"
+#include "cloudwatchresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatch {

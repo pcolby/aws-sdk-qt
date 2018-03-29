@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYHOSTSRESPONSE_P_H
 #define QTAWS_MODIFYHOSTSRESPONSE_P_H
 
-#include "ec2response.h"
-#include "modifyhostsrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTSSHPUBLICKEYSRESPONSE_P_H
 #define QTAWS_LISTSSHPUBLICKEYSRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "listsshpublickeysrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

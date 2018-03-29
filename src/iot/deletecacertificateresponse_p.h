@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECACERTIFICATERESPONSE_P_H
 #define QTAWS_DELETECACERTIFICATERESPONSE_P_H
 
-#include "iotresponse.h"
-#include "deletecacertificaterequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

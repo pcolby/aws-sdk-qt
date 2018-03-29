@@ -20,8 +20,7 @@
 #ifndef QTAWS_SWFRESPONSE_P_H
 #define QTAWS_SWFRESPONSE_P_H
 
-#include "swfresponse.h"
-#include "swfrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace SWF {

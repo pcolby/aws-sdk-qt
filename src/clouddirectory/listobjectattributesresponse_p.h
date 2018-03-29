@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTOBJECTATTRIBUTESRESPONSE_P_H
 #define QTAWS_LISTOBJECTATTRIBUTESRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "listobjectattributesrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

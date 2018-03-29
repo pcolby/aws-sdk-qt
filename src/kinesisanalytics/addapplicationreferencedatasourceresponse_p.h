@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDAPPLICATIONREFERENCEDATASOURCERESPONSE_P_H
 #define QTAWS_ADDAPPLICATIONREFERENCEDATASOURCERESPONSE_P_H
 
-#include "kinesisanalyticsresponse.h"
-#include "addapplicationreferencedatasourcerequest.h"
+#include "kinesisanalyticsresponse_p.h"
 
 namespace QtAws {
 namespace KinesisAnalytics {

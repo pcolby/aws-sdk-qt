@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNASSIGNINSTANCERESPONSE_P_H
 #define QTAWS_UNASSIGNINSTANCERESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "unassigninstancerequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

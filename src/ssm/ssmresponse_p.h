@@ -20,8 +20,7 @@
 #ifndef QTAWS_SSMRESPONSE_P_H
 #define QTAWS_SSMRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "ssmrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

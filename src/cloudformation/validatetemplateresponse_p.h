@@ -20,8 +20,7 @@
 #ifndef QTAWS_VALIDATETEMPLATERESPONSE_P_H
 #define QTAWS_VALIDATETEMPLATERESPONSE_P_H
 
-#include "cloudformationresponse.h"
-#include "validatetemplaterequest.h"
+#include "cloudformationresponse_p.h"
 
 namespace QtAws {
 namespace CloudFormation {

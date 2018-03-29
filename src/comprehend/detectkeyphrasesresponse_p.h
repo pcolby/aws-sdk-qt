@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETECTKEYPHRASESRESPONSE_P_H
 #define QTAWS_DETECTKEYPHRASESRESPONSE_P_H
 
-#include "comprehendresponse.h"
-#include "detectkeyphrasesrequest.h"
+#include "comprehendresponse_p.h"
 
 namespace QtAws {
 namespace Comprehend {

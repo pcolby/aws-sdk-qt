@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCHANGETOKENRESPONSE_P_H
 #define QTAWS_GETCHANGETOKENRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "getchangetokenrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

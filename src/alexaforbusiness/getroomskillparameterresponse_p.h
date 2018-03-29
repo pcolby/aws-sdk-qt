@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETROOMSKILLPARAMETERRESPONSE_P_H
 #define QTAWS_GETROOMSKILLPARAMETERRESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "getroomskillparameterrequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

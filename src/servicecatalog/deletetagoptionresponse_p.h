@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETAGOPTIONRESPONSE_P_H
 #define QTAWS_DELETETAGOPTIONRESPONSE_P_H
 
-#include "servicecatalogresponse.h"
-#include "deletetagoptionrequest.h"
+#include "servicecatalogresponse_p.h"
 
 namespace QtAws {
 namespace ServiceCatalog {

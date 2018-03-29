@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEPLACEMENTGROUPRESPONSE_P_H
 #define QTAWS_CREATEPLACEMENTGROUPRESPONSE_P_H
 
-#include "ec2response.h"
-#include "createplacementgrouprequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

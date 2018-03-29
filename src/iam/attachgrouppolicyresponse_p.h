@@ -20,8 +20,7 @@
 #ifndef QTAWS_ATTACHGROUPPOLICYRESPONSE_P_H
 #define QTAWS_ATTACHGROUPPOLICYRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "attachgrouppolicyrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

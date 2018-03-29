@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEPROFILERESPONSE_P_H
 #define QTAWS_UPDATEPROFILERESPONSE_P_H
 
-#include "alexaforbusinessresponse.h"
-#include "updateprofilerequest.h"
+#include "alexaforbusinessresponse_p.h"
 
 namespace QtAws {
 namespace AlexaForBusiness {

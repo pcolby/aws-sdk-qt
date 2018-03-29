@@ -20,8 +20,7 @@
 #ifndef QTAWS_SENDCOMMANDRESPONSE_P_H
 #define QTAWS_SENDCOMMANDRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "sendcommandrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

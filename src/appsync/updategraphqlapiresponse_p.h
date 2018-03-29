@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEGRAPHQLAPIRESPONSE_P_H
 #define QTAWS_UPDATEGRAPHQLAPIRESPONSE_P_H
 
-#include "appsyncresponse.h"
-#include "updategraphqlapirequest.h"
+#include "appsyncresponse_p.h"
 
 namespace QtAws {
 namespace AppSync {

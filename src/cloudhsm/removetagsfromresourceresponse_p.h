@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVETAGSFROMRESOURCERESPONSE_P_H
 #define QTAWS_REMOVETAGSFROMRESOURCERESPONSE_P_H
 
-#include "cloudhsmresponse.h"
-#include "removetagsfromresourcerequest.h"
+#include "cloudhsmresponse_p.h"
 
 namespace QtAws {
 namespace CloudHSM {

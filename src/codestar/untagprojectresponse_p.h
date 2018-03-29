@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNTAGPROJECTRESPONSE_P_H
 #define QTAWS_UNTAGPROJECTRESPONSE_P_H
 
-#include "codestarresponse.h"
-#include "untagprojectrequest.h"
+#include "codestarresponse_p.h"
 
 namespace QtAws {
 namespace CodeStar {

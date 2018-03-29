@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTUSERSRESPONSE_P_H
 #define QTAWS_LISTUSERSRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "listusersrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEJOBRESPONSE_P_H
 #define QTAWS_CREATEJOBRESPONSE_P_H
 
-#include "mediaconvertresponse.h"
-#include "createjobrequest.h"
+#include "mediaconvertresponse_p.h"
 
 namespace QtAws {
 namespace MediaConvert {

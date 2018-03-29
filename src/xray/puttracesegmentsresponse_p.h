@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTTRACESEGMENTSRESPONSE_P_H
 #define QTAWS_PUTTRACESEGMENTSRESPONSE_P_H
 
-#include "xrayresponse.h"
-#include "puttracesegmentsrequest.h"
+#include "xrayresponse_p.h"
 
 namespace QtAws {
 namespace XRay {

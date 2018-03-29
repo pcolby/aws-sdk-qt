@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECHANGESETRESPONSE_P_H
 #define QTAWS_DESCRIBECHANGESETRESPONSE_P_H
 
-#include "cloudformationresponse.h"
-#include "describechangesetrequest.h"
+#include "cloudformationresponse_p.h"
 
 namespace QtAws {
 namespace CloudFormation {

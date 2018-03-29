@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESESSIONSRESPONSE_P_H
 #define QTAWS_DESCRIBESESSIONSRESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "describesessionsrequest.h"
+#include "appstreamresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

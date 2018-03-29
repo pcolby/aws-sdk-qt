@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTONDEMANDREPLICATIONRUNRESPONSE_P_H
 #define QTAWS_STARTONDEMANDREPLICATIONRUNRESPONSE_P_H
 
-#include "smsresponse.h"
-#include "startondemandreplicationrunrequest.h"
+#include "smsresponse_p.h"
 
 namespace QtAws {
 namespace SMS {

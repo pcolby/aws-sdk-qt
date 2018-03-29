@@ -20,8 +20,7 @@
 #ifndef QTAWS_RETIREGRANTRESPONSE_P_H
 #define QTAWS_RETIREGRANTRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "retiregrantrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

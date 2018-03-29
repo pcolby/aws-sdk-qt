@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTFACETNAMESRESPONSE_P_H
 #define QTAWS_LISTFACETNAMESRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "listfacetnamesrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

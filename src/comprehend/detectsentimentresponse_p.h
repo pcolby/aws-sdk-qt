@@ -20,8 +20,7 @@
 #ifndef QTAWS_DETECTSENTIMENTRESPONSE_P_H
 #define QTAWS_DETECTSENTIMENTRESPONSE_P_H
 
-#include "comprehendresponse.h"
-#include "detectsentimentrequest.h"
+#include "comprehendresponse_p.h"
 
 namespace QtAws {
 namespace Comprehend {

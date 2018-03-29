@@ -20,8 +20,7 @@
 #ifndef QTAWS_COMPLETEMULTIPARTUPLOADRESPONSE_P_H
 #define QTAWS_COMPLETEMULTIPARTUPLOADRESPONSE_P_H
 
-#include "glacierresponse.h"
-#include "completemultipartuploadrequest.h"
+#include "glacierresponse_p.h"
 
 namespace QtAws {
 namespace Glacier {

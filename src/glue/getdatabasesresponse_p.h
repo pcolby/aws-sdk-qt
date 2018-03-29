@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDATABASESRESPONSE_P_H
 #define QTAWS_GETDATABASESRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "getdatabasesrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

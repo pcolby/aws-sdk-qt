@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETTAGSRESPONSE_P_H
 #define QTAWS_GETTAGSRESPONSE_P_H
 
-#include "resourcegroupsresponse.h"
-#include "gettagsrequest.h"
+#include "resourcegroupsresponse_p.h"
 
 namespace QtAws {
 namespace ResourceGroups {

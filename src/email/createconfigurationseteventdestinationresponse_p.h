@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECONFIGURATIONSETEVENTDESTINATIONRESPONSE_P_H
 #define QTAWS_CREATECONFIGURATIONSETEVENTDESTINATIONRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "createconfigurationseteventdestinationrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEPROJECTRESPONSE_P_H
 #define QTAWS_CREATEPROJECTRESPONSE_P_H
 
-#include "mobileresponse.h"
-#include "createprojectrequest.h"
+#include "mobileresponse_p.h"
 
 namespace QtAws {
 namespace Mobile {

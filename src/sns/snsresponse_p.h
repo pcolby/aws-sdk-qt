@@ -20,8 +20,7 @@
 #ifndef QTAWS_SNSRESPONSE_P_H
 #define QTAWS_SNSRESPONSE_P_H
 
-#include "snsresponse.h"
-#include "snsrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace SNS {

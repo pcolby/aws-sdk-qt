@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDOMAINRESPONSE_P_H
 #define QTAWS_DELETEDOMAINRESPONSE_P_H
 
-#include "simpledbresponse.h"
-#include "deletedomainrequest.h"
+#include "simpledbresponse_p.h"
 
 namespace QtAws {
 namespace SimpleDB {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETPLANRESPONSE_P_H
 #define QTAWS_GETPLANRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "getplanrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

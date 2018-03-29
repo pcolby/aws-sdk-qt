@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTATTACHEDINDICESRESPONSE_P_H
 #define QTAWS_LISTATTACHEDINDICESRESPONSE_P_H
 
-#include "clouddirectoryresponse.h"
-#include "listattachedindicesrequest.h"
+#include "clouddirectoryresponse_p.h"
 
 namespace QtAws {
 namespace CloudDirectory {

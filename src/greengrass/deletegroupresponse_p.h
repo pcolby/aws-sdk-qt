@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEGROUPRESPONSE_P_H
 #define QTAWS_DELETEGROUPRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "deletegrouprequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

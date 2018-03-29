@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNTAGRESOURCERESPONSE_P_H
 #define QTAWS_UNTAGRESOURCERESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "untagresourcerequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

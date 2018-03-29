@@ -20,8 +20,7 @@
 #ifndef QTAWS_KINESISVIDEOMEDIARESPONSE_P_H
 #define QTAWS_KINESISVIDEOMEDIARESPONSE_P_H
 
-#include "kinesisvideomediaresponse.h"
-#include "kinesisvideomediarequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace KinesisVideoMedia {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_WAFRESPONSE_P_H
 #define QTAWS_WAFRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "wafrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

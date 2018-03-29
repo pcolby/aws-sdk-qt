@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTCREATEACCOUNTSTATUSRESPONSE_P_H
 #define QTAWS_LISTCREATEACCOUNTSTATUSRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "listcreateaccountstatusrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEREQUESTVALIDATORRESPONSE_P_H
 #define QTAWS_UPDATEREQUESTVALIDATORRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "updaterequestvalidatorrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESERVICESRESPONSE_P_H
 #define QTAWS_DESCRIBESERVICESRESPONSE_P_H
 
-#include "supportresponse.h"
-#include "describeservicesrequest.h"
+#include "supportresponse_p.h"
 
 namespace QtAws {
 namespace Support {

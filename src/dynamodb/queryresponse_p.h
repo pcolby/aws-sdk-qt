@@ -20,8 +20,7 @@
 #ifndef QTAWS_QUERYRESPONSE_P_H
 #define QTAWS_QUERYRESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "queryrequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

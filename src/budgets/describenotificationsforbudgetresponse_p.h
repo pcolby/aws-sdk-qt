@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBENOTIFICATIONSFORBUDGETRESPONSE_P_H
 #define QTAWS_DESCRIBENOTIFICATIONSFORBUDGETRESPONSE_P_H
 
-#include "budgetsresponse.h"
-#include "describenotificationsforbudgetrequest.h"
+#include "budgetsresponse_p.h"
 
 namespace QtAws {
 namespace Budgets {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_ACMRESPONSE_P_H
 #define QTAWS_ACMRESPONSE_P_H
 
-#include "acmresponse.h"
-#include "acmrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace ACM {

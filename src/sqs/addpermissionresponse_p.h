@@ -20,8 +20,7 @@
 #ifndef QTAWS_ADDPERMISSIONRESPONSE_P_H
 #define QTAWS_ADDPERMISSIONRESPONSE_P_H
 
-#include "sqsresponse.h"
-#include "addpermissionrequest.h"
+#include "sqsresponse_p.h"
 
 namespace QtAws {
 namespace SQS {

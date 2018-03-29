@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTQUALIFICATIONTYPESRESPONSE_P_H
 #define QTAWS_LISTQUALIFICATIONTYPESRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "listqualificationtypesrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

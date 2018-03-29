@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTHANDSHAKESFORACCOUNTRESPONSE_P_H
 #define QTAWS_LISTHANDSHAKESFORACCOUNTRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "listhandshakesforaccountrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

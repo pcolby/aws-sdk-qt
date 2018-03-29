@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPEXECUTIONRESPONSE_P_H
 #define QTAWS_STOPEXECUTIONRESPONSE_P_H
 
-#include "sfnresponse.h"
-#include "stopexecutionrequest.h"
+#include "sfnresponse_p.h"
 
 namespace QtAws {
 namespace SFN {

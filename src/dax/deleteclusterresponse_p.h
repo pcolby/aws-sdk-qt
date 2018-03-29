@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECLUSTERRESPONSE_P_H
 #define QTAWS_DELETECLUSTERRESPONSE_P_H
 
-#include "daxresponse.h"
-#include "deleteclusterrequest.h"
+#include "daxresponse_p.h"
 
 namespace QtAws {
 namespace DAX {

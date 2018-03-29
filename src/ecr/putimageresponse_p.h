@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTIMAGERESPONSE_P_H
 #define QTAWS_PUTIMAGERESPONSE_P_H
 
-#include "ecrresponse.h"
-#include "putimagerequest.h"
+#include "ecrresponse_p.h"
 
 namespace QtAws {
 namespace ECR {

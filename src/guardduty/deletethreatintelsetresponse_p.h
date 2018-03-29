@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETHREATINTELSETRESPONSE_P_H
 #define QTAWS_DELETETHREATINTELSETRESPONSE_P_H
 
-#include "guarddutyresponse.h"
-#include "deletethreatintelsetrequest.h"
+#include "guarddutyresponse_p.h"
 
 namespace QtAws {
 namespace GuardDuty {

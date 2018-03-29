@@ -20,8 +20,7 @@
 #ifndef QTAWS_CHECKIFPHONENUMBERISOPTEDOUTRESPONSE_P_H
 #define QTAWS_CHECKIFPHONENUMBERISOPTEDOUTRESPONSE_P_H
 
-#include "snsresponse.h"
-#include "checkifphonenumberisoptedoutrequest.h"
+#include "snsresponse_p.h"
 
 namespace QtAws {
 namespace SNS {

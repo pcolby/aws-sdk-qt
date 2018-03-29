@@ -20,8 +20,7 @@
 #ifndef QTAWS_SENDUSERSMESSAGESRESPONSE_P_H
 #define QTAWS_SENDUSERSMESSAGESRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "sendusersmessagesrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

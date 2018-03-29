@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATESUBSCRIPTIONRESPONSE_P_H
 #define QTAWS_CREATESUBSCRIPTIONRESPONSE_P_H
 
-#include "shieldresponse.h"
-#include "createsubscriptionrequest.h"
+#include "shieldresponse_p.h"
 
 namespace QtAws {
 namespace Shield {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETADMCHANNELRESPONSE_P_H
 #define QTAWS_GETADMCHANNELRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "getadmchannelrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

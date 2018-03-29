@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATECONFIGURATIONSETSENDINGENABLEDRESPONSE_P_H
 #define QTAWS_UPDATECONFIGURATIONSETSENDINGENABLEDRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "updateconfigurationsetsendingenabledrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

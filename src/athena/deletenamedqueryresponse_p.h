@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETENAMEDQUERYRESPONSE_P_H
 #define QTAWS_DELETENAMEDQUERYRESPONSE_P_H
 
-#include "athenaresponse.h"
-#include "deletenamedqueryrequest.h"
+#include "athenaresponse_p.h"
 
 namespace QtAws {
 namespace Athena {

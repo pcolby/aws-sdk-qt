@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESTREAMPROCESSORRESPONSE_P_H
 #define QTAWS_DELETESTREAMPROCESSORRESPONSE_P_H
 
-#include "rekognitionresponse.h"
-#include "deletestreamprocessorrequest.h"
+#include "rekognitionresponse_p.h"
 
 namespace QtAws {
 namespace Rekognition {

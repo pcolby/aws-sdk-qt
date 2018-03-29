@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEENDPOINTCONFIGRESPONSE_P_H
 #define QTAWS_DELETEENDPOINTCONFIGRESPONSE_P_H
 
-#include "sagemakerresponse.h"
-#include "deleteendpointconfigrequest.h"
+#include "sagemakerresponse_p.h"
 
 namespace QtAws {
 namespace SageMaker {

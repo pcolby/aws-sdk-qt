@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEGAMESESSIONQUEUERESPONSE_P_H
 #define QTAWS_DELETEGAMESESSIONQUEUERESPONSE_P_H
 
-#include "gameliftresponse.h"
-#include "deletegamesessionqueuerequest.h"
+#include "gameliftresponse_p.h"
 
 namespace QtAws {
 namespace GameLift {

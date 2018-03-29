@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEASSOCIATIONRESPONSE_P_H
 #define QTAWS_DESCRIBEASSOCIATIONRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "describeassociationrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

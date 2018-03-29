@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETTRACEGRAPHRESPONSE_P_H
 #define QTAWS_GETTRACEGRAPHRESPONSE_P_H
 
-#include "xrayresponse.h"
-#include "gettracegraphrequest.h"
+#include "xrayresponse_p.h"
 
 namespace QtAws {
 namespace XRay {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETAPPLICATIONSETTINGSRESPONSE_P_H
 #define QTAWS_GETAPPLICATIONSETTINGSRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "getapplicationsettingsrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

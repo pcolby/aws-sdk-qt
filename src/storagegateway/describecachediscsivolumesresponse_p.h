@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBECACHEDISCSIVOLUMESRESPONSE_P_H
 #define QTAWS_DESCRIBECACHEDISCSIVOLUMESRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "describecachediscsivolumesrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

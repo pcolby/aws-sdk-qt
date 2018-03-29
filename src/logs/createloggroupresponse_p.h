@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATELOGGROUPRESPONSE_P_H
 #define QTAWS_CREATELOGGROUPRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "createloggrouprequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

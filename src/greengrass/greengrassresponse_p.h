@@ -20,8 +20,7 @@
 #ifndef QTAWS_GREENGRASSRESPONSE_P_H
 #define QTAWS_GREENGRASSRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "greengrassrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

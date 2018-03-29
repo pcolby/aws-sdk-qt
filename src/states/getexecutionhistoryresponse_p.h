@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETEXECUTIONHISTORYRESPONSE_P_H
 #define QTAWS_GETEXECUTIONHISTORYRESPONSE_P_H
 
-#include "sfnresponse.h"
-#include "getexecutionhistoryrequest.h"
+#include "sfnresponse_p.h"
 
 namespace QtAws {
 namespace SFN {

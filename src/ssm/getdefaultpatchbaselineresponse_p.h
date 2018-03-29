@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDEFAULTPATCHBASELINERESPONSE_P_H
 #define QTAWS_GETDEFAULTPATCHBASELINERESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "getdefaultpatchbaselinerequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

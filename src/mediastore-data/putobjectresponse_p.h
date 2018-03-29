@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTOBJECTRESPONSE_P_H
 #define QTAWS_PUTOBJECTRESPONSE_P_H
 
-#include "mediastoredataresponse.h"
-#include "putobjectrequest.h"
+#include "mediastoredataresponse_p.h"
 
 namespace QtAws {
 namespace MediaStoreData {

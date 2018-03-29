@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTRECEIPTRULESETSRESPONSE_P_H
 #define QTAWS_LISTRECEIPTRULESETSRESPONSE_P_H
 
-#include "sesresponse.h"
-#include "listreceiptrulesetsrequest.h"
+#include "sesresponse_p.h"
 
 namespace QtAws {
 namespace SES {

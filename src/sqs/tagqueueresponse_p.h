@@ -20,8 +20,7 @@
 #ifndef QTAWS_TAGQUEUERESPONSE_P_H
 #define QTAWS_TAGQUEUERESPONSE_P_H
 
-#include "sqsresponse.h"
-#include "tagqueuerequest.h"
+#include "sqsresponse_p.h"
 
 namespace QtAws {
 namespace SQS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_REBOOTREPLICATIONINSTANCERESPONSE_P_H
 #define QTAWS_REBOOTREPLICATIONINSTANCERESPONSE_P_H
 
-#include "databasemigrationserviceresponse.h"
-#include "rebootreplicationinstancerequest.h"
+#include "databasemigrationserviceresponse_p.h"
 
 namespace QtAws {
 namespace DatabaseMigrationService {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEAPPRESPONSE_P_H
 #define QTAWS_UPDATEAPPRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "updateapprequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

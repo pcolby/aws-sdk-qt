@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDBCLUSTERPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_DELETEDBCLUSTERPARAMETERGROUPRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "deletedbclusterparametergrouprequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

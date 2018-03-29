@@ -20,8 +20,7 @@
 #ifndef QTAWS_HEALTHRESPONSE_P_H
 #define QTAWS_HEALTHRESPONSE_P_H
 
-#include "healthresponse.h"
-#include "healthrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Health {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_COPYDBPARAMETERGROUPRESPONSE_P_H
 #define QTAWS_COPYDBPARAMETERGROUPRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "copydbparametergrouprequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

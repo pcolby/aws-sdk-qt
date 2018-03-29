@@ -20,8 +20,7 @@
 #ifndef QTAWS_S3RESPONSE_P_H
 #define QTAWS_S3RESPONSE_P_H
 
-#include "s3response.h"
-#include "s3request.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace S3 {

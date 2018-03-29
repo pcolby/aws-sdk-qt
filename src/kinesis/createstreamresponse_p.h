@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATESTREAMRESPONSE_P_H
 #define QTAWS_CREATESTREAMRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "createstreamrequest.h"
+#include "kinesisresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

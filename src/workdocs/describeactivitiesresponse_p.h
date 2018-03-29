@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEACTIVITIESRESPONSE_P_H
 #define QTAWS_DESCRIBEACTIVITIESRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "describeactivitiesrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEBRANCHRESPONSE_P_H
 #define QTAWS_CREATEBRANCHRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "createbranchrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

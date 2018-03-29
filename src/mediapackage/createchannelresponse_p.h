@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATECHANNELRESPONSE_P_H
 #define QTAWS_CREATECHANNELRESPONSE_P_H
 
-#include "mediapackageresponse.h"
-#include "createchannelrequest.h"
+#include "mediapackageresponse_p.h"
 
 namespace QtAws {
 namespace MediaPackage {

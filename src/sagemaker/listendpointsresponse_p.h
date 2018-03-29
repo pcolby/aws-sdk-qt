@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTENDPOINTSRESPONSE_P_H
 #define QTAWS_LISTENDPOINTSRESPONSE_P_H
 
-#include "sagemakerresponse.h"
-#include "listendpointsrequest.h"
+#include "sagemakerresponse_p.h"
 
 namespace QtAws {
 namespace SageMaker {

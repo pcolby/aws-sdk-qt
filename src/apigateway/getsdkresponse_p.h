@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSDKRESPONSE_P_H
 #define QTAWS_GETSDKRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "getsdkrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

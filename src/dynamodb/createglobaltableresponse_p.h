@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEGLOBALTABLERESPONSE_P_H
 #define QTAWS_CREATEGLOBALTABLERESPONSE_P_H
 
-#include "dynamodbresponse.h"
-#include "createglobaltablerequest.h"
+#include "dynamodbresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDB {

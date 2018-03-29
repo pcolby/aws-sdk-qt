@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATETRUSTRESPONSE_P_H
 #define QTAWS_CREATETRUSTRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "createtrustrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

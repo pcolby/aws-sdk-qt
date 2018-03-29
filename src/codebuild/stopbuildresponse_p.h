@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPBUILDRESPONSE_P_H
 #define QTAWS_STOPBUILDRESPONSE_P_H
 
-#include "codebuildresponse.h"
-#include "stopbuildrequest.h"
+#include "codebuildresponse_p.h"
 
 namespace QtAws {
 namespace CodeBuild {

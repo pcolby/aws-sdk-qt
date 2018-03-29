@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTRESOURCEPOLICYRESPONSE_P_H
 #define QTAWS_PUTRESOURCEPOLICYRESPONSE_P_H
 
-#include "cloudwatchlogsresponse.h"
-#include "putresourcepolicyrequest.h"
+#include "cloudwatchlogsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchLogs {

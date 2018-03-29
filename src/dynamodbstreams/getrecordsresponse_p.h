@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETRECORDSRESPONSE_P_H
 #define QTAWS_GETRECORDSRESPONSE_P_H
 
-#include "dynamodbstreamsresponse.h"
-#include "getrecordsrequest.h"
+#include "dynamodbstreamsresponse_p.h"
 
 namespace QtAws {
 namespace DynamoDBStreams {

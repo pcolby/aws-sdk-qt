@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEELASTICSEARCHINSTANCETYPELIMITSRESPONSE_P_H
 #define QTAWS_DESCRIBEELASTICSEARCHINSTANCETYPELIMITSRESPONSE_P_H
 
-#include "elasticsearchserviceresponse.h"
-#include "describeelasticsearchinstancetypelimitsrequest.h"
+#include "elasticsearchserviceresponse_p.h"
 
 namespace QtAws {
 namespace ElasticsearchService {

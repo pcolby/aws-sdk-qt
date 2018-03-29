@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATESERVERENGINEATTRIBUTESRESPONSE_P_H
 #define QTAWS_UPDATESERVERENGINEATTRIBUTESRESPONSE_P_H
 
-#include "opsworkscmresponse.h"
-#include "updateserverengineattributesrequest.h"
+#include "opsworkscmresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorksCM {

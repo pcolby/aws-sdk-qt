@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETRATEBASEDRULEMANAGEDKEYSRESPONSE_P_H
 #define QTAWS_GETRATEBASEDRULEMANAGEDKEYSRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "getratebasedrulemanagedkeysrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

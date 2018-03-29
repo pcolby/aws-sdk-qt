@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEVALIDDBINSTANCEMODIFICATIONSRESPONSE_P_H
 #define QTAWS_DESCRIBEVALIDDBINSTANCEMODIFICATIONSRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describevaliddbinstancemodificationsrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEVPCCLASSICLINKDNSSUPPORTRESPONSE_P_H
 #define QTAWS_DESCRIBEVPCCLASSICLINKDNSSUPPORTRESPONSE_P_H
 
-#include "ec2response.h"
-#include "describevpcclassiclinkdnssupportrequest.h"
+#include "ec2response_p.h"
 
 namespace QtAws {
 namespace EC2 {

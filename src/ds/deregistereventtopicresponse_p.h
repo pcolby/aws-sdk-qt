@@ -20,8 +20,7 @@
 #ifndef QTAWS_DEREGISTEREVENTTOPICRESPONSE_P_H
 #define QTAWS_DEREGISTEREVENTTOPICRESPONSE_P_H
 
-#include "directoryserviceresponse.h"
-#include "deregistereventtopicrequest.h"
+#include "directoryserviceresponse_p.h"
 
 namespace QtAws {
 namespace DirectoryService {

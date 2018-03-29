@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETCRAWLERSRESPONSE_P_H
 #define QTAWS_GETCRAWLERSRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "getcrawlersrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

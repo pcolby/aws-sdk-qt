@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEDELIVERYSTREAMRESPONSE_P_H
 #define QTAWS_DELETEDELIVERYSTREAMRESPONSE_P_H
 
-#include "firehoseresponse.h"
-#include "deletedeliverystreamrequest.h"
+#include "firehoseresponse_p.h"
 
 namespace QtAws {
 namespace Firehose {

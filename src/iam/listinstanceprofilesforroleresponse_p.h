@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTINSTANCEPROFILESFORROLERESPONSE_P_H
 #define QTAWS_LISTINSTANCEPROFILESFORROLERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "listinstanceprofilesforrolerequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

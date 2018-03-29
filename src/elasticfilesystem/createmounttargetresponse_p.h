@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEMOUNTTARGETRESPONSE_P_H
 #define QTAWS_CREATEMOUNTTARGETRESPONSE_P_H
 
-#include "efsresponse.h"
-#include "createmounttargetrequest.h"
+#include "efsresponse_p.h"
 
 namespace QtAws {
 namespace EFS {

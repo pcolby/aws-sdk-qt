@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSUBSCRIPTIONSTATERESPONSE_P_H
 #define QTAWS_GETSUBSCRIPTIONSTATERESPONSE_P_H
 
-#include "shieldresponse.h"
-#include "getsubscriptionstaterequest.h"
+#include "shieldresponse_p.h"
 
 namespace QtAws {
 namespace Shield {

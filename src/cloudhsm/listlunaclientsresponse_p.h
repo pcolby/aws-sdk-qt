@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTLUNACLIENTSRESPONSE_P_H
 #define QTAWS_LISTLUNACLIENTSRESPONSE_P_H
 
-#include "cloudhsmresponse.h"
-#include "listlunaclientsrequest.h"
+#include "cloudhsmresponse_p.h"
 
 namespace QtAws {
 namespace CloudHSM {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATERATEBASEDRULERESPONSE_P_H
 #define QTAWS_CREATERATEBASEDRULERESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "createratebasedrulerequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

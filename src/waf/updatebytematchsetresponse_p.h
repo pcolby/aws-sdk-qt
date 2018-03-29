@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEBYTEMATCHSETRESPONSE_P_H
 #define QTAWS_UPDATEBYTEMATCHSETRESPONSE_P_H
 
-#include "wafresponse.h"
-#include "updatebytematchsetrequest.h"
+#include "wafresponse_p.h"
 
 namespace QtAws {
 namespace WAF {

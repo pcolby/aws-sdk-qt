@@ -20,8 +20,7 @@
 #ifndef QTAWS_STOPTRIGGERRESPONSE_P_H
 #define QTAWS_STOPTRIGGERRESPONSE_P_H
 
-#include "glueresponse.h"
-#include "stoptriggerrequest.h"
+#include "glueresponse_p.h"
 
 namespace QtAws {
 namespace Glue {

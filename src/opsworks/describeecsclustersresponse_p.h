@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEECSCLUSTERSRESPONSE_P_H
 #define QTAWS_DESCRIBEECSCLUSTERSRESPONSE_P_H
 
-#include "opsworksresponse.h"
-#include "describeecsclustersrequest.h"
+#include "opsworksresponse_p.h"
 
 namespace QtAws {
 namespace OpsWorks {

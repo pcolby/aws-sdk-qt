@@ -20,8 +20,7 @@
 #ifndef QTAWS_BATCHGETBUILDSRESPONSE_P_H
 #define QTAWS_BATCHGETBUILDSRESPONSE_P_H
 
-#include "codebuildresponse.h"
-#include "batchgetbuildsrequest.h"
+#include "codebuildresponse_p.h"
 
 namespace QtAws {
 namespace CodeBuild {

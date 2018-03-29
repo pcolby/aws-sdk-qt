@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEUPLOADRESPONSE_P_H
 #define QTAWS_DELETEUPLOADRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "deleteuploadrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

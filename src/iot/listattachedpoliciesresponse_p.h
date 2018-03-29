@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTATTACHEDPOLICIESRESPONSE_P_H
 #define QTAWS_LISTATTACHEDPOLICIESRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "listattachedpoliciesrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {

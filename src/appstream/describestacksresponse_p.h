@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBESTACKSRESPONSE_P_H
 #define QTAWS_DESCRIBESTACKSRESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "describestacksrequest.h"
+#include "appstreamresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

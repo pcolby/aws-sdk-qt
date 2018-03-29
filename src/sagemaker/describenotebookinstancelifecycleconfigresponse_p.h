@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBENOTEBOOKINSTANCELIFECYCLECONFIGRESPONSE_P_H
 #define QTAWS_DESCRIBENOTEBOOKINSTANCELIFECYCLECONFIGRESPONSE_P_H
 
-#include "sagemakerresponse.h"
-#include "describenotebookinstancelifecycleconfigrequest.h"
+#include "sagemakerresponse_p.h"
 
 namespace QtAws {
 namespace SageMaker {

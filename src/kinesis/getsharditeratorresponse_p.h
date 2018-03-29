@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSHARDITERATORRESPONSE_P_H
 #define QTAWS_GETSHARDITERATORRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "getsharditeratorrequest.h"
+#include "kinesisresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

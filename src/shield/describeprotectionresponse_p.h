@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEPROTECTIONRESPONSE_P_H
 #define QTAWS_DESCRIBEPROTECTIONRESPONSE_P_H
 
-#include "shieldresponse.h"
-#include "describeprotectionrequest.h"
+#include "shieldresponse_p.h"
 
 namespace QtAws {
 namespace Shield {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDISKSNAPSHOTRESPONSE_P_H
 #define QTAWS_GETDISKSNAPSHOTRESPONSE_P_H
 
-#include "lightsailresponse.h"
-#include "getdisksnapshotrequest.h"
+#include "lightsailresponse_p.h"
 
 namespace QtAws {
 namespace Lightsail {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEEXPIRATIONFORHITRESPONSE_P_H
 #define QTAWS_UPDATEEXPIRATIONFORHITRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "updateexpirationforhitrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

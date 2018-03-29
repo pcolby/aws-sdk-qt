@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETEMAILCHANNELRESPONSE_P_H
 #define QTAWS_GETEMAILCHANNELRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "getemailchannelrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

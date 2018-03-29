@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETAGSRESPONSE_P_H
 #define QTAWS_DELETETAGSRESPONSE_P_H
 
-#include "workspacesresponse.h"
-#include "deletetagsrequest.h"
+#include "workspacesresponse_p.h"
 
 namespace QtAws {
 namespace WorkSpaces {

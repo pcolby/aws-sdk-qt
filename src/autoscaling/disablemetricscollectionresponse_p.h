@@ -20,8 +20,7 @@
 #ifndef QTAWS_DISABLEMETRICSCOLLECTIONRESPONSE_P_H
 #define QTAWS_DISABLEMETRICSCOLLECTIONRESPONSE_P_H
 
-#include "autoscalingresponse.h"
-#include "disablemetricscollectionrequest.h"
+#include "autoscalingresponse_p.h"
 
 namespace QtAws {
 namespace AutoScaling {

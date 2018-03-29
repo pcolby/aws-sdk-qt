@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETRESERVATIONPURCHASERECOMMENDATIONRESPONSE_P_H
 #define QTAWS_GETRESERVATIONPURCHASERECOMMENDATIONRESPONSE_P_H
 
-#include "costexplorerresponse.h"
-#include "getreservationpurchaserecommendationrequest.h"
+#include "costexplorerresponse_p.h"
 
 namespace QtAws {
 namespace CostExplorer {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_TERMINATEWORKSPACESRESPONSE_P_H
 #define QTAWS_TERMINATEWORKSPACESRESPONSE_P_H
 
-#include "workspacesresponse.h"
-#include "terminateworkspacesrequest.h"
+#include "workspacesresponse_p.h"
 
 namespace QtAws {
 namespace WorkSpaces {

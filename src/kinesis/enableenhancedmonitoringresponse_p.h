@@ -20,8 +20,7 @@
 #ifndef QTAWS_ENABLEENHANCEDMONITORINGRESPONSE_P_H
 #define QTAWS_ENABLEENHANCEDMONITORINGRESPONSE_P_H
 
-#include "kinesisresponse.h"
-#include "enableenhancedmonitoringrequest.h"
+#include "kinesisresponse_p.h"
 
 namespace QtAws {
 namespace Kinesis {

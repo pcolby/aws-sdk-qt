@@ -20,8 +20,7 @@
 #ifndef QTAWS_CHECKDNSAVAILABILITYRESPONSE_P_H
 #define QTAWS_CHECKDNSAVAILABILITYRESPONSE_P_H
 
-#include "elasticbeanstalkresponse.h"
-#include "checkdnsavailabilityrequest.h"
+#include "elasticbeanstalkresponse_p.h"
 
 namespace QtAws {
 namespace ElasticBeanstalk {

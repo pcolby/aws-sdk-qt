@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBERESERVEDDBINSTANCESOFFERINGSRESPONSE_P_H
 #define QTAWS_DESCRIBERESERVEDDBINSTANCESOFFERINGSRESPONSE_P_H
 
-#include "rdsresponse.h"
-#include "describereserveddbinstancesofferingsrequest.h"
+#include "rdsresponse_p.h"
 
 namespace QtAws {
 namespace RDS {

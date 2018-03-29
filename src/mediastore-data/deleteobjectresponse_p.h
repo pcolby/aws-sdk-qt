@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEOBJECTRESPONSE_P_H
 #define QTAWS_DELETEOBJECTRESPONSE_P_H
 
-#include "mediastoredataresponse.h"
-#include "deleteobjectrequest.h"
+#include "mediastoredataresponse_p.h"
 
 namespace QtAws {
 namespace MediaStoreData {

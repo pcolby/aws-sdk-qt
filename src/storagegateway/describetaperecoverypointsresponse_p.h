@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBETAPERECOVERYPOINTSRESPONSE_P_H
 #define QTAWS_DESCRIBETAPERECOVERYPOINTSRESPONSE_P_H
 
-#include "storagegatewayresponse.h"
-#include "describetaperecoverypointsrequest.h"
+#include "storagegatewayresponse_p.h"
 
 namespace QtAws {
 namespace StorageGateway {

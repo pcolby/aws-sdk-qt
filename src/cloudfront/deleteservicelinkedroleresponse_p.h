@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETESERVICELINKEDROLERESPONSE_P_H
 #define QTAWS_DELETESERVICELINKEDROLERESPONSE_P_H
 
-#include "cloudfrontresponse.h"
-#include "deleteservicelinkedrolerequest.h"
+#include "cloudfrontresponse_p.h"
 
 namespace QtAws {
 namespace CloudFront {

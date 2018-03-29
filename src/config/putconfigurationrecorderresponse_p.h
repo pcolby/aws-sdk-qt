@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTCONFIGURATIONRECORDERRESPONSE_P_H
 #define QTAWS_PUTCONFIGURATIONRECORDERRESPONSE_P_H
 
-#include "configserviceresponse.h"
-#include "putconfigurationrecorderrequest.h"
+#include "configserviceresponse_p.h"
 
 namespace QtAws {
 namespace ConfigService {

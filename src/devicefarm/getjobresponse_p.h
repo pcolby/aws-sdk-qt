@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETJOBRESPONSE_P_H
 #define QTAWS_GETJOBRESPONSE_P_H
 
-#include "devicefarmresponse.h"
-#include "getjobrequest.h"
+#include "devicefarmresponse_p.h"
 
 namespace QtAws {
 namespace DeviceFarm {

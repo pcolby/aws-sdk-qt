@@ -20,8 +20,7 @@
 #ifndef QTAWS_GENERATEDATAKEYRESPONSE_P_H
 #define QTAWS_GENERATEDATAKEYRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "generatedatakeyrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

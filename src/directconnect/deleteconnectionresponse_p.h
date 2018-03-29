@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETECONNECTIONRESPONSE_P_H
 #define QTAWS_DELETECONNECTIONRESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "deleteconnectionrequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

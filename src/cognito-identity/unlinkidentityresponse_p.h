@@ -20,8 +20,7 @@
 #ifndef QTAWS_UNLINKIDENTITYRESPONSE_P_H
 #define QTAWS_UNLINKIDENTITYRESPONSE_P_H
 
-#include "cognitoidentityresponse.h"
-#include "unlinkidentityrequest.h"
+#include "cognitoidentityresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentity {

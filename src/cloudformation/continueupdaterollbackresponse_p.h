@@ -20,8 +20,7 @@
 #ifndef QTAWS_CONTINUEUPDATEROLLBACKRESPONSE_P_H
 #define QTAWS_CONTINUEUPDATEROLLBACKRESPONSE_P_H
 
-#include "cloudformationresponse.h"
-#include "continueupdaterollbackrequest.h"
+#include "cloudformationresponse_p.h"
 
 namespace QtAws {
 namespace CloudFormation {

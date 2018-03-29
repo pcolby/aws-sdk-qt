@@ -20,8 +20,7 @@
 #ifndef QTAWS_ACKNOWLEDGEJOBRESPONSE_P_H
 #define QTAWS_ACKNOWLEDGEJOBRESPONSE_P_H
 
-#include "codepipelineresponse.h"
-#include "acknowledgejobrequest.h"
+#include "codepipelineresponse_p.h"
 
 namespace QtAws {
 namespace CodePipeline {

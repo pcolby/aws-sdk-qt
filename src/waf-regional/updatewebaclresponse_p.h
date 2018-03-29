@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEWEBACLRESPONSE_P_H
 #define QTAWS_UPDATEWEBACLRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "updatewebaclrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

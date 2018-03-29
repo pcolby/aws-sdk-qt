@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEAPNSVOIPCHANNELRESPONSE_P_H
 #define QTAWS_UPDATEAPNSVOIPCHANNELRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "updateapnsvoipchannelrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

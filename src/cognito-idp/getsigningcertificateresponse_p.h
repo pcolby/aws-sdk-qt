@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETSIGNINGCERTIFICATERESPONSE_P_H
 #define QTAWS_GETSIGNINGCERTIFICATERESPONSE_P_H
 
-#include "cognitoidentityproviderresponse.h"
-#include "getsigningcertificaterequest.h"
+#include "cognitoidentityproviderresponse_p.h"
 
 namespace QtAws {
 namespace CognitoIdentityProvider {

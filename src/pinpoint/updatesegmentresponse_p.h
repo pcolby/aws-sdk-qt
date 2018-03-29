@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATESEGMENTRESPONSE_P_H
 #define QTAWS_UPDATESEGMENTRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "updatesegmentrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETDEPLOYMENTGROUPRESPONSE_P_H
 #define QTAWS_GETDEPLOYMENTGROUPRESPONSE_P_H
 
-#include "codedeployresponse.h"
-#include "getdeploymentgrouprequest.h"
+#include "codedeployresponse_p.h"
 
 namespace QtAws {
 namespace CodeDeploy {

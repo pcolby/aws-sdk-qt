@@ -20,8 +20,7 @@
 #ifndef QTAWS_TRANSFERDOMAINRESPONSE_P_H
 #define QTAWS_TRANSFERDOMAINRESPONSE_P_H
 
-#include "route53domainsresponse.h"
-#include "transferdomainrequest.h"
+#include "route53domainsresponse_p.h"
 
 namespace QtAws {
 namespace Route53Domains {

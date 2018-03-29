@@ -20,8 +20,7 @@
 #ifndef QTAWS_CANCELUPDATESTACKRESPONSE_P_H
 #define QTAWS_CANCELUPDATESTACKRESPONSE_P_H
 
-#include "cloudformationresponse.h"
-#include "cancelupdatestackrequest.h"
+#include "cloudformationresponse_p.h"
 
 namespace QtAws {
 namespace CloudFormation {

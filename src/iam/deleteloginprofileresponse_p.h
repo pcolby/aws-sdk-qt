@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETELOGINPROFILERESPONSE_P_H
 #define QTAWS_DELETELOGINPROFILERESPONSE_P_H
 
-#include "iamresponse.h"
-#include "deleteloginprofilerequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

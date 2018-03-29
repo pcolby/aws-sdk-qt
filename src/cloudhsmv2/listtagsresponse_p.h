@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTTAGSRESPONSE_P_H
 #define QTAWS_LISTTAGSRESPONSE_P_H
 
-#include "cloudhsmv2response.h"
-#include "listtagsrequest.h"
+#include "cloudhsmv2response_p.h"
 
 namespace QtAws {
 namespace CloudHSMV2 {

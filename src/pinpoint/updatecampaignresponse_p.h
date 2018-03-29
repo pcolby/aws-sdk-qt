@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATECAMPAIGNRESPONSE_P_H
 #define QTAWS_UPDATECAMPAIGNRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "updatecampaignrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

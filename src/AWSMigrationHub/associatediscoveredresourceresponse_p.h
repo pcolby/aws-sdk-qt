@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSOCIATEDISCOVEREDRESOURCERESPONSE_P_H
 #define QTAWS_ASSOCIATEDISCOVEREDRESOURCERESPONSE_P_H
 
-#include "migrationhubresponse.h"
-#include "associatediscoveredresourcerequest.h"
+#include "migrationhubresponse_p.h"
 
 namespace QtAws {
 namespace MigrationHub {

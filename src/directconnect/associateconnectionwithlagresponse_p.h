@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSOCIATECONNECTIONWITHLAGRESPONSE_P_H
 #define QTAWS_ASSOCIATECONNECTIONWITHLAGRESPONSE_P_H
 
-#include "directconnectresponse.h"
-#include "associateconnectionwithlagrequest.h"
+#include "directconnectresponse_p.h"
 
 namespace QtAws {
 namespace DirectConnect {

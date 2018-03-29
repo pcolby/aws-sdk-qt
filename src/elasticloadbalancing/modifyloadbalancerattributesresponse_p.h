@@ -20,8 +20,7 @@
 #ifndef QTAWS_MODIFYLOADBALANCERATTRIBUTESRESPONSE_P_H
 #define QTAWS_MODIFYLOADBALANCERATTRIBUTESRESPONSE_P_H
 
-#include "elasticloadbalancingresponse.h"
-#include "modifyloadbalancerattributesrequest.h"
+#include "elasticloadbalancingresponse_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancing {

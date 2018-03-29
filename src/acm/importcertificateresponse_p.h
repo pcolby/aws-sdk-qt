@@ -20,8 +20,7 @@
 #ifndef QTAWS_IMPORTCERTIFICATERESPONSE_P_H
 #define QTAWS_IMPORTCERTIFICATERESPONSE_P_H
 
-#include "acmresponse.h"
-#include "importcertificaterequest.h"
+#include "acmresponse_p.h"
 
 namespace QtAws {
 namespace ACM {

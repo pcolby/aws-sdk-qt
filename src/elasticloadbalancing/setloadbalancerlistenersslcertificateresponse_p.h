@@ -20,8 +20,7 @@
 #ifndef QTAWS_SETLOADBALANCERLISTENERSSLCERTIFICATERESPONSE_P_H
 #define QTAWS_SETLOADBALANCERLISTENERSSLCERTIFICATERESPONSE_P_H
 
-#include "elasticloadbalancingresponse.h"
-#include "setloadbalancerlistenersslcertificaterequest.h"
+#include "elasticloadbalancingresponse_p.h"
 
 namespace QtAws {
 namespace ElasticLoadBalancing {

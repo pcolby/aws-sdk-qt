@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATETAGSRESPONSE_P_H
 #define QTAWS_CREATETAGSRESPONSE_P_H
 
-#include "efsresponse.h"
-#include "createtagsrequest.h"
+#include "efsresponse_p.h"
 
 namespace QtAws {
 namespace EFS {

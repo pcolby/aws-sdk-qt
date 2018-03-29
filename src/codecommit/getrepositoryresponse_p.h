@@ -20,8 +20,7 @@
 #ifndef QTAWS_GETREPOSITORYRESPONSE_P_H
 #define QTAWS_GETREPOSITORYRESPONSE_P_H
 
-#include "codecommitresponse.h"
-#include "getrepositoryrequest.h"
+#include "codecommitresponse_p.h"
 
 namespace QtAws {
 namespace CodeCommit {

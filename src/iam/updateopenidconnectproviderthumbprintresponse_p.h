@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATEOPENIDCONNECTPROVIDERTHUMBPRINTRESPONSE_P_H
 #define QTAWS_UPDATEOPENIDCONNECTPROVIDERTHUMBPRINTRESPONSE_P_H
 
-#include "iamresponse.h"
-#include "updateopenidconnectproviderthumbprintrequest.h"
+#include "iamresponse_p.h"
 
 namespace QtAws {
 namespace IAM {

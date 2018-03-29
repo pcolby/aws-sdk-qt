@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATELOGGERDEFINITIONRESPONSE_P_H
 #define QTAWS_CREATELOGGERDEFINITIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "createloggerdefinitionrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

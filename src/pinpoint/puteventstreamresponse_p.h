@@ -20,8 +20,7 @@
 #ifndef QTAWS_PUTEVENTSTREAMRESPONSE_P_H
 #define QTAWS_PUTEVENTSTREAMRESPONSE_P_H
 
-#include "pinpointresponse.h"
-#include "puteventstreamrequest.h"
+#include "pinpointresponse_p.h"
 
 namespace QtAws {
 namespace Pinpoint {

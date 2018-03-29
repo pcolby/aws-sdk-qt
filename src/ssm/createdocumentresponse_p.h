@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEDOCUMENTRESPONSE_P_H
 #define QTAWS_CREATEDOCUMENTRESPONSE_P_H
 
-#include "ssmresponse.h"
-#include "createdocumentrequest.h"
+#include "ssmresponse_p.h"
 
 namespace QtAws {
 namespace SSM {

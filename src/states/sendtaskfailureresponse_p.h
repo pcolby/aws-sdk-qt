@@ -20,8 +20,7 @@
 #ifndef QTAWS_SENDTASKFAILURERESPONSE_P_H
 #define QTAWS_SENDTASKFAILURERESPONSE_P_H
 
-#include "sfnresponse.h"
-#include "sendtaskfailurerequest.h"
+#include "sfnresponse_p.h"
 
 namespace QtAws {
 namespace SFN {

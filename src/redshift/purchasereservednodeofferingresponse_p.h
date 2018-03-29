@@ -20,8 +20,7 @@
 #ifndef QTAWS_PURCHASERESERVEDNODEOFFERINGRESPONSE_P_H
 #define QTAWS_PURCHASERESERVEDNODEOFFERINGRESPONSE_P_H
 
-#include "redshiftresponse.h"
-#include "purchasereservednodeofferingrequest.h"
+#include "redshiftresponse_p.h"
 
 namespace QtAws {
 namespace Redshift {

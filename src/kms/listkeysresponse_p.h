@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTKEYSRESPONSE_P_H
 #define QTAWS_LISTKEYSRESPONSE_P_H
 
-#include "kmsresponse.h"
-#include "listkeysrequest.h"
+#include "kmsresponse_p.h"
 
 namespace QtAws {
 namespace KMS {

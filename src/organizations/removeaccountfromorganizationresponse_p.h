@@ -20,8 +20,7 @@
 #ifndef QTAWS_REMOVEACCOUNTFROMORGANIZATIONRESPONSE_P_H
 #define QTAWS_REMOVEACCOUNTFROMORGANIZATIONRESPONSE_P_H
 
-#include "organizationsresponse.h"
-#include "removeaccountfromorganizationrequest.h"
+#include "organizationsresponse_p.h"
 
 namespace QtAws {
 namespace Organizations {

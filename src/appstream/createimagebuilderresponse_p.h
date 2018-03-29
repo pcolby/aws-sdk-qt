@@ -20,8 +20,7 @@
 #ifndef QTAWS_CREATEIMAGEBUILDERRESPONSE_P_H
 #define QTAWS_CREATEIMAGEBUILDERRESPONSE_P_H
 
-#include "appstreamresponse.h"
-#include "createimagebuilderrequest.h"
+#include "appstreamresponse_p.h"
 
 namespace QtAws {
 namespace AppStream {

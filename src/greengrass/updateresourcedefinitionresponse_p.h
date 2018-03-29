@@ -20,8 +20,7 @@
 #ifndef QTAWS_UPDATERESOURCEDEFINITIONRESPONSE_P_H
 #define QTAWS_UPDATERESOURCEDEFINITIONRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "updateresourcedefinitionrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

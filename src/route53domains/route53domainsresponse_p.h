@@ -20,8 +20,7 @@
 #ifndef QTAWS_ROUTE53DOMAINSRESPONSE_P_H
 #define QTAWS_ROUTE53DOMAINSRESPONSE_P_H
 
-#include "route53domainsresponse.h"
-#include "route53domainsrequest.h"
+#include "core/awsabstractresponse_p.h"
 
 namespace QtAws {
 namespace Route53Domains {

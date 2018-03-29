@@ -20,8 +20,7 @@
 #ifndef QTAWS_DESCRIBEGROUPSRESPONSE_P_H
 #define QTAWS_DESCRIBEGROUPSRESPONSE_P_H
 
-#include "workdocsresponse.h"
-#include "describegroupsrequest.h"
+#include "workdocsresponse_p.h"
 
 namespace QtAws {
 namespace WorkDocs {

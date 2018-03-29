@@ -20,8 +20,7 @@
 #ifndef QTAWS_STARTLOGGINGRESPONSE_P_H
 #define QTAWS_STARTLOGGINGRESPONSE_P_H
 
-#include "cloudtrailresponse.h"
-#include "startloggingrequest.h"
+#include "cloudtrailresponse_p.h"
 
 namespace QtAws {
 namespace CloudTrail {

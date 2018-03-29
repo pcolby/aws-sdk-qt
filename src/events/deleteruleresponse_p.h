@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETERULERESPONSE_P_H
 #define QTAWS_DELETERULERESPONSE_P_H
 
-#include "cloudwatcheventsresponse.h"
-#include "deleterulerequest.h"
+#include "cloudwatcheventsresponse_p.h"
 
 namespace QtAws {
 namespace CloudWatchEvents {

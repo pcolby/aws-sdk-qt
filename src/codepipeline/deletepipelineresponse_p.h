@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEPIPELINERESPONSE_P_H
 #define QTAWS_DELETEPIPELINERESPONSE_P_H
 
-#include "codepipelineresponse.h"
-#include "deletepipelinerequest.h"
+#include "codepipelineresponse_p.h"
 
 namespace QtAws {
 namespace CodePipeline {

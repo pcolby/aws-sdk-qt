@@ -20,8 +20,7 @@
 #ifndef QTAWS_SENDTESTEVENTNOTIFICATIONRESPONSE_P_H
 #define QTAWS_SENDTESTEVENTNOTIFICATIONRESPONSE_P_H
 
-#include "mturkresponse.h"
-#include "sendtesteventnotificationrequest.h"
+#include "mturkresponse_p.h"
 
 namespace QtAws {
 namespace MTurk {

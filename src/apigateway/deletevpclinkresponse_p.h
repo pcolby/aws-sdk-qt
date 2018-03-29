@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETEVPCLINKRESPONSE_P_H
 #define QTAWS_DELETEVPCLINKRESPONSE_P_H
 
-#include "apigatewayresponse.h"
-#include "deletevpclinkrequest.h"
+#include "apigatewayresponse_p.h"
 
 namespace QtAws {
 namespace APIGateway {

@@ -20,8 +20,7 @@
 #ifndef QTAWS_RESETDEPLOYMENTSRESPONSE_P_H
 #define QTAWS_RESETDEPLOYMENTSRESPONSE_P_H
 
-#include "greengrassresponse.h"
-#include "resetdeploymentsrequest.h"
+#include "greengrassresponse_p.h"
 
 namespace QtAws {
 namespace Greengrass {

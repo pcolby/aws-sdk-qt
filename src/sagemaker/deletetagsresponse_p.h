@@ -20,8 +20,7 @@
 #ifndef QTAWS_DELETETAGSRESPONSE_P_H
 #define QTAWS_DELETETAGSRESPONSE_P_H
 
-#include "sagemakerresponse.h"
-#include "deletetagsrequest.h"
+#include "sagemakerresponse_p.h"
 
 namespace QtAws {
 namespace SageMaker {

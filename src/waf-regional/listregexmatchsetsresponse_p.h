@@ -20,8 +20,7 @@
 #ifndef QTAWS_LISTREGEXMATCHSETSRESPONSE_P_H
 #define QTAWS_LISTREGEXMATCHSETSRESPONSE_P_H
 
-#include "wafregionalresponse.h"
-#include "listregexmatchsetsrequest.h"
+#include "wafregionalresponse_p.h"
 
 namespace QtAws {
 namespace WAFRegional {

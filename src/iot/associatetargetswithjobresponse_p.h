@@ -20,8 +20,7 @@
 #ifndef QTAWS_ASSOCIATETARGETSWITHJOBRESPONSE_P_H
 #define QTAWS_ASSOCIATETARGETSWITHJOBRESPONSE_P_H
 
-#include "iotresponse.h"
-#include "associatetargetswithjobrequest.h"
+#include "iotresponse_p.h"
 
 namespace QtAws {
 namespace IoT {
