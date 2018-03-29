@@ -46,7 +46,7 @@ CreateAccountResponse::CreateAccountResponse(
         const CreateAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OrganizationsResponse(new CreateAccountResponsePrivate(this), parent)
+    : CreateAccountResponse(new CreateAccountResponsePrivate(this), parent)
 {
     setRequest(new CreateAccountRequest(request));
     setReply(reply);

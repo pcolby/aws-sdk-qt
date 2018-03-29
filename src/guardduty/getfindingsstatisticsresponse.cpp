@@ -46,7 +46,7 @@ GetFindingsStatisticsResponse::GetFindingsStatisticsResponse(
         const GetFindingsStatisticsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GuardDutyResponse(new GetFindingsStatisticsResponsePrivate(this), parent)
+    : GetFindingsStatisticsResponse(new GetFindingsStatisticsResponsePrivate(this), parent)
 {
     setRequest(new GetFindingsStatisticsRequest(request));
     setReply(reply);

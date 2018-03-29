@@ -46,7 +46,7 @@ ListElasticsearchVersionsResponse::ListElasticsearchVersionsResponse(
         const ListElasticsearchVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new ListElasticsearchVersionsResponsePrivate(this), parent)
+    : ListElasticsearchVersionsResponse(new ListElasticsearchVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListElasticsearchVersionsRequest(request));
     setReply(reply);

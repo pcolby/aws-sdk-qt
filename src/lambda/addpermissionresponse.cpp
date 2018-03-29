@@ -46,7 +46,7 @@ AddPermissionResponse::AddPermissionResponse(
         const AddPermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LambdaResponse(new AddPermissionResponsePrivate(this), parent)
+    : AddPermissionResponse(new AddPermissionResponsePrivate(this), parent)
 {
     setRequest(new AddPermissionRequest(request));
     setReply(reply);

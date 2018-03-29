@@ -46,7 +46,7 @@ GetPipelineExecutionResponse::GetPipelineExecutionResponse(
         const GetPipelineExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodePipelineResponse(new GetPipelineExecutionResponsePrivate(this), parent)
+    : GetPipelineExecutionResponse(new GetPipelineExecutionResponsePrivate(this), parent)
 {
     setRequest(new GetPipelineExecutionRequest(request));
     setReply(reply);

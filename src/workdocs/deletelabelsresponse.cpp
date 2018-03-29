@@ -46,7 +46,7 @@ DeleteLabelsResponse::DeleteLabelsResponse(
         const DeleteLabelsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkDocsResponse(new DeleteLabelsResponsePrivate(this), parent)
+    : DeleteLabelsResponse(new DeleteLabelsResponsePrivate(this), parent)
 {
     setRequest(new DeleteLabelsRequest(request));
     setReply(reply);

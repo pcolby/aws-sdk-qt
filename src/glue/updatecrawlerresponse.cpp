@@ -46,7 +46,7 @@ UpdateCrawlerResponse::UpdateCrawlerResponse(
         const UpdateCrawlerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new UpdateCrawlerResponsePrivate(this), parent)
+    : UpdateCrawlerResponse(new UpdateCrawlerResponsePrivate(this), parent)
 {
     setRequest(new UpdateCrawlerRequest(request));
     setReply(reply);

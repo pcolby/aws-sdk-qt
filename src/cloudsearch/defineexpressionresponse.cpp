@@ -46,7 +46,7 @@ DefineExpressionResponse::DefineExpressionResponse(
         const DefineExpressionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudSearchResponse(new DefineExpressionResponsePrivate(this), parent)
+    : DefineExpressionResponse(new DefineExpressionResponsePrivate(this), parent)
 {
     setRequest(new DefineExpressionRequest(request));
     setReply(reply);

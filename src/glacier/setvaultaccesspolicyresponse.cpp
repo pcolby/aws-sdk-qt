@@ -46,7 +46,7 @@ SetVaultAccessPolicyResponse::SetVaultAccessPolicyResponse(
         const SetVaultAccessPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new SetVaultAccessPolicyResponsePrivate(this), parent)
+    : SetVaultAccessPolicyResponse(new SetVaultAccessPolicyResponsePrivate(this), parent)
 {
     setRequest(new SetVaultAccessPolicyRequest(request));
     setReply(reply);

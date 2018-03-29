@@ -46,7 +46,7 @@ ListExecutionsResponse::ListExecutionsResponse(
         const ListExecutionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new ListExecutionsResponsePrivate(this), parent)
+    : ListExecutionsResponse(new ListExecutionsResponsePrivate(this), parent)
 {
     setRequest(new ListExecutionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateCoreDefinitionResponse::UpdateCoreDefinitionResponse(
         const UpdateCoreDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new UpdateCoreDefinitionResponsePrivate(this), parent)
+    : UpdateCoreDefinitionResponse(new UpdateCoreDefinitionResponsePrivate(this), parent)
 {
     setRequest(new UpdateCoreDefinitionRequest(request));
     setReply(reply);

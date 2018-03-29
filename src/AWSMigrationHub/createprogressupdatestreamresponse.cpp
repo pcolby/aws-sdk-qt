@@ -46,7 +46,7 @@ CreateProgressUpdateStreamResponse::CreateProgressUpdateStreamResponse(
         const CreateProgressUpdateStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MigrationHubResponse(new CreateProgressUpdateStreamResponsePrivate(this), parent)
+    : CreateProgressUpdateStreamResponse(new CreateProgressUpdateStreamResponsePrivate(this), parent)
 {
     setRequest(new CreateProgressUpdateStreamRequest(request));
     setReply(reply);

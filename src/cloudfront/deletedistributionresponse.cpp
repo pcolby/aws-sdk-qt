@@ -46,7 +46,7 @@ DeleteDistributionResponse::DeleteDistributionResponse(
         const DeleteDistributionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFrontResponse(new DeleteDistributionResponsePrivate(this), parent)
+    : DeleteDistributionResponse(new DeleteDistributionResponsePrivate(this), parent)
 {
     setRequest(new DeleteDistributionRequest(request));
     setReply(reply);

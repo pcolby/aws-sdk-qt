@@ -46,7 +46,7 @@ AdminForgetDeviceResponse::AdminForgetDeviceResponse(
         const AdminForgetDeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new AdminForgetDeviceResponsePrivate(this), parent)
+    : AdminForgetDeviceResponse(new AdminForgetDeviceResponsePrivate(this), parent)
 {
     setRequest(new AdminForgetDeviceRequest(request));
     setReply(reply);

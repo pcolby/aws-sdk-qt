@@ -46,7 +46,7 @@ ListAssociationVersionsResponse::ListAssociationVersionsResponse(
         const ListAssociationVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new ListAssociationVersionsResponsePrivate(this), parent)
+    : ListAssociationVersionsResponse(new ListAssociationVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListAssociationVersionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DisableStageTransitionResponse::DisableStageTransitionResponse(
         const DisableStageTransitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodePipelineResponse(new DisableStageTransitionResponsePrivate(this), parent)
+    : DisableStageTransitionResponse(new DisableStageTransitionResponsePrivate(this), parent)
 {
     setRequest(new DisableStageTransitionRequest(request));
     setReply(reply);

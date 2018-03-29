@@ -46,7 +46,7 @@ GetEndpointResponse::GetEndpointResponse(
         const GetEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new GetEndpointResponsePrivate(this), parent)
+    : GetEndpointResponse(new GetEndpointResponsePrivate(this), parent)
 {
     setRequest(new GetEndpointRequest(request));
     setReply(reply);

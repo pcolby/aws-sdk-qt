@@ -46,7 +46,7 @@ DeleteTagsForDomainResponse::DeleteTagsForDomainResponse(
         const DeleteTagsForDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53DomainsResponse(new DeleteTagsForDomainResponsePrivate(this), parent)
+    : DeleteTagsForDomainResponse(new DeleteTagsForDomainResponsePrivate(this), parent)
 {
     setRequest(new DeleteTagsForDomainRequest(request));
     setReply(reply);

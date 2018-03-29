@@ -46,7 +46,7 @@ GetChangeResponse::GetChangeResponse(
         const GetChangeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new GetChangeResponsePrivate(this), parent)
+    : GetChangeResponse(new GetChangeResponsePrivate(this), parent)
 {
     setRequest(new GetChangeRequest(request));
     setReply(reply);

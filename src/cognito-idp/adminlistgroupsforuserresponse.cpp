@@ -46,7 +46,7 @@ AdminListGroupsForUserResponse::AdminListGroupsForUserResponse(
         const AdminListGroupsForUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new AdminListGroupsForUserResponsePrivate(this), parent)
+    : AdminListGroupsForUserResponse(new AdminListGroupsForUserResponsePrivate(this), parent)
 {
     setRequest(new AdminListGroupsForUserRequest(request));
     setReply(reply);

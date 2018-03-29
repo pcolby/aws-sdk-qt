@@ -46,7 +46,7 @@ DeleteSnapshotResponse::DeleteSnapshotResponse(
         const DeleteSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new DeleteSnapshotResponsePrivate(this), parent)
+    : DeleteSnapshotResponse(new DeleteSnapshotResponsePrivate(this), parent)
 {
     setRequest(new DeleteSnapshotRequest(request));
     setReply(reply);

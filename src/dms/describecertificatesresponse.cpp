@@ -46,7 +46,7 @@ DescribeCertificatesResponse::DescribeCertificatesResponse(
         const DescribeCertificatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeCertificatesResponsePrivate(this), parent)
+    : DescribeCertificatesResponse(new DescribeCertificatesResponsePrivate(this), parent)
 {
     setRequest(new DescribeCertificatesRequest(request));
     setReply(reply);

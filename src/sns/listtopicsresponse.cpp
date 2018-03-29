@@ -46,7 +46,7 @@ ListTopicsResponse::ListTopicsResponse(
         const ListTopicsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new ListTopicsResponsePrivate(this), parent)
+    : ListTopicsResponse(new ListTopicsResponsePrivate(this), parent)
 {
     setRequest(new ListTopicsRequest(request));
     setReply(reply);

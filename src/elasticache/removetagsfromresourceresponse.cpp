@@ -46,7 +46,7 @@ RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
         const RemoveTagsFromResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new RemoveTagsFromResourceResponsePrivate(this), parent)
+    : RemoveTagsFromResourceResponse(new RemoveTagsFromResourceResponsePrivate(this), parent)
 {
     setRequest(new RemoveTagsFromResourceRequest(request));
     setReply(reply);

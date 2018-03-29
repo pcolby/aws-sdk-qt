@@ -46,7 +46,7 @@ GetCostAndUsageResponse::GetCostAndUsageResponse(
         const GetCostAndUsageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CostExplorerResponse(new GetCostAndUsageResponsePrivate(this), parent)
+    : GetCostAndUsageResponse(new GetCostAndUsageResponsePrivate(this), parent)
 {
     setRequest(new GetCostAndUsageRequest(request));
     setReply(reply);

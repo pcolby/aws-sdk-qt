@@ -46,7 +46,7 @@ DescribeDatasetResponse::DescribeDatasetResponse(
         const DescribeDatasetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoSyncResponse(new DescribeDatasetResponsePrivate(this), parent)
+    : DescribeDatasetResponse(new DescribeDatasetResponsePrivate(this), parent)
 {
     setRequest(new DescribeDatasetRequest(request));
     setReply(reply);

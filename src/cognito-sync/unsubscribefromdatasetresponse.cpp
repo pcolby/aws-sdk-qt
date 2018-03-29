@@ -46,7 +46,7 @@ UnsubscribeFromDatasetResponse::UnsubscribeFromDatasetResponse(
         const UnsubscribeFromDatasetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoSyncResponse(new UnsubscribeFromDatasetResponsePrivate(this), parent)
+    : UnsubscribeFromDatasetResponse(new UnsubscribeFromDatasetResponsePrivate(this), parent)
 {
     setRequest(new UnsubscribeFromDatasetRequest(request));
     setReply(reply);

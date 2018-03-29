@@ -46,7 +46,7 @@ CopyOptionGroupResponse::CopyOptionGroupResponse(
         const CopyOptionGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CopyOptionGroupResponsePrivate(this), parent)
+    : CopyOptionGroupResponse(new CopyOptionGroupResponsePrivate(this), parent)
 {
     setRequest(new CopyOptionGroupRequest(request));
     setReply(reply);

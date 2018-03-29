@@ -46,7 +46,7 @@ DeleteSmsChannelResponse::DeleteSmsChannelResponse(
         const DeleteSmsChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new DeleteSmsChannelResponsePrivate(this), parent)
+    : DeleteSmsChannelResponse(new DeleteSmsChannelResponsePrivate(this), parent)
 {
     setRequest(new DeleteSmsChannelRequest(request));
     setReply(reply);

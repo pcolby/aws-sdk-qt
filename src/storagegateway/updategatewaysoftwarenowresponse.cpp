@@ -46,7 +46,7 @@ UpdateGatewaySoftwareNowResponse::UpdateGatewaySoftwareNowResponse(
         const UpdateGatewaySoftwareNowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new UpdateGatewaySoftwareNowResponsePrivate(this), parent)
+    : UpdateGatewaySoftwareNowResponse(new UpdateGatewaySoftwareNowResponsePrivate(this), parent)
 {
     setRequest(new UpdateGatewaySoftwareNowRequest(request));
     setReply(reply);

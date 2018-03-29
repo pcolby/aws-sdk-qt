@@ -46,7 +46,7 @@ ListInvitationsResponse::ListInvitationsResponse(
         const ListInvitationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GuardDutyResponse(new ListInvitationsResponsePrivate(this), parent)
+    : ListInvitationsResponse(new ListInvitationsResponsePrivate(this), parent)
 {
     setRequest(new ListInvitationsRequest(request));
     setReply(reply);

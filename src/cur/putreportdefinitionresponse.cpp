@@ -46,7 +46,7 @@ PutReportDefinitionResponse::PutReportDefinitionResponse(
         const PutReportDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CostandUsageReportServiceResponse(new PutReportDefinitionResponsePrivate(this), parent)
+    : PutReportDefinitionResponse(new PutReportDefinitionResponsePrivate(this), parent)
 {
     setRequest(new PutReportDefinitionRequest(request));
     setReply(reply);

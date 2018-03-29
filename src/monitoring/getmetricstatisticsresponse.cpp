@@ -46,7 +46,7 @@ GetMetricStatisticsResponse::GetMetricStatisticsResponse(
         const GetMetricStatisticsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchResponse(new GetMetricStatisticsResponsePrivate(this), parent)
+    : GetMetricStatisticsResponse(new GetMetricStatisticsResponsePrivate(this), parent)
 {
     setRequest(new GetMetricStatisticsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetSigningCertificateResponse::GetSigningCertificateResponse(
         const GetSigningCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new GetSigningCertificateResponsePrivate(this), parent)
+    : GetSigningCertificateResponse(new GetSigningCertificateResponsePrivate(this), parent)
 {
     setRequest(new GetSigningCertificateRequest(request));
     setReply(reply);

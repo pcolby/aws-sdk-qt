@@ -46,7 +46,7 @@ UpdateRestApiResponse::UpdateRestApiResponse(
         const UpdateRestApiRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateRestApiResponsePrivate(this), parent)
+    : UpdateRestApiResponse(new UpdateRestApiResponsePrivate(this), parent)
 {
     setRequest(new UpdateRestApiRequest(request));
     setReply(reply);

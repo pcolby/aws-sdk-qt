@@ -46,7 +46,7 @@ DeleteLaunchTemplateVersionsResponse::DeleteLaunchTemplateVersionsResponse(
         const DeleteLaunchTemplateVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteLaunchTemplateVersionsResponsePrivate(this), parent)
+    : DeleteLaunchTemplateVersionsResponse(new DeleteLaunchTemplateVersionsResponsePrivate(this), parent)
 {
     setRequest(new DeleteLaunchTemplateVersionsRequest(request));
     setReply(reply);

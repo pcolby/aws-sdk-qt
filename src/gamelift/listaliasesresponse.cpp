@@ -46,7 +46,7 @@ ListAliasesResponse::ListAliasesResponse(
         const ListAliasesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new ListAliasesResponsePrivate(this), parent)
+    : ListAliasesResponse(new ListAliasesResponsePrivate(this), parent)
 {
     setRequest(new ListAliasesRequest(request));
     setReply(reply);

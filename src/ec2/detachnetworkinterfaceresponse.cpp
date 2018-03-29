@@ -46,7 +46,7 @@ DetachNetworkInterfaceResponse::DetachNetworkInterfaceResponse(
         const DetachNetworkInterfaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DetachNetworkInterfaceResponsePrivate(this), parent)
+    : DetachNetworkInterfaceResponse(new DetachNetworkInterfaceResponsePrivate(this), parent)
 {
     setRequest(new DetachNetworkInterfaceRequest(request));
     setReply(reply);

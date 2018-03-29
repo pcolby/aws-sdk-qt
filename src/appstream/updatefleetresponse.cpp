@@ -46,7 +46,7 @@ UpdateFleetResponse::UpdateFleetResponse(
         const UpdateFleetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppStreamResponse(new UpdateFleetResponsePrivate(this), parent)
+    : UpdateFleetResponse(new UpdateFleetResponsePrivate(this), parent)
 {
     setRequest(new UpdateFleetRequest(request));
     setReply(reply);

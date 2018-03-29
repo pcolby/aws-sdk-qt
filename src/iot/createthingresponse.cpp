@@ -46,7 +46,7 @@ CreateThingResponse::CreateThingResponse(
         const CreateThingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new CreateThingResponsePrivate(this), parent)
+    : CreateThingResponse(new CreateThingResponsePrivate(this), parent)
 {
     setRequest(new CreateThingRequest(request));
     setReply(reply);

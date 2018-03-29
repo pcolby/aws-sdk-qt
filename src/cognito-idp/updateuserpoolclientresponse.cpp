@@ -46,7 +46,7 @@ UpdateUserPoolClientResponse::UpdateUserPoolClientResponse(
         const UpdateUserPoolClientRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new UpdateUserPoolClientResponsePrivate(this), parent)
+    : UpdateUserPoolClientResponse(new UpdateUserPoolClientResponsePrivate(this), parent)
 {
     setRequest(new UpdateUserPoolClientRequest(request));
     setReply(reply);

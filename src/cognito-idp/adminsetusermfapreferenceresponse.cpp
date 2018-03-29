@@ -46,7 +46,7 @@ AdminSetUserMFAPreferenceResponse::AdminSetUserMFAPreferenceResponse(
         const AdminSetUserMFAPreferenceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new AdminSetUserMFAPreferenceResponsePrivate(this), parent)
+    : AdminSetUserMFAPreferenceResponse(new AdminSetUserMFAPreferenceResponsePrivate(this), parent)
 {
     setRequest(new AdminSetUserMFAPreferenceRequest(request));
     setReply(reply);

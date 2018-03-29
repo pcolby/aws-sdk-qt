@@ -46,7 +46,7 @@ DeleteThreatIntelSetResponse::DeleteThreatIntelSetResponse(
         const DeleteThreatIntelSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GuardDutyResponse(new DeleteThreatIntelSetResponsePrivate(this), parent)
+    : DeleteThreatIntelSetResponse(new DeleteThreatIntelSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteThreatIntelSetRequest(request));
     setReply(reply);

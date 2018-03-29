@@ -46,7 +46,7 @@ DeleteFunctionResponse::DeleteFunctionResponse(
         const DeleteFunctionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LambdaResponse(new DeleteFunctionResponsePrivate(this), parent)
+    : DeleteFunctionResponse(new DeleteFunctionResponsePrivate(this), parent)
 {
     setRequest(new DeleteFunctionRequest(request));
     setReply(reply);

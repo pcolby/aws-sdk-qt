@@ -46,7 +46,7 @@ UpdateFacetResponse::UpdateFacetResponse(
         const UpdateFacetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new UpdateFacetResponsePrivate(this), parent)
+    : UpdateFacetResponse(new UpdateFacetResponsePrivate(this), parent)
 {
     setRequest(new UpdateFacetRequest(request));
     setReply(reply);

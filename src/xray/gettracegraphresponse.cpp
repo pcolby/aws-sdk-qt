@@ -46,7 +46,7 @@ GetTraceGraphResponse::GetTraceGraphResponse(
         const GetTraceGraphRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : XRayResponse(new GetTraceGraphResponsePrivate(this), parent)
+    : GetTraceGraphResponse(new GetTraceGraphResponsePrivate(this), parent)
 {
     setRequest(new GetTraceGraphRequest(request));
     setReply(reply);

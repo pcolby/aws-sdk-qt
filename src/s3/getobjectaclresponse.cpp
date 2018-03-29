@@ -46,7 +46,7 @@ GetObjectAclResponse::GetObjectAclResponse(
         const GetObjectAclRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new GetObjectAclResponsePrivate(this), parent)
+    : GetObjectAclResponse(new GetObjectAclResponsePrivate(this), parent)
 {
     setRequest(new GetObjectAclRequest(request));
     setReply(reply);

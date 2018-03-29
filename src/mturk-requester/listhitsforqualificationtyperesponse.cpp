@@ -46,7 +46,7 @@ ListHITsForQualificationTypeResponse::ListHITsForQualificationTypeResponse(
         const ListHITsForQualificationTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new ListHITsForQualificationTypeResponsePrivate(this), parent)
+    : ListHITsForQualificationTypeResponse(new ListHITsForQualificationTypeResponsePrivate(this), parent)
 {
     setRequest(new ListHITsForQualificationTypeRequest(request));
     setReply(reply);

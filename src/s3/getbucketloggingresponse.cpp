@@ -46,7 +46,7 @@ GetBucketLoggingResponse::GetBucketLoggingResponse(
         const GetBucketLoggingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new GetBucketLoggingResponsePrivate(this), parent)
+    : GetBucketLoggingResponse(new GetBucketLoggingResponsePrivate(this), parent)
 {
     setRequest(new GetBucketLoggingRequest(request));
     setReply(reply);

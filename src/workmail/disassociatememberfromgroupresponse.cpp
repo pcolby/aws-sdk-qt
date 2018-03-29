@@ -46,7 +46,7 @@ DisassociateMemberFromGroupResponse::DisassociateMemberFromGroupResponse(
         const DisassociateMemberFromGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkMailResponse(new DisassociateMemberFromGroupResponsePrivate(this), parent)
+    : DisassociateMemberFromGroupResponse(new DisassociateMemberFromGroupResponsePrivate(this), parent)
 {
     setRequest(new DisassociateMemberFromGroupRequest(request));
     setReply(reply);

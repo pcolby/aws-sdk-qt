@@ -46,7 +46,7 @@ ListIncomingTypedLinksResponse::ListIncomingTypedLinksResponse(
         const ListIncomingTypedLinksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new ListIncomingTypedLinksResponsePrivate(this), parent)
+    : ListIncomingTypedLinksResponse(new ListIncomingTypedLinksResponsePrivate(this), parent)
 {
     setRequest(new ListIncomingTypedLinksRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetClientCertificateResponse::GetClientCertificateResponse(
         const GetClientCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetClientCertificateResponsePrivate(this), parent)
+    : GetClientCertificateResponse(new GetClientCertificateResponsePrivate(this), parent)
 {
     setRequest(new GetClientCertificateRequest(request));
     setReply(reply);

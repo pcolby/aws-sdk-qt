@@ -46,7 +46,7 @@ DeleteVpcPeeringAuthorizationResponse::DeleteVpcPeeringAuthorizationResponse(
         const DeleteVpcPeeringAuthorizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new DeleteVpcPeeringAuthorizationResponsePrivate(this), parent)
+    : DeleteVpcPeeringAuthorizationResponse(new DeleteVpcPeeringAuthorizationResponsePrivate(this), parent)
 {
     setRequest(new DeleteVpcPeeringAuthorizationRequest(request));
     setReply(reply);

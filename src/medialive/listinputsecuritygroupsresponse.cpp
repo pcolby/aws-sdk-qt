@@ -46,7 +46,7 @@ ListInputSecurityGroupsResponse::ListInputSecurityGroupsResponse(
         const ListInputSecurityGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MediaLiveResponse(new ListInputSecurityGroupsResponsePrivate(this), parent)
+    : ListInputSecurityGroupsResponse(new ListInputSecurityGroupsResponsePrivate(this), parent)
 {
     setRequest(new ListInputSecurityGroupsRequest(request));
     setReply(reply);

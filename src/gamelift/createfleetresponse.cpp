@@ -46,7 +46,7 @@ CreateFleetResponse::CreateFleetResponse(
         const CreateFleetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new CreateFleetResponsePrivate(this), parent)
+    : CreateFleetResponse(new CreateFleetResponsePrivate(this), parent)
 {
     setRequest(new CreateFleetRequest(request));
     setReply(reply);

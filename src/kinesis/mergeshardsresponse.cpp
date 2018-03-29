@@ -46,7 +46,7 @@ MergeShardsResponse::MergeShardsResponse(
         const MergeShardsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisResponse(new MergeShardsResponsePrivate(this), parent)
+    : MergeShardsResponse(new MergeShardsResponsePrivate(this), parent)
 {
     setRequest(new MergeShardsRequest(request));
     setReply(reply);

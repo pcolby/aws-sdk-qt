@@ -46,7 +46,7 @@ DeleteByteMatchSetResponse::DeleteByteMatchSetResponse(
         const DeleteByteMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteByteMatchSetResponsePrivate(this), parent)
+    : DeleteByteMatchSetResponse(new DeleteByteMatchSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteByteMatchSetRequest(request));
     setReply(reply);

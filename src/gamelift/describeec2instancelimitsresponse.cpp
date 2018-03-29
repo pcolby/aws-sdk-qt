@@ -46,7 +46,7 @@ DescribeEC2InstanceLimitsResponse::DescribeEC2InstanceLimitsResponse(
         const DescribeEC2InstanceLimitsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new DescribeEC2InstanceLimitsResponsePrivate(this), parent)
+    : DescribeEC2InstanceLimitsResponse(new DescribeEC2InstanceLimitsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEC2InstanceLimitsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ PutSchemaFromJsonResponse::PutSchemaFromJsonResponse(
         const PutSchemaFromJsonRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new PutSchemaFromJsonResponsePrivate(this), parent)
+    : PutSchemaFromJsonResponse(new PutSchemaFromJsonResponsePrivate(this), parent)
 {
     setRequest(new PutSchemaFromJsonRequest(request));
     setReply(reply);

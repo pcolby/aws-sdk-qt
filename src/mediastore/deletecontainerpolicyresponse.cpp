@@ -46,7 +46,7 @@ DeleteContainerPolicyResponse::DeleteContainerPolicyResponse(
         const DeleteContainerPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MediaStoreResponse(new DeleteContainerPolicyResponsePrivate(this), parent)
+    : DeleteContainerPolicyResponse(new DeleteContainerPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteContainerPolicyRequest(request));
     setReply(reply);

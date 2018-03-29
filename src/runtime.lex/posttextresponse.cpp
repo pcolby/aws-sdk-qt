@@ -46,7 +46,7 @@ PostTextResponse::PostTextResponse(
         const PostTextRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexRuntimeServiceResponse(new PostTextResponsePrivate(this), parent)
+    : PostTextResponse(new PostTextResponsePrivate(this), parent)
 {
     setRequest(new PostTextRequest(request));
     setReply(reply);

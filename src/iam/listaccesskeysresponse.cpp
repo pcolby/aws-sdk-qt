@@ -46,7 +46,7 @@ ListAccessKeysResponse::ListAccessKeysResponse(
         const ListAccessKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListAccessKeysResponsePrivate(this), parent)
+    : ListAccessKeysResponse(new ListAccessKeysResponsePrivate(this), parent)
 {
     setRequest(new ListAccessKeysRequest(request));
     setReply(reply);

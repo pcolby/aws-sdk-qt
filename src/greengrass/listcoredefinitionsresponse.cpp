@@ -46,7 +46,7 @@ ListCoreDefinitionsResponse::ListCoreDefinitionsResponse(
         const ListCoreDefinitionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new ListCoreDefinitionsResponsePrivate(this), parent)
+    : ListCoreDefinitionsResponse(new ListCoreDefinitionsResponsePrivate(this), parent)
 {
     setRequest(new ListCoreDefinitionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RestoreDBInstanceFromS3Response::RestoreDBInstanceFromS3Response(
         const RestoreDBInstanceFromS3Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RestoreDBInstanceFromS3ResponsePrivate(this), parent)
+    : RestoreDBInstanceFromS3Response(new RestoreDBInstanceFromS3ResponsePrivate(this), parent)
 {
     setRequest(new RestoreDBInstanceFromS3Request(request));
     setReply(reply);

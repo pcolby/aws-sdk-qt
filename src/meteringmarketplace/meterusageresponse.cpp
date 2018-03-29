@@ -46,7 +46,7 @@ MeterUsageResponse::MeterUsageResponse(
         const MeterUsageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MarketplaceMeteringResponse(new MeterUsageResponsePrivate(this), parent)
+    : MeterUsageResponse(new MeterUsageResponsePrivate(this), parent)
 {
     setRequest(new MeterUsageRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StopQueryExecutionResponse::StopQueryExecutionResponse(
         const StopQueryExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AthenaResponse(new StopQueryExecutionResponsePrivate(this), parent)
+    : StopQueryExecutionResponse(new StopQueryExecutionResponsePrivate(this), parent)
 {
     setRequest(new StopQueryExecutionRequest(request));
     setReply(reply);

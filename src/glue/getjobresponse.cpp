@@ -46,7 +46,7 @@ GetJobResponse::GetJobResponse(
         const GetJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new GetJobResponsePrivate(this), parent)
+    : GetJobResponse(new GetJobResponsePrivate(this), parent)
 {
     setRequest(new GetJobRequest(request));
     setReply(reply);

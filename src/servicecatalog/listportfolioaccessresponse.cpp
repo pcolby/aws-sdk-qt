@@ -46,7 +46,7 @@ ListPortfolioAccessResponse::ListPortfolioAccessResponse(
         const ListPortfolioAccessRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new ListPortfolioAccessResponsePrivate(this), parent)
+    : ListPortfolioAccessResponse(new ListPortfolioAccessResponsePrivate(this), parent)
 {
     setRequest(new ListPortfolioAccessRequest(request));
     setReply(reply);

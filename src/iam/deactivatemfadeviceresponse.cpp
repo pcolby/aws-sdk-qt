@@ -46,7 +46,7 @@ DeactivateMFADeviceResponse::DeactivateMFADeviceResponse(
         const DeactivateMFADeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeactivateMFADeviceResponsePrivate(this), parent)
+    : DeactivateMFADeviceResponse(new DeactivateMFADeviceResponsePrivate(this), parent)
 {
     setRequest(new DeactivateMFADeviceRequest(request));
     setReply(reply);

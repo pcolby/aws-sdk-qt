@@ -46,7 +46,7 @@ UpdateResourceDefinitionResponse::UpdateResourceDefinitionResponse(
         const UpdateResourceDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new UpdateResourceDefinitionResponsePrivate(this), parent)
+    : UpdateResourceDefinitionResponse(new UpdateResourceDefinitionResponsePrivate(this), parent)
 {
     setRequest(new UpdateResourceDefinitionRequest(request));
     setReply(reply);

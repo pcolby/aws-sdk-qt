@@ -46,7 +46,7 @@ StopReplicationTaskResponse::StopReplicationTaskResponse(
         const StopReplicationTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new StopReplicationTaskResponsePrivate(this), parent)
+    : StopReplicationTaskResponse(new StopReplicationTaskResponsePrivate(this), parent)
 {
     setRequest(new StopReplicationTaskRequest(request));
     setReply(reply);

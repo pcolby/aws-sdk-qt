@@ -46,7 +46,7 @@ PurchaseReservedCacheNodesOfferingResponse::PurchaseReservedCacheNodesOfferingRe
         const PurchaseReservedCacheNodesOfferingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new PurchaseReservedCacheNodesOfferingResponsePrivate(this), parent)
+    : PurchaseReservedCacheNodesOfferingResponse(new PurchaseReservedCacheNodesOfferingResponsePrivate(this), parent)
 {
     setRequest(new PurchaseReservedCacheNodesOfferingRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateBudgetResponse::CreateBudgetResponse(
         const CreateBudgetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BudgetsResponse(new CreateBudgetResponsePrivate(this), parent)
+    : CreateBudgetResponse(new CreateBudgetResponsePrivate(this), parent)
 {
     setRequest(new CreateBudgetRequest(request));
     setReply(reply);

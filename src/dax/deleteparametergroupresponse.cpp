@@ -46,7 +46,7 @@ DeleteParameterGroupResponse::DeleteParameterGroupResponse(
         const DeleteParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new DeleteParameterGroupResponsePrivate(this), parent)
+    : DeleteParameterGroupResponse(new DeleteParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteParameterGroupRequest(request));
     setReply(reply);

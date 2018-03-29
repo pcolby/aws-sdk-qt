@@ -46,7 +46,7 @@ DescribeConfigurationResponse::DescribeConfigurationResponse(
         const DescribeConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new DescribeConfigurationResponsePrivate(this), parent)
+    : DescribeConfigurationResponse(new DescribeConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DescribeConfigurationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ResetSnapshotAttributeResponse::ResetSnapshotAttributeResponse(
         const ResetSnapshotAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ResetSnapshotAttributeResponsePrivate(this), parent)
+    : ResetSnapshotAttributeResponse(new ResetSnapshotAttributeResponsePrivate(this), parent)
 {
     setRequest(new ResetSnapshotAttributeRequest(request));
     setReply(reply);

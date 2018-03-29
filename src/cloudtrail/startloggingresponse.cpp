@@ -46,7 +46,7 @@ StartLoggingResponse::StartLoggingResponse(
         const StartLoggingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudTrailResponse(new StartLoggingResponsePrivate(this), parent)
+    : StartLoggingResponse(new StartLoggingResponsePrivate(this), parent)
 {
     setRequest(new StartLoggingRequest(request));
     setReply(reply);

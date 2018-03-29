@@ -46,7 +46,7 @@ ListSqlInjectionMatchSetsResponse::ListSqlInjectionMatchSetsResponse(
         const ListSqlInjectionMatchSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListSqlInjectionMatchSetsResponsePrivate(this), parent)
+    : ListSqlInjectionMatchSetsResponse(new ListSqlInjectionMatchSetsResponsePrivate(this), parent)
 {
     setRequest(new ListSqlInjectionMatchSetsRequest(request));
     setReply(reply);

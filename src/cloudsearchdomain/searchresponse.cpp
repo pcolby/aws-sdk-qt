@@ -46,7 +46,7 @@ SearchResponse::SearchResponse(
         const SearchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudSearchDomainResponse(new SearchResponsePrivate(this), parent)
+    : SearchResponse(new SearchResponsePrivate(this), parent)
 {
     setRequest(new SearchRequest(request));
     setReply(reply);

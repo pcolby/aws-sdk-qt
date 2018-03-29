@@ -46,7 +46,7 @@ ListDistributionsByWebACLIdResponse::ListDistributionsByWebACLIdResponse(
         const ListDistributionsByWebACLIdRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFrontResponse(new ListDistributionsByWebACLIdResponsePrivate(this), parent)
+    : ListDistributionsByWebACLIdResponse(new ListDistributionsByWebACLIdResponsePrivate(this), parent)
 {
     setRequest(new ListDistributionsByWebACLIdRequest(request));
     setReply(reply);

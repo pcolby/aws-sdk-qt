@@ -46,7 +46,7 @@ EnableDomainAutoRenewResponse::EnableDomainAutoRenewResponse(
         const EnableDomainAutoRenewRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53DomainsResponse(new EnableDomainAutoRenewResponsePrivate(this), parent)
+    : EnableDomainAutoRenewResponse(new EnableDomainAutoRenewResponsePrivate(this), parent)
 {
     setRequest(new EnableDomainAutoRenewRequest(request));
     setReply(reply);

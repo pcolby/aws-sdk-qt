@@ -46,7 +46,7 @@ ListSamplesResponse::ListSamplesResponse(
         const ListSamplesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new ListSamplesResponsePrivate(this), parent)
+    : ListSamplesResponse(new ListSamplesResponsePrivate(this), parent)
 {
     setRequest(new ListSamplesRequest(request));
     setReply(reply);

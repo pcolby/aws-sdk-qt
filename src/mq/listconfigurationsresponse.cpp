@@ -46,7 +46,7 @@ ListConfigurationsResponse::ListConfigurationsResponse(
         const ListConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new ListConfigurationsResponsePrivate(this), parent)
+    : ListConfigurationsResponse(new ListConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new ListConfigurationsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeCopyProductStatusResponse::DescribeCopyProductStatusResponse(
         const DescribeCopyProductStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new DescribeCopyProductStatusResponsePrivate(this), parent)
+    : DescribeCopyProductStatusResponse(new DescribeCopyProductStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeCopyProductStatusRequest(request));
     setReply(reply);

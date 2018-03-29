@@ -46,7 +46,7 @@ AssociateKmsKeyResponse::AssociateKmsKeyResponse(
         const AssociateKmsKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchLogsResponse(new AssociateKmsKeyResponsePrivate(this), parent)
+    : AssociateKmsKeyResponse(new AssociateKmsKeyResponsePrivate(this), parent)
 {
     setRequest(new AssociateKmsKeyRequest(request));
     setReply(reply);

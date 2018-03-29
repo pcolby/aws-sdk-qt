@@ -46,7 +46,7 @@ DisassociateConnectorResponse::DisassociateConnectorResponse(
         const DisassociateConnectorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SMSResponse(new DisassociateConnectorResponsePrivate(this), parent)
+    : DisassociateConnectorResponse(new DisassociateConnectorResponsePrivate(this), parent)
 {
     setRequest(new DisassociateConnectorRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateAppResponse::UpdateAppResponse(
         const UpdateAppRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new UpdateAppResponsePrivate(this), parent)
+    : UpdateAppResponse(new UpdateAppResponsePrivate(this), parent)
 {
     setRequest(new UpdateAppRequest(request));
     setReply(reply);

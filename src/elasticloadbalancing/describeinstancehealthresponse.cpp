@@ -46,7 +46,7 @@ DescribeInstanceHealthResponse::DescribeInstanceHealthResponse(
         const DescribeInstanceHealthRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticLoadBalancingResponse(new DescribeInstanceHealthResponsePrivate(this), parent)
+    : DescribeInstanceHealthResponse(new DescribeInstanceHealthResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstanceHealthRequest(request));
     setReply(reply);

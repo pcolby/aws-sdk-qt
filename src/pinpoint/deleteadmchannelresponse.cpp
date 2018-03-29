@@ -46,7 +46,7 @@ DeleteAdmChannelResponse::DeleteAdmChannelResponse(
         const DeleteAdmChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new DeleteAdmChannelResponsePrivate(this), parent)
+    : DeleteAdmChannelResponse(new DeleteAdmChannelResponsePrivate(this), parent)
 {
     setRequest(new DeleteAdmChannelRequest(request));
     setReply(reply);

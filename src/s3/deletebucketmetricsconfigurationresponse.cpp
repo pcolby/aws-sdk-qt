@@ -46,7 +46,7 @@ DeleteBucketMetricsConfigurationResponse::DeleteBucketMetricsConfigurationRespon
         const DeleteBucketMetricsConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new DeleteBucketMetricsConfigurationResponsePrivate(this), parent)
+    : DeleteBucketMetricsConfigurationResponse(new DeleteBucketMetricsConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DeleteBucketMetricsConfigurationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateNamedQueryResponse::CreateNamedQueryResponse(
         const CreateNamedQueryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AthenaResponse(new CreateNamedQueryResponsePrivate(this), parent)
+    : CreateNamedQueryResponse(new CreateNamedQueryResponsePrivate(this), parent)
 {
     setRequest(new CreateNamedQueryRequest(request));
     setReply(reply);

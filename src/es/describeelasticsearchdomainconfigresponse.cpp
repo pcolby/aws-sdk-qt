@@ -46,7 +46,7 @@ DescribeElasticsearchDomainConfigResponse::DescribeElasticsearchDomainConfigResp
         const DescribeElasticsearchDomainConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DescribeElasticsearchDomainConfigResponsePrivate(this), parent)
+    : DescribeElasticsearchDomainConfigResponse(new DescribeElasticsearchDomainConfigResponsePrivate(this), parent)
 {
     setRequest(new DescribeElasticsearchDomainConfigRequest(request));
     setReply(reply);

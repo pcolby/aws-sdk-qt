@@ -46,7 +46,7 @@ CopyObjectResponse::CopyObjectResponse(
         const CopyObjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new CopyObjectResponsePrivate(this), parent)
+    : CopyObjectResponse(new CopyObjectResponsePrivate(this), parent)
 {
     setRequest(new CopyObjectRequest(request));
     setReply(reply);

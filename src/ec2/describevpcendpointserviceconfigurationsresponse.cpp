@@ -46,7 +46,7 @@ DescribeVpcEndpointServiceConfigurationsResponse::DescribeVpcEndpointServiceConf
         const DescribeVpcEndpointServiceConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeVpcEndpointServiceConfigurationsResponsePrivate(this), parent)
+    : DescribeVpcEndpointServiceConfigurationsResponse(new DescribeVpcEndpointServiceConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeVpcEndpointServiceConfigurationsRequest(request));
     setReply(reply);

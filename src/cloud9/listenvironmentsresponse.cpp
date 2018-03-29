@@ -46,7 +46,7 @@ ListEnvironmentsResponse::ListEnvironmentsResponse(
         const ListEnvironmentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Cloud9Response(new ListEnvironmentsResponsePrivate(this), parent)
+    : ListEnvironmentsResponse(new ListEnvironmentsResponsePrivate(this), parent)
 {
     setRequest(new ListEnvironmentsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetSqlInjectionMatchSetResponse::GetSqlInjectionMatchSetResponse(
         const GetSqlInjectionMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetSqlInjectionMatchSetResponsePrivate(this), parent)
+    : GetSqlInjectionMatchSetResponse(new GetSqlInjectionMatchSetResponsePrivate(this), parent)
 {
     setRequest(new GetSqlInjectionMatchSetRequest(request));
     setReply(reply);

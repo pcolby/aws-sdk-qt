@@ -46,7 +46,7 @@ StartContentModerationResponse::StartContentModerationResponse(
         const StartContentModerationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RekognitionResponse(new StartContentModerationResponsePrivate(this), parent)
+    : StartContentModerationResponse(new StartContentModerationResponsePrivate(this), parent)
 {
     setRequest(new StartContentModerationRequest(request));
     setReply(reply);

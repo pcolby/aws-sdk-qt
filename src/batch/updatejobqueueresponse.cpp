@@ -46,7 +46,7 @@ UpdateJobQueueResponse::UpdateJobQueueResponse(
         const UpdateJobQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchResponse(new UpdateJobQueueResponsePrivate(this), parent)
+    : UpdateJobQueueResponse(new UpdateJobQueueResponsePrivate(this), parent)
 {
     setRequest(new UpdateJobQueueRequest(request));
     setReply(reply);

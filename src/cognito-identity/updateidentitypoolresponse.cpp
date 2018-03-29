@@ -46,7 +46,7 @@ UpdateIdentityPoolResponse::UpdateIdentityPoolResponse(
         const UpdateIdentityPoolRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityResponse(new UpdateIdentityPoolResponsePrivate(this), parent)
+    : UpdateIdentityPoolResponse(new UpdateIdentityPoolResponsePrivate(this), parent)
 {
     setRequest(new UpdateIdentityPoolRequest(request));
     setReply(reply);

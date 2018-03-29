@@ -46,7 +46,7 @@ DeleteTrustResponse::DeleteTrustResponse(
         const DeleteTrustRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new DeleteTrustResponsePrivate(this), parent)
+    : DeleteTrustResponse(new DeleteTrustResponsePrivate(this), parent)
 {
     setRequest(new DeleteTrustRequest(request));
     setReply(reply);

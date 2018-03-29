@@ -46,7 +46,7 @@ DescribeUserResponse::DescribeUserResponse(
         const DescribeUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new DescribeUserResponsePrivate(this), parent)
+    : DescribeUserResponse(new DescribeUserResponsePrivate(this), parent)
 {
     setRequest(new DescribeUserRequest(request));
     setReply(reply);

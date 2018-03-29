@@ -46,7 +46,7 @@ DeleteIPSetResponse::DeleteIPSetResponse(
         const DeleteIPSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteIPSetResponsePrivate(this), parent)
+    : DeleteIPSetResponse(new DeleteIPSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteIPSetRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeDestinationsResponse::DescribeDestinationsResponse(
         const DescribeDestinationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchLogsResponse(new DescribeDestinationsResponsePrivate(this), parent)
+    : DescribeDestinationsResponse(new DescribeDestinationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDestinationsRequest(request));
     setReply(reply);

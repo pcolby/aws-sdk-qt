@@ -46,7 +46,7 @@ PurchaseReservedNodeOfferingResponse::PurchaseReservedNodeOfferingResponse(
         const PurchaseReservedNodeOfferingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new PurchaseReservedNodeOfferingResponsePrivate(this), parent)
+    : PurchaseReservedNodeOfferingResponse(new PurchaseReservedNodeOfferingResponsePrivate(this), parent)
 {
     setRequest(new PurchaseReservedNodeOfferingRequest(request));
     setReply(reply);

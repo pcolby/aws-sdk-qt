@@ -46,7 +46,7 @@ LeaveOrganizationResponse::LeaveOrganizationResponse(
         const LeaveOrganizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OrganizationsResponse(new LeaveOrganizationResponsePrivate(this), parent)
+    : LeaveOrganizationResponse(new LeaveOrganizationResponsePrivate(this), parent)
 {
     setRequest(new LeaveOrganizationRequest(request));
     setReply(reply);

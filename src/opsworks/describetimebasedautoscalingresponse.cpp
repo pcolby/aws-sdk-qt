@@ -46,7 +46,7 @@ DescribeTimeBasedAutoScalingResponse::DescribeTimeBasedAutoScalingResponse(
         const DescribeTimeBasedAutoScalingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DescribeTimeBasedAutoScalingResponsePrivate(this), parent)
+    : DescribeTimeBasedAutoScalingResponse(new DescribeTimeBasedAutoScalingResponsePrivate(this), parent)
 {
     setRequest(new DescribeTimeBasedAutoScalingRequest(request));
     setReply(reply);

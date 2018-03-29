@@ -46,7 +46,7 @@ RemoveRoleFromDBClusterResponse::RemoveRoleFromDBClusterResponse(
         const RemoveRoleFromDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RemoveRoleFromDBClusterResponsePrivate(this), parent)
+    : RemoveRoleFromDBClusterResponse(new RemoveRoleFromDBClusterResponsePrivate(this), parent)
 {
     setRequest(new RemoveRoleFromDBClusterRequest(request));
     setReply(reply);

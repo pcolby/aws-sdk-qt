@@ -46,7 +46,7 @@ GetAssessmentReportResponse::GetAssessmentReportResponse(
         const GetAssessmentReportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new GetAssessmentReportResponsePrivate(this), parent)
+    : GetAssessmentReportResponse(new GetAssessmentReportResponsePrivate(this), parent)
 {
     setRequest(new GetAssessmentReportRequest(request));
     setReply(reply);

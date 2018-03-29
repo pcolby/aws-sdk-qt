@@ -46,7 +46,7 @@ ListGraphqlApisResponse::ListGraphqlApisResponse(
         const ListGraphqlApisRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppSyncResponse(new ListGraphqlApisResponsePrivate(this), parent)
+    : ListGraphqlApisResponse(new ListGraphqlApisResponsePrivate(this), parent)
 {
     setRequest(new ListGraphqlApisRequest(request));
     setReply(reply);

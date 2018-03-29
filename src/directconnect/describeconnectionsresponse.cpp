@@ -46,7 +46,7 @@ DescribeConnectionsResponse::DescribeConnectionsResponse(
         const DescribeConnectionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectConnectResponse(new DescribeConnectionsResponsePrivate(this), parent)
+    : DescribeConnectionsResponse(new DescribeConnectionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeConnectionsRequest(request));
     setReply(reply);

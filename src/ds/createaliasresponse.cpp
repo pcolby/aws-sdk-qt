@@ -46,7 +46,7 @@ CreateAliasResponse::CreateAliasResponse(
         const CreateAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new CreateAliasResponsePrivate(this), parent)
+    : CreateAliasResponse(new CreateAliasResponsePrivate(this), parent)
 {
     setRequest(new CreateAliasRequest(request));
     setReply(reply);

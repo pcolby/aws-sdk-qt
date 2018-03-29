@@ -46,7 +46,7 @@ DisassociateAddressResponse::DisassociateAddressResponse(
         const DisassociateAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DisassociateAddressResponsePrivate(this), parent)
+    : DisassociateAddressResponse(new DisassociateAddressResponsePrivate(this), parent)
 {
     setRequest(new DisassociateAddressRequest(request));
     setReply(reply);

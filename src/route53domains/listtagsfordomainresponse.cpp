@@ -46,7 +46,7 @@ ListTagsForDomainResponse::ListTagsForDomainResponse(
         const ListTagsForDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53DomainsResponse(new ListTagsForDomainResponsePrivate(this), parent)
+    : ListTagsForDomainResponse(new ListTagsForDomainResponsePrivate(this), parent)
 {
     setRequest(new ListTagsForDomainRequest(request));
     setReply(reply);

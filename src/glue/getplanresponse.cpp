@@ -46,7 +46,7 @@ GetPlanResponse::GetPlanResponse(
         const GetPlanRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new GetPlanResponsePrivate(this), parent)
+    : GetPlanResponse(new GetPlanResponsePrivate(this), parent)
 {
     setRequest(new GetPlanRequest(request));
     setReply(reply);

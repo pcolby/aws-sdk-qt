@@ -46,7 +46,7 @@ ListHostedZonesByNameResponse::ListHostedZonesByNameResponse(
         const ListHostedZonesByNameRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new ListHostedZonesByNameResponsePrivate(this), parent)
+    : ListHostedZonesByNameResponse(new ListHostedZonesByNameResponsePrivate(this), parent)
 {
     setRequest(new ListHostedZonesByNameRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RemoveTagsFromOnPremisesInstancesResponse::RemoveTagsFromOnPremisesInstancesResp
         const RemoveTagsFromOnPremisesInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeDeployResponse(new RemoveTagsFromOnPremisesInstancesResponsePrivate(this), parent)
+    : RemoveTagsFromOnPremisesInstancesResponse(new RemoveTagsFromOnPremisesInstancesResponsePrivate(this), parent)
 {
     setRequest(new RemoveTagsFromOnPremisesInstancesRequest(request));
     setReply(reply);

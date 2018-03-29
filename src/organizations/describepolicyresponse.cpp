@@ -46,7 +46,7 @@ DescribePolicyResponse::DescribePolicyResponse(
         const DescribePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OrganizationsResponse(new DescribePolicyResponsePrivate(this), parent)
+    : DescribePolicyResponse(new DescribePolicyResponsePrivate(this), parent)
 {
     setRequest(new DescribePolicyRequest(request));
     setReply(reply);

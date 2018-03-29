@@ -46,7 +46,7 @@ GetClusterCredentialsResponse::GetClusterCredentialsResponse(
         const GetClusterCredentialsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new GetClusterCredentialsResponsePrivate(this), parent)
+    : GetClusterCredentialsResponse(new GetClusterCredentialsResponsePrivate(this), parent)
 {
     setRequest(new GetClusterCredentialsRequest(request));
     setReply(reply);

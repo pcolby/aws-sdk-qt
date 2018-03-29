@@ -46,7 +46,7 @@ DescribeResourceResponse::DescribeResourceResponse(
         const DescribeResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkMailResponse(new DescribeResourceResponsePrivate(this), parent)
+    : DescribeResourceResponse(new DescribeResourceResponsePrivate(this), parent)
 {
     setRequest(new DescribeResourceRequest(request));
     setReply(reply);

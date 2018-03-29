@@ -46,7 +46,7 @@ ListResourceComplianceSummariesResponse::ListResourceComplianceSummariesResponse
         const ListResourceComplianceSummariesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new ListResourceComplianceSummariesResponsePrivate(this), parent)
+    : ListResourceComplianceSummariesResponse(new ListResourceComplianceSummariesResponsePrivate(this), parent)
 {
     setRequest(new ListResourceComplianceSummariesRequest(request));
     setReply(reply);

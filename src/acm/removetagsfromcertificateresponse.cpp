@@ -46,7 +46,7 @@ RemoveTagsFromCertificateResponse::RemoveTagsFromCertificateResponse(
         const RemoveTagsFromCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMResponse(new RemoveTagsFromCertificateResponsePrivate(this), parent)
+    : RemoveTagsFromCertificateResponse(new RemoveTagsFromCertificateResponsePrivate(this), parent)
 {
     setRequest(new RemoveTagsFromCertificateRequest(request));
     setReply(reply);

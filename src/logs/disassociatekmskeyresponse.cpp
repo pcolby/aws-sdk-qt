@@ -46,7 +46,7 @@ DisassociateKmsKeyResponse::DisassociateKmsKeyResponse(
         const DisassociateKmsKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchLogsResponse(new DisassociateKmsKeyResponsePrivate(this), parent)
+    : DisassociateKmsKeyResponse(new DisassociateKmsKeyResponsePrivate(this), parent)
 {
     setRequest(new DisassociateKmsKeyRequest(request));
     setReply(reply);

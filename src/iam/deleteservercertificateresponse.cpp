@@ -46,7 +46,7 @@ DeleteServerCertificateResponse::DeleteServerCertificateResponse(
         const DeleteServerCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteServerCertificateResponsePrivate(this), parent)
+    : DeleteServerCertificateResponse(new DeleteServerCertificateResponsePrivate(this), parent)
 {
     setRequest(new DeleteServerCertificateRequest(request));
     setReply(reply);

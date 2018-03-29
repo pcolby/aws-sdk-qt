@@ -46,7 +46,7 @@ ModifyInstanceFleetResponse::ModifyInstanceFleetResponse(
         const ModifyInstanceFleetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new ModifyInstanceFleetResponsePrivate(this), parent)
+    : ModifyInstanceFleetResponse(new ModifyInstanceFleetResponsePrivate(this), parent)
 {
     setRequest(new ModifyInstanceFleetRequest(request));
     setReply(reply);

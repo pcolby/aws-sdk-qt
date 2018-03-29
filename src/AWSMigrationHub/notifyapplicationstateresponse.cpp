@@ -46,7 +46,7 @@ NotifyApplicationStateResponse::NotifyApplicationStateResponse(
         const NotifyApplicationStateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MigrationHubResponse(new NotifyApplicationStateResponsePrivate(this), parent)
+    : NotifyApplicationStateResponse(new NotifyApplicationStateResponsePrivate(this), parent)
 {
     setRequest(new NotifyApplicationStateRequest(request));
     setReply(reply);

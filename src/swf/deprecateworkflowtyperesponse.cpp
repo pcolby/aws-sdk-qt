@@ -46,7 +46,7 @@ DeprecateWorkflowTypeResponse::DeprecateWorkflowTypeResponse(
         const DeprecateWorkflowTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new DeprecateWorkflowTypeResponsePrivate(this), parent)
+    : DeprecateWorkflowTypeResponse(new DeprecateWorkflowTypeResponsePrivate(this), parent)
 {
     setRequest(new DeprecateWorkflowTypeRequest(request));
     setReply(reply);

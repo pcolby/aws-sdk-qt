@@ -46,7 +46,7 @@ SubscribeToEventResponse::SubscribeToEventResponse(
         const SubscribeToEventRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new SubscribeToEventResponsePrivate(this), parent)
+    : SubscribeToEventResponse(new SubscribeToEventResponsePrivate(this), parent)
 {
     setRequest(new SubscribeToEventRequest(request));
     setReply(reply);

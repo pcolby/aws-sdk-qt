@@ -46,7 +46,7 @@ DeleteAssociationResponse::DeleteAssociationResponse(
         const DeleteAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeleteAssociationResponsePrivate(this), parent)
+    : DeleteAssociationResponse(new DeleteAssociationResponsePrivate(this), parent)
 {
     setRequest(new DeleteAssociationRequest(request));
     setReply(reply);

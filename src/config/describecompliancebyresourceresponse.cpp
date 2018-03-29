@@ -46,7 +46,7 @@ DescribeComplianceByResourceResponse::DescribeComplianceByResourceResponse(
         const DescribeComplianceByResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfigServiceResponse(new DescribeComplianceByResourceResponsePrivate(this), parent)
+    : DescribeComplianceByResourceResponse(new DescribeComplianceByResourceResponsePrivate(this), parent)
 {
     setRequest(new DescribeComplianceByResourceRequest(request));
     setReply(reply);

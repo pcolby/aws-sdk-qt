@@ -46,7 +46,7 @@ CreateHealthCheckResponse::CreateHealthCheckResponse(
         const CreateHealthCheckRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new CreateHealthCheckResponsePrivate(this), parent)
+    : CreateHealthCheckResponse(new CreateHealthCheckResponsePrivate(this), parent)
 {
     setRequest(new CreateHealthCheckRequest(request));
     setReply(reply);

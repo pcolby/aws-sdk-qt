@@ -46,7 +46,7 @@ GetLoggingOptionsResponse::GetLoggingOptionsResponse(
         const GetLoggingOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new GetLoggingOptionsResponsePrivate(this), parent)
+    : GetLoggingOptionsResponse(new GetLoggingOptionsResponsePrivate(this), parent)
 {
     setRequest(new GetLoggingOptionsRequest(request));
     setReply(reply);

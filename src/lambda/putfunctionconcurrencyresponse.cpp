@@ -46,7 +46,7 @@ PutFunctionConcurrencyResponse::PutFunctionConcurrencyResponse(
         const PutFunctionConcurrencyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LambdaResponse(new PutFunctionConcurrencyResponsePrivate(this), parent)
+    : PutFunctionConcurrencyResponse(new PutFunctionConcurrencyResponsePrivate(this), parent)
 {
     setRequest(new PutFunctionConcurrencyRequest(request));
     setReply(reply);

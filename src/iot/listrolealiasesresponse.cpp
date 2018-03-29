@@ -46,7 +46,7 @@ ListRoleAliasesResponse::ListRoleAliasesResponse(
         const ListRoleAliasesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new ListRoleAliasesResponsePrivate(this), parent)
+    : ListRoleAliasesResponse(new ListRoleAliasesResponsePrivate(this), parent)
 {
     setRequest(new ListRoleAliasesRequest(request));
     setReply(reply);

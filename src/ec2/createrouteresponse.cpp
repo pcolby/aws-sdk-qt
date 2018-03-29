@@ -46,7 +46,7 @@ CreateRouteResponse::CreateRouteResponse(
         const CreateRouteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateRouteResponsePrivate(this), parent)
+    : CreateRouteResponse(new CreateRouteResponsePrivate(this), parent)
 {
     setRequest(new CreateRouteRequest(request));
     setReply(reply);

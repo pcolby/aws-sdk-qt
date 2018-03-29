@@ -46,7 +46,7 @@ DeleteSubscriptionResponse::DeleteSubscriptionResponse(
         const DeleteSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ShieldResponse(new DeleteSubscriptionResponsePrivate(this), parent)
+    : DeleteSubscriptionResponse(new DeleteSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new DeleteSubscriptionRequest(request));
     setReply(reply);

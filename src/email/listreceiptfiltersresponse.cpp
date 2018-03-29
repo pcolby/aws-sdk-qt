@@ -46,7 +46,7 @@ ListReceiptFiltersResponse::ListReceiptFiltersResponse(
         const ListReceiptFiltersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new ListReceiptFiltersResponsePrivate(this), parent)
+    : ListReceiptFiltersResponse(new ListReceiptFiltersResponsePrivate(this), parent)
 {
     setRequest(new ListReceiptFiltersRequest(request));
     setReply(reply);

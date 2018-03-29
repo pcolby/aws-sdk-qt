@@ -46,7 +46,7 @@ ViewBillingResponse::ViewBillingResponse(
         const ViewBillingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53DomainsResponse(new ViewBillingResponsePrivate(this), parent)
+    : ViewBillingResponse(new ViewBillingResponsePrivate(this), parent)
 {
     setRequest(new ViewBillingRequest(request));
     setReply(reply);

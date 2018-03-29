@@ -46,7 +46,7 @@ ValidateMatchmakingRuleSetResponse::ValidateMatchmakingRuleSetResponse(
         const ValidateMatchmakingRuleSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new ValidateMatchmakingRuleSetResponsePrivate(this), parent)
+    : ValidateMatchmakingRuleSetResponse(new ValidateMatchmakingRuleSetResponsePrivate(this), parent)
 {
     setRequest(new ValidateMatchmakingRuleSetRequest(request));
     setReply(reply);

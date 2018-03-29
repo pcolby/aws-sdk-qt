@@ -46,7 +46,7 @@ DeleteDirectoryConfigResponse::DeleteDirectoryConfigResponse(
         const DeleteDirectoryConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppStreamResponse(new DeleteDirectoryConfigResponsePrivate(this), parent)
+    : DeleteDirectoryConfigResponse(new DeleteDirectoryConfigResponsePrivate(this), parent)
 {
     setRequest(new DeleteDirectoryConfigRequest(request));
     setReply(reply);

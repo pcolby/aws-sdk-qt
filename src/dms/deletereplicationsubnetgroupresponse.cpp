@@ -46,7 +46,7 @@ DeleteReplicationSubnetGroupResponse::DeleteReplicationSubnetGroupResponse(
         const DeleteReplicationSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DeleteReplicationSubnetGroupResponsePrivate(this), parent)
+    : DeleteReplicationSubnetGroupResponse(new DeleteReplicationSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteReplicationSubnetGroupRequest(request));
     setReply(reply);

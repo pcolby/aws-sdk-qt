@@ -46,7 +46,7 @@ PurchaseHostReservationResponse::PurchaseHostReservationResponse(
         const PurchaseHostReservationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new PurchaseHostReservationResponsePrivate(this), parent)
+    : PurchaseHostReservationResponse(new PurchaseHostReservationResponsePrivate(this), parent)
 {
     setRequest(new PurchaseHostReservationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteSqlInjectionMatchSetResponse::DeleteSqlInjectionMatchSetResponse(
         const DeleteSqlInjectionMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeleteSqlInjectionMatchSetResponsePrivate(this), parent)
+    : DeleteSqlInjectionMatchSetResponse(new DeleteSqlInjectionMatchSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteSqlInjectionMatchSetRequest(request));
     setReply(reply);

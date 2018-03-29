@@ -46,7 +46,7 @@ DescribeEventAggregatesResponse::DescribeEventAggregatesResponse(
         const DescribeEventAggregatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : HealthResponse(new DescribeEventAggregatesResponsePrivate(this), parent)
+    : DescribeEventAggregatesResponse(new DescribeEventAggregatesResponsePrivate(this), parent)
 {
     setRequest(new DescribeEventAggregatesRequest(request));
     setReply(reply);

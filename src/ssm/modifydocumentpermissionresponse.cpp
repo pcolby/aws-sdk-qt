@@ -46,7 +46,7 @@ ModifyDocumentPermissionResponse::ModifyDocumentPermissionResponse(
         const ModifyDocumentPermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new ModifyDocumentPermissionResponsePrivate(this), parent)
+    : ModifyDocumentPermissionResponse(new ModifyDocumentPermissionResponsePrivate(this), parent)
 {
     setRequest(new ModifyDocumentPermissionRequest(request));
     setReply(reply);

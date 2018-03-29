@@ -46,7 +46,7 @@ GetUsageResponse::GetUsageResponse(
         const GetUsageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetUsageResponsePrivate(this), parent)
+    : GetUsageResponse(new GetUsageResponsePrivate(this), parent)
 {
     setRequest(new GetUsageRequest(request));
     setReply(reply);

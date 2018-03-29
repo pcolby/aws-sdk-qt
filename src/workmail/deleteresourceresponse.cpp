@@ -46,7 +46,7 @@ DeleteResourceResponse::DeleteResourceResponse(
         const DeleteResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkMailResponse(new DeleteResourceResponsePrivate(this), parent)
+    : DeleteResourceResponse(new DeleteResourceResponsePrivate(this), parent)
 {
     setRequest(new DeleteResourceRequest(request));
     setReply(reply);

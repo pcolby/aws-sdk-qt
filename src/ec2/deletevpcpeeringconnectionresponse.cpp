@@ -46,7 +46,7 @@ DeleteVpcPeeringConnectionResponse::DeleteVpcPeeringConnectionResponse(
         const DeleteVpcPeeringConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteVpcPeeringConnectionResponsePrivate(this), parent)
+    : DeleteVpcPeeringConnectionResponse(new DeleteVpcPeeringConnectionResponsePrivate(this), parent)
 {
     setRequest(new DeleteVpcPeeringConnectionRequest(request));
     setReply(reply);

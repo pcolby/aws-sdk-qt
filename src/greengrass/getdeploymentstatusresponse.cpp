@@ -46,7 +46,7 @@ GetDeploymentStatusResponse::GetDeploymentStatusResponse(
         const GetDeploymentStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new GetDeploymentStatusResponsePrivate(this), parent)
+    : GetDeploymentStatusResponse(new GetDeploymentStatusResponsePrivate(this), parent)
 {
     setRequest(new GetDeploymentStatusRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ AssociateSoftwareTokenResponse::AssociateSoftwareTokenResponse(
         const AssociateSoftwareTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new AssociateSoftwareTokenResponsePrivate(this), parent)
+    : AssociateSoftwareTokenResponse(new AssociateSoftwareTokenResponsePrivate(this), parent)
 {
     setRequest(new AssociateSoftwareTokenRequest(request));
     setReply(reply);

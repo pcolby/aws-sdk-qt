@@ -46,7 +46,7 @@ GetResourceResponse::GetResourceResponse(
         const GetResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetResourceResponsePrivate(this), parent)
+    : GetResourceResponse(new GetResourceResponsePrivate(this), parent)
 {
     setRequest(new GetResourceRequest(request));
     setReply(reply);

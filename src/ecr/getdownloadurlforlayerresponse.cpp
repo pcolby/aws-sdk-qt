@@ -46,7 +46,7 @@ GetDownloadUrlForLayerResponse::GetDownloadUrlForLayerResponse(
         const GetDownloadUrlForLayerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new GetDownloadUrlForLayerResponsePrivate(this), parent)
+    : GetDownloadUrlForLayerResponse(new GetDownloadUrlForLayerResponsePrivate(this), parent)
 {
     setRequest(new GetDownloadUrlForLayerRequest(request));
     setReply(reply);

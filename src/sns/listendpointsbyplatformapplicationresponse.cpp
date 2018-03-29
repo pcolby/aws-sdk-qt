@@ -46,7 +46,7 @@ ListEndpointsByPlatformApplicationResponse::ListEndpointsByPlatformApplicationRe
         const ListEndpointsByPlatformApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new ListEndpointsByPlatformApplicationResponsePrivate(this), parent)
+    : ListEndpointsByPlatformApplicationResponse(new ListEndpointsByPlatformApplicationResponsePrivate(this), parent)
 {
     setRequest(new ListEndpointsByPlatformApplicationRequest(request));
     setReply(reply);

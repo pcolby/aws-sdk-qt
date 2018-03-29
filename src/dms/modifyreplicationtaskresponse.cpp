@@ -46,7 +46,7 @@ ModifyReplicationTaskResponse::ModifyReplicationTaskResponse(
         const ModifyReplicationTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new ModifyReplicationTaskResponsePrivate(this), parent)
+    : ModifyReplicationTaskResponse(new ModifyReplicationTaskResponsePrivate(this), parent)
 {
     setRequest(new ModifyReplicationTaskRequest(request));
     setReply(reply);

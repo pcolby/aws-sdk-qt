@@ -46,7 +46,7 @@ CreateMicrosoftADResponse::CreateMicrosoftADResponse(
         const CreateMicrosoftADRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new CreateMicrosoftADResponsePrivate(this), parent)
+    : CreateMicrosoftADResponse(new CreateMicrosoftADResponsePrivate(this), parent)
 {
     setRequest(new CreateMicrosoftADRequest(request));
     setReply(reply);

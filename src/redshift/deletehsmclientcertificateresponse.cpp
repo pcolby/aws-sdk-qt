@@ -46,7 +46,7 @@ DeleteHsmClientCertificateResponse::DeleteHsmClientCertificateResponse(
         const DeleteHsmClientCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DeleteHsmClientCertificateResponsePrivate(this), parent)
+    : DeleteHsmClientCertificateResponse(new DeleteHsmClientCertificateResponsePrivate(this), parent)
 {
     setRequest(new DeleteHsmClientCertificateRequest(request));
     setReply(reply);

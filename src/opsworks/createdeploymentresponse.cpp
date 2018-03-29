@@ -46,7 +46,7 @@ CreateDeploymentResponse::CreateDeploymentResponse(
         const CreateDeploymentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new CreateDeploymentResponsePrivate(this), parent)
+    : CreateDeploymentResponse(new CreateDeploymentResponsePrivate(this), parent)
 {
     setRequest(new CreateDeploymentRequest(request));
     setReply(reply);

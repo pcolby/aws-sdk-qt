@@ -46,7 +46,7 @@ StartImageBuilderResponse::StartImageBuilderResponse(
         const StartImageBuilderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppStreamResponse(new StartImageBuilderResponsePrivate(this), parent)
+    : StartImageBuilderResponse(new StartImageBuilderResponsePrivate(this), parent)
 {
     setRequest(new StartImageBuilderRequest(request));
     setReply(reply);

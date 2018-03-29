@@ -46,7 +46,7 @@ ListTestsResponse::ListTestsResponse(
         const ListTestsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new ListTestsResponsePrivate(this), parent)
+    : ListTestsResponse(new ListTestsResponsePrivate(this), parent)
 {
     setRequest(new ListTestsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetResourceConfigHistoryResponse::GetResourceConfigHistoryResponse(
         const GetResourceConfigHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfigServiceResponse(new GetResourceConfigHistoryResponsePrivate(this), parent)
+    : GetResourceConfigHistoryResponse(new GetResourceConfigHistoryResponsePrivate(this), parent)
 {
     setRequest(new GetResourceConfigHistoryRequest(request));
     setReply(reply);

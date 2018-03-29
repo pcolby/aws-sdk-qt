@@ -46,7 +46,7 @@ ReplaceIamInstanceProfileAssociationResponse::ReplaceIamInstanceProfileAssociati
         const ReplaceIamInstanceProfileAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ReplaceIamInstanceProfileAssociationResponsePrivate(this), parent)
+    : ReplaceIamInstanceProfileAssociationResponse(new ReplaceIamInstanceProfileAssociationResponsePrivate(this), parent)
 {
     setRequest(new ReplaceIamInstanceProfileAssociationRequest(request));
     setReply(reply);

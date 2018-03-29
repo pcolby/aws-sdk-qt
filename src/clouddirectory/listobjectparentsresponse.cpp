@@ -46,7 +46,7 @@ ListObjectParentsResponse::ListObjectParentsResponse(
         const ListObjectParentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new ListObjectParentsResponsePrivate(this), parent)
+    : ListObjectParentsResponse(new ListObjectParentsResponsePrivate(this), parent)
 {
     setRequest(new ListObjectParentsRequest(request));
     setReply(reply);

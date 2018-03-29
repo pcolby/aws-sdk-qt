@@ -46,7 +46,7 @@ CreatePlatformVersionResponse::CreatePlatformVersionResponse(
         const CreatePlatformVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new CreatePlatformVersionResponsePrivate(this), parent)
+    : CreatePlatformVersionResponse(new CreatePlatformVersionResponsePrivate(this), parent)
 {
     setRequest(new CreatePlatformVersionRequest(request));
     setReply(reply);

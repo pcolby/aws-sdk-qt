@@ -46,7 +46,7 @@ GetCurrentUserResponse::GetCurrentUserResponse(
         const GetCurrentUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkDocsResponse(new GetCurrentUserResponsePrivate(this), parent)
+    : GetCurrentUserResponse(new GetCurrentUserResponsePrivate(this), parent)
 {
     setRequest(new GetCurrentUserRequest(request));
     setReply(reply);

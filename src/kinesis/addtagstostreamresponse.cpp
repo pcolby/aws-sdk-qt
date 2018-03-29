@@ -46,7 +46,7 @@ AddTagsToStreamResponse::AddTagsToStreamResponse(
         const AddTagsToStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisResponse(new AddTagsToStreamResponsePrivate(this), parent)
+    : AddTagsToStreamResponse(new AddTagsToStreamResponsePrivate(this), parent)
 {
     setRequest(new AddTagsToStreamRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ TerminateInstanceInAutoScalingGroupResponse::TerminateInstanceInAutoScalingGroup
         const TerminateInstanceInAutoScalingGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new TerminateInstanceInAutoScalingGroupResponsePrivate(this), parent)
+    : TerminateInstanceInAutoScalingGroupResponse(new TerminateInstanceInAutoScalingGroupResponsePrivate(this), parent)
 {
     setRequest(new TerminateInstanceInAutoScalingGroupRequest(request));
     setReply(reply);

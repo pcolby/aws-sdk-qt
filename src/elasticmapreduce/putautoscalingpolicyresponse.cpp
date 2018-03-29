@@ -46,7 +46,7 @@ PutAutoScalingPolicyResponse::PutAutoScalingPolicyResponse(
         const PutAutoScalingPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new PutAutoScalingPolicyResponsePrivate(this), parent)
+    : PutAutoScalingPolicyResponse(new PutAutoScalingPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutAutoScalingPolicyRequest(request));
     setReply(reply);

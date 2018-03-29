@@ -46,7 +46,7 @@ GetSampledRequestsResponse::GetSampledRequestsResponse(
         const GetSampledRequestsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetSampledRequestsResponsePrivate(this), parent)
+    : GetSampledRequestsResponse(new GetSampledRequestsResponsePrivate(this), parent)
 {
     setRequest(new GetSampledRequestsRequest(request));
     setReply(reply);

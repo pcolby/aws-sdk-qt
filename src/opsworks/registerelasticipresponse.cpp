@@ -46,7 +46,7 @@ RegisterElasticIpResponse::RegisterElasticIpResponse(
         const RegisterElasticIpRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new RegisterElasticIpResponsePrivate(this), parent)
+    : RegisterElasticIpResponse(new RegisterElasticIpResponsePrivate(this), parent)
 {
     setRequest(new RegisterElasticIpRequest(request));
     setReply(reply);

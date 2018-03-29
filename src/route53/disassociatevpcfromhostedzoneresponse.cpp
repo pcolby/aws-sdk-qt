@@ -46,7 +46,7 @@ DisassociateVPCFromHostedZoneResponse::DisassociateVPCFromHostedZoneResponse(
         const DisassociateVPCFromHostedZoneRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new DisassociateVPCFromHostedZoneResponsePrivate(this), parent)
+    : DisassociateVPCFromHostedZoneResponse(new DisassociateVPCFromHostedZoneResponsePrivate(this), parent)
 {
     setRequest(new DisassociateVPCFromHostedZoneRequest(request));
     setReply(reply);

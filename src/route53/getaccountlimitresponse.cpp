@@ -46,7 +46,7 @@ GetAccountLimitResponse::GetAccountLimitResponse(
         const GetAccountLimitRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new GetAccountLimitResponsePrivate(this), parent)
+    : GetAccountLimitResponse(new GetAccountLimitResponsePrivate(this), parent)
 {
     setRequest(new GetAccountLimitRequest(request));
     setReply(reply);

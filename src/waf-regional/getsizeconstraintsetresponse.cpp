@@ -46,7 +46,7 @@ GetSizeConstraintSetResponse::GetSizeConstraintSetResponse(
         const GetSizeConstraintSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetSizeConstraintSetResponsePrivate(this), parent)
+    : GetSizeConstraintSetResponse(new GetSizeConstraintSetResponsePrivate(this), parent)
 {
     setRequest(new GetSizeConstraintSetRequest(request));
     setReply(reply);

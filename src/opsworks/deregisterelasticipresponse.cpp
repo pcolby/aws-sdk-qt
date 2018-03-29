@@ -46,7 +46,7 @@ DeregisterElasticIpResponse::DeregisterElasticIpResponse(
         const DeregisterElasticIpRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DeregisterElasticIpResponsePrivate(this), parent)
+    : DeregisterElasticIpResponse(new DeregisterElasticIpResponsePrivate(this), parent)
 {
     setRequest(new DeregisterElasticIpRequest(request));
     setReply(reply);

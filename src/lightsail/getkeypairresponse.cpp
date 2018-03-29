@@ -46,7 +46,7 @@ GetKeyPairResponse::GetKeyPairResponse(
         const GetKeyPairRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new GetKeyPairResponsePrivate(this), parent)
+    : GetKeyPairResponse(new GetKeyPairResponsePrivate(this), parent)
 {
     setRequest(new GetKeyPairRequest(request));
     setReply(reply);

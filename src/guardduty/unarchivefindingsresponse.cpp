@@ -46,7 +46,7 @@ UnarchiveFindingsResponse::UnarchiveFindingsResponse(
         const UnarchiveFindingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GuardDutyResponse(new UnarchiveFindingsResponsePrivate(this), parent)
+    : UnarchiveFindingsResponse(new UnarchiveFindingsResponsePrivate(this), parent)
 {
     setRequest(new UnarchiveFindingsRequest(request));
     setReply(reply);

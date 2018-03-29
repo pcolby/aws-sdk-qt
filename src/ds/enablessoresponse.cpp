@@ -46,7 +46,7 @@ EnableSsoResponse::EnableSsoResponse(
         const EnableSsoRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new EnableSsoResponsePrivate(this), parent)
+    : EnableSsoResponse(new EnableSsoResponsePrivate(this), parent)
 {
     setRequest(new EnableSsoRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ AcknowledgeThirdPartyJobResponse::AcknowledgeThirdPartyJobResponse(
         const AcknowledgeThirdPartyJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodePipelineResponse(new AcknowledgeThirdPartyJobResponsePrivate(this), parent)
+    : AcknowledgeThirdPartyJobResponse(new AcknowledgeThirdPartyJobResponsePrivate(this), parent)
 {
     setRequest(new AcknowledgeThirdPartyJobRequest(request));
     setReply(reply);

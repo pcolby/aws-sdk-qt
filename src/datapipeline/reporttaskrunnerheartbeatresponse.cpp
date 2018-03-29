@@ -46,7 +46,7 @@ ReportTaskRunnerHeartbeatResponse::ReportTaskRunnerHeartbeatResponse(
         const ReportTaskRunnerHeartbeatRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DataPipelineResponse(new ReportTaskRunnerHeartbeatResponsePrivate(this), parent)
+    : ReportTaskRunnerHeartbeatResponse(new ReportTaskRunnerHeartbeatResponsePrivate(this), parent)
 {
     setRequest(new ReportTaskRunnerHeartbeatRequest(request));
     setReply(reply);

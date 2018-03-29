@@ -46,7 +46,7 @@ DescribeClusterSecurityGroupsResponse::DescribeClusterSecurityGroupsResponse(
         const DescribeClusterSecurityGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DescribeClusterSecurityGroupsResponsePrivate(this), parent)
+    : DescribeClusterSecurityGroupsResponse(new DescribeClusterSecurityGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeClusterSecurityGroupsRequest(request));
     setReply(reply);

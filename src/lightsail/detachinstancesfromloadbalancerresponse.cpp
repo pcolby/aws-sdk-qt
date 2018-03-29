@@ -46,7 +46,7 @@ DetachInstancesFromLoadBalancerResponse::DetachInstancesFromLoadBalancerResponse
         const DetachInstancesFromLoadBalancerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new DetachInstancesFromLoadBalancerResponsePrivate(this), parent)
+    : DetachInstancesFromLoadBalancerResponse(new DetachInstancesFromLoadBalancerResponsePrivate(this), parent)
 {
     setRequest(new DetachInstancesFromLoadBalancerRequest(request));
     setReply(reply);

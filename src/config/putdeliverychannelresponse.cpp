@@ -46,7 +46,7 @@ PutDeliveryChannelResponse::PutDeliveryChannelResponse(
         const PutDeliveryChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfigServiceResponse(new PutDeliveryChannelResponsePrivate(this), parent)
+    : PutDeliveryChannelResponse(new PutDeliveryChannelResponsePrivate(this), parent)
 {
     setRequest(new PutDeliveryChannelRequest(request));
     setReply(reply);

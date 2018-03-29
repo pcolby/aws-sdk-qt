@@ -46,7 +46,7 @@ DeleteVirtualInterfaceResponse::DeleteVirtualInterfaceResponse(
         const DeleteVirtualInterfaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectConnectResponse(new DeleteVirtualInterfaceResponsePrivate(this), parent)
+    : DeleteVirtualInterfaceResponse(new DeleteVirtualInterfaceResponsePrivate(this), parent)
 {
     setRequest(new DeleteVirtualInterfaceRequest(request));
     setReply(reply);

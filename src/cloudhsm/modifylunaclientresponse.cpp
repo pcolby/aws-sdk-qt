@@ -46,7 +46,7 @@ ModifyLunaClientResponse::ModifyLunaClientResponse(
         const ModifyLunaClientRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMResponse(new ModifyLunaClientResponsePrivate(this), parent)
+    : ModifyLunaClientResponse(new ModifyLunaClientResponsePrivate(this), parent)
 {
     setRequest(new ModifyLunaClientRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetHealthCheckLastFailureReasonResponse::GetHealthCheckLastFailureReasonResponse
         const GetHealthCheckLastFailureReasonRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new GetHealthCheckLastFailureReasonResponsePrivate(this), parent)
+    : GetHealthCheckLastFailureReasonResponse(new GetHealthCheckLastFailureReasonResponsePrivate(this), parent)
 {
     setRequest(new GetHealthCheckLastFailureReasonRequest(request));
     setReply(reply);

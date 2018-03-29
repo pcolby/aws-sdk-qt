@@ -46,7 +46,7 @@ ListOperationsResponse::ListOperationsResponse(
         const ListOperationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53DomainsResponse(new ListOperationsResponsePrivate(this), parent)
+    : ListOperationsResponse(new ListOperationsResponsePrivate(this), parent)
 {
     setRequest(new ListOperationsRequest(request));
     setReply(reply);

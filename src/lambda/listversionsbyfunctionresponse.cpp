@@ -46,7 +46,7 @@ ListVersionsByFunctionResponse::ListVersionsByFunctionResponse(
         const ListVersionsByFunctionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LambdaResponse(new ListVersionsByFunctionResponsePrivate(this), parent)
+    : ListVersionsByFunctionResponse(new ListVersionsByFunctionResponsePrivate(this), parent)
 {
     setRequest(new ListVersionsByFunctionRequest(request));
     setReply(reply);

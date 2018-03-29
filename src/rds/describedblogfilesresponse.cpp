@@ -46,7 +46,7 @@ DescribeDBLogFilesResponse::DescribeDBLogFilesResponse(
         const DescribeDBLogFilesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeDBLogFilesResponsePrivate(this), parent)
+    : DescribeDBLogFilesResponse(new DescribeDBLogFilesResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBLogFilesRequest(request));
     setReply(reply);

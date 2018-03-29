@@ -46,7 +46,7 @@ UpdateProvisionedProductResponse::UpdateProvisionedProductResponse(
         const UpdateProvisionedProductRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new UpdateProvisionedProductResponsePrivate(this), parent)
+    : UpdateProvisionedProductResponse(new UpdateProvisionedProductResponsePrivate(this), parent)
 {
     setRequest(new UpdateProvisionedProductRequest(request));
     setReply(reply);

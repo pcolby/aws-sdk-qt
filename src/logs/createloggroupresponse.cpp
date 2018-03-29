@@ -46,7 +46,7 @@ CreateLogGroupResponse::CreateLogGroupResponse(
         const CreateLogGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchLogsResponse(new CreateLogGroupResponsePrivate(this), parent)
+    : CreateLogGroupResponse(new CreateLogGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateLogGroupRequest(request));
     setReply(reply);

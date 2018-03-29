@@ -46,7 +46,7 @@ DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
         const DescribeAccountAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeAccountAttributesResponsePrivate(this), parent)
+    : DescribeAccountAttributesResponse(new DescribeAccountAttributesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAccountAttributesRequest(request));
     setReply(reply);

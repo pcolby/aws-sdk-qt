@@ -46,7 +46,7 @@ DescribeFleetEventsResponse::DescribeFleetEventsResponse(
         const DescribeFleetEventsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new DescribeFleetEventsResponsePrivate(this), parent)
+    : DescribeFleetEventsResponse(new DescribeFleetEventsResponsePrivate(this), parent)
 {
     setRequest(new DescribeFleetEventsRequest(request));
     setReply(reply);

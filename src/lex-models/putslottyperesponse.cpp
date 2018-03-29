@@ -46,7 +46,7 @@ PutSlotTypeResponse::PutSlotTypeResponse(
         const PutSlotTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new PutSlotTypeResponsePrivate(this), parent)
+    : PutSlotTypeResponse(new PutSlotTypeResponsePrivate(this), parent)
 {
     setRequest(new PutSlotTypeRequest(request));
     setReply(reply);

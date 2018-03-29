@@ -46,7 +46,7 @@ DeregisterEcsClusterResponse::DeregisterEcsClusterResponse(
         const DeregisterEcsClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DeregisterEcsClusterResponsePrivate(this), parent)
+    : DeregisterEcsClusterResponse(new DeregisterEcsClusterResponsePrivate(this), parent)
 {
     setRequest(new DeregisterEcsClusterRequest(request));
     setReply(reply);

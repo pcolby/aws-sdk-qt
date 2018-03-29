@@ -46,7 +46,7 @@ ListDiscoveredResourcesResponse::ListDiscoveredResourcesResponse(
         const ListDiscoveredResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfigServiceResponse(new ListDiscoveredResourcesResponsePrivate(this), parent)
+    : ListDiscoveredResourcesResponse(new ListDiscoveredResourcesResponsePrivate(this), parent)
 {
     setRequest(new ListDiscoveredResourcesRequest(request));
     setReply(reply);

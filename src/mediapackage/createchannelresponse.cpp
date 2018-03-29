@@ -46,7 +46,7 @@ CreateChannelResponse::CreateChannelResponse(
         const CreateChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MediaPackageResponse(new CreateChannelResponsePrivate(this), parent)
+    : CreateChannelResponse(new CreateChannelResponsePrivate(this), parent)
 {
     setRequest(new CreateChannelRequest(request));
     setReply(reply);

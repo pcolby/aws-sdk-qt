@@ -46,7 +46,7 @@ DeleteParameterResponse::DeleteParameterResponse(
         const DeleteParameterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeleteParameterResponsePrivate(this), parent)
+    : DeleteParameterResponse(new DeleteParameterResponsePrivate(this), parent)
 {
     setRequest(new DeleteParameterRequest(request));
     setReply(reply);

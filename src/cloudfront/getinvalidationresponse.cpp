@@ -46,7 +46,7 @@ GetInvalidationResponse::GetInvalidationResponse(
         const GetInvalidationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFrontResponse(new GetInvalidationResponsePrivate(this), parent)
+    : GetInvalidationResponse(new GetInvalidationResponsePrivate(this), parent)
 {
     setRequest(new GetInvalidationRequest(request));
     setReply(reply);

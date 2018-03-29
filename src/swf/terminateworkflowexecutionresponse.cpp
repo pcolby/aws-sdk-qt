@@ -46,7 +46,7 @@ TerminateWorkflowExecutionResponse::TerminateWorkflowExecutionResponse(
         const TerminateWorkflowExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new TerminateWorkflowExecutionResponsePrivate(this), parent)
+    : TerminateWorkflowExecutionResponse(new TerminateWorkflowExecutionResponsePrivate(this), parent)
 {
     setRequest(new TerminateWorkflowExecutionRequest(request));
     setReply(reply);

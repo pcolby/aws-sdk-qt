@@ -46,7 +46,7 @@ UpdateSecurityGroupRuleDescriptionsIngressResponse::UpdateSecurityGroupRuleDescr
         const UpdateSecurityGroupRuleDescriptionsIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate(this), parent)
+    : UpdateSecurityGroupRuleDescriptionsIngressResponse(new UpdateSecurityGroupRuleDescriptionsIngressResponsePrivate(this), parent)
 {
     setRequest(new UpdateSecurityGroupRuleDescriptionsIngressRequest(request));
     setReply(reply);

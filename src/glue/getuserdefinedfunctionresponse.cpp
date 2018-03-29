@@ -46,7 +46,7 @@ GetUserDefinedFunctionResponse::GetUserDefinedFunctionResponse(
         const GetUserDefinedFunctionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new GetUserDefinedFunctionResponsePrivate(this), parent)
+    : GetUserDefinedFunctionResponse(new GetUserDefinedFunctionResponsePrivate(this), parent)
 {
     setRequest(new GetUserDefinedFunctionRequest(request));
     setReply(reply);

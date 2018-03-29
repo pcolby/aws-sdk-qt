@@ -46,7 +46,7 @@ ListResourcesResponse::ListResourcesResponse(
         const ListResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkMailResponse(new ListResourcesResponsePrivate(this), parent)
+    : ListResourcesResponse(new ListResourcesResponsePrivate(this), parent)
 {
     setRequest(new ListResourcesRequest(request));
     setReply(reply);

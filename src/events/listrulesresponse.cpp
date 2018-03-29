@@ -46,7 +46,7 @@ ListRulesResponse::ListRulesResponse(
         const ListRulesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchEventsResponse(new ListRulesResponsePrivate(this), parent)
+    : ListRulesResponse(new ListRulesResponsePrivate(this), parent)
 {
     setRequest(new ListRulesRequest(request));
     setReply(reply);

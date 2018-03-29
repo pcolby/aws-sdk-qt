@@ -46,7 +46,7 @@ ListApiKeysResponse::ListApiKeysResponse(
         const ListApiKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppSyncResponse(new ListApiKeysResponsePrivate(this), parent)
+    : ListApiKeysResponse(new ListApiKeysResponsePrivate(this), parent)
 {
     setRequest(new ListApiKeysRequest(request));
     setReply(reply);

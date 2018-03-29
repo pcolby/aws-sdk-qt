@@ -46,7 +46,7 @@ ConfirmForgotPasswordResponse::ConfirmForgotPasswordResponse(
         const ConfirmForgotPasswordRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new ConfirmForgotPasswordResponsePrivate(this), parent)
+    : ConfirmForgotPasswordResponse(new ConfirmForgotPasswordResponsePrivate(this), parent)
 {
     setRequest(new ConfirmForgotPasswordRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteScalingPolicyResponse::DeleteScalingPolicyResponse(
         const DeleteScalingPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new DeleteScalingPolicyResponsePrivate(this), parent)
+    : DeleteScalingPolicyResponse(new DeleteScalingPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteScalingPolicyRequest(request));
     setReply(reply);

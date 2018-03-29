@@ -46,7 +46,7 @@ UpgradePublishedSchemaResponse::UpgradePublishedSchemaResponse(
         const UpgradePublishedSchemaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new UpgradePublishedSchemaResponsePrivate(this), parent)
+    : UpgradePublishedSchemaResponse(new UpgradePublishedSchemaResponsePrivate(this), parent)
 {
     setRequest(new UpgradePublishedSchemaRequest(request));
     setReply(reply);

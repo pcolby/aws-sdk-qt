@@ -46,7 +46,7 @@ RemoveAttributesFromFindingsResponse::RemoveAttributesFromFindingsResponse(
         const RemoveAttributesFromFindingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new RemoveAttributesFromFindingsResponsePrivate(this), parent)
+    : RemoveAttributesFromFindingsResponse(new RemoveAttributesFromFindingsResponsePrivate(this), parent)
 {
     setRequest(new RemoveAttributesFromFindingsRequest(request));
     setReply(reply);

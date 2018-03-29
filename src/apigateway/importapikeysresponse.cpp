@@ -46,7 +46,7 @@ ImportApiKeysResponse::ImportApiKeysResponse(
         const ImportApiKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new ImportApiKeysResponsePrivate(this), parent)
+    : ImportApiKeysResponse(new ImportApiKeysResponsePrivate(this), parent)
 {
     setRequest(new ImportApiKeysRequest(request));
     setReply(reply);

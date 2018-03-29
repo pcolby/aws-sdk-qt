@@ -46,7 +46,7 @@ RegisterEventTopicResponse::RegisterEventTopicResponse(
         const RegisterEventTopicRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new RegisterEventTopicResponsePrivate(this), parent)
+    : RegisterEventTopicResponse(new RegisterEventTopicResponsePrivate(this), parent)
 {
     setRequest(new RegisterEventTopicRequest(request));
     setReply(reply);

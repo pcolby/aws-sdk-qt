@@ -46,7 +46,7 @@ AcceptVpcPeeringConnectionResponse::AcceptVpcPeeringConnectionResponse(
         const AcceptVpcPeeringConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AcceptVpcPeeringConnectionResponsePrivate(this), parent)
+    : AcceptVpcPeeringConnectionResponse(new AcceptVpcPeeringConnectionResponsePrivate(this), parent)
 {
     setRequest(new AcceptVpcPeeringConnectionRequest(request));
     setReply(reply);

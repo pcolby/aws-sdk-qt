@@ -46,7 +46,7 @@ AbortVaultLockResponse::AbortVaultLockResponse(
         const AbortVaultLockRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new AbortVaultLockResponsePrivate(this), parent)
+    : AbortVaultLockResponse(new AbortVaultLockResponsePrivate(this), parent)
 {
     setRequest(new AbortVaultLockRequest(request));
     setReply(reply);

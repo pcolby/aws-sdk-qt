@@ -46,7 +46,7 @@ SuspendProcessesResponse::SuspendProcessesResponse(
         const SuspendProcessesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new SuspendProcessesResponsePrivate(this), parent)
+    : SuspendProcessesResponse(new SuspendProcessesResponsePrivate(this), parent)
 {
     setRequest(new SuspendProcessesRequest(request));
     setReply(reply);

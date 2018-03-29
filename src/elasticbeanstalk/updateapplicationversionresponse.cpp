@@ -46,7 +46,7 @@ UpdateApplicationVersionResponse::UpdateApplicationVersionResponse(
         const UpdateApplicationVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new UpdateApplicationVersionResponsePrivate(this), parent)
+    : UpdateApplicationVersionResponse(new UpdateApplicationVersionResponsePrivate(this), parent)
 {
     setRequest(new UpdateApplicationVersionRequest(request));
     setReply(reply);

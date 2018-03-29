@@ -46,7 +46,7 @@ GetDeviceDefinitionResponse::GetDeviceDefinitionResponse(
         const GetDeviceDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new GetDeviceDefinitionResponsePrivate(this), parent)
+    : GetDeviceDefinitionResponse(new GetDeviceDefinitionResponsePrivate(this), parent)
 {
     setRequest(new GetDeviceDefinitionRequest(request));
     setReply(reply);

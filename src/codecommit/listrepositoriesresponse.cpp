@@ -46,7 +46,7 @@ ListRepositoriesResponse::ListRepositoriesResponse(
         const ListRepositoriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new ListRepositoriesResponsePrivate(this), parent)
+    : ListRepositoriesResponse(new ListRepositoriesResponsePrivate(this), parent)
 {
     setRequest(new ListRepositoriesRequest(request));
     setReply(reply);

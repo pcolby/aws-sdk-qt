@@ -46,7 +46,7 @@ DescribeActivityTypeResponse::DescribeActivityTypeResponse(
         const DescribeActivityTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new DescribeActivityTypeResponsePrivate(this), parent)
+    : DescribeActivityTypeResponse(new DescribeActivityTypeResponsePrivate(this), parent)
 {
     setRequest(new DescribeActivityTypeRequest(request));
     setReply(reply);

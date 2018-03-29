@@ -46,7 +46,7 @@ UpdateQueueResponse::UpdateQueueResponse(
         const UpdateQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MediaConvertResponse(new UpdateQueueResponsePrivate(this), parent)
+    : UpdateQueueResponse(new UpdateQueueResponsePrivate(this), parent)
 {
     setRequest(new UpdateQueueRequest(request));
     setReply(reply);

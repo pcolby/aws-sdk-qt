@@ -46,7 +46,7 @@ CreateDBSubnetGroupResponse::CreateDBSubnetGroupResponse(
         const CreateDBSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CreateDBSubnetGroupResponsePrivate(this), parent)
+    : CreateDBSubnetGroupResponse(new CreateDBSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateDBSubnetGroupRequest(request));
     setReply(reply);

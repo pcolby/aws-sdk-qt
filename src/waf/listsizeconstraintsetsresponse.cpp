@@ -46,7 +46,7 @@ ListSizeConstraintSetsResponse::ListSizeConstraintSetsResponse(
         const ListSizeConstraintSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListSizeConstraintSetsResponsePrivate(this), parent)
+    : ListSizeConstraintSetsResponse(new ListSizeConstraintSetsResponsePrivate(this), parent)
 {
     setRequest(new ListSizeConstraintSetsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ PurgeQueueResponse::PurgeQueueResponse(
         const PurgeQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new PurgeQueueResponsePrivate(this), parent)
+    : PurgeQueueResponse(new PurgeQueueResponsePrivate(this), parent)
 {
     setRequest(new PurgeQueueRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetTypedLinkFacetInformationResponse::GetTypedLinkFacetInformationResponse(
         const GetTypedLinkFacetInformationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new GetTypedLinkFacetInformationResponsePrivate(this), parent)
+    : GetTypedLinkFacetInformationResponse(new GetTypedLinkFacetInformationResponsePrivate(this), parent)
 {
     setRequest(new GetTypedLinkFacetInformationRequest(request));
     setReply(reply);

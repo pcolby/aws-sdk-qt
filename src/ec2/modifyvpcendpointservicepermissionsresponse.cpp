@@ -46,7 +46,7 @@ ModifyVpcEndpointServicePermissionsResponse::ModifyVpcEndpointServicePermissions
         const ModifyVpcEndpointServicePermissionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyVpcEndpointServicePermissionsResponsePrivate(this), parent)
+    : ModifyVpcEndpointServicePermissionsResponse(new ModifyVpcEndpointServicePermissionsResponsePrivate(this), parent)
 {
     setRequest(new ModifyVpcEndpointServicePermissionsRequest(request));
     setReply(reply);

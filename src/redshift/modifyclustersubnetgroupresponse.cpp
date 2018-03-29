@@ -46,7 +46,7 @@ ModifyClusterSubnetGroupResponse::ModifyClusterSubnetGroupResponse(
         const ModifyClusterSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new ModifyClusterSubnetGroupResponsePrivate(this), parent)
+    : ModifyClusterSubnetGroupResponse(new ModifyClusterSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new ModifyClusterSubnetGroupRequest(request));
     setReply(reply);

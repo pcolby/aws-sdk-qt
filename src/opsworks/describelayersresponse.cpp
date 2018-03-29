@@ -46,7 +46,7 @@ DescribeLayersResponse::DescribeLayersResponse(
         const DescribeLayersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DescribeLayersResponsePrivate(this), parent)
+    : DescribeLayersResponse(new DescribeLayersResponsePrivate(this), parent)
 {
     setRequest(new DescribeLayersRequest(request));
     setReply(reply);

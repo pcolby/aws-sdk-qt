@@ -46,7 +46,7 @@ RemoveTagsResponse::RemoveTagsResponse(
         const RemoveTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new RemoveTagsResponsePrivate(this), parent)
+    : RemoveTagsResponse(new RemoveTagsResponsePrivate(this), parent)
 {
     setRequest(new RemoveTagsRequest(request));
     setReply(reply);

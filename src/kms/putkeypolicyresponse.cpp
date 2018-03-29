@@ -46,7 +46,7 @@ PutKeyPolicyResponse::PutKeyPolicyResponse(
         const PutKeyPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new PutKeyPolicyResponsePrivate(this), parent)
+    : PutKeyPolicyResponse(new PutKeyPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutKeyPolicyRequest(request));
     setReply(reply);

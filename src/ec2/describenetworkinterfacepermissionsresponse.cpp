@@ -46,7 +46,7 @@ DescribeNetworkInterfacePermissionsResponse::DescribeNetworkInterfacePermissions
         const DescribeNetworkInterfacePermissionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeNetworkInterfacePermissionsResponsePrivate(this), parent)
+    : DescribeNetworkInterfacePermissionsResponse(new DescribeNetworkInterfacePermissionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeNetworkInterfacePermissionsRequest(request));
     setReply(reply);

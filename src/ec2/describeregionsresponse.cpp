@@ -46,7 +46,7 @@ DescribeRegionsResponse::DescribeRegionsResponse(
         const DescribeRegionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeRegionsResponsePrivate(this), parent)
+    : DescribeRegionsResponse(new DescribeRegionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeRegionsRequest(request));
     setReply(reply);

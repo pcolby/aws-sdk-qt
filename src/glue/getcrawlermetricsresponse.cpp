@@ -46,7 +46,7 @@ GetCrawlerMetricsResponse::GetCrawlerMetricsResponse(
         const GetCrawlerMetricsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new GetCrawlerMetricsResponsePrivate(this), parent)
+    : GetCrawlerMetricsResponse(new GetCrawlerMetricsResponsePrivate(this), parent)
 {
     setRequest(new GetCrawlerMetricsRequest(request));
     setReply(reply);

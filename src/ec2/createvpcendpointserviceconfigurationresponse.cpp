@@ -46,7 +46,7 @@ CreateVpcEndpointServiceConfigurationResponse::CreateVpcEndpointServiceConfigura
         const CreateVpcEndpointServiceConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateVpcEndpointServiceConfigurationResponsePrivate(this), parent)
+    : CreateVpcEndpointServiceConfigurationResponse(new CreateVpcEndpointServiceConfigurationResponsePrivate(this), parent)
 {
     setRequest(new CreateVpcEndpointServiceConfigurationRequest(request));
     setReply(reply);

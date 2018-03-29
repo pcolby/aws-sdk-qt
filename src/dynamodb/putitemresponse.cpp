@@ -46,7 +46,7 @@ PutItemResponse::PutItemResponse(
         const PutItemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new PutItemResponsePrivate(this), parent)
+    : PutItemResponse(new PutItemResponsePrivate(this), parent)
 {
     setRequest(new PutItemRequest(request));
     setReply(reply);

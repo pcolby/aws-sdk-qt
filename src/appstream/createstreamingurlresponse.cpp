@@ -46,7 +46,7 @@ CreateStreamingURLResponse::CreateStreamingURLResponse(
         const CreateStreamingURLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppStreamResponse(new CreateStreamingURLResponsePrivate(this), parent)
+    : CreateStreamingURLResponse(new CreateStreamingURLResponsePrivate(this), parent)
 {
     setRequest(new CreateStreamingURLRequest(request));
     setReply(reply);

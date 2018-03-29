@@ -46,7 +46,7 @@ UpdateDocumentDefaultVersionResponse::UpdateDocumentDefaultVersionResponse(
         const UpdateDocumentDefaultVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new UpdateDocumentDefaultVersionResponsePrivate(this), parent)
+    : UpdateDocumentDefaultVersionResponse(new UpdateDocumentDefaultVersionResponsePrivate(this), parent)
 {
     setRequest(new UpdateDocumentDefaultVersionRequest(request));
     setReply(reply);

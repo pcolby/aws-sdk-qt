@@ -46,7 +46,7 @@ AssociateRoleToGroupResponse::AssociateRoleToGroupResponse(
         const AssociateRoleToGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new AssociateRoleToGroupResponsePrivate(this), parent)
+    : AssociateRoleToGroupResponse(new AssociateRoleToGroupResponsePrivate(this), parent)
 {
     setRequest(new AssociateRoleToGroupRequest(request));
     setReply(reply);

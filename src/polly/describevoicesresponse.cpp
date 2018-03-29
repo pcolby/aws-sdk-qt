@@ -46,7 +46,7 @@ DescribeVoicesResponse::DescribeVoicesResponse(
         const DescribeVoicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PollyResponse(new DescribeVoicesResponsePrivate(this), parent)
+    : DescribeVoicesResponse(new DescribeVoicesResponsePrivate(this), parent)
 {
     setRequest(new DescribeVoicesRequest(request));
     setReply(reply);

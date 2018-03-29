@@ -46,7 +46,7 @@ RestoreDBInstanceToPointInTimeResponse::RestoreDBInstanceToPointInTimeResponse(
         const RestoreDBInstanceToPointInTimeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RestoreDBInstanceToPointInTimeResponsePrivate(this), parent)
+    : RestoreDBInstanceToPointInTimeResponse(new RestoreDBInstanceToPointInTimeResponsePrivate(this), parent)
 {
     setRequest(new RestoreDBInstanceToPointInTimeRequest(request));
     setReply(reply);

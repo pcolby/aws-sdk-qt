@@ -46,7 +46,7 @@ DeleteSegmentResponse::DeleteSegmentResponse(
         const DeleteSegmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new DeleteSegmentResponsePrivate(this), parent)
+    : DeleteSegmentResponse(new DeleteSegmentResponsePrivate(this), parent)
 {
     setRequest(new DeleteSegmentRequest(request));
     setReply(reply);

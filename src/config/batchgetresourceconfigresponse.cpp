@@ -46,7 +46,7 @@ BatchGetResourceConfigResponse::BatchGetResourceConfigResponse(
         const BatchGetResourceConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfigServiceResponse(new BatchGetResourceConfigResponsePrivate(this), parent)
+    : BatchGetResourceConfigResponse(new BatchGetResourceConfigResponsePrivate(this), parent)
 {
     setRequest(new BatchGetResourceConfigRequest(request));
     setReply(reply);

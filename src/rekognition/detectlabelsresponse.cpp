@@ -46,7 +46,7 @@ DetectLabelsResponse::DetectLabelsResponse(
         const DetectLabelsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RekognitionResponse(new DetectLabelsResponsePrivate(this), parent)
+    : DetectLabelsResponse(new DetectLabelsResponsePrivate(this), parent)
 {
     setRequest(new DetectLabelsRequest(request));
     setReply(reply);

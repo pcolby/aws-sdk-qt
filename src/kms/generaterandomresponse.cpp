@@ -46,7 +46,7 @@ GenerateRandomResponse::GenerateRandomResponse(
         const GenerateRandomRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new GenerateRandomResponsePrivate(this), parent)
+    : GenerateRandomResponse(new GenerateRandomResponsePrivate(this), parent)
 {
     setRequest(new GenerateRandomRequest(request));
     setReply(reply);

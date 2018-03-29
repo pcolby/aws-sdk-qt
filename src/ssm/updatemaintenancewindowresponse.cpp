@@ -46,7 +46,7 @@ UpdateMaintenanceWindowResponse::UpdateMaintenanceWindowResponse(
         const UpdateMaintenanceWindowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new UpdateMaintenanceWindowResponsePrivate(this), parent)
+    : UpdateMaintenanceWindowResponse(new UpdateMaintenanceWindowResponsePrivate(this), parent)
 {
     setRequest(new UpdateMaintenanceWindowRequest(request));
     setReply(reply);

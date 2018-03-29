@@ -46,7 +46,7 @@ GetMethodResponse::GetMethodResponse(
         const GetMethodRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetMethodResponsePrivate(this), parent)
+    : GetMethodResponse(new GetMethodResponsePrivate(this), parent)
 {
     setRequest(new GetMethodRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeWorkspaceDirectoriesResponse::DescribeWorkspaceDirectoriesResponse(
         const DescribeWorkspaceDirectoriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkSpacesResponse(new DescribeWorkspaceDirectoriesResponsePrivate(this), parent)
+    : DescribeWorkspaceDirectoriesResponse(new DescribeWorkspaceDirectoriesResponsePrivate(this), parent)
 {
     setRequest(new DescribeWorkspaceDirectoriesRequest(request));
     setReply(reply);

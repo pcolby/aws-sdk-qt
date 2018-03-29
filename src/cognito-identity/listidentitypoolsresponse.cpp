@@ -46,7 +46,7 @@ ListIdentityPoolsResponse::ListIdentityPoolsResponse(
         const ListIdentityPoolsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityResponse(new ListIdentityPoolsResponsePrivate(this), parent)
+    : ListIdentityPoolsResponse(new ListIdentityPoolsResponsePrivate(this), parent)
 {
     setRequest(new ListIdentityPoolsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetProjectResponse::GetProjectResponse(
         const GetProjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new GetProjectResponsePrivate(this), parent)
+    : GetProjectResponse(new GetProjectResponsePrivate(this), parent)
 {
     setRequest(new GetProjectRequest(request));
     setReply(reply);

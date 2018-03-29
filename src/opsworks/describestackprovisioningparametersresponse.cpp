@@ -46,7 +46,7 @@ DescribeStackProvisioningParametersResponse::DescribeStackProvisioningParameters
         const DescribeStackProvisioningParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DescribeStackProvisioningParametersResponsePrivate(this), parent)
+    : DescribeStackProvisioningParametersResponse(new DescribeStackProvisioningParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeStackProvisioningParametersRequest(request));
     setReply(reply);

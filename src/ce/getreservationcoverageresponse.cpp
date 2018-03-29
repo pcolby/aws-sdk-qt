@@ -46,7 +46,7 @@ GetReservationCoverageResponse::GetReservationCoverageResponse(
         const GetReservationCoverageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CostExplorerResponse(new GetReservationCoverageResponsePrivate(this), parent)
+    : GetReservationCoverageResponse(new GetReservationCoverageResponsePrivate(this), parent)
 {
     setRequest(new GetReservationCoverageRequest(request));
     setReply(reply);

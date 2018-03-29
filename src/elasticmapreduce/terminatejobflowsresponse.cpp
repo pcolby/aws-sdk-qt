@@ -46,7 +46,7 @@ TerminateJobFlowsResponse::TerminateJobFlowsResponse(
         const TerminateJobFlowsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new TerminateJobFlowsResponsePrivate(this), parent)
+    : TerminateJobFlowsResponse(new TerminateJobFlowsResponsePrivate(this), parent)
 {
     setRequest(new TerminateJobFlowsRequest(request));
     setReply(reply);

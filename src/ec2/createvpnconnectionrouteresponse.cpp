@@ -46,7 +46,7 @@ CreateVpnConnectionRouteResponse::CreateVpnConnectionRouteResponse(
         const CreateVpnConnectionRouteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateVpnConnectionRouteResponsePrivate(this), parent)
+    : CreateVpnConnectionRouteResponse(new CreateVpnConnectionRouteResponsePrivate(this), parent)
 {
     setRequest(new CreateVpnConnectionRouteRequest(request));
     setReply(reply);

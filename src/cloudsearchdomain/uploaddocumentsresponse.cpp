@@ -46,7 +46,7 @@ UploadDocumentsResponse::UploadDocumentsResponse(
         const UploadDocumentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudSearchDomainResponse(new UploadDocumentsResponsePrivate(this), parent)
+    : UploadDocumentsResponse(new UploadDocumentsResponsePrivate(this), parent)
 {
     setRequest(new UploadDocumentsRequest(request));
     setReply(reply);

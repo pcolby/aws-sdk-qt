@@ -46,7 +46,7 @@ ListDevicesResponse::ListDevicesResponse(
         const ListDevicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new ListDevicesResponsePrivate(this), parent)
+    : ListDevicesResponse(new ListDevicesResponsePrivate(this), parent)
 {
     setRequest(new ListDevicesRequest(request));
     setReply(reply);

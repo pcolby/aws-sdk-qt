@@ -46,7 +46,7 @@ ListRegexPatternSetsResponse::ListRegexPatternSetsResponse(
         const ListRegexPatternSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListRegexPatternSetsResponsePrivate(this), parent)
+    : ListRegexPatternSetsResponse(new ListRegexPatternSetsResponsePrivate(this), parent)
 {
     setRequest(new ListRegexPatternSetsRequest(request));
     setReply(reply);

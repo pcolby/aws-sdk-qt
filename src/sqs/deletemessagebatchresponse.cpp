@@ -46,7 +46,7 @@ DeleteMessageBatchResponse::DeleteMessageBatchResponse(
         const DeleteMessageBatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new DeleteMessageBatchResponsePrivate(this), parent)
+    : DeleteMessageBatchResponse(new DeleteMessageBatchResponsePrivate(this), parent)
 {
     setRequest(new DeleteMessageBatchRequest(request));
     setReply(reply);

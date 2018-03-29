@@ -46,7 +46,7 @@ DescribeTagsResponse::DescribeTagsResponse(
         const DescribeTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new DescribeTagsResponsePrivate(this), parent)
+    : DescribeTagsResponse(new DescribeTagsResponsePrivate(this), parent)
 {
     setRequest(new DescribeTagsRequest(request));
     setReply(reply);

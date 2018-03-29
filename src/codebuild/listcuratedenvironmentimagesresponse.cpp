@@ -46,7 +46,7 @@ ListCuratedEnvironmentImagesResponse::ListCuratedEnvironmentImagesResponse(
         const ListCuratedEnvironmentImagesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeBuildResponse(new ListCuratedEnvironmentImagesResponsePrivate(this), parent)
+    : ListCuratedEnvironmentImagesResponse(new ListCuratedEnvironmentImagesResponsePrivate(this), parent)
 {
     setRequest(new ListCuratedEnvironmentImagesRequest(request));
     setReply(reply);

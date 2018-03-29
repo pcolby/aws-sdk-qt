@@ -46,7 +46,7 @@ DeleteReplicationInstanceResponse::DeleteReplicationInstanceResponse(
         const DeleteReplicationInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DeleteReplicationInstanceResponsePrivate(this), parent)
+    : DeleteReplicationInstanceResponse(new DeleteReplicationInstanceResponsePrivate(this), parent)
 {
     setRequest(new DeleteReplicationInstanceRequest(request));
     setReply(reply);

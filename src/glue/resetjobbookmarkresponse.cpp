@@ -46,7 +46,7 @@ ResetJobBookmarkResponse::ResetJobBookmarkResponse(
         const ResetJobBookmarkRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new ResetJobBookmarkResponsePrivate(this), parent)
+    : ResetJobBookmarkResponse(new ResetJobBookmarkResponsePrivate(this), parent)
 {
     setRequest(new ResetJobBookmarkRequest(request));
     setReply(reply);

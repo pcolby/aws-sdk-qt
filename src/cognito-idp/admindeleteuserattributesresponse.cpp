@@ -46,7 +46,7 @@ AdminDeleteUserAttributesResponse::AdminDeleteUserAttributesResponse(
         const AdminDeleteUserAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new AdminDeleteUserAttributesResponsePrivate(this), parent)
+    : AdminDeleteUserAttributesResponse(new AdminDeleteUserAttributesResponsePrivate(this), parent)
 {
     setRequest(new AdminDeleteUserAttributesRequest(request));
     setReply(reply);

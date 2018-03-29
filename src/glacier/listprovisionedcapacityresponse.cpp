@@ -46,7 +46,7 @@ ListProvisionedCapacityResponse::ListProvisionedCapacityResponse(
         const ListProvisionedCapacityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new ListProvisionedCapacityResponsePrivate(this), parent)
+    : ListProvisionedCapacityResponse(new ListProvisionedCapacityResponsePrivate(this), parent)
 {
     setRequest(new ListProvisionedCapacityRequest(request));
     setReply(reply);

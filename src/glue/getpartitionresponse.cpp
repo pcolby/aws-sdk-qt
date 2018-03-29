@@ -46,7 +46,7 @@ GetPartitionResponse::GetPartitionResponse(
         const GetPartitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new GetPartitionResponsePrivate(this), parent)
+    : GetPartitionResponse(new GetPartitionResponsePrivate(this), parent)
 {
     setRequest(new GetPartitionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CloseInstancePublicPortsResponse::CloseInstancePublicPortsResponse(
         const CloseInstancePublicPortsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new CloseInstancePublicPortsResponsePrivate(this), parent)
+    : CloseInstancePublicPortsResponse(new CloseInstancePublicPortsResponsePrivate(this), parent)
 {
     setRequest(new CloseInstancePublicPortsRequest(request));
     setReply(reply);

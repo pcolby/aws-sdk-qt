@@ -46,7 +46,7 @@ ExportProjectResponse::ExportProjectResponse(
         const ExportProjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MobileResponse(new ExportProjectResponsePrivate(this), parent)
+    : ExportProjectResponse(new ExportProjectResponsePrivate(this), parent)
 {
     setRequest(new ExportProjectRequest(request));
     setReply(reply);

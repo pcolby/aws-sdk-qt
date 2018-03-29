@@ -46,7 +46,7 @@ DetachLoadBalancersResponse::DetachLoadBalancersResponse(
         const DetachLoadBalancersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new DetachLoadBalancersResponsePrivate(this), parent)
+    : DetachLoadBalancersResponse(new DetachLoadBalancersResponsePrivate(this), parent)
 {
     setRequest(new DetachLoadBalancersRequest(request));
     setReply(reply);

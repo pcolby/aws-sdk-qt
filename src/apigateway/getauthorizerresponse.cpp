@@ -46,7 +46,7 @@ GetAuthorizerResponse::GetAuthorizerResponse(
         const GetAuthorizerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetAuthorizerResponsePrivate(this), parent)
+    : GetAuthorizerResponse(new GetAuthorizerResponsePrivate(this), parent)
 {
     setRequest(new GetAuthorizerRequest(request));
     setReply(reply);

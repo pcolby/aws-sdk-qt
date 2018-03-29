@@ -46,7 +46,7 @@ CreateStreamingDistributionWithTagsResponse::CreateStreamingDistributionWithTags
         const CreateStreamingDistributionWithTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFrontResponse(new CreateStreamingDistributionWithTagsResponsePrivate(this), parent)
+    : CreateStreamingDistributionWithTagsResponse(new CreateStreamingDistributionWithTagsResponsePrivate(this), parent)
 {
     setRequest(new CreateStreamingDistributionWithTagsRequest(request));
     setReply(reply);

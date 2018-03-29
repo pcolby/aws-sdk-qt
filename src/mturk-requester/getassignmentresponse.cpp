@@ -46,7 +46,7 @@ GetAssignmentResponse::GetAssignmentResponse(
         const GetAssignmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new GetAssignmentResponsePrivate(this), parent)
+    : GetAssignmentResponse(new GetAssignmentResponsePrivate(this), parent)
 {
     setRequest(new GetAssignmentRequest(request));
     setReply(reply);

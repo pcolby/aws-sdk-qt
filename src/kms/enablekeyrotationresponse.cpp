@@ -46,7 +46,7 @@ EnableKeyRotationResponse::EnableKeyRotationResponse(
         const EnableKeyRotationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new EnableKeyRotationResponsePrivate(this), parent)
+    : EnableKeyRotationResponse(new EnableKeyRotationResponsePrivate(this), parent)
 {
     setRequest(new EnableKeyRotationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StopLoggingResponse::StopLoggingResponse(
         const StopLoggingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudTrailResponse(new StopLoggingResponsePrivate(this), parent)
+    : StopLoggingResponse(new StopLoggingResponsePrivate(this), parent)
 {
     setRequest(new StopLoggingRequest(request));
     setReply(reply);

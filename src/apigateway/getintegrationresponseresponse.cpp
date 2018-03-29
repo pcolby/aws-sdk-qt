@@ -46,7 +46,7 @@ GetIntegrationResponseResponse::GetIntegrationResponseResponse(
         const GetIntegrationResponseRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetIntegrationResponseResponsePrivate(this), parent)
+    : GetIntegrationResponseResponse(new GetIntegrationResponseResponsePrivate(this), parent)
 {
     setRequest(new GetIntegrationResponseRequest(request));
     setReply(reply);

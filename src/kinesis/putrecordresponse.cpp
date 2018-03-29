@@ -46,7 +46,7 @@ PutRecordResponse::PutRecordResponse(
         const PutRecordRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisResponse(new PutRecordResponsePrivate(this), parent)
+    : PutRecordResponse(new PutRecordResponsePrivate(this), parent)
 {
     setRequest(new PutRecordRequest(request));
     setReply(reply);

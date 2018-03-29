@@ -46,7 +46,7 @@ DescribePermissionsResponse::DescribePermissionsResponse(
         const DescribePermissionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DescribePermissionsResponsePrivate(this), parent)
+    : DescribePermissionsResponse(new DescribePermissionsResponsePrivate(this), parent)
 {
     setRequest(new DescribePermissionsRequest(request));
     setReply(reply);

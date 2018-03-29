@@ -46,7 +46,7 @@ SendTemplatedEmailResponse::SendTemplatedEmailResponse(
         const SendTemplatedEmailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SendTemplatedEmailResponsePrivate(this), parent)
+    : SendTemplatedEmailResponse(new SendTemplatedEmailResponsePrivate(this), parent)
 {
     setRequest(new SendTemplatedEmailRequest(request));
     setReply(reply);

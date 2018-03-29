@@ -46,7 +46,7 @@ DeleteConfigurationSetEventDestinationResponse::DeleteConfigurationSetEventDesti
         const DeleteConfigurationSetEventDestinationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new DeleteConfigurationSetEventDestinationResponsePrivate(this), parent)
+    : DeleteConfigurationSetEventDestinationResponse(new DeleteConfigurationSetEventDestinationResponsePrivate(this), parent)
 {
     setRequest(new DeleteConfigurationSetEventDestinationRequest(request));
     setReply(reply);

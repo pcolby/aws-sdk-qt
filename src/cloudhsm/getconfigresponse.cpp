@@ -46,7 +46,7 @@ GetConfigResponse::GetConfigResponse(
         const GetConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMResponse(new GetConfigResponsePrivate(this), parent)
+    : GetConfigResponse(new GetConfigResponsePrivate(this), parent)
 {
     setRequest(new GetConfigRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetIdentityVerificationAttributesResponse::GetIdentityVerificationAttributesResp
         const GetIdentityVerificationAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new GetIdentityVerificationAttributesResponsePrivate(this), parent)
+    : GetIdentityVerificationAttributesResponse(new GetIdentityVerificationAttributesResponsePrivate(this), parent)
 {
     setRequest(new GetIdentityVerificationAttributesRequest(request));
     setReply(reply);

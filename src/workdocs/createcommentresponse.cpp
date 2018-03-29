@@ -46,7 +46,7 @@ CreateCommentResponse::CreateCommentResponse(
         const CreateCommentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkDocsResponse(new CreateCommentResponsePrivate(this), parent)
+    : CreateCommentResponse(new CreateCommentResponsePrivate(this), parent)
 {
     setRequest(new CreateCommentRequest(request));
     setReply(reply);

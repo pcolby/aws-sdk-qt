@@ -46,7 +46,7 @@ BatchWriteItemResponse::BatchWriteItemResponse(
         const BatchWriteItemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new BatchWriteItemResponsePrivate(this), parent)
+    : BatchWriteItemResponse(new BatchWriteItemResponsePrivate(this), parent)
 {
     setRequest(new BatchWriteItemRequest(request));
     setReply(reply);

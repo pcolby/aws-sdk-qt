@@ -46,7 +46,7 @@ ListAssessmentTargetsResponse::ListAssessmentTargetsResponse(
         const ListAssessmentTargetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new ListAssessmentTargetsResponsePrivate(this), parent)
+    : ListAssessmentTargetsResponse(new ListAssessmentTargetsResponsePrivate(this), parent)
 {
     setRequest(new ListAssessmentTargetsRequest(request));
     setReply(reply);

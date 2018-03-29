@@ -46,7 +46,7 @@ UpdateObjectAttributesResponse::UpdateObjectAttributesResponse(
         const UpdateObjectAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new UpdateObjectAttributesResponsePrivate(this), parent)
+    : UpdateObjectAttributesResponse(new UpdateObjectAttributesResponsePrivate(this), parent)
 {
     setRequest(new UpdateObjectAttributesRequest(request));
     setReply(reply);

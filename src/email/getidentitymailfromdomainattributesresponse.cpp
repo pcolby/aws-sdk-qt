@@ -46,7 +46,7 @@ GetIdentityMailFromDomainAttributesResponse::GetIdentityMailFromDomainAttributes
         const GetIdentityMailFromDomainAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new GetIdentityMailFromDomainAttributesResponsePrivate(this), parent)
+    : GetIdentityMailFromDomainAttributesResponse(new GetIdentityMailFromDomainAttributesResponsePrivate(this), parent)
 {
     setRequest(new GetIdentityMailFromDomainAttributesRequest(request));
     setReply(reply);

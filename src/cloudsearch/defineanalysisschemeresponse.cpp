@@ -46,7 +46,7 @@ DefineAnalysisSchemeResponse::DefineAnalysisSchemeResponse(
         const DefineAnalysisSchemeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudSearchResponse(new DefineAnalysisSchemeResponsePrivate(this), parent)
+    : DefineAnalysisSchemeResponse(new DefineAnalysisSchemeResponsePrivate(this), parent)
 {
     setRequest(new DefineAnalysisSchemeRequest(request));
     setReply(reply);

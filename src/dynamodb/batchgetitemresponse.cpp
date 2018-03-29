@@ -46,7 +46,7 @@ BatchGetItemResponse::BatchGetItemResponse(
         const BatchGetItemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new BatchGetItemResponsePrivate(this), parent)
+    : BatchGetItemResponse(new BatchGetItemResponsePrivate(this), parent)
 {
     setRequest(new BatchGetItemRequest(request));
     setReply(reply);

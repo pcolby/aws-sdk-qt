@@ -46,7 +46,7 @@ BuildSuggestersResponse::BuildSuggestersResponse(
         const BuildSuggestersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudSearchResponse(new BuildSuggestersResponsePrivate(this), parent)
+    : BuildSuggestersResponse(new BuildSuggestersResponsePrivate(this), parent)
 {
     setRequest(new BuildSuggestersRequest(request));
     setReply(reply);

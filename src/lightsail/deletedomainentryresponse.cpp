@@ -46,7 +46,7 @@ DeleteDomainEntryResponse::DeleteDomainEntryResponse(
         const DeleteDomainEntryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new DeleteDomainEntryResponsePrivate(this), parent)
+    : DeleteDomainEntryResponse(new DeleteDomainEntryResponsePrivate(this), parent)
 {
     setRequest(new DeleteDomainEntryRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SetLoadBalancerListenerSSLCertificateResponse::SetLoadBalancerListenerSSLCertifi
         const SetLoadBalancerListenerSSLCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticLoadBalancingResponse(new SetLoadBalancerListenerSSLCertificateResponsePrivate(this), parent)
+    : SetLoadBalancerListenerSSLCertificateResponse(new SetLoadBalancerListenerSSLCertificateResponsePrivate(this), parent)
 {
     setRequest(new SetLoadBalancerListenerSSLCertificateRequest(request));
     setReply(reply);

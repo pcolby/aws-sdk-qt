@@ -46,7 +46,7 @@ ModifyClusterParameterGroupResponse::ModifyClusterParameterGroupResponse(
         const ModifyClusterParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new ModifyClusterParameterGroupResponsePrivate(this), parent)
+    : ModifyClusterParameterGroupResponse(new ModifyClusterParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new ModifyClusterParameterGroupRequest(request));
     setReply(reply);

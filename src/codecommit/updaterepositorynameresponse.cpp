@@ -46,7 +46,7 @@ UpdateRepositoryNameResponse::UpdateRepositoryNameResponse(
         const UpdateRepositoryNameRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new UpdateRepositoryNameResponsePrivate(this), parent)
+    : UpdateRepositoryNameResponse(new UpdateRepositoryNameResponsePrivate(this), parent)
 {
     setRequest(new UpdateRepositoryNameRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetCommitResponse::GetCommitResponse(
         const GetCommitRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new GetCommitResponsePrivate(this), parent)
+    : GetCommitResponse(new GetCommitResponsePrivate(this), parent)
 {
     setRequest(new GetCommitRequest(request));
     setReply(reply);

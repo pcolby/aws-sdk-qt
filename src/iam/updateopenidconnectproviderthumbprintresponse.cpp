@@ -46,7 +46,7 @@ UpdateOpenIDConnectProviderThumbprintResponse::UpdateOpenIDConnectProviderThumbp
         const UpdateOpenIDConnectProviderThumbprintRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateOpenIDConnectProviderThumbprintResponsePrivate(this), parent)
+    : UpdateOpenIDConnectProviderThumbprintResponse(new UpdateOpenIDConnectProviderThumbprintResponsePrivate(this), parent)
 {
     setRequest(new UpdateOpenIDConnectProviderThumbprintRequest(request));
     setReply(reply);

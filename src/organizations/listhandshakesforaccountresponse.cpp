@@ -46,7 +46,7 @@ ListHandshakesForAccountResponse::ListHandshakesForAccountResponse(
         const ListHandshakesForAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OrganizationsResponse(new ListHandshakesForAccountResponsePrivate(this), parent)
+    : ListHandshakesForAccountResponse(new ListHandshakesForAccountResponsePrivate(this), parent)
 {
     setRequest(new ListHandshakesForAccountRequest(request));
     setReply(reply);

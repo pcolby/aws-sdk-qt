@@ -46,7 +46,7 @@ DeleteSSHPublicKeyResponse::DeleteSSHPublicKeyResponse(
         const DeleteSSHPublicKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteSSHPublicKeyResponsePrivate(this), parent)
+    : DeleteSSHPublicKeyResponse(new DeleteSSHPublicKeyResponsePrivate(this), parent)
 {
     setRequest(new DeleteSSHPublicKeyRequest(request));
     setReply(reply);

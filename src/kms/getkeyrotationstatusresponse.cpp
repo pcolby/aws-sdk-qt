@@ -46,7 +46,7 @@ GetKeyRotationStatusResponse::GetKeyRotationStatusResponse(
         const GetKeyRotationStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new GetKeyRotationStatusResponsePrivate(this), parent)
+    : GetKeyRotationStatusResponse(new GetKeyRotationStatusResponsePrivate(this), parent)
 {
     setRequest(new GetKeyRotationStatusRequest(request));
     setReply(reply);

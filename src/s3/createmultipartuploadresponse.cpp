@@ -46,7 +46,7 @@ CreateMultipartUploadResponse::CreateMultipartUploadResponse(
         const CreateMultipartUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new CreateMultipartUploadResponsePrivate(this), parent)
+    : CreateMultipartUploadResponse(new CreateMultipartUploadResponsePrivate(this), parent)
 {
     setRequest(new CreateMultipartUploadRequest(request));
     setReply(reply);

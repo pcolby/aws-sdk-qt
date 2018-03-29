@@ -46,7 +46,7 @@ GetCallerIdentityResponse::GetCallerIdentityResponse(
         const GetCallerIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : STSResponse(new GetCallerIdentityResponsePrivate(this), parent)
+    : GetCallerIdentityResponse(new GetCallerIdentityResponsePrivate(this), parent)
 {
     setRequest(new GetCallerIdentityRequest(request));
     setReply(reply);

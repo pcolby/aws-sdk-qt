@@ -46,7 +46,7 @@ DescribeReplicationTasksResponse::DescribeReplicationTasksResponse(
         const DescribeReplicationTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeReplicationTasksResponsePrivate(this), parent)
+    : DescribeReplicationTasksResponse(new DescribeReplicationTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeReplicationTasksRequest(request));
     setReply(reply);

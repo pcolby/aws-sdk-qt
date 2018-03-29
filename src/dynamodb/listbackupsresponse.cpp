@@ -46,7 +46,7 @@ ListBackupsResponse::ListBackupsResponse(
         const ListBackupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new ListBackupsResponsePrivate(this), parent)
+    : ListBackupsResponse(new ListBackupsResponsePrivate(this), parent)
 {
     setRequest(new ListBackupsRequest(request));
     setReply(reply);

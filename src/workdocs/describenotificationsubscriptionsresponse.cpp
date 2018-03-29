@@ -46,7 +46,7 @@ DescribeNotificationSubscriptionsResponse::DescribeNotificationSubscriptionsResp
         const DescribeNotificationSubscriptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkDocsResponse(new DescribeNotificationSubscriptionsResponsePrivate(this), parent)
+    : DescribeNotificationSubscriptionsResponse(new DescribeNotificationSubscriptionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeNotificationSubscriptionsRequest(request));
     setReply(reply);

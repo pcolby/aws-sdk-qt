@@ -46,7 +46,7 @@ RestoreAddressToClassicResponse::RestoreAddressToClassicResponse(
         const RestoreAddressToClassicRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new RestoreAddressToClassicResponsePrivate(this), parent)
+    : RestoreAddressToClassicResponse(new RestoreAddressToClassicResponsePrivate(this), parent)
 {
     setRequest(new RestoreAddressToClassicRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteFpgaImageResponse::DeleteFpgaImageResponse(
         const DeleteFpgaImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteFpgaImageResponsePrivate(this), parent)
+    : DeleteFpgaImageResponse(new DeleteFpgaImageResponsePrivate(this), parent)
 {
     setRequest(new DeleteFpgaImageRequest(request));
     setReply(reply);

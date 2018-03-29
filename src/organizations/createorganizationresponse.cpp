@@ -46,7 +46,7 @@ CreateOrganizationResponse::CreateOrganizationResponse(
         const CreateOrganizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OrganizationsResponse(new CreateOrganizationResponsePrivate(this), parent)
+    : CreateOrganizationResponse(new CreateOrganizationResponsePrivate(this), parent)
 {
     setRequest(new CreateOrganizationRequest(request));
     setReply(reply);

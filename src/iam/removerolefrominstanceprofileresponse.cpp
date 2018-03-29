@@ -46,7 +46,7 @@ RemoveRoleFromInstanceProfileResponse::RemoveRoleFromInstanceProfileResponse(
         const RemoveRoleFromInstanceProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new RemoveRoleFromInstanceProfileResponsePrivate(this), parent)
+    : RemoveRoleFromInstanceProfileResponse(new RemoveRoleFromInstanceProfileResponsePrivate(this), parent)
 {
     setRequest(new RemoveRoleFromInstanceProfileRequest(request));
     setReply(reply);

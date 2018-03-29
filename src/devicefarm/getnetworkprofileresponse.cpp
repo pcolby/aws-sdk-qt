@@ -46,7 +46,7 @@ GetNetworkProfileResponse::GetNetworkProfileResponse(
         const GetNetworkProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new GetNetworkProfileResponsePrivate(this), parent)
+    : GetNetworkProfileResponse(new GetNetworkProfileResponsePrivate(this), parent)
 {
     setRequest(new GetNetworkProfileRequest(request));
     setReply(reply);

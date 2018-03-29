@@ -46,7 +46,7 @@ DeleteQualificationTypeResponse::DeleteQualificationTypeResponse(
         const DeleteQualificationTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new DeleteQualificationTypeResponsePrivate(this), parent)
+    : DeleteQualificationTypeResponse(new DeleteQualificationTypeResponsePrivate(this), parent)
 {
     setRequest(new DeleteQualificationTypeRequest(request));
     setReply(reply);

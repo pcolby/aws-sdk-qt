@@ -46,7 +46,7 @@ ReorderReceiptRuleSetResponse::ReorderReceiptRuleSetResponse(
         const ReorderReceiptRuleSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new ReorderReceiptRuleSetResponsePrivate(this), parent)
+    : ReorderReceiptRuleSetResponse(new ReorderReceiptRuleSetResponsePrivate(this), parent)
 {
     setRequest(new ReorderReceiptRuleSetRequest(request));
     setReply(reply);

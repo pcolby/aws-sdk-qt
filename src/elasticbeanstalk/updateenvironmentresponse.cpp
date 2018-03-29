@@ -46,7 +46,7 @@ UpdateEnvironmentResponse::UpdateEnvironmentResponse(
         const UpdateEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new UpdateEnvironmentResponsePrivate(this), parent)
+    : UpdateEnvironmentResponse(new UpdateEnvironmentResponsePrivate(this), parent)
 {
     setRequest(new UpdateEnvironmentRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ AllocateConnectionOnInterconnectResponse::AllocateConnectionOnInterconnectRespon
         const AllocateConnectionOnInterconnectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectConnectResponse(new AllocateConnectionOnInterconnectResponsePrivate(this), parent)
+    : AllocateConnectionOnInterconnectResponse(new AllocateConnectionOnInterconnectResponsePrivate(this), parent)
 {
     setRequest(new AllocateConnectionOnInterconnectRequest(request));
     setReply(reply);

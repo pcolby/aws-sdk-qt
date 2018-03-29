@@ -46,7 +46,7 @@ CreateGroupVersionResponse::CreateGroupVersionResponse(
         const CreateGroupVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new CreateGroupVersionResponsePrivate(this), parent)
+    : CreateGroupVersionResponse(new CreateGroupVersionResponsePrivate(this), parent)
 {
     setRequest(new CreateGroupVersionRequest(request));
     setReply(reply);

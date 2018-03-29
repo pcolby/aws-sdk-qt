@@ -46,7 +46,7 @@ GetReservationPurchaseRecommendationResponse::GetReservationPurchaseRecommendati
         const GetReservationPurchaseRecommendationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CostExplorerResponse(new GetReservationPurchaseRecommendationResponsePrivate(this), parent)
+    : GetReservationPurchaseRecommendationResponse(new GetReservationPurchaseRecommendationResponsePrivate(this), parent)
 {
     setRequest(new GetReservationPurchaseRecommendationRequest(request));
     setReply(reply);

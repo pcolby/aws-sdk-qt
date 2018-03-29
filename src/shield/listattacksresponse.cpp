@@ -46,7 +46,7 @@ ListAttacksResponse::ListAttacksResponse(
         const ListAttacksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ShieldResponse(new ListAttacksResponsePrivate(this), parent)
+    : ListAttacksResponse(new ListAttacksResponsePrivate(this), parent)
 {
     setRequest(new ListAttacksRequest(request));
     setReply(reply);

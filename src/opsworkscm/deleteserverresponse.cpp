@@ -46,7 +46,7 @@ DeleteServerResponse::DeleteServerResponse(
         const DeleteServerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new DeleteServerResponsePrivate(this), parent)
+    : DeleteServerResponse(new DeleteServerResponsePrivate(this), parent)
 {
     setRequest(new DeleteServerRequest(request));
     setReply(reply);

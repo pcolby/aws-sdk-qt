@@ -46,7 +46,7 @@ CreateCloudFormationChangeSetResponse::CreateCloudFormationChangeSetResponse(
         const CreateCloudFormationChangeSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServerlessApplicationRepositoryResponse(new CreateCloudFormationChangeSetResponsePrivate(this), parent)
+    : CreateCloudFormationChangeSetResponse(new CreateCloudFormationChangeSetResponsePrivate(this), parent)
 {
     setRequest(new CreateCloudFormationChangeSetRequest(request));
     setReply(reply);

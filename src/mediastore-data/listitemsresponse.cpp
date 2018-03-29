@@ -46,7 +46,7 @@ ListItemsResponse::ListItemsResponse(
         const ListItemsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MediaStoreDataResponse(new ListItemsResponsePrivate(this), parent)
+    : ListItemsResponse(new ListItemsResponsePrivate(this), parent)
 {
     setRequest(new ListItemsRequest(request));
     setReply(reply);

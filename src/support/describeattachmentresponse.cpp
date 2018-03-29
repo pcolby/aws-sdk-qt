@@ -46,7 +46,7 @@ DescribeAttachmentResponse::DescribeAttachmentResponse(
         const DescribeAttachmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SupportResponse(new DescribeAttachmentResponsePrivate(this), parent)
+    : DescribeAttachmentResponse(new DescribeAttachmentResponsePrivate(this), parent)
 {
     setRequest(new DescribeAttachmentRequest(request));
     setReply(reply);

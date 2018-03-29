@@ -46,7 +46,7 @@ CreateTrainingJobResponse::CreateTrainingJobResponse(
         const CreateTrainingJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SageMakerResponse(new CreateTrainingJobResponsePrivate(this), parent)
+    : CreateTrainingJobResponse(new CreateTrainingJobResponsePrivate(this), parent)
 {
     setRequest(new CreateTrainingJobRequest(request));
     setReply(reply);

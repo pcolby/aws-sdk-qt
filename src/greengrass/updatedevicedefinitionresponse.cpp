@@ -46,7 +46,7 @@ UpdateDeviceDefinitionResponse::UpdateDeviceDefinitionResponse(
         const UpdateDeviceDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new UpdateDeviceDefinitionResponsePrivate(this), parent)
+    : UpdateDeviceDefinitionResponse(new UpdateDeviceDefinitionResponsePrivate(this), parent)
 {
     setRequest(new UpdateDeviceDefinitionRequest(request));
     setReply(reply);

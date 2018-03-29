@@ -46,7 +46,7 @@ DeleteOpenIDConnectProviderResponse::DeleteOpenIDConnectProviderResponse(
         const DeleteOpenIDConnectProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteOpenIDConnectProviderResponsePrivate(this), parent)
+    : DeleteOpenIDConnectProviderResponse(new DeleteOpenIDConnectProviderResponsePrivate(this), parent)
 {
     setRequest(new DeleteOpenIDConnectProviderRequest(request));
     setReply(reply);

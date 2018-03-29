@@ -46,7 +46,7 @@ CreateGameSessionQueueResponse::CreateGameSessionQueueResponse(
         const CreateGameSessionQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new CreateGameSessionQueueResponsePrivate(this), parent)
+    : CreateGameSessionQueueResponse(new CreateGameSessionQueueResponsePrivate(this), parent)
 {
     setRequest(new CreateGameSessionQueueRequest(request));
     setReply(reply);

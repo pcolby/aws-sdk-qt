@@ -46,7 +46,7 @@ DescribeEgressOnlyInternetGatewaysResponse::DescribeEgressOnlyInternetGatewaysRe
         const DescribeEgressOnlyInternetGatewaysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeEgressOnlyInternetGatewaysResponsePrivate(this), parent)
+    : DescribeEgressOnlyInternetGatewaysResponse(new DescribeEgressOnlyInternetGatewaysResponsePrivate(this), parent)
 {
     setRequest(new DescribeEgressOnlyInternetGatewaysRequest(request));
     setReply(reply);

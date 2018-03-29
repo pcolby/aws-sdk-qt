@@ -46,7 +46,7 @@ PutObjectResponse::PutObjectResponse(
         const PutObjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new PutObjectResponsePrivate(this), parent)
+    : PutObjectResponse(new PutObjectResponsePrivate(this), parent)
 {
     setRequest(new PutObjectRequest(request));
     setReply(reply);

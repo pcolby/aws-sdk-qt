@@ -46,7 +46,7 @@ GetSegmentImportJobsResponse::GetSegmentImportJobsResponse(
         const GetSegmentImportJobsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new GetSegmentImportJobsResponsePrivate(this), parent)
+    : GetSegmentImportJobsResponse(new GetSegmentImportJobsResponsePrivate(this), parent)
 {
     setRequest(new GetSegmentImportJobsRequest(request));
     setReply(reply);

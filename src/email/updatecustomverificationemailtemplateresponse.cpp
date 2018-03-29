@@ -46,7 +46,7 @@ UpdateCustomVerificationEmailTemplateResponse::UpdateCustomVerificationEmailTemp
         const UpdateCustomVerificationEmailTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new UpdateCustomVerificationEmailTemplateResponsePrivate(this), parent)
+    : UpdateCustomVerificationEmailTemplateResponse(new UpdateCustomVerificationEmailTemplateResponsePrivate(this), parent)
 {
     setRequest(new UpdateCustomVerificationEmailTemplateRequest(request));
     setReply(reply);

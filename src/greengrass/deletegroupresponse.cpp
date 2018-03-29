@@ -46,7 +46,7 @@ DeleteGroupResponse::DeleteGroupResponse(
         const DeleteGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new DeleteGroupResponsePrivate(this), parent)
+    : DeleteGroupResponse(new DeleteGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteGroupRequest(request));
     setReply(reply);

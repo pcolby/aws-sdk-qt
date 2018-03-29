@@ -46,7 +46,7 @@ UpdatePolicyResponse::UpdatePolicyResponse(
         const UpdatePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OrganizationsResponse(new UpdatePolicyResponsePrivate(this), parent)
+    : UpdatePolicyResponse(new UpdatePolicyResponsePrivate(this), parent)
 {
     setRequest(new UpdatePolicyRequest(request));
     setReply(reply);

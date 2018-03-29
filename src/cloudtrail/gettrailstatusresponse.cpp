@@ -46,7 +46,7 @@ GetTrailStatusResponse::GetTrailStatusResponse(
         const GetTrailStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudTrailResponse(new GetTrailStatusResponsePrivate(this), parent)
+    : GetTrailStatusResponse(new GetTrailStatusResponsePrivate(this), parent)
 {
     setRequest(new GetTrailStatusRequest(request));
     setReply(reply);

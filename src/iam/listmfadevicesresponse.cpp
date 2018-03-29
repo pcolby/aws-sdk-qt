@@ -46,7 +46,7 @@ ListMFADevicesResponse::ListMFADevicesResponse(
         const ListMFADevicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListMFADevicesResponsePrivate(this), parent)
+    : ListMFADevicesResponse(new ListMFADevicesResponsePrivate(this), parent)
 {
     setRequest(new ListMFADevicesRequest(request));
     setReply(reply);

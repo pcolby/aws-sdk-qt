@@ -46,7 +46,7 @@ CreateDocumentationVersionResponse::CreateDocumentationVersionResponse(
         const CreateDocumentationVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new CreateDocumentationVersionResponsePrivate(this), parent)
+    : CreateDocumentationVersionResponse(new CreateDocumentationVersionResponsePrivate(this), parent)
 {
     setRequest(new CreateDocumentationVersionRequest(request));
     setReply(reply);

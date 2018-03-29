@@ -46,7 +46,7 @@ DetectSentimentResponse::DetectSentimentResponse(
         const DetectSentimentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ComprehendResponse(new DetectSentimentResponsePrivate(this), parent)
+    : DetectSentimentResponse(new DetectSentimentResponsePrivate(this), parent)
 {
     setRequest(new DetectSentimentRequest(request));
     setReply(reply);

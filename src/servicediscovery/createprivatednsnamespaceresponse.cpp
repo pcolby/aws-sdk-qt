@@ -46,7 +46,7 @@ CreatePrivateDnsNamespaceResponse::CreatePrivateDnsNamespaceResponse(
         const CreatePrivateDnsNamespaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceDiscoveryResponse(new CreatePrivateDnsNamespaceResponsePrivate(this), parent)
+    : CreatePrivateDnsNamespaceResponse(new CreatePrivateDnsNamespaceResponsePrivate(this), parent)
 {
     setRequest(new CreatePrivateDnsNamespaceRequest(request));
     setReply(reply);

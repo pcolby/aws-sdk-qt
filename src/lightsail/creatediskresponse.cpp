@@ -46,7 +46,7 @@ CreateDiskResponse::CreateDiskResponse(
         const CreateDiskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new CreateDiskResponsePrivate(this), parent)
+    : CreateDiskResponse(new CreateDiskResponsePrivate(this), parent)
 {
     setRequest(new CreateDiskRequest(request));
     setReply(reply);

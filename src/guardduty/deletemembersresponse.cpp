@@ -46,7 +46,7 @@ DeleteMembersResponse::DeleteMembersResponse(
         const DeleteMembersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GuardDutyResponse(new DeleteMembersResponsePrivate(this), parent)
+    : DeleteMembersResponse(new DeleteMembersResponsePrivate(this), parent)
 {
     setRequest(new DeleteMembersRequest(request));
     setReply(reply);

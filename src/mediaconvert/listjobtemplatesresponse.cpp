@@ -46,7 +46,7 @@ ListJobTemplatesResponse::ListJobTemplatesResponse(
         const ListJobTemplatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MediaConvertResponse(new ListJobTemplatesResponsePrivate(this), parent)
+    : ListJobTemplatesResponse(new ListJobTemplatesResponsePrivate(this), parent)
 {
     setRequest(new ListJobTemplatesRequest(request));
     setReply(reply);

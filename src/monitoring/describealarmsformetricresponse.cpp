@@ -46,7 +46,7 @@ DescribeAlarmsForMetricResponse::DescribeAlarmsForMetricResponse(
         const DescribeAlarmsForMetricRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchResponse(new DescribeAlarmsForMetricResponsePrivate(this), parent)
+    : DescribeAlarmsForMetricResponse(new DescribeAlarmsForMetricResponsePrivate(this), parent)
 {
     setRequest(new DescribeAlarmsForMetricRequest(request));
     setReply(reply);

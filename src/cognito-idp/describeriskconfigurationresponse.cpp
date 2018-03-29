@@ -46,7 +46,7 @@ DescribeRiskConfigurationResponse::DescribeRiskConfigurationResponse(
         const DescribeRiskConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new DescribeRiskConfigurationResponsePrivate(this), parent)
+    : DescribeRiskConfigurationResponse(new DescribeRiskConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DescribeRiskConfigurationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ AssociateWebACLResponse::AssociateWebACLResponse(
         const AssociateWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new AssociateWebACLResponsePrivate(this), parent)
+    : AssociateWebACLResponse(new AssociateWebACLResponsePrivate(this), parent)
 {
     setRequest(new AssociateWebACLRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeExportTasksResponse::DescribeExportTasksResponse(
         const DescribeExportTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new DescribeExportTasksResponsePrivate(this), parent)
+    : DescribeExportTasksResponse(new DescribeExportTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeExportTasksRequest(request));
     setReply(reply);

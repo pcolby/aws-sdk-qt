@@ -46,7 +46,7 @@ AuthorizeSecurityGroupIngressResponse::AuthorizeSecurityGroupIngressResponse(
         const AuthorizeSecurityGroupIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AuthorizeSecurityGroupIngressResponsePrivate(this), parent)
+    : AuthorizeSecurityGroupIngressResponse(new AuthorizeSecurityGroupIngressResponsePrivate(this), parent)
 {
     setRequest(new AuthorizeSecurityGroupIngressRequest(request));
     setReply(reply);

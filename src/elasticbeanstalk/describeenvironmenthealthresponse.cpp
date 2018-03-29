@@ -46,7 +46,7 @@ DescribeEnvironmentHealthResponse::DescribeEnvironmentHealthResponse(
         const DescribeEnvironmentHealthRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new DescribeEnvironmentHealthResponsePrivate(this), parent)
+    : DescribeEnvironmentHealthResponse(new DescribeEnvironmentHealthResponsePrivate(this), parent)
 {
     setRequest(new DescribeEnvironmentHealthRequest(request));
     setReply(reply);

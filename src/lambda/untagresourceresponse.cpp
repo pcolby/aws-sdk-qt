@@ -46,7 +46,7 @@ UntagResourceResponse::UntagResourceResponse(
         const UntagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LambdaResponse(new UntagResourceResponsePrivate(this), parent)
+    : UntagResourceResponse(new UntagResourceResponsePrivate(this), parent)
 {
     setRequest(new UntagResourceRequest(request));
     setReply(reply);

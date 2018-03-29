@@ -46,7 +46,7 @@ ModifyInstanceAttributeResponse::ModifyInstanceAttributeResponse(
         const ModifyInstanceAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyInstanceAttributeResponsePrivate(this), parent)
+    : ModifyInstanceAttributeResponse(new ModifyInstanceAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifyInstanceAttributeRequest(request));
     setReply(reply);

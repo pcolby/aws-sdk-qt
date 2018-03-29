@@ -46,7 +46,7 @@ DeleteProfileResponse::DeleteProfileResponse(
         const DeleteProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new DeleteProfileResponsePrivate(this), parent)
+    : DeleteProfileResponse(new DeleteProfileResponsePrivate(this), parent)
 {
     setRequest(new DeleteProfileRequest(request));
     setReply(reply);

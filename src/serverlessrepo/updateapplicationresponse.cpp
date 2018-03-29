@@ -46,7 +46,7 @@ UpdateApplicationResponse::UpdateApplicationResponse(
         const UpdateApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServerlessApplicationRepositoryResponse(new UpdateApplicationResponsePrivate(this), parent)
+    : UpdateApplicationResponse(new UpdateApplicationResponsePrivate(this), parent)
 {
     setRequest(new UpdateApplicationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RegisterDeviceResponse::RegisterDeviceResponse(
         const RegisterDeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoSyncResponse(new RegisterDeviceResponsePrivate(this), parent)
+    : RegisterDeviceResponse(new RegisterDeviceResponsePrivate(this), parent)
 {
     setRequest(new RegisterDeviceRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RebootNodeResponse::RebootNodeResponse(
         const RebootNodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new RebootNodeResponsePrivate(this), parent)
+    : RebootNodeResponse(new RebootNodeResponsePrivate(this), parent)
 {
     setRequest(new RebootNodeRequest(request));
     setReply(reply);

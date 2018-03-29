@@ -46,7 +46,7 @@ CreateDistributionWithTagsResponse::CreateDistributionWithTagsResponse(
         const CreateDistributionWithTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFrontResponse(new CreateDistributionWithTagsResponsePrivate(this), parent)
+    : CreateDistributionWithTagsResponse(new CreateDistributionWithTagsResponsePrivate(this), parent)
 {
     setRequest(new CreateDistributionWithTagsRequest(request));
     setReply(reply);

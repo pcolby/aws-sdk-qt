@@ -46,7 +46,7 @@ GetSnowballUsageResponse::GetSnowballUsageResponse(
         const GetSnowballUsageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SnowballResponse(new GetSnowballUsageResponsePrivate(this), parent)
+    : GetSnowballUsageResponse(new GetSnowballUsageResponsePrivate(this), parent)
 {
     setRequest(new GetSnowballUsageRequest(request));
     setReply(reply);

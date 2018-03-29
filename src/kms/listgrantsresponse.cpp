@@ -46,7 +46,7 @@ ListGrantsResponse::ListGrantsResponse(
         const ListGrantsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new ListGrantsResponsePrivate(this), parent)
+    : ListGrantsResponse(new ListGrantsResponsePrivate(this), parent)
 {
     setRequest(new ListGrantsRequest(request));
     setReply(reply);

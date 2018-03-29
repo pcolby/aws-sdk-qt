@@ -46,7 +46,7 @@ StartMatchBackfillResponse::StartMatchBackfillResponse(
         const StartMatchBackfillRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new StartMatchBackfillResponsePrivate(this), parent)
+    : StartMatchBackfillResponse(new StartMatchBackfillResponsePrivate(this), parent)
 {
     setRequest(new StartMatchBackfillRequest(request));
     setReply(reply);

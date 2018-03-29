@@ -46,7 +46,7 @@ GetConnectorsResponse::GetConnectorsResponse(
         const GetConnectorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SMSResponse(new GetConnectorsResponsePrivate(this), parent)
+    : GetConnectorsResponse(new GetConnectorsResponsePrivate(this), parent)
 {
     setRequest(new GetConnectorsRequest(request));
     setReply(reply);

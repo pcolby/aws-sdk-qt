@@ -46,7 +46,7 @@ ListShardsResponse::ListShardsResponse(
         const ListShardsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisResponse(new ListShardsResponsePrivate(this), parent)
+    : ListShardsResponse(new ListShardsResponsePrivate(this), parent)
 {
     setRequest(new ListShardsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateLabelsResponse::CreateLabelsResponse(
         const CreateLabelsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkDocsResponse(new CreateLabelsResponsePrivate(this), parent)
+    : CreateLabelsResponse(new CreateLabelsResponsePrivate(this), parent)
 {
     setRequest(new CreateLabelsRequest(request));
     setReply(reply);

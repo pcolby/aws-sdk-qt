@@ -46,7 +46,7 @@ CreateCaseResponse::CreateCaseResponse(
         const CreateCaseRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SupportResponse(new CreateCaseResponsePrivate(this), parent)
+    : CreateCaseResponse(new CreateCaseResponsePrivate(this), parent)
 {
     setRequest(new CreateCaseRequest(request));
     setReply(reply);

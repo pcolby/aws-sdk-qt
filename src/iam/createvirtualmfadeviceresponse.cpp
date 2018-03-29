@@ -46,7 +46,7 @@ CreateVirtualMFADeviceResponse::CreateVirtualMFADeviceResponse(
         const CreateVirtualMFADeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new CreateVirtualMFADeviceResponsePrivate(this), parent)
+    : CreateVirtualMFADeviceResponse(new CreateVirtualMFADeviceResponsePrivate(this), parent)
 {
     setRequest(new CreateVirtualMFADeviceRequest(request));
     setReply(reply);

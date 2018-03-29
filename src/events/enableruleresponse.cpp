@@ -46,7 +46,7 @@ EnableRuleResponse::EnableRuleResponse(
         const EnableRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchEventsResponse(new EnableRuleResponsePrivate(this), parent)
+    : EnableRuleResponse(new EnableRuleResponsePrivate(this), parent)
 {
     setRequest(new EnableRuleRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SearchUsersResponse::SearchUsersResponse(
         const SearchUsersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new SearchUsersResponsePrivate(this), parent)
+    : SearchUsersResponse(new SearchUsersResponsePrivate(this), parent)
 {
     setRequest(new SearchUsersRequest(request));
     setReply(reply);

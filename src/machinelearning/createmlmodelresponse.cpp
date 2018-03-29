@@ -46,7 +46,7 @@ CreateMLModelResponse::CreateMLModelResponse(
         const CreateMLModelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MachineLearningResponse(new CreateMLModelResponsePrivate(this), parent)
+    : CreateMLModelResponse(new CreateMLModelResponsePrivate(this), parent)
 {
     setRequest(new CreateMLModelRequest(request));
     setReply(reply);

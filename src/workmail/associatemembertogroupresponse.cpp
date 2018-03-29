@@ -46,7 +46,7 @@ AssociateMemberToGroupResponse::AssociateMemberToGroupResponse(
         const AssociateMemberToGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkMailResponse(new AssociateMemberToGroupResponsePrivate(this), parent)
+    : AssociateMemberToGroupResponse(new AssociateMemberToGroupResponsePrivate(this), parent)
 {
     setRequest(new AssociateMemberToGroupRequest(request));
     setReply(reply);

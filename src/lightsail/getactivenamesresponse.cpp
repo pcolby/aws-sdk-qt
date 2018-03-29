@@ -46,7 +46,7 @@ GetActiveNamesResponse::GetActiveNamesResponse(
         const GetActiveNamesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new GetActiveNamesResponsePrivate(this), parent)
+    : GetActiveNamesResponse(new GetActiveNamesResponsePrivate(this), parent)
 {
     setRequest(new GetActiveNamesRequest(request));
     setReply(reply);

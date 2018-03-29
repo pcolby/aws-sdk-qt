@@ -46,7 +46,7 @@ DescribeCacheEngineVersionsResponse::DescribeCacheEngineVersionsResponse(
         const DescribeCacheEngineVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new DescribeCacheEngineVersionsResponsePrivate(this), parent)
+    : DescribeCacheEngineVersionsResponse(new DescribeCacheEngineVersionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeCacheEngineVersionsRequest(request));
     setReply(reply);

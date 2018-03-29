@@ -46,7 +46,7 @@ DeleteJobResponse::DeleteJobResponse(
         const DeleteJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new DeleteJobResponsePrivate(this), parent)
+    : DeleteJobResponse(new DeleteJobResponsePrivate(this), parent)
 {
     setRequest(new DeleteJobRequest(request));
     setReply(reply);

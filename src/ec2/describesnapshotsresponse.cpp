@@ -46,7 +46,7 @@ DescribeSnapshotsResponse::DescribeSnapshotsResponse(
         const DescribeSnapshotsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeSnapshotsResponsePrivate(this), parent)
+    : DescribeSnapshotsResponse(new DescribeSnapshotsResponsePrivate(this), parent)
 {
     setRequest(new DescribeSnapshotsRequest(request));
     setReply(reply);

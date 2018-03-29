@@ -46,7 +46,7 @@ CancelSpotFleetRequestsResponse::CancelSpotFleetRequestsResponse(
         const CancelSpotFleetRequestsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CancelSpotFleetRequestsResponsePrivate(this), parent)
+    : CancelSpotFleetRequestsResponse(new CancelSpotFleetRequestsResponsePrivate(this), parent)
 {
     setRequest(new CancelSpotFleetRequestsRequest(request));
     setReply(reply);

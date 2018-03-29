@@ -46,7 +46,7 @@ CreateDataSourceResponse::CreateDataSourceResponse(
         const CreateDataSourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppSyncResponse(new CreateDataSourceResponsePrivate(this), parent)
+    : CreateDataSourceResponse(new CreateDataSourceResponsePrivate(this), parent)
 {
     setRequest(new CreateDataSourceRequest(request));
     setReply(reply);

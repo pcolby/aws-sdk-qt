@@ -46,7 +46,7 @@ ListSubscriptionsResponse::ListSubscriptionsResponse(
         const ListSubscriptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new ListSubscriptionsResponsePrivate(this), parent)
+    : ListSubscriptionsResponse(new ListSubscriptionsResponsePrivate(this), parent)
 {
     setRequest(new ListSubscriptionsRequest(request));
     setReply(reply);

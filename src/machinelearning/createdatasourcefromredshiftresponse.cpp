@@ -46,7 +46,7 @@ CreateDataSourceFromRedshiftResponse::CreateDataSourceFromRedshiftResponse(
         const CreateDataSourceFromRedshiftRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MachineLearningResponse(new CreateDataSourceFromRedshiftResponsePrivate(this), parent)
+    : CreateDataSourceFromRedshiftResponse(new CreateDataSourceFromRedshiftResponsePrivate(this), parent)
 {
     setRequest(new CreateDataSourceFromRedshiftRequest(request));
     setReply(reply);

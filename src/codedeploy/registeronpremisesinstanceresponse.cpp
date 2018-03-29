@@ -46,7 +46,7 @@ RegisterOnPremisesInstanceResponse::RegisterOnPremisesInstanceResponse(
         const RegisterOnPremisesInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeDeployResponse(new RegisterOnPremisesInstanceResponsePrivate(this), parent)
+    : RegisterOnPremisesInstanceResponse(new RegisterOnPremisesInstanceResponsePrivate(this), parent)
 {
     setRequest(new RegisterOnPremisesInstanceRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteTopicResponse::DeleteTopicResponse(
         const DeleteTopicRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new DeleteTopicResponsePrivate(this), parent)
+    : DeleteTopicResponse(new DeleteTopicResponsePrivate(this), parent)
 {
     setRequest(new DeleteTopicRequest(request));
     setReply(reply);

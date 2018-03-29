@@ -46,7 +46,7 @@ GenerateDataKeyResponse::GenerateDataKeyResponse(
         const GenerateDataKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new GenerateDataKeyResponsePrivate(this), parent)
+    : GenerateDataKeyResponse(new GenerateDataKeyResponsePrivate(this), parent)
 {
     setRequest(new GenerateDataKeyRequest(request));
     setReply(reply);

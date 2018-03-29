@@ -46,7 +46,7 @@ DescribeReservedCacheNodesResponse::DescribeReservedCacheNodesResponse(
         const DescribeReservedCacheNodesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new DescribeReservedCacheNodesResponsePrivate(this), parent)
+    : DescribeReservedCacheNodesResponse(new DescribeReservedCacheNodesResponsePrivate(this), parent)
 {
     setRequest(new DescribeReservedCacheNodesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListCertificatesByCAResponse::ListCertificatesByCAResponse(
         const ListCertificatesByCARequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new ListCertificatesByCAResponsePrivate(this), parent)
+    : ListCertificatesByCAResponse(new ListCertificatesByCAResponsePrivate(this), parent)
 {
     setRequest(new ListCertificatesByCARequest(request));
     setReply(reply);

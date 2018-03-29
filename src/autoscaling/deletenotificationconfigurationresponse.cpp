@@ -46,7 +46,7 @@ DeleteNotificationConfigurationResponse::DeleteNotificationConfigurationResponse
         const DeleteNotificationConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new DeleteNotificationConfigurationResponsePrivate(this), parent)
+    : DeleteNotificationConfigurationResponse(new DeleteNotificationConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DeleteNotificationConfigurationRequest(request));
     setReply(reply);

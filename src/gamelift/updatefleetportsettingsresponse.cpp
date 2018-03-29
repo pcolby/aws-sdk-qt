@@ -46,7 +46,7 @@ UpdateFleetPortSettingsResponse::UpdateFleetPortSettingsResponse(
         const UpdateFleetPortSettingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new UpdateFleetPortSettingsResponsePrivate(this), parent)
+    : UpdateFleetPortSettingsResponse(new UpdateFleetPortSettingsResponsePrivate(this), parent)
 {
     setRequest(new UpdateFleetPortSettingsRequest(request));
     setReply(reply);

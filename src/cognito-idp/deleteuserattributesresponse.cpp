@@ -46,7 +46,7 @@ DeleteUserAttributesResponse::DeleteUserAttributesResponse(
         const DeleteUserAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new DeleteUserAttributesResponsePrivate(this), parent)
+    : DeleteUserAttributesResponse(new DeleteUserAttributesResponsePrivate(this), parent)
 {
     setRequest(new DeleteUserAttributesRequest(request));
     setReply(reply);

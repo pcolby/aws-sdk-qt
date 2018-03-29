@@ -46,7 +46,7 @@ ModifyVpcPeeringConnectionOptionsResponse::ModifyVpcPeeringConnectionOptionsResp
         const ModifyVpcPeeringConnectionOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyVpcPeeringConnectionOptionsResponsePrivate(this), parent)
+    : ModifyVpcPeeringConnectionOptionsResponse(new ModifyVpcPeeringConnectionOptionsResponsePrivate(this), parent)
 {
     setRequest(new ModifyVpcPeeringConnectionOptionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeResourceGroupsResponse::DescribeResourceGroupsResponse(
         const DescribeResourceGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new DescribeResourceGroupsResponsePrivate(this), parent)
+    : DescribeResourceGroupsResponse(new DescribeResourceGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeResourceGroupsRequest(request));
     setReply(reply);

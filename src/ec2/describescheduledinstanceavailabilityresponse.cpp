@@ -46,7 +46,7 @@ DescribeScheduledInstanceAvailabilityResponse::DescribeScheduledInstanceAvailabi
         const DescribeScheduledInstanceAvailabilityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeScheduledInstanceAvailabilityResponsePrivate(this), parent)
+    : DescribeScheduledInstanceAvailabilityResponse(new DescribeScheduledInstanceAvailabilityResponsePrivate(this), parent)
 {
     setRequest(new DescribeScheduledInstanceAvailabilityRequest(request));
     setReply(reply);

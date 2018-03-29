@@ -46,7 +46,7 @@ RestartAppServerResponse::RestartAppServerResponse(
         const RestartAppServerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new RestartAppServerResponsePrivate(this), parent)
+    : RestartAppServerResponse(new RestartAppServerResponsePrivate(this), parent)
 {
     setRequest(new RestartAppServerRequest(request));
     setReply(reply);

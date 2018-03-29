@@ -46,7 +46,7 @@ UpdateComputeEnvironmentResponse::UpdateComputeEnvironmentResponse(
         const UpdateComputeEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchResponse(new UpdateComputeEnvironmentResponsePrivate(this), parent)
+    : UpdateComputeEnvironmentResponse(new UpdateComputeEnvironmentResponsePrivate(this), parent)
 {
     setRequest(new UpdateComputeEnvironmentRequest(request));
     setReply(reply);

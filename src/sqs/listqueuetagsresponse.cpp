@@ -46,7 +46,7 @@ ListQueueTagsResponse::ListQueueTagsResponse(
         const ListQueueTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new ListQueueTagsResponsePrivate(this), parent)
+    : ListQueueTagsResponse(new ListQueueTagsResponsePrivate(this), parent)
 {
     setRequest(new ListQueueTagsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RefreshTrustedAdvisorCheckResponse::RefreshTrustedAdvisorCheckResponse(
         const RefreshTrustedAdvisorCheckRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SupportResponse(new RefreshTrustedAdvisorCheckResponsePrivate(this), parent)
+    : RefreshTrustedAdvisorCheckResponse(new RefreshTrustedAdvisorCheckResponsePrivate(this), parent)
 {
     setRequest(new RefreshTrustedAdvisorCheckRequest(request));
     setReply(reply);

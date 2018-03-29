@@ -46,7 +46,7 @@ GetQueryLoggingConfigResponse::GetQueryLoggingConfigResponse(
         const GetQueryLoggingConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new GetQueryLoggingConfigResponsePrivate(this), parent)
+    : GetQueryLoggingConfigResponse(new GetQueryLoggingConfigResponsePrivate(this), parent)
 {
     setRequest(new GetQueryLoggingConfigRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeSeverityLevelsResponse::DescribeSeverityLevelsResponse(
         const DescribeSeverityLevelsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SupportResponse(new DescribeSeverityLevelsResponsePrivate(this), parent)
+    : DescribeSeverityLevelsResponse(new DescribeSeverityLevelsResponsePrivate(this), parent)
 {
     setRequest(new DescribeSeverityLevelsRequest(request));
     setReply(reply);

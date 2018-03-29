@@ -46,7 +46,7 @@ ListTagsForResourcesResponse::ListTagsForResourcesResponse(
         const ListTagsForResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new ListTagsForResourcesResponsePrivate(this), parent)
+    : ListTagsForResourcesResponse(new ListTagsForResourcesResponsePrivate(this), parent)
 {
     setRequest(new ListTagsForResourcesRequest(request));
     setReply(reply);

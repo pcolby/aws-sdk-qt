@@ -46,7 +46,7 @@ CreateFpgaImageResponse::CreateFpgaImageResponse(
         const CreateFpgaImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateFpgaImageResponsePrivate(this), parent)
+    : CreateFpgaImageResponse(new CreateFpgaImageResponsePrivate(this), parent)
 {
     setRequest(new CreateFpgaImageRequest(request));
     setReply(reply);

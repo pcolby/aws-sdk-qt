@@ -46,7 +46,7 @@ OpenInstancePublicPortsResponse::OpenInstancePublicPortsResponse(
         const OpenInstancePublicPortsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new OpenInstancePublicPortsResponsePrivate(this), parent)
+    : OpenInstancePublicPortsResponse(new OpenInstancePublicPortsResponsePrivate(this), parent)
 {
     setRequest(new OpenInstancePublicPortsRequest(request));
     setReply(reply);

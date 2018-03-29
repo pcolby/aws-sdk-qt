@@ -46,7 +46,7 @@ DeleteCommentContentResponse::DeleteCommentContentResponse(
         const DeleteCommentContentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new DeleteCommentContentResponsePrivate(this), parent)
+    : DeleteCommentContentResponse(new DeleteCommentContentResponsePrivate(this), parent)
 {
     setRequest(new DeleteCommentContentRequest(request));
     setReply(reply);

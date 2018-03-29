@@ -46,7 +46,7 @@ DeleteTableVersionResponse::DeleteTableVersionResponse(
         const DeleteTableVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new DeleteTableVersionResponsePrivate(this), parent)
+    : DeleteTableVersionResponse(new DeleteTableVersionResponsePrivate(this), parent)
 {
     setRequest(new DeleteTableVersionRequest(request));
     setReply(reply);

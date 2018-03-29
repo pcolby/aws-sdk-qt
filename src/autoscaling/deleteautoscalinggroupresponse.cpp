@@ -46,7 +46,7 @@ DeleteAutoScalingGroupResponse::DeleteAutoScalingGroupResponse(
         const DeleteAutoScalingGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new DeleteAutoScalingGroupResponsePrivate(this), parent)
+    : DeleteAutoScalingGroupResponse(new DeleteAutoScalingGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteAutoScalingGroupRequest(request));
     setReply(reply);

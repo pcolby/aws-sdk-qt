@@ -46,7 +46,7 @@ DetectFacesResponse::DetectFacesResponse(
         const DetectFacesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RekognitionResponse(new DetectFacesResponsePrivate(this), parent)
+    : DetectFacesResponse(new DetectFacesResponsePrivate(this), parent)
 {
     setRequest(new DetectFacesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetDataEndpointResponse::GetDataEndpointResponse(
         const GetDataEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisVideoResponse(new GetDataEndpointResponsePrivate(this), parent)
+    : GetDataEndpointResponse(new GetDataEndpointResponsePrivate(this), parent)
 {
     setRequest(new GetDataEndpointRequest(request));
     setReply(reply);

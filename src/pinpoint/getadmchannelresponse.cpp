@@ -46,7 +46,7 @@ GetAdmChannelResponse::GetAdmChannelResponse(
         const GetAdmChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new GetAdmChannelResponsePrivate(this), parent)
+    : GetAdmChannelResponse(new GetAdmChannelResponsePrivate(this), parent)
 {
     setRequest(new GetAdmChannelRequest(request));
     setReply(reply);

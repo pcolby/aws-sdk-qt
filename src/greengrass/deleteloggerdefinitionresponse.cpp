@@ -46,7 +46,7 @@ DeleteLoggerDefinitionResponse::DeleteLoggerDefinitionResponse(
         const DeleteLoggerDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new DeleteLoggerDefinitionResponsePrivate(this), parent)
+    : DeleteLoggerDefinitionResponse(new DeleteLoggerDefinitionResponsePrivate(this), parent)
 {
     setRequest(new DeleteLoggerDefinitionRequest(request));
     setReply(reply);

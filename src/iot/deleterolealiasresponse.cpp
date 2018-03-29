@@ -46,7 +46,7 @@ DeleteRoleAliasResponse::DeleteRoleAliasResponse(
         const DeleteRoleAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new DeleteRoleAliasResponsePrivate(this), parent)
+    : DeleteRoleAliasResponse(new DeleteRoleAliasResponsePrivate(this), parent)
 {
     setRequest(new DeleteRoleAliasRequest(request));
     setReply(reply);

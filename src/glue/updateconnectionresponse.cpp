@@ -46,7 +46,7 @@ UpdateConnectionResponse::UpdateConnectionResponse(
         const UpdateConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new UpdateConnectionResponsePrivate(this), parent)
+    : UpdateConnectionResponse(new UpdateConnectionResponsePrivate(this), parent)
 {
     setRequest(new UpdateConnectionRequest(request));
     setReply(reply);

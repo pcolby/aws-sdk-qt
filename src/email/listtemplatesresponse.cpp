@@ -46,7 +46,7 @@ ListTemplatesResponse::ListTemplatesResponse(
         const ListTemplatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new ListTemplatesResponsePrivate(this), parent)
+    : ListTemplatesResponse(new ListTemplatesResponsePrivate(this), parent)
 {
     setRequest(new ListTemplatesRequest(request));
     setReply(reply);

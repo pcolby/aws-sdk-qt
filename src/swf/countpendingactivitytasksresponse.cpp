@@ -46,7 +46,7 @@ CountPendingActivityTasksResponse::CountPendingActivityTasksResponse(
         const CountPendingActivityTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new CountPendingActivityTasksResponsePrivate(this), parent)
+    : CountPendingActivityTasksResponse(new CountPendingActivityTasksResponsePrivate(this), parent)
 {
     setRequest(new CountPendingActivityTasksRequest(request));
     setReply(reply);

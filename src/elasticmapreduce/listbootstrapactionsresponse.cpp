@@ -46,7 +46,7 @@ ListBootstrapActionsResponse::ListBootstrapActionsResponse(
         const ListBootstrapActionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new ListBootstrapActionsResponsePrivate(this), parent)
+    : ListBootstrapActionsResponse(new ListBootstrapActionsResponsePrivate(this), parent)
 {
     setRequest(new ListBootstrapActionsRequest(request));
     setReply(reply);

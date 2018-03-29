@@ -46,7 +46,7 @@ CancelReservedInstancesListingResponse::CancelReservedInstancesListingResponse(
         const CancelReservedInstancesListingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CancelReservedInstancesListingResponsePrivate(this), parent)
+    : CancelReservedInstancesListingResponse(new CancelReservedInstancesListingResponsePrivate(this), parent)
 {
     setRequest(new CancelReservedInstancesListingRequest(request));
     setReply(reply);

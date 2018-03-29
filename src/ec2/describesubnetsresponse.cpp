@@ -46,7 +46,7 @@ DescribeSubnetsResponse::DescribeSubnetsResponse(
         const DescribeSubnetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeSubnetsResponsePrivate(this), parent)
+    : DescribeSubnetsResponse(new DescribeSubnetsResponsePrivate(this), parent)
 {
     setRequest(new DescribeSubnetsRequest(request));
     setReply(reply);

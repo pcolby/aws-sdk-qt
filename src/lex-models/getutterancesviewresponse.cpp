@@ -46,7 +46,7 @@ GetUtterancesViewResponse::GetUtterancesViewResponse(
         const GetUtterancesViewRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetUtterancesViewResponsePrivate(this), parent)
+    : GetUtterancesViewResponse(new GetUtterancesViewResponsePrivate(this), parent)
 {
     setRequest(new GetUtterancesViewRequest(request));
     setReply(reply);

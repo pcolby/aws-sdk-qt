@@ -46,7 +46,7 @@ ListOrganizationsResponse::ListOrganizationsResponse(
         const ListOrganizationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkMailResponse(new ListOrganizationsResponsePrivate(this), parent)
+    : ListOrganizationsResponse(new ListOrganizationsResponsePrivate(this), parent)
 {
     setRequest(new ListOrganizationsRequest(request));
     setReply(reply);

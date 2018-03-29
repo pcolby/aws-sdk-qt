@@ -46,7 +46,7 @@ ListAccountsResponse::ListAccountsResponse(
         const ListAccountsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OrganizationsResponse(new ListAccountsResponsePrivate(this), parent)
+    : ListAccountsResponse(new ListAccountsResponsePrivate(this), parent)
 {
     setRequest(new ListAccountsRequest(request));
     setReply(reply);

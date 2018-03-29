@@ -46,7 +46,7 @@ AttachVolumeResponse::AttachVolumeResponse(
         const AttachVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AttachVolumeResponsePrivate(this), parent)
+    : AttachVolumeResponse(new AttachVolumeResponsePrivate(this), parent)
 {
     setRequest(new AttachVolumeRequest(request));
     setReply(reply);

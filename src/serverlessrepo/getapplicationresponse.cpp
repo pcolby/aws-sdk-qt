@@ -46,7 +46,7 @@ GetApplicationResponse::GetApplicationResponse(
         const GetApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServerlessApplicationRepositoryResponse(new GetApplicationResponsePrivate(this), parent)
+    : GetApplicationResponse(new GetApplicationResponsePrivate(this), parent)
 {
     setRequest(new GetApplicationRequest(request));
     setReply(reply);

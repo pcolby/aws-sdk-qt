@@ -46,7 +46,7 @@ CreateBuildResponse::CreateBuildResponse(
         const CreateBuildRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new CreateBuildResponsePrivate(this), parent)
+    : CreateBuildResponse(new CreateBuildResponsePrivate(this), parent)
 {
     setRequest(new CreateBuildRequest(request));
     setReply(reply);

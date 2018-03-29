@@ -46,7 +46,7 @@ GetLogEventsResponse::GetLogEventsResponse(
         const GetLogEventsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchLogsResponse(new GetLogEventsResponsePrivate(this), parent)
+    : GetLogEventsResponse(new GetLogEventsResponsePrivate(this), parent)
 {
     setRequest(new GetLogEventsRequest(request));
     setReply(reply);

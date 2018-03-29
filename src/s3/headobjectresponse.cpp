@@ -46,7 +46,7 @@ HeadObjectResponse::HeadObjectResponse(
         const HeadObjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new HeadObjectResponsePrivate(this), parent)
+    : HeadObjectResponse(new HeadObjectResponsePrivate(this), parent)
 {
     setRequest(new HeadObjectRequest(request));
     setReply(reply);

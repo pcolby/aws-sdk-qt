@@ -46,7 +46,7 @@ UpdateGroupCertificateConfigurationResponse::UpdateGroupCertificateConfiguration
         const UpdateGroupCertificateConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new UpdateGroupCertificateConfigurationResponsePrivate(this), parent)
+    : UpdateGroupCertificateConfigurationResponse(new UpdateGroupCertificateConfigurationResponsePrivate(this), parent)
 {
     setRequest(new UpdateGroupCertificateConfigurationRequest(request));
     setReply(reply);

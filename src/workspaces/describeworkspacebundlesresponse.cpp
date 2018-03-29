@@ -46,7 +46,7 @@ DescribeWorkspaceBundlesResponse::DescribeWorkspaceBundlesResponse(
         const DescribeWorkspaceBundlesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkSpacesResponse(new DescribeWorkspaceBundlesResponsePrivate(this), parent)
+    : DescribeWorkspaceBundlesResponse(new DescribeWorkspaceBundlesResponsePrivate(this), parent)
 {
     setRequest(new DescribeWorkspaceBundlesRequest(request));
     setReply(reply);

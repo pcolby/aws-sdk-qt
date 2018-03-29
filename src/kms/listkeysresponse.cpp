@@ -46,7 +46,7 @@ ListKeysResponse::ListKeysResponse(
         const ListKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new ListKeysResponsePrivate(this), parent)
+    : ListKeysResponse(new ListKeysResponsePrivate(this), parent)
 {
     setRequest(new ListKeysRequest(request));
     setReply(reply);

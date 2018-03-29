@@ -46,7 +46,7 @@ CreateMatchmakingRuleSetResponse::CreateMatchmakingRuleSetResponse(
         const CreateMatchmakingRuleSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new CreateMatchmakingRuleSetResponsePrivate(this), parent)
+    : CreateMatchmakingRuleSetResponse(new CreateMatchmakingRuleSetResponsePrivate(this), parent)
 {
     setRequest(new CreateMatchmakingRuleSetRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateApnsSandboxChannelResponse::UpdateApnsSandboxChannelResponse(
         const UpdateApnsSandboxChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new UpdateApnsSandboxChannelResponsePrivate(this), parent)
+    : UpdateApnsSandboxChannelResponse(new UpdateApnsSandboxChannelResponsePrivate(this), parent)
 {
     setRequest(new UpdateApnsSandboxChannelRequest(request));
     setReply(reply);

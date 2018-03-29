@@ -46,7 +46,7 @@ UpdateGameSessionQueueResponse::UpdateGameSessionQueueResponse(
         const UpdateGameSessionQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new UpdateGameSessionQueueResponsePrivate(this), parent)
+    : UpdateGameSessionQueueResponse(new UpdateGameSessionQueueResponsePrivate(this), parent)
 {
     setRequest(new UpdateGameSessionQueueRequest(request));
     setReply(reply);

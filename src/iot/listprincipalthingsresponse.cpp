@@ -46,7 +46,7 @@ ListPrincipalThingsResponse::ListPrincipalThingsResponse(
         const ListPrincipalThingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new ListPrincipalThingsResponsePrivate(this), parent)
+    : ListPrincipalThingsResponse(new ListPrincipalThingsResponsePrivate(this), parent)
 {
     setRequest(new ListPrincipalThingsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListActivatedRulesInRuleGroupResponse::ListActivatedRulesInRuleGroupResponse(
         const ListActivatedRulesInRuleGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new ListActivatedRulesInRuleGroupResponsePrivate(this), parent)
+    : ListActivatedRulesInRuleGroupResponse(new ListActivatedRulesInRuleGroupResponsePrivate(this), parent)
 {
     setRequest(new ListActivatedRulesInRuleGroupRequest(request));
     setReply(reply);

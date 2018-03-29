@@ -46,7 +46,7 @@ ModifyOptionGroupResponse::ModifyOptionGroupResponse(
         const ModifyOptionGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ModifyOptionGroupResponsePrivate(this), parent)
+    : ModifyOptionGroupResponse(new ModifyOptionGroupResponsePrivate(this), parent)
 {
     setRequest(new ModifyOptionGroupRequest(request));
     setReply(reply);

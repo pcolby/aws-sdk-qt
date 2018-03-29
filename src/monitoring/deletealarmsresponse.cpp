@@ -46,7 +46,7 @@ DeleteAlarmsResponse::DeleteAlarmsResponse(
         const DeleteAlarmsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchResponse(new DeleteAlarmsResponsePrivate(this), parent)
+    : DeleteAlarmsResponse(new DeleteAlarmsResponsePrivate(this), parent)
 {
     setRequest(new DeleteAlarmsRequest(request));
     setReply(reply);

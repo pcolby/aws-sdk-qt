@@ -46,7 +46,7 @@ GetBotChannelAssociationResponse::GetBotChannelAssociationResponse(
         const GetBotChannelAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetBotChannelAssociationResponsePrivate(this), parent)
+    : GetBotChannelAssociationResponse(new GetBotChannelAssociationResponsePrivate(this), parent)
 {
     setRequest(new GetBotChannelAssociationRequest(request));
     setReply(reply);

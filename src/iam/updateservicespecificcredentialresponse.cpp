@@ -46,7 +46,7 @@ UpdateServiceSpecificCredentialResponse::UpdateServiceSpecificCredentialResponse
         const UpdateServiceSpecificCredentialRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateServiceSpecificCredentialResponsePrivate(this), parent)
+    : UpdateServiceSpecificCredentialResponse(new UpdateServiceSpecificCredentialResponsePrivate(this), parent)
 {
     setRequest(new UpdateServiceSpecificCredentialRequest(request));
     setReply(reply);

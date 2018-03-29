@@ -46,7 +46,7 @@ VerifyDomainDkimResponse::VerifyDomainDkimResponse(
         const VerifyDomainDkimRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new VerifyDomainDkimResponsePrivate(this), parent)
+    : VerifyDomainDkimResponse(new VerifyDomainDkimResponsePrivate(this), parent)
 {
     setRequest(new VerifyDomainDkimRequest(request));
     setReply(reply);

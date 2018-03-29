@@ -46,7 +46,7 @@ DeleteDeploymentResponse::DeleteDeploymentResponse(
         const DeleteDeploymentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteDeploymentResponsePrivate(this), parent)
+    : DeleteDeploymentResponse(new DeleteDeploymentResponsePrivate(this), parent)
 {
     setRequest(new DeleteDeploymentRequest(request));
     setReply(reply);

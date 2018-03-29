@@ -46,7 +46,7 @@ GetInstanceSnapshotsResponse::GetInstanceSnapshotsResponse(
         const GetInstanceSnapshotsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new GetInstanceSnapshotsResponsePrivate(this), parent)
+    : GetInstanceSnapshotsResponse(new GetInstanceSnapshotsResponsePrivate(this), parent)
 {
     setRequest(new GetInstanceSnapshotsRequest(request));
     setReply(reply);

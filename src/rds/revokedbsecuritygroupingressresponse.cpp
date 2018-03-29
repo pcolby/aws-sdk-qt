@@ -46,7 +46,7 @@ RevokeDBSecurityGroupIngressResponse::RevokeDBSecurityGroupIngressResponse(
         const RevokeDBSecurityGroupIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RevokeDBSecurityGroupIngressResponsePrivate(this), parent)
+    : RevokeDBSecurityGroupIngressResponse(new RevokeDBSecurityGroupIngressResponsePrivate(this), parent)
 {
     setRequest(new RevokeDBSecurityGroupIngressRequest(request));
     setReply(reply);

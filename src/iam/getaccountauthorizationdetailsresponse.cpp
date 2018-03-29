@@ -46,7 +46,7 @@ GetAccountAuthorizationDetailsResponse::GetAccountAuthorizationDetailsResponse(
         const GetAccountAuthorizationDetailsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetAccountAuthorizationDetailsResponsePrivate(this), parent)
+    : GetAccountAuthorizationDetailsResponse(new GetAccountAuthorizationDetailsResponsePrivate(this), parent)
 {
     setRequest(new GetAccountAuthorizationDetailsRequest(request));
     setReply(reply);

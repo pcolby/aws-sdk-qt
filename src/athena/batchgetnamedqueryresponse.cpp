@@ -46,7 +46,7 @@ BatchGetNamedQueryResponse::BatchGetNamedQueryResponse(
         const BatchGetNamedQueryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AthenaResponse(new BatchGetNamedQueryResponsePrivate(this), parent)
+    : BatchGetNamedQueryResponse(new BatchGetNamedQueryResponsePrivate(this), parent)
 {
     setRequest(new BatchGetNamedQueryRequest(request));
     setReply(reply);

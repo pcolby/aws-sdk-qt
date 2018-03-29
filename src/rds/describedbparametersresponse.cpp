@@ -46,7 +46,7 @@ DescribeDBParametersResponse::DescribeDBParametersResponse(
         const DescribeDBParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeDBParametersResponsePrivate(this), parent)
+    : DescribeDBParametersResponse(new DescribeDBParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBParametersRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListEntitiesForPolicyResponse::ListEntitiesForPolicyResponse(
         const ListEntitiesForPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListEntitiesForPolicyResponsePrivate(this), parent)
+    : ListEntitiesForPolicyResponse(new ListEntitiesForPolicyResponsePrivate(this), parent)
 {
     setRequest(new ListEntitiesForPolicyRequest(request));
     setReply(reply);

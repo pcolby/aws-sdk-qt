@@ -46,7 +46,7 @@ DeleteModelResponse::DeleteModelResponse(
         const DeleteModelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteModelResponsePrivate(this), parent)
+    : DeleteModelResponse(new DeleteModelResponsePrivate(this), parent)
 {
     setRequest(new DeleteModelRequest(request));
     setReply(reply);

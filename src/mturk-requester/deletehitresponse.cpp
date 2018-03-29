@@ -46,7 +46,7 @@ DeleteHITResponse::DeleteHITResponse(
         const DeleteHITRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new DeleteHITResponsePrivate(this), parent)
+    : DeleteHITResponse(new DeleteHITResponsePrivate(this), parent)
 {
     setRequest(new DeleteHITRequest(request));
     setReply(reply);

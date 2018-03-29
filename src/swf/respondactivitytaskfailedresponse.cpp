@@ -46,7 +46,7 @@ RespondActivityTaskFailedResponse::RespondActivityTaskFailedResponse(
         const RespondActivityTaskFailedRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new RespondActivityTaskFailedResponsePrivate(this), parent)
+    : RespondActivityTaskFailedResponse(new RespondActivityTaskFailedResponsePrivate(this), parent)
 {
     setRequest(new RespondActivityTaskFailedRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteRuleResponse::DeleteRuleResponse(
         const DeleteRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteRuleResponsePrivate(this), parent)
+    : DeleteRuleResponse(new DeleteRuleResponsePrivate(this), parent)
 {
     setRequest(new DeleteRuleRequest(request));
     setReply(reply);

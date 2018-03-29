@@ -46,7 +46,7 @@ UpdateRepositoryDescriptionResponse::UpdateRepositoryDescriptionResponse(
         const UpdateRepositoryDescriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new UpdateRepositoryDescriptionResponsePrivate(this), parent)
+    : UpdateRepositoryDescriptionResponse(new UpdateRepositoryDescriptionResponsePrivate(this), parent)
 {
     setRequest(new UpdateRepositoryDescriptionRequest(request));
     setReply(reply);

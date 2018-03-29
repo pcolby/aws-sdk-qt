@@ -46,7 +46,7 @@ CancelArchivalResponse::CancelArchivalResponse(
         const CancelArchivalRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new CancelArchivalResponsePrivate(this), parent)
+    : CancelArchivalResponse(new CancelArchivalResponsePrivate(this), parent)
 {
     setRequest(new CancelArchivalRequest(request));
     setReply(reply);

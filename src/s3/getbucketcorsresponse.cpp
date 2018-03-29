@@ -46,7 +46,7 @@ GetBucketCorsResponse::GetBucketCorsResponse(
         const GetBucketCorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new GetBucketCorsResponsePrivate(this), parent)
+    : GetBucketCorsResponse(new GetBucketCorsResponsePrivate(this), parent)
 {
     setRequest(new GetBucketCorsRequest(request));
     setReply(reply);

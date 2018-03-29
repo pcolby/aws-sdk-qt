@@ -46,7 +46,7 @@ DeleteChapCredentialsResponse::DeleteChapCredentialsResponse(
         const DeleteChapCredentialsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new DeleteChapCredentialsResponsePrivate(this), parent)
+    : DeleteChapCredentialsResponse(new DeleteChapCredentialsResponsePrivate(this), parent)
 {
     setRequest(new DeleteChapCredentialsRequest(request));
     setReply(reply);

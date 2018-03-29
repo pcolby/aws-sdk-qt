@@ -46,7 +46,7 @@ SignalWorkflowExecutionResponse::SignalWorkflowExecutionResponse(
         const SignalWorkflowExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new SignalWorkflowExecutionResponsePrivate(this), parent)
+    : SignalWorkflowExecutionResponse(new SignalWorkflowExecutionResponsePrivate(this), parent)
 {
     setRequest(new SignalWorkflowExecutionRequest(request));
     setReply(reply);

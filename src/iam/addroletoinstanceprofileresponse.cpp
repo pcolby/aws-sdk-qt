@@ -46,7 +46,7 @@ AddRoleToInstanceProfileResponse::AddRoleToInstanceProfileResponse(
         const AddRoleToInstanceProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new AddRoleToInstanceProfileResponsePrivate(this), parent)
+    : AddRoleToInstanceProfileResponse(new AddRoleToInstanceProfileResponsePrivate(this), parent)
 {
     setRequest(new AddRoleToInstanceProfileRequest(request));
     setReply(reply);

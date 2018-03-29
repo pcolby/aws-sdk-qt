@@ -46,7 +46,7 @@ StartReplicationTaskResponse::StartReplicationTaskResponse(
         const StartReplicationTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new StartReplicationTaskResponsePrivate(this), parent)
+    : StartReplicationTaskResponse(new StartReplicationTaskResponsePrivate(this), parent)
 {
     setRequest(new StartReplicationTaskRequest(request));
     setReply(reply);

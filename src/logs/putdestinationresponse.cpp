@@ -46,7 +46,7 @@ PutDestinationResponse::PutDestinationResponse(
         const PutDestinationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchLogsResponse(new PutDestinationResponsePrivate(this), parent)
+    : PutDestinationResponse(new PutDestinationResponsePrivate(this), parent)
 {
     setRequest(new PutDestinationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DecreaseStreamRetentionPeriodResponse::DecreaseStreamRetentionPeriodResponse(
         const DecreaseStreamRetentionPeriodRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisResponse(new DecreaseStreamRetentionPeriodResponsePrivate(this), parent)
+    : DecreaseStreamRetentionPeriodResponse(new DecreaseStreamRetentionPeriodResponsePrivate(this), parent)
 {
     setRequest(new DecreaseStreamRetentionPeriodRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StartMaintenanceResponse::StartMaintenanceResponse(
         const StartMaintenanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new StartMaintenanceResponsePrivate(this), parent)
+    : StartMaintenanceResponse(new StartMaintenanceResponsePrivate(this), parent)
 {
     setRequest(new StartMaintenanceRequest(request));
     setReply(reply);

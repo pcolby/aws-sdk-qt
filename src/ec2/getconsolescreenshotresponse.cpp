@@ -46,7 +46,7 @@ GetConsoleScreenshotResponse::GetConsoleScreenshotResponse(
         const GetConsoleScreenshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new GetConsoleScreenshotResponsePrivate(this), parent)
+    : GetConsoleScreenshotResponse(new GetConsoleScreenshotResponsePrivate(this), parent)
 {
     setRequest(new GetConsoleScreenshotRequest(request));
     setReply(reply);

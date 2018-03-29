@@ -46,7 +46,7 @@ SetUICustomizationResponse::SetUICustomizationResponse(
         const SetUICustomizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new SetUICustomizationResponsePrivate(this), parent)
+    : SetUICustomizationResponse(new SetUICustomizationResponsePrivate(this), parent)
 {
     setRequest(new SetUICustomizationRequest(request));
     setReply(reply);

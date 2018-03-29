@@ -46,7 +46,7 @@ DescribeTerminationPolicyTypesResponse::DescribeTerminationPolicyTypesResponse(
         const DescribeTerminationPolicyTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new DescribeTerminationPolicyTypesResponsePrivate(this), parent)
+    : DescribeTerminationPolicyTypesResponse(new DescribeTerminationPolicyTypesResponsePrivate(this), parent)
 {
     setRequest(new DescribeTerminationPolicyTypesRequest(request));
     setReply(reply);

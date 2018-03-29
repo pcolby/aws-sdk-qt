@@ -46,7 +46,7 @@ ModifyDBInstanceResponse::ModifyDBInstanceResponse(
         const ModifyDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ModifyDBInstanceResponsePrivate(this), parent)
+    : ModifyDBInstanceResponse(new ModifyDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new ModifyDBInstanceRequest(request));
     setReply(reply);

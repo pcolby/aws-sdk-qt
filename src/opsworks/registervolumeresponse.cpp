@@ -46,7 +46,7 @@ RegisterVolumeResponse::RegisterVolumeResponse(
         const RegisterVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new RegisterVolumeResponsePrivate(this), parent)
+    : RegisterVolumeResponse(new RegisterVolumeResponsePrivate(this), parent)
 {
     setRequest(new RegisterVolumeRequest(request));
     setReply(reply);

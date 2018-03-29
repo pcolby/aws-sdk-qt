@@ -46,7 +46,7 @@ ResetDBParameterGroupResponse::ResetDBParameterGroupResponse(
         const ResetDBParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ResetDBParameterGroupResponsePrivate(this), parent)
+    : ResetDBParameterGroupResponse(new ResetDBParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new ResetDBParameterGroupRequest(request));
     setReply(reply);

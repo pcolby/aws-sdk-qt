@@ -46,7 +46,7 @@ DescribeConfigurationOptionsResponse::DescribeConfigurationOptionsResponse(
         const DescribeConfigurationOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new DescribeConfigurationOptionsResponsePrivate(this), parent)
+    : DescribeConfigurationOptionsResponse(new DescribeConfigurationOptionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeConfigurationOptionsRequest(request));
     setReply(reply);

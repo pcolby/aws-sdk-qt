@@ -46,7 +46,7 @@ RegisterToWorkMailResponse::RegisterToWorkMailResponse(
         const RegisterToWorkMailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkMailResponse(new RegisterToWorkMailResponsePrivate(this), parent)
+    : RegisterToWorkMailResponse(new RegisterToWorkMailResponsePrivate(this), parent)
 {
     setRequest(new RegisterToWorkMailRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RegisterTargetsResponse::RegisterTargetsResponse(
         const RegisterTargetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticLoadBalancingv2Response(new RegisterTargetsResponsePrivate(this), parent)
+    : RegisterTargetsResponse(new RegisterTargetsResponsePrivate(this), parent)
 {
     setRequest(new RegisterTargetsRequest(request));
     setReply(reply);

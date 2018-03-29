@@ -46,7 +46,7 @@ SendRawEmailResponse::SendRawEmailResponse(
         const SendRawEmailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SendRawEmailResponsePrivate(this), parent)
+    : SendRawEmailResponse(new SendRawEmailResponsePrivate(this), parent)
 {
     setRequest(new SendRawEmailRequest(request));
     setReply(reply);

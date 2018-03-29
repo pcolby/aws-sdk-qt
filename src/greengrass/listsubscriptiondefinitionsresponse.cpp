@@ -46,7 +46,7 @@ ListSubscriptionDefinitionsResponse::ListSubscriptionDefinitionsResponse(
         const ListSubscriptionDefinitionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new ListSubscriptionDefinitionsResponsePrivate(this), parent)
+    : ListSubscriptionDefinitionsResponse(new ListSubscriptionDefinitionsResponsePrivate(this), parent)
 {
     setRequest(new ListSubscriptionDefinitionsRequest(request));
     setReply(reply);

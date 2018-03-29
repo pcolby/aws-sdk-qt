@@ -46,7 +46,7 @@ CountPendingDecisionTasksResponse::CountPendingDecisionTasksResponse(
         const CountPendingDecisionTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new CountPendingDecisionTasksResponsePrivate(this), parent)
+    : CountPendingDecisionTasksResponse(new CountPendingDecisionTasksResponsePrivate(this), parent)
 {
     setRequest(new CountPendingDecisionTasksRequest(request));
     setReply(reply);

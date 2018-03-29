@@ -46,7 +46,7 @@ DescribeWorkspacesConnectionStatusResponse::DescribeWorkspacesConnectionStatusRe
         const DescribeWorkspacesConnectionStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkSpacesResponse(new DescribeWorkspacesConnectionStatusResponsePrivate(this), parent)
+    : DescribeWorkspacesConnectionStatusResponse(new DescribeWorkspacesConnectionStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeWorkspacesConnectionStatusRequest(request));
     setReply(reply);

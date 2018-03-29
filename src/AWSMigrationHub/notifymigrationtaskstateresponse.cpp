@@ -46,7 +46,7 @@ NotifyMigrationTaskStateResponse::NotifyMigrationTaskStateResponse(
         const NotifyMigrationTaskStateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MigrationHubResponse(new NotifyMigrationTaskStateResponsePrivate(this), parent)
+    : NotifyMigrationTaskStateResponse(new NotifyMigrationTaskStateResponsePrivate(this), parent)
 {
     setRequest(new NotifyMigrationTaskStateRequest(request));
     setReply(reply);

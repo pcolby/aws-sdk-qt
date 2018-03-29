@@ -46,7 +46,7 @@ ResendValidationEmailResponse::ResendValidationEmailResponse(
         const ResendValidationEmailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMResponse(new ResendValidationEmailResponsePrivate(this), parent)
+    : ResendValidationEmailResponse(new ResendValidationEmailResponsePrivate(this), parent)
 {
     setRequest(new ResendValidationEmailRequest(request));
     setReply(reply);

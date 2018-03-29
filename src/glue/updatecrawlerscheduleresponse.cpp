@@ -46,7 +46,7 @@ UpdateCrawlerScheduleResponse::UpdateCrawlerScheduleResponse(
         const UpdateCrawlerScheduleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new UpdateCrawlerScheduleResponsePrivate(this), parent)
+    : UpdateCrawlerScheduleResponse(new UpdateCrawlerScheduleResponsePrivate(this), parent)
 {
     setRequest(new UpdateCrawlerScheduleRequest(request));
     setReply(reply);

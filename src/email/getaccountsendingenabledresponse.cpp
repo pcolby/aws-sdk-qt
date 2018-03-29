@@ -46,7 +46,7 @@ GetAccountSendingEnabledResponse::GetAccountSendingEnabledResponse(
         const GetAccountSendingEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new GetAccountSendingEnabledResponsePrivate(this), parent)
+    : GetAccountSendingEnabledResponse(new GetAccountSendingEnabledResponsePrivate(this), parent)
 {
     setRequest(new GetAccountSendingEnabledRequest(request));
     setReply(reply);

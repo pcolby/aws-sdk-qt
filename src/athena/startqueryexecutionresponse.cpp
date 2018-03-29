@@ -46,7 +46,7 @@ StartQueryExecutionResponse::StartQueryExecutionResponse(
         const StartQueryExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AthenaResponse(new StartQueryExecutionResponsePrivate(this), parent)
+    : StartQueryExecutionResponse(new StartQueryExecutionResponsePrivate(this), parent)
 {
     setRequest(new StartQueryExecutionRequest(request));
     setReply(reply);

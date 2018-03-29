@@ -46,7 +46,7 @@ DescribeOrderableClusterOptionsResponse::DescribeOrderableClusterOptionsResponse
         const DescribeOrderableClusterOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DescribeOrderableClusterOptionsResponsePrivate(this), parent)
+    : DescribeOrderableClusterOptionsResponse(new DescribeOrderableClusterOptionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeOrderableClusterOptionsRequest(request));
     setReply(reply);

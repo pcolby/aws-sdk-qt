@@ -46,7 +46,7 @@ GetAuthorizationTokenResponse::GetAuthorizationTokenResponse(
         const GetAuthorizationTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new GetAuthorizationTokenResponsePrivate(this), parent)
+    : GetAuthorizationTokenResponse(new GetAuthorizationTokenResponsePrivate(this), parent)
 {
     setRequest(new GetAuthorizationTokenRequest(request));
     setReply(reply);

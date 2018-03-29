@@ -46,7 +46,7 @@ UpdateDocumentVersionResponse::UpdateDocumentVersionResponse(
         const UpdateDocumentVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkDocsResponse(new UpdateDocumentVersionResponsePrivate(this), parent)
+    : UpdateDocumentVersionResponse(new UpdateDocumentVersionResponsePrivate(this), parent)
 {
     setRequest(new UpdateDocumentVersionRequest(request));
     setReply(reply);

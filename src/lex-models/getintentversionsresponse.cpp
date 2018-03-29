@@ -46,7 +46,7 @@ GetIntentVersionsResponse::GetIntentVersionsResponse(
         const GetIntentVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetIntentVersionsResponsePrivate(this), parent)
+    : GetIntentVersionsResponse(new GetIntentVersionsResponsePrivate(this), parent)
 {
     setRequest(new GetIntentVersionsRequest(request));
     setReply(reply);

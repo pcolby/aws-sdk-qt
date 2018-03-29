@@ -46,7 +46,7 @@ DisableLoggingResponse::DisableLoggingResponse(
         const DisableLoggingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DisableLoggingResponsePrivate(this), parent)
+    : DisableLoggingResponse(new DisableLoggingResponsePrivate(this), parent)
 {
     setRequest(new DisableLoggingRequest(request));
     setReply(reply);

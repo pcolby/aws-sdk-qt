@@ -46,7 +46,7 @@ DeleteUserPoolClientResponse::DeleteUserPoolClientResponse(
         const DeleteUserPoolClientRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new DeleteUserPoolClientResponsePrivate(this), parent)
+    : DeleteUserPoolClientResponse(new DeleteUserPoolClientResponsePrivate(this), parent)
 {
     setRequest(new DeleteUserPoolClientRequest(request));
     setReply(reply);

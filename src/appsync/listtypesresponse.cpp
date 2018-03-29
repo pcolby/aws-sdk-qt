@@ -46,7 +46,7 @@ ListTypesResponse::ListTypesResponse(
         const ListTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppSyncResponse(new ListTypesResponsePrivate(this), parent)
+    : ListTypesResponse(new ListTypesResponsePrivate(this), parent)
 {
     setRequest(new ListTypesRequest(request));
     setReply(reply);

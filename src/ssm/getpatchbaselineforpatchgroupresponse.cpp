@@ -46,7 +46,7 @@ GetPatchBaselineForPatchGroupResponse::GetPatchBaselineForPatchGroupResponse(
         const GetPatchBaselineForPatchGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new GetPatchBaselineForPatchGroupResponsePrivate(this), parent)
+    : GetPatchBaselineForPatchGroupResponse(new GetPatchBaselineForPatchGroupResponsePrivate(this), parent)
 {
     setRequest(new GetPatchBaselineForPatchGroupRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateDBParameterGroupResponse::CreateDBParameterGroupResponse(
         const CreateDBParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CreateDBParameterGroupResponsePrivate(this), parent)
+    : CreateDBParameterGroupResponse(new CreateDBParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateDBParameterGroupRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetJobManifestResponse::GetJobManifestResponse(
         const GetJobManifestRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SnowballResponse(new GetJobManifestResponsePrivate(this), parent)
+    : GetJobManifestResponse(new GetJobManifestResponsePrivate(this), parent)
 {
     setRequest(new GetJobManifestRequest(request));
     setReply(reply);

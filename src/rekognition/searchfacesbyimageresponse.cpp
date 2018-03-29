@@ -46,7 +46,7 @@ SearchFacesByImageResponse::SearchFacesByImageResponse(
         const SearchFacesByImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RekognitionResponse(new SearchFacesByImageResponsePrivate(this), parent)
+    : SearchFacesByImageResponse(new SearchFacesByImageResponsePrivate(this), parent)
 {
     setRequest(new SearchFacesByImageRequest(request));
     setReply(reply);

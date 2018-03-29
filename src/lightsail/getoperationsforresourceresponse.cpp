@@ -46,7 +46,7 @@ GetOperationsForResourceResponse::GetOperationsForResourceResponse(
         const GetOperationsForResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new GetOperationsForResourceResponsePrivate(this), parent)
+    : GetOperationsForResourceResponse(new GetOperationsForResourceResponsePrivate(this), parent)
 {
     setRequest(new GetOperationsForResourceRequest(request));
     setReply(reply);

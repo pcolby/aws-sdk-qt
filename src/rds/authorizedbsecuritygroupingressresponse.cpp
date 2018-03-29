@@ -46,7 +46,7 @@ AuthorizeDBSecurityGroupIngressResponse::AuthorizeDBSecurityGroupIngressResponse
         const AuthorizeDBSecurityGroupIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new AuthorizeDBSecurityGroupIngressResponsePrivate(this), parent)
+    : AuthorizeDBSecurityGroupIngressResponse(new AuthorizeDBSecurityGroupIngressResponsePrivate(this), parent)
 {
     setRequest(new AuthorizeDBSecurityGroupIngressRequest(request));
     setReply(reply);

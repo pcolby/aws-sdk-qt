@@ -46,7 +46,7 @@ DeleteStreamingDistributionResponse::DeleteStreamingDistributionResponse(
         const DeleteStreamingDistributionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFrontResponse(new DeleteStreamingDistributionResponsePrivate(this), parent)
+    : DeleteStreamingDistributionResponse(new DeleteStreamingDistributionResponsePrivate(this), parent)
 {
     setRequest(new DeleteStreamingDistributionRequest(request));
     setReply(reply);

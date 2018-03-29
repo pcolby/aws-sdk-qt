@@ -46,7 +46,7 @@ GetBucketPolicyResponse::GetBucketPolicyResponse(
         const GetBucketPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new GetBucketPolicyResponsePrivate(this), parent)
+    : GetBucketPolicyResponse(new GetBucketPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetBucketPolicyRequest(request));
     setReply(reply);

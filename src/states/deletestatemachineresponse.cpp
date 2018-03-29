@@ -46,7 +46,7 @@ DeleteStateMachineResponse::DeleteStateMachineResponse(
         const DeleteStateMachineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new DeleteStateMachineResponsePrivate(this), parent)
+    : DeleteStateMachineResponse(new DeleteStateMachineResponsePrivate(this), parent)
 {
     setRequest(new DeleteStateMachineRequest(request));
     setReply(reply);

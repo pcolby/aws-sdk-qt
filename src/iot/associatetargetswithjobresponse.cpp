@@ -46,7 +46,7 @@ AssociateTargetsWithJobResponse::AssociateTargetsWithJobResponse(
         const AssociateTargetsWithJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new AssociateTargetsWithJobResponsePrivate(this), parent)
+    : AssociateTargetsWithJobResponse(new AssociateTargetsWithJobResponsePrivate(this), parent)
 {
     setRequest(new AssociateTargetsWithJobRequest(request));
     setReply(reply);

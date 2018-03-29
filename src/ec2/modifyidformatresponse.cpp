@@ -46,7 +46,7 @@ ModifyIdFormatResponse::ModifyIdFormatResponse(
         const ModifyIdFormatRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyIdFormatResponsePrivate(this), parent)
+    : ModifyIdFormatResponse(new ModifyIdFormatResponsePrivate(this), parent)
 {
     setRequest(new ModifyIdFormatRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteWebACLResponse::DeleteWebACLResponse(
         const DeleteWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeleteWebACLResponsePrivate(this), parent)
+    : DeleteWebACLResponse(new DeleteWebACLResponsePrivate(this), parent)
 {
     setRequest(new DeleteWebACLRequest(request));
     setReply(reply);

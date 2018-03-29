@@ -46,7 +46,7 @@ CreateTagsResponse::CreateTagsResponse(
         const CreateTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateTagsResponsePrivate(this), parent)
+    : CreateTagsResponse(new CreateTagsResponsePrivate(this), parent)
 {
     setRequest(new CreateTagsRequest(request));
     setReply(reply);

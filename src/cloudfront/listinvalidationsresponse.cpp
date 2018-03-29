@@ -46,7 +46,7 @@ ListInvalidationsResponse::ListInvalidationsResponse(
         const ListInvalidationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFrontResponse(new ListInvalidationsResponsePrivate(this), parent)
+    : ListInvalidationsResponse(new ListInvalidationsResponsePrivate(this), parent)
 {
     setRequest(new ListInvalidationsRequest(request));
     setReply(reply);

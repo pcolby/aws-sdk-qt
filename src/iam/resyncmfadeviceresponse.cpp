@@ -46,7 +46,7 @@ ResyncMFADeviceResponse::ResyncMFADeviceResponse(
         const ResyncMFADeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ResyncMFADeviceResponsePrivate(this), parent)
+    : ResyncMFADeviceResponse(new ResyncMFADeviceResponsePrivate(this), parent)
 {
     setRequest(new ResyncMFADeviceRequest(request));
     setReply(reply);

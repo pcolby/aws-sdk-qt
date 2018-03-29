@@ -46,7 +46,7 @@ DescribeEventCategoriesResponse::DescribeEventCategoriesResponse(
         const DescribeEventCategoriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeEventCategoriesResponsePrivate(this), parent)
+    : DescribeEventCategoriesResponse(new DescribeEventCategoriesResponsePrivate(this), parent)
 {
     setRequest(new DescribeEventCategoriesRequest(request));
     setReply(reply);

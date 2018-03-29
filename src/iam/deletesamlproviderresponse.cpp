@@ -46,7 +46,7 @@ DeleteSAMLProviderResponse::DeleteSAMLProviderResponse(
         const DeleteSAMLProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteSAMLProviderResponsePrivate(this), parent)
+    : DeleteSAMLProviderResponse(new DeleteSAMLProviderResponsePrivate(this), parent)
 {
     setRequest(new DeleteSAMLProviderRequest(request));
     setReply(reply);

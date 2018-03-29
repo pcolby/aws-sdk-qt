@@ -46,7 +46,7 @@ ListPlatformVersionsResponse::ListPlatformVersionsResponse(
         const ListPlatformVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new ListPlatformVersionsResponsePrivate(this), parent)
+    : ListPlatformVersionsResponse(new ListPlatformVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListPlatformVersionsRequest(request));
     setReply(reply);

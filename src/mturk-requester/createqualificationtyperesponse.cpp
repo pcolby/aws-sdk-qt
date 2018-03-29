@@ -46,7 +46,7 @@ CreateQualificationTypeResponse::CreateQualificationTypeResponse(
         const CreateQualificationTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new CreateQualificationTypeResponsePrivate(this), parent)
+    : CreateQualificationTypeResponse(new CreateQualificationTypeResponsePrivate(this), parent)
 {
     setRequest(new CreateQualificationTypeRequest(request));
     setReply(reply);

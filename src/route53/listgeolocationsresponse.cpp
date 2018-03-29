@@ -46,7 +46,7 @@ ListGeoLocationsResponse::ListGeoLocationsResponse(
         const ListGeoLocationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new ListGeoLocationsResponsePrivate(this), parent)
+    : ListGeoLocationsResponse(new ListGeoLocationsResponsePrivate(this), parent)
 {
     setRequest(new ListGeoLocationsRequest(request));
     setReply(reply);

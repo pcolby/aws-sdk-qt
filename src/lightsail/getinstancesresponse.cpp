@@ -46,7 +46,7 @@ GetInstancesResponse::GetInstancesResponse(
         const GetInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new GetInstancesResponsePrivate(this), parent)
+    : GetInstancesResponse(new GetInstancesResponsePrivate(this), parent)
 {
     setRequest(new GetInstancesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateTemplateResponse::UpdateTemplateResponse(
         const UpdateTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new UpdateTemplateResponsePrivate(this), parent)
+    : UpdateTemplateResponse(new UpdateTemplateResponsePrivate(this), parent)
 {
     setRequest(new UpdateTemplateRequest(request));
     setReply(reply);

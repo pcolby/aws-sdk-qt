@@ -46,7 +46,7 @@ DeregisterFromWorkMailResponse::DeregisterFromWorkMailResponse(
         const DeregisterFromWorkMailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkMailResponse(new DeregisterFromWorkMailResponsePrivate(this), parent)
+    : DeregisterFromWorkMailResponse(new DeregisterFromWorkMailResponsePrivate(this), parent)
 {
     setRequest(new DeregisterFromWorkMailRequest(request));
     setReply(reply);

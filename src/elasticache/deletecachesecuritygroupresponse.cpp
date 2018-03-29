@@ -46,7 +46,7 @@ DeleteCacheSecurityGroupResponse::DeleteCacheSecurityGroupResponse(
         const DeleteCacheSecurityGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new DeleteCacheSecurityGroupResponsePrivate(this), parent)
+    : DeleteCacheSecurityGroupResponse(new DeleteCacheSecurityGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteCacheSecurityGroupRequest(request));
     setReply(reply);

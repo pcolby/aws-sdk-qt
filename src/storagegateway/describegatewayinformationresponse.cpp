@@ -46,7 +46,7 @@ DescribeGatewayInformationResponse::DescribeGatewayInformationResponse(
         const DescribeGatewayInformationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new DescribeGatewayInformationResponsePrivate(this), parent)
+    : DescribeGatewayInformationResponse(new DescribeGatewayInformationResponsePrivate(this), parent)
 {
     setRequest(new DescribeGatewayInformationRequest(request));
     setReply(reply);

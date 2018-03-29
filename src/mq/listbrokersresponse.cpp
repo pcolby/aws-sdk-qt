@@ -46,7 +46,7 @@ ListBrokersResponse::ListBrokersResponse(
         const ListBrokersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new ListBrokersResponsePrivate(this), parent)
+    : ListBrokersResponse(new ListBrokersResponsePrivate(this), parent)
 {
     setRequest(new ListBrokersRequest(request));
     setReply(reply);

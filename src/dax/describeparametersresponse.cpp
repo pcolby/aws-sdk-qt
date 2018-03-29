@@ -46,7 +46,7 @@ DescribeParametersResponse::DescribeParametersResponse(
         const DescribeParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new DescribeParametersResponsePrivate(this), parent)
+    : DescribeParametersResponse(new DescribeParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeParametersRequest(request));
     setReply(reply);

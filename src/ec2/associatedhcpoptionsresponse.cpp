@@ -46,7 +46,7 @@ AssociateDhcpOptionsResponse::AssociateDhcpOptionsResponse(
         const AssociateDhcpOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AssociateDhcpOptionsResponsePrivate(this), parent)
+    : AssociateDhcpOptionsResponse(new AssociateDhcpOptionsResponsePrivate(this), parent)
 {
     setRequest(new AssociateDhcpOptionsRequest(request));
     setReply(reply);

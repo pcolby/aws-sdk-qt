@@ -46,7 +46,7 @@ CreateNetworkProfileResponse::CreateNetworkProfileResponse(
         const CreateNetworkProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new CreateNetworkProfileResponsePrivate(this), parent)
+    : CreateNetworkProfileResponse(new CreateNetworkProfileResponsePrivate(this), parent)
 {
     setRequest(new CreateNetworkProfileRequest(request));
     setReply(reply);

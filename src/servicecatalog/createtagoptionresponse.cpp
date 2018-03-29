@@ -46,7 +46,7 @@ CreateTagOptionResponse::CreateTagOptionResponse(
         const CreateTagOptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new CreateTagOptionResponsePrivate(this), parent)
+    : CreateTagOptionResponse(new CreateTagOptionResponsePrivate(this), parent)
 {
     setRequest(new CreateTagOptionRequest(request));
     setReply(reply);

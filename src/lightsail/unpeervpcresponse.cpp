@@ -46,7 +46,7 @@ UnpeerVpcResponse::UnpeerVpcResponse(
         const UnpeerVpcRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new UnpeerVpcResponsePrivate(this), parent)
+    : UnpeerVpcResponse(new UnpeerVpcResponsePrivate(this), parent)
 {
     setRequest(new UnpeerVpcRequest(request));
     setReply(reply);

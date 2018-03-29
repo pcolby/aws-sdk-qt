@@ -46,7 +46,7 @@ DescribeLaunchTemplateVersionsResponse::DescribeLaunchTemplateVersionsResponse(
         const DescribeLaunchTemplateVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeLaunchTemplateVersionsResponsePrivate(this), parent)
+    : DescribeLaunchTemplateVersionsResponse(new DescribeLaunchTemplateVersionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeLaunchTemplateVersionsRequest(request));
     setReply(reply);

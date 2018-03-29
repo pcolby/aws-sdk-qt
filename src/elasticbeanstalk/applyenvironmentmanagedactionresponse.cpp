@@ -46,7 +46,7 @@ ApplyEnvironmentManagedActionResponse::ApplyEnvironmentManagedActionResponse(
         const ApplyEnvironmentManagedActionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new ApplyEnvironmentManagedActionResponsePrivate(this), parent)
+    : ApplyEnvironmentManagedActionResponse(new ApplyEnvironmentManagedActionResponsePrivate(this), parent)
 {
     setRequest(new ApplyEnvironmentManagedActionRequest(request));
     setReply(reply);

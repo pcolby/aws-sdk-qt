@@ -46,7 +46,7 @@ GetPresetResponse::GetPresetResponse(
         const GetPresetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MediaConvertResponse(new GetPresetResponsePrivate(this), parent)
+    : GetPresetResponse(new GetPresetResponsePrivate(this), parent)
 {
     setRequest(new GetPresetRequest(request));
     setReply(reply);

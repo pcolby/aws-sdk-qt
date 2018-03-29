@@ -46,7 +46,7 @@ AdminUpdateDeviceStatusResponse::AdminUpdateDeviceStatusResponse(
         const AdminUpdateDeviceStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new AdminUpdateDeviceStatusResponsePrivate(this), parent)
+    : AdminUpdateDeviceStatusResponse(new AdminUpdateDeviceStatusResponsePrivate(this), parent)
 {
     setRequest(new AdminUpdateDeviceStatusRequest(request));
     setReply(reply);

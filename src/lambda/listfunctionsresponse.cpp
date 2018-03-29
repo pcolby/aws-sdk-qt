@@ -46,7 +46,7 @@ ListFunctionsResponse::ListFunctionsResponse(
         const ListFunctionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LambdaResponse(new ListFunctionsResponsePrivate(this), parent)
+    : ListFunctionsResponse(new ListFunctionsResponsePrivate(this), parent)
 {
     setRequest(new ListFunctionsRequest(request));
     setReply(reply);

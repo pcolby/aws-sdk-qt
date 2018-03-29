@@ -46,7 +46,7 @@ DeleteLoginProfileResponse::DeleteLoginProfileResponse(
         const DeleteLoginProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteLoginProfileResponsePrivate(this), parent)
+    : DeleteLoginProfileResponse(new DeleteLoginProfileResponsePrivate(this), parent)
 {
     setRequest(new DeleteLoginProfileRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateGeoMatchSetResponse::CreateGeoMatchSetResponse(
         const CreateGeoMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new CreateGeoMatchSetResponsePrivate(this), parent)
+    : CreateGeoMatchSetResponse(new CreateGeoMatchSetResponsePrivate(this), parent)
 {
     setRequest(new CreateGeoMatchSetRequest(request));
     setReply(reply);

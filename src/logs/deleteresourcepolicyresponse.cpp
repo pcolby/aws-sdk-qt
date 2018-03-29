@@ -46,7 +46,7 @@ DeleteResourcePolicyResponse::DeleteResourcePolicyResponse(
         const DeleteResourcePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchLogsResponse(new DeleteResourcePolicyResponsePrivate(this), parent)
+    : DeleteResourcePolicyResponse(new DeleteResourcePolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteResourcePolicyRequest(request));
     setReply(reply);

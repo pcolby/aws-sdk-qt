@@ -46,7 +46,7 @@ DescribeMigrationTaskResponse::DescribeMigrationTaskResponse(
         const DescribeMigrationTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MigrationHubResponse(new DescribeMigrationTaskResponsePrivate(this), parent)
+    : DescribeMigrationTaskResponse(new DescribeMigrationTaskResponsePrivate(this), parent)
 {
     setRequest(new DescribeMigrationTaskRequest(request));
     setReply(reply);

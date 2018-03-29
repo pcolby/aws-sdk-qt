@@ -46,7 +46,7 @@ DescribeInstancePatchesResponse::DescribeInstancePatchesResponse(
         const DescribeInstancePatchesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeInstancePatchesResponsePrivate(this), parent)
+    : DescribeInstancePatchesResponse(new DescribeInstancePatchesResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstancePatchesRequest(request));
     setReply(reply);

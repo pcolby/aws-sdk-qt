@@ -46,7 +46,7 @@ DeleteDocumentationPartResponse::DeleteDocumentationPartResponse(
         const DeleteDocumentationPartRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteDocumentationPartResponsePrivate(this), parent)
+    : DeleteDocumentationPartResponse(new DeleteDocumentationPartResponsePrivate(this), parent)
 {
     setRequest(new DeleteDocumentationPartRequest(request));
     setReply(reply);

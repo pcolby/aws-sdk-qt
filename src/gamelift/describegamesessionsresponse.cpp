@@ -46,7 +46,7 @@ DescribeGameSessionsResponse::DescribeGameSessionsResponse(
         const DescribeGameSessionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new DescribeGameSessionsResponsePrivate(this), parent)
+    : DescribeGameSessionsResponse(new DescribeGameSessionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeGameSessionsRequest(request));
     setReply(reply);

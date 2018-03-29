@@ -46,7 +46,7 @@ DeleteUserPolicyResponse::DeleteUserPolicyResponse(
         const DeleteUserPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteUserPolicyResponsePrivate(this), parent)
+    : DeleteUserPolicyResponse(new DeleteUserPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteUserPolicyRequest(request));
     setReply(reply);

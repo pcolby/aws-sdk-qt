@@ -46,7 +46,7 @@ StopBuildResponse::StopBuildResponse(
         const StopBuildRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeBuildResponse(new StopBuildResponsePrivate(this), parent)
+    : StopBuildResponse(new StopBuildResponsePrivate(this), parent)
 {
     setRequest(new StopBuildRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ AcceptQualificationRequestResponse::AcceptQualificationRequestResponse(
         const AcceptQualificationRequestRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new AcceptQualificationRequestResponsePrivate(this), parent)
+    : AcceptQualificationRequestResponse(new AcceptQualificationRequestResponsePrivate(this), parent)
 {
     setRequest(new AcceptQualificationRequestRequest(request));
     setReply(reply);

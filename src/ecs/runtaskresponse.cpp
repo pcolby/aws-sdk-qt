@@ -46,7 +46,7 @@ RunTaskResponse::RunTaskResponse(
         const RunTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new RunTaskResponsePrivate(this), parent)
+    : RunTaskResponse(new RunTaskResponsePrivate(this), parent)
 {
     setRequest(new RunTaskRequest(request));
     setReply(reply);

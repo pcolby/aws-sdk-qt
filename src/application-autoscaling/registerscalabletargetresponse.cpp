@@ -46,7 +46,7 @@ RegisterScalableTargetResponse::RegisterScalableTargetResponse(
         const RegisterScalableTargetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationAutoScalingResponse(new RegisterScalableTargetResponsePrivate(this), parent)
+    : RegisterScalableTargetResponse(new RegisterScalableTargetResponsePrivate(this), parent)
 {
     setRequest(new RegisterScalableTargetRequest(request));
     setReply(reply);

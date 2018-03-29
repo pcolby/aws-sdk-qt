@@ -46,7 +46,7 @@ AddApplicationReferenceDataSourceResponse::AddApplicationReferenceDataSourceResp
         const AddApplicationReferenceDataSourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisAnalyticsResponse(new AddApplicationReferenceDataSourceResponsePrivate(this), parent)
+    : AddApplicationReferenceDataSourceResponse(new AddApplicationReferenceDataSourceResponsePrivate(this), parent)
 {
     setRequest(new AddApplicationReferenceDataSourceRequest(request));
     setReply(reply);

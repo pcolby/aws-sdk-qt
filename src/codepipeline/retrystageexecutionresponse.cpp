@@ -46,7 +46,7 @@ RetryStageExecutionResponse::RetryStageExecutionResponse(
         const RetryStageExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodePipelineResponse(new RetryStageExecutionResponsePrivate(this), parent)
+    : RetryStageExecutionResponse(new RetryStageExecutionResponsePrivate(this), parent)
 {
     setRequest(new RetryStageExecutionRequest(request));
     setReply(reply);

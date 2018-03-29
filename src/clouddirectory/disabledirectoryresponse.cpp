@@ -46,7 +46,7 @@ DisableDirectoryResponse::DisableDirectoryResponse(
         const DisableDirectoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new DisableDirectoryResponsePrivate(this), parent)
+    : DisableDirectoryResponse(new DisableDirectoryResponsePrivate(this), parent)
 {
     setRequest(new DisableDirectoryRequest(request));
     setReply(reply);

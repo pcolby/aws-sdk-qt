@@ -46,7 +46,7 @@ RegisterImageResponse::RegisterImageResponse(
         const RegisterImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new RegisterImageResponsePrivate(this), parent)
+    : RegisterImageResponse(new RegisterImageResponsePrivate(this), parent)
 {
     setRequest(new RegisterImageRequest(request));
     setReply(reply);

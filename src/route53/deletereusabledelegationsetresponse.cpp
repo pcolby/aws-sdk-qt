@@ -46,7 +46,7 @@ DeleteReusableDelegationSetResponse::DeleteReusableDelegationSetResponse(
         const DeleteReusableDelegationSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new DeleteReusableDelegationSetResponsePrivate(this), parent)
+    : DeleteReusableDelegationSetResponse(new DeleteReusableDelegationSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteReusableDelegationSetRequest(request));
     setReply(reply);

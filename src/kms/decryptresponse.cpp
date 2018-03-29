@@ -46,7 +46,7 @@ DecryptResponse::DecryptResponse(
         const DecryptRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new DecryptResponsePrivate(this), parent)
+    : DecryptResponse(new DecryptResponsePrivate(this), parent)
 {
     setRequest(new DecryptRequest(request));
     setReply(reply);

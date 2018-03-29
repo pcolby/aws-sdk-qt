@@ -46,7 +46,7 @@ TerminateProvisionedProductResponse::TerminateProvisionedProductResponse(
         const TerminateProvisionedProductRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new TerminateProvisionedProductResponsePrivate(this), parent)
+    : TerminateProvisionedProductResponse(new TerminateProvisionedProductResponsePrivate(this), parent)
 {
     setRequest(new TerminateProvisionedProductRequest(request));
     setReply(reply);

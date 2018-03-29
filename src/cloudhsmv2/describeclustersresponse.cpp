@@ -46,7 +46,7 @@ DescribeClustersResponse::DescribeClustersResponse(
         const DescribeClustersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMV2Response(new DescribeClustersResponsePrivate(this), parent)
+    : DescribeClustersResponse(new DescribeClustersResponsePrivate(this), parent)
 {
     setRequest(new DescribeClustersRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateEnvironmentEC2Response::CreateEnvironmentEC2Response(
         const CreateEnvironmentEC2Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Cloud9Response(new CreateEnvironmentEC2ResponsePrivate(this), parent)
+    : CreateEnvironmentEC2Response(new CreateEnvironmentEC2ResponsePrivate(this), parent)
 {
     setRequest(new CreateEnvironmentEC2Request(request));
     setReply(reply);

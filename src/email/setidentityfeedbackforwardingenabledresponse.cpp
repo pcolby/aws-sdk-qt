@@ -46,7 +46,7 @@ SetIdentityFeedbackForwardingEnabledResponse::SetIdentityFeedbackForwardingEnabl
         const SetIdentityFeedbackForwardingEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SetIdentityFeedbackForwardingEnabledResponsePrivate(this), parent)
+    : SetIdentityFeedbackForwardingEnabledResponse(new SetIdentityFeedbackForwardingEnabledResponsePrivate(this), parent)
 {
     setRequest(new SetIdentityFeedbackForwardingEnabledRequest(request));
     setReply(reply);

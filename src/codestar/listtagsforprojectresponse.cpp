@@ -46,7 +46,7 @@ ListTagsForProjectResponse::ListTagsForProjectResponse(
         const ListTagsForProjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeStarResponse(new ListTagsForProjectResponsePrivate(this), parent)
+    : ListTagsForProjectResponse(new ListTagsForProjectResponsePrivate(this), parent)
 {
     setRequest(new ListTagsForProjectRequest(request));
     setReply(reply);

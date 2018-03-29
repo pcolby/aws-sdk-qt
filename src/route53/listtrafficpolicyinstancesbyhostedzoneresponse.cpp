@@ -46,7 +46,7 @@ ListTrafficPolicyInstancesByHostedZoneResponse::ListTrafficPolicyInstancesByHost
         const ListTrafficPolicyInstancesByHostedZoneRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new ListTrafficPolicyInstancesByHostedZoneResponsePrivate(this), parent)
+    : ListTrafficPolicyInstancesByHostedZoneResponse(new ListTrafficPolicyInstancesByHostedZoneResponsePrivate(this), parent)
 {
     setRequest(new ListTrafficPolicyInstancesByHostedZoneRequest(request));
     setReply(reply);

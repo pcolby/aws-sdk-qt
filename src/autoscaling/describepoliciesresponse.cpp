@@ -46,7 +46,7 @@ DescribePoliciesResponse::DescribePoliciesResponse(
         const DescribePoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new DescribePoliciesResponsePrivate(this), parent)
+    : DescribePoliciesResponse(new DescribePoliciesResponsePrivate(this), parent)
 {
     setRequest(new DescribePoliciesRequest(request));
     setReply(reply);

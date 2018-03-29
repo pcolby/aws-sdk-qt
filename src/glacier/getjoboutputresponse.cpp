@@ -46,7 +46,7 @@ GetJobOutputResponse::GetJobOutputResponse(
         const GetJobOutputRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new GetJobOutputResponsePrivate(this), parent)
+    : GetJobOutputResponse(new GetJobOutputResponsePrivate(this), parent)
 {
     setRequest(new GetJobOutputRequest(request));
     setReply(reply);

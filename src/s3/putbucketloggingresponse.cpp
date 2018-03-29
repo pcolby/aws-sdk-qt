@@ -46,7 +46,7 @@ PutBucketLoggingResponse::PutBucketLoggingResponse(
         const PutBucketLoggingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new PutBucketLoggingResponsePrivate(this), parent)
+    : PutBucketLoggingResponse(new PutBucketLoggingResponsePrivate(this), parent)
 {
     setRequest(new PutBucketLoggingRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeInterconnectsResponse::DescribeInterconnectsResponse(
         const DescribeInterconnectsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectConnectResponse(new DescribeInterconnectsResponsePrivate(this), parent)
+    : DescribeInterconnectsResponse(new DescribeInterconnectsResponsePrivate(this), parent)
 {
     setRequest(new DescribeInterconnectsRequest(request));
     setReply(reply);

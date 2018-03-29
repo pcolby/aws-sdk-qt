@@ -46,7 +46,7 @@ DescribeTapesResponse::DescribeTapesResponse(
         const DescribeTapesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new DescribeTapesResponsePrivate(this), parent)
+    : DescribeTapesResponse(new DescribeTapesResponsePrivate(this), parent)
 {
     setRequest(new DescribeTapesRequest(request));
     setReply(reply);

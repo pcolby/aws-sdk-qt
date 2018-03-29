@@ -46,7 +46,7 @@ ListDashboardsResponse::ListDashboardsResponse(
         const ListDashboardsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchResponse(new ListDashboardsResponsePrivate(this), parent)
+    : ListDashboardsResponse(new ListDashboardsResponsePrivate(this), parent)
 {
     setRequest(new ListDashboardsRequest(request));
     setReply(reply);

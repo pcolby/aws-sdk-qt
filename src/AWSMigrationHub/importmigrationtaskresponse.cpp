@@ -46,7 +46,7 @@ ImportMigrationTaskResponse::ImportMigrationTaskResponse(
         const ImportMigrationTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MigrationHubResponse(new ImportMigrationTaskResponsePrivate(this), parent)
+    : ImportMigrationTaskResponse(new ImportMigrationTaskResponsePrivate(this), parent)
 {
     setRequest(new ImportMigrationTaskRequest(request));
     setReply(reply);

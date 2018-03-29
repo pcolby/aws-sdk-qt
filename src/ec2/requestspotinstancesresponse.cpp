@@ -46,7 +46,7 @@ RequestSpotInstancesResponse::RequestSpotInstancesResponse(
         const RequestSpotInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new RequestSpotInstancesResponsePrivate(this), parent)
+    : RequestSpotInstancesResponse(new RequestSpotInstancesResponsePrivate(this), parent)
 {
     setRequest(new RequestSpotInstancesRequest(request));
     setReply(reply);

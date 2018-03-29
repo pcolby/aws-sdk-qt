@@ -46,7 +46,7 @@ GetAttributesResponse::GetAttributesResponse(
         const GetAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SimpleDBResponse(new GetAttributesResponsePrivate(this), parent)
+    : GetAttributesResponse(new GetAttributesResponsePrivate(this), parent)
 {
     setRequest(new GetAttributesRequest(request));
     setReply(reply);

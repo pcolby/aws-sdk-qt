@@ -46,7 +46,7 @@ GetBatchPredictionResponse::GetBatchPredictionResponse(
         const GetBatchPredictionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MachineLearningResponse(new GetBatchPredictionResponsePrivate(this), parent)
+    : GetBatchPredictionResponse(new GetBatchPredictionResponsePrivate(this), parent)
 {
     setRequest(new GetBatchPredictionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ BatchDeletePartitionResponse::BatchDeletePartitionResponse(
         const BatchDeletePartitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new BatchDeletePartitionResponsePrivate(this), parent)
+    : BatchDeletePartitionResponse(new BatchDeletePartitionResponsePrivate(this), parent)
 {
     setRequest(new BatchDeletePartitionRequest(request));
     setReply(reply);

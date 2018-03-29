@@ -46,7 +46,7 @@ GetCertificateResponse::GetCertificateResponse(
         const GetCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMResponse(new GetCertificateResponsePrivate(this), parent)
+    : GetCertificateResponse(new GetCertificateResponsePrivate(this), parent)
 {
     setRequest(new GetCertificateRequest(request));
     setReply(reply);

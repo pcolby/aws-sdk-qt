@@ -46,7 +46,7 @@ TerminateInstancesResponse::TerminateInstancesResponse(
         const TerminateInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new TerminateInstancesResponsePrivate(this), parent)
+    : TerminateInstancesResponse(new TerminateInstancesResponsePrivate(this), parent)
 {
     setRequest(new TerminateInstancesRequest(request));
     setReply(reply);

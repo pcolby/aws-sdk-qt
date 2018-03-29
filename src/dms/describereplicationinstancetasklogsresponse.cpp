@@ -46,7 +46,7 @@ DescribeReplicationInstanceTaskLogsResponse::DescribeReplicationInstanceTaskLogs
         const DescribeReplicationInstanceTaskLogsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeReplicationInstanceTaskLogsResponsePrivate(this), parent)
+    : DescribeReplicationInstanceTaskLogsResponse(new DescribeReplicationInstanceTaskLogsResponsePrivate(this), parent)
 {
     setRequest(new DescribeReplicationInstanceTaskLogsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CopyDBSnapshotResponse::CopyDBSnapshotResponse(
         const CopyDBSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CopyDBSnapshotResponsePrivate(this), parent)
+    : CopyDBSnapshotResponse(new CopyDBSnapshotResponsePrivate(this), parent)
 {
     setRequest(new CopyDBSnapshotRequest(request));
     setReply(reply);

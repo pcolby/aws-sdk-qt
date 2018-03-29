@@ -46,7 +46,7 @@ CreateInstanceResponse::CreateInstanceResponse(
         const CreateInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new CreateInstanceResponsePrivate(this), parent)
+    : CreateInstanceResponse(new CreateInstanceResponsePrivate(this), parent)
 {
     setRequest(new CreateInstanceRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateSizeConstraintSetResponse::UpdateSizeConstraintSetResponse(
         const UpdateSizeConstraintSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new UpdateSizeConstraintSetResponsePrivate(this), parent)
+    : UpdateSizeConstraintSetResponse(new UpdateSizeConstraintSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateSizeConstraintSetRequest(request));
     setReply(reply);

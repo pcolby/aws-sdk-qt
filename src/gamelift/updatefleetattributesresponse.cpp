@@ -46,7 +46,7 @@ UpdateFleetAttributesResponse::UpdateFleetAttributesResponse(
         const UpdateFleetAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new UpdateFleetAttributesResponsePrivate(this), parent)
+    : UpdateFleetAttributesResponse(new UpdateFleetAttributesResponsePrivate(this), parent)
 {
     setRequest(new UpdateFleetAttributesRequest(request));
     setReply(reply);

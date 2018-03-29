@@ -46,7 +46,7 @@ DescribeMountTargetsResponse::DescribeMountTargetsResponse(
         const DescribeMountTargetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EFSResponse(new DescribeMountTargetsResponsePrivate(this), parent)
+    : DescribeMountTargetsResponse(new DescribeMountTargetsResponsePrivate(this), parent)
 {
     setRequest(new DescribeMountTargetsRequest(request));
     setReply(reply);

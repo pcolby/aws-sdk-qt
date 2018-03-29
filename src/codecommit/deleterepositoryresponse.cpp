@@ -46,7 +46,7 @@ DeleteRepositoryResponse::DeleteRepositoryResponse(
         const DeleteRepositoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new DeleteRepositoryResponsePrivate(this), parent)
+    : DeleteRepositoryResponse(new DeleteRepositoryResponsePrivate(this), parent)
 {
     setRequest(new DeleteRepositoryRequest(request));
     setReply(reply);

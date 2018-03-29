@@ -46,7 +46,7 @@ CreateDomainNameResponse::CreateDomainNameResponse(
         const CreateDomainNameRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new CreateDomainNameResponsePrivate(this), parent)
+    : CreateDomainNameResponse(new CreateDomainNameResponsePrivate(this), parent)
 {
     setRequest(new CreateDomainNameRequest(request));
     setReply(reply);

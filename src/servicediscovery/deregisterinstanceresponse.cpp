@@ -46,7 +46,7 @@ DeregisterInstanceResponse::DeregisterInstanceResponse(
         const DeregisterInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceDiscoveryResponse(new DeregisterInstanceResponsePrivate(this), parent)
+    : DeregisterInstanceResponse(new DeregisterInstanceResponsePrivate(this), parent)
 {
     setRequest(new DeregisterInstanceRequest(request));
     setReply(reply);

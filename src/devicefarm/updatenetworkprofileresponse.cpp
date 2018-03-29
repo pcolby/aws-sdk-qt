@@ -46,7 +46,7 @@ UpdateNetworkProfileResponse::UpdateNetworkProfileResponse(
         const UpdateNetworkProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new UpdateNetworkProfileResponsePrivate(this), parent)
+    : UpdateNetworkProfileResponse(new UpdateNetworkProfileResponsePrivate(this), parent)
 {
     setRequest(new UpdateNetworkProfileRequest(request));
     setReply(reply);

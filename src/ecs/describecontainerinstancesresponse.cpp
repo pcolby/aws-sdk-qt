@@ -46,7 +46,7 @@ DescribeContainerInstancesResponse::DescribeContainerInstancesResponse(
         const DescribeContainerInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new DescribeContainerInstancesResponsePrivate(this), parent)
+    : DescribeContainerInstancesResponse(new DescribeContainerInstancesResponsePrivate(this), parent)
 {
     setRequest(new DescribeContainerInstancesRequest(request));
     setReply(reply);

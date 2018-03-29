@@ -46,7 +46,7 @@ CreateVaultResponse::CreateVaultResponse(
         const CreateVaultRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new CreateVaultResponsePrivate(this), parent)
+    : CreateVaultResponse(new CreateVaultResponsePrivate(this), parent)
 {
     setRequest(new CreateVaultRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeStacksResponse::DescribeStacksResponse(
         const DescribeStacksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppStreamResponse(new DescribeStacksResponsePrivate(this), parent)
+    : DescribeStacksResponse(new DescribeStacksResponsePrivate(this), parent)
 {
     setRequest(new DescribeStacksRequest(request));
     setReply(reply);

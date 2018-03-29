@@ -46,7 +46,7 @@ AddTagsToCertificateResponse::AddTagsToCertificateResponse(
         const AddTagsToCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMResponse(new AddTagsToCertificateResponsePrivate(this), parent)
+    : AddTagsToCertificateResponse(new AddTagsToCertificateResponsePrivate(this), parent)
 {
     setRequest(new AddTagsToCertificateRequest(request));
     setReply(reply);

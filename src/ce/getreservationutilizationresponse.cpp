@@ -46,7 +46,7 @@ GetReservationUtilizationResponse::GetReservationUtilizationResponse(
         const GetReservationUtilizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CostExplorerResponse(new GetReservationUtilizationResponsePrivate(this), parent)
+    : GetReservationUtilizationResponse(new GetReservationUtilizationResponsePrivate(this), parent)
 {
     setRequest(new GetReservationUtilizationRequest(request));
     setReply(reply);

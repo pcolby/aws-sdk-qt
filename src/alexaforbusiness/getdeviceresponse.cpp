@@ -46,7 +46,7 @@ GetDeviceResponse::GetDeviceResponse(
         const GetDeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new GetDeviceResponsePrivate(this), parent)
+    : GetDeviceResponse(new GetDeviceResponsePrivate(this), parent)
 {
     setRequest(new GetDeviceRequest(request));
     setReply(reply);

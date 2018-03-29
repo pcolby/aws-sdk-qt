@@ -46,7 +46,7 @@ SetVaultNotificationsResponse::SetVaultNotificationsResponse(
         const SetVaultNotificationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new SetVaultNotificationsResponsePrivate(this), parent)
+    : SetVaultNotificationsResponse(new SetVaultNotificationsResponsePrivate(this), parent)
 {
     setRequest(new SetVaultNotificationsRequest(request));
     setReply(reply);

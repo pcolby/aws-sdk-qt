@@ -46,7 +46,7 @@ ConfigureHealthCheckResponse::ConfigureHealthCheckResponse(
         const ConfigureHealthCheckRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticLoadBalancingResponse(new ConfigureHealthCheckResponsePrivate(this), parent)
+    : ConfigureHealthCheckResponse(new ConfigureHealthCheckResponsePrivate(this), parent)
 {
     setRequest(new ConfigureHealthCheckRequest(request));
     setReply(reply);

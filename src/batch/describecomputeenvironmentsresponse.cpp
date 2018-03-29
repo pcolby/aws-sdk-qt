@@ -46,7 +46,7 @@ DescribeComputeEnvironmentsResponse::DescribeComputeEnvironmentsResponse(
         const DescribeComputeEnvironmentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchResponse(new DescribeComputeEnvironmentsResponsePrivate(this), parent)
+    : DescribeComputeEnvironmentsResponse(new DescribeComputeEnvironmentsResponsePrivate(this), parent)
 {
     setRequest(new DescribeComputeEnvironmentsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ PutRoomSkillParameterResponse::PutRoomSkillParameterResponse(
         const PutRoomSkillParameterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new PutRoomSkillParameterResponsePrivate(this), parent)
+    : PutRoomSkillParameterResponse(new PutRoomSkillParameterResponsePrivate(this), parent)
 {
     setRequest(new PutRoomSkillParameterRequest(request));
     setReply(reply);

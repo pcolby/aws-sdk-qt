@@ -46,7 +46,7 @@ DescribeElasticIpsResponse::DescribeElasticIpsResponse(
         const DescribeElasticIpsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DescribeElasticIpsResponsePrivate(this), parent)
+    : DescribeElasticIpsResponse(new DescribeElasticIpsResponsePrivate(this), parent)
 {
     setRequest(new DescribeElasticIpsRequest(request));
     setReply(reply);

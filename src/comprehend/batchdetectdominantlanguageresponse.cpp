@@ -46,7 +46,7 @@ BatchDetectDominantLanguageResponse::BatchDetectDominantLanguageResponse(
         const BatchDetectDominantLanguageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ComprehendResponse(new BatchDetectDominantLanguageResponsePrivate(this), parent)
+    : BatchDetectDominantLanguageResponse(new BatchDetectDominantLanguageResponsePrivate(this), parent)
 {
     setRequest(new BatchDetectDominantLanguageRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SplitShardResponse::SplitShardResponse(
         const SplitShardRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisResponse(new SplitShardResponsePrivate(this), parent)
+    : SplitShardResponse(new SplitShardResponsePrivate(this), parent)
 {
     setRequest(new SplitShardRequest(request));
     setReply(reply);

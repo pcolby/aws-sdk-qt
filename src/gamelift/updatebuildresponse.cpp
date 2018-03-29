@@ -46,7 +46,7 @@ UpdateBuildResponse::UpdateBuildResponse(
         const UpdateBuildRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new UpdateBuildResponsePrivate(this), parent)
+    : UpdateBuildResponse(new UpdateBuildResponsePrivate(this), parent)
 {
     setRequest(new UpdateBuildRequest(request));
     setReply(reply);

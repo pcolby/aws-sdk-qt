@@ -46,7 +46,7 @@ ListApplicationsResponse::ListApplicationsResponse(
         const ListApplicationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServerlessApplicationRepositoryResponse(new ListApplicationsResponsePrivate(this), parent)
+    : ListApplicationsResponse(new ListApplicationsResponsePrivate(this), parent)
 {
     setRequest(new ListApplicationsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeNotebookInstanceResponse::DescribeNotebookInstanceResponse(
         const DescribeNotebookInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SageMakerResponse(new DescribeNotebookInstanceResponsePrivate(this), parent)
+    : DescribeNotebookInstanceResponse(new DescribeNotebookInstanceResponsePrivate(this), parent)
 {
     setRequest(new DescribeNotebookInstanceRequest(request));
     setReply(reply);

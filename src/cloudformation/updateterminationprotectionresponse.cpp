@@ -46,7 +46,7 @@ UpdateTerminationProtectionResponse::UpdateTerminationProtectionResponse(
         const UpdateTerminationProtectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFormationResponse(new UpdateTerminationProtectionResponsePrivate(this), parent)
+    : UpdateTerminationProtectionResponse(new UpdateTerminationProtectionResponsePrivate(this), parent)
 {
     setRequest(new UpdateTerminationProtectionRequest(request));
     setReply(reply);

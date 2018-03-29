@@ -46,7 +46,7 @@ UpdateFunctionCodeResponse::UpdateFunctionCodeResponse(
         const UpdateFunctionCodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LambdaResponse(new UpdateFunctionCodeResponsePrivate(this), parent)
+    : UpdateFunctionCodeResponse(new UpdateFunctionCodeResponsePrivate(this), parent)
 {
     setRequest(new UpdateFunctionCodeRequest(request));
     setReply(reply);

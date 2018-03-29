@@ -46,7 +46,7 @@ ListTablesResponse::ListTablesResponse(
         const ListTablesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new ListTablesResponsePrivate(this), parent)
+    : ListTablesResponse(new ListTablesResponsePrivate(this), parent)
 {
     setRequest(new ListTablesRequest(request));
     setReply(reply);

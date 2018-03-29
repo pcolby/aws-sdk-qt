@@ -46,7 +46,7 @@ CreateComputeEnvironmentResponse::CreateComputeEnvironmentResponse(
         const CreateComputeEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchResponse(new CreateComputeEnvironmentResponsePrivate(this), parent)
+    : CreateComputeEnvironmentResponse(new CreateComputeEnvironmentResponsePrivate(this), parent)
 {
     setRequest(new CreateComputeEnvironmentRequest(request));
     setReply(reply);

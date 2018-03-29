@@ -46,7 +46,7 @@ ListJobsByStatusResponse::ListJobsByStatusResponse(
         const ListJobsByStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticTranscoderResponse(new ListJobsByStatusResponsePrivate(this), parent)
+    : ListJobsByStatusResponse(new ListJobsByStatusResponsePrivate(this), parent)
 {
     setRequest(new ListJobsByStatusRequest(request));
     setReply(reply);

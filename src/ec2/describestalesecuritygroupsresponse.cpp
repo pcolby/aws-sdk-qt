@@ -46,7 +46,7 @@ DescribeStaleSecurityGroupsResponse::DescribeStaleSecurityGroupsResponse(
         const DescribeStaleSecurityGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeStaleSecurityGroupsResponsePrivate(this), parent)
+    : DescribeStaleSecurityGroupsResponse(new DescribeStaleSecurityGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeStaleSecurityGroupsRequest(request));
     setReply(reply);

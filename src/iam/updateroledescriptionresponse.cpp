@@ -46,7 +46,7 @@ UpdateRoleDescriptionResponse::UpdateRoleDescriptionResponse(
         const UpdateRoleDescriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateRoleDescriptionResponsePrivate(this), parent)
+    : UpdateRoleDescriptionResponse(new UpdateRoleDescriptionResponsePrivate(this), parent)
 {
     setRequest(new UpdateRoleDescriptionRequest(request));
     setReply(reply);

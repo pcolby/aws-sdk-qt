@@ -46,7 +46,7 @@ DeleteElasticsearchDomainResponse::DeleteElasticsearchDomainResponse(
         const DeleteElasticsearchDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DeleteElasticsearchDomainResponsePrivate(this), parent)
+    : DeleteElasticsearchDomainResponse(new DeleteElasticsearchDomainResponsePrivate(this), parent)
 {
     setRequest(new DeleteElasticsearchDomainRequest(request));
     setReply(reply);

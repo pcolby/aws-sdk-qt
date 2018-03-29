@@ -46,7 +46,7 @@ RejectQualificationRequestResponse::RejectQualificationRequestResponse(
         const RejectQualificationRequestRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new RejectQualificationRequestResponsePrivate(this), parent)
+    : RejectQualificationRequestResponse(new RejectQualificationRequestResponsePrivate(this), parent)
 {
     setRequest(new RejectQualificationRequestRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RebuildWorkspacesResponse::RebuildWorkspacesResponse(
         const RebuildWorkspacesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkSpacesResponse(new RebuildWorkspacesResponsePrivate(this), parent)
+    : RebuildWorkspacesResponse(new RebuildWorkspacesResponsePrivate(this), parent)
 {
     setRequest(new RebuildWorkspacesRequest(request));
     setReply(reply);

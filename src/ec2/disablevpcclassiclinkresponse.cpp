@@ -46,7 +46,7 @@ DisableVpcClassicLinkResponse::DisableVpcClassicLinkResponse(
         const DisableVpcClassicLinkRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DisableVpcClassicLinkResponsePrivate(this), parent)
+    : DisableVpcClassicLinkResponse(new DisableVpcClassicLinkResponsePrivate(this), parent)
 {
     setRequest(new DisableVpcClassicLinkRequest(request));
     setReply(reply);

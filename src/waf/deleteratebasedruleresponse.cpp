@@ -46,7 +46,7 @@ DeleteRateBasedRuleResponse::DeleteRateBasedRuleResponse(
         const DeleteRateBasedRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteRateBasedRuleResponsePrivate(this), parent)
+    : DeleteRateBasedRuleResponse(new DeleteRateBasedRuleResponsePrivate(this), parent)
 {
     setRequest(new DeleteRateBasedRuleRequest(request));
     setReply(reply);

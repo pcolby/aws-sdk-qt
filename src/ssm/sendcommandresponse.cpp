@@ -46,7 +46,7 @@ SendCommandResponse::SendCommandResponse(
         const SendCommandRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new SendCommandResponsePrivate(this), parent)
+    : SendCommandResponse(new SendCommandResponsePrivate(this), parent)
 {
     setRequest(new SendCommandRequest(request));
     setReply(reply);

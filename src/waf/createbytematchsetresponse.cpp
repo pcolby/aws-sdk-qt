@@ -46,7 +46,7 @@ CreateByteMatchSetResponse::CreateByteMatchSetResponse(
         const CreateByteMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new CreateByteMatchSetResponsePrivate(this), parent)
+    : CreateByteMatchSetResponse(new CreateByteMatchSetResponsePrivate(this), parent)
 {
     setRequest(new CreateByteMatchSetRequest(request));
     setReply(reply);

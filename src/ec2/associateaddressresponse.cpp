@@ -46,7 +46,7 @@ AssociateAddressResponse::AssociateAddressResponse(
         const AssociateAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AssociateAddressResponsePrivate(this), parent)
+    : AssociateAddressResponse(new AssociateAddressResponsePrivate(this), parent)
 {
     setRequest(new AssociateAddressRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StartNextPendingJobExecutionResponse::StartNextPendingJobExecutionResponse(
         const StartNextPendingJobExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTJobsDataPlaneResponse(new StartNextPendingJobExecutionResponsePrivate(this), parent)
+    : StartNextPendingJobExecutionResponse(new StartNextPendingJobExecutionResponsePrivate(this), parent)
 {
     setRequest(new StartNextPendingJobExecutionRequest(request));
     setReply(reply);

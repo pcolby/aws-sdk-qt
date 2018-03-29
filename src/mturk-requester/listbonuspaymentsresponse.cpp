@@ -46,7 +46,7 @@ ListBonusPaymentsResponse::ListBonusPaymentsResponse(
         const ListBonusPaymentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new ListBonusPaymentsResponsePrivate(this), parent)
+    : ListBonusPaymentsResponse(new ListBonusPaymentsResponsePrivate(this), parent)
 {
     setRequest(new ListBonusPaymentsRequest(request));
     setReply(reply);

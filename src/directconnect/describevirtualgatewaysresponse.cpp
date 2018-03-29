@@ -46,7 +46,7 @@ DescribeVirtualGatewaysResponse::DescribeVirtualGatewaysResponse(
         const DescribeVirtualGatewaysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectConnectResponse(new DescribeVirtualGatewaysResponsePrivate(this), parent)
+    : DescribeVirtualGatewaysResponse(new DescribeVirtualGatewaysResponsePrivate(this), parent)
 {
     setRequest(new DescribeVirtualGatewaysRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeNetworkInterfacesResponse::DescribeNetworkInterfacesResponse(
         const DescribeNetworkInterfacesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeNetworkInterfacesResponsePrivate(this), parent)
+    : DescribeNetworkInterfacesResponse(new DescribeNetworkInterfacesResponsePrivate(this), parent)
 {
     setRequest(new DescribeNetworkInterfacesRequest(request));
     setReply(reply);

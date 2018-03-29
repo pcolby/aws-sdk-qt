@@ -46,7 +46,7 @@ GetBucketRequestPaymentResponse::GetBucketRequestPaymentResponse(
         const GetBucketRequestPaymentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new GetBucketRequestPaymentResponsePrivate(this), parent)
+    : GetBucketRequestPaymentResponse(new GetBucketRequestPaymentResponsePrivate(this), parent)
 {
     setRequest(new GetBucketRequestPaymentRequest(request));
     setReply(reply);

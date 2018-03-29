@@ -46,7 +46,7 @@ GetDifferencesResponse::GetDifferencesResponse(
         const GetDifferencesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new GetDifferencesResponsePrivate(this), parent)
+    : GetDifferencesResponse(new GetDifferencesResponsePrivate(this), parent)
 {
     setRequest(new GetDifferencesRequest(request));
     setReply(reply);

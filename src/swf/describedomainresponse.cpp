@@ -46,7 +46,7 @@ DescribeDomainResponse::DescribeDomainResponse(
         const DescribeDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new DescribeDomainResponsePrivate(this), parent)
+    : DescribeDomainResponse(new DescribeDomainResponsePrivate(this), parent)
 {
     setRequest(new DescribeDomainRequest(request));
     setReply(reply);

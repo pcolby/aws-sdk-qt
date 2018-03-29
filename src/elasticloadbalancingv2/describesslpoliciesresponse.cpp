@@ -46,7 +46,7 @@ DescribeSSLPoliciesResponse::DescribeSSLPoliciesResponse(
         const DescribeSSLPoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticLoadBalancingv2Response(new DescribeSSLPoliciesResponsePrivate(this), parent)
+    : DescribeSSLPoliciesResponse(new DescribeSSLPoliciesResponsePrivate(this), parent)
 {
     setRequest(new DescribeSSLPoliciesRequest(request));
     setReply(reply);

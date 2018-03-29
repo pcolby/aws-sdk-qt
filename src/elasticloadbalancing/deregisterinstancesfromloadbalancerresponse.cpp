@@ -46,7 +46,7 @@ DeregisterInstancesFromLoadBalancerResponse::DeregisterInstancesFromLoadBalancer
         const DeregisterInstancesFromLoadBalancerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticLoadBalancingResponse(new DeregisterInstancesFromLoadBalancerResponsePrivate(this), parent)
+    : DeregisterInstancesFromLoadBalancerResponse(new DeregisterInstancesFromLoadBalancerResponsePrivate(this), parent)
 {
     setRequest(new DeregisterInstancesFromLoadBalancerRequest(request));
     setReply(reply);

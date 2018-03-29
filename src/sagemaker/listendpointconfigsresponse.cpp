@@ -46,7 +46,7 @@ ListEndpointConfigsResponse::ListEndpointConfigsResponse(
         const ListEndpointConfigsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SageMakerResponse(new ListEndpointConfigsResponsePrivate(this), parent)
+    : ListEndpointConfigsResponse(new ListEndpointConfigsResponsePrivate(this), parent)
 {
     setRequest(new ListEndpointConfigsRequest(request));
     setReply(reply);

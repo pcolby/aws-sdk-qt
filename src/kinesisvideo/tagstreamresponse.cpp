@@ -46,7 +46,7 @@ TagStreamResponse::TagStreamResponse(
         const TagStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisVideoResponse(new TagStreamResponsePrivate(this), parent)
+    : TagStreamResponse(new TagStreamResponsePrivate(this), parent)
 {
     setRequest(new TagStreamRequest(request));
     setReply(reply);

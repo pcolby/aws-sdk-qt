@@ -46,7 +46,7 @@ DeleteIdentityProviderResponse::DeleteIdentityProviderResponse(
         const DeleteIdentityProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new DeleteIdentityProviderResponsePrivate(this), parent)
+    : DeleteIdentityProviderResponse(new DeleteIdentityProviderResponsePrivate(this), parent)
 {
     setRequest(new DeleteIdentityProviderRequest(request));
     setReply(reply);

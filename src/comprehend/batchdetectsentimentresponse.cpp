@@ -46,7 +46,7 @@ BatchDetectSentimentResponse::BatchDetectSentimentResponse(
         const BatchDetectSentimentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ComprehendResponse(new BatchDetectSentimentResponsePrivate(this), parent)
+    : BatchDetectSentimentResponse(new BatchDetectSentimentResponsePrivate(this), parent)
 {
     setRequest(new BatchDetectSentimentRequest(request));
     setReply(reply);

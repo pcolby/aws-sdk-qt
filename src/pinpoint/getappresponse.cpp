@@ -46,7 +46,7 @@ GetAppResponse::GetAppResponse(
         const GetAppRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new GetAppResponsePrivate(this), parent)
+    : GetAppResponse(new GetAppResponsePrivate(this), parent)
 {
     setRequest(new GetAppRequest(request));
     setReply(reply);

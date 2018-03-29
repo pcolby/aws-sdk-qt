@@ -46,7 +46,7 @@ DisassociateElasticIpResponse::DisassociateElasticIpResponse(
         const DisassociateElasticIpRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DisassociateElasticIpResponsePrivate(this), parent)
+    : DisassociateElasticIpResponse(new DisassociateElasticIpResponsePrivate(this), parent)
 {
     setRequest(new DisassociateElasticIpRequest(request));
     setReply(reply);

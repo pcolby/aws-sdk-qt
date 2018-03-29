@@ -46,7 +46,7 @@ DescribeActivityResponse::DescribeActivityResponse(
         const DescribeActivityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new DescribeActivityResponsePrivate(this), parent)
+    : DescribeActivityResponse(new DescribeActivityResponsePrivate(this), parent)
 {
     setRequest(new DescribeActivityRequest(request));
     setReply(reply);

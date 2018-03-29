@@ -46,7 +46,7 @@ AssociateServiceRoleToAccountResponse::AssociateServiceRoleToAccountResponse(
         const AssociateServiceRoleToAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new AssociateServiceRoleToAccountResponsePrivate(this), parent)
+    : AssociateServiceRoleToAccountResponse(new AssociateServiceRoleToAccountResponsePrivate(this), parent)
 {
     setRequest(new AssociateServiceRoleToAccountRequest(request));
     setReply(reply);

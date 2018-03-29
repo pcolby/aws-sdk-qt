@@ -46,7 +46,7 @@ DescribeAlarmsResponse::DescribeAlarmsResponse(
         const DescribeAlarmsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchResponse(new DescribeAlarmsResponsePrivate(this), parent)
+    : DescribeAlarmsResponse(new DescribeAlarmsResponsePrivate(this), parent)
 {
     setRequest(new DescribeAlarmsRequest(request));
     setReply(reply);

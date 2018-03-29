@@ -46,7 +46,7 @@ AssociatePrincipalWithPortfolioResponse::AssociatePrincipalWithPortfolioResponse
         const AssociatePrincipalWithPortfolioRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new AssociatePrincipalWithPortfolioResponsePrivate(this), parent)
+    : AssociatePrincipalWithPortfolioResponse(new AssociatePrincipalWithPortfolioResponsePrivate(this), parent)
 {
     setRequest(new AssociatePrincipalWithPortfolioRequest(request));
     setReply(reply);

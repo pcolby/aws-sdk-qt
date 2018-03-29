@@ -46,7 +46,7 @@ DescribeProvisioningArtifactResponse::DescribeProvisioningArtifactResponse(
         const DescribeProvisioningArtifactRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new DescribeProvisioningArtifactResponsePrivate(this), parent)
+    : DescribeProvisioningArtifactResponse(new DescribeProvisioningArtifactResponsePrivate(this), parent)
 {
     setRequest(new DescribeProvisioningArtifactRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteOrganizationResponse::DeleteOrganizationResponse(
         const DeleteOrganizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OrganizationsResponse(new DeleteOrganizationResponsePrivate(this), parent)
+    : DeleteOrganizationResponse(new DeleteOrganizationResponsePrivate(this), parent)
 {
     setRequest(new DeleteOrganizationRequest(request));
     setReply(reply);

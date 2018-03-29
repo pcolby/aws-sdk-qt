@@ -46,7 +46,7 @@ GetEventSelectorsResponse::GetEventSelectorsResponse(
         const GetEventSelectorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudTrailResponse(new GetEventSelectorsResponsePrivate(this), parent)
+    : GetEventSelectorsResponse(new GetEventSelectorsResponsePrivate(this), parent)
 {
     setRequest(new GetEventSelectorsRequest(request));
     setReply(reply);

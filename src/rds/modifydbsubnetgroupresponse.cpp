@@ -46,7 +46,7 @@ ModifyDBSubnetGroupResponse::ModifyDBSubnetGroupResponse(
         const ModifyDBSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ModifyDBSubnetGroupResponsePrivate(this), parent)
+    : ModifyDBSubnetGroupResponse(new ModifyDBSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new ModifyDBSubnetGroupRequest(request));
     setReply(reply);

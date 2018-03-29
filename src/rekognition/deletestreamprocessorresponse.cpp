@@ -46,7 +46,7 @@ DeleteStreamProcessorResponse::DeleteStreamProcessorResponse(
         const DeleteStreamProcessorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RekognitionResponse(new DeleteStreamProcessorResponsePrivate(this), parent)
+    : DeleteStreamProcessorResponse(new DeleteStreamProcessorResponsePrivate(this), parent)
 {
     setRequest(new DeleteStreamProcessorRequest(request));
     setReply(reply);

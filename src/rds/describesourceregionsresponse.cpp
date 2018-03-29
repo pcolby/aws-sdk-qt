@@ -46,7 +46,7 @@ DescribeSourceRegionsResponse::DescribeSourceRegionsResponse(
         const DescribeSourceRegionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeSourceRegionsResponsePrivate(this), parent)
+    : DescribeSourceRegionsResponse(new DescribeSourceRegionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeSourceRegionsRequest(request));
     setReply(reply);

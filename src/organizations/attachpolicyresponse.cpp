@@ -46,7 +46,7 @@ AttachPolicyResponse::AttachPolicyResponse(
         const AttachPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OrganizationsResponse(new AttachPolicyResponsePrivate(this), parent)
+    : AttachPolicyResponse(new AttachPolicyResponsePrivate(this), parent)
 {
     setRequest(new AttachPolicyRequest(request));
     setReply(reply);

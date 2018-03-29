@@ -46,7 +46,7 @@ DescribeProductAsAdminResponse::DescribeProductAsAdminResponse(
         const DescribeProductAsAdminRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new DescribeProductAsAdminResponsePrivate(this), parent)
+    : DescribeProductAsAdminResponse(new DescribeProductAsAdminResponsePrivate(this), parent)
 {
     setRequest(new DescribeProductAsAdminRequest(request));
     setReply(reply);

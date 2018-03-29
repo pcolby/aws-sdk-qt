@@ -46,7 +46,7 @@ DeleteUsagePlanResponse::DeleteUsagePlanResponse(
         const DeleteUsagePlanRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteUsagePlanResponsePrivate(this), parent)
+    : DeleteUsagePlanResponse(new DeleteUsagePlanResponsePrivate(this), parent)
 {
     setRequest(new DeleteUsagePlanRequest(request));
     setReply(reply);

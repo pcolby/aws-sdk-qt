@@ -46,7 +46,7 @@ PutLogEventsResponse::PutLogEventsResponse(
         const PutLogEventsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchLogsResponse(new PutLogEventsResponsePrivate(this), parent)
+    : PutLogEventsResponse(new PutLogEventsResponsePrivate(this), parent)
 {
     setRequest(new PutLogEventsRequest(request));
     setReply(reply);

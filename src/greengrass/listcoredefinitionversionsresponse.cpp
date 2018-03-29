@@ -46,7 +46,7 @@ ListCoreDefinitionVersionsResponse::ListCoreDefinitionVersionsResponse(
         const ListCoreDefinitionVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new ListCoreDefinitionVersionsResponsePrivate(this), parent)
+    : ListCoreDefinitionVersionsResponse(new ListCoreDefinitionVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListCoreDefinitionVersionsRequest(request));
     setReply(reply);

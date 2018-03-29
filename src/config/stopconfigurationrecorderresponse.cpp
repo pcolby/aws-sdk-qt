@@ -46,7 +46,7 @@ StopConfigurationRecorderResponse::StopConfigurationRecorderResponse(
         const StopConfigurationRecorderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfigServiceResponse(new StopConfigurationRecorderResponsePrivate(this), parent)
+    : StopConfigurationRecorderResponse(new StopConfigurationRecorderResponsePrivate(this), parent)
 {
     setRequest(new StopConfigurationRecorderRequest(request));
     setReply(reply);

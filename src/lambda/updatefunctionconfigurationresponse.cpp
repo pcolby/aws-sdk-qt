@@ -46,7 +46,7 @@ UpdateFunctionConfigurationResponse::UpdateFunctionConfigurationResponse(
         const UpdateFunctionConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LambdaResponse(new UpdateFunctionConfigurationResponsePrivate(this), parent)
+    : UpdateFunctionConfigurationResponse(new UpdateFunctionConfigurationResponsePrivate(this), parent)
 {
     setRequest(new UpdateFunctionConfigurationRequest(request));
     setReply(reply);

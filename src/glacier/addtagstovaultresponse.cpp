@@ -46,7 +46,7 @@ AddTagsToVaultResponse::AddTagsToVaultResponse(
         const AddTagsToVaultRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new AddTagsToVaultResponsePrivate(this), parent)
+    : AddTagsToVaultResponse(new AddTagsToVaultResponsePrivate(this), parent)
 {
     setRequest(new AddTagsToVaultRequest(request));
     setReply(reply);

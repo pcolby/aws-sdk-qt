@@ -46,7 +46,7 @@ ListTagsForStreamResponse::ListTagsForStreamResponse(
         const ListTagsForStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisResponse(new ListTagsForStreamResponsePrivate(this), parent)
+    : ListTagsForStreamResponse(new ListTagsForStreamResponsePrivate(this), parent)
 {
     setRequest(new ListTagsForStreamRequest(request));
     setReply(reply);

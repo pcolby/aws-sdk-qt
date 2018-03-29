@@ -46,7 +46,7 @@ UpdateProfileResponse::UpdateProfileResponse(
         const UpdateProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new UpdateProfileResponsePrivate(this), parent)
+    : UpdateProfileResponse(new UpdateProfileResponsePrivate(this), parent)
 {
     setRequest(new UpdateProfileRequest(request));
     setReply(reply);

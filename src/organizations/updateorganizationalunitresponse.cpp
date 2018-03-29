@@ -46,7 +46,7 @@ UpdateOrganizationalUnitResponse::UpdateOrganizationalUnitResponse(
         const UpdateOrganizationalUnitRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OrganizationsResponse(new UpdateOrganizationalUnitResponsePrivate(this), parent)
+    : UpdateOrganizationalUnitResponse(new UpdateOrganizationalUnitResponsePrivate(this), parent)
 {
     setRequest(new UpdateOrganizationalUnitRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateLoadBalancerAttributeResponse::UpdateLoadBalancerAttributeResponse(
         const UpdateLoadBalancerAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new UpdateLoadBalancerAttributeResponsePrivate(this), parent)
+    : UpdateLoadBalancerAttributeResponse(new UpdateLoadBalancerAttributeResponsePrivate(this), parent)
 {
     setRequest(new UpdateLoadBalancerAttributeRequest(request));
     setReply(reply);

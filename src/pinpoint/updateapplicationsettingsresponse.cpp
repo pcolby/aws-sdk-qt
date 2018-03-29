@@ -46,7 +46,7 @@ UpdateApplicationSettingsResponse::UpdateApplicationSettingsResponse(
         const UpdateApplicationSettingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new UpdateApplicationSettingsResponsePrivate(this), parent)
+    : UpdateApplicationSettingsResponse(new UpdateApplicationSettingsResponsePrivate(this), parent)
 {
     setRequest(new UpdateApplicationSettingsRequest(request));
     setReply(reply);

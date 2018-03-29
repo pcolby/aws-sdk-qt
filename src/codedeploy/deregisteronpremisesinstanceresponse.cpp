@@ -46,7 +46,7 @@ DeregisterOnPremisesInstanceResponse::DeregisterOnPremisesInstanceResponse(
         const DeregisterOnPremisesInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeDeployResponse(new DeregisterOnPremisesInstanceResponsePrivate(this), parent)
+    : DeregisterOnPremisesInstanceResponse(new DeregisterOnPremisesInstanceResponsePrivate(this), parent)
 {
     setRequest(new DeregisterOnPremisesInstanceRequest(request));
     setReply(reply);

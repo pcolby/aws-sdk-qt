@@ -46,7 +46,7 @@ GetOfferingStatusResponse::GetOfferingStatusResponse(
         const GetOfferingStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new GetOfferingStatusResponsePrivate(this), parent)
+    : GetOfferingStatusResponse(new GetOfferingStatusResponsePrivate(this), parent)
 {
     setRequest(new GetOfferingStatusRequest(request));
     setReply(reply);

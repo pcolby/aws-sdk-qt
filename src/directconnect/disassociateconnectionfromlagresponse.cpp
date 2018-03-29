@@ -46,7 +46,7 @@ DisassociateConnectionFromLagResponse::DisassociateConnectionFromLagResponse(
         const DisassociateConnectionFromLagRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectConnectResponse(new DisassociateConnectionFromLagResponsePrivate(this), parent)
+    : DisassociateConnectionFromLagResponse(new DisassociateConnectionFromLagResponsePrivate(this), parent)
 {
     setRequest(new DisassociateConnectionFromLagRequest(request));
     setReply(reply);

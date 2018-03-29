@@ -46,7 +46,7 @@ SendBounceResponse::SendBounceResponse(
         const SendBounceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SendBounceResponsePrivate(this), parent)
+    : SendBounceResponse(new SendBounceResponsePrivate(this), parent)
 {
     setRequest(new SendBounceRequest(request));
     setReply(reply);

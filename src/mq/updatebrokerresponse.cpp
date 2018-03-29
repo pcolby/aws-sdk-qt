@@ -46,7 +46,7 @@ UpdateBrokerResponse::UpdateBrokerResponse(
         const UpdateBrokerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new UpdateBrokerResponsePrivate(this), parent)
+    : UpdateBrokerResponse(new UpdateBrokerResponsePrivate(this), parent)
 {
     setRequest(new UpdateBrokerRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeEntityAggregatesResponse::DescribeEntityAggregatesResponse(
         const DescribeEntityAggregatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : HealthResponse(new DescribeEntityAggregatesResponsePrivate(this), parent)
+    : DescribeEntityAggregatesResponse(new DescribeEntityAggregatesResponsePrivate(this), parent)
 {
     setRequest(new DescribeEntityAggregatesRequest(request));
     setReply(reply);

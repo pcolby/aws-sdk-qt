@@ -46,7 +46,7 @@ CreateStorediSCSIVolumeResponse::CreateStorediSCSIVolumeResponse(
         const CreateStorediSCSIVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new CreateStorediSCSIVolumeResponsePrivate(this), parent)
+    : CreateStorediSCSIVolumeResponse(new CreateStorediSCSIVolumeResponsePrivate(this), parent)
 {
     setRequest(new CreateStorediSCSIVolumeRequest(request));
     setReply(reply);

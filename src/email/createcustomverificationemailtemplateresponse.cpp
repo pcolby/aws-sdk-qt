@@ -46,7 +46,7 @@ CreateCustomVerificationEmailTemplateResponse::CreateCustomVerificationEmailTemp
         const CreateCustomVerificationEmailTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new CreateCustomVerificationEmailTemplateResponsePrivate(this), parent)
+    : CreateCustomVerificationEmailTemplateResponse(new CreateCustomVerificationEmailTemplateResponsePrivate(this), parent)
 {
     setRequest(new CreateCustomVerificationEmailTemplateRequest(request));
     setReply(reply);

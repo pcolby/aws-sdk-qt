@@ -46,7 +46,7 @@ ListInstanceFleetsResponse::ListInstanceFleetsResponse(
         const ListInstanceFleetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new ListInstanceFleetsResponsePrivate(this), parent)
+    : ListInstanceFleetsResponse(new ListInstanceFleetsResponsePrivate(this), parent)
 {
     setRequest(new ListInstanceFleetsRequest(request));
     setReply(reply);

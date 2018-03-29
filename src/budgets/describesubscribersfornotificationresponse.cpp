@@ -46,7 +46,7 @@ DescribeSubscribersForNotificationResponse::DescribeSubscribersForNotificationRe
         const DescribeSubscribersForNotificationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BudgetsResponse(new DescribeSubscribersForNotificationResponsePrivate(this), parent)
+    : DescribeSubscribersForNotificationResponse(new DescribeSubscribersForNotificationResponsePrivate(this), parent)
 {
     setRequest(new DescribeSubscribersForNotificationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RotateChannelCredentialsResponse::RotateChannelCredentialsResponse(
         const RotateChannelCredentialsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MediaPackageResponse(new RotateChannelCredentialsResponsePrivate(this), parent)
+    : RotateChannelCredentialsResponse(new RotateChannelCredentialsResponsePrivate(this), parent)
 {
     setRequest(new RotateChannelCredentialsRequest(request));
     setReply(reply);

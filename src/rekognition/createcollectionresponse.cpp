@@ -46,7 +46,7 @@ CreateCollectionResponse::CreateCollectionResponse(
         const CreateCollectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RekognitionResponse(new CreateCollectionResponsePrivate(this), parent)
+    : CreateCollectionResponse(new CreateCollectionResponsePrivate(this), parent)
 {
     setRequest(new CreateCollectionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListInventoryEntriesResponse::ListInventoryEntriesResponse(
         const ListInventoryEntriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new ListInventoryEntriesResponsePrivate(this), parent)
+    : ListInventoryEntriesResponse(new ListInventoryEntriesResponsePrivate(this), parent)
 {
     setRequest(new ListInventoryEntriesRequest(request));
     setReply(reply);

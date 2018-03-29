@@ -46,7 +46,7 @@ SetTerminationProtectionResponse::SetTerminationProtectionResponse(
         const SetTerminationProtectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new SetTerminationProtectionResponsePrivate(this), parent)
+    : SetTerminationProtectionResponse(new SetTerminationProtectionResponsePrivate(this), parent)
 {
     setRequest(new SetTerminationProtectionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeEnvironmentsResponse::DescribeEnvironmentsResponse(
         const DescribeEnvironmentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new DescribeEnvironmentsResponsePrivate(this), parent)
+    : DescribeEnvironmentsResponse(new DescribeEnvironmentsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEnvironmentsRequest(request));
     setReply(reply);

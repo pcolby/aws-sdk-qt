@@ -46,7 +46,7 @@ UpdateCACertificateResponse::UpdateCACertificateResponse(
         const UpdateCACertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new UpdateCACertificateResponsePrivate(this), parent)
+    : UpdateCACertificateResponse(new UpdateCACertificateResponsePrivate(this), parent)
 {
     setRequest(new UpdateCACertificateRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeTableRestoreStatusResponse::DescribeTableRestoreStatusResponse(
         const DescribeTableRestoreStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DescribeTableRestoreStatusResponsePrivate(this), parent)
+    : DescribeTableRestoreStatusResponse(new DescribeTableRestoreStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeTableRestoreStatusRequest(request));
     setReply(reply);

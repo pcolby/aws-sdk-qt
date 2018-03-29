@@ -46,7 +46,7 @@ StopThingRegistrationTaskResponse::StopThingRegistrationTaskResponse(
         const StopThingRegistrationTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new StopThingRegistrationTaskResponsePrivate(this), parent)
+    : StopThingRegistrationTaskResponse(new StopThingRegistrationTaskResponsePrivate(this), parent)
 {
     setRequest(new StopThingRegistrationTaskRequest(request));
     setReply(reply);

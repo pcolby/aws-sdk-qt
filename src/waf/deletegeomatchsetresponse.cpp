@@ -46,7 +46,7 @@ DeleteGeoMatchSetResponse::DeleteGeoMatchSetResponse(
         const DeleteGeoMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteGeoMatchSetResponsePrivate(this), parent)
+    : DeleteGeoMatchSetResponse(new DeleteGeoMatchSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteGeoMatchSetRequest(request));
     setReply(reply);

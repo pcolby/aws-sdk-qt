@@ -46,7 +46,7 @@ GetBucketVersioningResponse::GetBucketVersioningResponse(
         const GetBucketVersioningRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new GetBucketVersioningResponsePrivate(this), parent)
+    : GetBucketVersioningResponse(new GetBucketVersioningResponsePrivate(this), parent)
 {
     setRequest(new GetBucketVersioningRequest(request));
     setReply(reply);

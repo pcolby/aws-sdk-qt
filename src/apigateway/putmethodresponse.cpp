@@ -46,7 +46,7 @@ PutMethodResponse::PutMethodResponse(
         const PutMethodRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new PutMethodResponsePrivate(this), parent)
+    : PutMethodResponse(new PutMethodResponsePrivate(this), parent)
 {
     setRequest(new PutMethodRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteDataSourceResponse::DeleteDataSourceResponse(
         const DeleteDataSourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppSyncResponse(new DeleteDataSourceResponsePrivate(this), parent)
+    : DeleteDataSourceResponse(new DeleteDataSourceResponsePrivate(this), parent)
 {
     setRequest(new DeleteDataSourceRequest(request));
     setReply(reply);

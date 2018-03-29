@@ -46,7 +46,7 @@ UpdateRecordsResponse::UpdateRecordsResponse(
         const UpdateRecordsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoSyncResponse(new UpdateRecordsResponsePrivate(this), parent)
+    : UpdateRecordsResponse(new UpdateRecordsResponsePrivate(this), parent)
 {
     setRequest(new UpdateRecordsRequest(request));
     setReply(reply);

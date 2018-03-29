@@ -46,7 +46,7 @@ ListInstancesResponse::ListInstancesResponse(
         const ListInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new ListInstancesResponsePrivate(this), parent)
+    : ListInstancesResponse(new ListInstancesResponsePrivate(this), parent)
 {
     setRequest(new ListInstancesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateDeploymentGroupResponse::CreateDeploymentGroupResponse(
         const CreateDeploymentGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeDeployResponse(new CreateDeploymentGroupResponsePrivate(this), parent)
+    : CreateDeploymentGroupResponse(new CreateDeploymentGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateDeploymentGroupRequest(request));
     setReply(reply);

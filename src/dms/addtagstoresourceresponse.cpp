@@ -46,7 +46,7 @@ AddTagsToResourceResponse::AddTagsToResourceResponse(
         const AddTagsToResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new AddTagsToResourceResponsePrivate(this), parent)
+    : AddTagsToResourceResponse(new AddTagsToResourceResponsePrivate(this), parent)
 {
     setRequest(new AddTagsToResourceRequest(request));
     setReply(reply);

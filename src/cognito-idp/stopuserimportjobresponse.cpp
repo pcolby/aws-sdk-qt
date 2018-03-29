@@ -46,7 +46,7 @@ StopUserImportJobResponse::StopUserImportJobResponse(
         const StopUserImportJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new StopUserImportJobResponsePrivate(this), parent)
+    : StopUserImportJobResponse(new StopUserImportJobResponsePrivate(this), parent)
 {
     setRequest(new StopUserImportJobRequest(request));
     setReply(reply);

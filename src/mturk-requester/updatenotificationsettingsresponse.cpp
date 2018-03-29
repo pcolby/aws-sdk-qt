@@ -46,7 +46,7 @@ UpdateNotificationSettingsResponse::UpdateNotificationSettingsResponse(
         const UpdateNotificationSettingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new UpdateNotificationSettingsResponsePrivate(this), parent)
+    : UpdateNotificationSettingsResponse(new UpdateNotificationSettingsResponsePrivate(this), parent)
 {
     setRequest(new UpdateNotificationSettingsRequest(request));
     setReply(reply);

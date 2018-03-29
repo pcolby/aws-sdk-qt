@@ -46,7 +46,7 @@ GetImportJobResponse::GetImportJobResponse(
         const GetImportJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new GetImportJobResponsePrivate(this), parent)
+    : GetImportJobResponse(new GetImportJobResponsePrivate(this), parent)
 {
     setRequest(new GetImportJobRequest(request));
     setReply(reply);

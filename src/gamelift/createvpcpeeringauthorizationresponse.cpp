@@ -46,7 +46,7 @@ CreateVpcPeeringAuthorizationResponse::CreateVpcPeeringAuthorizationResponse(
         const CreateVpcPeeringAuthorizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new CreateVpcPeeringAuthorizationResponsePrivate(this), parent)
+    : CreateVpcPeeringAuthorizationResponse(new CreateVpcPeeringAuthorizationResponsePrivate(this), parent)
 {
     setRequest(new CreateVpcPeeringAuthorizationRequest(request));
     setReply(reply);

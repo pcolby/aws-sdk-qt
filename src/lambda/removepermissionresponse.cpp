@@ -46,7 +46,7 @@ RemovePermissionResponse::RemovePermissionResponse(
         const RemovePermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LambdaResponse(new RemovePermissionResponsePrivate(this), parent)
+    : RemovePermissionResponse(new RemovePermissionResponsePrivate(this), parent)
 {
     setRequest(new RemovePermissionRequest(request));
     setReply(reply);

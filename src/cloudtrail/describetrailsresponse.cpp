@@ -46,7 +46,7 @@ DescribeTrailsResponse::DescribeTrailsResponse(
         const DescribeTrailsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudTrailResponse(new DescribeTrailsResponsePrivate(this), parent)
+    : DescribeTrailsResponse(new DescribeTrailsResponsePrivate(this), parent)
 {
     setRequest(new DescribeTrailsRequest(request));
     setReply(reply);

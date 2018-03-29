@@ -46,7 +46,7 @@ DescribeAffectedEntitiesResponse::DescribeAffectedEntitiesResponse(
         const DescribeAffectedEntitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : HealthResponse(new DescribeAffectedEntitiesResponsePrivate(this), parent)
+    : DescribeAffectedEntitiesResponse(new DescribeAffectedEntitiesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAffectedEntitiesRequest(request));
     setReply(reply);

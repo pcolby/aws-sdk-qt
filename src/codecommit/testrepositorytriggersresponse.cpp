@@ -46,7 +46,7 @@ TestRepositoryTriggersResponse::TestRepositoryTriggersResponse(
         const TestRepositoryTriggersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new TestRepositoryTriggersResponsePrivate(this), parent)
+    : TestRepositoryTriggersResponse(new TestRepositoryTriggersResponsePrivate(this), parent)
 {
     setRequest(new TestRepositoryTriggersRequest(request));
     setReply(reply);

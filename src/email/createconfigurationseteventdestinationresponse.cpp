@@ -46,7 +46,7 @@ CreateConfigurationSetEventDestinationResponse::CreateConfigurationSetEventDesti
         const CreateConfigurationSetEventDestinationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new CreateConfigurationSetEventDestinationResponsePrivate(this), parent)
+    : CreateConfigurationSetEventDestinationResponse(new CreateConfigurationSetEventDestinationResponsePrivate(this), parent)
 {
     setRequest(new CreateConfigurationSetEventDestinationRequest(request));
     setReply(reply);

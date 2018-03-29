@@ -46,7 +46,7 @@ GetEventStreamResponse::GetEventStreamResponse(
         const GetEventStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new GetEventStreamResponsePrivate(this), parent)
+    : GetEventStreamResponse(new GetEventStreamResponsePrivate(this), parent)
 {
     setRequest(new GetEventStreamRequest(request));
     setReply(reply);

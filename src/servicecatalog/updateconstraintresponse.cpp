@@ -46,7 +46,7 @@ UpdateConstraintResponse::UpdateConstraintResponse(
         const UpdateConstraintRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new UpdateConstraintResponsePrivate(this), parent)
+    : UpdateConstraintResponse(new UpdateConstraintResponsePrivate(this), parent)
 {
     setRequest(new UpdateConstraintRequest(request));
     setReply(reply);

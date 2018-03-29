@@ -46,7 +46,7 @@ SetReceiptRulePositionResponse::SetReceiptRulePositionResponse(
         const SetReceiptRulePositionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SetReceiptRulePositionResponsePrivate(this), parent)
+    : SetReceiptRulePositionResponse(new SetReceiptRulePositionResponsePrivate(this), parent)
 {
     setRequest(new SetReceiptRulePositionRequest(request));
     setReply(reply);

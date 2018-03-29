@@ -46,7 +46,7 @@ StartBuildResponse::StartBuildResponse(
         const StartBuildRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeBuildResponse(new StartBuildResponsePrivate(this), parent)
+    : StartBuildResponse(new StartBuildResponsePrivate(this), parent)
 {
     setRequest(new StartBuildRequest(request));
     setReply(reply);

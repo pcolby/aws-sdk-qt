@@ -46,7 +46,7 @@ RegisterContainerInstanceResponse::RegisterContainerInstanceResponse(
         const RegisterContainerInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new RegisterContainerInstanceResponsePrivate(this), parent)
+    : RegisterContainerInstanceResponse(new RegisterContainerInstanceResponsePrivate(this), parent)
 {
     setRequest(new RegisterContainerInstanceRequest(request));
     setReply(reply);

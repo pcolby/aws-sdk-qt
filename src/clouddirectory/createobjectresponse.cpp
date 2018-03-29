@@ -46,7 +46,7 @@ CreateObjectResponse::CreateObjectResponse(
         const CreateObjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new CreateObjectResponsePrivate(this), parent)
+    : CreateObjectResponse(new CreateObjectResponsePrivate(this), parent)
 {
     setRequest(new CreateObjectRequest(request));
     setReply(reply);

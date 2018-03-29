@@ -46,7 +46,7 @@ CloneReceiptRuleSetResponse::CloneReceiptRuleSetResponse(
         const CloneReceiptRuleSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new CloneReceiptRuleSetResponsePrivate(this), parent)
+    : CloneReceiptRuleSetResponse(new CloneReceiptRuleSetResponsePrivate(this), parent)
 {
     setRequest(new CloneReceiptRuleSetRequest(request));
     setReply(reply);

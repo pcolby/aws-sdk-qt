@@ -46,7 +46,7 @@ SetIpAddressTypeResponse::SetIpAddressTypeResponse(
         const SetIpAddressTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticLoadBalancingv2Response(new SetIpAddressTypeResponsePrivate(this), parent)
+    : SetIpAddressTypeResponse(new SetIpAddressTypeResponsePrivate(this), parent)
 {
     setRequest(new SetIpAddressTypeRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetFederationTokenResponse::GetFederationTokenResponse(
         const GetFederationTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : STSResponse(new GetFederationTokenResponsePrivate(this), parent)
+    : GetFederationTokenResponse(new GetFederationTokenResponsePrivate(this), parent)
 {
     setRequest(new GetFederationTokenRequest(request));
     setReply(reply);

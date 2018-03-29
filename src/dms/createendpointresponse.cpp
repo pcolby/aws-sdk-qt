@@ -46,7 +46,7 @@ CreateEndpointResponse::CreateEndpointResponse(
         const CreateEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new CreateEndpointResponsePrivate(this), parent)
+    : CreateEndpointResponse(new CreateEndpointResponsePrivate(this), parent)
 {
     setRequest(new CreateEndpointRequest(request));
     setReply(reply);

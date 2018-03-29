@@ -46,7 +46,7 @@ DescribeListenersResponse::DescribeListenersResponse(
         const DescribeListenersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticLoadBalancingv2Response(new DescribeListenersResponsePrivate(this), parent)
+    : DescribeListenersResponse(new DescribeListenersResponsePrivate(this), parent)
 {
     setRequest(new DescribeListenersRequest(request));
     setReply(reply);

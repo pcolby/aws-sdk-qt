@@ -46,7 +46,7 @@ PostCommentReplyResponse::PostCommentReplyResponse(
         const PostCommentReplyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new PostCommentReplyResponsePrivate(this), parent)
+    : PostCommentReplyResponse(new PostCommentReplyResponsePrivate(this), parent)
 {
     setRequest(new PostCommentReplyRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StopInstancesResponse::StopInstancesResponse(
         const StopInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new StopInstancesResponsePrivate(this), parent)
+    : StopInstancesResponse(new StopInstancesResponsePrivate(this), parent)
 {
     setRequest(new StopInstancesRequest(request));
     setReply(reply);

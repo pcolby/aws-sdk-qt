@@ -46,7 +46,7 @@ DescribeRuntimeConfigurationResponse::DescribeRuntimeConfigurationResponse(
         const DescribeRuntimeConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new DescribeRuntimeConfigurationResponsePrivate(this), parent)
+    : DescribeRuntimeConfigurationResponse(new DescribeRuntimeConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DescribeRuntimeConfigurationRequest(request));
     setReply(reply);

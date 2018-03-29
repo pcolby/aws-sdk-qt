@@ -46,7 +46,7 @@ StartMonitoringMembersResponse::StartMonitoringMembersResponse(
         const StartMonitoringMembersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GuardDutyResponse(new StartMonitoringMembersResponsePrivate(this), parent)
+    : StartMonitoringMembersResponse(new StartMonitoringMembersResponsePrivate(this), parent)
 {
     setRequest(new StartMonitoringMembersRequest(request));
     setReply(reply);

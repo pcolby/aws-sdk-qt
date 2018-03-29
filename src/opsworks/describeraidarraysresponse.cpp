@@ -46,7 +46,7 @@ DescribeRaidArraysResponse::DescribeRaidArraysResponse(
         const DescribeRaidArraysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DescribeRaidArraysResponsePrivate(this), parent)
+    : DescribeRaidArraysResponse(new DescribeRaidArraysResponsePrivate(this), parent)
 {
     setRequest(new DescribeRaidArraysRequest(request));
     setReply(reply);

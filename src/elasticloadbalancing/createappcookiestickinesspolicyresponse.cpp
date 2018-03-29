@@ -46,7 +46,7 @@ CreateAppCookieStickinessPolicyResponse::CreateAppCookieStickinessPolicyResponse
         const CreateAppCookieStickinessPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticLoadBalancingResponse(new CreateAppCookieStickinessPolicyResponsePrivate(this), parent)
+    : CreateAppCookieStickinessPolicyResponse(new CreateAppCookieStickinessPolicyResponsePrivate(this), parent)
 {
     setRequest(new CreateAppCookieStickinessPolicyRequest(request));
     setReply(reply);

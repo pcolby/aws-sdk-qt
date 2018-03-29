@@ -46,7 +46,7 @@ DeleteConfigurationSetResponse::DeleteConfigurationSetResponse(
         const DeleteConfigurationSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new DeleteConfigurationSetResponsePrivate(this), parent)
+    : DeleteConfigurationSetResponse(new DeleteConfigurationSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteConfigurationSetRequest(request));
     setReply(reply);

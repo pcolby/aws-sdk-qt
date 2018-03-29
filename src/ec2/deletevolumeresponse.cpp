@@ -46,7 +46,7 @@ DeleteVolumeResponse::DeleteVolumeResponse(
         const DeleteVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DeleteVolumeResponsePrivate(this), parent)
+    : DeleteVolumeResponse(new DeleteVolumeResponsePrivate(this), parent)
 {
     setRequest(new DeleteVolumeRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StartStackResponse::StartStackResponse(
         const StartStackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new StartStackResponsePrivate(this), parent)
+    : StartStackResponse(new StartStackResponsePrivate(this), parent)
 {
     setRequest(new StartStackRequest(request));
     setReply(reply);

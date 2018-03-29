@@ -46,7 +46,7 @@ DeleteEventSourceMappingResponse::DeleteEventSourceMappingResponse(
         const DeleteEventSourceMappingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LambdaResponse(new DeleteEventSourceMappingResponsePrivate(this), parent)
+    : DeleteEventSourceMappingResponse(new DeleteEventSourceMappingResponsePrivate(this), parent)
 {
     setRequest(new DeleteEventSourceMappingRequest(request));
     setReply(reply);

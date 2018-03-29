@@ -46,7 +46,7 @@ UpdateAliasResponse::UpdateAliasResponse(
         const UpdateAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new UpdateAliasResponsePrivate(this), parent)
+    : UpdateAliasResponse(new UpdateAliasResponsePrivate(this), parent)
 {
     setRequest(new UpdateAliasRequest(request));
     setReply(reply);

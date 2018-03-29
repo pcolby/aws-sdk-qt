@@ -46,7 +46,7 @@ SendTaskHeartbeatResponse::SendTaskHeartbeatResponse(
         const SendTaskHeartbeatRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new SendTaskHeartbeatResponsePrivate(this), parent)
+    : SendTaskHeartbeatResponse(new SendTaskHeartbeatResponsePrivate(this), parent)
 {
     setRequest(new SendTaskHeartbeatRequest(request));
     setReply(reply);

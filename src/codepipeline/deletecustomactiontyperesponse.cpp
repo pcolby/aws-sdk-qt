@@ -46,7 +46,7 @@ DeleteCustomActionTypeResponse::DeleteCustomActionTypeResponse(
         const DeleteCustomActionTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodePipelineResponse(new DeleteCustomActionTypeResponsePrivate(this), parent)
+    : DeleteCustomActionTypeResponse(new DeleteCustomActionTypeResponsePrivate(this), parent)
 {
     setRequest(new DeleteCustomActionTypeRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateMethodResponseResponse::UpdateMethodResponseResponse(
         const UpdateMethodResponseRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateMethodResponseResponsePrivate(this), parent)
+    : UpdateMethodResponseResponse(new UpdateMethodResponseResponsePrivate(this), parent)
 {
     setRequest(new UpdateMethodResponseRequest(request));
     setReply(reply);

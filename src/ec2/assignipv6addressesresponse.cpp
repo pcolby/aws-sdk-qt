@@ -46,7 +46,7 @@ AssignIpv6AddressesResponse::AssignIpv6AddressesResponse(
         const AssignIpv6AddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AssignIpv6AddressesResponsePrivate(this), parent)
+    : AssignIpv6AddressesResponse(new AssignIpv6AddressesResponsePrivate(this), parent)
 {
     setRequest(new AssignIpv6AddressesRequest(request));
     setReply(reply);

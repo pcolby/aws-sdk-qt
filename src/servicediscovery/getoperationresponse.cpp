@@ -46,7 +46,7 @@ GetOperationResponse::GetOperationResponse(
         const GetOperationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceDiscoveryResponse(new GetOperationResponsePrivate(this), parent)
+    : GetOperationResponse(new GetOperationResponsePrivate(this), parent)
 {
     setRequest(new GetOperationRequest(request));
     setReply(reply);

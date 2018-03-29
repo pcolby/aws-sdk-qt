@@ -46,7 +46,7 @@ DeleteApiKeyResponse::DeleteApiKeyResponse(
         const DeleteApiKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppSyncResponse(new DeleteApiKeyResponsePrivate(this), parent)
+    : DeleteApiKeyResponse(new DeleteApiKeyResponsePrivate(this), parent)
 {
     setRequest(new DeleteApiKeyRequest(request));
     setReply(reply);

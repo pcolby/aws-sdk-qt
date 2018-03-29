@@ -46,7 +46,7 @@ ListHITsResponse::ListHITsResponse(
         const ListHITsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new ListHITsResponsePrivate(this), parent)
+    : ListHITsResponse(new ListHITsResponsePrivate(this), parent)
 {
     setRequest(new ListHITsRequest(request));
     setReply(reply);

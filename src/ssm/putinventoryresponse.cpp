@@ -46,7 +46,7 @@ PutInventoryResponse::PutInventoryResponse(
         const PutInventoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new PutInventoryResponsePrivate(this), parent)
+    : PutInventoryResponse(new PutInventoryResponsePrivate(this), parent)
 {
     setRequest(new PutInventoryRequest(request));
     setReply(reply);

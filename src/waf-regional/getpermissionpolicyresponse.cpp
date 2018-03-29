@@ -46,7 +46,7 @@ GetPermissionPolicyResponse::GetPermissionPolicyResponse(
         const GetPermissionPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new GetPermissionPolicyResponsePrivate(this), parent)
+    : GetPermissionPolicyResponse(new GetPermissionPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetPermissionPolicyRequest(request));
     setReply(reply);

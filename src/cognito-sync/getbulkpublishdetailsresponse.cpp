@@ -46,7 +46,7 @@ GetBulkPublishDetailsResponse::GetBulkPublishDetailsResponse(
         const GetBulkPublishDetailsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoSyncResponse(new GetBulkPublishDetailsResponsePrivate(this), parent)
+    : GetBulkPublishDetailsResponse(new GetBulkPublishDetailsResponsePrivate(this), parent)
 {
     setRequest(new GetBulkPublishDetailsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateContainerAgentResponse::UpdateContainerAgentResponse(
         const UpdateContainerAgentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new UpdateContainerAgentResponsePrivate(this), parent)
+    : UpdateContainerAgentResponse(new UpdateContainerAgentResponsePrivate(this), parent)
 {
     setRequest(new UpdateContainerAgentRequest(request));
     setReply(reply);

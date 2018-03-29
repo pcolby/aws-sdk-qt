@@ -46,7 +46,7 @@ CreateOpenIDConnectProviderResponse::CreateOpenIDConnectProviderResponse(
         const CreateOpenIDConnectProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new CreateOpenIDConnectProviderResponsePrivate(this), parent)
+    : CreateOpenIDConnectProviderResponse(new CreateOpenIDConnectProviderResponsePrivate(this), parent)
 {
     setRequest(new CreateOpenIDConnectProviderRequest(request));
     setReply(reply);

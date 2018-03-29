@@ -46,7 +46,7 @@ UpdateNFSFileShareResponse::UpdateNFSFileShareResponse(
         const UpdateNFSFileShareRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new UpdateNFSFileShareResponsePrivate(this), parent)
+    : UpdateNFSFileShareResponse(new UpdateNFSFileShareResponsePrivate(this), parent)
 {
     setRequest(new UpdateNFSFileShareRequest(request));
     setReply(reply);

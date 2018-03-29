@@ -46,7 +46,7 @@ UpdateAssumeRolePolicyResponse::UpdateAssumeRolePolicyResponse(
         const UpdateAssumeRolePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateAssumeRolePolicyResponsePrivate(this), parent)
+    : UpdateAssumeRolePolicyResponse(new UpdateAssumeRolePolicyResponsePrivate(this), parent)
 {
     setRequest(new UpdateAssumeRolePolicyRequest(request));
     setReply(reply);

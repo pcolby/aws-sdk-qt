@@ -46,7 +46,7 @@ ModifyEventSubscriptionResponse::ModifyEventSubscriptionResponse(
         const ModifyEventSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ModifyEventSubscriptionResponsePrivate(this), parent)
+    : ModifyEventSubscriptionResponse(new ModifyEventSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new ModifyEventSubscriptionRequest(request));
     setReply(reply);

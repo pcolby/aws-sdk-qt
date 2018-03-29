@@ -46,7 +46,7 @@ DescribeSpotDatafeedSubscriptionResponse::DescribeSpotDatafeedSubscriptionRespon
         const DescribeSpotDatafeedSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeSpotDatafeedSubscriptionResponsePrivate(this), parent)
+    : DescribeSpotDatafeedSubscriptionResponse(new DescribeSpotDatafeedSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new DescribeSpotDatafeedSubscriptionRequest(request));
     setReply(reply);

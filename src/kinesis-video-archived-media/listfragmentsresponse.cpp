@@ -46,7 +46,7 @@ ListFragmentsResponse::ListFragmentsResponse(
         const ListFragmentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisVideoArchivedMediaResponse(new ListFragmentsResponsePrivate(this), parent)
+    : ListFragmentsResponse(new ListFragmentsResponsePrivate(this), parent)
 {
     setRequest(new ListFragmentsRequest(request));
     setReply(reply);

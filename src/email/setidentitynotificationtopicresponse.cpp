@@ -46,7 +46,7 @@ SetIdentityNotificationTopicResponse::SetIdentityNotificationTopicResponse(
         const SetIdentityNotificationTopicRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SetIdentityNotificationTopicResponsePrivate(this), parent)
+    : SetIdentityNotificationTopicResponse(new SetIdentityNotificationTopicResponsePrivate(this), parent)
 {
     setRequest(new SetIdentityNotificationTopicRequest(request));
     setReply(reply);

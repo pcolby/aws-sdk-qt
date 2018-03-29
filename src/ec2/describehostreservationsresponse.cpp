@@ -46,7 +46,7 @@ DescribeHostReservationsResponse::DescribeHostReservationsResponse(
         const DescribeHostReservationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeHostReservationsResponsePrivate(this), parent)
+    : DescribeHostReservationsResponse(new DescribeHostReservationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeHostReservationsRequest(request));
     setReply(reply);

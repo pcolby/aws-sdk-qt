@@ -46,7 +46,7 @@ ListTypedLinkFacetAttributesResponse::ListTypedLinkFacetAttributesResponse(
         const ListTypedLinkFacetAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new ListTypedLinkFacetAttributesResponsePrivate(this), parent)
+    : ListTypedLinkFacetAttributesResponse(new ListTypedLinkFacetAttributesResponsePrivate(this), parent)
 {
     setRequest(new ListTypedLinkFacetAttributesRequest(request));
     setReply(reply);

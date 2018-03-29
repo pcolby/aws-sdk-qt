@@ -46,7 +46,7 @@ RemoveUserFromGroupResponse::RemoveUserFromGroupResponse(
         const RemoveUserFromGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new RemoveUserFromGroupResponsePrivate(this), parent)
+    : RemoveUserFromGroupResponse(new RemoveUserFromGroupResponsePrivate(this), parent)
 {
     setRequest(new RemoveUserFromGroupRequest(request));
     setReply(reply);

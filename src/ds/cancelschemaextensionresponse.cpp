@@ -46,7 +46,7 @@ CancelSchemaExtensionResponse::CancelSchemaExtensionResponse(
         const CancelSchemaExtensionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new CancelSchemaExtensionResponsePrivate(this), parent)
+    : CancelSchemaExtensionResponse(new CancelSchemaExtensionResponsePrivate(this), parent)
 {
     setRequest(new CancelSchemaExtensionRequest(request));
     setReply(reply);

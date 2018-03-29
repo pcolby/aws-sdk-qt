@@ -46,7 +46,7 @@ RevokeGrantResponse::RevokeGrantResponse(
         const RevokeGrantRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new RevokeGrantResponsePrivate(this), parent)
+    : RevokeGrantResponse(new RevokeGrantResponsePrivate(this), parent)
 {
     setRequest(new RevokeGrantRequest(request));
     setReply(reply);

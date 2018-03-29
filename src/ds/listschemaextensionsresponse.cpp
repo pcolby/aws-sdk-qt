@@ -46,7 +46,7 @@ ListSchemaExtensionsResponse::ListSchemaExtensionsResponse(
         const ListSchemaExtensionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new ListSchemaExtensionsResponsePrivate(this), parent)
+    : ListSchemaExtensionsResponse(new ListSchemaExtensionsResponsePrivate(this), parent)
 {
     setRequest(new ListSchemaExtensionsRequest(request));
     setReply(reply);

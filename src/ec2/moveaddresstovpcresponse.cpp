@@ -46,7 +46,7 @@ MoveAddressToVpcResponse::MoveAddressToVpcResponse(
         const MoveAddressToVpcRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new MoveAddressToVpcResponsePrivate(this), parent)
+    : MoveAddressToVpcResponse(new MoveAddressToVpcResponsePrivate(this), parent)
 {
     setRequest(new MoveAddressToVpcRequest(request));
     setReply(reply);

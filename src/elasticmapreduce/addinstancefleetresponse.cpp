@@ -46,7 +46,7 @@ AddInstanceFleetResponse::AddInstanceFleetResponse(
         const AddInstanceFleetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new AddInstanceFleetResponsePrivate(this), parent)
+    : AddInstanceFleetResponse(new AddInstanceFleetResponsePrivate(this), parent)
 {
     setRequest(new AddInstanceFleetRequest(request));
     setReply(reply);

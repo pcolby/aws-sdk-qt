@@ -46,7 +46,7 @@ UpdateUserAttributesResponse::UpdateUserAttributesResponse(
         const UpdateUserAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new UpdateUserAttributesResponsePrivate(this), parent)
+    : UpdateUserAttributesResponse(new UpdateUserAttributesResponsePrivate(this), parent)
 {
     setRequest(new UpdateUserAttributesRequest(request));
     setReply(reply);

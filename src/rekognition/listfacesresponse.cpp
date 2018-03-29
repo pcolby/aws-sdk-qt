@@ -46,7 +46,7 @@ ListFacesResponse::ListFacesResponse(
         const ListFacesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RekognitionResponse(new ListFacesResponsePrivate(this), parent)
+    : ListFacesResponse(new ListFacesResponsePrivate(this), parent)
 {
     setRequest(new ListFacesRequest(request));
     setReply(reply);

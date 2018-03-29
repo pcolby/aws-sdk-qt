@@ -46,7 +46,7 @@ DescribeSubscriptionResponse::DescribeSubscriptionResponse(
         const DescribeSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ShieldResponse(new DescribeSubscriptionResponsePrivate(this), parent)
+    : DescribeSubscriptionResponse(new DescribeSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new DescribeSubscriptionRequest(request));
     setReply(reply);

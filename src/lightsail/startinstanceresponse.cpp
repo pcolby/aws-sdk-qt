@@ -46,7 +46,7 @@ StartInstanceResponse::StartInstanceResponse(
         const StartInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new StartInstanceResponsePrivate(this), parent)
+    : StartInstanceResponse(new StartInstanceResponsePrivate(this), parent)
 {
     setRequest(new StartInstanceRequest(request));
     setReply(reply);

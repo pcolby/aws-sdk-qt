@@ -46,7 +46,7 @@ RejectPortfolioShareResponse::RejectPortfolioShareResponse(
         const RejectPortfolioShareRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new RejectPortfolioShareResponsePrivate(this), parent)
+    : RejectPortfolioShareResponse(new RejectPortfolioShareResponsePrivate(this), parent)
 {
     setRequest(new RejectPortfolioShareRequest(request));
     setReply(reply);

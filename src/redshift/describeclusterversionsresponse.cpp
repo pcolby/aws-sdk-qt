@@ -46,7 +46,7 @@ DescribeClusterVersionsResponse::DescribeClusterVersionsResponse(
         const DescribeClusterVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DescribeClusterVersionsResponsePrivate(this), parent)
+    : DescribeClusterVersionsResponse(new DescribeClusterVersionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeClusterVersionsRequest(request));
     setReply(reply);

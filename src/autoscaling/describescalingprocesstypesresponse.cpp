@@ -46,7 +46,7 @@ DescribeScalingProcessTypesResponse::DescribeScalingProcessTypesResponse(
         const DescribeScalingProcessTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new DescribeScalingProcessTypesResponsePrivate(this), parent)
+    : DescribeScalingProcessTypesResponse(new DescribeScalingProcessTypesResponsePrivate(this), parent)
 {
     setRequest(new DescribeScalingProcessTypesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetPersonTrackingResponse::GetPersonTrackingResponse(
         const GetPersonTrackingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RekognitionResponse(new GetPersonTrackingResponsePrivate(this), parent)
+    : GetPersonTrackingResponse(new GetPersonTrackingResponsePrivate(this), parent)
 {
     setRequest(new GetPersonTrackingRequest(request));
     setReply(reply);

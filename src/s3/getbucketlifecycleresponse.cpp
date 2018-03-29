@@ -46,7 +46,7 @@ GetBucketLifecycleResponse::GetBucketLifecycleResponse(
         const GetBucketLifecycleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new GetBucketLifecycleResponsePrivate(this), parent)
+    : GetBucketLifecycleResponse(new GetBucketLifecycleResponsePrivate(this), parent)
 {
     setRequest(new GetBucketLifecycleRequest(request));
     setReply(reply);

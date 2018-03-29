@@ -46,7 +46,7 @@ EnableSnapshotCopyResponse::EnableSnapshotCopyResponse(
         const EnableSnapshotCopyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new EnableSnapshotCopyResponsePrivate(this), parent)
+    : EnableSnapshotCopyResponse(new EnableSnapshotCopyResponsePrivate(this), parent)
 {
     setRequest(new EnableSnapshotCopyRequest(request));
     setReply(reply);

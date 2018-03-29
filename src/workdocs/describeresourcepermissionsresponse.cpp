@@ -46,7 +46,7 @@ DescribeResourcePermissionsResponse::DescribeResourcePermissionsResponse(
         const DescribeResourcePermissionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkDocsResponse(new DescribeResourcePermissionsResponsePrivate(this), parent)
+    : DescribeResourcePermissionsResponse(new DescribeResourcePermissionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeResourcePermissionsRequest(request));
     setReply(reply);

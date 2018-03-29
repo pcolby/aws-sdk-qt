@@ -46,7 +46,7 @@ BatchWriteResponse::BatchWriteResponse(
         const BatchWriteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new BatchWriteResponsePrivate(this), parent)
+    : BatchWriteResponse(new BatchWriteResponsePrivate(this), parent)
 {
     setRequest(new BatchWriteRequest(request));
     setReply(reply);

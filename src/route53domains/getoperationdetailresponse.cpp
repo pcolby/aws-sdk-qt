@@ -46,7 +46,7 @@ GetOperationDetailResponse::GetOperationDetailResponse(
         const GetOperationDetailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53DomainsResponse(new GetOperationDetailResponsePrivate(this), parent)
+    : GetOperationDetailResponse(new GetOperationDetailResponsePrivate(this), parent)
 {
     setRequest(new GetOperationDetailRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UploadLayerPartResponse::UploadLayerPartResponse(
         const UploadLayerPartRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new UploadLayerPartResponsePrivate(this), parent)
+    : UploadLayerPartResponse(new UploadLayerPartResponsePrivate(this), parent)
 {
     setRequest(new UploadLayerPartRequest(request));
     setReply(reply);

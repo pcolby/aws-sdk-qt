@@ -46,7 +46,7 @@ UpdateBasePathMappingResponse::UpdateBasePathMappingResponse(
         const UpdateBasePathMappingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateBasePathMappingResponsePrivate(this), parent)
+    : UpdateBasePathMappingResponse(new UpdateBasePathMappingResponsePrivate(this), parent)
 {
     setRequest(new UpdateBasePathMappingRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeConfigurationSetResponse::DescribeConfigurationSetResponse(
         const DescribeConfigurationSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new DescribeConfigurationSetResponsePrivate(this), parent)
+    : DescribeConfigurationSetResponse(new DescribeConfigurationSetResponsePrivate(this), parent)
 {
     setRequest(new DescribeConfigurationSetRequest(request));
     setReply(reply);

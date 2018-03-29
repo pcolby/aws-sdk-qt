@@ -46,7 +46,7 @@ GetBotResponse::GetBotResponse(
         const GetBotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetBotResponsePrivate(this), parent)
+    : GetBotResponse(new GetBotResponsePrivate(this), parent)
 {
     setRequest(new GetBotRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeEnvironmentManagedActionHistoryResponse::DescribeEnvironmentManagedActio
         const DescribeEnvironmentManagedActionHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new DescribeEnvironmentManagedActionHistoryResponsePrivate(this), parent)
+    : DescribeEnvironmentManagedActionHistoryResponse(new DescribeEnvironmentManagedActionHistoryResponsePrivate(this), parent)
 {
     setRequest(new DescribeEnvironmentManagedActionHistoryRequest(request));
     setReply(reply);

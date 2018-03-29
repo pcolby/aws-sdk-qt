@@ -46,7 +46,7 @@ AddAttachmentsToSetResponse::AddAttachmentsToSetResponse(
         const AddAttachmentsToSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SupportResponse(new AddAttachmentsToSetResponsePrivate(this), parent)
+    : AddAttachmentsToSetResponse(new AddAttachmentsToSetResponsePrivate(this), parent)
 {
     setRequest(new AddAttachmentsToSetRequest(request));
     setReply(reply);

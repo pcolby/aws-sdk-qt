@@ -46,7 +46,7 @@ ResetNetworkInterfaceAttributeResponse::ResetNetworkInterfaceAttributeResponse(
         const ResetNetworkInterfaceAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ResetNetworkInterfaceAttributeResponsePrivate(this), parent)
+    : ResetNetworkInterfaceAttributeResponse(new ResetNetworkInterfaceAttributeResponsePrivate(this), parent)
 {
     setRequest(new ResetNetworkInterfaceAttributeRequest(request));
     setReply(reply);

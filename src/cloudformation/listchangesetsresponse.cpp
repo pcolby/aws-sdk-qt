@@ -46,7 +46,7 @@ ListChangeSetsResponse::ListChangeSetsResponse(
         const ListChangeSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFormationResponse(new ListChangeSetsResponsePrivate(this), parent)
+    : ListChangeSetsResponse(new ListChangeSetsResponsePrivate(this), parent)
 {
     setRequest(new ListChangeSetsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetIdentityPoliciesResponse::GetIdentityPoliciesResponse(
         const GetIdentityPoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new GetIdentityPoliciesResponsePrivate(this), parent)
+    : GetIdentityPoliciesResponse(new GetIdentityPoliciesResponsePrivate(this), parent)
 {
     setRequest(new GetIdentityPoliciesRequest(request));
     setReply(reply);

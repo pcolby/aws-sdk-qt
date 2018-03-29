@@ -46,7 +46,7 @@ GetRolePolicyResponse::GetRolePolicyResponse(
         const GetRolePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetRolePolicyResponsePrivate(this), parent)
+    : GetRolePolicyResponse(new GetRolePolicyResponsePrivate(this), parent)
 {
     setRequest(new GetRolePolicyRequest(request));
     setReply(reply);

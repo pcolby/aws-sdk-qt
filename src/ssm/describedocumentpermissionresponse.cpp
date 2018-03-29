@@ -46,7 +46,7 @@ DescribeDocumentPermissionResponse::DescribeDocumentPermissionResponse(
         const DescribeDocumentPermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeDocumentPermissionResponsePrivate(this), parent)
+    : DescribeDocumentPermissionResponse(new DescribeDocumentPermissionResponsePrivate(this), parent)
 {
     setRequest(new DescribeDocumentPermissionRequest(request));
     setReply(reply);

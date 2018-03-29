@@ -46,7 +46,7 @@ CreateSpotDatafeedSubscriptionResponse::CreateSpotDatafeedSubscriptionResponse(
         const CreateSpotDatafeedSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateSpotDatafeedSubscriptionResponsePrivate(this), parent)
+    : CreateSpotDatafeedSubscriptionResponse(new CreateSpotDatafeedSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new CreateSpotDatafeedSubscriptionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DisableSnapshotCopyResponse::DisableSnapshotCopyResponse(
         const DisableSnapshotCopyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DisableSnapshotCopyResponsePrivate(this), parent)
+    : DisableSnapshotCopyResponse(new DisableSnapshotCopyResponsePrivate(this), parent)
 {
     setRequest(new DisableSnapshotCopyRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeImagesResponse::DescribeImagesResponse(
         const DescribeImagesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeImagesResponsePrivate(this), parent)
+    : DescribeImagesResponse(new DescribeImagesResponsePrivate(this), parent)
 {
     setRequest(new DescribeImagesRequest(request));
     setReply(reply);

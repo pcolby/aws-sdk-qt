@@ -46,7 +46,7 @@ DescribeNatGatewaysResponse::DescribeNatGatewaysResponse(
         const DescribeNatGatewaysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeNatGatewaysResponsePrivate(this), parent)
+    : DescribeNatGatewaysResponse(new DescribeNatGatewaysResponsePrivate(this), parent)
 {
     setRequest(new DescribeNatGatewaysRequest(request));
     setReply(reply);

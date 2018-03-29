@@ -46,7 +46,7 @@ DeleteAliasResponse::DeleteAliasResponse(
         const DeleteAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkMailResponse(new DeleteAliasResponsePrivate(this), parent)
+    : DeleteAliasResponse(new DeleteAliasResponsePrivate(this), parent)
 {
     setRequest(new DeleteAliasRequest(request));
     setReply(reply);

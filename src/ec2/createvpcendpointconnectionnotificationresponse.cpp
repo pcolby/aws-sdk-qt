@@ -46,7 +46,7 @@ CreateVpcEndpointConnectionNotificationResponse::CreateVpcEndpointConnectionNoti
         const CreateVpcEndpointConnectionNotificationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateVpcEndpointConnectionNotificationResponsePrivate(this), parent)
+    : CreateVpcEndpointConnectionNotificationResponse(new CreateVpcEndpointConnectionNotificationResponsePrivate(this), parent)
 {
     setRequest(new CreateVpcEndpointConnectionNotificationRequest(request));
     setReply(reply);

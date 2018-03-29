@@ -46,7 +46,7 @@ AddWorkingStorageResponse::AddWorkingStorageResponse(
         const AddWorkingStorageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new AddWorkingStorageResponsePrivate(this), parent)
+    : AddWorkingStorageResponse(new AddWorkingStorageResponsePrivate(this), parent)
 {
     setRequest(new AddWorkingStorageRequest(request));
     setReply(reply);

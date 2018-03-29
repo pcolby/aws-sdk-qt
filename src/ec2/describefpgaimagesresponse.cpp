@@ -46,7 +46,7 @@ DescribeFpgaImagesResponse::DescribeFpgaImagesResponse(
         const DescribeFpgaImagesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeFpgaImagesResponsePrivate(this), parent)
+    : DescribeFpgaImagesResponse(new DescribeFpgaImagesResponsePrivate(this), parent)
 {
     setRequest(new DescribeFpgaImagesRequest(request));
     setReply(reply);

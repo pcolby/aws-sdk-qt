@@ -46,7 +46,7 @@ UploadPartResponse::UploadPartResponse(
         const UploadPartRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new UploadPartResponsePrivate(this), parent)
+    : UploadPartResponse(new UploadPartResponsePrivate(this), parent)
 {
     setRequest(new UploadPartRequest(request));
     setReply(reply);

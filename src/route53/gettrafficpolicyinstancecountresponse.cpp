@@ -46,7 +46,7 @@ GetTrafficPolicyInstanceCountResponse::GetTrafficPolicyInstanceCountResponse(
         const GetTrafficPolicyInstanceCountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new GetTrafficPolicyInstanceCountResponsePrivate(this), parent)
+    : GetTrafficPolicyInstanceCountResponse(new GetTrafficPolicyInstanceCountResponsePrivate(this), parent)
 {
     setRequest(new GetTrafficPolicyInstanceCountRequest(request));
     setReply(reply);

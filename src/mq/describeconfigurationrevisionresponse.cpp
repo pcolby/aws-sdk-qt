@@ -46,7 +46,7 @@ DescribeConfigurationRevisionResponse::DescribeConfigurationRevisionResponse(
         const DescribeConfigurationRevisionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new DescribeConfigurationRevisionResponsePrivate(this), parent)
+    : DescribeConfigurationRevisionResponse(new DescribeConfigurationRevisionResponsePrivate(this), parent)
 {
     setRequest(new DescribeConfigurationRevisionRequest(request));
     setReply(reply);

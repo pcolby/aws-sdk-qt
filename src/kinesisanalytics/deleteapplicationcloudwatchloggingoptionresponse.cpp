@@ -46,7 +46,7 @@ DeleteApplicationCloudWatchLoggingOptionResponse::DeleteApplicationCloudWatchLog
         const DeleteApplicationCloudWatchLoggingOptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisAnalyticsResponse(new DeleteApplicationCloudWatchLoggingOptionResponsePrivate(this), parent)
+    : DeleteApplicationCloudWatchLoggingOptionResponse(new DeleteApplicationCloudWatchLoggingOptionResponsePrivate(this), parent)
 {
     setRequest(new DeleteApplicationCloudWatchLoggingOptionRequest(request));
     setReply(reply);

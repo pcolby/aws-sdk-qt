@@ -46,7 +46,7 @@ DeleteKeyPairResponse::DeleteKeyPairResponse(
         const DeleteKeyPairRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new DeleteKeyPairResponsePrivate(this), parent)
+    : DeleteKeyPairResponse(new DeleteKeyPairResponsePrivate(this), parent)
 {
     setRequest(new DeleteKeyPairRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetAuthorizersResponse::GetAuthorizersResponse(
         const GetAuthorizersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetAuthorizersResponsePrivate(this), parent)
+    : GetAuthorizersResponse(new GetAuthorizersResponsePrivate(this), parent)
 {
     setRequest(new GetAuthorizersRequest(request));
     setReply(reply);

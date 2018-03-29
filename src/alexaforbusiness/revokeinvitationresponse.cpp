@@ -46,7 +46,7 @@ RevokeInvitationResponse::RevokeInvitationResponse(
         const RevokeInvitationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new RevokeInvitationResponsePrivate(this), parent)
+    : RevokeInvitationResponse(new RevokeInvitationResponsePrivate(this), parent)
 {
     setRequest(new RevokeInvitationRequest(request));
     setReply(reply);

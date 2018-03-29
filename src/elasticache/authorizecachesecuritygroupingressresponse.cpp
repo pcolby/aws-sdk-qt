@@ -46,7 +46,7 @@ AuthorizeCacheSecurityGroupIngressResponse::AuthorizeCacheSecurityGroupIngressRe
         const AuthorizeCacheSecurityGroupIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new AuthorizeCacheSecurityGroupIngressResponsePrivate(this), parent)
+    : AuthorizeCacheSecurityGroupIngressResponse(new AuthorizeCacheSecurityGroupIngressResponsePrivate(this), parent)
 {
     setRequest(new AuthorizeCacheSecurityGroupIngressRequest(request));
     setReply(reply);

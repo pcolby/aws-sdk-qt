@@ -46,7 +46,7 @@ ListSkillsResponse::ListSkillsResponse(
         const ListSkillsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new ListSkillsResponsePrivate(this), parent)
+    : ListSkillsResponse(new ListSkillsResponsePrivate(this), parent)
 {
     setRequest(new ListSkillsRequest(request));
     setReply(reply);

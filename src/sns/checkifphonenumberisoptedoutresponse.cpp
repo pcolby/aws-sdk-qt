@@ -46,7 +46,7 @@ CheckIfPhoneNumberIsOptedOutResponse::CheckIfPhoneNumberIsOptedOutResponse(
         const CheckIfPhoneNumberIsOptedOutRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new CheckIfPhoneNumberIsOptedOutResponsePrivate(this), parent)
+    : CheckIfPhoneNumberIsOptedOutResponse(new CheckIfPhoneNumberIsOptedOutResponsePrivate(this), parent)
 {
     setRequest(new CheckIfPhoneNumberIsOptedOutRequest(request));
     setReply(reply);

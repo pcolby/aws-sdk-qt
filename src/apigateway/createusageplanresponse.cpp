@@ -46,7 +46,7 @@ CreateUsagePlanResponse::CreateUsagePlanResponse(
         const CreateUsagePlanRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new CreateUsagePlanResponsePrivate(this), parent)
+    : CreateUsagePlanResponse(new CreateUsagePlanResponsePrivate(this), parent)
 {
     setRequest(new CreateUsagePlanRequest(request));
     setReply(reply);

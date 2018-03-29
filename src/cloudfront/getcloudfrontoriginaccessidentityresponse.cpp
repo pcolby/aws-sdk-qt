@@ -46,7 +46,7 @@ GetCloudFrontOriginAccessIdentityResponse::GetCloudFrontOriginAccessIdentityResp
         const GetCloudFrontOriginAccessIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFrontResponse(new GetCloudFrontOriginAccessIdentityResponsePrivate(this), parent)
+    : GetCloudFrontOriginAccessIdentityResponse(new GetCloudFrontOriginAccessIdentityResponsePrivate(this), parent)
 {
     setRequest(new GetCloudFrontOriginAccessIdentityRequest(request));
     setReply(reply);

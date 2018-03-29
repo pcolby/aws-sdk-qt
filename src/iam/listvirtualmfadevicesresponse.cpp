@@ -46,7 +46,7 @@ ListVirtualMFADevicesResponse::ListVirtualMFADevicesResponse(
         const ListVirtualMFADevicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListVirtualMFADevicesResponsePrivate(this), parent)
+    : ListVirtualMFADevicesResponse(new ListVirtualMFADevicesResponsePrivate(this), parent)
 {
     setRequest(new ListVirtualMFADevicesRequest(request));
     setReply(reply);

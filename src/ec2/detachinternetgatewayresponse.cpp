@@ -46,7 +46,7 @@ DetachInternetGatewayResponse::DetachInternetGatewayResponse(
         const DetachInternetGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DetachInternetGatewayResponsePrivate(this), parent)
+    : DetachInternetGatewayResponse(new DetachInternetGatewayResponsePrivate(this), parent)
 {
     setRequest(new DetachInternetGatewayRequest(request));
     setReply(reply);

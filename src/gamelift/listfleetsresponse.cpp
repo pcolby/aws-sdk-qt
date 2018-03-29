@@ -46,7 +46,7 @@ ListFleetsResponse::ListFleetsResponse(
         const ListFleetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new ListFleetsResponsePrivate(this), parent)
+    : ListFleetsResponse(new ListFleetsResponsePrivate(this), parent)
 {
     setRequest(new ListFleetsRequest(request));
     setReply(reply);

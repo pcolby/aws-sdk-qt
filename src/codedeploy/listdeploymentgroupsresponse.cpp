@@ -46,7 +46,7 @@ ListDeploymentGroupsResponse::ListDeploymentGroupsResponse(
         const ListDeploymentGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeDeployResponse(new ListDeploymentGroupsResponsePrivate(this), parent)
+    : ListDeploymentGroupsResponse(new ListDeploymentGroupsResponsePrivate(this), parent)
 {
     setRequest(new ListDeploymentGroupsRequest(request));
     setReply(reply);

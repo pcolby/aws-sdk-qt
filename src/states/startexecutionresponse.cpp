@@ -46,7 +46,7 @@ StartExecutionResponse::StartExecutionResponse(
         const StartExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new StartExecutionResponsePrivate(this), parent)
+    : StartExecutionResponse(new StartExecutionResponsePrivate(this), parent)
 {
     setRequest(new StartExecutionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListSecurityConfigurationsResponse::ListSecurityConfigurationsResponse(
         const ListSecurityConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new ListSecurityConfigurationsResponsePrivate(this), parent)
+    : ListSecurityConfigurationsResponse(new ListSecurityConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new ListSecurityConfigurationsRequest(request));
     setReply(reply);

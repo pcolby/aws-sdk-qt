@@ -46,7 +46,7 @@ DeleteUserResponse::DeleteUserResponse(
         const DeleteUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkMailResponse(new DeleteUserResponsePrivate(this), parent)
+    : DeleteUserResponse(new DeleteUserResponsePrivate(this), parent)
 {
     setRequest(new DeleteUserRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateRoleResponse::CreateRoleResponse(
         const CreateRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new CreateRoleResponsePrivate(this), parent)
+    : CreateRoleResponse(new CreateRoleResponsePrivate(this), parent)
 {
     setRequest(new CreateRoleRequest(request));
     setReply(reply);

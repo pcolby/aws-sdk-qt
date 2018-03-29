@@ -46,7 +46,7 @@ GetBucketMetricsConfigurationResponse::GetBucketMetricsConfigurationResponse(
         const GetBucketMetricsConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new GetBucketMetricsConfigurationResponsePrivate(this), parent)
+    : GetBucketMetricsConfigurationResponse(new GetBucketMetricsConfigurationResponsePrivate(this), parent)
 {
     setRequest(new GetBucketMetricsConfigurationRequest(request));
     setReply(reply);

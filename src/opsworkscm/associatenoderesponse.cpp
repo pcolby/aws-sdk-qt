@@ -46,7 +46,7 @@ AssociateNodeResponse::AssociateNodeResponse(
         const AssociateNodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new AssociateNodeResponsePrivate(this), parent)
+    : AssociateNodeResponse(new AssociateNodeResponsePrivate(this), parent)
 {
     setRequest(new AssociateNodeRequest(request));
     setReply(reply);

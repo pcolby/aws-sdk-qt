@@ -46,7 +46,7 @@ DetachThingPrincipalResponse::DetachThingPrincipalResponse(
         const DetachThingPrincipalRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new DetachThingPrincipalResponsePrivate(this), parent)
+    : DetachThingPrincipalResponse(new DetachThingPrincipalResponsePrivate(this), parent)
 {
     setRequest(new DetachThingPrincipalRequest(request));
     setReply(reply);

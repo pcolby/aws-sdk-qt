@@ -46,7 +46,7 @@ DescribeEventBusResponse::DescribeEventBusResponse(
         const DescribeEventBusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchEventsResponse(new DescribeEventBusResponsePrivate(this), parent)
+    : DescribeEventBusResponse(new DescribeEventBusResponsePrivate(this), parent)
 {
     setRequest(new DescribeEventBusRequest(request));
     setReply(reply);

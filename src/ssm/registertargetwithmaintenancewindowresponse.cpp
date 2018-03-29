@@ -46,7 +46,7 @@ RegisterTargetWithMaintenanceWindowResponse::RegisterTargetWithMaintenanceWindow
         const RegisterTargetWithMaintenanceWindowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new RegisterTargetWithMaintenanceWindowResponsePrivate(this), parent)
+    : RegisterTargetWithMaintenanceWindowResponse(new RegisterTargetWithMaintenanceWindowResponsePrivate(this), parent)
 {
     setRequest(new RegisterTargetWithMaintenanceWindowRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteBasePathMappingResponse::DeleteBasePathMappingResponse(
         const DeleteBasePathMappingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteBasePathMappingResponsePrivate(this), parent)
+    : DeleteBasePathMappingResponse(new DeleteBasePathMappingResponsePrivate(this), parent)
 {
     setRequest(new DeleteBasePathMappingRequest(request));
     setReply(reply);

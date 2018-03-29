@@ -46,7 +46,7 @@ ListConfigurationSetsResponse::ListConfigurationSetsResponse(
         const ListConfigurationSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new ListConfigurationSetsResponsePrivate(this), parent)
+    : ListConfigurationSetsResponse(new ListConfigurationSetsResponsePrivate(this), parent)
 {
     setRequest(new ListConfigurationSetsRequest(request));
     setReply(reply);

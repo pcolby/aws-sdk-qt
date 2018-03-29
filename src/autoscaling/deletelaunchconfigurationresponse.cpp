@@ -46,7 +46,7 @@ DeleteLaunchConfigurationResponse::DeleteLaunchConfigurationResponse(
         const DeleteLaunchConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new DeleteLaunchConfigurationResponsePrivate(this), parent)
+    : DeleteLaunchConfigurationResponse(new DeleteLaunchConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DeleteLaunchConfigurationRequest(request));
     setReply(reply);

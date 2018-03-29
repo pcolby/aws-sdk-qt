@@ -46,7 +46,7 @@ ReceiveMessageResponse::ReceiveMessageResponse(
         const ReceiveMessageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new ReceiveMessageResponsePrivate(this), parent)
+    : ReceiveMessageResponse(new ReceiveMessageResponsePrivate(this), parent)
 {
     setRequest(new ReceiveMessageRequest(request));
     setReply(reply);

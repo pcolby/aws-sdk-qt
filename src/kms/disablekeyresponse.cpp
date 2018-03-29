@@ -46,7 +46,7 @@ DisableKeyResponse::DisableKeyResponse(
         const DisableKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new DisableKeyResponsePrivate(this), parent)
+    : DisableKeyResponse(new DisableKeyResponsePrivate(this), parent)
 {
     setRequest(new DisableKeyRequest(request));
     setReply(reply);

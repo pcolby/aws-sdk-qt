@@ -46,7 +46,7 @@ SetTagsForResourceResponse::SetTagsForResourceResponse(
         const SetTagsForResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new SetTagsForResourceResponsePrivate(this), parent)
+    : SetTagsForResourceResponse(new SetTagsForResourceResponsePrivate(this), parent)
 {
     setRequest(new SetTagsForResourceRequest(request));
     setReply(reply);

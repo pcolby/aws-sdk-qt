@@ -46,7 +46,7 @@ UpdateRadiusResponse::UpdateRadiusResponse(
         const UpdateRadiusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new UpdateRadiusResponsePrivate(this), parent)
+    : UpdateRadiusResponse(new UpdateRadiusResponsePrivate(this), parent)
 {
     setRequest(new UpdateRadiusRequest(request));
     setReply(reply);

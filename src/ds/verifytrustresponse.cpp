@@ -46,7 +46,7 @@ VerifyTrustResponse::VerifyTrustResponse(
         const VerifyTrustRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new VerifyTrustResponsePrivate(this), parent)
+    : VerifyTrustResponse(new VerifyTrustResponsePrivate(this), parent)
 {
     setRequest(new VerifyTrustRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeEffectiveInstanceAssociationsResponse::DescribeEffectiveInstanceAssociat
         const DescribeEffectiveInstanceAssociationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeEffectiveInstanceAssociationsResponsePrivate(this), parent)
+    : DescribeEffectiveInstanceAssociationsResponse(new DescribeEffectiveInstanceAssociationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEffectiveInstanceAssociationsRequest(request));
     setReply(reply);

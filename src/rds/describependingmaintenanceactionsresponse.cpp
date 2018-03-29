@@ -46,7 +46,7 @@ DescribePendingMaintenanceActionsResponse::DescribePendingMaintenanceActionsResp
         const DescribePendingMaintenanceActionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribePendingMaintenanceActionsResponsePrivate(this), parent)
+    : DescribePendingMaintenanceActionsResponse(new DescribePendingMaintenanceActionsResponsePrivate(this), parent)
 {
     setRequest(new DescribePendingMaintenanceActionsRequest(request));
     setReply(reply);

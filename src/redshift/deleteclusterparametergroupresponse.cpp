@@ -46,7 +46,7 @@ DeleteClusterParameterGroupResponse::DeleteClusterParameterGroupResponse(
         const DeleteClusterParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DeleteClusterParameterGroupResponsePrivate(this), parent)
+    : DeleteClusterParameterGroupResponse(new DeleteClusterParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteClusterParameterGroupRequest(request));
     setReply(reply);

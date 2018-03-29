@@ -46,7 +46,7 @@ SetInstanceHealthResponse::SetInstanceHealthResponse(
         const SetInstanceHealthRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new SetInstanceHealthResponsePrivate(this), parent)
+    : SetInstanceHealthResponse(new SetInstanceHealthResponsePrivate(this), parent)
 {
     setRequest(new SetInstanceHealthRequest(request));
     setReply(reply);

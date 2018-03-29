@@ -46,7 +46,7 @@ ListGroupsForUserResponse::ListGroupsForUserResponse(
         const ListGroupsForUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListGroupsForUserResponsePrivate(this), parent)
+    : ListGroupsForUserResponse(new ListGroupsForUserResponsePrivate(this), parent)
 {
     setRequest(new ListGroupsForUserRequest(request));
     setReply(reply);

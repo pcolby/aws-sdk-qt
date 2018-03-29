@@ -46,7 +46,7 @@ PutActionRevisionResponse::PutActionRevisionResponse(
         const PutActionRevisionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodePipelineResponse(new PutActionRevisionResponsePrivate(this), parent)
+    : PutActionRevisionResponse(new PutActionRevisionResponsePrivate(this), parent)
 {
     setRequest(new PutActionRevisionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetCredentialsForIdentityResponse::GetCredentialsForIdentityResponse(
         const GetCredentialsForIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityResponse(new GetCredentialsForIdentityResponsePrivate(this), parent)
+    : GetCredentialsForIdentityResponse(new GetCredentialsForIdentityResponsePrivate(this), parent)
 {
     setRequest(new GetCredentialsForIdentityRequest(request));
     setReply(reply);

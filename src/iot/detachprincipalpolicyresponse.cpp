@@ -46,7 +46,7 @@ DetachPrincipalPolicyResponse::DetachPrincipalPolicyResponse(
         const DetachPrincipalPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new DetachPrincipalPolicyResponsePrivate(this), parent)
+    : DetachPrincipalPolicyResponse(new DetachPrincipalPolicyResponsePrivate(this), parent)
 {
     setRequest(new DetachPrincipalPolicyRequest(request));
     setReply(reply);

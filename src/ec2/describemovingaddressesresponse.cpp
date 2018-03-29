@@ -46,7 +46,7 @@ DescribeMovingAddressesResponse::DescribeMovingAddressesResponse(
         const DescribeMovingAddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeMovingAddressesResponsePrivate(this), parent)
+    : DescribeMovingAddressesResponse(new DescribeMovingAddressesResponsePrivate(this), parent)
 {
     setRequest(new DescribeMovingAddressesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateEventSourceMappingResponse::UpdateEventSourceMappingResponse(
         const UpdateEventSourceMappingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LambdaResponse(new UpdateEventSourceMappingResponsePrivate(this), parent)
+    : UpdateEventSourceMappingResponse(new UpdateEventSourceMappingResponsePrivate(this), parent)
 {
     setRequest(new UpdateEventSourceMappingRequest(request));
     setReply(reply);

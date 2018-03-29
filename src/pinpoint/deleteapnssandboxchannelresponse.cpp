@@ -46,7 +46,7 @@ DeleteApnsSandboxChannelResponse::DeleteApnsSandboxChannelResponse(
         const DeleteApnsSandboxChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new DeleteApnsSandboxChannelResponsePrivate(this), parent)
+    : DeleteApnsSandboxChannelResponse(new DeleteApnsSandboxChannelResponsePrivate(this), parent)
 {
     setRequest(new DeleteApnsSandboxChannelRequest(request));
     setReply(reply);

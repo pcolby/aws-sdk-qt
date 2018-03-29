@@ -46,7 +46,7 @@ DeleteAuthorizerResponse::DeleteAuthorizerResponse(
         const DeleteAuthorizerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new DeleteAuthorizerResponsePrivate(this), parent)
+    : DeleteAuthorizerResponse(new DeleteAuthorizerResponsePrivate(this), parent)
 {
     setRequest(new DeleteAuthorizerRequest(request));
     setReply(reply);

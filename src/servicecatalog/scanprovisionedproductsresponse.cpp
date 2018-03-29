@@ -46,7 +46,7 @@ ScanProvisionedProductsResponse::ScanProvisionedProductsResponse(
         const ScanProvisionedProductsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new ScanProvisionedProductsResponsePrivate(this), parent)
+    : ScanProvisionedProductsResponse(new ScanProvisionedProductsResponsePrivate(this), parent)
 {
     setRequest(new ScanProvisionedProductsRequest(request));
     setReply(reply);

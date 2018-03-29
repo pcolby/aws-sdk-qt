@@ -46,7 +46,7 @@ CreateVPCAssociationAuthorizationResponse::CreateVPCAssociationAuthorizationResp
         const CreateVPCAssociationAuthorizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new CreateVPCAssociationAuthorizationResponsePrivate(this), parent)
+    : CreateVPCAssociationAuthorizationResponse(new CreateVPCAssociationAuthorizationResponsePrivate(this), parent)
 {
     setRequest(new CreateVPCAssociationAuthorizationRequest(request));
     setReply(reply);

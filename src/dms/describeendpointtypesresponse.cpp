@@ -46,7 +46,7 @@ DescribeEndpointTypesResponse::DescribeEndpointTypesResponse(
         const DescribeEndpointTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new DescribeEndpointTypesResponsePrivate(this), parent)
+    : DescribeEndpointTypesResponse(new DescribeEndpointTypesResponsePrivate(this), parent)
 {
     setRequest(new DescribeEndpointTypesRequest(request));
     setReply(reply);

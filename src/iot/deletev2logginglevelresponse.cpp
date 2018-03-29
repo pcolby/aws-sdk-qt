@@ -46,7 +46,7 @@ DeleteV2LoggingLevelResponse::DeleteV2LoggingLevelResponse(
         const DeleteV2LoggingLevelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new DeleteV2LoggingLevelResponsePrivate(this), parent)
+    : DeleteV2LoggingLevelResponse(new DeleteV2LoggingLevelResponsePrivate(this), parent)
 {
     setRequest(new DeleteV2LoggingLevelRequest(request));
     setReply(reply);

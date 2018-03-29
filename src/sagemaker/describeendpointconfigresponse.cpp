@@ -46,7 +46,7 @@ DescribeEndpointConfigResponse::DescribeEndpointConfigResponse(
         const DescribeEndpointConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SageMakerResponse(new DescribeEndpointConfigResponsePrivate(this), parent)
+    : DescribeEndpointConfigResponse(new DescribeEndpointConfigResponsePrivate(this), parent)
 {
     setRequest(new DescribeEndpointConfigRequest(request));
     setReply(reply);

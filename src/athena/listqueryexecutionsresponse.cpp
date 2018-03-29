@@ -46,7 +46,7 @@ ListQueryExecutionsResponse::ListQueryExecutionsResponse(
         const ListQueryExecutionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AthenaResponse(new ListQueryExecutionsResponsePrivate(this), parent)
+    : ListQueryExecutionsResponse(new ListQueryExecutionsResponsePrivate(this), parent)
 {
     setRequest(new ListQueryExecutionsRequest(request));
     setReply(reply);

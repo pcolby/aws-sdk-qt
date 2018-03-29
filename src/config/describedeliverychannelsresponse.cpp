@@ -46,7 +46,7 @@ DescribeDeliveryChannelsResponse::DescribeDeliveryChannelsResponse(
         const DescribeDeliveryChannelsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfigServiceResponse(new DescribeDeliveryChannelsResponsePrivate(this), parent)
+    : DescribeDeliveryChannelsResponse(new DescribeDeliveryChannelsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDeliveryChannelsRequest(request));
     setReply(reply);

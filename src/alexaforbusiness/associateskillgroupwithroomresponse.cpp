@@ -46,7 +46,7 @@ AssociateSkillGroupWithRoomResponse::AssociateSkillGroupWithRoomResponse(
         const AssociateSkillGroupWithRoomRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new AssociateSkillGroupWithRoomResponsePrivate(this), parent)
+    : AssociateSkillGroupWithRoomResponse(new AssociateSkillGroupWithRoomResponsePrivate(this), parent)
 {
     setRequest(new AssociateSkillGroupWithRoomRequest(request));
     setReply(reply);

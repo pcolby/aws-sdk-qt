@@ -46,7 +46,7 @@ DeleteBandwidthRateLimitResponse::DeleteBandwidthRateLimitResponse(
         const DeleteBandwidthRateLimitRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new DeleteBandwidthRateLimitResponsePrivate(this), parent)
+    : DeleteBandwidthRateLimitResponse(new DeleteBandwidthRateLimitResponsePrivate(this), parent)
 {
     setRequest(new DeleteBandwidthRateLimitRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListVaultsResponse::ListVaultsResponse(
         const ListVaultsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new ListVaultsResponsePrivate(this), parent)
+    : ListVaultsResponse(new ListVaultsResponsePrivate(this), parent)
 {
     setRequest(new ListVaultsRequest(request));
     setReply(reply);

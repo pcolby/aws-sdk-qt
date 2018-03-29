@@ -46,7 +46,7 @@ ListDeploymentConfigsResponse::ListDeploymentConfigsResponse(
         const ListDeploymentConfigsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeDeployResponse(new ListDeploymentConfigsResponsePrivate(this), parent)
+    : ListDeploymentConfigsResponse(new ListDeploymentConfigsResponsePrivate(this), parent)
 {
     setRequest(new ListDeploymentConfigsRequest(request));
     setReply(reply);

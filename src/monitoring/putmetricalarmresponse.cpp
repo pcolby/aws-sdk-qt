@@ -46,7 +46,7 @@ PutMetricAlarmResponse::PutMetricAlarmResponse(
         const PutMetricAlarmRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchResponse(new PutMetricAlarmResponsePrivate(this), parent)
+    : PutMetricAlarmResponse(new PutMetricAlarmResponsePrivate(this), parent)
 {
     setRequest(new PutMetricAlarmRequest(request));
     setReply(reply);

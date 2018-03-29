@@ -46,7 +46,7 @@ ListSAMLProvidersResponse::ListSAMLProvidersResponse(
         const ListSAMLProvidersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListSAMLProvidersResponsePrivate(this), parent)
+    : ListSAMLProvidersResponse(new ListSAMLProvidersResponsePrivate(this), parent)
 {
     setRequest(new ListSAMLProvidersRequest(request));
     setReply(reply);

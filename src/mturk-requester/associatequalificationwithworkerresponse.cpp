@@ -46,7 +46,7 @@ AssociateQualificationWithWorkerResponse::AssociateQualificationWithWorkerRespon
         const AssociateQualificationWithWorkerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new AssociateQualificationWithWorkerResponsePrivate(this), parent)
+    : AssociateQualificationWithWorkerResponse(new AssociateQualificationWithWorkerResponsePrivate(this), parent)
 {
     setRequest(new AssociateQualificationWithWorkerRequest(request));
     setReply(reply);

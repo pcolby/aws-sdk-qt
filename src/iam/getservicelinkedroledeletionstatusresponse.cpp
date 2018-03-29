@@ -46,7 +46,7 @@ GetServiceLinkedRoleDeletionStatusResponse::GetServiceLinkedRoleDeletionStatusRe
         const GetServiceLinkedRoleDeletionStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetServiceLinkedRoleDeletionStatusResponsePrivate(this), parent)
+    : GetServiceLinkedRoleDeletionStatusResponse(new GetServiceLinkedRoleDeletionStatusResponsePrivate(this), parent)
 {
     setRequest(new GetServiceLinkedRoleDeletionStatusRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListReviewPolicyResultsForHITResponse::ListReviewPolicyResultsForHITResponse(
         const ListReviewPolicyResultsForHITRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new ListReviewPolicyResultsForHITResponsePrivate(this), parent)
+    : ListReviewPolicyResultsForHITResponse(new ListReviewPolicyResultsForHITResponsePrivate(this), parent)
 {
     setRequest(new ListReviewPolicyResultsForHITRequest(request));
     setReply(reply);

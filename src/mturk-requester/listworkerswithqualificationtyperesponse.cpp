@@ -46,7 +46,7 @@ ListWorkersWithQualificationTypeResponse::ListWorkersWithQualificationTypeRespon
         const ListWorkersWithQualificationTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new ListWorkersWithQualificationTypeResponsePrivate(this), parent)
+    : ListWorkersWithQualificationTypeResponse(new ListWorkersWithQualificationTypeResponsePrivate(this), parent)
 {
     setRequest(new ListWorkersWithQualificationTypeRequest(request));
     setReply(reply);

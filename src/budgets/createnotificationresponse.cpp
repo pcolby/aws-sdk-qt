@@ -46,7 +46,7 @@ CreateNotificationResponse::CreateNotificationResponse(
         const CreateNotificationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BudgetsResponse(new CreateNotificationResponsePrivate(this), parent)
+    : CreateNotificationResponse(new CreateNotificationResponsePrivate(this), parent)
 {
     setRequest(new CreateNotificationRequest(request));
     setReply(reply);

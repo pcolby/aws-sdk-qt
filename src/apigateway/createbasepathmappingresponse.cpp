@@ -46,7 +46,7 @@ CreateBasePathMappingResponse::CreateBasePathMappingResponse(
         const CreateBasePathMappingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new CreateBasePathMappingResponsePrivate(this), parent)
+    : CreateBasePathMappingResponse(new CreateBasePathMappingResponsePrivate(this), parent)
 {
     setRequest(new CreateBasePathMappingRequest(request));
     setReply(reply);

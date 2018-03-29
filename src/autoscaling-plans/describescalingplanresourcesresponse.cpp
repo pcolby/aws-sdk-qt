@@ -46,7 +46,7 @@ DescribeScalingPlanResourcesResponse::DescribeScalingPlanResourcesResponse(
         const DescribeScalingPlanResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingPlansResponse(new DescribeScalingPlanResourcesResponsePrivate(this), parent)
+    : DescribeScalingPlanResourcesResponse(new DescribeScalingPlanResourcesResponsePrivate(this), parent)
 {
     setRequest(new DescribeScalingPlanResourcesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ AssociateVirtualInterfaceResponse::AssociateVirtualInterfaceResponse(
         const AssociateVirtualInterfaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectConnectResponse(new AssociateVirtualInterfaceResponsePrivate(this), parent)
+    : AssociateVirtualInterfaceResponse(new AssociateVirtualInterfaceResponsePrivate(this), parent)
 {
     setRequest(new AssociateVirtualInterfaceRequest(request));
     setReply(reply);

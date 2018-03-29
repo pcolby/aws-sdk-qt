@@ -46,7 +46,7 @@ GetEvaluationResponse::GetEvaluationResponse(
         const GetEvaluationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MachineLearningResponse(new GetEvaluationResponsePrivate(this), parent)
+    : GetEvaluationResponse(new GetEvaluationResponsePrivate(this), parent)
 {
     setRequest(new GetEvaluationRequest(request));
     setReply(reply);

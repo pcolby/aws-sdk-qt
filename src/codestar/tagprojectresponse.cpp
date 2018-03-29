@@ -46,7 +46,7 @@ TagProjectResponse::TagProjectResponse(
         const TagProjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeStarResponse(new TagProjectResponsePrivate(this), parent)
+    : TagProjectResponse(new TagProjectResponsePrivate(this), parent)
 {
     setRequest(new TagProjectRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ImportKeyMaterialResponse::ImportKeyMaterialResponse(
         const ImportKeyMaterialRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new ImportKeyMaterialResponsePrivate(this), parent)
+    : ImportKeyMaterialResponse(new ImportKeyMaterialResponsePrivate(this), parent)
 {
     setRequest(new ImportKeyMaterialRequest(request));
     setReply(reply);

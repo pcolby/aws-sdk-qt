@@ -46,7 +46,7 @@ ListRetirableGrantsResponse::ListRetirableGrantsResponse(
         const ListRetirableGrantsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new ListRetirableGrantsResponsePrivate(this), parent)
+    : ListRetirableGrantsResponse(new ListRetirableGrantsResponsePrivate(this), parent)
 {
     setRequest(new ListRetirableGrantsRequest(request));
     setReply(reply);

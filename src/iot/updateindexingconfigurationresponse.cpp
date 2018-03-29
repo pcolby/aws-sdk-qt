@@ -46,7 +46,7 @@ UpdateIndexingConfigurationResponse::UpdateIndexingConfigurationResponse(
         const UpdateIndexingConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new UpdateIndexingConfigurationResponsePrivate(this), parent)
+    : UpdateIndexingConfigurationResponse(new UpdateIndexingConfigurationResponsePrivate(this), parent)
 {
     setRequest(new UpdateIndexingConfigurationRequest(request));
     setReply(reply);

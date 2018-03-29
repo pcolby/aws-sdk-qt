@@ -46,7 +46,7 @@ AttachInternetGatewayResponse::AttachInternetGatewayResponse(
         const AttachInternetGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AttachInternetGatewayResponsePrivate(this), parent)
+    : AttachInternetGatewayResponse(new AttachInternetGatewayResponsePrivate(this), parent)
 {
     setRequest(new AttachInternetGatewayRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListTeamMembersResponse::ListTeamMembersResponse(
         const ListTeamMembersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeStarResponse(new ListTeamMembersResponsePrivate(this), parent)
+    : ListTeamMembersResponse(new ListTeamMembersResponsePrivate(this), parent)
 {
     setRequest(new ListTeamMembersRequest(request));
     setReply(reply);

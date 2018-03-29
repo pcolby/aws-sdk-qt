@@ -46,7 +46,7 @@ DeleteBotVersionResponse::DeleteBotVersionResponse(
         const DeleteBotVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new DeleteBotVersionResponsePrivate(this), parent)
+    : DeleteBotVersionResponse(new DeleteBotVersionResponsePrivate(this), parent)
 {
     setRequest(new DeleteBotVersionRequest(request));
     setReply(reply);

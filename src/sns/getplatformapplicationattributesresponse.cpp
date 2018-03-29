@@ -46,7 +46,7 @@ GetPlatformApplicationAttributesResponse::GetPlatformApplicationAttributesRespon
         const GetPlatformApplicationAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new GetPlatformApplicationAttributesResponsePrivate(this), parent)
+    : GetPlatformApplicationAttributesResponse(new GetPlatformApplicationAttributesResponsePrivate(this), parent)
 {
     setRequest(new GetPlatformApplicationAttributesRequest(request));
     setReply(reply);

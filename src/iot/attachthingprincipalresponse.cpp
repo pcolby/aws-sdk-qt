@@ -46,7 +46,7 @@ AttachThingPrincipalResponse::AttachThingPrincipalResponse(
         const AttachThingPrincipalRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new AttachThingPrincipalResponsePrivate(this), parent)
+    : AttachThingPrincipalResponse(new AttachThingPrincipalResponsePrivate(this), parent)
 {
     setRequest(new AttachThingPrincipalRequest(request));
     setReply(reply);

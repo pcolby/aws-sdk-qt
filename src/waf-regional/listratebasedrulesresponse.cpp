@@ -46,7 +46,7 @@ ListRateBasedRulesResponse::ListRateBasedRulesResponse(
         const ListRateBasedRulesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new ListRateBasedRulesResponsePrivate(this), parent)
+    : ListRateBasedRulesResponse(new ListRateBasedRulesResponsePrivate(this), parent)
 {
     setRequest(new ListRateBasedRulesRequest(request));
     setReply(reply);

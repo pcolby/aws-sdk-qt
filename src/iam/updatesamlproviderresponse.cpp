@@ -46,7 +46,7 @@ UpdateSAMLProviderResponse::UpdateSAMLProviderResponse(
         const UpdateSAMLProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateSAMLProviderResponsePrivate(this), parent)
+    : UpdateSAMLProviderResponse(new UpdateSAMLProviderResponsePrivate(this), parent)
 {
     setRequest(new UpdateSAMLProviderRequest(request));
     setReply(reply);

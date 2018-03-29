@@ -46,7 +46,7 @@ GetDomainDetailResponse::GetDomainDetailResponse(
         const GetDomainDetailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53DomainsResponse(new GetDomainDetailResponsePrivate(this), parent)
+    : GetDomainDetailResponse(new GetDomainDetailResponsePrivate(this), parent)
 {
     setRequest(new GetDomainDetailRequest(request));
     setReply(reply);

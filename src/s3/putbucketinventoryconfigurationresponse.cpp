@@ -46,7 +46,7 @@ PutBucketInventoryConfigurationResponse::PutBucketInventoryConfigurationResponse
         const PutBucketInventoryConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new PutBucketInventoryConfigurationResponsePrivate(this), parent)
+    : PutBucketInventoryConfigurationResponse(new PutBucketInventoryConfigurationResponsePrivate(this), parent)
 {
     setRequest(new PutBucketInventoryConfigurationRequest(request));
     setReply(reply);

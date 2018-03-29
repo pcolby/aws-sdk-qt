@@ -46,7 +46,7 @@ DescribeInstancePatchStatesForPatchGroupResponse::DescribeInstancePatchStatesFor
         const DescribeInstancePatchStatesForPatchGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeInstancePatchStatesForPatchGroupResponsePrivate(this), parent)
+    : DescribeInstancePatchStatesForPatchGroupResponse(new DescribeInstancePatchStatesForPatchGroupResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstancePatchStatesForPatchGroupRequest(request));
     setReply(reply);

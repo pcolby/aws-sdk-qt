@@ -46,7 +46,7 @@ DescribeReportDefinitionsResponse::DescribeReportDefinitionsResponse(
         const DescribeReportDefinitionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CostandUsageReportServiceResponse(new DescribeReportDefinitionsResponsePrivate(this), parent)
+    : DescribeReportDefinitionsResponse(new DescribeReportDefinitionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeReportDefinitionsRequest(request));
     setReply(reply);

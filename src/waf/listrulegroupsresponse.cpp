@@ -46,7 +46,7 @@ ListRuleGroupsResponse::ListRuleGroupsResponse(
         const ListRuleGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListRuleGroupsResponsePrivate(this), parent)
+    : ListRuleGroupsResponse(new ListRuleGroupsResponsePrivate(this), parent)
 {
     setRequest(new ListRuleGroupsRequest(request));
     setReply(reply);

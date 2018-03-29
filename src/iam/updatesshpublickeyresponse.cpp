@@ -46,7 +46,7 @@ UpdateSSHPublicKeyResponse::UpdateSSHPublicKeyResponse(
         const UpdateSSHPublicKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateSSHPublicKeyResponsePrivate(this), parent)
+    : UpdateSSHPublicKeyResponse(new UpdateSSHPublicKeyResponsePrivate(this), parent)
 {
     setRequest(new UpdateSSHPublicKeyRequest(request));
     setReply(reply);

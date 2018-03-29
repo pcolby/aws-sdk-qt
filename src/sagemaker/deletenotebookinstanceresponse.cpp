@@ -46,7 +46,7 @@ DeleteNotebookInstanceResponse::DeleteNotebookInstanceResponse(
         const DeleteNotebookInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SageMakerResponse(new DeleteNotebookInstanceResponsePrivate(this), parent)
+    : DeleteNotebookInstanceResponse(new DeleteNotebookInstanceResponsePrivate(this), parent)
 {
     setRequest(new DeleteNotebookInstanceRequest(request));
     setReply(reply);

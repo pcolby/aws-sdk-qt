@@ -46,7 +46,7 @@ CancelRetrievalResponse::CancelRetrievalResponse(
         const CancelRetrievalRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new CancelRetrievalResponsePrivate(this), parent)
+    : CancelRetrievalResponse(new CancelRetrievalResponsePrivate(this), parent)
 {
     setRequest(new CancelRetrievalRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteBGPPeerResponse::DeleteBGPPeerResponse(
         const DeleteBGPPeerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectConnectResponse(new DeleteBGPPeerResponsePrivate(this), parent)
+    : DeleteBGPPeerResponse(new DeleteBGPPeerResponsePrivate(this), parent)
 {
     setRequest(new DeleteBGPPeerRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeJobQueuesResponse::DescribeJobQueuesResponse(
         const DescribeJobQueuesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchResponse(new DescribeJobQueuesResponsePrivate(this), parent)
+    : DescribeJobQueuesResponse(new DescribeJobQueuesResponsePrivate(this), parent)
 {
     setRequest(new DescribeJobQueuesRequest(request));
     setReply(reply);

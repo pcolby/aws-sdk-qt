@@ -46,7 +46,7 @@ DeleteEventStreamResponse::DeleteEventStreamResponse(
         const DeleteEventStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new DeleteEventStreamResponsePrivate(this), parent)
+    : DeleteEventStreamResponse(new DeleteEventStreamResponsePrivate(this), parent)
 {
     setRequest(new DeleteEventStreamRequest(request));
     setReply(reply);

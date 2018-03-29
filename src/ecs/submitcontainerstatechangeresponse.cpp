@@ -46,7 +46,7 @@ SubmitContainerStateChangeResponse::SubmitContainerStateChangeResponse(
         const SubmitContainerStateChangeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new SubmitContainerStateChangeResponsePrivate(this), parent)
+    : SubmitContainerStateChangeResponse(new SubmitContainerStateChangeResponsePrivate(this), parent)
 {
     setRequest(new SubmitContainerStateChangeRequest(request));
     setReply(reply);

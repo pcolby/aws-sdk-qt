@@ -46,7 +46,7 @@ RestoreTableFromBackupResponse::RestoreTableFromBackupResponse(
         const RestoreTableFromBackupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new RestoreTableFromBackupResponsePrivate(this), parent)
+    : RestoreTableFromBackupResponse(new RestoreTableFromBackupResponsePrivate(this), parent)
 {
     setRequest(new RestoreTableFromBackupRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateHostedZoneResponse::CreateHostedZoneResponse(
         const CreateHostedZoneRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new CreateHostedZoneResponsePrivate(this), parent)
+    : CreateHostedZoneResponse(new CreateHostedZoneResponsePrivate(this), parent)
 {
     setRequest(new CreateHostedZoneRequest(request));
     setReply(reply);

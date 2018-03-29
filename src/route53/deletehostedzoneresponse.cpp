@@ -46,7 +46,7 @@ DeleteHostedZoneResponse::DeleteHostedZoneResponse(
         const DeleteHostedZoneRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new DeleteHostedZoneResponsePrivate(this), parent)
+    : DeleteHostedZoneResponse(new DeleteHostedZoneResponsePrivate(this), parent)
 {
     setRequest(new DeleteHostedZoneRequest(request));
     setReply(reply);

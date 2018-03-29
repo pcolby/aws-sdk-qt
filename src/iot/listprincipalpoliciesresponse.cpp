@@ -46,7 +46,7 @@ ListPrincipalPoliciesResponse::ListPrincipalPoliciesResponse(
         const ListPrincipalPoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new ListPrincipalPoliciesResponsePrivate(this), parent)
+    : ListPrincipalPoliciesResponse(new ListPrincipalPoliciesResponsePrivate(this), parent)
 {
     setRequest(new ListPrincipalPoliciesRequest(request));
     setReply(reply);

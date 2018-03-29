@@ -46,7 +46,7 @@ UpdateLoggerDefinitionResponse::UpdateLoggerDefinitionResponse(
         const UpdateLoggerDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new UpdateLoggerDefinitionResponsePrivate(this), parent)
+    : UpdateLoggerDefinitionResponse(new UpdateLoggerDefinitionResponsePrivate(this), parent)
 {
     setRequest(new UpdateLoggerDefinitionRequest(request));
     setReply(reply);

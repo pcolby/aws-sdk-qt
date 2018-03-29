@@ -46,7 +46,7 @@ CreateAccountAliasResponse::CreateAccountAliasResponse(
         const CreateAccountAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new CreateAccountAliasResponsePrivate(this), parent)
+    : CreateAccountAliasResponse(new CreateAccountAliasResponsePrivate(this), parent)
 {
     setRequest(new CreateAccountAliasRequest(request));
     setReply(reply);

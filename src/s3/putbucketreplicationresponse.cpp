@@ -46,7 +46,7 @@ PutBucketReplicationResponse::PutBucketReplicationResponse(
         const PutBucketReplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new PutBucketReplicationResponsePrivate(this), parent)
+    : PutBucketReplicationResponse(new PutBucketReplicationResponsePrivate(this), parent)
 {
     setRequest(new PutBucketReplicationRequest(request));
     setReply(reply);

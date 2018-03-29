@@ -46,7 +46,7 @@ DescribeExecutionResponse::DescribeExecutionResponse(
         const DescribeExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new DescribeExecutionResponsePrivate(this), parent)
+    : DescribeExecutionResponse(new DescribeExecutionResponsePrivate(this), parent)
 {
     setRequest(new DescribeExecutionRequest(request));
     setReply(reply);

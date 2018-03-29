@@ -46,7 +46,7 @@ DeleteImageResponse::DeleteImageResponse(
         const DeleteImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppStreamResponse(new DeleteImageResponsePrivate(this), parent)
+    : DeleteImageResponse(new DeleteImageResponsePrivate(this), parent)
 {
     setRequest(new DeleteImageRequest(request));
     setReply(reply);

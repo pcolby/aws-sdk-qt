@@ -46,7 +46,7 @@ AdminListUserAuthEventsResponse::AdminListUserAuthEventsResponse(
         const AdminListUserAuthEventsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new AdminListUserAuthEventsResponsePrivate(this), parent)
+    : AdminListUserAuthEventsResponse(new AdminListUserAuthEventsResponsePrivate(this), parent)
 {
     setRequest(new AdminListUserAuthEventsRequest(request));
     setReply(reply);

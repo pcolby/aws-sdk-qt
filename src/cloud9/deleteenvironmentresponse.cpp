@@ -46,7 +46,7 @@ DeleteEnvironmentResponse::DeleteEnvironmentResponse(
         const DeleteEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Cloud9Response(new DeleteEnvironmentResponsePrivate(this), parent)
+    : DeleteEnvironmentResponse(new DeleteEnvironmentResponsePrivate(this), parent)
 {
     setRequest(new DeleteEnvironmentRequest(request));
     setReply(reply);

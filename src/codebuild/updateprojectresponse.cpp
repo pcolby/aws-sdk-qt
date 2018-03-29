@@ -46,7 +46,7 @@ UpdateProjectResponse::UpdateProjectResponse(
         const UpdateProjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeBuildResponse(new UpdateProjectResponsePrivate(this), parent)
+    : UpdateProjectResponse(new UpdateProjectResponsePrivate(this), parent)
 {
     setRequest(new UpdateProjectRequest(request));
     setReply(reply);

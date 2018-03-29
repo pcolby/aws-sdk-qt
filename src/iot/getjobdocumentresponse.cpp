@@ -46,7 +46,7 @@ GetJobDocumentResponse::GetJobDocumentResponse(
         const GetJobDocumentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new GetJobDocumentResponsePrivate(this), parent)
+    : GetJobDocumentResponse(new GetJobDocumentResponsePrivate(this), parent)
 {
     setRequest(new GetJobDocumentRequest(request));
     setReply(reply);

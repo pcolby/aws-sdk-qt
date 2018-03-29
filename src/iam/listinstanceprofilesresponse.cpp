@@ -46,7 +46,7 @@ ListInstanceProfilesResponse::ListInstanceProfilesResponse(
         const ListInstanceProfilesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListInstanceProfilesResponsePrivate(this), parent)
+    : ListInstanceProfilesResponse(new ListInstanceProfilesResponsePrivate(this), parent)
 {
     setRequest(new ListInstanceProfilesRequest(request));
     setReply(reply);

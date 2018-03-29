@@ -46,7 +46,7 @@ DeleteDeploymentGroupResponse::DeleteDeploymentGroupResponse(
         const DeleteDeploymentGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeDeployResponse(new DeleteDeploymentGroupResponsePrivate(this), parent)
+    : DeleteDeploymentGroupResponse(new DeleteDeploymentGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteDeploymentGroupRequest(request));
     setReply(reply);

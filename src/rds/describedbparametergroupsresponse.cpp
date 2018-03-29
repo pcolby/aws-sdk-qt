@@ -46,7 +46,7 @@ DescribeDBParameterGroupsResponse::DescribeDBParameterGroupsResponse(
         const DescribeDBParameterGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeDBParameterGroupsResponsePrivate(this), parent)
+    : DescribeDBParameterGroupsResponse(new DescribeDBParameterGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBParameterGroupsRequest(request));
     setReply(reply);

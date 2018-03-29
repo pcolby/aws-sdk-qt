@@ -46,7 +46,7 @@ GetBucketNotificationResponse::GetBucketNotificationResponse(
         const GetBucketNotificationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new GetBucketNotificationResponsePrivate(this), parent)
+    : GetBucketNotificationResponse(new GetBucketNotificationResponsePrivate(this), parent)
 {
     setRequest(new GetBucketNotificationRequest(request));
     setReply(reply);

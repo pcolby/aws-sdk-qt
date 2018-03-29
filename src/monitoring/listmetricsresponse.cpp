@@ -46,7 +46,7 @@ ListMetricsResponse::ListMetricsResponse(
         const ListMetricsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchResponse(new ListMetricsResponsePrivate(this), parent)
+    : ListMetricsResponse(new ListMetricsResponsePrivate(this), parent)
 {
     setRequest(new ListMetricsRequest(request));
     setReply(reply);

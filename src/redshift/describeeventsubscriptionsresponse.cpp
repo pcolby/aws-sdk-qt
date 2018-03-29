@@ -46,7 +46,7 @@ DescribeEventSubscriptionsResponse::DescribeEventSubscriptionsResponse(
         const DescribeEventSubscriptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DescribeEventSubscriptionsResponsePrivate(this), parent)
+    : DescribeEventSubscriptionsResponse(new DescribeEventSubscriptionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEventSubscriptionsRequest(request));
     setReply(reply);

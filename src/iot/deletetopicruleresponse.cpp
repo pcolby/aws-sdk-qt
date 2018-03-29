@@ -46,7 +46,7 @@ DeleteTopicRuleResponse::DeleteTopicRuleResponse(
         const DeleteTopicRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new DeleteTopicRuleResponsePrivate(this), parent)
+    : DeleteTopicRuleResponse(new DeleteTopicRuleResponsePrivate(this), parent)
 {
     setRequest(new DeleteTopicRuleRequest(request));
     setReply(reply);

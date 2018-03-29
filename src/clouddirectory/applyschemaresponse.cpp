@@ -46,7 +46,7 @@ ApplySchemaResponse::ApplySchemaResponse(
         const ApplySchemaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new ApplySchemaResponsePrivate(this), parent)
+    : ApplySchemaResponse(new ApplySchemaResponsePrivate(this), parent)
 {
     setRequest(new ApplySchemaRequest(request));
     setReply(reply);

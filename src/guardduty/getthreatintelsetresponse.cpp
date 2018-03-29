@@ -46,7 +46,7 @@ GetThreatIntelSetResponse::GetThreatIntelSetResponse(
         const GetThreatIntelSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GuardDutyResponse(new GetThreatIntelSetResponsePrivate(this), parent)
+    : GetThreatIntelSetResponse(new GetThreatIntelSetResponsePrivate(this), parent)
 {
     setRequest(new GetThreatIntelSetRequest(request));
     setReply(reply);

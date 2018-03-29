@@ -46,7 +46,7 @@ UpdateByteMatchSetResponse::UpdateByteMatchSetResponse(
         const UpdateByteMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new UpdateByteMatchSetResponsePrivate(this), parent)
+    : UpdateByteMatchSetResponse(new UpdateByteMatchSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateByteMatchSetRequest(request));
     setReply(reply);

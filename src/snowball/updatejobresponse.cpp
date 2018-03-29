@@ -46,7 +46,7 @@ UpdateJobResponse::UpdateJobResponse(
         const UpdateJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SnowballResponse(new UpdateJobResponsePrivate(this), parent)
+    : UpdateJobResponse(new UpdateJobResponsePrivate(this), parent)
 {
     setRequest(new UpdateJobRequest(request));
     setReply(reply);

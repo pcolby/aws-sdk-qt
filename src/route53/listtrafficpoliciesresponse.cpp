@@ -46,7 +46,7 @@ ListTrafficPoliciesResponse::ListTrafficPoliciesResponse(
         const ListTrafficPoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new ListTrafficPoliciesResponsePrivate(this), parent)
+    : ListTrafficPoliciesResponse(new ListTrafficPoliciesResponsePrivate(this), parent)
 {
     setRequest(new ListTrafficPoliciesRequest(request));
     setReply(reply);

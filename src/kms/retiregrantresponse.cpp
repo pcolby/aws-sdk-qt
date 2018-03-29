@@ -46,7 +46,7 @@ RetireGrantResponse::RetireGrantResponse(
         const RetireGrantRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new RetireGrantResponsePrivate(this), parent)
+    : RetireGrantResponse(new RetireGrantResponsePrivate(this), parent)
 {
     setRequest(new RetireGrantRequest(request));
     setReply(reply);

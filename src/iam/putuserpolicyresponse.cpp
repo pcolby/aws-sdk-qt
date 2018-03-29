@@ -46,7 +46,7 @@ PutUserPolicyResponse::PutUserPolicyResponse(
         const PutUserPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new PutUserPolicyResponsePrivate(this), parent)
+    : PutUserPolicyResponse(new PutUserPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutUserPolicyRequest(request));
     setReply(reply);

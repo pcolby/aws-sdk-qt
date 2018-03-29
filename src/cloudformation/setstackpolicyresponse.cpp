@@ -46,7 +46,7 @@ SetStackPolicyResponse::SetStackPolicyResponse(
         const SetStackPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFormationResponse(new SetStackPolicyResponsePrivate(this), parent)
+    : SetStackPolicyResponse(new SetStackPolicyResponsePrivate(this), parent)
 {
     setRequest(new SetStackPolicyRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteIdentitiesResponse::DeleteIdentitiesResponse(
         const DeleteIdentitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityResponse(new DeleteIdentitiesResponsePrivate(this), parent)
+    : DeleteIdentitiesResponse(new DeleteIdentitiesResponsePrivate(this), parent)
 {
     setRequest(new DeleteIdentitiesRequest(request));
     setReply(reply);

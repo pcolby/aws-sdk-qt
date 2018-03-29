@@ -46,7 +46,7 @@ AttachLoadBalancerToSubnetsResponse::AttachLoadBalancerToSubnetsResponse(
         const AttachLoadBalancerToSubnetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticLoadBalancingResponse(new AttachLoadBalancerToSubnetsResponsePrivate(this), parent)
+    : AttachLoadBalancerToSubnetsResponse(new AttachLoadBalancerToSubnetsResponsePrivate(this), parent)
 {
     setRequest(new AttachLoadBalancerToSubnetsRequest(request));
     setReply(reply);

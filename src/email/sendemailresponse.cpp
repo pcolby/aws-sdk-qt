@@ -46,7 +46,7 @@ SendEmailResponse::SendEmailResponse(
         const SendEmailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SendEmailResponsePrivate(this), parent)
+    : SendEmailResponse(new SendEmailResponsePrivate(this), parent)
 {
     setRequest(new SendEmailRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListByteMatchSetsResponse::ListByteMatchSetsResponse(
         const ListByteMatchSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new ListByteMatchSetsResponsePrivate(this), parent)
+    : ListByteMatchSetsResponse(new ListByteMatchSetsResponsePrivate(this), parent)
 {
     setRequest(new ListByteMatchSetsRequest(request));
     setReply(reply);

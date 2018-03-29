@@ -46,7 +46,7 @@ ModifyDBSnapshotAttributeResponse::ModifyDBSnapshotAttributeResponse(
         const ModifyDBSnapshotAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ModifyDBSnapshotAttributeResponsePrivate(this), parent)
+    : ModifyDBSnapshotAttributeResponse(new ModifyDBSnapshotAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifyDBSnapshotAttributeRequest(request));
     setReply(reply);

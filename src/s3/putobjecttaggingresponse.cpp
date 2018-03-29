@@ -46,7 +46,7 @@ PutObjectTaggingResponse::PutObjectTaggingResponse(
         const PutObjectTaggingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new PutObjectTaggingResponsePrivate(this), parent)
+    : PutObjectTaggingResponse(new PutObjectTaggingResponsePrivate(this), parent)
 {
     setRequest(new PutObjectTaggingRequest(request));
     setReply(reply);

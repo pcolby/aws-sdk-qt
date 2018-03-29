@@ -46,7 +46,7 @@ GetLexiconResponse::GetLexiconResponse(
         const GetLexiconRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PollyResponse(new GetLexiconResponsePrivate(this), parent)
+    : GetLexiconResponse(new GetLexiconResponsePrivate(this), parent)
 {
     setRequest(new GetLexiconRequest(request));
     setReply(reply);

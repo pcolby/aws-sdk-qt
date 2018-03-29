@@ -46,7 +46,7 @@ DeleteLogStreamResponse::DeleteLogStreamResponse(
         const DeleteLogStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchLogsResponse(new DeleteLogStreamResponsePrivate(this), parent)
+    : DeleteLogStreamResponse(new DeleteLogStreamResponsePrivate(this), parent)
 {
     setRequest(new DeleteLogStreamRequest(request));
     setReply(reply);

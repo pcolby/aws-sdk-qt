@@ -46,7 +46,7 @@ PutComplianceItemsResponse::PutComplianceItemsResponse(
         const PutComplianceItemsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new PutComplianceItemsResponsePrivate(this), parent)
+    : PutComplianceItemsResponse(new PutComplianceItemsResponsePrivate(this), parent)
 {
     setRequest(new PutComplianceItemsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetPullRequestResponse::GetPullRequestResponse(
         const GetPullRequestRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new GetPullRequestResponsePrivate(this), parent)
+    : GetPullRequestResponse(new GetPullRequestResponsePrivate(this), parent)
 {
     setRequest(new GetPullRequestRequest(request));
     setReply(reply);

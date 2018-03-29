@@ -46,7 +46,7 @@ ListPlatformApplicationsResponse::ListPlatformApplicationsResponse(
         const ListPlatformApplicationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new ListPlatformApplicationsResponsePrivate(this), parent)
+    : ListPlatformApplicationsResponse(new ListPlatformApplicationsResponsePrivate(this), parent)
 {
     setRequest(new ListPlatformApplicationsRequest(request));
     setReply(reply);

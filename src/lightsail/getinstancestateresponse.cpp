@@ -46,7 +46,7 @@ GetInstanceStateResponse::GetInstanceStateResponse(
         const GetInstanceStateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new GetInstanceStateResponsePrivate(this), parent)
+    : GetInstanceStateResponse(new GetInstanceStateResponsePrivate(this), parent)
 {
     setRequest(new GetInstanceStateRequest(request));
     setReply(reply);

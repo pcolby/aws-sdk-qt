@@ -46,7 +46,7 @@ RespondActivityTaskCanceledResponse::RespondActivityTaskCanceledResponse(
         const RespondActivityTaskCanceledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new RespondActivityTaskCanceledResponsePrivate(this), parent)
+    : RespondActivityTaskCanceledResponse(new RespondActivityTaskCanceledResponsePrivate(this), parent)
 {
     setRequest(new RespondActivityTaskCanceledRequest(request));
     setReply(reply);

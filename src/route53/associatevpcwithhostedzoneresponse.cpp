@@ -46,7 +46,7 @@ AssociateVPCWithHostedZoneResponse::AssociateVPCWithHostedZoneResponse(
         const AssociateVPCWithHostedZoneRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new AssociateVPCWithHostedZoneResponsePrivate(this), parent)
+    : AssociateVPCWithHostedZoneResponse(new AssociateVPCWithHostedZoneResponsePrivate(this), parent)
 {
     setRequest(new AssociateVPCWithHostedZoneRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateXssMatchSetResponse::CreateXssMatchSetResponse(
         const CreateXssMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new CreateXssMatchSetResponsePrivate(this), parent)
+    : CreateXssMatchSetResponse(new CreateXssMatchSetResponsePrivate(this), parent)
 {
     setRequest(new CreateXssMatchSetRequest(request));
     setReply(reply);

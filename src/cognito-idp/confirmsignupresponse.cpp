@@ -46,7 +46,7 @@ ConfirmSignUpResponse::ConfirmSignUpResponse(
         const ConfirmSignUpRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new ConfirmSignUpResponsePrivate(this), parent)
+    : ConfirmSignUpResponse(new ConfirmSignUpResponsePrivate(this), parent)
 {
     setRequest(new ConfirmSignUpRequest(request));
     setReply(reply);

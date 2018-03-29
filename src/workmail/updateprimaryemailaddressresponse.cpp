@@ -46,7 +46,7 @@ UpdatePrimaryEmailAddressResponse::UpdatePrimaryEmailAddressResponse(
         const UpdatePrimaryEmailAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkMailResponse(new UpdatePrimaryEmailAddressResponsePrivate(this), parent)
+    : UpdatePrimaryEmailAddressResponse(new UpdatePrimaryEmailAddressResponsePrivate(this), parent)
 {
     setRequest(new UpdatePrimaryEmailAddressRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StopApplicationResponse::StopApplicationResponse(
         const StopApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisAnalyticsResponse(new StopApplicationResponsePrivate(this), parent)
+    : StopApplicationResponse(new StopApplicationResponsePrivate(this), parent)
 {
     setRequest(new StopApplicationRequest(request));
     setReply(reply);

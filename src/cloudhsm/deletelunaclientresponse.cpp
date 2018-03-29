@@ -46,7 +46,7 @@ DeleteLunaClientResponse::DeleteLunaClientResponse(
         const DeleteLunaClientRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMResponse(new DeleteLunaClientResponsePrivate(this), parent)
+    : DeleteLunaClientResponse(new DeleteLunaClientResponsePrivate(this), parent)
 {
     setRequest(new DeleteLunaClientRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RenewDomainResponse::RenewDomainResponse(
         const RenewDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53DomainsResponse(new RenewDomainResponsePrivate(this), parent)
+    : RenewDomainResponse(new RenewDomainResponsePrivate(this), parent)
 {
     setRequest(new RenewDomainRequest(request));
     setReply(reply);

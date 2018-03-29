@@ -46,7 +46,7 @@ DescribeVaultResponse::DescribeVaultResponse(
         const DescribeVaultRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new DescribeVaultResponsePrivate(this), parent)
+    : DescribeVaultResponse(new DescribeVaultResponsePrivate(this), parent)
 {
     setRequest(new DescribeVaultRequest(request));
     setReply(reply);

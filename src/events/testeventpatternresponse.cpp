@@ -46,7 +46,7 @@ TestEventPatternResponse::TestEventPatternResponse(
         const TestEventPatternRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchEventsResponse(new TestEventPatternResponsePrivate(this), parent)
+    : TestEventPatternResponse(new TestEventPatternResponsePrivate(this), parent)
 {
     setRequest(new TestEventPatternRequest(request));
     setReply(reply);

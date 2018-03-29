@@ -46,7 +46,7 @@ DisassociateFromMasterAccountResponse::DisassociateFromMasterAccountResponse(
         const DisassociateFromMasterAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GuardDutyResponse(new DisassociateFromMasterAccountResponsePrivate(this), parent)
+    : DisassociateFromMasterAccountResponse(new DisassociateFromMasterAccountResponsePrivate(this), parent)
 {
     setRequest(new DisassociateFromMasterAccountRequest(request));
     setReply(reply);

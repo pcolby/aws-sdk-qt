@@ -46,7 +46,7 @@ DescribeIdentityResponse::DescribeIdentityResponse(
         const DescribeIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityResponse(new DescribeIdentityResponsePrivate(this), parent)
+    : DescribeIdentityResponse(new DescribeIdentityResponsePrivate(this), parent)
 {
     setRequest(new DescribeIdentityRequest(request));
     setReply(reply);

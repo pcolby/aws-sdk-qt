@@ -46,7 +46,7 @@ ListDistributionsResponse::ListDistributionsResponse(
         const ListDistributionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFrontResponse(new ListDistributionsResponsePrivate(this), parent)
+    : ListDistributionsResponse(new ListDistributionsResponsePrivate(this), parent)
 {
     setRequest(new ListDistributionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListNamedQueriesResponse::ListNamedQueriesResponse(
         const ListNamedQueriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AthenaResponse(new ListNamedQueriesResponsePrivate(this), parent)
+    : ListNamedQueriesResponse(new ListNamedQueriesResponsePrivate(this), parent)
 {
     setRequest(new ListNamedQueriesRequest(request));
     setReply(reply);

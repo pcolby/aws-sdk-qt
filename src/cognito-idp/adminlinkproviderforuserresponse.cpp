@@ -46,7 +46,7 @@ AdminLinkProviderForUserResponse::AdminLinkProviderForUserResponse(
         const AdminLinkProviderForUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new AdminLinkProviderForUserResponsePrivate(this), parent)
+    : AdminLinkProviderForUserResponse(new AdminLinkProviderForUserResponsePrivate(this), parent)
 {
     setRequest(new AdminLinkProviderForUserRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateSubnetGroupResponse::CreateSubnetGroupResponse(
         const CreateSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new CreateSubnetGroupResponsePrivate(this), parent)
+    : CreateSubnetGroupResponse(new CreateSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateSubnetGroupRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SearchProductsResponse::SearchProductsResponse(
         const SearchProductsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new SearchProductsResponsePrivate(this), parent)
+    : SearchProductsResponse(new SearchProductsResponsePrivate(this), parent)
 {
     setRequest(new SearchProductsRequest(request));
     setReply(reply);

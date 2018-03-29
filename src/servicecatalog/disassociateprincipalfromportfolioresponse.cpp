@@ -46,7 +46,7 @@ DisassociatePrincipalFromPortfolioResponse::DisassociatePrincipalFromPortfolioRe
         const DisassociatePrincipalFromPortfolioRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new DisassociatePrincipalFromPortfolioResponsePrivate(this), parent)
+    : DisassociatePrincipalFromPortfolioResponse(new DisassociatePrincipalFromPortfolioResponsePrivate(this), parent)
 {
     setRequest(new DisassociatePrincipalFromPortfolioRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetObjectTorrentResponse::GetObjectTorrentResponse(
         const GetObjectTorrentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new GetObjectTorrentResponsePrivate(this), parent)
+    : GetObjectTorrentResponse(new GetObjectTorrentResponsePrivate(this), parent)
 {
     setRequest(new GetObjectTorrentRequest(request));
     setReply(reply);

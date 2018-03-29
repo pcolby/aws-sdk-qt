@@ -46,7 +46,7 @@ DescribeCasesResponse::DescribeCasesResponse(
         const DescribeCasesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SupportResponse(new DescribeCasesResponsePrivate(this), parent)
+    : DescribeCasesResponse(new DescribeCasesResponsePrivate(this), parent)
 {
     setRequest(new DescribeCasesRequest(request));
     setReply(reply);

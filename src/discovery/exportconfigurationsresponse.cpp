@@ -46,7 +46,7 @@ ExportConfigurationsResponse::ExportConfigurationsResponse(
         const ExportConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new ExportConfigurationsResponsePrivate(this), parent)
+    : ExportConfigurationsResponse(new ExportConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new ExportConfigurationsRequest(request));
     setReply(reply);

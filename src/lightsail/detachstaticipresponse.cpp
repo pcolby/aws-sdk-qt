@@ -46,7 +46,7 @@ DetachStaticIpResponse::DetachStaticIpResponse(
         const DetachStaticIpRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new DetachStaticIpResponsePrivate(this), parent)
+    : DetachStaticIpResponse(new DetachStaticIpResponsePrivate(this), parent)
 {
     setRequest(new DetachStaticIpRequest(request));
     setReply(reply);

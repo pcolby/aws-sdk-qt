@@ -46,7 +46,7 @@ GetGeoLocationResponse::GetGeoLocationResponse(
         const GetGeoLocationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new GetGeoLocationResponsePrivate(this), parent)
+    : GetGeoLocationResponse(new GetGeoLocationResponsePrivate(this), parent)
 {
     setRequest(new GetGeoLocationRequest(request));
     setReply(reply);

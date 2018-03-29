@@ -46,7 +46,7 @@ ModifyReplicationGroupShardConfigurationResponse::ModifyReplicationGroupShardCon
         const ModifyReplicationGroupShardConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new ModifyReplicationGroupShardConfigurationResponsePrivate(this), parent)
+    : ModifyReplicationGroupShardConfigurationResponse(new ModifyReplicationGroupShardConfigurationResponsePrivate(this), parent)
 {
     setRequest(new ModifyReplicationGroupShardConfigurationRequest(request));
     setReply(reply);

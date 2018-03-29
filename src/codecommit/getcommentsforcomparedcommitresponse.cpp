@@ -46,7 +46,7 @@ GetCommentsForComparedCommitResponse::GetCommentsForComparedCommitResponse(
         const GetCommentsForComparedCommitRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new GetCommentsForComparedCommitResponsePrivate(this), parent)
+    : GetCommentsForComparedCommitResponse(new GetCommentsForComparedCommitResponsePrivate(this), parent)
 {
     setRequest(new GetCommentsForComparedCommitRequest(request));
     setReply(reply);

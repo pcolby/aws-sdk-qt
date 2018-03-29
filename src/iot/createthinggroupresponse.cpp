@@ -46,7 +46,7 @@ CreateThingGroupResponse::CreateThingGroupResponse(
         const CreateThingGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new CreateThingGroupResponsePrivate(this), parent)
+    : CreateThingGroupResponse(new CreateThingGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateThingGroupRequest(request));
     setReply(reply);

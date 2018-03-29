@@ -46,7 +46,7 @@ DeleteBucketCorsResponse::DeleteBucketCorsResponse(
         const DeleteBucketCorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new DeleteBucketCorsResponsePrivate(this), parent)
+    : DeleteBucketCorsResponse(new DeleteBucketCorsResponsePrivate(this), parent)
 {
     setRequest(new DeleteBucketCorsRequest(request));
     setReply(reply);

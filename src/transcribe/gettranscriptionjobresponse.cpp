@@ -46,7 +46,7 @@ GetTranscriptionJobResponse::GetTranscriptionJobResponse(
         const GetTranscriptionJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : TranscribeServiceResponse(new GetTranscriptionJobResponsePrivate(this), parent)
+    : GetTranscriptionJobResponse(new GetTranscriptionJobResponsePrivate(this), parent)
 {
     setRequest(new GetTranscriptionJobRequest(request));
     setReply(reply);

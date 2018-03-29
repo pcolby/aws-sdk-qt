@@ -46,7 +46,7 @@ ListCommandsResponse::ListCommandsResponse(
         const ListCommandsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new ListCommandsResponsePrivate(this), parent)
+    : ListCommandsResponse(new ListCommandsResponsePrivate(this), parent)
 {
     setRequest(new ListCommandsRequest(request));
     setReply(reply);

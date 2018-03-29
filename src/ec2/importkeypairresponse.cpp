@@ -46,7 +46,7 @@ ImportKeyPairResponse::ImportKeyPairResponse(
         const ImportKeyPairRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ImportKeyPairResponsePrivate(this), parent)
+    : ImportKeyPairResponse(new ImportKeyPairResponsePrivate(this), parent)
 {
     setRequest(new ImportKeyPairRequest(request));
     setReply(reply);

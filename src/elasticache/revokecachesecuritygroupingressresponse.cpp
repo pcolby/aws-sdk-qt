@@ -46,7 +46,7 @@ RevokeCacheSecurityGroupIngressResponse::RevokeCacheSecurityGroupIngressResponse
         const RevokeCacheSecurityGroupIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new RevokeCacheSecurityGroupIngressResponsePrivate(this), parent)
+    : RevokeCacheSecurityGroupIngressResponse(new RevokeCacheSecurityGroupIngressResponsePrivate(this), parent)
 {
     setRequest(new RevokeCacheSecurityGroupIngressRequest(request));
     setReply(reply);

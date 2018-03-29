@@ -46,7 +46,7 @@ DeleteMaintenanceWindowResponse::DeleteMaintenanceWindowResponse(
         const DeleteMaintenanceWindowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeleteMaintenanceWindowResponsePrivate(this), parent)
+    : DeleteMaintenanceWindowResponse(new DeleteMaintenanceWindowResponsePrivate(this), parent)
 {
     setRequest(new DeleteMaintenanceWindowRequest(request));
     setReply(reply);

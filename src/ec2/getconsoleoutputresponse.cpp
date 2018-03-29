@@ -46,7 +46,7 @@ GetConsoleOutputResponse::GetConsoleOutputResponse(
         const GetConsoleOutputRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new GetConsoleOutputResponsePrivate(this), parent)
+    : GetConsoleOutputResponse(new GetConsoleOutputResponsePrivate(this), parent)
 {
     setRequest(new GetConsoleOutputRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CancelExportTaskResponse::CancelExportTaskResponse(
         const CancelExportTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchLogsResponse(new CancelExportTaskResponsePrivate(this), parent)
+    : CancelExportTaskResponse(new CancelExportTaskResponsePrivate(this), parent)
 {
     setRequest(new CancelExportTaskRequest(request));
     setReply(reply);

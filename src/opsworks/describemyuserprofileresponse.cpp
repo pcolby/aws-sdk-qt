@@ -46,7 +46,7 @@ DescribeMyUserProfileResponse::DescribeMyUserProfileResponse(
         const DescribeMyUserProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DescribeMyUserProfileResponsePrivate(this), parent)
+    : DescribeMyUserProfileResponse(new DescribeMyUserProfileResponsePrivate(this), parent)
 {
     setRequest(new DescribeMyUserProfileRequest(request));
     setReply(reply);

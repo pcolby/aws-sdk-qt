@@ -46,7 +46,7 @@ CreateFacetResponse::CreateFacetResponse(
         const CreateFacetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new CreateFacetResponsePrivate(this), parent)
+    : CreateFacetResponse(new CreateFacetResponsePrivate(this), parent)
 {
     setRequest(new CreateFacetRequest(request));
     setReply(reply);

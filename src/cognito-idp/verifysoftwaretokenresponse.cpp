@@ -46,7 +46,7 @@ VerifySoftwareTokenResponse::VerifySoftwareTokenResponse(
         const VerifySoftwareTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new VerifySoftwareTokenResponsePrivate(this), parent)
+    : VerifySoftwareTokenResponse(new VerifySoftwareTokenResponsePrivate(this), parent)
 {
     setRequest(new VerifySoftwareTokenRequest(request));
     setReply(reply);

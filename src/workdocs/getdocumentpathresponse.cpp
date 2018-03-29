@@ -46,7 +46,7 @@ GetDocumentPathResponse::GetDocumentPathResponse(
         const GetDocumentPathRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkDocsResponse(new GetDocumentPathResponsePrivate(this), parent)
+    : GetDocumentPathResponse(new GetDocumentPathResponsePrivate(this), parent)
 {
     setRequest(new GetDocumentPathRequest(request));
     setReply(reply);

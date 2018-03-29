@@ -46,7 +46,7 @@ DescribeCustomerGatewaysResponse::DescribeCustomerGatewaysResponse(
         const DescribeCustomerGatewaysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeCustomerGatewaysResponsePrivate(this), parent)
+    : DescribeCustomerGatewaysResponse(new DescribeCustomerGatewaysResponsePrivate(this), parent)
 {
     setRequest(new DescribeCustomerGatewaysRequest(request));
     setReply(reply);

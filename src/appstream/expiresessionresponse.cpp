@@ -46,7 +46,7 @@ ExpireSessionResponse::ExpireSessionResponse(
         const ExpireSessionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppStreamResponse(new ExpireSessionResponsePrivate(this), parent)
+    : ExpireSessionResponse(new ExpireSessionResponsePrivate(this), parent)
 {
     setRequest(new ExpireSessionRequest(request));
     setReply(reply);

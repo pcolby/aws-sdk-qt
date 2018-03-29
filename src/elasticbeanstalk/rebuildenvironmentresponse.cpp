@@ -46,7 +46,7 @@ RebuildEnvironmentResponse::RebuildEnvironmentResponse(
         const RebuildEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new RebuildEnvironmentResponsePrivate(this), parent)
+    : RebuildEnvironmentResponse(new RebuildEnvironmentResponsePrivate(this), parent)
 {
     setRequest(new RebuildEnvironmentRequest(request));
     setReply(reply);

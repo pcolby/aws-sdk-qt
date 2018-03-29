@@ -46,7 +46,7 @@ RefreshSchemasResponse::RefreshSchemasResponse(
         const RefreshSchemasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new RefreshSchemasResponsePrivate(this), parent)
+    : RefreshSchemasResponse(new RefreshSchemasResponsePrivate(this), parent)
 {
     setRequest(new RefreshSchemasRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteVirtualMFADeviceResponse::DeleteVirtualMFADeviceResponse(
         const DeleteVirtualMFADeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteVirtualMFADeviceResponsePrivate(this), parent)
+    : DeleteVirtualMFADeviceResponse(new DeleteVirtualMFADeviceResponsePrivate(this), parent)
 {
     setRequest(new DeleteVirtualMFADeviceRequest(request));
     setReply(reply);

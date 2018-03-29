@@ -46,7 +46,7 @@ UpdateSubscriberResponse::UpdateSubscriberResponse(
         const UpdateSubscriberRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BudgetsResponse(new UpdateSubscriberResponsePrivate(this), parent)
+    : UpdateSubscriberResponse(new UpdateSubscriberResponsePrivate(this), parent)
 {
     setRequest(new UpdateSubscriberRequest(request));
     setReply(reply);

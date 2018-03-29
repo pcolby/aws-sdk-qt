@@ -46,7 +46,7 @@ PutApprovalResultResponse::PutApprovalResultResponse(
         const PutApprovalResultRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodePipelineResponse(new PutApprovalResultResponsePrivate(this), parent)
+    : PutApprovalResultResponse(new PutApprovalResultResponsePrivate(this), parent)
 {
     setRequest(new PutApprovalResultRequest(request));
     setReply(reply);

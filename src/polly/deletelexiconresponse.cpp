@@ -46,7 +46,7 @@ DeleteLexiconResponse::DeleteLexiconResponse(
         const DeleteLexiconRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PollyResponse(new DeleteLexiconResponsePrivate(this), parent)
+    : DeleteLexiconResponse(new DeleteLexiconResponsePrivate(this), parent)
 {
     setRequest(new DeleteLexiconRequest(request));
     setReply(reply);

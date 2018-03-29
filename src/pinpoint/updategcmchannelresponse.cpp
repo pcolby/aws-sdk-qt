@@ -46,7 +46,7 @@ UpdateGcmChannelResponse::UpdateGcmChannelResponse(
         const UpdateGcmChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new UpdateGcmChannelResponsePrivate(this), parent)
+    : UpdateGcmChannelResponse(new UpdateGcmChannelResponsePrivate(this), parent)
 {
     setRequest(new UpdateGcmChannelRequest(request));
     setReply(reply);

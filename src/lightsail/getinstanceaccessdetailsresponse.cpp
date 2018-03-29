@@ -46,7 +46,7 @@ GetInstanceAccessDetailsResponse::GetInstanceAccessDetailsResponse(
         const GetInstanceAccessDetailsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new GetInstanceAccessDetailsResponsePrivate(this), parent)
+    : GetInstanceAccessDetailsResponse(new GetInstanceAccessDetailsResponsePrivate(this), parent)
 {
     setRequest(new GetInstanceAccessDetailsRequest(request));
     setReply(reply);

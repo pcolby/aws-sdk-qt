@@ -46,7 +46,7 @@ ListSigningCertificatesResponse::ListSigningCertificatesResponse(
         const ListSigningCertificatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListSigningCertificatesResponsePrivate(this), parent)
+    : ListSigningCertificatesResponse(new ListSigningCertificatesResponsePrivate(this), parent)
 {
     setRequest(new ListSigningCertificatesRequest(request));
     setReply(reply);

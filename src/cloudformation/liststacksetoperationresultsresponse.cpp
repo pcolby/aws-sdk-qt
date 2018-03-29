@@ -46,7 +46,7 @@ ListStackSetOperationResultsResponse::ListStackSetOperationResultsResponse(
         const ListStackSetOperationResultsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFormationResponse(new ListStackSetOperationResultsResponsePrivate(this), parent)
+    : ListStackSetOperationResultsResponse(new ListStackSetOperationResultsResponsePrivate(this), parent)
 {
     setRequest(new ListStackSetOperationResultsRequest(request));
     setReply(reply);

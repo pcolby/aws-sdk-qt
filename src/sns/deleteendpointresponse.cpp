@@ -46,7 +46,7 @@ DeleteEndpointResponse::DeleteEndpointResponse(
         const DeleteEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new DeleteEndpointResponsePrivate(this), parent)
+    : DeleteEndpointResponse(new DeleteEndpointResponsePrivate(this), parent)
 {
     setRequest(new DeleteEndpointRequest(request));
     setReply(reply);

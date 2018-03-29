@@ -46,7 +46,7 @@ UpdateConditionalForwarderResponse::UpdateConditionalForwarderResponse(
         const UpdateConditionalForwarderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new UpdateConditionalForwarderResponsePrivate(this), parent)
+    : UpdateConditionalForwarderResponse(new UpdateConditionalForwarderResponsePrivate(this), parent)
 {
     setRequest(new UpdateConditionalForwarderRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeScalingPoliciesResponse::DescribeScalingPoliciesResponse(
         const DescribeScalingPoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new DescribeScalingPoliciesResponsePrivate(this), parent)
+    : DescribeScalingPoliciesResponse(new DescribeScalingPoliciesResponsePrivate(this), parent)
 {
     setRequest(new DescribeScalingPoliciesRequest(request));
     setReply(reply);

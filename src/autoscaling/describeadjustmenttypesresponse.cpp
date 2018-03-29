@@ -46,7 +46,7 @@ DescribeAdjustmentTypesResponse::DescribeAdjustmentTypesResponse(
         const DescribeAdjustmentTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new DescribeAdjustmentTypesResponsePrivate(this), parent)
+    : DescribeAdjustmentTypesResponse(new DescribeAdjustmentTypesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAdjustmentTypesRequest(request));
     setReply(reply);

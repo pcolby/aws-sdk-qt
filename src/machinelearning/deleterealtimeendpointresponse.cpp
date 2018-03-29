@@ -46,7 +46,7 @@ DeleteRealtimeEndpointResponse::DeleteRealtimeEndpointResponse(
         const DeleteRealtimeEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MachineLearningResponse(new DeleteRealtimeEndpointResponsePrivate(this), parent)
+    : DeleteRealtimeEndpointResponse(new DeleteRealtimeEndpointResponsePrivate(this), parent)
 {
     setRequest(new DeleteRealtimeEndpointRequest(request));
     setReply(reply);

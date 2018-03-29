@@ -46,7 +46,7 @@ DeleteCommentResponse::DeleteCommentResponse(
         const DeleteCommentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkDocsResponse(new DeleteCommentResponsePrivate(this), parent)
+    : DeleteCommentResponse(new DeleteCommentResponsePrivate(this), parent)
 {
     setRequest(new DeleteCommentRequest(request));
     setReply(reply);

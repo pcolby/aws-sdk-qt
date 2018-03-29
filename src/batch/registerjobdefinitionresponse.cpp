@@ -46,7 +46,7 @@ RegisterJobDefinitionResponse::RegisterJobDefinitionResponse(
         const RegisterJobDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchResponse(new RegisterJobDefinitionResponsePrivate(this), parent)
+    : RegisterJobDefinitionResponse(new RegisterJobDefinitionResponsePrivate(this), parent)
 {
     setRequest(new RegisterJobDefinitionRequest(request));
     setReply(reply);

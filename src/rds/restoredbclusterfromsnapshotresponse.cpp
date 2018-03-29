@@ -46,7 +46,7 @@ RestoreDBClusterFromSnapshotResponse::RestoreDBClusterFromSnapshotResponse(
         const RestoreDBClusterFromSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RestoreDBClusterFromSnapshotResponsePrivate(this), parent)
+    : RestoreDBClusterFromSnapshotResponse(new RestoreDBClusterFromSnapshotResponsePrivate(this), parent)
 {
     setRequest(new RestoreDBClusterFromSnapshotRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ EnterStandbyResponse::EnterStandbyResponse(
         const EnterStandbyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new EnterStandbyResponsePrivate(this), parent)
+    : EnterStandbyResponse(new EnterStandbyResponsePrivate(this), parent)
 {
     setRequest(new EnterStandbyRequest(request));
     setReply(reply);

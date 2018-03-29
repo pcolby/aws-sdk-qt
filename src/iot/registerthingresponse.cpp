@@ -46,7 +46,7 @@ RegisterThingResponse::RegisterThingResponse(
         const RegisterThingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new RegisterThingResponsePrivate(this), parent)
+    : RegisterThingResponse(new RegisterThingResponsePrivate(this), parent)
 {
     setRequest(new RegisterThingRequest(request));
     setReply(reply);

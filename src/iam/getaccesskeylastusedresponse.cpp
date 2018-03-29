@@ -46,7 +46,7 @@ GetAccessKeyLastUsedResponse::GetAccessKeyLastUsedResponse(
         const GetAccessKeyLastUsedRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetAccessKeyLastUsedResponsePrivate(this), parent)
+    : GetAccessKeyLastUsedResponse(new GetAccessKeyLastUsedResponsePrivate(this), parent)
 {
     setRequest(new GetAccessKeyLastUsedRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SetIdentityDkimEnabledResponse::SetIdentityDkimEnabledResponse(
         const SetIdentityDkimEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new SetIdentityDkimEnabledResponsePrivate(this), parent)
+    : SetIdentityDkimEnabledResponse(new SetIdentityDkimEnabledResponsePrivate(this), parent)
 {
     setRequest(new SetIdentityDkimEnabledRequest(request));
     setReply(reply);

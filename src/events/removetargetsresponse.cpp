@@ -46,7 +46,7 @@ RemoveTargetsResponse::RemoveTargetsResponse(
         const RemoveTargetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchEventsResponse(new RemoveTargetsResponsePrivate(this), parent)
+    : RemoveTargetsResponse(new RemoveTargetsResponsePrivate(this), parent)
 {
     setRequest(new RemoveTargetsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeIdentityPoolUsageResponse::DescribeIdentityPoolUsageResponse(
         const DescribeIdentityPoolUsageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoSyncResponse(new DescribeIdentityPoolUsageResponsePrivate(this), parent)
+    : DescribeIdentityPoolUsageResponse(new DescribeIdentityPoolUsageResponsePrivate(this), parent)
 {
     setRequest(new DescribeIdentityPoolUsageRequest(request));
     setReply(reply);

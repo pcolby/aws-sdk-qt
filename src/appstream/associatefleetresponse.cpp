@@ -46,7 +46,7 @@ AssociateFleetResponse::AssociateFleetResponse(
         const AssociateFleetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppStreamResponse(new AssociateFleetResponsePrivate(this), parent)
+    : AssociateFleetResponse(new AssociateFleetResponsePrivate(this), parent)
 {
     setRequest(new AssociateFleetRequest(request));
     setReply(reply);

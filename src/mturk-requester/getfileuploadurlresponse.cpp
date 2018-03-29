@@ -46,7 +46,7 @@ GetFileUploadURLResponse::GetFileUploadURLResponse(
         const GetFileUploadURLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new GetFileUploadURLResponsePrivate(this), parent)
+    : GetFileUploadURLResponse(new GetFileUploadURLResponsePrivate(this), parent)
 {
     setRequest(new GetFileUploadURLRequest(request));
     setReply(reply);

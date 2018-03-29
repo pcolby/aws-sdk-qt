@@ -46,7 +46,7 @@ DetectDominantLanguageResponse::DetectDominantLanguageResponse(
         const DetectDominantLanguageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ComprehendResponse(new DetectDominantLanguageResponsePrivate(this), parent)
+    : DetectDominantLanguageResponse(new DetectDominantLanguageResponsePrivate(this), parent)
 {
     setRequest(new DetectDominantLanguageRequest(request));
     setReply(reply);

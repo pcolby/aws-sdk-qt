@@ -46,7 +46,7 @@ DeleteMessageResponse::DeleteMessageResponse(
         const DeleteMessageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new DeleteMessageResponsePrivate(this), parent)
+    : DeleteMessageResponse(new DeleteMessageResponsePrivate(this), parent)
 {
     setRequest(new DeleteMessageRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RemoveClientIDFromOpenIDConnectProviderResponse::RemoveClientIDFromOpenIDConnect
         const RemoveClientIDFromOpenIDConnectProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new RemoveClientIDFromOpenIDConnectProviderResponsePrivate(this), parent)
+    : RemoveClientIDFromOpenIDConnectProviderResponse(new RemoveClientIDFromOpenIDConnectProviderResponsePrivate(this), parent)
 {
     setRequest(new RemoveClientIDFromOpenIDConnectProviderRequest(request));
     setReply(reply);

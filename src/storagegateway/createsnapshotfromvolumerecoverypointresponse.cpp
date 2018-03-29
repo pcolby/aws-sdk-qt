@@ -46,7 +46,7 @@ CreateSnapshotFromVolumeRecoveryPointResponse::CreateSnapshotFromVolumeRecoveryP
         const CreateSnapshotFromVolumeRecoveryPointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new CreateSnapshotFromVolumeRecoveryPointResponsePrivate(this), parent)
+    : CreateSnapshotFromVolumeRecoveryPointResponse(new CreateSnapshotFromVolumeRecoveryPointResponsePrivate(this), parent)
 {
     setRequest(new CreateSnapshotFromVolumeRecoveryPointRequest(request));
     setReply(reply);

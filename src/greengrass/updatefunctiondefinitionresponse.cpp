@@ -46,7 +46,7 @@ UpdateFunctionDefinitionResponse::UpdateFunctionDefinitionResponse(
         const UpdateFunctionDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new UpdateFunctionDefinitionResponsePrivate(this), parent)
+    : UpdateFunctionDefinitionResponse(new UpdateFunctionDefinitionResponsePrivate(this), parent)
 {
     setRequest(new UpdateFunctionDefinitionRequest(request));
     setReply(reply);

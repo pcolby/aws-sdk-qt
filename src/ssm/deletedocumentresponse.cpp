@@ -46,7 +46,7 @@ DeleteDocumentResponse::DeleteDocumentResponse(
         const DeleteDocumentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DeleteDocumentResponsePrivate(this), parent)
+    : DeleteDocumentResponse(new DeleteDocumentResponsePrivate(this), parent)
 {
     setRequest(new DeleteDocumentRequest(request));
     setReply(reply);

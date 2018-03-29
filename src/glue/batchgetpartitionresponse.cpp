@@ -46,7 +46,7 @@ BatchGetPartitionResponse::BatchGetPartitionResponse(
         const BatchGetPartitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new BatchGetPartitionResponsePrivate(this), parent)
+    : BatchGetPartitionResponse(new BatchGetPartitionResponsePrivate(this), parent)
 {
     setRequest(new BatchGetPartitionRequest(request));
     setReply(reply);

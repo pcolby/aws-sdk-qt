@@ -46,7 +46,7 @@ CreateResourceServerResponse::CreateResourceServerResponse(
         const CreateResourceServerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new CreateResourceServerResponsePrivate(this), parent)
+    : CreateResourceServerResponse(new CreateResourceServerResponsePrivate(this), parent)
 {
     setRequest(new CreateResourceServerRequest(request));
     setReply(reply);

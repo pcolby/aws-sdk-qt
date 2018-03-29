@@ -46,7 +46,7 @@ UpdateThingShadowResponse::UpdateThingShadowResponse(
         const UpdateThingShadowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTDataPlaneResponse(new UpdateThingShadowResponsePrivate(this), parent)
+    : UpdateThingShadowResponse(new UpdateThingShadowResponsePrivate(this), parent)
 {
     setRequest(new UpdateThingShadowRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeFileSystemsResponse::DescribeFileSystemsResponse(
         const DescribeFileSystemsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EFSResponse(new DescribeFileSystemsResponsePrivate(this), parent)
+    : DescribeFileSystemsResponse(new DescribeFileSystemsResponsePrivate(this), parent)
 {
     setRequest(new DescribeFileSystemsRequest(request));
     setReply(reply);

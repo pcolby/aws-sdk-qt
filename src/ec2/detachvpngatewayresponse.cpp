@@ -46,7 +46,7 @@ DetachVpnGatewayResponse::DetachVpnGatewayResponse(
         const DetachVpnGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DetachVpnGatewayResponsePrivate(this), parent)
+    : DetachVpnGatewayResponse(new DetachVpnGatewayResponsePrivate(this), parent)
 {
     setRequest(new DetachVpnGatewayRequest(request));
     setReply(reply);

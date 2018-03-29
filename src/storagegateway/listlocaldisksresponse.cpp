@@ -46,7 +46,7 @@ ListLocalDisksResponse::ListLocalDisksResponse(
         const ListLocalDisksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new ListLocalDisksResponsePrivate(this), parent)
+    : ListLocalDisksResponse(new ListLocalDisksResponsePrivate(this), parent)
 {
     setRequest(new ListLocalDisksRequest(request));
     setReply(reply);

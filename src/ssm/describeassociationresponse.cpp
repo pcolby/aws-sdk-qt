@@ -46,7 +46,7 @@ DescribeAssociationResponse::DescribeAssociationResponse(
         const DescribeAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeAssociationResponsePrivate(this), parent)
+    : DescribeAssociationResponse(new DescribeAssociationResponsePrivate(this), parent)
 {
     setRequest(new DescribeAssociationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeCommandsResponse::DescribeCommandsResponse(
         const DescribeCommandsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DescribeCommandsResponsePrivate(this), parent)
+    : DescribeCommandsResponse(new DescribeCommandsResponsePrivate(this), parent)
 {
     setRequest(new DescribeCommandsRequest(request));
     setReply(reply);

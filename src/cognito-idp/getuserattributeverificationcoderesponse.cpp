@@ -46,7 +46,7 @@ GetUserAttributeVerificationCodeResponse::GetUserAttributeVerificationCodeRespon
         const GetUserAttributeVerificationCodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new GetUserAttributeVerificationCodeResponsePrivate(this), parent)
+    : GetUserAttributeVerificationCodeResponse(new GetUserAttributeVerificationCodeResponsePrivate(this), parent)
 {
     setRequest(new GetUserAttributeVerificationCodeRequest(request));
     setReply(reply);

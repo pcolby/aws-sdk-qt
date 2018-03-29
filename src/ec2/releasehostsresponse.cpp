@@ -46,7 +46,7 @@ ReleaseHostsResponse::ReleaseHostsResponse(
         const ReleaseHostsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ReleaseHostsResponsePrivate(this), parent)
+    : ReleaseHostsResponse(new ReleaseHostsResponsePrivate(this), parent)
 {
     setRequest(new ReleaseHostsRequest(request));
     setReply(reply);

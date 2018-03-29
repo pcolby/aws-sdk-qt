@@ -46,7 +46,7 @@ DeleteGraphqlApiResponse::DeleteGraphqlApiResponse(
         const DeleteGraphqlApiRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppSyncResponse(new DeleteGraphqlApiResponsePrivate(this), parent)
+    : DeleteGraphqlApiResponse(new DeleteGraphqlApiResponsePrivate(this), parent)
 {
     setRequest(new DeleteGraphqlApiRequest(request));
     setReply(reply);

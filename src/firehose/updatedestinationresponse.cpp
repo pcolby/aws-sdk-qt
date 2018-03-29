@@ -46,7 +46,7 @@ UpdateDestinationResponse::UpdateDestinationResponse(
         const UpdateDestinationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FirehoseResponse(new UpdateDestinationResponsePrivate(this), parent)
+    : UpdateDestinationResponse(new UpdateDestinationResponsePrivate(this), parent)
 {
     setRequest(new UpdateDestinationRequest(request));
     setReply(reply);

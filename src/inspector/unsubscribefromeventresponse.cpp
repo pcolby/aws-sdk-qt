@@ -46,7 +46,7 @@ UnsubscribeFromEventResponse::UnsubscribeFromEventResponse(
         const UnsubscribeFromEventRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new UnsubscribeFromEventResponsePrivate(this), parent)
+    : UnsubscribeFromEventResponse(new UnsubscribeFromEventResponsePrivate(this), parent)
 {
     setRequest(new UnsubscribeFromEventRequest(request));
     setReply(reply);

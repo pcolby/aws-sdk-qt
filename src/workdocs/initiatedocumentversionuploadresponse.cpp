@@ -46,7 +46,7 @@ InitiateDocumentVersionUploadResponse::InitiateDocumentVersionUploadResponse(
         const InitiateDocumentVersionUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkDocsResponse(new InitiateDocumentVersionUploadResponsePrivate(this), parent)
+    : InitiateDocumentVersionUploadResponse(new InitiateDocumentVersionUploadResponsePrivate(this), parent)
 {
     setRequest(new InitiateDocumentVersionUploadRequest(request));
     setReply(reply);

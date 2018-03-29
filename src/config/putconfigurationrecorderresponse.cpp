@@ -46,7 +46,7 @@ PutConfigurationRecorderResponse::PutConfigurationRecorderResponse(
         const PutConfigurationRecorderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfigServiceResponse(new PutConfigurationRecorderResponsePrivate(this), parent)
+    : PutConfigurationRecorderResponse(new PutConfigurationRecorderResponsePrivate(this), parent)
 {
     setRequest(new PutConfigurationRecorderRequest(request));
     setReply(reply);

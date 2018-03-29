@@ -46,7 +46,7 @@ ListV2LoggingLevelsResponse::ListV2LoggingLevelsResponse(
         const ListV2LoggingLevelsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new ListV2LoggingLevelsResponsePrivate(this), parent)
+    : ListV2LoggingLevelsResponse(new ListV2LoggingLevelsResponsePrivate(this), parent)
 {
     setRequest(new ListV2LoggingLevelsRequest(request));
     setReply(reply);

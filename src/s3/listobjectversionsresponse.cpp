@@ -46,7 +46,7 @@ ListObjectVersionsResponse::ListObjectVersionsResponse(
         const ListObjectVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new ListObjectVersionsResponsePrivate(this), parent)
+    : ListObjectVersionsResponse(new ListObjectVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListObjectVersionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListPublicKeysResponse::ListPublicKeysResponse(
         const ListPublicKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudTrailResponse(new ListPublicKeysResponsePrivate(this), parent)
+    : ListPublicKeysResponse(new ListPublicKeysResponsePrivate(this), parent)
 {
     setRequest(new ListPublicKeysRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateSlotTypeVersionResponse::CreateSlotTypeVersionResponse(
         const CreateSlotTypeVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new CreateSlotTypeVersionResponsePrivate(this), parent)
+    : CreateSlotTypeVersionResponse(new CreateSlotTypeVersionResponsePrivate(this), parent)
 {
     setRequest(new CreateSlotTypeVersionRequest(request));
     setReply(reply);

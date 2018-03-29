@@ -46,7 +46,7 @@ RebootInstanceResponse::RebootInstanceResponse(
         const RebootInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new RebootInstanceResponsePrivate(this), parent)
+    : RebootInstanceResponse(new RebootInstanceResponsePrivate(this), parent)
 {
     setRequest(new RebootInstanceRequest(request));
     setReply(reply);

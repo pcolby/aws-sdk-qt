@@ -46,7 +46,7 @@ CreateMaintenanceWindowResponse::CreateMaintenanceWindowResponse(
         const CreateMaintenanceWindowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new CreateMaintenanceWindowResponsePrivate(this), parent)
+    : CreateMaintenanceWindowResponse(new CreateMaintenanceWindowResponsePrivate(this), parent)
 {
     setRequest(new CreateMaintenanceWindowRequest(request));
     setReply(reply);

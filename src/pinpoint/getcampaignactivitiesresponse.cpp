@@ -46,7 +46,7 @@ GetCampaignActivitiesResponse::GetCampaignActivitiesResponse(
         const GetCampaignActivitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new GetCampaignActivitiesResponsePrivate(this), parent)
+    : GetCampaignActivitiesResponse(new GetCampaignActivitiesResponsePrivate(this), parent)
 {
     setRequest(new GetCampaignActivitiesRequest(request));
     setReply(reply);

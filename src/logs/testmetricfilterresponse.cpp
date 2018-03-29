@@ -46,7 +46,7 @@ TestMetricFilterResponse::TestMetricFilterResponse(
         const TestMetricFilterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchLogsResponse(new TestMetricFilterResponsePrivate(this), parent)
+    : TestMetricFilterResponse(new TestMetricFilterResponsePrivate(this), parent)
 {
     setRequest(new TestMetricFilterRequest(request));
     setReply(reply);

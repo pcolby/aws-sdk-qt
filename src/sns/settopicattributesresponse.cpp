@@ -46,7 +46,7 @@ SetTopicAttributesResponse::SetTopicAttributesResponse(
         const SetTopicAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new SetTopicAttributesResponsePrivate(this), parent)
+    : SetTopicAttributesResponse(new SetTopicAttributesResponsePrivate(this), parent)
 {
     setRequest(new SetTopicAttributesRequest(request));
     setReply(reply);

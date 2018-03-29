@@ -46,7 +46,7 @@ DescribeEnvironmentStatusResponse::DescribeEnvironmentStatusResponse(
         const DescribeEnvironmentStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Cloud9Response(new DescribeEnvironmentStatusResponsePrivate(this), parent)
+    : DescribeEnvironmentStatusResponse(new DescribeEnvironmentStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeEnvironmentStatusRequest(request));
     setReply(reply);

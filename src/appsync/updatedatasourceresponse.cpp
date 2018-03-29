@@ -46,7 +46,7 @@ UpdateDataSourceResponse::UpdateDataSourceResponse(
         const UpdateDataSourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppSyncResponse(new UpdateDataSourceResponsePrivate(this), parent)
+    : UpdateDataSourceResponse(new UpdateDataSourceResponsePrivate(this), parent)
 {
     setRequest(new UpdateDataSourceRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ModifyEndpointResponse::ModifyEndpointResponse(
         const ModifyEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new ModifyEndpointResponsePrivate(this), parent)
+    : ModifyEndpointResponse(new ModifyEndpointResponsePrivate(this), parent)
 {
     setRequest(new ModifyEndpointRequest(request));
     setReply(reply);

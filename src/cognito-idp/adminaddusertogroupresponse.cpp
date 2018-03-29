@@ -46,7 +46,7 @@ AdminAddUserToGroupResponse::AdminAddUserToGroupResponse(
         const AdminAddUserToGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new AdminAddUserToGroupResponsePrivate(this), parent)
+    : AdminAddUserToGroupResponse(new AdminAddUserToGroupResponsePrivate(this), parent)
 {
     setRequest(new AdminAddUserToGroupRequest(request));
     setReply(reply);

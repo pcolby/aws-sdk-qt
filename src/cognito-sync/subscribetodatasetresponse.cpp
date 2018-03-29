@@ -46,7 +46,7 @@ SubscribeToDatasetResponse::SubscribeToDatasetResponse(
         const SubscribeToDatasetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoSyncResponse(new SubscribeToDatasetResponsePrivate(this), parent)
+    : SubscribeToDatasetResponse(new SubscribeToDatasetResponsePrivate(this), parent)
 {
     setRequest(new SubscribeToDatasetRequest(request));
     setReply(reply);

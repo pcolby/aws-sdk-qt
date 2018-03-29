@@ -46,7 +46,7 @@ CreatePresignedNotebookInstanceUrlResponse::CreatePresignedNotebookInstanceUrlRe
         const CreatePresignedNotebookInstanceUrlRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SageMakerResponse(new CreatePresignedNotebookInstanceUrlResponsePrivate(this), parent)
+    : CreatePresignedNotebookInstanceUrlResponse(new CreatePresignedNotebookInstanceUrlResponsePrivate(this), parent)
 {
     setRequest(new CreatePresignedNotebookInstanceUrlRequest(request));
     setReply(reply);

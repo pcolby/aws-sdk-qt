@@ -46,7 +46,7 @@ PutLifecyclePolicyResponse::PutLifecyclePolicyResponse(
         const PutLifecyclePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new PutLifecyclePolicyResponsePrivate(this), parent)
+    : PutLifecyclePolicyResponse(new PutLifecyclePolicyResponsePrivate(this), parent)
 {
     setRequest(new PutLifecyclePolicyRequest(request));
     setReply(reply);

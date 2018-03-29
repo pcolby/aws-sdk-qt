@@ -46,7 +46,7 @@ DeleteUserDefinedFunctionResponse::DeleteUserDefinedFunctionResponse(
         const DeleteUserDefinedFunctionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new DeleteUserDefinedFunctionResponsePrivate(this), parent)
+    : DeleteUserDefinedFunctionResponse(new DeleteUserDefinedFunctionResponsePrivate(this), parent)
 {
     setRequest(new DeleteUserDefinedFunctionRequest(request));
     setReply(reply);

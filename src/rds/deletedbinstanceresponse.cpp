@@ -46,7 +46,7 @@ DeleteDBInstanceResponse::DeleteDBInstanceResponse(
         const DeleteDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DeleteDBInstanceResponsePrivate(this), parent)
+    : DeleteDBInstanceResponse(new DeleteDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBInstanceRequest(request));
     setReply(reply);

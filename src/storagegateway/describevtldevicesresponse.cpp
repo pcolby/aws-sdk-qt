@@ -46,7 +46,7 @@ DescribeVTLDevicesResponse::DescribeVTLDevicesResponse(
         const DescribeVTLDevicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new DescribeVTLDevicesResponsePrivate(this), parent)
+    : DescribeVTLDevicesResponse(new DescribeVTLDevicesResponsePrivate(this), parent)
 {
     setRequest(new DescribeVTLDevicesRequest(request));
     setReply(reply);

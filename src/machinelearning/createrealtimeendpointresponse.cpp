@@ -46,7 +46,7 @@ CreateRealtimeEndpointResponse::CreateRealtimeEndpointResponse(
         const CreateRealtimeEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MachineLearningResponse(new CreateRealtimeEndpointResponsePrivate(this), parent)
+    : CreateRealtimeEndpointResponse(new CreateRealtimeEndpointResponsePrivate(this), parent)
 {
     setRequest(new CreateRealtimeEndpointRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateLayerResponse::UpdateLayerResponse(
         const UpdateLayerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new UpdateLayerResponsePrivate(this), parent)
+    : UpdateLayerResponse(new UpdateLayerResponsePrivate(this), parent)
 {
     setRequest(new UpdateLayerRequest(request));
     setReply(reply);

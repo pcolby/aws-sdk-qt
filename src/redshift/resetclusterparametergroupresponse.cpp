@@ -46,7 +46,7 @@ ResetClusterParameterGroupResponse::ResetClusterParameterGroupResponse(
         const ResetClusterParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new ResetClusterParameterGroupResponsePrivate(this), parent)
+    : ResetClusterParameterGroupResponse(new ResetClusterParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new ResetClusterParameterGroupRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeBackupsResponse::DescribeBackupsResponse(
         const DescribeBackupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMV2Response(new DescribeBackupsResponsePrivate(this), parent)
+    : DescribeBackupsResponse(new DescribeBackupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeBackupsRequest(request));
     setReply(reply);

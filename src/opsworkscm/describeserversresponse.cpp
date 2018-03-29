@@ -46,7 +46,7 @@ DescribeServersResponse::DescribeServersResponse(
         const DescribeServersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new DescribeServersResponsePrivate(this), parent)
+    : DescribeServersResponse(new DescribeServersResponsePrivate(this), parent)
 {
     setRequest(new DescribeServersRequest(request));
     setReply(reply);

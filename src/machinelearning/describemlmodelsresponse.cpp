@@ -46,7 +46,7 @@ DescribeMLModelsResponse::DescribeMLModelsResponse(
         const DescribeMLModelsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MachineLearningResponse(new DescribeMLModelsResponsePrivate(this), parent)
+    : DescribeMLModelsResponse(new DescribeMLModelsResponsePrivate(this), parent)
 {
     setRequest(new DescribeMLModelsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ BatchDeleteBuildsResponse::BatchDeleteBuildsResponse(
         const BatchDeleteBuildsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeBuildResponse(new BatchDeleteBuildsResponsePrivate(this), parent)
+    : BatchDeleteBuildsResponse(new BatchDeleteBuildsResponsePrivate(this), parent)
 {
     setRequest(new BatchDeleteBuildsRequest(request));
     setReply(reply);

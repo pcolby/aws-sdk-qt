@@ -46,7 +46,7 @@ ListOriginEndpointsResponse::ListOriginEndpointsResponse(
         const ListOriginEndpointsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MediaPackageResponse(new ListOriginEndpointsResponsePrivate(this), parent)
+    : ListOriginEndpointsResponse(new ListOriginEndpointsResponsePrivate(this), parent)
 {
     setRequest(new ListOriginEndpointsRequest(request));
     setReply(reply);

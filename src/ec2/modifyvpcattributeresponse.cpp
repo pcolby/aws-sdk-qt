@@ -46,7 +46,7 @@ ModifyVpcAttributeResponse::ModifyVpcAttributeResponse(
         const ModifyVpcAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyVpcAttributeResponsePrivate(this), parent)
+    : ModifyVpcAttributeResponse(new ModifyVpcAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifyVpcAttributeRequest(request));
     setReply(reply);

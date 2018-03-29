@@ -46,7 +46,7 @@ CreateReplicationGroupResponse::CreateReplicationGroupResponse(
         const CreateReplicationGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new CreateReplicationGroupResponsePrivate(this), parent)
+    : CreateReplicationGroupResponse(new CreateReplicationGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateReplicationGroupRequest(request));
     setReply(reply);

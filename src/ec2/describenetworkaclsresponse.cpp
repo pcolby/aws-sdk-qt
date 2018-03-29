@@ -46,7 +46,7 @@ DescribeNetworkAclsResponse::DescribeNetworkAclsResponse(
         const DescribeNetworkAclsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeNetworkAclsResponsePrivate(this), parent)
+    : DescribeNetworkAclsResponse(new DescribeNetworkAclsResponsePrivate(this), parent)
 {
     setRequest(new DescribeNetworkAclsRequest(request));
     setReply(reply);

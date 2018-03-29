@@ -46,7 +46,7 @@ CreateTopicRuleResponse::CreateTopicRuleResponse(
         const CreateTopicRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new CreateTopicRuleResponsePrivate(this), parent)
+    : CreateTopicRuleResponse(new CreateTopicRuleResponsePrivate(this), parent)
 {
     setRequest(new CreateTopicRuleRequest(request));
     setReply(reply);

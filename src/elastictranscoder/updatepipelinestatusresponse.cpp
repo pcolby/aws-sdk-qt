@@ -46,7 +46,7 @@ UpdatePipelineStatusResponse::UpdatePipelineStatusResponse(
         const UpdatePipelineStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticTranscoderResponse(new UpdatePipelineStatusResponsePrivate(this), parent)
+    : UpdatePipelineStatusResponse(new UpdatePipelineStatusResponsePrivate(this), parent)
 {
     setRequest(new UpdatePipelineStatusRequest(request));
     setReply(reply);

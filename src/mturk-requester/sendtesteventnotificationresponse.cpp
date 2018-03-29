@@ -46,7 +46,7 @@ SendTestEventNotificationResponse::SendTestEventNotificationResponse(
         const SendTestEventNotificationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new SendTestEventNotificationResponsePrivate(this), parent)
+    : SendTestEventNotificationResponse(new SendTestEventNotificationResponsePrivate(this), parent)
 {
     setRequest(new SendTestEventNotificationRequest(request));
     setReply(reply);

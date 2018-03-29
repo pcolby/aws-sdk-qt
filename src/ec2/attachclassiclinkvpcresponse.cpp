@@ -46,7 +46,7 @@ AttachClassicLinkVpcResponse::AttachClassicLinkVpcResponse(
         const AttachClassicLinkVpcRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AttachClassicLinkVpcResponsePrivate(this), parent)
+    : AttachClassicLinkVpcResponse(new AttachClassicLinkVpcResponsePrivate(this), parent)
 {
     setRequest(new AttachClassicLinkVpcRequest(request));
     setReply(reply);

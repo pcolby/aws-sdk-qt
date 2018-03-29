@@ -46,7 +46,7 @@ ForgetDeviceResponse::ForgetDeviceResponse(
         const ForgetDeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new ForgetDeviceResponsePrivate(this), parent)
+    : ForgetDeviceResponse(new ForgetDeviceResponsePrivate(this), parent)
 {
     setRequest(new ForgetDeviceRequest(request));
     setReply(reply);

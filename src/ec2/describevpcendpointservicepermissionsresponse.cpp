@@ -46,7 +46,7 @@ DescribeVpcEndpointServicePermissionsResponse::DescribeVpcEndpointServicePermiss
         const DescribeVpcEndpointServicePermissionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeVpcEndpointServicePermissionsResponsePrivate(this), parent)
+    : DescribeVpcEndpointServicePermissionsResponse(new DescribeVpcEndpointServicePermissionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeVpcEndpointServicePermissionsRequest(request));
     setReply(reply);

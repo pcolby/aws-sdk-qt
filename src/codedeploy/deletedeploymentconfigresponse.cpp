@@ -46,7 +46,7 @@ DeleteDeploymentConfigResponse::DeleteDeploymentConfigResponse(
         const DeleteDeploymentConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeDeployResponse(new DeleteDeploymentConfigResponsePrivate(this), parent)
+    : DeleteDeploymentConfigResponse(new DeleteDeploymentConfigResponsePrivate(this), parent)
 {
     setRequest(new DeleteDeploymentConfigRequest(request));
     setReply(reply);

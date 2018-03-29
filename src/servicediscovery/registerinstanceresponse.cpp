@@ -46,7 +46,7 @@ RegisterInstanceResponse::RegisterInstanceResponse(
         const RegisterInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceDiscoveryResponse(new RegisterInstanceResponsePrivate(this), parent)
+    : RegisterInstanceResponse(new RegisterInstanceResponsePrivate(this), parent)
 {
     setRequest(new RegisterInstanceRequest(request));
     setReply(reply);

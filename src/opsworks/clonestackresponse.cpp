@@ -46,7 +46,7 @@ CloneStackResponse::CloneStackResponse(
         const CloneStackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new CloneStackResponsePrivate(this), parent)
+    : CloneStackResponse(new CloneStackResponsePrivate(this), parent)
 {
     setRequest(new CloneStackRequest(request));
     setReply(reply);

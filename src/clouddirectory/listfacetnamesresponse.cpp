@@ -46,7 +46,7 @@ ListFacetNamesResponse::ListFacetNamesResponse(
         const ListFacetNamesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new ListFacetNamesResponsePrivate(this), parent)
+    : ListFacetNamesResponse(new ListFacetNamesResponsePrivate(this), parent)
 {
     setRequest(new ListFacetNamesRequest(request));
     setReply(reply);

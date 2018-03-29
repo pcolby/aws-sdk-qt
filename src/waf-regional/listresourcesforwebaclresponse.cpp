@@ -46,7 +46,7 @@ ListResourcesForWebACLResponse::ListResourcesForWebACLResponse(
         const ListResourcesForWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new ListResourcesForWebACLResponsePrivate(this), parent)
+    : ListResourcesForWebACLResponse(new ListResourcesForWebACLResponsePrivate(this), parent)
 {
     setRequest(new ListResourcesForWebACLRequest(request));
     setReply(reply);

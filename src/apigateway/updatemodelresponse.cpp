@@ -46,7 +46,7 @@ UpdateModelResponse::UpdateModelResponse(
         const UpdateModelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new UpdateModelResponsePrivate(this), parent)
+    : UpdateModelResponse(new UpdateModelResponsePrivate(this), parent)
 {
     setRequest(new UpdateModelRequest(request));
     setReply(reply);

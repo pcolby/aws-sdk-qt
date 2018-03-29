@@ -46,7 +46,7 @@ DetachLoadBalancerTargetGroupsResponse::DetachLoadBalancerTargetGroupsResponse(
         const DetachLoadBalancerTargetGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new DetachLoadBalancerTargetGroupsResponsePrivate(this), parent)
+    : DetachLoadBalancerTargetGroupsResponse(new DetachLoadBalancerTargetGroupsResponsePrivate(this), parent)
 {
     setRequest(new DetachLoadBalancerTargetGroupsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListLaunchPathsResponse::ListLaunchPathsResponse(
         const ListLaunchPathsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new ListLaunchPathsResponsePrivate(this), parent)
+    : ListLaunchPathsResponse(new ListLaunchPathsResponsePrivate(this), parent)
 {
     setRequest(new ListLaunchPathsRequest(request));
     setReply(reply);

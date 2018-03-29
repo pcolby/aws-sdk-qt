@@ -46,7 +46,7 @@ UpdateEndpointsBatchResponse::UpdateEndpointsBatchResponse(
         const UpdateEndpointsBatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new UpdateEndpointsBatchResponsePrivate(this), parent)
+    : UpdateEndpointsBatchResponse(new UpdateEndpointsBatchResponsePrivate(this), parent)
 {
     setRequest(new UpdateEndpointsBatchRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ InitiateLayerUploadResponse::InitiateLayerUploadResponse(
         const InitiateLayerUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new InitiateLayerUploadResponsePrivate(this), parent)
+    : InitiateLayerUploadResponse(new InitiateLayerUploadResponsePrivate(this), parent)
 {
     setRequest(new InitiateLayerUploadRequest(request));
     setReply(reply);

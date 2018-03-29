@@ -46,7 +46,7 @@ CreateStackInstancesResponse::CreateStackInstancesResponse(
         const CreateStackInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFormationResponse(new CreateStackInstancesResponsePrivate(this), parent)
+    : CreateStackInstancesResponse(new CreateStackInstancesResponsePrivate(this), parent)
 {
     setRequest(new CreateStackInstancesRequest(request));
     setReply(reply);

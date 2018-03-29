@@ -46,7 +46,7 @@ DeregisterRdsDbInstanceResponse::DeregisterRdsDbInstanceResponse(
         const DeregisterRdsDbInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DeregisterRdsDbInstanceResponsePrivate(this), parent)
+    : DeregisterRdsDbInstanceResponse(new DeregisterRdsDbInstanceResponsePrivate(this), parent)
 {
     setRequest(new DeregisterRdsDbInstanceRequest(request));
     setReply(reply);

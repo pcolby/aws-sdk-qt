@@ -46,7 +46,7 @@ GetLaunchTemplateDataResponse::GetLaunchTemplateDataResponse(
         const GetLaunchTemplateDataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new GetLaunchTemplateDataResponsePrivate(this), parent)
+    : GetLaunchTemplateDataResponse(new GetLaunchTemplateDataResponsePrivate(this), parent)
 {
     setRequest(new GetLaunchTemplateDataRequest(request));
     setReply(reply);

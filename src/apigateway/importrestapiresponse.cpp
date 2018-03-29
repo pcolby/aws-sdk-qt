@@ -46,7 +46,7 @@ ImportRestApiResponse::ImportRestApiResponse(
         const ImportRestApiRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new ImportRestApiResponsePrivate(this), parent)
+    : ImportRestApiResponse(new ImportRestApiResponsePrivate(this), parent)
 {
     setRequest(new ImportRestApiRequest(request));
     setReply(reply);

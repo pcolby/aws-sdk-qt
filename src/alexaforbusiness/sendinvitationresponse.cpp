@@ -46,7 +46,7 @@ SendInvitationResponse::SendInvitationResponse(
         const SendInvitationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new SendInvitationResponsePrivate(this), parent)
+    : SendInvitationResponse(new SendInvitationResponsePrivate(this), parent)
 {
     setRequest(new SendInvitationRequest(request));
     setReply(reply);

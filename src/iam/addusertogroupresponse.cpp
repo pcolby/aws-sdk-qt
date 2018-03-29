@@ -46,7 +46,7 @@ AddUserToGroupResponse::AddUserToGroupResponse(
         const AddUserToGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new AddUserToGroupResponsePrivate(this), parent)
+    : AddUserToGroupResponse(new AddUserToGroupResponsePrivate(this), parent)
 {
     setRequest(new AddUserToGroupRequest(request));
     setReply(reply);

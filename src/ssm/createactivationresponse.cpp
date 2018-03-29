@@ -46,7 +46,7 @@ CreateActivationResponse::CreateActivationResponse(
         const CreateActivationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new CreateActivationResponsePrivate(this), parent)
+    : CreateActivationResponse(new CreateActivationResponsePrivate(this), parent)
 {
     setRequest(new CreateActivationRequest(request));
     setReply(reply);

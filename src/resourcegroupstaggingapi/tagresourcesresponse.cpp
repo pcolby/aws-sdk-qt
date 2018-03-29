@@ -46,7 +46,7 @@ TagResourcesResponse::TagResourcesResponse(
         const TagResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResourceGroupsTaggingAPIResponse(new TagResourcesResponsePrivate(this), parent)
+    : TagResourcesResponse(new TagResourcesResponsePrivate(this), parent)
 {
     setRequest(new TagResourcesRequest(request));
     setReply(reply);

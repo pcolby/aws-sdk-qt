@@ -46,7 +46,7 @@ DeliverConfigSnapshotResponse::DeliverConfigSnapshotResponse(
         const DeliverConfigSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfigServiceResponse(new DeliverConfigSnapshotResponsePrivate(this), parent)
+    : DeliverConfigSnapshotResponse(new DeliverConfigSnapshotResponsePrivate(this), parent)
 {
     setRequest(new DeliverConfigSnapshotRequest(request));
     setReply(reply);

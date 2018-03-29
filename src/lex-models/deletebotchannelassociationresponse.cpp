@@ -46,7 +46,7 @@ DeleteBotChannelAssociationResponse::DeleteBotChannelAssociationResponse(
         const DeleteBotChannelAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new DeleteBotChannelAssociationResponsePrivate(this), parent)
+    : DeleteBotChannelAssociationResponse(new DeleteBotChannelAssociationResponsePrivate(this), parent)
 {
     setRequest(new DeleteBotChannelAssociationRequest(request));
     setReply(reply);

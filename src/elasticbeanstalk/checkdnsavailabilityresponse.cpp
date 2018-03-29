@@ -46,7 +46,7 @@ CheckDNSAvailabilityResponse::CheckDNSAvailabilityResponse(
         const CheckDNSAvailabilityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new CheckDNSAvailabilityResponsePrivate(this), parent)
+    : CheckDNSAvailabilityResponse(new CheckDNSAvailabilityResponsePrivate(this), parent)
 {
     setRequest(new CheckDNSAvailabilityRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CompleteLifecycleActionResponse::CompleteLifecycleActionResponse(
         const CompleteLifecycleActionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new CompleteLifecycleActionResponsePrivate(this), parent)
+    : CompleteLifecycleActionResponse(new CompleteLifecycleActionResponsePrivate(this), parent)
 {
     setRequest(new CompleteLifecycleActionRequest(request));
     setReply(reply);

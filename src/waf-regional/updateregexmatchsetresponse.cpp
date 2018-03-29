@@ -46,7 +46,7 @@ UpdateRegexMatchSetResponse::UpdateRegexMatchSetResponse(
         const UpdateRegexMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new UpdateRegexMatchSetResponsePrivate(this), parent)
+    : UpdateRegexMatchSetResponse(new UpdateRegexMatchSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateRegexMatchSetRequest(request));
     setReply(reply);

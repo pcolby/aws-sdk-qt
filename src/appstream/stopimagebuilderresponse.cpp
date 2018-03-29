@@ -46,7 +46,7 @@ StopImageBuilderResponse::StopImageBuilderResponse(
         const StopImageBuilderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppStreamResponse(new StopImageBuilderResponsePrivate(this), parent)
+    : StopImageBuilderResponse(new StopImageBuilderResponsePrivate(this), parent)
 {
     setRequest(new StopImageBuilderRequest(request));
     setReply(reply);

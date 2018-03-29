@@ -46,7 +46,7 @@ CreateTableResponse::CreateTableResponse(
         const CreateTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new CreateTableResponsePrivate(this), parent)
+    : CreateTableResponse(new CreateTableResponsePrivate(this), parent)
 {
     setRequest(new CreateTableRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeclineInvitationsResponse::DeclineInvitationsResponse(
         const DeclineInvitationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GuardDutyResponse(new DeclineInvitationsResponsePrivate(this), parent)
+    : DeclineInvitationsResponse(new DeclineInvitationsResponsePrivate(this), parent)
 {
     setRequest(new DeclineInvitationsRequest(request));
     setReply(reply);

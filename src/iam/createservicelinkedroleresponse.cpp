@@ -46,7 +46,7 @@ CreateServiceLinkedRoleResponse::CreateServiceLinkedRoleResponse(
         const CreateServiceLinkedRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new CreateServiceLinkedRoleResponsePrivate(this), parent)
+    : CreateServiceLinkedRoleResponse(new CreateServiceLinkedRoleResponsePrivate(this), parent)
 {
     setRequest(new CreateServiceLinkedRoleRequest(request));
     setReply(reply);

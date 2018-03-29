@@ -46,7 +46,7 @@ DeleteEmailChannelResponse::DeleteEmailChannelResponse(
         const DeleteEmailChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new DeleteEmailChannelResponsePrivate(this), parent)
+    : DeleteEmailChannelResponse(new DeleteEmailChannelResponsePrivate(this), parent)
 {
     setRequest(new DeleteEmailChannelRequest(request));
     setReply(reply);

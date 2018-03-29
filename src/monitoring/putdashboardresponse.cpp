@@ -46,7 +46,7 @@ PutDashboardResponse::PutDashboardResponse(
         const PutDashboardRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchResponse(new PutDashboardResponsePrivate(this), parent)
+    : PutDashboardResponse(new PutDashboardResponsePrivate(this), parent)
 {
     setRequest(new PutDashboardRequest(request));
     setReply(reply);

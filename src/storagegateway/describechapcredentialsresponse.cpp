@@ -46,7 +46,7 @@ DescribeChapCredentialsResponse::DescribeChapCredentialsResponse(
         const DescribeChapCredentialsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new DescribeChapCredentialsResponsePrivate(this), parent)
+    : DescribeChapCredentialsResponse(new DescribeChapCredentialsResponsePrivate(this), parent)
 {
     setRequest(new DescribeChapCredentialsRequest(request));
     setReply(reply);

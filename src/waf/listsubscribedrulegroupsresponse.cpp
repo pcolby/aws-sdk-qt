@@ -46,7 +46,7 @@ ListSubscribedRuleGroupsResponse::ListSubscribedRuleGroupsResponse(
         const ListSubscribedRuleGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new ListSubscribedRuleGroupsResponsePrivate(this), parent)
+    : ListSubscribedRuleGroupsResponse(new ListSubscribedRuleGroupsResponsePrivate(this), parent)
 {
     setRequest(new ListSubscribedRuleGroupsRequest(request));
     setReply(reply);

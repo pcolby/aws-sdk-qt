@@ -46,7 +46,7 @@ DeleteStackInstancesResponse::DeleteStackInstancesResponse(
         const DeleteStackInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFormationResponse(new DeleteStackInstancesResponsePrivate(this), parent)
+    : DeleteStackInstancesResponse(new DeleteStackInstancesResponsePrivate(this), parent)
 {
     setRequest(new DeleteStackInstancesRequest(request));
     setReply(reply);

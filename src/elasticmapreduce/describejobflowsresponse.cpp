@@ -46,7 +46,7 @@ DescribeJobFlowsResponse::DescribeJobFlowsResponse(
         const DescribeJobFlowsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new DescribeJobFlowsResponsePrivate(this), parent)
+    : DescribeJobFlowsResponse(new DescribeJobFlowsResponsePrivate(this), parent)
 {
     setRequest(new DescribeJobFlowsRequest(request));
     setReply(reply);

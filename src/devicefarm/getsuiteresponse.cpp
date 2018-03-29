@@ -46,7 +46,7 @@ GetSuiteResponse::GetSuiteResponse(
         const GetSuiteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new GetSuiteResponsePrivate(this), parent)
+    : GetSuiteResponse(new GetSuiteResponsePrivate(this), parent)
 {
     setRequest(new GetSuiteRequest(request));
     setReply(reply);

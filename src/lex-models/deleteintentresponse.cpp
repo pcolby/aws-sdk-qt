@@ -46,7 +46,7 @@ DeleteIntentResponse::DeleteIntentResponse(
         const DeleteIntentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new DeleteIntentResponsePrivate(this), parent)
+    : DeleteIntentResponse(new DeleteIntentResponsePrivate(this), parent)
 {
     setRequest(new DeleteIntentRequest(request));
     setReply(reply);

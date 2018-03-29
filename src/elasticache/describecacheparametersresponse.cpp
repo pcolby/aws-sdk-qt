@@ -46,7 +46,7 @@ DescribeCacheParametersResponse::DescribeCacheParametersResponse(
         const DescribeCacheParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new DescribeCacheParametersResponsePrivate(this), parent)
+    : DescribeCacheParametersResponse(new DescribeCacheParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeCacheParametersRequest(request));
     setReply(reply);

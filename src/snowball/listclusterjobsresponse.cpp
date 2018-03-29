@@ -46,7 +46,7 @@ ListClusterJobsResponse::ListClusterJobsResponse(
         const ListClusterJobsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SnowballResponse(new ListClusterJobsResponsePrivate(this), parent)
+    : ListClusterJobsResponse(new ListClusterJobsResponsePrivate(this), parent)
 {
     setRequest(new ListClusterJobsRequest(request));
     setReply(reply);

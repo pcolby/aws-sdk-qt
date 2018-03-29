@@ -46,7 +46,7 @@ DeleteWebhookResponse::DeleteWebhookResponse(
         const DeleteWebhookRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeBuildResponse(new DeleteWebhookResponsePrivate(this), parent)
+    : DeleteWebhookResponse(new DeleteWebhookResponsePrivate(this), parent)
 {
     setRequest(new DeleteWebhookRequest(request));
     setReply(reply);

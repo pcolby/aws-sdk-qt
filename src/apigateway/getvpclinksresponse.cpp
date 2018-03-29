@@ -46,7 +46,7 @@ GetVpcLinksResponse::GetVpcLinksResponse(
         const GetVpcLinksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetVpcLinksResponsePrivate(this), parent)
+    : GetVpcLinksResponse(new GetVpcLinksResponsePrivate(this), parent)
 {
     setRequest(new GetVpcLinksRequest(request));
     setReply(reply);

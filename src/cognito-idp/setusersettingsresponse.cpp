@@ -46,7 +46,7 @@ SetUserSettingsResponse::SetUserSettingsResponse(
         const SetUserSettingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new SetUserSettingsResponsePrivate(this), parent)
+    : SetUserSettingsResponse(new SetUserSettingsResponsePrivate(this), parent)
 {
     setRequest(new SetUserSettingsRequest(request));
     setReply(reply);

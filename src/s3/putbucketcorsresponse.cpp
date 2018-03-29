@@ -46,7 +46,7 @@ PutBucketCorsResponse::PutBucketCorsResponse(
         const PutBucketCorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new PutBucketCorsResponsePrivate(this), parent)
+    : PutBucketCorsResponse(new PutBucketCorsResponsePrivate(this), parent)
 {
     setRequest(new PutBucketCorsRequest(request));
     setReply(reply);

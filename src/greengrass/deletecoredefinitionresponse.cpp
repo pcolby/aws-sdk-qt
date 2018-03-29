@@ -46,7 +46,7 @@ DeleteCoreDefinitionResponse::DeleteCoreDefinitionResponse(
         const DeleteCoreDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new DeleteCoreDefinitionResponsePrivate(this), parent)
+    : DeleteCoreDefinitionResponse(new DeleteCoreDefinitionResponsePrivate(this), parent)
 {
     setRequest(new DeleteCoreDefinitionRequest(request));
     setReply(reply);

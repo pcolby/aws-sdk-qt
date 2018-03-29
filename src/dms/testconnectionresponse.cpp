@@ -46,7 +46,7 @@ TestConnectionResponse::TestConnectionResponse(
         const TestConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DatabaseMigrationServiceResponse(new TestConnectionResponsePrivate(this), parent)
+    : TestConnectionResponse(new TestConnectionResponsePrivate(this), parent)
 {
     setRequest(new TestConnectionRequest(request));
     setReply(reply);

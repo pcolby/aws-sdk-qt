@@ -46,7 +46,7 @@ DeleteDeliveryStreamResponse::DeleteDeliveryStreamResponse(
         const DeleteDeliveryStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FirehoseResponse(new DeleteDeliveryStreamResponsePrivate(this), parent)
+    : DeleteDeliveryStreamResponse(new DeleteDeliveryStreamResponsePrivate(this), parent)
 {
     setRequest(new DeleteDeliveryStreamRequest(request));
     setReply(reply);

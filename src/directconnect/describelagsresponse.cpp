@@ -46,7 +46,7 @@ DescribeLagsResponse::DescribeLagsResponse(
         const DescribeLagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectConnectResponse(new DescribeLagsResponsePrivate(this), parent)
+    : DescribeLagsResponse(new DescribeLagsResponsePrivate(this), parent)
 {
     setRequest(new DescribeLagsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StartTopicsDetectionJobResponse::StartTopicsDetectionJobResponse(
         const StartTopicsDetectionJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ComprehendResponse(new StartTopicsDetectionJobResponsePrivate(this), parent)
+    : StartTopicsDetectionJobResponse(new StartTopicsDetectionJobResponsePrivate(this), parent)
 {
     setRequest(new StartTopicsDetectionJobRequest(request));
     setReply(reply);

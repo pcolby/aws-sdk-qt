@@ -46,7 +46,7 @@ VerifyDomainIdentityResponse::VerifyDomainIdentityResponse(
         const VerifyDomainIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new VerifyDomainIdentityResponsePrivate(this), parent)
+    : VerifyDomainIdentityResponse(new VerifyDomainIdentityResponsePrivate(this), parent)
 {
     setRequest(new VerifyDomainIdentityRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SearchIndexResponse::SearchIndexResponse(
         const SearchIndexRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new SearchIndexResponsePrivate(this), parent)
+    : SearchIndexResponse(new SearchIndexResponsePrivate(this), parent)
 {
     setRequest(new SearchIndexRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UntagResourcesResponse::UntagResourcesResponse(
         const UntagResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResourceGroupsTaggingAPIResponse(new UntagResourcesResponsePrivate(this), parent)
+    : UntagResourcesResponse(new UntagResourcesResponsePrivate(this), parent)
 {
     setRequest(new UntagResourcesRequest(request));
     setReply(reply);

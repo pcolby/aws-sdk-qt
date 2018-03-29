@@ -46,7 +46,7 @@ UpdateFolderResponse::UpdateFolderResponse(
         const UpdateFolderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkDocsResponse(new UpdateFolderResponsePrivate(this), parent)
+    : UpdateFolderResponse(new UpdateFolderResponsePrivate(this), parent)
 {
     setRequest(new UpdateFolderRequest(request));
     setReply(reply);

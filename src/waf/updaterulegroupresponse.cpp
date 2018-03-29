@@ -46,7 +46,7 @@ UpdateRuleGroupResponse::UpdateRuleGroupResponse(
         const UpdateRuleGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new UpdateRuleGroupResponsePrivate(this), parent)
+    : UpdateRuleGroupResponse(new UpdateRuleGroupResponsePrivate(this), parent)
 {
     setRequest(new UpdateRuleGroupRequest(request));
     setReply(reply);

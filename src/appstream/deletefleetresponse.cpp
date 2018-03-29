@@ -46,7 +46,7 @@ DeleteFleetResponse::DeleteFleetResponse(
         const DeleteFleetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppStreamResponse(new DeleteFleetResponsePrivate(this), parent)
+    : DeleteFleetResponse(new DeleteFleetResponsePrivate(this), parent)
 {
     setRequest(new DeleteFleetRequest(request));
     setReply(reply);

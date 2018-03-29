@@ -46,7 +46,7 @@ StopDataCollectionByAgentIdsResponse::StopDataCollectionByAgentIdsResponse(
         const StopDataCollectionByAgentIdsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApplicationDiscoveryServiceResponse(new StopDataCollectionByAgentIdsResponsePrivate(this), parent)
+    : StopDataCollectionByAgentIdsResponse(new StopDataCollectionByAgentIdsResponsePrivate(this), parent)
 {
     setRequest(new StopDataCollectionByAgentIdsRequest(request));
     setReply(reply);

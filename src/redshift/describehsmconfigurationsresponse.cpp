@@ -46,7 +46,7 @@ DescribeHsmConfigurationsResponse::DescribeHsmConfigurationsResponse(
         const DescribeHsmConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DescribeHsmConfigurationsResponsePrivate(this), parent)
+    : DescribeHsmConfigurationsResponse(new DescribeHsmConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeHsmConfigurationsRequest(request));
     setReply(reply);

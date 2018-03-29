@@ -46,7 +46,7 @@ DescribeSessionsResponse::DescribeSessionsResponse(
         const DescribeSessionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppStreamResponse(new DescribeSessionsResponsePrivate(this), parent)
+    : DescribeSessionsResponse(new DescribeSessionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeSessionsRequest(request));
     setReply(reply);

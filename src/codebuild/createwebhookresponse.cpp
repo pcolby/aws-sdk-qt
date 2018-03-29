@@ -46,7 +46,7 @@ CreateWebhookResponse::CreateWebhookResponse(
         const CreateWebhookRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeBuildResponse(new CreateWebhookResponsePrivate(this), parent)
+    : CreateWebhookResponse(new CreateWebhookResponsePrivate(this), parent)
 {
     setRequest(new CreateWebhookRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListDocumentsResponse::ListDocumentsResponse(
         const ListDocumentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new ListDocumentsResponsePrivate(this), parent)
+    : ListDocumentsResponse(new ListDocumentsResponsePrivate(this), parent)
 {
     setRequest(new ListDocumentsRequest(request));
     setReply(reply);

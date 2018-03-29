@@ -46,7 +46,7 @@ AbortMultipartUploadResponse::AbortMultipartUploadResponse(
         const AbortMultipartUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new AbortMultipartUploadResponsePrivate(this), parent)
+    : AbortMultipartUploadResponse(new AbortMultipartUploadResponsePrivate(this), parent)
 {
     setRequest(new AbortMultipartUploadRequest(request));
     setReply(reply);

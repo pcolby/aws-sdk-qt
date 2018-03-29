@@ -46,7 +46,7 @@ ListVerifiedEmailAddressesResponse::ListVerifiedEmailAddressesResponse(
         const ListVerifiedEmailAddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new ListVerifiedEmailAddressesResponsePrivate(this), parent)
+    : ListVerifiedEmailAddressesResponse(new ListVerifiedEmailAddressesResponsePrivate(this), parent)
 {
     setRequest(new ListVerifiedEmailAddressesRequest(request));
     setReply(reply);

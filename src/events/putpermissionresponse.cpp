@@ -46,7 +46,7 @@ PutPermissionResponse::PutPermissionResponse(
         const PutPermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchEventsResponse(new PutPermissionResponsePrivate(this), parent)
+    : PutPermissionResponse(new PutPermissionResponsePrivate(this), parent)
 {
     setRequest(new PutPermissionRequest(request));
     setReply(reply);

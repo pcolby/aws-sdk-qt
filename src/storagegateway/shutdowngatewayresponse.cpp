@@ -46,7 +46,7 @@ ShutdownGatewayResponse::ShutdownGatewayResponse(
         const ShutdownGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new ShutdownGatewayResponsePrivate(this), parent)
+    : ShutdownGatewayResponse(new ShutdownGatewayResponsePrivate(this), parent)
 {
     setRequest(new ShutdownGatewayRequest(request));
     setReply(reply);

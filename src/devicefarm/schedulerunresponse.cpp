@@ -46,7 +46,7 @@ ScheduleRunResponse::ScheduleRunResponse(
         const ScheduleRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new ScheduleRunResponsePrivate(this), parent)
+    : ScheduleRunResponse(new ScheduleRunResponsePrivate(this), parent)
 {
     setRequest(new ScheduleRunRequest(request));
     setReply(reply);

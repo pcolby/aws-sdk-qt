@@ -46,7 +46,7 @@ DetectTextResponse::DetectTextResponse(
         const DetectTextRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RekognitionResponse(new DetectTextResponsePrivate(this), parent)
+    : DetectTextResponse(new DetectTextResponsePrivate(this), parent)
 {
     setRequest(new DetectTextRequest(request));
     setReply(reply);

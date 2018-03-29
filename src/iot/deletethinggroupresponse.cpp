@@ -46,7 +46,7 @@ DeleteThingGroupResponse::DeleteThingGroupResponse(
         const DeleteThingGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new DeleteThingGroupResponsePrivate(this), parent)
+    : DeleteThingGroupResponse(new DeleteThingGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteThingGroupRequest(request));
     setReply(reply);

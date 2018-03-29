@@ -46,7 +46,7 @@ ResolveAliasResponse::ResolveAliasResponse(
         const ResolveAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new ResolveAliasResponsePrivate(this), parent)
+    : ResolveAliasResponse(new ResolveAliasResponsePrivate(this), parent)
 {
     setRequest(new ResolveAliasRequest(request));
     setReply(reply);

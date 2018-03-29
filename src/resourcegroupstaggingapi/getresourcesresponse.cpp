@@ -46,7 +46,7 @@ GetResourcesResponse::GetResourcesResponse(
         const GetResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResourceGroupsTaggingAPIResponse(new GetResourcesResponsePrivate(this), parent)
+    : GetResourcesResponse(new GetResourcesResponsePrivate(this), parent)
 {
     setRequest(new GetResourcesRequest(request));
     setReply(reply);

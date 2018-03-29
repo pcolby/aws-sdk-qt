@@ -46,7 +46,7 @@ DefineSuggesterResponse::DefineSuggesterResponse(
         const DefineSuggesterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudSearchResponse(new DefineSuggesterResponsePrivate(this), parent)
+    : DefineSuggesterResponse(new DefineSuggesterResponsePrivate(this), parent)
 {
     setRequest(new DefineSuggesterRequest(request));
     setReply(reply);

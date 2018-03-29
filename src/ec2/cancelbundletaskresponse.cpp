@@ -46,7 +46,7 @@ CancelBundleTaskResponse::CancelBundleTaskResponse(
         const CancelBundleTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CancelBundleTaskResponsePrivate(this), parent)
+    : CancelBundleTaskResponse(new CancelBundleTaskResponsePrivate(this), parent)
 {
     setRequest(new CancelBundleTaskRequest(request));
     setReply(reply);

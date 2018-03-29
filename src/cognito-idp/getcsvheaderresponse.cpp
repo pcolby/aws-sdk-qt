@@ -46,7 +46,7 @@ GetCSVHeaderResponse::GetCSVHeaderResponse(
         const GetCSVHeaderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new GetCSVHeaderResponsePrivate(this), parent)
+    : GetCSVHeaderResponse(new GetCSVHeaderResponsePrivate(this), parent)
 {
     setRequest(new GetCSVHeaderRequest(request));
     setReply(reply);

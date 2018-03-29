@@ -46,7 +46,7 @@ GetUserResponse::GetUserResponse(
         const GetUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new GetUserResponsePrivate(this), parent)
+    : GetUserResponse(new GetUserResponsePrivate(this), parent)
 {
     setRequest(new GetUserRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeUserProfileResponse::DescribeUserProfileResponse(
         const DescribeUserProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeStarResponse(new DescribeUserProfileResponsePrivate(this), parent)
+    : DescribeUserProfileResponse(new DescribeUserProfileResponsePrivate(this), parent)
 {
     setRequest(new DescribeUserProfileRequest(request));
     setReply(reply);

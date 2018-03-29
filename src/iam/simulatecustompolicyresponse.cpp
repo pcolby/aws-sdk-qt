@@ -46,7 +46,7 @@ SimulateCustomPolicyResponse::SimulateCustomPolicyResponse(
         const SimulateCustomPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new SimulateCustomPolicyResponsePrivate(this), parent)
+    : SimulateCustomPolicyResponse(new SimulateCustomPolicyResponsePrivate(this), parent)
 {
     setRequest(new SimulateCustomPolicyRequest(request));
     setReply(reply);

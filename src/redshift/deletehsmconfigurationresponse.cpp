@@ -46,7 +46,7 @@ DeleteHsmConfigurationResponse::DeleteHsmConfigurationResponse(
         const DeleteHsmConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DeleteHsmConfigurationResponsePrivate(this), parent)
+    : DeleteHsmConfigurationResponse(new DeleteHsmConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DeleteHsmConfigurationRequest(request));
     setReply(reply);

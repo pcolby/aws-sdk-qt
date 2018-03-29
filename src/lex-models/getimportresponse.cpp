@@ -46,7 +46,7 @@ GetImportResponse::GetImportResponse(
         const GetImportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetImportResponsePrivate(this), parent)
+    : GetImportResponse(new GetImportResponsePrivate(this), parent)
 {
     setRequest(new GetImportRequest(request));
     setReply(reply);

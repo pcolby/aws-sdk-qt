@@ -46,7 +46,7 @@ UpdateTagsForResourceResponse::UpdateTagsForResourceResponse(
         const UpdateTagsForResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new UpdateTagsForResourceResponsePrivate(this), parent)
+    : UpdateTagsForResourceResponse(new UpdateTagsForResourceResponsePrivate(this), parent)
 {
     setRequest(new UpdateTagsForResourceRequest(request));
     setReply(reply);

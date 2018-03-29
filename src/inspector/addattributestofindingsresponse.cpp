@@ -46,7 +46,7 @@ AddAttributesToFindingsResponse::AddAttributesToFindingsResponse(
         const AddAttributesToFindingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new AddAttributesToFindingsResponsePrivate(this), parent)
+    : AddAttributesToFindingsResponse(new AddAttributesToFindingsResponsePrivate(this), parent)
 {
     setRequest(new AddAttributesToFindingsRequest(request));
     setReply(reply);

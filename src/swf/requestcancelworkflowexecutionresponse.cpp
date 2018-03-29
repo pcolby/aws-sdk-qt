@@ -46,7 +46,7 @@ RequestCancelWorkflowExecutionResponse::RequestCancelWorkflowExecutionResponse(
         const RequestCancelWorkflowExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new RequestCancelWorkflowExecutionResponsePrivate(this), parent)
+    : RequestCancelWorkflowExecutionResponse(new RequestCancelWorkflowExecutionResponsePrivate(this), parent)
 {
     setRequest(new RequestCancelWorkflowExecutionRequest(request));
     setReply(reply);

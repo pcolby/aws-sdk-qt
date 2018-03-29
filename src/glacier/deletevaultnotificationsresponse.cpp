@@ -46,7 +46,7 @@ DeleteVaultNotificationsResponse::DeleteVaultNotificationsResponse(
         const DeleteVaultNotificationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new DeleteVaultNotificationsResponsePrivate(this), parent)
+    : DeleteVaultNotificationsResponse(new DeleteVaultNotificationsResponsePrivate(this), parent)
 {
     setRequest(new DeleteVaultNotificationsRequest(request));
     setReply(reply);

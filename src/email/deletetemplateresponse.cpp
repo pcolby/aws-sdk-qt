@@ -46,7 +46,7 @@ DeleteTemplateResponse::DeleteTemplateResponse(
         const DeleteTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new DeleteTemplateResponsePrivate(this), parent)
+    : DeleteTemplateResponse(new DeleteTemplateResponsePrivate(this), parent)
 {
     setRequest(new DeleteTemplateRequest(request));
     setReply(reply);

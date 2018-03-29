@@ -46,7 +46,7 @@ CreateReservedInstancesListingResponse::CreateReservedInstancesListingResponse(
         const CreateReservedInstancesListingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateReservedInstancesListingResponsePrivate(this), parent)
+    : CreateReservedInstancesListingResponse(new CreateReservedInstancesListingResponsePrivate(this), parent)
 {
     setRequest(new CreateReservedInstancesListingRequest(request));
     setReply(reply);

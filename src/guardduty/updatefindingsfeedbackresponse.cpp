@@ -46,7 +46,7 @@ UpdateFindingsFeedbackResponse::UpdateFindingsFeedbackResponse(
         const UpdateFindingsFeedbackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GuardDutyResponse(new UpdateFindingsFeedbackResponsePrivate(this), parent)
+    : UpdateFindingsFeedbackResponse(new UpdateFindingsFeedbackResponsePrivate(this), parent)
 {
     setRequest(new UpdateFindingsFeedbackRequest(request));
     setReply(reply);

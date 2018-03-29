@@ -46,7 +46,7 @@ GenerateDataKeyWithoutPlaintextResponse::GenerateDataKeyWithoutPlaintextResponse
         const GenerateDataKeyWithoutPlaintextRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new GenerateDataKeyWithoutPlaintextResponsePrivate(this), parent)
+    : GenerateDataKeyWithoutPlaintextResponse(new GenerateDataKeyWithoutPlaintextResponsePrivate(this), parent)
 {
     setRequest(new GenerateDataKeyWithoutPlaintextRequest(request));
     setReply(reply);

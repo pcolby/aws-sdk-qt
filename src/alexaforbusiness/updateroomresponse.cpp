@@ -46,7 +46,7 @@ UpdateRoomResponse::UpdateRoomResponse(
         const UpdateRoomRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new UpdateRoomResponsePrivate(this), parent)
+    : UpdateRoomResponse(new UpdateRoomResponsePrivate(this), parent)
 {
     setRequest(new UpdateRoomRequest(request));
     setReply(reply);

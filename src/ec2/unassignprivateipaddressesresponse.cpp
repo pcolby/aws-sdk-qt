@@ -46,7 +46,7 @@ UnassignPrivateIpAddressesResponse::UnassignPrivateIpAddressesResponse(
         const UnassignPrivateIpAddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new UnassignPrivateIpAddressesResponsePrivate(this), parent)
+    : UnassignPrivateIpAddressesResponse(new UnassignPrivateIpAddressesResponsePrivate(this), parent)
 {
     setRequest(new UnassignPrivateIpAddressesRequest(request));
     setReply(reply);

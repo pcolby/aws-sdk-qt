@@ -46,7 +46,7 @@ PutCorsPolicyResponse::PutCorsPolicyResponse(
         const PutCorsPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MediaStoreResponse(new PutCorsPolicyResponsePrivate(this), parent)
+    : PutCorsPolicyResponse(new PutCorsPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutCorsPolicyRequest(request));
     setReply(reply);

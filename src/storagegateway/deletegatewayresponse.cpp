@@ -46,7 +46,7 @@ DeleteGatewayResponse::DeleteGatewayResponse(
         const DeleteGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new DeleteGatewayResponsePrivate(this), parent)
+    : DeleteGatewayResponse(new DeleteGatewayResponsePrivate(this), parent)
 {
     setRequest(new DeleteGatewayRequest(request));
     setReply(reply);

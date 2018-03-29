@@ -46,7 +46,7 @@ SendAutomationSignalResponse::SendAutomationSignalResponse(
         const SendAutomationSignalRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new SendAutomationSignalResponsePrivate(this), parent)
+    : SendAutomationSignalResponse(new SendAutomationSignalResponsePrivate(this), parent)
 {
     setRequest(new SendAutomationSignalRequest(request));
     setReply(reply);

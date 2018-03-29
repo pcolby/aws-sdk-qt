@@ -46,7 +46,7 @@ GetServerCertificateResponse::GetServerCertificateResponse(
         const GetServerCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetServerCertificateResponsePrivate(this), parent)
+    : GetServerCertificateResponse(new GetServerCertificateResponsePrivate(this), parent)
 {
     setRequest(new GetServerCertificateRequest(request));
     setReply(reply);

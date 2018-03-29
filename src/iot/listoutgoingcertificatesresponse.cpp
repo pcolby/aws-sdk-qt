@@ -46,7 +46,7 @@ ListOutgoingCertificatesResponse::ListOutgoingCertificatesResponse(
         const ListOutgoingCertificatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new ListOutgoingCertificatesResponsePrivate(this), parent)
+    : ListOutgoingCertificatesResponse(new ListOutgoingCertificatesResponsePrivate(this), parent)
 {
     setRequest(new ListOutgoingCertificatesRequest(request));
     setReply(reply);

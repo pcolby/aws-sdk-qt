@@ -46,7 +46,7 @@ UpdateInstanceCustomHealthStatusResponse::UpdateInstanceCustomHealthStatusRespon
         const UpdateInstanceCustomHealthStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceDiscoveryResponse(new UpdateInstanceCustomHealthStatusResponsePrivate(this), parent)
+    : UpdateInstanceCustomHealthStatusResponse(new UpdateInstanceCustomHealthStatusResponsePrivate(this), parent)
 {
     setRequest(new UpdateInstanceCustomHealthStatusRequest(request));
     setReply(reply);

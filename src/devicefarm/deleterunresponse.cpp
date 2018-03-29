@@ -46,7 +46,7 @@ DeleteRunResponse::DeleteRunResponse(
         const DeleteRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new DeleteRunResponsePrivate(this), parent)
+    : DeleteRunResponse(new DeleteRunResponsePrivate(this), parent)
 {
     setRequest(new DeleteRunRequest(request));
     setReply(reply);

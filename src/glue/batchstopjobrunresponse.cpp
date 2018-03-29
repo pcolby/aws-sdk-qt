@@ -46,7 +46,7 @@ BatchStopJobRunResponse::BatchStopJobRunResponse(
         const BatchStopJobRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new BatchStopJobRunResponsePrivate(this), parent)
+    : BatchStopJobRunResponse(new BatchStopJobRunResponsePrivate(this), parent)
 {
     setRequest(new BatchStopJobRunRequest(request));
     setReply(reply);

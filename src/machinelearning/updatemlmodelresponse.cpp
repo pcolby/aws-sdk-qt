@@ -46,7 +46,7 @@ UpdateMLModelResponse::UpdateMLModelResponse(
         const UpdateMLModelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MachineLearningResponse(new UpdateMLModelResponsePrivate(this), parent)
+    : UpdateMLModelResponse(new UpdateMLModelResponsePrivate(this), parent)
 {
     setRequest(new UpdateMLModelRequest(request));
     setReply(reply);

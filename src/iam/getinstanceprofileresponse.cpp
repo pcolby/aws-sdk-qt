@@ -46,7 +46,7 @@ GetInstanceProfileResponse::GetInstanceProfileResponse(
         const GetInstanceProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new GetInstanceProfileResponsePrivate(this), parent)
+    : GetInstanceProfileResponse(new GetInstanceProfileResponsePrivate(this), parent)
 {
     setRequest(new GetInstanceProfileRequest(request));
     setReply(reply);

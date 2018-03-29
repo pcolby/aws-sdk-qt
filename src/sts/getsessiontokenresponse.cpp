@@ -46,7 +46,7 @@ GetSessionTokenResponse::GetSessionTokenResponse(
         const GetSessionTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : STSResponse(new GetSessionTokenResponsePrivate(this), parent)
+    : GetSessionTokenResponse(new GetSessionTokenResponsePrivate(this), parent)
 {
     setRequest(new GetSessionTokenRequest(request));
     setReply(reply);

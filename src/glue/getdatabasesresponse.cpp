@@ -46,7 +46,7 @@ GetDatabasesResponse::GetDatabasesResponse(
         const GetDatabasesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new GetDatabasesResponsePrivate(this), parent)
+    : GetDatabasesResponse(new GetDatabasesResponsePrivate(this), parent)
 {
     setRequest(new GetDatabasesRequest(request));
     setReply(reply);

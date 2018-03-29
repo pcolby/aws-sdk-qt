@@ -46,7 +46,7 @@ DescribeCACertificateResponse::DescribeCACertificateResponse(
         const DescribeCACertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new DescribeCACertificateResponsePrivate(this), parent)
+    : DescribeCACertificateResponse(new DescribeCACertificateResponsePrivate(this), parent)
 {
     setRequest(new DescribeCACertificateRequest(request));
     setReply(reply);

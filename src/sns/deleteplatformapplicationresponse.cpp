@@ -46,7 +46,7 @@ DeletePlatformApplicationResponse::DeletePlatformApplicationResponse(
         const DeletePlatformApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new DeletePlatformApplicationResponsePrivate(this), parent)
+    : DeletePlatformApplicationResponse(new DeletePlatformApplicationResponsePrivate(this), parent)
 {
     setRequest(new DeletePlatformApplicationRequest(request));
     setReply(reply);

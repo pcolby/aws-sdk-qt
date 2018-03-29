@@ -46,7 +46,7 @@ ListJobsResponse::ListJobsResponse(
         const ListJobsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new ListJobsResponsePrivate(this), parent)
+    : ListJobsResponse(new ListJobsResponsePrivate(this), parent)
 {
     setRequest(new ListJobsRequest(request));
     setReply(reply);

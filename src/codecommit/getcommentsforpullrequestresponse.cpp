@@ -46,7 +46,7 @@ GetCommentsForPullRequestResponse::GetCommentsForPullRequestResponse(
         const GetCommentsForPullRequestRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new GetCommentsForPullRequestResponsePrivate(this), parent)
+    : GetCommentsForPullRequestResponse(new GetCommentsForPullRequestResponsePrivate(this), parent)
 {
     setRequest(new GetCommentsForPullRequestRequest(request));
     setReply(reply);

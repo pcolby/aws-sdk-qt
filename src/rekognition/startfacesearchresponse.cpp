@@ -46,7 +46,7 @@ StartFaceSearchResponse::StartFaceSearchResponse(
         const StartFaceSearchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RekognitionResponse(new StartFaceSearchResponsePrivate(this), parent)
+    : StartFaceSearchResponse(new StartFaceSearchResponsePrivate(this), parent)
 {
     setRequest(new StartFaceSearchRequest(request));
     setReply(reply);

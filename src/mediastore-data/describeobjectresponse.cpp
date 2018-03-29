@@ -46,7 +46,7 @@ DescribeObjectResponse::DescribeObjectResponse(
         const DescribeObjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MediaStoreDataResponse(new DescribeObjectResponsePrivate(this), parent)
+    : DescribeObjectResponse(new DescribeObjectResponsePrivate(this), parent)
 {
     setRequest(new DescribeObjectRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ResetServiceSpecificCredentialResponse::ResetServiceSpecificCredentialResponse(
         const ResetServiceSpecificCredentialRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ResetServiceSpecificCredentialResponsePrivate(this), parent)
+    : ResetServiceSpecificCredentialResponse(new ResetServiceSpecificCredentialResponsePrivate(this), parent)
 {
     setRequest(new ResetServiceSpecificCredentialRequest(request));
     setReply(reply);

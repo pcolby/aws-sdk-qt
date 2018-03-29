@@ -46,7 +46,7 @@ CreateComputerResponse::CreateComputerResponse(
         const CreateComputerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new CreateComputerResponsePrivate(this), parent)
+    : CreateComputerResponse(new CreateComputerResponsePrivate(this), parent)
 {
     setRequest(new CreateComputerRequest(request));
     setReply(reply);

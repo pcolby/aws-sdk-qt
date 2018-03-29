@@ -46,7 +46,7 @@ SetPermissionResponse::SetPermissionResponse(
         const SetPermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new SetPermissionResponsePrivate(this), parent)
+    : SetPermissionResponse(new SetPermissionResponsePrivate(this), parent)
 {
     setRequest(new SetPermissionRequest(request));
     setReply(reply);

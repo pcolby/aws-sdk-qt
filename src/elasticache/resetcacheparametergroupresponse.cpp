@@ -46,7 +46,7 @@ ResetCacheParameterGroupResponse::ResetCacheParameterGroupResponse(
         const ResetCacheParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new ResetCacheParameterGroupResponsePrivate(this), parent)
+    : ResetCacheParameterGroupResponse(new ResetCacheParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new ResetCacheParameterGroupRequest(request));
     setReply(reply);

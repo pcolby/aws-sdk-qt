@@ -46,7 +46,7 @@ DeleteSizeConstraintSetResponse::DeleteSizeConstraintSetResponse(
         const DeleteSizeConstraintSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new DeleteSizeConstraintSetResponsePrivate(this), parent)
+    : DeleteSizeConstraintSetResponse(new DeleteSizeConstraintSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteSizeConstraintSetRequest(request));
     setReply(reply);

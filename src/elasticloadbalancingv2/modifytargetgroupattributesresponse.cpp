@@ -46,7 +46,7 @@ ModifyTargetGroupAttributesResponse::ModifyTargetGroupAttributesResponse(
         const ModifyTargetGroupAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticLoadBalancingv2Response(new ModifyTargetGroupAttributesResponsePrivate(this), parent)
+    : ModifyTargetGroupAttributesResponse(new ModifyTargetGroupAttributesResponsePrivate(this), parent)
 {
     setRequest(new ModifyTargetGroupAttributesRequest(request));
     setReply(reply);

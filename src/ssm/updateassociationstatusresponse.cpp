@@ -46,7 +46,7 @@ UpdateAssociationStatusResponse::UpdateAssociationStatusResponse(
         const UpdateAssociationStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new UpdateAssociationStatusResponsePrivate(this), parent)
+    : UpdateAssociationStatusResponse(new UpdateAssociationStatusResponsePrivate(this), parent)
 {
     setRequest(new UpdateAssociationStatusRequest(request));
     setReply(reply);

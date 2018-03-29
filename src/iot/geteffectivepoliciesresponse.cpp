@@ -46,7 +46,7 @@ GetEffectivePoliciesResponse::GetEffectivePoliciesResponse(
         const GetEffectivePoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new GetEffectivePoliciesResponsePrivate(this), parent)
+    : GetEffectivePoliciesResponse(new GetEffectivePoliciesResponsePrivate(this), parent)
 {
     setRequest(new GetEffectivePoliciesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ PurchaseOfferingResponse::PurchaseOfferingResponse(
         const PurchaseOfferingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new PurchaseOfferingResponsePrivate(this), parent)
+    : PurchaseOfferingResponse(new PurchaseOfferingResponsePrivate(this), parent)
 {
     setRequest(new PurchaseOfferingRequest(request));
     setReply(reply);

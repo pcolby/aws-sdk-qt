@@ -46,7 +46,7 @@ DeleteBucketPolicyResponse::DeleteBucketPolicyResponse(
         const DeleteBucketPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new DeleteBucketPolicyResponsePrivate(this), parent)
+    : DeleteBucketPolicyResponse(new DeleteBucketPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteBucketPolicyRequest(request));
     setReply(reply);

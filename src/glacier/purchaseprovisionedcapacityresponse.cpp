@@ -46,7 +46,7 @@ PurchaseProvisionedCapacityResponse::PurchaseProvisionedCapacityResponse(
         const PurchaseProvisionedCapacityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new PurchaseProvisionedCapacityResponsePrivate(this), parent)
+    : PurchaseProvisionedCapacityResponse(new PurchaseProvisionedCapacityResponsePrivate(this), parent)
 {
     setRequest(new PurchaseProvisionedCapacityRequest(request));
     setReply(reply);

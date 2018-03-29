@@ -46,7 +46,7 @@ UpdateResourceServerResponse::UpdateResourceServerResponse(
         const UpdateResourceServerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new UpdateResourceServerResponsePrivate(this), parent)
+    : UpdateResourceServerResponse(new UpdateResourceServerResponsePrivate(this), parent)
 {
     setRequest(new UpdateResourceServerRequest(request));
     setReply(reply);

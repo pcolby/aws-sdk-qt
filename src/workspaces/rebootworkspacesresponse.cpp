@@ -46,7 +46,7 @@ RebootWorkspacesResponse::RebootWorkspacesResponse(
         const RebootWorkspacesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkSpacesResponse(new RebootWorkspacesResponsePrivate(this), parent)
+    : RebootWorkspacesResponse(new RebootWorkspacesResponsePrivate(this), parent)
 {
     setRequest(new RebootWorkspacesRequest(request));
     setReply(reply);

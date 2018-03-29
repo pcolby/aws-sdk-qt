@@ -46,7 +46,7 @@ CreateApplicationVersionResponse::CreateApplicationVersionResponse(
         const CreateApplicationVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServerlessApplicationRepositoryResponse(new CreateApplicationVersionResponsePrivate(this), parent)
+    : CreateApplicationVersionResponse(new CreateApplicationVersionResponsePrivate(this), parent)
 {
     setRequest(new CreateApplicationVersionRequest(request));
     setReply(reply);

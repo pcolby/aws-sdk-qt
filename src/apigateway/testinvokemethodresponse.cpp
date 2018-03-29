@@ -46,7 +46,7 @@ TestInvokeMethodResponse::TestInvokeMethodResponse(
         const TestInvokeMethodRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new TestInvokeMethodResponsePrivate(this), parent)
+    : TestInvokeMethodResponse(new TestInvokeMethodResponsePrivate(this), parent)
 {
     setRequest(new TestInvokeMethodRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListLoggerDefinitionsResponse::ListLoggerDefinitionsResponse(
         const ListLoggerDefinitionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new ListLoggerDefinitionsResponsePrivate(this), parent)
+    : ListLoggerDefinitionsResponse(new ListLoggerDefinitionsResponsePrivate(this), parent)
 {
     setRequest(new ListLoggerDefinitionsRequest(request));
     setReply(reply);

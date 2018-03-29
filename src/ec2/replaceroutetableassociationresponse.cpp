@@ -46,7 +46,7 @@ ReplaceRouteTableAssociationResponse::ReplaceRouteTableAssociationResponse(
         const ReplaceRouteTableAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ReplaceRouteTableAssociationResponsePrivate(this), parent)
+    : ReplaceRouteTableAssociationResponse(new ReplaceRouteTableAssociationResponsePrivate(this), parent)
 {
     setRequest(new ReplaceRouteTableAssociationRequest(request));
     setReply(reply);

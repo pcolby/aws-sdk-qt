@@ -46,7 +46,7 @@ CreateDefaultSubnetResponse::CreateDefaultSubnetResponse(
         const CreateDefaultSubnetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateDefaultSubnetResponsePrivate(this), parent)
+    : CreateDefaultSubnetResponse(new CreateDefaultSubnetResponsePrivate(this), parent)
 {
     setRequest(new CreateDefaultSubnetRequest(request));
     setReply(reply);

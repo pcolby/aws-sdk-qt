@@ -46,7 +46,7 @@ CreateClusterSnapshotResponse::CreateClusterSnapshotResponse(
         const CreateClusterSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new CreateClusterSnapshotResponsePrivate(this), parent)
+    : CreateClusterSnapshotResponse(new CreateClusterSnapshotResponsePrivate(this), parent)
 {
     setRequest(new CreateClusterSnapshotRequest(request));
     setReply(reply);

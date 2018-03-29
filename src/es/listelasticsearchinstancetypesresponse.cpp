@@ -46,7 +46,7 @@ ListElasticsearchInstanceTypesResponse::ListElasticsearchInstanceTypesResponse(
         const ListElasticsearchInstanceTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new ListElasticsearchInstanceTypesResponsePrivate(this), parent)
+    : ListElasticsearchInstanceTypesResponse(new ListElasticsearchInstanceTypesResponsePrivate(this), parent)
 {
     setRequest(new ListElasticsearchInstanceTypesRequest(request));
     setReply(reply);

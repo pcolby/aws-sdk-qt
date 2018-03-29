@@ -46,7 +46,7 @@ DescribeAutoScalingGroupsResponse::DescribeAutoScalingGroupsResponse(
         const DescribeAutoScalingGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new DescribeAutoScalingGroupsResponsePrivate(this), parent)
+    : DescribeAutoScalingGroupsResponse(new DescribeAutoScalingGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeAutoScalingGroupsRequest(request));
     setReply(reply);

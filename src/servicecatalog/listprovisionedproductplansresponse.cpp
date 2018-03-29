@@ -46,7 +46,7 @@ ListProvisionedProductPlansResponse::ListProvisionedProductPlansResponse(
         const ListProvisionedProductPlansRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new ListProvisionedProductPlansResponsePrivate(this), parent)
+    : ListProvisionedProductPlansResponse(new ListProvisionedProductPlansResponsePrivate(this), parent)
 {
     setRequest(new ListProvisionedProductPlansRequest(request));
     setReply(reply);

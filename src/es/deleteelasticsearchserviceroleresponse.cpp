@@ -46,7 +46,7 @@ DeleteElasticsearchServiceRoleResponse::DeleteElasticsearchServiceRoleResponse(
         const DeleteElasticsearchServiceRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticsearchServiceResponse(new DeleteElasticsearchServiceRoleResponsePrivate(this), parent)
+    : DeleteElasticsearchServiceRoleResponse(new DeleteElasticsearchServiceRoleResponsePrivate(this), parent)
 {
     setRequest(new DeleteElasticsearchServiceRoleRequest(request));
     setReply(reply);

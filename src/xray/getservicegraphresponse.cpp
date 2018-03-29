@@ -46,7 +46,7 @@ GetServiceGraphResponse::GetServiceGraphResponse(
         const GetServiceGraphRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : XRayResponse(new GetServiceGraphResponsePrivate(this), parent)
+    : GetServiceGraphResponse(new GetServiceGraphResponsePrivate(this), parent)
 {
     setRequest(new GetServiceGraphRequest(request));
     setReply(reply);

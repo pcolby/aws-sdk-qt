@@ -46,7 +46,7 @@ UpdateLagResponse::UpdateLagResponse(
         const UpdateLagRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectConnectResponse(new UpdateLagResponsePrivate(this), parent)
+    : UpdateLagResponse(new UpdateLagResponsePrivate(this), parent)
 {
     setRequest(new UpdateLagRequest(request));
     setReply(reply);

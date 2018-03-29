@@ -46,7 +46,7 @@ CreateCoreDefinitionResponse::CreateCoreDefinitionResponse(
         const CreateCoreDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new CreateCoreDefinitionResponsePrivate(this), parent)
+    : CreateCoreDefinitionResponse(new CreateCoreDefinitionResponsePrivate(this), parent)
 {
     setRequest(new CreateCoreDefinitionRequest(request));
     setReply(reply);

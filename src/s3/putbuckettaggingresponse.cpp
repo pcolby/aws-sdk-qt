@@ -46,7 +46,7 @@ PutBucketTaggingResponse::PutBucketTaggingResponse(
         const PutBucketTaggingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new PutBucketTaggingResponsePrivate(this), parent)
+    : PutBucketTaggingResponse(new PutBucketTaggingResponsePrivate(this), parent)
 {
     setRequest(new PutBucketTaggingRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteBackupResponse::DeleteBackupResponse(
         const DeleteBackupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new DeleteBackupResponsePrivate(this), parent)
+    : DeleteBackupResponse(new DeleteBackupResponsePrivate(this), parent)
 {
     setRequest(new DeleteBackupRequest(request));
     setReply(reply);

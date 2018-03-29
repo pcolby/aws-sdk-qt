@@ -46,7 +46,7 @@ CreateJobResponse::CreateJobResponse(
         const CreateJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SnowballResponse(new CreateJobResponsePrivate(this), parent)
+    : CreateJobResponse(new CreateJobResponsePrivate(this), parent)
 {
     setRequest(new CreateJobRequest(request));
     setReply(reply);

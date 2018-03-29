@@ -46,7 +46,7 @@ ModifyClusterResponse::ModifyClusterResponse(
         const ModifyClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new ModifyClusterResponsePrivate(this), parent)
+    : ModifyClusterResponse(new ModifyClusterResponsePrivate(this), parent)
 {
     setRequest(new ModifyClusterRequest(request));
     setReply(reply);

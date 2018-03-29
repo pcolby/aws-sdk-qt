@@ -46,7 +46,7 @@ LookupEventsResponse::LookupEventsResponse(
         const LookupEventsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudTrailResponse(new LookupEventsResponsePrivate(this), parent)
+    : LookupEventsResponse(new LookupEventsResponsePrivate(this), parent)
 {
     setRequest(new LookupEventsRequest(request));
     setReply(reply);

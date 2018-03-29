@@ -46,7 +46,7 @@ DeleteItemResponse::DeleteItemResponse(
         const DeleteItemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new DeleteItemResponsePrivate(this), parent)
+    : DeleteItemResponse(new DeleteItemResponsePrivate(this), parent)
 {
     setRequest(new DeleteItemRequest(request));
     setReply(reply);

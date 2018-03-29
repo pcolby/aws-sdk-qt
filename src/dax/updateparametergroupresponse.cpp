@@ -46,7 +46,7 @@ UpdateParameterGroupResponse::UpdateParameterGroupResponse(
         const UpdateParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new UpdateParameterGroupResponsePrivate(this), parent)
+    : UpdateParameterGroupResponse(new UpdateParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new UpdateParameterGroupRequest(request));
     setReply(reply);

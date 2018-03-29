@@ -46,7 +46,7 @@ DeleteQueueResponse::DeleteQueueResponse(
         const DeleteQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new DeleteQueueResponsePrivate(this), parent)
+    : DeleteQueueResponse(new DeleteQueueResponsePrivate(this), parent)
 {
     setRequest(new DeleteQueueRequest(request));
     setReply(reply);

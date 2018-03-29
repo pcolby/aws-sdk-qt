@@ -46,7 +46,7 @@ UpdateAssessmentTargetResponse::UpdateAssessmentTargetResponse(
         const UpdateAssessmentTargetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new UpdateAssessmentTargetResponsePrivate(this), parent)
+    : UpdateAssessmentTargetResponse(new UpdateAssessmentTargetResponsePrivate(this), parent)
 {
     setRequest(new UpdateAssessmentTargetRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListResourceRecordSetsResponse::ListResourceRecordSetsResponse(
         const ListResourceRecordSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new ListResourceRecordSetsResponsePrivate(this), parent)
+    : ListResourceRecordSetsResponse(new ListResourceRecordSetsResponsePrivate(this), parent)
 {
     setRequest(new ListResourceRecordSetsRequest(request));
     setReply(reply);

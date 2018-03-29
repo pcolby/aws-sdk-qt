@@ -46,7 +46,7 @@ AdminRemoveUserFromGroupResponse::AdminRemoveUserFromGroupResponse(
         const AdminRemoveUserFromGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new AdminRemoveUserFromGroupResponsePrivate(this), parent)
+    : AdminRemoveUserFromGroupResponse(new AdminRemoveUserFromGroupResponsePrivate(this), parent)
 {
     setRequest(new AdminRemoveUserFromGroupRequest(request));
     setReply(reply);

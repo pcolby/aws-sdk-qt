@@ -46,7 +46,7 @@ AdminDeleteUserResponse::AdminDeleteUserResponse(
         const AdminDeleteUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new AdminDeleteUserResponsePrivate(this), parent)
+    : AdminDeleteUserResponse(new AdminDeleteUserResponsePrivate(this), parent)
 {
     setRequest(new AdminDeleteUserRequest(request));
     setReply(reply);

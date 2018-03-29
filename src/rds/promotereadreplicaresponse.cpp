@@ -46,7 +46,7 @@ PromoteReadReplicaResponse::PromoteReadReplicaResponse(
         const PromoteReadReplicaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new PromoteReadReplicaResponsePrivate(this), parent)
+    : PromoteReadReplicaResponse(new PromoteReadReplicaResponsePrivate(this), parent)
 {
     setRequest(new PromoteReadReplicaRequest(request));
     setReply(reply);

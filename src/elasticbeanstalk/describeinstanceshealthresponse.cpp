@@ -46,7 +46,7 @@ DescribeInstancesHealthResponse::DescribeInstancesHealthResponse(
         const DescribeInstancesHealthRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new DescribeInstancesHealthResponsePrivate(this), parent)
+    : DescribeInstancesHealthResponse(new DescribeInstancesHealthResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstancesHealthRequest(request));
     setReply(reply);

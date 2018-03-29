@@ -46,7 +46,7 @@ CreateDatabaseResponse::CreateDatabaseResponse(
         const CreateDatabaseRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new CreateDatabaseResponsePrivate(this), parent)
+    : CreateDatabaseResponse(new CreateDatabaseResponsePrivate(this), parent)
 {
     setRequest(new CreateDatabaseRequest(request));
     setReply(reply);

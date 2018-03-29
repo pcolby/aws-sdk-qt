@@ -46,7 +46,7 @@ SetLoadBasedAutoScalingResponse::SetLoadBasedAutoScalingResponse(
         const SetLoadBasedAutoScalingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new SetLoadBasedAutoScalingResponsePrivate(this), parent)
+    : SetLoadBasedAutoScalingResponse(new SetLoadBasedAutoScalingResponsePrivate(this), parent)
 {
     setRequest(new SetLoadBasedAutoScalingRequest(request));
     setReply(reply);

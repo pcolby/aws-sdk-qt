@@ -46,7 +46,7 @@ CreateClusterResponse::CreateClusterResponse(
         const CreateClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new CreateClusterResponsePrivate(this), parent)
+    : CreateClusterResponse(new CreateClusterResponsePrivate(this), parent)
 {
     setRequest(new CreateClusterRequest(request));
     setReply(reply);

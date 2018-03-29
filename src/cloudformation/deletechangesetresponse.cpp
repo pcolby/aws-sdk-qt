@@ -46,7 +46,7 @@ DeleteChangeSetResponse::DeleteChangeSetResponse(
         const DeleteChangeSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFormationResponse(new DeleteChangeSetResponsePrivate(this), parent)
+    : DeleteChangeSetResponse(new DeleteChangeSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteChangeSetRequest(request));
     setReply(reply);

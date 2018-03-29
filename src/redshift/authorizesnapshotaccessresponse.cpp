@@ -46,7 +46,7 @@ AuthorizeSnapshotAccessResponse::AuthorizeSnapshotAccessResponse(
         const AuthorizeSnapshotAccessRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new AuthorizeSnapshotAccessResponsePrivate(this), parent)
+    : AuthorizeSnapshotAccessResponse(new AuthorizeSnapshotAccessResponsePrivate(this), parent)
 {
     setRequest(new AuthorizeSnapshotAccessRequest(request));
     setReply(reply);

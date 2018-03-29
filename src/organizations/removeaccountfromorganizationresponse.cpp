@@ -46,7 +46,7 @@ RemoveAccountFromOrganizationResponse::RemoveAccountFromOrganizationResponse(
         const RemoveAccountFromOrganizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OrganizationsResponse(new RemoveAccountFromOrganizationResponsePrivate(this), parent)
+    : RemoveAccountFromOrganizationResponse(new RemoveAccountFromOrganizationResponsePrivate(this), parent)
 {
     setRequest(new RemoveAccountFromOrganizationRequest(request));
     setReply(reply);

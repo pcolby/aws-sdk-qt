@@ -46,7 +46,7 @@ UpdateLoginProfileResponse::UpdateLoginProfileResponse(
         const UpdateLoginProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new UpdateLoginProfileResponsePrivate(this), parent)
+    : UpdateLoginProfileResponse(new UpdateLoginProfileResponsePrivate(this), parent)
 {
     setRequest(new UpdateLoginProfileRequest(request));
     setReply(reply);

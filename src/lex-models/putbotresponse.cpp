@@ -46,7 +46,7 @@ PutBotResponse::PutBotResponse(
         const PutBotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new PutBotResponsePrivate(this), parent)
+    : PutBotResponse(new PutBotResponsePrivate(this), parent)
 {
     setRequest(new PutBotRequest(request));
     setReply(reply);

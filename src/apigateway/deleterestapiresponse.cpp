@@ -46,7 +46,7 @@ DeleteRestApiResponse::DeleteRestApiResponse(
         const DeleteRestApiRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new DeleteRestApiResponsePrivate(this), parent)
+    : DeleteRestApiResponse(new DeleteRestApiResponsePrivate(this), parent)
 {
     setRequest(new DeleteRestApiRequest(request));
     setReply(reply);

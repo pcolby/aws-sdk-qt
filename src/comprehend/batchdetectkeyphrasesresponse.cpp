@@ -46,7 +46,7 @@ BatchDetectKeyPhrasesResponse::BatchDetectKeyPhrasesResponse(
         const BatchDetectKeyPhrasesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ComprehendResponse(new BatchDetectKeyPhrasesResponsePrivate(this), parent)
+    : BatchDetectKeyPhrasesResponse(new BatchDetectKeyPhrasesResponsePrivate(this), parent)
 {
     setRequest(new BatchDetectKeyPhrasesRequest(request));
     setReply(reply);

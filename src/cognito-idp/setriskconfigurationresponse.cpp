@@ -46,7 +46,7 @@ SetRiskConfigurationResponse::SetRiskConfigurationResponse(
         const SetRiskConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new SetRiskConfigurationResponsePrivate(this), parent)
+    : SetRiskConfigurationResponse(new SetRiskConfigurationResponsePrivate(this), parent)
 {
     setRequest(new SetRiskConfigurationRequest(request));
     setReply(reply);

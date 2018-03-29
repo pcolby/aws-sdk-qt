@@ -46,7 +46,7 @@ DescribeTrustsResponse::DescribeTrustsResponse(
         const DescribeTrustsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new DescribeTrustsResponsePrivate(this), parent)
+    : DescribeTrustsResponse(new DescribeTrustsResponsePrivate(this), parent)
 {
     setRequest(new DescribeTrustsRequest(request));
     setReply(reply);

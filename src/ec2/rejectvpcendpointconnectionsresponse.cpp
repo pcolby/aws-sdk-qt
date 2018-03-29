@@ -46,7 +46,7 @@ RejectVpcEndpointConnectionsResponse::RejectVpcEndpointConnectionsResponse(
         const RejectVpcEndpointConnectionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new RejectVpcEndpointConnectionsResponsePrivate(this), parent)
+    : RejectVpcEndpointConnectionsResponse(new RejectVpcEndpointConnectionsResponsePrivate(this), parent)
 {
     setRequest(new RejectVpcEndpointConnectionsRequest(request));
     setReply(reply);

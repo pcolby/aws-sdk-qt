@@ -46,7 +46,7 @@ ListPolicyVersionsResponse::ListPolicyVersionsResponse(
         const ListPolicyVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new ListPolicyVersionsResponsePrivate(this), parent)
+    : ListPolicyVersionsResponse(new ListPolicyVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListPolicyVersionsRequest(request));
     setReply(reply);

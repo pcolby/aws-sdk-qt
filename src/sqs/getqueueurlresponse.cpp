@@ -46,7 +46,7 @@ GetQueueUrlResponse::GetQueueUrlResponse(
         const GetQueueUrlRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new GetQueueUrlResponsePrivate(this), parent)
+    : GetQueueUrlResponse(new GetQueueUrlResponsePrivate(this), parent)
 {
     setRequest(new GetQueueUrlRequest(request));
     setReply(reply);

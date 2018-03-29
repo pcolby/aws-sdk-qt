@@ -46,7 +46,7 @@ DescribeBackupResponse::DescribeBackupResponse(
         const DescribeBackupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new DescribeBackupResponsePrivate(this), parent)
+    : DescribeBackupResponse(new DescribeBackupResponsePrivate(this), parent)
 {
     setRequest(new DescribeBackupRequest(request));
     setReply(reply);

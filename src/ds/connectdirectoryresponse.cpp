@@ -46,7 +46,7 @@ ConnectDirectoryResponse::ConnectDirectoryResponse(
         const ConnectDirectoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new ConnectDirectoryResponsePrivate(this), parent)
+    : ConnectDirectoryResponse(new ConnectDirectoryResponsePrivate(this), parent)
 {
     setRequest(new ConnectDirectoryRequest(request));
     setReply(reply);

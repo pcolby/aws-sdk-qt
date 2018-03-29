@@ -46,7 +46,7 @@ MonitorInstancesResponse::MonitorInstancesResponse(
         const MonitorInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new MonitorInstancesResponsePrivate(this), parent)
+    : MonitorInstancesResponse(new MonitorInstancesResponsePrivate(this), parent)
 {
     setRequest(new MonitorInstancesRequest(request));
     setReply(reply);

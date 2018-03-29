@@ -46,7 +46,7 @@ DescribeVpcClassicLinkDnsSupportResponse::DescribeVpcClassicLinkDnsSupportRespon
         const DescribeVpcClassicLinkDnsSupportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeVpcClassicLinkDnsSupportResponsePrivate(this), parent)
+    : DescribeVpcClassicLinkDnsSupportResponse(new DescribeVpcClassicLinkDnsSupportResponsePrivate(this), parent)
 {
     setRequest(new DescribeVpcClassicLinkDnsSupportRequest(request));
     setReply(reply);

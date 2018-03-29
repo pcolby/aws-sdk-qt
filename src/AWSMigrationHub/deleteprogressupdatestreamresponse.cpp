@@ -46,7 +46,7 @@ DeleteProgressUpdateStreamResponse::DeleteProgressUpdateStreamResponse(
         const DeleteProgressUpdateStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MigrationHubResponse(new DeleteProgressUpdateStreamResponsePrivate(this), parent)
+    : DeleteProgressUpdateStreamResponse(new DeleteProgressUpdateStreamResponsePrivate(this), parent)
 {
     setRequest(new DeleteProgressUpdateStreamRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeReservedDBInstancesOfferingsResponse::DescribeReservedDBInstancesOfferin
         const DescribeReservedDBInstancesOfferingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeReservedDBInstancesOfferingsResponsePrivate(this), parent)
+    : DescribeReservedDBInstancesOfferingsResponse(new DescribeReservedDBInstancesOfferingsResponsePrivate(this), parent)
 {
     setRequest(new DescribeReservedDBInstancesOfferingsRequest(request));
     setReply(reply);

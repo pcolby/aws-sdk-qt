@@ -46,7 +46,7 @@ UpdateElasticIpResponse::UpdateElasticIpResponse(
         const UpdateElasticIpRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new UpdateElasticIpResponsePrivate(this), parent)
+    : UpdateElasticIpResponse(new UpdateElasticIpResponsePrivate(this), parent)
 {
     setRequest(new UpdateElasticIpRequest(request));
     setReply(reply);

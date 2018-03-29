@@ -46,7 +46,7 @@ AuthorizeClusterSecurityGroupIngressResponse::AuthorizeClusterSecurityGroupIngre
         const AuthorizeClusterSecurityGroupIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new AuthorizeClusterSecurityGroupIngressResponsePrivate(this), parent)
+    : AuthorizeClusterSecurityGroupIngressResponse(new AuthorizeClusterSecurityGroupIngressResponsePrivate(this), parent)
 {
     setRequest(new AuthorizeClusterSecurityGroupIngressRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RegisterCACertificateResponse::RegisterCACertificateResponse(
         const RegisterCACertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new RegisterCACertificateResponsePrivate(this), parent)
+    : RegisterCACertificateResponse(new RegisterCACertificateResponsePrivate(this), parent)
 {
     setRequest(new RegisterCACertificateRequest(request));
     setReply(reply);

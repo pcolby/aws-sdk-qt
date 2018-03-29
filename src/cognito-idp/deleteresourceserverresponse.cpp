@@ -46,7 +46,7 @@ DeleteResourceServerResponse::DeleteResourceServerResponse(
         const DeleteResourceServerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new DeleteResourceServerResponsePrivate(this), parent)
+    : DeleteResourceServerResponse(new DeleteResourceServerResponsePrivate(this), parent)
 {
     setRequest(new DeleteResourceServerRequest(request));
     setReply(reply);

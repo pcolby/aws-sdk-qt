@@ -46,7 +46,7 @@ AttachNetworkInterfaceResponse::AttachNetworkInterfaceResponse(
         const AttachNetworkInterfaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AttachNetworkInterfaceResponsePrivate(this), parent)
+    : AttachNetworkInterfaceResponse(new AttachNetworkInterfaceResponsePrivate(this), parent)
 {
     setRequest(new AttachNetworkInterfaceRequest(request));
     setReply(reply);

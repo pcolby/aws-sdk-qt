@@ -46,7 +46,7 @@ ListAuthorizersResponse::ListAuthorizersResponse(
         const ListAuthorizersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new ListAuthorizersResponsePrivate(this), parent)
+    : ListAuthorizersResponse(new ListAuthorizersResponsePrivate(this), parent)
 {
     setRequest(new ListAuthorizersRequest(request));
     setReply(reply);

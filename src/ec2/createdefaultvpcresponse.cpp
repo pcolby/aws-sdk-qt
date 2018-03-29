@@ -46,7 +46,7 @@ CreateDefaultVpcResponse::CreateDefaultVpcResponse(
         const CreateDefaultVpcRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CreateDefaultVpcResponsePrivate(this), parent)
+    : CreateDefaultVpcResponse(new CreateDefaultVpcResponsePrivate(this), parent)
 {
     setRequest(new CreateDefaultVpcRequest(request));
     setReply(reply);

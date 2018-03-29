@@ -46,7 +46,7 @@ DescribePlatformVersionResponse::DescribePlatformVersionResponse(
         const DescribePlatformVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new DescribePlatformVersionResponsePrivate(this), parent)
+    : DescribePlatformVersionResponse(new DescribePlatformVersionResponsePrivate(this), parent)
 {
     setRequest(new DescribePlatformVersionRequest(request));
     setReply(reply);

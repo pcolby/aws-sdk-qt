@@ -46,7 +46,7 @@ DeleteFacesResponse::DeleteFacesResponse(
         const DeleteFacesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RekognitionResponse(new DeleteFacesResponsePrivate(this), parent)
+    : DeleteFacesResponse(new DeleteFacesResponsePrivate(this), parent)
 {
     setRequest(new DeleteFacesRequest(request));
     setReply(reply);

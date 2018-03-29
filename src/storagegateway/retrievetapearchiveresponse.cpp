@@ -46,7 +46,7 @@ RetrieveTapeArchiveResponse::RetrieveTapeArchiveResponse(
         const RetrieveTapeArchiveRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new RetrieveTapeArchiveResponsePrivate(this), parent)
+    : RetrieveTapeArchiveResponse(new RetrieveTapeArchiveResponsePrivate(this), parent)
 {
     setRequest(new RetrieveTapeArchiveRequest(request));
     setReply(reply);

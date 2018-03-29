@@ -46,7 +46,7 @@ ListStateMachinesResponse::ListStateMachinesResponse(
         const ListStateMachinesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new ListStateMachinesResponsePrivate(this), parent)
+    : ListStateMachinesResponse(new ListStateMachinesResponsePrivate(this), parent)
 {
     setRequest(new ListStateMachinesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SetLoadBalancerPoliciesOfListenerResponse::SetLoadBalancerPoliciesOfListenerResp
         const SetLoadBalancerPoliciesOfListenerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticLoadBalancingResponse(new SetLoadBalancerPoliciesOfListenerResponsePrivate(this), parent)
+    : SetLoadBalancerPoliciesOfListenerResponse(new SetLoadBalancerPoliciesOfListenerResponsePrivate(this), parent)
 {
     setRequest(new SetLoadBalancerPoliciesOfListenerRequest(request));
     setReply(reply);

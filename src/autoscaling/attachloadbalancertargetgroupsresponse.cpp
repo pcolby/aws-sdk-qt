@@ -46,7 +46,7 @@ AttachLoadBalancerTargetGroupsResponse::AttachLoadBalancerTargetGroupsResponse(
         const AttachLoadBalancerTargetGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new AttachLoadBalancerTargetGroupsResponsePrivate(this), parent)
+    : AttachLoadBalancerTargetGroupsResponse(new AttachLoadBalancerTargetGroupsResponsePrivate(this), parent)
 {
     setRequest(new AttachLoadBalancerTargetGroupsRequest(request));
     setReply(reply);

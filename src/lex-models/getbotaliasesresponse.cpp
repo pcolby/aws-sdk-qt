@@ -46,7 +46,7 @@ GetBotAliasesResponse::GetBotAliasesResponse(
         const GetBotAliasesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new GetBotAliasesResponsePrivate(this), parent)
+    : GetBotAliasesResponse(new GetBotAliasesResponsePrivate(this), parent)
 {
     setRequest(new GetBotAliasesRequest(request));
     setReply(reply);

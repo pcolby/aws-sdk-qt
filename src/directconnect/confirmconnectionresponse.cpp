@@ -46,7 +46,7 @@ ConfirmConnectionResponse::ConfirmConnectionResponse(
         const ConfirmConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectConnectResponse(new ConfirmConnectionResponsePrivate(this), parent)
+    : ConfirmConnectionResponse(new ConfirmConnectionResponsePrivate(this), parent)
 {
     setRequest(new ConfirmConnectionRequest(request));
     setReply(reply);

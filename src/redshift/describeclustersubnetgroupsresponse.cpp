@@ -46,7 +46,7 @@ DescribeClusterSubnetGroupsResponse::DescribeClusterSubnetGroupsResponse(
         const DescribeClusterSubnetGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DescribeClusterSubnetGroupsResponsePrivate(this), parent)
+    : DescribeClusterSubnetGroupsResponse(new DescribeClusterSubnetGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeClusterSubnetGroupsRequest(request));
     setReply(reply);

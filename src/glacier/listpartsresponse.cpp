@@ -46,7 +46,7 @@ ListPartsResponse::ListPartsResponse(
         const ListPartsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new ListPartsResponsePrivate(this), parent)
+    : ListPartsResponse(new ListPartsResponsePrivate(this), parent)
 {
     setRequest(new ListPartsRequest(request));
     setReply(reply);

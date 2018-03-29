@@ -46,7 +46,7 @@ GetBlueprintsResponse::GetBlueprintsResponse(
         const GetBlueprintsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new GetBlueprintsResponsePrivate(this), parent)
+    : GetBlueprintsResponse(new GetBlueprintsResponsePrivate(this), parent)
 {
     setRequest(new GetBlueprintsRequest(request));
     setReply(reply);

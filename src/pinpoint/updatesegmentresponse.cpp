@@ -46,7 +46,7 @@ UpdateSegmentResponse::UpdateSegmentResponse(
         const UpdateSegmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new UpdateSegmentResponsePrivate(this), parent)
+    : UpdateSegmentResponse(new UpdateSegmentResponsePrivate(this), parent)
 {
     setRequest(new UpdateSegmentRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateGraphqlApiResponse::UpdateGraphqlApiResponse(
         const UpdateGraphqlApiRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppSyncResponse(new UpdateGraphqlApiResponsePrivate(this), parent)
+    : UpdateGraphqlApiResponse(new UpdateGraphqlApiResponsePrivate(this), parent)
 {
     setRequest(new UpdateGraphqlApiRequest(request));
     setReply(reply);

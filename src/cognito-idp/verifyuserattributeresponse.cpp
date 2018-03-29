@@ -46,7 +46,7 @@ VerifyUserAttributeResponse::VerifyUserAttributeResponse(
         const VerifyUserAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new VerifyUserAttributeResponsePrivate(this), parent)
+    : VerifyUserAttributeResponse(new VerifyUserAttributeResponsePrivate(this), parent)
 {
     setRequest(new VerifyUserAttributeRequest(request));
     setReply(reply);

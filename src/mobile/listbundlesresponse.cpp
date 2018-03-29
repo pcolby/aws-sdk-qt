@@ -46,7 +46,7 @@ ListBundlesResponse::ListBundlesResponse(
         const ListBundlesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MobileResponse(new ListBundlesResponsePrivate(this), parent)
+    : ListBundlesResponse(new ListBundlesResponsePrivate(this), parent)
 {
     setRequest(new ListBundlesRequest(request));
     setReply(reply);

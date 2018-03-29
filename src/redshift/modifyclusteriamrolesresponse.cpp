@@ -46,7 +46,7 @@ ModifyClusterIamRolesResponse::ModifyClusterIamRolesResponse(
         const ModifyClusterIamRolesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new ModifyClusterIamRolesResponsePrivate(this), parent)
+    : ModifyClusterIamRolesResponse(new ModifyClusterIamRolesResponsePrivate(this), parent)
 {
     setRequest(new ModifyClusterIamRolesRequest(request));
     setReply(reply);

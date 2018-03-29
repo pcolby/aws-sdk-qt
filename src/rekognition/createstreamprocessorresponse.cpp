@@ -46,7 +46,7 @@ CreateStreamProcessorResponse::CreateStreamProcessorResponse(
         const CreateStreamProcessorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RekognitionResponse(new CreateStreamProcessorResponsePrivate(this), parent)
+    : CreateStreamProcessorResponse(new CreateStreamProcessorResponsePrivate(this), parent)
 {
     setRequest(new CreateStreamProcessorRequest(request));
     setReply(reply);

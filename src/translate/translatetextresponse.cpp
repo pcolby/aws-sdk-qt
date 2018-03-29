@@ -46,7 +46,7 @@ TranslateTextResponse::TranslateTextResponse(
         const TranslateTextRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : TranslateResponse(new TranslateTextResponsePrivate(this), parent)
+    : TranslateTextResponse(new TranslateTextResponsePrivate(this), parent)
 {
     setRequest(new TranslateTextRequest(request));
     setReply(reply);

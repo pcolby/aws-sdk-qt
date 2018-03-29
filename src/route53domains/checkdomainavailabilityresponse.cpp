@@ -46,7 +46,7 @@ CheckDomainAvailabilityResponse::CheckDomainAvailabilityResponse(
         const CheckDomainAvailabilityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53DomainsResponse(new CheckDomainAvailabilityResponsePrivate(this), parent)
+    : CheckDomainAvailabilityResponse(new CheckDomainAvailabilityResponsePrivate(this), parent)
 {
     setRequest(new CheckDomainAvailabilityRequest(request));
     setReply(reply);

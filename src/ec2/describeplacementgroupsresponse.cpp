@@ -46,7 +46,7 @@ DescribePlacementGroupsResponse::DescribePlacementGroupsResponse(
         const DescribePlacementGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribePlacementGroupsResponsePrivate(this), parent)
+    : DescribePlacementGroupsResponse(new DescribePlacementGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribePlacementGroupsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StartSchemaCreationResponse::StartSchemaCreationResponse(
         const StartSchemaCreationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppSyncResponse(new StartSchemaCreationResponsePrivate(this), parent)
+    : StartSchemaCreationResponse(new StartSchemaCreationResponsePrivate(this), parent)
 {
     setRequest(new StartSchemaCreationRequest(request));
     setReply(reply);

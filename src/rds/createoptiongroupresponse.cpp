@@ -46,7 +46,7 @@ CreateOptionGroupResponse::CreateOptionGroupResponse(
         const CreateOptionGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CreateOptionGroupResponsePrivate(this), parent)
+    : CreateOptionGroupResponse(new CreateOptionGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateOptionGroupRequest(request));
     setReply(reply);

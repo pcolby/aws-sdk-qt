@@ -46,7 +46,7 @@ ListTagOptionsResponse::ListTagOptionsResponse(
         const ListTagOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new ListTagOptionsResponsePrivate(this), parent)
+    : ListTagOptionsResponse(new ListTagOptionsResponsePrivate(this), parent)
 {
     setRequest(new ListTagOptionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateRepositoryResponse::CreateRepositoryResponse(
         const CreateRepositoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new CreateRepositoryResponsePrivate(this), parent)
+    : CreateRepositoryResponse(new CreateRepositoryResponsePrivate(this), parent)
 {
     setRequest(new CreateRepositoryRequest(request));
     setReply(reply);

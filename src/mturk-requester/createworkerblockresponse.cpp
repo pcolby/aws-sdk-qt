@@ -46,7 +46,7 @@ CreateWorkerBlockResponse::CreateWorkerBlockResponse(
         const CreateWorkerBlockRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new CreateWorkerBlockResponsePrivate(this), parent)
+    : CreateWorkerBlockResponse(new CreateWorkerBlockResponsePrivate(this), parent)
 {
     setRequest(new CreateWorkerBlockRequest(request));
     setReply(reply);

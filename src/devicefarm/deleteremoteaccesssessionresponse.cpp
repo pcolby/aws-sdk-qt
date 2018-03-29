@@ -46,7 +46,7 @@ DeleteRemoteAccessSessionResponse::DeleteRemoteAccessSessionResponse(
         const DeleteRemoteAccessSessionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new DeleteRemoteAccessSessionResponsePrivate(this), parent)
+    : DeleteRemoteAccessSessionResponse(new DeleteRemoteAccessSessionResponsePrivate(this), parent)
 {
     setRequest(new DeleteRemoteAccessSessionRequest(request));
     setReply(reply);

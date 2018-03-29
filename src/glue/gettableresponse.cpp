@@ -46,7 +46,7 @@ GetTableResponse::GetTableResponse(
         const GetTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new GetTableResponsePrivate(this), parent)
+    : GetTableResponse(new GetTableResponsePrivate(this), parent)
 {
     setRequest(new GetTableRequest(request));
     setReply(reply);

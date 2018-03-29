@@ -46,7 +46,7 @@ GetContactReachabilityStatusResponse::GetContactReachabilityStatusResponse(
         const GetContactReachabilityStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53DomainsResponse(new GetContactReachabilityStatusResponsePrivate(this), parent)
+    : GetContactReachabilityStatusResponse(new GetContactReachabilityStatusResponsePrivate(this), parent)
 {
     setRequest(new GetContactReachabilityStatusRequest(request));
     setReply(reply);

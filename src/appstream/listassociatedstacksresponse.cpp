@@ -46,7 +46,7 @@ ListAssociatedStacksResponse::ListAssociatedStacksResponse(
         const ListAssociatedStacksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppStreamResponse(new ListAssociatedStacksResponsePrivate(this), parent)
+    : ListAssociatedStacksResponse(new ListAssociatedStacksResponsePrivate(this), parent)
 {
     setRequest(new ListAssociatedStacksRequest(request));
     setReply(reply);

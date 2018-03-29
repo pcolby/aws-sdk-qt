@@ -46,7 +46,7 @@ VerifyEmailAddressResponse::VerifyEmailAddressResponse(
         const VerifyEmailAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SESResponse(new VerifyEmailAddressResponsePrivate(this), parent)
+    : VerifyEmailAddressResponse(new VerifyEmailAddressResponsePrivate(this), parent)
 {
     setRequest(new VerifyEmailAddressRequest(request));
     setReply(reply);

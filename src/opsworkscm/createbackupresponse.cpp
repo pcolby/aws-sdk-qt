@@ -46,7 +46,7 @@ CreateBackupResponse::CreateBackupResponse(
         const CreateBackupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new CreateBackupResponsePrivate(this), parent)
+    : CreateBackupResponse(new CreateBackupResponsePrivate(this), parent)
 {
     setRequest(new CreateBackupRequest(request));
     setReply(reply);

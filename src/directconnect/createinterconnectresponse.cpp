@@ -46,7 +46,7 @@ CreateInterconnectResponse::CreateInterconnectResponse(
         const CreateInterconnectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectConnectResponse(new CreateInterconnectResponsePrivate(this), parent)
+    : CreateInterconnectResponse(new CreateInterconnectResponsePrivate(this), parent)
 {
     setRequest(new CreateInterconnectRequest(request));
     setReply(reply);

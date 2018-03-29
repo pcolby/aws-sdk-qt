@@ -46,7 +46,7 @@ DescribeInternetGatewaysResponse::DescribeInternetGatewaysResponse(
         const DescribeInternetGatewaysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeInternetGatewaysResponsePrivate(this), parent)
+    : DescribeInternetGatewaysResponse(new DescribeInternetGatewaysResponsePrivate(this), parent)
 {
     setRequest(new DescribeInternetGatewaysRequest(request));
     setReply(reply);

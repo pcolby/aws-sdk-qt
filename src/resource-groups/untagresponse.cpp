@@ -46,7 +46,7 @@ UntagResponse::UntagResponse(
         const UntagRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResourceGroupsResponse(new UntagResponsePrivate(this), parent)
+    : UntagResponse(new UntagResponsePrivate(this), parent)
 {
     setRequest(new UntagRequest(request));
     setReply(reply);

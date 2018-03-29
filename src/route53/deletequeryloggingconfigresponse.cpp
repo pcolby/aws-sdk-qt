@@ -46,7 +46,7 @@ DeleteQueryLoggingConfigResponse::DeleteQueryLoggingConfigResponse(
         const DeleteQueryLoggingConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new DeleteQueryLoggingConfigResponsePrivate(this), parent)
+    : DeleteQueryLoggingConfigResponse(new DeleteQueryLoggingConfigResponsePrivate(this), parent)
 {
     setRequest(new DeleteQueryLoggingConfigRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetTelemetryMetadataResponse::GetTelemetryMetadataResponse(
         const GetTelemetryMetadataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new GetTelemetryMetadataResponsePrivate(this), parent)
+    : GetTelemetryMetadataResponse(new GetTelemetryMetadataResponsePrivate(this), parent)
 {
     setRequest(new GetTelemetryMetadataRequest(request));
     setReply(reply);

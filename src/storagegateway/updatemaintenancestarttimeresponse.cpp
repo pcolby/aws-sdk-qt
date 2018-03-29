@@ -46,7 +46,7 @@ UpdateMaintenanceStartTimeResponse::UpdateMaintenanceStartTimeResponse(
         const UpdateMaintenanceStartTimeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new UpdateMaintenanceStartTimeResponsePrivate(this), parent)
+    : UpdateMaintenanceStartTimeResponse(new UpdateMaintenanceStartTimeResponsePrivate(this), parent)
 {
     setRequest(new UpdateMaintenanceStartTimeRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateAuthEventFeedbackResponse::UpdateAuthEventFeedbackResponse(
         const UpdateAuthEventFeedbackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new UpdateAuthEventFeedbackResponsePrivate(this), parent)
+    : UpdateAuthEventFeedbackResponse(new UpdateAuthEventFeedbackResponsePrivate(this), parent)
 {
     setRequest(new UpdateAuthEventFeedbackRequest(request));
     setReply(reply);

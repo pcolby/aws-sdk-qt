@@ -46,7 +46,7 @@ UpdateEnvironmentMembershipResponse::UpdateEnvironmentMembershipResponse(
         const UpdateEnvironmentMembershipRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Cloud9Response(new UpdateEnvironmentMembershipResponsePrivate(this), parent)
+    : UpdateEnvironmentMembershipResponse(new UpdateEnvironmentMembershipResponsePrivate(this), parent)
 {
     setRequest(new UpdateEnvironmentMembershipRequest(request));
     setReply(reply);

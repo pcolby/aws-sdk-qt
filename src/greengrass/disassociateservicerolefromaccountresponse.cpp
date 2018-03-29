@@ -46,7 +46,7 @@ DisassociateServiceRoleFromAccountResponse::DisassociateServiceRoleFromAccountRe
         const DisassociateServiceRoleFromAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new DisassociateServiceRoleFromAccountResponsePrivate(this), parent)
+    : DisassociateServiceRoleFromAccountResponse(new DisassociateServiceRoleFromAccountResponsePrivate(this), parent)
 {
     setRequest(new DisassociateServiceRoleFromAccountRequest(request));
     setReply(reply);

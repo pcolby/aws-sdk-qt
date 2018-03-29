@@ -46,7 +46,7 @@ DescribeServiceErrorsResponse::DescribeServiceErrorsResponse(
         const DescribeServiceErrorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DescribeServiceErrorsResponsePrivate(this), parent)
+    : DescribeServiceErrorsResponse(new DescribeServiceErrorsResponsePrivate(this), parent)
 {
     setRequest(new DescribeServiceErrorsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateUserResponse::CreateUserResponse(
         const CreateUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new CreateUserResponsePrivate(this), parent)
+    : CreateUserResponse(new CreateUserResponsePrivate(this), parent)
 {
     setRequest(new CreateUserRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteAnalysisSchemeResponse::DeleteAnalysisSchemeResponse(
         const DeleteAnalysisSchemeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudSearchResponse(new DeleteAnalysisSchemeResponsePrivate(this), parent)
+    : DeleteAnalysisSchemeResponse(new DeleteAnalysisSchemeResponsePrivate(this), parent)
 {
     setRequest(new DeleteAnalysisSchemeRequest(request));
     setReply(reply);

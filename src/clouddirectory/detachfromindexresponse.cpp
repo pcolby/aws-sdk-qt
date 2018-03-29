@@ -46,7 +46,7 @@ DetachFromIndexResponse::DetachFromIndexResponse(
         const DetachFromIndexRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new DetachFromIndexResponsePrivate(this), parent)
+    : DetachFromIndexResponse(new DetachFromIndexResponsePrivate(this), parent)
 {
     setRequest(new DetachFromIndexRequest(request));
     setReply(reply);

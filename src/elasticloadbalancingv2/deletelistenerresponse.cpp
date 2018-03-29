@@ -46,7 +46,7 @@ DeleteListenerResponse::DeleteListenerResponse(
         const DeleteListenerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticLoadBalancingv2Response(new DeleteListenerResponsePrivate(this), parent)
+    : DeleteListenerResponse(new DeleteListenerResponsePrivate(this), parent)
 {
     setRequest(new DeleteListenerRequest(request));
     setReply(reply);

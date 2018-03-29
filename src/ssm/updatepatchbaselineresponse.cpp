@@ -46,7 +46,7 @@ UpdatePatchBaselineResponse::UpdatePatchBaselineResponse(
         const UpdatePatchBaselineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new UpdatePatchBaselineResponsePrivate(this), parent)
+    : UpdatePatchBaselineResponse(new UpdatePatchBaselineResponsePrivate(this), parent)
 {
     setRequest(new UpdatePatchBaselineRequest(request));
     setReply(reply);

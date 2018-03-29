@@ -46,7 +46,7 @@ UpdateEndpointResponse::UpdateEndpointResponse(
         const UpdateEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new UpdateEndpointResponsePrivate(this), parent)
+    : UpdateEndpointResponse(new UpdateEndpointResponsePrivate(this), parent)
 {
     setRequest(new UpdateEndpointRequest(request));
     setReply(reply);

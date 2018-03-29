@@ -46,7 +46,7 @@ CreateResourceDataSyncResponse::CreateResourceDataSyncResponse(
         const CreateResourceDataSyncRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new CreateResourceDataSyncResponsePrivate(this), parent)
+    : CreateResourceDataSyncResponse(new CreateResourceDataSyncResponsePrivate(this), parent)
 {
     setRequest(new CreateResourceDataSyncRequest(request));
     setReply(reply);

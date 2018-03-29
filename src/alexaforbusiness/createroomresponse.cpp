@@ -46,7 +46,7 @@ CreateRoomResponse::CreateRoomResponse(
         const CreateRoomRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new CreateRoomResponsePrivate(this), parent)
+    : CreateRoomResponse(new CreateRoomResponsePrivate(this), parent)
 {
     setRequest(new CreateRoomRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetIPSetResponse::GetIPSetResponse(
         const GetIPSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new GetIPSetResponsePrivate(this), parent)
+    : GetIPSetResponse(new GetIPSetResponsePrivate(this), parent)
 {
     setRequest(new GetIPSetRequest(request));
     setReply(reply);

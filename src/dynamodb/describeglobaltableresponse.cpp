@@ -46,7 +46,7 @@ DescribeGlobalTableResponse::DescribeGlobalTableResponse(
         const DescribeGlobalTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DynamoDBResponse(new DescribeGlobalTableResponsePrivate(this), parent)
+    : DescribeGlobalTableResponse(new DescribeGlobalTableResponsePrivate(this), parent)
 {
     setRequest(new DescribeGlobalTableRequest(request));
     setReply(reply);

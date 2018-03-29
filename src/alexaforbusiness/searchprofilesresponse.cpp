@@ -46,7 +46,7 @@ SearchProfilesResponse::SearchProfilesResponse(
         const SearchProfilesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new SearchProfilesResponsePrivate(this), parent)
+    : SearchProfilesResponse(new SearchProfilesResponsePrivate(this), parent)
 {
     setRequest(new SearchProfilesRequest(request));
     setReply(reply);

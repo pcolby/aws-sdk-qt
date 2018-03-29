@@ -46,7 +46,7 @@ DescribeInstanceAttributeResponse::DescribeInstanceAttributeResponse(
         const DescribeInstanceAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeInstanceAttributeResponsePrivate(this), parent)
+    : DescribeInstanceAttributeResponse(new DescribeInstanceAttributeResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstanceAttributeRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeDefaultClusterParametersResponse::DescribeDefaultClusterParametersRespon
         const DescribeDefaultClusterParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DescribeDefaultClusterParametersResponsePrivate(this), parent)
+    : DescribeDefaultClusterParametersResponse(new DescribeDefaultClusterParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeDefaultClusterParametersRequest(request));
     setReply(reply);

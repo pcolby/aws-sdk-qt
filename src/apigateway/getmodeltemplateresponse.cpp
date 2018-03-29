@@ -46,7 +46,7 @@ GetModelTemplateResponse::GetModelTemplateResponse(
         const GetModelTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetModelTemplateResponsePrivate(this), parent)
+    : GetModelTemplateResponse(new GetModelTemplateResponsePrivate(this), parent)
 {
     setRequest(new GetModelTemplateRequest(request));
     setReply(reply);

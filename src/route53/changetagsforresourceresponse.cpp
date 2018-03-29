@@ -46,7 +46,7 @@ ChangeTagsForResourceResponse::ChangeTagsForResourceResponse(
         const ChangeTagsForResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new ChangeTagsForResourceResponsePrivate(this), parent)
+    : ChangeTagsForResourceResponse(new ChangeTagsForResourceResponsePrivate(this), parent)
 {
     setRequest(new ChangeTagsForResourceRequest(request));
     setReply(reply);

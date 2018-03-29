@@ -46,7 +46,7 @@ DeleteTagOptionResponse::DeleteTagOptionResponse(
         const DeleteTagOptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new DeleteTagOptionResponsePrivate(this), parent)
+    : DeleteTagOptionResponse(new DeleteTagOptionResponsePrivate(this), parent)
 {
     setRequest(new DeleteTagOptionRequest(request));
     setReply(reply);

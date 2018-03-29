@@ -46,7 +46,7 @@ DeleteRuleGroupResponse::DeleteRuleGroupResponse(
         const DeleteRuleGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeleteRuleGroupResponsePrivate(this), parent)
+    : DeleteRuleGroupResponse(new DeleteRuleGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteRuleGroupRequest(request));
     setReply(reply);

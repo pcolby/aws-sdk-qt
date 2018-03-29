@@ -46,7 +46,7 @@ UpdateTypeResponse::UpdateTypeResponse(
         const UpdateTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppSyncResponse(new UpdateTypeResponsePrivate(this), parent)
+    : UpdateTypeResponse(new UpdateTypeResponsePrivate(this), parent)
 {
     setRequest(new UpdateTypeRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ InitiateMultipartUploadResponse::InitiateMultipartUploadResponse(
         const InitiateMultipartUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new InitiateMultipartUploadResponsePrivate(this), parent)
+    : InitiateMultipartUploadResponse(new InitiateMultipartUploadResponsePrivate(this), parent)
 {
     setRequest(new InitiateMultipartUploadRequest(request));
     setReply(reply);

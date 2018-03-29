@@ -46,7 +46,7 @@ UpdateTrailResponse::UpdateTrailResponse(
         const UpdateTrailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudTrailResponse(new UpdateTrailResponsePrivate(this), parent)
+    : UpdateTrailResponse(new UpdateTrailResponsePrivate(this), parent)
 {
     setRequest(new UpdateTrailRequest(request));
     setReply(reply);

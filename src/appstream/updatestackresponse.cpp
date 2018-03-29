@@ -46,7 +46,7 @@ UpdateStackResponse::UpdateStackResponse(
         const UpdateStackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppStreamResponse(new UpdateStackResponsePrivate(this), parent)
+    : UpdateStackResponse(new UpdateStackResponsePrivate(this), parent)
 {
     setRequest(new UpdateStackRequest(request));
     setReply(reply);

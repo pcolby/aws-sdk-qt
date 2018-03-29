@@ -46,7 +46,7 @@ DeleteSlotTypeVersionResponse::DeleteSlotTypeVersionResponse(
         const DeleteSlotTypeVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new DeleteSlotTypeVersionResponsePrivate(this), parent)
+    : DeleteSlotTypeVersionResponse(new DeleteSlotTypeVersionResponsePrivate(this), parent)
 {
     setRequest(new DeleteSlotTypeVersionRequest(request));
     setReply(reply);

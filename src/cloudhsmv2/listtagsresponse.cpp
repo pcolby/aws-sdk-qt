@@ -46,7 +46,7 @@ ListTagsResponse::ListTagsResponse(
         const ListTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudHSMV2Response(new ListTagsResponsePrivate(this), parent)
+    : ListTagsResponse(new ListTagsResponsePrivate(this), parent)
 {
     setRequest(new ListTagsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ApplyPendingMaintenanceActionResponse::ApplyPendingMaintenanceActionResponse(
         const ApplyPendingMaintenanceActionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ApplyPendingMaintenanceActionResponsePrivate(this), parent)
+    : ApplyPendingMaintenanceActionResponse(new ApplyPendingMaintenanceActionResponsePrivate(this), parent)
 {
     setRequest(new ApplyPendingMaintenanceActionRequest(request));
     setReply(reply);

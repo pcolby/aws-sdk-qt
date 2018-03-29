@@ -46,7 +46,7 @@ RebootCacheClusterResponse::RebootCacheClusterResponse(
         const RebootCacheClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new RebootCacheClusterResponsePrivate(this), parent)
+    : RebootCacheClusterResponse(new RebootCacheClusterResponsePrivate(this), parent)
 {
     setRequest(new RebootCacheClusterRequest(request));
     setReply(reply);

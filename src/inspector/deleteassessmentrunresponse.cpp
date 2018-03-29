@@ -46,7 +46,7 @@ DeleteAssessmentRunResponse::DeleteAssessmentRunResponse(
         const DeleteAssessmentRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new DeleteAssessmentRunResponsePrivate(this), parent)
+    : DeleteAssessmentRunResponse(new DeleteAssessmentRunResponsePrivate(this), parent)
 {
     setRequest(new DeleteAssessmentRunRequest(request));
     setReply(reply);

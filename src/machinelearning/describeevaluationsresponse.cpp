@@ -46,7 +46,7 @@ DescribeEvaluationsResponse::DescribeEvaluationsResponse(
         const DescribeEvaluationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MachineLearningResponse(new DescribeEvaluationsResponsePrivate(this), parent)
+    : DescribeEvaluationsResponse(new DescribeEvaluationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEvaluationsRequest(request));
     setReply(reply);

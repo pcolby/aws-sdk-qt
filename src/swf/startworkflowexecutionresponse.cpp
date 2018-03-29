@@ -46,7 +46,7 @@ StartWorkflowExecutionResponse::StartWorkflowExecutionResponse(
         const StartWorkflowExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new StartWorkflowExecutionResponsePrivate(this), parent)
+    : StartWorkflowExecutionResponse(new StartWorkflowExecutionResponsePrivate(this), parent)
 {
     setRequest(new StartWorkflowExecutionRequest(request));
     setReply(reply);

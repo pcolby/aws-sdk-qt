@@ -46,7 +46,7 @@ DeleteComputeEnvironmentResponse::DeleteComputeEnvironmentResponse(
         const DeleteComputeEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchResponse(new DeleteComputeEnvironmentResponsePrivate(this), parent)
+    : DeleteComputeEnvironmentResponse(new DeleteComputeEnvironmentResponsePrivate(this), parent)
 {
     setRequest(new DeleteComputeEnvironmentRequest(request));
     setReply(reply);

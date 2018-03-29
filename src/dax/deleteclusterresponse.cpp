@@ -46,7 +46,7 @@ DeleteClusterResponse::DeleteClusterResponse(
         const DeleteClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new DeleteClusterResponsePrivate(this), parent)
+    : DeleteClusterResponse(new DeleteClusterResponsePrivate(this), parent)
 {
     setRequest(new DeleteClusterRequest(request));
     setReply(reply);

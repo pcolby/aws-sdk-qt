@@ -46,7 +46,7 @@ CreateConstraintResponse::CreateConstraintResponse(
         const CreateConstraintRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new CreateConstraintResponsePrivate(this), parent)
+    : CreateConstraintResponse(new CreateConstraintResponsePrivate(this), parent)
 {
     setRequest(new CreateConstraintRequest(request));
     setReply(reply);

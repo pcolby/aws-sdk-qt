@@ -46,7 +46,7 @@ StopAssessmentRunResponse::StopAssessmentRunResponse(
         const StopAssessmentRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new StopAssessmentRunResponsePrivate(this), parent)
+    : StopAssessmentRunResponse(new StopAssessmentRunResponsePrivate(this), parent)
 {
     setRequest(new StopAssessmentRunRequest(request));
     setReply(reply);

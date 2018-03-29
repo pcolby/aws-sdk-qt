@@ -46,7 +46,7 @@ ListVolumeInitiatorsResponse::ListVolumeInitiatorsResponse(
         const ListVolumeInitiatorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new ListVolumeInitiatorsResponsePrivate(this), parent)
+    : ListVolumeInitiatorsResponse(new ListVolumeInitiatorsResponsePrivate(this), parent)
 {
     setRequest(new ListVolumeInitiatorsRequest(request));
     setReply(reply);

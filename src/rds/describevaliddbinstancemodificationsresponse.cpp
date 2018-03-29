@@ -46,7 +46,7 @@ DescribeValidDBInstanceModificationsResponse::DescribeValidDBInstanceModificatio
         const DescribeValidDBInstanceModificationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DescribeValidDBInstanceModificationsResponsePrivate(this), parent)
+    : DescribeValidDBInstanceModificationsResponse(new DescribeValidDBInstanceModificationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeValidDBInstanceModificationsRequest(request));
     setReply(reply);

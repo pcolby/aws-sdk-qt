@@ -46,7 +46,7 @@ DeprecateActivityTypeResponse::DeprecateActivityTypeResponse(
         const DeprecateActivityTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new DeprecateActivityTypeResponsePrivate(this), parent)
+    : DeprecateActivityTypeResponse(new DeprecateActivityTypeResponsePrivate(this), parent)
 {
     setRequest(new DeprecateActivityTypeRequest(request));
     setReply(reply);

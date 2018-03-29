@@ -46,7 +46,7 @@ GetRepositoryPolicyResponse::GetRepositoryPolicyResponse(
         const GetRepositoryPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new GetRepositoryPolicyResponsePrivate(this), parent)
+    : GetRepositoryPolicyResponse(new GetRepositoryPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetRepositoryPolicyRequest(request));
     setReply(reply);

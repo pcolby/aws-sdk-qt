@@ -46,7 +46,7 @@ RetrieveEnvironmentInfoResponse::RetrieveEnvironmentInfoResponse(
         const RetrieveEnvironmentInfoRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new RetrieveEnvironmentInfoResponsePrivate(this), parent)
+    : RetrieveEnvironmentInfoResponse(new RetrieveEnvironmentInfoResponsePrivate(this), parent)
 {
     setRequest(new RetrieveEnvironmentInfoRequest(request));
     setReply(reply);

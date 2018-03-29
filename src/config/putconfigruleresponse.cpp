@@ -46,7 +46,7 @@ PutConfigRuleResponse::PutConfigRuleResponse(
         const PutConfigRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfigServiceResponse(new PutConfigRuleResponsePrivate(this), parent)
+    : PutConfigRuleResponse(new PutConfigRuleResponsePrivate(this), parent)
 {
     setRequest(new PutConfigRuleRequest(request));
     setReply(reply);

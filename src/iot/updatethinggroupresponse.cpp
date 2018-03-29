@@ -46,7 +46,7 @@ UpdateThingGroupResponse::UpdateThingGroupResponse(
         const UpdateThingGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new UpdateThingGroupResponsePrivate(this), parent)
+    : UpdateThingGroupResponse(new UpdateThingGroupResponsePrivate(this), parent)
 {
     setRequest(new UpdateThingGroupRequest(request));
     setReply(reply);

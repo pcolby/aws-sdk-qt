@@ -46,7 +46,7 @@ DiscoverPollEndpointResponse::DiscoverPollEndpointResponse(
         const DiscoverPollEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new DiscoverPollEndpointResponsePrivate(this), parent)
+    : DiscoverPollEndpointResponse(new DiscoverPollEndpointResponsePrivate(this), parent)
 {
     setRequest(new DiscoverPollEndpointRequest(request));
     setReply(reply);

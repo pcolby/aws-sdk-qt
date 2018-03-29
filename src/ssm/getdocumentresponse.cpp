@@ -46,7 +46,7 @@ GetDocumentResponse::GetDocumentResponse(
         const GetDocumentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new GetDocumentResponsePrivate(this), parent)
+    : GetDocumentResponse(new GetDocumentResponsePrivate(this), parent)
 {
     setRequest(new GetDocumentRequest(request));
     setReply(reply);

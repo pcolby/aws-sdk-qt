@@ -46,7 +46,7 @@ ReEncryptResponse::ReEncryptResponse(
         const ReEncryptRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KMSResponse(new ReEncryptResponsePrivate(this), parent)
+    : ReEncryptResponse(new ReEncryptResponsePrivate(this), parent)
 {
     setRequest(new ReEncryptRequest(request));
     setReply(reply);

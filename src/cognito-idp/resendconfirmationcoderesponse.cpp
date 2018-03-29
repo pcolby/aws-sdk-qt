@@ -46,7 +46,7 @@ ResendConfirmationCodeResponse::ResendConfirmationCodeResponse(
         const ResendConfirmationCodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new ResendConfirmationCodeResponsePrivate(this), parent)
+    : ResendConfirmationCodeResponse(new ResendConfirmationCodeResponsePrivate(this), parent)
 {
     setRequest(new ResendConfirmationCodeRequest(request));
     setReply(reply);

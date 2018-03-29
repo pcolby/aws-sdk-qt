@@ -46,7 +46,7 @@ GetGroupResponse::GetGroupResponse(
         const GetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new GetGroupResponsePrivate(this), parent)
+    : GetGroupResponse(new GetGroupResponsePrivate(this), parent)
 {
     setRequest(new GetGroupRequest(request));
     setReply(reply);

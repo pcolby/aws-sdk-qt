@@ -46,7 +46,7 @@ GetAccountSettingsResponse::GetAccountSettingsResponse(
         const GetAccountSettingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new GetAccountSettingsResponsePrivate(this), parent)
+    : GetAccountSettingsResponse(new GetAccountSettingsResponsePrivate(this), parent)
 {
     setRequest(new GetAccountSettingsRequest(request));
     setReply(reply);

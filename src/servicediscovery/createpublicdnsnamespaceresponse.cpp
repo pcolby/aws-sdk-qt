@@ -46,7 +46,7 @@ CreatePublicDnsNamespaceResponse::CreatePublicDnsNamespaceResponse(
         const CreatePublicDnsNamespaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceDiscoveryResponse(new CreatePublicDnsNamespaceResponsePrivate(this), parent)
+    : CreatePublicDnsNamespaceResponse(new CreatePublicDnsNamespaceResponsePrivate(this), parent)
 {
     setRequest(new CreatePublicDnsNamespaceRequest(request));
     setReply(reply);

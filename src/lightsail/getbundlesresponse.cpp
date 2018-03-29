@@ -46,7 +46,7 @@ GetBundlesResponse::GetBundlesResponse(
         const GetBundlesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new GetBundlesResponsePrivate(this), parent)
+    : GetBundlesResponse(new GetBundlesResponsePrivate(this), parent)
 {
     setRequest(new GetBundlesRequest(request));
     setReply(reply);

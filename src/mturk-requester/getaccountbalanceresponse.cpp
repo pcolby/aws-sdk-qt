@@ -46,7 +46,7 @@ GetAccountBalanceResponse::GetAccountBalanceResponse(
         const GetAccountBalanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new GetAccountBalanceResponsePrivate(this), parent)
+    : GetAccountBalanceResponse(new GetAccountBalanceResponsePrivate(this), parent)
 {
     setRequest(new GetAccountBalanceRequest(request));
     setReply(reply);

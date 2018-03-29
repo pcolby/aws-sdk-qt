@@ -46,7 +46,7 @@ InvokeAsyncResponse::InvokeAsyncResponse(
         const InvokeAsyncRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LambdaResponse(new InvokeAsyncResponsePrivate(this), parent)
+    : InvokeAsyncResponse(new InvokeAsyncResponsePrivate(this), parent)
 {
     setRequest(new InvokeAsyncRequest(request));
     setReply(reply);

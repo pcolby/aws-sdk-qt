@@ -46,7 +46,7 @@ DescribeImportImageTasksResponse::DescribeImportImageTasksResponse(
         const DescribeImportImageTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeImportImageTasksResponsePrivate(this), parent)
+    : DescribeImportImageTasksResponse(new DescribeImportImageTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeImportImageTasksRequest(request));
     setReply(reply);

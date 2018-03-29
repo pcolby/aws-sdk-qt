@@ -46,7 +46,7 @@ CreatePresetResponse::CreatePresetResponse(
         const CreatePresetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticTranscoderResponse(new CreatePresetResponsePrivate(this), parent)
+    : CreatePresetResponse(new CreatePresetResponsePrivate(this), parent)
 {
     setRequest(new CreatePresetRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListSuitesResponse::ListSuitesResponse(
         const ListSuitesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new ListSuitesResponsePrivate(this), parent)
+    : ListSuitesResponse(new ListSuitesResponsePrivate(this), parent)
 {
     setRequest(new ListSuitesRequest(request));
     setReply(reply);

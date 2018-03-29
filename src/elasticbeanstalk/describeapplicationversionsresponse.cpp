@@ -46,7 +46,7 @@ DescribeApplicationVersionsResponse::DescribeApplicationVersionsResponse(
         const DescribeApplicationVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticBeanstalkResponse(new DescribeApplicationVersionsResponsePrivate(this), parent)
+    : DescribeApplicationVersionsResponse(new DescribeApplicationVersionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeApplicationVersionsRequest(request));
     setReply(reply);

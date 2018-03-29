@@ -46,7 +46,7 @@ DescribeHsmClientCertificatesResponse::DescribeHsmClientCertificatesResponse(
         const DescribeHsmClientCertificatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DescribeHsmClientCertificatesResponsePrivate(this), parent)
+    : DescribeHsmClientCertificatesResponse(new DescribeHsmClientCertificatesResponsePrivate(this), parent)
 {
     setRequest(new DescribeHsmClientCertificatesRequest(request));
     setReply(reply);

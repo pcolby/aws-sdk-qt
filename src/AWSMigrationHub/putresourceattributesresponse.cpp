@@ -46,7 +46,7 @@ PutResourceAttributesResponse::PutResourceAttributesResponse(
         const PutResourceAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MigrationHubResponse(new PutResourceAttributesResponsePrivate(this), parent)
+    : PutResourceAttributesResponse(new PutResourceAttributesResponsePrivate(this), parent)
 {
     setRequest(new PutResourceAttributesRequest(request));
     setReply(reply);

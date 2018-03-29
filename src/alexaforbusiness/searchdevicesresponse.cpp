@@ -46,7 +46,7 @@ SearchDevicesResponse::SearchDevicesResponse(
         const SearchDevicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new SearchDevicesResponsePrivate(this), parent)
+    : SearchDevicesResponse(new SearchDevicesResponsePrivate(this), parent)
 {
     setRequest(new SearchDevicesRequest(request));
     setReply(reply);

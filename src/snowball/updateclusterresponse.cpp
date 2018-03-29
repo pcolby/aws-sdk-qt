@@ -46,7 +46,7 @@ UpdateClusterResponse::UpdateClusterResponse(
         const UpdateClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SnowballResponse(new UpdateClusterResponsePrivate(this), parent)
+    : UpdateClusterResponse(new UpdateClusterResponsePrivate(this), parent)
 {
     setRequest(new UpdateClusterRequest(request));
     setReply(reply);

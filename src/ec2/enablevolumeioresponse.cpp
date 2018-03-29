@@ -46,7 +46,7 @@ EnableVolumeIOResponse::EnableVolumeIOResponse(
         const EnableVolumeIORequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new EnableVolumeIOResponsePrivate(this), parent)
+    : EnableVolumeIOResponse(new EnableVolumeIOResponsePrivate(this), parent)
 {
     setRequest(new EnableVolumeIORequest(request));
     setReply(reply);

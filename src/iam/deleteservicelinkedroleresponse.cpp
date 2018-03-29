@@ -46,7 +46,7 @@ DeleteServiceLinkedRoleResponse::DeleteServiceLinkedRoleResponse(
         const DeleteServiceLinkedRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteServiceLinkedRoleResponsePrivate(this), parent)
+    : DeleteServiceLinkedRoleResponse(new DeleteServiceLinkedRoleResponsePrivate(this), parent)
 {
     setRequest(new DeleteServiceLinkedRoleRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateDBClusterResponse::CreateDBClusterResponse(
         const CreateDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CreateDBClusterResponsePrivate(this), parent)
+    : CreateDBClusterResponse(new CreateDBClusterResponsePrivate(this), parent)
 {
     setRequest(new CreateDBClusterRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ BatchCheckLayerAvailabilityResponse::BatchCheckLayerAvailabilityResponse(
         const BatchCheckLayerAvailabilityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new BatchCheckLayerAvailabilityResponsePrivate(this), parent)
+    : BatchCheckLayerAvailabilityResponse(new BatchCheckLayerAvailabilityResponsePrivate(this), parent)
 {
     setRequest(new BatchCheckLayerAvailabilityRequest(request));
     setReply(reply);

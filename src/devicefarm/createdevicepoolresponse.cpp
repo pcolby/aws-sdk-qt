@@ -46,7 +46,7 @@ CreateDevicePoolResponse::CreateDevicePoolResponse(
         const CreateDevicePoolRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new CreateDevicePoolResponsePrivate(this), parent)
+    : CreateDevicePoolResponse(new CreateDevicePoolResponsePrivate(this), parent)
 {
     setRequest(new CreateDevicePoolRequest(request));
     setReply(reply);

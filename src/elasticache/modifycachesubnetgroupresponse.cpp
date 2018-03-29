@@ -46,7 +46,7 @@ ModifyCacheSubnetGroupResponse::ModifyCacheSubnetGroupResponse(
         const ModifyCacheSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new ModifyCacheSubnetGroupResponsePrivate(this), parent)
+    : ModifyCacheSubnetGroupResponse(new ModifyCacheSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new ModifyCacheSubnetGroupRequest(request));
     setReply(reply);

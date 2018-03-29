@@ -46,7 +46,7 @@ UpdateRateBasedRuleResponse::UpdateRateBasedRuleResponse(
         const UpdateRateBasedRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFResponse(new UpdateRateBasedRuleResponsePrivate(this), parent)
+    : UpdateRateBasedRuleResponse(new UpdateRateBasedRuleResponsePrivate(this), parent)
 {
     setRequest(new UpdateRateBasedRuleRequest(request));
     setReply(reply);

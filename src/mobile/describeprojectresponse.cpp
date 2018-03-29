@@ -46,7 +46,7 @@ DescribeProjectResponse::DescribeProjectResponse(
         const DescribeProjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MobileResponse(new DescribeProjectResponsePrivate(this), parent)
+    : DescribeProjectResponse(new DescribeProjectResponsePrivate(this), parent)
 {
     setRequest(new DescribeProjectRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetCommandInvocationResponse::GetCommandInvocationResponse(
         const GetCommandInvocationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new GetCommandInvocationResponsePrivate(this), parent)
+    : GetCommandInvocationResponse(new GetCommandInvocationResponsePrivate(this), parent)
 {
     setRequest(new GetCommandInvocationRequest(request));
     setReply(reply);

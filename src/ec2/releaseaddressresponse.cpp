@@ -46,7 +46,7 @@ ReleaseAddressResponse::ReleaseAddressResponse(
         const ReleaseAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ReleaseAddressResponsePrivate(this), parent)
+    : ReleaseAddressResponse(new ReleaseAddressResponsePrivate(this), parent)
 {
     setRequest(new ReleaseAddressRequest(request));
     setReply(reply);

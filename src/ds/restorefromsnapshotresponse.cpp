@@ -46,7 +46,7 @@ RestoreFromSnapshotResponse::RestoreFromSnapshotResponse(
         const RestoreFromSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new RestoreFromSnapshotResponsePrivate(this), parent)
+    : RestoreFromSnapshotResponse(new RestoreFromSnapshotResponsePrivate(this), parent)
 {
     setRequest(new RestoreFromSnapshotRequest(request));
     setReply(reply);

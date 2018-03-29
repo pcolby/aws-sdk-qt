@@ -46,7 +46,7 @@ GetOpenIdTokenForDeveloperIdentityResponse::GetOpenIdTokenForDeveloperIdentityRe
         const GetOpenIdTokenForDeveloperIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityResponse(new GetOpenIdTokenForDeveloperIdentityResponsePrivate(this), parent)
+    : GetOpenIdTokenForDeveloperIdentityResponse(new GetOpenIdTokenForDeveloperIdentityResponsePrivate(this), parent)
 {
     setRequest(new GetOpenIdTokenForDeveloperIdentityRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeBuildResponse::DescribeBuildResponse(
         const DescribeBuildRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new DescribeBuildResponsePrivate(this), parent)
+    : DescribeBuildResponse(new DescribeBuildResponsePrivate(this), parent)
 {
     setRequest(new DescribeBuildRequest(request));
     setReply(reply);

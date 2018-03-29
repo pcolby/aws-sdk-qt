@@ -46,7 +46,7 @@ PutLifecycleEventHookExecutionStatusResponse::PutLifecycleEventHookExecutionStat
         const PutLifecycleEventHookExecutionStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeDeployResponse(new PutLifecycleEventHookExecutionStatusResponsePrivate(this), parent)
+    : PutLifecycleEventHookExecutionStatusResponse(new PutLifecycleEventHookExecutionStatusResponsePrivate(this), parent)
 {
     setRequest(new PutLifecycleEventHookExecutionStatusRequest(request));
     setReply(reply);

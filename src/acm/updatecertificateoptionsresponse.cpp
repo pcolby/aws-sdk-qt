@@ -46,7 +46,7 @@ UpdateCertificateOptionsResponse::UpdateCertificateOptionsResponse(
         const UpdateCertificateOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMResponse(new UpdateCertificateOptionsResponsePrivate(this), parent)
+    : UpdateCertificateOptionsResponse(new UpdateCertificateOptionsResponsePrivate(this), parent)
 {
     setRequest(new UpdateCertificateOptionsRequest(request));
     setReply(reply);

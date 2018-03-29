@@ -46,7 +46,7 @@ DescribeRulesPackagesResponse::DescribeRulesPackagesResponse(
         const DescribeRulesPackagesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new DescribeRulesPackagesResponsePrivate(this), parent)
+    : DescribeRulesPackagesResponse(new DescribeRulesPackagesResponsePrivate(this), parent)
 {
     setRequest(new DescribeRulesPackagesRequest(request));
     setReply(reply);

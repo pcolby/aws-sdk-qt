@@ -46,7 +46,7 @@ UpdateDeploymentGroupResponse::UpdateDeploymentGroupResponse(
         const UpdateDeploymentGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeDeployResponse(new UpdateDeploymentGroupResponsePrivate(this), parent)
+    : UpdateDeploymentGroupResponse(new UpdateDeploymentGroupResponsePrivate(this), parent)
 {
     setRequest(new UpdateDeploymentGroupRequest(request));
     setReply(reply);

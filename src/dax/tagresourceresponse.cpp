@@ -46,7 +46,7 @@ TagResourceResponse::TagResourceResponse(
         const TagResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new TagResourceResponsePrivate(this), parent)
+    : TagResourceResponse(new TagResourceResponsePrivate(this), parent)
 {
     setRequest(new TagResourceRequest(request));
     setReply(reply);

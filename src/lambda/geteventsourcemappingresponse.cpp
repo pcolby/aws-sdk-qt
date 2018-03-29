@@ -46,7 +46,7 @@ GetEventSourceMappingResponse::GetEventSourceMappingResponse(
         const GetEventSourceMappingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LambdaResponse(new GetEventSourceMappingResponsePrivate(this), parent)
+    : GetEventSourceMappingResponse(new GetEventSourceMappingResponsePrivate(this), parent)
 {
     setRequest(new GetEventSourceMappingRequest(request));
     setReply(reply);

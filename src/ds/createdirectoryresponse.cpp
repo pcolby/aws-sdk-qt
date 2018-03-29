@@ -46,7 +46,7 @@ CreateDirectoryResponse::CreateDirectoryResponse(
         const CreateDirectoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new CreateDirectoryResponsePrivate(this), parent)
+    : CreateDirectoryResponse(new CreateDirectoryResponsePrivate(this), parent)
 {
     setRequest(new CreateDirectoryRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreatePartitionResponse::CreatePartitionResponse(
         const CreatePartitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlueResponse(new CreatePartitionResponsePrivate(this), parent)
+    : CreatePartitionResponse(new CreatePartitionResponsePrivate(this), parent)
 {
     setRequest(new CreatePartitionRequest(request));
     setReply(reply);

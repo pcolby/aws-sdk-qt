@@ -46,7 +46,7 @@ UpdateRuleResponse::UpdateRuleResponse(
         const UpdateRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new UpdateRuleResponsePrivate(this), parent)
+    : UpdateRuleResponse(new UpdateRuleResponsePrivate(this), parent)
 {
     setRequest(new UpdateRuleRequest(request));
     setReply(reply);

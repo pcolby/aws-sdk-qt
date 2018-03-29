@@ -46,7 +46,7 @@ ListSSHPublicKeysResponse::ListSSHPublicKeysResponse(
         const ListSSHPublicKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new ListSSHPublicKeysResponsePrivate(this), parent)
+    : ListSSHPublicKeysResponse(new ListSSHPublicKeysResponsePrivate(this), parent)
 {
     setRequest(new ListSSHPublicKeysRequest(request));
     setReply(reply);

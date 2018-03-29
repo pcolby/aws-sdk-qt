@@ -46,7 +46,7 @@ CreatePortfolioShareResponse::CreatePortfolioShareResponse(
         const CreatePortfolioShareRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new CreatePortfolioShareResponsePrivate(this), parent)
+    : CreatePortfolioShareResponse(new CreatePortfolioShareResponsePrivate(this), parent)
 {
     setRequest(new CreatePortfolioShareRequest(request));
     setReply(reply);

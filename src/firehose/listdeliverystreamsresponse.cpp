@@ -46,7 +46,7 @@ ListDeliveryStreamsResponse::ListDeliveryStreamsResponse(
         const ListDeliveryStreamsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FirehoseResponse(new ListDeliveryStreamsResponsePrivate(this), parent)
+    : ListDeliveryStreamsResponse(new ListDeliveryStreamsResponsePrivate(this), parent)
 {
     setRequest(new ListDeliveryStreamsRequest(request));
     setReply(reply);

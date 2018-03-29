@@ -46,7 +46,7 @@ AssociateCreatedArtifactResponse::AssociateCreatedArtifactResponse(
         const AssociateCreatedArtifactRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MigrationHubResponse(new AssociateCreatedArtifactResponsePrivate(this), parent)
+    : AssociateCreatedArtifactResponse(new AssociateCreatedArtifactResponsePrivate(this), parent)
 {
     setRequest(new AssociateCreatedArtifactRequest(request));
     setReply(reply);

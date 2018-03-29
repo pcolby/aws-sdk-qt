@@ -46,7 +46,7 @@ GetMLModelResponse::GetMLModelResponse(
         const GetMLModelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MachineLearningResponse(new GetMLModelResponsePrivate(this), parent)
+    : GetMLModelResponse(new GetMLModelResponsePrivate(this), parent)
 {
     setRequest(new GetMLModelRequest(request));
     setReply(reply);

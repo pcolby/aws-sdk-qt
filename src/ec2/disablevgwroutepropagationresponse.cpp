@@ -46,7 +46,7 @@ DisableVgwRoutePropagationResponse::DisableVgwRoutePropagationResponse(
         const DisableVgwRoutePropagationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DisableVgwRoutePropagationResponsePrivate(this), parent)
+    : DisableVgwRoutePropagationResponse(new DisableVgwRoutePropagationResponsePrivate(this), parent)
 {
     setRequest(new DisableVgwRoutePropagationRequest(request));
     setReply(reply);

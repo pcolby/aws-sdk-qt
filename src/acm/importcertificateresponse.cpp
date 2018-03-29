@@ -46,7 +46,7 @@ ImportCertificateResponse::ImportCertificateResponse(
         const ImportCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ACMResponse(new ImportCertificateResponsePrivate(this), parent)
+    : ImportCertificateResponse(new ImportCertificateResponsePrivate(this), parent)
 {
     setRequest(new ImportCertificateRequest(request));
     setReply(reply);

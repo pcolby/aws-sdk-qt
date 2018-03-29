@@ -46,7 +46,7 @@ StopRemoteAccessSessionResponse::StopRemoteAccessSessionResponse(
         const StopRemoteAccessSessionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new StopRemoteAccessSessionResponsePrivate(this), parent)
+    : StopRemoteAccessSessionResponse(new StopRemoteAccessSessionResponsePrivate(this), parent)
 {
     setRequest(new StopRemoteAccessSessionRequest(request));
     setReply(reply);

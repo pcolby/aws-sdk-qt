@@ -46,7 +46,7 @@ TestFailoverResponse::TestFailoverResponse(
         const TestFailoverRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new TestFailoverResponsePrivate(this), parent)
+    : TestFailoverResponse(new TestFailoverResponsePrivate(this), parent)
 {
     setRequest(new TestFailoverRequest(request));
     setReply(reply);

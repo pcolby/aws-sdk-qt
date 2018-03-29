@@ -46,7 +46,7 @@ GlobalSignOutResponse::GlobalSignOutResponse(
         const GlobalSignOutRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new GlobalSignOutResponsePrivate(this), parent)
+    : GlobalSignOutResponse(new GlobalSignOutResponsePrivate(this), parent)
 {
     setRequest(new GlobalSignOutRequest(request));
     setReply(reply);

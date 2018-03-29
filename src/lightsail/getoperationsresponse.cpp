@@ -46,7 +46,7 @@ GetOperationsResponse::GetOperationsResponse(
         const GetOperationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new GetOperationsResponsePrivate(this), parent)
+    : GetOperationsResponse(new GetOperationsResponsePrivate(this), parent)
 {
     setRequest(new GetOperationsRequest(request));
     setReply(reply);

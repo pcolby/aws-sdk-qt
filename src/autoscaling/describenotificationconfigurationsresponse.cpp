@@ -46,7 +46,7 @@ DescribeNotificationConfigurationsResponse::DescribeNotificationConfigurationsRe
         const DescribeNotificationConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new DescribeNotificationConfigurationsResponsePrivate(this), parent)
+    : DescribeNotificationConfigurationsResponse(new DescribeNotificationConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeNotificationConfigurationsRequest(request));
     setReply(reply);

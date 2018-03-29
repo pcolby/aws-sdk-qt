@@ -46,7 +46,7 @@ ListTagsForResourceResponse::ListTagsForResourceResponse(
         const ListTagsForResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new ListTagsForResourceResponsePrivate(this), parent)
+    : ListTagsForResourceResponse(new ListTagsForResourceResponsePrivate(this), parent)
 {
     setRequest(new ListTagsForResourceRequest(request));
     setReply(reply);

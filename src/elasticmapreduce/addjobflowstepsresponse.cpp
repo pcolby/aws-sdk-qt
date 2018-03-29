@@ -46,7 +46,7 @@ AddJobFlowStepsResponse::AddJobFlowStepsResponse(
         const AddJobFlowStepsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new AddJobFlowStepsResponsePrivate(this), parent)
+    : AddJobFlowStepsResponse(new AddJobFlowStepsResponsePrivate(this), parent)
 {
     setRequest(new AddJobFlowStepsRequest(request));
     setReply(reply);

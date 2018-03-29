@@ -46,7 +46,7 @@ QueryObjectsResponse::QueryObjectsResponse(
         const QueryObjectsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DataPipelineResponse(new QueryObjectsResponsePrivate(this), parent)
+    : QueryObjectsResponse(new QueryObjectsResponsePrivate(this), parent)
 {
     setRequest(new QueryObjectsRequest(request));
     setReply(reply);

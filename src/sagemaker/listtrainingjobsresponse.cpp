@@ -46,7 +46,7 @@ ListTrainingJobsResponse::ListTrainingJobsResponse(
         const ListTrainingJobsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SageMakerResponse(new ListTrainingJobsResponsePrivate(this), parent)
+    : ListTrainingJobsResponse(new ListTrainingJobsResponsePrivate(this), parent)
 {
     setRequest(new ListTrainingJobsRequest(request));
     setReply(reply);

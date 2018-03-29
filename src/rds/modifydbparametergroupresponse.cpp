@@ -46,7 +46,7 @@ ModifyDBParameterGroupResponse::ModifyDBParameterGroupResponse(
         const ModifyDBParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new ModifyDBParameterGroupResponsePrivate(this), parent)
+    : ModifyDBParameterGroupResponse(new ModifyDBParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new ModifyDBParameterGroupRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeProductViewResponse::DescribeProductViewResponse(
         const DescribeProductViewRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new DescribeProductViewResponsePrivate(this), parent)
+    : DescribeProductViewResponse(new DescribeProductViewResponsePrivate(this), parent)
 {
     setRequest(new DescribeProductViewRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetDomainResponse::GetDomainResponse(
         const GetDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new GetDomainResponsePrivate(this), parent)
+    : GetDomainResponse(new GetDomainResponsePrivate(this), parent)
 {
     setRequest(new GetDomainRequest(request));
     setReply(reply);

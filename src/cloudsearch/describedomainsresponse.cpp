@@ -46,7 +46,7 @@ DescribeDomainsResponse::DescribeDomainsResponse(
         const DescribeDomainsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudSearchResponse(new DescribeDomainsResponsePrivate(this), parent)
+    : DescribeDomainsResponse(new DescribeDomainsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDomainsRequest(request));
     setReply(reply);

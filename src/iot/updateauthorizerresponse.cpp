@@ -46,7 +46,7 @@ UpdateAuthorizerResponse::UpdateAuthorizerResponse(
         const UpdateAuthorizerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new UpdateAuthorizerResponsePrivate(this), parent)
+    : UpdateAuthorizerResponse(new UpdateAuthorizerResponsePrivate(this), parent)
 {
     setRequest(new UpdateAuthorizerRequest(request));
     setReply(reply);

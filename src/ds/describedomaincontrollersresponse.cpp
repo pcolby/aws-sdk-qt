@@ -46,7 +46,7 @@ DescribeDomainControllersResponse::DescribeDomainControllersResponse(
         const DescribeDomainControllersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DirectoryServiceResponse(new DescribeDomainControllersResponsePrivate(this), parent)
+    : DescribeDomainControllersResponse(new DescribeDomainControllersResponsePrivate(this), parent)
 {
     setRequest(new DescribeDomainControllersRequest(request));
     setReply(reply);

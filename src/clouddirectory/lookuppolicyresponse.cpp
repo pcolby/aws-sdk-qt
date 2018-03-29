@@ -46,7 +46,7 @@ LookupPolicyResponse::LookupPolicyResponse(
         const LookupPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new LookupPolicyResponsePrivate(this), parent)
+    : LookupPolicyResponse(new LookupPolicyResponsePrivate(this), parent)
 {
     setRequest(new LookupPolicyRequest(request));
     setReply(reply);

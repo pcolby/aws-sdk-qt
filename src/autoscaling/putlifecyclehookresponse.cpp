@@ -46,7 +46,7 @@ PutLifecycleHookResponse::PutLifecycleHookResponse(
         const PutLifecycleHookRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new PutLifecycleHookResponsePrivate(this), parent)
+    : PutLifecycleHookResponse(new PutLifecycleHookResponsePrivate(this), parent)
 {
     setRequest(new PutLifecycleHookRequest(request));
     setReply(reply);

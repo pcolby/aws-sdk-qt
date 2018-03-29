@@ -46,7 +46,7 @@ ImportVolumeResponse::ImportVolumeResponse(
         const ImportVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ImportVolumeResponsePrivate(this), parent)
+    : ImportVolumeResponse(new ImportVolumeResponsePrivate(this), parent)
 {
     setRequest(new ImportVolumeRequest(request));
     setReply(reply);

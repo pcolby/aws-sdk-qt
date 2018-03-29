@@ -46,7 +46,7 @@ PutAttributesResponse::PutAttributesResponse(
         const PutAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new PutAttributesResponsePrivate(this), parent)
+    : PutAttributesResponse(new PutAttributesResponsePrivate(this), parent)
 {
     setRequest(new PutAttributesRequest(request));
     setReply(reply);

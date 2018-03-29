@@ -46,7 +46,7 @@ UpdateResolverResponse::UpdateResolverResponse(
         const UpdateResolverRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AppSyncResponse(new UpdateResolverResponsePrivate(this), parent)
+    : UpdateResolverResponse(new UpdateResolverResponsePrivate(this), parent)
 {
     setRequest(new UpdateResolverRequest(request));
     setReply(reply);

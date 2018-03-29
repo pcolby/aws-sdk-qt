@@ -46,7 +46,7 @@ PromoteReadReplicaDBClusterResponse::PromoteReadReplicaDBClusterResponse(
         const PromoteReadReplicaDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new PromoteReadReplicaDBClusterResponsePrivate(this), parent)
+    : PromoteReadReplicaDBClusterResponse(new PromoteReadReplicaDBClusterResponsePrivate(this), parent)
 {
     setRequest(new PromoteReadReplicaDBClusterRequest(request));
     setReply(reply);

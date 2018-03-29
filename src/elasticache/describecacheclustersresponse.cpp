@@ -46,7 +46,7 @@ DescribeCacheClustersResponse::DescribeCacheClustersResponse(
         const DescribeCacheClustersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new DescribeCacheClustersResponsePrivate(this), parent)
+    : DescribeCacheClustersResponse(new DescribeCacheClustersResponsePrivate(this), parent)
 {
     setRequest(new DescribeCacheClustersRequest(request));
     setReply(reply);

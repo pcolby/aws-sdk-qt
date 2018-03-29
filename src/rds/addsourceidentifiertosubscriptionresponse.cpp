@@ -46,7 +46,7 @@ AddSourceIdentifierToSubscriptionResponse::AddSourceIdentifierToSubscriptionResp
         const AddSourceIdentifierToSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new AddSourceIdentifierToSubscriptionResponsePrivate(this), parent)
+    : AddSourceIdentifierToSubscriptionResponse(new AddSourceIdentifierToSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new AddSourceIdentifierToSubscriptionRequest(request));
     setReply(reply);

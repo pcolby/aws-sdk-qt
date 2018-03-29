@@ -28,7 +28,7 @@ namespace {{NameSpaceName}} {
         const {{OperationName}}Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : {{ServiceName}}Response(new {{ClassName}}Private(this), parent)
+    : {{OperationName}}Response(new {{ClassName}}Private(this), parent)
 {
     setRequest(new {{OperationName}}Request(request));
     setReply(reply);

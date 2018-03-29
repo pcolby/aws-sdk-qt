@@ -46,7 +46,7 @@ DisassociateTagOptionFromResourceResponse::DisassociateTagOptionFromResourceResp
         const DisassociateTagOptionFromResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new DisassociateTagOptionFromResourceResponsePrivate(this), parent)
+    : DisassociateTagOptionFromResourceResponse(new DisassociateTagOptionFromResourceResponsePrivate(this), parent)
 {
     setRequest(new DisassociateTagOptionFromResourceRequest(request));
     setReply(reply);

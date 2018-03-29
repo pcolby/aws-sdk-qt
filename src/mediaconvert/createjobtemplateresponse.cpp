@@ -46,7 +46,7 @@ CreateJobTemplateResponse::CreateJobTemplateResponse(
         const CreateJobTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MediaConvertResponse(new CreateJobTemplateResponsePrivate(this), parent)
+    : CreateJobTemplateResponse(new CreateJobTemplateResponsePrivate(this), parent)
 {
     setRequest(new CreateJobTemplateRequest(request));
     setReply(reply);

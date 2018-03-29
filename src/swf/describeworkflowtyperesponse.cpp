@@ -46,7 +46,7 @@ DescribeWorkflowTypeResponse::DescribeWorkflowTypeResponse(
         const DescribeWorkflowTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new DescribeWorkflowTypeResponsePrivate(this), parent)
+    : DescribeWorkflowTypeResponse(new DescribeWorkflowTypeResponsePrivate(this), parent)
 {
     setRequest(new DescribeWorkflowTypeRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteUserProfileResponse::DeleteUserProfileResponse(
         const DeleteUserProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DeleteUserProfileResponsePrivate(this), parent)
+    : DeleteUserProfileResponse(new DeleteUserProfileResponsePrivate(this), parent)
 {
     setRequest(new DeleteUserProfileRequest(request));
     setReply(reply);

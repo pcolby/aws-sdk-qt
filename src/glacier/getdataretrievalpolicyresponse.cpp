@@ -46,7 +46,7 @@ GetDataRetrievalPolicyResponse::GetDataRetrievalPolicyResponse(
         const GetDataRetrievalPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new GetDataRetrievalPolicyResponsePrivate(this), parent)
+    : GetDataRetrievalPolicyResponse(new GetDataRetrievalPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetDataRetrievalPolicyRequest(request));
     setReply(reply);

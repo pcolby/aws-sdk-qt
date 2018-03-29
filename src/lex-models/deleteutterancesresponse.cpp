@@ -46,7 +46,7 @@ DeleteUtterancesResponse::DeleteUtterancesResponse(
         const DeleteUtterancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LexModelBuildingServiceResponse(new DeleteUtterancesResponsePrivate(this), parent)
+    : DeleteUtterancesResponse(new DeleteUtterancesResponsePrivate(this), parent)
 {
     setRequest(new DeleteUtterancesRequest(request));
     setReply(reply);

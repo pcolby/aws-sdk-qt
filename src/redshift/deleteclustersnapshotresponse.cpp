@@ -46,7 +46,7 @@ DeleteClusterSnapshotResponse::DeleteClusterSnapshotResponse(
         const DeleteClusterSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DeleteClusterSnapshotResponsePrivate(this), parent)
+    : DeleteClusterSnapshotResponse(new DeleteClusterSnapshotResponsePrivate(this), parent)
 {
     setRequest(new DeleteClusterSnapshotRequest(request));
     setReply(reply);

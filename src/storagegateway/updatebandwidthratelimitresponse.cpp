@@ -46,7 +46,7 @@ UpdateBandwidthRateLimitResponse::UpdateBandwidthRateLimitResponse(
         const UpdateBandwidthRateLimitRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new UpdateBandwidthRateLimitResponsePrivate(this), parent)
+    : UpdateBandwidthRateLimitResponse(new UpdateBandwidthRateLimitResponsePrivate(this), parent)
 {
     setRequest(new UpdateBandwidthRateLimitRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ PutBucketWebsiteResponse::PutBucketWebsiteResponse(
         const PutBucketWebsiteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new PutBucketWebsiteResponsePrivate(this), parent)
+    : PutBucketWebsiteResponse(new PutBucketWebsiteResponsePrivate(this), parent)
 {
     setRequest(new PutBucketWebsiteRequest(request));
     setReply(reply);

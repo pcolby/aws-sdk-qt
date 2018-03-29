@@ -46,7 +46,7 @@ GetApiKeysResponse::GetApiKeysResponse(
         const GetApiKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetApiKeysResponsePrivate(this), parent)
+    : GetApiKeysResponse(new GetApiKeysResponsePrivate(this), parent)
 {
     setRequest(new GetApiKeysRequest(request));
     setReply(reply);

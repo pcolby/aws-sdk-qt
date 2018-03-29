@@ -46,7 +46,7 @@ DeleteGameSessionQueueResponse::DeleteGameSessionQueueResponse(
         const DeleteGameSessionQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GameLiftResponse(new DeleteGameSessionQueueResponsePrivate(this), parent)
+    : DeleteGameSessionQueueResponse(new DeleteGameSessionQueueResponsePrivate(this), parent)
 {
     setRequest(new DeleteGameSessionQueueRequest(request));
     setReply(reply);

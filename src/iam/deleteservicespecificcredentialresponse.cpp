@@ -46,7 +46,7 @@ DeleteServiceSpecificCredentialResponse::DeleteServiceSpecificCredentialResponse
         const DeleteServiceSpecificCredentialRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IAMResponse(new DeleteServiceSpecificCredentialResponsePrivate(this), parent)
+    : DeleteServiceSpecificCredentialResponse(new DeleteServiceSpecificCredentialResponsePrivate(this), parent)
 {
     setRequest(new DeleteServiceSpecificCredentialRequest(request));
     setReply(reply);

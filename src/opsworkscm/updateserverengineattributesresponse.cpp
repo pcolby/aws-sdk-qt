@@ -46,7 +46,7 @@ UpdateServerEngineAttributesResponse::UpdateServerEngineAttributesResponse(
         const UpdateServerEngineAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new UpdateServerEngineAttributesResponsePrivate(this), parent)
+    : UpdateServerEngineAttributesResponse(new UpdateServerEngineAttributesResponsePrivate(this), parent)
 {
     setRequest(new UpdateServerEngineAttributesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeletePipelineResponse::DeletePipelineResponse(
         const DeletePipelineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElasticTranscoderResponse(new DeletePipelineResponsePrivate(this), parent)
+    : DeletePipelineResponse(new DeletePipelineResponsePrivate(this), parent)
 {
     setRequest(new DeletePipelineRequest(request));
     setReply(reply);

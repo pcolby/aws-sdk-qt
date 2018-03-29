@@ -46,7 +46,7 @@ DetachClassicLinkVpcResponse::DetachClassicLinkVpcResponse(
         const DetachClassicLinkVpcRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DetachClassicLinkVpcResponsePrivate(this), parent)
+    : DetachClassicLinkVpcResponse(new DetachClassicLinkVpcResponsePrivate(this), parent)
 {
     setRequest(new DetachClassicLinkVpcRequest(request));
     setReply(reply);

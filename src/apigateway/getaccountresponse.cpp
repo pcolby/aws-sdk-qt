@@ -46,7 +46,7 @@ GetAccountResponse::GetAccountResponse(
         const GetAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetAccountResponsePrivate(this), parent)
+    : GetAccountResponse(new GetAccountResponsePrivate(this), parent)
 {
     setRequest(new GetAccountRequest(request));
     setReply(reply);

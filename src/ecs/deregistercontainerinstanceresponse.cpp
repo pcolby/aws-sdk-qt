@@ -46,7 +46,7 @@ DeregisterContainerInstanceResponse::DeregisterContainerInstanceResponse(
         const DeregisterContainerInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECSResponse(new DeregisterContainerInstanceResponsePrivate(this), parent)
+    : DeregisterContainerInstanceResponse(new DeregisterContainerInstanceResponsePrivate(this), parent)
 {
     setRequest(new DeregisterContainerInstanceRequest(request));
     setReply(reply);

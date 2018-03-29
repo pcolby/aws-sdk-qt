@@ -46,7 +46,7 @@ AssociateTagOptionWithResourceResponse::AssociateTagOptionWithResourceResponse(
         const AssociateTagOptionWithResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new AssociateTagOptionWithResourceResponsePrivate(this), parent)
+    : AssociateTagOptionWithResourceResponse(new AssociateTagOptionWithResourceResponsePrivate(this), parent)
 {
     setRequest(new AssociateTagOptionWithResourceRequest(request));
     setReply(reply);

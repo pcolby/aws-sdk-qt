@@ -46,7 +46,7 @@ UpdateInputResponse::UpdateInputResponse(
         const UpdateInputRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MediaLiveResponse(new UpdateInputResponsePrivate(this), parent)
+    : UpdateInputResponse(new UpdateInputResponsePrivate(this), parent)
 {
     setRequest(new UpdateInputRequest(request));
     setReply(reply);

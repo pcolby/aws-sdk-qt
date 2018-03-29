@@ -46,7 +46,7 @@ GetOnPremisesInstanceResponse::GetOnPremisesInstanceResponse(
         const GetOnPremisesInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeDeployResponse(new GetOnPremisesInstanceResponsePrivate(this), parent)
+    : GetOnPremisesInstanceResponse(new GetOnPremisesInstanceResponsePrivate(this), parent)
 {
     setRequest(new GetOnPremisesInstanceRequest(request));
     setReply(reply);

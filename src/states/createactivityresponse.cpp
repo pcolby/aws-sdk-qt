@@ -46,7 +46,7 @@ CreateActivityResponse::CreateActivityResponse(
         const CreateActivityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new CreateActivityResponsePrivate(this), parent)
+    : CreateActivityResponse(new CreateActivityResponsePrivate(this), parent)
 {
     setRequest(new CreateActivityRequest(request));
     setReply(reply);

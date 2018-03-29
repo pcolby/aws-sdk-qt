@@ -46,7 +46,7 @@ DeleteApnsVoipSandboxChannelResponse::DeleteApnsVoipSandboxChannelResponse(
         const DeleteApnsVoipSandboxChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new DeleteApnsVoipSandboxChannelResponsePrivate(this), parent)
+    : DeleteApnsVoipSandboxChannelResponse(new DeleteApnsVoipSandboxChannelResponsePrivate(this), parent)
 {
     setRequest(new DeleteApnsVoipSandboxChannelRequest(request));
     setReply(reply);

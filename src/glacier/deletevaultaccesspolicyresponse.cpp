@@ -46,7 +46,7 @@ DeleteVaultAccessPolicyResponse::DeleteVaultAccessPolicyResponse(
         const DeleteVaultAccessPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GlacierResponse(new DeleteVaultAccessPolicyResponsePrivate(this), parent)
+    : DeleteVaultAccessPolicyResponse(new DeleteVaultAccessPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteVaultAccessPolicyRequest(request));
     setReply(reply);

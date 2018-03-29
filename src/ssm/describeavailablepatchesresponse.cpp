@@ -46,7 +46,7 @@ DescribeAvailablePatchesResponse::DescribeAvailablePatchesResponse(
         const DescribeAvailablePatchesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeAvailablePatchesResponsePrivate(this), parent)
+    : DescribeAvailablePatchesResponse(new DescribeAvailablePatchesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAvailablePatchesRequest(request));
     setReply(reply);

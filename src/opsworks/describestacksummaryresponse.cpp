@@ -46,7 +46,7 @@ DescribeStackSummaryResponse::DescribeStackSummaryResponse(
         const DescribeStackSummaryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new DescribeStackSummaryResponsePrivate(this), parent)
+    : DescribeStackSummaryResponse(new DescribeStackSummaryResponsePrivate(this), parent)
 {
     setRequest(new DescribeStackSummaryRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeBundleTasksResponse::DescribeBundleTasksResponse(
         const DescribeBundleTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new DescribeBundleTasksResponsePrivate(this), parent)
+    : DescribeBundleTasksResponse(new DescribeBundleTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeBundleTasksRequest(request));
     setReply(reply);

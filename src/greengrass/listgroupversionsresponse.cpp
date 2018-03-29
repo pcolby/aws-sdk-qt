@@ -46,7 +46,7 @@ ListGroupVersionsResponse::ListGroupVersionsResponse(
         const ListGroupVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new ListGroupVersionsResponsePrivate(this), parent)
+    : ListGroupVersionsResponse(new ListGroupVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListGroupVersionsRequest(request));
     setReply(reply);

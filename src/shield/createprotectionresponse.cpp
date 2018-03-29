@@ -46,7 +46,7 @@ CreateProtectionResponse::CreateProtectionResponse(
         const CreateProtectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ShieldResponse(new CreateProtectionResponsePrivate(this), parent)
+    : CreateProtectionResponse(new CreateProtectionResponsePrivate(this), parent)
 {
     setRequest(new CreateProtectionRequest(request));
     setReply(reply);

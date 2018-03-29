@@ -46,7 +46,7 @@ CreateHITTypeResponse::CreateHITTypeResponse(
         const CreateHITTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MTurkResponse(new CreateHITTypeResponsePrivate(this), parent)
+    : CreateHITTypeResponse(new CreateHITTypeResponsePrivate(this), parent)
 {
     setRequest(new CreateHITTypeRequest(request));
     setReply(reply);

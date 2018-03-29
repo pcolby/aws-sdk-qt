@@ -46,7 +46,7 @@ CreateAddressResponse::CreateAddressResponse(
         const CreateAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SnowballResponse(new CreateAddressResponsePrivate(this), parent)
+    : CreateAddressResponse(new CreateAddressResponsePrivate(this), parent)
 {
     setRequest(new CreateAddressRequest(request));
     setReply(reply);

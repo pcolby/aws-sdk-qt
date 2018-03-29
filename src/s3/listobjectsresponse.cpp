@@ -46,7 +46,7 @@ ListObjectsResponse::ListObjectsResponse(
         const ListObjectsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : S3Response(new ListObjectsResponsePrivate(this), parent)
+    : ListObjectsResponse(new ListObjectsResponsePrivate(this), parent)
 {
     setRequest(new ListObjectsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListActivitiesResponse::ListActivitiesResponse(
         const ListActivitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SFNResponse(new ListActivitiesResponsePrivate(this), parent)
+    : ListActivitiesResponse(new ListActivitiesResponsePrivate(this), parent)
 {
     setRequest(new ListActivitiesRequest(request));
     setReply(reply);

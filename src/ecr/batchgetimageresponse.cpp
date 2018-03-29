@@ -46,7 +46,7 @@ BatchGetImageResponse::BatchGetImageResponse(
         const BatchGetImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ECRResponse(new BatchGetImageResponsePrivate(this), parent)
+    : BatchGetImageResponse(new BatchGetImageResponsePrivate(this), parent)
 {
     setRequest(new BatchGetImageRequest(request));
     setReply(reply);

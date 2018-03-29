@@ -46,7 +46,7 @@ RestoreServerResponse::RestoreServerResponse(
         const RestoreServerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksCMResponse(new RestoreServerResponsePrivate(this), parent)
+    : RestoreServerResponse(new RestoreServerResponsePrivate(this), parent)
 {
     setRequest(new RestoreServerRequest(request));
     setReply(reply);

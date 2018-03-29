@@ -46,7 +46,7 @@ StartDBInstanceResponse::StartDBInstanceResponse(
         const StartDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new StartDBInstanceResponsePrivate(this), parent)
+    : StartDBInstanceResponse(new StartDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new StartDBInstanceRequest(request));
     setReply(reply);

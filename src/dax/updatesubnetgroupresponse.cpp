@@ -46,7 +46,7 @@ UpdateSubnetGroupResponse::UpdateSubnetGroupResponse(
         const UpdateSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DAXResponse(new UpdateSubnetGroupResponsePrivate(this), parent)
+    : UpdateSubnetGroupResponse(new UpdateSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new UpdateSubnetGroupRequest(request));
     setReply(reply);

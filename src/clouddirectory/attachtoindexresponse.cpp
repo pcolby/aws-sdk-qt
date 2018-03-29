@@ -46,7 +46,7 @@ AttachToIndexResponse::AttachToIndexResponse(
         const AttachToIndexRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new AttachToIndexResponsePrivate(this), parent)
+    : AttachToIndexResponse(new AttachToIndexResponsePrivate(this), parent)
 {
     setRequest(new AttachToIndexRequest(request));
     setReply(reply);

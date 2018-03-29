@@ -46,7 +46,7 @@ PutDestinationPolicyResponse::PutDestinationPolicyResponse(
         const PutDestinationPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchLogsResponse(new PutDestinationPolicyResponsePrivate(this), parent)
+    : PutDestinationPolicyResponse(new PutDestinationPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutDestinationPolicyRequest(request));
     setReply(reply);

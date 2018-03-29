@@ -46,7 +46,7 @@ DescribeConfigurationRecorderStatusResponse::DescribeConfigurationRecorderStatus
         const DescribeConfigurationRecorderStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfigServiceResponse(new DescribeConfigurationRecorderStatusResponsePrivate(this), parent)
+    : DescribeConfigurationRecorderStatusResponse(new DescribeConfigurationRecorderStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeConfigurationRecorderStatusRequest(request));
     setReply(reply);

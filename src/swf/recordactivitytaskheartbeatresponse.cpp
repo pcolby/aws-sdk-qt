@@ -46,7 +46,7 @@ RecordActivityTaskHeartbeatResponse::RecordActivityTaskHeartbeatResponse(
         const RecordActivityTaskHeartbeatRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new RecordActivityTaskHeartbeatResponsePrivate(this), parent)
+    : RecordActivityTaskHeartbeatResponse(new RecordActivityTaskHeartbeatResponsePrivate(this), parent)
 {
     setRequest(new RecordActivityTaskHeartbeatRequest(request));
     setReply(reply);

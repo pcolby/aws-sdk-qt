@@ -46,7 +46,7 @@ ListDeviceDefinitionsResponse::ListDeviceDefinitionsResponse(
         const ListDeviceDefinitionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GreengrassResponse(new ListDeviceDefinitionsResponsePrivate(this), parent)
+    : ListDeviceDefinitionsResponse(new ListDeviceDefinitionsResponsePrivate(this), parent)
 {
     setRequest(new ListDeviceDefinitionsRequest(request));
     setReply(reply);

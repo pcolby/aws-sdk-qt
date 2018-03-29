@@ -46,7 +46,7 @@ DescribeOrganizationalUnitResponse::DescribeOrganizationalUnitResponse(
         const DescribeOrganizationalUnitRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OrganizationsResponse(new DescribeOrganizationalUnitResponsePrivate(this), parent)
+    : DescribeOrganizationalUnitResponse(new DescribeOrganizationalUnitResponsePrivate(this), parent)
 {
     setRequest(new DescribeOrganizationalUnitRequest(request));
     setReply(reply);

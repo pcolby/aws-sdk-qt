@@ -46,7 +46,7 @@ ListQueryLoggingConfigsResponse::ListQueryLoggingConfigsResponse(
         const ListQueryLoggingConfigsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new ListQueryLoggingConfigsResponsePrivate(this), parent)
+    : ListQueryLoggingConfigsResponse(new ListQueryLoggingConfigsResponsePrivate(this), parent)
 {
     setRequest(new ListQueryLoggingConfigsRequest(request));
     setReply(reply);

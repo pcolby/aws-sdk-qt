@@ -46,7 +46,7 @@ DeleteDBSnapshotResponse::DeleteDBSnapshotResponse(
         const DeleteDBSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new DeleteDBSnapshotResponsePrivate(this), parent)
+    : DeleteDBSnapshotResponse(new DeleteDBSnapshotResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBSnapshotRequest(request));
     setReply(reply);

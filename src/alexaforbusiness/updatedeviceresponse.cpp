@@ -46,7 +46,7 @@ UpdateDeviceResponse::UpdateDeviceResponse(
         const UpdateDeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AlexaForBusinessResponse(new UpdateDeviceResponsePrivate(this), parent)
+    : UpdateDeviceResponse(new UpdateDeviceResponsePrivate(this), parent)
 {
     setRequest(new UpdateDeviceRequest(request));
     setReply(reply);

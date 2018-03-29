@@ -46,7 +46,7 @@ DeleteBaiduChannelResponse::DeleteBaiduChannelResponse(
         const DeleteBaiduChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PinpointResponse(new DeleteBaiduChannelResponsePrivate(this), parent)
+    : DeleteBaiduChannelResponse(new DeleteBaiduChannelResponsePrivate(this), parent)
 {
     setRequest(new DeleteBaiduChannelRequest(request));
     setReply(reply);

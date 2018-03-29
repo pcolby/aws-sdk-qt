@@ -46,7 +46,7 @@ ListAssessmentTemplatesResponse::ListAssessmentTemplatesResponse(
         const ListAssessmentTemplatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InspectorResponse(new ListAssessmentTemplatesResponsePrivate(this), parent)
+    : ListAssessmentTemplatesResponse(new ListAssessmentTemplatesResponsePrivate(this), parent)
 {
     setRequest(new ListAssessmentTemplatesRequest(request));
     setReply(reply);

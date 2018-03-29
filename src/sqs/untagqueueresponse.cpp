@@ -46,7 +46,7 @@ UntagQueueResponse::UntagQueueResponse(
         const UntagQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SQSResponse(new UntagQueueResponsePrivate(this), parent)
+    : UntagQueueResponse(new UntagQueueResponsePrivate(this), parent)
 {
     setRequest(new UntagQueueRequest(request));
     setReply(reply);

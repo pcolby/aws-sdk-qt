@@ -46,7 +46,7 @@ ListUserProfilesResponse::ListUserProfilesResponse(
         const ListUserProfilesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeStarResponse(new ListUserProfilesResponsePrivate(this), parent)
+    : ListUserProfilesResponse(new ListUserProfilesResponsePrivate(this), parent)
 {
     setRequest(new ListUserProfilesRequest(request));
     setReply(reply);

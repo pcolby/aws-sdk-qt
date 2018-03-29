@@ -46,7 +46,7 @@ CopyDBParameterGroupResponse::CopyDBParameterGroupResponse(
         const CopyDBParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CopyDBParameterGroupResponsePrivate(this), parent)
+    : CopyDBParameterGroupResponse(new CopyDBParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new CopyDBParameterGroupRequest(request));
     setReply(reply);

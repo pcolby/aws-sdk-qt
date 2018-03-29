@@ -46,7 +46,7 @@ CreateCachediSCSIVolumeResponse::CreateCachediSCSIVolumeResponse(
         const CreateCachediSCSIVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new CreateCachediSCSIVolumeResponsePrivate(this), parent)
+    : CreateCachediSCSIVolumeResponse(new CreateCachediSCSIVolumeResponsePrivate(this), parent)
 {
     setRequest(new CreateCachediSCSIVolumeRequest(request));
     setReply(reply);

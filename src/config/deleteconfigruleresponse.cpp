@@ -46,7 +46,7 @@ DeleteConfigRuleResponse::DeleteConfigRuleResponse(
         const DeleteConfigRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfigServiceResponse(new DeleteConfigRuleResponsePrivate(this), parent)
+    : DeleteConfigRuleResponse(new DeleteConfigRuleResponsePrivate(this), parent)
 {
     setRequest(new DeleteConfigRuleRequest(request));
     setReply(reply);

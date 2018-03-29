@@ -46,7 +46,7 @@ CreateConfigurationResponse::CreateConfigurationResponse(
         const CreateConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MQResponse(new CreateConfigurationResponsePrivate(this), parent)
+    : CreateConfigurationResponse(new CreateConfigurationResponsePrivate(this), parent)
 {
     setRequest(new CreateConfigurationRequest(request));
     setReply(reply);

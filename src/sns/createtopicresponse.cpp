@@ -46,7 +46,7 @@ CreateTopicResponse::CreateTopicResponse(
         const CreateTopicRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SNSResponse(new CreateTopicResponsePrivate(this), parent)
+    : CreateTopicResponse(new CreateTopicResponsePrivate(this), parent)
 {
     setRequest(new CreateTopicRequest(request));
     setReply(reply);

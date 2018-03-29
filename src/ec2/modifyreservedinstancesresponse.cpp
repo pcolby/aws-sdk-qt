@@ -46,7 +46,7 @@ ModifyReservedInstancesResponse::ModifyReservedInstancesResponse(
         const ModifyReservedInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new ModifyReservedInstancesResponsePrivate(this), parent)
+    : ModifyReservedInstancesResponse(new ModifyReservedInstancesResponsePrivate(this), parent)
 {
     setRequest(new ModifyReservedInstancesRequest(request));
     setReply(reply);

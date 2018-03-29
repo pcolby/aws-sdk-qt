@@ -46,7 +46,7 @@ StartConfigRulesEvaluationResponse::StartConfigRulesEvaluationResponse(
         const StartConfigRulesEvaluationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfigServiceResponse(new StartConfigRulesEvaluationResponsePrivate(this), parent)
+    : StartConfigRulesEvaluationResponse(new StartConfigRulesEvaluationResponsePrivate(this), parent)
 {
     setRequest(new StartConfigRulesEvaluationRequest(request));
     setReply(reply);

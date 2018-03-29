@@ -46,7 +46,7 @@ StopInstanceResponse::StopInstanceResponse(
         const StopInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LightsailResponse(new StopInstanceResponsePrivate(this), parent)
+    : StopInstanceResponse(new StopInstanceResponsePrivate(this), parent)
 {
     setRequest(new StopInstanceRequest(request));
     setReply(reply);

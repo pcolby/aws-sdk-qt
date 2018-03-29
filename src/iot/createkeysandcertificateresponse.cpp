@@ -46,7 +46,7 @@ CreateKeysAndCertificateResponse::CreateKeysAndCertificateResponse(
         const CreateKeysAndCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new CreateKeysAndCertificateResponsePrivate(this), parent)
+    : CreateKeysAndCertificateResponse(new CreateKeysAndCertificateResponsePrivate(this), parent)
 {
     setRequest(new CreateKeysAndCertificateRequest(request));
     setReply(reply);

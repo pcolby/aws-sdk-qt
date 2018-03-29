@@ -46,7 +46,7 @@ UpdateTagOptionResponse::UpdateTagOptionResponse(
         const UpdateTagOptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ServiceCatalogResponse(new UpdateTagOptionResponsePrivate(this), parent)
+    : UpdateTagOptionResponse(new UpdateTagOptionResponsePrivate(this), parent)
 {
     setRequest(new UpdateTagOptionRequest(request));
     setReply(reply);

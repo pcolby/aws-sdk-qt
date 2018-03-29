@@ -46,7 +46,7 @@ ListFileSharesResponse::ListFileSharesResponse(
         const ListFileSharesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StorageGatewayResponse(new ListFileSharesResponsePrivate(this), parent)
+    : ListFileSharesResponse(new ListFileSharesResponsePrivate(this), parent)
 {
     setRequest(new ListFileSharesRequest(request));
     setReply(reply);

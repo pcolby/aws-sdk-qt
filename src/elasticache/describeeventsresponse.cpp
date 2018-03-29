@@ -46,7 +46,7 @@ DescribeEventsResponse::DescribeEventsResponse(
         const DescribeEventsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ElastiCacheResponse(new DescribeEventsResponsePrivate(this), parent)
+    : DescribeEventsResponse(new DescribeEventsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEventsRequest(request));
     setReply(reply);

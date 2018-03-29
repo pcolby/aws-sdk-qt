@@ -46,7 +46,7 @@ GetTestResponse::GetTestResponse(
         const GetTestRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeviceFarmResponse(new GetTestResponsePrivate(this), parent)
+    : GetTestResponse(new GetTestResponsePrivate(this), parent)
 {
     setRequest(new GetTestRequest(request));
     setReply(reply);

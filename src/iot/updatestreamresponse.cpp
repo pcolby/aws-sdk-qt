@@ -46,7 +46,7 @@ UpdateStreamResponse::UpdateStreamResponse(
         const UpdateStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IoTResponse(new UpdateStreamResponsePrivate(this), parent)
+    : UpdateStreamResponse(new UpdateStreamResponsePrivate(this), parent)
 {
     setRequest(new UpdateStreamRequest(request));
     setReply(reply);

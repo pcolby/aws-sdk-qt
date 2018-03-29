@@ -46,7 +46,7 @@ PollForDecisionTaskResponse::PollForDecisionTaskResponse(
         const PollForDecisionTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SWFResponse(new PollForDecisionTaskResponsePrivate(this), parent)
+    : PollForDecisionTaskResponse(new PollForDecisionTaskResponsePrivate(this), parent)
 {
     setRequest(new PollForDecisionTaskRequest(request));
     setReply(reply);

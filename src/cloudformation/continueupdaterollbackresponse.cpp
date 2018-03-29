@@ -46,7 +46,7 @@ ContinueUpdateRollbackResponse::ContinueUpdateRollbackResponse(
         const ContinueUpdateRollbackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudFormationResponse(new ContinueUpdateRollbackResponsePrivate(this), parent)
+    : ContinueUpdateRollbackResponse(new ContinueUpdateRollbackResponsePrivate(this), parent)
 {
     setRequest(new ContinueUpdateRollbackRequest(request));
     setReply(reply);

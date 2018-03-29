@@ -46,7 +46,7 @@ PutMetricFilterResponse::PutMetricFilterResponse(
         const PutMetricFilterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudWatchLogsResponse(new PutMetricFilterResponsePrivate(this), parent)
+    : PutMetricFilterResponse(new PutMetricFilterResponsePrivate(this), parent)
 {
     setRequest(new PutMetricFilterRequest(request));
     setReply(reply);

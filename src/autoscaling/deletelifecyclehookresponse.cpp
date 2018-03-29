@@ -46,7 +46,7 @@ DeleteLifecycleHookResponse::DeleteLifecycleHookResponse(
         const DeleteLifecycleHookRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AutoScalingResponse(new DeleteLifecycleHookResponsePrivate(this), parent)
+    : DeleteLifecycleHookResponse(new DeleteLifecycleHookResponsePrivate(this), parent)
 {
     setRequest(new DeleteLifecycleHookRequest(request));
     setReply(reply);

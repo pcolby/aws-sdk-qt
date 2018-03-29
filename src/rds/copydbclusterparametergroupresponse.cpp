@@ -46,7 +46,7 @@ CopyDBClusterParameterGroupResponse::CopyDBClusterParameterGroupResponse(
         const CopyDBClusterParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new CopyDBClusterParameterGroupResponsePrivate(this), parent)
+    : CopyDBClusterParameterGroupResponse(new CopyDBClusterParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new CopyDBClusterParameterGroupRequest(request));
     setReply(reply);

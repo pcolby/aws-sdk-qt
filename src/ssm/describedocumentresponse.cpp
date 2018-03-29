@@ -46,7 +46,7 @@ DescribeDocumentResponse::DescribeDocumentResponse(
         const DescribeDocumentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SSMResponse(new DescribeDocumentResponsePrivate(this), parent)
+    : DescribeDocumentResponse(new DescribeDocumentResponsePrivate(this), parent)
 {
     setRequest(new DescribeDocumentRequest(request));
     setReply(reply);

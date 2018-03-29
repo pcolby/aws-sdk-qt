@@ -46,7 +46,7 @@ DeleteClusterSecurityGroupResponse::DeleteClusterSecurityGroupResponse(
         const DeleteClusterSecurityGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DeleteClusterSecurityGroupResponsePrivate(this), parent)
+    : DeleteClusterSecurityGroupResponse(new DeleteClusterSecurityGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteClusterSecurityGroupRequest(request));
     setReply(reply);

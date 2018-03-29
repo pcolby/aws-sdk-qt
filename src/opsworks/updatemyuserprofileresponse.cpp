@@ -46,7 +46,7 @@ UpdateMyUserProfileResponse::UpdateMyUserProfileResponse(
         const UpdateMyUserProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new UpdateMyUserProfileResponsePrivate(this), parent)
+    : UpdateMyUserProfileResponse(new UpdateMyUserProfileResponsePrivate(this), parent)
 {
     setRequest(new UpdateMyUserProfileRequest(request));
     setReply(reply);

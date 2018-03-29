@@ -46,7 +46,7 @@ ModifyWorkspacePropertiesResponse::ModifyWorkspacePropertiesResponse(
         const ModifyWorkspacePropertiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WorkSpacesResponse(new ModifyWorkspacePropertiesResponsePrivate(this), parent)
+    : ModifyWorkspacePropertiesResponse(new ModifyWorkspacePropertiesResponsePrivate(this), parent)
 {
     setRequest(new ModifyWorkspacePropertiesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CheckDomainTransferabilityResponse::CheckDomainTransferabilityResponse(
         const CheckDomainTransferabilityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53DomainsResponse(new CheckDomainTransferabilityResponsePrivate(this), parent)
+    : CheckDomainTransferabilityResponse(new CheckDomainTransferabilityResponsePrivate(this), parent)
 {
     setRequest(new CheckDomainTransferabilityRequest(request));
     setReply(reply);

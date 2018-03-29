@@ -46,7 +46,7 @@ GetRestApisResponse::GetRestApisResponse(
         const GetRestApisRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : APIGatewayResponse(new GetRestApisResponsePrivate(this), parent)
+    : GetRestApisResponse(new GetRestApisResponsePrivate(this), parent)
 {
     setRequest(new GetRestApisRequest(request));
     setReply(reply);

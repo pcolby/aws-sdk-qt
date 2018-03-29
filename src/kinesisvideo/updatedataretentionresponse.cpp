@@ -46,7 +46,7 @@ UpdateDataRetentionResponse::UpdateDataRetentionResponse(
         const UpdateDataRetentionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : KinesisVideoResponse(new UpdateDataRetentionResponsePrivate(this), parent)
+    : UpdateDataRetentionResponse(new UpdateDataRetentionResponsePrivate(this), parent)
 {
     setRequest(new UpdateDataRetentionRequest(request));
     setReply(reply);

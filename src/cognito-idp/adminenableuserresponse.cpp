@@ -46,7 +46,7 @@ AdminEnableUserResponse::AdminEnableUserResponse(
         const AdminEnableUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CognitoIdentityProviderResponse(new AdminEnableUserResponsePrivate(this), parent)
+    : AdminEnableUserResponse(new AdminEnableUserResponsePrivate(this), parent)
 {
     setRequest(new AdminEnableUserRequest(request));
     setReply(reply);

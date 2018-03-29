@@ -46,7 +46,7 @@ DescribeSnapshotCopyGrantsResponse::DescribeSnapshotCopyGrantsResponse(
         const DescribeSnapshotCopyGrantsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RedshiftResponse(new DescribeSnapshotCopyGrantsResponsePrivate(this), parent)
+    : DescribeSnapshotCopyGrantsResponse(new DescribeSnapshotCopyGrantsResponsePrivate(this), parent)
 {
     setRequest(new DescribeSnapshotCopyGrantsRequest(request));
     setReply(reply);

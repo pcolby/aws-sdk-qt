@@ -46,7 +46,7 @@ UpdateRdsDbInstanceResponse::UpdateRdsDbInstanceResponse(
         const UpdateRdsDbInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OpsWorksResponse(new UpdateRdsDbInstanceResponsePrivate(this), parent)
+    : UpdateRdsDbInstanceResponse(new UpdateRdsDbInstanceResponsePrivate(this), parent)
 {
     setRequest(new UpdateRdsDbInstanceRequest(request));
     setReply(reply);

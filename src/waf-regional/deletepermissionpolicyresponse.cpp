@@ -46,7 +46,7 @@ DeletePermissionPolicyResponse::DeletePermissionPolicyResponse(
         const DeletePermissionPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : WAFRegionalResponse(new DeletePermissionPolicyResponsePrivate(this), parent)
+    : DeletePermissionPolicyResponse(new DeletePermissionPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeletePermissionPolicyRequest(request));
     setReply(reply);

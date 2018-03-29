@@ -46,7 +46,7 @@ RestoreDBClusterFromS3Response::RestoreDBClusterFromS3Response(
         const RestoreDBClusterFromS3Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RDSResponse(new RestoreDBClusterFromS3ResponsePrivate(this), parent)
+    : RestoreDBClusterFromS3Response(new RestoreDBClusterFromS3ResponsePrivate(this), parent)
 {
     setRequest(new RestoreDBClusterFromS3Request(request));
     setReply(reply);

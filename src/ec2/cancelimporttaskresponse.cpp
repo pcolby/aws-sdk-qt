@@ -46,7 +46,7 @@ CancelImportTaskResponse::CancelImportTaskResponse(
         const CancelImportTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new CancelImportTaskResponsePrivate(this), parent)
+    : CancelImportTaskResponse(new CancelImportTaskResponsePrivate(this), parent)
 {
     setRequest(new CancelImportTaskRequest(request));
     setReply(reply);

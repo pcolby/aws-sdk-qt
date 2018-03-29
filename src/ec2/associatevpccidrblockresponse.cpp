@@ -46,7 +46,7 @@ AssociateVpcCidrBlockResponse::AssociateVpcCidrBlockResponse(
         const AssociateVpcCidrBlockRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EC2Response(new AssociateVpcCidrBlockResponsePrivate(this), parent)
+    : AssociateVpcCidrBlockResponse(new AssociateVpcCidrBlockResponsePrivate(this), parent)
 {
     setRequest(new AssociateVpcCidrBlockRequest(request));
     setReply(reply);

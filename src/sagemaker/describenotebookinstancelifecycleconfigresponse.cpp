@@ -46,7 +46,7 @@ DescribeNotebookInstanceLifecycleConfigResponse::DescribeNotebookInstanceLifecyc
         const DescribeNotebookInstanceLifecycleConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SageMakerResponse(new DescribeNotebookInstanceLifecycleConfigResponsePrivate(this), parent)
+    : DescribeNotebookInstanceLifecycleConfigResponse(new DescribeNotebookInstanceLifecycleConfigResponsePrivate(this), parent)
 {
     setRequest(new DescribeNotebookInstanceLifecycleConfigRequest(request));
     setReply(reply);

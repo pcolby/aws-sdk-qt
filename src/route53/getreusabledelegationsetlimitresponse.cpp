@@ -46,7 +46,7 @@ GetReusableDelegationSetLimitResponse::GetReusableDelegationSetLimitResponse(
         const GetReusableDelegationSetLimitRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : Route53Response(new GetReusableDelegationSetLimitResponsePrivate(this), parent)
+    : GetReusableDelegationSetLimitResponse(new GetReusableDelegationSetLimitResponsePrivate(this), parent)
 {
     setRequest(new GetReusableDelegationSetLimitRequest(request));
     setReply(reply);

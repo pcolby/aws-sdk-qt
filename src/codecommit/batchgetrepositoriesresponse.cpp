@@ -46,7 +46,7 @@ BatchGetRepositoriesResponse::BatchGetRepositoriesResponse(
         const BatchGetRepositoriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CodeCommitResponse(new BatchGetRepositoriesResponsePrivate(this), parent)
+    : BatchGetRepositoriesResponse(new BatchGetRepositoriesResponsePrivate(this), parent)
 {
     setRequest(new BatchGetRepositoriesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetAppliedSchemaVersionResponse::GetAppliedSchemaVersionResponse(
         const GetAppliedSchemaVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudDirectoryResponse(new GetAppliedSchemaVersionResponsePrivate(this), parent)
+    : GetAppliedSchemaVersionResponse(new GetAppliedSchemaVersionResponsePrivate(this), parent)
 {
     setRequest(new GetAppliedSchemaVersionRequest(request));
     setReply(reply);

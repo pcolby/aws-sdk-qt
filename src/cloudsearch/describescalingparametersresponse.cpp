@@ -46,7 +46,7 @@ DescribeScalingParametersResponse::DescribeScalingParametersResponse(
         const DescribeScalingParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CloudSearchResponse(new DescribeScalingParametersResponsePrivate(this), parent)
+    : DescribeScalingParametersResponse(new DescribeScalingParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeScalingParametersRequest(request));
     setReply(reply);

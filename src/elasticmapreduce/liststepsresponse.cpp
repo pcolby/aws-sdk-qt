@@ -46,7 +46,7 @@ ListStepsResponse::ListStepsResponse(
         const ListStepsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EMRResponse(new ListStepsResponsePrivate(this), parent)
+    : ListStepsResponse(new ListStepsResponsePrivate(this), parent)
 {
     setRequest(new ListStepsRequest(request));
     setReply(reply);
