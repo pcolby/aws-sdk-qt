@@ -172,11 +172,11 @@ bool ShieldRequest::operator==(const ShieldRequest &other) const
  *
  * @see    http://aws.amazon.com/sqs/faqs/
  */
-bool ShieldRequest::isValidQueueName(const QString &queueName)
+/*bool ShieldRequest::isValidQueueName(const QString &queueName)
 {
     const QRegExp pattern(QLatin1String("[a-zA-Z0-9-_]{1,80}"));
     return pattern.exactMatch(queueName);
-}
+}*/
 
 /**
  * @brief  Remove a parameter from the parameters to be included with this request.
