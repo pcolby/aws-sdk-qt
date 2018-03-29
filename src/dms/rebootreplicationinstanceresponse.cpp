@@ -46,7 +46,7 @@ RebootReplicationInstanceResponse::RebootReplicationInstanceResponse(
         const RebootReplicationInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RebootReplicationInstanceResponse(new RebootReplicationInstanceResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new RebootReplicationInstanceResponsePrivate(this), parent)
 {
     setRequest(new RebootReplicationInstanceRequest(request));
     setReply(reply);

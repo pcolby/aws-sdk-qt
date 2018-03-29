@@ -46,7 +46,7 @@ CreateJobResponse::CreateJobResponse(
         const CreateJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateJobResponse(new CreateJobResponsePrivate(this), parent)
+    : ElasticTranscoderResponse(new CreateJobResponsePrivate(this), parent)
 {
     setRequest(new CreateJobRequest(request));
     setReply(reply);

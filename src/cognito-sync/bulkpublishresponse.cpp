@@ -46,7 +46,7 @@ BulkPublishResponse::BulkPublishResponse(
         const BulkPublishRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BulkPublishResponse(new BulkPublishResponsePrivate(this), parent)
+    : CognitoSyncResponse(new BulkPublishResponsePrivate(this), parent)
 {
     setRequest(new BulkPublishRequest(request));
     setReply(reply);

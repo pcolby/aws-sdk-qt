@@ -46,7 +46,7 @@ DeletePolicyResponse::DeletePolicyResponse(
         const DeletePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeletePolicyResponse(new DeletePolicyResponsePrivate(this), parent)
+    : IoTResponse(new DeletePolicyResponsePrivate(this), parent)
 {
     setRequest(new DeletePolicyRequest(request));
     setReply(reply);

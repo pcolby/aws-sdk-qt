@@ -46,7 +46,7 @@ GetFunctionDefinitionResponse::GetFunctionDefinitionResponse(
         const GetFunctionDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetFunctionDefinitionResponse(new GetFunctionDefinitionResponsePrivate(this), parent)
+    : GreengrassResponse(new GetFunctionDefinitionResponsePrivate(this), parent)
 {
     setRequest(new GetFunctionDefinitionRequest(request));
     setReply(reply);

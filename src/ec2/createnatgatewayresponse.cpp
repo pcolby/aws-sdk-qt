@@ -46,7 +46,7 @@ CreateNatGatewayResponse::CreateNatGatewayResponse(
         const CreateNatGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateNatGatewayResponse(new CreateNatGatewayResponsePrivate(this), parent)
+    : EC2Response(new CreateNatGatewayResponsePrivate(this), parent)
 {
     setRequest(new CreateNatGatewayRequest(request));
     setReply(reply);

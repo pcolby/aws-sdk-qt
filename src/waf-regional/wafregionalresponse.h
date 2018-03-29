@@ -34,6 +34,11 @@ class QTAWS_EXPORT WAFRegionalResponse : public QtAws::Core::AwsAbstractResponse
 public:
     WAFRegionalResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    WAFRegionalResponse(WAFRegionalResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

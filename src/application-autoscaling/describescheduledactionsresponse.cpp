@@ -46,7 +46,7 @@ DescribeScheduledActionsResponse::DescribeScheduledActionsResponse(
         const DescribeScheduledActionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeScheduledActionsResponse(new DescribeScheduledActionsResponsePrivate(this), parent)
+    : ApplicationAutoScalingResponse(new DescribeScheduledActionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeScheduledActionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteIntentVersionResponse::DeleteIntentVersionResponse(
         const DeleteIntentVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteIntentVersionResponse(new DeleteIntentVersionResponsePrivate(this), parent)
+    : LexModelBuildingServiceResponse(new DeleteIntentVersionResponsePrivate(this), parent)
 {
     setRequest(new DeleteIntentVersionRequest(request));
     setReply(reply);

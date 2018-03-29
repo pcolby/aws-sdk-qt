@@ -46,7 +46,7 @@ DisableAlarmActionsResponse::DisableAlarmActionsResponse(
         const DisableAlarmActionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisableAlarmActionsResponse(new DisableAlarmActionsResponsePrivate(this), parent)
+    : CloudWatchResponse(new DisableAlarmActionsResponsePrivate(this), parent)
 {
     setRequest(new DisableAlarmActionsRequest(request));
     setReply(reply);

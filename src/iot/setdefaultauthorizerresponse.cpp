@@ -46,7 +46,7 @@ SetDefaultAuthorizerResponse::SetDefaultAuthorizerResponse(
         const SetDefaultAuthorizerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetDefaultAuthorizerResponse(new SetDefaultAuthorizerResponsePrivate(this), parent)
+    : IoTResponse(new SetDefaultAuthorizerResponsePrivate(this), parent)
 {
     setRequest(new SetDefaultAuthorizerRequest(request));
     setReply(reply);

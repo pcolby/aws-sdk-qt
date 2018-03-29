@@ -46,7 +46,7 @@ UpdateContainerInstancesStateResponse::UpdateContainerInstancesStateResponse(
         const UpdateContainerInstancesStateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateContainerInstancesStateResponse(new UpdateContainerInstancesStateResponsePrivate(this), parent)
+    : ECSResponse(new UpdateContainerInstancesStateResponsePrivate(this), parent)
 {
     setRequest(new UpdateContainerInstancesStateRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetInstanceResponse::GetInstanceResponse(
         const GetInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetInstanceResponse(new GetInstanceResponsePrivate(this), parent)
+    : ServiceDiscoveryResponse(new GetInstanceResponsePrivate(this), parent)
 {
     setRequest(new GetInstanceRequest(request));
     setReply(reply);

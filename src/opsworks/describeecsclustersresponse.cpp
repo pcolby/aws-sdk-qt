@@ -46,7 +46,7 @@ DescribeEcsClustersResponse::DescribeEcsClustersResponse(
         const DescribeEcsClustersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeEcsClustersResponse(new DescribeEcsClustersResponsePrivate(this), parent)
+    : OpsWorksResponse(new DescribeEcsClustersResponsePrivate(this), parent)
 {
     setRequest(new DescribeEcsClustersRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListPortfoliosForProductResponse::ListPortfoliosForProductResponse(
         const ListPortfoliosForProductRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListPortfoliosForProductResponse(new ListPortfoliosForProductResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new ListPortfoliosForProductResponsePrivate(this), parent)
 {
     setRequest(new ListPortfoliosForProductRequest(request));
     setReply(reply);

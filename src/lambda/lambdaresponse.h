@@ -34,6 +34,11 @@ class QTAWS_EXPORT LambdaResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     LambdaResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    LambdaResponse(LambdaResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

@@ -46,7 +46,7 @@ DescribeDocumentVersionsResponse::DescribeDocumentVersionsResponse(
         const DescribeDocumentVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeDocumentVersionsResponse(new DescribeDocumentVersionsResponsePrivate(this), parent)
+    : WorkDocsResponse(new DescribeDocumentVersionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDocumentVersionsRequest(request));
     setReply(reply);

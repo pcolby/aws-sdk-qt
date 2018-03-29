@@ -46,7 +46,7 @@ DeleteAccountAliasResponse::DeleteAccountAliasResponse(
         const DeleteAccountAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteAccountAliasResponse(new DeleteAccountAliasResponsePrivate(this), parent)
+    : IAMResponse(new DeleteAccountAliasResponsePrivate(this), parent)
 {
     setRequest(new DeleteAccountAliasRequest(request));
     setReply(reply);

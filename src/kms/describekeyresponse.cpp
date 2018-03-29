@@ -46,7 +46,7 @@ DescribeKeyResponse::DescribeKeyResponse(
         const DescribeKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeKeyResponse(new DescribeKeyResponsePrivate(this), parent)
+    : KMSResponse(new DescribeKeyResponsePrivate(this), parent)
 {
     setRequest(new DescribeKeyRequest(request));
     setReply(reply);

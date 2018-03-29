@@ -46,7 +46,7 @@ StopStreamEncryptionResponse::StopStreamEncryptionResponse(
         const StopStreamEncryptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopStreamEncryptionResponse(new StopStreamEncryptionResponsePrivate(this), parent)
+    : KinesisResponse(new StopStreamEncryptionResponsePrivate(this), parent)
 {
     setRequest(new StopStreamEncryptionRequest(request));
     setReply(reply);

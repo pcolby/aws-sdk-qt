@@ -46,7 +46,7 @@ ModifyImageAttributeResponse::ModifyImageAttributeResponse(
         const ModifyImageAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyImageAttributeResponse(new ModifyImageAttributeResponsePrivate(this), parent)
+    : EC2Response(new ModifyImageAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifyImageAttributeRequest(request));
     setReply(reply);

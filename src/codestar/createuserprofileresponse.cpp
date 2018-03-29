@@ -46,7 +46,7 @@ CreateUserProfileResponse::CreateUserProfileResponse(
         const CreateUserProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateUserProfileResponse(new CreateUserProfileResponsePrivate(this), parent)
+    : CodeStarResponse(new CreateUserProfileResponsePrivate(this), parent)
 {
     setRequest(new CreateUserProfileRequest(request));
     setReply(reply);

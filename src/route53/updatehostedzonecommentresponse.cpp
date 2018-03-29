@@ -46,7 +46,7 @@ UpdateHostedZoneCommentResponse::UpdateHostedZoneCommentResponse(
         const UpdateHostedZoneCommentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateHostedZoneCommentResponse(new UpdateHostedZoneCommentResponsePrivate(this), parent)
+    : Route53Response(new UpdateHostedZoneCommentResponsePrivate(this), parent)
 {
     setRequest(new UpdateHostedZoneCommentRequest(request));
     setReply(reply);

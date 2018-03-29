@@ -46,7 +46,7 @@ ListServicesResponse::ListServicesResponse(
         const ListServicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListServicesResponse(new ListServicesResponsePrivate(this), parent)
+    : ServiceDiscoveryResponse(new ListServicesResponsePrivate(this), parent)
 {
     setRequest(new ListServicesRequest(request));
     setReply(reply);

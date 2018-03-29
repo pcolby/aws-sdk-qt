@@ -46,7 +46,7 @@ CancelUpdateStackResponse::CancelUpdateStackResponse(
         const CancelUpdateStackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CancelUpdateStackResponse(new CancelUpdateStackResponsePrivate(this), parent)
+    : CloudFormationResponse(new CancelUpdateStackResponsePrivate(this), parent)
 {
     setRequest(new CancelUpdateStackRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeletePlacementGroupResponse::DeletePlacementGroupResponse(
         const DeletePlacementGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeletePlacementGroupResponse(new DeletePlacementGroupResponsePrivate(this), parent)
+    : EC2Response(new DeletePlacementGroupResponsePrivate(this), parent)
 {
     setRequest(new DeletePlacementGroupRequest(request));
     setReply(reply);

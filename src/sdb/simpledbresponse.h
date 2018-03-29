@@ -34,6 +34,11 @@ class QTAWS_EXPORT SimpleDBResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     SimpleDBResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    SimpleDBResponse(SimpleDBResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

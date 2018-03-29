@@ -46,7 +46,7 @@ CreateSAMLProviderResponse::CreateSAMLProviderResponse(
         const CreateSAMLProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateSAMLProviderResponse(new CreateSAMLProviderResponsePrivate(this), parent)
+    : IAMResponse(new CreateSAMLProviderResponsePrivate(this), parent)
 {
     setRequest(new CreateSAMLProviderRequest(request));
     setReply(reply);

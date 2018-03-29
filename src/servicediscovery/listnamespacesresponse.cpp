@@ -46,7 +46,7 @@ ListNamespacesResponse::ListNamespacesResponse(
         const ListNamespacesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListNamespacesResponse(new ListNamespacesResponsePrivate(this), parent)
+    : ServiceDiscoveryResponse(new ListNamespacesResponsePrivate(this), parent)
 {
     setRequest(new ListNamespacesRequest(request));
     setReply(reply);

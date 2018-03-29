@@ -46,7 +46,7 @@ DeleteBucketWebsiteResponse::DeleteBucketWebsiteResponse(
         const DeleteBucketWebsiteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteBucketWebsiteResponse(new DeleteBucketWebsiteResponsePrivate(this), parent)
+    : S3Response(new DeleteBucketWebsiteResponsePrivate(this), parent)
 {
     setRequest(new DeleteBucketWebsiteRequest(request));
     setReply(reply);

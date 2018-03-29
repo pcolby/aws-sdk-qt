@@ -46,7 +46,7 @@ UpdateSqlInjectionMatchSetResponse::UpdateSqlInjectionMatchSetResponse(
         const UpdateSqlInjectionMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateSqlInjectionMatchSetResponse(new UpdateSqlInjectionMatchSetResponsePrivate(this), parent)
+    : WAFResponse(new UpdateSqlInjectionMatchSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateSqlInjectionMatchSetRequest(request));
     setReply(reply);

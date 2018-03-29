@@ -46,7 +46,7 @@ ModifySnapshotCopyRetentionPeriodResponse::ModifySnapshotCopyRetentionPeriodResp
         const ModifySnapshotCopyRetentionPeriodRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifySnapshotCopyRetentionPeriodResponse(new ModifySnapshotCopyRetentionPeriodResponsePrivate(this), parent)
+    : RedshiftResponse(new ModifySnapshotCopyRetentionPeriodResponsePrivate(this), parent)
 {
     setRequest(new ModifySnapshotCopyRetentionPeriodRequest(request));
     setReply(reply);

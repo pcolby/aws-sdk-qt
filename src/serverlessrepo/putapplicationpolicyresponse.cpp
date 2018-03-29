@@ -46,7 +46,7 @@ PutApplicationPolicyResponse::PutApplicationPolicyResponse(
         const PutApplicationPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutApplicationPolicyResponse(new PutApplicationPolicyResponsePrivate(this), parent)
+    : ServerlessApplicationRepositoryResponse(new PutApplicationPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutApplicationPolicyRequest(request));
     setReply(reply);

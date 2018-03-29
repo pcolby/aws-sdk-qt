@@ -46,7 +46,7 @@ CreateSubscriptionResponse::CreateSubscriptionResponse(
         const CreateSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateSubscriptionResponse(new CreateSubscriptionResponsePrivate(this), parent)
+    : ShieldResponse(new CreateSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new CreateSubscriptionRequest(request));
     setReply(reply);

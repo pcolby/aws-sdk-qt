@@ -46,7 +46,7 @@ DescribeSubscriptionFiltersResponse::DescribeSubscriptionFiltersResponse(
         const DescribeSubscriptionFiltersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeSubscriptionFiltersResponse(new DescribeSubscriptionFiltersResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new DescribeSubscriptionFiltersResponsePrivate(this), parent)
 {
     setRequest(new DescribeSubscriptionFiltersRequest(request));
     setReply(reply);

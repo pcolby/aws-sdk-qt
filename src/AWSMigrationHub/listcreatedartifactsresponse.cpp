@@ -46,7 +46,7 @@ ListCreatedArtifactsResponse::ListCreatedArtifactsResponse(
         const ListCreatedArtifactsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListCreatedArtifactsResponse(new ListCreatedArtifactsResponsePrivate(this), parent)
+    : MigrationHubResponse(new ListCreatedArtifactsResponsePrivate(this), parent)
 {
     setRequest(new ListCreatedArtifactsRequest(request));
     setReply(reply);

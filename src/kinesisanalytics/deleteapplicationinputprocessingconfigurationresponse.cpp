@@ -46,7 +46,7 @@ DeleteApplicationInputProcessingConfigurationResponse::DeleteApplicationInputPro
         const DeleteApplicationInputProcessingConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteApplicationInputProcessingConfigurationResponse(new DeleteApplicationInputProcessingConfigurationResponsePrivate(this), parent)
+    : KinesisAnalyticsResponse(new DeleteApplicationInputProcessingConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DeleteApplicationInputProcessingConfigurationRequest(request));
     setReply(reply);

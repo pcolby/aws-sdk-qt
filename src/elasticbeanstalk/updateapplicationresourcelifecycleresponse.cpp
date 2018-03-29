@@ -46,7 +46,7 @@ UpdateApplicationResourceLifecycleResponse::UpdateApplicationResourceLifecycleRe
         const UpdateApplicationResourceLifecycleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateApplicationResourceLifecycleResponse(new UpdateApplicationResourceLifecycleResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new UpdateApplicationResourceLifecycleResponsePrivate(this), parent)
 {
     setRequest(new UpdateApplicationResourceLifecycleRequest(request));
     setReply(reply);

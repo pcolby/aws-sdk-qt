@@ -46,7 +46,7 @@ DeleteInputResponse::DeleteInputResponse(
         const DeleteInputRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteInputResponse(new DeleteInputResponsePrivate(this), parent)
+    : MediaLiveResponse(new DeleteInputResponsePrivate(this), parent)
 {
     setRequest(new DeleteInputRequest(request));
     setReply(reply);

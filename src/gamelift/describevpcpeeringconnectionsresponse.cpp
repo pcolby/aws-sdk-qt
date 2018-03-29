@@ -46,7 +46,7 @@ DescribeVpcPeeringConnectionsResponse::DescribeVpcPeeringConnectionsResponse(
         const DescribeVpcPeeringConnectionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeVpcPeeringConnectionsResponse(new DescribeVpcPeeringConnectionsResponsePrivate(this), parent)
+    : GameLiftResponse(new DescribeVpcPeeringConnectionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeVpcPeeringConnectionsRequest(request));
     setReply(reply);

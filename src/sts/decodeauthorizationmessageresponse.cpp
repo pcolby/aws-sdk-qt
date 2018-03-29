@@ -46,7 +46,7 @@ DecodeAuthorizationMessageResponse::DecodeAuthorizationMessageResponse(
         const DecodeAuthorizationMessageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DecodeAuthorizationMessageResponse(new DecodeAuthorizationMessageResponsePrivate(this), parent)
+    : STSResponse(new DecodeAuthorizationMessageResponsePrivate(this), parent)
 {
     setRequest(new DecodeAuthorizationMessageRequest(request));
     setReply(reply);

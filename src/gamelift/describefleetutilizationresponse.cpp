@@ -46,7 +46,7 @@ DescribeFleetUtilizationResponse::DescribeFleetUtilizationResponse(
         const DescribeFleetUtilizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeFleetUtilizationResponse(new DescribeFleetUtilizationResponsePrivate(this), parent)
+    : GameLiftResponse(new DescribeFleetUtilizationResponsePrivate(this), parent)
 {
     setRequest(new DescribeFleetUtilizationRequest(request));
     setReply(reply);

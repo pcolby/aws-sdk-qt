@@ -46,7 +46,7 @@ CreateParameterGroupResponse::CreateParameterGroupResponse(
         const CreateParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateParameterGroupResponse(new CreateParameterGroupResponsePrivate(this), parent)
+    : DAXResponse(new CreateParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateParameterGroupRequest(request));
     setReply(reply);

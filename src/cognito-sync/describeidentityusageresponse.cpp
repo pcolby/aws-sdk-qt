@@ -46,7 +46,7 @@ DescribeIdentityUsageResponse::DescribeIdentityUsageResponse(
         const DescribeIdentityUsageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeIdentityUsageResponse(new DescribeIdentityUsageResponsePrivate(this), parent)
+    : CognitoSyncResponse(new DescribeIdentityUsageResponsePrivate(this), parent)
 {
     setRequest(new DescribeIdentityUsageRequest(request));
     setReply(reply);

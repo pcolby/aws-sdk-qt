@@ -46,7 +46,7 @@ DescribeFlowLogsResponse::DescribeFlowLogsResponse(
         const DescribeFlowLogsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeFlowLogsResponse(new DescribeFlowLogsResponsePrivate(this), parent)
+    : EC2Response(new DescribeFlowLogsResponsePrivate(this), parent)
 {
     setRequest(new DescribeFlowLogsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetFolderResponse::GetFolderResponse(
         const GetFolderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetFolderResponse(new GetFolderResponsePrivate(this), parent)
+    : WorkDocsResponse(new GetFolderResponsePrivate(this), parent)
 {
     setRequest(new GetFolderRequest(request));
     setReply(reply);

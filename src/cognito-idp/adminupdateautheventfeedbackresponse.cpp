@@ -46,7 +46,7 @@ AdminUpdateAuthEventFeedbackResponse::AdminUpdateAuthEventFeedbackResponse(
         const AdminUpdateAuthEventFeedbackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AdminUpdateAuthEventFeedbackResponse(new AdminUpdateAuthEventFeedbackResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new AdminUpdateAuthEventFeedbackResponsePrivate(this), parent)
 {
     setRequest(new AdminUpdateAuthEventFeedbackRequest(request));
     setReply(reply);

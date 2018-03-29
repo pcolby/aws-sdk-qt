@@ -46,7 +46,7 @@ DetachVolumeResponse::DetachVolumeResponse(
         const DetachVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DetachVolumeResponse(new DetachVolumeResponsePrivate(this), parent)
+    : EC2Response(new DetachVolumeResponsePrivate(this), parent)
 {
     setRequest(new DetachVolumeRequest(request));
     setReply(reply);

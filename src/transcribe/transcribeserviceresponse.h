@@ -34,6 +34,11 @@ class QTAWS_EXPORT TranscribeServiceResponse : public QtAws::Core::AwsAbstractRe
 public:
     TranscribeServiceResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    TranscribeServiceResponse(TranscribeServiceResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

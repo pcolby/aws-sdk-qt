@@ -46,7 +46,7 @@ ListGitHubAccountTokenNamesResponse::ListGitHubAccountTokenNamesResponse(
         const ListGitHubAccountTokenNamesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListGitHubAccountTokenNamesResponse(new ListGitHubAccountTokenNamesResponsePrivate(this), parent)
+    : CodeDeployResponse(new ListGitHubAccountTokenNamesResponsePrivate(this), parent)
 {
     setRequest(new ListGitHubAccountTokenNamesRequest(request));
     setReply(reply);

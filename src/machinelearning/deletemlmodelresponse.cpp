@@ -46,7 +46,7 @@ DeleteMLModelResponse::DeleteMLModelResponse(
         const DeleteMLModelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteMLModelResponse(new DeleteMLModelResponsePrivate(this), parent)
+    : MachineLearningResponse(new DeleteMLModelResponsePrivate(this), parent)
 {
     setRequest(new DeleteMLModelRequest(request));
     setReply(reply);

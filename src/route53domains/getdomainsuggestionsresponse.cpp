@@ -46,7 +46,7 @@ GetDomainSuggestionsResponse::GetDomainSuggestionsResponse(
         const GetDomainSuggestionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDomainSuggestionsResponse(new GetDomainSuggestionsResponsePrivate(this), parent)
+    : Route53DomainsResponse(new GetDomainSuggestionsResponsePrivate(this), parent)
 {
     setRequest(new GetDomainSuggestionsRequest(request));
     setReply(reply);

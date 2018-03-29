@@ -46,7 +46,7 @@ CreateContainerResponse::CreateContainerResponse(
         const CreateContainerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateContainerResponse(new CreateContainerResponsePrivate(this), parent)
+    : MediaStoreResponse(new CreateContainerResponsePrivate(this), parent)
 {
     setRequest(new CreateContainerRequest(request));
     setReply(reply);

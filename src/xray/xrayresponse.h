@@ -34,6 +34,11 @@ class QTAWS_EXPORT XRayResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     XRayResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    XRayResponse(XRayResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

@@ -46,7 +46,7 @@ CompleteLayerUploadResponse::CompleteLayerUploadResponse(
         const CompleteLayerUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CompleteLayerUploadResponse(new CompleteLayerUploadResponsePrivate(this), parent)
+    : ECRResponse(new CompleteLayerUploadResponsePrivate(this), parent)
 {
     setRequest(new CompleteLayerUploadRequest(request));
     setReply(reply);

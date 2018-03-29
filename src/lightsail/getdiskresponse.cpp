@@ -46,7 +46,7 @@ GetDiskResponse::GetDiskResponse(
         const GetDiskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDiskResponse(new GetDiskResponsePrivate(this), parent)
+    : LightsailResponse(new GetDiskResponsePrivate(this), parent)
 {
     setRequest(new GetDiskRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SetIdentityHeadersInNotificationsEnabledResponse::SetIdentityHeadersInNotificati
         const SetIdentityHeadersInNotificationsEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetIdentityHeadersInNotificationsEnabledResponse(new SetIdentityHeadersInNotificationsEnabledResponsePrivate(this), parent)
+    : SESResponse(new SetIdentityHeadersInNotificationsEnabledResponsePrivate(this), parent)
 {
     setRequest(new SetIdentityHeadersInNotificationsEnabledRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListVolumesResponse::ListVolumesResponse(
         const ListVolumesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListVolumesResponse(new ListVolumesResponsePrivate(this), parent)
+    : StorageGatewayResponse(new ListVolumesResponsePrivate(this), parent)
 {
     setRequest(new ListVolumesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateCacheClusterResponse::CreateCacheClusterResponse(
         const CreateCacheClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateCacheClusterResponse(new CreateCacheClusterResponsePrivate(this), parent)
+    : ElastiCacheResponse(new CreateCacheClusterResponsePrivate(this), parent)
 {
     setRequest(new CreateCacheClusterRequest(request));
     setReply(reply);

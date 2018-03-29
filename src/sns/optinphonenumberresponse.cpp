@@ -46,7 +46,7 @@ OptInPhoneNumberResponse::OptInPhoneNumberResponse(
         const OptInPhoneNumberRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : OptInPhoneNumberResponse(new OptInPhoneNumberResponsePrivate(this), parent)
+    : SNSResponse(new OptInPhoneNumberResponsePrivate(this), parent)
 {
     setRequest(new OptInPhoneNumberRequest(request));
     setReply(reply);

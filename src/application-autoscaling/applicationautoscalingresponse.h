@@ -34,6 +34,11 @@ class QTAWS_EXPORT ApplicationAutoScalingResponse : public QtAws::Core::AwsAbstr
 public:
     ApplicationAutoScalingResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    ApplicationAutoScalingResponse(ApplicationAutoScalingResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

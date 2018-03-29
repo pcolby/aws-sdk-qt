@@ -46,7 +46,7 @@ BatchDeleteAttributesResponse::BatchDeleteAttributesResponse(
         const BatchDeleteAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchDeleteAttributesResponse(new BatchDeleteAttributesResponsePrivate(this), parent)
+    : SimpleDBResponse(new BatchDeleteAttributesResponsePrivate(this), parent)
 {
     setRequest(new BatchDeleteAttributesRequest(request));
     setReply(reply);

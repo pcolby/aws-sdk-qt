@@ -46,7 +46,7 @@ CreateSoftwareUpdateJobResponse::CreateSoftwareUpdateJobResponse(
         const CreateSoftwareUpdateJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateSoftwareUpdateJobResponse(new CreateSoftwareUpdateJobResponsePrivate(this), parent)
+    : GreengrassResponse(new CreateSoftwareUpdateJobResponsePrivate(this), parent)
 {
     setRequest(new CreateSoftwareUpdateJobRequest(request));
     setReply(reply);

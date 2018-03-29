@@ -46,7 +46,7 @@ DeregisterImageResponse::DeregisterImageResponse(
         const DeregisterImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeregisterImageResponse(new DeregisterImageResponsePrivate(this), parent)
+    : EC2Response(new DeregisterImageResponsePrivate(this), parent)
 {
     setRequest(new DeregisterImageRequest(request));
     setReply(reply);

@@ -34,6 +34,11 @@ class QTAWS_EXPORT IoTDataPlaneResponse : public QtAws::Core::AwsAbstractRespons
 public:
     IoTDataPlaneResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    IoTDataPlaneResponse(IoTDataPlaneResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

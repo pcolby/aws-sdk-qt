@@ -46,7 +46,7 @@ GrantAccessResponse::GrantAccessResponse(
         const GrantAccessRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GrantAccessResponse(new GrantAccessResponsePrivate(this), parent)
+    : OpsWorksResponse(new GrantAccessResponsePrivate(this), parent)
 {
     setRequest(new GrantAccessRequest(request));
     setReply(reply);

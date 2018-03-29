@@ -46,7 +46,7 @@ DeleteChannelResponse::DeleteChannelResponse(
         const DeleteChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteChannelResponse(new DeleteChannelResponsePrivate(this), parent)
+    : MediaPackageResponse(new DeleteChannelResponsePrivate(this), parent)
 {
     setRequest(new DeleteChannelRequest(request));
     setReply(reply);

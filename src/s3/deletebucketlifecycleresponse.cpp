@@ -46,7 +46,7 @@ DeleteBucketLifecycleResponse::DeleteBucketLifecycleResponse(
         const DeleteBucketLifecycleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteBucketLifecycleResponse(new DeleteBucketLifecycleResponsePrivate(this), parent)
+    : S3Response(new DeleteBucketLifecycleResponsePrivate(this), parent)
 {
     setRequest(new DeleteBucketLifecycleRequest(request));
     setReply(reply);

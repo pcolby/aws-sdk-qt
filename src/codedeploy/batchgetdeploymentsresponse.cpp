@@ -46,7 +46,7 @@ BatchGetDeploymentsResponse::BatchGetDeploymentsResponse(
         const BatchGetDeploymentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchGetDeploymentsResponse(new BatchGetDeploymentsResponsePrivate(this), parent)
+    : CodeDeployResponse(new BatchGetDeploymentsResponsePrivate(this), parent)
 {
     setRequest(new BatchGetDeploymentsRequest(request));
     setReply(reply);

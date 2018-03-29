@@ -46,7 +46,7 @@ PreviewAgentsResponse::PreviewAgentsResponse(
         const PreviewAgentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PreviewAgentsResponse(new PreviewAgentsResponsePrivate(this), parent)
+    : InspectorResponse(new PreviewAgentsResponsePrivate(this), parent)
 {
     setRequest(new PreviewAgentsRequest(request));
     setReply(reply);

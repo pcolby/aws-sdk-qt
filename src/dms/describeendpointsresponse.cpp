@@ -46,7 +46,7 @@ DescribeEndpointsResponse::DescribeEndpointsResponse(
         const DescribeEndpointsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeEndpointsResponse(new DescribeEndpointsResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new DescribeEndpointsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEndpointsRequest(request));
     setReply(reply);

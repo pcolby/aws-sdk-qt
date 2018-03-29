@@ -46,7 +46,7 @@ ListPipelineExecutionsResponse::ListPipelineExecutionsResponse(
         const ListPipelineExecutionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListPipelineExecutionsResponse(new ListPipelineExecutionsResponsePrivate(this), parent)
+    : CodePipelineResponse(new ListPipelineExecutionsResponsePrivate(this), parent)
 {
     setRequest(new ListPipelineExecutionsRequest(request));
     setReply(reply);

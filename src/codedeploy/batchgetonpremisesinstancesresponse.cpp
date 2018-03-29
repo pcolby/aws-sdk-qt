@@ -46,7 +46,7 @@ BatchGetOnPremisesInstancesResponse::BatchGetOnPremisesInstancesResponse(
         const BatchGetOnPremisesInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchGetOnPremisesInstancesResponse(new BatchGetOnPremisesInstancesResponsePrivate(this), parent)
+    : CodeDeployResponse(new BatchGetOnPremisesInstancesResponsePrivate(this), parent)
 {
     setRequest(new BatchGetOnPremisesInstancesRequest(request));
     setReply(reply);

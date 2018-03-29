@@ -46,7 +46,7 @@ AttachInstancesToLoadBalancerResponse::AttachInstancesToLoadBalancerResponse(
         const AttachInstancesToLoadBalancerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AttachInstancesToLoadBalancerResponse(new AttachInstancesToLoadBalancerResponsePrivate(this), parent)
+    : LightsailResponse(new AttachInstancesToLoadBalancerResponsePrivate(this), parent)
 {
     setRequest(new AttachInstancesToLoadBalancerRequest(request));
     setReply(reply);

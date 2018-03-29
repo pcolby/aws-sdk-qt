@@ -46,7 +46,7 @@ ListDomainNamesResponse::ListDomainNamesResponse(
         const ListDomainNamesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListDomainNamesResponse(new ListDomainNamesResponsePrivate(this), parent)
+    : CloudSearchResponse(new ListDomainNamesResponsePrivate(this), parent)
 {
     setRequest(new ListDomainNamesRequest(request));
     setReply(reply);

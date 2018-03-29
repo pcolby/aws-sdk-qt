@@ -46,7 +46,7 @@ InstallToRemoteAccessSessionResponse::InstallToRemoteAccessSessionResponse(
         const InstallToRemoteAccessSessionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InstallToRemoteAccessSessionResponse(new InstallToRemoteAccessSessionResponsePrivate(this), parent)
+    : DeviceFarmResponse(new InstallToRemoteAccessSessionResponsePrivate(this), parent)
 {
     setRequest(new InstallToRemoteAccessSessionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetRateBasedRuleManagedKeysResponse::GetRateBasedRuleManagedKeysResponse(
         const GetRateBasedRuleManagedKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetRateBasedRuleManagedKeysResponse(new GetRateBasedRuleManagedKeysResponsePrivate(this), parent)
+    : WAFResponse(new GetRateBasedRuleManagedKeysResponsePrivate(this), parent)
 {
     setRequest(new GetRateBasedRuleManagedKeysRequest(request));
     setReply(reply);

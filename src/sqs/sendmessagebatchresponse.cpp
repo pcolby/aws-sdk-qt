@@ -46,7 +46,7 @@ SendMessageBatchResponse::SendMessageBatchResponse(
         const SendMessageBatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SendMessageBatchResponse(new SendMessageBatchResponsePrivate(this), parent)
+    : SQSResponse(new SendMessageBatchResponsePrivate(this), parent)
 {
     setRequest(new SendMessageBatchRequest(request));
     setReply(reply);

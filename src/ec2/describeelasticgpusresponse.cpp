@@ -46,7 +46,7 @@ DescribeElasticGpusResponse::DescribeElasticGpusResponse(
         const DescribeElasticGpusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeElasticGpusResponse(new DescribeElasticGpusResponsePrivate(this), parent)
+    : EC2Response(new DescribeElasticGpusResponsePrivate(this), parent)
 {
     setRequest(new DescribeElasticGpusRequest(request));
     setReply(reply);

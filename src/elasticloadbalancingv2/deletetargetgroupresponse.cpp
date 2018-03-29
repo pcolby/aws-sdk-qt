@@ -46,7 +46,7 @@ DeleteTargetGroupResponse::DeleteTargetGroupResponse(
         const DeleteTargetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteTargetGroupResponse(new DeleteTargetGroupResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new DeleteTargetGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteTargetGroupRequest(request));
     setReply(reply);

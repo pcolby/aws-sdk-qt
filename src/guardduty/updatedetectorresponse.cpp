@@ -46,7 +46,7 @@ UpdateDetectorResponse::UpdateDetectorResponse(
         const UpdateDetectorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDetectorResponse(new UpdateDetectorResponsePrivate(this), parent)
+    : GuardDutyResponse(new UpdateDetectorResponsePrivate(this), parent)
 {
     setRequest(new UpdateDetectorRequest(request));
     setReply(reply);

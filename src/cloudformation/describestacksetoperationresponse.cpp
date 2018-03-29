@@ -46,7 +46,7 @@ DescribeStackSetOperationResponse::DescribeStackSetOperationResponse(
         const DescribeStackSetOperationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeStackSetOperationResponse(new DescribeStackSetOperationResponsePrivate(this), parent)
+    : CloudFormationResponse(new DescribeStackSetOperationResponsePrivate(this), parent)
 {
     setRequest(new DescribeStackSetOperationRequest(request));
     setReply(reply);

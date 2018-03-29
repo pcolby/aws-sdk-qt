@@ -46,7 +46,7 @@ SearchResourcesResponse::SearchResourcesResponse(
         const SearchResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SearchResourcesResponse(new SearchResourcesResponsePrivate(this), parent)
+    : ResourceGroupsResponse(new SearchResourcesResponsePrivate(this), parent)
 {
     setRequest(new SearchResourcesRequest(request));
     setReply(reply);

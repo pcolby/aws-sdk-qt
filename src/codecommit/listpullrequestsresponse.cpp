@@ -46,7 +46,7 @@ ListPullRequestsResponse::ListPullRequestsResponse(
         const ListPullRequestsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListPullRequestsResponse(new ListPullRequestsResponsePrivate(this), parent)
+    : CodeCommitResponse(new ListPullRequestsResponsePrivate(this), parent)
 {
     setRequest(new ListPullRequestsRequest(request));
     setReply(reply);

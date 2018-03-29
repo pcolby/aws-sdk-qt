@@ -46,7 +46,7 @@ ListOfferingPromotionsResponse::ListOfferingPromotionsResponse(
         const ListOfferingPromotionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListOfferingPromotionsResponse(new ListOfferingPromotionsResponsePrivate(this), parent)
+    : DeviceFarmResponse(new ListOfferingPromotionsResponsePrivate(this), parent)
 {
     setRequest(new ListOfferingPromotionsRequest(request));
     setReply(reply);

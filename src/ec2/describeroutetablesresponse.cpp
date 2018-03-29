@@ -46,7 +46,7 @@ DescribeRouteTablesResponse::DescribeRouteTablesResponse(
         const DescribeRouteTablesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeRouteTablesResponse(new DescribeRouteTablesResponsePrivate(this), parent)
+    : EC2Response(new DescribeRouteTablesResponsePrivate(this), parent)
 {
     setRequest(new DescribeRouteTablesRequest(request));
     setReply(reply);

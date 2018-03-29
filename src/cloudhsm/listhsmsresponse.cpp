@@ -46,7 +46,7 @@ ListHsmsResponse::ListHsmsResponse(
         const ListHsmsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListHsmsResponse(new ListHsmsResponsePrivate(this), parent)
+    : CloudHSMResponse(new ListHsmsResponsePrivate(this), parent)
 {
     setRequest(new ListHsmsRequest(request));
     setReply(reply);

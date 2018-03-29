@@ -46,7 +46,7 @@ PutBucketEncryptionResponse::PutBucketEncryptionResponse(
         const PutBucketEncryptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutBucketEncryptionResponse(new PutBucketEncryptionResponsePrivate(this), parent)
+    : S3Response(new PutBucketEncryptionResponsePrivate(this), parent)
 {
     setRequest(new PutBucketEncryptionRequest(request));
     setReply(reply);

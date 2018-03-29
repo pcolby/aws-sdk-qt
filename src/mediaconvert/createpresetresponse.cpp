@@ -46,7 +46,7 @@ CreatePresetResponse::CreatePresetResponse(
         const CreatePresetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreatePresetResponse(new CreatePresetResponsePrivate(this), parent)
+    : MediaConvertResponse(new CreatePresetResponsePrivate(this), parent)
 {
     setRequest(new CreatePresetRequest(request));
     setReply(reply);

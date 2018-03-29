@@ -46,7 +46,7 @@ DescribeListenerCertificatesResponse::DescribeListenerCertificatesResponse(
         const DescribeListenerCertificatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeListenerCertificatesResponse(new DescribeListenerCertificatesResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new DescribeListenerCertificatesResponsePrivate(this), parent)
 {
     setRequest(new DescribeListenerCertificatesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeScalableTargetsResponse::DescribeScalableTargetsResponse(
         const DescribeScalableTargetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeScalableTargetsResponse(new DescribeScalableTargetsResponsePrivate(this), parent)
+    : ApplicationAutoScalingResponse(new DescribeScalableTargetsResponsePrivate(this), parent)
 {
     setRequest(new DescribeScalableTargetsRequest(request));
     setReply(reply);

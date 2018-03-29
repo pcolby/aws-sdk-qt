@@ -46,7 +46,7 @@ CreateInstanceSnapshotResponse::CreateInstanceSnapshotResponse(
         const CreateInstanceSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateInstanceSnapshotResponse(new CreateInstanceSnapshotResponsePrivate(this), parent)
+    : LightsailResponse(new CreateInstanceSnapshotResponsePrivate(this), parent)
 {
     setRequest(new CreateInstanceSnapshotRequest(request));
     setReply(reply);

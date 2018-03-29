@@ -46,7 +46,7 @@ CreateEgressOnlyInternetGatewayResponse::CreateEgressOnlyInternetGatewayResponse
         const CreateEgressOnlyInternetGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateEgressOnlyInternetGatewayResponse(new CreateEgressOnlyInternetGatewayResponsePrivate(this), parent)
+    : EC2Response(new CreateEgressOnlyInternetGatewayResponsePrivate(this), parent)
 {
     setRequest(new CreateEgressOnlyInternetGatewayRequest(request));
     setReply(reply);

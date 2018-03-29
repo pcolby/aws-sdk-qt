@@ -46,7 +46,7 @@ CreateNetworkAclResponse::CreateNetworkAclResponse(
         const CreateNetworkAclRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateNetworkAclResponse(new CreateNetworkAclResponsePrivate(this), parent)
+    : EC2Response(new CreateNetworkAclResponsePrivate(this), parent)
 {
     setRequest(new CreateNetworkAclRequest(request));
     setReply(reply);

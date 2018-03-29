@@ -46,7 +46,7 @@ DescribeVpcAttributeResponse::DescribeVpcAttributeResponse(
         const DescribeVpcAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeVpcAttributeResponse(new DescribeVpcAttributeResponsePrivate(this), parent)
+    : EC2Response(new DescribeVpcAttributeResponsePrivate(this), parent)
 {
     setRequest(new DescribeVpcAttributeRequest(request));
     setReply(reply);

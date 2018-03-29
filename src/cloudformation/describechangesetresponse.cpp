@@ -46,7 +46,7 @@ DescribeChangeSetResponse::DescribeChangeSetResponse(
         const DescribeChangeSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeChangeSetResponse(new DescribeChangeSetResponsePrivate(this), parent)
+    : CloudFormationResponse(new DescribeChangeSetResponsePrivate(this), parent)
 {
     setRequest(new DescribeChangeSetRequest(request));
     setReply(reply);

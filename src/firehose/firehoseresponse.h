@@ -34,6 +34,11 @@ class QTAWS_EXPORT FirehoseResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     FirehoseResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    FirehoseResponse(FirehoseResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

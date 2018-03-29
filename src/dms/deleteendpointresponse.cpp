@@ -46,7 +46,7 @@ DeleteEndpointResponse::DeleteEndpointResponse(
         const DeleteEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteEndpointResponse(new DeleteEndpointResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new DeleteEndpointResponsePrivate(this), parent)
 {
     setRequest(new DeleteEndpointRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ PutTargetsResponse::PutTargetsResponse(
         const PutTargetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutTargetsResponse(new PutTargetsResponsePrivate(this), parent)
+    : CloudWatchEventsResponse(new PutTargetsResponsePrivate(this), parent)
 {
     setRequest(new PutTargetsRequest(request));
     setReply(reply);

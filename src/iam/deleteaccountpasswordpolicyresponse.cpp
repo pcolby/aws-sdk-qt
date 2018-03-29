@@ -46,7 +46,7 @@ DeleteAccountPasswordPolicyResponse::DeleteAccountPasswordPolicyResponse(
         const DeleteAccountPasswordPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteAccountPasswordPolicyResponse(new DeleteAccountPasswordPolicyResponsePrivate(this), parent)
+    : IAMResponse(new DeleteAccountPasswordPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteAccountPasswordPolicyRequest(request));
     setReply(reply);

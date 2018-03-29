@@ -46,7 +46,7 @@ DescribeChannelResponse::DescribeChannelResponse(
         const DescribeChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeChannelResponse(new DescribeChannelResponsePrivate(this), parent)
+    : MediaPackageResponse(new DescribeChannelResponsePrivate(this), parent)
 {
     setRequest(new DescribeChannelRequest(request));
     setReply(reply);

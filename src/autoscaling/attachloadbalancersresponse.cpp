@@ -46,7 +46,7 @@ AttachLoadBalancersResponse::AttachLoadBalancersResponse(
         const AttachLoadBalancersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AttachLoadBalancersResponse(new AttachLoadBalancersResponsePrivate(this), parent)
+    : AutoScalingResponse(new AttachLoadBalancersResponsePrivate(this), parent)
 {
     setRequest(new AttachLoadBalancersRequest(request));
     setReply(reply);

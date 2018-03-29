@@ -46,6 +46,24 @@ ResourceGroupsResponse::ResourceGroupsResponse(QObject * const parent)
 }
 
 /**
+ * @internal
+ *
+ * @brief  Constructs a new ResourceGroupsResponse object.
+ *
+ *
+ * This overload allows derived classes to provide their own private class
+ * implementation that inherits from ResourceGroupsResponsePrivate.
+ *
+ * @param  d       Pointer to private data (aka D-Pointer).
+ * @param  parent  This object's parent.
+ */
+ResourceGroupsResponse::ResourceGroupsResponse(ResourceGroupsResponsePrivate * const d, QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
+{
+
+}
+
+/**
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.

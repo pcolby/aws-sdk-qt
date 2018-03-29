@@ -46,7 +46,7 @@ GetDisksResponse::GetDisksResponse(
         const GetDisksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDisksResponse(new GetDisksResponsePrivate(this), parent)
+    : LightsailResponse(new GetDisksResponsePrivate(this), parent)
 {
     setRequest(new GetDisksRequest(request));
     setReply(reply);

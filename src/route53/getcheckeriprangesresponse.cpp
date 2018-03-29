@@ -46,7 +46,7 @@ GetCheckerIpRangesResponse::GetCheckerIpRangesResponse(
         const GetCheckerIpRangesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetCheckerIpRangesResponse(new GetCheckerIpRangesResponsePrivate(this), parent)
+    : Route53Response(new GetCheckerIpRangesResponsePrivate(this), parent)
 {
     setRequest(new GetCheckerIpRangesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListTapesResponse::ListTapesResponse(
         const ListTapesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListTapesResponse(new ListTapesResponsePrivate(this), parent)
+    : StorageGatewayResponse(new ListTapesResponsePrivate(this), parent)
 {
     setRequest(new ListTapesRequest(request));
     setReply(reply);

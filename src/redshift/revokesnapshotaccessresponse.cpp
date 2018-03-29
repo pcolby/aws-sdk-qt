@@ -46,7 +46,7 @@ RevokeSnapshotAccessResponse::RevokeSnapshotAccessResponse(
         const RevokeSnapshotAccessRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RevokeSnapshotAccessResponse(new RevokeSnapshotAccessResponsePrivate(this), parent)
+    : RedshiftResponse(new RevokeSnapshotAccessResponsePrivate(this), parent)
 {
     setRequest(new RevokeSnapshotAccessRequest(request));
     setReply(reply);

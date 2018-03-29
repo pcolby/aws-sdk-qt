@@ -46,7 +46,7 @@ ListAvailableZonesResponse::ListAvailableZonesResponse(
         const ListAvailableZonesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListAvailableZonesResponse(new ListAvailableZonesResponsePrivate(this), parent)
+    : CloudHSMResponse(new ListAvailableZonesResponsePrivate(this), parent)
 {
     setRequest(new ListAvailableZonesRequest(request));
     setReply(reply);

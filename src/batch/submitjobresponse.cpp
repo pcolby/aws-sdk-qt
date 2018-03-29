@@ -46,7 +46,7 @@ SubmitJobResponse::SubmitJobResponse(
         const SubmitJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SubmitJobResponse(new SubmitJobResponsePrivate(this), parent)
+    : BatchResponse(new SubmitJobResponsePrivate(this), parent)
 {
     setRequest(new SubmitJobRequest(request));
     setReply(reply);

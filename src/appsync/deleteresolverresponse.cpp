@@ -46,7 +46,7 @@ DeleteResolverResponse::DeleteResolverResponse(
         const DeleteResolverRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteResolverResponse(new DeleteResolverResponsePrivate(this), parent)
+    : AppSyncResponse(new DeleteResolverResponsePrivate(this), parent)
 {
     setRequest(new DeleteResolverRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteReplicationGroupResponse::DeleteReplicationGroupResponse(
         const DeleteReplicationGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteReplicationGroupResponse(new DeleteReplicationGroupResponsePrivate(this), parent)
+    : ElastiCacheResponse(new DeleteReplicationGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteReplicationGroupRequest(request));
     setReply(reply);

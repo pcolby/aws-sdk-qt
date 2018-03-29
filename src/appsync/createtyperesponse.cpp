@@ -46,7 +46,7 @@ CreateTypeResponse::CreateTypeResponse(
         const CreateTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateTypeResponse(new CreateTypeResponsePrivate(this), parent)
+    : AppSyncResponse(new CreateTypeResponsePrivate(this), parent)
 {
     setRequest(new CreateTypeRequest(request));
     setReply(reply);

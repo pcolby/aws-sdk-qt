@@ -46,7 +46,7 @@ DeleteActivityResponse::DeleteActivityResponse(
         const DeleteActivityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteActivityResponse(new DeleteActivityResponsePrivate(this), parent)
+    : SFNResponse(new DeleteActivityResponsePrivate(this), parent)
 {
     setRequest(new DeleteActivityRequest(request));
     setReply(reply);

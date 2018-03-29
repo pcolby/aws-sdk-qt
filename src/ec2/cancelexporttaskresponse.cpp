@@ -46,7 +46,7 @@ CancelExportTaskResponse::CancelExportTaskResponse(
         const CancelExportTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CancelExportTaskResponse(new CancelExportTaskResponsePrivate(this), parent)
+    : EC2Response(new CancelExportTaskResponsePrivate(this), parent)
 {
     setRequest(new CancelExportTaskRequest(request));
     setReply(reply);

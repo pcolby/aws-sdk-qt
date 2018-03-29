@@ -46,7 +46,7 @@ ListTagsForVaultResponse::ListTagsForVaultResponse(
         const ListTagsForVaultRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListTagsForVaultResponse(new ListTagsForVaultResponsePrivate(this), parent)
+    : GlacierResponse(new ListTagsForVaultResponsePrivate(this), parent)
 {
     setRequest(new ListTagsForVaultRequest(request));
     setReply(reply);

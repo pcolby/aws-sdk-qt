@@ -46,7 +46,7 @@ ListResourceDataSyncResponse::ListResourceDataSyncResponse(
         const ListResourceDataSyncRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListResourceDataSyncResponse(new ListResourceDataSyncResponsePrivate(this), parent)
+    : SSMResponse(new ListResourceDataSyncResponsePrivate(this), parent)
 {
     setRequest(new ListResourceDataSyncRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeLoadBalancerTargetGroupsResponse::DescribeLoadBalancerTargetGroupsRespon
         const DescribeLoadBalancerTargetGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeLoadBalancerTargetGroupsResponse(new DescribeLoadBalancerTargetGroupsResponsePrivate(this), parent)
+    : AutoScalingResponse(new DescribeLoadBalancerTargetGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeLoadBalancerTargetGroupsRequest(request));
     setReply(reply);

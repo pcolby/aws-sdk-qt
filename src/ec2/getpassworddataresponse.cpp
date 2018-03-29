@@ -46,7 +46,7 @@ GetPasswordDataResponse::GetPasswordDataResponse(
         const GetPasswordDataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetPasswordDataResponse(new GetPasswordDataResponsePrivate(this), parent)
+    : EC2Response(new GetPasswordDataResponsePrivate(this), parent)
 {
     setRequest(new GetPasswordDataRequest(request));
     setReply(reply);

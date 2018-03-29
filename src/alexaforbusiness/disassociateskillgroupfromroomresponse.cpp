@@ -46,7 +46,7 @@ DisassociateSkillGroupFromRoomResponse::DisassociateSkillGroupFromRoomResponse(
         const DisassociateSkillGroupFromRoomRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateSkillGroupFromRoomResponse(new DisassociateSkillGroupFromRoomResponsePrivate(this), parent)
+    : AlexaForBusinessResponse(new DisassociateSkillGroupFromRoomResponsePrivate(this), parent)
 {
     setRequest(new DisassociateSkillGroupFromRoomRequest(request));
     setReply(reply);

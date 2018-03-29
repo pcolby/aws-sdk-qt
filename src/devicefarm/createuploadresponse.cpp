@@ -46,7 +46,7 @@ CreateUploadResponse::CreateUploadResponse(
         const CreateUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateUploadResponse(new CreateUploadResponsePrivate(this), parent)
+    : DeviceFarmResponse(new CreateUploadResponsePrivate(this), parent)
 {
     setRequest(new CreateUploadRequest(request));
     setReply(reply);

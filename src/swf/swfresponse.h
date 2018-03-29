@@ -34,6 +34,11 @@ class QTAWS_EXPORT SWFResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     SWFResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    SWFResponse(SWFResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

@@ -46,7 +46,7 @@ AssumeRoleResponse::AssumeRoleResponse(
         const AssumeRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssumeRoleResponse(new AssumeRoleResponsePrivate(this), parent)
+    : STSResponse(new AssumeRoleResponsePrivate(this), parent)
 {
     setRequest(new AssumeRoleRequest(request));
     setReply(reply);

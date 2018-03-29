@@ -46,7 +46,7 @@ PeerVpcResponse::PeerVpcResponse(
         const PeerVpcRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PeerVpcResponse(new PeerVpcResponsePrivate(this), parent)
+    : LightsailResponse(new PeerVpcResponsePrivate(this), parent)
 {
     setRequest(new PeerVpcRequest(request));
     setReply(reply);

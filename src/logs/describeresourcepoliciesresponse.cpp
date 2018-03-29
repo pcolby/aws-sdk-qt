@@ -46,7 +46,7 @@ DescribeResourcePoliciesResponse::DescribeResourcePoliciesResponse(
         const DescribeResourcePoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeResourcePoliciesResponse(new DescribeResourcePoliciesResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new DescribeResourcePoliciesResponsePrivate(this), parent)
 {
     setRequest(new DescribeResourcePoliciesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetWorkflowExecutionHistoryResponse::GetWorkflowExecutionHistoryResponse(
         const GetWorkflowExecutionHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetWorkflowExecutionHistoryResponse(new GetWorkflowExecutionHistoryResponsePrivate(this), parent)
+    : SWFResponse(new GetWorkflowExecutionHistoryResponsePrivate(this), parent)
 {
     setRequest(new GetWorkflowExecutionHistoryRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteConfigurationSetTrackingOptionsResponse::DeleteConfigurationSetTrackingOpt
         const DeleteConfigurationSetTrackingOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteConfigurationSetTrackingOptionsResponse(new DeleteConfigurationSetTrackingOptionsResponsePrivate(this), parent)
+    : SESResponse(new DeleteConfigurationSetTrackingOptionsResponsePrivate(this), parent)
 {
     setRequest(new DeleteConfigurationSetTrackingOptionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteBranchResponse::DeleteBranchResponse(
         const DeleteBranchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteBranchResponse(new DeleteBranchResponsePrivate(this), parent)
+    : CodeCommitResponse(new DeleteBranchResponsePrivate(this), parent)
 {
     setRequest(new DeleteBranchRequest(request));
     setReply(reply);

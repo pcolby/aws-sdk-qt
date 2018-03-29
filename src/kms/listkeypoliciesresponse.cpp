@@ -46,7 +46,7 @@ ListKeyPoliciesResponse::ListKeyPoliciesResponse(
         const ListKeyPoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListKeyPoliciesResponse(new ListKeyPoliciesResponsePrivate(this), parent)
+    : KMSResponse(new ListKeyPoliciesResponsePrivate(this), parent)
 {
     setRequest(new ListKeyPoliciesRequest(request));
     setReply(reply);

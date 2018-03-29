@@ -46,7 +46,7 @@ CopyFpgaImageResponse::CopyFpgaImageResponse(
         const CopyFpgaImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CopyFpgaImageResponse(new CopyFpgaImageResponsePrivate(this), parent)
+    : EC2Response(new CopyFpgaImageResponsePrivate(this), parent)
 {
     setRequest(new CopyFpgaImageRequest(request));
     setReply(reply);

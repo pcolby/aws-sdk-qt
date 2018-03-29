@@ -46,7 +46,7 @@ DeleteConstraintResponse::DeleteConstraintResponse(
         const DeleteConstraintRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteConstraintResponse(new DeleteConstraintResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new DeleteConstraintResponsePrivate(this), parent)
 {
     setRequest(new DeleteConstraintRequest(request));
     setReply(reply);

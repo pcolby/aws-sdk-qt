@@ -46,7 +46,7 @@ StopDeploymentResponse::StopDeploymentResponse(
         const StopDeploymentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopDeploymentResponse(new StopDeploymentResponsePrivate(this), parent)
+    : CodeDeployResponse(new StopDeploymentResponsePrivate(this), parent)
 {
     setRequest(new StopDeploymentRequest(request));
     setReply(reply);

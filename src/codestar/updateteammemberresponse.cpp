@@ -46,7 +46,7 @@ UpdateTeamMemberResponse::UpdateTeamMemberResponse(
         const UpdateTeamMemberRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateTeamMemberResponse(new UpdateTeamMemberResponsePrivate(this), parent)
+    : CodeStarResponse(new UpdateTeamMemberResponsePrivate(this), parent)
 {
     setRequest(new UpdateTeamMemberRequest(request));
     setReply(reply);

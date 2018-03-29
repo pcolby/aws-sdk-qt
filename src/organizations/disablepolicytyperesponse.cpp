@@ -46,7 +46,7 @@ DisablePolicyTypeResponse::DisablePolicyTypeResponse(
         const DisablePolicyTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisablePolicyTypeResponse(new DisablePolicyTypeResponsePrivate(this), parent)
+    : OrganizationsResponse(new DisablePolicyTypeResponsePrivate(this), parent)
 {
     setRequest(new DisablePolicyTypeRequest(request));
     setReply(reply);

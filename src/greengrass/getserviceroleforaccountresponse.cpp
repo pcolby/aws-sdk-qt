@@ -46,7 +46,7 @@ GetServiceRoleForAccountResponse::GetServiceRoleForAccountResponse(
         const GetServiceRoleForAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetServiceRoleForAccountResponse(new GetServiceRoleForAccountResponsePrivate(this), parent)
+    : GreengrassResponse(new GetServiceRoleForAccountResponsePrivate(this), parent)
 {
     setRequest(new GetServiceRoleForAccountRequest(request));
     setReply(reply);

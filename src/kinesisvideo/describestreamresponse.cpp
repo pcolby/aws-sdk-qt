@@ -46,7 +46,7 @@ DescribeStreamResponse::DescribeStreamResponse(
         const DescribeStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeStreamResponse(new DescribeStreamResponsePrivate(this), parent)
+    : KinesisVideoResponse(new DescribeStreamResponsePrivate(this), parent)
 {
     setRequest(new DescribeStreamRequest(request));
     setReply(reply);

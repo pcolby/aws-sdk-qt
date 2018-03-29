@@ -46,7 +46,7 @@ DeleteDBSecurityGroupResponse::DeleteDBSecurityGroupResponse(
         const DeleteDBSecurityGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDBSecurityGroupResponse(new DeleteDBSecurityGroupResponsePrivate(this), parent)
+    : RDSResponse(new DeleteDBSecurityGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBSecurityGroupRequest(request));
     setReply(reply);

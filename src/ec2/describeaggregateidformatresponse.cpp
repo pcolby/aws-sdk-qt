@@ -46,7 +46,7 @@ DescribeAggregateIdFormatResponse::DescribeAggregateIdFormatResponse(
         const DescribeAggregateIdFormatRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAggregateIdFormatResponse(new DescribeAggregateIdFormatResponsePrivate(this), parent)
+    : EC2Response(new DescribeAggregateIdFormatResponsePrivate(this), parent)
 {
     setRequest(new DescribeAggregateIdFormatRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RespondToAuthChallengeResponse::RespondToAuthChallengeResponse(
         const RespondToAuthChallengeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RespondToAuthChallengeResponse(new RespondToAuthChallengeResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new RespondToAuthChallengeResponsePrivate(this), parent)
 {
     setRequest(new RespondToAuthChallengeRequest(request));
     setReply(reply);

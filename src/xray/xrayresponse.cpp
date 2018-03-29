@@ -46,6 +46,24 @@ XRayResponse::XRayResponse(QObject * const parent)
 }
 
 /**
+ * @internal
+ *
+ * @brief  Constructs a new XRayResponse object.
+ *
+ *
+ * This overload allows derived classes to provide their own private class
+ * implementation that inherits from XRayResponsePrivate.
+ *
+ * @param  d       Pointer to private data (aka D-Pointer).
+ * @param  parent  This object's parent.
+ */
+XRayResponse::XRayResponse(XRayResponsePrivate * const d, QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
+{
+
+}
+
+/**
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.

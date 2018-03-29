@@ -46,7 +46,7 @@ UpdateConfigurationSetSendingEnabledResponse::UpdateConfigurationSetSendingEnabl
         const UpdateConfigurationSetSendingEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateConfigurationSetSendingEnabledResponse(new UpdateConfigurationSetSendingEnabledResponsePrivate(this), parent)
+    : SESResponse(new UpdateConfigurationSetSendingEnabledResponsePrivate(this), parent)
 {
     setRequest(new UpdateConfigurationSetSendingEnabledRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteProvisioningArtifactResponse::DeleteProvisioningArtifactResponse(
         const DeleteProvisioningArtifactRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteProvisioningArtifactResponse(new DeleteProvisioningArtifactResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new DeleteProvisioningArtifactResponsePrivate(this), parent)
 {
     setRequest(new DeleteProvisioningArtifactRequest(request));
     setReply(reply);

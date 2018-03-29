@@ -46,7 +46,7 @@ DescribeJobExecutionResponse::DescribeJobExecutionResponse(
         const DescribeJobExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeJobExecutionResponse(new DescribeJobExecutionResponsePrivate(this), parent)
+    : IoTResponse(new DescribeJobExecutionResponsePrivate(this), parent)
 {
     setRequest(new DescribeJobExecutionRequest(request));
     setReply(reply);

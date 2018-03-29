@@ -46,7 +46,7 @@ DescribeMaintenanceWindowExecutionTasksResponse::DescribeMaintenanceWindowExecut
         const DescribeMaintenanceWindowExecutionTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeMaintenanceWindowExecutionTasksResponse(new DescribeMaintenanceWindowExecutionTasksResponsePrivate(this), parent)
+    : SSMResponse(new DescribeMaintenanceWindowExecutionTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeMaintenanceWindowExecutionTasksRequest(request));
     setReply(reply);

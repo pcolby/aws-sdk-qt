@@ -34,6 +34,11 @@ class QTAWS_EXPORT MediaConvertResponse : public QtAws::Core::AwsAbstractRespons
 public:
     MediaConvertResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    MediaConvertResponse(MediaConvertResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

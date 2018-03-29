@@ -46,7 +46,7 @@ ListChannelsResponse::ListChannelsResponse(
         const ListChannelsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListChannelsResponse(new ListChannelsResponsePrivate(this), parent)
+    : MediaLiveResponse(new ListChannelsResponsePrivate(this), parent)
 {
     setRequest(new ListChannelsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ PollForThirdPartyJobsResponse::PollForThirdPartyJobsResponse(
         const PollForThirdPartyJobsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PollForThirdPartyJobsResponse(new PollForThirdPartyJobsResponsePrivate(this), parent)
+    : CodePipelineResponse(new PollForThirdPartyJobsResponsePrivate(this), parent)
 {
     setRequest(new PollForThirdPartyJobsRequest(request));
     setReply(reply);

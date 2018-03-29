@@ -46,7 +46,7 @@ ReloadTablesResponse::ReloadTablesResponse(
         const ReloadTablesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ReloadTablesResponse(new ReloadTablesResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new ReloadTablesResponsePrivate(this), parent)
 {
     setRequest(new ReloadTablesRequest(request));
     setReply(reply);

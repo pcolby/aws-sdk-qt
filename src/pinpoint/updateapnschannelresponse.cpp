@@ -46,7 +46,7 @@ UpdateApnsChannelResponse::UpdateApnsChannelResponse(
         const UpdateApnsChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateApnsChannelResponse(new UpdateApnsChannelResponsePrivate(this), parent)
+    : PinpointResponse(new UpdateApnsChannelResponsePrivate(this), parent)
 {
     setRequest(new UpdateApnsChannelRequest(request));
     setReply(reply);

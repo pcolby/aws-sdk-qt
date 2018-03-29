@@ -46,7 +46,7 @@ CancelStepsResponse::CancelStepsResponse(
         const CancelStepsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CancelStepsResponse(new CancelStepsResponsePrivate(this), parent)
+    : EMRResponse(new CancelStepsResponsePrivate(this), parent)
 {
     setRequest(new CancelStepsRequest(request));
     setReply(reply);

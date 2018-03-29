@@ -46,7 +46,7 @@ RegisterCrossAccountAccessRoleResponse::RegisterCrossAccountAccessRoleResponse(
         const RegisterCrossAccountAccessRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RegisterCrossAccountAccessRoleResponse(new RegisterCrossAccountAccessRoleResponsePrivate(this), parent)
+    : InspectorResponse(new RegisterCrossAccountAccessRoleResponsePrivate(this), parent)
 {
     setRequest(new RegisterCrossAccountAccessRoleRequest(request));
     setReply(reply);

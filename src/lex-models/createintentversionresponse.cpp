@@ -46,7 +46,7 @@ CreateIntentVersionResponse::CreateIntentVersionResponse(
         const CreateIntentVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateIntentVersionResponse(new CreateIntentVersionResponsePrivate(this), parent)
+    : LexModelBuildingServiceResponse(new CreateIntentVersionResponsePrivate(this), parent)
 {
     setRequest(new CreateIntentVersionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListComplianceItemsResponse::ListComplianceItemsResponse(
         const ListComplianceItemsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListComplianceItemsResponse(new ListComplianceItemsResponsePrivate(this), parent)
+    : SSMResponse(new ListComplianceItemsResponsePrivate(this), parent)
 {
     setRequest(new ListComplianceItemsRequest(request));
     setReply(reply);

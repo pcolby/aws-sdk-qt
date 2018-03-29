@@ -46,7 +46,7 @@ UpdateVpcLinkResponse::UpdateVpcLinkResponse(
         const UpdateVpcLinkRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateVpcLinkResponse(new UpdateVpcLinkResponsePrivate(this), parent)
+    : APIGatewayResponse(new UpdateVpcLinkResponsePrivate(this), parent)
 {
     setRequest(new UpdateVpcLinkRequest(request));
     setReply(reply);

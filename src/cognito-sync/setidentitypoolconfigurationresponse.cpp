@@ -46,7 +46,7 @@ SetIdentityPoolConfigurationResponse::SetIdentityPoolConfigurationResponse(
         const SetIdentityPoolConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetIdentityPoolConfigurationResponse(new SetIdentityPoolConfigurationResponsePrivate(this), parent)
+    : CognitoSyncResponse(new SetIdentityPoolConfigurationResponsePrivate(this), parent)
 {
     setRequest(new SetIdentityPoolConfigurationRequest(request));
     setReply(reply);

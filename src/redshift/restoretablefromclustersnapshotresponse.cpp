@@ -46,7 +46,7 @@ RestoreTableFromClusterSnapshotResponse::RestoreTableFromClusterSnapshotResponse
         const RestoreTableFromClusterSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RestoreTableFromClusterSnapshotResponse(new RestoreTableFromClusterSnapshotResponsePrivate(this), parent)
+    : RedshiftResponse(new RestoreTableFromClusterSnapshotResponsePrivate(this), parent)
 {
     setRequest(new RestoreTableFromClusterSnapshotRequest(request));
     setReply(reply);

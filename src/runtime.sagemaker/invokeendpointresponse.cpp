@@ -46,7 +46,7 @@ InvokeEndpointResponse::InvokeEndpointResponse(
         const InvokeEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InvokeEndpointResponse(new InvokeEndpointResponsePrivate(this), parent)
+    : SageMakerRuntimeResponse(new InvokeEndpointResponsePrivate(this), parent)
 {
     setRequest(new InvokeEndpointRequest(request));
     setReply(reply);

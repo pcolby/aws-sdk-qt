@@ -46,7 +46,7 @@ DeleteDeviceDefinitionResponse::DeleteDeviceDefinitionResponse(
         const DeleteDeviceDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDeviceDefinitionResponse(new DeleteDeviceDefinitionResponsePrivate(this), parent)
+    : GreengrassResponse(new DeleteDeviceDefinitionResponsePrivate(this), parent)
 {
     setRequest(new DeleteDeviceDefinitionRequest(request));
     setReply(reply);

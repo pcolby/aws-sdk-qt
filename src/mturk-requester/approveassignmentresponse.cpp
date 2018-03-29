@@ -46,7 +46,7 @@ ApproveAssignmentResponse::ApproveAssignmentResponse(
         const ApproveAssignmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ApproveAssignmentResponse(new ApproveAssignmentResponsePrivate(this), parent)
+    : MTurkResponse(new ApproveAssignmentResponsePrivate(this), parent)
 {
     setRequest(new ApproveAssignmentRequest(request));
     setReply(reply);

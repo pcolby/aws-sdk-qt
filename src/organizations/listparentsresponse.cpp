@@ -46,7 +46,7 @@ ListParentsResponse::ListParentsResponse(
         const ListParentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListParentsResponse(new ListParentsResponsePrivate(this), parent)
+    : OrganizationsResponse(new ListParentsResponsePrivate(this), parent)
 {
     setRequest(new ListParentsRequest(request));
     setReply(reply);

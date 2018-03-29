@@ -46,7 +46,7 @@ DeleteTapeArchiveResponse::DeleteTapeArchiveResponse(
         const DeleteTapeArchiveRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteTapeArchiveResponse(new DeleteTapeArchiveResponsePrivate(this), parent)
+    : StorageGatewayResponse(new DeleteTapeArchiveResponsePrivate(this), parent)
 {
     setRequest(new DeleteTapeArchiveRequest(request));
     setReply(reply);

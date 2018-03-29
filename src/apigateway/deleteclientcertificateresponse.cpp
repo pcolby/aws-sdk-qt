@@ -46,7 +46,7 @@ DeleteClientCertificateResponse::DeleteClientCertificateResponse(
         const DeleteClientCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteClientCertificateResponse(new DeleteClientCertificateResponsePrivate(this), parent)
+    : APIGatewayResponse(new DeleteClientCertificateResponsePrivate(this), parent)
 {
     setRequest(new DeleteClientCertificateRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ReadPipelineResponse::ReadPipelineResponse(
         const ReadPipelineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ReadPipelineResponse(new ReadPipelineResponsePrivate(this), parent)
+    : ElasticTranscoderResponse(new ReadPipelineResponsePrivate(this), parent)
 {
     setRequest(new ReadPipelineRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeLoadBalancersResponse::DescribeLoadBalancersResponse(
         const DescribeLoadBalancersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeLoadBalancersResponse(new DescribeLoadBalancersResponsePrivate(this), parent)
+    : ElasticLoadBalancingResponse(new DescribeLoadBalancersResponsePrivate(this), parent)
 {
     setRequest(new DescribeLoadBalancersRequest(request));
     setReply(reply);

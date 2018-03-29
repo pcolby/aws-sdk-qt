@@ -46,7 +46,7 @@ ListWorkflowTypesResponse::ListWorkflowTypesResponse(
         const ListWorkflowTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListWorkflowTypesResponse(new ListWorkflowTypesResponsePrivate(this), parent)
+    : SWFResponse(new ListWorkflowTypesResponsePrivate(this), parent)
 {
     setRequest(new ListWorkflowTypesRequest(request));
     setReply(reply);

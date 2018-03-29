@@ -46,7 +46,7 @@ UnassignInstanceResponse::UnassignInstanceResponse(
         const UnassignInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UnassignInstanceResponse(new UnassignInstanceResponsePrivate(this), parent)
+    : OpsWorksResponse(new UnassignInstanceResponsePrivate(this), parent)
 {
     setRequest(new UnassignInstanceRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteNetworkAclResponse::DeleteNetworkAclResponse(
         const DeleteNetworkAclRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteNetworkAclResponse(new DeleteNetworkAclResponsePrivate(this), parent)
+    : EC2Response(new DeleteNetworkAclResponsePrivate(this), parent)
 {
     setRequest(new DeleteNetworkAclRequest(request));
     setReply(reply);

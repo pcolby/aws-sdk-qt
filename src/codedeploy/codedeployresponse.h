@@ -34,6 +34,11 @@ class QTAWS_EXPORT CodeDeployResponse : public QtAws::Core::AwsAbstractResponse 
 public:
     CodeDeployResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    CodeDeployResponse(CodeDeployResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

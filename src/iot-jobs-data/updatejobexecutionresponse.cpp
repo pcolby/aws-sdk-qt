@@ -46,7 +46,7 @@ UpdateJobExecutionResponse::UpdateJobExecutionResponse(
         const UpdateJobExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateJobExecutionResponse(new UpdateJobExecutionResponsePrivate(this), parent)
+    : IoTJobsDataPlaneResponse(new UpdateJobExecutionResponsePrivate(this), parent)
 {
     setRequest(new UpdateJobExecutionRequest(request));
     setReply(reply);

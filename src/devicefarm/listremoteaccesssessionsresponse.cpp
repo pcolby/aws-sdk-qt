@@ -46,7 +46,7 @@ ListRemoteAccessSessionsResponse::ListRemoteAccessSessionsResponse(
         const ListRemoteAccessSessionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListRemoteAccessSessionsResponse(new ListRemoteAccessSessionsResponsePrivate(this), parent)
+    : DeviceFarmResponse(new ListRemoteAccessSessionsResponsePrivate(this), parent)
 {
     setRequest(new ListRemoteAccessSessionsRequest(request));
     setReply(reply);

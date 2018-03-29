@@ -46,7 +46,7 @@ SetUserMFAPreferenceResponse::SetUserMFAPreferenceResponse(
         const SetUserMFAPreferenceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetUserMFAPreferenceResponse(new SetUserMFAPreferenceResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new SetUserMFAPreferenceResponsePrivate(this), parent)
 {
     setRequest(new SetUserMFAPreferenceRequest(request));
     setReply(reply);

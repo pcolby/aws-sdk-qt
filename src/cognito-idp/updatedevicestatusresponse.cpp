@@ -46,7 +46,7 @@ UpdateDeviceStatusResponse::UpdateDeviceStatusResponse(
         const UpdateDeviceStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDeviceStatusResponse(new UpdateDeviceStatusResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new UpdateDeviceStatusResponsePrivate(this), parent)
 {
     setRequest(new UpdateDeviceStatusRequest(request));
     setReply(reply);

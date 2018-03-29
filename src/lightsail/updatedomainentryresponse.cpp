@@ -46,7 +46,7 @@ UpdateDomainEntryResponse::UpdateDomainEntryResponse(
         const UpdateDomainEntryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDomainEntryResponse(new UpdateDomainEntryResponsePrivate(this), parent)
+    : LightsailResponse(new UpdateDomainEntryResponsePrivate(this), parent)
 {
     setRequest(new UpdateDomainEntryRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ResetInstanceAttributeResponse::ResetInstanceAttributeResponse(
         const ResetInstanceAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResetInstanceAttributeResponse(new ResetInstanceAttributeResponsePrivate(this), parent)
+    : EC2Response(new ResetInstanceAttributeResponsePrivate(this), parent)
 {
     setRequest(new ResetInstanceAttributeRequest(request));
     setReply(reply);

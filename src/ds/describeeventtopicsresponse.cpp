@@ -46,7 +46,7 @@ DescribeEventTopicsResponse::DescribeEventTopicsResponse(
         const DescribeEventTopicsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeEventTopicsResponse(new DescribeEventTopicsResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new DescribeEventTopicsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEventTopicsRequest(request));
     setReply(reply);

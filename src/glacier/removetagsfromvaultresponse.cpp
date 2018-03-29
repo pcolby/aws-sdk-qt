@@ -46,7 +46,7 @@ RemoveTagsFromVaultResponse::RemoveTagsFromVaultResponse(
         const RemoveTagsFromVaultRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RemoveTagsFromVaultResponse(new RemoveTagsFromVaultResponsePrivate(this), parent)
+    : GlacierResponse(new RemoveTagsFromVaultResponsePrivate(this), parent)
 {
     setRequest(new RemoveTagsFromVaultRequest(request));
     setReply(reply);

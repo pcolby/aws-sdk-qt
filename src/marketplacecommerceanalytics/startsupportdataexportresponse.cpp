@@ -46,7 +46,7 @@ StartSupportDataExportResponse::StartSupportDataExportResponse(
         const StartSupportDataExportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartSupportDataExportResponse(new StartSupportDataExportResponsePrivate(this), parent)
+    : MarketplaceCommerceAnalyticsResponse(new StartSupportDataExportResponsePrivate(this), parent)
 {
     setRequest(new StartSupportDataExportRequest(request));
     setReply(reply);

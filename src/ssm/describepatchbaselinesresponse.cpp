@@ -46,7 +46,7 @@ DescribePatchBaselinesResponse::DescribePatchBaselinesResponse(
         const DescribePatchBaselinesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribePatchBaselinesResponse(new DescribePatchBaselinesResponsePrivate(this), parent)
+    : SSMResponse(new DescribePatchBaselinesResponsePrivate(this), parent)
 {
     setRequest(new DescribePatchBaselinesRequest(request));
     setReply(reply);

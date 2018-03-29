@@ -46,7 +46,7 @@ ListAppliedSchemaArnsResponse::ListAppliedSchemaArnsResponse(
         const ListAppliedSchemaArnsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListAppliedSchemaArnsResponse(new ListAppliedSchemaArnsResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new ListAppliedSchemaArnsResponsePrivate(this), parent)
 {
     setRequest(new ListAppliedSchemaArnsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ResendContactReachabilityEmailResponse::ResendContactReachabilityEmailResponse(
         const ResendContactReachabilityEmailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResendContactReachabilityEmailResponse(new ResendContactReachabilityEmailResponsePrivate(this), parent)
+    : Route53DomainsResponse(new ResendContactReachabilityEmailResponsePrivate(this), parent)
 {
     setRequest(new ResendContactReachabilityEmailRequest(request));
     setReply(reply);

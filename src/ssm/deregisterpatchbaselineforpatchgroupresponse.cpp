@@ -46,7 +46,7 @@ DeregisterPatchBaselineForPatchGroupResponse::DeregisterPatchBaselineForPatchGro
         const DeregisterPatchBaselineForPatchGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeregisterPatchBaselineForPatchGroupResponse(new DeregisterPatchBaselineForPatchGroupResponsePrivate(this), parent)
+    : SSMResponse(new DeregisterPatchBaselineForPatchGroupResponsePrivate(this), parent)
 {
     setRequest(new DeregisterPatchBaselineForPatchGroupRequest(request));
     setReply(reply);

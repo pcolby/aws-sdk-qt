@@ -46,7 +46,7 @@ ResetDBClusterParameterGroupResponse::ResetDBClusterParameterGroupResponse(
         const ResetDBClusterParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResetDBClusterParameterGroupResponse(new ResetDBClusterParameterGroupResponsePrivate(this), parent)
+    : RDSResponse(new ResetDBClusterParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new ResetDBClusterParameterGroupRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateDomainNameserversResponse::UpdateDomainNameserversResponse(
         const UpdateDomainNameserversRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDomainNameserversResponse(new UpdateDomainNameserversResponsePrivate(this), parent)
+    : Route53DomainsResponse(new UpdateDomainNameserversResponsePrivate(this), parent)
 {
     setRequest(new UpdateDomainNameserversRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SetSubscriptionAttributesResponse::SetSubscriptionAttributesResponse(
         const SetSubscriptionAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetSubscriptionAttributesResponse(new SetSubscriptionAttributesResponsePrivate(this), parent)
+    : SNSResponse(new SetSubscriptionAttributesResponsePrivate(this), parent)
 {
     setRequest(new SetSubscriptionAttributesRequest(request));
     setReply(reply);

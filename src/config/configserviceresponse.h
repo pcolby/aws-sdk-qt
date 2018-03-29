@@ -34,6 +34,11 @@ class QTAWS_EXPORT ConfigServiceResponse : public QtAws::Core::AwsAbstractRespon
 public:
     ConfigServiceResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    ConfigServiceResponse(ConfigServiceResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

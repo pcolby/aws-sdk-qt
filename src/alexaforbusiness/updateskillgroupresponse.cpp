@@ -46,7 +46,7 @@ UpdateSkillGroupResponse::UpdateSkillGroupResponse(
         const UpdateSkillGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateSkillGroupResponse(new UpdateSkillGroupResponsePrivate(this), parent)
+    : AlexaForBusinessResponse(new UpdateSkillGroupResponsePrivate(this), parent)
 {
     setRequest(new UpdateSkillGroupRequest(request));
     setReply(reply);

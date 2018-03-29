@@ -46,7 +46,7 @@ CreateSecurityConfigurationResponse::CreateSecurityConfigurationResponse(
         const CreateSecurityConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateSecurityConfigurationResponse(new CreateSecurityConfigurationResponsePrivate(this), parent)
+    : EMRResponse(new CreateSecurityConfigurationResponsePrivate(this), parent)
 {
     setRequest(new CreateSecurityConfigurationRequest(request));
     setReply(reply);

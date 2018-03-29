@@ -46,7 +46,7 @@ DescribeDeliveryStreamResponse::DescribeDeliveryStreamResponse(
         const DescribeDeliveryStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeDeliveryStreamResponse(new DescribeDeliveryStreamResponsePrivate(this), parent)
+    : FirehoseResponse(new DescribeDeliveryStreamResponsePrivate(this), parent)
 {
     setRequest(new DescribeDeliveryStreamRequest(request));
     setReply(reply);

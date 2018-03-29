@@ -46,7 +46,7 @@ EnableAllFeaturesResponse::EnableAllFeaturesResponse(
         const EnableAllFeaturesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EnableAllFeaturesResponse(new EnableAllFeaturesResponsePrivate(this), parent)
+    : OrganizationsResponse(new EnableAllFeaturesResponsePrivate(this), parent)
 {
     setRequest(new EnableAllFeaturesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetPipelineDefinitionResponse::GetPipelineDefinitionResponse(
         const GetPipelineDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetPipelineDefinitionResponse(new GetPipelineDefinitionResponsePrivate(this), parent)
+    : DataPipelineResponse(new GetPipelineDefinitionResponsePrivate(this), parent)
 {
     setRequest(new GetPipelineDefinitionRequest(request));
     setReply(reply);

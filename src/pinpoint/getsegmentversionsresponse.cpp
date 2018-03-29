@@ -46,7 +46,7 @@ GetSegmentVersionsResponse::GetSegmentVersionsResponse(
         const GetSegmentVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetSegmentVersionsResponse(new GetSegmentVersionsResponsePrivate(this), parent)
+    : PinpointResponse(new GetSegmentVersionsResponsePrivate(this), parent)
 {
     setRequest(new GetSegmentVersionsRequest(request));
     setReply(reply);

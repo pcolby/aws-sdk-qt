@@ -46,7 +46,7 @@ CreateSampleFindingsResponse::CreateSampleFindingsResponse(
         const CreateSampleFindingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateSampleFindingsResponse(new CreateSampleFindingsResponsePrivate(this), parent)
+    : GuardDutyResponse(new CreateSampleFindingsResponsePrivate(this), parent)
 {
     setRequest(new CreateSampleFindingsRequest(request));
     setReply(reply);

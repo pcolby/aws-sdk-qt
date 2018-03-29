@@ -46,7 +46,7 @@ ListBuildsForProjectResponse::ListBuildsForProjectResponse(
         const ListBuildsForProjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListBuildsForProjectResponse(new ListBuildsForProjectResponsePrivate(this), parent)
+    : CodeBuildResponse(new ListBuildsForProjectResponsePrivate(this), parent)
 {
     setRequest(new ListBuildsForProjectRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ InviteMembersResponse::InviteMembersResponse(
         const InviteMembersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InviteMembersResponse(new InviteMembersResponsePrivate(this), parent)
+    : GuardDutyResponse(new InviteMembersResponsePrivate(this), parent)
 {
     setRequest(new InviteMembersRequest(request));
     setReply(reply);

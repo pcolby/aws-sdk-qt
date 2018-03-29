@@ -46,7 +46,7 @@ DescribeAutomationExecutionsResponse::DescribeAutomationExecutionsResponse(
         const DescribeAutomationExecutionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAutomationExecutionsResponse(new DescribeAutomationExecutionsResponsePrivate(this), parent)
+    : SSMResponse(new DescribeAutomationExecutionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeAutomationExecutionsRequest(request));
     setReply(reply);

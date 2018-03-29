@@ -46,7 +46,7 @@ UploadServerCertificateResponse::UploadServerCertificateResponse(
         const UploadServerCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UploadServerCertificateResponse(new UploadServerCertificateResponsePrivate(this), parent)
+    : IAMResponse(new UploadServerCertificateResponsePrivate(this), parent)
 {
     setRequest(new UploadServerCertificateRequest(request));
     setReply(reply);

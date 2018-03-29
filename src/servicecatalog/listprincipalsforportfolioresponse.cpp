@@ -46,7 +46,7 @@ ListPrincipalsForPortfolioResponse::ListPrincipalsForPortfolioResponse(
         const ListPrincipalsForPortfolioRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListPrincipalsForPortfolioResponse(new ListPrincipalsForPortfolioResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new ListPrincipalsForPortfolioResponsePrivate(this), parent)
 {
     setRequest(new ListPrincipalsForPortfolioRequest(request));
     setReply(reply);

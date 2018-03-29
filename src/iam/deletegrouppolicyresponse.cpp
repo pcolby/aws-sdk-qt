@@ -46,7 +46,7 @@ DeleteGroupPolicyResponse::DeleteGroupPolicyResponse(
         const DeleteGroupPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteGroupPolicyResponse(new DeleteGroupPolicyResponsePrivate(this), parent)
+    : IAMResponse(new DeleteGroupPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteGroupPolicyRequest(request));
     setReply(reply);

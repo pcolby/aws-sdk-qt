@@ -46,7 +46,7 @@ GetHostedZoneLimitResponse::GetHostedZoneLimitResponse(
         const GetHostedZoneLimitRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetHostedZoneLimitResponse(new GetHostedZoneLimitResponsePrivate(this), parent)
+    : Route53Response(new GetHostedZoneLimitResponsePrivate(this), parent)
 {
     setRequest(new GetHostedZoneLimitRequest(request));
     setReply(reply);

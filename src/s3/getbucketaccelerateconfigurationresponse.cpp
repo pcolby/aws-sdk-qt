@@ -46,7 +46,7 @@ GetBucketAccelerateConfigurationResponse::GetBucketAccelerateConfigurationRespon
         const GetBucketAccelerateConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetBucketAccelerateConfigurationResponse(new GetBucketAccelerateConfigurationResponsePrivate(this), parent)
+    : S3Response(new GetBucketAccelerateConfigurationResponsePrivate(this), parent)
 {
     setRequest(new GetBucketAccelerateConfigurationRequest(request));
     setReply(reply);

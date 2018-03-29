@@ -46,7 +46,7 @@ GetApplicationSettingsResponse::GetApplicationSettingsResponse(
         const GetApplicationSettingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetApplicationSettingsResponse(new GetApplicationSettingsResponsePrivate(this), parent)
+    : PinpointResponse(new GetApplicationSettingsResponsePrivate(this), parent)
 {
     setRequest(new GetApplicationSettingsRequest(request));
     setReply(reply);

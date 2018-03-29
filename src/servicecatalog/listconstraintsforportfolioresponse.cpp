@@ -46,7 +46,7 @@ ListConstraintsForPortfolioResponse::ListConstraintsForPortfolioResponse(
         const ListConstraintsForPortfolioRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListConstraintsForPortfolioResponse(new ListConstraintsForPortfolioResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new ListConstraintsForPortfolioResponsePrivate(this), parent)
 {
     setRequest(new ListConstraintsForPortfolioRequest(request));
     setReply(reply);

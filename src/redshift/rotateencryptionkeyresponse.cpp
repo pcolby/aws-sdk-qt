@@ -46,7 +46,7 @@ RotateEncryptionKeyResponse::RotateEncryptionKeyResponse(
         const RotateEncryptionKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RotateEncryptionKeyResponse(new RotateEncryptionKeyResponsePrivate(this), parent)
+    : RedshiftResponse(new RotateEncryptionKeyResponsePrivate(this), parent)
 {
     setRequest(new RotateEncryptionKeyRequest(request));
     setReply(reply);

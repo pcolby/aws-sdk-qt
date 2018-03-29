@@ -46,7 +46,7 @@ StopTaskResponse::StopTaskResponse(
         const StopTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopTaskResponse(new StopTaskResponsePrivate(this), parent)
+    : ECSResponse(new StopTaskResponsePrivate(this), parent)
 {
     setRequest(new StopTaskRequest(request));
     setReply(reply);

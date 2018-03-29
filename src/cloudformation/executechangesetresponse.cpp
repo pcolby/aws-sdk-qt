@@ -46,7 +46,7 @@ ExecuteChangeSetResponse::ExecuteChangeSetResponse(
         const ExecuteChangeSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ExecuteChangeSetResponse(new ExecuteChangeSetResponsePrivate(this), parent)
+    : CloudFormationResponse(new ExecuteChangeSetResponsePrivate(this), parent)
 {
     setRequest(new ExecuteChangeSetRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SendBulkTemplatedEmailResponse::SendBulkTemplatedEmailResponse(
         const SendBulkTemplatedEmailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SendBulkTemplatedEmailResponse(new SendBulkTemplatedEmailResponsePrivate(this), parent)
+    : SESResponse(new SendBulkTemplatedEmailResponsePrivate(this), parent)
 {
     setRequest(new SendBulkTemplatedEmailRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeActivationsResponse::DescribeActivationsResponse(
         const DescribeActivationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeActivationsResponse(new DescribeActivationsResponsePrivate(this), parent)
+    : SSMResponse(new DescribeActivationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeActivationsRequest(request));
     setReply(reply);

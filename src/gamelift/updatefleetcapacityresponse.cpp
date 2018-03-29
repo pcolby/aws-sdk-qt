@@ -46,7 +46,7 @@ UpdateFleetCapacityResponse::UpdateFleetCapacityResponse(
         const UpdateFleetCapacityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateFleetCapacityResponse(new UpdateFleetCapacityResponsePrivate(this), parent)
+    : GameLiftResponse(new UpdateFleetCapacityResponsePrivate(this), parent)
 {
     setRequest(new UpdateFleetCapacityRequest(request));
     setReply(reply);

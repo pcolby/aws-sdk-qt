@@ -46,7 +46,7 @@ AddTagsToOnPremisesInstancesResponse::AddTagsToOnPremisesInstancesResponse(
         const AddTagsToOnPremisesInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AddTagsToOnPremisesInstancesResponse(new AddTagsToOnPremisesInstancesResponsePrivate(this), parent)
+    : CodeDeployResponse(new AddTagsToOnPremisesInstancesResponsePrivate(this), parent)
 {
     setRequest(new AddTagsToOnPremisesInstancesRequest(request));
     setReply(reply);

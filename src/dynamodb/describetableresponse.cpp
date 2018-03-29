@@ -46,7 +46,7 @@ DescribeTableResponse::DescribeTableResponse(
         const DescribeTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeTableResponse(new DescribeTableResponsePrivate(this), parent)
+    : DynamoDBResponse(new DescribeTableResponsePrivate(this), parent)
 {
     setRequest(new DescribeTableRequest(request));
     setReply(reply);

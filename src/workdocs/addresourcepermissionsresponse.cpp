@@ -46,7 +46,7 @@ AddResourcePermissionsResponse::AddResourcePermissionsResponse(
         const AddResourcePermissionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AddResourcePermissionsResponse(new AddResourcePermissionsResponsePrivate(this), parent)
+    : WorkDocsResponse(new AddResourcePermissionsResponsePrivate(this), parent)
 {
     setRequest(new AddResourcePermissionsRequest(request));
     setReply(reply);

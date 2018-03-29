@@ -46,7 +46,7 @@ DescribeDeploymentsResponse::DescribeDeploymentsResponse(
         const DescribeDeploymentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeDeploymentsResponse(new DescribeDeploymentsResponsePrivate(this), parent)
+    : OpsWorksResponse(new DescribeDeploymentsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDeploymentsRequest(request));
     setReply(reply);

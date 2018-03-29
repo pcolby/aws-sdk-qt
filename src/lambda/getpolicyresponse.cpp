@@ -46,7 +46,7 @@ GetPolicyResponse::GetPolicyResponse(
         const GetPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetPolicyResponse(new GetPolicyResponsePrivate(this), parent)
+    : LambdaResponse(new GetPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetPolicyRequest(request));
     setReply(reply);

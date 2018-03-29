@@ -46,7 +46,7 @@ UpdateNumberOfDomainControllersResponse::UpdateNumberOfDomainControllersResponse
         const UpdateNumberOfDomainControllersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateNumberOfDomainControllersResponse(new UpdateNumberOfDomainControllersResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new UpdateNumberOfDomainControllersResponsePrivate(this), parent)
 {
     setRequest(new UpdateNumberOfDomainControllersRequest(request));
     setReply(reply);

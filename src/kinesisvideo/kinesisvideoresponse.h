@@ -34,6 +34,11 @@ class QTAWS_EXPORT KinesisVideoResponse : public QtAws::Core::AwsAbstractRespons
 public:
     KinesisVideoResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    KinesisVideoResponse(KinesisVideoResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

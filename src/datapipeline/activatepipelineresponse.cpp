@@ -46,7 +46,7 @@ ActivatePipelineResponse::ActivatePipelineResponse(
         const ActivatePipelineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ActivatePipelineResponse(new ActivatePipelineResponsePrivate(this), parent)
+    : DataPipelineResponse(new ActivatePipelineResponsePrivate(this), parent)
 {
     setRequest(new ActivatePipelineRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateGroupResponse::UpdateGroupResponse(
         const UpdateGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateGroupResponse(new UpdateGroupResponsePrivate(this), parent)
+    : ResourceGroupsResponse(new UpdateGroupResponsePrivate(this), parent)
 {
     setRequest(new UpdateGroupRequest(request));
     setReply(reply);

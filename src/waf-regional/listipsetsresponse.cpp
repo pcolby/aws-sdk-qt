@@ -46,7 +46,7 @@ ListIPSetsResponse::ListIPSetsResponse(
         const ListIPSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListIPSetsResponse(new ListIPSetsResponsePrivate(this), parent)
+    : WAFRegionalResponse(new ListIPSetsResponsePrivate(this), parent)
 {
     setRequest(new ListIPSetsRequest(request));
     setReply(reply);

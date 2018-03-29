@@ -46,7 +46,7 @@ ListAllowedNodeTypeModificationsResponse::ListAllowedNodeTypeModificationsRespon
         const ListAllowedNodeTypeModificationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListAllowedNodeTypeModificationsResponse(new ListAllowedNodeTypeModificationsResponsePrivate(this), parent)
+    : ElastiCacheResponse(new ListAllowedNodeTypeModificationsResponsePrivate(this), parent)
 {
     setRequest(new ListAllowedNodeTypeModificationsRequest(request));
     setReply(reply);

@@ -34,6 +34,11 @@ class QTAWS_EXPORT ElasticTranscoderResponse : public QtAws::Core::AwsAbstractRe
 public:
     ElasticTranscoderResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    ElasticTranscoderResponse(ElasticTranscoderResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

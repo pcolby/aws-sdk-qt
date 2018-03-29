@@ -46,7 +46,7 @@ DeleteAssessmentTemplateResponse::DeleteAssessmentTemplateResponse(
         const DeleteAssessmentTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteAssessmentTemplateResponse(new DeleteAssessmentTemplateResponsePrivate(this), parent)
+    : InspectorResponse(new DeleteAssessmentTemplateResponsePrivate(this), parent)
 {
     setRequest(new DeleteAssessmentTemplateRequest(request));
     setReply(reply);

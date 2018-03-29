@@ -46,7 +46,7 @@ ListResourcesForTagOptionResponse::ListResourcesForTagOptionResponse(
         const ListResourcesForTagOptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListResourcesForTagOptionResponse(new ListResourcesForTagOptionResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new ListResourcesForTagOptionResponsePrivate(this), parent)
 {
     setRequest(new ListResourcesForTagOptionRequest(request));
     setReply(reply);

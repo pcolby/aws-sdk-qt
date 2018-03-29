@@ -46,7 +46,7 @@ DeleteInstanceProfileResponse::DeleteInstanceProfileResponse(
         const DeleteInstanceProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteInstanceProfileResponse(new DeleteInstanceProfileResponsePrivate(this), parent)
+    : IAMResponse(new DeleteInstanceProfileResponsePrivate(this), parent)
 {
     setRequest(new DeleteInstanceProfileRequest(request));
     setReply(reply);

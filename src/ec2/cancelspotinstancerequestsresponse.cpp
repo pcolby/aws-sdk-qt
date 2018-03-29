@@ -46,7 +46,7 @@ CancelSpotInstanceRequestsResponse::CancelSpotInstanceRequestsResponse(
         const CancelSpotInstanceRequestsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CancelSpotInstanceRequestsResponse(new CancelSpotInstanceRequestsResponsePrivate(this), parent)
+    : EC2Response(new CancelSpotInstanceRequestsResponsePrivate(this), parent)
 {
     setRequest(new CancelSpotInstanceRequestsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ImportImageResponse::ImportImageResponse(
         const ImportImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ImportImageResponse(new ImportImageResponsePrivate(this), parent)
+    : EC2Response(new ImportImageResponsePrivate(this), parent)
 {
     setRequest(new ImportImageRequest(request));
     setReply(reply);

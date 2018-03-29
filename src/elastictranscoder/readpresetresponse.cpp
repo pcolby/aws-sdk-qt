@@ -46,7 +46,7 @@ ReadPresetResponse::ReadPresetResponse(
         const ReadPresetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ReadPresetResponse(new ReadPresetResponsePrivate(this), parent)
+    : ElasticTranscoderResponse(new ReadPresetResponsePrivate(this), parent)
 {
     setRequest(new ReadPresetRequest(request));
     setReply(reply);

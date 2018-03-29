@@ -46,7 +46,7 @@ GetRepositoryResponse::GetRepositoryResponse(
         const GetRepositoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetRepositoryResponse(new GetRepositoryResponsePrivate(this), parent)
+    : CodeCommitResponse(new GetRepositoryResponsePrivate(this), parent)
 {
     setRequest(new GetRepositoryRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StopStreamProcessorResponse::StopStreamProcessorResponse(
         const StopStreamProcessorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopStreamProcessorResponse(new StopStreamProcessorResponsePrivate(this), parent)
+    : RekognitionResponse(new StopStreamProcessorResponsePrivate(this), parent)
 {
     setRequest(new StopStreamProcessorRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ModifySnapshotAttributeResponse::ModifySnapshotAttributeResponse(
         const ModifySnapshotAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifySnapshotAttributeResponse(new ModifySnapshotAttributeResponsePrivate(this), parent)
+    : EC2Response(new ModifySnapshotAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifySnapshotAttributeRequest(request));
     setReply(reply);

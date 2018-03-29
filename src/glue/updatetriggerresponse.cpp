@@ -46,7 +46,7 @@ UpdateTriggerResponse::UpdateTriggerResponse(
         const UpdateTriggerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateTriggerResponse(new UpdateTriggerResponsePrivate(this), parent)
+    : GlueResponse(new UpdateTriggerResponsePrivate(this), parent)
 {
     setRequest(new UpdateTriggerRequest(request));
     setReply(reply);

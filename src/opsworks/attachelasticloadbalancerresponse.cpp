@@ -46,7 +46,7 @@ AttachElasticLoadBalancerResponse::AttachElasticLoadBalancerResponse(
         const AttachElasticLoadBalancerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AttachElasticLoadBalancerResponse(new AttachElasticLoadBalancerResponsePrivate(this), parent)
+    : OpsWorksResponse(new AttachElasticLoadBalancerResponsePrivate(this), parent)
 {
     setRequest(new AttachElasticLoadBalancerRequest(request));
     setReply(reply);

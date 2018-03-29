@@ -46,7 +46,7 @@ DeleteHapgResponse::DeleteHapgResponse(
         const DeleteHapgRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteHapgResponse(new DeleteHapgResponsePrivate(this), parent)
+    : CloudHSMResponse(new DeleteHapgResponsePrivate(this), parent)
 {
     setRequest(new DeleteHapgRequest(request));
     setReply(reply);

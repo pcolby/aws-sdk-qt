@@ -46,7 +46,7 @@ CreateAssociationBatchResponse::CreateAssociationBatchResponse(
         const CreateAssociationBatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateAssociationBatchResponse(new CreateAssociationBatchResponsePrivate(this), parent)
+    : SSMResponse(new CreateAssociationBatchResponsePrivate(this), parent)
 {
     setRequest(new CreateAssociationBatchRequest(request));
     setReply(reply);

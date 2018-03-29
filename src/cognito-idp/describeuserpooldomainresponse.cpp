@@ -46,7 +46,7 @@ DescribeUserPoolDomainResponse::DescribeUserPoolDomainResponse(
         const DescribeUserPoolDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeUserPoolDomainResponse(new DescribeUserPoolDomainResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new DescribeUserPoolDomainResponsePrivate(this), parent)
 {
     setRequest(new DescribeUserPoolDomainRequest(request));
     setReply(reply);

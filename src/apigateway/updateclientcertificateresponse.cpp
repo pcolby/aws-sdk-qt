@@ -46,7 +46,7 @@ UpdateClientCertificateResponse::UpdateClientCertificateResponse(
         const UpdateClientCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateClientCertificateResponse(new UpdateClientCertificateResponsePrivate(this), parent)
+    : APIGatewayResponse(new UpdateClientCertificateResponsePrivate(this), parent)
 {
     setRequest(new UpdateClientCertificateRequest(request));
     setReply(reply);

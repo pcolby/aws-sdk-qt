@@ -46,7 +46,7 @@ DescribeAgentsResponse::DescribeAgentsResponse(
         const DescribeAgentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAgentsResponse(new DescribeAgentsResponsePrivate(this), parent)
+    : ApplicationDiscoveryServiceResponse(new DescribeAgentsResponsePrivate(this), parent)
 {
     setRequest(new DescribeAgentsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ReplaceRouteResponse::ReplaceRouteResponse(
         const ReplaceRouteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ReplaceRouteResponse(new ReplaceRouteResponsePrivate(this), parent)
+    : EC2Response(new ReplaceRouteResponsePrivate(this), parent)
 {
     setRequest(new ReplaceRouteRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeCertificateResponse::DescribeCertificateResponse(
         const DescribeCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeCertificateResponse(new DescribeCertificateResponsePrivate(this), parent)
+    : ACMResponse(new DescribeCertificateResponsePrivate(this), parent)
 {
     setRequest(new DescribeCertificateRequest(request));
     setReply(reply);

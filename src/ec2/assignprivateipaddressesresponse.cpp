@@ -46,7 +46,7 @@ AssignPrivateIpAddressesResponse::AssignPrivateIpAddressesResponse(
         const AssignPrivateIpAddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssignPrivateIpAddressesResponse(new AssignPrivateIpAddressesResponsePrivate(this), parent)
+    : EC2Response(new AssignPrivateIpAddressesResponsePrivate(this), parent)
 {
     setRequest(new AssignPrivateIpAddressesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListVolumeRecoveryPointsResponse::ListVolumeRecoveryPointsResponse(
         const ListVolumeRecoveryPointsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListVolumeRecoveryPointsResponse(new ListVolumeRecoveryPointsResponsePrivate(this), parent)
+    : StorageGatewayResponse(new ListVolumeRecoveryPointsResponsePrivate(this), parent)
 {
     setRequest(new ListVolumeRecoveryPointsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteXssMatchSetResponse::DeleteXssMatchSetResponse(
         const DeleteXssMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteXssMatchSetResponse(new DeleteXssMatchSetResponsePrivate(this), parent)
+    : WAFRegionalResponse(new DeleteXssMatchSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteXssMatchSetRequest(request));
     setReply(reply);

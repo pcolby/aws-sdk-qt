@@ -46,7 +46,7 @@ DescribeClassicLinkInstancesResponse::DescribeClassicLinkInstancesResponse(
         const DescribeClassicLinkInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeClassicLinkInstancesResponse(new DescribeClassicLinkInstancesResponsePrivate(this), parent)
+    : EC2Response(new DescribeClassicLinkInstancesResponsePrivate(this), parent)
 {
     setRequest(new DescribeClassicLinkInstancesRequest(request));
     setReply(reply);

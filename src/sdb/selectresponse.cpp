@@ -46,7 +46,7 @@ SelectResponse::SelectResponse(
         const SelectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SelectResponse(new SelectResponsePrivate(this), parent)
+    : SimpleDBResponse(new SelectResponsePrivate(this), parent)
 {
     setRequest(new SelectRequest(request));
     setReply(reply);

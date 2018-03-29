@@ -46,7 +46,7 @@ ExecuteProvisionedProductPlanResponse::ExecuteProvisionedProductPlanResponse(
         const ExecuteProvisionedProductPlanRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ExecuteProvisionedProductPlanResponse(new ExecuteProvisionedProductPlanResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new ExecuteProvisionedProductPlanResponsePrivate(this), parent)
 {
     setRequest(new ExecuteProvisionedProductPlanRequest(request));
     setReply(reply);

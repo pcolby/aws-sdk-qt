@@ -46,7 +46,7 @@ CreateFolderResponse::CreateFolderResponse(
         const CreateFolderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateFolderResponse(new CreateFolderResponsePrivate(this), parent)
+    : WorkDocsResponse(new CreateFolderResponsePrivate(this), parent)
 {
     setRequest(new CreateFolderRequest(request));
     setReply(reply);

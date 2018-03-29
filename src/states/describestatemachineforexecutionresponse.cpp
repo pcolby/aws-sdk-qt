@@ -46,7 +46,7 @@ DescribeStateMachineForExecutionResponse::DescribeStateMachineForExecutionRespon
         const DescribeStateMachineForExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeStateMachineForExecutionResponse(new DescribeStateMachineForExecutionResponsePrivate(this), parent)
+    : SFNResponse(new DescribeStateMachineForExecutionResponsePrivate(this), parent)
 {
     setRequest(new DescribeStateMachineForExecutionRequest(request));
     setReply(reply);

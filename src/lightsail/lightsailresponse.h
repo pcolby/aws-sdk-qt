@@ -34,6 +34,11 @@ class QTAWS_EXPORT LightsailResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     LightsailResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    LightsailResponse(LightsailResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

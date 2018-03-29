@@ -46,7 +46,7 @@ AssociateDiscoveredResourceResponse::AssociateDiscoveredResourceResponse(
         const AssociateDiscoveredResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssociateDiscoveredResourceResponse(new AssociateDiscoveredResourceResponsePrivate(this), parent)
+    : MigrationHubResponse(new AssociateDiscoveredResourceResponsePrivate(this), parent)
 {
     setRequest(new AssociateDiscoveredResourceRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeEventConfigurationsResponse::DescribeEventConfigurationsResponse(
         const DescribeEventConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeEventConfigurationsResponse(new DescribeEventConfigurationsResponsePrivate(this), parent)
+    : IoTResponse(new DescribeEventConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEventConfigurationsRequest(request));
     setReply(reply);

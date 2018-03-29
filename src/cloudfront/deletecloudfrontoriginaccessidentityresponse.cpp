@@ -46,7 +46,7 @@ DeleteCloudFrontOriginAccessIdentityResponse::DeleteCloudFrontOriginAccessIdenti
         const DeleteCloudFrontOriginAccessIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteCloudFrontOriginAccessIdentityResponse(new DeleteCloudFrontOriginAccessIdentityResponsePrivate(this), parent)
+    : CloudFrontResponse(new DeleteCloudFrontOriginAccessIdentityResponsePrivate(this), parent)
 {
     setRequest(new DeleteCloudFrontOriginAccessIdentityRequest(request));
     setReply(reply);

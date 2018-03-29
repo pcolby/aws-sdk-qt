@@ -46,7 +46,7 @@ UpdateClassifierResponse::UpdateClassifierResponse(
         const UpdateClassifierRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateClassifierResponse(new UpdateClassifierResponsePrivate(this), parent)
+    : GlueResponse(new UpdateClassifierResponsePrivate(this), parent)
 {
     setRequest(new UpdateClassifierRequest(request));
     setReply(reply);

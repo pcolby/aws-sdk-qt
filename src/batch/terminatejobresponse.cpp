@@ -46,7 +46,7 @@ TerminateJobResponse::TerminateJobResponse(
         const TerminateJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : TerminateJobResponse(new TerminateJobResponsePrivate(this), parent)
+    : BatchResponse(new TerminateJobResponsePrivate(this), parent)
 {
     setRequest(new TerminateJobRequest(request));
     setReply(reply);

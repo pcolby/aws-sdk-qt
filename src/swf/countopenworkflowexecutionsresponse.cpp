@@ -46,7 +46,7 @@ CountOpenWorkflowExecutionsResponse::CountOpenWorkflowExecutionsResponse(
         const CountOpenWorkflowExecutionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CountOpenWorkflowExecutionsResponse(new CountOpenWorkflowExecutionsResponsePrivate(this), parent)
+    : SWFResponse(new CountOpenWorkflowExecutionsResponsePrivate(this), parent)
 {
     setRequest(new CountOpenWorkflowExecutionsRequest(request));
     setReply(reply);

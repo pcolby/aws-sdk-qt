@@ -46,7 +46,7 @@ ListIdentitiesResponse::ListIdentitiesResponse(
         const ListIdentitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListIdentitiesResponse(new ListIdentitiesResponsePrivate(this), parent)
+    : CognitoIdentityResponse(new ListIdentitiesResponsePrivate(this), parent)
 {
     setRequest(new ListIdentitiesRequest(request));
     setReply(reply);

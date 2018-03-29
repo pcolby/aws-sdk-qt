@@ -34,6 +34,11 @@ class QTAWS_EXPORT MachineLearningResponse : public QtAws::Core::AwsAbstractResp
 public:
     MachineLearningResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    MachineLearningResponse(MachineLearningResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

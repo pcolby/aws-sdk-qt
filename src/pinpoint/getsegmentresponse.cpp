@@ -46,7 +46,7 @@ GetSegmentResponse::GetSegmentResponse(
         const GetSegmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetSegmentResponse(new GetSegmentResponsePrivate(this), parent)
+    : PinpointResponse(new GetSegmentResponsePrivate(this), parent)
 {
     setRequest(new GetSegmentRequest(request));
     setReply(reply);

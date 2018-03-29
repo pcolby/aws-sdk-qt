@@ -46,7 +46,7 @@ UpdateDomainContactResponse::UpdateDomainContactResponse(
         const UpdateDomainContactRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDomainContactResponse(new UpdateDomainContactResponsePrivate(this), parent)
+    : Route53DomainsResponse(new UpdateDomainContactResponsePrivate(this), parent)
 {
     setRequest(new UpdateDomainContactRequest(request));
     setReply(reply);

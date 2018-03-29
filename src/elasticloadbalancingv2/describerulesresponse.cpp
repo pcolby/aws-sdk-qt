@@ -46,7 +46,7 @@ DescribeRulesResponse::DescribeRulesResponse(
         const DescribeRulesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeRulesResponse(new DescribeRulesResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new DescribeRulesResponsePrivate(this), parent)
 {
     setRequest(new DescribeRulesRequest(request));
     setReply(reply);

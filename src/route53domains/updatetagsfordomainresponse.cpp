@@ -46,7 +46,7 @@ UpdateTagsForDomainResponse::UpdateTagsForDomainResponse(
         const UpdateTagsForDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateTagsForDomainResponse(new UpdateTagsForDomainResponsePrivate(this), parent)
+    : Route53DomainsResponse(new UpdateTagsForDomainResponsePrivate(this), parent)
 {
     setRequest(new UpdateTagsForDomainRequest(request));
     setReply(reply);

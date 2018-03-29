@@ -46,7 +46,7 @@ GetHostedZoneCountResponse::GetHostedZoneCountResponse(
         const GetHostedZoneCountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetHostedZoneCountResponse(new GetHostedZoneCountResponsePrivate(this), parent)
+    : Route53Response(new GetHostedZoneCountResponsePrivate(this), parent)
 {
     setRequest(new GetHostedZoneCountRequest(request));
     setReply(reply);

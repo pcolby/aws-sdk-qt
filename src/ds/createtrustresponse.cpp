@@ -46,7 +46,7 @@ CreateTrustResponse::CreateTrustResponse(
         const CreateTrustRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateTrustResponse(new CreateTrustResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new CreateTrustResponsePrivate(this), parent)
 {
     setRequest(new CreateTrustRequest(request));
     setReply(reply);

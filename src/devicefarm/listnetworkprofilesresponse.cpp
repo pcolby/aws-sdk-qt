@@ -46,7 +46,7 @@ ListNetworkProfilesResponse::ListNetworkProfilesResponse(
         const ListNetworkProfilesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListNetworkProfilesResponse(new ListNetworkProfilesResponsePrivate(this), parent)
+    : DeviceFarmResponse(new ListNetworkProfilesResponsePrivate(this), parent)
 {
     setRequest(new ListNetworkProfilesRequest(request));
     setReply(reply);

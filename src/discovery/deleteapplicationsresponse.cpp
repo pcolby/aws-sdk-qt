@@ -46,7 +46,7 @@ DeleteApplicationsResponse::DeleteApplicationsResponse(
         const DeleteApplicationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteApplicationsResponse(new DeleteApplicationsResponsePrivate(this), parent)
+    : ApplicationDiscoveryServiceResponse(new DeleteApplicationsResponsePrivate(this), parent)
 {
     setRequest(new DeleteApplicationsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeRefreshSchemasStatusResponse::DescribeRefreshSchemasStatusResponse(
         const DescribeRefreshSchemasStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeRefreshSchemasStatusResponse(new DescribeRefreshSchemasStatusResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new DescribeRefreshSchemasStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeRefreshSchemasStatusRequest(request));
     setReply(reply);

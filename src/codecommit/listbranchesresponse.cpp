@@ -46,7 +46,7 @@ ListBranchesResponse::ListBranchesResponse(
         const ListBranchesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListBranchesResponse(new ListBranchesResponsePrivate(this), parent)
+    : CodeCommitResponse(new ListBranchesResponsePrivate(this), parent)
 {
     setRequest(new ListBranchesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ModifyVpcTenancyResponse::ModifyVpcTenancyResponse(
         const ModifyVpcTenancyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyVpcTenancyResponse(new ModifyVpcTenancyResponsePrivate(this), parent)
+    : EC2Response(new ModifyVpcTenancyResponsePrivate(this), parent)
 {
     setRequest(new ModifyVpcTenancyRequest(request));
     setReply(reply);

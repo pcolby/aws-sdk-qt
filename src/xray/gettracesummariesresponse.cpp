@@ -46,7 +46,7 @@ GetTraceSummariesResponse::GetTraceSummariesResponse(
         const GetTraceSummariesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetTraceSummariesResponse(new GetTraceSummariesResponsePrivate(this), parent)
+    : XRayResponse(new GetTraceSummariesResponsePrivate(this), parent)
 {
     setRequest(new GetTraceSummariesRequest(request));
     setReply(reply);

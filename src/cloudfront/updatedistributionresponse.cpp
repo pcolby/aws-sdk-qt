@@ -46,7 +46,7 @@ UpdateDistributionResponse::UpdateDistributionResponse(
         const UpdateDistributionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDistributionResponse(new UpdateDistributionResponsePrivate(this), parent)
+    : CloudFrontResponse(new UpdateDistributionResponsePrivate(this), parent)
 {
     setRequest(new UpdateDistributionRequest(request));
     setReply(reply);

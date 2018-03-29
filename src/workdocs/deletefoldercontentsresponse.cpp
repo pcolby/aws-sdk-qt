@@ -46,7 +46,7 @@ DeleteFolderContentsResponse::DeleteFolderContentsResponse(
         const DeleteFolderContentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteFolderContentsResponse(new DeleteFolderContentsResponsePrivate(this), parent)
+    : WorkDocsResponse(new DeleteFolderContentsResponsePrivate(this), parent)
 {
     setRequest(new DeleteFolderContentsRequest(request));
     setReply(reply);

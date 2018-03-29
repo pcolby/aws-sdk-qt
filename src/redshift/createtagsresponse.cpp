@@ -46,7 +46,7 @@ CreateTagsResponse::CreateTagsResponse(
         const CreateTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateTagsResponse(new CreateTagsResponsePrivate(this), parent)
+    : RedshiftResponse(new CreateTagsResponsePrivate(this), parent)
 {
     setRequest(new CreateTagsRequest(request));
     setReply(reply);

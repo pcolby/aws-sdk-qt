@@ -46,7 +46,7 @@ DeleteBuildResponse::DeleteBuildResponse(
         const DeleteBuildRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteBuildResponse(new DeleteBuildResponsePrivate(this), parent)
+    : GameLiftResponse(new DeleteBuildResponsePrivate(this), parent)
 {
     setRequest(new DeleteBuildRequest(request));
     setReply(reply);

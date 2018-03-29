@@ -46,7 +46,7 @@ ListCreateAccountStatusResponse::ListCreateAccountStatusResponse(
         const ListCreateAccountStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListCreateAccountStatusResponse(new ListCreateAccountStatusResponsePrivate(this), parent)
+    : OrganizationsResponse(new ListCreateAccountStatusResponsePrivate(this), parent)
 {
     setRequest(new ListCreateAccountStatusRequest(request));
     setReply(reply);

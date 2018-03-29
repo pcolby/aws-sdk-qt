@@ -46,7 +46,7 @@ CancelKeyDeletionResponse::CancelKeyDeletionResponse(
         const CancelKeyDeletionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CancelKeyDeletionResponse(new CancelKeyDeletionResponsePrivate(this), parent)
+    : KMSResponse(new CancelKeyDeletionResponsePrivate(this), parent)
 {
     setRequest(new CancelKeyDeletionRequest(request));
     setReply(reply);

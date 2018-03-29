@@ -46,7 +46,7 @@ ListStreamsResponse::ListStreamsResponse(
         const ListStreamsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListStreamsResponse(new ListStreamsResponsePrivate(this), parent)
+    : KinesisVideoResponse(new ListStreamsResponsePrivate(this), parent)
 {
     setRequest(new ListStreamsRequest(request));
     setReply(reply);

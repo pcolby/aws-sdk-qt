@@ -34,6 +34,11 @@ class QTAWS_EXPORT MigrationHubResponse : public QtAws::Core::AwsAbstractRespons
 public:
     MigrationHubResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    MigrationHubResponse(MigrationHubResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

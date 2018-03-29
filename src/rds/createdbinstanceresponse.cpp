@@ -46,7 +46,7 @@ CreateDBInstanceResponse::CreateDBInstanceResponse(
         const CreateDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateDBInstanceResponse(new CreateDBInstanceResponsePrivate(this), parent)
+    : RDSResponse(new CreateDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new CreateDBInstanceRequest(request));
     setReply(reply);

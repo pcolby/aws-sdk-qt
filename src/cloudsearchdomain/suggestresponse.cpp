@@ -46,7 +46,7 @@ SuggestResponse::SuggestResponse(
         const SuggestRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SuggestResponse(new SuggestResponsePrivate(this), parent)
+    : CloudSearchDomainResponse(new SuggestResponsePrivate(this), parent)
 {
     setRequest(new SuggestRequest(request));
     setReply(reply);

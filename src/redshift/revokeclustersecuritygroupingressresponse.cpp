@@ -46,7 +46,7 @@ RevokeClusterSecurityGroupIngressResponse::RevokeClusterSecurityGroupIngressResp
         const RevokeClusterSecurityGroupIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RevokeClusterSecurityGroupIngressResponse(new RevokeClusterSecurityGroupIngressResponsePrivate(this), parent)
+    : RedshiftResponse(new RevokeClusterSecurityGroupIngressResponsePrivate(this), parent)
 {
     setRequest(new RevokeClusterSecurityGroupIngressRequest(request));
     setReply(reply);

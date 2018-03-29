@@ -46,7 +46,7 @@ CreateDeviceDefinitionVersionResponse::CreateDeviceDefinitionVersionResponse(
         const CreateDeviceDefinitionVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateDeviceDefinitionVersionResponse(new CreateDeviceDefinitionVersionResponsePrivate(this), parent)
+    : GreengrassResponse(new CreateDeviceDefinitionVersionResponsePrivate(this), parent)
 {
     setRequest(new CreateDeviceDefinitionVersionRequest(request));
     setReply(reply);

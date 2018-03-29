@@ -46,7 +46,7 @@ DeleteServerCatalogResponse::DeleteServerCatalogResponse(
         const DeleteServerCatalogRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteServerCatalogResponse(new DeleteServerCatalogResponsePrivate(this), parent)
+    : SMSResponse(new DeleteServerCatalogResponsePrivate(this), parent)
 {
     setRequest(new DeleteServerCatalogRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateLogStreamResponse::CreateLogStreamResponse(
         const CreateLogStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateLogStreamResponse(new CreateLogStreamResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new CreateLogStreamResponsePrivate(this), parent)
 {
     setRequest(new CreateLogStreamRequest(request));
     setReply(reply);

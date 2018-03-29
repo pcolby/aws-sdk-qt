@@ -46,7 +46,7 @@ PutTraceSegmentsResponse::PutTraceSegmentsResponse(
         const PutTraceSegmentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutTraceSegmentsResponse(new PutTraceSegmentsResponsePrivate(this), parent)
+    : XRayResponse(new PutTraceSegmentsResponsePrivate(this), parent)
 {
     setRequest(new PutTraceSegmentsRequest(request));
     setReply(reply);

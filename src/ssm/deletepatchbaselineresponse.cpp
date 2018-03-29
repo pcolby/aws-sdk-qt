@@ -46,7 +46,7 @@ DeletePatchBaselineResponse::DeletePatchBaselineResponse(
         const DeletePatchBaselineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeletePatchBaselineResponse(new DeletePatchBaselineResponsePrivate(this), parent)
+    : SSMResponse(new DeletePatchBaselineResponsePrivate(this), parent)
 {
     setRequest(new DeletePatchBaselineRequest(request));
     setReply(reply);

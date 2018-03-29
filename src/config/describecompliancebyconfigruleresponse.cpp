@@ -46,7 +46,7 @@ DescribeComplianceByConfigRuleResponse::DescribeComplianceByConfigRuleResponse(
         const DescribeComplianceByConfigRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeComplianceByConfigRuleResponse(new DescribeComplianceByConfigRuleResponsePrivate(this), parent)
+    : ConfigServiceResponse(new DescribeComplianceByConfigRuleResponsePrivate(this), parent)
 {
     setRequest(new DescribeComplianceByConfigRuleRequest(request));
     setReply(reply);

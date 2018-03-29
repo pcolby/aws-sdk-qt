@@ -46,7 +46,7 @@ AttachPrincipalPolicyResponse::AttachPrincipalPolicyResponse(
         const AttachPrincipalPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AttachPrincipalPolicyResponse(new AttachPrincipalPolicyResponsePrivate(this), parent)
+    : IoTResponse(new AttachPrincipalPolicyResponsePrivate(this), parent)
 {
     setRequest(new AttachPrincipalPolicyRequest(request));
     setReply(reply);

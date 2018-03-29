@@ -46,7 +46,7 @@ ListActionTypesResponse::ListActionTypesResponse(
         const ListActionTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListActionTypesResponse(new ListActionTypesResponsePrivate(this), parent)
+    : CodePipelineResponse(new ListActionTypesResponsePrivate(this), parent)
 {
     setRequest(new ListActionTypesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateUserImportJobResponse::CreateUserImportJobResponse(
         const CreateUserImportJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateUserImportJobResponse(new CreateUserImportJobResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new CreateUserImportJobResponsePrivate(this), parent)
 {
     setRequest(new CreateUserImportJobRequest(request));
     setReply(reply);

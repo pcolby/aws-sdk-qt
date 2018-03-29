@@ -46,7 +46,7 @@ PutRecordBatchResponse::PutRecordBatchResponse(
         const PutRecordBatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutRecordBatchResponse(new PutRecordBatchResponsePrivate(this), parent)
+    : FirehoseResponse(new PutRecordBatchResponsePrivate(this), parent)
 {
     setRequest(new PutRecordBatchRequest(request));
     setReply(reply);

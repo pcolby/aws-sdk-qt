@@ -46,7 +46,7 @@ BundleInstanceResponse::BundleInstanceResponse(
         const BundleInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BundleInstanceResponse(new BundleInstanceResponsePrivate(this), parent)
+    : EC2Response(new BundleInstanceResponsePrivate(this), parent)
 {
     setRequest(new BundleInstanceRequest(request));
     setReply(reply);

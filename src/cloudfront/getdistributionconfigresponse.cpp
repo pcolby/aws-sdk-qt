@@ -46,7 +46,7 @@ GetDistributionConfigResponse::GetDistributionConfigResponse(
         const GetDistributionConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDistributionConfigResponse(new GetDistributionConfigResponsePrivate(this), parent)
+    : CloudFrontResponse(new GetDistributionConfigResponsePrivate(this), parent)
 {
     setRequest(new GetDistributionConfigRequest(request));
     setReply(reply);

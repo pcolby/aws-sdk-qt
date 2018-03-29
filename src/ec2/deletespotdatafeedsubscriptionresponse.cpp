@@ -46,7 +46,7 @@ DeleteSpotDatafeedSubscriptionResponse::DeleteSpotDatafeedSubscriptionResponse(
         const DeleteSpotDatafeedSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSpotDatafeedSubscriptionResponse(new DeleteSpotDatafeedSubscriptionResponsePrivate(this), parent)
+    : EC2Response(new DeleteSpotDatafeedSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new DeleteSpotDatafeedSubscriptionRequest(request));
     setReply(reply);

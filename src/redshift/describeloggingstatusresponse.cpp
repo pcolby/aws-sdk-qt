@@ -46,7 +46,7 @@ DescribeLoggingStatusResponse::DescribeLoggingStatusResponse(
         const DescribeLoggingStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeLoggingStatusResponse(new DescribeLoggingStatusResponsePrivate(this), parent)
+    : RedshiftResponse(new DescribeLoggingStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeLoggingStatusRequest(request));
     setReply(reply);

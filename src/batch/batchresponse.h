@@ -34,6 +34,11 @@ class QTAWS_EXPORT BatchResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     BatchResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    BatchResponse(BatchResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

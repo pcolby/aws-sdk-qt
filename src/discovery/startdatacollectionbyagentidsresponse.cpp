@@ -46,7 +46,7 @@ StartDataCollectionByAgentIdsResponse::StartDataCollectionByAgentIdsResponse(
         const StartDataCollectionByAgentIdsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartDataCollectionByAgentIdsResponse(new StartDataCollectionByAgentIdsResponsePrivate(this), parent)
+    : ApplicationDiscoveryServiceResponse(new StartDataCollectionByAgentIdsResponsePrivate(this), parent)
 {
     setRequest(new StartDataCollectionByAgentIdsRequest(request));
     setReply(reply);

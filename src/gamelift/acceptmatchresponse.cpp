@@ -46,7 +46,7 @@ AcceptMatchResponse::AcceptMatchResponse(
         const AcceptMatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AcceptMatchResponse(new AcceptMatchResponsePrivate(this), parent)
+    : GameLiftResponse(new AcceptMatchResponsePrivate(this), parent)
 {
     setRequest(new AcceptMatchRequest(request));
     setReply(reply);

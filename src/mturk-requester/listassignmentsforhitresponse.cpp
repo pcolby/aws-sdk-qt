@@ -46,7 +46,7 @@ ListAssignmentsForHITResponse::ListAssignmentsForHITResponse(
         const ListAssignmentsForHITRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListAssignmentsForHITResponse(new ListAssignmentsForHITResponsePrivate(this), parent)
+    : MTurkResponse(new ListAssignmentsForHITResponsePrivate(this), parent)
 {
     setRequest(new ListAssignmentsForHITRequest(request));
     setReply(reply);

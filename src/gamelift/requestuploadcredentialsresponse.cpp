@@ -46,7 +46,7 @@ RequestUploadCredentialsResponse::RequestUploadCredentialsResponse(
         const RequestUploadCredentialsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RequestUploadCredentialsResponse(new RequestUploadCredentialsResponsePrivate(this), parent)
+    : GameLiftResponse(new RequestUploadCredentialsResponsePrivate(this), parent)
 {
     setRequest(new RequestUploadCredentialsRequest(request));
     setReply(reply);

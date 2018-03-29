@@ -46,7 +46,7 @@ DescribeCommunicationsResponse::DescribeCommunicationsResponse(
         const DescribeCommunicationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeCommunicationsResponse(new DescribeCommunicationsResponsePrivate(this), parent)
+    : SupportResponse(new DescribeCommunicationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeCommunicationsRequest(request));
     setReply(reply);

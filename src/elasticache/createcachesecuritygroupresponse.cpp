@@ -46,7 +46,7 @@ CreateCacheSecurityGroupResponse::CreateCacheSecurityGroupResponse(
         const CreateCacheSecurityGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateCacheSecurityGroupResponse(new CreateCacheSecurityGroupResponsePrivate(this), parent)
+    : ElastiCacheResponse(new CreateCacheSecurityGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateCacheSecurityGroupRequest(request));
     setReply(reply);

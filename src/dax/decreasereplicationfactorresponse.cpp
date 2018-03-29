@@ -46,7 +46,7 @@ DecreaseReplicationFactorResponse::DecreaseReplicationFactorResponse(
         const DecreaseReplicationFactorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DecreaseReplicationFactorResponse(new DecreaseReplicationFactorResponsePrivate(this), parent)
+    : DAXResponse(new DecreaseReplicationFactorResponsePrivate(this), parent)
 {
     setRequest(new DecreaseReplicationFactorRequest(request));
     setReply(reply);

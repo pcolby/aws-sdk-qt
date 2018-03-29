@@ -46,7 +46,7 @@ RestoreDBClusterToPointInTimeResponse::RestoreDBClusterToPointInTimeResponse(
         const RestoreDBClusterToPointInTimeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RestoreDBClusterToPointInTimeResponse(new RestoreDBClusterToPointInTimeResponsePrivate(this), parent)
+    : RDSResponse(new RestoreDBClusterToPointInTimeResponsePrivate(this), parent)
 {
     setRequest(new RestoreDBClusterToPointInTimeRequest(request));
     setReply(reply);

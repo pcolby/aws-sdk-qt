@@ -46,7 +46,7 @@ DeleteInternetGatewayResponse::DeleteInternetGatewayResponse(
         const DeleteInternetGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteInternetGatewayResponse(new DeleteInternetGatewayResponsePrivate(this), parent)
+    : EC2Response(new DeleteInternetGatewayResponsePrivate(this), parent)
 {
     setRequest(new DeleteInternetGatewayRequest(request));
     setReply(reply);

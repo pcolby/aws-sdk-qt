@@ -46,7 +46,7 @@ DescribeDirectConnectGatewayAttachmentsResponse::DescribeDirectConnectGatewayAtt
         const DescribeDirectConnectGatewayAttachmentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeDirectConnectGatewayAttachmentsResponse(new DescribeDirectConnectGatewayAttachmentsResponsePrivate(this), parent)
+    : DirectConnectResponse(new DescribeDirectConnectGatewayAttachmentsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDirectConnectGatewayAttachmentsRequest(request));
     setReply(reply);

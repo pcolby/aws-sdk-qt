@@ -46,7 +46,7 @@ CreateDBSnapshotResponse::CreateDBSnapshotResponse(
         const CreateDBSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateDBSnapshotResponse(new CreateDBSnapshotResponsePrivate(this), parent)
+    : RDSResponse(new CreateDBSnapshotResponsePrivate(this), parent)
 {
     setRequest(new CreateDBSnapshotRequest(request));
     setReply(reply);

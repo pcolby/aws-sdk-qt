@@ -46,7 +46,7 @@ DeleteResourceDataSyncResponse::DeleteResourceDataSyncResponse(
         const DeleteResourceDataSyncRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteResourceDataSyncResponse(new DeleteResourceDataSyncResponsePrivate(this), parent)
+    : SSMResponse(new DeleteResourceDataSyncResponsePrivate(this), parent)
 {
     setRequest(new DeleteResourceDataSyncRequest(request));
     setReply(reply);

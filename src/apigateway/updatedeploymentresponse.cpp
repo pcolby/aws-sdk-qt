@@ -46,7 +46,7 @@ UpdateDeploymentResponse::UpdateDeploymentResponse(
         const UpdateDeploymentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDeploymentResponse(new UpdateDeploymentResponsePrivate(this), parent)
+    : APIGatewayResponse(new UpdateDeploymentResponsePrivate(this), parent)
 {
     setRequest(new UpdateDeploymentRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateRuntimeConfigurationResponse::UpdateRuntimeConfigurationResponse(
         const UpdateRuntimeConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateRuntimeConfigurationResponse(new UpdateRuntimeConfigurationResponsePrivate(this), parent)
+    : GameLiftResponse(new UpdateRuntimeConfigurationResponsePrivate(this), parent)
 {
     setRequest(new UpdateRuntimeConfigurationRequest(request));
     setReply(reply);

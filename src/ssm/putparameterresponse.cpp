@@ -46,7 +46,7 @@ PutParameterResponse::PutParameterResponse(
         const PutParameterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutParameterResponse(new PutParameterResponsePrivate(this), parent)
+    : SSMResponse(new PutParameterResponsePrivate(this), parent)
 {
     setRequest(new PutParameterRequest(request));
     setReply(reply);

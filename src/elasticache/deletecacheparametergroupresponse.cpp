@@ -46,7 +46,7 @@ DeleteCacheParameterGroupResponse::DeleteCacheParameterGroupResponse(
         const DeleteCacheParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteCacheParameterGroupResponse(new DeleteCacheParameterGroupResponsePrivate(this), parent)
+    : ElastiCacheResponse(new DeleteCacheParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteCacheParameterGroupRequest(request));
     setReply(reply);

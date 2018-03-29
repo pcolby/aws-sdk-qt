@@ -46,7 +46,7 @@ DescribeConstraintResponse::DescribeConstraintResponse(
         const DescribeConstraintRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeConstraintResponse(new DescribeConstraintResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new DescribeConstraintResponsePrivate(this), parent)
 {
     setRequest(new DescribeConstraintRequest(request));
     setReply(reply);

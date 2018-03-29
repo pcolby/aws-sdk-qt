@@ -46,7 +46,7 @@ AddCommunicationToCaseResponse::AddCommunicationToCaseResponse(
         const AddCommunicationToCaseRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AddCommunicationToCaseResponse(new AddCommunicationToCaseResponsePrivate(this), parent)
+    : SupportResponse(new AddCommunicationToCaseResponsePrivate(this), parent)
 {
     setRequest(new AddCommunicationToCaseRequest(request));
     setReply(reply);

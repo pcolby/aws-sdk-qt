@@ -46,7 +46,7 @@ PutRepositoryTriggersResponse::PutRepositoryTriggersResponse(
         const PutRepositoryTriggersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutRepositoryTriggersResponse(new PutRepositoryTriggersResponsePrivate(this), parent)
+    : CodeCommitResponse(new PutRepositoryTriggersResponsePrivate(this), parent)
 {
     setRequest(new PutRepositoryTriggersRequest(request));
     setReply(reply);

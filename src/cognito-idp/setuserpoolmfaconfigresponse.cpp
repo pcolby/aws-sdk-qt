@@ -46,7 +46,7 @@ SetUserPoolMfaConfigResponse::SetUserPoolMfaConfigResponse(
         const SetUserPoolMfaConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetUserPoolMfaConfigResponse(new SetUserPoolMfaConfigResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new SetUserPoolMfaConfigResponsePrivate(this), parent)
 {
     setRequest(new SetUserPoolMfaConfigRequest(request));
     setReply(reply);

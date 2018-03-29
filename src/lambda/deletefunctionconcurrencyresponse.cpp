@@ -46,7 +46,7 @@ DeleteFunctionConcurrencyResponse::DeleteFunctionConcurrencyResponse(
         const DeleteFunctionConcurrencyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteFunctionConcurrencyResponse(new DeleteFunctionConcurrencyResponsePrivate(this), parent)
+    : LambdaResponse(new DeleteFunctionConcurrencyResponsePrivate(this), parent)
 {
     setRequest(new DeleteFunctionConcurrencyRequest(request));
     setReply(reply);

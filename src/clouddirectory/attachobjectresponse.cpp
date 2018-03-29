@@ -46,7 +46,7 @@ AttachObjectResponse::AttachObjectResponse(
         const AttachObjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AttachObjectResponse(new AttachObjectResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new AttachObjectResponsePrivate(this), parent)
 {
     setRequest(new AttachObjectRequest(request));
     setReply(reply);

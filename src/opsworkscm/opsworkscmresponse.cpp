@@ -46,6 +46,24 @@ OpsWorksCMResponse::OpsWorksCMResponse(QObject * const parent)
 }
 
 /**
+ * @internal
+ *
+ * @brief  Constructs a new OpsWorksCMResponse object.
+ *
+ *
+ * This overload allows derived classes to provide their own private class
+ * implementation that inherits from OpsWorksCMResponsePrivate.
+ *
+ * @param  d       Pointer to private data (aka D-Pointer).
+ * @param  parent  This object's parent.
+ */
+OpsWorksCMResponse::OpsWorksCMResponse(OpsWorksCMResponsePrivate * const d, QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
+{
+
+}
+
+/**
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.

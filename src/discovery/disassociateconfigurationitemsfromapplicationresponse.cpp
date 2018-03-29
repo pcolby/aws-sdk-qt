@@ -46,7 +46,7 @@ DisassociateConfigurationItemsFromApplicationResponse::DisassociateConfiguration
         const DisassociateConfigurationItemsFromApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateConfigurationItemsFromApplicationResponse(new DisassociateConfigurationItemsFromApplicationResponsePrivate(this), parent)
+    : ApplicationDiscoveryServiceResponse(new DisassociateConfigurationItemsFromApplicationResponsePrivate(this), parent)
 {
     setRequest(new DisassociateConfigurationItemsFromApplicationRequest(request));
     setReply(reply);

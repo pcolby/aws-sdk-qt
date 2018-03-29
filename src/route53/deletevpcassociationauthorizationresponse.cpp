@@ -46,7 +46,7 @@ DeleteVPCAssociationAuthorizationResponse::DeleteVPCAssociationAuthorizationResp
         const DeleteVPCAssociationAuthorizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteVPCAssociationAuthorizationResponse(new DeleteVPCAssociationAuthorizationResponsePrivate(this), parent)
+    : Route53Response(new DeleteVPCAssociationAuthorizationResponsePrivate(this), parent)
 {
     setRequest(new DeleteVPCAssociationAuthorizationRequest(request));
     setReply(reply);

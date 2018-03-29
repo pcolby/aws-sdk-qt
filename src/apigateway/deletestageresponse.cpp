@@ -46,7 +46,7 @@ DeleteStageResponse::DeleteStageResponse(
         const DeleteStageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteStageResponse(new DeleteStageResponsePrivate(this), parent)
+    : APIGatewayResponse(new DeleteStageResponsePrivate(this), parent)
 {
     setRequest(new DeleteStageRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ AssociateTeamMemberResponse::AssociateTeamMemberResponse(
         const AssociateTeamMemberRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssociateTeamMemberResponse(new AssociateTeamMemberResponsePrivate(this), parent)
+    : CodeStarResponse(new AssociateTeamMemberResponsePrivate(this), parent)
 {
     setRequest(new AssociateTeamMemberRequest(request));
     setReply(reply);

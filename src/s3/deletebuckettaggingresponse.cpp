@@ -46,7 +46,7 @@ DeleteBucketTaggingResponse::DeleteBucketTaggingResponse(
         const DeleteBucketTaggingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteBucketTaggingResponse(new DeleteBucketTaggingResponsePrivate(this), parent)
+    : S3Response(new DeleteBucketTaggingResponsePrivate(this), parent)
 {
     setRequest(new DeleteBucketTaggingRequest(request));
     setReply(reply);

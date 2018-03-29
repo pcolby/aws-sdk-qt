@@ -46,7 +46,7 @@ RebootClusterResponse::RebootClusterResponse(
         const RebootClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RebootClusterResponse(new RebootClusterResponsePrivate(this), parent)
+    : RedshiftResponse(new RebootClusterResponsePrivate(this), parent)
 {
     setRequest(new RebootClusterRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteSnapshotScheduleResponse::DeleteSnapshotScheduleResponse(
         const DeleteSnapshotScheduleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSnapshotScheduleResponse(new DeleteSnapshotScheduleResponsePrivate(this), parent)
+    : StorageGatewayResponse(new DeleteSnapshotScheduleResponsePrivate(this), parent)
 {
     setRequest(new DeleteSnapshotScheduleRequest(request));
     setReply(reply);

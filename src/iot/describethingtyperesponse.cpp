@@ -46,7 +46,7 @@ DescribeThingTypeResponse::DescribeThingTypeResponse(
         const DescribeThingTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeThingTypeResponse(new DescribeThingTypeResponsePrivate(this), parent)
+    : IoTResponse(new DescribeThingTypeResponsePrivate(this), parent)
 {
     setRequest(new DescribeThingTypeRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetCampaignVersionsResponse::GetCampaignVersionsResponse(
         const GetCampaignVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetCampaignVersionsResponse(new GetCampaignVersionsResponsePrivate(this), parent)
+    : PinpointResponse(new GetCampaignVersionsResponsePrivate(this), parent)
 {
     setRequest(new GetCampaignVersionsRequest(request));
     setReply(reply);

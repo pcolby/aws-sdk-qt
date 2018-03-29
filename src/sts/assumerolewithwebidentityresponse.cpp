@@ -46,7 +46,7 @@ AssumeRoleWithWebIdentityResponse::AssumeRoleWithWebIdentityResponse(
         const AssumeRoleWithWebIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssumeRoleWithWebIdentityResponse(new AssumeRoleWithWebIdentityResponsePrivate(this), parent)
+    : STSResponse(new AssumeRoleWithWebIdentityResponsePrivate(this), parent)
 {
     setRequest(new AssumeRoleWithWebIdentityRequest(request));
     setReply(reply);

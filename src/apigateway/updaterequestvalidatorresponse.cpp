@@ -46,7 +46,7 @@ UpdateRequestValidatorResponse::UpdateRequestValidatorResponse(
         const UpdateRequestValidatorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateRequestValidatorResponse(new UpdateRequestValidatorResponsePrivate(this), parent)
+    : APIGatewayResponse(new UpdateRequestValidatorResponsePrivate(this), parent)
 {
     setRequest(new UpdateRequestValidatorRequest(request));
     setReply(reply);

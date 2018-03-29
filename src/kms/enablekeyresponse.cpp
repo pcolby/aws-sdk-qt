@@ -46,7 +46,7 @@ EnableKeyResponse::EnableKeyResponse(
         const EnableKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EnableKeyResponse(new EnableKeyResponsePrivate(this), parent)
+    : KMSResponse(new EnableKeyResponsePrivate(this), parent)
 {
     setRequest(new EnableKeyRequest(request));
     setReply(reply);

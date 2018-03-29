@@ -46,7 +46,7 @@ ListArtifactsResponse::ListArtifactsResponse(
         const ListArtifactsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListArtifactsResponse(new ListArtifactsResponsePrivate(this), parent)
+    : DeviceFarmResponse(new ListArtifactsResponsePrivate(this), parent)
 {
     setRequest(new ListArtifactsRequest(request));
     setReply(reply);

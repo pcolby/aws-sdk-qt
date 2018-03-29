@@ -46,7 +46,7 @@ RegisterActivityTypeResponse::RegisterActivityTypeResponse(
         const RegisterActivityTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RegisterActivityTypeResponse(new RegisterActivityTypeResponsePrivate(this), parent)
+    : SWFResponse(new RegisterActivityTypeResponsePrivate(this), parent)
 {
     setRequest(new RegisterActivityTypeRequest(request));
     setReply(reply);

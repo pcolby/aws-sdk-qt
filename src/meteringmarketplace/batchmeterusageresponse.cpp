@@ -46,7 +46,7 @@ BatchMeterUsageResponse::BatchMeterUsageResponse(
         const BatchMeterUsageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchMeterUsageResponse(new BatchMeterUsageResponsePrivate(this), parent)
+    : MarketplaceMeteringResponse(new BatchMeterUsageResponsePrivate(this), parent)
 {
     setRequest(new BatchMeterUsageRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteClusterSubnetGroupResponse::DeleteClusterSubnetGroupResponse(
         const DeleteClusterSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteClusterSubnetGroupResponse(new DeleteClusterSubnetGroupResponsePrivate(this), parent)
+    : RedshiftResponse(new DeleteClusterSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteClusterSubnetGroupRequest(request));
     setReply(reply);

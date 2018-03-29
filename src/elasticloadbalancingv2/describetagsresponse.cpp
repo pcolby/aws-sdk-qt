@@ -46,7 +46,7 @@ DescribeTagsResponse::DescribeTagsResponse(
         const DescribeTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeTagsResponse(new DescribeTagsResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new DescribeTagsResponsePrivate(this), parent)
 {
     setRequest(new DescribeTagsRequest(request));
     setReply(reply);

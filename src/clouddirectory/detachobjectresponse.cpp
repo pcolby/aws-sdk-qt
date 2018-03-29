@@ -46,7 +46,7 @@ DetachObjectResponse::DetachObjectResponse(
         const DetachObjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DetachObjectResponse(new DetachObjectResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new DetachObjectResponsePrivate(this), parent)
 {
     setRequest(new DetachObjectRequest(request));
     setReply(reply);

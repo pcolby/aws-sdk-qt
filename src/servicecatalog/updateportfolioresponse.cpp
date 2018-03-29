@@ -46,7 +46,7 @@ UpdatePortfolioResponse::UpdatePortfolioResponse(
         const UpdatePortfolioRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdatePortfolioResponse(new UpdatePortfolioResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new UpdatePortfolioResponsePrivate(this), parent)
 {
     setRequest(new UpdatePortfolioRequest(request));
     setReply(reply);

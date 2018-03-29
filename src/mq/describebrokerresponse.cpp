@@ -46,7 +46,7 @@ DescribeBrokerResponse::DescribeBrokerResponse(
         const DescribeBrokerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeBrokerResponse(new DescribeBrokerResponsePrivate(this), parent)
+    : MQResponse(new DescribeBrokerResponsePrivate(this), parent)
 {
     setRequest(new DescribeBrokerRequest(request));
     setReply(reply);

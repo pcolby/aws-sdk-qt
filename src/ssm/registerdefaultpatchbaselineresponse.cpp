@@ -46,7 +46,7 @@ RegisterDefaultPatchBaselineResponse::RegisterDefaultPatchBaselineResponse(
         const RegisterDefaultPatchBaselineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RegisterDefaultPatchBaselineResponse(new RegisterDefaultPatchBaselineResponsePrivate(this), parent)
+    : SSMResponse(new RegisterDefaultPatchBaselineResponsePrivate(this), parent)
 {
     setRequest(new RegisterDefaultPatchBaselineRequest(request));
     setReply(reply);

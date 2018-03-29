@@ -46,7 +46,7 @@ DescribeIdentityIdFormatResponse::DescribeIdentityIdFormatResponse(
         const DescribeIdentityIdFormatRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeIdentityIdFormatResponse(new DescribeIdentityIdFormatResponsePrivate(this), parent)
+    : EC2Response(new DescribeIdentityIdFormatResponsePrivate(this), parent)
 {
     setRequest(new DescribeIdentityIdFormatRequest(request));
     setReply(reply);

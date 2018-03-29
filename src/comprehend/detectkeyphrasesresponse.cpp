@@ -46,7 +46,7 @@ DetectKeyPhrasesResponse::DetectKeyPhrasesResponse(
         const DetectKeyPhrasesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DetectKeyPhrasesResponse(new DetectKeyPhrasesResponsePrivate(this), parent)
+    : ComprehendResponse(new DetectKeyPhrasesResponsePrivate(this), parent)
 {
     setRequest(new DetectKeyPhrasesRequest(request));
     setReply(reply);

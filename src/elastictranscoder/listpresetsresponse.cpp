@@ -46,7 +46,7 @@ ListPresetsResponse::ListPresetsResponse(
         const ListPresetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListPresetsResponse(new ListPresetsResponsePrivate(this), parent)
+    : ElasticTranscoderResponse(new ListPresetsResponsePrivate(this), parent)
 {
     setRequest(new ListPresetsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RestoreDBInstanceFromDBSnapshotResponse::RestoreDBInstanceFromDBSnapshotResponse
         const RestoreDBInstanceFromDBSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RestoreDBInstanceFromDBSnapshotResponse(new RestoreDBInstanceFromDBSnapshotResponsePrivate(this), parent)
+    : RDSResponse(new RestoreDBInstanceFromDBSnapshotResponsePrivate(this), parent)
 {
     setRequest(new RestoreDBInstanceFromDBSnapshotRequest(request));
     setReply(reply);

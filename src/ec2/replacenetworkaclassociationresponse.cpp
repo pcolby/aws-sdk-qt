@@ -46,7 +46,7 @@ ReplaceNetworkAclAssociationResponse::ReplaceNetworkAclAssociationResponse(
         const ReplaceNetworkAclAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ReplaceNetworkAclAssociationResponse(new ReplaceNetworkAclAssociationResponsePrivate(this), parent)
+    : EC2Response(new ReplaceNetworkAclAssociationResponsePrivate(this), parent)
 {
     setRequest(new ReplaceNetworkAclAssociationRequest(request));
     setReply(reply);

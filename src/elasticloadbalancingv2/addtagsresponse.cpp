@@ -46,7 +46,7 @@ AddTagsResponse::AddTagsResponse(
         const AddTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AddTagsResponse(new AddTagsResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new AddTagsResponsePrivate(this), parent)
 {
     setRequest(new AddTagsRequest(request));
     setReply(reply);

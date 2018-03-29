@@ -46,7 +46,7 @@ DescribeInputResponse::DescribeInputResponse(
         const DescribeInputRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeInputResponse(new DescribeInputResponsePrivate(this), parent)
+    : MediaLiveResponse(new DescribeInputResponsePrivate(this), parent)
 {
     setRequest(new DescribeInputRequest(request));
     setReply(reply);

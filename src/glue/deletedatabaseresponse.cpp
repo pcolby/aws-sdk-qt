@@ -46,7 +46,7 @@ DeleteDatabaseResponse::DeleteDatabaseResponse(
         const DeleteDatabaseRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDatabaseResponse(new DeleteDatabaseResponsePrivate(this), parent)
+    : GlueResponse(new DeleteDatabaseResponsePrivate(this), parent)
 {
     setRequest(new DeleteDatabaseRequest(request));
     setReply(reply);

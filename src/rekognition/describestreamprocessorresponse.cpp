@@ -46,7 +46,7 @@ DescribeStreamProcessorResponse::DescribeStreamProcessorResponse(
         const DescribeStreamProcessorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeStreamProcessorResponse(new DescribeStreamProcessorResponsePrivate(this), parent)
+    : RekognitionResponse(new DescribeStreamProcessorResponsePrivate(this), parent)
 {
     setRequest(new DescribeStreamProcessorRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateTapesResponse::CreateTapesResponse(
         const CreateTapesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateTapesResponse(new CreateTapesResponsePrivate(this), parent)
+    : StorageGatewayResponse(new CreateTapesResponsePrivate(this), parent)
 {
     setRequest(new CreateTapesRequest(request));
     setReply(reply);

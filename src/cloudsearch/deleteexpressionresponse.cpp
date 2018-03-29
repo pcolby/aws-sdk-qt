@@ -46,7 +46,7 @@ DeleteExpressionResponse::DeleteExpressionResponse(
         const DeleteExpressionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteExpressionResponse(new DeleteExpressionResponsePrivate(this), parent)
+    : CloudSearchResponse(new DeleteExpressionResponsePrivate(this), parent)
 {
     setRequest(new DeleteExpressionRequest(request));
     setReply(reply);

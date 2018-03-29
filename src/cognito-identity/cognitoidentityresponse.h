@@ -34,6 +34,11 @@ class QTAWS_EXPORT CognitoIdentityResponse : public QtAws::Core::AwsAbstractResp
 public:
     CognitoIdentityResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    CognitoIdentityResponse(CognitoIdentityResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

@@ -46,7 +46,7 @@ ListAssociationsResponse::ListAssociationsResponse(
         const ListAssociationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListAssociationsResponse(new ListAssociationsResponsePrivate(this), parent)
+    : SSMResponse(new ListAssociationsResponsePrivate(this), parent)
 {
     setRequest(new ListAssociationsRequest(request));
     setReply(reply);

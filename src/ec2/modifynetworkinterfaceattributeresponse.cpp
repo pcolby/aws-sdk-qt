@@ -46,7 +46,7 @@ ModifyNetworkInterfaceAttributeResponse::ModifyNetworkInterfaceAttributeResponse
         const ModifyNetworkInterfaceAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyNetworkInterfaceAttributeResponse(new ModifyNetworkInterfaceAttributeResponsePrivate(this), parent)
+    : EC2Response(new ModifyNetworkInterfaceAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifyNetworkInterfaceAttributeRequest(request));
     setReply(reply);

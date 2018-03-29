@@ -46,7 +46,7 @@ GetSendStatisticsResponse::GetSendStatisticsResponse(
         const GetSendStatisticsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetSendStatisticsResponse(new GetSendStatisticsResponsePrivate(this), parent)
+    : SESResponse(new GetSendStatisticsResponsePrivate(this), parent)
 {
     setRequest(new GetSendStatisticsRequest(request));
     setReply(reply);

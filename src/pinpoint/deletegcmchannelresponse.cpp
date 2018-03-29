@@ -46,7 +46,7 @@ DeleteGcmChannelResponse::DeleteGcmChannelResponse(
         const DeleteGcmChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteGcmChannelResponse(new DeleteGcmChannelResponsePrivate(this), parent)
+    : PinpointResponse(new DeleteGcmChannelResponsePrivate(this), parent)
 {
     setRequest(new DeleteGcmChannelRequest(request));
     setReply(reply);

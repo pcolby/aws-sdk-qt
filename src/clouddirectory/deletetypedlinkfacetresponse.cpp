@@ -46,7 +46,7 @@ DeleteTypedLinkFacetResponse::DeleteTypedLinkFacetResponse(
         const DeleteTypedLinkFacetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteTypedLinkFacetResponse(new DeleteTypedLinkFacetResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new DeleteTypedLinkFacetResponsePrivate(this), parent)
 {
     setRequest(new DeleteTypedLinkFacetRequest(request));
     setReply(reply);

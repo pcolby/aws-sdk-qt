@@ -46,7 +46,7 @@ DescribeStateMachineResponse::DescribeStateMachineResponse(
         const DescribeStateMachineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeStateMachineResponse(new DescribeStateMachineResponsePrivate(this), parent)
+    : SFNResponse(new DescribeStateMachineResponsePrivate(this), parent)
 {
     setRequest(new DescribeStateMachineRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ BatchDeleteConnectionResponse::BatchDeleteConnectionResponse(
         const BatchDeleteConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchDeleteConnectionResponse(new BatchDeleteConnectionResponsePrivate(this), parent)
+    : GlueResponse(new BatchDeleteConnectionResponsePrivate(this), parent)
 {
     setRequest(new BatchDeleteConnectionRequest(request));
     setReply(reply);

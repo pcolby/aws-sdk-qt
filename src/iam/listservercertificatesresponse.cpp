@@ -46,7 +46,7 @@ ListServerCertificatesResponse::ListServerCertificatesResponse(
         const ListServerCertificatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListServerCertificatesResponse(new ListServerCertificatesResponsePrivate(this), parent)
+    : IAMResponse(new ListServerCertificatesResponsePrivate(this), parent)
 {
     setRequest(new ListServerCertificatesRequest(request));
     setReply(reply);

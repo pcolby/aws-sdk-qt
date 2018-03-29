@@ -46,7 +46,7 @@ DeleteCustomMetadataResponse::DeleteCustomMetadataResponse(
         const DeleteCustomMetadataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteCustomMetadataResponse(new DeleteCustomMetadataResponsePrivate(this), parent)
+    : WorkDocsResponse(new DeleteCustomMetadataResponsePrivate(this), parent)
 {
     setRequest(new DeleteCustomMetadataRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ConfirmDeviceResponse::ConfirmDeviceResponse(
         const ConfirmDeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfirmDeviceResponse(new ConfirmDeviceResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new ConfirmDeviceResponsePrivate(this), parent)
 {
     setRequest(new ConfirmDeviceRequest(request));
     setReply(reply);

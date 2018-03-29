@@ -46,7 +46,7 @@ ListConfigurationsResponse::ListConfigurationsResponse(
         const ListConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListConfigurationsResponse(new ListConfigurationsResponsePrivate(this), parent)
+    : ApplicationDiscoveryServiceResponse(new ListConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new ListConfigurationsRequest(request));
     setReply(reply);

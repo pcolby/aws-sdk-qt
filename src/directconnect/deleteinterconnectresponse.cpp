@@ -46,7 +46,7 @@ DeleteInterconnectResponse::DeleteInterconnectResponse(
         const DeleteInterconnectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteInterconnectResponse(new DeleteInterconnectResponsePrivate(this), parent)
+    : DirectConnectResponse(new DeleteInterconnectResponsePrivate(this), parent)
 {
     setRequest(new DeleteInterconnectRequest(request));
     setReply(reply);

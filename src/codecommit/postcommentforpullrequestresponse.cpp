@@ -46,7 +46,7 @@ PostCommentForPullRequestResponse::PostCommentForPullRequestResponse(
         const PostCommentForPullRequestRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PostCommentForPullRequestResponse(new PostCommentForPullRequestResponsePrivate(this), parent)
+    : CodeCommitResponse(new PostCommentForPullRequestResponsePrivate(this), parent)
 {
     setRequest(new PostCommentForPullRequestRequest(request));
     setReply(reply);

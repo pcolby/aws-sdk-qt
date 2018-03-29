@@ -46,7 +46,7 @@ DeleteFunctionDefinitionResponse::DeleteFunctionDefinitionResponse(
         const DeleteFunctionDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteFunctionDefinitionResponse(new DeleteFunctionDefinitionResponsePrivate(this), parent)
+    : GreengrassResponse(new DeleteFunctionDefinitionResponsePrivate(this), parent)
 {
     setRequest(new DeleteFunctionDefinitionRequest(request));
     setReply(reply);

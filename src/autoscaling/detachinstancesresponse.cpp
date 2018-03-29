@@ -46,7 +46,7 @@ DetachInstancesResponse::DetachInstancesResponse(
         const DetachInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DetachInstancesResponse(new DetachInstancesResponsePrivate(this), parent)
+    : AutoScalingResponse(new DetachInstancesResponsePrivate(this), parent)
 {
     setRequest(new DetachInstancesRequest(request));
     setReply(reply);

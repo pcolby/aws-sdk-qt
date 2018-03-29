@@ -46,7 +46,7 @@ CancelHandshakeResponse::CancelHandshakeResponse(
         const CancelHandshakeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CancelHandshakeResponse(new CancelHandshakeResponsePrivate(this), parent)
+    : OrganizationsResponse(new CancelHandshakeResponsePrivate(this), parent)
 {
     setRequest(new CancelHandshakeRequest(request));
     setReply(reply);

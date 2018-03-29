@@ -46,7 +46,7 @@ DeleteApplicationReferenceDataSourceResponse::DeleteApplicationReferenceDataSour
         const DeleteApplicationReferenceDataSourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteApplicationReferenceDataSourceResponse(new DeleteApplicationReferenceDataSourceResponsePrivate(this), parent)
+    : KinesisAnalyticsResponse(new DeleteApplicationReferenceDataSourceResponsePrivate(this), parent)
 {
     setRequest(new DeleteApplicationReferenceDataSourceRequest(request));
     setReply(reply);

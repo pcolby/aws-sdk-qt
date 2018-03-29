@@ -46,7 +46,7 @@ ModifyReplicationInstanceResponse::ModifyReplicationInstanceResponse(
         const ModifyReplicationInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyReplicationInstanceResponse(new ModifyReplicationInstanceResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new ModifyReplicationInstanceResponsePrivate(this), parent)
 {
     setRequest(new ModifyReplicationInstanceRequest(request));
     setReply(reply);

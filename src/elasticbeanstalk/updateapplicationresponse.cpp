@@ -46,7 +46,7 @@ UpdateApplicationResponse::UpdateApplicationResponse(
         const UpdateApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateApplicationResponse(new UpdateApplicationResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new UpdateApplicationResponsePrivate(this), parent)
 {
     setRequest(new UpdateApplicationRequest(request));
     setReply(reply);

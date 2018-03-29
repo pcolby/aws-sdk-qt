@@ -46,7 +46,7 @@ GetFolderPathResponse::GetFolderPathResponse(
         const GetFolderPathRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetFolderPathResponse(new GetFolderPathResponsePrivate(this), parent)
+    : WorkDocsResponse(new GetFolderPathResponsePrivate(this), parent)
 {
     setRequest(new GetFolderPathRequest(request));
     setReply(reply);

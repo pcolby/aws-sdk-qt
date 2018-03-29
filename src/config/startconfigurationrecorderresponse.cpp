@@ -46,7 +46,7 @@ StartConfigurationRecorderResponse::StartConfigurationRecorderResponse(
         const StartConfigurationRecorderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartConfigurationRecorderResponse(new StartConfigurationRecorderResponsePrivate(this), parent)
+    : ConfigServiceResponse(new StartConfigurationRecorderResponsePrivate(this), parent)
 {
     setRequest(new StartConfigurationRecorderRequest(request));
     setReply(reply);

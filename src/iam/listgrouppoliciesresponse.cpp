@@ -46,7 +46,7 @@ ListGroupPoliciesResponse::ListGroupPoliciesResponse(
         const ListGroupPoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListGroupPoliciesResponse(new ListGroupPoliciesResponsePrivate(this), parent)
+    : IAMResponse(new ListGroupPoliciesResponsePrivate(this), parent)
 {
     setRequest(new ListGroupPoliciesRequest(request));
     setReply(reply);

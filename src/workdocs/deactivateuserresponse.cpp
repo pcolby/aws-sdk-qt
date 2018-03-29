@@ -46,7 +46,7 @@ DeactivateUserResponse::DeactivateUserResponse(
         const DeactivateUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeactivateUserResponse(new DeactivateUserResponsePrivate(this), parent)
+    : WorkDocsResponse(new DeactivateUserResponsePrivate(this), parent)
 {
     setRequest(new DeactivateUserRequest(request));
     setReply(reply);

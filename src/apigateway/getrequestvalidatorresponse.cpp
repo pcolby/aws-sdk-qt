@@ -46,7 +46,7 @@ GetRequestValidatorResponse::GetRequestValidatorResponse(
         const GetRequestValidatorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetRequestValidatorResponse(new GetRequestValidatorResponsePrivate(this), parent)
+    : APIGatewayResponse(new GetRequestValidatorResponsePrivate(this), parent)
 {
     setRequest(new GetRequestValidatorRequest(request));
     setReply(reply);

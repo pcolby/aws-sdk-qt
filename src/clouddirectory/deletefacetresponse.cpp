@@ -46,7 +46,7 @@ DeleteFacetResponse::DeleteFacetResponse(
         const DeleteFacetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteFacetResponse(new DeleteFacetResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new DeleteFacetResponsePrivate(this), parent)
 {
     setRequest(new DeleteFacetRequest(request));
     setReply(reply);

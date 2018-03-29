@@ -46,7 +46,7 @@ PutGroupPolicyResponse::PutGroupPolicyResponse(
         const PutGroupPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutGroupPolicyResponse(new PutGroupPolicyResponsePrivate(this), parent)
+    : IAMResponse(new PutGroupPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutGroupPolicyRequest(request));
     setReply(reply);

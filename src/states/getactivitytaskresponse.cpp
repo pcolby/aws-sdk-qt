@@ -46,7 +46,7 @@ GetActivityTaskResponse::GetActivityTaskResponse(
         const GetActivityTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetActivityTaskResponse(new GetActivityTaskResponsePrivate(this), parent)
+    : SFNResponse(new GetActivityTaskResponsePrivate(this), parent)
 {
     setRequest(new GetActivityTaskRequest(request));
     setReply(reply);

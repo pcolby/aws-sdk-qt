@@ -46,7 +46,7 @@ DescribeDBSecurityGroupsResponse::DescribeDBSecurityGroupsResponse(
         const DescribeDBSecurityGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeDBSecurityGroupsResponse(new DescribeDBSecurityGroupsResponsePrivate(this), parent)
+    : RDSResponse(new DescribeDBSecurityGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBSecurityGroupsRequest(request));
     setReply(reply);

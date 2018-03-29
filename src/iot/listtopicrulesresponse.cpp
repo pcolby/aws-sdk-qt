@@ -46,7 +46,7 @@ ListTopicRulesResponse::ListTopicRulesResponse(
         const ListTopicRulesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListTopicRulesResponse(new ListTopicRulesResponsePrivate(this), parent)
+    : IoTResponse(new ListTopicRulesResponsePrivate(this), parent)
 {
     setRequest(new ListTopicRulesRequest(request));
     setReply(reply);

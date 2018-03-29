@@ -46,7 +46,7 @@ CreateExportTaskResponse::CreateExportTaskResponse(
         const CreateExportTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateExportTaskResponse(new CreateExportTaskResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new CreateExportTaskResponsePrivate(this), parent)
 {
     setRequest(new CreateExportTaskRequest(request));
     setReply(reply);

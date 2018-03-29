@@ -46,7 +46,7 @@ GetRecordsResponse::GetRecordsResponse(
         const GetRecordsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetRecordsResponse(new GetRecordsResponsePrivate(this), parent)
+    : KinesisResponse(new GetRecordsResponsePrivate(this), parent)
 {
     setRequest(new GetRecordsRequest(request));
     setReply(reply);

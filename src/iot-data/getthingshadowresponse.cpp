@@ -46,7 +46,7 @@ GetThingShadowResponse::GetThingShadowResponse(
         const GetThingShadowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetThingShadowResponse(new GetThingShadowResponsePrivate(this), parent)
+    : IoTDataPlaneResponse(new GetThingShadowResponsePrivate(this), parent)
 {
     setRequest(new GetThingShadowRequest(request));
     setReply(reply);

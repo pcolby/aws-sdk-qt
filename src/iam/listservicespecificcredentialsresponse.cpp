@@ -46,7 +46,7 @@ ListServiceSpecificCredentialsResponse::ListServiceSpecificCredentialsResponse(
         const ListServiceSpecificCredentialsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListServiceSpecificCredentialsResponse(new ListServiceSpecificCredentialsResponsePrivate(this), parent)
+    : IAMResponse(new ListServiceSpecificCredentialsResponsePrivate(this), parent)
 {
     setRequest(new ListServiceSpecificCredentialsRequest(request));
     setReply(reply);

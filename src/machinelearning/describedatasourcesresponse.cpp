@@ -46,7 +46,7 @@ DescribeDataSourcesResponse::DescribeDataSourcesResponse(
         const DescribeDataSourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeDataSourcesResponse(new DescribeDataSourcesResponsePrivate(this), parent)
+    : MachineLearningResponse(new DescribeDataSourcesResponsePrivate(this), parent)
 {
     setRequest(new DescribeDataSourcesRequest(request));
     setReply(reply);

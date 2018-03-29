@@ -46,7 +46,7 @@ SynthesizeSpeechResponse::SynthesizeSpeechResponse(
         const SynthesizeSpeechRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SynthesizeSpeechResponse(new SynthesizeSpeechResponsePrivate(this), parent)
+    : PollyResponse(new SynthesizeSpeechResponsePrivate(this), parent)
 {
     setRequest(new SynthesizeSpeechRequest(request));
     setReply(reply);

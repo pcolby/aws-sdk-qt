@@ -46,7 +46,7 @@ ListWorkerBlocksResponse::ListWorkerBlocksResponse(
         const ListWorkerBlocksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListWorkerBlocksResponse(new ListWorkerBlocksResponsePrivate(this), parent)
+    : MTurkResponse(new ListWorkerBlocksResponsePrivate(this), parent)
 {
     setRequest(new ListWorkerBlocksRequest(request));
     setReply(reply);

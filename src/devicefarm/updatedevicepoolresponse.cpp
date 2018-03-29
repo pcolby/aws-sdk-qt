@@ -46,7 +46,7 @@ UpdateDevicePoolResponse::UpdateDevicePoolResponse(
         const UpdateDevicePoolRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDevicePoolResponse(new UpdateDevicePoolResponsePrivate(this), parent)
+    : DeviceFarmResponse(new UpdateDevicePoolResponsePrivate(this), parent)
 {
     setRequest(new UpdateDevicePoolRequest(request));
     setReply(reply);

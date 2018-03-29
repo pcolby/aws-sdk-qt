@@ -46,7 +46,7 @@ DeletePresetResponse::DeletePresetResponse(
         const DeletePresetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeletePresetResponse(new DeletePresetResponsePrivate(this), parent)
+    : ElasticTranscoderResponse(new DeletePresetResponsePrivate(this), parent)
 {
     setRequest(new DeletePresetRequest(request));
     setReply(reply);

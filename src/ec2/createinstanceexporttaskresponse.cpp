@@ -46,7 +46,7 @@ CreateInstanceExportTaskResponse::CreateInstanceExportTaskResponse(
         const CreateInstanceExportTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateInstanceExportTaskResponse(new CreateInstanceExportTaskResponsePrivate(this), parent)
+    : EC2Response(new CreateInstanceExportTaskResponsePrivate(this), parent)
 {
     setRequest(new CreateInstanceExportTaskRequest(request));
     setReply(reply);

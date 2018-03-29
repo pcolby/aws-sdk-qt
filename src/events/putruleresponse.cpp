@@ -46,7 +46,7 @@ PutRuleResponse::PutRuleResponse(
         const PutRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutRuleResponse(new PutRuleResponsePrivate(this), parent)
+    : CloudWatchEventsResponse(new PutRuleResponsePrivate(this), parent)
 {
     setRequest(new PutRuleRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ExportBundleResponse::ExportBundleResponse(
         const ExportBundleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ExportBundleResponse(new ExportBundleResponsePrivate(this), parent)
+    : MobileResponse(new ExportBundleResponsePrivate(this), parent)
 {
     setRequest(new ExportBundleRequest(request));
     setReply(reply);

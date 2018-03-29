@@ -46,7 +46,7 @@ DeleteNetworkInterfacePermissionResponse::DeleteNetworkInterfacePermissionRespon
         const DeleteNetworkInterfacePermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteNetworkInterfacePermissionResponse(new DeleteNetworkInterfacePermissionResponsePrivate(this), parent)
+    : EC2Response(new DeleteNetworkInterfacePermissionResponsePrivate(this), parent)
 {
     setRequest(new DeleteNetworkInterfacePermissionRequest(request));
     setReply(reply);

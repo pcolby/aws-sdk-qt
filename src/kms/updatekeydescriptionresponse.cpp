@@ -46,7 +46,7 @@ UpdateKeyDescriptionResponse::UpdateKeyDescriptionResponse(
         const UpdateKeyDescriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateKeyDescriptionResponse(new UpdateKeyDescriptionResponsePrivate(this), parent)
+    : KMSResponse(new UpdateKeyDescriptionResponsePrivate(this), parent)
 {
     setRequest(new UpdateKeyDescriptionRequest(request));
     setReply(reply);

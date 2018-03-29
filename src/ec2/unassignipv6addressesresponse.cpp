@@ -46,7 +46,7 @@ UnassignIpv6AddressesResponse::UnassignIpv6AddressesResponse(
         const UnassignIpv6AddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UnassignIpv6AddressesResponse(new UnassignIpv6AddressesResponsePrivate(this), parent)
+    : EC2Response(new UnassignIpv6AddressesResponsePrivate(this), parent)
 {
     setRequest(new UnassignIpv6AddressesRequest(request));
     setReply(reply);

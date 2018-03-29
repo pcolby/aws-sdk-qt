@@ -46,7 +46,7 @@ PutRetentionPolicyResponse::PutRetentionPolicyResponse(
         const PutRetentionPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutRetentionPolicyResponse(new PutRetentionPolicyResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new PutRetentionPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutRetentionPolicyRequest(request));
     setReply(reply);

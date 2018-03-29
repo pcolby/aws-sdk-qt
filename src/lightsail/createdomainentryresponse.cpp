@@ -46,7 +46,7 @@ CreateDomainEntryResponse::CreateDomainEntryResponse(
         const CreateDomainEntryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateDomainEntryResponse(new CreateDomainEntryResponsePrivate(this), parent)
+    : LightsailResponse(new CreateDomainEntryResponsePrivate(this), parent)
 {
     setRequest(new CreateDomainEntryRequest(request));
     setReply(reply);

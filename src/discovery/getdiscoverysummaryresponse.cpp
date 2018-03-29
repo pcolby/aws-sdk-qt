@@ -46,7 +46,7 @@ GetDiscoverySummaryResponse::GetDiscoverySummaryResponse(
         const GetDiscoverySummaryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDiscoverySummaryResponse(new GetDiscoverySummaryResponsePrivate(this), parent)
+    : ApplicationDiscoveryServiceResponse(new GetDiscoverySummaryResponsePrivate(this), parent)
 {
     setRequest(new GetDiscoverySummaryRequest(request));
     setReply(reply);

@@ -34,6 +34,11 @@ class QTAWS_EXPORT CostandUsageReportServiceResponse : public QtAws::Core::AwsAb
 public:
     CostandUsageReportServiceResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    CostandUsageReportServiceResponse(CostandUsageReportServiceResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

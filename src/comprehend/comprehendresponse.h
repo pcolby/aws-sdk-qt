@@ -34,6 +34,11 @@ class QTAWS_EXPORT ComprehendResponse : public QtAws::Core::AwsAbstractResponse 
 public:
     ComprehendResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    ComprehendResponse(ComprehendResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

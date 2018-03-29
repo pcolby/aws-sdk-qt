@@ -46,7 +46,7 @@ DownloadDefaultKeyPairResponse::DownloadDefaultKeyPairResponse(
         const DownloadDefaultKeyPairRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DownloadDefaultKeyPairResponse(new DownloadDefaultKeyPairResponsePrivate(this), parent)
+    : LightsailResponse(new DownloadDefaultKeyPairResponsePrivate(this), parent)
 {
     setRequest(new DownloadDefaultKeyPairRequest(request));
     setReply(reply);

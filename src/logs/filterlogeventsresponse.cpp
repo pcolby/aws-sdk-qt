@@ -46,7 +46,7 @@ FilterLogEventsResponse::FilterLogEventsResponse(
         const FilterLogEventsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FilterLogEventsResponse(new FilterLogEventsResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new FilterLogEventsResponsePrivate(this), parent)
 {
     setRequest(new FilterLogEventsRequest(request));
     setReply(reply);

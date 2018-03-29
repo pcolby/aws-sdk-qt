@@ -46,7 +46,7 @@ DescribeMatchmakingConfigurationsResponse::DescribeMatchmakingConfigurationsResp
         const DescribeMatchmakingConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeMatchmakingConfigurationsResponse(new DescribeMatchmakingConfigurationsResponsePrivate(this), parent)
+    : GameLiftResponse(new DescribeMatchmakingConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeMatchmakingConfigurationsRequest(request));
     setReply(reply);

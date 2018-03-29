@@ -46,7 +46,7 @@ CreateCacheParameterGroupResponse::CreateCacheParameterGroupResponse(
         const CreateCacheParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateCacheParameterGroupResponse(new CreateCacheParameterGroupResponsePrivate(this), parent)
+    : ElastiCacheResponse(new CreateCacheParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateCacheParameterGroupRequest(request));
     setReply(reply);

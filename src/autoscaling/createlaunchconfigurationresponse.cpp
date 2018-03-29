@@ -46,7 +46,7 @@ CreateLaunchConfigurationResponse::CreateLaunchConfigurationResponse(
         const CreateLaunchConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateLaunchConfigurationResponse(new CreateLaunchConfigurationResponsePrivate(this), parent)
+    : AutoScalingResponse(new CreateLaunchConfigurationResponsePrivate(this), parent)
 {
     setRequest(new CreateLaunchConfigurationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ TestInvokeAuthorizerResponse::TestInvokeAuthorizerResponse(
         const TestInvokeAuthorizerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : TestInvokeAuthorizerResponse(new TestInvokeAuthorizerResponsePrivate(this), parent)
+    : IoTResponse(new TestInvokeAuthorizerResponsePrivate(this), parent)
 {
     setRequest(new TestInvokeAuthorizerRequest(request));
     setReply(reply);

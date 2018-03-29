@@ -34,6 +34,11 @@ class QTAWS_EXPORT ImportExportResponse : public QtAws::Core::AwsAbstractRespons
 public:
     ImportExportResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    ImportExportResponse(ImportExportResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

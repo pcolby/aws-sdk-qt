@@ -46,7 +46,7 @@ DeleteVpcEndpointsResponse::DeleteVpcEndpointsResponse(
         const DeleteVpcEndpointsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteVpcEndpointsResponse(new DeleteVpcEndpointsResponsePrivate(this), parent)
+    : EC2Response(new DeleteVpcEndpointsResponsePrivate(this), parent)
 {
     setRequest(new DeleteVpcEndpointsRequest(request));
     setReply(reply);

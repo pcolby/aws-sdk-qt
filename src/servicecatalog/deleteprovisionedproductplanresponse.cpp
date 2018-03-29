@@ -46,7 +46,7 @@ DeleteProvisionedProductPlanResponse::DeleteProvisionedProductPlanResponse(
         const DeleteProvisionedProductPlanRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteProvisionedProductPlanResponse(new DeleteProvisionedProductPlanResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new DeleteProvisionedProductPlanResponsePrivate(this), parent)
 {
     setRequest(new DeleteProvisionedProductPlanRequest(request));
     setReply(reply);

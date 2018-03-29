@@ -46,7 +46,7 @@ DescribeSpotFleetRequestHistoryResponse::DescribeSpotFleetRequestHistoryResponse
         const DescribeSpotFleetRequestHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeSpotFleetRequestHistoryResponse(new DescribeSpotFleetRequestHistoryResponsePrivate(this), parent)
+    : EC2Response(new DescribeSpotFleetRequestHistoryResponsePrivate(this), parent)
 {
     setRequest(new DescribeSpotFleetRequestHistoryRequest(request));
     setReply(reply);

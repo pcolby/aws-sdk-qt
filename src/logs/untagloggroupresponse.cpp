@@ -46,7 +46,7 @@ UntagLogGroupResponse::UntagLogGroupResponse(
         const UntagLogGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UntagLogGroupResponse(new UntagLogGroupResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new UntagLogGroupResponsePrivate(this), parent)
 {
     setRequest(new UntagLogGroupRequest(request));
     setReply(reply);

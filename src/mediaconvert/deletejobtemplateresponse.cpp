@@ -46,7 +46,7 @@ DeleteJobTemplateResponse::DeleteJobTemplateResponse(
         const DeleteJobTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteJobTemplateResponse(new DeleteJobTemplateResponsePrivate(this), parent)
+    : MediaConvertResponse(new DeleteJobTemplateResponsePrivate(this), parent)
 {
     setRequest(new DeleteJobTemplateRequest(request));
     setReply(reply);

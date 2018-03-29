@@ -46,7 +46,7 @@ DeleteLoadBalancerListenersResponse::DeleteLoadBalancerListenersResponse(
         const DeleteLoadBalancerListenersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteLoadBalancerListenersResponse(new DeleteLoadBalancerListenersResponsePrivate(this), parent)
+    : ElasticLoadBalancingResponse(new DeleteLoadBalancerListenersResponsePrivate(this), parent)
 {
     setRequest(new DeleteLoadBalancerListenersRequest(request));
     setReply(reply);

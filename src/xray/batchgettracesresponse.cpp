@@ -46,7 +46,7 @@ BatchGetTracesResponse::BatchGetTracesResponse(
         const BatchGetTracesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchGetTracesResponse(new BatchGetTracesResponsePrivate(this), parent)
+    : XRayResponse(new BatchGetTracesResponsePrivate(this), parent)
 {
     setRequest(new BatchGetTracesRequest(request));
     setReply(reply);

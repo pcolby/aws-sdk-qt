@@ -46,7 +46,7 @@ CreateLayerResponse::CreateLayerResponse(
         const CreateLayerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateLayerResponse(new CreateLayerResponsePrivate(this), parent)
+    : OpsWorksResponse(new CreateLayerResponsePrivate(this), parent)
 {
     setRequest(new CreateLayerRequest(request));
     setReply(reply);

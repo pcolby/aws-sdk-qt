@@ -46,7 +46,7 @@ StopFleetResponse::StopFleetResponse(
         const StopFleetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopFleetResponse(new StopFleetResponsePrivate(this), parent)
+    : AppStreamResponse(new StopFleetResponsePrivate(this), parent)
 {
     setRequest(new StopFleetRequest(request));
     setReply(reply);

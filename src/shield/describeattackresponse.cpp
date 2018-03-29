@@ -46,7 +46,7 @@ DescribeAttackResponse::DescribeAttackResponse(
         const DescribeAttackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAttackResponse(new DescribeAttackResponsePrivate(this), parent)
+    : ShieldResponse(new DescribeAttackResponsePrivate(this), parent)
 {
     setRequest(new DescribeAttackRequest(request));
     setReply(reply);

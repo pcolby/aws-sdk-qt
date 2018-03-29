@@ -46,7 +46,7 @@ UpdateGatewayInformationResponse::UpdateGatewayInformationResponse(
         const UpdateGatewayInformationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateGatewayInformationResponse(new UpdateGatewayInformationResponsePrivate(this), parent)
+    : StorageGatewayResponse(new UpdateGatewayInformationResponsePrivate(this), parent)
 {
     setRequest(new UpdateGatewayInformationRequest(request));
     setReply(reply);

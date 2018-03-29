@@ -46,7 +46,7 @@ DeleteNetworkInterfaceResponse::DeleteNetworkInterfaceResponse(
         const DeleteNetworkInterfaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteNetworkInterfaceResponse(new DeleteNetworkInterfaceResponsePrivate(this), parent)
+    : EC2Response(new DeleteNetworkInterfaceResponsePrivate(this), parent)
 {
     setRequest(new DeleteNetworkInterfaceRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeTableStatisticsResponse::DescribeTableStatisticsResponse(
         const DescribeTableStatisticsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeTableStatisticsResponse(new DescribeTableStatisticsResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new DescribeTableStatisticsResponsePrivate(this), parent)
 {
     setRequest(new DescribeTableStatisticsRequest(request));
     setReply(reply);

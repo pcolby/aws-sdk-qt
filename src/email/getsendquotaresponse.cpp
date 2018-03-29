@@ -46,7 +46,7 @@ GetSendQuotaResponse::GetSendQuotaResponse(
         const GetSendQuotaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetSendQuotaResponse(new GetSendQuotaResponsePrivate(this), parent)
+    : SESResponse(new GetSendQuotaResponsePrivate(this), parent)
 {
     setRequest(new GetSendQuotaRequest(request));
     setReply(reply);

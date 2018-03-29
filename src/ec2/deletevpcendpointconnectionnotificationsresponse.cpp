@@ -46,7 +46,7 @@ DeleteVpcEndpointConnectionNotificationsResponse::DeleteVpcEndpointConnectionNot
         const DeleteVpcEndpointConnectionNotificationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteVpcEndpointConnectionNotificationsResponse(new DeleteVpcEndpointConnectionNotificationsResponsePrivate(this), parent)
+    : EC2Response(new DeleteVpcEndpointConnectionNotificationsResponsePrivate(this), parent)
 {
     setRequest(new DeleteVpcEndpointConnectionNotificationsRequest(request));
     setReply(reply);

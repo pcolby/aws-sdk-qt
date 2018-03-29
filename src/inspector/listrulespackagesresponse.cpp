@@ -46,7 +46,7 @@ ListRulesPackagesResponse::ListRulesPackagesResponse(
         const ListRulesPackagesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListRulesPackagesResponse(new ListRulesPackagesResponsePrivate(this), parent)
+    : InspectorResponse(new ListRulesPackagesResponsePrivate(this), parent)
 {
     setRequest(new ListRulesPackagesRequest(request));
     setReply(reply);

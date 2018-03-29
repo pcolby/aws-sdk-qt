@@ -46,7 +46,7 @@ InitializeClusterResponse::InitializeClusterResponse(
         const InitializeClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InitializeClusterResponse(new InitializeClusterResponsePrivate(this), parent)
+    : CloudHSMV2Response(new InitializeClusterResponsePrivate(this), parent)
 {
     setRequest(new InitializeClusterRequest(request));
     setReply(reply);

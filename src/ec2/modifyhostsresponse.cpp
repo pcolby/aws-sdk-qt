@@ -46,7 +46,7 @@ ModifyHostsResponse::ModifyHostsResponse(
         const ModifyHostsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyHostsResponse(new ModifyHostsResponsePrivate(this), parent)
+    : EC2Response(new ModifyHostsResponsePrivate(this), parent)
 {
     setRequest(new ModifyHostsRequest(request));
     setReply(reply);

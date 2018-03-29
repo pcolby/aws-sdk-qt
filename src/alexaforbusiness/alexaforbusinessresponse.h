@@ -34,6 +34,11 @@ class QTAWS_EXPORT AlexaForBusinessResponse : public QtAws::Core::AwsAbstractRes
 public:
     AlexaForBusinessResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    AlexaForBusinessResponse(AlexaForBusinessResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

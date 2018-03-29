@@ -46,7 +46,7 @@ DeleteObjectResponse::DeleteObjectResponse(
         const DeleteObjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteObjectResponse(new DeleteObjectResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new DeleteObjectResponsePrivate(this), parent)
 {
     setRequest(new DeleteObjectRequest(request));
     setReply(reply);

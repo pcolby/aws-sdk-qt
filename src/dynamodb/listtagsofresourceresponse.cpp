@@ -46,7 +46,7 @@ ListTagsOfResourceResponse::ListTagsOfResourceResponse(
         const ListTagsOfResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListTagsOfResourceResponse(new ListTagsOfResourceResponsePrivate(this), parent)
+    : DynamoDBResponse(new ListTagsOfResourceResponsePrivate(this), parent)
 {
     setRequest(new ListTagsOfResourceRequest(request));
     setReply(reply);

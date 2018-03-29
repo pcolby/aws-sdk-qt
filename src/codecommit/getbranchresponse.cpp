@@ -46,7 +46,7 @@ GetBranchResponse::GetBranchResponse(
         const GetBranchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetBranchResponse(new GetBranchResponsePrivate(this), parent)
+    : CodeCommitResponse(new GetBranchResponsePrivate(this), parent)
 {
     setRequest(new GetBranchRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateTypedLinkFacetResponse::CreateTypedLinkFacetResponse(
         const CreateTypedLinkFacetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateTypedLinkFacetResponse(new CreateTypedLinkFacetResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new CreateTypedLinkFacetResponsePrivate(this), parent)
 {
     setRequest(new CreateTypedLinkFacetRequest(request));
     setReply(reply);

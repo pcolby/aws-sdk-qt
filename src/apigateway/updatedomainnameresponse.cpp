@@ -46,7 +46,7 @@ UpdateDomainNameResponse::UpdateDomainNameResponse(
         const UpdateDomainNameRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDomainNameResponse(new UpdateDomainNameResponsePrivate(this), parent)
+    : APIGatewayResponse(new UpdateDomainNameResponsePrivate(this), parent)
 {
     setRequest(new UpdateDomainNameRequest(request));
     setReply(reply);

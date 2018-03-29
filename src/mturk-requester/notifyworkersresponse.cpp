@@ -46,7 +46,7 @@ NotifyWorkersResponse::NotifyWorkersResponse(
         const NotifyWorkersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : NotifyWorkersResponse(new NotifyWorkersResponsePrivate(this), parent)
+    : MTurkResponse(new NotifyWorkersResponsePrivate(this), parent)
 {
     setRequest(new NotifyWorkersRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeRepositoriesResponse::DescribeRepositoriesResponse(
         const DescribeRepositoriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeRepositoriesResponse(new DescribeRepositoriesResponsePrivate(this), parent)
+    : ECRResponse(new DescribeRepositoriesResponsePrivate(this), parent)
 {
     setRequest(new DescribeRepositoriesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ AssociateHostedConnectionResponse::AssociateHostedConnectionResponse(
         const AssociateHostedConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssociateHostedConnectionResponse(new AssociateHostedConnectionResponsePrivate(this), parent)
+    : DirectConnectResponse(new AssociateHostedConnectionResponsePrivate(this), parent)
 {
     setRequest(new AssociateHostedConnectionRequest(request));
     setReply(reply);

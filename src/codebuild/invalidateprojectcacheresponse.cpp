@@ -46,7 +46,7 @@ InvalidateProjectCacheResponse::InvalidateProjectCacheResponse(
         const InvalidateProjectCacheRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InvalidateProjectCacheResponse(new InvalidateProjectCacheResponsePrivate(this), parent)
+    : CodeBuildResponse(new InvalidateProjectCacheResponsePrivate(this), parent)
 {
     setRequest(new InvalidateProjectCacheRequest(request));
     setReply(reply);

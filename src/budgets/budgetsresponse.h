@@ -34,6 +34,11 @@ class QTAWS_EXPORT BudgetsResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     BudgetsResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    BudgetsResponse(BudgetsResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

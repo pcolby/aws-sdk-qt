@@ -46,7 +46,7 @@ CreateLoggerDefinitionVersionResponse::CreateLoggerDefinitionVersionResponse(
         const CreateLoggerDefinitionVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateLoggerDefinitionVersionResponse(new CreateLoggerDefinitionVersionResponsePrivate(this), parent)
+    : GreengrassResponse(new CreateLoggerDefinitionVersionResponsePrivate(this), parent)
 {
     setRequest(new CreateLoggerDefinitionVersionRequest(request));
     setReply(reply);

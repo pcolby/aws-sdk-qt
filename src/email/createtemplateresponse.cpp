@@ -46,7 +46,7 @@ CreateTemplateResponse::CreateTemplateResponse(
         const CreateTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateTemplateResponse(new CreateTemplateResponsePrivate(this), parent)
+    : SESResponse(new CreateTemplateResponsePrivate(this), parent)
 {
     setRequest(new CreateTemplateRequest(request));
     setReply(reply);

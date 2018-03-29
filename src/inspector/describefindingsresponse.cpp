@@ -46,7 +46,7 @@ DescribeFindingsResponse::DescribeFindingsResponse(
         const DescribeFindingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeFindingsResponse(new DescribeFindingsResponsePrivate(this), parent)
+    : InspectorResponse(new DescribeFindingsResponsePrivate(this), parent)
 {
     setRequest(new DescribeFindingsRequest(request));
     setReply(reply);

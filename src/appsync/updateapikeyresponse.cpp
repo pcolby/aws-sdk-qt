@@ -46,7 +46,7 @@ UpdateApiKeyResponse::UpdateApiKeyResponse(
         const UpdateApiKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateApiKeyResponse(new UpdateApiKeyResponsePrivate(this), parent)
+    : AppSyncResponse(new UpdateApiKeyResponsePrivate(this), parent)
 {
     setRequest(new UpdateApiKeyRequest(request));
     setReply(reply);

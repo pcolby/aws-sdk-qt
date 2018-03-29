@@ -46,7 +46,7 @@ GetBucketInventoryConfigurationResponse::GetBucketInventoryConfigurationResponse
         const GetBucketInventoryConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetBucketInventoryConfigurationResponse(new GetBucketInventoryConfigurationResponsePrivate(this), parent)
+    : S3Response(new GetBucketInventoryConfigurationResponsePrivate(this), parent)
 {
     setRequest(new GetBucketInventoryConfigurationRequest(request));
     setReply(reply);

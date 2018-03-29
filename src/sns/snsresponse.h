@@ -34,6 +34,11 @@ class QTAWS_EXPORT SNSResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     SNSResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    SNSResponse(SNSResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

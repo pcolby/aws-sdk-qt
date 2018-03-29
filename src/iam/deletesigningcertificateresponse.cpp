@@ -46,7 +46,7 @@ DeleteSigningCertificateResponse::DeleteSigningCertificateResponse(
         const DeleteSigningCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSigningCertificateResponse(new DeleteSigningCertificateResponsePrivate(this), parent)
+    : IAMResponse(new DeleteSigningCertificateResponsePrivate(this), parent)
 {
     setRequest(new DeleteSigningCertificateRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetAccountPasswordPolicyResponse::GetAccountPasswordPolicyResponse(
         const GetAccountPasswordPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetAccountPasswordPolicyResponse(new GetAccountPasswordPolicyResponsePrivate(this), parent)
+    : IAMResponse(new GetAccountPasswordPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetAccountPasswordPolicyRequest(request));
     setReply(reply);

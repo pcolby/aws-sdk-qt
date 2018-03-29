@@ -46,7 +46,7 @@ GetDocumentResponse::GetDocumentResponse(
         const GetDocumentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDocumentResponse(new GetDocumentResponsePrivate(this), parent)
+    : WorkDocsResponse(new GetDocumentResponsePrivate(this), parent)
 {
     setRequest(new GetDocumentRequest(request));
     setReply(reply);

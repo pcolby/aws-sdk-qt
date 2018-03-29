@@ -46,7 +46,7 @@ DescribeVolumeStatusResponse::DescribeVolumeStatusResponse(
         const DescribeVolumeStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeVolumeStatusResponse(new DescribeVolumeStatusResponsePrivate(this), parent)
+    : EC2Response(new DescribeVolumeStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeVolumeStatusRequest(request));
     setReply(reply);

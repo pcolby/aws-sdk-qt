@@ -46,7 +46,7 @@ GetOTAUpdateResponse::GetOTAUpdateResponse(
         const GetOTAUpdateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetOTAUpdateResponse(new GetOTAUpdateResponsePrivate(this), parent)
+    : IoTResponse(new GetOTAUpdateResponsePrivate(this), parent)
 {
     setRequest(new GetOTAUpdateRequest(request));
     setReply(reply);

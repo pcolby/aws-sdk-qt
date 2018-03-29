@@ -46,7 +46,7 @@ ModifySubnetAttributeResponse::ModifySubnetAttributeResponse(
         const ModifySubnetAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifySubnetAttributeResponse(new ModifySubnetAttributeResponsePrivate(this), parent)
+    : EC2Response(new ModifySubnetAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifySubnetAttributeRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DetachRolePolicyResponse::DetachRolePolicyResponse(
         const DetachRolePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DetachRolePolicyResponse(new DetachRolePolicyResponsePrivate(this), parent)
+    : IAMResponse(new DetachRolePolicyResponsePrivate(this), parent)
 {
     setRequest(new DetachRolePolicyRequest(request));
     setReply(reply);

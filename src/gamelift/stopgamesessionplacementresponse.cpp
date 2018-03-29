@@ -46,7 +46,7 @@ StopGameSessionPlacementResponse::StopGameSessionPlacementResponse(
         const StopGameSessionPlacementRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopGameSessionPlacementResponse(new StopGameSessionPlacementResponsePrivate(this), parent)
+    : GameLiftResponse(new StopGameSessionPlacementResponsePrivate(this), parent)
 {
     setRequest(new StopGameSessionPlacementRequest(request));
     setReply(reply);

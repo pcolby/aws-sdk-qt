@@ -46,7 +46,7 @@ ModifyInstancePlacementResponse::ModifyInstancePlacementResponse(
         const ModifyInstancePlacementRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyInstancePlacementResponse(new ModifyInstancePlacementResponsePrivate(this), parent)
+    : EC2Response(new ModifyInstancePlacementResponsePrivate(this), parent)
 {
     setRequest(new ModifyInstancePlacementRequest(request));
     setReply(reply);

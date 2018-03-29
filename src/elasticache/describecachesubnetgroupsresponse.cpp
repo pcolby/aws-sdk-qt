@@ -46,7 +46,7 @@ DescribeCacheSubnetGroupsResponse::DescribeCacheSubnetGroupsResponse(
         const DescribeCacheSubnetGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeCacheSubnetGroupsResponse(new DescribeCacheSubnetGroupsResponsePrivate(this), parent)
+    : ElastiCacheResponse(new DescribeCacheSubnetGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeCacheSubnetGroupsRequest(request));
     setReply(reply);

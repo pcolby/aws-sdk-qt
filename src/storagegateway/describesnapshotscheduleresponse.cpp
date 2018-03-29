@@ -46,7 +46,7 @@ DescribeSnapshotScheduleResponse::DescribeSnapshotScheduleResponse(
         const DescribeSnapshotScheduleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeSnapshotScheduleResponse(new DescribeSnapshotScheduleResponsePrivate(this), parent)
+    : StorageGatewayResponse(new DescribeSnapshotScheduleResponsePrivate(this), parent)
 {
     setRequest(new DescribeSnapshotScheduleRequest(request));
     setReply(reply);

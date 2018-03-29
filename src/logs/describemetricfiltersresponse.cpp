@@ -46,7 +46,7 @@ DescribeMetricFiltersResponse::DescribeMetricFiltersResponse(
         const DescribeMetricFiltersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeMetricFiltersResponse(new DescribeMetricFiltersResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new DescribeMetricFiltersResponsePrivate(this), parent)
 {
     setRequest(new DescribeMetricFiltersRequest(request));
     setReply(reply);

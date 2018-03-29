@@ -46,7 +46,7 @@ SetVisibleToAllUsersResponse::SetVisibleToAllUsersResponse(
         const SetVisibleToAllUsersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetVisibleToAllUsersResponse(new SetVisibleToAllUsersResponsePrivate(this), parent)
+    : EMRResponse(new SetVisibleToAllUsersResponsePrivate(this), parent)
 {
     setRequest(new SetVisibleToAllUsersRequest(request));
     setReply(reply);

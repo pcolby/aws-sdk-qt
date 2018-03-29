@@ -46,7 +46,7 @@ DescribeHandshakeResponse::DescribeHandshakeResponse(
         const DescribeHandshakeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeHandshakeResponse(new DescribeHandshakeResponsePrivate(this), parent)
+    : OrganizationsResponse(new DescribeHandshakeResponsePrivate(this), parent)
 {
     setRequest(new DescribeHandshakeRequest(request));
     setReply(reply);

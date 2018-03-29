@@ -46,7 +46,7 @@ GetRunResponse::GetRunResponse(
         const GetRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetRunResponse(new GetRunResponsePrivate(this), parent)
+    : DeviceFarmResponse(new GetRunResponsePrivate(this), parent)
 {
     setRequest(new GetRunRequest(request));
     setReply(reply);

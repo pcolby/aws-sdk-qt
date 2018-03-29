@@ -46,7 +46,7 @@ DeleteDhcpOptionsResponse::DeleteDhcpOptionsResponse(
         const DeleteDhcpOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDhcpOptionsResponse(new DeleteDhcpOptionsResponsePrivate(this), parent)
+    : EC2Response(new DeleteDhcpOptionsResponsePrivate(this), parent)
 {
     setRequest(new DeleteDhcpOptionsRequest(request));
     setReply(reply);

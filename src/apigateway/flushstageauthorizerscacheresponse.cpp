@@ -46,7 +46,7 @@ FlushStageAuthorizersCacheResponse::FlushStageAuthorizersCacheResponse(
         const FlushStageAuthorizersCacheRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FlushStageAuthorizersCacheResponse(new FlushStageAuthorizersCacheResponsePrivate(this), parent)
+    : APIGatewayResponse(new FlushStageAuthorizersCacheResponsePrivate(this), parent)
 {
     setRequest(new FlushStageAuthorizersCacheRequest(request));
     setReply(reply);

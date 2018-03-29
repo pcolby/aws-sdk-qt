@@ -46,7 +46,7 @@ DeleteEvaluationResultsResponse::DeleteEvaluationResultsResponse(
         const DeleteEvaluationResultsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteEvaluationResultsResponse(new DeleteEvaluationResultsResponsePrivate(this), parent)
+    : ConfigServiceResponse(new DeleteEvaluationResultsResponsePrivate(this), parent)
 {
     setRequest(new DeleteEvaluationResultsRequest(request));
     setReply(reply);

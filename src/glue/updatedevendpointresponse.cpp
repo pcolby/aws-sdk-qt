@@ -46,7 +46,7 @@ UpdateDevEndpointResponse::UpdateDevEndpointResponse(
         const UpdateDevEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDevEndpointResponse(new UpdateDevEndpointResponsePrivate(this), parent)
+    : GlueResponse(new UpdateDevEndpointResponsePrivate(this), parent)
 {
     setRequest(new UpdateDevEndpointRequest(request));
     setReply(reply);

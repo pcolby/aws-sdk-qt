@@ -46,7 +46,7 @@ CreateElasticsearchDomainResponse::CreateElasticsearchDomainResponse(
         const CreateElasticsearchDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateElasticsearchDomainResponse(new CreateElasticsearchDomainResponsePrivate(this), parent)
+    : ElasticsearchServiceResponse(new CreateElasticsearchDomainResponsePrivate(this), parent)
 {
     setRequest(new CreateElasticsearchDomainRequest(request));
     setReply(reply);

@@ -34,6 +34,11 @@ class QTAWS_EXPORT CostExplorerResponse : public QtAws::Core::AwsAbstractRespons
 public:
     CostExplorerResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    CostExplorerResponse(CostExplorerResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

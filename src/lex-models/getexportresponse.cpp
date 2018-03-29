@@ -46,7 +46,7 @@ GetExportResponse::GetExportResponse(
         const GetExportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetExportResponse(new GetExportResponsePrivate(this), parent)
+    : LexModelBuildingServiceResponse(new GetExportResponsePrivate(this), parent)
 {
     setRequest(new GetExportRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteFlowLogsResponse::DeleteFlowLogsResponse(
         const DeleteFlowLogsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteFlowLogsResponse(new DeleteFlowLogsResponsePrivate(this), parent)
+    : EC2Response(new DeleteFlowLogsResponsePrivate(this), parent)
 {
     setRequest(new DeleteFlowLogsRequest(request));
     setReply(reply);

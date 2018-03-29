@@ -46,7 +46,7 @@ DescribeConversionTasksResponse::DescribeConversionTasksResponse(
         const DescribeConversionTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeConversionTasksResponse(new DescribeConversionTasksResponsePrivate(this), parent)
+    : EC2Response(new DescribeConversionTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeConversionTasksRequest(request));
     setReply(reply);

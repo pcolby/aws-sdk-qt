@@ -46,7 +46,7 @@ DeleteDevicePoolResponse::DeleteDevicePoolResponse(
         const DeleteDevicePoolRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDevicePoolResponse(new DeleteDevicePoolResponsePrivate(this), parent)
+    : DeviceFarmResponse(new DeleteDevicePoolResponsePrivate(this), parent)
 {
     setRequest(new DeleteDevicePoolRequest(request));
     setReply(reply);

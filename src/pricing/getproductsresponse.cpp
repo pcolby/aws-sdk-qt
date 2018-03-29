@@ -46,7 +46,7 @@ GetProductsResponse::GetProductsResponse(
         const GetProductsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetProductsResponse(new GetProductsResponsePrivate(this), parent)
+    : PricingResponse(new GetProductsResponsePrivate(this), parent)
 {
     setRequest(new GetProductsRequest(request));
     setReply(reply);

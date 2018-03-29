@@ -46,7 +46,7 @@ DeleteMatchmakingConfigurationResponse::DeleteMatchmakingConfigurationResponse(
         const DeleteMatchmakingConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteMatchmakingConfigurationResponse(new DeleteMatchmakingConfigurationResponsePrivate(this), parent)
+    : GameLiftResponse(new DeleteMatchmakingConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DeleteMatchmakingConfigurationRequest(request));
     setReply(reply);

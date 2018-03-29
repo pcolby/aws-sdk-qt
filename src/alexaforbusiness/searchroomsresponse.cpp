@@ -46,7 +46,7 @@ SearchRoomsResponse::SearchRoomsResponse(
         const SearchRoomsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SearchRoomsResponse(new SearchRoomsResponsePrivate(this), parent)
+    : AlexaForBusinessResponse(new SearchRoomsResponsePrivate(this), parent)
 {
     setRequest(new SearchRoomsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ EnableAlarmActionsResponse::EnableAlarmActionsResponse(
         const EnableAlarmActionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EnableAlarmActionsResponse(new EnableAlarmActionsResponsePrivate(this), parent)
+    : CloudWatchResponse(new EnableAlarmActionsResponsePrivate(this), parent)
 {
     setRequest(new EnableAlarmActionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteDirectConnectGatewayAssociationResponse::DeleteDirectConnectGatewayAssocia
         const DeleteDirectConnectGatewayAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDirectConnectGatewayAssociationResponse(new DeleteDirectConnectGatewayAssociationResponsePrivate(this), parent)
+    : DirectConnectResponse(new DeleteDirectConnectGatewayAssociationResponsePrivate(this), parent)
 {
     setRequest(new DeleteDirectConnectGatewayAssociationRequest(request));
     setReply(reply);

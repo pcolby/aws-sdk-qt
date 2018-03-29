@@ -46,7 +46,7 @@ UpdateExpirationForHITResponse::UpdateExpirationForHITResponse(
         const UpdateExpirationForHITRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateExpirationForHITResponse(new UpdateExpirationForHITResponsePrivate(this), parent)
+    : MTurkResponse(new UpdateExpirationForHITResponsePrivate(this), parent)
 {
     setRequest(new UpdateExpirationForHITRequest(request));
     setReply(reply);

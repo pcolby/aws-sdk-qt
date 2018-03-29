@@ -46,7 +46,7 @@ GetParametersForImportResponse::GetParametersForImportResponse(
         const GetParametersForImportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetParametersForImportResponse(new GetParametersForImportResponsePrivate(this), parent)
+    : KMSResponse(new GetParametersForImportResponsePrivate(this), parent)
 {
     setRequest(new GetParametersForImportRequest(request));
     setReply(reply);

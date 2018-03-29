@@ -46,7 +46,7 @@ ListDeadLetterSourceQueuesResponse::ListDeadLetterSourceQueuesResponse(
         const ListDeadLetterSourceQueuesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListDeadLetterSourceQueuesResponse(new ListDeadLetterSourceQueuesResponsePrivate(this), parent)
+    : SQSResponse(new ListDeadLetterSourceQueuesResponsePrivate(this), parent)
 {
     setRequest(new ListDeadLetterSourceQueuesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ PutLexiconResponse::PutLexiconResponse(
         const PutLexiconRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutLexiconResponse(new PutLexiconResponsePrivate(this), parent)
+    : PollyResponse(new PutLexiconResponsePrivate(this), parent)
 {
     setRequest(new PutLexiconRequest(request));
     setReply(reply);

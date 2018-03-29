@@ -46,7 +46,7 @@ GetConnectionResponse::GetConnectionResponse(
         const GetConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetConnectionResponse(new GetConnectionResponsePrivate(this), parent)
+    : GlueResponse(new GetConnectionResponsePrivate(this), parent)
 {
     setRequest(new GetConnectionRequest(request));
     setReply(reply);

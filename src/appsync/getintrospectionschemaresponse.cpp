@@ -46,7 +46,7 @@ GetIntrospectionSchemaResponse::GetIntrospectionSchemaResponse(
         const GetIntrospectionSchemaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetIntrospectionSchemaResponse(new GetIntrospectionSchemaResponsePrivate(this), parent)
+    : AppSyncResponse(new GetIntrospectionSchemaResponsePrivate(this), parent)
 {
     setRequest(new GetIntrospectionSchemaRequest(request));
     setReply(reply);

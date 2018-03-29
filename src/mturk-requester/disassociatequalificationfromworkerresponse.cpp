@@ -46,7 +46,7 @@ DisassociateQualificationFromWorkerResponse::DisassociateQualificationFromWorker
         const DisassociateQualificationFromWorkerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateQualificationFromWorkerResponse(new DisassociateQualificationFromWorkerResponsePrivate(this), parent)
+    : MTurkResponse(new DisassociateQualificationFromWorkerResponsePrivate(this), parent)
 {
     setRequest(new DisassociateQualificationFromWorkerRequest(request));
     setReply(reply);

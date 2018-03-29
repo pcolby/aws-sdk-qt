@@ -46,7 +46,7 @@ CopyImageResponse::CopyImageResponse(
         const CopyImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CopyImageResponse(new CopyImageResponsePrivate(this), parent)
+    : EC2Response(new CopyImageResponsePrivate(this), parent)
 {
     setRequest(new CopyImageRequest(request));
     setReply(reply);

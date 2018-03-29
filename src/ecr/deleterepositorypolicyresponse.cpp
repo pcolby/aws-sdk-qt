@@ -46,7 +46,7 @@ DeleteRepositoryPolicyResponse::DeleteRepositoryPolicyResponse(
         const DeleteRepositoryPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteRepositoryPolicyResponse(new DeleteRepositoryPolicyResponsePrivate(this), parent)
+    : ECRResponse(new DeleteRepositoryPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteRepositoryPolicyRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListNotebookInstancesResponse::ListNotebookInstancesResponse(
         const ListNotebookInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListNotebookInstancesResponse(new ListNotebookInstancesResponsePrivate(this), parent)
+    : SageMakerResponse(new ListNotebookInstancesResponsePrivate(this), parent)
 {
     setRequest(new ListNotebookInstancesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetModelResponse::GetModelResponse(
         const GetModelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetModelResponse(new GetModelResponsePrivate(this), parent)
+    : APIGatewayResponse(new GetModelResponsePrivate(this), parent)
 {
     setRequest(new GetModelRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DisassociateTeamMemberResponse::DisassociateTeamMemberResponse(
         const DisassociateTeamMemberRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateTeamMemberResponse(new DisassociateTeamMemberResponsePrivate(this), parent)
+    : CodeStarResponse(new DisassociateTeamMemberResponsePrivate(this), parent)
 {
     setRequest(new DisassociateTeamMemberRequest(request));
     setReply(reply);

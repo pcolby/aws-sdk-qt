@@ -46,7 +46,7 @@ DescribeAvailabilityZonesResponse::DescribeAvailabilityZonesResponse(
         const DescribeAvailabilityZonesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAvailabilityZonesResponse(new DescribeAvailabilityZonesResponsePrivate(this), parent)
+    : EC2Response(new DescribeAvailabilityZonesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAvailabilityZonesRequest(request));
     setReply(reply);

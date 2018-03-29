@@ -46,7 +46,7 @@ CreateBrokerResponse::CreateBrokerResponse(
         const CreateBrokerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateBrokerResponse(new CreateBrokerResponsePrivate(this), parent)
+    : MQResponse(new CreateBrokerResponsePrivate(this), parent)
 {
     setRequest(new CreateBrokerRequest(request));
     setReply(reply);

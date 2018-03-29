@@ -46,7 +46,7 @@ InviteAccountToOrganizationResponse::InviteAccountToOrganizationResponse(
         const InviteAccountToOrganizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InviteAccountToOrganizationResponse(new InviteAccountToOrganizationResponsePrivate(this), parent)
+    : OrganizationsResponse(new InviteAccountToOrganizationResponsePrivate(this), parent)
 {
     setRequest(new InviteAccountToOrganizationRequest(request));
     setReply(reply);

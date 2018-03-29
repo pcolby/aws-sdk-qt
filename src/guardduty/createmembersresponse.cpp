@@ -46,7 +46,7 @@ CreateMembersResponse::CreateMembersResponse(
         const CreateMembersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateMembersResponse(new CreateMembersResponsePrivate(this), parent)
+    : GuardDutyResponse(new CreateMembersResponsePrivate(this), parent)
 {
     setRequest(new CreateMembersRequest(request));
     setReply(reply);

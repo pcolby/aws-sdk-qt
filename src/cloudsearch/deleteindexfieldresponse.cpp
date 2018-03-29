@@ -46,7 +46,7 @@ DeleteIndexFieldResponse::DeleteIndexFieldResponse(
         const DeleteIndexFieldRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteIndexFieldResponse(new DeleteIndexFieldResponsePrivate(this), parent)
+    : CloudSearchResponse(new DeleteIndexFieldResponsePrivate(this), parent)
 {
     setRequest(new DeleteIndexFieldRequest(request));
     setReply(reply);

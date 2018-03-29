@@ -34,6 +34,11 @@ class QTAWS_EXPORT ECRResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     ECRResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    ECRResponse(ECRResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

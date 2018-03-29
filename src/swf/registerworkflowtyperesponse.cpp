@@ -46,7 +46,7 @@ RegisterWorkflowTypeResponse::RegisterWorkflowTypeResponse(
         const RegisterWorkflowTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RegisterWorkflowTypeResponse(new RegisterWorkflowTypeResponsePrivate(this), parent)
+    : SWFResponse(new RegisterWorkflowTypeResponsePrivate(this), parent)
 {
     setRequest(new RegisterWorkflowTypeRequest(request));
     setReply(reply);

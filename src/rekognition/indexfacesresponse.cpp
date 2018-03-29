@@ -46,7 +46,7 @@ IndexFacesResponse::IndexFacesResponse(
         const IndexFacesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IndexFacesResponse(new IndexFacesResponsePrivate(this), parent)
+    : RekognitionResponse(new IndexFacesResponsePrivate(this), parent)
 {
     setRequest(new IndexFacesRequest(request));
     setReply(reply);

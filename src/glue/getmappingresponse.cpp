@@ -46,7 +46,7 @@ GetMappingResponse::GetMappingResponse(
         const GetMappingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetMappingResponse(new GetMappingResponsePrivate(this), parent)
+    : GlueResponse(new GetMappingResponsePrivate(this), parent)
 {
     setRequest(new GetMappingRequest(request));
     setReply(reply);

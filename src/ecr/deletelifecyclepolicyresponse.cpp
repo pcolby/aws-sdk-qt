@@ -46,7 +46,7 @@ DeleteLifecyclePolicyResponse::DeleteLifecyclePolicyResponse(
         const DeleteLifecyclePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteLifecyclePolicyResponse(new DeleteLifecyclePolicyResponsePrivate(this), parent)
+    : ECRResponse(new DeleteLifecyclePolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteLifecyclePolicyRequest(request));
     setReply(reply);

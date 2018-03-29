@@ -46,7 +46,7 @@ DeleteProjectResponse::DeleteProjectResponse(
         const DeleteProjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteProjectResponse(new DeleteProjectResponsePrivate(this), parent)
+    : MobileResponse(new DeleteProjectResponsePrivate(this), parent)
 {
     setRequest(new DeleteProjectRequest(request));
     setReply(reply);

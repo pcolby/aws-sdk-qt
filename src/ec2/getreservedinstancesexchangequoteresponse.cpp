@@ -46,7 +46,7 @@ GetReservedInstancesExchangeQuoteResponse::GetReservedInstancesExchangeQuoteResp
         const GetReservedInstancesExchangeQuoteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetReservedInstancesExchangeQuoteResponse(new GetReservedInstancesExchangeQuoteResponsePrivate(this), parent)
+    : EC2Response(new GetReservedInstancesExchangeQuoteResponsePrivate(this), parent)
 {
     setRequest(new GetReservedInstancesExchangeQuoteRequest(request));
     setReply(reply);

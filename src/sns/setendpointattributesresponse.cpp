@@ -46,7 +46,7 @@ SetEndpointAttributesResponse::SetEndpointAttributesResponse(
         const SetEndpointAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetEndpointAttributesResponse(new SetEndpointAttributesResponsePrivate(this), parent)
+    : SNSResponse(new SetEndpointAttributesResponsePrivate(this), parent)
 {
     setRequest(new SetEndpointAttributesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetFunctionConfigurationResponse::GetFunctionConfigurationResponse(
         const GetFunctionConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetFunctionConfigurationResponse(new GetFunctionConfigurationResponsePrivate(this), parent)
+    : LambdaResponse(new GetFunctionConfigurationResponsePrivate(this), parent)
 {
     setRequest(new GetFunctionConfigurationRequest(request));
     setReply(reply);

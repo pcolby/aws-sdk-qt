@@ -46,7 +46,7 @@ CreateCertificateFromCsrResponse::CreateCertificateFromCsrResponse(
         const CreateCertificateFromCsrRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateCertificateFromCsrResponse(new CreateCertificateFromCsrResponsePrivate(this), parent)
+    : IoTResponse(new CreateCertificateFromCsrResponsePrivate(this), parent)
 {
     setRequest(new CreateCertificateFromCsrRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListLexiconsResponse::ListLexiconsResponse(
         const ListLexiconsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListLexiconsResponse(new ListLexiconsResponsePrivate(this), parent)
+    : PollyResponse(new ListLexiconsResponsePrivate(this), parent)
 {
     setRequest(new ListLexiconsRequest(request));
     setReply(reply);

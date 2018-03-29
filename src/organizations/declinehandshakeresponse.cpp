@@ -46,7 +46,7 @@ DeclineHandshakeResponse::DeclineHandshakeResponse(
         const DeclineHandshakeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeclineHandshakeResponse(new DeclineHandshakeResponsePrivate(this), parent)
+    : OrganizationsResponse(new DeclineHandshakeResponsePrivate(this), parent)
 {
     setRequest(new DeclineHandshakeRequest(request));
     setReply(reply);

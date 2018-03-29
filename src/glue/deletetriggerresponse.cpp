@@ -46,7 +46,7 @@ DeleteTriggerResponse::DeleteTriggerResponse(
         const DeleteTriggerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteTriggerResponse(new DeleteTriggerResponsePrivate(this), parent)
+    : GlueResponse(new DeleteTriggerResponsePrivate(this), parent)
 {
     setRequest(new DeleteTriggerRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ TestDNSAnswerResponse::TestDNSAnswerResponse(
         const TestDNSAnswerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : TestDNSAnswerResponse(new TestDNSAnswerResponsePrivate(this), parent)
+    : Route53Response(new TestDNSAnswerResponsePrivate(this), parent)
 {
     setRequest(new TestDNSAnswerRequest(request));
     setReply(reply);

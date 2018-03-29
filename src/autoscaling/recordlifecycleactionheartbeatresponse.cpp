@@ -46,7 +46,7 @@ RecordLifecycleActionHeartbeatResponse::RecordLifecycleActionHeartbeatResponse(
         const RecordLifecycleActionHeartbeatRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RecordLifecycleActionHeartbeatResponse(new RecordLifecycleActionHeartbeatResponsePrivate(this), parent)
+    : AutoScalingResponse(new RecordLifecycleActionHeartbeatResponsePrivate(this), parent)
 {
     setRequest(new RecordLifecycleActionHeartbeatRequest(request));
     setReply(reply);

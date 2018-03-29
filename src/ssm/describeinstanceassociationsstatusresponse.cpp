@@ -46,7 +46,7 @@ DescribeInstanceAssociationsStatusResponse::DescribeInstanceAssociationsStatusRe
         const DescribeInstanceAssociationsStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeInstanceAssociationsStatusResponse(new DescribeInstanceAssociationsStatusResponsePrivate(this), parent)
+    : SSMResponse(new DescribeInstanceAssociationsStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstanceAssociationsStatusRequest(request));
     setReply(reply);

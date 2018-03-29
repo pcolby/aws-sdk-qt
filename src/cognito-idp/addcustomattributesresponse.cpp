@@ -46,7 +46,7 @@ AddCustomAttributesResponse::AddCustomAttributesResponse(
         const AddCustomAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AddCustomAttributesResponse(new AddCustomAttributesResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new AddCustomAttributesResponsePrivate(this), parent)
 {
     setRequest(new AddCustomAttributesRequest(request));
     setReply(reply);

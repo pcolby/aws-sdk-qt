@@ -46,7 +46,7 @@ DeleteUploadResponse::DeleteUploadResponse(
         const DeleteUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteUploadResponse(new DeleteUploadResponsePrivate(this), parent)
+    : DeviceFarmResponse(new DeleteUploadResponsePrivate(this), parent)
 {
     setRequest(new DeleteUploadRequest(request));
     setReply(reply);

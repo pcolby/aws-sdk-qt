@@ -46,7 +46,7 @@ DescribeVpcEndpointConnectionsResponse::DescribeVpcEndpointConnectionsResponse(
         const DescribeVpcEndpointConnectionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeVpcEndpointConnectionsResponse(new DescribeVpcEndpointConnectionsResponsePrivate(this), parent)
+    : EC2Response(new DescribeVpcEndpointConnectionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeVpcEndpointConnectionsRequest(request));
     setReply(reply);

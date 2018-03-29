@@ -46,7 +46,7 @@ GetParametersByPathResponse::GetParametersByPathResponse(
         const GetParametersByPathRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetParametersByPathResponse(new GetParametersByPathResponsePrivate(this), parent)
+    : SSMResponse(new GetParametersByPathResponsePrivate(this), parent)
 {
     setRequest(new GetParametersByPathRequest(request));
     setReply(reply);

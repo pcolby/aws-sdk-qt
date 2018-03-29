@@ -46,7 +46,7 @@ DescribeActivitiesResponse::DescribeActivitiesResponse(
         const DescribeActivitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeActivitiesResponse(new DescribeActivitiesResponsePrivate(this), parent)
+    : WorkDocsResponse(new DescribeActivitiesResponsePrivate(this), parent)
 {
     setRequest(new DescribeActivitiesRequest(request));
     setReply(reply);

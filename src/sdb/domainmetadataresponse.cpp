@@ -46,7 +46,7 @@ DomainMetadataResponse::DomainMetadataResponse(
         const DomainMetadataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DomainMetadataResponse(new DomainMetadataResponsePrivate(this), parent)
+    : SimpleDBResponse(new DomainMetadataResponsePrivate(this), parent)
 {
     setRequest(new DomainMetadataRequest(request));
     setReply(reply);

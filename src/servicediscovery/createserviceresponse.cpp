@@ -46,7 +46,7 @@ CreateServiceResponse::CreateServiceResponse(
         const CreateServiceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateServiceResponse(new CreateServiceResponsePrivate(this), parent)
+    : ServiceDiscoveryResponse(new CreateServiceResponsePrivate(this), parent)
 {
     setRequest(new CreateServiceRequest(request));
     setReply(reply);

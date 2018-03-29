@@ -46,7 +46,7 @@ DeletePlatformVersionResponse::DeletePlatformVersionResponse(
         const DeletePlatformVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeletePlatformVersionResponse(new DeletePlatformVersionResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new DeletePlatformVersionResponsePrivate(this), parent)
 {
     setRequest(new DeletePlatformVersionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ AdminInitiateAuthResponse::AdminInitiateAuthResponse(
         const AdminInitiateAuthRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AdminInitiateAuthResponse(new AdminInitiateAuthResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new AdminInitiateAuthResponsePrivate(this), parent)
 {
     setRequest(new AdminInitiateAuthRequest(request));
     setReply(reply);

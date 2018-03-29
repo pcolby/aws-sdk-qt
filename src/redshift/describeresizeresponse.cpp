@@ -46,7 +46,7 @@ DescribeResizeResponse::DescribeResizeResponse(
         const DescribeResizeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeResizeResponse(new DescribeResizeResponsePrivate(this), parent)
+    : RedshiftResponse(new DescribeResizeResponsePrivate(this), parent)
 {
     setRequest(new DescribeResizeRequest(request));
     setReply(reply);

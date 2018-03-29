@@ -46,7 +46,7 @@ GetAssociatedRoleResponse::GetAssociatedRoleResponse(
         const GetAssociatedRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetAssociatedRoleResponse(new GetAssociatedRoleResponsePrivate(this), parent)
+    : GreengrassResponse(new GetAssociatedRoleResponsePrivate(this), parent)
 {
     setRequest(new GetAssociatedRoleRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribePatchGroupsResponse::DescribePatchGroupsResponse(
         const DescribePatchGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribePatchGroupsResponse(new DescribePatchGroupsResponsePrivate(this), parent)
+    : SSMResponse(new DescribePatchGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribePatchGroupsRequest(request));
     setReply(reply);

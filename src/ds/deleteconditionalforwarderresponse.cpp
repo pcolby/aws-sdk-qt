@@ -46,7 +46,7 @@ DeleteConditionalForwarderResponse::DeleteConditionalForwarderResponse(
         const DeleteConditionalForwarderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteConditionalForwarderResponse(new DeleteConditionalForwarderResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new DeleteConditionalForwarderResponsePrivate(this), parent)
 {
     setRequest(new DeleteConditionalForwarderRequest(request));
     setReply(reply);

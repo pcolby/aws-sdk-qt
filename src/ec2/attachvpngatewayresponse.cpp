@@ -46,7 +46,7 @@ AttachVpnGatewayResponse::AttachVpnGatewayResponse(
         const AttachVpnGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AttachVpnGatewayResponse(new AttachVpnGatewayResponsePrivate(this), parent)
+    : EC2Response(new AttachVpnGatewayResponsePrivate(this), parent)
 {
     setRequest(new AttachVpnGatewayRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateTrafficPolicyInstanceResponse::UpdateTrafficPolicyInstanceResponse(
         const UpdateTrafficPolicyInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateTrafficPolicyInstanceResponse(new UpdateTrafficPolicyInstanceResponsePrivate(this), parent)
+    : Route53Response(new UpdateTrafficPolicyInstanceResponsePrivate(this), parent)
 {
     setRequest(new UpdateTrafficPolicyInstanceRequest(request));
     setReply(reply);

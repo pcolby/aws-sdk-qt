@@ -46,7 +46,7 @@ DescribeCommentsResponse::DescribeCommentsResponse(
         const DescribeCommentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeCommentsResponse(new DescribeCommentsResponsePrivate(this), parent)
+    : WorkDocsResponse(new DescribeCommentsResponsePrivate(this), parent)
 {
     setRequest(new DescribeCommentsRequest(request));
     setReply(reply);

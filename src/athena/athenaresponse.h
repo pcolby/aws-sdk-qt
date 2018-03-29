@@ -34,6 +34,11 @@ class QTAWS_EXPORT AthenaResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     AthenaResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    AthenaResponse(AthenaResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

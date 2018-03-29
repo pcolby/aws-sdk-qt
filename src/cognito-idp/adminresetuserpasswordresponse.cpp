@@ -46,7 +46,7 @@ AdminResetUserPasswordResponse::AdminResetUserPasswordResponse(
         const AdminResetUserPasswordRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AdminResetUserPasswordResponse(new AdminResetUserPasswordResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new AdminResetUserPasswordResponsePrivate(this), parent)
 {
     setRequest(new AdminResetUserPasswordRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ModifyLaunchTemplateResponse::ModifyLaunchTemplateResponse(
         const ModifyLaunchTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyLaunchTemplateResponse(new ModifyLaunchTemplateResponsePrivate(this), parent)
+    : EC2Response(new ModifyLaunchTemplateResponsePrivate(this), parent)
 {
     setRequest(new ModifyLaunchTemplateRequest(request));
     setReply(reply);

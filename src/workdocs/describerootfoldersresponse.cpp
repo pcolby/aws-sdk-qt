@@ -46,7 +46,7 @@ DescribeRootFoldersResponse::DescribeRootFoldersResponse(
         const DescribeRootFoldersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeRootFoldersResponse(new DescribeRootFoldersResponsePrivate(this), parent)
+    : WorkDocsResponse(new DescribeRootFoldersResponsePrivate(this), parent)
 {
     setRequest(new DescribeRootFoldersRequest(request));
     setReply(reply);

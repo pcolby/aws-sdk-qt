@@ -46,7 +46,7 @@ GetChangeTokenResponse::GetChangeTokenResponse(
         const GetChangeTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetChangeTokenResponse(new GetChangeTokenResponsePrivate(this), parent)
+    : WAFRegionalResponse(new GetChangeTokenResponsePrivate(this), parent)
 {
     setRequest(new GetChangeTokenRequest(request));
     setReply(reply);

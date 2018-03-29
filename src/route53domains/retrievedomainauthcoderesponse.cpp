@@ -46,7 +46,7 @@ RetrieveDomainAuthCodeResponse::RetrieveDomainAuthCodeResponse(
         const RetrieveDomainAuthCodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RetrieveDomainAuthCodeResponse(new RetrieveDomainAuthCodeResponsePrivate(this), parent)
+    : Route53DomainsResponse(new RetrieveDomainAuthCodeResponsePrivate(this), parent)
 {
     setRequest(new RetrieveDomainAuthCodeRequest(request));
     setReply(reply);

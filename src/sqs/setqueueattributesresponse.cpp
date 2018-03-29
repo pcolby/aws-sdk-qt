@@ -46,7 +46,7 @@ SetQueueAttributesResponse::SetQueueAttributesResponse(
         const SetQueueAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetQueueAttributesResponse(new SetQueueAttributesResponsePrivate(this), parent)
+    : SQSResponse(new SetQueueAttributesResponsePrivate(this), parent)
 {
     setRequest(new SetQueueAttributesRequest(request));
     setReply(reply);

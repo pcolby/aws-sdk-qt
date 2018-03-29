@@ -46,7 +46,7 @@ GenerateCredentialReportResponse::GenerateCredentialReportResponse(
         const GenerateCredentialReportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GenerateCredentialReportResponse(new GenerateCredentialReportResponsePrivate(this), parent)
+    : IAMResponse(new GenerateCredentialReportResponsePrivate(this), parent)
 {
     setRequest(new GenerateCredentialReportRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteRoomResponse::DeleteRoomResponse(
         const DeleteRoomRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteRoomResponse(new DeleteRoomResponsePrivate(this), parent)
+    : AlexaForBusinessResponse(new DeleteRoomResponsePrivate(this), parent)
 {
     setRequest(new DeleteRoomRequest(request));
     setReply(reply);

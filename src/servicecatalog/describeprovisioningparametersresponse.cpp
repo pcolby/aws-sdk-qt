@@ -46,7 +46,7 @@ DescribeProvisioningParametersResponse::DescribeProvisioningParametersResponse(
         const DescribeProvisioningParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeProvisioningParametersResponse(new DescribeProvisioningParametersResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new DescribeProvisioningParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeProvisioningParametersRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListUserImportJobsResponse::ListUserImportJobsResponse(
         const ListUserImportJobsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListUserImportJobsResponse(new ListUserImportJobsResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new ListUserImportJobsResponsePrivate(this), parent)
 {
     setRequest(new ListUserImportJobsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateGlobalTableResponse::CreateGlobalTableResponse(
         const CreateGlobalTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateGlobalTableResponse(new CreateGlobalTableResponsePrivate(this), parent)
+    : DynamoDBResponse(new CreateGlobalTableResponsePrivate(this), parent)
 {
     setRequest(new CreateGlobalTableRequest(request));
     setReply(reply);

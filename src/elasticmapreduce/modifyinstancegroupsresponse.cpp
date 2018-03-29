@@ -46,7 +46,7 @@ ModifyInstanceGroupsResponse::ModifyInstanceGroupsResponse(
         const ModifyInstanceGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyInstanceGroupsResponse(new ModifyInstanceGroupsResponsePrivate(this), parent)
+    : EMRResponse(new ModifyInstanceGroupsResponsePrivate(this), parent)
 {
     setRequest(new ModifyInstanceGroupsRequest(request));
     setReply(reply);

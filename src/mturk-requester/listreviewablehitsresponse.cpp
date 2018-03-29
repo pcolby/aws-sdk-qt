@@ -46,7 +46,7 @@ ListReviewableHITsResponse::ListReviewableHITsResponse(
         const ListReviewableHITsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListReviewableHITsResponse(new ListReviewableHITsResponsePrivate(this), parent)
+    : MTurkResponse(new ListReviewableHITsResponsePrivate(this), parent)
 {
     setRequest(new ListReviewableHITsRequest(request));
     setReply(reply);

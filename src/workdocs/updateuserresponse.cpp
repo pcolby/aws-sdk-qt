@@ -46,7 +46,7 @@ UpdateUserResponse::UpdateUserResponse(
         const UpdateUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateUserResponse(new UpdateUserResponsePrivate(this), parent)
+    : WorkDocsResponse(new UpdateUserResponsePrivate(this), parent)
 {
     setRequest(new UpdateUserRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteBudgetResponse::DeleteBudgetResponse(
         const DeleteBudgetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteBudgetResponse(new DeleteBudgetResponsePrivate(this), parent)
+    : BudgetsResponse(new DeleteBudgetResponsePrivate(this), parent)
 {
     setRequest(new DeleteBudgetRequest(request));
     setReply(reply);

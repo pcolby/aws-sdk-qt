@@ -46,7 +46,7 @@ SubmitTaskStateChangeResponse::SubmitTaskStateChangeResponse(
         const SubmitTaskStateChangeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SubmitTaskStateChangeResponse(new SubmitTaskStateChangeResponsePrivate(this), parent)
+    : ECSResponse(new SubmitTaskStateChangeResponsePrivate(this), parent)
 {
     setRequest(new SubmitTaskStateChangeRequest(request));
     setReply(reply);

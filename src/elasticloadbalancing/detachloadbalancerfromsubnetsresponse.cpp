@@ -46,7 +46,7 @@ DetachLoadBalancerFromSubnetsResponse::DetachLoadBalancerFromSubnetsResponse(
         const DetachLoadBalancerFromSubnetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DetachLoadBalancerFromSubnetsResponse(new DetachLoadBalancerFromSubnetsResponsePrivate(this), parent)
+    : ElasticLoadBalancingResponse(new DetachLoadBalancerFromSubnetsResponsePrivate(this), parent)
 {
     setRequest(new DetachLoadBalancerFromSubnetsRequest(request));
     setReply(reply);

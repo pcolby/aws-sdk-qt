@@ -46,7 +46,7 @@ DeleteMethodResponse::DeleteMethodResponse(
         const DeleteMethodRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteMethodResponse(new DeleteMethodResponsePrivate(this), parent)
+    : APIGatewayResponse(new DeleteMethodResponsePrivate(this), parent)
 {
     setRequest(new DeleteMethodRequest(request));
     setReply(reply);

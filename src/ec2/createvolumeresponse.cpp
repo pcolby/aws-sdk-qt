@@ -46,7 +46,7 @@ CreateVolumeResponse::CreateVolumeResponse(
         const CreateVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateVolumeResponse(new CreateVolumeResponsePrivate(this), parent)
+    : EC2Response(new CreateVolumeResponsePrivate(this), parent)
 {
     setRequest(new CreateVolumeRequest(request));
     setReply(reply);

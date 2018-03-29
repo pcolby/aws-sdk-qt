@@ -46,7 +46,7 @@ DeleteActivationResponse::DeleteActivationResponse(
         const DeleteActivationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteActivationResponse(new DeleteActivationResponsePrivate(this), parent)
+    : SSMResponse(new DeleteActivationResponsePrivate(this), parent)
 {
     setRequest(new DeleteActivationRequest(request));
     setReply(reply);

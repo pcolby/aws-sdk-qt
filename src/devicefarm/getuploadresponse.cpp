@@ -46,7 +46,7 @@ GetUploadResponse::GetUploadResponse(
         const GetUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetUploadResponse(new GetUploadResponsePrivate(this), parent)
+    : DeviceFarmResponse(new GetUploadResponsePrivate(this), parent)
 {
     setRequest(new GetUploadRequest(request));
     setReply(reply);

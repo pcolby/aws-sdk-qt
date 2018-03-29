@@ -46,7 +46,7 @@ CreateBucketResponse::CreateBucketResponse(
         const CreateBucketRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateBucketResponse(new CreateBucketResponsePrivate(this), parent)
+    : S3Response(new CreateBucketResponsePrivate(this), parent)
 {
     setRequest(new CreateBucketRequest(request));
     setReply(reply);

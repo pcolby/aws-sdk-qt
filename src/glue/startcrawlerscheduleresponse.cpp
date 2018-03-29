@@ -46,7 +46,7 @@ StartCrawlerScheduleResponse::StartCrawlerScheduleResponse(
         const StartCrawlerScheduleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartCrawlerScheduleResponse(new StartCrawlerScheduleResponsePrivate(this), parent)
+    : GlueResponse(new StartCrawlerScheduleResponsePrivate(this), parent)
 {
     setRequest(new StartCrawlerScheduleRequest(request));
     setReply(reply);

@@ -34,6 +34,11 @@ class QTAWS_EXPORT ElasticsearchServiceResponse : public QtAws::Core::AwsAbstrac
 public:
     ElasticsearchServiceResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    ElasticsearchServiceResponse(ElasticsearchServiceResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

@@ -46,7 +46,7 @@ AcceptVpcEndpointConnectionsResponse::AcceptVpcEndpointConnectionsResponse(
         const AcceptVpcEndpointConnectionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AcceptVpcEndpointConnectionsResponse(new AcceptVpcEndpointConnectionsResponsePrivate(this), parent)
+    : EC2Response(new AcceptVpcEndpointConnectionsResponsePrivate(this), parent)
 {
     setRequest(new AcceptVpcEndpointConnectionsRequest(request));
     setReply(reply);

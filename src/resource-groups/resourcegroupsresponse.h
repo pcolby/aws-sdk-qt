@@ -34,6 +34,11 @@ class QTAWS_EXPORT ResourceGroupsResponse : public QtAws::Core::AwsAbstractRespo
 public:
     ResourceGroupsResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    ResourceGroupsResponse(ResourceGroupsResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

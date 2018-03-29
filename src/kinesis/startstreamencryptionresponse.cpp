@@ -46,7 +46,7 @@ StartStreamEncryptionResponse::StartStreamEncryptionResponse(
         const StartStreamEncryptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartStreamEncryptionResponse(new StartStreamEncryptionResponsePrivate(this), parent)
+    : KinesisResponse(new StartStreamEncryptionResponsePrivate(this), parent)
 {
     setRequest(new StartStreamEncryptionRequest(request));
     setReply(reply);

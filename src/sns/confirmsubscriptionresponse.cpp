@@ -46,7 +46,7 @@ ConfirmSubscriptionResponse::ConfirmSubscriptionResponse(
         const ConfirmSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfirmSubscriptionResponse(new ConfirmSubscriptionResponsePrivate(this), parent)
+    : SNSResponse(new ConfirmSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new ConfirmSubscriptionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteImportedKeyMaterialResponse::DeleteImportedKeyMaterialResponse(
         const DeleteImportedKeyMaterialRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteImportedKeyMaterialResponse(new DeleteImportedKeyMaterialResponsePrivate(this), parent)
+    : KMSResponse(new DeleteImportedKeyMaterialResponsePrivate(this), parent)
 {
     setRequest(new DeleteImportedKeyMaterialRequest(request));
     setReply(reply);

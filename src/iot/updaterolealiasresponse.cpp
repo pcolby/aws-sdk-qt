@@ -46,7 +46,7 @@ UpdateRoleAliasResponse::UpdateRoleAliasResponse(
         const UpdateRoleAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateRoleAliasResponse(new UpdateRoleAliasResponsePrivate(this), parent)
+    : IoTResponse(new UpdateRoleAliasResponsePrivate(this), parent)
 {
     setRequest(new UpdateRoleAliasRequest(request));
     setReply(reply);

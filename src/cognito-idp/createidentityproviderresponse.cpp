@@ -46,7 +46,7 @@ CreateIdentityProviderResponse::CreateIdentityProviderResponse(
         const CreateIdentityProviderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateIdentityProviderResponse(new CreateIdentityProviderResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new CreateIdentityProviderResponsePrivate(this), parent)
 {
     setRequest(new CreateIdentityProviderRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StartLabelDetectionResponse::StartLabelDetectionResponse(
         const StartLabelDetectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartLabelDetectionResponse(new StartLabelDetectionResponsePrivate(this), parent)
+    : RekognitionResponse(new StartLabelDetectionResponsePrivate(this), parent)
 {
     setRequest(new StartLabelDetectionRequest(request));
     setReply(reply);

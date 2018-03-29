@@ -46,7 +46,7 @@ DeleteAttributesResponse::DeleteAttributesResponse(
         const DeleteAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteAttributesResponse(new DeleteAttributesResponsePrivate(this), parent)
+    : ECSResponse(new DeleteAttributesResponsePrivate(this), parent)
 {
     setRequest(new DeleteAttributesRequest(request));
     setReply(reply);

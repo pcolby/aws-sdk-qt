@@ -46,7 +46,7 @@ GetLoginProfileResponse::GetLoginProfileResponse(
         const GetLoginProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetLoginProfileResponse(new GetLoginProfileResponsePrivate(this), parent)
+    : IAMResponse(new GetLoginProfileResponsePrivate(this), parent)
 {
     setRequest(new GetLoginProfileRequest(request));
     setReply(reply);

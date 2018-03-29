@@ -46,7 +46,7 @@ DeleteObjectsResponse::DeleteObjectsResponse(
         const DeleteObjectsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteObjectsResponse(new DeleteObjectsResponsePrivate(this), parent)
+    : S3Response(new DeleteObjectsResponsePrivate(this), parent)
 {
     setRequest(new DeleteObjectsRequest(request));
     setReply(reply);

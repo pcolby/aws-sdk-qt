@@ -46,7 +46,7 @@ ScheduleKeyDeletionResponse::ScheduleKeyDeletionResponse(
         const ScheduleKeyDeletionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ScheduleKeyDeletionResponse(new ScheduleKeyDeletionResponsePrivate(this), parent)
+    : KMSResponse(new ScheduleKeyDeletionResponsePrivate(this), parent)
 {
     setRequest(new ScheduleKeyDeletionRequest(request));
     setReply(reply);

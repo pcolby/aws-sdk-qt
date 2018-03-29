@@ -46,7 +46,7 @@ GetRegexPatternSetResponse::GetRegexPatternSetResponse(
         const GetRegexPatternSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetRegexPatternSetResponse(new GetRegexPatternSetResponsePrivate(this), parent)
+    : WAFResponse(new GetRegexPatternSetResponsePrivate(this), parent)
 {
     setRequest(new GetRegexPatternSetRequest(request));
     setReply(reply);

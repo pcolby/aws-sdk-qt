@@ -46,7 +46,7 @@ StartGatewayResponse::StartGatewayResponse(
         const StartGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartGatewayResponse(new StartGatewayResponsePrivate(this), parent)
+    : StorageGatewayResponse(new StartGatewayResponsePrivate(this), parent)
 {
     setRequest(new StartGatewayRequest(request));
     setReply(reply);

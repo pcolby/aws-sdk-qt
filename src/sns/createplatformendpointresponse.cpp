@@ -46,7 +46,7 @@ CreatePlatformEndpointResponse::CreatePlatformEndpointResponse(
         const CreatePlatformEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreatePlatformEndpointResponse(new CreatePlatformEndpointResponsePrivate(this), parent)
+    : SNSResponse(new CreatePlatformEndpointResponsePrivate(this), parent)
 {
     setRequest(new CreatePlatformEndpointRequest(request));
     setReply(reply);

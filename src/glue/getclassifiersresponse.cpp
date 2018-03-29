@@ -46,7 +46,7 @@ GetClassifiersResponse::GetClassifiersResponse(
         const GetClassifiersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetClassifiersResponse(new GetClassifiersResponsePrivate(this), parent)
+    : GlueResponse(new GetClassifiersResponsePrivate(this), parent)
 {
     setRequest(new GetClassifiersRequest(request));
     setReply(reply);

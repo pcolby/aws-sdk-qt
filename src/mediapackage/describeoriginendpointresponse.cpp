@@ -46,7 +46,7 @@ DescribeOriginEndpointResponse::DescribeOriginEndpointResponse(
         const DescribeOriginEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeOriginEndpointResponse(new DescribeOriginEndpointResponsePrivate(this), parent)
+    : MediaPackageResponse(new DescribeOriginEndpointResponsePrivate(this), parent)
 {
     setRequest(new DescribeOriginEndpointRequest(request));
     setReply(reply);

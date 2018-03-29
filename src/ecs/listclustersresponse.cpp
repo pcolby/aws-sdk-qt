@@ -46,7 +46,7 @@ ListClustersResponse::ListClustersResponse(
         const ListClustersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListClustersResponse(new ListClustersResponsePrivate(this), parent)
+    : ECSResponse(new ListClustersResponsePrivate(this), parent)
 {
     setRequest(new ListClustersRequest(request));
     setReply(reply);

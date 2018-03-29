@@ -46,7 +46,7 @@ TransferDomainResponse::TransferDomainResponse(
         const TransferDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : TransferDomainResponse(new TransferDomainResponsePrivate(this), parent)
+    : Route53DomainsResponse(new TransferDomainResponsePrivate(this), parent)
 {
     setRequest(new TransferDomainRequest(request));
     setReply(reply);

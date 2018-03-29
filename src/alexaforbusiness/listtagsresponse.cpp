@@ -46,7 +46,7 @@ ListTagsResponse::ListTagsResponse(
         const ListTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListTagsResponse(new ListTagsResponsePrivate(this), parent)
+    : AlexaForBusinessResponse(new ListTagsResponsePrivate(this), parent)
 {
     setRequest(new ListTagsRequest(request));
     setReply(reply);

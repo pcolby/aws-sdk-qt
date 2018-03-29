@@ -46,7 +46,7 @@ ChangeResourceRecordSetsResponse::ChangeResourceRecordSetsResponse(
         const ChangeResourceRecordSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ChangeResourceRecordSetsResponse(new ChangeResourceRecordSetsResponsePrivate(this), parent)
+    : Route53Response(new ChangeResourceRecordSetsResponsePrivate(this), parent)
 {
     setRequest(new ChangeResourceRecordSetsRequest(request));
     setReply(reply);

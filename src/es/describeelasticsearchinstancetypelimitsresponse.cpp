@@ -46,7 +46,7 @@ DescribeElasticsearchInstanceTypeLimitsResponse::DescribeElasticsearchInstanceTy
         const DescribeElasticsearchInstanceTypeLimitsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeElasticsearchInstanceTypeLimitsResponse(new DescribeElasticsearchInstanceTypeLimitsResponsePrivate(this), parent)
+    : ElasticsearchServiceResponse(new DescribeElasticsearchInstanceTypeLimitsResponsePrivate(this), parent)
 {
     setRequest(new DescribeElasticsearchInstanceTypeLimitsRequest(request));
     setReply(reply);

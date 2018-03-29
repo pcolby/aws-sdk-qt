@@ -46,7 +46,7 @@ StartApplicationResponse::StartApplicationResponse(
         const StartApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartApplicationResponse(new StartApplicationResponsePrivate(this), parent)
+    : KinesisAnalyticsResponse(new StartApplicationResponsePrivate(this), parent)
 {
     setRequest(new StartApplicationRequest(request));
     setReply(reply);

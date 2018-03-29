@@ -46,7 +46,7 @@ DescribeMetricCollectionTypesResponse::DescribeMetricCollectionTypesResponse(
         const DescribeMetricCollectionTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeMetricCollectionTypesResponse(new DescribeMetricCollectionTypesResponsePrivate(this), parent)
+    : AutoScalingResponse(new DescribeMetricCollectionTypesResponsePrivate(this), parent)
 {
     setRequest(new DescribeMetricCollectionTypesRequest(request));
     setReply(reply);

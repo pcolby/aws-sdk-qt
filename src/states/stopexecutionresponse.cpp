@@ -46,7 +46,7 @@ StopExecutionResponse::StopExecutionResponse(
         const StopExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopExecutionResponse(new StopExecutionResponsePrivate(this), parent)
+    : SFNResponse(new StopExecutionResponsePrivate(this), parent)
 {
     setRequest(new StopExecutionRequest(request));
     setReply(reply);

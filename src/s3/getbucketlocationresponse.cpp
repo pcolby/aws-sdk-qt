@@ -46,7 +46,7 @@ GetBucketLocationResponse::GetBucketLocationResponse(
         const GetBucketLocationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetBucketLocationResponse(new GetBucketLocationResponsePrivate(this), parent)
+    : S3Response(new GetBucketLocationResponsePrivate(this), parent)
 {
     setRequest(new GetBucketLocationRequest(request));
     setReply(reply);

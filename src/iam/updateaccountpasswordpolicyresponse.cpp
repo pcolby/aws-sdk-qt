@@ -46,7 +46,7 @@ UpdateAccountPasswordPolicyResponse::UpdateAccountPasswordPolicyResponse(
         const UpdateAccountPasswordPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateAccountPasswordPolicyResponse(new UpdateAccountPasswordPolicyResponsePrivate(this), parent)
+    : IAMResponse(new UpdateAccountPasswordPolicyResponsePrivate(this), parent)
 {
     setRequest(new UpdateAccountPasswordPolicyRequest(request));
     setReply(reply);

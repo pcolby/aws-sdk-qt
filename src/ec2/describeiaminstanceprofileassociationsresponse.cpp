@@ -46,7 +46,7 @@ DescribeIamInstanceProfileAssociationsResponse::DescribeIamInstanceProfileAssoci
         const DescribeIamInstanceProfileAssociationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeIamInstanceProfileAssociationsResponse(new DescribeIamInstanceProfileAssociationsResponsePrivate(this), parent)
+    : EC2Response(new DescribeIamInstanceProfileAssociationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeIamInstanceProfileAssociationsRequest(request));
     setReply(reply);

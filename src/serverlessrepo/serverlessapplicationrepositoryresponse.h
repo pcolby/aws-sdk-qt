@@ -34,6 +34,11 @@ class QTAWS_EXPORT ServerlessApplicationRepositoryResponse : public QtAws::Core:
 public:
     ServerlessApplicationRepositoryResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    ServerlessApplicationRepositoryResponse(ServerlessApplicationRepositoryResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

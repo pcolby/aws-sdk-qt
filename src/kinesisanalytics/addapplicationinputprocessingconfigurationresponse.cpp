@@ -46,7 +46,7 @@ AddApplicationInputProcessingConfigurationResponse::AddApplicationInputProcessin
         const AddApplicationInputProcessingConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AddApplicationInputProcessingConfigurationResponse(new AddApplicationInputProcessingConfigurationResponsePrivate(this), parent)
+    : KinesisAnalyticsResponse(new AddApplicationInputProcessingConfigurationResponsePrivate(this), parent)
 {
     setRequest(new AddApplicationInputProcessingConfigurationRequest(request));
     setReply(reply);

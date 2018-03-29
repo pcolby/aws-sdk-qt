@@ -46,7 +46,7 @@ RevokeSecurityGroupIngressResponse::RevokeSecurityGroupIngressResponse(
         const RevokeSecurityGroupIngressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RevokeSecurityGroupIngressResponse(new RevokeSecurityGroupIngressResponsePrivate(this), parent)
+    : EC2Response(new RevokeSecurityGroupIngressResponsePrivate(this), parent)
 {
     setRequest(new RevokeSecurityGroupIngressRequest(request));
     setReply(reply);

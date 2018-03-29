@@ -46,7 +46,7 @@ DescribeModelResponse::DescribeModelResponse(
         const DescribeModelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeModelResponse(new DescribeModelResponsePrivate(this), parent)
+    : SageMakerResponse(new DescribeModelResponsePrivate(this), parent)
 {
     setRequest(new DescribeModelRequest(request));
     setReply(reply);

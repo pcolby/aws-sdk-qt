@@ -46,7 +46,7 @@ UpdateContinuousBackupsResponse::UpdateContinuousBackupsResponse(
         const UpdateContinuousBackupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateContinuousBackupsResponse(new UpdateContinuousBackupsResponsePrivate(this), parent)
+    : DynamoDBResponse(new UpdateContinuousBackupsResponsePrivate(this), parent)
 {
     setRequest(new UpdateContinuousBackupsRequest(request));
     setReply(reply);

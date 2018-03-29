@@ -46,7 +46,7 @@ CreateDataSourceFromRDSResponse::CreateDataSourceFromRDSResponse(
         const CreateDataSourceFromRDSRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateDataSourceFromRDSResponse(new CreateDataSourceFromRDSResponsePrivate(this), parent)
+    : MachineLearningResponse(new CreateDataSourceFromRDSResponsePrivate(this), parent)
 {
     setRequest(new CreateDataSourceFromRDSRequest(request));
     setReply(reply);

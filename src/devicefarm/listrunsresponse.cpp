@@ -46,7 +46,7 @@ ListRunsResponse::ListRunsResponse(
         const ListRunsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListRunsResponse(new ListRunsResponsePrivate(this), parent)
+    : DeviceFarmResponse(new ListRunsResponsePrivate(this), parent)
 {
     setRequest(new ListRunsRequest(request));
     setReply(reply);

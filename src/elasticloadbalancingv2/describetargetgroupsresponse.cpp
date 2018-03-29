@@ -46,7 +46,7 @@ DescribeTargetGroupsResponse::DescribeTargetGroupsResponse(
         const DescribeTargetGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeTargetGroupsResponse(new DescribeTargetGroupsResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new DescribeTargetGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeTargetGroupsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListAcceptedPortfolioSharesResponse::ListAcceptedPortfolioSharesResponse(
         const ListAcceptedPortfolioSharesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListAcceptedPortfolioSharesResponse(new ListAcceptedPortfolioSharesResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new ListAcceptedPortfolioSharesResponsePrivate(this), parent)
 {
     setRequest(new ListAcceptedPortfolioSharesRequest(request));
     setReply(reply);

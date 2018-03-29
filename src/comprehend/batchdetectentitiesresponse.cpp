@@ -46,7 +46,7 @@ BatchDetectEntitiesResponse::BatchDetectEntitiesResponse(
         const BatchDetectEntitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchDetectEntitiesResponse(new BatchDetectEntitiesResponsePrivate(this), parent)
+    : ComprehendResponse(new BatchDetectEntitiesResponsePrivate(this), parent)
 {
     setRequest(new BatchDetectEntitiesRequest(request));
     setReply(reply);

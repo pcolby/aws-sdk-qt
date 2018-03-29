@@ -46,7 +46,7 @@ SetLocalConsolePasswordResponse::SetLocalConsolePasswordResponse(
         const SetLocalConsolePasswordRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetLocalConsolePasswordResponse(new SetLocalConsolePasswordResponsePrivate(this), parent)
+    : StorageGatewayResponse(new SetLocalConsolePasswordResponsePrivate(this), parent)
 {
     setRequest(new SetLocalConsolePasswordRequest(request));
     setReply(reply);

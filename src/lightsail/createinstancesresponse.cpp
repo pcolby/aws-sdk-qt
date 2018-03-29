@@ -46,7 +46,7 @@ CreateInstancesResponse::CreateInstancesResponse(
         const CreateInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateInstancesResponse(new CreateInstancesResponsePrivate(this), parent)
+    : LightsailResponse(new CreateInstancesResponsePrivate(this), parent)
 {
     setRequest(new CreateInstancesRequest(request));
     setReply(reply);

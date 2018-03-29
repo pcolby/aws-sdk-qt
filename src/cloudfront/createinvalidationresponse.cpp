@@ -46,7 +46,7 @@ CreateInvalidationResponse::CreateInvalidationResponse(
         const CreateInvalidationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateInvalidationResponse(new CreateInvalidationResponsePrivate(this), parent)
+    : CloudFrontResponse(new CreateInvalidationResponsePrivate(this), parent)
 {
     setRequest(new CreateInvalidationRequest(request));
     setReply(reply);

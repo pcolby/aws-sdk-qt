@@ -46,7 +46,7 @@ DisassociateFleetResponse::DisassociateFleetResponse(
         const DisassociateFleetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateFleetResponse(new DisassociateFleetResponsePrivate(this), parent)
+    : AppStreamResponse(new DisassociateFleetResponsePrivate(this), parent)
 {
     setRequest(new DisassociateFleetRequest(request));
     setReply(reply);

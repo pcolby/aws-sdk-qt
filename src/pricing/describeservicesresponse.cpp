@@ -46,7 +46,7 @@ DescribeServicesResponse::DescribeServicesResponse(
         const DescribeServicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeServicesResponse(new DescribeServicesResponsePrivate(this), parent)
+    : PricingResponse(new DescribeServicesResponsePrivate(this), parent)
 {
     setRequest(new DescribeServicesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeregisterVolumeResponse::DeregisterVolumeResponse(
         const DeregisterVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeregisterVolumeResponse(new DeregisterVolumeResponsePrivate(this), parent)
+    : OpsWorksResponse(new DeregisterVolumeResponsePrivate(this), parent)
 {
     setRequest(new DeregisterVolumeRequest(request));
     setReply(reply);

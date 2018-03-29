@@ -46,7 +46,7 @@ CreateNotificationSubscriptionResponse::CreateNotificationSubscriptionResponse(
         const CreateNotificationSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateNotificationSubscriptionResponse(new CreateNotificationSubscriptionResponsePrivate(this), parent)
+    : WorkDocsResponse(new CreateNotificationSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new CreateNotificationSubscriptionRequest(request));
     setReply(reply);

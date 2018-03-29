@@ -46,7 +46,7 @@ EnableDomainTransferLockResponse::EnableDomainTransferLockResponse(
         const EnableDomainTransferLockRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EnableDomainTransferLockResponse(new EnableDomainTransferLockResponsePrivate(this), parent)
+    : Route53DomainsResponse(new EnableDomainTransferLockResponsePrivate(this), parent)
 {
     setRequest(new EnableDomainTransferLockRequest(request));
     setReply(reply);

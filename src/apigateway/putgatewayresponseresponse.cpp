@@ -46,7 +46,7 @@ PutGatewayResponseResponse::PutGatewayResponseResponse(
         const PutGatewayResponseRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutGatewayResponseResponse(new PutGatewayResponseResponsePrivate(this), parent)
+    : APIGatewayResponse(new PutGatewayResponseResponsePrivate(this), parent)
 {
     setRequest(new PutGatewayResponseRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateConnectionResponse::CreateConnectionResponse(
         const CreateConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateConnectionResponse(new CreateConnectionResponsePrivate(this), parent)
+    : DirectConnectResponse(new CreateConnectionResponsePrivate(this), parent)
 {
     setRequest(new CreateConnectionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateDhcpOptionsResponse::CreateDhcpOptionsResponse(
         const CreateDhcpOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateDhcpOptionsResponse(new CreateDhcpOptionsResponsePrivate(this), parent)
+    : EC2Response(new CreateDhcpOptionsResponsePrivate(this), parent)
 {
     setRequest(new CreateDhcpOptionsRequest(request));
     setReply(reply);

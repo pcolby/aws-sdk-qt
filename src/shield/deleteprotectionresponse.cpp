@@ -46,7 +46,7 @@ DeleteProtectionResponse::DeleteProtectionResponse(
         const DeleteProtectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteProtectionResponse(new DeleteProtectionResponsePrivate(this), parent)
+    : ShieldResponse(new DeleteProtectionResponsePrivate(this), parent)
 {
     setRequest(new DeleteProtectionRequest(request));
     setReply(reply);

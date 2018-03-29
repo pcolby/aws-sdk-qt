@@ -46,7 +46,7 @@ PutBucketNotificationConfigurationResponse::PutBucketNotificationConfigurationRe
         const PutBucketNotificationConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutBucketNotificationConfigurationResponse(new PutBucketNotificationConfigurationResponsePrivate(this), parent)
+    : S3Response(new PutBucketNotificationConfigurationResponsePrivate(this), parent)
 {
     setRequest(new PutBucketNotificationConfigurationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteSubscriptionDefinitionResponse::DeleteSubscriptionDefinitionResponse(
         const DeleteSubscriptionDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSubscriptionDefinitionResponse(new DeleteSubscriptionDefinitionResponsePrivate(this), parent)
+    : GreengrassResponse(new DeleteSubscriptionDefinitionResponsePrivate(this), parent)
 {
     setRequest(new DeleteSubscriptionDefinitionRequest(request));
     setReply(reply);

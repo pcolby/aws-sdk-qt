@@ -46,7 +46,7 @@ DescribeBandwidthRateLimitResponse::DescribeBandwidthRateLimitResponse(
         const DescribeBandwidthRateLimitRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeBandwidthRateLimitResponse(new DescribeBandwidthRateLimitResponsePrivate(this), parent)
+    : StorageGatewayResponse(new DescribeBandwidthRateLimitResponsePrivate(this), parent)
 {
     setRequest(new DescribeBandwidthRateLimitRequest(request));
     setReply(reply);

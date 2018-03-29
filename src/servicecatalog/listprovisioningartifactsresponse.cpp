@@ -46,7 +46,7 @@ ListProvisioningArtifactsResponse::ListProvisioningArtifactsResponse(
         const ListProvisioningArtifactsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListProvisioningArtifactsResponse(new ListProvisioningArtifactsResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new ListProvisioningArtifactsResponsePrivate(this), parent)
 {
     setRequest(new ListProvisioningArtifactsRequest(request));
     setReply(reply);

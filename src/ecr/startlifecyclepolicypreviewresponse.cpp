@@ -46,7 +46,7 @@ StartLifecyclePolicyPreviewResponse::StartLifecyclePolicyPreviewResponse(
         const StartLifecyclePolicyPreviewRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartLifecyclePolicyPreviewResponse(new StartLifecyclePolicyPreviewResponsePrivate(this), parent)
+    : ECRResponse(new StartLifecyclePolicyPreviewResponsePrivate(this), parent)
 {
     setRequest(new StartLifecyclePolicyPreviewRequest(request));
     setReply(reply);

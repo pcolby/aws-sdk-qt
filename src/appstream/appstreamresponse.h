@@ -34,6 +34,11 @@ class QTAWS_EXPORT AppStreamResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     AppStreamResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    AppStreamResponse(AppStreamResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

@@ -46,7 +46,7 @@ DisassociateRoleFromGroupResponse::DisassociateRoleFromGroupResponse(
         const DisassociateRoleFromGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateRoleFromGroupResponse(new DisassociateRoleFromGroupResponsePrivate(this), parent)
+    : GreengrassResponse(new DisassociateRoleFromGroupResponsePrivate(this), parent)
 {
     setRequest(new DisassociateRoleFromGroupRequest(request));
     setReply(reply);

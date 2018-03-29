@@ -46,7 +46,7 @@ TerminateEnvironmentResponse::TerminateEnvironmentResponse(
         const TerminateEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : TerminateEnvironmentResponse(new TerminateEnvironmentResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new TerminateEnvironmentResponsePrivate(this), parent)
 {
     setRequest(new TerminateEnvironmentRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListApplicationRevisionsResponse::ListApplicationRevisionsResponse(
         const ListApplicationRevisionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListApplicationRevisionsResponse(new ListApplicationRevisionsResponsePrivate(this), parent)
+    : CodeDeployResponse(new ListApplicationRevisionsResponsePrivate(this), parent)
 {
     setRequest(new ListApplicationRevisionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeRuleResponse::DescribeRuleResponse(
         const DescribeRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeRuleResponse(new DescribeRuleResponsePrivate(this), parent)
+    : CloudWatchEventsResponse(new DescribeRuleResponsePrivate(this), parent)
 {
     setRequest(new DescribeRuleRequest(request));
     setReply(reply);

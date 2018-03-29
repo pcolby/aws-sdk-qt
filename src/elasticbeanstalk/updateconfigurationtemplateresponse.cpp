@@ -46,7 +46,7 @@ UpdateConfigurationTemplateResponse::UpdateConfigurationTemplateResponse(
         const UpdateConfigurationTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateConfigurationTemplateResponse(new UpdateConfigurationTemplateResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new UpdateConfigurationTemplateResponsePrivate(this), parent)
 {
     setRequest(new UpdateConfigurationTemplateRequest(request));
     setReply(reply);

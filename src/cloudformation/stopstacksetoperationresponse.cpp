@@ -46,7 +46,7 @@ StopStackSetOperationResponse::StopStackSetOperationResponse(
         const StopStackSetOperationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopStackSetOperationResponse(new StopStackSetOperationResponsePrivate(this), parent)
+    : CloudFormationResponse(new StopStackSetOperationResponsePrivate(this), parent)
 {
     setRequest(new StopStackSetOperationRequest(request));
     setReply(reply);

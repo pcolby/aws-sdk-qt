@@ -46,7 +46,7 @@ ExecutePolicyResponse::ExecutePolicyResponse(
         const ExecutePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ExecutePolicyResponse(new ExecutePolicyResponsePrivate(this), parent)
+    : AutoScalingResponse(new ExecutePolicyResponsePrivate(this), parent)
 {
     setRequest(new ExecutePolicyRequest(request));
     setReply(reply);

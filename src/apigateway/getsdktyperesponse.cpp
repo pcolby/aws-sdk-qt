@@ -46,7 +46,7 @@ GetSdkTypeResponse::GetSdkTypeResponse(
         const GetSdkTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetSdkTypeResponse(new GetSdkTypeResponsePrivate(this), parent)
+    : APIGatewayResponse(new GetSdkTypeResponsePrivate(this), parent)
 {
     setRequest(new GetSdkTypeRequest(request));
     setReply(reply);

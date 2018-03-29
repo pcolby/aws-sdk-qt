@@ -46,7 +46,7 @@ AddInstanceGroupsResponse::AddInstanceGroupsResponse(
         const AddInstanceGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AddInstanceGroupsResponse(new AddInstanceGroupsResponsePrivate(this), parent)
+    : EMRResponse(new AddInstanceGroupsResponsePrivate(this), parent)
 {
     setRequest(new AddInstanceGroupsRequest(request));
     setReply(reply);

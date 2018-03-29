@@ -46,7 +46,7 @@ DescribeFleetCapacityResponse::DescribeFleetCapacityResponse(
         const DescribeFleetCapacityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeFleetCapacityResponse(new DescribeFleetCapacityResponsePrivate(this), parent)
+    : GameLiftResponse(new DescribeFleetCapacityResponsePrivate(this), parent)
 {
     setRequest(new DescribeFleetCapacityRequest(request));
     setReply(reply);

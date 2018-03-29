@@ -46,7 +46,7 @@ SendCustomVerificationEmailResponse::SendCustomVerificationEmailResponse(
         const SendCustomVerificationEmailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SendCustomVerificationEmailResponse(new SendCustomVerificationEmailResponsePrivate(this), parent)
+    : SESResponse(new SendCustomVerificationEmailResponsePrivate(this), parent)
 {
     setRequest(new SendCustomVerificationEmailRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ArchiveFindingsResponse::ArchiveFindingsResponse(
         const ArchiveFindingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ArchiveFindingsResponse(new ArchiveFindingsResponsePrivate(this), parent)
+    : GuardDutyResponse(new ArchiveFindingsResponsePrivate(this), parent)
 {
     setRequest(new ArchiveFindingsRequest(request));
     setReply(reply);

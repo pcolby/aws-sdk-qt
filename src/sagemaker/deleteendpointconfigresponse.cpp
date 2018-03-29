@@ -46,7 +46,7 @@ DeleteEndpointConfigResponse::DeleteEndpointConfigResponse(
         const DeleteEndpointConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteEndpointConfigResponse(new DeleteEndpointConfigResponsePrivate(this), parent)
+    : SageMakerResponse(new DeleteEndpointConfigResponsePrivate(this), parent)
 {
     setRequest(new DeleteEndpointConfigRequest(request));
     setReply(reply);

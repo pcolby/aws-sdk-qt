@@ -46,7 +46,7 @@ BatchDeleteTableResponse::BatchDeleteTableResponse(
         const BatchDeleteTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchDeleteTableResponse(new BatchDeleteTableResponsePrivate(this), parent)
+    : GlueResponse(new BatchDeleteTableResponsePrivate(this), parent)
 {
     setRequest(new BatchDeleteTableRequest(request));
     setReply(reply);

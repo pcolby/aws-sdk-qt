@@ -46,7 +46,7 @@ CreateStackResponse::CreateStackResponse(
         const CreateStackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateStackResponse(new CreateStackResponsePrivate(this), parent)
+    : AppStreamResponse(new CreateStackResponsePrivate(this), parent)
 {
     setRequest(new CreateStackRequest(request));
     setReply(reply);

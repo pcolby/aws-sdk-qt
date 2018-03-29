@@ -46,7 +46,7 @@ DisableSsoResponse::DisableSsoResponse(
         const DisableSsoRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisableSsoResponse(new DisableSsoResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new DisableSsoResponsePrivate(this), parent)
 {
     setRequest(new DisableSsoRequest(request));
     setReply(reply);

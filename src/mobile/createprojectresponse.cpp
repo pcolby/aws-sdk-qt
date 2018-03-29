@@ -46,7 +46,7 @@ CreateProjectResponse::CreateProjectResponse(
         const CreateProjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateProjectResponse(new CreateProjectResponsePrivate(this), parent)
+    : MobileResponse(new CreateProjectResponsePrivate(this), parent)
 {
     setRequest(new CreateProjectRequest(request));
     setReply(reply);

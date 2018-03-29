@@ -46,7 +46,7 @@ ListGroupsResponse::ListGroupsResponse(
         const ListGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListGroupsResponse(new ListGroupsResponsePrivate(this), parent)
+    : WorkMailResponse(new ListGroupsResponsePrivate(this), parent)
 {
     setRequest(new ListGroupsRequest(request));
     setReply(reply);

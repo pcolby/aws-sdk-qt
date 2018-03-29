@@ -46,7 +46,7 @@ SubscribeResponse::SubscribeResponse(
         const SubscribeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SubscribeResponse(new SubscribeResponsePrivate(this), parent)
+    : SNSResponse(new SubscribeResponsePrivate(this), parent)
 {
     setRequest(new SubscribeRequest(request));
     setReply(reply);

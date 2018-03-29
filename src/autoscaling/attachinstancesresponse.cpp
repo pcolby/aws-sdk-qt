@@ -46,7 +46,7 @@ AttachInstancesResponse::AttachInstancesResponse(
         const AttachInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AttachInstancesResponse(new AttachInstancesResponsePrivate(this), parent)
+    : AutoScalingResponse(new AttachInstancesResponsePrivate(this), parent)
 {
     setRequest(new AttachInstancesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateWebhookResponse::UpdateWebhookResponse(
         const UpdateWebhookRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateWebhookResponse(new UpdateWebhookResponsePrivate(this), parent)
+    : CodeBuildResponse(new UpdateWebhookResponsePrivate(this), parent)
 {
     setRequest(new UpdateWebhookRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeregisterEventTopicResponse::DeregisterEventTopicResponse(
         const DeregisterEventTopicRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeregisterEventTopicResponse(new DeregisterEventTopicResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new DeregisterEventTopicResponsePrivate(this), parent)
 {
     setRequest(new DeregisterEventTopicRequest(request));
     setReply(reply);

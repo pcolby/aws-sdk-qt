@@ -46,7 +46,7 @@ DeregisterTargetsResponse::DeregisterTargetsResponse(
         const DeregisterTargetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeregisterTargetsResponse(new DeregisterTargetsResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new DeregisterTargetsResponsePrivate(this), parent)
 {
     setRequest(new DeregisterTargetsRequest(request));
     setReply(reply);

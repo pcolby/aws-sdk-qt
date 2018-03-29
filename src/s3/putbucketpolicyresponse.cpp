@@ -46,7 +46,7 @@ PutBucketPolicyResponse::PutBucketPolicyResponse(
         const PutBucketPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutBucketPolicyResponse(new PutBucketPolicyResponsePrivate(this), parent)
+    : S3Response(new PutBucketPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutBucketPolicyRequest(request));
     setReply(reply);

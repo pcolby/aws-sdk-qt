@@ -46,7 +46,7 @@ EnableMetricsCollectionResponse::EnableMetricsCollectionResponse(
         const EnableMetricsCollectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EnableMetricsCollectionResponse(new EnableMetricsCollectionResponsePrivate(this), parent)
+    : AutoScalingResponse(new EnableMetricsCollectionResponsePrivate(this), parent)
 {
     setRequest(new EnableMetricsCollectionRequest(request));
     setReply(reply);

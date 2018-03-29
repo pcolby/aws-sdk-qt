@@ -46,7 +46,7 @@ ListQueuesResponse::ListQueuesResponse(
         const ListQueuesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListQueuesResponse(new ListQueuesResponsePrivate(this), parent)
+    : SQSResponse(new ListQueuesResponsePrivate(this), parent)
 {
     setRequest(new ListQueuesRequest(request));
     setReply(reply);

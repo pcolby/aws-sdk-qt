@@ -46,7 +46,7 @@ DeleteInstanceSnapshotResponse::DeleteInstanceSnapshotResponse(
         const DeleteInstanceSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteInstanceSnapshotResponse(new DeleteInstanceSnapshotResponsePrivate(this), parent)
+    : LightsailResponse(new DeleteInstanceSnapshotResponsePrivate(this), parent)
 {
     setRequest(new DeleteInstanceSnapshotRequest(request));
     setReply(reply);

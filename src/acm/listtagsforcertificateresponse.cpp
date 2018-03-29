@@ -46,7 +46,7 @@ ListTagsForCertificateResponse::ListTagsForCertificateResponse(
         const ListTagsForCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListTagsForCertificateResponse(new ListTagsForCertificateResponsePrivate(this), parent)
+    : ACMResponse(new ListTagsForCertificateResponsePrivate(this), parent)
 {
     setRequest(new ListTagsForCertificateRequest(request));
     setReply(reply);

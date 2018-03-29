@@ -46,7 +46,7 @@ ListClosedWorkflowExecutionsResponse::ListClosedWorkflowExecutionsResponse(
         const ListClosedWorkflowExecutionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListClosedWorkflowExecutionsResponse(new ListClosedWorkflowExecutionsResponsePrivate(this), parent)
+    : SWFResponse(new ListClosedWorkflowExecutionsResponsePrivate(this), parent)
 {
     setRequest(new ListClosedWorkflowExecutionsRequest(request));
     setReply(reply);

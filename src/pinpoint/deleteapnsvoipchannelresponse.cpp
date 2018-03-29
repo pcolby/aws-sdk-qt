@@ -46,7 +46,7 @@ DeleteApnsVoipChannelResponse::DeleteApnsVoipChannelResponse(
         const DeleteApnsVoipChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteApnsVoipChannelResponse(new DeleteApnsVoipChannelResponsePrivate(this), parent)
+    : PinpointResponse(new DeleteApnsVoipChannelResponsePrivate(this), parent)
 {
     setRequest(new DeleteApnsVoipChannelRequest(request));
     setReply(reply);

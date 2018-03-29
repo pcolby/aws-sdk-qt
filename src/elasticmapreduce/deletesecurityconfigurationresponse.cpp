@@ -46,7 +46,7 @@ DeleteSecurityConfigurationResponse::DeleteSecurityConfigurationResponse(
         const DeleteSecurityConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSecurityConfigurationResponse(new DeleteSecurityConfigurationResponsePrivate(this), parent)
+    : EMRResponse(new DeleteSecurityConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DeleteSecurityConfigurationRequest(request));
     setReply(reply);

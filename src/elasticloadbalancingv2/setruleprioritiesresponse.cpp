@@ -46,7 +46,7 @@ SetRulePrioritiesResponse::SetRulePrioritiesResponse(
         const SetRulePrioritiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetRulePrioritiesResponse(new SetRulePrioritiesResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new SetRulePrioritiesResponsePrivate(this), parent)
 {
     setRequest(new SetRulePrioritiesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeVirtualInterfacesResponse::DescribeVirtualInterfacesResponse(
         const DescribeVirtualInterfacesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeVirtualInterfacesResponse(new DescribeVirtualInterfacesResponsePrivate(this), parent)
+    : DirectConnectResponse(new DescribeVirtualInterfacesResponsePrivate(this), parent)
 {
     setRequest(new DescribeVirtualInterfacesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteReplicationJobResponse::DeleteReplicationJobResponse(
         const DeleteReplicationJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteReplicationJobResponse(new DeleteReplicationJobResponsePrivate(this), parent)
+    : SMSResponse(new DeleteReplicationJobResponsePrivate(this), parent)
 {
     setRequest(new DeleteReplicationJobRequest(request));
     setReply(reply);

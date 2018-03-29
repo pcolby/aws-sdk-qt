@@ -46,7 +46,7 @@ UnlinkDeveloperIdentityResponse::UnlinkDeveloperIdentityResponse(
         const UnlinkDeveloperIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UnlinkDeveloperIdentityResponse(new UnlinkDeveloperIdentityResponsePrivate(this), parent)
+    : CognitoIdentityResponse(new UnlinkDeveloperIdentityResponsePrivate(this), parent)
 {
     setRequest(new UnlinkDeveloperIdentityRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetGcmChannelResponse::GetGcmChannelResponse(
         const GetGcmChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetGcmChannelResponse(new GetGcmChannelResponsePrivate(this), parent)
+    : PinpointResponse(new GetGcmChannelResponsePrivate(this), parent)
 {
     setRequest(new GetGcmChannelRequest(request));
     setReply(reply);

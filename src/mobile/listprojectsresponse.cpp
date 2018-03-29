@@ -46,7 +46,7 @@ ListProjectsResponse::ListProjectsResponse(
         const ListProjectsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListProjectsResponse(new ListProjectsResponsePrivate(this), parent)
+    : MobileResponse(new ListProjectsResponsePrivate(this), parent)
 {
     setRequest(new ListProjectsRequest(request));
     setReply(reply);

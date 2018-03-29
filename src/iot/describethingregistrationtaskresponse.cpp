@@ -46,7 +46,7 @@ DescribeThingRegistrationTaskResponse::DescribeThingRegistrationTaskResponse(
         const DescribeThingRegistrationTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeThingRegistrationTaskResponse(new DescribeThingRegistrationTaskResponsePrivate(this), parent)
+    : IoTResponse(new DescribeThingRegistrationTaskResponsePrivate(this), parent)
 {
     setRequest(new DescribeThingRegistrationTaskRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListObjectsV2Response::ListObjectsV2Response(
         const ListObjectsV2Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListObjectsV2Response(new ListObjectsV2ResponsePrivate(this), parent)
+    : S3Response(new ListObjectsV2ResponsePrivate(this), parent)
 {
     setRequest(new ListObjectsV2Request(request));
     setReply(reply);

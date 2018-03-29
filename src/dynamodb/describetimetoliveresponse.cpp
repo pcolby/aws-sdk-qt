@@ -46,7 +46,7 @@ DescribeTimeToLiveResponse::DescribeTimeToLiveResponse(
         const DescribeTimeToLiveRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeTimeToLiveResponse(new DescribeTimeToLiveResponsePrivate(this), parent)
+    : DynamoDBResponse(new DescribeTimeToLiveResponsePrivate(this), parent)
 {
     setRequest(new DescribeTimeToLiveRequest(request));
     setReply(reply);

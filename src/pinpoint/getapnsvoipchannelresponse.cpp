@@ -46,7 +46,7 @@ GetApnsVoipChannelResponse::GetApnsVoipChannelResponse(
         const GetApnsVoipChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetApnsVoipChannelResponse(new GetApnsVoipChannelResponsePrivate(this), parent)
+    : PinpointResponse(new GetApnsVoipChannelResponsePrivate(this), parent)
 {
     setRequest(new GetApnsVoipChannelRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteClusterResponse::DeleteClusterResponse(
         const DeleteClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteClusterResponse(new DeleteClusterResponsePrivate(this), parent)
+    : CloudHSMV2Response(new DeleteClusterResponsePrivate(this), parent)
 {
     setRequest(new DeleteClusterRequest(request));
     setReply(reply);

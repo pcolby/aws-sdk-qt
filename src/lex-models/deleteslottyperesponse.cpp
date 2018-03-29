@@ -46,7 +46,7 @@ DeleteSlotTypeResponse::DeleteSlotTypeResponse(
         const DeleteSlotTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSlotTypeResponse(new DeleteSlotTypeResponsePrivate(this), parent)
+    : LexModelBuildingServiceResponse(new DeleteSlotTypeResponsePrivate(this), parent)
 {
     setRequest(new DeleteSlotTypeRequest(request));
     setReply(reply);

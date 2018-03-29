@@ -46,7 +46,7 @@ CreateVpnGatewayResponse::CreateVpnGatewayResponse(
         const CreateVpnGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateVpnGatewayResponse(new CreateVpnGatewayResponsePrivate(this), parent)
+    : EC2Response(new CreateVpnGatewayResponsePrivate(this), parent)
 {
     setRequest(new CreateVpnGatewayRequest(request));
     setReply(reply);

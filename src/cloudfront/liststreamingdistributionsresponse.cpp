@@ -46,7 +46,7 @@ ListStreamingDistributionsResponse::ListStreamingDistributionsResponse(
         const ListStreamingDistributionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListStreamingDistributionsResponse(new ListStreamingDistributionsResponsePrivate(this), parent)
+    : CloudFrontResponse(new ListStreamingDistributionsResponsePrivate(this), parent)
 {
     setRequest(new ListStreamingDistributionsRequest(request));
     setReply(reply);

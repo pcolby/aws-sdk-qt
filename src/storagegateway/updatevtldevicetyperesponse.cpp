@@ -46,7 +46,7 @@ UpdateVTLDeviceTypeResponse::UpdateVTLDeviceTypeResponse(
         const UpdateVTLDeviceTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateVTLDeviceTypeResponse(new UpdateVTLDeviceTypeResponsePrivate(this), parent)
+    : StorageGatewayResponse(new UpdateVTLDeviceTypeResponsePrivate(this), parent)
 {
     setRequest(new UpdateVTLDeviceTypeRequest(request));
     setReply(reply);

@@ -46,6 +46,24 @@ MobileAnalyticsResponse::MobileAnalyticsResponse(QObject * const parent)
 }
 
 /**
+ * @internal
+ *
+ * @brief  Constructs a new MobileAnalyticsResponse object.
+ *
+ *
+ * This overload allows derived classes to provide their own private class
+ * implementation that inherits from MobileAnalyticsResponsePrivate.
+ *
+ * @param  d       Pointer to private data (aka D-Pointer).
+ * @param  parent  This object's parent.
+ */
+MobileAnalyticsResponse::MobileAnalyticsResponse(MobileAnalyticsResponsePrivate * const d, QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
+{
+
+}
+
+/**
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.

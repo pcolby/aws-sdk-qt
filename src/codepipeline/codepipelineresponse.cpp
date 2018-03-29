@@ -46,6 +46,24 @@ CodePipelineResponse::CodePipelineResponse(QObject * const parent)
 }
 
 /**
+ * @internal
+ *
+ * @brief  Constructs a new CodePipelineResponse object.
+ *
+ *
+ * This overload allows derived classes to provide their own private class
+ * implementation that inherits from CodePipelineResponsePrivate.
+ *
+ * @param  d       Pointer to private data (aka D-Pointer).
+ * @param  parent  This object's parent.
+ */
+CodePipelineResponse::CodePipelineResponse(CodePipelineResponsePrivate * const d, QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
+{
+
+}
+
+/**
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.

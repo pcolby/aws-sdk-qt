@@ -46,7 +46,7 @@ StartJobRunResponse::StartJobRunResponse(
         const StartJobRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartJobRunResponse(new StartJobRunResponsePrivate(this), parent)
+    : GlueResponse(new StartJobRunResponsePrivate(this), parent)
 {
     setRequest(new StartJobRunRequest(request));
     setReply(reply);

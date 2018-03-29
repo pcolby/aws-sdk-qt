@@ -46,7 +46,7 @@ CreateImageResponse::CreateImageResponse(
         const CreateImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateImageResponse(new CreateImageResponsePrivate(this), parent)
+    : EC2Response(new CreateImageResponsePrivate(this), parent)
 {
     setRequest(new CreateImageRequest(request));
     setReply(reply);

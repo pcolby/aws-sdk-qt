@@ -46,7 +46,7 @@ EnableAvailabilityZonesForLoadBalancerResponse::EnableAvailabilityZonesForLoadBa
         const EnableAvailabilityZonesForLoadBalancerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EnableAvailabilityZonesForLoadBalancerResponse(new EnableAvailabilityZonesForLoadBalancerResponsePrivate(this), parent)
+    : ElasticLoadBalancingResponse(new EnableAvailabilityZonesForLoadBalancerResponsePrivate(this), parent)
 {
     setRequest(new EnableAvailabilityZonesForLoadBalancerRequest(request));
     setReply(reply);

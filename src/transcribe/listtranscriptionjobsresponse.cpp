@@ -46,7 +46,7 @@ ListTranscriptionJobsResponse::ListTranscriptionJobsResponse(
         const ListTranscriptionJobsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListTranscriptionJobsResponse(new ListTranscriptionJobsResponsePrivate(this), parent)
+    : TranscribeServiceResponse(new ListTranscriptionJobsResponsePrivate(this), parent)
 {
     setRequest(new ListTranscriptionJobsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateManagedInstanceRoleResponse::UpdateManagedInstanceRoleResponse(
         const UpdateManagedInstanceRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateManagedInstanceRoleResponse(new UpdateManagedInstanceRoleResponsePrivate(this), parent)
+    : SSMResponse(new UpdateManagedInstanceRoleResponsePrivate(this), parent)
 {
     setRequest(new UpdateManagedInstanceRoleRequest(request));
     setReply(reply);

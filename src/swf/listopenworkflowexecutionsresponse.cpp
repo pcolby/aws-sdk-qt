@@ -46,7 +46,7 @@ ListOpenWorkflowExecutionsResponse::ListOpenWorkflowExecutionsResponse(
         const ListOpenWorkflowExecutionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListOpenWorkflowExecutionsResponse(new ListOpenWorkflowExecutionsResponsePrivate(this), parent)
+    : SWFResponse(new ListOpenWorkflowExecutionsResponsePrivate(this), parent)
 {
     setRequest(new ListOpenWorkflowExecutionsRequest(request));
     setReply(reply);

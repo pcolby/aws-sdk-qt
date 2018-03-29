@@ -46,7 +46,7 @@ ListAvailableSolutionStacksResponse::ListAvailableSolutionStacksResponse(
         const ListAvailableSolutionStacksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListAvailableSolutionStacksResponse(new ListAvailableSolutionStacksResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new ListAvailableSolutionStacksResponsePrivate(this), parent)
 {
     setRequest(new ListAvailableSolutionStacksRequest(request));
     setReply(reply);

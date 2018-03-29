@@ -46,7 +46,7 @@ StartAutomationExecutionResponse::StartAutomationExecutionResponse(
         const StartAutomationExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartAutomationExecutionResponse(new StartAutomationExecutionResponsePrivate(this), parent)
+    : SSMResponse(new StartAutomationExecutionResponsePrivate(this), parent)
 {
     setRequest(new StartAutomationExecutionRequest(request));
     setReply(reply);

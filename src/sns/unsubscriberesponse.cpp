@@ -46,7 +46,7 @@ UnsubscribeResponse::UnsubscribeResponse(
         const UnsubscribeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UnsubscribeResponse(new UnsubscribeResponsePrivate(this), parent)
+    : SNSResponse(new UnsubscribeResponsePrivate(this), parent)
 {
     setRequest(new UnsubscribeRequest(request));
     setReply(reply);

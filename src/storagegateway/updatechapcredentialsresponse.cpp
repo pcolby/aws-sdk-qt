@@ -46,7 +46,7 @@ UpdateChapCredentialsResponse::UpdateChapCredentialsResponse(
         const UpdateChapCredentialsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateChapCredentialsResponse(new UpdateChapCredentialsResponsePrivate(this), parent)
+    : StorageGatewayResponse(new UpdateChapCredentialsResponsePrivate(this), parent)
 {
     setRequest(new UpdateChapCredentialsRequest(request));
     setReply(reply);

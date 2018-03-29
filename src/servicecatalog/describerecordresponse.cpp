@@ -46,7 +46,7 @@ DescribeRecordResponse::DescribeRecordResponse(
         const DescribeRecordRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeRecordResponse(new DescribeRecordResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new DescribeRecordResponsePrivate(this), parent)
 {
     setRequest(new DescribeRecordRequest(request));
     setReply(reply);

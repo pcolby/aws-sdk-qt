@@ -46,7 +46,7 @@ CreateDirectConnectGatewayResponse::CreateDirectConnectGatewayResponse(
         const CreateDirectConnectGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateDirectConnectGatewayResponse(new CreateDirectConnectGatewayResponsePrivate(this), parent)
+    : DirectConnectResponse(new CreateDirectConnectGatewayResponsePrivate(this), parent)
 {
     setRequest(new CreateDirectConnectGatewayRequest(request));
     setReply(reply);

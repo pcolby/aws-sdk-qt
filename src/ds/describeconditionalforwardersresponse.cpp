@@ -46,7 +46,7 @@ DescribeConditionalForwardersResponse::DescribeConditionalForwardersResponse(
         const DescribeConditionalForwardersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeConditionalForwardersResponse(new DescribeConditionalForwardersResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new DescribeConditionalForwardersResponsePrivate(this), parent)
 {
     setRequest(new DescribeConditionalForwardersRequest(request));
     setReply(reply);

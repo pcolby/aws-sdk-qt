@@ -46,7 +46,7 @@ ListLoggerDefinitionVersionsResponse::ListLoggerDefinitionVersionsResponse(
         const ListLoggerDefinitionVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListLoggerDefinitionVersionsResponse(new ListLoggerDefinitionVersionsResponsePrivate(this), parent)
+    : GreengrassResponse(new ListLoggerDefinitionVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListLoggerDefinitionVersionsRequest(request));
     setReply(reply);

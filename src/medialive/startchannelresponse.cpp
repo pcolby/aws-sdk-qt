@@ -46,7 +46,7 @@ StartChannelResponse::StartChannelResponse(
         const StartChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartChannelResponse(new StartChannelResponsePrivate(this), parent)
+    : MediaLiveResponse(new StartChannelResponsePrivate(this), parent)
 {
     setRequest(new StartChannelRequest(request));
     setReply(reply);

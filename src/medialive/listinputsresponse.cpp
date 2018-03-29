@@ -46,7 +46,7 @@ ListInputsResponse::ListInputsResponse(
         const ListInputsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListInputsResponse(new ListInputsResponsePrivate(this), parent)
+    : MediaLiveResponse(new ListInputsResponsePrivate(this), parent)
 {
     setRequest(new ListInputsRequest(request));
     setReply(reply);

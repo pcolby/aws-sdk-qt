@@ -46,7 +46,7 @@ UpdateEndpointWeightsAndCapacitiesResponse::UpdateEndpointWeightsAndCapacitiesRe
         const UpdateEndpointWeightsAndCapacitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateEndpointWeightsAndCapacitiesResponse(new UpdateEndpointWeightsAndCapacitiesResponsePrivate(this), parent)
+    : SageMakerResponse(new UpdateEndpointWeightsAndCapacitiesResponsePrivate(this), parent)
 {
     setRequest(new UpdateEndpointWeightsAndCapacitiesRequest(request));
     setReply(reply);

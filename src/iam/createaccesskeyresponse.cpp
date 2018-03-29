@@ -46,7 +46,7 @@ CreateAccessKeyResponse::CreateAccessKeyResponse(
         const CreateAccessKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateAccessKeyResponse(new CreateAccessKeyResponsePrivate(this), parent)
+    : IAMResponse(new CreateAccessKeyResponsePrivate(this), parent)
 {
     setRequest(new CreateAccessKeyRequest(request));
     setReply(reply);

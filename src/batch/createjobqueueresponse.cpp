@@ -46,7 +46,7 @@ CreateJobQueueResponse::CreateJobQueueResponse(
         const CreateJobQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateJobQueueResponse(new CreateJobQueueResponsePrivate(this), parent)
+    : BatchResponse(new CreateJobQueueResponsePrivate(this), parent)
 {
     setRequest(new CreateJobQueueRequest(request));
     setReply(reply);

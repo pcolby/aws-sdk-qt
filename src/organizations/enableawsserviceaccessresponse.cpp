@@ -46,7 +46,7 @@ EnableAWSServiceAccessResponse::EnableAWSServiceAccessResponse(
         const EnableAWSServiceAccessRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EnableAWSServiceAccessResponse(new EnableAWSServiceAccessResponsePrivate(this), parent)
+    : OrganizationsResponse(new EnableAWSServiceAccessResponsePrivate(this), parent)
 {
     setRequest(new EnableAWSServiceAccessRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetMediaForFragmentListResponse::GetMediaForFragmentListResponse(
         const GetMediaForFragmentListRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetMediaForFragmentListResponse(new GetMediaForFragmentListResponsePrivate(this), parent)
+    : KinesisVideoArchivedMediaResponse(new GetMediaForFragmentListResponsePrivate(this), parent)
 {
     setRequest(new GetMediaForFragmentListRequest(request));
     setReply(reply);

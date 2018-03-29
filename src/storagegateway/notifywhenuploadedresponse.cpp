@@ -46,7 +46,7 @@ NotifyWhenUploadedResponse::NotifyWhenUploadedResponse(
         const NotifyWhenUploadedRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : NotifyWhenUploadedResponse(new NotifyWhenUploadedResponsePrivate(this), parent)
+    : StorageGatewayResponse(new NotifyWhenUploadedResponsePrivate(this), parent)
 {
     setRequest(new NotifyWhenUploadedRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ TestRoleResponse::TestRoleResponse(
         const TestRoleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : TestRoleResponse(new TestRoleResponsePrivate(this), parent)
+    : ElasticTranscoderResponse(new TestRoleResponsePrivate(this), parent)
 {
     setRequest(new TestRoleRequest(request));
     setReply(reply);

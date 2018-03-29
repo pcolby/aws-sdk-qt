@@ -46,7 +46,7 @@ AssociateSubnetCidrBlockResponse::AssociateSubnetCidrBlockResponse(
         const AssociateSubnetCidrBlockRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssociateSubnetCidrBlockResponse(new AssociateSubnetCidrBlockResponsePrivate(this), parent)
+    : EC2Response(new AssociateSubnetCidrBlockResponsePrivate(this), parent)
 {
     setRequest(new AssociateSubnetCidrBlockRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ BatchDeleteImageResponse::BatchDeleteImageResponse(
         const BatchDeleteImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchDeleteImageResponse(new BatchDeleteImageResponsePrivate(this), parent)
+    : ECRResponse(new BatchDeleteImageResponsePrivate(this), parent)
 {
     setRequest(new BatchDeleteImageRequest(request));
     setReply(reply);

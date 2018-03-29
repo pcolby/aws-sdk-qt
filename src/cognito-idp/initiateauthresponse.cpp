@@ -46,7 +46,7 @@ InitiateAuthResponse::InitiateAuthResponse(
         const InitiateAuthRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InitiateAuthResponse(new InitiateAuthResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new InitiateAuthResponsePrivate(this), parent)
 {
     setRequest(new InitiateAuthRequest(request));
     setReply(reply);

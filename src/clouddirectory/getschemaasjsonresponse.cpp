@@ -46,7 +46,7 @@ GetSchemaAsJsonResponse::GetSchemaAsJsonResponse(
         const GetSchemaAsJsonRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetSchemaAsJsonResponse(new GetSchemaAsJsonResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new GetSchemaAsJsonResponsePrivate(this), parent)
 {
     setRequest(new GetSchemaAsJsonRequest(request));
     setReply(reply);

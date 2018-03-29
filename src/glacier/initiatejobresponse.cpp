@@ -46,7 +46,7 @@ InitiateJobResponse::InitiateJobResponse(
         const InitiateJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InitiateJobResponse(new InitiateJobResponsePrivate(this), parent)
+    : GlacierResponse(new InitiateJobResponsePrivate(this), parent)
 {
     setRequest(new InitiateJobRequest(request));
     setReply(reply);

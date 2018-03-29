@@ -46,7 +46,7 @@ IsVpcPeeredResponse::IsVpcPeeredResponse(
         const IsVpcPeeredRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IsVpcPeeredResponse(new IsVpcPeeredResponsePrivate(this), parent)
+    : LightsailResponse(new IsVpcPeeredResponsePrivate(this), parent)
 {
     setRequest(new IsVpcPeeredRequest(request));
     setReply(reply);

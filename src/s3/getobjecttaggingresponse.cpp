@@ -46,7 +46,7 @@ GetObjectTaggingResponse::GetObjectTaggingResponse(
         const GetObjectTaggingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetObjectTaggingResponse(new GetObjectTaggingResponsePrivate(this), parent)
+    : S3Response(new GetObjectTaggingResponsePrivate(this), parent)
 {
     setRequest(new GetObjectTaggingRequest(request));
     setReply(reply);

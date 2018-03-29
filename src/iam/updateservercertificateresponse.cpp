@@ -46,7 +46,7 @@ UpdateServerCertificateResponse::UpdateServerCertificateResponse(
         const UpdateServerCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateServerCertificateResponse(new UpdateServerCertificateResponsePrivate(this), parent)
+    : IAMResponse(new UpdateServerCertificateResponsePrivate(this), parent)
 {
     setRequest(new UpdateServerCertificateRequest(request));
     setReply(reply);

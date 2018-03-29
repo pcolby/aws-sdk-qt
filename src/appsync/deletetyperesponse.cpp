@@ -46,7 +46,7 @@ DeleteTypeResponse::DeleteTypeResponse(
         const DeleteTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteTypeResponse(new DeleteTypeResponsePrivate(this), parent)
+    : AppSyncResponse(new DeleteTypeResponsePrivate(this), parent)
 {
     setRequest(new DeleteTypeRequest(request));
     setReply(reply);

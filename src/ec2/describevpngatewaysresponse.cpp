@@ -46,7 +46,7 @@ DescribeVpnGatewaysResponse::DescribeVpnGatewaysResponse(
         const DescribeVpnGatewaysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeVpnGatewaysResponse(new DescribeVpnGatewaysResponsePrivate(this), parent)
+    : EC2Response(new DescribeVpnGatewaysResponsePrivate(this), parent)
 {
     setRequest(new DescribeVpnGatewaysRequest(request));
     setReply(reply);

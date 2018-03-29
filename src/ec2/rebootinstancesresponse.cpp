@@ -46,7 +46,7 @@ RebootInstancesResponse::RebootInstancesResponse(
         const RebootInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RebootInstancesResponse(new RebootInstancesResponsePrivate(this), parent)
+    : EC2Response(new RebootInstancesResponsePrivate(this), parent)
 {
     setRequest(new RebootInstancesRequest(request));
     setReply(reply);

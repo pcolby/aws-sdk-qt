@@ -34,6 +34,11 @@ class QTAWS_EXPORT CloudSearchDomainResponse : public QtAws::Core::AwsAbstractRe
 public:
     CloudSearchDomainResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    CloudSearchDomainResponse(CloudSearchDomainResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

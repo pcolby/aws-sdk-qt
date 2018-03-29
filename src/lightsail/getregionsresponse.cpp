@@ -46,7 +46,7 @@ GetRegionsResponse::GetRegionsResponse(
         const GetRegionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetRegionsResponse(new GetRegionsResponsePrivate(this), parent)
+    : LightsailResponse(new GetRegionsResponsePrivate(this), parent)
 {
     setRequest(new GetRegionsRequest(request));
     setReply(reply);

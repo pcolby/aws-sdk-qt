@@ -46,7 +46,7 @@ DescribeAccountAttributesResponse::DescribeAccountAttributesResponse(
         const DescribeAccountAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAccountAttributesResponse(new DescribeAccountAttributesResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new DescribeAccountAttributesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAccountAttributesRequest(request));
     setReply(reply);

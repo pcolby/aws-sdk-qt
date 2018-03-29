@@ -46,7 +46,7 @@ RemoveThingFromThingGroupResponse::RemoveThingFromThingGroupResponse(
         const RemoveThingFromThingGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RemoveThingFromThingGroupResponse(new RemoveThingFromThingGroupResponsePrivate(this), parent)
+    : IoTResponse(new RemoveThingFromThingGroupResponsePrivate(this), parent)
 {
     setRequest(new RemoveThingFromThingGroupRequest(request));
     setReply(reply);

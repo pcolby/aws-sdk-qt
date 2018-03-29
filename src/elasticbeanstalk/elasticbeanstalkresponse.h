@@ -34,6 +34,11 @@ class QTAWS_EXPORT ElasticBeanstalkResponse : public QtAws::Core::AwsAbstractRes
 public:
     ElasticBeanstalkResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    ElasticBeanstalkResponse(ElasticBeanstalkResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

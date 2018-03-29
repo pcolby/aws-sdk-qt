@@ -46,7 +46,7 @@ ListGatewaysResponse::ListGatewaysResponse(
         const ListGatewaysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListGatewaysResponse(new ListGatewaysResponsePrivate(this), parent)
+    : StorageGatewayResponse(new ListGatewaysResponsePrivate(this), parent)
 {
     setRequest(new ListGatewaysRequest(request));
     setReply(reply);

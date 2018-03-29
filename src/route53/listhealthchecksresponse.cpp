@@ -46,7 +46,7 @@ ListHealthChecksResponse::ListHealthChecksResponse(
         const ListHealthChecksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListHealthChecksResponse(new ListHealthChecksResponsePrivate(this), parent)
+    : Route53Response(new ListHealthChecksResponsePrivate(this), parent)
 {
     setRequest(new ListHealthChecksRequest(request));
     setReply(reply);

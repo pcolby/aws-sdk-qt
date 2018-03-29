@@ -46,7 +46,7 @@ SetInstanceProtectionResponse::SetInstanceProtectionResponse(
         const SetInstanceProtectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetInstanceProtectionResponse(new SetInstanceProtectionResponsePrivate(this), parent)
+    : AutoScalingResponse(new SetInstanceProtectionResponsePrivate(this), parent)
 {
     setRequest(new SetInstanceProtectionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateServerResponse::CreateServerResponse(
         const CreateServerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateServerResponse(new CreateServerResponsePrivate(this), parent)
+    : OpsWorksCMResponse(new CreateServerResponsePrivate(this), parent)
 {
     setRequest(new CreateServerRequest(request));
     setReply(reply);

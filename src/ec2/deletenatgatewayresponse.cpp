@@ -46,7 +46,7 @@ DeleteNatGatewayResponse::DeleteNatGatewayResponse(
         const DeleteNatGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteNatGatewayResponse(new DeleteNatGatewayResponsePrivate(this), parent)
+    : EC2Response(new DeleteNatGatewayResponsePrivate(this), parent)
 {
     setRequest(new DeleteNatGatewayRequest(request));
     setReply(reply);

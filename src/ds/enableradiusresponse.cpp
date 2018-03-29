@@ -46,7 +46,7 @@ EnableRadiusResponse::EnableRadiusResponse(
         const EnableRadiusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EnableRadiusResponse(new EnableRadiusResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new EnableRadiusResponsePrivate(this), parent)
 {
     setRequest(new EnableRadiusRequest(request));
     setReply(reply);

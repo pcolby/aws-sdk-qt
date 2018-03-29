@@ -46,7 +46,7 @@ CreateEnvironmentResponse::CreateEnvironmentResponse(
         const CreateEnvironmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateEnvironmentResponse(new CreateEnvironmentResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new CreateEnvironmentResponsePrivate(this), parent)
 {
     setRequest(new CreateEnvironmentRequest(request));
     setReply(reply);

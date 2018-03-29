@@ -46,7 +46,7 @@ AllocateAddressResponse::AllocateAddressResponse(
         const AllocateAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AllocateAddressResponse(new AllocateAddressResponsePrivate(this), parent)
+    : EC2Response(new AllocateAddressResponsePrivate(this), parent)
 {
     setRequest(new AllocateAddressRequest(request));
     setReply(reply);

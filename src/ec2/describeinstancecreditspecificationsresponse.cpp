@@ -46,7 +46,7 @@ DescribeInstanceCreditSpecificationsResponse::DescribeInstanceCreditSpecificatio
         const DescribeInstanceCreditSpecificationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeInstanceCreditSpecificationsResponse(new DescribeInstanceCreditSpecificationsResponsePrivate(this), parent)
+    : EC2Response(new DescribeInstanceCreditSpecificationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstanceCreditSpecificationsRequest(request));
     setReply(reply);

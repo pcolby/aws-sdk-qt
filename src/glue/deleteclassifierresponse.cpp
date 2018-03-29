@@ -46,7 +46,7 @@ DeleteClassifierResponse::DeleteClassifierResponse(
         const DeleteClassifierRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteClassifierResponse(new DeleteClassifierResponsePrivate(this), parent)
+    : GlueResponse(new DeleteClassifierResponsePrivate(this), parent)
 {
     setRequest(new DeleteClassifierRequest(request));
     setReply(reply);

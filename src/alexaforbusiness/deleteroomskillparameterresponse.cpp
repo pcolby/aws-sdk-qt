@@ -46,7 +46,7 @@ DeleteRoomSkillParameterResponse::DeleteRoomSkillParameterResponse(
         const DeleteRoomSkillParameterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteRoomSkillParameterResponse(new DeleteRoomSkillParameterResponsePrivate(this), parent)
+    : AlexaForBusinessResponse(new DeleteRoomSkillParameterResponsePrivate(this), parent)
 {
     setRequest(new DeleteRoomSkillParameterRequest(request));
     setReply(reply);

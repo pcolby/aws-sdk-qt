@@ -46,7 +46,7 @@ GetSubscriptionStateResponse::GetSubscriptionStateResponse(
         const GetSubscriptionStateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetSubscriptionStateResponse(new GetSubscriptionStateResponsePrivate(this), parent)
+    : ShieldResponse(new GetSubscriptionStateResponsePrivate(this), parent)
 {
     setRequest(new GetSubscriptionStateRequest(request));
     setReply(reply);

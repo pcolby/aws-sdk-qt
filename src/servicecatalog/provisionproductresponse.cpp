@@ -46,7 +46,7 @@ ProvisionProductResponse::ProvisionProductResponse(
         const ProvisionProductRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ProvisionProductResponse(new ProvisionProductResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new ProvisionProductResponsePrivate(this), parent)
 {
     setRequest(new ProvisionProductRequest(request));
     setReply(reply);

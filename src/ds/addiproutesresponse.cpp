@@ -46,7 +46,7 @@ AddIpRoutesResponse::AddIpRoutesResponse(
         const AddIpRoutesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AddIpRoutesResponse(new AddIpRoutesResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new AddIpRoutesResponsePrivate(this), parent)
 {
     setRequest(new AddIpRoutesRequest(request));
     setReply(reply);

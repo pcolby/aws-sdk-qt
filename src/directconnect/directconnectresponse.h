@@ -34,6 +34,11 @@ class QTAWS_EXPORT DirectConnectResponse : public QtAws::Core::AwsAbstractRespon
 public:
     DirectConnectResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    DirectConnectResponse(DirectConnectResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

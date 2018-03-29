@@ -46,7 +46,7 @@ DeleteGitHubAccountTokenResponse::DeleteGitHubAccountTokenResponse(
         const DeleteGitHubAccountTokenRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteGitHubAccountTokenResponse(new DeleteGitHubAccountTokenResponsePrivate(this), parent)
+    : CodeDeployResponse(new DeleteGitHubAccountTokenResponsePrivate(this), parent)
 {
     setRequest(new DeleteGitHubAccountTokenRequest(request));
     setReply(reply);

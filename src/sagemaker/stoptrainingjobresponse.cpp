@@ -46,7 +46,7 @@ StopTrainingJobResponse::StopTrainingJobResponse(
         const StopTrainingJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopTrainingJobResponse(new StopTrainingJobResponsePrivate(this), parent)
+    : SageMakerResponse(new StopTrainingJobResponsePrivate(this), parent)
 {
     setRequest(new StopTrainingJobRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateConfigurationSetTrackingOptionsResponse::CreateConfigurationSetTrackingOpt
         const CreateConfigurationSetTrackingOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateConfigurationSetTrackingOptionsResponse(new CreateConfigurationSetTrackingOptionsResponsePrivate(this), parent)
+    : SESResponse(new CreateConfigurationSetTrackingOptionsResponsePrivate(this), parent)
 {
     setRequest(new CreateConfigurationSetTrackingOptionsRequest(request));
     setReply(reply);

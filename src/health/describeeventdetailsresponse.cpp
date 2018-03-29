@@ -46,7 +46,7 @@ DescribeEventDetailsResponse::DescribeEventDetailsResponse(
         const DescribeEventDetailsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeEventDetailsResponse(new DescribeEventDetailsResponsePrivate(this), parent)
+    : HealthResponse(new DescribeEventDetailsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEventDetailsRequest(request));
     setReply(reply);

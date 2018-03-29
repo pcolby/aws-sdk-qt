@@ -46,7 +46,7 @@ InitiateVaultLockResponse::InitiateVaultLockResponse(
         const InitiateVaultLockRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InitiateVaultLockResponse(new InitiateVaultLockResponsePrivate(this), parent)
+    : GlacierResponse(new InitiateVaultLockResponsePrivate(this), parent)
 {
     setRequest(new InitiateVaultLockRequest(request));
     setReply(reply);

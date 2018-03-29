@@ -46,7 +46,7 @@ EvaluateExpressionResponse::EvaluateExpressionResponse(
         const EvaluateExpressionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EvaluateExpressionResponse(new EvaluateExpressionResponsePrivate(this), parent)
+    : DataPipelineResponse(new EvaluateExpressionResponsePrivate(this), parent)
 {
     setRequest(new EvaluateExpressionRequest(request));
     setReply(reply);

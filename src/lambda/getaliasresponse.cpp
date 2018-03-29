@@ -46,7 +46,7 @@ GetAliasResponse::GetAliasResponse(
         const GetAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetAliasResponse(new GetAliasResponsePrivate(this), parent)
+    : LambdaResponse(new GetAliasResponsePrivate(this), parent)
 {
     setRequest(new GetAliasRequest(request));
     setReply(reply);

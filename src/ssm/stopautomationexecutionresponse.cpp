@@ -46,7 +46,7 @@ StopAutomationExecutionResponse::StopAutomationExecutionResponse(
         const StopAutomationExecutionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopAutomationExecutionResponse(new StopAutomationExecutionResponsePrivate(this), parent)
+    : SSMResponse(new StopAutomationExecutionResponsePrivate(this), parent)
 {
     setRequest(new StopAutomationExecutionRequest(request));
     setReply(reply);

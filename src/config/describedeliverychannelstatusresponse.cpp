@@ -46,7 +46,7 @@ DescribeDeliveryChannelStatusResponse::DescribeDeliveryChannelStatusResponse(
         const DescribeDeliveryChannelStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeDeliveryChannelStatusResponse(new DescribeDeliveryChannelStatusResponsePrivate(this), parent)
+    : ConfigServiceResponse(new DescribeDeliveryChannelStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeDeliveryChannelStatusRequest(request));
     setReply(reply);

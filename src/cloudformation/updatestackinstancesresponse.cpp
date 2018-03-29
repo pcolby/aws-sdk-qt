@@ -46,7 +46,7 @@ UpdateStackInstancesResponse::UpdateStackInstancesResponse(
         const UpdateStackInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateStackInstancesResponse(new UpdateStackInstancesResponsePrivate(this), parent)
+    : CloudFormationResponse(new UpdateStackInstancesResponsePrivate(this), parent)
 {
     setRequest(new UpdateStackInstancesRequest(request));
     setReply(reply);

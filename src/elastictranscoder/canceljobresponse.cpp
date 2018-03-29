@@ -46,7 +46,7 @@ CancelJobResponse::CancelJobResponse(
         const CancelJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CancelJobResponse(new CancelJobResponsePrivate(this), parent)
+    : ElasticTranscoderResponse(new CancelJobResponsePrivate(this), parent)
 {
     setRequest(new CancelJobRequest(request));
     setReply(reply);

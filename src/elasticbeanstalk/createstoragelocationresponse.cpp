@@ -46,7 +46,7 @@ CreateStorageLocationResponse::CreateStorageLocationResponse(
         const CreateStorageLocationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateStorageLocationResponse(new CreateStorageLocationResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new CreateStorageLocationResponsePrivate(this), parent)
 {
     setRequest(new CreateStorageLocationRequest(request));
     setReply(reply);

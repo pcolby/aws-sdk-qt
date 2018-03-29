@@ -46,7 +46,7 @@ DescribeDirectoriesResponse::DescribeDirectoriesResponse(
         const DescribeDirectoriesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeDirectoriesResponse(new DescribeDirectoriesResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new DescribeDirectoriesResponsePrivate(this), parent)
 {
     setRequest(new DescribeDirectoriesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RejectVpcPeeringConnectionResponse::RejectVpcPeeringConnectionResponse(
         const RejectVpcPeeringConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RejectVpcPeeringConnectionResponse(new RejectVpcPeeringConnectionResponsePrivate(this), parent)
+    : EC2Response(new RejectVpcPeeringConnectionResponsePrivate(this), parent)
 {
     setRequest(new RejectVpcPeeringConnectionRequest(request));
     setReply(reply);

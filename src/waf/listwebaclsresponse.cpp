@@ -46,7 +46,7 @@ ListWebACLsResponse::ListWebACLsResponse(
         const ListWebACLsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListWebACLsResponse(new ListWebACLsResponsePrivate(this), parent)
+    : WAFResponse(new ListWebACLsResponsePrivate(this), parent)
 {
     setRequest(new ListWebACLsRequest(request));
     setReply(reply);

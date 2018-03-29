@@ -34,6 +34,11 @@ class QTAWS_EXPORT LexRuntimeServiceResponse : public QtAws::Core::AwsAbstractRe
 public:
     LexRuntimeServiceResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    LexRuntimeServiceResponse(LexRuntimeServiceResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

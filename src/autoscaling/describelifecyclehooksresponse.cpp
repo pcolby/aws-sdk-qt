@@ -46,7 +46,7 @@ DescribeLifecycleHooksResponse::DescribeLifecycleHooksResponse(
         const DescribeLifecycleHooksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeLifecycleHooksResponse(new DescribeLifecycleHooksResponsePrivate(this), parent)
+    : AutoScalingResponse(new DescribeLifecycleHooksResponsePrivate(this), parent)
 {
     setRequest(new DescribeLifecycleHooksRequest(request));
     setReply(reply);

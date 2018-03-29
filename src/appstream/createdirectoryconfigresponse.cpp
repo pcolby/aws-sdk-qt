@@ -46,7 +46,7 @@ CreateDirectoryConfigResponse::CreateDirectoryConfigResponse(
         const CreateDirectoryConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateDirectoryConfigResponse(new CreateDirectoryConfigResponsePrivate(this), parent)
+    : AppStreamResponse(new CreateDirectoryConfigResponsePrivate(this), parent)
 {
     setRequest(new CreateDirectoryConfigRequest(request));
     setReply(reply);

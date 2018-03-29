@@ -46,7 +46,7 @@ DisassociateCreatedArtifactResponse::DisassociateCreatedArtifactResponse(
         const DisassociateCreatedArtifactRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateCreatedArtifactResponse(new DisassociateCreatedArtifactResponsePrivate(this), parent)
+    : MigrationHubResponse(new DisassociateCreatedArtifactResponsePrivate(this), parent)
 {
     setRequest(new DisassociateCreatedArtifactRequest(request));
     setReply(reply);

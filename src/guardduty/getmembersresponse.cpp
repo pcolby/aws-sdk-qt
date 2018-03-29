@@ -46,7 +46,7 @@ GetMembersResponse::GetMembersResponse(
         const GetMembersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetMembersResponse(new GetMembersResponsePrivate(this), parent)
+    : GuardDutyResponse(new GetMembersResponsePrivate(this), parent)
 {
     setRequest(new GetMembersRequest(request));
     setReply(reply);

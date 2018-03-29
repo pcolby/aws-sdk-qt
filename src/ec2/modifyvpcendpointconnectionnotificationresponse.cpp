@@ -46,7 +46,7 @@ ModifyVpcEndpointConnectionNotificationResponse::ModifyVpcEndpointConnectionNoti
         const ModifyVpcEndpointConnectionNotificationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyVpcEndpointConnectionNotificationResponse(new ModifyVpcEndpointConnectionNotificationResponsePrivate(this), parent)
+    : EC2Response(new ModifyVpcEndpointConnectionNotificationResponsePrivate(this), parent)
 {
     setRequest(new ModifyVpcEndpointConnectionNotificationRequest(request));
     setReply(reply);

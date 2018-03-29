@@ -46,7 +46,7 @@ ListProtectionsResponse::ListProtectionsResponse(
         const ListProtectionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListProtectionsResponse(new ListProtectionsResponsePrivate(this), parent)
+    : ShieldResponse(new ListProtectionsResponsePrivate(this), parent)
 {
     setRequest(new ListProtectionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RegisterRdsDbInstanceResponse::RegisterRdsDbInstanceResponse(
         const RegisterRdsDbInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RegisterRdsDbInstanceResponse(new RegisterRdsDbInstanceResponsePrivate(this), parent)
+    : OpsWorksResponse(new RegisterRdsDbInstanceResponsePrivate(this), parent)
 {
     setRequest(new RegisterRdsDbInstanceRequest(request));
     setReply(reply);

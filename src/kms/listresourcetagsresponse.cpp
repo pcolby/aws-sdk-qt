@@ -46,7 +46,7 @@ ListResourceTagsResponse::ListResourceTagsResponse(
         const ListResourceTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListResourceTagsResponse(new ListResourceTagsResponsePrivate(this), parent)
+    : KMSResponse(new ListResourceTagsResponsePrivate(this), parent)
 {
     setRequest(new ListResourceTagsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ AddApplicationOutputResponse::AddApplicationOutputResponse(
         const AddApplicationOutputRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AddApplicationOutputResponse(new AddApplicationOutputResponsePrivate(this), parent)
+    : KinesisAnalyticsResponse(new AddApplicationOutputResponsePrivate(this), parent)
 {
     setRequest(new AddApplicationOutputRequest(request));
     setReply(reply);

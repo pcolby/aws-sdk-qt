@@ -46,7 +46,7 @@ DisableAWSServiceAccessResponse::DisableAWSServiceAccessResponse(
         const DisableAWSServiceAccessRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisableAWSServiceAccessResponse(new DisableAWSServiceAccessResponsePrivate(this), parent)
+    : OrganizationsResponse(new DisableAWSServiceAccessResponsePrivate(this), parent)
 {
     setRequest(new DisableAWSServiceAccessRequest(request));
     setReply(reply);

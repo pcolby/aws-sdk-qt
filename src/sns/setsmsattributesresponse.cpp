@@ -46,7 +46,7 @@ SetSMSAttributesResponse::SetSMSAttributesResponse(
         const SetSMSAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetSMSAttributesResponse(new SetSMSAttributesResponsePrivate(this), parent)
+    : SNSResponse(new SetSMSAttributesResponsePrivate(this), parent)
 {
     setRequest(new SetSMSAttributesRequest(request));
     setReply(reply);

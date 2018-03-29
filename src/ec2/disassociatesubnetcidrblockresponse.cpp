@@ -46,7 +46,7 @@ DisassociateSubnetCidrBlockResponse::DisassociateSubnetCidrBlockResponse(
         const DisassociateSubnetCidrBlockRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateSubnetCidrBlockResponse(new DisassociateSubnetCidrBlockResponsePrivate(this), parent)
+    : EC2Response(new DisassociateSubnetCidrBlockResponsePrivate(this), parent)
 {
     setRequest(new DisassociateSubnetCidrBlockRequest(request));
     setReply(reply);

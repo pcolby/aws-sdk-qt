@@ -46,7 +46,7 @@ UpdateGeoMatchSetResponse::UpdateGeoMatchSetResponse(
         const UpdateGeoMatchSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateGeoMatchSetResponse(new UpdateGeoMatchSetResponsePrivate(this), parent)
+    : WAFRegionalResponse(new UpdateGeoMatchSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateGeoMatchSetRequest(request));
     setReply(reply);

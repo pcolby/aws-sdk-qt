@@ -34,6 +34,11 @@ class QTAWS_EXPORT KinesisResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     KinesisResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    KinesisResponse(KinesisResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

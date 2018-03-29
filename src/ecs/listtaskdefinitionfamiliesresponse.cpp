@@ -46,7 +46,7 @@ ListTaskDefinitionFamiliesResponse::ListTaskDefinitionFamiliesResponse(
         const ListTaskDefinitionFamiliesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListTaskDefinitionFamiliesResponse(new ListTaskDefinitionFamiliesResponsePrivate(this), parent)
+    : ECSResponse(new ListTaskDefinitionFamiliesResponsePrivate(this), parent)
 {
     setRequest(new ListTaskDefinitionFamiliesRequest(request));
     setReply(reply);

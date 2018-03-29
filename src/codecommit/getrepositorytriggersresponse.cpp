@@ -46,7 +46,7 @@ GetRepositoryTriggersResponse::GetRepositoryTriggersResponse(
         const GetRepositoryTriggersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetRepositoryTriggersResponse(new GetRepositoryTriggersResponsePrivate(this), parent)
+    : CodeCommitResponse(new GetRepositoryTriggersResponsePrivate(this), parent)
 {
     setRequest(new GetRepositoryTriggersRequest(request));
     setReply(reply);

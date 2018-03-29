@@ -46,7 +46,7 @@ ChangeMessageVisibilityBatchResponse::ChangeMessageVisibilityBatchResponse(
         const ChangeMessageVisibilityBatchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ChangeMessageVisibilityBatchResponse(new ChangeMessageVisibilityBatchResponsePrivate(this), parent)
+    : SQSResponse(new ChangeMessageVisibilityBatchResponsePrivate(this), parent)
 {
     setRequest(new ChangeMessageVisibilityBatchRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ModifyInstanceCreditSpecificationResponse::ModifyInstanceCreditSpecificationResp
         const ModifyInstanceCreditSpecificationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyInstanceCreditSpecificationResponse(new ModifyInstanceCreditSpecificationResponsePrivate(this), parent)
+    : EC2Response(new ModifyInstanceCreditSpecificationResponsePrivate(this), parent)
 {
     setRequest(new ModifyInstanceCreditSpecificationRequest(request));
     setReply(reply);

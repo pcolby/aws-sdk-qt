@@ -46,7 +46,7 @@ CopySnapshotResponse::CopySnapshotResponse(
         const CopySnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CopySnapshotResponse(new CopySnapshotResponsePrivate(this), parent)
+    : ElastiCacheResponse(new CopySnapshotResponsePrivate(this), parent)
 {
     setRequest(new CopySnapshotRequest(request));
     setReply(reply);

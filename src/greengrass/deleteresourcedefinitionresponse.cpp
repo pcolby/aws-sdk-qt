@@ -46,7 +46,7 @@ DeleteResourceDefinitionResponse::DeleteResourceDefinitionResponse(
         const DeleteResourceDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteResourceDefinitionResponse(new DeleteResourceDefinitionResponsePrivate(this), parent)
+    : GreengrassResponse(new DeleteResourceDefinitionResponsePrivate(this), parent)
 {
     setRequest(new DeleteResourceDefinitionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateQueryLoggingConfigResponse::CreateQueryLoggingConfigResponse(
         const CreateQueryLoggingConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateQueryLoggingConfigResponse(new CreateQueryLoggingConfigResponsePrivate(this), parent)
+    : Route53Response(new CreateQueryLoggingConfigResponsePrivate(this), parent)
 {
     setRequest(new CreateQueryLoggingConfigRequest(request));
     setReply(reply);

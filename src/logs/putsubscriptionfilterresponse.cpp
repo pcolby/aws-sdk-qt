@@ -46,7 +46,7 @@ PutSubscriptionFilterResponse::PutSubscriptionFilterResponse(
         const PutSubscriptionFilterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutSubscriptionFilterResponse(new PutSubscriptionFilterResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new PutSubscriptionFilterResponsePrivate(this), parent)
 {
     setRequest(new PutSubscriptionFilterRequest(request));
     setReply(reply);

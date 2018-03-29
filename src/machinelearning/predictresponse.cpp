@@ -46,7 +46,7 @@ PredictResponse::PredictResponse(
         const PredictRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PredictResponse(new PredictResponsePrivate(this), parent)
+    : MachineLearningResponse(new PredictResponsePrivate(this), parent)
 {
     setRequest(new PredictRequest(request));
     setReply(reply);

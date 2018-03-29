@@ -46,7 +46,7 @@ SimulatePrincipalPolicyResponse::SimulatePrincipalPolicyResponse(
         const SimulatePrincipalPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SimulatePrincipalPolicyResponse(new SimulatePrincipalPolicyResponsePrivate(this), parent)
+    : IAMResponse(new SimulatePrincipalPolicyResponsePrivate(this), parent)
 {
     setRequest(new SimulatePrincipalPolicyRequest(request));
     setReply(reply);

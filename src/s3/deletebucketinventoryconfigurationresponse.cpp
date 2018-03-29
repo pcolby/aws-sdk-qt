@@ -46,7 +46,7 @@ DeleteBucketInventoryConfigurationResponse::DeleteBucketInventoryConfigurationRe
         const DeleteBucketInventoryConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteBucketInventoryConfigurationResponse(new DeleteBucketInventoryConfigurationResponsePrivate(this), parent)
+    : S3Response(new DeleteBucketInventoryConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DeleteBucketInventoryConfigurationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteNotificationResponse::DeleteNotificationResponse(
         const DeleteNotificationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteNotificationResponse(new DeleteNotificationResponsePrivate(this), parent)
+    : BudgetsResponse(new DeleteNotificationResponsePrivate(this), parent)
 {
     setRequest(new DeleteNotificationRequest(request));
     setReply(reply);

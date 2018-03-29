@@ -46,7 +46,7 @@ ListAWSServiceAccessForOrganizationResponse::ListAWSServiceAccessForOrganization
         const ListAWSServiceAccessForOrganizationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListAWSServiceAccessForOrganizationResponse(new ListAWSServiceAccessForOrganizationResponsePrivate(this), parent)
+    : OrganizationsResponse(new ListAWSServiceAccessForOrganizationResponsePrivate(this), parent)
 {
     setRequest(new ListAWSServiceAccessForOrganizationRequest(request));
     setReply(reply);

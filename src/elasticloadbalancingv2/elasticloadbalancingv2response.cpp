@@ -46,6 +46,24 @@ ElasticLoadBalancingv2Response::ElasticLoadBalancingv2Response(QObject * const p
 }
 
 /**
+ * @internal
+ *
+ * @brief  Constructs a new ElasticLoadBalancingv2Response object.
+ *
+ *
+ * This overload allows derived classes to provide their own private class
+ * implementation that inherits from ElasticLoadBalancingv2ResponsePrivate.
+ *
+ * @param  d       Pointer to private data (aka D-Pointer).
+ * @param  parent  This object's parent.
+ */
+ElasticLoadBalancingv2Response::ElasticLoadBalancingv2Response(ElasticLoadBalancingv2ResponsePrivate * const d, QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
+{
+
+}
+
+/**
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.

@@ -46,6 +46,24 @@ CognitoIdentityProviderResponse::CognitoIdentityProviderResponse(QObject * const
 }
 
 /**
+ * @internal
+ *
+ * @brief  Constructs a new CognitoIdentityProviderResponse object.
+ *
+ *
+ * This overload allows derived classes to provide their own private class
+ * implementation that inherits from CognitoIdentityProviderResponsePrivate.
+ *
+ * @param  d       Pointer to private data (aka D-Pointer).
+ * @param  parent  This object's parent.
+ */
+CognitoIdentityProviderResponse::CognitoIdentityProviderResponse(CognitoIdentityProviderResponsePrivate * const d, QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
+{
+
+}
+
+/**
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.

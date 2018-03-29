@@ -46,7 +46,7 @@ GetDimensionValuesResponse::GetDimensionValuesResponse(
         const GetDimensionValuesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDimensionValuesResponse(new GetDimensionValuesResponsePrivate(this), parent)
+    : CostExplorerResponse(new GetDimensionValuesResponsePrivate(this), parent)
 {
     setRequest(new GetDimensionValuesRequest(request));
     setReply(reply);

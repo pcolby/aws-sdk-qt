@@ -46,7 +46,7 @@ TestRenderTemplateResponse::TestRenderTemplateResponse(
         const TestRenderTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : TestRenderTemplateResponse(new TestRenderTemplateResponsePrivate(this), parent)
+    : SESResponse(new TestRenderTemplateResponsePrivate(this), parent)
 {
     setRequest(new TestRenderTemplateRequest(request));
     setReply(reply);

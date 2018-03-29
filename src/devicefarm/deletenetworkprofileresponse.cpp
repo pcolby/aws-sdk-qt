@@ -46,7 +46,7 @@ DeleteNetworkProfileResponse::DeleteNetworkProfileResponse(
         const DeleteNetworkProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteNetworkProfileResponse(new DeleteNetworkProfileResponsePrivate(this), parent)
+    : DeviceFarmResponse(new DeleteNetworkProfileResponsePrivate(this), parent)
 {
     setRequest(new DeleteNetworkProfileRequest(request));
     setReply(reply);

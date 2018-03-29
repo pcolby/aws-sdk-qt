@@ -46,7 +46,7 @@ ListTasksResponse::ListTasksResponse(
         const ListTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListTasksResponse(new ListTasksResponsePrivate(this), parent)
+    : ECSResponse(new ListTasksResponsePrivate(this), parent)
 {
     setRequest(new ListTasksRequest(request));
     setReply(reply);

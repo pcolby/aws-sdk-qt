@@ -46,7 +46,7 @@ UpdateSnapshotScheduleResponse::UpdateSnapshotScheduleResponse(
         const UpdateSnapshotScheduleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateSnapshotScheduleResponse(new UpdateSnapshotScheduleResponsePrivate(this), parent)
+    : StorageGatewayResponse(new UpdateSnapshotScheduleResponsePrivate(this), parent)
 {
     setRequest(new UpdateSnapshotScheduleRequest(request));
     setReply(reply);

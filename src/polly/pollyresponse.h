@@ -34,6 +34,11 @@ class QTAWS_EXPORT PollyResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     PollyResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    PollyResponse(PollyResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

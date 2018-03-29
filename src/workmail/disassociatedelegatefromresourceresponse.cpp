@@ -46,7 +46,7 @@ DisassociateDelegateFromResourceResponse::DisassociateDelegateFromResourceRespon
         const DisassociateDelegateFromResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateDelegateFromResourceResponse(new DisassociateDelegateFromResourceResponsePrivate(this), parent)
+    : WorkMailResponse(new DisassociateDelegateFromResourceResponsePrivate(this), parent)
 {
     setRequest(new DisassociateDelegateFromResourceRequest(request));
     setReply(reply);

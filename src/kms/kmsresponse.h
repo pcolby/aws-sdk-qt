@@ -34,6 +34,11 @@ class QTAWS_EXPORT KMSResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     KMSResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    KMSResponse(KMSResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

@@ -46,7 +46,7 @@ DeleteObjectTaggingResponse::DeleteObjectTaggingResponse(
         const DeleteObjectTaggingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteObjectTaggingResponse(new DeleteObjectTaggingResponsePrivate(this), parent)
+    : S3Response(new DeleteObjectTaggingResponsePrivate(this), parent)
 {
     setRequest(new DeleteObjectTaggingRequest(request));
     setReply(reply);

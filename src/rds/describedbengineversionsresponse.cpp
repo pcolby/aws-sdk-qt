@@ -46,7 +46,7 @@ DescribeDBEngineVersionsResponse::DescribeDBEngineVersionsResponse(
         const DescribeDBEngineVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeDBEngineVersionsResponse(new DescribeDBEngineVersionsResponsePrivate(this), parent)
+    : RDSResponse(new DescribeDBEngineVersionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBEngineVersionsRequest(request));
     setReply(reply);

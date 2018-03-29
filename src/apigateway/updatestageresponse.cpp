@@ -46,7 +46,7 @@ UpdateStageResponse::UpdateStageResponse(
         const UpdateStageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateStageResponse(new UpdateStageResponsePrivate(this), parent)
+    : APIGatewayResponse(new UpdateStageResponsePrivate(this), parent)
 {
     setRequest(new UpdateStageRequest(request));
     setReply(reply);

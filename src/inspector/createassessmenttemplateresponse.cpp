@@ -46,7 +46,7 @@ CreateAssessmentTemplateResponse::CreateAssessmentTemplateResponse(
         const CreateAssessmentTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateAssessmentTemplateResponse(new CreateAssessmentTemplateResponsePrivate(this), parent)
+    : InspectorResponse(new CreateAssessmentTemplateResponsePrivate(this), parent)
 {
     setRequest(new CreateAssessmentTemplateRequest(request));
     setReply(reply);

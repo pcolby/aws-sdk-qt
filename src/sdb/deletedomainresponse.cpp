@@ -46,7 +46,7 @@ DeleteDomainResponse::DeleteDomainResponse(
         const DeleteDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDomainResponse(new DeleteDomainResponsePrivate(this), parent)
+    : SimpleDBResponse(new DeleteDomainResponsePrivate(this), parent)
 {
     setRequest(new DeleteDomainRequest(request));
     setReply(reply);

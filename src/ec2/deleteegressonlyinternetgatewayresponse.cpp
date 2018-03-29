@@ -46,7 +46,7 @@ DeleteEgressOnlyInternetGatewayResponse::DeleteEgressOnlyInternetGatewayResponse
         const DeleteEgressOnlyInternetGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteEgressOnlyInternetGatewayResponse(new DeleteEgressOnlyInternetGatewayResponsePrivate(this), parent)
+    : EC2Response(new DeleteEgressOnlyInternetGatewayResponsePrivate(this), parent)
 {
     setRequest(new DeleteEgressOnlyInternetGatewayRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CopyProductResponse::CopyProductResponse(
         const CopyProductRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CopyProductResponse(new CopyProductResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new CopyProductResponsePrivate(this), parent)
 {
     setRequest(new CopyProductRequest(request));
     setReply(reply);

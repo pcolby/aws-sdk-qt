@@ -46,7 +46,7 @@ DetachPolicyResponse::DetachPolicyResponse(
         const DetachPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DetachPolicyResponse(new DetachPolicyResponsePrivate(this), parent)
+    : OrganizationsResponse(new DetachPolicyResponsePrivate(this), parent)
 {
     setRequest(new DetachPolicyRequest(request));
     setReply(reply);

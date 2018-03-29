@@ -46,7 +46,7 @@ DescribeScheduledInstancesResponse::DescribeScheduledInstancesResponse(
         const DescribeScheduledInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeScheduledInstancesResponse(new DescribeScheduledInstancesResponsePrivate(this), parent)
+    : EC2Response(new DescribeScheduledInstancesResponsePrivate(this), parent)
 {
     setRequest(new DescribeScheduledInstancesRequest(request));
     setReply(reply);

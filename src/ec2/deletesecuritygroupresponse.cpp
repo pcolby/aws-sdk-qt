@@ -46,7 +46,7 @@ DeleteSecurityGroupResponse::DeleteSecurityGroupResponse(
         const DeleteSecurityGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSecurityGroupResponse(new DeleteSecurityGroupResponsePrivate(this), parent)
+    : EC2Response(new DeleteSecurityGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteSecurityGroupRequest(request));
     setReply(reply);

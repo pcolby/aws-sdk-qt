@@ -46,7 +46,7 @@ CreateNFSFileShareResponse::CreateNFSFileShareResponse(
         const CreateNFSFileShareRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateNFSFileShareResponse(new CreateNFSFileShareResponsePrivate(this), parent)
+    : StorageGatewayResponse(new CreateNFSFileShareResponsePrivate(this), parent)
 {
     setRequest(new CreateNFSFileShareRequest(request));
     setReply(reply);

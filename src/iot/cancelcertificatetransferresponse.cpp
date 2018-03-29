@@ -46,7 +46,7 @@ CancelCertificateTransferResponse::CancelCertificateTransferResponse(
         const CancelCertificateTransferRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CancelCertificateTransferResponse(new CancelCertificateTransferResponsePrivate(this), parent)
+    : IoTResponse(new CancelCertificateTransferResponsePrivate(this), parent)
 {
     setRequest(new CancelCertificateTransferRequest(request));
     setReply(reply);

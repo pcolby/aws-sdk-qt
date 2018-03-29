@@ -46,7 +46,7 @@ ReadJobResponse::ReadJobResponse(
         const ReadJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ReadJobResponse(new ReadJobResponsePrivate(this), parent)
+    : ElasticTranscoderResponse(new ReadJobResponsePrivate(this), parent)
 {
     setRequest(new ReadJobRequest(request));
     setReply(reply);

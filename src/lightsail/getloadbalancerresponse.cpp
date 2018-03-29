@@ -46,7 +46,7 @@ GetLoadBalancerResponse::GetLoadBalancerResponse(
         const GetLoadBalancerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetLoadBalancerResponse(new GetLoadBalancerResponsePrivate(this), parent)
+    : LightsailResponse(new GetLoadBalancerResponsePrivate(this), parent)
 {
     setRequest(new GetLoadBalancerRequest(request));
     setReply(reply);

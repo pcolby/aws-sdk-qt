@@ -46,7 +46,7 @@ DescribeFpgaImageAttributeResponse::DescribeFpgaImageAttributeResponse(
         const DescribeFpgaImageAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeFpgaImageAttributeResponse(new DescribeFpgaImageAttributeResponsePrivate(this), parent)
+    : EC2Response(new DescribeFpgaImageAttributeResponsePrivate(this), parent)
 {
     setRequest(new DescribeFpgaImageAttributeRequest(request));
     setReply(reply);

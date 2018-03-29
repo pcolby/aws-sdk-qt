@@ -46,7 +46,7 @@ UpdateOriginEndpointResponse::UpdateOriginEndpointResponse(
         const UpdateOriginEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateOriginEndpointResponse(new UpdateOriginEndpointResponsePrivate(this), parent)
+    : MediaPackageResponse(new UpdateOriginEndpointResponsePrivate(this), parent)
 {
     setRequest(new UpdateOriginEndpointRequest(request));
     setReply(reply);

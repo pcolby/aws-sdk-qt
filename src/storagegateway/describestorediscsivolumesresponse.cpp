@@ -46,7 +46,7 @@ DescribeStorediSCSIVolumesResponse::DescribeStorediSCSIVolumesResponse(
         const DescribeStorediSCSIVolumesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeStorediSCSIVolumesResponse(new DescribeStorediSCSIVolumesResponsePrivate(this), parent)
+    : StorageGatewayResponse(new DescribeStorediSCSIVolumesResponsePrivate(this), parent)
 {
     setRequest(new DescribeStorediSCSIVolumesRequest(request));
     setReply(reply);

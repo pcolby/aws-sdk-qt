@@ -46,7 +46,7 @@ DiscoverInputSchemaResponse::DiscoverInputSchemaResponse(
         const DiscoverInputSchemaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DiscoverInputSchemaResponse(new DiscoverInputSchemaResponsePrivate(this), parent)
+    : KinesisAnalyticsResponse(new DiscoverInputSchemaResponsePrivate(this), parent)
 {
     setRequest(new DiscoverInputSchemaRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeletePolicyVersionResponse::DeletePolicyVersionResponse(
         const DeletePolicyVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeletePolicyVersionResponse(new DeletePolicyVersionResponsePrivate(this), parent)
+    : IAMResponse(new DeletePolicyVersionResponsePrivate(this), parent)
 {
     setRequest(new DeletePolicyVersionRequest(request));
     setReply(reply);

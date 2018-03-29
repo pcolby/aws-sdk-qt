@@ -46,7 +46,7 @@ GetDiskSnapshotsResponse::GetDiskSnapshotsResponse(
         const GetDiskSnapshotsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDiskSnapshotsResponse(new GetDiskSnapshotsResponsePrivate(this), parent)
+    : LightsailResponse(new GetDiskSnapshotsResponsePrivate(this), parent)
 {
     setRequest(new GetDiskSnapshotsRequest(request));
     setReply(reply);

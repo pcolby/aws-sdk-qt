@@ -46,7 +46,7 @@ StartNotebookInstanceResponse::StartNotebookInstanceResponse(
         const StartNotebookInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartNotebookInstanceResponse(new StartNotebookInstanceResponsePrivate(this), parent)
+    : SageMakerResponse(new StartNotebookInstanceResponsePrivate(this), parent)
 {
     setRequest(new StartNotebookInstanceRequest(request));
     setReply(reply);

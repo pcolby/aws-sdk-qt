@@ -46,7 +46,7 @@ StartOnDemandReplicationRunResponse::StartOnDemandReplicationRunResponse(
         const StartOnDemandReplicationRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartOnDemandReplicationRunResponse(new StartOnDemandReplicationRunResponsePrivate(this), parent)
+    : SMSResponse(new StartOnDemandReplicationRunResponsePrivate(this), parent)
 {
     setRequest(new StartOnDemandReplicationRunRequest(request));
     setReply(reply);

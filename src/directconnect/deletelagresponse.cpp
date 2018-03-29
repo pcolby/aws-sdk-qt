@@ -46,7 +46,7 @@ DeleteLagResponse::DeleteLagResponse(
         const DeleteLagRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteLagResponse(new DeleteLagResponsePrivate(this), parent)
+    : DirectConnectResponse(new DeleteLagResponsePrivate(this), parent)
 {
     setRequest(new DeleteLagRequest(request));
     setReply(reply);

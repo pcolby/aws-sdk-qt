@@ -46,7 +46,7 @@ ListImagesResponse::ListImagesResponse(
         const ListImagesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListImagesResponse(new ListImagesResponsePrivate(this), parent)
+    : ECRResponse(new ListImagesResponsePrivate(this), parent)
 {
     setRequest(new ListImagesRequest(request));
     setReply(reply);

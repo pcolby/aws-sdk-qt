@@ -46,7 +46,7 @@ DescribeConfigRuleEvaluationStatusResponse::DescribeConfigRuleEvaluationStatusRe
         const DescribeConfigRuleEvaluationStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeConfigRuleEvaluationStatusResponse(new DescribeConfigRuleEvaluationStatusResponsePrivate(this), parent)
+    : ConfigServiceResponse(new DescribeConfigRuleEvaluationStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeConfigRuleEvaluationStatusRequest(request));
     setReply(reply);

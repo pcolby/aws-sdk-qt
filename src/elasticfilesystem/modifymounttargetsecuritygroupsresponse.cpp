@@ -46,7 +46,7 @@ ModifyMountTargetSecurityGroupsResponse::ModifyMountTargetSecurityGroupsResponse
         const ModifyMountTargetSecurityGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyMountTargetSecurityGroupsResponse(new ModifyMountTargetSecurityGroupsResponsePrivate(this), parent)
+    : EFSResponse(new ModifyMountTargetSecurityGroupsResponsePrivate(this), parent)
 {
     setRequest(new ModifyMountTargetSecurityGroupsRequest(request));
     setReply(reply);

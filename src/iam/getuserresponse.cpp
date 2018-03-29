@@ -46,7 +46,7 @@ GetUserResponse::GetUserResponse(
         const GetUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetUserResponse(new GetUserResponsePrivate(this), parent)
+    : IAMResponse(new GetUserResponsePrivate(this), parent)
 {
     setRequest(new GetUserRequest(request));
     setReply(reply);

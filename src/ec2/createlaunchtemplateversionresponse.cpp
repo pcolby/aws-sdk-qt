@@ -46,7 +46,7 @@ CreateLaunchTemplateVersionResponse::CreateLaunchTemplateVersionResponse(
         const CreateLaunchTemplateVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateLaunchTemplateVersionResponse(new CreateLaunchTemplateVersionResponsePrivate(this), parent)
+    : EC2Response(new CreateLaunchTemplateVersionResponsePrivate(this), parent)
 {
     setRequest(new CreateLaunchTemplateVersionRequest(request));
     setReply(reply);

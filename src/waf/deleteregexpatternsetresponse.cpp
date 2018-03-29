@@ -46,7 +46,7 @@ DeleteRegexPatternSetResponse::DeleteRegexPatternSetResponse(
         const DeleteRegexPatternSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteRegexPatternSetResponse(new DeleteRegexPatternSetResponsePrivate(this), parent)
+    : WAFResponse(new DeleteRegexPatternSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteRegexPatternSetRequest(request));
     setReply(reply);

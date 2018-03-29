@@ -46,7 +46,7 @@ AdminConfirmSignUpResponse::AdminConfirmSignUpResponse(
         const AdminConfirmSignUpRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AdminConfirmSignUpResponse(new AdminConfirmSignUpResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new AdminConfirmSignUpResponsePrivate(this), parent)
 {
     setRequest(new AdminConfirmSignUpRequest(request));
     setReply(reply);

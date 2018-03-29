@@ -46,7 +46,7 @@ UpdateTimeToLiveResponse::UpdateTimeToLiveResponse(
         const UpdateTimeToLiveRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateTimeToLiveResponse(new UpdateTimeToLiveResponsePrivate(this), parent)
+    : DynamoDBResponse(new UpdateTimeToLiveResponsePrivate(this), parent)
 {
     setRequest(new UpdateTimeToLiveRequest(request));
     setReply(reply);

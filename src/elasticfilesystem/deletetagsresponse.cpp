@@ -46,7 +46,7 @@ DeleteTagsResponse::DeleteTagsResponse(
         const DeleteTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteTagsResponse(new DeleteTagsResponsePrivate(this), parent)
+    : EFSResponse(new DeleteTagsResponsePrivate(this), parent)
 {
     setRequest(new DeleteTagsRequest(request));
     setReply(reply);

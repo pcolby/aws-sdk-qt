@@ -46,7 +46,7 @@ StopTriggerResponse::StopTriggerResponse(
         const StopTriggerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopTriggerResponse(new StopTriggerResponsePrivate(this), parent)
+    : GlueResponse(new StopTriggerResponsePrivate(this), parent)
 {
     setRequest(new StopTriggerRequest(request));
     setReply(reply);

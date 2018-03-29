@@ -46,7 +46,7 @@ ImportInstanceResponse::ImportInstanceResponse(
         const ImportInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ImportInstanceResponse(new ImportInstanceResponsePrivate(this), parent)
+    : EC2Response(new ImportInstanceResponsePrivate(this), parent)
 {
     setRequest(new ImportInstanceRequest(request));
     setReply(reply);

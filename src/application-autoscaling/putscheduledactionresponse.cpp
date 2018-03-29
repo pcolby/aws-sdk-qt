@@ -46,7 +46,7 @@ PutScheduledActionResponse::PutScheduledActionResponse(
         const PutScheduledActionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutScheduledActionResponse(new PutScheduledActionResponsePrivate(this), parent)
+    : ApplicationAutoScalingResponse(new PutScheduledActionResponsePrivate(this), parent)
 {
     setRequest(new PutScheduledActionRequest(request));
     setReply(reply);

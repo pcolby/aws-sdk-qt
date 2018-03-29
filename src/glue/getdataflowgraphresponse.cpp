@@ -46,7 +46,7 @@ GetDataflowGraphResponse::GetDataflowGraphResponse(
         const GetDataflowGraphRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDataflowGraphResponse(new GetDataflowGraphResponsePrivate(this), parent)
+    : GlueResponse(new GetDataflowGraphResponsePrivate(this), parent)
 {
     setRequest(new GetDataflowGraphRequest(request));
     setReply(reply);

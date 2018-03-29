@@ -46,7 +46,7 @@ GetApnsVoipSandboxChannelResponse::GetApnsVoipSandboxChannelResponse(
         const GetApnsVoipSandboxChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetApnsVoipSandboxChannelResponse(new GetApnsVoipSandboxChannelResponsePrivate(this), parent)
+    : PinpointResponse(new GetApnsVoipSandboxChannelResponsePrivate(this), parent)
 {
     setRequest(new GetApnsVoipSandboxChannelRequest(request));
     setReply(reply);

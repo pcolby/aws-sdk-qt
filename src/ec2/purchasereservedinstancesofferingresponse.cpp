@@ -46,7 +46,7 @@ PurchaseReservedInstancesOfferingResponse::PurchaseReservedInstancesOfferingResp
         const PurchaseReservedInstancesOfferingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PurchaseReservedInstancesOfferingResponse(new PurchaseReservedInstancesOfferingResponsePrivate(this), parent)
+    : EC2Response(new PurchaseReservedInstancesOfferingResponsePrivate(this), parent)
 {
     setRequest(new PurchaseReservedInstancesOfferingRequest(request));
     setReply(reply);

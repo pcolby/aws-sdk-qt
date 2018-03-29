@@ -46,7 +46,7 @@ AssociateDelegateToResourceResponse::AssociateDelegateToResourceResponse(
         const AssociateDelegateToResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssociateDelegateToResourceResponse(new AssociateDelegateToResourceResponsePrivate(this), parent)
+    : WorkMailResponse(new AssociateDelegateToResourceResponsePrivate(this), parent)
 {
     setRequest(new AssociateDelegateToResourceRequest(request));
     setReply(reply);

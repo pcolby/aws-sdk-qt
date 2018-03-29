@@ -46,7 +46,7 @@ GetInstanceMetricDataResponse::GetInstanceMetricDataResponse(
         const GetInstanceMetricDataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetInstanceMetricDataResponse(new GetInstanceMetricDataResponsePrivate(this), parent)
+    : LightsailResponse(new GetInstanceMetricDataResponsePrivate(this), parent)
 {
     setRequest(new GetInstanceMetricDataRequest(request));
     setReply(reply);

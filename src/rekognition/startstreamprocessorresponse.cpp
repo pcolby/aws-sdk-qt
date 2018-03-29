@@ -46,7 +46,7 @@ StartStreamProcessorResponse::StartStreamProcessorResponse(
         const StartStreamProcessorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartStreamProcessorResponse(new StartStreamProcessorResponsePrivate(this), parent)
+    : RekognitionResponse(new StartStreamProcessorResponsePrivate(this), parent)
 {
     setRequest(new StartStreamProcessorRequest(request));
     setReply(reply);

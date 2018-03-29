@@ -46,7 +46,7 @@ RegisterEcsClusterResponse::RegisterEcsClusterResponse(
         const RegisterEcsClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RegisterEcsClusterResponse(new RegisterEcsClusterResponsePrivate(this), parent)
+    : OpsWorksResponse(new RegisterEcsClusterResponsePrivate(this), parent)
 {
     setRequest(new RegisterEcsClusterRequest(request));
     setReply(reply);

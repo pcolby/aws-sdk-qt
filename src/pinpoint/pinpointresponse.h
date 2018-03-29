@@ -34,6 +34,11 @@ class QTAWS_EXPORT PinpointResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     PinpointResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    PinpointResponse(PinpointResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

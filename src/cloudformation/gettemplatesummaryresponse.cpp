@@ -46,7 +46,7 @@ GetTemplateSummaryResponse::GetTemplateSummaryResponse(
         const GetTemplateSummaryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetTemplateSummaryResponse(new GetTemplateSummaryResponsePrivate(this), parent)
+    : CloudFormationResponse(new GetTemplateSummaryResponsePrivate(this), parent)
 {
     setRequest(new GetTemplateSummaryRequest(request));
     setReply(reply);

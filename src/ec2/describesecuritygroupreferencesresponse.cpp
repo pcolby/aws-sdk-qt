@@ -46,7 +46,7 @@ DescribeSecurityGroupReferencesResponse::DescribeSecurityGroupReferencesResponse
         const DescribeSecurityGroupReferencesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeSecurityGroupReferencesResponse(new DescribeSecurityGroupReferencesResponsePrivate(this), parent)
+    : EC2Response(new DescribeSecurityGroupReferencesResponsePrivate(this), parent)
 {
     setRequest(new DescribeSecurityGroupReferencesRequest(request));
     setReply(reply);

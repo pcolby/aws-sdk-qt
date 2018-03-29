@@ -46,7 +46,7 @@ DescribeAccountLimitsResponse::DescribeAccountLimitsResponse(
         const DescribeAccountLimitsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAccountLimitsResponse(new DescribeAccountLimitsResponsePrivate(this), parent)
+    : CloudFormationResponse(new DescribeAccountLimitsResponsePrivate(this), parent)
 {
     setRequest(new DescribeAccountLimitsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateSubscriberResponse::CreateSubscriberResponse(
         const CreateSubscriberRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateSubscriberResponse(new CreateSubscriberResponsePrivate(this), parent)
+    : BudgetsResponse(new CreateSubscriberResponsePrivate(this), parent)
 {
     setRequest(new CreateSubscriberRequest(request));
     setReply(reply);

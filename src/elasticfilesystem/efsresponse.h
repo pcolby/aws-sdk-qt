@@ -34,6 +34,11 @@ class QTAWS_EXPORT EFSResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     EFSResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    EFSResponse(EFSResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

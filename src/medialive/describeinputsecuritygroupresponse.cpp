@@ -46,7 +46,7 @@ DescribeInputSecurityGroupResponse::DescribeInputSecurityGroupResponse(
         const DescribeInputSecurityGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeInputSecurityGroupResponse(new DescribeInputSecurityGroupResponsePrivate(this), parent)
+    : MediaLiveResponse(new DescribeInputSecurityGroupResponsePrivate(this), parent)
 {
     setRequest(new DescribeInputSecurityGroupRequest(request));
     setReply(reply);

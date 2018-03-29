@@ -46,7 +46,7 @@ ListDeploymentsResponse::ListDeploymentsResponse(
         const ListDeploymentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListDeploymentsResponse(new ListDeploymentsResponsePrivate(this), parent)
+    : GreengrassResponse(new ListDeploymentsResponsePrivate(this), parent)
 {
     setRequest(new ListDeploymentsRequest(request));
     setReply(reply);

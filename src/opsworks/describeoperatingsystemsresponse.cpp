@@ -46,7 +46,7 @@ DescribeOperatingSystemsResponse::DescribeOperatingSystemsResponse(
         const DescribeOperatingSystemsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeOperatingSystemsResponse(new DescribeOperatingSystemsResponsePrivate(this), parent)
+    : OpsWorksResponse(new DescribeOperatingSystemsResponsePrivate(this), parent)
 {
     setRequest(new DescribeOperatingSystemsRequest(request));
     setReply(reply);

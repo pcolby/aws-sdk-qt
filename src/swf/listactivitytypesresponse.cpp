@@ -46,7 +46,7 @@ ListActivityTypesResponse::ListActivityTypesResponse(
         const ListActivityTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListActivityTypesResponse(new ListActivityTypesResponsePrivate(this), parent)
+    : SWFResponse(new ListActivityTypesResponsePrivate(this), parent)
 {
     setRequest(new ListActivityTypesRequest(request));
     setReply(reply);

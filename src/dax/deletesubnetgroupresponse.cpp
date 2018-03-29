@@ -46,7 +46,7 @@ DeleteSubnetGroupResponse::DeleteSubnetGroupResponse(
         const DeleteSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSubnetGroupResponse(new DeleteSubnetGroupResponsePrivate(this), parent)
+    : DAXResponse(new DeleteSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteSubnetGroupRequest(request));
     setReply(reply);

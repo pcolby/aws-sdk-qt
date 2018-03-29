@@ -46,7 +46,7 @@ AddListenerCertificatesResponse::AddListenerCertificatesResponse(
         const AddListenerCertificatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AddListenerCertificatesResponse(new AddListenerCertificatesResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new AddListenerCertificatesResponsePrivate(this), parent)
 {
     setRequest(new AddListenerCertificatesRequest(request));
     setReply(reply);

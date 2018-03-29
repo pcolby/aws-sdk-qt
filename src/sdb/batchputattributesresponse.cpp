@@ -46,7 +46,7 @@ BatchPutAttributesResponse::BatchPutAttributesResponse(
         const BatchPutAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchPutAttributesResponse(new BatchPutAttributesResponsePrivate(this), parent)
+    : SimpleDBResponse(new BatchPutAttributesResponsePrivate(this), parent)
 {
     setRequest(new BatchPutAttributesRequest(request));
     setReply(reply);

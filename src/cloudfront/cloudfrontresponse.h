@@ -34,6 +34,11 @@ class QTAWS_EXPORT CloudFrontResponse : public QtAws::Core::AwsAbstractResponse 
 public:
     CloudFrontResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    CloudFrontResponse(CloudFrontResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

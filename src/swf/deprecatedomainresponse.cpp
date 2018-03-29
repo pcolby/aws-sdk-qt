@@ -46,7 +46,7 @@ DeprecateDomainResponse::DeprecateDomainResponse(
         const DeprecateDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeprecateDomainResponse(new DeprecateDomainResponsePrivate(this), parent)
+    : SWFResponse(new DeprecateDomainResponsePrivate(this), parent)
 {
     setRequest(new DeprecateDomainRequest(request));
     setReply(reply);

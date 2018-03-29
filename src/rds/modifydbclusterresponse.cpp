@@ -46,7 +46,7 @@ ModifyDBClusterResponse::ModifyDBClusterResponse(
         const ModifyDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyDBClusterResponse(new ModifyDBClusterResponsePrivate(this), parent)
+    : RDSResponse(new ModifyDBClusterResponsePrivate(this), parent)
 {
     setRequest(new ModifyDBClusterRequest(request));
     setReply(reply);

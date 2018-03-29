@@ -46,7 +46,7 @@ UpdatePartitionResponse::UpdatePartitionResponse(
         const UpdatePartitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdatePartitionResponse(new UpdatePartitionResponsePrivate(this), parent)
+    : GlueResponse(new UpdatePartitionResponsePrivate(this), parent)
 {
     setRequest(new UpdatePartitionRequest(request));
     setReply(reply);

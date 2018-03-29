@@ -46,7 +46,7 @@ SetSecurityGroupsResponse::SetSecurityGroupsResponse(
         const SetSecurityGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetSecurityGroupsResponse(new SetSecurityGroupsResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new SetSecurityGroupsResponsePrivate(this), parent)
 {
     setRequest(new SetSecurityGroupsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetDocumentVersionResponse::GetDocumentVersionResponse(
         const GetDocumentVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDocumentVersionResponse(new GetDocumentVersionResponsePrivate(this), parent)
+    : WorkDocsResponse(new GetDocumentVersionResponsePrivate(this), parent)
 {
     setRequest(new GetDocumentVersionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetQualificationScoreResponse::GetQualificationScoreResponse(
         const GetQualificationScoreRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetQualificationScoreResponse(new GetQualificationScoreResponsePrivate(this), parent)
+    : MTurkResponse(new GetQualificationScoreResponsePrivate(this), parent)
 {
     setRequest(new GetQualificationScoreRequest(request));
     setReply(reply);

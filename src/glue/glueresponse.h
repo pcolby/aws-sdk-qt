@@ -34,6 +34,11 @@ class QTAWS_EXPORT GlueResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     GlueResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    GlueResponse(GlueResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

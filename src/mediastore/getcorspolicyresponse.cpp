@@ -46,7 +46,7 @@ GetCorsPolicyResponse::GetCorsPolicyResponse(
         const GetCorsPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetCorsPolicyResponse(new GetCorsPolicyResponsePrivate(this), parent)
+    : MediaStoreResponse(new GetCorsPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetCorsPolicyRequest(request));
     setReply(reply);

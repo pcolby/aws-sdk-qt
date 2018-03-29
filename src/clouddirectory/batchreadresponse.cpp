@@ -46,7 +46,7 @@ BatchReadResponse::BatchReadResponse(
         const BatchReadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchReadResponse(new BatchReadResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new BatchReadResponsePrivate(this), parent)
 {
     setRequest(new BatchReadRequest(request));
     setReply(reply);

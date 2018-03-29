@@ -46,7 +46,7 @@ ImportDocumentationPartsResponse::ImportDocumentationPartsResponse(
         const ImportDocumentationPartsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ImportDocumentationPartsResponse(new ImportDocumentationPartsResponsePrivate(this), parent)
+    : APIGatewayResponse(new ImportDocumentationPartsResponsePrivate(this), parent)
 {
     setRequest(new ImportDocumentationPartsRequest(request));
     setReply(reply);

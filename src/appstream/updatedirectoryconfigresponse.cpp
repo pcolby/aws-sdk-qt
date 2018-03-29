@@ -46,7 +46,7 @@ UpdateDirectoryConfigResponse::UpdateDirectoryConfigResponse(
         const UpdateDirectoryConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDirectoryConfigResponse(new UpdateDirectoryConfigResponsePrivate(this), parent)
+    : AppStreamResponse(new UpdateDirectoryConfigResponsePrivate(this), parent)
 {
     setRequest(new UpdateDirectoryConfigRequest(request));
     setReply(reply);

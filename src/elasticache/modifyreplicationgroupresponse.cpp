@@ -46,7 +46,7 @@ ModifyReplicationGroupResponse::ModifyReplicationGroupResponse(
         const ModifyReplicationGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyReplicationGroupResponse(new ModifyReplicationGroupResponsePrivate(this), parent)
+    : ElastiCacheResponse(new ModifyReplicationGroupResponsePrivate(this), parent)
 {
     setRequest(new ModifyReplicationGroupRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ModifyHsmResponse::ModifyHsmResponse(
         const ModifyHsmRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyHsmResponse(new ModifyHsmResponsePrivate(this), parent)
+    : CloudHSMResponse(new ModifyHsmResponsePrivate(this), parent)
 {
     setRequest(new ModifyHsmRequest(request));
     setReply(reply);

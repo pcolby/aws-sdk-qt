@@ -46,7 +46,7 @@ PutScalingPolicyResponse::PutScalingPolicyResponse(
         const PutScalingPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutScalingPolicyResponse(new PutScalingPolicyResponsePrivate(this), parent)
+    : ApplicationAutoScalingResponse(new PutScalingPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutScalingPolicyRequest(request));
     setReply(reply);

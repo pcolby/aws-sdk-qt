@@ -46,7 +46,7 @@ FailoverDBClusterResponse::FailoverDBClusterResponse(
         const FailoverDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FailoverDBClusterResponse(new FailoverDBClusterResponsePrivate(this), parent)
+    : RDSResponse(new FailoverDBClusterResponsePrivate(this), parent)
 {
     setRequest(new FailoverDBClusterRequest(request));
     setReply(reply);

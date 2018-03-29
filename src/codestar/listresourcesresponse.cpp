@@ -46,7 +46,7 @@ ListResourcesResponse::ListResourcesResponse(
         const ListResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListResourcesResponse(new ListResourcesResponsePrivate(this), parent)
+    : CodeStarResponse(new ListResourcesResponsePrivate(this), parent)
 {
     setRequest(new ListResourcesRequest(request));
     setReply(reply);

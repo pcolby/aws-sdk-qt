@@ -46,7 +46,7 @@ DeleteMetricFilterResponse::DeleteMetricFilterResponse(
         const DeleteMetricFilterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteMetricFilterResponse(new DeleteMetricFilterResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new DeleteMetricFilterResponsePrivate(this), parent)
 {
     setRequest(new DeleteMetricFilterRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteDirectConnectGatewayResponse::DeleteDirectConnectGatewayResponse(
         const DeleteDirectConnectGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDirectConnectGatewayResponse(new DeleteDirectConnectGatewayResponsePrivate(this), parent)
+    : DirectConnectResponse(new DeleteDirectConnectGatewayResponsePrivate(this), parent)
 {
     setRequest(new DeleteDirectConnectGatewayRequest(request));
     setReply(reply);

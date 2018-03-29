@@ -46,7 +46,7 @@ TagLogGroupResponse::TagLogGroupResponse(
         const TagLogGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : TagLogGroupResponse(new TagLogGroupResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new TagLogGroupResponsePrivate(this), parent)
 {
     setRequest(new TagLogGroupRequest(request));
     setReply(reply);

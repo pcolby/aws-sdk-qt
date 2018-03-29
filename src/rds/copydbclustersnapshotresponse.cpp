@@ -46,7 +46,7 @@ CopyDBClusterSnapshotResponse::CopyDBClusterSnapshotResponse(
         const CopyDBClusterSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CopyDBClusterSnapshotResponse(new CopyDBClusterSnapshotResponsePrivate(this), parent)
+    : RDSResponse(new CopyDBClusterSnapshotResponsePrivate(this), parent)
 {
     setRequest(new CopyDBClusterSnapshotRequest(request));
     setReply(reply);

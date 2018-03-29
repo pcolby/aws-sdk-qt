@@ -46,7 +46,7 @@ DescribeTrustedAdvisorCheckResultResponse::DescribeTrustedAdvisorCheckResultResp
         const DescribeTrustedAdvisorCheckResultRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeTrustedAdvisorCheckResultResponse(new DescribeTrustedAdvisorCheckResultResponsePrivate(this), parent)
+    : SupportResponse(new DescribeTrustedAdvisorCheckResultResponsePrivate(this), parent)
 {
     setRequest(new DescribeTrustedAdvisorCheckResultRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetInstanceAccessResponse::GetInstanceAccessResponse(
         const GetInstanceAccessRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetInstanceAccessResponse(new GetInstanceAccessResponsePrivate(this), parent)
+    : GameLiftResponse(new GetInstanceAccessResponsePrivate(this), parent)
 {
     setRequest(new GetInstanceAccessRequest(request));
     setReply(reply);

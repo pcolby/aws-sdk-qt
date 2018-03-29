@@ -46,7 +46,7 @@ SetStatusResponse::SetStatusResponse(
         const SetStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetStatusResponse(new SetStatusResponsePrivate(this), parent)
+    : DataPipelineResponse(new SetStatusResponsePrivate(this), parent)
 {
     setRequest(new SetStatusRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeregisterManagedInstanceResponse::DeregisterManagedInstanceResponse(
         const DeregisterManagedInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeregisterManagedInstanceResponse(new DeregisterManagedInstanceResponsePrivate(this), parent)
+    : SSMResponse(new DeregisterManagedInstanceResponsePrivate(this), parent)
 {
     setRequest(new DeregisterManagedInstanceRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetReplicationRunsResponse::GetReplicationRunsResponse(
         const GetReplicationRunsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetReplicationRunsResponse(new GetReplicationRunsResponsePrivate(this), parent)
+    : SMSResponse(new GetReplicationRunsResponsePrivate(this), parent)
 {
     setRequest(new GetReplicationRunsRequest(request));
     setReply(reply);

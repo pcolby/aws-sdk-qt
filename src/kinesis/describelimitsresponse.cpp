@@ -46,7 +46,7 @@ DescribeLimitsResponse::DescribeLimitsResponse(
         const DescribeLimitsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeLimitsResponse(new DescribeLimitsResponsePrivate(this), parent)
+    : KinesisResponse(new DescribeLimitsResponsePrivate(this), parent)
 {
     setRequest(new DescribeLimitsRequest(request));
     setReply(reply);

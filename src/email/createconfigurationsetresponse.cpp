@@ -46,7 +46,7 @@ CreateConfigurationSetResponse::CreateConfigurationSetResponse(
         const CreateConfigurationSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateConfigurationSetResponse(new CreateConfigurationSetResponsePrivate(this), parent)
+    : SESResponse(new CreateConfigurationSetResponsePrivate(this), parent)
 {
     setRequest(new CreateConfigurationSetRequest(request));
     setReply(reply);

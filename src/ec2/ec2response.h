@@ -34,6 +34,11 @@ class QTAWS_EXPORT EC2Response : public QtAws::Core::AwsAbstractResponse {
 public:
     EC2Response(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    EC2Response(EC2ResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

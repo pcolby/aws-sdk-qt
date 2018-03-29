@@ -46,7 +46,7 @@ GetEmailChannelResponse::GetEmailChannelResponse(
         const GetEmailChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetEmailChannelResponse(new GetEmailChannelResponsePrivate(this), parent)
+    : PinpointResponse(new GetEmailChannelResponsePrivate(this), parent)
 {
     setRequest(new GetEmailChannelRequest(request));
     setReply(reply);

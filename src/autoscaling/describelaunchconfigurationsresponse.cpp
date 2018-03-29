@@ -46,7 +46,7 @@ DescribeLaunchConfigurationsResponse::DescribeLaunchConfigurationsResponse(
         const DescribeLaunchConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeLaunchConfigurationsResponse(new DescribeLaunchConfigurationsResponsePrivate(this), parent)
+    : AutoScalingResponse(new DescribeLaunchConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeLaunchConfigurationsRequest(request));
     setReply(reply);

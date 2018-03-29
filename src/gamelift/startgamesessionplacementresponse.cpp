@@ -46,7 +46,7 @@ StartGameSessionPlacementResponse::StartGameSessionPlacementResponse(
         const StartGameSessionPlacementRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartGameSessionPlacementResponse(new StartGameSessionPlacementResponsePrivate(this), parent)
+    : GameLiftResponse(new StartGameSessionPlacementResponsePrivate(this), parent)
 {
     setRequest(new StartGameSessionPlacementRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListAccountAliasesResponse::ListAccountAliasesResponse(
         const ListAccountAliasesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListAccountAliasesResponse(new ListAccountAliasesResponsePrivate(this), parent)
+    : IAMResponse(new ListAccountAliasesResponsePrivate(this), parent)
 {
     setRequest(new ListAccountAliasesRequest(request));
     setReply(reply);

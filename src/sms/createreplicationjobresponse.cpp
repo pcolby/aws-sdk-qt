@@ -46,7 +46,7 @@ CreateReplicationJobResponse::CreateReplicationJobResponse(
         const CreateReplicationJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateReplicationJobResponse(new CreateReplicationJobResponsePrivate(this), parent)
+    : SMSResponse(new CreateReplicationJobResponsePrivate(this), parent)
 {
     setRequest(new CreateReplicationJobRequest(request));
     setReply(reply);

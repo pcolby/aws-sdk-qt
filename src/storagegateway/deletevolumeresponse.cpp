@@ -46,7 +46,7 @@ DeleteVolumeResponse::DeleteVolumeResponse(
         const DeleteVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteVolumeResponse(new DeleteVolumeResponsePrivate(this), parent)
+    : StorageGatewayResponse(new DeleteVolumeResponsePrivate(this), parent)
 {
     setRequest(new DeleteVolumeRequest(request));
     setReply(reply);

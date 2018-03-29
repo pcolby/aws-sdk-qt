@@ -46,7 +46,7 @@ EnableEnhancedMonitoringResponse::EnableEnhancedMonitoringResponse(
         const EnableEnhancedMonitoringRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EnableEnhancedMonitoringResponse(new EnableEnhancedMonitoringResponsePrivate(this), parent)
+    : KinesisResponse(new EnableEnhancedMonitoringResponsePrivate(this), parent)
 {
     setRequest(new EnableEnhancedMonitoringRequest(request));
     setReply(reply);

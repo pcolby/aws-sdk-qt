@@ -46,7 +46,7 @@ DescribeFleetsResponse::DescribeFleetsResponse(
         const DescribeFleetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeFleetsResponse(new DescribeFleetsResponsePrivate(this), parent)
+    : AppStreamResponse(new DescribeFleetsResponsePrivate(this), parent)
 {
     setRequest(new DescribeFleetsRequest(request));
     setReply(reply);

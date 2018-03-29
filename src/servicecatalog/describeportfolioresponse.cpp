@@ -46,7 +46,7 @@ DescribePortfolioResponse::DescribePortfolioResponse(
         const DescribePortfolioRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribePortfolioResponse(new DescribePortfolioResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new DescribePortfolioResponsePrivate(this), parent)
 {
     setRequest(new DescribePortfolioRequest(request));
     setReply(reply);

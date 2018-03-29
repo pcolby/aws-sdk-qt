@@ -46,7 +46,7 @@ DescribeBudgetsResponse::DescribeBudgetsResponse(
         const DescribeBudgetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeBudgetsResponse(new DescribeBudgetsResponsePrivate(this), parent)
+    : BudgetsResponse(new DescribeBudgetsResponsePrivate(this), parent)
 {
     setRequest(new DescribeBudgetsRequest(request));
     setReply(reply);

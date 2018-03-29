@@ -46,7 +46,7 @@ RebootBrokerResponse::RebootBrokerResponse(
         const RebootBrokerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RebootBrokerResponse(new RebootBrokerResponsePrivate(this), parent)
+    : MQResponse(new RebootBrokerResponsePrivate(this), parent)
 {
     setRequest(new RebootBrokerRequest(request));
     setReply(reply);

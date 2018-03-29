@@ -46,7 +46,7 @@ DeleteIntegrationResponseResponse::DeleteIntegrationResponseResponse(
         const DeleteIntegrationResponseRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteIntegrationResponseResponse(new DeleteIntegrationResponseResponsePrivate(this), parent)
+    : APIGatewayResponse(new DeleteIntegrationResponseResponsePrivate(this), parent)
 {
     setRequest(new DeleteIntegrationResponseRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DisassociateDeviceFromRoomResponse::DisassociateDeviceFromRoomResponse(
         const DisassociateDeviceFromRoomRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateDeviceFromRoomResponse(new DisassociateDeviceFromRoomResponsePrivate(this), parent)
+    : AlexaForBusinessResponse(new DisassociateDeviceFromRoomResponsePrivate(this), parent)
 {
     setRequest(new DisassociateDeviceFromRoomRequest(request));
     setReply(reply);

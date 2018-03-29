@@ -46,7 +46,7 @@ ListRecordsResponse::ListRecordsResponse(
         const ListRecordsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListRecordsResponse(new ListRecordsResponsePrivate(this), parent)
+    : CognitoSyncResponse(new ListRecordsResponsePrivate(this), parent)
 {
     setRequest(new ListRecordsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RunJobFlowResponse::RunJobFlowResponse(
         const RunJobFlowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RunJobFlowResponse(new RunJobFlowResponsePrivate(this), parent)
+    : EMRResponse(new RunJobFlowResponsePrivate(this), parent)
 {
     setRequest(new RunJobFlowRequest(request));
     setReply(reply);

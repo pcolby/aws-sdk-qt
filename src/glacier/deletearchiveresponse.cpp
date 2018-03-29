@@ -46,7 +46,7 @@ DeleteArchiveResponse::DeleteArchiveResponse(
         const DeleteArchiveRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteArchiveResponse(new DeleteArchiveResponsePrivate(this), parent)
+    : GlacierResponse(new DeleteArchiveResponsePrivate(this), parent)
 {
     setRequest(new DeleteArchiveRequest(request));
     setReply(reply);

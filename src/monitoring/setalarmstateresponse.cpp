@@ -46,7 +46,7 @@ SetAlarmStateResponse::SetAlarmStateResponse(
         const SetAlarmStateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetAlarmStateResponse(new SetAlarmStateResponsePrivate(this), parent)
+    : CloudWatchResponse(new SetAlarmStateResponsePrivate(this), parent)
 {
     setRequest(new SetAlarmStateRequest(request));
     setReply(reply);

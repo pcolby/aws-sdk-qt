@@ -46,7 +46,7 @@ ListHapgsResponse::ListHapgsResponse(
         const ListHapgsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListHapgsResponse(new ListHapgsResponsePrivate(this), parent)
+    : CloudHSMResponse(new ListHapgsResponsePrivate(this), parent)
 {
     setRequest(new ListHapgsRequest(request));
     setReply(reply);

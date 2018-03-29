@@ -46,7 +46,7 @@ CreateKeyResponse::CreateKeyResponse(
         const CreateKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateKeyResponse(new CreateKeyResponsePrivate(this), parent)
+    : KMSResponse(new CreateKeyResponsePrivate(this), parent)
 {
     setRequest(new CreateKeyRequest(request));
     setReply(reply);

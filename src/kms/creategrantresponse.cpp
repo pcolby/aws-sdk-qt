@@ -46,7 +46,7 @@ CreateGrantResponse::CreateGrantResponse(
         const CreateGrantRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateGrantResponse(new CreateGrantResponsePrivate(this), parent)
+    : KMSResponse(new CreateGrantResponsePrivate(this), parent)
 {
     setRequest(new CreateGrantRequest(request));
     setReply(reply);

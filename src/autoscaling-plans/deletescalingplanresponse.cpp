@@ -46,7 +46,7 @@ DeleteScalingPlanResponse::DeleteScalingPlanResponse(
         const DeleteScalingPlanRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteScalingPlanResponse(new DeleteScalingPlanResponsePrivate(this), parent)
+    : AutoScalingPlansResponse(new DeleteScalingPlanResponsePrivate(this), parent)
 {
     setRequest(new DeleteScalingPlanRequest(request));
     setReply(reply);

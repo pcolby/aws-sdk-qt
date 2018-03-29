@@ -46,7 +46,7 @@ DeleteCollectionResponse::DeleteCollectionResponse(
         const DeleteCollectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteCollectionResponse(new DeleteCollectionResponsePrivate(this), parent)
+    : RekognitionResponse(new DeleteCollectionResponsePrivate(this), parent)
 {
     setRequest(new DeleteCollectionRequest(request));
     setReply(reply);

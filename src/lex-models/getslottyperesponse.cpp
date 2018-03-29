@@ -46,7 +46,7 @@ GetSlotTypeResponse::GetSlotTypeResponse(
         const GetSlotTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetSlotTypeResponse(new GetSlotTypeResponsePrivate(this), parent)
+    : LexModelBuildingServiceResponse(new GetSlotTypeResponsePrivate(this), parent)
 {
     setRequest(new GetSlotTypeRequest(request));
     setReply(reply);

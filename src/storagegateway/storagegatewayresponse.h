@@ -34,6 +34,11 @@ class QTAWS_EXPORT StorageGatewayResponse : public QtAws::Core::AwsAbstractRespo
 public:
     StorageGatewayResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    StorageGatewayResponse(StorageGatewayResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

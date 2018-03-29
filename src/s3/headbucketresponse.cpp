@@ -46,7 +46,7 @@ HeadBucketResponse::HeadBucketResponse(
         const HeadBucketRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : HeadBucketResponse(new HeadBucketResponsePrivate(this), parent)
+    : S3Response(new HeadBucketResponsePrivate(this), parent)
 {
     setRequest(new HeadBucketRequest(request));
     setReply(reply);

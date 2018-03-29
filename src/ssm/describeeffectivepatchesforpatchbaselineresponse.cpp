@@ -46,7 +46,7 @@ DescribeEffectivePatchesForPatchBaselineResponse::DescribeEffectivePatchesForPat
         const DescribeEffectivePatchesForPatchBaselineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeEffectivePatchesForPatchBaselineResponse(new DescribeEffectivePatchesForPatchBaselineResponsePrivate(this), parent)
+    : SSMResponse(new DescribeEffectivePatchesForPatchBaselineResponsePrivate(this), parent)
 {
     setRequest(new DescribeEffectivePatchesForPatchBaselineRequest(request));
     setReply(reply);

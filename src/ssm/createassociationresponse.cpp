@@ -46,7 +46,7 @@ CreateAssociationResponse::CreateAssociationResponse(
         const CreateAssociationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateAssociationResponse(new CreateAssociationResponsePrivate(this), parent)
+    : SSMResponse(new CreateAssociationResponsePrivate(this), parent)
 {
     setRequest(new CreateAssociationRequest(request));
     setReply(reply);

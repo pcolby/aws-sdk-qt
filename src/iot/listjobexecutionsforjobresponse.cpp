@@ -46,7 +46,7 @@ ListJobExecutionsForJobResponse::ListJobExecutionsForJobResponse(
         const ListJobExecutionsForJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListJobExecutionsForJobResponse(new ListJobExecutionsForJobResponsePrivate(this), parent)
+    : IoTResponse(new ListJobExecutionsForJobResponsePrivate(this), parent)
 {
     setRequest(new ListJobExecutionsForJobRequest(request));
     setReply(reply);

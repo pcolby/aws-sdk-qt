@@ -46,7 +46,7 @@ ContinueDeploymentResponse::ContinueDeploymentResponse(
         const ContinueDeploymentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ContinueDeploymentResponse(new ContinueDeploymentResponsePrivate(this), parent)
+    : CodeDeployResponse(new ContinueDeploymentResponsePrivate(this), parent)
 {
     setRequest(new ContinueDeploymentRequest(request));
     setReply(reply);

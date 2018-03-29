@@ -46,7 +46,7 @@ GetInventorySchemaResponse::GetInventorySchemaResponse(
         const GetInventorySchemaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetInventorySchemaResponse(new GetInventorySchemaResponsePrivate(this), parent)
+    : SSMResponse(new GetInventorySchemaResponsePrivate(this), parent)
 {
     setRequest(new GetInventorySchemaRequest(request));
     setReply(reply);

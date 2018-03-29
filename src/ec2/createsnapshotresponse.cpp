@@ -46,7 +46,7 @@ CreateSnapshotResponse::CreateSnapshotResponse(
         const CreateSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateSnapshotResponse(new CreateSnapshotResponsePrivate(this), parent)
+    : EC2Response(new CreateSnapshotResponsePrivate(this), parent)
 {
     setRequest(new CreateSnapshotRequest(request));
     setReply(reply);

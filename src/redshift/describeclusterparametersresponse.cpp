@@ -46,7 +46,7 @@ DescribeClusterParametersResponse::DescribeClusterParametersResponse(
         const DescribeClusterParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeClusterParametersResponse(new DescribeClusterParametersResponsePrivate(this), parent)
+    : RedshiftResponse(new DescribeClusterParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeClusterParametersRequest(request));
     setReply(reply);

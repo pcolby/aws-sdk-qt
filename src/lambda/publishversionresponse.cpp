@@ -46,7 +46,7 @@ PublishVersionResponse::PublishVersionResponse(
         const PublishVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PublishVersionResponse(new PublishVersionResponsePrivate(this), parent)
+    : LambdaResponse(new PublishVersionResponsePrivate(this), parent)
 {
     setRequest(new PublishVersionRequest(request));
     setReply(reply);

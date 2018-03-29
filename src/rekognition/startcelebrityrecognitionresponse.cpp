@@ -46,7 +46,7 @@ StartCelebrityRecognitionResponse::StartCelebrityRecognitionResponse(
         const StartCelebrityRecognitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartCelebrityRecognitionResponse(new StartCelebrityRecognitionResponsePrivate(this), parent)
+    : RekognitionResponse(new StartCelebrityRecognitionResponsePrivate(this), parent)
 {
     setRequest(new StartCelebrityRecognitionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ AttachTypedLinkResponse::AttachTypedLinkResponse(
         const AttachTypedLinkRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AttachTypedLinkResponse(new AttachTypedLinkResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new AttachTypedLinkResponsePrivate(this), parent)
 {
     setRequest(new AttachTypedLinkRequest(request));
     setReply(reply);

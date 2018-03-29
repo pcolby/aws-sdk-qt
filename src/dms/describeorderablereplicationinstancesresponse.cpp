@@ -46,7 +46,7 @@ DescribeOrderableReplicationInstancesResponse::DescribeOrderableReplicationInsta
         const DescribeOrderableReplicationInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeOrderableReplicationInstancesResponse(new DescribeOrderableReplicationInstancesResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new DescribeOrderableReplicationInstancesResponsePrivate(this), parent)
 {
     setRequest(new DescribeOrderableReplicationInstancesRequest(request));
     setReply(reply);

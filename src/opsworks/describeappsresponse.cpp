@@ -46,7 +46,7 @@ DescribeAppsResponse::DescribeAppsResponse(
         const DescribeAppsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAppsResponse(new DescribeAppsResponsePrivate(this), parent)
+    : OpsWorksResponse(new DescribeAppsResponsePrivate(this), parent)
 {
     setRequest(new DescribeAppsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeAliasResponse::DescribeAliasResponse(
         const DescribeAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAliasResponse(new DescribeAliasResponsePrivate(this), parent)
+    : GameLiftResponse(new DescribeAliasResponsePrivate(this), parent)
 {
     setRequest(new DescribeAliasRequest(request));
     setReply(reply);

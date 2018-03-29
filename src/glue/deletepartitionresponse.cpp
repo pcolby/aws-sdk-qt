@@ -46,7 +46,7 @@ DeletePartitionResponse::DeletePartitionResponse(
         const DeletePartitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeletePartitionResponse(new DeletePartitionResponsePrivate(this), parent)
+    : GlueResponse(new DeletePartitionResponsePrivate(this), parent)
 {
     setRequest(new DeletePartitionRequest(request));
     setReply(reply);

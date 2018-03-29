@@ -46,7 +46,7 @@ ResetImageAttributeResponse::ResetImageAttributeResponse(
         const ResetImageAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResetImageAttributeResponse(new ResetImageAttributeResponsePrivate(this), parent)
+    : EC2Response(new ResetImageAttributeResponsePrivate(this), parent)
 {
     setRequest(new ResetImageAttributeRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteVpnConnectionResponse::DeleteVpnConnectionResponse(
         const DeleteVpnConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteVpnConnectionResponse(new DeleteVpnConnectionResponsePrivate(this), parent)
+    : EC2Response(new DeleteVpnConnectionResponsePrivate(this), parent)
 {
     setRequest(new DeleteVpnConnectionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateFunctionDefinitionVersionResponse::CreateFunctionDefinitionVersionResponse
         const CreateFunctionDefinitionVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateFunctionDefinitionVersionResponse(new CreateFunctionDefinitionVersionResponsePrivate(this), parent)
+    : GreengrassResponse(new CreateFunctionDefinitionVersionResponsePrivate(this), parent)
 {
     setRequest(new CreateFunctionDefinitionVersionRequest(request));
     setReply(reply);

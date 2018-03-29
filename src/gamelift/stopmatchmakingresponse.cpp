@@ -46,7 +46,7 @@ StopMatchmakingResponse::StopMatchmakingResponse(
         const StopMatchmakingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopMatchmakingResponse(new StopMatchmakingResponsePrivate(this), parent)
+    : GameLiftResponse(new StopMatchmakingResponsePrivate(this), parent)
 {
     setRequest(new StopMatchmakingRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetDocumentationPartsResponse::GetDocumentationPartsResponse(
         const GetDocumentationPartsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDocumentationPartsResponse(new GetDocumentationPartsResponsePrivate(this), parent)
+    : APIGatewayResponse(new GetDocumentationPartsResponsePrivate(this), parent)
 {
     setRequest(new GetDocumentationPartsRequest(request));
     setReply(reply);

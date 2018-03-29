@@ -46,7 +46,7 @@ ListPhoneNumbersOptedOutResponse::ListPhoneNumbersOptedOutResponse(
         const ListPhoneNumbersOptedOutRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListPhoneNumbersOptedOutResponse(new ListPhoneNumbersOptedOutResponsePrivate(this), parent)
+    : SNSResponse(new ListPhoneNumbersOptedOutResponsePrivate(this), parent)
 {
     setRequest(new ListPhoneNumbersOptedOutRequest(request));
     setReply(reply);

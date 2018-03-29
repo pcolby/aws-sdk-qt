@@ -46,7 +46,7 @@ DeleteDBClusterSnapshotResponse::DeleteDBClusterSnapshotResponse(
         const DeleteDBClusterSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDBClusterSnapshotResponse(new DeleteDBClusterSnapshotResponsePrivate(this), parent)
+    : RDSResponse(new DeleteDBClusterSnapshotResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBClusterSnapshotRequest(request));
     setReply(reply);

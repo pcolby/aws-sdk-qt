@@ -46,7 +46,7 @@ GetTriggersResponse::GetTriggersResponse(
         const GetTriggersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetTriggersResponse(new GetTriggersResponsePrivate(this), parent)
+    : GlueResponse(new GetTriggersResponsePrivate(this), parent)
 {
     setRequest(new GetTriggersRequest(request));
     setReply(reply);

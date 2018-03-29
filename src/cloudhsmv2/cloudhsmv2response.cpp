@@ -46,6 +46,24 @@ CloudHSMV2Response::CloudHSMV2Response(QObject * const parent)
 }
 
 /**
+ * @internal
+ *
+ * @brief  Constructs a new CloudHSMV2Response object.
+ *
+ *
+ * This overload allows derived classes to provide their own private class
+ * implementation that inherits from CloudHSMV2ResponsePrivate.
+ *
+ * @param  d       Pointer to private data (aka D-Pointer).
+ * @param  parent  This object's parent.
+ */
+CloudHSMV2Response::CloudHSMV2Response(CloudHSMV2ResponsePrivate * const d, QObject * const parent)
+    : QtAws::Core::AwsAbstractResponse(d, parent)
+{
+
+}
+
+/**
  * @brief  Parse a failure response.
  *
  * @param  response  Response to parse.

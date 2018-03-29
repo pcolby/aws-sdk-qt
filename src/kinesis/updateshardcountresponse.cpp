@@ -46,7 +46,7 @@ UpdateShardCountResponse::UpdateShardCountResponse(
         const UpdateShardCountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateShardCountResponse(new UpdateShardCountResponsePrivate(this), parent)
+    : KinesisResponse(new UpdateShardCountResponsePrivate(this), parent)
 {
     setRequest(new UpdateShardCountRequest(request));
     setReply(reply);

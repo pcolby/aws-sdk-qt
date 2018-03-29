@@ -46,7 +46,7 @@ GetFunctionResponse::GetFunctionResponse(
         const GetFunctionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetFunctionResponse(new GetFunctionResponsePrivate(this), parent)
+    : LambdaResponse(new GetFunctionResponsePrivate(this), parent)
 {
     setRequest(new GetFunctionRequest(request));
     setReply(reply);

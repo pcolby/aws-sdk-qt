@@ -46,7 +46,7 @@ DeleteSubscriberResponse::DeleteSubscriberResponse(
         const DeleteSubscriberRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSubscriberResponse(new DeleteSubscriberResponsePrivate(this), parent)
+    : BudgetsResponse(new DeleteSubscriberResponsePrivate(this), parent)
 {
     setRequest(new DeleteSubscriberRequest(request));
     setReply(reply);

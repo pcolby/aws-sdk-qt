@@ -46,7 +46,7 @@ SignalResourceResponse::SignalResourceResponse(
         const SignalResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SignalResourceResponse(new SignalResourceResponsePrivate(this), parent)
+    : CloudFormationResponse(new SignalResourceResponsePrivate(this), parent)
 {
     setRequest(new SignalResourceRequest(request));
     setReply(reply);

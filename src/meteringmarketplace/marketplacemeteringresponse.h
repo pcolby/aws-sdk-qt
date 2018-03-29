@@ -34,6 +34,11 @@ class QTAWS_EXPORT MarketplaceMeteringResponse : public QtAws::Core::AwsAbstract
 public:
     MarketplaceMeteringResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    MarketplaceMeteringResponse(MarketplaceMeteringResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

@@ -46,7 +46,7 @@ DescribeServiceAccessPoliciesResponse::DescribeServiceAccessPoliciesResponse(
         const DescribeServiceAccessPoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeServiceAccessPoliciesResponse(new DescribeServiceAccessPoliciesResponsePrivate(this), parent)
+    : CloudSearchResponse(new DescribeServiceAccessPoliciesResponsePrivate(this), parent)
 {
     setRequest(new DescribeServiceAccessPoliciesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListDocumentVersionsResponse::ListDocumentVersionsResponse(
         const ListDocumentVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListDocumentVersionsResponse(new ListDocumentVersionsResponsePrivate(this), parent)
+    : SSMResponse(new ListDocumentVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListDocumentVersionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StartReplicationTaskAssessmentResponse::StartReplicationTaskAssessmentResponse(
         const StartReplicationTaskAssessmentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartReplicationTaskAssessmentResponse(new StartReplicationTaskAssessmentResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new StartReplicationTaskAssessmentResponsePrivate(this), parent)
 {
     setRequest(new StartReplicationTaskAssessmentRequest(request));
     setReply(reply);

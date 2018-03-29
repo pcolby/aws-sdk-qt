@@ -46,7 +46,7 @@ DeleteCACertificateResponse::DeleteCACertificateResponse(
         const DeleteCACertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteCACertificateResponse(new DeleteCACertificateResponsePrivate(this), parent)
+    : IoTResponse(new DeleteCACertificateResponsePrivate(this), parent)
 {
     setRequest(new DeleteCACertificateRequest(request));
     setReply(reply);

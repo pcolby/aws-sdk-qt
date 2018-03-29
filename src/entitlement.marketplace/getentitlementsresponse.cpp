@@ -46,7 +46,7 @@ GetEntitlementsResponse::GetEntitlementsResponse(
         const GetEntitlementsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetEntitlementsResponse(new GetEntitlementsResponsePrivate(this), parent)
+    : MarketplaceEntitlementServiceResponse(new GetEntitlementsResponsePrivate(this), parent)
 {
     setRequest(new GetEntitlementsRequest(request));
     setReply(reply);

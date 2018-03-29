@@ -46,7 +46,7 @@ UpdateEventConfigurationsResponse::UpdateEventConfigurationsResponse(
         const UpdateEventConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateEventConfigurationsResponse(new UpdateEventConfigurationsResponsePrivate(this), parent)
+    : IoTResponse(new UpdateEventConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new UpdateEventConfigurationsRequest(request));
     setReply(reply);

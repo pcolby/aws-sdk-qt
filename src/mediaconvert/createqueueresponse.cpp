@@ -46,7 +46,7 @@ CreateQueueResponse::CreateQueueResponse(
         const CreateQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateQueueResponse(new CreateQueueResponsePrivate(this), parent)
+    : MediaConvertResponse(new CreateQueueResponsePrivate(this), parent)
 {
     setRequest(new CreateQueueRequest(request));
     setReply(reply);

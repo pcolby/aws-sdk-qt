@@ -46,7 +46,7 @@ GetBaiduChannelResponse::GetBaiduChannelResponse(
         const GetBaiduChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetBaiduChannelResponse(new GetBaiduChannelResponsePrivate(this), parent)
+    : PinpointResponse(new GetBaiduChannelResponsePrivate(this), parent)
 {
     setRequest(new GetBaiduChannelRequest(request));
     setReply(reply);

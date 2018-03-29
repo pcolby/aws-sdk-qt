@@ -34,6 +34,11 @@ class QTAWS_EXPORT DeviceFarmResponse : public QtAws::Core::AwsAbstractResponse 
 public:
     DeviceFarmResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    DeviceFarmResponse(DeviceFarmResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

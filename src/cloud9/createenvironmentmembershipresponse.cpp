@@ -46,7 +46,7 @@ CreateEnvironmentMembershipResponse::CreateEnvironmentMembershipResponse(
         const CreateEnvironmentMembershipRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateEnvironmentMembershipResponse(new CreateEnvironmentMembershipResponsePrivate(this), parent)
+    : Cloud9Response(new CreateEnvironmentMembershipResponsePrivate(this), parent)
 {
     setRequest(new CreateEnvironmentMembershipRequest(request));
     setReply(reply);

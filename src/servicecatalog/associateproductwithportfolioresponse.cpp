@@ -46,7 +46,7 @@ AssociateProductWithPortfolioResponse::AssociateProductWithPortfolioResponse(
         const AssociateProductWithPortfolioRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssociateProductWithPortfolioResponse(new AssociateProductWithPortfolioResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new AssociateProductWithPortfolioResponsePrivate(this), parent)
 {
     setRequest(new AssociateProductWithPortfolioRequest(request));
     setReply(reply);

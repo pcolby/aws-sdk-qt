@@ -46,7 +46,7 @@ GetContextKeysForPrincipalPolicyResponse::GetContextKeysForPrincipalPolicyRespon
         const GetContextKeysForPrincipalPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetContextKeysForPrincipalPolicyResponse(new GetContextKeysForPrincipalPolicyResponsePrivate(this), parent)
+    : IAMResponse(new GetContextKeysForPrincipalPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetContextKeysForPrincipalPolicyRequest(request));
     setReply(reply);

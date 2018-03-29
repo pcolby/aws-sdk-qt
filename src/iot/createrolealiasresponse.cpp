@@ -46,7 +46,7 @@ CreateRoleAliasResponse::CreateRoleAliasResponse(
         const CreateRoleAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateRoleAliasResponse(new CreateRoleAliasResponsePrivate(this), parent)
+    : IoTResponse(new CreateRoleAliasResponsePrivate(this), parent)
 {
     setRequest(new CreateRoleAliasRequest(request));
     setReply(reply);

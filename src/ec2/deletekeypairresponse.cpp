@@ -46,7 +46,7 @@ DeleteKeyPairResponse::DeleteKeyPairResponse(
         const DeleteKeyPairRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteKeyPairResponse(new DeleteKeyPairResponsePrivate(this), parent)
+    : EC2Response(new DeleteKeyPairResponsePrivate(this), parent)
 {
     setRequest(new DeleteKeyPairRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StopStackResponse::StopStackResponse(
         const StopStackRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopStackResponse(new StopStackResponsePrivate(this), parent)
+    : OpsWorksResponse(new StopStackResponsePrivate(this), parent)
 {
     setRequest(new StopStackRequest(request));
     setReply(reply);

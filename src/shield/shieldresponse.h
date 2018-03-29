@@ -34,6 +34,11 @@ class QTAWS_EXPORT ShieldResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     ShieldResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    ShieldResponse(ShieldResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

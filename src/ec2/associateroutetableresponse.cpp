@@ -46,7 +46,7 @@ AssociateRouteTableResponse::AssociateRouteTableResponse(
         const AssociateRouteTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssociateRouteTableResponse(new AssociateRouteTableResponsePrivate(this), parent)
+    : EC2Response(new AssociateRouteTableResponsePrivate(this), parent)
 {
     setRequest(new AssociateRouteTableRequest(request));
     setReply(reply);

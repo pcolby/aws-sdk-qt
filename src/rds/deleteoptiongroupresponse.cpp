@@ -46,7 +46,7 @@ DeleteOptionGroupResponse::DeleteOptionGroupResponse(
         const DeleteOptionGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteOptionGroupResponse(new DeleteOptionGroupResponsePrivate(this), parent)
+    : RDSResponse(new DeleteOptionGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteOptionGroupRequest(request));
     setReply(reply);

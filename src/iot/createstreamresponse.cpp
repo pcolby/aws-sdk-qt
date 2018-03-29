@@ -46,7 +46,7 @@ CreateStreamResponse::CreateStreamResponse(
         const CreateStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateStreamResponse(new CreateStreamResponsePrivate(this), parent)
+    : IoTResponse(new CreateStreamResponsePrivate(this), parent)
 {
     setRequest(new CreateStreamRequest(request));
     setReply(reply);

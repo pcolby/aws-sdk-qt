@@ -46,7 +46,7 @@ DescribeObjectsResponse::DescribeObjectsResponse(
         const DescribeObjectsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeObjectsResponse(new DescribeObjectsResponsePrivate(this), parent)
+    : DataPipelineResponse(new DescribeObjectsResponsePrivate(this), parent)
 {
     setRequest(new DescribeObjectsRequest(request));
     setReply(reply);

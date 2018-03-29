@@ -46,7 +46,7 @@ GetSmsChannelResponse::GetSmsChannelResponse(
         const GetSmsChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetSmsChannelResponse(new GetSmsChannelResponsePrivate(this), parent)
+    : PinpointResponse(new GetSmsChannelResponsePrivate(this), parent)
 {
     setRequest(new GetSmsChannelRequest(request));
     setReply(reply);

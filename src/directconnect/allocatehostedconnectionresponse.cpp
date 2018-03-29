@@ -46,7 +46,7 @@ AllocateHostedConnectionResponse::AllocateHostedConnectionResponse(
         const AllocateHostedConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AllocateHostedConnectionResponse(new AllocateHostedConnectionResponsePrivate(this), parent)
+    : DirectConnectResponse(new AllocateHostedConnectionResponsePrivate(this), parent)
 {
     setRequest(new AllocateHostedConnectionRequest(request));
     setReply(reply);

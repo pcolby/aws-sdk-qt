@@ -46,7 +46,7 @@ ListAttributesResponse::ListAttributesResponse(
         const ListAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListAttributesResponse(new ListAttributesResponsePrivate(this), parent)
+    : ECSResponse(new ListAttributesResponsePrivate(this), parent)
 {
     setRequest(new ListAttributesRequest(request));
     setReply(reply);

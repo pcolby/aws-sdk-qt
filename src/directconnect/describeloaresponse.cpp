@@ -46,7 +46,7 @@ DescribeLoaResponse::DescribeLoaResponse(
         const DescribeLoaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeLoaResponse(new DescribeLoaResponsePrivate(this), parent)
+    : DirectConnectResponse(new DescribeLoaResponsePrivate(this), parent)
 {
     setRequest(new DescribeLoaRequest(request));
     setReply(reply);

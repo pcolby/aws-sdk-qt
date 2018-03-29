@@ -46,7 +46,7 @@ DescribeDBClusterParametersResponse::DescribeDBClusterParametersResponse(
         const DescribeDBClusterParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeDBClusterParametersResponse(new DescribeDBClusterParametersResponsePrivate(this), parent)
+    : RDSResponse(new DescribeDBClusterParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBClusterParametersRequest(request));
     setReply(reply);

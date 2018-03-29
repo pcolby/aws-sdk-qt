@@ -46,7 +46,7 @@ CreateOrUpdateTagsResponse::CreateOrUpdateTagsResponse(
         const CreateOrUpdateTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateOrUpdateTagsResponse(new CreateOrUpdateTagsResponsePrivate(this), parent)
+    : AutoScalingResponse(new CreateOrUpdateTagsResponsePrivate(this), parent)
 {
     setRequest(new CreateOrUpdateTagsRequest(request));
     setReply(reply);

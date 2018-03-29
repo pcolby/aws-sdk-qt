@@ -46,7 +46,7 @@ UpdateAccessKeyResponse::UpdateAccessKeyResponse(
         const UpdateAccessKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateAccessKeyResponse(new UpdateAccessKeyResponsePrivate(this), parent)
+    : IAMResponse(new UpdateAccessKeyResponsePrivate(this), parent)
 {
     setRequest(new UpdateAccessKeyRequest(request));
     setReply(reply);

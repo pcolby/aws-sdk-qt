@@ -34,6 +34,11 @@ class QTAWS_EXPORT InspectorResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     InspectorResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    InspectorResponse(InspectorResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

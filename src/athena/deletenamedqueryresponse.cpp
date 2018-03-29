@@ -46,7 +46,7 @@ DeleteNamedQueryResponse::DeleteNamedQueryResponse(
         const DeleteNamedQueryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteNamedQueryResponse(new DeleteNamedQueryResponsePrivate(this), parent)
+    : AthenaResponse(new DeleteNamedQueryResponsePrivate(this), parent)
 {
     setRequest(new DeleteNamedQueryRequest(request));
     setReply(reply);

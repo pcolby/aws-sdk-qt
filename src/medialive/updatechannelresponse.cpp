@@ -46,7 +46,7 @@ UpdateChannelResponse::UpdateChannelResponse(
         const UpdateChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateChannelResponse(new UpdateChannelResponsePrivate(this), parent)
+    : MediaLiveResponse(new UpdateChannelResponsePrivate(this), parent)
 {
     setRequest(new UpdateChannelRequest(request));
     setReply(reply);

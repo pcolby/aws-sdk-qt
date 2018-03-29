@@ -46,7 +46,7 @@ SetV2LoggingOptionsResponse::SetV2LoggingOptionsResponse(
         const SetV2LoggingOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetV2LoggingOptionsResponse(new SetV2LoggingOptionsResponsePrivate(this), parent)
+    : IoTResponse(new SetV2LoggingOptionsResponsePrivate(this), parent)
 {
     setRequest(new SetV2LoggingOptionsRequest(request));
     setReply(reply);

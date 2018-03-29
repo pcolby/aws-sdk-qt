@@ -46,7 +46,7 @@ RemoveAutoScalingPolicyResponse::RemoveAutoScalingPolicyResponse(
         const RemoveAutoScalingPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RemoveAutoScalingPolicyResponse(new RemoveAutoScalingPolicyResponsePrivate(this), parent)
+    : EMRResponse(new RemoveAutoScalingPolicyResponsePrivate(this), parent)
 {
     setRequest(new RemoveAutoScalingPolicyRequest(request));
     setReply(reply);

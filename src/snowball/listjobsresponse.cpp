@@ -46,7 +46,7 @@ ListJobsResponse::ListJobsResponse(
         const ListJobsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListJobsResponse(new ListJobsResponsePrivate(this), parent)
+    : SnowballResponse(new ListJobsResponsePrivate(this), parent)
 {
     setRequest(new ListJobsRequest(request));
     setReply(reply);

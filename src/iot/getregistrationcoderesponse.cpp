@@ -46,7 +46,7 @@ GetRegistrationCodeResponse::GetRegistrationCodeResponse(
         const GetRegistrationCodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetRegistrationCodeResponse(new GetRegistrationCodeResponsePrivate(this), parent)
+    : IoTResponse(new GetRegistrationCodeResponsePrivate(this), parent)
 {
     setRequest(new GetRegistrationCodeRequest(request));
     setReply(reply);

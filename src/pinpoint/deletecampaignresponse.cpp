@@ -46,7 +46,7 @@ DeleteCampaignResponse::DeleteCampaignResponse(
         const DeleteCampaignRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteCampaignResponse(new DeleteCampaignResponsePrivate(this), parent)
+    : PinpointResponse(new DeleteCampaignResponsePrivate(this), parent)
 {
     setRequest(new DeleteCampaignRequest(request));
     setReply(reply);

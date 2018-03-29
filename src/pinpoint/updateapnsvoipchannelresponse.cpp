@@ -46,7 +46,7 @@ UpdateApnsVoipChannelResponse::UpdateApnsVoipChannelResponse(
         const UpdateApnsVoipChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateApnsVoipChannelResponse(new UpdateApnsVoipChannelResponsePrivate(this), parent)
+    : PinpointResponse(new UpdateApnsVoipChannelResponsePrivate(this), parent)
 {
     setRequest(new UpdateApnsVoipChannelRequest(request));
     setReply(reply);

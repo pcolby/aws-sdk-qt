@@ -46,7 +46,7 @@ DeleteConfigurationTemplateResponse::DeleteConfigurationTemplateResponse(
         const DeleteConfigurationTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteConfigurationTemplateResponse(new DeleteConfigurationTemplateResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new DeleteConfigurationTemplateResponsePrivate(this), parent)
 {
     setRequest(new DeleteConfigurationTemplateRequest(request));
     setReply(reply);

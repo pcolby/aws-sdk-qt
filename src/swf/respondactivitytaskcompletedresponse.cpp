@@ -46,7 +46,7 @@ RespondActivityTaskCompletedResponse::RespondActivityTaskCompletedResponse(
         const RespondActivityTaskCompletedRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RespondActivityTaskCompletedResponse(new RespondActivityTaskCompletedResponsePrivate(this), parent)
+    : SWFResponse(new RespondActivityTaskCompletedResponsePrivate(this), parent)
 {
     setRequest(new RespondActivityTaskCompletedRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeApplicationResponse::DescribeApplicationResponse(
         const DescribeApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeApplicationResponse(new DescribeApplicationResponsePrivate(this), parent)
+    : KinesisAnalyticsResponse(new DescribeApplicationResponsePrivate(this), parent)
 {
     setRequest(new DescribeApplicationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListDatasetsResponse::ListDatasetsResponse(
         const ListDatasetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListDatasetsResponse(new ListDatasetsResponsePrivate(this), parent)
+    : CognitoSyncResponse(new ListDatasetsResponsePrivate(this), parent)
 {
     setRequest(new ListDatasetsRequest(request));
     setReply(reply);

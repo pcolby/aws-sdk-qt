@@ -46,7 +46,7 @@ GetTableVersionsResponse::GetTableVersionsResponse(
         const GetTableVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetTableVersionsResponse(new GetTableVersionsResponsePrivate(this), parent)
+    : GlueResponse(new GetTableVersionsResponsePrivate(this), parent)
 {
     setRequest(new GetTableVersionsRequest(request));
     setReply(reply);

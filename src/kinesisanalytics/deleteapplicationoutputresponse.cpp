@@ -46,7 +46,7 @@ DeleteApplicationOutputResponse::DeleteApplicationOutputResponse(
         const DeleteApplicationOutputRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteApplicationOutputResponse(new DeleteApplicationOutputResponsePrivate(this), parent)
+    : KinesisAnalyticsResponse(new DeleteApplicationOutputResponsePrivate(this), parent)
 {
     setRequest(new DeleteApplicationOutputRequest(request));
     setReply(reply);

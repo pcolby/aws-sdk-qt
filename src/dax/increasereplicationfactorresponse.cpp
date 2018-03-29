@@ -46,7 +46,7 @@ IncreaseReplicationFactorResponse::IncreaseReplicationFactorResponse(
         const IncreaseReplicationFactorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IncreaseReplicationFactorResponse(new IncreaseReplicationFactorResponsePrivate(this), parent)
+    : DAXResponse(new IncreaseReplicationFactorResponsePrivate(this), parent)
 {
     setRequest(new IncreaseReplicationFactorRequest(request));
     setReply(reply);

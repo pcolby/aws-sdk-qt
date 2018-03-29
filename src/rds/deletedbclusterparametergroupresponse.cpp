@@ -46,7 +46,7 @@ DeleteDBClusterParameterGroupResponse::DeleteDBClusterParameterGroupResponse(
         const DeleteDBClusterParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDBClusterParameterGroupResponse(new DeleteDBClusterParameterGroupResponsePrivate(this), parent)
+    : RDSResponse(new DeleteDBClusterParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBClusterParameterGroupRequest(request));
     setReply(reply);

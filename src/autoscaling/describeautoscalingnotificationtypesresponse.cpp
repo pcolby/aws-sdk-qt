@@ -46,7 +46,7 @@ DescribeAutoScalingNotificationTypesResponse::DescribeAutoScalingNotificationTyp
         const DescribeAutoScalingNotificationTypesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAutoScalingNotificationTypesResponse(new DescribeAutoScalingNotificationTypesResponsePrivate(this), parent)
+    : AutoScalingResponse(new DescribeAutoScalingNotificationTypesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAutoScalingNotificationTypesRequest(request));
     setReply(reply);

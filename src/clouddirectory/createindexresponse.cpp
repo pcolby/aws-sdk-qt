@@ -46,7 +46,7 @@ CreateIndexResponse::CreateIndexResponse(
         const CreateIndexRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateIndexResponse(new CreateIndexResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new CreateIndexResponsePrivate(this), parent)
 {
     setRequest(new CreateIndexRequest(request));
     setReply(reply);

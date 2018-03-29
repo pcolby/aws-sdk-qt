@@ -46,7 +46,7 @@ DeleteSuggesterResponse::DeleteSuggesterResponse(
         const DeleteSuggesterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSuggesterResponse(new DeleteSuggesterResponsePrivate(this), parent)
+    : CloudSearchResponse(new DeleteSuggesterResponsePrivate(this), parent)
 {
     setRequest(new DeleteSuggesterRequest(request));
     setReply(reply);

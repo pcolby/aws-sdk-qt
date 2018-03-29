@@ -46,7 +46,7 @@ GetServersResponse::GetServersResponse(
         const GetServersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetServersResponse(new GetServersResponsePrivate(this), parent)
+    : SMSResponse(new GetServersResponsePrivate(this), parent)
 {
     setRequest(new GetServersRequest(request));
     setReply(reply);

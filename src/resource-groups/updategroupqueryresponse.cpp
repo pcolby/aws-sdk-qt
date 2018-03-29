@@ -46,7 +46,7 @@ UpdateGroupQueryResponse::UpdateGroupQueryResponse(
         const UpdateGroupQueryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateGroupQueryResponse(new UpdateGroupQueryResponsePrivate(this), parent)
+    : ResourceGroupsResponse(new UpdateGroupQueryResponsePrivate(this), parent)
 {
     setRequest(new UpdateGroupQueryRequest(request));
     setReply(reply);

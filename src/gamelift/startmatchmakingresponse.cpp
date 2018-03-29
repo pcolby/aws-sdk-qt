@@ -46,7 +46,7 @@ StartMatchmakingResponse::StartMatchmakingResponse(
         const StartMatchmakingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartMatchmakingResponse(new StartMatchmakingResponsePrivate(this), parent)
+    : GameLiftResponse(new StartMatchmakingResponsePrivate(this), parent)
 {
     setRequest(new StartMatchmakingRequest(request));
     setReply(reply);

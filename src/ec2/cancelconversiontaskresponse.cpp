@@ -46,7 +46,7 @@ CancelConversionTaskResponse::CancelConversionTaskResponse(
         const CancelConversionTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CancelConversionTaskResponse(new CancelConversionTaskResponsePrivate(this), parent)
+    : EC2Response(new CancelConversionTaskResponsePrivate(this), parent)
 {
     setRequest(new CancelConversionTaskRequest(request));
     setReply(reply);

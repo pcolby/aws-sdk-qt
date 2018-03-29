@@ -46,7 +46,7 @@ BatchGetBuildsResponse::BatchGetBuildsResponse(
         const BatchGetBuildsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchGetBuildsResponse(new BatchGetBuildsResponsePrivate(this), parent)
+    : CodeBuildResponse(new BatchGetBuildsResponsePrivate(this), parent)
 {
     setRequest(new BatchGetBuildsRequest(request));
     setReply(reply);

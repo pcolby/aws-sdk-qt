@@ -46,7 +46,7 @@ CreateGroupCertificateAuthorityResponse::CreateGroupCertificateAuthorityResponse
         const CreateGroupCertificateAuthorityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateGroupCertificateAuthorityResponse(new CreateGroupCertificateAuthorityResponsePrivate(this), parent)
+    : GreengrassResponse(new CreateGroupCertificateAuthorityResponsePrivate(this), parent)
 {
     setRequest(new CreateGroupCertificateAuthorityRequest(request));
     setReply(reply);

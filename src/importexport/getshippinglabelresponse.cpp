@@ -46,7 +46,7 @@ GetShippingLabelResponse::GetShippingLabelResponse(
         const GetShippingLabelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetShippingLabelResponse(new GetShippingLabelResponsePrivate(this), parent)
+    : ImportExportResponse(new GetShippingLabelResponsePrivate(this), parent)
 {
     setRequest(new GetShippingLabelRequest(request));
     setReply(reply);

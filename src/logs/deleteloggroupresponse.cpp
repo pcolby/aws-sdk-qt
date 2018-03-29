@@ -46,7 +46,7 @@ DeleteLogGroupResponse::DeleteLogGroupResponse(
         const DeleteLogGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteLogGroupResponse(new DeleteLogGroupResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new DeleteLogGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteLogGroupRequest(request));
     setReply(reply);

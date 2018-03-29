@@ -46,7 +46,7 @@ UpdateCampaignResponse::UpdateCampaignResponse(
         const UpdateCampaignRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateCampaignResponse(new UpdateCampaignResponsePrivate(this), parent)
+    : PinpointResponse(new UpdateCampaignResponsePrivate(this), parent)
 {
     setRequest(new UpdateCampaignRequest(request));
     setReply(reply);

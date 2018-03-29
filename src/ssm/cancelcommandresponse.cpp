@@ -46,7 +46,7 @@ CancelCommandResponse::CancelCommandResponse(
         const CancelCommandRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CancelCommandResponse(new CancelCommandResponsePrivate(this), parent)
+    : SSMResponse(new CancelCommandResponsePrivate(this), parent)
 {
     setRequest(new CancelCommandRequest(request));
     setReply(reply);

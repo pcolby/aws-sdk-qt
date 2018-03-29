@@ -46,7 +46,7 @@ ListIndicesResponse::ListIndicesResponse(
         const ListIndicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListIndicesResponse(new ListIndicesResponsePrivate(this), parent)
+    : IoTResponse(new ListIndicesResponsePrivate(this), parent)
 {
     setRequest(new ListIndicesRequest(request));
     setReply(reply);

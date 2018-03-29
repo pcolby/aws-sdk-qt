@@ -46,7 +46,7 @@ ListRuleNamesByTargetResponse::ListRuleNamesByTargetResponse(
         const ListRuleNamesByTargetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListRuleNamesByTargetResponse(new ListRuleNamesByTargetResponsePrivate(this), parent)
+    : CloudWatchEventsResponse(new ListRuleNamesByTargetResponsePrivate(this), parent)
 {
     setRequest(new ListRuleNamesByTargetRequest(request));
     setReply(reply);

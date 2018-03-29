@@ -46,7 +46,7 @@ SendBonusResponse::SendBonusResponse(
         const SendBonusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SendBonusResponse(new SendBonusResponsePrivate(this), parent)
+    : MTurkResponse(new SendBonusResponsePrivate(this), parent)
 {
     setRequest(new SendBonusRequest(request));
     setReply(reply);

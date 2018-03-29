@@ -46,7 +46,7 @@ ListTopicsDetectionJobsResponse::ListTopicsDetectionJobsResponse(
         const ListTopicsDetectionJobsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListTopicsDetectionJobsResponse(new ListTopicsDetectionJobsResponsePrivate(this), parent)
+    : ComprehendResponse(new ListTopicsDetectionJobsResponsePrivate(this), parent)
 {
     setRequest(new ListTopicsDetectionJobsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetSchemaCreationStatusResponse::GetSchemaCreationStatusResponse(
         const GetSchemaCreationStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetSchemaCreationStatusResponse(new GetSchemaCreationStatusResponsePrivate(this), parent)
+    : AppSyncResponse(new GetSchemaCreationStatusResponsePrivate(this), parent)
 {
     setRequest(new GetSchemaCreationStatusRequest(request));
     setReply(reply);

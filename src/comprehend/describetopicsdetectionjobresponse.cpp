@@ -46,7 +46,7 @@ DescribeTopicsDetectionJobResponse::DescribeTopicsDetectionJobResponse(
         const DescribeTopicsDetectionJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeTopicsDetectionJobResponse(new DescribeTopicsDetectionJobResponsePrivate(this), parent)
+    : ComprehendResponse(new DescribeTopicsDetectionJobResponsePrivate(this), parent)
 {
     setRequest(new DescribeTopicsDetectionJobRequest(request));
     setReply(reply);

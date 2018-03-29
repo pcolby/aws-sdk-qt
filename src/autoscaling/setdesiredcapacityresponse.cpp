@@ -46,7 +46,7 @@ SetDesiredCapacityResponse::SetDesiredCapacityResponse(
         const SetDesiredCapacityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetDesiredCapacityResponse(new SetDesiredCapacityResponsePrivate(this), parent)
+    : AutoScalingResponse(new SetDesiredCapacityResponsePrivate(this), parent)
 {
     setRequest(new SetDesiredCapacityRequest(request));
     setReply(reply);

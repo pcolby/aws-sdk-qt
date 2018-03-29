@@ -46,7 +46,7 @@ AssociateConnectionWithLagResponse::AssociateConnectionWithLagResponse(
         const AssociateConnectionWithLagRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssociateConnectionWithLagResponse(new AssociateConnectionWithLagResponsePrivate(this), parent)
+    : DirectConnectResponse(new AssociateConnectionWithLagResponsePrivate(this), parent)
 {
     setRequest(new AssociateConnectionWithLagRequest(request));
     setReply(reply);

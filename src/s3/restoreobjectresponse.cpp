@@ -46,7 +46,7 @@ RestoreObjectResponse::RestoreObjectResponse(
         const RestoreObjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RestoreObjectResponse(new RestoreObjectResponsePrivate(this), parent)
+    : S3Response(new RestoreObjectResponsePrivate(this), parent)
 {
     setRequest(new RestoreObjectRequest(request));
     setReply(reply);

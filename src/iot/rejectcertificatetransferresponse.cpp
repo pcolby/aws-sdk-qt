@@ -46,7 +46,7 @@ RejectCertificateTransferResponse::RejectCertificateTransferResponse(
         const RejectCertificateTransferRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RejectCertificateTransferResponse(new RejectCertificateTransferResponsePrivate(this), parent)
+    : IoTResponse(new RejectCertificateTransferResponsePrivate(this), parent)
 {
     setRequest(new RejectCertificateTransferRequest(request));
     setReply(reply);

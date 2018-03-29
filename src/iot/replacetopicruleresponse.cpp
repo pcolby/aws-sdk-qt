@@ -46,7 +46,7 @@ ReplaceTopicRuleResponse::ReplaceTopicRuleResponse(
         const ReplaceTopicRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ReplaceTopicRuleResponse(new ReplaceTopicRuleResponsePrivate(this), parent)
+    : IoTResponse(new ReplaceTopicRuleResponsePrivate(this), parent)
 {
     setRequest(new ReplaceTopicRuleRequest(request));
     setReply(reply);

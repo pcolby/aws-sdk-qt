@@ -46,7 +46,7 @@ UpdateConfigurationSetReputationMetricsEnabledResponse::UpdateConfigurationSetRe
         const UpdateConfigurationSetReputationMetricsEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateConfigurationSetReputationMetricsEnabledResponse(new UpdateConfigurationSetReputationMetricsEnabledResponsePrivate(this), parent)
+    : SESResponse(new UpdateConfigurationSetReputationMetricsEnabledResponsePrivate(this), parent)
 {
     setRequest(new UpdateConfigurationSetReputationMetricsEnabledRequest(request));
     setReply(reply);

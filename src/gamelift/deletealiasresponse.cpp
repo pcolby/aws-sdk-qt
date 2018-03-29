@@ -46,7 +46,7 @@ DeleteAliasResponse::DeleteAliasResponse(
         const DeleteAliasRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteAliasResponse(new DeleteAliasResponsePrivate(this), parent)
+    : GameLiftResponse(new DeleteAliasResponsePrivate(this), parent)
 {
     setRequest(new DeleteAliasRequest(request));
     setReply(reply);

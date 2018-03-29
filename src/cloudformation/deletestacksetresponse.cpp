@@ -46,7 +46,7 @@ DeleteStackSetResponse::DeleteStackSetResponse(
         const DeleteStackSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteStackSetResponse(new DeleteStackSetResponsePrivate(this), parent)
+    : CloudFormationResponse(new DeleteStackSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteStackSetRequest(request));
     setReply(reply);

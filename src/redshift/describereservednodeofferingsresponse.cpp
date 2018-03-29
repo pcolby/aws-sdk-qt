@@ -46,7 +46,7 @@ DescribeReservedNodeOfferingsResponse::DescribeReservedNodeOfferingsResponse(
         const DescribeReservedNodeOfferingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeReservedNodeOfferingsResponse(new DescribeReservedNodeOfferingsResponsePrivate(this), parent)
+    : RedshiftResponse(new DescribeReservedNodeOfferingsResponsePrivate(this), parent)
 {
     setRequest(new DescribeReservedNodeOfferingsRequest(request));
     setReply(reply);

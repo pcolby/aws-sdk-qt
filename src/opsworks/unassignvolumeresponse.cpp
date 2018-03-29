@@ -46,7 +46,7 @@ UnassignVolumeResponse::UnassignVolumeResponse(
         const UnassignVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UnassignVolumeResponse(new UnassignVolumeResponsePrivate(this), parent)
+    : OpsWorksResponse(new UnassignVolumeResponsePrivate(this), parent)
 {
     setRequest(new UnassignVolumeRequest(request));
     setReply(reply);

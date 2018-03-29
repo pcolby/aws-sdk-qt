@@ -46,7 +46,7 @@ SendTaskFailureResponse::SendTaskFailureResponse(
         const SendTaskFailureRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SendTaskFailureResponse(new SendTaskFailureResponsePrivate(this), parent)
+    : SFNResponse(new SendTaskFailureResponsePrivate(this), parent)
 {
     setRequest(new SendTaskFailureRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteInvitationsResponse::DeleteInvitationsResponse(
         const DeleteInvitationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteInvitationsResponse(new DeleteInvitationsResponsePrivate(this), parent)
+    : GuardDutyResponse(new DeleteInvitationsResponsePrivate(this), parent)
 {
     setRequest(new DeleteInvitationsRequest(request));
     setReply(reply);

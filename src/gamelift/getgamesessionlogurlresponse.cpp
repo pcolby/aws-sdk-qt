@@ -46,7 +46,7 @@ GetGameSessionLogUrlResponse::GetGameSessionLogUrlResponse(
         const GetGameSessionLogUrlRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetGameSessionLogUrlResponse(new GetGameSessionLogUrlResponsePrivate(this), parent)
+    : GameLiftResponse(new GetGameSessionLogUrlResponsePrivate(this), parent)
 {
     setRequest(new GetGameSessionLogUrlRequest(request));
     setReply(reply);

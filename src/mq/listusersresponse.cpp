@@ -46,7 +46,7 @@ ListUsersResponse::ListUsersResponse(
         const ListUsersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListUsersResponse(new ListUsersResponsePrivate(this), parent)
+    : MQResponse(new ListUsersResponsePrivate(this), parent)
 {
     setRequest(new ListUsersRequest(request));
     setReply(reply);

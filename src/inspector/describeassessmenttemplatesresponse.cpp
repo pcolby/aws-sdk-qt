@@ -46,7 +46,7 @@ DescribeAssessmentTemplatesResponse::DescribeAssessmentTemplatesResponse(
         const DescribeAssessmentTemplatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAssessmentTemplatesResponse(new DescribeAssessmentTemplatesResponsePrivate(this), parent)
+    : InspectorResponse(new DescribeAssessmentTemplatesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAssessmentTemplatesRequest(request));
     setReply(reply);

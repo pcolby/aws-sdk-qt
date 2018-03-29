@@ -46,7 +46,7 @@ CreateCustomMetadataResponse::CreateCustomMetadataResponse(
         const CreateCustomMetadataRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateCustomMetadataResponse(new CreateCustomMetadataResponsePrivate(this), parent)
+    : WorkDocsResponse(new CreateCustomMetadataResponsePrivate(this), parent)
 {
     setRequest(new CreateCustomMetadataRequest(request));
     setReply(reply);

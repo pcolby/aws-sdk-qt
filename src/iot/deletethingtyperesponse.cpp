@@ -46,7 +46,7 @@ DeleteThingTypeResponse::DeleteThingTypeResponse(
         const DeleteThingTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteThingTypeResponse(new DeleteThingTypeResponsePrivate(this), parent)
+    : IoTResponse(new DeleteThingTypeResponsePrivate(this), parent)
 {
     setRequest(new DeleteThingTypeRequest(request));
     setReply(reply);

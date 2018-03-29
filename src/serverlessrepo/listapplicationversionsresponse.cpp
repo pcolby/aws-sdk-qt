@@ -46,7 +46,7 @@ ListApplicationVersionsResponse::ListApplicationVersionsResponse(
         const ListApplicationVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListApplicationVersionsResponse(new ListApplicationVersionsResponsePrivate(this), parent)
+    : ServerlessApplicationRepositoryResponse(new ListApplicationVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListApplicationVersionsRequest(request));
     setReply(reply);

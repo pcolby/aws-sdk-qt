@@ -46,7 +46,7 @@ DescribeAutoScalingInstancesResponse::DescribeAutoScalingInstancesResponse(
         const DescribeAutoScalingInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAutoScalingInstancesResponse(new DescribeAutoScalingInstancesResponsePrivate(this), parent)
+    : AutoScalingResponse(new DescribeAutoScalingInstancesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAutoScalingInstancesRequest(request));
     setReply(reply);

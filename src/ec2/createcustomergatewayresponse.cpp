@@ -46,7 +46,7 @@ CreateCustomerGatewayResponse::CreateCustomerGatewayResponse(
         const CreateCustomerGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateCustomerGatewayResponse(new CreateCustomerGatewayResponsePrivate(this), parent)
+    : EC2Response(new CreateCustomerGatewayResponsePrivate(this), parent)
 {
     setRequest(new CreateCustomerGatewayRequest(request));
     setReply(reply);

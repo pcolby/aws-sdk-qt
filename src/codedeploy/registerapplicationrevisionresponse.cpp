@@ -46,7 +46,7 @@ RegisterApplicationRevisionResponse::RegisterApplicationRevisionResponse(
         const RegisterApplicationRevisionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RegisterApplicationRevisionResponse(new RegisterApplicationRevisionResponsePrivate(this), parent)
+    : CodeDeployResponse(new RegisterApplicationRevisionResponsePrivate(this), parent)
 {
     setRequest(new RegisterApplicationRevisionRequest(request));
     setReply(reply);

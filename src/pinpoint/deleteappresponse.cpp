@@ -46,7 +46,7 @@ DeleteAppResponse::DeleteAppResponse(
         const DeleteAppRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteAppResponse(new DeleteAppResponsePrivate(this), parent)
+    : PinpointResponse(new DeleteAppResponsePrivate(this), parent)
 {
     setRequest(new DeleteAppRequest(request));
     setReply(reply);

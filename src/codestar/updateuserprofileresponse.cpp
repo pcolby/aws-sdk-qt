@@ -46,7 +46,7 @@ UpdateUserProfileResponse::UpdateUserProfileResponse(
         const UpdateUserProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateUserProfileResponse(new UpdateUserProfileResponsePrivate(this), parent)
+    : CodeStarResponse(new UpdateUserProfileResponsePrivate(this), parent)
 {
     setRequest(new UpdateUserProfileRequest(request));
     setReply(reply);

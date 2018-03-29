@@ -46,7 +46,7 @@ UnmonitorInstancesResponse::UnmonitorInstancesResponse(
         const UnmonitorInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UnmonitorInstancesResponse(new UnmonitorInstancesResponsePrivate(this), parent)
+    : EC2Response(new UnmonitorInstancesResponsePrivate(this), parent)
 {
     setRequest(new UnmonitorInstancesRequest(request));
     setReply(reply);

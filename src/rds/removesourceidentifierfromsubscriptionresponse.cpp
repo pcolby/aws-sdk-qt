@@ -46,7 +46,7 @@ RemoveSourceIdentifierFromSubscriptionResponse::RemoveSourceIdentifierFromSubscr
         const RemoveSourceIdentifierFromSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RemoveSourceIdentifierFromSubscriptionResponse(new RemoveSourceIdentifierFromSubscriptionResponsePrivate(this), parent)
+    : RDSResponse(new RemoveSourceIdentifierFromSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new RemoveSourceIdentifierFromSubscriptionRequest(request));
     setReply(reply);

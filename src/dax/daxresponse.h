@@ -34,6 +34,11 @@ class QTAWS_EXPORT DAXResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     DAXResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    DAXResponse(DAXResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

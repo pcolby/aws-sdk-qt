@@ -46,7 +46,7 @@ ResetFpgaImageAttributeResponse::ResetFpgaImageAttributeResponse(
         const ResetFpgaImageAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResetFpgaImageAttributeResponse(new ResetFpgaImageAttributeResponsePrivate(this), parent)
+    : EC2Response(new ResetFpgaImageAttributeResponsePrivate(this), parent)
 {
     setRequest(new ResetFpgaImageAttributeRequest(request));
     setReply(reply);

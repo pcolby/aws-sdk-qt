@@ -46,7 +46,7 @@ GetExecutionHistoryResponse::GetExecutionHistoryResponse(
         const GetExecutionHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetExecutionHistoryResponse(new GetExecutionHistoryResponsePrivate(this), parent)
+    : SFNResponse(new GetExecutionHistoryResponsePrivate(this), parent)
 {
     setRequest(new GetExecutionHistoryRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DisassociateNodeResponse::DisassociateNodeResponse(
         const DisassociateNodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateNodeResponse(new DisassociateNodeResponsePrivate(this), parent)
+    : OpsWorksCMResponse(new DisassociateNodeResponsePrivate(this), parent)
 {
     setRequest(new DisassociateNodeRequest(request));
     setReply(reply);

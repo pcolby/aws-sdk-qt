@@ -46,7 +46,7 @@ GetJobTemplateResponse::GetJobTemplateResponse(
         const GetJobTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetJobTemplateResponse(new GetJobTemplateResponsePrivate(this), parent)
+    : MediaConvertResponse(new GetJobTemplateResponsePrivate(this), parent)
 {
     setRequest(new GetJobTemplateRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UntagStreamResponse::UntagStreamResponse(
         const UntagStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UntagStreamResponse(new UntagStreamResponsePrivate(this), parent)
+    : KinesisVideoResponse(new UntagStreamResponsePrivate(this), parent)
 {
     setRequest(new UntagStreamRequest(request));
     setReply(reply);

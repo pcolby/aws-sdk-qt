@@ -46,7 +46,7 @@ DeleteHealthCheckResponse::DeleteHealthCheckResponse(
         const DeleteHealthCheckRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteHealthCheckResponse(new DeleteHealthCheckResponsePrivate(this), parent)
+    : Route53Response(new DeleteHealthCheckResponsePrivate(this), parent)
 {
     setRequest(new DeleteHealthCheckRequest(request));
     setReply(reply);

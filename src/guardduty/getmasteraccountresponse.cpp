@@ -46,7 +46,7 @@ GetMasterAccountResponse::GetMasterAccountResponse(
         const GetMasterAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetMasterAccountResponse(new GetMasterAccountResponsePrivate(this), parent)
+    : GuardDutyResponse(new GetMasterAccountResponsePrivate(this), parent)
 {
     setRequest(new GetMasterAccountRequest(request));
     setReply(reply);

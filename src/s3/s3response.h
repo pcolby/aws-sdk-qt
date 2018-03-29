@@ -34,6 +34,11 @@ class QTAWS_EXPORT S3Response : public QtAws::Core::AwsAbstractResponse {
 public:
     S3Response(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    S3Response(S3ResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

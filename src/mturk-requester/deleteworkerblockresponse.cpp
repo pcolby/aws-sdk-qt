@@ -46,7 +46,7 @@ DeleteWorkerBlockResponse::DeleteWorkerBlockResponse(
         const DeleteWorkerBlockRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteWorkerBlockResponse(new DeleteWorkerBlockResponsePrivate(this), parent)
+    : MTurkResponse(new DeleteWorkerBlockResponsePrivate(this), parent)
 {
     setRequest(new DeleteWorkerBlockRequest(request));
     setReply(reply);

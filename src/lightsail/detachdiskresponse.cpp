@@ -46,7 +46,7 @@ DetachDiskResponse::DetachDiskResponse(
         const DetachDiskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DetachDiskResponse(new DetachDiskResponsePrivate(this), parent)
+    : LightsailResponse(new DetachDiskResponsePrivate(this), parent)
 {
     setRequest(new DetachDiskRequest(request));
     setReply(reply);

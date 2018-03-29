@@ -46,7 +46,7 @@ DisassociateIamInstanceProfileResponse::DisassociateIamInstanceProfileResponse(
         const DisassociateIamInstanceProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateIamInstanceProfileResponse(new DisassociateIamInstanceProfileResponsePrivate(this), parent)
+    : EC2Response(new DisassociateIamInstanceProfileResponsePrivate(this), parent)
 {
     setRequest(new DisassociateIamInstanceProfileRequest(request));
     setReply(reply);

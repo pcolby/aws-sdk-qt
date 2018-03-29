@@ -46,7 +46,7 @@ DeleteFileSystemResponse::DeleteFileSystemResponse(
         const DeleteFileSystemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteFileSystemResponse(new DeleteFileSystemResponsePrivate(this), parent)
+    : EFSResponse(new DeleteFileSystemResponsePrivate(this), parent)
 {
     setRequest(new DeleteFileSystemRequest(request));
     setReply(reply);

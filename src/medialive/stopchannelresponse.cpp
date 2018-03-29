@@ -46,7 +46,7 @@ StopChannelResponse::StopChannelResponse(
         const StopChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopChannelResponse(new StopChannelResponsePrivate(this), parent)
+    : MediaLiveResponse(new StopChannelResponsePrivate(this), parent)
 {
     setRequest(new StopChannelRequest(request));
     setReply(reply);

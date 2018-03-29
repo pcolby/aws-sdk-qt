@@ -46,7 +46,7 @@ PutEvaluationsResponse::PutEvaluationsResponse(
         const PutEvaluationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutEvaluationsResponse(new PutEvaluationsResponsePrivate(this), parent)
+    : ConfigServiceResponse(new PutEvaluationsResponsePrivate(this), parent)
 {
     setRequest(new PutEvaluationsRequest(request));
     setReply(reply);

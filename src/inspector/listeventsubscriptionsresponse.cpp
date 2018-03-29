@@ -46,7 +46,7 @@ ListEventSubscriptionsResponse::ListEventSubscriptionsResponse(
         const ListEventSubscriptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListEventSubscriptionsResponse(new ListEventSubscriptionsResponsePrivate(this), parent)
+    : InspectorResponse(new ListEventSubscriptionsResponsePrivate(this), parent)
 {
     setRequest(new ListEventSubscriptionsRequest(request));
     setReply(reply);

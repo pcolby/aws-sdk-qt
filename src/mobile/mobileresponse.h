@@ -34,6 +34,11 @@ class QTAWS_EXPORT MobileResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     MobileResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    MobileResponse(MobileResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

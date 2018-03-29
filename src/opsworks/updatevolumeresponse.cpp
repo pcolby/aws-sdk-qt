@@ -46,7 +46,7 @@ UpdateVolumeResponse::UpdateVolumeResponse(
         const UpdateVolumeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateVolumeResponse(new UpdateVolumeResponsePrivate(this), parent)
+    : OpsWorksResponse(new UpdateVolumeResponsePrivate(this), parent)
 {
     setRequest(new UpdateVolumeRequest(request));
     setReply(reply);

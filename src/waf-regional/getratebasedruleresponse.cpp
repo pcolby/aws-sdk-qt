@@ -46,7 +46,7 @@ GetRateBasedRuleResponse::GetRateBasedRuleResponse(
         const GetRateBasedRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetRateBasedRuleResponse(new GetRateBasedRuleResponsePrivate(this), parent)
+    : WAFRegionalResponse(new GetRateBasedRuleResponsePrivate(this), parent)
 {
     setRequest(new GetRateBasedRuleRequest(request));
     setReply(reply);

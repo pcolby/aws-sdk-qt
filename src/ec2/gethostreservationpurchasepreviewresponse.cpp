@@ -46,7 +46,7 @@ GetHostReservationPurchasePreviewResponse::GetHostReservationPurchasePreviewResp
         const GetHostReservationPurchasePreviewRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetHostReservationPurchasePreviewResponse(new GetHostReservationPurchasePreviewResponsePrivate(this), parent)
+    : EC2Response(new GetHostReservationPurchasePreviewResponsePrivate(this), parent)
 {
     setRequest(new GetHostReservationPurchasePreviewRequest(request));
     setReply(reply);

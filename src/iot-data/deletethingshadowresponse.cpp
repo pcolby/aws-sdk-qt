@@ -46,7 +46,7 @@ DeleteThingShadowResponse::DeleteThingShadowResponse(
         const DeleteThingShadowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteThingShadowResponse(new DeleteThingShadowResponsePrivate(this), parent)
+    : IoTDataPlaneResponse(new DeleteThingShadowResponsePrivate(this), parent)
 {
     setRequest(new DeleteThingShadowRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ PutContainerPolicyResponse::PutContainerPolicyResponse(
         const PutContainerPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutContainerPolicyResponse(new PutContainerPolicyResponsePrivate(this), parent)
+    : MediaStoreResponse(new PutContainerPolicyResponsePrivate(this), parent)
 {
     setRequest(new PutContainerPolicyRequest(request));
     setReply(reply);

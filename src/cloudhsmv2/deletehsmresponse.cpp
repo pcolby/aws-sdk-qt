@@ -46,7 +46,7 @@ DeleteHsmResponse::DeleteHsmResponse(
         const DeleteHsmRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteHsmResponse(new DeleteHsmResponsePrivate(this), parent)
+    : CloudHSMV2Response(new DeleteHsmResponsePrivate(this), parent)
 {
     setRequest(new DeleteHsmRequest(request));
     setReply(reply);

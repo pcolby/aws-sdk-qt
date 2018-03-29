@@ -46,7 +46,7 @@ TagQueueResponse::TagQueueResponse(
         const TagQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : TagQueueResponse(new TagQueueResponsePrivate(this), parent)
+    : SQSResponse(new TagQueueResponsePrivate(this), parent)
 {
     setRequest(new TagQueueRequest(request));
     setReply(reply);

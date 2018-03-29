@@ -46,7 +46,7 @@ GetThirdPartyJobDetailsResponse::GetThirdPartyJobDetailsResponse(
         const GetThirdPartyJobDetailsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetThirdPartyJobDetailsResponse(new GetThirdPartyJobDetailsResponsePrivate(this), parent)
+    : CodePipelineResponse(new GetThirdPartyJobDetailsResponsePrivate(this), parent)
 {
     setRequest(new GetThirdPartyJobDetailsRequest(request));
     setReply(reply);

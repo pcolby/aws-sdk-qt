@@ -46,7 +46,7 @@ DescribeNodeAssociationStatusResponse::DescribeNodeAssociationStatusResponse(
         const DescribeNodeAssociationStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeNodeAssociationStatusResponse(new DescribeNodeAssociationStatusResponsePrivate(this), parent)
+    : OpsWorksCMResponse(new DescribeNodeAssociationStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeNodeAssociationStatusRequest(request));
     setReply(reply);

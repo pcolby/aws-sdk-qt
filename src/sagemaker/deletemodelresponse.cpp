@@ -46,7 +46,7 @@ DeleteModelResponse::DeleteModelResponse(
         const DeleteModelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteModelResponse(new DeleteModelResponsePrivate(this), parent)
+    : SageMakerResponse(new DeleteModelResponsePrivate(this), parent)
 {
     setRequest(new DeleteModelRequest(request));
     setReply(reply);

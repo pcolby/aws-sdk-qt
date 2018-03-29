@@ -46,7 +46,7 @@ DeleteApplicationVersionResponse::DeleteApplicationVersionResponse(
         const DeleteApplicationVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteApplicationVersionResponse(new DeleteApplicationVersionResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new DeleteApplicationVersionResponsePrivate(this), parent)
 {
     setRequest(new DeleteApplicationVersionRequest(request));
     setReply(reply);

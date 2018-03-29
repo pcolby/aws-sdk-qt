@@ -46,7 +46,7 @@ AbortEnvironmentUpdateResponse::AbortEnvironmentUpdateResponse(
         const AbortEnvironmentUpdateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AbortEnvironmentUpdateResponse(new AbortEnvironmentUpdateResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new AbortEnvironmentUpdateResponsePrivate(this), parent)
 {
     setRequest(new AbortEnvironmentUpdateRequest(request));
     setReply(reply);

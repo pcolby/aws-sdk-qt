@@ -46,7 +46,7 @@ ListStreamProcessorsResponse::ListStreamProcessorsResponse(
         const ListStreamProcessorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListStreamProcessorsResponse(new ListStreamProcessorsResponsePrivate(this), parent)
+    : RekognitionResponse(new ListStreamProcessorsResponsePrivate(this), parent)
 {
     setRequest(new ListStreamProcessorsRequest(request));
     setReply(reply);

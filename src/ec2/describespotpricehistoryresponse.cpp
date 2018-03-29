@@ -46,7 +46,7 @@ DescribeSpotPriceHistoryResponse::DescribeSpotPriceHistoryResponse(
         const DescribeSpotPriceHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeSpotPriceHistoryResponse(new DescribeSpotPriceHistoryResponsePrivate(this), parent)
+    : EC2Response(new DescribeSpotPriceHistoryResponsePrivate(this), parent)
 {
     setRequest(new DescribeSpotPriceHistoryRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateSubscriptionDefinitionVersionResponse::CreateSubscriptionDefinitionVersion
         const CreateSubscriptionDefinitionVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateSubscriptionDefinitionVersionResponse(new CreateSubscriptionDefinitionVersionResponsePrivate(this), parent)
+    : GreengrassResponse(new CreateSubscriptionDefinitionVersionResponsePrivate(this), parent)
 {
     setRequest(new CreateSubscriptionDefinitionVersionRequest(request));
     setReply(reply);

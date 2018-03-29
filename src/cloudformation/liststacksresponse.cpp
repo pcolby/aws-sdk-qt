@@ -46,7 +46,7 @@ ListStacksResponse::ListStacksResponse(
         const ListStacksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListStacksResponse(new ListStacksResponsePrivate(this), parent)
+    : CloudFormationResponse(new ListStacksResponsePrivate(this), parent)
 {
     setRequest(new ListStacksRequest(request));
     setReply(reply);

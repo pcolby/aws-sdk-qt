@@ -46,7 +46,7 @@ ListDataSourcesResponse::ListDataSourcesResponse(
         const ListDataSourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListDataSourcesResponse(new ListDataSourcesResponsePrivate(this), parent)
+    : AppSyncResponse(new ListDataSourcesResponsePrivate(this), parent)
 {
     setRequest(new ListDataSourcesRequest(request));
     setReply(reply);

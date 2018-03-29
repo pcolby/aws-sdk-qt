@@ -46,7 +46,7 @@ PurchaseReservedDBInstancesOfferingResponse::PurchaseReservedDBInstancesOffering
         const PurchaseReservedDBInstancesOfferingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PurchaseReservedDBInstancesOfferingResponse(new PurchaseReservedDBInstancesOfferingResponsePrivate(this), parent)
+    : RDSResponse(new PurchaseReservedDBInstancesOfferingResponsePrivate(this), parent)
 {
     setRequest(new PurchaseReservedDBInstancesOfferingRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeClusterResponse::DescribeClusterResponse(
         const DescribeClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeClusterResponse(new DescribeClusterResponsePrivate(this), parent)
+    : SnowballResponse(new DescribeClusterResponsePrivate(this), parent)
 {
     setRequest(new DescribeClusterRequest(request));
     setReply(reply);

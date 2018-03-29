@@ -46,7 +46,7 @@ StartDeviceSyncResponse::StartDeviceSyncResponse(
         const StartDeviceSyncRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartDeviceSyncResponse(new StartDeviceSyncResponsePrivate(this), parent)
+    : AlexaForBusinessResponse(new StartDeviceSyncResponsePrivate(this), parent)
 {
     setRequest(new StartDeviceSyncRequest(request));
     setReply(reply);

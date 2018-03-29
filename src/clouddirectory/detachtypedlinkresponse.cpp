@@ -46,7 +46,7 @@ DetachTypedLinkResponse::DetachTypedLinkResponse(
         const DetachTypedLinkRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DetachTypedLinkResponse(new DetachTypedLinkResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new DetachTypedLinkResponsePrivate(this), parent)
 {
     setRequest(new DetachTypedLinkRequest(request));
     setReply(reply);

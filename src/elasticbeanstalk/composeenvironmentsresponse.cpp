@@ -46,7 +46,7 @@ ComposeEnvironmentsResponse::ComposeEnvironmentsResponse(
         const ComposeEnvironmentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ComposeEnvironmentsResponse(new ComposeEnvironmentsResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new ComposeEnvironmentsResponsePrivate(this), parent)
 {
     setRequest(new ComposeEnvironmentsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SkipWaitTimeForInstanceTerminationResponse::SkipWaitTimeForInstanceTerminationRe
         const SkipWaitTimeForInstanceTerminationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SkipWaitTimeForInstanceTerminationResponse(new SkipWaitTimeForInstanceTerminationResponsePrivate(this), parent)
+    : CodeDeployResponse(new SkipWaitTimeForInstanceTerminationResponsePrivate(this), parent)
 {
     setRequest(new SkipWaitTimeForInstanceTerminationRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteSkillGroupResponse::DeleteSkillGroupResponse(
         const DeleteSkillGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSkillGroupResponse(new DeleteSkillGroupResponsePrivate(this), parent)
+    : AlexaForBusinessResponse(new DeleteSkillGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteSkillGroupRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateEventSubscriptionResponse::CreateEventSubscriptionResponse(
         const CreateEventSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateEventSubscriptionResponse(new CreateEventSubscriptionResponsePrivate(this), parent)
+    : RedshiftResponse(new CreateEventSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new CreateEventSubscriptionRequest(request));
     setReply(reply);

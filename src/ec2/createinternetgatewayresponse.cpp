@@ -46,7 +46,7 @@ CreateInternetGatewayResponse::CreateInternetGatewayResponse(
         const CreateInternetGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateInternetGatewayResponse(new CreateInternetGatewayResponsePrivate(this), parent)
+    : EC2Response(new CreateInternetGatewayResponsePrivate(this), parent)
 {
     setRequest(new CreateInternetGatewayRequest(request));
     setReply(reply);

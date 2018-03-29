@@ -46,7 +46,7 @@ DeleteDBSubnetGroupResponse::DeleteDBSubnetGroupResponse(
         const DeleteDBSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDBSubnetGroupResponse(new DeleteDBSubnetGroupResponsePrivate(this), parent)
+    : RDSResponse(new DeleteDBSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBSubnetGroupRequest(request));
     setReply(reply);

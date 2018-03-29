@@ -46,7 +46,7 @@ DetectModerationLabelsResponse::DetectModerationLabelsResponse(
         const DetectModerationLabelsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DetectModerationLabelsResponse(new DetectModerationLabelsResponsePrivate(this), parent)
+    : RekognitionResponse(new DetectModerationLabelsResponsePrivate(this), parent)
 {
     setRequest(new DetectModerationLabelsRequest(request));
     setReply(reply);

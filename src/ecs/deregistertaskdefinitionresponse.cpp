@@ -46,7 +46,7 @@ DeregisterTaskDefinitionResponse::DeregisterTaskDefinitionResponse(
         const DeregisterTaskDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeregisterTaskDefinitionResponse(new DeregisterTaskDefinitionResponsePrivate(this), parent)
+    : ECSResponse(new DeregisterTaskDefinitionResponsePrivate(this), parent)
 {
     setRequest(new DeregisterTaskDefinitionRequest(request));
     setReply(reply);

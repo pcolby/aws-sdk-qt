@@ -46,7 +46,7 @@ ListUsersInGroupResponse::ListUsersInGroupResponse(
         const ListUsersInGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListUsersInGroupResponse(new ListUsersInGroupResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new ListUsersInGroupResponsePrivate(this), parent)
 {
     setRequest(new ListUsersInGroupRequest(request));
     setReply(reply);

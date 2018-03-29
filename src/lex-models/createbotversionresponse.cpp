@@ -46,7 +46,7 @@ CreateBotVersionResponse::CreateBotVersionResponse(
         const CreateBotVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateBotVersionResponse(new CreateBotVersionResponsePrivate(this), parent)
+    : LexModelBuildingServiceResponse(new CreateBotVersionResponsePrivate(this), parent)
 {
     setRequest(new CreateBotVersionRequest(request));
     setReply(reply);

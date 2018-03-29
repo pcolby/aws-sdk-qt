@@ -34,6 +34,11 @@ class QTAWS_EXPORT WorkSpacesResponse : public QtAws::Core::AwsAbstractResponse 
 public:
     WorkSpacesResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    WorkSpacesResponse(WorkSpacesResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

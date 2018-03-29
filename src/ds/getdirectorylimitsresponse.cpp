@@ -46,7 +46,7 @@ GetDirectoryLimitsResponse::GetDirectoryLimitsResponse(
         const GetDirectoryLimitsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDirectoryLimitsResponse(new GetDirectoryLimitsResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new GetDirectoryLimitsResponsePrivate(this), parent)
 {
     setRequest(new GetDirectoryLimitsRequest(request));
     setReply(reply);

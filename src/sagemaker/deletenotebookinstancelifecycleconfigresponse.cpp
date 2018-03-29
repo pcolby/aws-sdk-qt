@@ -46,7 +46,7 @@ DeleteNotebookInstanceLifecycleConfigResponse::DeleteNotebookInstanceLifecycleCo
         const DeleteNotebookInstanceLifecycleConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteNotebookInstanceLifecycleConfigResponse(new DeleteNotebookInstanceLifecycleConfigResponsePrivate(this), parent)
+    : SageMakerResponse(new DeleteNotebookInstanceLifecycleConfigResponsePrivate(this), parent)
 {
     setRequest(new DeleteNotebookInstanceLifecycleConfigRequest(request));
     setReply(reply);

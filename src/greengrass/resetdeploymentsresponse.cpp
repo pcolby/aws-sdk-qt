@@ -46,7 +46,7 @@ ResetDeploymentsResponse::ResetDeploymentsResponse(
         const ResetDeploymentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResetDeploymentsResponse(new ResetDeploymentsResponsePrivate(this), parent)
+    : GreengrassResponse(new ResetDeploymentsResponsePrivate(this), parent)
 {
     setRequest(new ResetDeploymentsRequest(request));
     setReply(reply);

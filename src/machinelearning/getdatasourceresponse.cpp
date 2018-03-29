@@ -46,7 +46,7 @@ GetDataSourceResponse::GetDataSourceResponse(
         const GetDataSourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDataSourceResponse(new GetDataSourceResponsePrivate(this), parent)
+    : MachineLearningResponse(new GetDataSourceResponsePrivate(this), parent)
 {
     setRequest(new GetDataSourceRequest(request));
     setReply(reply);

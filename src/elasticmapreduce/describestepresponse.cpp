@@ -46,7 +46,7 @@ DescribeStepResponse::DescribeStepResponse(
         const DescribeStepRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeStepResponse(new DescribeStepResponsePrivate(this), parent)
+    : EMRResponse(new DescribeStepResponsePrivate(this), parent)
 {
     setRequest(new DescribeStepRequest(request));
     setReply(reply);

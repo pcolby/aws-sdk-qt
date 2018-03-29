@@ -46,7 +46,7 @@ UpdateHITTypeOfHITResponse::UpdateHITTypeOfHITResponse(
         const UpdateHITTypeOfHITRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateHITTypeOfHITResponse(new UpdateHITTypeOfHITResponsePrivate(this), parent)
+    : MTurkResponse(new UpdateHITTypeOfHITResponsePrivate(this), parent)
 {
     setRequest(new UpdateHITTypeOfHITRequest(request));
     setReply(reply);

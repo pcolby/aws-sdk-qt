@@ -46,7 +46,7 @@ DeleteStreamResponse::DeleteStreamResponse(
         const DeleteStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteStreamResponse(new DeleteStreamResponsePrivate(this), parent)
+    : IoTResponse(new DeleteStreamResponsePrivate(this), parent)
 {
     setRequest(new DeleteStreamRequest(request));
     setReply(reply);

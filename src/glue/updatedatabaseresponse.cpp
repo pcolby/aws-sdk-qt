@@ -46,7 +46,7 @@ UpdateDatabaseResponse::UpdateDatabaseResponse(
         const UpdateDatabaseRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDatabaseResponse(new UpdateDatabaseResponsePrivate(this), parent)
+    : GlueResponse(new UpdateDatabaseResponsePrivate(this), parent)
 {
     setRequest(new UpdateDatabaseRequest(request));
     setReply(reply);

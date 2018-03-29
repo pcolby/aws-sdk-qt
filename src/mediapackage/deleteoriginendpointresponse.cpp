@@ -46,7 +46,7 @@ DeleteOriginEndpointResponse::DeleteOriginEndpointResponse(
         const DeleteOriginEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteOriginEndpointResponse(new DeleteOriginEndpointResponsePrivate(this), parent)
+    : MediaPackageResponse(new DeleteOriginEndpointResponsePrivate(this), parent)
 {
     setRequest(new DeleteOriginEndpointRequest(request));
     setReply(reply);

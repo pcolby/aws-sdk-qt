@@ -46,7 +46,7 @@ ImportCatalogToGlueResponse::ImportCatalogToGlueResponse(
         const ImportCatalogToGlueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ImportCatalogToGlueResponse(new ImportCatalogToGlueResponsePrivate(this), parent)
+    : GlueResponse(new ImportCatalogToGlueResponsePrivate(this), parent)
 {
     setRequest(new ImportCatalogToGlueRequest(request));
     setReply(reply);

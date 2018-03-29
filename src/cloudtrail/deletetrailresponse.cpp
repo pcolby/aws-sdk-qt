@@ -46,7 +46,7 @@ DeleteTrailResponse::DeleteTrailResponse(
         const DeleteTrailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteTrailResponse(new DeleteTrailResponsePrivate(this), parent)
+    : CloudTrailResponse(new DeleteTrailResponsePrivate(this), parent)
 {
     setRequest(new DeleteTrailRequest(request));
     setReply(reply);

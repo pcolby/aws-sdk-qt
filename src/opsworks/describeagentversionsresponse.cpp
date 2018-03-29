@@ -46,7 +46,7 @@ DescribeAgentVersionsResponse::DescribeAgentVersionsResponse(
         const DescribeAgentVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAgentVersionsResponse(new DescribeAgentVersionsResponsePrivate(this), parent)
+    : OpsWorksResponse(new DescribeAgentVersionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeAgentVersionsRequest(request));
     setReply(reply);

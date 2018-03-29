@@ -46,7 +46,7 @@ CreateListenerResponse::CreateListenerResponse(
         const CreateListenerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateListenerResponse(new CreateListenerResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new CreateListenerResponsePrivate(this), parent)
 {
     setRequest(new CreateListenerRequest(request));
     setReply(reply);

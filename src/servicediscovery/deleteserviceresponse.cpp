@@ -46,7 +46,7 @@ DeleteServiceResponse::DeleteServiceResponse(
         const DeleteServiceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteServiceResponse(new DeleteServiceResponsePrivate(this), parent)
+    : ServiceDiscoveryResponse(new DeleteServiceResponsePrivate(this), parent)
 {
     setRequest(new DeleteServiceRequest(request));
     setReply(reply);

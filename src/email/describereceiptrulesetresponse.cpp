@@ -46,7 +46,7 @@ DescribeReceiptRuleSetResponse::DescribeReceiptRuleSetResponse(
         const DescribeReceiptRuleSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeReceiptRuleSetResponse(new DescribeReceiptRuleSetResponsePrivate(this), parent)
+    : SESResponse(new DescribeReceiptRuleSetResponsePrivate(this), parent)
 {
     setRequest(new DescribeReceiptRuleSetRequest(request));
     setReply(reply);

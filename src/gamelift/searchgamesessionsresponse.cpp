@@ -46,7 +46,7 @@ SearchGameSessionsResponse::SearchGameSessionsResponse(
         const SearchGameSessionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SearchGameSessionsResponse(new SearchGameSessionsResponsePrivate(this), parent)
+    : GameLiftResponse(new SearchGameSessionsResponsePrivate(this), parent)
 {
     setRequest(new SearchGameSessionsRequest(request));
     setReply(reply);

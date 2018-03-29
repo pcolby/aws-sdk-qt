@@ -46,7 +46,7 @@ ListServerNeighborsResponse::ListServerNeighborsResponse(
         const ListServerNeighborsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListServerNeighborsResponse(new ListServerNeighborsResponsePrivate(this), parent)
+    : ApplicationDiscoveryServiceResponse(new ListServerNeighborsResponsePrivate(this), parent)
 {
     setRequest(new ListServerNeighborsRequest(request));
     setReply(reply);

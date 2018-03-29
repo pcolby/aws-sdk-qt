@@ -46,7 +46,7 @@ DeleteRegistrationCodeResponse::DeleteRegistrationCodeResponse(
         const DeleteRegistrationCodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteRegistrationCodeResponse(new DeleteRegistrationCodeResponsePrivate(this), parent)
+    : IoTResponse(new DeleteRegistrationCodeResponsePrivate(this), parent)
 {
     setRequest(new DeleteRegistrationCodeRequest(request));
     setReply(reply);

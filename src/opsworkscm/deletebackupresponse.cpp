@@ -46,7 +46,7 @@ DeleteBackupResponse::DeleteBackupResponse(
         const DeleteBackupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteBackupResponse(new DeleteBackupResponsePrivate(this), parent)
+    : OpsWorksCMResponse(new DeleteBackupResponsePrivate(this), parent)
 {
     setRequest(new DeleteBackupRequest(request));
     setReply(reply);

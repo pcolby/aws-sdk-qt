@@ -46,7 +46,7 @@ GetDevEndpointsResponse::GetDevEndpointsResponse(
         const GetDevEndpointsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDevEndpointsResponse(new GetDevEndpointsResponsePrivate(this), parent)
+    : GlueResponse(new GetDevEndpointsResponsePrivate(this), parent)
 {
     setRequest(new GetDevEndpointsRequest(request));
     setReply(reply);

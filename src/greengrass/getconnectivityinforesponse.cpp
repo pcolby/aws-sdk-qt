@@ -46,7 +46,7 @@ GetConnectivityInfoResponse::GetConnectivityInfoResponse(
         const GetConnectivityInfoRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetConnectivityInfoResponse(new GetConnectivityInfoResponsePrivate(this), parent)
+    : GreengrassResponse(new GetConnectivityInfoResponsePrivate(this), parent)
 {
     setRequest(new GetConnectivityInfoRequest(request));
     setReply(reply);

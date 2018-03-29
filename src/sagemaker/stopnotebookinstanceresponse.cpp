@@ -46,7 +46,7 @@ StopNotebookInstanceResponse::StopNotebookInstanceResponse(
         const StopNotebookInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopNotebookInstanceResponse(new StopNotebookInstanceResponsePrivate(this), parent)
+    : SageMakerResponse(new StopNotebookInstanceResponsePrivate(this), parent)
 {
     setRequest(new StopNotebookInstanceRequest(request));
     setReply(reply);

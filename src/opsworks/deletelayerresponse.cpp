@@ -46,7 +46,7 @@ DeleteLayerResponse::DeleteLayerResponse(
         const DeleteLayerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteLayerResponse(new DeleteLayerResponsePrivate(this), parent)
+    : OpsWorksResponse(new DeleteLayerResponsePrivate(this), parent)
 {
     setRequest(new DeleteLayerRequest(request));
     setReply(reply);

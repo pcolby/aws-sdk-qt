@@ -46,7 +46,7 @@ ListDetectorsResponse::ListDetectorsResponse(
         const ListDetectorsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListDetectorsResponse(new ListDetectorsResponsePrivate(this), parent)
+    : GuardDutyResponse(new ListDetectorsResponsePrivate(this), parent)
 {
     setRequest(new ListDetectorsRequest(request));
     setReply(reply);

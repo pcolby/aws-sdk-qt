@@ -46,7 +46,7 @@ UpdateIPSetResponse::UpdateIPSetResponse(
         const UpdateIPSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateIPSetResponse(new UpdateIPSetResponsePrivate(this), parent)
+    : GuardDutyResponse(new UpdateIPSetResponsePrivate(this), parent)
 {
     setRequest(new UpdateIPSetRequest(request));
     setReply(reply);

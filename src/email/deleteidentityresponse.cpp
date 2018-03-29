@@ -46,7 +46,7 @@ DeleteIdentityResponse::DeleteIdentityResponse(
         const DeleteIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteIdentityResponse(new DeleteIdentityResponsePrivate(this), parent)
+    : SESResponse(new DeleteIdentityResponsePrivate(this), parent)
 {
     setRequest(new DeleteIdentityRequest(request));
     setReply(reply);

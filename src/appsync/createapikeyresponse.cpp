@@ -46,7 +46,7 @@ CreateApiKeyResponse::CreateApiKeyResponse(
         const CreateApiKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateApiKeyResponse(new CreateApiKeyResponsePrivate(this), parent)
+    : AppSyncResponse(new CreateApiKeyResponsePrivate(this), parent)
 {
     setRequest(new CreateApiKeyRequest(request));
     setReply(reply);

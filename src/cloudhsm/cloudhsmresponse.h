@@ -34,6 +34,11 @@ class QTAWS_EXPORT CloudHSMResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     CloudHSMResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    CloudHSMResponse(CloudHSMResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

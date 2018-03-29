@@ -46,7 +46,7 @@ PutObjectResponse::PutObjectResponse(
         const PutObjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutObjectResponse(new PutObjectResponsePrivate(this), parent)
+    : MediaStoreDataResponse(new PutObjectResponsePrivate(this), parent)
 {
     setRequest(new PutObjectRequest(request));
     setReply(reply);

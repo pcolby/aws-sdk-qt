@@ -46,7 +46,7 @@ DeleteNamespaceResponse::DeleteNamespaceResponse(
         const DeleteNamespaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteNamespaceResponse(new DeleteNamespaceResponsePrivate(this), parent)
+    : ServiceDiscoveryResponse(new DeleteNamespaceResponsePrivate(this), parent)
 {
     setRequest(new DeleteNamespaceRequest(request));
     setReply(reply);

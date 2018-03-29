@@ -46,7 +46,7 @@ ListObjectAttributesResponse::ListObjectAttributesResponse(
         const ListObjectAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListObjectAttributesResponse(new ListObjectAttributesResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new ListObjectAttributesResponsePrivate(this), parent)
 {
     setRequest(new ListObjectAttributesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SearchProductsAsAdminResponse::SearchProductsAsAdminResponse(
         const SearchProductsAsAdminRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SearchProductsAsAdminResponse(new SearchProductsAsAdminResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new SearchProductsAsAdminResponsePrivate(this), parent)
 {
     setRequest(new SearchProductsAsAdminRequest(request));
     setReply(reply);

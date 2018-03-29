@@ -46,7 +46,7 @@ DeleteScheduledActionResponse::DeleteScheduledActionResponse(
         const DeleteScheduledActionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteScheduledActionResponse(new DeleteScheduledActionResponsePrivate(this), parent)
+    : AutoScalingResponse(new DeleteScheduledActionResponsePrivate(this), parent)
 {
     setRequest(new DeleteScheduledActionRequest(request));
     setReply(reply);

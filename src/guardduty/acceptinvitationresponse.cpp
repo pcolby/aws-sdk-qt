@@ -46,7 +46,7 @@ AcceptInvitationResponse::AcceptInvitationResponse(
         const AcceptInvitationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AcceptInvitationResponse(new AcceptInvitationResponsePrivate(this), parent)
+    : GuardDutyResponse(new AcceptInvitationResponsePrivate(this), parent)
 {
     setRequest(new AcceptInvitationRequest(request));
     setReply(reply);

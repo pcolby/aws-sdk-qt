@@ -46,7 +46,7 @@ GetObjectInformationResponse::GetObjectInformationResponse(
         const GetObjectInformationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetObjectInformationResponse(new GetObjectInformationResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new GetObjectInformationResponsePrivate(this), parent)
 {
     setRequest(new GetObjectInformationRequest(request));
     setReply(reply);

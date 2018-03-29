@@ -46,7 +46,7 @@ ListConfigurationRevisionsResponse::ListConfigurationRevisionsResponse(
         const ListConfigurationRevisionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListConfigurationRevisionsResponse(new ListConfigurationRevisionsResponsePrivate(this), parent)
+    : MQResponse(new ListConfigurationRevisionsResponsePrivate(this), parent)
 {
     setRequest(new ListConfigurationRevisionsRequest(request));
     setReply(reply);

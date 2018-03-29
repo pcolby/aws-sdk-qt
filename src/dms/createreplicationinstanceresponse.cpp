@@ -46,7 +46,7 @@ CreateReplicationInstanceResponse::CreateReplicationInstanceResponse(
         const CreateReplicationInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateReplicationInstanceResponse(new CreateReplicationInstanceResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new CreateReplicationInstanceResponsePrivate(this), parent)
 {
     setRequest(new CreateReplicationInstanceRequest(request));
     setReply(reply);

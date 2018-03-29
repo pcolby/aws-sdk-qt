@@ -46,7 +46,7 @@ EstimateTemplateCostResponse::EstimateTemplateCostResponse(
         const EstimateTemplateCostRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EstimateTemplateCostResponse(new EstimateTemplateCostResponsePrivate(this), parent)
+    : CloudFormationResponse(new EstimateTemplateCostResponsePrivate(this), parent)
 {
     setRequest(new EstimateTemplateCostRequest(request));
     setReply(reply);

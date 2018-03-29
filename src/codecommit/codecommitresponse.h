@@ -34,6 +34,11 @@ class QTAWS_EXPORT CodeCommitResponse : public QtAws::Core::AwsAbstractResponse 
 public:
     CodeCommitResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    CodeCommitResponse(CodeCommitResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

@@ -46,7 +46,7 @@ CompareFacesResponse::CompareFacesResponse(
         const CompareFacesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CompareFacesResponse(new CompareFacesResponsePrivate(this), parent)
+    : RekognitionResponse(new CompareFacesResponsePrivate(this), parent)
 {
     setRequest(new CompareFacesRequest(request));
     setReply(reply);

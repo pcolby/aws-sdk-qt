@@ -46,7 +46,7 @@ GetDirectoryResponse::GetDirectoryResponse(
         const GetDirectoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDirectoryResponse(new GetDirectoryResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new GetDirectoryResponsePrivate(this), parent)
 {
     setRequest(new GetDirectoryRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RebootDBInstanceResponse::RebootDBInstanceResponse(
         const RebootDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RebootDBInstanceResponse(new RebootDBInstanceResponsePrivate(this), parent)
+    : RDSResponse(new RebootDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new RebootDBInstanceRequest(request));
     setReply(reply);

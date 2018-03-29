@@ -46,7 +46,7 @@ DisableVpcClassicLinkDnsSupportResponse::DisableVpcClassicLinkDnsSupportResponse
         const DisableVpcClassicLinkDnsSupportRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisableVpcClassicLinkDnsSupportResponse(new DisableVpcClassicLinkDnsSupportResponsePrivate(this), parent)
+    : EC2Response(new DisableVpcClassicLinkDnsSupportResponsePrivate(this), parent)
 {
     setRequest(new DisableVpcClassicLinkDnsSupportRequest(request));
     setReply(reply);

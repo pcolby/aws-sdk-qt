@@ -46,7 +46,7 @@ DescribeVolumesResponse::DescribeVolumesResponse(
         const DescribeVolumesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeVolumesResponse(new DescribeVolumesResponsePrivate(this), parent)
+    : EC2Response(new DescribeVolumesResponsePrivate(this), parent)
 {
     setRequest(new DescribeVolumesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetTagsResponse::GetTagsResponse(
         const GetTagsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetTagsResponse(new GetTagsResponsePrivate(this), parent)
+    : CostExplorerResponse(new GetTagsResponsePrivate(this), parent)
 {
     setRequest(new GetTagsRequest(request));
     setReply(reply);

@@ -34,6 +34,11 @@ class QTAWS_EXPORT DataPipelineResponse : public QtAws::Core::AwsAbstractRespons
 public:
     DataPipelineResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    DataPipelineResponse(DataPipelineResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

@@ -46,7 +46,7 @@ DescribeTagOptionResponse::DescribeTagOptionResponse(
         const DescribeTagOptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeTagOptionResponse(new DescribeTagOptionResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new DescribeTagOptionResponsePrivate(this), parent)
 {
     setRequest(new DescribeTagOptionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteDevEndpointResponse::DeleteDevEndpointResponse(
         const DeleteDevEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDevEndpointResponse(new DeleteDevEndpointResponsePrivate(this), parent)
+    : GlueResponse(new DeleteDevEndpointResponsePrivate(this), parent)
 {
     setRequest(new DeleteDevEndpointRequest(request));
     setReply(reply);

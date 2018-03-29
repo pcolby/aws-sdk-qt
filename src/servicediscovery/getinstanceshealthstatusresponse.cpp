@@ -46,7 +46,7 @@ GetInstancesHealthStatusResponse::GetInstancesHealthStatusResponse(
         const GetInstancesHealthStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetInstancesHealthStatusResponse(new GetInstancesHealthStatusResponsePrivate(this), parent)
+    : ServiceDiscoveryResponse(new GetInstancesHealthStatusResponsePrivate(this), parent)
 {
     setRequest(new GetInstancesHealthStatusRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListContainerInstancesResponse::ListContainerInstancesResponse(
         const ListContainerInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListContainerInstancesResponse(new ListContainerInstancesResponsePrivate(this), parent)
+    : ECSResponse(new ListContainerInstancesResponsePrivate(this), parent)
 {
     setRequest(new ListContainerInstancesRequest(request));
     setReply(reply);

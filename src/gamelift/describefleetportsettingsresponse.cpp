@@ -46,7 +46,7 @@ DescribeFleetPortSettingsResponse::DescribeFleetPortSettingsResponse(
         const DescribeFleetPortSettingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeFleetPortSettingsResponse(new DescribeFleetPortSettingsResponsePrivate(this), parent)
+    : GameLiftResponse(new DescribeFleetPortSettingsResponsePrivate(this), parent)
 {
     setRequest(new DescribeFleetPortSettingsRequest(request));
     setReply(reply);

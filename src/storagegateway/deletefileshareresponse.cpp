@@ -46,7 +46,7 @@ DeleteFileShareResponse::DeleteFileShareResponse(
         const DeleteFileShareRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteFileShareResponse(new DeleteFileShareResponsePrivate(this), parent)
+    : StorageGatewayResponse(new DeleteFileShareResponsePrivate(this), parent)
 {
     setRequest(new DeleteFileShareRequest(request));
     setReply(reply);

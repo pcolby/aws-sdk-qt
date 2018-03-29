@@ -46,7 +46,7 @@ GetItemResponse::GetItemResponse(
         const GetItemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetItemResponse(new GetItemResponsePrivate(this), parent)
+    : DynamoDBResponse(new GetItemResponsePrivate(this), parent)
 {
     setRequest(new GetItemRequest(request));
     setReply(reply);

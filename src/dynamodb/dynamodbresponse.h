@@ -34,6 +34,11 @@ class QTAWS_EXPORT DynamoDBResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     DynamoDBResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    DynamoDBResponse(DynamoDBResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

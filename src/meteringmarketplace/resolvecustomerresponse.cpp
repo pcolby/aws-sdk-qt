@@ -46,7 +46,7 @@ ResolveCustomerResponse::ResolveCustomerResponse(
         const ResolveCustomerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResolveCustomerResponse(new ResolveCustomerResponsePrivate(this), parent)
+    : MarketplaceMeteringResponse(new ResolveCustomerResponsePrivate(this), parent)
 {
     setRequest(new ResolveCustomerRequest(request));
     setReply(reply);

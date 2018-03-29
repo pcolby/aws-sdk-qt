@@ -46,7 +46,7 @@ UpdateJobTemplateResponse::UpdateJobTemplateResponse(
         const UpdateJobTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateJobTemplateResponse(new UpdateJobTemplateResponsePrivate(this), parent)
+    : MediaConvertResponse(new UpdateJobTemplateResponsePrivate(this), parent)
 {
     setRequest(new UpdateJobTemplateRequest(request));
     setReply(reply);

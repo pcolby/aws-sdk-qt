@@ -46,7 +46,7 @@ DescribeEngineDefaultClusterParametersResponse::DescribeEngineDefaultClusterPara
         const DescribeEngineDefaultClusterParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeEngineDefaultClusterParametersResponse(new DescribeEngineDefaultClusterParametersResponsePrivate(this), parent)
+    : RDSResponse(new DescribeEngineDefaultClusterParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeEngineDefaultClusterParametersRequest(request));
     setReply(reply);

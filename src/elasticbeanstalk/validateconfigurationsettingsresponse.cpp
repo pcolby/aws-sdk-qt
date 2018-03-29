@@ -46,7 +46,7 @@ ValidateConfigurationSettingsResponse::ValidateConfigurationSettingsResponse(
         const ValidateConfigurationSettingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ValidateConfigurationSettingsResponse(new ValidateConfigurationSettingsResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new ValidateConfigurationSettingsResponsePrivate(this), parent)
 {
     setRequest(new ValidateConfigurationSettingsRequest(request));
     setReply(reply);

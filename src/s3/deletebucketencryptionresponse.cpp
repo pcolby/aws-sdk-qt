@@ -46,7 +46,7 @@ DeleteBucketEncryptionResponse::DeleteBucketEncryptionResponse(
         const DeleteBucketEncryptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteBucketEncryptionResponse(new DeleteBucketEncryptionResponsePrivate(this), parent)
+    : S3Response(new DeleteBucketEncryptionResponsePrivate(this), parent)
 {
     setRequest(new DeleteBucketEncryptionRequest(request));
     setReply(reply);

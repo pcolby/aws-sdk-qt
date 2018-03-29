@@ -46,7 +46,7 @@ UpdateHITReviewStatusResponse::UpdateHITReviewStatusResponse(
         const UpdateHITReviewStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateHITReviewStatusResponse(new UpdateHITReviewStatusResponsePrivate(this), parent)
+    : MTurkResponse(new UpdateHITReviewStatusResponsePrivate(this), parent)
 {
     setRequest(new UpdateHITReviewStatusRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ EnableMFADeviceResponse::EnableMFADeviceResponse(
         const EnableMFADeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : EnableMFADeviceResponse(new EnableMFADeviceResponsePrivate(this), parent)
+    : IAMResponse(new EnableMFADeviceResponsePrivate(this), parent)
 {
     setRequest(new EnableMFADeviceRequest(request));
     setReply(reply);

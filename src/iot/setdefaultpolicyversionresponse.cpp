@@ -46,7 +46,7 @@ SetDefaultPolicyVersionResponse::SetDefaultPolicyVersionResponse(
         const SetDefaultPolicyVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetDefaultPolicyVersionResponse(new SetDefaultPolicyVersionResponsePrivate(this), parent)
+    : IoTResponse(new SetDefaultPolicyVersionResponsePrivate(this), parent)
 {
     setRequest(new SetDefaultPolicyVersionRequest(request));
     setReply(reply);

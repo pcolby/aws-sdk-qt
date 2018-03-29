@@ -46,7 +46,7 @@ ListCollectionsResponse::ListCollectionsResponse(
         const ListCollectionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListCollectionsResponse(new ListCollectionsResponsePrivate(this), parent)
+    : RekognitionResponse(new ListCollectionsResponsePrivate(this), parent)
 {
     setRequest(new ListCollectionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateDataSourceFromS3Response::CreateDataSourceFromS3Response(
         const CreateDataSourceFromS3Request &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateDataSourceFromS3Response(new CreateDataSourceFromS3ResponsePrivate(this), parent)
+    : MachineLearningResponse(new CreateDataSourceFromS3ResponsePrivate(this), parent)
 {
     setRequest(new CreateDataSourceFromS3Request(request));
     setReply(reply);

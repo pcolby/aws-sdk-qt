@@ -46,7 +46,7 @@ GetMediaResponse::GetMediaResponse(
         const GetMediaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetMediaResponse(new GetMediaResponsePrivate(this), parent)
+    : KinesisVideoMediaResponse(new GetMediaResponsePrivate(this), parent)
 {
     setRequest(new GetMediaRequest(request));
     setReply(reply);

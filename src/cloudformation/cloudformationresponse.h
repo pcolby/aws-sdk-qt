@@ -34,6 +34,11 @@ class QTAWS_EXPORT CloudFormationResponse : public QtAws::Core::AwsAbstractRespo
 public:
     CloudFormationResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    CloudFormationResponse(CloudFormationResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

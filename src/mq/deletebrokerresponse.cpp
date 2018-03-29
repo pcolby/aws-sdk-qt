@@ -46,7 +46,7 @@ DeleteBrokerResponse::DeleteBrokerResponse(
         const DeleteBrokerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteBrokerResponse(new DeleteBrokerResponsePrivate(this), parent)
+    : MQResponse(new DeleteBrokerResponsePrivate(this), parent)
 {
     setRequest(new DeleteBrokerRequest(request));
     setReply(reply);

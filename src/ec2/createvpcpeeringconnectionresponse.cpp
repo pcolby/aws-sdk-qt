@@ -46,7 +46,7 @@ CreateVpcPeeringConnectionResponse::CreateVpcPeeringConnectionResponse(
         const CreateVpcPeeringConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateVpcPeeringConnectionResponse(new CreateVpcPeeringConnectionResponsePrivate(this), parent)
+    : EC2Response(new CreateVpcPeeringConnectionResponsePrivate(this), parent)
 {
     setRequest(new CreateVpcPeeringConnectionRequest(request));
     setReply(reply);

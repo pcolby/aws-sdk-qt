@@ -46,7 +46,7 @@ DescribeEnvironmentsResponse::DescribeEnvironmentsResponse(
         const DescribeEnvironmentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeEnvironmentsResponse(new DescribeEnvironmentsResponsePrivate(this), parent)
+    : Cloud9Response(new DescribeEnvironmentsResponsePrivate(this), parent)
 {
     setRequest(new DescribeEnvironmentsRequest(request));
     setReply(reply);

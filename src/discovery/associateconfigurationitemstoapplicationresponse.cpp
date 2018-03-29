@@ -46,7 +46,7 @@ AssociateConfigurationItemsToApplicationResponse::AssociateConfigurationItemsToA
         const AssociateConfigurationItemsToApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssociateConfigurationItemsToApplicationResponse(new AssociateConfigurationItemsToApplicationResponsePrivate(this), parent)
+    : ApplicationDiscoveryServiceResponse(new AssociateConfigurationItemsToApplicationResponsePrivate(this), parent)
 {
     setRequest(new AssociateConfigurationItemsToApplicationRequest(request));
     setReply(reply);

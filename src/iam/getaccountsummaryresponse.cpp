@@ -46,7 +46,7 @@ GetAccountSummaryResponse::GetAccountSummaryResponse(
         const GetAccountSummaryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetAccountSummaryResponse(new GetAccountSummaryResponsePrivate(this), parent)
+    : IAMResponse(new GetAccountSummaryResponsePrivate(this), parent)
 {
     setRequest(new GetAccountSummaryRequest(request));
     setReply(reply);

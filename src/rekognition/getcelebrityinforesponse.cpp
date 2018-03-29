@@ -46,7 +46,7 @@ GetCelebrityInfoResponse::GetCelebrityInfoResponse(
         const GetCelebrityInfoRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetCelebrityInfoResponse(new GetCelebrityInfoResponsePrivate(this), parent)
+    : RekognitionResponse(new GetCelebrityInfoResponsePrivate(this), parent)
 {
     setRequest(new GetCelebrityInfoRequest(request));
     setReply(reply);

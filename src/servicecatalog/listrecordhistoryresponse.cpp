@@ -46,7 +46,7 @@ ListRecordHistoryResponse::ListRecordHistoryResponse(
         const ListRecordHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListRecordHistoryResponse(new ListRecordHistoryResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new ListRecordHistoryResponsePrivate(this), parent)
 {
     setRequest(new ListRecordHistoryRequest(request));
     setReply(reply);

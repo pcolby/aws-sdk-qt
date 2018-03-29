@@ -46,7 +46,7 @@ ListFunctionDefinitionsResponse::ListFunctionDefinitionsResponse(
         const ListFunctionDefinitionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListFunctionDefinitionsResponse(new ListFunctionDefinitionsResponsePrivate(this), parent)
+    : GreengrassResponse(new ListFunctionDefinitionsResponsePrivate(this), parent)
 {
     setRequest(new ListFunctionDefinitionsRequest(request));
     setReply(reply);

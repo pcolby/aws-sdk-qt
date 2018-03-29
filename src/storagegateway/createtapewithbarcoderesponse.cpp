@@ -46,7 +46,7 @@ CreateTapeWithBarcodeResponse::CreateTapeWithBarcodeResponse(
         const CreateTapeWithBarcodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateTapeWithBarcodeResponse(new CreateTapeWithBarcodeResponsePrivate(this), parent)
+    : StorageGatewayResponse(new CreateTapeWithBarcodeResponsePrivate(this), parent)
 {
     setRequest(new CreateTapeWithBarcodeRequest(request));
     setReply(reply);

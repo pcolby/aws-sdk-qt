@@ -46,7 +46,7 @@ ListVPCAssociationAuthorizationsResponse::ListVPCAssociationAuthorizationsRespon
         const ListVPCAssociationAuthorizationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListVPCAssociationAuthorizationsResponse(new ListVPCAssociationAuthorizationsResponsePrivate(this), parent)
+    : Route53Response(new ListVPCAssociationAuthorizationsResponsePrivate(this), parent)
 {
     setRequest(new ListVPCAssociationAuthorizationsRequest(request));
     setReply(reply);

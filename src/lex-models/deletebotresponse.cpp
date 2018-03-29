@@ -46,7 +46,7 @@ DeleteBotResponse::DeleteBotResponse(
         const DeleteBotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteBotResponse(new DeleteBotResponsePrivate(this), parent)
+    : LexModelBuildingServiceResponse(new DeleteBotResponsePrivate(this), parent)
 {
     setRequest(new DeleteBotRequest(request));
     setReply(reply);

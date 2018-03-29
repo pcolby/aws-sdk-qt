@@ -46,7 +46,7 @@ SetTaskStatusResponse::SetTaskStatusResponse(
         const SetTaskStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetTaskStatusResponse(new SetTaskStatusResponsePrivate(this), parent)
+    : DataPipelineResponse(new SetTaskStatusResponsePrivate(this), parent)
 {
     setRequest(new SetTaskStatusRequest(request));
     setReply(reply);

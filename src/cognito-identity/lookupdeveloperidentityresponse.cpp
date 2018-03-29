@@ -46,7 +46,7 @@ LookupDeveloperIdentityResponse::LookupDeveloperIdentityResponse(
         const LookupDeveloperIdentityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : LookupDeveloperIdentityResponse(new LookupDeveloperIdentityResponsePrivate(this), parent)
+    : CognitoIdentityResponse(new LookupDeveloperIdentityResponsePrivate(this), parent)
 {
     setRequest(new LookupDeveloperIdentityRequest(request));
     setReply(reply);

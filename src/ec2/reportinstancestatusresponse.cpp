@@ -46,7 +46,7 @@ ReportInstanceStatusResponse::ReportInstanceStatusResponse(
         const ReportInstanceStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ReportInstanceStatusResponse(new ReportInstanceStatusResponsePrivate(this), parent)
+    : EC2Response(new ReportInstanceStatusResponsePrivate(this), parent)
 {
     setRequest(new ReportInstanceStatusRequest(request));
     setReply(reply);

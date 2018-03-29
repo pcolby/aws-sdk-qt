@@ -46,7 +46,7 @@ UploadArchiveResponse::UploadArchiveResponse(
         const UploadArchiveRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UploadArchiveResponse(new UploadArchiveResponsePrivate(this), parent)
+    : GlacierResponse(new UploadArchiveResponsePrivate(this), parent)
 {
     setRequest(new UploadArchiveRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteAccessKeyResponse::DeleteAccessKeyResponse(
         const DeleteAccessKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteAccessKeyResponse(new DeleteAccessKeyResponsePrivate(this), parent)
+    : IAMResponse(new DeleteAccessKeyResponsePrivate(this), parent)
 {
     setRequest(new DeleteAccessKeyRequest(request));
     setReply(reply);

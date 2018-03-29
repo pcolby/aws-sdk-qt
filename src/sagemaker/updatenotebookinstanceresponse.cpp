@@ -46,7 +46,7 @@ UpdateNotebookInstanceResponse::UpdateNotebookInstanceResponse(
         const UpdateNotebookInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateNotebookInstanceResponse(new UpdateNotebookInstanceResponsePrivate(this), parent)
+    : SageMakerResponse(new UpdateNotebookInstanceResponsePrivate(this), parent)
 {
     setRequest(new UpdateNotebookInstanceRequest(request));
     setReply(reply);

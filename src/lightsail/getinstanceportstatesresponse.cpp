@@ -46,7 +46,7 @@ GetInstancePortStatesResponse::GetInstancePortStatesResponse(
         const GetInstancePortStatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetInstancePortStatesResponse(new GetInstancePortStatesResponsePrivate(this), parent)
+    : LightsailResponse(new GetInstancePortStatesResponsePrivate(this), parent)
 {
     setRequest(new GetInstancePortStatesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ AllocatePublicVirtualInterfaceResponse::AllocatePublicVirtualInterfaceResponse(
         const AllocatePublicVirtualInterfaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AllocatePublicVirtualInterfaceResponse(new AllocatePublicVirtualInterfaceResponsePrivate(this), parent)
+    : DirectConnectResponse(new AllocatePublicVirtualInterfaceResponsePrivate(this), parent)
 {
     setRequest(new AllocatePublicVirtualInterfaceRequest(request));
     setReply(reply);

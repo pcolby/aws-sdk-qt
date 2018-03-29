@@ -46,7 +46,7 @@ RefreshCacheResponse::RefreshCacheResponse(
         const RefreshCacheRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RefreshCacheResponse(new RefreshCacheResponsePrivate(this), parent)
+    : StorageGatewayResponse(new RefreshCacheResponsePrivate(this), parent)
 {
     setRequest(new RefreshCacheRequest(request));
     setReply(reply);

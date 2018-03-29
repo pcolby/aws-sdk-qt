@@ -46,7 +46,7 @@ ModifyVpcEndpointServiceConfigurationResponse::ModifyVpcEndpointServiceConfigura
         const ModifyVpcEndpointServiceConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyVpcEndpointServiceConfigurationResponse(new ModifyVpcEndpointServiceConfigurationResponsePrivate(this), parent)
+    : EC2Response(new ModifyVpcEndpointServiceConfigurationResponsePrivate(this), parent)
 {
     setRequest(new ModifyVpcEndpointServiceConfigurationRequest(request));
     setReply(reply);

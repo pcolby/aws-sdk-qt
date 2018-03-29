@@ -46,7 +46,7 @@ DeleteDomainNameResponse::DeleteDomainNameResponse(
         const DeleteDomainNameRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDomainNameResponse(new DeleteDomainNameResponsePrivate(this), parent)
+    : APIGatewayResponse(new DeleteDomainNameResponsePrivate(this), parent)
 {
     setRequest(new DeleteDomainNameRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetShardIteratorResponse::GetShardIteratorResponse(
         const GetShardIteratorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetShardIteratorResponse(new GetShardIteratorResponsePrivate(this), parent)
+    : KinesisResponse(new GetShardIteratorResponsePrivate(this), parent)
 {
     setRequest(new GetShardIteratorRequest(request));
     setReply(reply);

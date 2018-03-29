@@ -46,7 +46,7 @@ GetMaintenanceWindowExecutionTaskInvocationResponse::GetMaintenanceWindowExecuti
         const GetMaintenanceWindowExecutionTaskInvocationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetMaintenanceWindowExecutionTaskInvocationResponse(new GetMaintenanceWindowExecutionTaskInvocationResponsePrivate(this), parent)
+    : SSMResponse(new GetMaintenanceWindowExecutionTaskInvocationResponsePrivate(this), parent)
 {
     setRequest(new GetMaintenanceWindowExecutionTaskInvocationRequest(request));
     setReply(reply);

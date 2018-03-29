@@ -46,7 +46,7 @@ UpdateAdmChannelResponse::UpdateAdmChannelResponse(
         const UpdateAdmChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateAdmChannelResponse(new UpdateAdmChannelResponsePrivate(this), parent)
+    : PinpointResponse(new UpdateAdmChannelResponsePrivate(this), parent)
 {
     setRequest(new UpdateAdmChannelRequest(request));
     setReply(reply);

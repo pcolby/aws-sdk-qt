@@ -46,7 +46,7 @@ QueryResponse::QueryResponse(
         const QueryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : QueryResponse(new QueryResponsePrivate(this), parent)
+    : DynamoDBResponse(new QueryResponsePrivate(this), parent)
 {
     setRequest(new QueryRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ReportTaskProgressResponse::ReportTaskProgressResponse(
         const ReportTaskProgressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ReportTaskProgressResponse(new ReportTaskProgressResponsePrivate(this), parent)
+    : DataPipelineResponse(new ReportTaskProgressResponsePrivate(this), parent)
 {
     setRequest(new ReportTaskProgressRequest(request));
     setReply(reply);

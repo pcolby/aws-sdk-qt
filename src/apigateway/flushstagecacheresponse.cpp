@@ -46,7 +46,7 @@ FlushStageCacheResponse::FlushStageCacheResponse(
         const FlushStageCacheRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : FlushStageCacheResponse(new FlushStageCacheResponsePrivate(this), parent)
+    : APIGatewayResponse(new FlushStageCacheResponsePrivate(this), parent)
 {
     setRequest(new FlushStageCacheRequest(request));
     setReply(reply);

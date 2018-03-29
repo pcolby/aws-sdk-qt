@@ -46,7 +46,7 @@ ChangePasswordResponse::ChangePasswordResponse(
         const ChangePasswordRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ChangePasswordResponse(new ChangePasswordResponsePrivate(this), parent)
+    : IAMResponse(new ChangePasswordResponsePrivate(this), parent)
 {
     setRequest(new ChangePasswordRequest(request));
     setReply(reply);

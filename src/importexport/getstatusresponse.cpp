@@ -46,7 +46,7 @@ GetStatusResponse::GetStatusResponse(
         const GetStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetStatusResponse(new GetStatusResponsePrivate(this), parent)
+    : ImportExportResponse(new GetStatusResponsePrivate(this), parent)
 {
     setRequest(new GetStatusRequest(request));
     setReply(reply);

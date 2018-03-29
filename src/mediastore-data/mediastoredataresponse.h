@@ -34,6 +34,11 @@ class QTAWS_EXPORT MediaStoreDataResponse : public QtAws::Core::AwsAbstractRespo
 public:
     MediaStoreDataResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    MediaStoreDataResponse(MediaStoreDataResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

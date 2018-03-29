@@ -46,7 +46,7 @@ UpdateDefaultBranchResponse::UpdateDefaultBranchResponse(
         const UpdateDefaultBranchRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDefaultBranchResponse(new UpdateDefaultBranchResponsePrivate(this), parent)
+    : CodeCommitResponse(new UpdateDefaultBranchResponsePrivate(this), parent)
 {
     setRequest(new UpdateDefaultBranchRequest(request));
     setReply(reply);

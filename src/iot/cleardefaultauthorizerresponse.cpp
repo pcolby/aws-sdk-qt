@@ -46,7 +46,7 @@ ClearDefaultAuthorizerResponse::ClearDefaultAuthorizerResponse(
         const ClearDefaultAuthorizerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ClearDefaultAuthorizerResponse(new ClearDefaultAuthorizerResponsePrivate(this), parent)
+    : IoTResponse(new ClearDefaultAuthorizerResponsePrivate(this), parent)
 {
     setRequest(new ClearDefaultAuthorizerRequest(request));
     setReply(reply);

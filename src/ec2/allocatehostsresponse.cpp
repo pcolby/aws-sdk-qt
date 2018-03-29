@@ -46,7 +46,7 @@ AllocateHostsResponse::AllocateHostsResponse(
         const AllocateHostsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AllocateHostsResponse(new AllocateHostsResponsePrivate(this), parent)
+    : EC2Response(new AllocateHostsResponsePrivate(this), parent)
 {
     setRequest(new AllocateHostsRequest(request));
     setReply(reply);

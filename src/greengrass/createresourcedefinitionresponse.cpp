@@ -46,7 +46,7 @@ CreateResourceDefinitionResponse::CreateResourceDefinitionResponse(
         const CreateResourceDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateResourceDefinitionResponse(new CreateResourceDefinitionResponsePrivate(this), parent)
+    : GreengrassResponse(new CreateResourceDefinitionResponsePrivate(this), parent)
 {
     setRequest(new CreateResourceDefinitionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteVaultResponse::DeleteVaultResponse(
         const DeleteVaultRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteVaultResponse(new DeleteVaultResponsePrivate(this), parent)
+    : GlacierResponse(new DeleteVaultResponsePrivate(this), parent)
 {
     setRequest(new DeleteVaultRequest(request));
     setReply(reply);

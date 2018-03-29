@@ -46,7 +46,7 @@ DeleteInputSecurityGroupResponse::DeleteInputSecurityGroupResponse(
         const DeleteInputSecurityGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteInputSecurityGroupResponse(new DeleteInputSecurityGroupResponsePrivate(this), parent)
+    : MediaLiveResponse(new DeleteInputSecurityGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteInputSecurityGroupRequest(request));
     setReply(reply);

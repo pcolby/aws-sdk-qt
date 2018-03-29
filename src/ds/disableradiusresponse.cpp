@@ -46,7 +46,7 @@ DisableRadiusResponse::DisableRadiusResponse(
         const DisableRadiusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisableRadiusResponse(new DisableRadiusResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new DisableRadiusResponsePrivate(this), parent)
 {
     setRequest(new DisableRadiusRequest(request));
     setReply(reply);

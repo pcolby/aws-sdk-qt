@@ -46,7 +46,7 @@ DeleteRolePolicyResponse::DeleteRolePolicyResponse(
         const DeleteRolePolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteRolePolicyResponse(new DeleteRolePolicyResponsePrivate(this), parent)
+    : IAMResponse(new DeleteRolePolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteRolePolicyRequest(request));
     setReply(reply);

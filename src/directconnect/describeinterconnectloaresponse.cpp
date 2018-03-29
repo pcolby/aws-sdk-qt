@@ -46,7 +46,7 @@ DescribeInterconnectLoaResponse::DescribeInterconnectLoaResponse(
         const DescribeInterconnectLoaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeInterconnectLoaResponse(new DescribeInterconnectLoaResponsePrivate(this), parent)
+    : DirectConnectResponse(new DescribeInterconnectLoaResponsePrivate(this), parent)
 {
     setRequest(new DescribeInterconnectLoaRequest(request));
     setReply(reply);

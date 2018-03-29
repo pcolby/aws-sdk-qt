@@ -46,7 +46,7 @@ ActivateUserResponse::ActivateUserResponse(
         const ActivateUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ActivateUserResponse(new ActivateUserResponsePrivate(this), parent)
+    : WorkDocsResponse(new ActivateUserResponsePrivate(this), parent)
 {
     setRequest(new ActivateUserRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteDestinationResponse::DeleteDestinationResponse(
         const DeleteDestinationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDestinationResponse(new DeleteDestinationResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new DeleteDestinationResponsePrivate(this), parent)
 {
     setRequest(new DeleteDestinationRequest(request));
     setReply(reply);

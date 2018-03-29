@@ -46,7 +46,7 @@ GetQueryResultsResponse::GetQueryResultsResponse(
         const GetQueryResultsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetQueryResultsResponse(new GetQueryResultsResponsePrivate(this), parent)
+    : AthenaResponse(new GetQueryResultsResponsePrivate(this), parent)
 {
     setRequest(new GetQueryResultsRequest(request));
     setReply(reply);

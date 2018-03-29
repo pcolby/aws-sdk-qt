@@ -46,7 +46,7 @@ ListAssessmentRunsResponse::ListAssessmentRunsResponse(
         const ListAssessmentRunsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListAssessmentRunsResponse(new ListAssessmentRunsResponsePrivate(this), parent)
+    : InspectorResponse(new ListAssessmentRunsResponsePrivate(this), parent)
 {
     setRequest(new ListAssessmentRunsRequest(request));
     setReply(reply);

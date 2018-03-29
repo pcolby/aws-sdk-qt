@@ -46,7 +46,7 @@ GetBucketWebsiteResponse::GetBucketWebsiteResponse(
         const GetBucketWebsiteRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetBucketWebsiteResponse(new GetBucketWebsiteResponsePrivate(this), parent)
+    : S3Response(new GetBucketWebsiteResponsePrivate(this), parent)
 {
     setRequest(new GetBucketWebsiteRequest(request));
     setReply(reply);

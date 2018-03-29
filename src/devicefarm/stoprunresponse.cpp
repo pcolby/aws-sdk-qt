@@ -46,7 +46,7 @@ StopRunResponse::StopRunResponse(
         const StopRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopRunResponse(new StopRunResponsePrivate(this), parent)
+    : DeviceFarmResponse(new StopRunResponsePrivate(this), parent)
 {
     setRequest(new StopRunRequest(request));
     setReply(reply);

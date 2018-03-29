@@ -46,7 +46,7 @@ CreateTargetGroupResponse::CreateTargetGroupResponse(
         const CreateTargetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateTargetGroupResponse(new CreateTargetGroupResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new CreateTargetGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateTargetGroupRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SearchSkillGroupsResponse::SearchSkillGroupsResponse(
         const SearchSkillGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SearchSkillGroupsResponse(new SearchSkillGroupsResponsePrivate(this), parent)
+    : AlexaForBusinessResponse(new SearchSkillGroupsResponsePrivate(this), parent)
 {
     setRequest(new SearchSkillGroupsRequest(request));
     setReply(reply);

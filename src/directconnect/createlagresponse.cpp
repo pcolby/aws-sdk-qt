@@ -46,7 +46,7 @@ CreateLagResponse::CreateLagResponse(
         const CreateLagRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateLagResponse(new CreateLagResponsePrivate(this), parent)
+    : DirectConnectResponse(new CreateLagResponsePrivate(this), parent)
 {
     setRequest(new CreateLagRequest(request));
     setReply(reply);

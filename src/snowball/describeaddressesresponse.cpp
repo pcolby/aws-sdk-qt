@@ -46,7 +46,7 @@ DescribeAddressesResponse::DescribeAddressesResponse(
         const DescribeAddressesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAddressesResponse(new DescribeAddressesResponsePrivate(this), parent)
+    : SnowballResponse(new DescribeAddressesResponsePrivate(this), parent)
 {
     setRequest(new DescribeAddressesRequest(request));
     setReply(reply);

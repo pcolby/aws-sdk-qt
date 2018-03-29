@@ -46,7 +46,7 @@ UpdateInstanceResponse::UpdateInstanceResponse(
         const UpdateInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateInstanceResponse(new UpdateInstanceResponsePrivate(this), parent)
+    : OpsWorksResponse(new UpdateInstanceResponsePrivate(this), parent)
 {
     setRequest(new UpdateInstanceRequest(request));
     setReply(reply);

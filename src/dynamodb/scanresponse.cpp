@@ -46,7 +46,7 @@ ScanResponse::ScanResponse(
         const ScanRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ScanResponse(new ScanResponsePrivate(this), parent)
+    : DynamoDBResponse(new ScanResponsePrivate(this), parent)
 {
     setRequest(new ScanRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ UpdateServerResponse::UpdateServerResponse(
         const UpdateServerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateServerResponse(new UpdateServerResponsePrivate(this), parent)
+    : OpsWorksCMResponse(new UpdateServerResponsePrivate(this), parent)
 {
     setRequest(new UpdateServerRequest(request));
     setReply(reply);

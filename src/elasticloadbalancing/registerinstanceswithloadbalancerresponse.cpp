@@ -46,7 +46,7 @@ RegisterInstancesWithLoadBalancerResponse::RegisterInstancesWithLoadBalancerResp
         const RegisterInstancesWithLoadBalancerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RegisterInstancesWithLoadBalancerResponse(new RegisterInstancesWithLoadBalancerResponsePrivate(this), parent)
+    : ElasticLoadBalancingResponse(new RegisterInstancesWithLoadBalancerResponsePrivate(this), parent)
 {
     setRequest(new RegisterInstancesWithLoadBalancerRequest(request));
     setReply(reply);

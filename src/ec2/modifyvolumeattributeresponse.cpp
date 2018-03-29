@@ -46,7 +46,7 @@ ModifyVolumeAttributeResponse::ModifyVolumeAttributeResponse(
         const ModifyVolumeAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyVolumeAttributeResponse(new ModifyVolumeAttributeResponsePrivate(this), parent)
+    : EC2Response(new ModifyVolumeAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifyVolumeAttributeRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ModifyHapgResponse::ModifyHapgResponse(
         const ModifyHapgRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyHapgResponse(new ModifyHapgResponsePrivate(this), parent)
+    : CloudHSMResponse(new ModifyHapgResponsePrivate(this), parent)
 {
     setRequest(new ModifyHapgRequest(request));
     setReply(reply);

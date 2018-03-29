@@ -46,7 +46,7 @@ DescribeDBSnapshotAttributesResponse::DescribeDBSnapshotAttributesResponse(
         const DescribeDBSnapshotAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeDBSnapshotAttributesResponse(new DescribeDBSnapshotAttributesResponsePrivate(this), parent)
+    : RDSResponse(new DescribeDBSnapshotAttributesResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBSnapshotAttributesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeImportSnapshotTasksResponse::DescribeImportSnapshotTasksResponse(
         const DescribeImportSnapshotTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeImportSnapshotTasksResponse(new DescribeImportSnapshotTasksResponsePrivate(this), parent)
+    : EC2Response(new DescribeImportSnapshotTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeImportSnapshotTasksRequest(request));
     setReply(reply);

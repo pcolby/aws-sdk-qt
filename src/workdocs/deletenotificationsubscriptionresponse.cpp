@@ -46,7 +46,7 @@ DeleteNotificationSubscriptionResponse::DeleteNotificationSubscriptionResponse(
         const DeleteNotificationSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteNotificationSubscriptionResponse(new DeleteNotificationSubscriptionResponsePrivate(this), parent)
+    : WorkDocsResponse(new DeleteNotificationSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new DeleteNotificationSubscriptionRequest(request));
     setReply(reply);

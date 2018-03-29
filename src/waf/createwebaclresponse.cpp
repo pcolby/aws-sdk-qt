@@ -46,7 +46,7 @@ CreateWebACLResponse::CreateWebACLResponse(
         const CreateWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateWebACLResponse(new CreateWebACLResponsePrivate(this), parent)
+    : WAFResponse(new CreateWebACLResponsePrivate(this), parent)
 {
     setRequest(new CreateWebACLRequest(request));
     setReply(reply);

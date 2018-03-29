@@ -46,7 +46,7 @@ GetBuiltinIntentResponse::GetBuiltinIntentResponse(
         const GetBuiltinIntentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetBuiltinIntentResponse(new GetBuiltinIntentResponsePrivate(this), parent)
+    : LexModelBuildingServiceResponse(new GetBuiltinIntentResponsePrivate(this), parent)
 {
     setRequest(new GetBuiltinIntentRequest(request));
     setReply(reply);

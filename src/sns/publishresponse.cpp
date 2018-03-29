@@ -46,7 +46,7 @@ PublishResponse::PublishResponse(
         const PublishRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PublishResponse(new PublishResponsePrivate(this), parent)
+    : SNSResponse(new PublishResponsePrivate(this), parent)
 {
     setRequest(new PublishRequest(request));
     setReply(reply);

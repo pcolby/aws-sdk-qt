@@ -46,7 +46,7 @@ DescribeTapeRecoveryPointsResponse::DescribeTapeRecoveryPointsResponse(
         const DescribeTapeRecoveryPointsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeTapeRecoveryPointsResponse(new DescribeTapeRecoveryPointsResponsePrivate(this), parent)
+    : StorageGatewayResponse(new DescribeTapeRecoveryPointsResponsePrivate(this), parent)
 {
     setRequest(new DescribeTapeRecoveryPointsRequest(request));
     setReply(reply);

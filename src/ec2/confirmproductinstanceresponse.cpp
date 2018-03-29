@@ -46,7 +46,7 @@ ConfirmProductInstanceResponse::ConfirmProductInstanceResponse(
         const ConfirmProductInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfirmProductInstanceResponse(new ConfirmProductInstanceResponsePrivate(this), parent)
+    : EC2Response(new ConfirmProductInstanceResponsePrivate(this), parent)
 {
     setRequest(new ConfirmProductInstanceRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteCrawlerResponse::DeleteCrawlerResponse(
         const DeleteCrawlerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteCrawlerResponse(new DeleteCrawlerResponsePrivate(this), parent)
+    : GlueResponse(new DeleteCrawlerResponsePrivate(this), parent)
 {
     setRequest(new DeleteCrawlerRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateModelResponse::CreateModelResponse(
         const CreateModelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateModelResponse(new CreateModelResponsePrivate(this), parent)
+    : SageMakerResponse(new CreateModelResponsePrivate(this), parent)
 {
     setRequest(new CreateModelRequest(request));
     setReply(reply);

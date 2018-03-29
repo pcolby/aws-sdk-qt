@@ -46,7 +46,7 @@ DeleteTrafficPolicyResponse::DeleteTrafficPolicyResponse(
         const DeleteTrafficPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteTrafficPolicyResponse(new DeleteTrafficPolicyResponsePrivate(this), parent)
+    : Route53Response(new DeleteTrafficPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteTrafficPolicyRequest(request));
     setReply(reply);

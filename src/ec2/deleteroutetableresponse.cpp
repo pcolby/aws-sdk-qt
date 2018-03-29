@@ -46,7 +46,7 @@ DeleteRouteTableResponse::DeleteRouteTableResponse(
         const DeleteRouteTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteRouteTableResponse(new DeleteRouteTableResponsePrivate(this), parent)
+    : EC2Response(new DeleteRouteTableResponsePrivate(this), parent)
 {
     setRequest(new DeleteRouteTableRequest(request));
     setReply(reply);

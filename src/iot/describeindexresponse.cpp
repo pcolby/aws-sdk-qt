@@ -46,7 +46,7 @@ DescribeIndexResponse::DescribeIndexResponse(
         const DescribeIndexRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeIndexResponse(new DescribeIndexResponsePrivate(this), parent)
+    : IoTResponse(new DescribeIndexResponsePrivate(this), parent)
 {
     setRequest(new DescribeIndexRequest(request));
     setReply(reply);

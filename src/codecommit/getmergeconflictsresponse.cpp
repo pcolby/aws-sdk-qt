@@ -46,7 +46,7 @@ GetMergeConflictsResponse::GetMergeConflictsResponse(
         const GetMergeConflictsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetMergeConflictsResponse(new GetMergeConflictsResponsePrivate(this), parent)
+    : CodeCommitResponse(new GetMergeConflictsResponsePrivate(this), parent)
 {
     setRequest(new GetMergeConflictsRequest(request));
     setReply(reply);

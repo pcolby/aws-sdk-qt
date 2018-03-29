@@ -46,7 +46,7 @@ RemoveResourcePermissionResponse::RemoveResourcePermissionResponse(
         const RemoveResourcePermissionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RemoveResourcePermissionResponse(new RemoveResourcePermissionResponsePrivate(this), parent)
+    : WorkDocsResponse(new RemoveResourcePermissionResponsePrivate(this), parent)
 {
     setRequest(new RemoveResourcePermissionRequest(request));
     setReply(reply);

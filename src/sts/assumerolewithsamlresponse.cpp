@@ -46,7 +46,7 @@ AssumeRoleWithSAMLResponse::AssumeRoleWithSAMLResponse(
         const AssumeRoleWithSAMLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssumeRoleWithSAMLResponse(new AssumeRoleWithSAMLResponsePrivate(this), parent)
+    : STSResponse(new AssumeRoleWithSAMLResponsePrivate(this), parent)
 {
     setRequest(new AssumeRoleWithSAMLRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ PutImageResponse::PutImageResponse(
         const PutImageRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutImageResponse(new PutImageResponsePrivate(this), parent)
+    : ECRResponse(new PutImageResponsePrivate(this), parent)
 {
     setRequest(new PutImageRequest(request));
     setReply(reply);

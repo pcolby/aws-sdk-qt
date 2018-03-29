@@ -46,7 +46,7 @@ DeleteBatchPredictionResponse::DeleteBatchPredictionResponse(
         const DeleteBatchPredictionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteBatchPredictionResponse(new DeleteBatchPredictionResponsePrivate(this), parent)
+    : MachineLearningResponse(new DeleteBatchPredictionResponsePrivate(this), parent)
 {
     setRequest(new DeleteBatchPredictionRequest(request));
     setReply(reply);

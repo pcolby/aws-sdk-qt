@@ -34,6 +34,11 @@ class QTAWS_EXPORT SageMakerResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     SageMakerResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    SageMakerResponse(SageMakerResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

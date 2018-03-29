@@ -46,7 +46,7 @@ MergeDeveloperIdentitiesResponse::MergeDeveloperIdentitiesResponse(
         const MergeDeveloperIdentitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MergeDeveloperIdentitiesResponse(new MergeDeveloperIdentitiesResponsePrivate(this), parent)
+    : CognitoIdentityResponse(new MergeDeveloperIdentitiesResponsePrivate(this), parent)
 {
     setRequest(new MergeDeveloperIdentitiesRequest(request));
     setReply(reply);

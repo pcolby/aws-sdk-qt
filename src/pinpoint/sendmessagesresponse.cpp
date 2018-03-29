@@ -46,7 +46,7 @@ SendMessagesResponse::SendMessagesResponse(
         const SendMessagesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SendMessagesResponse(new SendMessagesResponsePrivate(this), parent)
+    : PinpointResponse(new SendMessagesResponsePrivate(this), parent)
 {
     setRequest(new SendMessagesRequest(request));
     setReply(reply);

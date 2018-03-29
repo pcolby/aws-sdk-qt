@@ -46,7 +46,7 @@ UpdateReplicationJobResponse::UpdateReplicationJobResponse(
         const UpdateReplicationJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateReplicationJobResponse(new UpdateReplicationJobResponsePrivate(this), parent)
+    : SMSResponse(new UpdateReplicationJobResponsePrivate(this), parent)
 {
     setRequest(new UpdateReplicationJobRequest(request));
     setReply(reply);

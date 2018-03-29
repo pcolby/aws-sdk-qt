@@ -46,7 +46,7 @@ PutThirdPartyJobFailureResultResponse::PutThirdPartyJobFailureResultResponse(
         const PutThirdPartyJobFailureResultRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutThirdPartyJobFailureResultResponse(new PutThirdPartyJobFailureResultResponsePrivate(this), parent)
+    : CodePipelineResponse(new PutThirdPartyJobFailureResultResponsePrivate(this), parent)
 {
     setRequest(new PutThirdPartyJobFailureResultRequest(request));
     setReply(reply);

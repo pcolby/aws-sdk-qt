@@ -46,7 +46,7 @@ DetectEntitiesResponse::DetectEntitiesResponse(
         const DetectEntitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DetectEntitiesResponse(new DetectEntitiesResponsePrivate(this), parent)
+    : ComprehendResponse(new DetectEntitiesResponsePrivate(this), parent)
 {
     setRequest(new DetectEntitiesRequest(request));
     setReply(reply);

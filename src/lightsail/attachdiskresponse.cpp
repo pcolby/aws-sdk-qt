@@ -46,7 +46,7 @@ AttachDiskResponse::AttachDiskResponse(
         const AttachDiskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AttachDiskResponse(new AttachDiskResponsePrivate(this), parent)
+    : LightsailResponse(new AttachDiskResponsePrivate(this), parent)
 {
     setRequest(new AttachDiskRequest(request));
     setReply(reply);

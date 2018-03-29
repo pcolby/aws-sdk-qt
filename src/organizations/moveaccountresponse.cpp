@@ -46,7 +46,7 @@ MoveAccountResponse::MoveAccountResponse(
         const MoveAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MoveAccountResponse(new MoveAccountResponsePrivate(this), parent)
+    : OrganizationsResponse(new MoveAccountResponsePrivate(this), parent)
 {
     setRequest(new MoveAccountRequest(request));
     setReply(reply);

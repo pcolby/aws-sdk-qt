@@ -46,7 +46,7 @@ DisableTopicRuleResponse::DisableTopicRuleResponse(
         const DisableTopicRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisableTopicRuleResponse(new DisableTopicRuleResponsePrivate(this), parent)
+    : IoTResponse(new DisableTopicRuleResponsePrivate(this), parent)
 {
     setRequest(new DisableTopicRuleRequest(request));
     setReply(reply);

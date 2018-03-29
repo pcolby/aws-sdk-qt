@@ -46,7 +46,7 @@ GetDeploymentResponse::GetDeploymentResponse(
         const GetDeploymentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDeploymentResponse(new GetDeploymentResponsePrivate(this), parent)
+    : CodeDeployResponse(new GetDeploymentResponsePrivate(this), parent)
 {
     setRequest(new GetDeploymentRequest(request));
     setReply(reply);

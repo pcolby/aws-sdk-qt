@@ -46,7 +46,7 @@ DescribeReplicationTaskAssessmentResultsResponse::DescribeReplicationTaskAssessm
         const DescribeReplicationTaskAssessmentResultsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeReplicationTaskAssessmentResultsResponse(new DescribeReplicationTaskAssessmentResultsResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new DescribeReplicationTaskAssessmentResultsResponsePrivate(this), parent)
 {
     setRequest(new DescribeReplicationTaskAssessmentResultsRequest(request));
     setReply(reply);

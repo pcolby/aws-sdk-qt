@@ -46,7 +46,7 @@ DescribeVpcClassicLinkResponse::DescribeVpcClassicLinkResponse(
         const DescribeVpcClassicLinkRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeVpcClassicLinkResponse(new DescribeVpcClassicLinkResponsePrivate(this), parent)
+    : EC2Response(new DescribeVpcClassicLinkResponsePrivate(this), parent)
 {
     setRequest(new DescribeVpcClassicLinkRequest(request));
     setReply(reply);

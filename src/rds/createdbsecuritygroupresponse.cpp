@@ -46,7 +46,7 @@ CreateDBSecurityGroupResponse::CreateDBSecurityGroupResponse(
         const CreateDBSecurityGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateDBSecurityGroupResponse(new CreateDBSecurityGroupResponsePrivate(this), parent)
+    : RDSResponse(new CreateDBSecurityGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateDBSecurityGroupRequest(request));
     setReply(reply);

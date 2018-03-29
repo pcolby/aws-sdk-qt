@@ -46,7 +46,7 @@ ModifyFpgaImageAttributeResponse::ModifyFpgaImageAttributeResponse(
         const ModifyFpgaImageAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyFpgaImageAttributeResponse(new ModifyFpgaImageAttributeResponsePrivate(this), parent)
+    : EC2Response(new ModifyFpgaImageAttributeResponsePrivate(this), parent)
 {
     setRequest(new ModifyFpgaImageAttributeRequest(request));
     setReply(reply);

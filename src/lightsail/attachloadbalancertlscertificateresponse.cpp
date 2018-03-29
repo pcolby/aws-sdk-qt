@@ -46,7 +46,7 @@ AttachLoadBalancerTlsCertificateResponse::AttachLoadBalancerTlsCertificateRespon
         const AttachLoadBalancerTlsCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AttachLoadBalancerTlsCertificateResponse(new AttachLoadBalancerTlsCertificateResponsePrivate(this), parent)
+    : LightsailResponse(new AttachLoadBalancerTlsCertificateResponsePrivate(this), parent)
 {
     setRequest(new AttachLoadBalancerTlsCertificateRequest(request));
     setReply(reply);

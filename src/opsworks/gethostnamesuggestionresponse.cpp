@@ -46,7 +46,7 @@ GetHostnameSuggestionResponse::GetHostnameSuggestionResponse(
         const GetHostnameSuggestionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetHostnameSuggestionResponse(new GetHostnameSuggestionResponsePrivate(this), parent)
+    : OpsWorksResponse(new GetHostnameSuggestionResponsePrivate(this), parent)
 {
     setRequest(new GetHostnameSuggestionRequest(request));
     setReply(reply);

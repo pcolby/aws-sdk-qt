@@ -46,7 +46,7 @@ DeregisterJobDefinitionResponse::DeregisterJobDefinitionResponse(
         const DeregisterJobDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeregisterJobDefinitionResponse(new DeregisterJobDefinitionResponsePrivate(this), parent)
+    : BatchResponse(new DeregisterJobDefinitionResponsePrivate(this), parent)
 {
     setRequest(new DeregisterJobDefinitionRequest(request));
     setReply(reply);

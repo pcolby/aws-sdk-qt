@@ -46,7 +46,7 @@ ReleaseStaticIpResponse::ReleaseStaticIpResponse(
         const ReleaseStaticIpRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ReleaseStaticIpResponse(new ReleaseStaticIpResponsePrivate(this), parent)
+    : LightsailResponse(new ReleaseStaticIpResponsePrivate(this), parent)
 {
     setRequest(new ReleaseStaticIpRequest(request));
     setReply(reply);

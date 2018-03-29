@@ -46,7 +46,7 @@ UpdateWebACLResponse::UpdateWebACLResponse(
         const UpdateWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateWebACLResponse(new UpdateWebACLResponsePrivate(this), parent)
+    : WAFResponse(new UpdateWebACLResponsePrivate(this), parent)
 {
     setRequest(new UpdateWebACLRequest(request));
     setReply(reply);

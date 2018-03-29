@@ -46,7 +46,7 @@ CreateDBInstanceReadReplicaResponse::CreateDBInstanceReadReplicaResponse(
         const CreateDBInstanceReadReplicaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateDBInstanceReadReplicaResponse(new CreateDBInstanceReadReplicaResponsePrivate(this), parent)
+    : RDSResponse(new CreateDBInstanceReadReplicaResponsePrivate(this), parent)
 {
     setRequest(new CreateDBInstanceReadReplicaRequest(request));
     setReply(reply);

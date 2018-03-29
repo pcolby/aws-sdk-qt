@@ -46,7 +46,7 @@ DeregisterScalableTargetResponse::DeregisterScalableTargetResponse(
         const DeregisterScalableTargetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeregisterScalableTargetResponse(new DeregisterScalableTargetResponsePrivate(this), parent)
+    : ApplicationAutoScalingResponse(new DeregisterScalableTargetResponsePrivate(this), parent)
 {
     setRequest(new DeregisterScalableTargetRequest(request));
     setReply(reply);

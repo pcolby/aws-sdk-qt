@@ -46,7 +46,7 @@ CreateCustomActionTypeResponse::CreateCustomActionTypeResponse(
         const CreateCustomActionTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateCustomActionTypeResponse(new CreateCustomActionTypeResponsePrivate(this), parent)
+    : CodePipelineResponse(new CreateCustomActionTypeResponsePrivate(this), parent)
 {
     setRequest(new CreateCustomActionTypeRequest(request));
     setReply(reply);

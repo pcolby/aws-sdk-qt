@@ -46,7 +46,7 @@ DescribeInstanceStatusResponse::DescribeInstanceStatusResponse(
         const DescribeInstanceStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeInstanceStatusResponse(new DescribeInstanceStatusResponsePrivate(this), parent)
+    : EC2Response(new DescribeInstanceStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstanceStatusRequest(request));
     setReply(reply);

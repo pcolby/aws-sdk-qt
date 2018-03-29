@@ -46,7 +46,7 @@ GetGatewayResponseResponse::GetGatewayResponseResponse(
         const GetGatewayResponseRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetGatewayResponseResponse(new GetGatewayResponseResponsePrivate(this), parent)
+    : APIGatewayResponse(new GetGatewayResponseResponsePrivate(this), parent)
 {
     setRequest(new GetGatewayResponseRequest(request));
     setReply(reply);

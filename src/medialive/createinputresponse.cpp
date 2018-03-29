@@ -46,7 +46,7 @@ CreateInputResponse::CreateInputResponse(
         const CreateInputRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateInputResponse(new CreateInputResponsePrivate(this), parent)
+    : MediaLiveResponse(new CreateInputResponsePrivate(this), parent)
 {
     setRequest(new CreateInputRequest(request));
     setReply(reply);

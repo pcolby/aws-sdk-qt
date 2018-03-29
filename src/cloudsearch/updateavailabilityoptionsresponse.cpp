@@ -46,7 +46,7 @@ UpdateAvailabilityOptionsResponse::UpdateAvailabilityOptionsResponse(
         const UpdateAvailabilityOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateAvailabilityOptionsResponse(new UpdateAvailabilityOptionsResponsePrivate(this), parent)
+    : CloudSearchResponse(new UpdateAvailabilityOptionsResponsePrivate(this), parent)
 {
     setRequest(new UpdateAvailabilityOptionsRequest(request));
     setReply(reply);

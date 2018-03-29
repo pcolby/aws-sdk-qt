@@ -46,7 +46,7 @@ ListImportsResponse::ListImportsResponse(
         const ListImportsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListImportsResponse(new ListImportsResponsePrivate(this), parent)
+    : CloudFormationResponse(new ListImportsResponsePrivate(this), parent)
 {
     setRequest(new ListImportsRequest(request));
     setReply(reply);

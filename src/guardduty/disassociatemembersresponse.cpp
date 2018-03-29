@@ -46,7 +46,7 @@ DisassociateMembersResponse::DisassociateMembersResponse(
         const DisassociateMembersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateMembersResponse(new DisassociateMembersResponsePrivate(this), parent)
+    : GuardDutyResponse(new DisassociateMembersResponsePrivate(this), parent)
 {
     setRequest(new DisassociateMembersRequest(request));
     setReply(reply);

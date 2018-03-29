@@ -46,7 +46,7 @@ GetDevicePoolCompatibilityResponse::GetDevicePoolCompatibilityResponse(
         const GetDevicePoolCompatibilityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDevicePoolCompatibilityResponse(new GetDevicePoolCompatibilityResponsePrivate(this), parent)
+    : DeviceFarmResponse(new GetDevicePoolCompatibilityResponsePrivate(this), parent)
 {
     setRequest(new GetDevicePoolCompatibilityRequest(request));
     setReply(reply);

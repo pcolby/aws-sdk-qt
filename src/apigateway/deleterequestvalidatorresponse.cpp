@@ -46,7 +46,7 @@ DeleteRequestValidatorResponse::DeleteRequestValidatorResponse(
         const DeleteRequestValidatorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteRequestValidatorResponse(new DeleteRequestValidatorResponsePrivate(this), parent)
+    : APIGatewayResponse(new DeleteRequestValidatorResponsePrivate(this), parent)
 {
     setRequest(new DeleteRequestValidatorRequest(request));
     setReply(reply);

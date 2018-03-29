@@ -46,7 +46,7 @@ DeleteCorsPolicyResponse::DeleteCorsPolicyResponse(
         const DeleteCorsPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteCorsPolicyResponse(new DeleteCorsPolicyResponsePrivate(this), parent)
+    : MediaStoreResponse(new DeleteCorsPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteCorsPolicyRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateServiceSpecificCredentialResponse::CreateServiceSpecificCredentialResponse
         const CreateServiceSpecificCredentialRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateServiceSpecificCredentialResponse(new CreateServiceSpecificCredentialResponsePrivate(this), parent)
+    : IAMResponse(new CreateServiceSpecificCredentialResponsePrivate(this), parent)
 {
     setRequest(new CreateServiceSpecificCredentialRequest(request));
     setReply(reply);

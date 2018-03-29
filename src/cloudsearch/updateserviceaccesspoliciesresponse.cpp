@@ -46,7 +46,7 @@ UpdateServiceAccessPoliciesResponse::UpdateServiceAccessPoliciesResponse(
         const UpdateServiceAccessPoliciesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateServiceAccessPoliciesResponse(new UpdateServiceAccessPoliciesResponsePrivate(this), parent)
+    : CloudSearchResponse(new UpdateServiceAccessPoliciesResponsePrivate(this), parent)
 {
     setRequest(new UpdateServiceAccessPoliciesRequest(request));
     setReply(reply);

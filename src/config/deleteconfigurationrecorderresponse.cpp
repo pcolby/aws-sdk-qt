@@ -46,7 +46,7 @@ DeleteConfigurationRecorderResponse::DeleteConfigurationRecorderResponse(
         const DeleteConfigurationRecorderRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteConfigurationRecorderResponse(new DeleteConfigurationRecorderResponsePrivate(this), parent)
+    : ConfigServiceResponse(new DeleteConfigurationRecorderResponsePrivate(this), parent)
 {
     setRequest(new DeleteConfigurationRecorderRequest(request));
     setReply(reply);

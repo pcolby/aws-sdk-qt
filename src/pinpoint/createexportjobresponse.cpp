@@ -46,7 +46,7 @@ CreateExportJobResponse::CreateExportJobResponse(
         const CreateExportJobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateExportJobResponse(new CreateExportJobResponsePrivate(this), parent)
+    : PinpointResponse(new CreateExportJobResponsePrivate(this), parent)
 {
     setRequest(new CreateExportJobRequest(request));
     setReply(reply);

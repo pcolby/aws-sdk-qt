@@ -46,7 +46,7 @@ CreateFunctionResponse::CreateFunctionResponse(
         const CreateFunctionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateFunctionResponse(new CreateFunctionResponsePrivate(this), parent)
+    : LambdaResponse(new CreateFunctionResponsePrivate(this), parent)
 {
     setRequest(new CreateFunctionRequest(request));
     setReply(reply);

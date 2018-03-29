@@ -46,7 +46,7 @@ DeleteSchemaResponse::DeleteSchemaResponse(
         const DeleteSchemaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSchemaResponse(new DeleteSchemaResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new DeleteSchemaResponsePrivate(this), parent)
 {
     setRequest(new DeleteSchemaRequest(request));
     setReply(reply);

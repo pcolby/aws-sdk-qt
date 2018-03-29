@@ -46,7 +46,7 @@ ListModelsResponse::ListModelsResponse(
         const ListModelsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListModelsResponse(new ListModelsResponsePrivate(this), parent)
+    : SageMakerResponse(new ListModelsResponsePrivate(this), parent)
 {
     setRequest(new ListModelsRequest(request));
     setReply(reply);

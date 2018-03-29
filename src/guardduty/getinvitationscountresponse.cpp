@@ -46,7 +46,7 @@ GetInvitationsCountResponse::GetInvitationsCountResponse(
         const GetInvitationsCountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetInvitationsCountResponse(new GetInvitationsCountResponsePrivate(this), parent)
+    : GuardDutyResponse(new GetInvitationsCountResponsePrivate(this), parent)
 {
     setRequest(new GetInvitationsCountRequest(request));
     setReply(reply);

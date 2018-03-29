@@ -46,7 +46,7 @@ SendTaskSuccessResponse::SendTaskSuccessResponse(
         const SendTaskSuccessRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SendTaskSuccessResponse(new SendTaskSuccessResponsePrivate(this), parent)
+    : SFNResponse(new SendTaskSuccessResponsePrivate(this), parent)
 {
     setRequest(new SendTaskSuccessRequest(request));
     setReply(reply);

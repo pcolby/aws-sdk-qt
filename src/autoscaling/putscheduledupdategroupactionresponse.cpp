@@ -46,7 +46,7 @@ PutScheduledUpdateGroupActionResponse::PutScheduledUpdateGroupActionResponse(
         const PutScheduledUpdateGroupActionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutScheduledUpdateGroupActionResponse(new PutScheduledUpdateGroupActionResponsePrivate(this), parent)
+    : AutoScalingResponse(new PutScheduledUpdateGroupActionResponsePrivate(this), parent)
 {
     setRequest(new PutScheduledUpdateGroupActionRequest(request));
     setReply(reply);

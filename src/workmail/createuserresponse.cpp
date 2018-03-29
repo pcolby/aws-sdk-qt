@@ -46,7 +46,7 @@ CreateUserResponse::CreateUserResponse(
         const CreateUserRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateUserResponse(new CreateUserResponsePrivate(this), parent)
+    : WorkMailResponse(new CreateUserResponsePrivate(this), parent)
 {
     setRequest(new CreateUserRequest(request));
     setReply(reply);

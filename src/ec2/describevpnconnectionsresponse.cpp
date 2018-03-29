@@ -46,7 +46,7 @@ DescribeVpnConnectionsResponse::DescribeVpnConnectionsResponse(
         const DescribeVpnConnectionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeVpnConnectionsResponse(new DescribeVpnConnectionsResponsePrivate(this), parent)
+    : EC2Response(new DescribeVpnConnectionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeVpnConnectionsRequest(request));
     setReply(reply);

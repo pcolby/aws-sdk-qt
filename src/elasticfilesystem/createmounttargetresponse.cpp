@@ -46,7 +46,7 @@ CreateMountTargetResponse::CreateMountTargetResponse(
         const CreateMountTargetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateMountTargetResponse(new CreateMountTargetResponsePrivate(this), parent)
+    : EFSResponse(new CreateMountTargetResponsePrivate(this), parent)
 {
     setRequest(new CreateMountTargetRequest(request));
     setReply(reply);

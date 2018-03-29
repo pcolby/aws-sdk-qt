@@ -34,6 +34,11 @@ class QTAWS_EXPORT WorkDocsResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     WorkDocsResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    WorkDocsResponse(WorkDocsResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

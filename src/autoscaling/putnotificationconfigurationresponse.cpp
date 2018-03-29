@@ -46,7 +46,7 @@ PutNotificationConfigurationResponse::PutNotificationConfigurationResponse(
         const PutNotificationConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutNotificationConfigurationResponse(new PutNotificationConfigurationResponsePrivate(this), parent)
+    : AutoScalingResponse(new PutNotificationConfigurationResponsePrivate(this), parent)
 {
     setRequest(new PutNotificationConfigurationRequest(request));
     setReply(reply);

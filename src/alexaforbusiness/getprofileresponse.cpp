@@ -46,7 +46,7 @@ GetProfileResponse::GetProfileResponse(
         const GetProfileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetProfileResponse(new GetProfileResponsePrivate(this), parent)
+    : AlexaForBusinessResponse(new GetProfileResponsePrivate(this), parent)
 {
     setRequest(new GetProfileRequest(request));
     setReply(reply);

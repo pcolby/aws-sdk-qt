@@ -46,7 +46,7 @@ DeprecateThingTypeResponse::DeprecateThingTypeResponse(
         const DeprecateThingTypeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeprecateThingTypeResponse(new DeprecateThingTypeResponsePrivate(this), parent)
+    : IoTResponse(new DeprecateThingTypeResponsePrivate(this), parent)
 {
     setRequest(new DeprecateThingTypeRequest(request));
     setReply(reply);

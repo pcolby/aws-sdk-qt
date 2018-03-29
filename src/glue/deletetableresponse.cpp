@@ -46,7 +46,7 @@ DeleteTableResponse::DeleteTableResponse(
         const DeleteTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteTableResponse(new DeleteTableResponsePrivate(this), parent)
+    : GlueResponse(new DeleteTableResponsePrivate(this), parent)
 {
     setRequest(new DeleteTableRequest(request));
     setReply(reply);

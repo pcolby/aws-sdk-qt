@@ -46,7 +46,7 @@ CreateProductResponse::CreateProductResponse(
         const CreateProductRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateProductResponse(new CreateProductResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new CreateProductResponsePrivate(this), parent)
 {
     setRequest(new CreateProductRequest(request));
     setReply(reply);

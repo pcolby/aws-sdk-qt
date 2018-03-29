@@ -46,7 +46,7 @@ StartInstancesResponse::StartInstancesResponse(
         const StartInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartInstancesResponse(new StartInstancesResponsePrivate(this), parent)
+    : EC2Response(new StartInstancesResponsePrivate(this), parent)
 {
     setRequest(new StartInstancesRequest(request));
     setReply(reply);

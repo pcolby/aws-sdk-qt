@@ -46,7 +46,7 @@ DescribePrincipalIdFormatResponse::DescribePrincipalIdFormatResponse(
         const DescribePrincipalIdFormatRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribePrincipalIdFormatResponse(new DescribePrincipalIdFormatResponsePrivate(this), parent)
+    : EC2Response(new DescribePrincipalIdFormatResponsePrivate(this), parent)
 {
     setRequest(new DescribePrincipalIdFormatRequest(request));
     setReply(reply);

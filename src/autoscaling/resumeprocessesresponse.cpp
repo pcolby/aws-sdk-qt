@@ -46,7 +46,7 @@ ResumeProcessesResponse::ResumeProcessesResponse(
         const ResumeProcessesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResumeProcessesResponse(new ResumeProcessesResponsePrivate(this), parent)
+    : AutoScalingResponse(new ResumeProcessesResponsePrivate(this), parent)
 {
     setRequest(new ResumeProcessesRequest(request));
     setReply(reply);

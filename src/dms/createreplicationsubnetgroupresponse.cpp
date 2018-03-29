@@ -46,7 +46,7 @@ CreateReplicationSubnetGroupResponse::CreateReplicationSubnetGroupResponse(
         const CreateReplicationSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateReplicationSubnetGroupResponse(new CreateReplicationSubnetGroupResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new CreateReplicationSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new CreateReplicationSubnetGroupRequest(request));
     setReply(reply);

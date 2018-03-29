@@ -46,7 +46,7 @@ DescribeOptionGroupOptionsResponse::DescribeOptionGroupOptionsResponse(
         const DescribeOptionGroupOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeOptionGroupOptionsResponse(new DescribeOptionGroupOptionsResponsePrivate(this), parent)
+    : RDSResponse(new DescribeOptionGroupOptionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeOptionGroupOptionsRequest(request));
     setReply(reply);

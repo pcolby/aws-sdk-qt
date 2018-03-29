@@ -46,7 +46,7 @@ ModifyListenerResponse::ModifyListenerResponse(
         const ModifyListenerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyListenerResponse(new ModifyListenerResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new ModifyListenerResponsePrivate(this), parent)
 {
     setRequest(new ModifyListenerRequest(request));
     setReply(reply);

@@ -34,6 +34,11 @@ class QTAWS_EXPORT CodeStarResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     CodeStarResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    CodeStarResponse(CodeStarResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

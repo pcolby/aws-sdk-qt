@@ -46,7 +46,7 @@ UpdateAccountResponse::UpdateAccountResponse(
         const UpdateAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateAccountResponse(new UpdateAccountResponsePrivate(this), parent)
+    : APIGatewayResponse(new UpdateAccountResponsePrivate(this), parent)
 {
     setRequest(new UpdateAccountRequest(request));
     setReply(reply);

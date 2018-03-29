@@ -46,7 +46,7 @@ UpdateTableResponse::UpdateTableResponse(
         const UpdateTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateTableResponse(new UpdateTableResponsePrivate(this), parent)
+    : DynamoDBResponse(new UpdateTableResponsePrivate(this), parent)
 {
     setRequest(new UpdateTableRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListThingRegistrationTasksResponse::ListThingRegistrationTasksResponse(
         const ListThingRegistrationTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListThingRegistrationTasksResponse(new ListThingRegistrationTasksResponsePrivate(this), parent)
+    : IoTResponse(new ListThingRegistrationTasksResponsePrivate(this), parent)
 {
     setRequest(new ListThingRegistrationTasksRequest(request));
     setReply(reply);

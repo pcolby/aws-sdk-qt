@@ -46,7 +46,7 @@ AddApplicationCloudWatchLoggingOptionResponse::AddApplicationCloudWatchLoggingOp
         const AddApplicationCloudWatchLoggingOptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AddApplicationCloudWatchLoggingOptionResponse(new AddApplicationCloudWatchLoggingOptionResponsePrivate(this), parent)
+    : KinesisAnalyticsResponse(new AddApplicationCloudWatchLoggingOptionResponsePrivate(this), parent)
 {
     setRequest(new AddApplicationCloudWatchLoggingOptionRequest(request));
     setReply(reply);

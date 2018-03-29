@@ -46,7 +46,7 @@ DisassociateRouteTableResponse::DisassociateRouteTableResponse(
         const DisassociateRouteTableRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateRouteTableResponse(new DisassociateRouteTableResponsePrivate(this), parent)
+    : EC2Response(new DisassociateRouteTableResponsePrivate(this), parent)
 {
     setRequest(new DisassociateRouteTableRequest(request));
     setReply(reply);

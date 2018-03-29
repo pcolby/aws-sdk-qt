@@ -46,7 +46,7 @@ ModifyLoadBalancerAttributesResponse::ModifyLoadBalancerAttributesResponse(
         const ModifyLoadBalancerAttributesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyLoadBalancerAttributesResponse(new ModifyLoadBalancerAttributesResponsePrivate(this), parent)
+    : ElasticLoadBalancingResponse(new ModifyLoadBalancerAttributesResponsePrivate(this), parent)
 {
     setRequest(new ModifyLoadBalancerAttributesRequest(request));
     setReply(reply);

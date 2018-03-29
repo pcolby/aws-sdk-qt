@@ -46,7 +46,7 @@ StopCrawlerResponse::StopCrawlerResponse(
         const StopCrawlerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopCrawlerResponse(new StopCrawlerResponsePrivate(this), parent)
+    : GlueResponse(new StopCrawlerResponsePrivate(this), parent)
 {
     setRequest(new StopCrawlerRequest(request));
     setReply(reply);

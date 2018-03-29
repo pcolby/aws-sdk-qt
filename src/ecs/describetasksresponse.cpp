@@ -46,7 +46,7 @@ DescribeTasksResponse::DescribeTasksResponse(
         const DescribeTasksRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeTasksResponse(new DescribeTasksResponsePrivate(this), parent)
+    : ECSResponse(new DescribeTasksResponsePrivate(this), parent)
 {
     setRequest(new DescribeTasksRequest(request));
     setReply(reply);

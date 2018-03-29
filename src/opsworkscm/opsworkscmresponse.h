@@ -34,6 +34,11 @@ class QTAWS_EXPORT OpsWorksCMResponse : public QtAws::Core::AwsAbstractResponse 
 public:
     OpsWorksCMResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    OpsWorksCMResponse(OpsWorksCMResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

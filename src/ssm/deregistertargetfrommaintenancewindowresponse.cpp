@@ -46,7 +46,7 @@ DeregisterTargetFromMaintenanceWindowResponse::DeregisterTargetFromMaintenanceWi
         const DeregisterTargetFromMaintenanceWindowRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeregisterTargetFromMaintenanceWindowResponse(new DeregisterTargetFromMaintenanceWindowResponsePrivate(this), parent)
+    : SSMResponse(new DeregisterTargetFromMaintenanceWindowResponsePrivate(this), parent)
 {
     setRequest(new DeregisterTargetFromMaintenanceWindowRequest(request));
     setReply(reply);

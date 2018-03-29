@@ -34,6 +34,11 @@ class QTAWS_EXPORT CloudTrailResponse : public QtAws::Core::AwsAbstractResponse 
 public:
     CloudTrailResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    CloudTrailResponse(CloudTrailResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

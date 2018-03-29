@@ -46,7 +46,7 @@ DeleteJobQueueResponse::DeleteJobQueueResponse(
         const DeleteJobQueueRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteJobQueueResponse(new DeleteJobQueueResponsePrivate(this), parent)
+    : BatchResponse(new DeleteJobQueueResponsePrivate(this), parent)
 {
     setRequest(new DeleteJobQueueRequest(request));
     setReply(reply);

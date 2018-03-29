@@ -46,7 +46,7 @@ DeleteEnvironmentConfigurationResponse::DeleteEnvironmentConfigurationResponse(
         const DeleteEnvironmentConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteEnvironmentConfigurationResponse(new DeleteEnvironmentConfigurationResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new DeleteEnvironmentConfigurationResponsePrivate(this), parent)
 {
     setRequest(new DeleteEnvironmentConfigurationRequest(request));
     setReply(reply);

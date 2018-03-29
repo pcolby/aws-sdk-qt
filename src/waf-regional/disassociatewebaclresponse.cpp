@@ -46,7 +46,7 @@ DisassociateWebACLResponse::DisassociateWebACLResponse(
         const DisassociateWebACLRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateWebACLResponse(new DisassociateWebACLResponsePrivate(this), parent)
+    : WAFRegionalResponse(new DisassociateWebACLResponsePrivate(this), parent)
 {
     setRequest(new DisassociateWebACLRequest(request));
     setReply(reply);

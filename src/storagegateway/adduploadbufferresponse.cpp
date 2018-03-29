@@ -46,7 +46,7 @@ AddUploadBufferResponse::AddUploadBufferResponse(
         const AddUploadBufferRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AddUploadBufferResponse(new AddUploadBufferResponsePrivate(this), parent)
+    : StorageGatewayResponse(new AddUploadBufferResponsePrivate(this), parent)
 {
     setRequest(new AddUploadBufferRequest(request));
     setReply(reply);

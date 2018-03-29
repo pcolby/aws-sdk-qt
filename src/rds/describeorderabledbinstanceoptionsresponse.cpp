@@ -46,7 +46,7 @@ DescribeOrderableDBInstanceOptionsResponse::DescribeOrderableDBInstanceOptionsRe
         const DescribeOrderableDBInstanceOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeOrderableDBInstanceOptionsResponse(new DescribeOrderableDBInstanceOptionsResponsePrivate(this), parent)
+    : RDSResponse(new DescribeOrderableDBInstanceOptionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeOrderableDBInstanceOptionsRequest(request));
     setReply(reply);

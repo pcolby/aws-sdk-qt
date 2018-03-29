@@ -46,7 +46,7 @@ GetResolverResponse::GetResolverResponse(
         const GetResolverRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetResolverResponse(new GetResolverResponsePrivate(this), parent)
+    : AppSyncResponse(new GetResolverResponsePrivate(this), parent)
 {
     setRequest(new GetResolverRequest(request));
     setReply(reply);

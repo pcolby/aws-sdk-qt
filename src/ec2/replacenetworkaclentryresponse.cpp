@@ -46,7 +46,7 @@ ReplaceNetworkAclEntryResponse::ReplaceNetworkAclEntryResponse(
         const ReplaceNetworkAclEntryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ReplaceNetworkAclEntryResponse(new ReplaceNetworkAclEntryResponsePrivate(this), parent)
+    : EC2Response(new ReplaceNetworkAclEntryResponsePrivate(this), parent)
 {
     setRequest(new ReplaceNetworkAclEntryRequest(request));
     setReply(reply);

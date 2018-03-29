@@ -46,7 +46,7 @@ DeleteDeliveryChannelResponse::DeleteDeliveryChannelResponse(
         const DeleteDeliveryChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDeliveryChannelResponse(new DeleteDeliveryChannelResponsePrivate(this), parent)
+    : ConfigServiceResponse(new DeleteDeliveryChannelResponsePrivate(this), parent)
 {
     setRequest(new DeleteDeliveryChannelRequest(request));
     setReply(reply);

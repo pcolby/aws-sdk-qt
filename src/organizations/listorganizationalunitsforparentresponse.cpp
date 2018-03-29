@@ -46,7 +46,7 @@ ListOrganizationalUnitsForParentResponse::ListOrganizationalUnitsForParentRespon
         const ListOrganizationalUnitsForParentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListOrganizationalUnitsForParentResponse(new ListOrganizationalUnitsForParentResponsePrivate(this), parent)
+    : OrganizationsResponse(new ListOrganizationalUnitsForParentResponsePrivate(this), parent)
 {
     setRequest(new ListOrganizationalUnitsForParentRequest(request));
     setReply(reply);

@@ -34,6 +34,11 @@ class QTAWS_EXPORT RedshiftResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     RedshiftResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    RedshiftResponse(RedshiftResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

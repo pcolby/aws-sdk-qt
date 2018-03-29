@@ -46,7 +46,7 @@ UpdateCommentResponse::UpdateCommentResponse(
         const UpdateCommentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateCommentResponse(new UpdateCommentResponsePrivate(this), parent)
+    : CodeCommitResponse(new UpdateCommentResponsePrivate(this), parent)
 {
     setRequest(new UpdateCommentRequest(request));
     setReply(reply);

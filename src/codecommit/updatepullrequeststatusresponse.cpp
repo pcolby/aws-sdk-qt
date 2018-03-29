@@ -46,7 +46,7 @@ UpdatePullRequestStatusResponse::UpdatePullRequestStatusResponse(
         const UpdatePullRequestStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdatePullRequestStatusResponse(new UpdatePullRequestStatusResponsePrivate(this), parent)
+    : CodeCommitResponse(new UpdatePullRequestStatusResponsePrivate(this), parent)
 {
     setRequest(new UpdatePullRequestStatusRequest(request));
     setReply(reply);

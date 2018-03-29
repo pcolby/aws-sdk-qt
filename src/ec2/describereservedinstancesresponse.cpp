@@ -46,7 +46,7 @@ DescribeReservedInstancesResponse::DescribeReservedInstancesResponse(
         const DescribeReservedInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeReservedInstancesResponse(new DescribeReservedInstancesResponsePrivate(this), parent)
+    : EC2Response(new DescribeReservedInstancesResponsePrivate(this), parent)
 {
     setRequest(new DescribeReservedInstancesRequest(request));
     setReply(reply);

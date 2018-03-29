@@ -46,7 +46,7 @@ DeleteCacheClusterResponse::DeleteCacheClusterResponse(
         const DeleteCacheClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteCacheClusterResponse(new DeleteCacheClusterResponsePrivate(this), parent)
+    : ElastiCacheResponse(new DeleteCacheClusterResponsePrivate(this), parent)
 {
     setRequest(new DeleteCacheClusterRequest(request));
     setReply(reply);

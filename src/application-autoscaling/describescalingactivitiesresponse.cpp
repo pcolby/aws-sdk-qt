@@ -46,7 +46,7 @@ DescribeScalingActivitiesResponse::DescribeScalingActivitiesResponse(
         const DescribeScalingActivitiesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeScalingActivitiesResponse(new DescribeScalingActivitiesResponsePrivate(this), parent)
+    : ApplicationAutoScalingResponse(new DescribeScalingActivitiesResponsePrivate(this), parent)
 {
     setRequest(new DescribeScalingActivitiesRequest(request));
     setReply(reply);

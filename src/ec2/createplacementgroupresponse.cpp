@@ -46,7 +46,7 @@ CreatePlacementGroupResponse::CreatePlacementGroupResponse(
         const CreatePlacementGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreatePlacementGroupResponse(new CreatePlacementGroupResponsePrivate(this), parent)
+    : EC2Response(new CreatePlacementGroupResponsePrivate(this), parent)
 {
     setRequest(new CreatePlacementGroupRequest(request));
     setReply(reply);

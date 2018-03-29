@@ -46,7 +46,7 @@ ConfirmPrivateVirtualInterfaceResponse::ConfirmPrivateVirtualInterfaceResponse(
         const ConfirmPrivateVirtualInterfaceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ConfirmPrivateVirtualInterfaceResponse(new ConfirmPrivateVirtualInterfaceResponsePrivate(this), parent)
+    : DirectConnectResponse(new ConfirmPrivateVirtualInterfaceResponsePrivate(this), parent)
 {
     setRequest(new ConfirmPrivateVirtualInterfaceRequest(request));
     setReply(reply);

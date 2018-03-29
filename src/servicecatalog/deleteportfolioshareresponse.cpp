@@ -46,7 +46,7 @@ DeletePortfolioShareResponse::DeletePortfolioShareResponse(
         const DeletePortfolioShareRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeletePortfolioShareResponse(new DeletePortfolioShareResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new DeletePortfolioShareResponsePrivate(this), parent)
 {
     setRequest(new DeletePortfolioShareRequest(request));
     setReply(reply);

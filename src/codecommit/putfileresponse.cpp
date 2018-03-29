@@ -46,7 +46,7 @@ PutFileResponse::PutFileResponse(
         const PutFileRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutFileResponse(new PutFileResponsePrivate(this), parent)
+    : CodeCommitResponse(new PutFileResponsePrivate(this), parent)
 {
     setRequest(new PutFileRequest(request));
     setReply(reply);

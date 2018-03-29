@@ -46,7 +46,7 @@ UpdateMatchmakingConfigurationResponse::UpdateMatchmakingConfigurationResponse(
         const UpdateMatchmakingConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateMatchmakingConfigurationResponse(new UpdateMatchmakingConfigurationResponsePrivate(this), parent)
+    : GameLiftResponse(new UpdateMatchmakingConfigurationResponsePrivate(this), parent)
 {
     setRequest(new UpdateMatchmakingConfigurationRequest(request));
     setReply(reply);

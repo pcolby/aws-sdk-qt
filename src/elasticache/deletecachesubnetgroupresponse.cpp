@@ -46,7 +46,7 @@ DeleteCacheSubnetGroupResponse::DeleteCacheSubnetGroupResponse(
         const DeleteCacheSubnetGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteCacheSubnetGroupResponse(new DeleteCacheSubnetGroupResponsePrivate(this), parent)
+    : ElastiCacheResponse(new DeleteCacheSubnetGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteCacheSubnetGroupRequest(request));
     setReply(reply);

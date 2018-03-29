@@ -46,7 +46,7 @@ StartSchemaExtensionResponse::StartSchemaExtensionResponse(
         const StartSchemaExtensionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartSchemaExtensionResponse(new StartSchemaExtensionResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new StartSchemaExtensionResponsePrivate(this), parent)
 {
     setRequest(new StartSchemaExtensionRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ AdminSetUserSettingsResponse::AdminSetUserSettingsResponse(
         const AdminSetUserSettingsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AdminSetUserSettingsResponse(new AdminSetUserSettingsResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new AdminSetUserSettingsResponsePrivate(this), parent)
 {
     setRequest(new AdminSetUserSettingsRequest(request));
     setReply(reply);

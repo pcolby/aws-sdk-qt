@@ -34,6 +34,11 @@ class QTAWS_EXPORT PricingResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     PricingResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    PricingResponse(PricingResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

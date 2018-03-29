@@ -46,7 +46,7 @@ CreateUserPoolResponse::CreateUserPoolResponse(
         const CreateUserPoolRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateUserPoolResponse(new CreateUserPoolResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new CreateUserPoolResponsePrivate(this), parent)
 {
     setRequest(new CreateUserPoolRequest(request));
     setReply(reply);

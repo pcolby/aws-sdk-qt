@@ -46,7 +46,7 @@ ListGroupResourcesResponse::ListGroupResourcesResponse(
         const ListGroupResourcesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListGroupResourcesResponse(new ListGroupResourcesResponsePrivate(this), parent)
+    : ResourceGroupsResponse(new ListGroupResourcesResponsePrivate(this), parent)
 {
     setRequest(new ListGroupResourcesRequest(request));
     setReply(reply);

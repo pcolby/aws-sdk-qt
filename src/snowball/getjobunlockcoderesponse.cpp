@@ -46,7 +46,7 @@ GetJobUnlockCodeResponse::GetJobUnlockCodeResponse(
         const GetJobUnlockCodeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetJobUnlockCodeResponse(new GetJobUnlockCodeResponsePrivate(this), parent)
+    : SnowballResponse(new GetJobUnlockCodeResponsePrivate(this), parent)
 {
     setRequest(new GetJobUnlockCodeRequest(request));
     setReply(reply);

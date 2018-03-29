@@ -46,7 +46,7 @@ SetLoadBalancerPoliciesForBackendServerResponse::SetLoadBalancerPoliciesForBacke
         const SetLoadBalancerPoliciesForBackendServerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetLoadBalancerPoliciesForBackendServerResponse(new SetLoadBalancerPoliciesForBackendServerResponsePrivate(this), parent)
+    : ElasticLoadBalancingResponse(new SetLoadBalancerPoliciesForBackendServerResponsePrivate(this), parent)
 {
     setRequest(new SetLoadBalancerPoliciesForBackendServerRequest(request));
     setReply(reply);

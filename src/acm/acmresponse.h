@@ -34,6 +34,11 @@ class QTAWS_EXPORT ACMResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     ACMResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    ACMResponse(ACMResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

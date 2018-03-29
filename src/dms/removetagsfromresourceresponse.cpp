@@ -46,7 +46,7 @@ RemoveTagsFromResourceResponse::RemoveTagsFromResourceResponse(
         const RemoveTagsFromResourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RemoveTagsFromResourceResponse(new RemoveTagsFromResourceResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new RemoveTagsFromResourceResponsePrivate(this), parent)
 {
     setRequest(new RemoveTagsFromResourceRequest(request));
     setReply(reply);

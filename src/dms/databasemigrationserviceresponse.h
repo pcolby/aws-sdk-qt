@@ -34,6 +34,11 @@ class QTAWS_EXPORT DatabaseMigrationServiceResponse : public QtAws::Core::AwsAbs
 public:
     DatabaseMigrationServiceResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    DatabaseMigrationServiceResponse(DatabaseMigrationServiceResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

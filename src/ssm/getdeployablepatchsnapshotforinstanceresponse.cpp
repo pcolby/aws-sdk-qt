@@ -46,7 +46,7 @@ GetDeployablePatchSnapshotForInstanceResponse::GetDeployablePatchSnapshotForInst
         const GetDeployablePatchSnapshotForInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDeployablePatchSnapshotForInstanceResponse(new GetDeployablePatchSnapshotForInstanceResponsePrivate(this), parent)
+    : SSMResponse(new GetDeployablePatchSnapshotForInstanceResponsePrivate(this), parent)
 {
     setRequest(new GetDeployablePatchSnapshotForInstanceRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DefineIndexFieldResponse::DefineIndexFieldResponse(
         const DefineIndexFieldRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DefineIndexFieldResponse(new DefineIndexFieldResponsePrivate(this), parent)
+    : CloudSearchResponse(new DefineIndexFieldResponsePrivate(this), parent)
 {
     setRequest(new DefineIndexFieldRequest(request));
     setReply(reply);

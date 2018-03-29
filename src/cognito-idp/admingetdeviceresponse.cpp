@@ -46,7 +46,7 @@ AdminGetDeviceResponse::AdminGetDeviceResponse(
         const AdminGetDeviceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AdminGetDeviceResponse(new AdminGetDeviceResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new AdminGetDeviceResponsePrivate(this), parent)
 {
     setRequest(new AdminGetDeviceRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteDashboardsResponse::DeleteDashboardsResponse(
         const DeleteDashboardsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDashboardsResponse(new DeleteDashboardsResponsePrivate(this), parent)
+    : CloudWatchResponse(new DeleteDashboardsResponsePrivate(this), parent)
 {
     setRequest(new DeleteDashboardsRequest(request));
     setReply(reply);

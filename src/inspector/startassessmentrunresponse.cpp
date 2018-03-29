@@ -46,7 +46,7 @@ StartAssessmentRunResponse::StartAssessmentRunResponse(
         const StartAssessmentRunRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartAssessmentRunResponse(new StartAssessmentRunResponsePrivate(this), parent)
+    : InspectorResponse(new StartAssessmentRunResponsePrivate(this), parent)
 {
     setRequest(new StartAssessmentRunRequest(request));
     setReply(reply);

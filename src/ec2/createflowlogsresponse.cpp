@@ -46,7 +46,7 @@ CreateFlowLogsResponse::CreateFlowLogsResponse(
         const CreateFlowLogsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateFlowLogsResponse(new CreateFlowLogsResponsePrivate(this), parent)
+    : EC2Response(new CreateFlowLogsResponsePrivate(this), parent)
 {
     setRequest(new CreateFlowLogsRequest(request));
     setReply(reply);

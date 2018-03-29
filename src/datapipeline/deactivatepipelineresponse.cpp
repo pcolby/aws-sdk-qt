@@ -46,7 +46,7 @@ DeactivatePipelineResponse::DeactivatePipelineResponse(
         const DeactivatePipelineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeactivatePipelineResponse(new DeactivatePipelineResponsePrivate(this), parent)
+    : DataPipelineResponse(new DeactivatePipelineResponsePrivate(this), parent)
 {
     setRequest(new DeactivatePipelineRequest(request));
     setReply(reply);

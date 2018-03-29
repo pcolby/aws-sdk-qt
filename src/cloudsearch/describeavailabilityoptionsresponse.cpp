@@ -46,7 +46,7 @@ DescribeAvailabilityOptionsResponse::DescribeAvailabilityOptionsResponse(
         const DescribeAvailabilityOptionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAvailabilityOptionsResponse(new DescribeAvailabilityOptionsResponsePrivate(this), parent)
+    : CloudSearchResponse(new DescribeAvailabilityOptionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeAvailabilityOptionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetPermissionPolicyResponse::GetPermissionPolicyResponse(
         const GetPermissionPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetPermissionPolicyResponse(new GetPermissionPolicyResponsePrivate(this), parent)
+    : WAFResponse(new GetPermissionPolicyResponsePrivate(this), parent)
 {
     setRequest(new GetPermissionPolicyRequest(request));
     setReply(reply);

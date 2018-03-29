@@ -46,7 +46,7 @@ ValidatePipelineDefinitionResponse::ValidatePipelineDefinitionResponse(
         const ValidatePipelineDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ValidatePipelineDefinitionResponse(new ValidatePipelineDefinitionResponsePrivate(this), parent)
+    : DataPipelineResponse(new ValidatePipelineDefinitionResponsePrivate(this), parent)
 {
     setRequest(new ValidatePipelineDefinitionRequest(request));
     setReply(reply);

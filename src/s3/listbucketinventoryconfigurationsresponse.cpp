@@ -46,7 +46,7 @@ ListBucketInventoryConfigurationsResponse::ListBucketInventoryConfigurationsResp
         const ListBucketInventoryConfigurationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListBucketInventoryConfigurationsResponse(new ListBucketInventoryConfigurationsResponsePrivate(this), parent)
+    : S3Response(new ListBucketInventoryConfigurationsResponsePrivate(this), parent)
 {
     setRequest(new ListBucketInventoryConfigurationsRequest(request));
     setReply(reply);

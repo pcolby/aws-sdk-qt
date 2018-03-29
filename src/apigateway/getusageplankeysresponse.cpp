@@ -46,7 +46,7 @@ GetUsagePlanKeysResponse::GetUsagePlanKeysResponse(
         const GetUsagePlanKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetUsagePlanKeysResponse(new GetUsagePlanKeysResponsePrivate(this), parent)
+    : APIGatewayResponse(new GetUsagePlanKeysResponsePrivate(this), parent)
 {
     setRequest(new GetUsagePlanKeysRequest(request));
     setReply(reply);

@@ -34,6 +34,11 @@ class QTAWS_EXPORT CognitoSyncResponse : public QtAws::Core::AwsAbstractResponse
 public:
     CognitoSyncResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    CognitoSyncResponse(CognitoSyncResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

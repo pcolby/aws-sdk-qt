@@ -46,7 +46,7 @@ DescribeExpressionsResponse::DescribeExpressionsResponse(
         const DescribeExpressionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeExpressionsResponse(new DescribeExpressionsResponsePrivate(this), parent)
+    : CloudSearchResponse(new DescribeExpressionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeExpressionsRequest(request));
     setReply(reply);

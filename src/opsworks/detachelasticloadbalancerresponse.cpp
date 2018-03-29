@@ -46,7 +46,7 @@ DetachElasticLoadBalancerResponse::DetachElasticLoadBalancerResponse(
         const DetachElasticLoadBalancerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DetachElasticLoadBalancerResponse(new DetachElasticLoadBalancerResponsePrivate(this), parent)
+    : OpsWorksResponse(new DetachElasticLoadBalancerResponsePrivate(this), parent)
 {
     setRequest(new DetachElasticLoadBalancerRequest(request));
     setReply(reply);

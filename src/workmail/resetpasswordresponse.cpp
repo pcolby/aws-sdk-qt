@@ -46,7 +46,7 @@ ResetPasswordResponse::ResetPasswordResponse(
         const ResetPasswordRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ResetPasswordResponse(new ResetPasswordResponsePrivate(this), parent)
+    : WorkMailResponse(new ResetPasswordResponsePrivate(this), parent)
 {
     setRequest(new ResetPasswordRequest(request));
     setReply(reply);

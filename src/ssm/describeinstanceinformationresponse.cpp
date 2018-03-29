@@ -46,7 +46,7 @@ DescribeInstanceInformationResponse::DescribeInstanceInformationResponse(
         const DescribeInstanceInformationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeInstanceInformationResponse(new DescribeInstanceInformationResponsePrivate(this), parent)
+    : SSMResponse(new DescribeInstanceInformationResponsePrivate(this), parent)
 {
     setRequest(new DescribeInstanceInformationRequest(request));
     setReply(reply);

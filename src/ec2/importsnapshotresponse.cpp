@@ -46,7 +46,7 @@ ImportSnapshotResponse::ImportSnapshotResponse(
         const ImportSnapshotRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ImportSnapshotResponse(new ImportSnapshotResponsePrivate(this), parent)
+    : EC2Response(new ImportSnapshotResponsePrivate(this), parent)
 {
     setRequest(new ImportSnapshotRequest(request));
     setReply(reply);

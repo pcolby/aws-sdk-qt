@@ -46,7 +46,7 @@ ListQualificationRequestsResponse::ListQualificationRequestsResponse(
         const ListQualificationRequestsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListQualificationRequestsResponse(new ListQualificationRequestsResponsePrivate(this), parent)
+    : MTurkResponse(new ListQualificationRequestsResponsePrivate(this), parent)
 {
     setRequest(new ListQualificationRequestsRequest(request));
     setReply(reply);

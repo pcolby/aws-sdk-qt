@@ -46,7 +46,7 @@ PollForTaskResponse::PollForTaskResponse(
         const PollForTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PollForTaskResponse(new PollForTaskResponsePrivate(this), parent)
+    : DataPipelineResponse(new PollForTaskResponsePrivate(this), parent)
 {
     setRequest(new PollForTaskRequest(request));
     setReply(reply);

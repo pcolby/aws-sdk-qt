@@ -46,7 +46,7 @@ ListIndexResponse::ListIndexResponse(
         const ListIndexRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListIndexResponse(new ListIndexResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new ListIndexResponsePrivate(this), parent)
 {
     setRequest(new ListIndexRequest(request));
     setReply(reply);

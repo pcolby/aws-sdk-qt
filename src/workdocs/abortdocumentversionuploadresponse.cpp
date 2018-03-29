@@ -46,7 +46,7 @@ AbortDocumentVersionUploadResponse::AbortDocumentVersionUploadResponse(
         const AbortDocumentVersionUploadRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AbortDocumentVersionUploadResponse(new AbortDocumentVersionUploadResponsePrivate(this), parent)
+    : WorkDocsResponse(new AbortDocumentVersionUploadResponsePrivate(this), parent)
 {
     setRequest(new AbortDocumentVersionUploadRequest(request));
     setReply(reply);

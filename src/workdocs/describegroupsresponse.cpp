@@ -46,7 +46,7 @@ DescribeGroupsResponse::DescribeGroupsResponse(
         const DescribeGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeGroupsResponse(new DescribeGroupsResponsePrivate(this), parent)
+    : WorkDocsResponse(new DescribeGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeGroupsRequest(request));
     setReply(reply);

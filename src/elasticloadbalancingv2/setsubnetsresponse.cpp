@@ -46,7 +46,7 @@ SetSubnetsResponse::SetSubnetsResponse(
         const SetSubnetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetSubnetsResponse(new SetSubnetsResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new SetSubnetsResponsePrivate(this), parent)
 {
     setRequest(new SetSubnetsRequest(request));
     setReply(reply);

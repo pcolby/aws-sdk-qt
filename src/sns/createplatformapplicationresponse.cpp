@@ -46,7 +46,7 @@ CreatePlatformApplicationResponse::CreatePlatformApplicationResponse(
         const CreatePlatformApplicationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreatePlatformApplicationResponse(new CreatePlatformApplicationResponsePrivate(this), parent)
+    : SNSResponse(new CreatePlatformApplicationResponsePrivate(this), parent)
 {
     setRequest(new CreatePlatformApplicationRequest(request));
     setReply(reply);

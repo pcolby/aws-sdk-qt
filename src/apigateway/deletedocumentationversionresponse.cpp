@@ -46,7 +46,7 @@ DeleteDocumentationVersionResponse::DeleteDocumentationVersionResponse(
         const DeleteDocumentationVersionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDocumentationVersionResponse(new DeleteDocumentationVersionResponsePrivate(this), parent)
+    : APIGatewayResponse(new DeleteDocumentationVersionResponsePrivate(this), parent)
 {
     setRequest(new DeleteDocumentationVersionRequest(request));
     setReply(reply);

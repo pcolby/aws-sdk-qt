@@ -46,7 +46,7 @@ DeleteEventSubscriptionResponse::DeleteEventSubscriptionResponse(
         const DeleteEventSubscriptionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteEventSubscriptionResponse(new DeleteEventSubscriptionResponsePrivate(this), parent)
+    : DatabaseMigrationServiceResponse(new DeleteEventSubscriptionResponsePrivate(this), parent)
 {
     setRequest(new DeleteEventSubscriptionRequest(request));
     setReply(reply);

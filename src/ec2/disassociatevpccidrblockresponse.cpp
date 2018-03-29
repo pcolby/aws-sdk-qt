@@ -46,7 +46,7 @@ DisassociateVpcCidrBlockResponse::DisassociateVpcCidrBlockResponse(
         const DisassociateVpcCidrBlockRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisassociateVpcCidrBlockResponse(new DisassociateVpcCidrBlockResponsePrivate(this), parent)
+    : EC2Response(new DisassociateVpcCidrBlockResponsePrivate(this), parent)
 {
     setRequest(new DisassociateVpcCidrBlockRequest(request));
     setReply(reply);

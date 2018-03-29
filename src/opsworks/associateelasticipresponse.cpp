@@ -46,7 +46,7 @@ AssociateElasticIpResponse::AssociateElasticIpResponse(
         const AssociateElasticIpRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssociateElasticIpResponse(new AssociateElasticIpResponsePrivate(this), parent)
+    : OpsWorksResponse(new AssociateElasticIpResponsePrivate(this), parent)
 {
     setRequest(new AssociateElasticIpRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribePullRequestEventsResponse::DescribePullRequestEventsResponse(
         const DescribePullRequestEventsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribePullRequestEventsResponse(new DescribePullRequestEventsResponsePrivate(this), parent)
+    : CodeCommitResponse(new DescribePullRequestEventsResponsePrivate(this), parent)
 {
     setRequest(new DescribePullRequestEventsRequest(request));
     setReply(reply);

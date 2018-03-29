@@ -46,7 +46,7 @@ ChangeMessageVisibilityResponse::ChangeMessageVisibilityResponse(
         const ChangeMessageVisibilityRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ChangeMessageVisibilityResponse(new ChangeMessageVisibilityResponsePrivate(this), parent)
+    : SQSResponse(new ChangeMessageVisibilityResponsePrivate(this), parent)
 {
     setRequest(new ChangeMessageVisibilityRequest(request));
     setReply(reply);

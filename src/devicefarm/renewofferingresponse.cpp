@@ -46,7 +46,7 @@ RenewOfferingResponse::RenewOfferingResponse(
         const RenewOfferingRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RenewOfferingResponse(new RenewOfferingResponsePrivate(this), parent)
+    : DeviceFarmResponse(new RenewOfferingResponsePrivate(this), parent)
 {
     setRequest(new RenewOfferingRequest(request));
     setReply(reply);

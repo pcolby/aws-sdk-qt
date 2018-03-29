@@ -46,7 +46,7 @@ ImportServerCatalogResponse::ImportServerCatalogResponse(
         const ImportServerCatalogRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ImportServerCatalogResponse(new ImportServerCatalogResponsePrivate(this), parent)
+    : SMSResponse(new ImportServerCatalogResponsePrivate(this), parent)
 {
     setRequest(new ImportServerCatalogRequest(request));
     setReply(reply);

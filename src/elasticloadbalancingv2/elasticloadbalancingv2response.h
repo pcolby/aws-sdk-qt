@@ -34,6 +34,11 @@ class QTAWS_EXPORT ElasticLoadBalancingv2Response : public QtAws::Core::AwsAbstr
 public:
     ElasticLoadBalancingv2Response(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    ElasticLoadBalancingv2Response(ElasticLoadBalancingv2ResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

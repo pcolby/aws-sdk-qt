@@ -46,7 +46,7 @@ BatchGetApplicationsResponse::BatchGetApplicationsResponse(
         const BatchGetApplicationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : BatchGetApplicationsResponse(new BatchGetApplicationsResponsePrivate(this), parent)
+    : CodeDeployResponse(new BatchGetApplicationsResponsePrivate(this), parent)
 {
     setRequest(new BatchGetApplicationsRequest(request));
     setReply(reply);

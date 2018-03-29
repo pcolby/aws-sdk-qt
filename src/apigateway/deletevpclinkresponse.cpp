@@ -46,7 +46,7 @@ DeleteVpcLinkResponse::DeleteVpcLinkResponse(
         const DeleteVpcLinkRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteVpcLinkResponse(new DeleteVpcLinkResponsePrivate(this), parent)
+    : APIGatewayResponse(new DeleteVpcLinkResponsePrivate(this), parent)
 {
     setRequest(new DeleteVpcLinkRequest(request));
     setReply(reply);

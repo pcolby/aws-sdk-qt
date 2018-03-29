@@ -46,7 +46,7 @@ GetBlobResponse::GetBlobResponse(
         const GetBlobRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetBlobResponse(new GetBlobResponsePrivate(this), parent)
+    : CodeCommitResponse(new GetBlobResponsePrivate(this), parent)
 {
     setRequest(new GetBlobRequest(request));
     setReply(reply);

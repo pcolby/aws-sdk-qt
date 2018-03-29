@@ -46,7 +46,7 @@ CreateTrailResponse::CreateTrailResponse(
         const CreateTrailRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateTrailResponse(new CreateTrailResponsePrivate(this), parent)
+    : CloudTrailResponse(new CreateTrailResponsePrivate(this), parent)
 {
     setRequest(new CreateTrailRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListUniqueProblemsResponse::ListUniqueProblemsResponse(
         const ListUniqueProblemsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListUniqueProblemsResponse(new ListUniqueProblemsResponsePrivate(this), parent)
+    : DeviceFarmResponse(new ListUniqueProblemsResponsePrivate(this), parent)
 {
     setRequest(new ListUniqueProblemsRequest(request));
     setReply(reply);

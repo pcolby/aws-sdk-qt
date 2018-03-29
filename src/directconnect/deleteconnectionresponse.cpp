@@ -46,7 +46,7 @@ DeleteConnectionResponse::DeleteConnectionResponse(
         const DeleteConnectionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteConnectionResponse(new DeleteConnectionResponsePrivate(this), parent)
+    : DirectConnectResponse(new DeleteConnectionResponsePrivate(this), parent)
 {
     setRequest(new DeleteConnectionRequest(request));
     setReply(reply);

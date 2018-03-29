@@ -46,7 +46,7 @@ DeleteCustomVerificationEmailTemplateResponse::DeleteCustomVerificationEmailTemp
         const DeleteCustomVerificationEmailTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteCustomVerificationEmailTemplateResponse(new DeleteCustomVerificationEmailTemplateResponsePrivate(this), parent)
+    : SESResponse(new DeleteCustomVerificationEmailTemplateResponsePrivate(this), parent)
 {
     setRequest(new DeleteCustomVerificationEmailTemplateRequest(request));
     setReply(reply);

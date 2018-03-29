@@ -46,7 +46,7 @@ DescribeParameterGroupsResponse::DescribeParameterGroupsResponse(
         const DescribeParameterGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeParameterGroupsResponse(new DescribeParameterGroupsResponsePrivate(this), parent)
+    : DAXResponse(new DescribeParameterGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeParameterGroupsRequest(request));
     setReply(reply);

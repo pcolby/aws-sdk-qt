@@ -46,7 +46,7 @@ AttachGroupPolicyResponse::AttachGroupPolicyResponse(
         const AttachGroupPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AttachGroupPolicyResponse(new AttachGroupPolicyResponsePrivate(this), parent)
+    : IAMResponse(new AttachGroupPolicyResponsePrivate(this), parent)
 {
     setRequest(new AttachGroupPolicyRequest(request));
     setReply(reply);

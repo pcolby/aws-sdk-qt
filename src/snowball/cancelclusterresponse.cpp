@@ -46,7 +46,7 @@ CancelClusterResponse::CancelClusterResponse(
         const CancelClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CancelClusterResponse(new CancelClusterResponsePrivate(this), parent)
+    : SnowballResponse(new CancelClusterResponsePrivate(this), parent)
 {
     setRequest(new CancelClusterRequest(request));
     setReply(reply);

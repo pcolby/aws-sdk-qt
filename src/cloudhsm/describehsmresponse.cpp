@@ -46,7 +46,7 @@ DescribeHsmResponse::DescribeHsmResponse(
         const DescribeHsmRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeHsmResponse(new DescribeHsmResponsePrivate(this), parent)
+    : CloudHSMResponse(new DescribeHsmResponsePrivate(this), parent)
 {
     setRequest(new DescribeHsmRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ CreateDistributionResponse::CreateDistributionResponse(
         const CreateDistributionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateDistributionResponse(new CreateDistributionResponsePrivate(this), parent)
+    : CloudFrontResponse(new CreateDistributionResponsePrivate(this), parent)
 {
     setRequest(new CreateDistributionRequest(request));
     setReply(reply);

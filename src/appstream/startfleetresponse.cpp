@@ -46,7 +46,7 @@ StartFleetResponse::StartFleetResponse(
         const StartFleetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartFleetResponse(new StartFleetResponsePrivate(this), parent)
+    : AppStreamResponse(new StartFleetResponsePrivate(this), parent)
 {
     setRequest(new StartFleetRequest(request));
     setReply(reply);

@@ -34,6 +34,11 @@ class QTAWS_EXPORT MTurkResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     MTurkResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    MTurkResponse(MTurkResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

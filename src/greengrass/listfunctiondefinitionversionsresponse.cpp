@@ -46,7 +46,7 @@ ListFunctionDefinitionVersionsResponse::ListFunctionDefinitionVersionsResponse(
         const ListFunctionDefinitionVersionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListFunctionDefinitionVersionsResponse(new ListFunctionDefinitionVersionsResponsePrivate(this), parent)
+    : GreengrassResponse(new ListFunctionDefinitionVersionsResponsePrivate(this), parent)
 {
     setRequest(new ListFunctionDefinitionVersionsRequest(request));
     setReply(reply);

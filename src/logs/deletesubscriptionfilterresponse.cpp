@@ -46,7 +46,7 @@ DeleteSubscriptionFilterResponse::DeleteSubscriptionFilterResponse(
         const DeleteSubscriptionFilterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSubscriptionFilterResponse(new DeleteSubscriptionFilterResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new DeleteSubscriptionFilterResponsePrivate(this), parent)
 {
     setRequest(new DeleteSubscriptionFilterRequest(request));
     setReply(reply);

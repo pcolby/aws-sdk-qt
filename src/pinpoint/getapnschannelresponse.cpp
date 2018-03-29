@@ -46,7 +46,7 @@ GetApnsChannelResponse::GetApnsChannelResponse(
         const GetApnsChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetApnsChannelResponse(new GetApnsChannelResponsePrivate(this), parent)
+    : PinpointResponse(new GetApnsChannelResponsePrivate(this), parent)
 {
     setRequest(new GetApnsChannelRequest(request));
     setReply(reply);

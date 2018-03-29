@@ -46,7 +46,7 @@ RestoreTableToPointInTimeResponse::RestoreTableToPointInTimeResponse(
         const RestoreTableToPointInTimeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RestoreTableToPointInTimeResponse(new RestoreTableToPointInTimeResponsePrivate(this), parent)
+    : DynamoDBResponse(new RestoreTableToPointInTimeResponsePrivate(this), parent)
 {
     setRequest(new RestoreTableToPointInTimeRequest(request));
     setReply(reply);

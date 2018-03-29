@@ -46,7 +46,7 @@ PostCommentForComparedCommitResponse::PostCommentForComparedCommitResponse(
         const PostCommentForComparedCommitRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PostCommentForComparedCommitResponse(new PostCommentForComparedCommitResponsePrivate(this), parent)
+    : CodeCommitResponse(new PostCommentForComparedCommitResponsePrivate(this), parent)
 {
     setRequest(new PostCommentForComparedCommitRequest(request));
     setReply(reply);

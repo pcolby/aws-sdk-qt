@@ -46,7 +46,7 @@ UpgradeAppliedSchemaResponse::UpgradeAppliedSchemaResponse(
         const UpgradeAppliedSchemaRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpgradeAppliedSchemaResponse(new UpgradeAppliedSchemaResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new UpgradeAppliedSchemaResponsePrivate(this), parent)
 {
     setRequest(new UpgradeAppliedSchemaRequest(request));
     setReply(reply);

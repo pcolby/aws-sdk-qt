@@ -46,7 +46,7 @@ DescribeStreamSummaryResponse::DescribeStreamSummaryResponse(
         const DescribeStreamSummaryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeStreamSummaryResponse(new DescribeStreamSummaryResponsePrivate(this), parent)
+    : KinesisResponse(new DescribeStreamSummaryResponsePrivate(this), parent)
 {
     setRequest(new DescribeStreamSummaryRequest(request));
     setReply(reply);

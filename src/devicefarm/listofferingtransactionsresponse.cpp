@@ -46,7 +46,7 @@ ListOfferingTransactionsResponse::ListOfferingTransactionsResponse(
         const ListOfferingTransactionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListOfferingTransactionsResponse(new ListOfferingTransactionsResponsePrivate(this), parent)
+    : DeviceFarmResponse(new ListOfferingTransactionsResponsePrivate(this), parent)
 {
     setRequest(new ListOfferingTransactionsRequest(request));
     setReply(reply);

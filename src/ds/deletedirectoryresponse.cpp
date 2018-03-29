@@ -46,7 +46,7 @@ DeleteDirectoryResponse::DeleteDirectoryResponse(
         const DeleteDirectoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDirectoryResponse(new DeleteDirectoryResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new DeleteDirectoryResponsePrivate(this), parent)
 {
     setRequest(new DeleteDirectoryRequest(request));
     setReply(reply);

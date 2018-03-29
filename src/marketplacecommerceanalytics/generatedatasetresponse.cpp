@@ -46,7 +46,7 @@ GenerateDataSetResponse::GenerateDataSetResponse(
         const GenerateDataSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GenerateDataSetResponse(new GenerateDataSetResponsePrivate(this), parent)
+    : MarketplaceCommerceAnalyticsResponse(new GenerateDataSetResponsePrivate(this), parent)
 {
     setRequest(new GenerateDataSetRequest(request));
     setReply(reply);

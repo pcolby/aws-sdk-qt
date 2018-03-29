@@ -46,7 +46,7 @@ DescribeFolderContentsResponse::DescribeFolderContentsResponse(
         const DescribeFolderContentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeFolderContentsResponse(new DescribeFolderContentsResponsePrivate(this), parent)
+    : WorkDocsResponse(new DescribeFolderContentsResponsePrivate(this), parent)
 {
     setRequest(new DescribeFolderContentsRequest(request));
     setReply(reply);

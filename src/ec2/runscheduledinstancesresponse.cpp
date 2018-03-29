@@ -46,7 +46,7 @@ RunScheduledInstancesResponse::RunScheduledInstancesResponse(
         const RunScheduledInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RunScheduledInstancesResponse(new RunScheduledInstancesResponsePrivate(this), parent)
+    : EC2Response(new RunScheduledInstancesResponsePrivate(this), parent)
 {
     setRequest(new RunScheduledInstancesRequest(request));
     setReply(reply);

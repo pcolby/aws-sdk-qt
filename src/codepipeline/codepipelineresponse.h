@@ -34,6 +34,11 @@ class QTAWS_EXPORT CodePipelineResponse : public QtAws::Core::AwsAbstractRespons
 public:
     CodePipelineResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    CodePipelineResponse(CodePipelineResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

@@ -46,7 +46,7 @@ ExitStandbyResponse::ExitStandbyResponse(
         const ExitStandbyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ExitStandbyResponse(new ExitStandbyResponsePrivate(this), parent)
+    : AutoScalingResponse(new ExitStandbyResponsePrivate(this), parent)
 {
     setRequest(new ExitStandbyRequest(request));
     setReply(reply);

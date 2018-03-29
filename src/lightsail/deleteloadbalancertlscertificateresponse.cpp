@@ -46,7 +46,7 @@ DeleteLoadBalancerTlsCertificateResponse::DeleteLoadBalancerTlsCertificateRespon
         const DeleteLoadBalancerTlsCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteLoadBalancerTlsCertificateResponse(new DeleteLoadBalancerTlsCertificateResponsePrivate(this), parent)
+    : LightsailResponse(new DeleteLoadBalancerTlsCertificateResponsePrivate(this), parent)
 {
     setRequest(new DeleteLoadBalancerTlsCertificateRequest(request));
     setReply(reply);

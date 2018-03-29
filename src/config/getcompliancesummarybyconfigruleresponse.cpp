@@ -46,7 +46,7 @@ GetComplianceSummaryByConfigRuleResponse::GetComplianceSummaryByConfigRuleRespon
         const GetComplianceSummaryByConfigRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetComplianceSummaryByConfigRuleResponse(new GetComplianceSummaryByConfigRuleResponsePrivate(this), parent)
+    : ConfigServiceResponse(new GetComplianceSummaryByConfigRuleResponsePrivate(this), parent)
 {
     setRequest(new GetComplianceSummaryByConfigRuleRequest(request));
     setReply(reply);

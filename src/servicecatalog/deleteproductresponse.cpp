@@ -46,7 +46,7 @@ DeleteProductResponse::DeleteProductResponse(
         const DeleteProductRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteProductResponse(new DeleteProductResponsePrivate(this), parent)
+    : ServiceCatalogResponse(new DeleteProductResponsePrivate(this), parent)
 {
     setRequest(new DeleteProductRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetAttributeValuesResponse::GetAttributeValuesResponse(
         const GetAttributeValuesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetAttributeValuesResponse(new GetAttributeValuesResponsePrivate(this), parent)
+    : PricingResponse(new GetAttributeValuesResponsePrivate(this), parent)
 {
     setRequest(new GetAttributeValuesRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribePrefixListsResponse::DescribePrefixListsResponse(
         const DescribePrefixListsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribePrefixListsResponse(new DescribePrefixListsResponsePrivate(this), parent)
+    : EC2Response(new DescribePrefixListsResponsePrivate(this), parent)
 {
     setRequest(new DescribePrefixListsRequest(request));
     setReply(reply);

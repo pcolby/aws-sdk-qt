@@ -46,7 +46,7 @@ UntagProjectResponse::UntagProjectResponse(
         const UntagProjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UntagProjectResponse(new UntagProjectResponsePrivate(this), parent)
+    : CodeStarResponse(new UntagProjectResponsePrivate(this), parent)
 {
     setRequest(new UntagProjectRequest(request));
     setReply(reply);

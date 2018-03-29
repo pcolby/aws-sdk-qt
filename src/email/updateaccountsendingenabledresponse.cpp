@@ -46,7 +46,7 @@ UpdateAccountSendingEnabledResponse::UpdateAccountSendingEnabledResponse(
         const UpdateAccountSendingEnabledRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateAccountSendingEnabledResponse(new UpdateAccountSendingEnabledResponsePrivate(this), parent)
+    : SESResponse(new UpdateAccountSendingEnabledResponsePrivate(this), parent)
 {
     setRequest(new UpdateAccountSendingEnabledRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RegisterTaskDefinitionResponse::RegisterTaskDefinitionResponse(
         const RegisterTaskDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RegisterTaskDefinitionResponse(new RegisterTaskDefinitionResponsePrivate(this), parent)
+    : ECSResponse(new RegisterTaskDefinitionResponsePrivate(this), parent)
 {
     setRequest(new RegisterTaskDefinitionRequest(request));
     setReply(reply);

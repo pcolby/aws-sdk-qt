@@ -34,6 +34,11 @@ class QTAWS_EXPORT GameLiftResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     GameLiftResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    GameLiftResponse(GameLiftResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

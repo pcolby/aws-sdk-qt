@@ -46,7 +46,7 @@ DeleteOTAUpdateResponse::DeleteOTAUpdateResponse(
         const DeleteOTAUpdateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteOTAUpdateResponse(new DeleteOTAUpdateResponsePrivate(this), parent)
+    : IoTResponse(new DeleteOTAUpdateResponsePrivate(this), parent)
 {
     setRequest(new DeleteOTAUpdateRequest(request));
     setReply(reply);

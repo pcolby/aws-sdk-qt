@@ -46,7 +46,7 @@ DeleteEvaluationResponse::DeleteEvaluationResponse(
         const DeleteEvaluationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteEvaluationResponse(new DeleteEvaluationResponsePrivate(this), parent)
+    : MachineLearningResponse(new DeleteEvaluationResponsePrivate(this), parent)
 {
     setRequest(new DeleteEvaluationRequest(request));
     setReply(reply);

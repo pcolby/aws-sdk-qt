@@ -46,7 +46,7 @@ PutTelemetryRecordsResponse::PutTelemetryRecordsResponse(
         const PutTelemetryRecordsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutTelemetryRecordsResponse(new PutTelemetryRecordsResponsePrivate(this), parent)
+    : XRayResponse(new PutTelemetryRecordsResponsePrivate(this), parent)
 {
     setRequest(new PutTelemetryRecordsRequest(request));
     setReply(reply);

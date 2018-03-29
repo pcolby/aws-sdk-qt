@@ -46,7 +46,7 @@ InvokeResponse::InvokeResponse(
         const InvokeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : InvokeResponse(new InvokeResponsePrivate(this), parent)
+    : LambdaResponse(new InvokeResponsePrivate(this), parent)
 {
     setRequest(new InvokeRequest(request));
     setReply(reply);

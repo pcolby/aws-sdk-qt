@@ -34,6 +34,11 @@ class QTAWS_EXPORT MobileAnalyticsResponse : public QtAws::Core::AwsAbstractResp
 public:
     MobileAnalyticsResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    MobileAnalyticsResponse(MobileAnalyticsResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

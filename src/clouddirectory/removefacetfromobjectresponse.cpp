@@ -46,7 +46,7 @@ RemoveFacetFromObjectResponse::RemoveFacetFromObjectResponse(
         const RemoveFacetFromObjectRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RemoveFacetFromObjectResponse(new RemoveFacetFromObjectResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new RemoveFacetFromObjectResponsePrivate(this), parent)
 {
     setRequest(new RemoveFacetFromObjectRequest(request));
     setReply(reply);

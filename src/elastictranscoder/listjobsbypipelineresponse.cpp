@@ -46,7 +46,7 @@ ListJobsByPipelineResponse::ListJobsByPipelineResponse(
         const ListJobsByPipelineRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListJobsByPipelineResponse(new ListJobsByPipelineResponsePrivate(this), parent)
+    : ElasticTranscoderResponse(new ListJobsByPipelineResponsePrivate(this), parent)
 {
     setRequest(new ListJobsByPipelineRequest(request));
     setReply(reply);

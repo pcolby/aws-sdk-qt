@@ -34,6 +34,11 @@ class QTAWS_EXPORT HealthResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     HealthResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    HealthResponse(HealthResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

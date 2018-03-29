@@ -46,7 +46,7 @@ CreateRegexPatternSetResponse::CreateRegexPatternSetResponse(
         const CreateRegexPatternSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateRegexPatternSetResponse(new CreateRegexPatternSetResponsePrivate(this), parent)
+    : WAFRegionalResponse(new CreateRegexPatternSetResponsePrivate(this), parent)
 {
     setRequest(new CreateRegexPatternSetRequest(request));
     setReply(reply);

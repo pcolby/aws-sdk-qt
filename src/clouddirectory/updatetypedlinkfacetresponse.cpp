@@ -46,7 +46,7 @@ UpdateTypedLinkFacetResponse::UpdateTypedLinkFacetResponse(
         const UpdateTypedLinkFacetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateTypedLinkFacetResponse(new UpdateTypedLinkFacetResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new UpdateTypedLinkFacetResponsePrivate(this), parent)
 {
     setRequest(new UpdateTypedLinkFacetRequest(request));
     setReply(reply);

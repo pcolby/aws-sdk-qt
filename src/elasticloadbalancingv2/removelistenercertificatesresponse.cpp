@@ -46,7 +46,7 @@ RemoveListenerCertificatesResponse::RemoveListenerCertificatesResponse(
         const RemoveListenerCertificatesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RemoveListenerCertificatesResponse(new RemoveListenerCertificatesResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new RemoveListenerCertificatesResponsePrivate(this), parent)
 {
     setRequest(new RemoveListenerCertificatesRequest(request));
     setReply(reply);

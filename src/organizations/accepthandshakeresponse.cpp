@@ -46,7 +46,7 @@ AcceptHandshakeResponse::AcceptHandshakeResponse(
         const AcceptHandshakeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AcceptHandshakeResponse(new AcceptHandshakeResponsePrivate(this), parent)
+    : OrganizationsResponse(new AcceptHandshakeResponsePrivate(this), parent)
 {
     setRequest(new AcceptHandshakeRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteSnapshotCopyGrantResponse::DeleteSnapshotCopyGrantResponse(
         const DeleteSnapshotCopyGrantRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteSnapshotCopyGrantResponse(new DeleteSnapshotCopyGrantResponsePrivate(this), parent)
+    : RedshiftResponse(new DeleteSnapshotCopyGrantResponsePrivate(this), parent)
 {
     setRequest(new DeleteSnapshotCopyGrantRequest(request));
     setReply(reply);

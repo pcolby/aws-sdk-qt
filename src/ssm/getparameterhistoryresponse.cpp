@@ -46,7 +46,7 @@ GetParameterHistoryResponse::GetParameterHistoryResponse(
         const GetParameterHistoryRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetParameterHistoryResponse(new GetParameterHistoryResponsePrivate(this), parent)
+    : SSMResponse(new GetParameterHistoryResponsePrivate(this), parent)
 {
     setRequest(new GetParameterHistoryRequest(request));
     setReply(reply);

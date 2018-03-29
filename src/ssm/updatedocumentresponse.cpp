@@ -46,7 +46,7 @@ UpdateDocumentResponse::UpdateDocumentResponse(
         const UpdateDocumentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateDocumentResponse(new UpdateDocumentResponsePrivate(this), parent)
+    : SSMResponse(new UpdateDocumentResponsePrivate(this), parent)
 {
     setRequest(new UpdateDocumentRequest(request));
     setReply(reply);

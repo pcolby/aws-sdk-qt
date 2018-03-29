@@ -46,7 +46,7 @@ UpdateServiceResponse::UpdateServiceResponse(
         const UpdateServiceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateServiceResponse(new UpdateServiceResponsePrivate(this), parent)
+    : ServiceDiscoveryResponse(new UpdateServiceResponsePrivate(this), parent)
 {
     setRequest(new UpdateServiceRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ SetCognitoEventsResponse::SetCognitoEventsResponse(
         const SetCognitoEventsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SetCognitoEventsResponse(new SetCognitoEventsResponsePrivate(this), parent)
+    : CognitoSyncResponse(new SetCognitoEventsResponsePrivate(this), parent)
 {
     setRequest(new SetCognitoEventsRequest(request));
     setReply(reply);

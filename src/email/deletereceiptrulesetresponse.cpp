@@ -46,7 +46,7 @@ DeleteReceiptRuleSetResponse::DeleteReceiptRuleSetResponse(
         const DeleteReceiptRuleSetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteReceiptRuleSetResponse(new DeleteReceiptRuleSetResponsePrivate(this), parent)
+    : SESResponse(new DeleteReceiptRuleSetResponsePrivate(this), parent)
 {
     setRequest(new DeleteReceiptRuleSetRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeRdsDbInstancesResponse::DescribeRdsDbInstancesResponse(
         const DescribeRdsDbInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeRdsDbInstancesResponse(new DescribeRdsDbInstancesResponsePrivate(this), parent)
+    : OpsWorksResponse(new DescribeRdsDbInstancesResponsePrivate(this), parent)
 {
     setRequest(new DescribeRdsDbInstancesRequest(request));
     setReply(reply);

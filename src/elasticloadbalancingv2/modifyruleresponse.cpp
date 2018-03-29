@@ -46,7 +46,7 @@ ModifyRuleResponse::ModifyRuleResponse(
         const ModifyRuleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ModifyRuleResponse(new ModifyRuleResponsePrivate(this), parent)
+    : ElasticLoadBalancingv2Response(new ModifyRuleResponsePrivate(this), parent)
 {
     setRequest(new ModifyRuleRequest(request));
     setReply(reply);

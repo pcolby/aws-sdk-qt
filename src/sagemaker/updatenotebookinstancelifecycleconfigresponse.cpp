@@ -46,7 +46,7 @@ UpdateNotebookInstanceLifecycleConfigResponse::UpdateNotebookInstanceLifecycleCo
         const UpdateNotebookInstanceLifecycleConfigRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateNotebookInstanceLifecycleConfigResponse(new UpdateNotebookInstanceLifecycleConfigResponsePrivate(this), parent)
+    : SageMakerResponse(new UpdateNotebookInstanceLifecycleConfigResponsePrivate(this), parent)
 {
     setRequest(new UpdateNotebookInstanceLifecycleConfigRequest(request));
     setReply(reply);

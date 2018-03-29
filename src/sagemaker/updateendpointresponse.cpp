@@ -46,7 +46,7 @@ UpdateEndpointResponse::UpdateEndpointResponse(
         const UpdateEndpointRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateEndpointResponse(new UpdateEndpointResponsePrivate(this), parent)
+    : SageMakerResponse(new UpdateEndpointResponsePrivate(this), parent)
 {
     setRequest(new UpdateEndpointRequest(request));
     setReply(reply);

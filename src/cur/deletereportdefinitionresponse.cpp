@@ -46,7 +46,7 @@ DeleteReportDefinitionResponse::DeleteReportDefinitionResponse(
         const DeleteReportDefinitionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteReportDefinitionResponse(new DeleteReportDefinitionResponsePrivate(this), parent)
+    : CostandUsageReportServiceResponse(new DeleteReportDefinitionResponsePrivate(this), parent)
 {
     setRequest(new DeleteReportDefinitionRequest(request));
     setReply(reply);

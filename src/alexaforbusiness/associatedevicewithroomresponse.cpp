@@ -46,7 +46,7 @@ AssociateDeviceWithRoomResponse::AssociateDeviceWithRoomResponse(
         const AssociateDeviceWithRoomRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssociateDeviceWithRoomResponse(new AssociateDeviceWithRoomResponsePrivate(this), parent)
+    : AlexaForBusinessResponse(new AssociateDeviceWithRoomResponsePrivate(this), parent)
 {
     setRequest(new AssociateDeviceWithRoomRequest(request));
     setReply(reply);

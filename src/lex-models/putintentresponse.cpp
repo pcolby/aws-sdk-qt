@@ -46,7 +46,7 @@ PutIntentResponse::PutIntentResponse(
         const PutIntentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutIntentResponse(new PutIntentResponsePrivate(this), parent)
+    : LexModelBuildingServiceResponse(new PutIntentResponsePrivate(this), parent)
 {
     setRequest(new PutIntentRequest(request));
     setReply(reply);

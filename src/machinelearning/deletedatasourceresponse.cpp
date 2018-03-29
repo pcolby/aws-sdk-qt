@@ -46,7 +46,7 @@ DeleteDataSourceResponse::DeleteDataSourceResponse(
         const DeleteDataSourceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDataSourceResponse(new DeleteDataSourceResponsePrivate(this), parent)
+    : MachineLearningResponse(new DeleteDataSourceResponsePrivate(this), parent)
 {
     setRequest(new DeleteDataSourceRequest(request));
     setReply(reply);

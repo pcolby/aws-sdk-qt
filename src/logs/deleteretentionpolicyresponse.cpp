@@ -46,7 +46,7 @@ DeleteRetentionPolicyResponse::DeleteRetentionPolicyResponse(
         const DeleteRetentionPolicyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteRetentionPolicyResponse(new DeleteRetentionPolicyResponsePrivate(this), parent)
+    : CloudWatchLogsResponse(new DeleteRetentionPolicyResponsePrivate(this), parent)
 {
     setRequest(new DeleteRetentionPolicyRequest(request));
     setReply(reply);

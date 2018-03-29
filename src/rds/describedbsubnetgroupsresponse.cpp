@@ -46,7 +46,7 @@ DescribeDBSubnetGroupsResponse::DescribeDBSubnetGroupsResponse(
         const DescribeDBSubnetGroupsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeDBSubnetGroupsResponse(new DescribeDBSubnetGroupsResponsePrivate(this), parent)
+    : RDSResponse(new DescribeDBSubnetGroupsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBSubnetGroupsRequest(request));
     setReply(reply);

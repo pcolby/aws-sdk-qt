@@ -46,7 +46,7 @@ CreateBGPPeerResponse::CreateBGPPeerResponse(
         const CreateBGPPeerRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateBGPPeerResponse(new CreateBGPPeerResponsePrivate(this), parent)
+    : DirectConnectResponse(new CreateBGPPeerResponsePrivate(this), parent)
 {
     setRequest(new CreateBGPPeerRequest(request));
     setReply(reply);

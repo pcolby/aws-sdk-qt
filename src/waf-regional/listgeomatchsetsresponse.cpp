@@ -46,7 +46,7 @@ ListGeoMatchSetsResponse::ListGeoMatchSetsResponse(
         const ListGeoMatchSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListGeoMatchSetsResponse(new ListGeoMatchSetsResponsePrivate(this), parent)
+    : WAFRegionalResponse(new ListGeoMatchSetsResponsePrivate(this), parent)
 {
     setRequest(new ListGeoMatchSetsRequest(request));
     setReply(reply);

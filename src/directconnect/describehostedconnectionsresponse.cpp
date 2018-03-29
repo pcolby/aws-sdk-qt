@@ -46,7 +46,7 @@ DescribeHostedConnectionsResponse::DescribeHostedConnectionsResponse(
         const DescribeHostedConnectionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeHostedConnectionsResponse(new DescribeHostedConnectionsResponsePrivate(this), parent)
+    : DirectConnectResponse(new DescribeHostedConnectionsResponsePrivate(this), parent)
 {
     setRequest(new DescribeHostedConnectionsRequest(request));
     setReply(reply);

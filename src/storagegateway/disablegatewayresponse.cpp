@@ -46,7 +46,7 @@ DisableGatewayResponse::DisableGatewayResponse(
         const DisableGatewayRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DisableGatewayResponse(new DisableGatewayResponsePrivate(this), parent)
+    : StorageGatewayResponse(new DisableGatewayResponsePrivate(this), parent)
 {
     setRequest(new DisableGatewayRequest(request));
     setReply(reply);

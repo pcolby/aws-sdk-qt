@@ -46,7 +46,7 @@ DownloadDBLogFilePortionResponse::DownloadDBLogFilePortionResponse(
         const DownloadDBLogFilePortionRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DownloadDBLogFilePortionResponse(new DownloadDBLogFilePortionResponsePrivate(this), parent)
+    : RDSResponse(new DownloadDBLogFilePortionResponsePrivate(this), parent)
 {
     setRequest(new DownloadDBLogFilePortionRequest(request));
     setReply(reply);

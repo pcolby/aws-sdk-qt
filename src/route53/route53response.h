@@ -34,6 +34,11 @@ class QTAWS_EXPORT Route53Response : public QtAws::Core::AwsAbstractResponse {
 public:
     Route53Response(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    Route53Response(Route53ResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

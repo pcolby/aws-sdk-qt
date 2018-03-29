@@ -34,6 +34,11 @@ class QTAWS_EXPORT RDSResponse : public QtAws::Core::AwsAbstractResponse {
 public:
     RDSResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    RDSResponse(RDSResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

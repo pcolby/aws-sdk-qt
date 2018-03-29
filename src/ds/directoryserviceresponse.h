@@ -34,6 +34,11 @@ class QTAWS_EXPORT DirectoryServiceResponse : public QtAws::Core::AwsAbstractRes
 public:
     DirectoryServiceResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    DirectoryServiceResponse(DirectoryServiceResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

@@ -34,6 +34,11 @@ class QTAWS_EXPORT GreengrassResponse : public QtAws::Core::AwsAbstractResponse 
 public:
     GreengrassResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    GreengrassResponse(GreengrassResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

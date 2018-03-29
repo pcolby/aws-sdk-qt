@@ -46,7 +46,7 @@ ListDeploymentInstancesResponse::ListDeploymentInstancesResponse(
         const ListDeploymentInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListDeploymentInstancesResponse(new ListDeploymentInstancesResponsePrivate(this), parent)
+    : CodeDeployResponse(new ListDeploymentInstancesResponsePrivate(this), parent)
 {
     setRequest(new ListDeploymentInstancesRequest(request));
     setReply(reply);

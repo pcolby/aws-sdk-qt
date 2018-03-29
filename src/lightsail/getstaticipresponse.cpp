@@ -46,7 +46,7 @@ GetStaticIpResponse::GetStaticIpResponse(
         const GetStaticIpRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetStaticIpResponse(new GetStaticIpResponsePrivate(this), parent)
+    : LightsailResponse(new GetStaticIpResponsePrivate(this), parent)
 {
     setRequest(new GetStaticIpRequest(request));
     setReply(reply);

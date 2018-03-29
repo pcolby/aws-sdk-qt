@@ -34,6 +34,11 @@ class QTAWS_EXPORT MarketplaceEntitlementServiceResponse : public QtAws::Core::A
 public:
     MarketplaceEntitlementServiceResponse(QObject * const parent = 0);
 
+protected:
+    /// @cond internal
+    MarketplaceEntitlementServiceResponse(MarketplaceEntitlementServiceResponsePrivate * const d, QObject * const parent);
+    /// @endcond
+
 protected slots:
     virtual void parseFailure(QIODevice &response);
 

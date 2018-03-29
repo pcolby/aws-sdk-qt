@@ -46,7 +46,7 @@ CreateAdditionalAssignmentsForHITResponse::CreateAdditionalAssignmentsForHITResp
         const CreateAdditionalAssignmentsForHITRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateAdditionalAssignmentsForHITResponse(new CreateAdditionalAssignmentsForHITResponsePrivate(this), parent)
+    : MTurkResponse(new CreateAdditionalAssignmentsForHITResponsePrivate(this), parent)
 {
     setRequest(new CreateAdditionalAssignmentsForHITRequest(request));
     setReply(reply);

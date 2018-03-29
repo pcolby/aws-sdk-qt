@@ -46,7 +46,7 @@ DeleteDiskResponse::DeleteDiskResponse(
         const DeleteDiskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDiskResponse(new DeleteDiskResponsePrivate(this), parent)
+    : LightsailResponse(new DeleteDiskResponsePrivate(this), parent)
 {
     setRequest(new DeleteDiskRequest(request));
     setReply(reply);

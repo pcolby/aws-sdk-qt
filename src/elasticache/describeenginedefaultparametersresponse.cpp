@@ -46,7 +46,7 @@ DescribeEngineDefaultParametersResponse::DescribeEngineDefaultParametersResponse
         const DescribeEngineDefaultParametersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeEngineDefaultParametersResponse(new DescribeEngineDefaultParametersResponsePrivate(this), parent)
+    : ElastiCacheResponse(new DescribeEngineDefaultParametersResponsePrivate(this), parent)
 {
     setRequest(new DescribeEngineDefaultParametersRequest(request));
     setReply(reply);

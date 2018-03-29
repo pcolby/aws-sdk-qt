@@ -46,7 +46,7 @@ RemoveTagsFromStreamResponse::RemoveTagsFromStreamResponse(
         const RemoveTagsFromStreamRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RemoveTagsFromStreamResponse(new RemoveTagsFromStreamResponsePrivate(this), parent)
+    : KinesisResponse(new RemoveTagsFromStreamResponsePrivate(this), parent)
 {
     setRequest(new RemoveTagsFromStreamRequest(request));
     setReply(reply);

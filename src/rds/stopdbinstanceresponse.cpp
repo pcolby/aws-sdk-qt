@@ -46,7 +46,7 @@ StopDBInstanceResponse::StopDBInstanceResponse(
         const StopDBInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StopDBInstanceResponse(new StopDBInstanceResponsePrivate(this), parent)
+    : RDSResponse(new StopDBInstanceResponsePrivate(this), parent)
 {
     setRequest(new StopDBInstanceRequest(request));
     setReply(reply);

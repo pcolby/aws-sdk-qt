@@ -46,7 +46,7 @@ DeleteEnvironmentMembershipResponse::DeleteEnvironmentMembershipResponse(
         const DeleteEnvironmentMembershipRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteEnvironmentMembershipResponse(new DeleteEnvironmentMembershipResponsePrivate(this), parent)
+    : Cloud9Response(new DeleteEnvironmentMembershipResponsePrivate(this), parent)
 {
     setRequest(new DeleteEnvironmentMembershipRequest(request));
     setReply(reply);

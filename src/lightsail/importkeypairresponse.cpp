@@ -46,7 +46,7 @@ ImportKeyPairResponse::ImportKeyPairResponse(
         const ImportKeyPairRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ImportKeyPairResponse(new ImportKeyPairResponsePrivate(this), parent)
+    : LightsailResponse(new ImportKeyPairResponsePrivate(this), parent)
 {
     setRequest(new ImportKeyPairRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ ListDomainsResponse::ListDomainsResponse(
         const ListDomainsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListDomainsResponse(new ListDomainsResponsePrivate(this), parent)
+    : Route53DomainsResponse(new ListDomainsResponsePrivate(this), parent)
 {
     setRequest(new ListDomainsRequest(request));
     setReply(reply);

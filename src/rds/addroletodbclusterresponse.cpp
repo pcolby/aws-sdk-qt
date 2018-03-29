@@ -46,7 +46,7 @@ AddRoleToDBClusterResponse::AddRoleToDBClusterResponse(
         const AddRoleToDBClusterRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AddRoleToDBClusterResponse(new AddRoleToDBClusterResponsePrivate(this), parent)
+    : RDSResponse(new AddRoleToDBClusterResponsePrivate(this), parent)
 {
     setRequest(new AddRoleToDBClusterRequest(request));
     setReply(reply);

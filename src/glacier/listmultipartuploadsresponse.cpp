@@ -46,7 +46,7 @@ ListMultipartUploadsResponse::ListMultipartUploadsResponse(
         const ListMultipartUploadsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListMultipartUploadsResponse(new ListMultipartUploadsResponsePrivate(this), parent)
+    : GlacierResponse(new ListMultipartUploadsResponsePrivate(this), parent)
 {
     setRequest(new ListMultipartUploadsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ StartWorkspacesResponse::StartWorkspacesResponse(
         const StartWorkspacesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartWorkspacesResponse(new StartWorkspacesResponsePrivate(this), parent)
+    : WorkSpacesResponse(new StartWorkspacesResponsePrivate(this), parent)
 {
     setRequest(new StartWorkspacesRequest(request));
     setReply(reply);

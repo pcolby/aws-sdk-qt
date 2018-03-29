@@ -46,7 +46,7 @@ RegisterDomainResponse::RegisterDomainResponse(
         const RegisterDomainRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RegisterDomainResponse(new RegisterDomainResponsePrivate(this), parent)
+    : Route53DomainsResponse(new RegisterDomainResponsePrivate(this), parent)
 {
     setRequest(new RegisterDomainRequest(request));
     setReply(reply);

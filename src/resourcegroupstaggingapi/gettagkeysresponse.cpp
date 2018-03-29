@@ -46,7 +46,7 @@ GetTagKeysResponse::GetTagKeysResponse(
         const GetTagKeysRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetTagKeysResponse(new GetTagKeysResponsePrivate(this), parent)
+    : ResourceGroupsTaggingAPIResponse(new GetTagKeysResponsePrivate(this), parent)
 {
     setRequest(new GetTagKeysRequest(request));
     setReply(reply);

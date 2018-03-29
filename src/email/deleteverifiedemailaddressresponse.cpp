@@ -46,7 +46,7 @@ DeleteVerifiedEmailAddressResponse::DeleteVerifiedEmailAddressResponse(
         const DeleteVerifiedEmailAddressRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteVerifiedEmailAddressResponse(new DeleteVerifiedEmailAddressResponsePrivate(this), parent)
+    : SESResponse(new DeleteVerifiedEmailAddressResponsePrivate(this), parent)
 {
     setRequest(new DeleteVerifiedEmailAddressRequest(request));
     setReply(reply);

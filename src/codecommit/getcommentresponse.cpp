@@ -46,7 +46,7 @@ GetCommentResponse::GetCommentResponse(
         const GetCommentRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetCommentResponse(new GetCommentResponsePrivate(this), parent)
+    : CodeCommitResponse(new GetCommentResponsePrivate(this), parent)
 {
     setRequest(new GetCommentRequest(request));
     setReply(reply);

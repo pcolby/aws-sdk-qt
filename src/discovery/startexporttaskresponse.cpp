@@ -46,7 +46,7 @@ StartExportTaskResponse::StartExportTaskResponse(
         const StartExportTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartExportTaskResponse(new StartExportTaskResponsePrivate(this), parent)
+    : ApplicationDiscoveryServiceResponse(new StartExportTaskResponsePrivate(this), parent)
 {
     setRequest(new StartExportTaskRequest(request));
     setReply(reply);

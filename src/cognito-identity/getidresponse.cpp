@@ -46,7 +46,7 @@ GetIdResponse::GetIdResponse(
         const GetIdRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetIdResponse(new GetIdResponsePrivate(this), parent)
+    : CognitoIdentityResponse(new GetIdResponsePrivate(this), parent)
 {
     setRequest(new GetIdRequest(request));
     setReply(reply);

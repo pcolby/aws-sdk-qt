@@ -46,7 +46,7 @@ DescribeApplicationStateResponse::DescribeApplicationStateResponse(
         const DescribeApplicationStateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeApplicationStateResponse(new DescribeApplicationStateResponsePrivate(this), parent)
+    : MigrationHubResponse(new DescribeApplicationStateResponsePrivate(this), parent)
 {
     setRequest(new DescribeApplicationStateRequest(request));
     setReply(reply);

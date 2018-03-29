@@ -46,7 +46,7 @@ UploadSSHPublicKeyResponse::UploadSSHPublicKeyResponse(
         const UploadSSHPublicKeyRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UploadSSHPublicKeyResponse(new UploadSSHPublicKeyResponsePrivate(this), parent)
+    : IAMResponse(new UploadSSHPublicKeyResponsePrivate(this), parent)
 {
     setRequest(new UploadSSHPublicKeyRequest(request));
     setReply(reply);

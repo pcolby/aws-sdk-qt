@@ -46,7 +46,7 @@ CreateDetectorResponse::CreateDetectorResponse(
         const CreateDetectorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateDetectorResponse(new CreateDetectorResponsePrivate(this), parent)
+    : GuardDutyResponse(new CreateDetectorResponsePrivate(this), parent)
 {
     setRequest(new CreateDetectorRequest(request));
     setReply(reply);

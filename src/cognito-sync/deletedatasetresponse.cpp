@@ -46,7 +46,7 @@ DeleteDatasetResponse::DeleteDatasetResponse(
         const DeleteDatasetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDatasetResponse(new DeleteDatasetResponsePrivate(this), parent)
+    : CognitoSyncResponse(new DeleteDatasetResponsePrivate(this), parent)
 {
     setRequest(new DeleteDatasetRequest(request));
     setReply(reply);

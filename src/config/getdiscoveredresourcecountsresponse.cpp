@@ -46,7 +46,7 @@ GetDiscoveredResourceCountsResponse::GetDiscoveredResourceCountsResponse(
         const GetDiscoveredResourceCountsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetDiscoveredResourceCountsResponse(new GetDiscoveredResourceCountsResponsePrivate(this), parent)
+    : ConfigServiceResponse(new GetDiscoveredResourceCountsResponsePrivate(this), parent)
 {
     setRequest(new GetDiscoveredResourceCountsRequest(request));
     setReply(reply);

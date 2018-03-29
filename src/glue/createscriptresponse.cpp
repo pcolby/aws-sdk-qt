@@ -46,7 +46,7 @@ CreateScriptResponse::CreateScriptResponse(
         const CreateScriptRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateScriptResponse(new CreateScriptResponsePrivate(this), parent)
+    : GlueResponse(new CreateScriptResponsePrivate(this), parent)
 {
     setRequest(new CreateScriptRequest(request));
     setReply(reply);

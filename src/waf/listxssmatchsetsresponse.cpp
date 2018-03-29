@@ -46,7 +46,7 @@ ListXssMatchSetsResponse::ListXssMatchSetsResponse(
         const ListXssMatchSetsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListXssMatchSetsResponse(new ListXssMatchSetsResponsePrivate(this), parent)
+    : WAFResponse(new ListXssMatchSetsResponsePrivate(this), parent)
 {
     setRequest(new ListXssMatchSetsRequest(request));
     setReply(reply);

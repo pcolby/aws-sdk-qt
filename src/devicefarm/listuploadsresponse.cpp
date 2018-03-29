@@ -46,7 +46,7 @@ ListUploadsResponse::ListUploadsResponse(
         const ListUploadsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListUploadsResponse(new ListUploadsResponsePrivate(this), parent)
+    : DeviceFarmResponse(new ListUploadsResponsePrivate(this), parent)
 {
     setRequest(new ListUploadsRequest(request));
     setReply(reply);

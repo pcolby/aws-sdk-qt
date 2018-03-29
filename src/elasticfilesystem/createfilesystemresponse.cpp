@@ -46,7 +46,7 @@ CreateFileSystemResponse::CreateFileSystemResponse(
         const CreateFileSystemRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : CreateFileSystemResponse(new CreateFileSystemResponsePrivate(this), parent)
+    : EFSResponse(new CreateFileSystemResponsePrivate(this), parent)
 {
     setRequest(new CreateFileSystemRequest(request));
     setReply(reply);

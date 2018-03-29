@@ -46,7 +46,7 @@ PutBucketAclResponse::PutBucketAclResponse(
         const PutBucketAclRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PutBucketAclResponse(new PutBucketAclResponsePrivate(this), parent)
+    : S3Response(new PutBucketAclResponsePrivate(this), parent)
 {
     setRequest(new PutBucketAclRequest(request));
     setReply(reply);

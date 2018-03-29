@@ -46,7 +46,7 @@ MergePullRequestByFastForwardResponse::MergePullRequestByFastForwardResponse(
         const MergePullRequestByFastForwardRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : MergePullRequestByFastForwardResponse(new MergePullRequestByFastForwardResponsePrivate(this), parent)
+    : CodeCommitResponse(new MergePullRequestByFastForwardResponsePrivate(this), parent)
 {
     setRequest(new MergePullRequestByFastForwardRequest(request));
     setReply(reply);

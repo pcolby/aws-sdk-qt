@@ -46,7 +46,7 @@ ListResourceDefinitionsResponse::ListResourceDefinitionsResponse(
         const ListResourceDefinitionsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListResourceDefinitionsResponse(new ListResourceDefinitionsResponsePrivate(this), parent)
+    : GreengrassResponse(new ListResourceDefinitionsResponsePrivate(this), parent)
 {
     setRequest(new ListResourceDefinitionsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DeleteMountTargetResponse::DeleteMountTargetResponse(
         const DeleteMountTargetRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteMountTargetResponse(new DeleteMountTargetResponsePrivate(this), parent)
+    : EFSResponse(new DeleteMountTargetResponsePrivate(this), parent)
 {
     setRequest(new DeleteMountTargetRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ DescribeBundleResponse::DescribeBundleResponse(
         const DescribeBundleRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeBundleResponse(new DescribeBundleResponsePrivate(this), parent)
+    : MobileResponse(new DescribeBundleResponsePrivate(this), parent)
 {
     setRequest(new DescribeBundleRequest(request));
     setReply(reply);

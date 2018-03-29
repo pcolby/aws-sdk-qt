@@ -46,7 +46,7 @@ UpdateConfigurationResponse::UpdateConfigurationResponse(
         const UpdateConfigurationRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateConfigurationResponse(new UpdateConfigurationResponsePrivate(this), parent)
+    : MQResponse(new UpdateConfigurationResponsePrivate(this), parent)
 {
     setRequest(new UpdateConfigurationRequest(request));
     setReply(reply);

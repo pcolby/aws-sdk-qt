@@ -46,7 +46,7 @@ DeleteDBParameterGroupResponse::DeleteDBParameterGroupResponse(
         const DeleteDBParameterGroupRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDBParameterGroupResponse(new DeleteDBParameterGroupResponsePrivate(this), parent)
+    : RDSResponse(new DeleteDBParameterGroupResponsePrivate(this), parent)
 {
     setRequest(new DeleteDBParameterGroupRequest(request));
     setReply(reply);

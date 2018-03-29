@@ -46,7 +46,7 @@ DeleteDetectorResponse::DeleteDetectorResponse(
         const DeleteDetectorRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DeleteDetectorResponse(new DeleteDetectorResponsePrivate(this), parent)
+    : GuardDutyResponse(new DeleteDetectorResponsePrivate(this), parent)
 {
     setRequest(new DeleteDetectorRequest(request));
     setReply(reply);

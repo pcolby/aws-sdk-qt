@@ -46,7 +46,7 @@ DescribeAccountResponse::DescribeAccountResponse(
         const DescribeAccountRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeAccountResponse(new DescribeAccountResponsePrivate(this), parent)
+    : OrganizationsResponse(new DescribeAccountResponsePrivate(this), parent)
 {
     setRequest(new DescribeAccountRequest(request));
     setReply(reply);

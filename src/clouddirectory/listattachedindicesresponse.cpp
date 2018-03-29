@@ -46,7 +46,7 @@ ListAttachedIndicesResponse::ListAttachedIndicesResponse(
         const ListAttachedIndicesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListAttachedIndicesResponse(new ListAttachedIndicesResponsePrivate(this), parent)
+    : CloudDirectoryResponse(new ListAttachedIndicesResponsePrivate(this), parent)
 {
     setRequest(new ListAttachedIndicesRequest(request));
     setReply(reply);

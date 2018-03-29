@@ -46,7 +46,7 @@ ListResolversResponse::ListResolversResponse(
         const ListResolversRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListResolversResponse(new ListResolversResponsePrivate(this), parent)
+    : AppSyncResponse(new ListResolversResponsePrivate(this), parent)
 {
     setRequest(new ListResolversRequest(request));
     setReply(reply);

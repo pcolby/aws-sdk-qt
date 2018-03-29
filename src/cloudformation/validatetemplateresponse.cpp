@@ -46,7 +46,7 @@ ValidateTemplateResponse::ValidateTemplateResponse(
         const ValidateTemplateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ValidateTemplateResponse(new ValidateTemplateResponsePrivate(this), parent)
+    : CloudFormationResponse(new ValidateTemplateResponsePrivate(this), parent)
 {
     setRequest(new ValidateTemplateRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ RemoveIpRoutesResponse::RemoveIpRoutesResponse(
         const RemoveIpRoutesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : RemoveIpRoutesResponse(new RemoveIpRoutesResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new RemoveIpRoutesResponsePrivate(this), parent)
 {
     setRequest(new RemoveIpRoutesRequest(request));
     setReply(reply);

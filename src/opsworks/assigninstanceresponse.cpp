@@ -46,7 +46,7 @@ AssignInstanceResponse::AssignInstanceResponse(
         const AssignInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : AssignInstanceResponse(new AssignInstanceResponsePrivate(this), parent)
+    : OpsWorksResponse(new AssignInstanceResponsePrivate(this), parent)
 {
     setRequest(new AssignInstanceRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ IndexDocumentsResponse::IndexDocumentsResponse(
         const IndexDocumentsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : IndexDocumentsResponse(new IndexDocumentsResponsePrivate(this), parent)
+    : CloudSearchResponse(new IndexDocumentsResponsePrivate(this), parent)
 {
     setRequest(new IndexDocumentsRequest(request));
     setReply(reply);

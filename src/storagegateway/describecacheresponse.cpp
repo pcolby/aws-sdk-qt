@@ -46,7 +46,7 @@ DescribeCacheResponse::DescribeCacheResponse(
         const DescribeCacheRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeCacheResponse(new DescribeCacheResponsePrivate(this), parent)
+    : StorageGatewayResponse(new DescribeCacheResponsePrivate(this), parent)
 {
     setRequest(new DescribeCacheRequest(request));
     setReply(reply);

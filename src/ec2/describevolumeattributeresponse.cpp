@@ -46,7 +46,7 @@ DescribeVolumeAttributeResponse::DescribeVolumeAttributeResponse(
         const DescribeVolumeAttributeRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeVolumeAttributeResponse(new DescribeVolumeAttributeResponsePrivate(this), parent)
+    : EC2Response(new DescribeVolumeAttributeResponsePrivate(this), parent)
 {
     setRequest(new DescribeVolumeAttributeRequest(request));
     setReply(reply);

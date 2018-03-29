@@ -46,7 +46,7 @@ DescribeUploadBufferResponse::DescribeUploadBufferResponse(
         const DescribeUploadBufferRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeUploadBufferResponse(new DescribeUploadBufferResponsePrivate(this), parent)
+    : StorageGatewayResponse(new DescribeUploadBufferResponsePrivate(this), parent)
 {
     setRequest(new DescribeUploadBufferRequest(request));
     setReply(reply);

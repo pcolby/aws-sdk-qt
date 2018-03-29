@@ -46,7 +46,7 @@ ForgotPasswordResponse::ForgotPasswordResponse(
         const ForgotPasswordRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ForgotPasswordResponse(new ForgotPasswordResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new ForgotPasswordResponsePrivate(this), parent)
 {
     setRequest(new ForgotPasswordRequest(request));
     setReply(reply);

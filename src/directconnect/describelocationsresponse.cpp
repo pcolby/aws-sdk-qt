@@ -46,7 +46,7 @@ DescribeLocationsResponse::DescribeLocationsResponse(
         const DescribeLocationsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeLocationsResponse(new DescribeLocationsResponsePrivate(this), parent)
+    : DirectConnectResponse(new DescribeLocationsResponsePrivate(this), parent)
 {
     setRequest(new DescribeLocationsRequest(request));
     setReply(reply);

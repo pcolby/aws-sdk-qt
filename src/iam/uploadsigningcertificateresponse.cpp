@@ -46,7 +46,7 @@ UploadSigningCertificateResponse::UploadSigningCertificateResponse(
         const UploadSigningCertificateRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UploadSigningCertificateResponse(new UploadSigningCertificateResponsePrivate(this), parent)
+    : IAMResponse(new UploadSigningCertificateResponsePrivate(this), parent)
 {
     setRequest(new UploadSigningCertificateRequest(request));
     setReply(reply);

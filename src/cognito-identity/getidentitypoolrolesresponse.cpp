@@ -46,7 +46,7 @@ GetIdentityPoolRolesResponse::GetIdentityPoolRolesResponse(
         const GetIdentityPoolRolesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetIdentityPoolRolesResponse(new GetIdentityPoolRolesResponsePrivate(this), parent)
+    : CognitoIdentityResponse(new GetIdentityPoolRolesResponsePrivate(this), parent)
 {
     setRequest(new GetIdentityPoolRolesRequest(request));
     setReply(reply);

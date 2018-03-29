@@ -46,7 +46,7 @@ PollForActivityTaskResponse::PollForActivityTaskResponse(
         const PollForActivityTaskRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PollForActivityTaskResponse(new PollForActivityTaskResponsePrivate(this), parent)
+    : SWFResponse(new PollForActivityTaskResponsePrivate(this), parent)
 {
     setRequest(new PollForActivityTaskRequest(request));
     setReply(reply);

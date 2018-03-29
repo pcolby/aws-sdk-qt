@@ -46,7 +46,7 @@ DescribeCreateAccountStatusResponse::DescribeCreateAccountStatusResponse(
         const DescribeCreateAccountStatusRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeCreateAccountStatusResponse(new DescribeCreateAccountStatusResponsePrivate(this), parent)
+    : OrganizationsResponse(new DescribeCreateAccountStatusResponsePrivate(this), parent)
 {
     setRequest(new DescribeCreateAccountStatusRequest(request));
     setReply(reply);

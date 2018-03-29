@@ -46,7 +46,7 @@ StartInstanceResponse::StartInstanceResponse(
         const StartInstanceRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : StartInstanceResponse(new StartInstanceResponsePrivate(this), parent)
+    : OpsWorksResponse(new StartInstanceResponsePrivate(this), parent)
 {
     setRequest(new StartInstanceRequest(request));
     setReply(reply);

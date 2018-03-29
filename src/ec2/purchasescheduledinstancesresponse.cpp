@@ -46,7 +46,7 @@ PurchaseScheduledInstancesResponse::PurchaseScheduledInstancesResponse(
         const PurchaseScheduledInstancesRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : PurchaseScheduledInstancesResponse(new PurchaseScheduledInstancesResponsePrivate(this), parent)
+    : EC2Response(new PurchaseScheduledInstancesResponsePrivate(this), parent)
 {
     setRequest(new PurchaseScheduledInstancesRequest(request));
     setReply(reply);

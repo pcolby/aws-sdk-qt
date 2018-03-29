@@ -46,7 +46,7 @@ ListResourceServersResponse::ListResourceServersResponse(
         const ListResourceServersRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : ListResourceServersResponse(new ListResourceServersResponsePrivate(this), parent)
+    : CognitoIdentityProviderResponse(new ListResourceServersResponsePrivate(this), parent)
 {
     setRequest(new ListResourceServersRequest(request));
     setReply(reply);

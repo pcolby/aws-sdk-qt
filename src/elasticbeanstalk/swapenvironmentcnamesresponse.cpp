@@ -46,7 +46,7 @@ SwapEnvironmentCNAMEsResponse::SwapEnvironmentCNAMEsResponse(
         const SwapEnvironmentCNAMEsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : SwapEnvironmentCNAMEsResponse(new SwapEnvironmentCNAMEsResponsePrivate(this), parent)
+    : ElasticBeanstalkResponse(new SwapEnvironmentCNAMEsResponsePrivate(this), parent)
 {
     setRequest(new SwapEnvironmentCNAMEsRequest(request));
     setReply(reply);

@@ -46,7 +46,7 @@ GetSnapshotLimitsResponse::GetSnapshotLimitsResponse(
         const GetSnapshotLimitsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : GetSnapshotLimitsResponse(new GetSnapshotLimitsResponsePrivate(this), parent)
+    : DirectoryServiceResponse(new GetSnapshotLimitsResponsePrivate(this), parent)
 {
     setRequest(new GetSnapshotLimitsRequest(request));
     setReply(reply);

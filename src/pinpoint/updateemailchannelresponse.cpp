@@ -46,7 +46,7 @@ UpdateEmailChannelResponse::UpdateEmailChannelResponse(
         const UpdateEmailChannelRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : UpdateEmailChannelResponse(new UpdateEmailChannelResponsePrivate(this), parent)
+    : PinpointResponse(new UpdateEmailChannelResponsePrivate(this), parent)
 {
     setRequest(new UpdateEmailChannelRequest(request));
     setReply(reply);

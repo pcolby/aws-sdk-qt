@@ -46,7 +46,7 @@ DescribeDBClusterSnapshotsResponse::DescribeDBClusterSnapshotsResponse(
         const DescribeDBClusterSnapshotsRequest &request,
         QNetworkReply * const reply,
         QObject * const parent)
-    : DescribeDBClusterSnapshotsResponse(new DescribeDBClusterSnapshotsResponsePrivate(this), parent)
+    : RDSResponse(new DescribeDBClusterSnapshotsResponsePrivate(this), parent)
 {
     setRequest(new DescribeDBClusterSnapshotsRequest(request));
     setReply(reply);
