@@ -27,7 +27,7 @@
 #include <QUuid>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 /**
  * @class  AwsSignatureV3
@@ -359,5 +359,5 @@ void AwsSignatureV3Private::setDateHeader(QNetworkRequest &request, const QDateT
     }
 }
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws

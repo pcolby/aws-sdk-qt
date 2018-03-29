@@ -27,7 +27,7 @@
 #include <QUrl>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 /**
  * @class  AwsSignatureV0
@@ -224,5 +224,5 @@ QByteArray AwsSignatureV0Private::canonicalQuery(const QUrlQuery &query) const
                 (query.hasQueryItem(QLatin1String("Timestamp"))) ? "Timestamp" : "Expires"))).toUtf8();
 }
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws

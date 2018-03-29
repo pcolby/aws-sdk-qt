@@ -24,7 +24,7 @@
 #include <QDir>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 /**
  * @class  AwsAbstractSignature
@@ -272,5 +272,5 @@ bool AwsAbstractSignaturePrivate::setQueryItem(QUrlQuery &query, const QString &
  * @return The AWS Signature version implemented by this class.
  */
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws

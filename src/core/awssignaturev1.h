@@ -24,7 +24,7 @@
 #include "awssignaturev0.h"
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 class AwsSignatureV1Private;
 
@@ -41,7 +41,7 @@ private:
     friend class TestAwsSignatureV1;
 };
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
 
 #endif

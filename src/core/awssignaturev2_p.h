@@ -28,7 +28,7 @@
 #include <QUrl>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 class AwsSignatureV2;
 
@@ -51,7 +51,7 @@ private:
     friend class TestAwsSignatureV2;
 };
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
 
 #endif

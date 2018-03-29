@@ -27,7 +27,7 @@
 #include <QStringList>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 class AwsRegionPrivate;
 
@@ -110,7 +110,7 @@ private:
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(AwsRegion::Regions)
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
 
 #endif

@@ -31,7 +31,7 @@
 #include <QVariant>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 class AwsEndpoint;
 
@@ -93,7 +93,7 @@ private:
     friend class TestAwsSignatureV4;
 };
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
 
 #endif

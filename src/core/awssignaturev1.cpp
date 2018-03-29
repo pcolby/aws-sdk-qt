@@ -27,7 +27,7 @@
 #include <QUrl>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 /**
  * @class  AwsSignatureV1
@@ -161,5 +161,5 @@ bool AwsSignatureV1Private::caseInsensitiveLessThan(const QStringPair &pair1, co
     return (pair1.second.toLower() < pair2.second.toLower());
 }
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws

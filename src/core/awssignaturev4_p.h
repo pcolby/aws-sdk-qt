@@ -30,7 +30,7 @@
 #include <QUrlQuery>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 class AwsSignatureV4;
 
@@ -80,7 +80,7 @@ private:
     friend class TestAwsSignatureV4;
 };
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
 
 #endif

@@ -26,7 +26,7 @@
 #include <QObject>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 class AwsAbstractCredentialsPrivate;
 
@@ -64,7 +64,7 @@ signals:
 
 };
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
 
 #endif

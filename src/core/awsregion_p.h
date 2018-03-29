@@ -25,7 +25,7 @@
 #include <QtGlobal>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 class AwsRegion;
 
@@ -44,7 +44,7 @@ private:
     friend class TestAwsRegionPrivate;
 };
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
 
 #endif

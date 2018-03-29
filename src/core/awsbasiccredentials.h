@@ -23,7 +23,7 @@
 #include "awsabstractcredentials.h"
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 class AwsBasicCredentialsPrivate;
 
@@ -55,7 +55,7 @@ private:
 
 };
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
 
 #endif

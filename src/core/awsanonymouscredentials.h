@@ -23,7 +23,7 @@
 #include "awsabstractcredentials.h"
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 class QTAWS_EXPORT AwsAnonymousCredentials : public AwsAbstractCredentials {
     Q_OBJECT
@@ -40,7 +40,7 @@ private:
 
 };
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
 
 #endif

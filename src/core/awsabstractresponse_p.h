@@ -28,7 +28,7 @@
 class QNetworkReply;
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 class AwsAbstractRequest;
 class AwsAbstractResponse;
@@ -54,7 +54,7 @@ private:
 
 };
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
 
 #endif

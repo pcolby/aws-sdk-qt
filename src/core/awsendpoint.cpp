@@ -25,7 +25,7 @@
 #include <QMutexLocker>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 /**
  * @class  AwsEndpoint
@@ -699,5 +699,5 @@ void AwsEndpointPrivate::parseServices(QXmlStreamReader &xml)
     }
 }
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws

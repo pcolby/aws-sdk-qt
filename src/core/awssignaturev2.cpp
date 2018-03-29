@@ -26,7 +26,7 @@
 #include <QUrl>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 /**
  * @class  AwsSignatureV2
@@ -215,5 +215,5 @@ QByteArray AwsSignatureV2Private::signatureMethod(const QCryptographicHash::Algo
     }
 }
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws

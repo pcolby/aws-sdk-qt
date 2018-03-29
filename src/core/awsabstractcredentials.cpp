@@ -23,7 +23,7 @@
 #include <QDebug>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 /**
  * @class  AwsAbstractCredentials
@@ -238,5 +238,5 @@ AwsAbstractCredentialsPrivate::~AwsAbstractCredentialsPrivate()
 
 }
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws

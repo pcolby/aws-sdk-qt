@@ -29,7 +29,7 @@
 #include <QNetworkRequest>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 /**
  * @class  AwsAbstractClient
@@ -365,5 +365,5 @@ AwsAbstractClientPrivate::~AwsAbstractClientPrivate()
 
 }
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws

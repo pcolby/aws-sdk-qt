@@ -21,7 +21,7 @@
 #include "awsbasiccredentials_p.h"
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 /**
  * @class  AwsBasicCredentials
@@ -151,5 +151,5 @@ AwsBasicCredentialsPrivate::AwsBasicCredentialsPrivate(AwsBasicCredentials * con
 
 }
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws

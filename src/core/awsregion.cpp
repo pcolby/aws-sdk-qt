@@ -23,7 +23,7 @@
 #include <QDebug>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 /**
  * @class  AwsRegion
@@ -300,5 +300,5 @@ AwsRegionPrivate::AwsRegionPrivate(const int region, AwsRegion * const q)
 
 }
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws

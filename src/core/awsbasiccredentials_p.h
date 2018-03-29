@@ -25,7 +25,7 @@
 #include <QString>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 class AwsBasicCredentials;
 
@@ -44,7 +44,7 @@ private:
 
 };
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
 
 #endif

@@ -27,7 +27,7 @@
 #include <QNetworkRequest>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 /**
  * @class  AwsAbstractRequest
@@ -398,5 +398,5 @@ QNetworkReply *AwsAbstractRequestPrivate::put(QNetworkAccessManager &manager,
     return manager.put(request, q->data());
 }
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws

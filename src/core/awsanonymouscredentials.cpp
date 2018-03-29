@@ -20,7 +20,7 @@
 #include "awsanonymouscredentials.h"
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 /**
  * @class  AwsAnonymousCredentials
@@ -54,5 +54,5 @@ QString AwsAnonymousCredentials::token() const
     return QString();
 }
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws

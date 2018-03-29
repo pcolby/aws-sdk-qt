@@ -28,7 +28,7 @@ class QNetworkAccessManager;
 class QNetworkReply;
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 class AwsAbstractClientPrivate;
 class AwsAbstractCredentials;
@@ -73,7 +73,7 @@ private:
     friend class TestAwsAbstractClient;
 };
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
 
 #endif

@@ -27,7 +27,7 @@
 #include <QUrl>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 class AwsEndpointPrivate;
 
@@ -84,7 +84,7 @@ private:
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(AwsEndpoint::Transports)
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
 
 #endif

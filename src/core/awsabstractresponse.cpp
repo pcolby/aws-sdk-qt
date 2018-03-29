@@ -26,7 +26,7 @@
 #include <QXmlStreamReader>
 
 namespace QtAws {
-namespace Client {
+namespace Core {
 
 /**
  * @class  AwsAbstractResponse
@@ -502,5 +502,5 @@ AwsAbstractResponsePrivate::~AwsAbstractResponsePrivate()
 
 }
 
-} // namespace Client
+} // namespace Core
 } // namespace QtAws
