@@ -22,8 +22,32 @@
 #include <QDebug>
 #include <QDir>
 #include <QFileInfo>
+#include <QLoggingCategory>
 
 #include "generator.h"
+
+void configureLogging(const QCommandLineParser &parser)
+{
+    // Start with the Qt default message pattern (see qtbase:::qlogging.cpp:defaultPattern)
+    QString messagePattern = QStringLiteral("%{if-category}%{category}: %{endif}%{message}");
+
+    if (parser.isSet(QStringLiteral("debug"))) {
+        messagePattern.prepend(QStringLiteral("%{time process} %{type} "));
+        QLoggingCategory::defaultCategory()->setEnabled(QtDebugMsg, true);
+    }
+
+    if (!parser.isSet(QStringLiteral("no-color"))) {
+        messagePattern.prepend(QStringLiteral(
+      //"%{if-debug}D%{endif}"
+      //"%{if-info}\x1b[32m%{endif}"
+        "%{if-warning}\x1b[31m%{endif}"   // Red
+        "%{if-critical}\x1b31;1m%{endif}" // Red, bold
+        "%{if-fatal}31;1;5%{endif}"));    // Red, bold and blinking!
+        messagePattern.append(QStringLiteral("\x1b[0m"));
+    }
+
+    qSetMessagePattern(messagePattern);
+}
 
 int main(int argc, char *argv[])
 {
@@ -44,17 +68,20 @@ int main(int argc, char *argv[])
         {{QStringLiteral("a"), QStringLiteral("apis")},
           QStringLiteral("Read API descriptions from dir (default is %1)").arg(defaultTemplatesPath),
           QStringLiteral("dir"), defaultTemplatesPath},
+        {{QStringLiteral("d"), QStringLiteral("debug")}, QStringLiteral("Enable debug output")},
         {{QStringLiteral("f"), QStringLiteral("force")},
-         QStringLiteral("Dont prompt before generating files")},
+          QStringLiteral("Dont prompt before generating files")},
+        { QStringLiteral("no-color"), QStringLiteral("Do not color the output")},
         {{QStringLiteral("o"), QStringLiteral("output")},
-         QStringLiteral("Write output to dir (default is %1)").arg(defaultOutputPath),
-         QStringLiteral("dir"), defaultOutputPath},
+          QStringLiteral("Write output to dir (default is %1)").arg(defaultOutputPath),
+          QStringLiteral("dir"), defaultOutputPath},
     });
     parser.addPositionalArgument(
         QStringLiteral("services"),
         QStringLiteral("Services to generate, such as 'alexaforbusiness'; omit for all services"),
         QStringLiteral("[services...]"));
     parser.process(app);
+    configureLogging(parser);
 
     // Verify that the output directory exists.
     const QFileInfo outputDir(QDir::cleanPath(parser.value(QStringLiteral("output"))));
