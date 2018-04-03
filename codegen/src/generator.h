@@ -27,8 +27,8 @@ class Generator {
 public:
     explicit Generator(const QDir &outputDir);
 
-    bool generate(const QFileInfoList &descriptions);
-    bool generate(const QString &serviceFileName, const QJsonObject &description);
+    int generate(const QFileInfoList &descriptions);
+    int generate(const QString &serviceFileName, const QJsonObject &description);
 
 protected:
     static QStringList formatHtmlDocumentation(const QString &html);

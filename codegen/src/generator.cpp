@@ -49,8 +49,9 @@ Generator::Generator(const QDir &outputDir)
     }
 }
 
-bool Generator::generate(const QFileInfoList &descriptions)
+int Generator::generate(const QFileInfoList &descriptions)
 {
+    int count = 0;
     QStringList serviceFileNames;
     foreach (const QFileInfo &entry, descriptions) {
         QFile file(entry.absoluteFilePath());
@@ -58,18 +59,24 @@ bool Generator::generate(const QFileInfoList &descriptions)
         // <servce-name>-yyyy-mm-dd.normal.json
         Q_ASSERT(entry.fileName().endsWith(QLatin1String(".normal.json")));
         const QString serviceFileName = entry.fileName().chopped(23);
-        generate(serviceFileName, QJsonDocument::fromJson(file.readAll()).object());
+        const int thisCount = generate(serviceFileName, QJsonDocument::fromJson(file.readAll()).object());
+        if (thisCount < 0) {
+            return thisCount;
+        }
+        count += thisCount;
         serviceFileNames.append(serviceFileName);
     }
     serviceFileNames.sort();
 
     Grantlee::Context context;
     context.insert(QSL("ServiceNames"), serviceFileNames);
-    render(QSL("src.pro"), context, outputDir.absoluteFilePath(QSL("src.pro")));
-    return true;
+    if (!render(QSL("src.pro"), context, outputDir.absoluteFilePath(QSL("src.pro")))) {
+        return -1;
+    }
+    return ++count;
 }
 
-bool Generator::generate(const QString &serviceFileName,
+int Generator::generate(const QString &serviceFileName,
                          const QJsonObject &description)
 {
     qInfo() << "generating service" << serviceFileName;
@@ -123,9 +130,12 @@ bool Generator::generate(const QString &serviceFileName,
     sources.sort();
     context.insert(QSL("HeaderFiles"), headers);
     context.insert(QSL("SourceFiles"), sources);
-    render(QSL("service.pro"), context, projectDir, serviceFileName + QSL(".pro"));
+    if (!render(QSL("service.pro"), context, projectDir, serviceFileName + QSL(".pro"))) {
+        context.pop();
+        return -1;
+    }
     context.pop();
-    return true;
+    return headers.size() + sources.size() + 1;
 }
 
 QStringList Generator::formatHtmlDocumentation(const QString &html)
@@ -245,6 +255,10 @@ bool Generator::render(const QString &templateName, Grantlee::Context &context,
     QTextStream textStream(&file);
     NoEscapeStream noEscapeStream(&textStream);
     templates[templateName]->render(&noEscapeStream, &context);
+    if (templates[templateName]->error()) {
+        qInfo() << "failed to generate" << outputFileName << templates[templateName]->errorString();
+        return false;
+    }
     return true;
 }
 

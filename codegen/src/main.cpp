@@ -138,9 +138,9 @@ int main(int argc, char *argv[])
 
     // Generate code.
     Generator generator(outputDir.absoluteFilePath());
-    if (!generator.generate(descriptions))
-    {
-        return 3;
+    const int count = generator.generate(descriptions);
+    if (count >= 0) {
+        qInfo() << "Generated" << count << "files in" << outputDir.absoluteFilePath();
     }
-    return 0;
+    return (count > 0) ? 0 : 4;
 }
