@@ -50,6 +50,10 @@ int main(int argc, char *argv[])
          QStringLiteral("Write output to dir (default is %1)").arg(defaultOutputPath),
          QStringLiteral("dir"), defaultOutputPath},
     });
+    parser.addPositionalArgument(
+        QStringLiteral("services"),
+        QStringLiteral("Services to generate, such as 'alexaforbusiness'; omit for all services"),
+        QStringLiteral("[services...]"));
     parser.process(app);
 
     // Verify that the output directory exists.
@@ -60,31 +64,53 @@ int main(int argc, char *argv[])
         return 2;
     }
 
+    // Build a list of API descriptions to generate code from.
+    const QStringList serviceNames = parser.positionalArguments();
+    QFileInfoList descriptions = QDir(
+        parser.value(QStringLiteral("apis")), QLatin1String("*-???\?-?\?-??.normal.json"),
+        QDir::Name|QDir::IgnoreCase, QDir::Files|QDir::Readable).entryInfoList();
+    for (int i = 0; i < descriptions.size(); ++i) {
+        const QString serviceName = descriptions.at(i).fileName().chopped(23);
+        if ((!serviceNames.isEmpty()) && (!serviceNames.contains(serviceName))) {
+            qDebug() << "skipping" << descriptions.at(i).fileName();
+            descriptions.removeAt(i--);
+        } else if ((i > 0) && (serviceName == descriptions.at(i-1).fileName().chopped(23))) {
+            qDebug() << descriptions.at(i).fileName() << "supersedes" << descriptions.at(i-1).fileName();
+            descriptions.removeAt(--i);
+        }
+    }
+
+    // If services were specified on the command line, make sure they were all known services.
+    foreach (const QString &serviceName, serviceNames) {
+        bool found = false;
+        for (int i = 0; (!found) && (i < descriptions.size()); ++i) {
+            if (descriptions.at(i).fileName().chopped(23) == serviceName) {
+                found = true;
+            }
+        }
+        if (!found) {
+            qWarning() << "no API description found for service" << serviceName
+                       << "in" << outputDir.absoluteFilePath();
+            return 3;
+        }
+    }
+
+    // Verify that we found services to generate code for.
+    if (descriptions.isEmpty()) {
+        qWarning() << "no API descriptions found in" << outputDir.absoluteFilePath();
+        return 3;
+    }
+
     // Let the user know we're about to generate a lot of files.
     if (!parser.isSet(QStringLiteral("force"))) {
-        qInfo() << "About to generate a lots of files in" << outputDir.absoluteFilePath();
+        qInfo() << "About to generate a lot of files in" << outputDir.absoluteFilePath();
         qInfo() << "Press Enter to contine";
         QTextStream stream(stdin);
         stream.readLine();
     }
 
     // Generate code.
-    /// @todo Allow position arguments to specify individual APIs.
     Generator generator(outputDir.absoluteFilePath());
-    QFileInfoList descriptions = QDir(
-        parser.value(QStringLiteral("apis")), QLatin1String("*-???\?-?\?-??.normal.json"),
-        QDir::Name|QDir::IgnoreCase, QDir::Files|QDir::Readable).entryInfoList();
-    for (int i = 1; i < descriptions.size(); ++i) {
-        if (descriptions.at(i).fileName().chopped(23) == descriptions.at(i-1).fileName().chopped(23)) {
-            qInfo() << "skipping " << descriptions.at(i-1).fileName()
-                    << "superseded by" << descriptions.at(i).fileName();
-            descriptions.removeAt(--i);
-        }
-    }
-    if (descriptions.isEmpty()) {
-        qWarning() << "no API descriptiosn found in" << outputDir.absoluteFilePath();
-        return 3;
-    }
     if (!generator.generate(descriptions))
     {
         return 3;
