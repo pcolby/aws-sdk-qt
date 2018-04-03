@@ -25,4 +25,4 @@ LIBS += -lGrantlee_Templates
 VPATH += qrc src
 HEADERS += generator.h
 SOURCES += generator.cpp main.cpp
-RESOURCES += api-descriptions.qrc templates.qrc
+RESOURCES += templates.qrc
