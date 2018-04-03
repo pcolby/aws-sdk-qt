@@ -23,6 +23,8 @@
 #include "core/awssignaturev4.h"
 #include "createdevicepoolrequest.h"
 #include "createdevicepoolresponse.h"
+#include "createinstanceprofilerequest.h"
+#include "createinstanceprofileresponse.h"
 #include "createnetworkprofilerequest.h"
 #include "createnetworkprofileresponse.h"
 #include "createprojectrequest.h"
@@ -33,6 +35,8 @@
 #include "createuploadresponse.h"
 #include "deletedevicepoolrequest.h"
 #include "deletedevicepoolresponse.h"
+#include "deleteinstanceprofilerequest.h"
+#include "deleteinstanceprofileresponse.h"
 #include "deletenetworkprofilerequest.h"
 #include "deletenetworkprofileresponse.h"
 #include "deleteprojectrequest.h"
@@ -47,10 +51,14 @@
 #include "getaccountsettingsresponse.h"
 #include "getdevicerequest.h"
 #include "getdeviceresponse.h"
+#include "getdeviceinstancerequest.h"
+#include "getdeviceinstanceresponse.h"
 #include "getdevicepoolrequest.h"
 #include "getdevicepoolresponse.h"
 #include "getdevicepoolcompatibilityrequest.h"
 #include "getdevicepoolcompatibilityresponse.h"
+#include "getinstanceprofilerequest.h"
+#include "getinstanceprofileresponse.h"
 #include "getjobrequest.h"
 #include "getjobresponse.h"
 #include "getnetworkprofilerequest.h"
@@ -73,10 +81,14 @@
 #include "installtoremoteaccesssessionresponse.h"
 #include "listartifactsrequest.h"
 #include "listartifactsresponse.h"
+#include "listdeviceinstancesrequest.h"
+#include "listdeviceinstancesresponse.h"
 #include "listdevicepoolsrequest.h"
 #include "listdevicepoolsresponse.h"
 #include "listdevicesrequest.h"
 #include "listdevicesresponse.h"
+#include "listinstanceprofilesrequest.h"
+#include "listinstanceprofilesresponse.h"
 #include "listjobsrequest.h"
 #include "listjobsresponse.h"
 #include "listnetworkprofilesrequest.h"
@@ -113,8 +125,12 @@
 #include "stopremoteaccesssessionresponse.h"
 #include "stoprunrequest.h"
 #include "stoprunresponse.h"
+#include "updatedeviceinstancerequest.h"
+#include "updatedeviceinstanceresponse.h"
 #include "updatedevicepoolrequest.h"
 #include "updatedevicepoolresponse.h"
+#include "updateinstanceprofilerequest.h"
+#include "updateinstanceprofileresponse.h"
 #include "updatenetworkprofilerequest.h"
 #include "updatenetworkprofileresponse.h"
 #include "updateprojectrequest.h"
@@ -208,6 +224,20 @@ CreateDevicePoolResponse * DeviceFarmClient::createDevicePool(const CreateDevice
 }
 
 /**
+ * Creates a profile that can be applied to one or more private fleet device
+ *
+ * @param  request Request to send to AWS Device Farm.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+CreateInstanceProfileResponse * DeviceFarmClient::createInstanceProfile(const CreateInstanceProfileRequest &request)
+{
+    return qobject_cast<CreateInstanceProfileResponse *>(send(request));
+}
+
+/**
  * Creates a network
  *
  * @param  request Request to send to AWS Device Farm.
@@ -275,6 +305,20 @@ CreateUploadResponse * DeviceFarmClient::createUpload(const CreateUploadRequest 
 DeleteDevicePoolResponse * DeviceFarmClient::deleteDevicePool(const DeleteDevicePoolRequest &request)
 {
     return qobject_cast<DeleteDevicePoolResponse *>(send(request));
+}
+
+/**
+ * Deletes a profile that can be applied to one or more private device
+ *
+ * @param  request Request to send to AWS Device Farm.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DeleteInstanceProfileResponse * DeviceFarmClient::deleteInstanceProfile(const DeleteInstanceProfileRequest &request)
+{
+    return qobject_cast<DeleteInstanceProfileResponse *>(send(request));
 }
 
 /**
@@ -384,6 +428,20 @@ GetDeviceResponse * DeviceFarmClient::getDevice(const GetDeviceRequest &request)
 }
 
 /**
+ * Returns information about a device instance belonging to a private device
+ *
+ * @param  request Request to send to AWS Device Farm.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetDeviceInstanceResponse * DeviceFarmClient::getDeviceInstance(const GetDeviceInstanceRequest &request)
+{
+    return qobject_cast<GetDeviceInstanceResponse *>(send(request));
+}
+
+/**
  * Gets information about a device
  *
  * @param  request Request to send to AWS Device Farm.
@@ -409,6 +467,20 @@ GetDevicePoolResponse * DeviceFarmClient::getDevicePool(const GetDevicePoolReque
 GetDevicePoolCompatibilityResponse * DeviceFarmClient::getDevicePoolCompatibility(const GetDevicePoolCompatibilityRequest &request)
 {
     return qobject_cast<GetDevicePoolCompatibilityResponse *>(send(request));
+}
+
+/**
+ * Returns information about the specified instance
+ *
+ * @param  request Request to send to AWS Device Farm.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetInstanceProfileResponse * DeviceFarmClient::getInstanceProfile(const GetInstanceProfileRequest &request)
+{
+    return qobject_cast<GetInstanceProfileResponse *>(send(request));
 }
 
 /**
@@ -571,6 +643,20 @@ ListArtifactsResponse * DeviceFarmClient::listArtifacts(const ListArtifactsReque
 }
 
 /**
+ * Returns information about the private device instances associated with one or more AWS
+ *
+ * @param  request Request to send to AWS Device Farm.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+ListDeviceInstancesResponse * DeviceFarmClient::listDeviceInstances(const ListDeviceInstancesRequest &request)
+{
+    return qobject_cast<ListDeviceInstancesResponse *>(send(request));
+}
+
+/**
  * Gets information about device
  *
  * @param  request Request to send to AWS Device Farm.
@@ -596,6 +682,20 @@ ListDevicePoolsResponse * DeviceFarmClient::listDevicePools(const ListDevicePool
 ListDevicesResponse * DeviceFarmClient::listDevices(const ListDevicesRequest &request)
 {
     return qobject_cast<ListDevicesResponse *>(send(request));
+}
+
+/**
+ * Returns information about all the instance profiles in an AWS
+ *
+ * @param  request Request to send to AWS Device Farm.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+ListInstanceProfilesResponse * DeviceFarmClient::listInstanceProfiles(const ListInstanceProfilesRequest &request)
+{
+    return qobject_cast<ListInstanceProfilesResponse *>(send(request));
 }
 
 /**
@@ -872,6 +972,20 @@ StopRunResponse * DeviceFarmClient::stopRun(const StopRunRequest &request)
 }
 
 /**
+ * Updates information about an existing private device
+ *
+ * @param  request Request to send to AWS Device Farm.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+UpdateDeviceInstanceResponse * DeviceFarmClient::updateDeviceInstance(const UpdateDeviceInstanceRequest &request)
+{
+    return qobject_cast<UpdateDeviceInstanceResponse *>(send(request));
+}
+
+/**
  * Modifies the name, description, and rules in a device pool given the attributes and the pool ARN. Rule updates are
  * all-or-nothing, meaning they can only be updated as a whole (or not at
  *
@@ -884,6 +998,20 @@ StopRunResponse * DeviceFarmClient::stopRun(const StopRunRequest &request)
 UpdateDevicePoolResponse * DeviceFarmClient::updateDevicePool(const UpdateDevicePoolRequest &request)
 {
     return qobject_cast<UpdateDevicePoolResponse *>(send(request));
+}
+
+/**
+ * Updates information about an existing private device instance
+ *
+ * @param  request Request to send to AWS Device Farm.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+UpdateInstanceProfileResponse * DeviceFarmClient::updateInstanceProfile(const UpdateInstanceProfileRequest &request)
+{
+    return qobject_cast<UpdateInstanceProfileResponse *>(send(request));
 }
 
 /**

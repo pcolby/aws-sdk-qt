@@ -124,6 +124,12 @@ TranslateClient::TranslateClient(
  *
  * Spanish
  *
+ * (es> </li> </ul>
+ *
+ * To have Amazon Translate determine the source language of your text, you can specify <code>auto</code> in the
+ * <code>SourceLanguageCode</code> field. If you specify <code>auto</code>, Amazon Translate will call Amazon Comprehend to
+ * determine the source
+ *
  * @param  request Request to send to Amazon Translate.
  *
  * @return A pointer to a related response object.

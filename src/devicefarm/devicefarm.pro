@@ -14,6 +14,10 @@ HEADERS += \
     createdevicepoolrequest_p.h \
     createdevicepoolresponse.h \
     createdevicepoolresponse_p.h \
+    createinstanceprofilerequest.h \
+    createinstanceprofilerequest_p.h \
+    createinstanceprofileresponse.h \
+    createinstanceprofileresponse_p.h \
     createnetworkprofilerequest.h \
     createnetworkprofilerequest_p.h \
     createnetworkprofileresponse.h \
@@ -34,6 +38,10 @@ HEADERS += \
     deletedevicepoolrequest_p.h \
     deletedevicepoolresponse.h \
     deletedevicepoolresponse_p.h \
+    deleteinstanceprofilerequest.h \
+    deleteinstanceprofilerequest_p.h \
+    deleteinstanceprofileresponse.h \
+    deleteinstanceprofileresponse_p.h \
     deletenetworkprofilerequest.h \
     deletenetworkprofilerequest_p.h \
     deletenetworkprofileresponse.h \
@@ -64,6 +72,10 @@ HEADERS += \
     getaccountsettingsrequest_p.h \
     getaccountsettingsresponse.h \
     getaccountsettingsresponse_p.h \
+    getdeviceinstancerequest.h \
+    getdeviceinstancerequest_p.h \
+    getdeviceinstanceresponse.h \
+    getdeviceinstanceresponse_p.h \
     getdevicepoolcompatibilityrequest.h \
     getdevicepoolcompatibilityrequest_p.h \
     getdevicepoolcompatibilityresponse.h \
@@ -76,6 +88,10 @@ HEADERS += \
     getdevicerequest_p.h \
     getdeviceresponse.h \
     getdeviceresponse_p.h \
+    getinstanceprofilerequest.h \
+    getinstanceprofilerequest_p.h \
+    getinstanceprofileresponse.h \
+    getinstanceprofileresponse_p.h \
     getjobrequest.h \
     getjobrequest_p.h \
     getjobresponse.h \
@@ -120,6 +136,10 @@ HEADERS += \
     listartifactsrequest_p.h \
     listartifactsresponse.h \
     listartifactsresponse_p.h \
+    listdeviceinstancesrequest.h \
+    listdeviceinstancesrequest_p.h \
+    listdeviceinstancesresponse.h \
+    listdeviceinstancesresponse_p.h \
     listdevicepoolsrequest.h \
     listdevicepoolsrequest_p.h \
     listdevicepoolsresponse.h \
@@ -128,6 +148,10 @@ HEADERS += \
     listdevicesrequest_p.h \
     listdevicesresponse.h \
     listdevicesresponse_p.h \
+    listinstanceprofilesrequest.h \
+    listinstanceprofilesrequest_p.h \
+    listinstanceprofilesresponse.h \
+    listinstanceprofilesresponse_p.h \
     listjobsrequest.h \
     listjobsrequest_p.h \
     listjobsresponse.h \
@@ -200,10 +224,18 @@ HEADERS += \
     stoprunrequest_p.h \
     stoprunresponse.h \
     stoprunresponse_p.h \
+    updatedeviceinstancerequest.h \
+    updatedeviceinstancerequest_p.h \
+    updatedeviceinstanceresponse.h \
+    updatedeviceinstanceresponse_p.h \
     updatedevicepoolrequest.h \
     updatedevicepoolrequest_p.h \
     updatedevicepoolresponse.h \
     updatedevicepoolresponse_p.h \
+    updateinstanceprofilerequest.h \
+    updateinstanceprofilerequest_p.h \
+    updateinstanceprofileresponse.h \
+    updateinstanceprofileresponse_p.h \
     updatenetworkprofilerequest.h \
     updatenetworkprofilerequest_p.h \
     updatenetworkprofileresponse.h \
@@ -216,6 +248,8 @@ HEADERS += \
 SOURCES += \
     createdevicepoolrequest.cpp \
     createdevicepoolresponse.cpp \
+    createinstanceprofilerequest.cpp \
+    createinstanceprofileresponse.cpp \
     createnetworkprofilerequest.cpp \
     createnetworkprofileresponse.cpp \
     createprojectrequest.cpp \
@@ -226,6 +260,8 @@ SOURCES += \
     createuploadresponse.cpp \
     deletedevicepoolrequest.cpp \
     deletedevicepoolresponse.cpp \
+    deleteinstanceprofilerequest.cpp \
+    deleteinstanceprofileresponse.cpp \
     deletenetworkprofilerequest.cpp \
     deletenetworkprofileresponse.cpp \
     deleteprojectrequest.cpp \
@@ -241,12 +277,16 @@ SOURCES += \
     devicefarmresponse.cpp \
     getaccountsettingsrequest.cpp \
     getaccountsettingsresponse.cpp \
+    getdeviceinstancerequest.cpp \
+    getdeviceinstanceresponse.cpp \
     getdevicepoolcompatibilityrequest.cpp \
     getdevicepoolcompatibilityresponse.cpp \
     getdevicepoolrequest.cpp \
     getdevicepoolresponse.cpp \
     getdevicerequest.cpp \
     getdeviceresponse.cpp \
+    getinstanceprofilerequest.cpp \
+    getinstanceprofileresponse.cpp \
     getjobrequest.cpp \
     getjobresponse.cpp \
     getnetworkprofilerequest.cpp \
@@ -269,10 +309,14 @@ SOURCES += \
     installtoremoteaccesssessionresponse.cpp \
     listartifactsrequest.cpp \
     listartifactsresponse.cpp \
+    listdeviceinstancesrequest.cpp \
+    listdeviceinstancesresponse.cpp \
     listdevicepoolsrequest.cpp \
     listdevicepoolsresponse.cpp \
     listdevicesrequest.cpp \
     listdevicesresponse.cpp \
+    listinstanceprofilesrequest.cpp \
+    listinstanceprofilesresponse.cpp \
     listjobsrequest.cpp \
     listjobsresponse.cpp \
     listnetworkprofilesrequest.cpp \
@@ -309,8 +353,12 @@ SOURCES += \
     stopremoteaccesssessionresponse.cpp \
     stoprunrequest.cpp \
     stoprunresponse.cpp \
+    updatedeviceinstancerequest.cpp \
+    updatedeviceinstanceresponse.cpp \
     updatedevicepoolrequest.cpp \
     updatedevicepoolresponse.cpp \
+    updateinstanceprofilerequest.cpp \
+    updateinstanceprofileresponse.cpp \
     updatenetworkprofilerequest.cpp \
     updatenetworkprofileresponse.cpp \
     updateprojectrequest.cpp \
