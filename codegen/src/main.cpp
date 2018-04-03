@@ -40,9 +40,9 @@ void configureLogging(const QCommandLineParser &parser)
         messagePattern.prepend(QStringLiteral(
       //"%{if-debug}D%{endif}"
       //"%{if-info}\x1b[32m%{endif}"
-        "%{if-warning}\x1b[31m%{endif}"   // Red
-        "%{if-critical}\x1b31;1m%{endif}" // Red, bold
-        "%{if-fatal}31;1;5%{endif}"));    // Red, bold and blinking!
+        "%{if-warning}\x1b[35m%{endif}" // Magenta
+        "%{if-critical}\x1b31m%{endif}" // Red
+        "%{if-fatal}31;1%{endif}"));    // Red and bold
         messagePattern.append(QStringLiteral("\x1b[0m"));
     }
 
@@ -130,7 +130,7 @@ int main(int argc, char *argv[])
 
     // Let the user know we're about to generate a lot of files.
     if (!parser.isSet(QStringLiteral("force"))) {
-        qInfo() << "About to generate a lot of files in" << outputDir.absoluteFilePath();
+        qWarning() << "About to generate a lot of files in" << outputDir.absoluteFilePath();
         qInfo() << "Press Enter to contine";
         QTextStream stream(stdin);
         stream.readLine();
