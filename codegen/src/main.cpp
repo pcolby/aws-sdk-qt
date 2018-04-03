@@ -32,7 +32,7 @@ void configureLogging(const QCommandLineParser &parser)
     QString messagePattern = QStringLiteral("%{if-category}%{category}: %{endif}%{message}");
 
     if (parser.isSet(QStringLiteral("debug"))) {
-        messagePattern.prepend(QStringLiteral("%{time process} %{type} "));
+        messagePattern.prepend(QStringLiteral("%{time process} %{type} %{function} "));
         QLoggingCategory::defaultCategory()->setEnabled(QtDebugMsg, true);
     }
 

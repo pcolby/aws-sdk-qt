@@ -2,6 +2,9 @@
 TEMPLATE = app
 QT -= gui
 
+# Enable message log contexts (file, line, function).
+DEFINES += QT_MESSAGELOGCONTEXT
+
 # Disable automatic ASCII conversions.
 DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 
