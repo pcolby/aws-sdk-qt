@@ -27,6 +27,8 @@
 #include "deletecertificateresponse.h"
 #include "describecertificaterequest.h"
 #include "describecertificateresponse.h"
+#include "exportcertificaterequest.h"
+#include "exportcertificateresponse.h"
 #include "getcertificaterequest.h"
 #include "getcertificateresponse.h"
 #include "importcertificaterequest.h"
@@ -62,8 +64,8 @@ namespace ACM {
  * documentation>
  *
  * You can use ACM to manage SSL/TLS certificates for your AWS-based websites and applications. For general information
- * about using ACM, see the <a href="http://docs.aws.amazon.com/acm/latest/userguide/"> <i>AWS Certificate Manager User
- * Guide</i>
+ * about using ACM, see the <a href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/"> <i>AWS
+ * Certificate Manager User Guide</i>
  */
 
 /**
@@ -136,7 +138,7 @@ AcmClient::AcmClient(
  * certificates. Similarly, you can apply the same tag to multiple resources if you want to specify a relationship among
  * those resources. For example, you can add the same tag to an ACM certificate and an Elastic Load Balancing load balancer
  * to indicate that they are both used by the same website. For more information, see <a
- * href="http://docs.aws.amazon.com/acm/latest/userguide/tags.html">Tagging ACM certificates</a>.
+ * href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/tags.html">Tagging ACM certificates</a>.
  *
  * </p
  *
@@ -190,6 +192,27 @@ DescribeCertificateResponse * AcmClient::describeCertificate(const DescribeCerti
 }
 
 /**
+ * Exports a certificate for use anywhere. You can export the certificate, the certificate chain, and the encrypted private
+ * key associated with the public key embedded in the certificate. You must store the private key securely. The private key
+ * is a 2048 bit RSA key. You must provide a passphrase for the private key when exporting it. You can use the following
+ * OpenSSL command to decrypt it later. Provide the passphrase when prompted.
+ *
+ * </p
+ *
+ * <code>openssl rsa -in encrypted_key.pem -out decrypted_key.pem</code>
+ *
+ * @param  request Request to send to AWS Certificate Manager.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+ExportCertificateResponse * AcmClient::exportCertificate(const ExportCertificateRequest &request)
+{
+    return qobject_cast<ExportCertificateResponse *>(send(request));
+}
+
+/**
  * Retrieves a certificate specified by an ARN and its certificate chain . The chain is an ordered list of certificates
  * that contains the end entity certificate, intermediate certificates of subordinate CAs, and the root certificate in that
  * order. The certificate and certificate chain are base64 encoded. If you want to decode the certificate to see the
@@ -208,16 +231,17 @@ GetCertificateResponse * AcmClient::getCertificate(const GetCertificateRequest &
 
 /**
  * Imports a certificate into AWS Certificate Manager (ACM) to use with services that are integrated with ACM. Note that <a
- * href="http://docs.aws.amazon.com/acm/latest/userguide/acm-services.html">integrated services</a> allow only certificate
- * types and keys they support to be associated with their resources. Further, their support differs depending on whether
- * the certificate is imported into IAM or into ACM. For more information, see the documentation for each service. For more
- * information about importing certificates into ACM, see <a
- * href="http://docs.aws.amazon.com/acm/latest/userguide/import-certificate.html">Importing Certificates</a> in the <i>AWS
- * Certificate Manager User Guide</i>.
+ * href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/acm-services.html">integrated
+ * services</a> allow only certificate types and keys they support to be associated with their resources. Further, their
+ * support differs depending on whether the certificate is imported into IAM or into ACM. For more information, see the
+ * documentation for each service. For more information about importing certificates into ACM, see <a
+ * href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/import-certificate.html">Importing
+ * Certificates</a> in the <i>AWS Certificate Manager User Guide</i>.
  *
  * </p <note>
  *
- * ACM does not provide <a href="http://docs.aws.amazon.com/acm/latest/userguide/acm-renewal.html">managed renewal</a> for
+ * ACM does not provide <a
+ * href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/acm-renewal.html">managed renewal</a> for
  * certificates that you
  *
  * import> </note>
@@ -344,16 +368,18 @@ RemoveTagsFromCertificateResponse * AcmClient::removeTagsFromCertificate(const R
  * </p
  *
  * Each domain name that you specify must be validated to verify that you own or control the domain. You can use <a
- * href="http://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-dns.html">DNS validation</a> or <a
- * href="http://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html">email validation</a>. We recommend
- * that you use DNS validation.
+ * href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/gs-acm-validate-dns.html">DNS
+ * validation</a> or <a
+ * href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/gs-acm-validate-email.html">email
+ * validation</a>. We recommend that you use DNS validation.
  *
  * </p
  *
  * If you choose email validation, email is sent to the domain owner to request approval to issue the certificate. Email is
  * sent to three registered contact addresses in the WHOIS database and to five common system administration addresses
  * formed from the <code>DomainName</code> you enter or the optional <code>ValidationDomain</code> parameter. For more
- * information, see <a href="http://docs.aws.amazon.com/acm/latest/userguide/gs-acm-validate-email.html">Validate with
+ * information, see <a
+ * href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/gs-acm-validate-email.html">Validate with
  * Email</a>.
  *
  * </p
@@ -379,7 +405,8 @@ RequestCertificateResponse * AcmClient::requestCertificate(const RequestCertific
  * resent within 72 hours of requesting the ACM certificate. If more than 72 hours have elapsed since your original request
  * or since your last attempt to resend validation mail, you must request a new certificate. For more information about
  * setting up your contact email addresses, see <a
- * href="http://docs.aws.amazon.com/acm/latest/userguide/setup-email.html">Configure Email for your Domain</a>.
+ * href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/setup-email.html">Configure Email for
+ * your Domain</a>.
  *
  * @param  request Request to send to AWS Certificate Manager.
  *
@@ -395,8 +422,8 @@ ResendValidationEmailResponse * AcmClient::resendValidationEmail(const ResendVal
 /**
  * Updates a certificate. Currently, you can use this function to specify whether to opt in to or out of recording your
  * certificate in a certificate transparency log. For more information, see <a
- * href="http://docs.aws.amazon.com/acm/latest/userguide/acm-bestpractices.html#best-practices-transparency"> Opting Out of
- * Certificate Transparency Logging</a>.
+ * href="http://docs.aws.amazon.com/http:/docs.aws.amazon.comacm/latest/userguide/acm-bestpractices.html#best-practices-transparency">
+ * Opting Out of Certificate Transparency Logging</a>.
  *
  * @param  request Request to send to AWS Certificate Manager.
  *

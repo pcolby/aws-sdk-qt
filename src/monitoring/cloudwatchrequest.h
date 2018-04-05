@@ -45,6 +45,7 @@ public:
         DisableAlarmActionsAction,
         EnableAlarmActionsAction,
         GetDashboardAction,
+        GetMetricDataAction,
         GetMetricStatisticsAction,
         ListDashboardsAction,
         ListMetricsAction,

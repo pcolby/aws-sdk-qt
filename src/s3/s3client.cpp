@@ -170,6 +170,8 @@
 #include "putobjecttaggingresponse.h"
 #include "restoreobjectrequest.h"
 #include "restoreobjectresponse.h"
+#include "selectobjectcontentrequest.h"
+#include "selectobjectcontentresponse.h"
 #include "uploadpartrequest.h"
 #include "uploadpartresponse.h"
 #include "uploadpartcopyrequest.h"
@@ -1237,6 +1239,22 @@ PutObjectTaggingResponse * S3Client::putObjectTagging(const PutObjectTaggingRequ
 RestoreObjectResponse * S3Client::restoreObject(const RestoreObjectRequest &request)
 {
     return qobject_cast<RestoreObjectResponse *>(send(request));
+}
+
+/**
+ * This operation filters the contents of an Amazon S3 object based on a simple Structured Query Language (SQL) statement.
+ * In the request, along with the SQL expression, you must also specify a data serialization format (JSON or CSV) of the
+ * object. Amazon S3 uses this to parse object data into records, and returns only records that match the specified SQL
+ *
+ * @param  request Request to send to Amazon Simple Storage Service.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+SelectObjectContentResponse * S3Client::selectObjectContent(const SelectObjectContentRequest &request)
+{
+    return qobject_cast<SelectObjectContentResponse *>(send(request));
 }
 
 /**

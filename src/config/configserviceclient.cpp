@@ -23,16 +23,26 @@
 #include "core/awssignaturev4.h"
 #include "batchgetresourceconfigrequest.h"
 #include "batchgetresourceconfigresponse.h"
+#include "deleteaggregationauthorizationrequest.h"
+#include "deleteaggregationauthorizationresponse.h"
 #include "deleteconfigrulerequest.h"
 #include "deleteconfigruleresponse.h"
+#include "deleteconfigurationaggregatorrequest.h"
+#include "deleteconfigurationaggregatorresponse.h"
 #include "deleteconfigurationrecorderrequest.h"
 #include "deleteconfigurationrecorderresponse.h"
 #include "deletedeliverychannelrequest.h"
 #include "deletedeliverychannelresponse.h"
 #include "deleteevaluationresultsrequest.h"
 #include "deleteevaluationresultsresponse.h"
+#include "deletependingaggregationrequestrequest.h"
+#include "deletependingaggregationrequestresponse.h"
 #include "deliverconfigsnapshotrequest.h"
 #include "deliverconfigsnapshotresponse.h"
+#include "describeaggregatecompliancebyconfigrulesrequest.h"
+#include "describeaggregatecompliancebyconfigrulesresponse.h"
+#include "describeaggregationauthorizationsrequest.h"
+#include "describeaggregationauthorizationsresponse.h"
 #include "describecompliancebyconfigrulerequest.h"
 #include "describecompliancebyconfigruleresponse.h"
 #include "describecompliancebyresourcerequest.h"
@@ -41,6 +51,10 @@
 #include "describeconfigruleevaluationstatusresponse.h"
 #include "describeconfigrulesrequest.h"
 #include "describeconfigrulesresponse.h"
+#include "describeconfigurationaggregatorsourcesstatusrequest.h"
+#include "describeconfigurationaggregatorsourcesstatusresponse.h"
+#include "describeconfigurationaggregatorsrequest.h"
+#include "describeconfigurationaggregatorsresponse.h"
 #include "describeconfigurationrecorderstatusrequest.h"
 #include "describeconfigurationrecorderstatusresponse.h"
 #include "describeconfigurationrecordersrequest.h"
@@ -49,6 +63,12 @@
 #include "describedeliverychannelstatusresponse.h"
 #include "describedeliverychannelsrequest.h"
 #include "describedeliverychannelsresponse.h"
+#include "describependingaggregationrequestsrequest.h"
+#include "describependingaggregationrequestsresponse.h"
+#include "getaggregatecompliancedetailsbyconfigrulerequest.h"
+#include "getaggregatecompliancedetailsbyconfigruleresponse.h"
+#include "getaggregateconfigrulecompliancesummaryrequest.h"
+#include "getaggregateconfigrulecompliancesummaryresponse.h"
 #include "getcompliancedetailsbyconfigrulerequest.h"
 #include "getcompliancedetailsbyconfigruleresponse.h"
 #include "getcompliancedetailsbyresourcerequest.h"
@@ -62,8 +82,12 @@
 #include "getresourceconfighistoryresponse.h"
 #include "listdiscoveredresourcesrequest.h"
 #include "listdiscoveredresourcesresponse.h"
+#include "putaggregationauthorizationrequest.h"
+#include "putaggregationauthorizationresponse.h"
 #include "putconfigrulerequest.h"
 #include "putconfigruleresponse.h"
+#include "putconfigurationaggregatorrequest.h"
+#include "putconfigurationaggregatorresponse.h"
 #include "putconfigurationrecorderrequest.h"
 #include "putconfigurationrecorderresponse.h"
 #include "putdeliverychannelrequest.h"
@@ -93,7 +117,7 @@ namespace ConfigService {
  * AWS Config provides a way to keep track of the configurations of all the AWS resources associated with your AWS account.
  * You can use AWS Config to get the current and historical configurations of each AWS resource and also to get information
  * about the relationship between the resources. An AWS resource can be an Amazon Compute Cloud (Amazon EC2) instance, an
- * Elastic Block Store (EBS) volume, an Elastic network Interface (ENI), or a security group. For a complete list of
+ * Elastic Block Store (EBS) volume, an elastic network Interface (ENI), or a security group. For a complete list of
  * resources currently supported by AWS Config, see <a
  * href="http://docs.aws.amazon.com/config/latest/developerguide/resource-config-reference.html#supported-resources">Supported
  * AWS
@@ -101,24 +125,16 @@ namespace ConfigService {
  * Resources</a>>
  *
  * You can access and manage AWS Config through the AWS Management Console, the AWS Command Line Interface (AWS CLI), the
- * AWS Config API, or the AWS SDKs for AWS
- *
- * Confi>
- *
- * This reference guide contains documentation for the AWS Config API and the AWS CLI commands that you can use to manage
- * AWS
- *
- * Config>
- *
- * The AWS Config API uses the Signature Version 4 protocol for signing requests. For more information about how to sign a
- * request with this protocol, see <a
- * href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing
- *
- * Process</a>>
- *
+ * AWS Config API, or the AWS SDKs for AWS Config. This reference guide contains documentation for the AWS Config API and
+ * the AWS CLI commands that you can use to manage AWS Config. The AWS Config API uses the Signature Version 4 protocol for
+ * signing requests. For more information about how to sign a request with this protocol, see <a
+ * href="http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html">Signature Version 4 Signing Process</a>.
  * For detailed information about AWS Config features and their associated actions or commands, as well as how to work with
  * AWS Management Console, see <a href="http://docs.aws.amazon.com/config/latest/developerguide/WhatIsConfig.html">What Is
- * AWS Config?</a> in the <i>AWS Config Developer
+ * AWS Config</a> in the <i>AWS Config Developer
+ *
+ * Guide</i>> <ul> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> </ul> <ul> <li/>
+ * <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> <li/> </ul> <ul> <li> </li> <li/> <li/> <li/> <li/>
  */
 
 /**
@@ -205,6 +221,20 @@ BatchGetResourceConfigResponse * ConfigServiceClient::batchGetResourceConfig(con
 }
 
 /**
+ * Deletes the authorization granted to the specified configuration aggregator account in a specified
+ *
+ * @param  request Request to send to AWS Config.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DeleteAggregationAuthorizationResponse * ConfigServiceClient::deleteAggregationAuthorization(const DeleteAggregationAuthorizationRequest &request)
+{
+    return qobject_cast<DeleteAggregationAuthorizationResponse *>(send(request));
+}
+
+/**
  * Deletes the specified AWS Config rule and all of its evaluation
  *
  * results>
@@ -226,6 +256,20 @@ BatchGetResourceConfigResponse * ConfigServiceClient::batchGetResourceConfig(con
 DeleteConfigRuleResponse * ConfigServiceClient::deleteConfigRule(const DeleteConfigRuleRequest &request)
 {
     return qobject_cast<DeleteConfigRuleResponse *>(send(request));
+}
+
+/**
+ * Deletes the specified configuration aggregator and the aggregated data associated with the
+ *
+ * @param  request Request to send to AWS Config.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DeleteConfigurationAggregatorResponse * ConfigServiceClient::deleteConfigurationAggregator(const DeleteConfigurationAggregatorRequest &request)
+{
+    return qobject_cast<DeleteConfigurationAggregatorResponse *>(send(request));
 }
 
 /**
@@ -273,8 +317,8 @@ DeleteDeliveryChannelResponse * ConfigServiceClient::deleteDeliveryChannel(const
 }
 
 /**
- * Deletes the evaluation results for the specified Config rule. You can specify one Config rule per request. After you
- * delete the evaluation results, you can call the <a>StartConfigRulesEvaluation</a> API to start evaluating your AWS
+ * Deletes the evaluation results for the specified AWS Config rule. You can specify one AWS Config rule per request. After
+ * you delete the evaluation results, you can call the <a>StartConfigRulesEvaluation</a> API to start evaluating your AWS
  * resources against the
  *
  * @param  request Request to send to AWS Config.
@@ -289,20 +333,34 @@ DeleteEvaluationResultsResponse * ConfigServiceClient::deleteEvaluationResults(c
 }
 
 /**
+ * Deletes pending authorization requests for a specified aggregator account in a specified
+ *
+ * @param  request Request to send to AWS Config.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DeletePendingAggregationRequestResponse * ConfigServiceClient::deletePendingAggregationRequest(const DeletePendingAggregationRequestRequest &request)
+{
+    return qobject_cast<DeletePendingAggregationRequestResponse *>(send(request));
+}
+
+/**
  * Schedules delivery of a configuration snapshot to the Amazon S3 bucket in the specified delivery channel. After the
- * delivery has started, AWS Config sends following notifications using an Amazon SNS topic that you have
+ * delivery has started, AWS Config sends the following notifications using an Amazon SNS topic that you have
  *
  * specified> <ul> <li>
  *
- * Notification of starting the
+ * Notification of the start of the
  *
  * delivery> </li> <li>
  *
- * Notification of delivery completed, if the delivery was successfully
+ * Notification of the completion of the delivery, if the delivery was successfully
  *
  * completed> </li> <li>
  *
- * Notification of delivery failure, if the delivery failed to
+ * Notification of delivery failure, if the delivery
  *
  * @param  request Request to send to AWS Config.
  *
@@ -316,13 +374,45 @@ DeliverConfigSnapshotResponse * ConfigServiceClient::deliverConfigSnapshot(const
 }
 
 /**
+ * Returns a list of compliant and noncompliant rules with the number of resources for compliant and noncompliant rules.
+ *
+ * </p <note>
+ *
+ * The results can return an empty result page, but if you have a nextToken, the results are displayed on the next
+ *
+ * @param  request Request to send to AWS Config.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DescribeAggregateComplianceByConfigRulesResponse * ConfigServiceClient::describeAggregateComplianceByConfigRules(const DescribeAggregateComplianceByConfigRulesRequest &request)
+{
+    return qobject_cast<DescribeAggregateComplianceByConfigRulesResponse *>(send(request));
+}
+
+/**
+ * Returns a list of authorizations granted to various aggregator accounts and
+ *
+ * @param  request Request to send to AWS Config.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DescribeAggregationAuthorizationsResponse * ConfigServiceClient::describeAggregationAuthorizations(const DescribeAggregationAuthorizationsRequest &request)
+{
+    return qobject_cast<DescribeAggregationAuthorizationsResponse *>(send(request));
+}
+
+/**
  * Indicates whether the specified AWS Config rules are compliant. If a rule is noncompliant, this action returns the
  * number of AWS resources that do not comply with the
  *
  * rule>
  *
- * A rule is compliant if all of the evaluated resources comply with it, and it is noncompliant if any of these resources
- * do not
+ * A rule is compliant if all of the evaluated resources comply with it. It is noncompliant if any of these resources do
+ * not
  *
  * comply>
  *
@@ -336,9 +426,9 @@ DeliverConfigSnapshotResponse * ConfigServiceClient::deliverConfigSnapshot(const
  *
  * <code>LastFailedInvocationTime</code>> </li> <li>
  *
- * The rule's AWS Lambda function is failing to send evaluation results to AWS Config. Verify that the role that you
- * assigned to your configuration recorder includes the <code>config:PutEvaluations</code> permission. If the rule is a
- * custom rule, verify that the AWS Lambda execution role includes the <code>config:PutEvaluations</code>
+ * The rule's AWS Lambda function is failing to send evaluation results to AWS Config. Verify that the role you assigned to
+ * your configuration recorder includes the <code>config:PutEvaluations</code> permission. If the rule is a custom rule,
+ * verify that the AWS Lambda execution role includes the <code>config:PutEvaluations</code>
  *
  * permission> </li> <li>
  *
@@ -427,8 +517,39 @@ DescribeConfigRulesResponse * ConfigServiceClient::describeConfigRules(const Des
 }
 
 /**
+ * Returns status information for sources within an aggregator. The status includes information about the last time AWS
+ * Config aggregated data from source accounts or AWS Config failed to aggregate data from source accounts with the related
+ * error code or message.
+ *
+ * @param  request Request to send to AWS Config.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DescribeConfigurationAggregatorSourcesStatusResponse * ConfigServiceClient::describeConfigurationAggregatorSourcesStatus(const DescribeConfigurationAggregatorSourcesStatusRequest &request)
+{
+    return qobject_cast<DescribeConfigurationAggregatorSourcesStatusResponse *>(send(request));
+}
+
+/**
+ * Returns the details of one or more configuration aggregators. If the configuration aggregator is not specified, this
+ * action returns the details for all the configuration aggregators associated with the account.
+ *
+ * @param  request Request to send to AWS Config.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DescribeConfigurationAggregatorsResponse * ConfigServiceClient::describeConfigurationAggregators(const DescribeConfigurationAggregatorsRequest &request)
+{
+    return qobject_cast<DescribeConfigurationAggregatorsResponse *>(send(request));
+}
+
+/**
  * Returns the current status of the specified configuration recorder. If a configuration recorder is not specified, this
- * action returns the status of all configuration recorder associated with the
+ * action returns the status of all configuration recorders associated with the
  *
  * account> <note>
  *
@@ -500,6 +621,58 @@ DescribeDeliveryChannelStatusResponse * ConfigServiceClient::describeDeliveryCha
 DescribeDeliveryChannelsResponse * ConfigServiceClient::describeDeliveryChannels(const DescribeDeliveryChannelsRequest &request)
 {
     return qobject_cast<DescribeDeliveryChannelsResponse *>(send(request));
+}
+
+/**
+ * Returns a list of all pending aggregation
+ *
+ * @param  request Request to send to AWS Config.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DescribePendingAggregationRequestsResponse * ConfigServiceClient::describePendingAggregationRequests(const DescribePendingAggregationRequestsRequest &request)
+{
+    return qobject_cast<DescribePendingAggregationRequestsResponse *>(send(request));
+}
+
+/**
+ * Returns the evaluation results for the specified AWS Config rule for a specific resource in a rule. The results indicate
+ * which AWS resources were evaluated by the rule, when each resource was last evaluated, and whether each resource
+ * complies with the rule.
+ *
+ * </p <note>
+ *
+ * The results can return an empty result page. But if you have a nextToken, the results are displayed on the next
+ *
+ * @param  request Request to send to AWS Config.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetAggregateComplianceDetailsByConfigRuleResponse * ConfigServiceClient::getAggregateComplianceDetailsByConfigRule(const GetAggregateComplianceDetailsByConfigRuleRequest &request)
+{
+    return qobject_cast<GetAggregateComplianceDetailsByConfigRuleResponse *>(send(request));
+}
+
+/**
+ * Returns the number of compliant and noncompliant rules for one or more accounts and regions in an
+ *
+ * aggregator> <note>
+ *
+ * The results can return an empty result page, but if you have a nextToken, the results are displayed on the next
+ *
+ * @param  request Request to send to AWS Config.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetAggregateConfigRuleComplianceSummaryResponse * ConfigServiceClient::getAggregateConfigRuleComplianceSummary(const GetAggregateConfigRuleComplianceSummaryRequest &request)
+{
+    return qobject_cast<GetAggregateConfigRuleComplianceSummaryResponse *>(send(request));
 }
 
 /**
@@ -584,15 +757,15 @@ GetComplianceSummaryByResourceTypeResponse * ConfigServiceClient::getComplianceS
  *
  * The resource types (EC2 instances, IAM users, and S3
  *
- * buckets> </li> <li>
+ * buckets)> </li> <li>
  *
  * The number of each resource type (25, 20, and
  *
- * 15> </li> <li>
+ * 15)> </li> <li>
  *
  * The total number of all resources
  *
- * (60> </li> </ul> </li> </ol>
+ * (60)> </li> </ul> </li> </ol>
  *
  * The response is paginated. By default, AWS Config lists 100 <a>ResourceCount</a> objects on each page. You can customize
  * this number with the <code>limit</code> parameter. The response includes a <code>nextToken</code> string. To get the
@@ -600,20 +773,20 @@ GetComplianceSummaryByResourceTypeResponse * ConfigServiceClient::getComplianceS
  *
  * parameter> <note>
  *
- * If you make a call to the <a>GetDiscoveredResourceCounts</a> action, you may not immediately receive resource counts in
- * the following
+ * If you make a call to the <a>GetDiscoveredResourceCounts</a> action, you might not immediately receive resource counts
+ * in the following
  *
  * situations> <ul> <li>
  *
  * You are a new AWS Config
  *
- * custome> </li> <li>
+ * customer> </li> <li>
  *
  * You just enabled resource
  *
- * recordin> </li> </ul>
+ * recording> </li> </ul>
  *
- * It may take a few minutes for AWS Config to record and count your resources. Wait a few minutes and then retry the
+ * It might take a few minutes for AWS Config to record and count your resources. Wait a few minutes and then retry the
  * <a>GetDiscoveredResourceCounts</a> action.
  *
  * @param  request Request to send to AWS Config.
@@ -661,7 +834,7 @@ GetResourceConfigHistoryResponse * ConfigServiceClient::getResourceConfigHistory
  *
  * name> <note>
  *
- * You can specify either resource IDs or a resource name but not both in the same
+ * You can specify either resource IDs or a resource name, but not both, in the same
  *
  * request> </note>
  *
@@ -681,16 +854,30 @@ ListDiscoveredResourcesResponse * ConfigServiceClient::listDiscoveredResources(c
 }
 
 /**
+ * Authorizes the aggregator account and region to collect data from the source account and region.
+ *
+ * @param  request Request to send to AWS Config.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+PutAggregationAuthorizationResponse * ConfigServiceClient::putAggregationAuthorization(const PutAggregationAuthorizationRequest &request)
+{
+    return qobject_cast<PutAggregationAuthorizationResponse *>(send(request));
+}
+
+/**
  * Adds or updates an AWS Config rule for evaluating whether your AWS resources comply with your desired
  *
  * configurations>
  *
- * You can use this action for custom Config rules and AWS managed Config rules. A custom Config rule is a rule that you
- * develop and maintain. An AWS managed Config rule is a customizable, predefined rule that AWS Config
+ * You can use this action for custom AWS Config rules and AWS managed Config rules. A custom AWS Config rule is a rule
+ * that you develop and maintain. An AWS managed Config rule is a customizable, predefined rule that AWS Config
  *
  * provides>
  *
- * If you are adding a new custom Config rule, you must first create the AWS Lambda function that the rule invokes to
+ * If you are adding a new custom AWS Config rule, you must first create the AWS Lambda function that the rule invokes to
  * evaluate your resources. When you use the <code>PutConfigRule</code> action to add the rule to AWS Config, you must
  * specify the Amazon Resource Name (ARN) that AWS Lambda assigns to the function. Specify the ARN for the
  * <code>SourceIdentifier</code> key. This key is part of the <code>Source</code> object, which is part of the
@@ -720,7 +907,7 @@ ListDiscoveredResourcesResponse * ConfigServiceClient::listDiscoveredResources(c
  *
  * 50>
  *
- * For more information about requesting a rule limit increase, see <a
+ * For information about requesting a rule limit increase, see <a
  * href="http://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html#limits_config">AWS Config Limits</a> in the
  * <i>AWS General Reference
  *
@@ -742,11 +929,29 @@ PutConfigRuleResponse * ConfigServiceClient::putConfigRule(const PutConfigRuleRe
 }
 
 /**
+ * Creates and updates the configuration aggregator with the selected source accounts and
+ *
+ * regions> <note>
+ *
+ * AWS Config should be enabled in accounts and regions you want to
+ *
+ * @param  request Request to send to AWS Config.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+PutConfigurationAggregatorResponse * ConfigServiceClient::putConfigurationAggregator(const PutConfigurationAggregatorRequest &request)
+{
+    return qobject_cast<PutConfigurationAggregatorResponse *>(send(request));
+}
+
+/**
  * Creates a new configuration recorder to record the selected resource
  *
  * configurations>
  *
- * You can use this action to change the role <code>roleARN</code> and/or the <code>recordingGroup</code> of an existing
+ * You can use this action to change the role <code>roleARN</code> or the <code>recordingGroup</code> of an existing
  * recorder. To change the role, call the action on the existing configuration recorder and specify a
  *
  * role> <note>
@@ -814,25 +1019,25 @@ PutEvaluationsResponse * ConfigServiceClient::putEvaluations(const PutEvaluation
 }
 
 /**
- * Runs an on-demand evaluation for the specified Config rules against the last known configuration state of the resources.
- * Use <code>StartConfigRulesEvaluation</code> when you want to test a rule that you updated is working as expected.
- * <code>StartConfigRulesEvaluation</code> does not re-record the latest configuration state for your resources; it re-runs
- * an evaluation against the last known state of your resources.
+ * Runs an on-demand evaluation for the specified AWS Config rules against the last known configuration state of the
+ * resources. Use <code>StartConfigRulesEvaluation</code> when you want to test that a rule you updated is working as
+ * expected. <code>StartConfigRulesEvaluation</code> does not re-record the latest configuration state for your resources.
+ * It re-runs an evaluation against the last known state of your resources.
  *
  * </p
  *
- * You can specify up to 25 Config rules per request.
+ * You can specify up to 25 AWS Config rules per request.
  *
  * </p
  *
- * An existing <code>StartConfigRulesEvaluation</code> call must complete for the specified rules before you can call the
+ * An existing <code>StartConfigRulesEvaluation</code> call for the specified rules must complete before you can call the
  * API again. If you chose to have AWS Config stream to an Amazon SNS topic, you will receive a
  * <code>ConfigRuleEvaluationStarted</code> notification when the evaluation
  *
  * starts> <note>
  *
  * You don't need to call the <code>StartConfigRulesEvaluation</code> API to run an evaluation for a new rule. When you
- * create a new rule, AWS Config automatically evaluates your resources against the rule.
+ * create a rule, AWS Config evaluates your resources against the rule automatically.
  *
  * </p </note>
  *

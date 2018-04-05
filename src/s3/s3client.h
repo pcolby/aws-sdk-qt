@@ -177,6 +177,8 @@ class PutObjectTaggingRequest;
 class PutObjectTaggingResponse;
 class RestoreObjectRequest;
 class RestoreObjectResponse;
+class SelectObjectContentRequest;
+class SelectObjectContentResponse;
 class UploadPartRequest;
 class UploadPartResponse;
 class UploadPartCopyRequest;
@@ -273,6 +275,7 @@ public slots:
     PutObjectAclResponse * putObjectAcl(const PutObjectAclRequest &request);
     PutObjectTaggingResponse * putObjectTagging(const PutObjectTaggingRequest &request);
     RestoreObjectResponse * restoreObject(const RestoreObjectRequest &request);
+    SelectObjectContentResponse * selectObjectContent(const SelectObjectContentRequest &request);
     UploadPartResponse * uploadPart(const UploadPartRequest &request);
     UploadPartCopyResponse * uploadPartCopy(const UploadPartCopyRequest &request);
 

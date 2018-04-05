@@ -112,6 +112,7 @@ public:
         PutObjectAclAction,
         PutObjectTaggingAction,
         RestoreObjectAction,
+        SelectObjectContentAction,
         UploadPartAction,
         UploadPartCopyAction,
     };

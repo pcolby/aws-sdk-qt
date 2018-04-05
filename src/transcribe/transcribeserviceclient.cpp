@@ -21,12 +21,22 @@
 #include "transcribeserviceclient_p.h"
 
 #include "core/awssignaturev4.h"
+#include "createvocabularyrequest.h"
+#include "createvocabularyresponse.h"
+#include "deletevocabularyrequest.h"
+#include "deletevocabularyresponse.h"
 #include "gettranscriptionjobrequest.h"
 #include "gettranscriptionjobresponse.h"
+#include "getvocabularyrequest.h"
+#include "getvocabularyresponse.h"
 #include "listtranscriptionjobsrequest.h"
 #include "listtranscriptionjobsresponse.h"
+#include "listvocabulariesrequest.h"
+#include "listvocabulariesresponse.h"
 #include "starttranscriptionjobrequest.h"
 #include "starttranscriptionjobresponse.h"
+#include "updatevocabularyrequest.h"
+#include "updatevocabularyresponse.h"
 
 #include <QNetworkAccessManager>
 #include <QNetworkRequest>
@@ -101,9 +111,37 @@ TranscribeServiceClient::TranscribeServiceClient(
 }
 
 /**
- * Returns information about a transcription job. To see the status of the job, check the <code>Status</code> field. If the
- * status is <code>COMPLETE</code>, the job is finished and you can find the results at the location specified in the
- * <code>TranscriptionFileUri</code>
+ * Creates a new custom vocabulary that you can use to change the way Amazon Transcribe handles transcription of an audio
+ *
+ * @param  request Request to send to Amazon Transcribe Service.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+CreateVocabularyResponse * TranscribeServiceClient::createVocabulary(const CreateVocabularyRequest &request)
+{
+    return qobject_cast<CreateVocabularyResponse *>(send(request));
+}
+
+/**
+ * Deletes a vocabulary from Amazon Transcribe.
+ *
+ * @param  request Request to send to Amazon Transcribe Service.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DeleteVocabularyResponse * TranscribeServiceClient::deleteVocabulary(const DeleteVocabularyRequest &request)
+{
+    return qobject_cast<DeleteVocabularyResponse *>(send(request));
+}
+
+/**
+ * Returns information about a transcription job. To see the status of the job, check the
+ * <code>TranscriptionJobStatus</code> field. If the status is <code>COMPLETED</code>, the job is finished and you can find
+ * the results at the location specified in the <code>TranscriptionFileUri</code>
  *
  * @param  request Request to send to Amazon Transcribe Service.
  *
@@ -114,6 +152,20 @@ TranscribeServiceClient::TranscribeServiceClient(
 GetTranscriptionJobResponse * TranscribeServiceClient::getTranscriptionJob(const GetTranscriptionJobRequest &request)
 {
     return qobject_cast<GetTranscriptionJobResponse *>(send(request));
+}
+
+/**
+ * Gets information about a
+ *
+ * @param  request Request to send to Amazon Transcribe Service.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetVocabularyResponse * TranscribeServiceClient::getVocabulary(const GetVocabularyRequest &request)
+{
+    return qobject_cast<GetVocabularyResponse *>(send(request));
 }
 
 /**
@@ -131,6 +183,21 @@ ListTranscriptionJobsResponse * TranscribeServiceClient::listTranscriptionJobs(c
 }
 
 /**
+ * Returns a list of vocabularies that match the specified criteria. If no criteria are specified, returns the entire list
+ * of
+ *
+ * @param  request Request to send to Amazon Transcribe Service.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+ListVocabulariesResponse * TranscribeServiceClient::listVocabularies(const ListVocabulariesRequest &request)
+{
+    return qobject_cast<ListVocabulariesResponse *>(send(request));
+}
+
+/**
  * Starts an asynchronous job to transcribe speech to
  *
  * @param  request Request to send to Amazon Transcribe Service.
@@ -142,6 +209,20 @@ ListTranscriptionJobsResponse * TranscribeServiceClient::listTranscriptionJobs(c
 StartTranscriptionJobResponse * TranscribeServiceClient::startTranscriptionJob(const StartTranscriptionJobRequest &request)
 {
     return qobject_cast<StartTranscriptionJobResponse *>(send(request));
+}
+
+/**
+ * Updates an existing vocabulary with new
+ *
+ * @param  request Request to send to Amazon Transcribe Service.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+UpdateVocabularyResponse * TranscribeServiceClient::updateVocabulary(const UpdateVocabularyRequest &request)
+{
+    return qobject_cast<UpdateVocabularyResponse *>(send(request));
 }
 
 /**

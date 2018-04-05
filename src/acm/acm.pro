@@ -28,6 +28,10 @@ HEADERS += \
     describecertificaterequest_p.h \
     describecertificateresponse.h \
     describecertificateresponse_p.h \
+    exportcertificaterequest.h \
+    exportcertificaterequest_p.h \
+    exportcertificateresponse.h \
+    exportcertificateresponse_p.h \
     getcertificaterequest.h \
     getcertificaterequest_p.h \
     getcertificateresponse.h \
@@ -71,6 +75,8 @@ SOURCES += \
     deletecertificateresponse.cpp \
     describecertificaterequest.cpp \
     describecertificateresponse.cpp \
+    exportcertificaterequest.cpp \
+    exportcertificateresponse.cpp \
     getcertificaterequest.cpp \
     getcertificateresponse.cpp \
     importcertificaterequest.cpp \

@@ -20,10 +20,18 @@ HEADERS += \
     configservicerequest_p.h \
     configserviceresponse.h \
     configserviceresponse_p.h \
+    deleteaggregationauthorizationrequest.h \
+    deleteaggregationauthorizationrequest_p.h \
+    deleteaggregationauthorizationresponse.h \
+    deleteaggregationauthorizationresponse_p.h \
     deleteconfigrulerequest.h \
     deleteconfigrulerequest_p.h \
     deleteconfigruleresponse.h \
     deleteconfigruleresponse_p.h \
+    deleteconfigurationaggregatorrequest.h \
+    deleteconfigurationaggregatorrequest_p.h \
+    deleteconfigurationaggregatorresponse.h \
+    deleteconfigurationaggregatorresponse_p.h \
     deleteconfigurationrecorderrequest.h \
     deleteconfigurationrecorderrequest_p.h \
     deleteconfigurationrecorderresponse.h \
@@ -36,10 +44,22 @@ HEADERS += \
     deleteevaluationresultsrequest_p.h \
     deleteevaluationresultsresponse.h \
     deleteevaluationresultsresponse_p.h \
+    deletependingaggregationrequestrequest.h \
+    deletependingaggregationrequestrequest_p.h \
+    deletependingaggregationrequestresponse.h \
+    deletependingaggregationrequestresponse_p.h \
     deliverconfigsnapshotrequest.h \
     deliverconfigsnapshotrequest_p.h \
     deliverconfigsnapshotresponse.h \
     deliverconfigsnapshotresponse_p.h \
+    describeaggregatecompliancebyconfigrulesrequest.h \
+    describeaggregatecompliancebyconfigrulesrequest_p.h \
+    describeaggregatecompliancebyconfigrulesresponse.h \
+    describeaggregatecompliancebyconfigrulesresponse_p.h \
+    describeaggregationauthorizationsrequest.h \
+    describeaggregationauthorizationsrequest_p.h \
+    describeaggregationauthorizationsresponse.h \
+    describeaggregationauthorizationsresponse_p.h \
     describecompliancebyconfigrulerequest.h \
     describecompliancebyconfigrulerequest_p.h \
     describecompliancebyconfigruleresponse.h \
@@ -56,6 +76,14 @@ HEADERS += \
     describeconfigrulesrequest_p.h \
     describeconfigrulesresponse.h \
     describeconfigrulesresponse_p.h \
+    describeconfigurationaggregatorsourcesstatusrequest.h \
+    describeconfigurationaggregatorsourcesstatusrequest_p.h \
+    describeconfigurationaggregatorsourcesstatusresponse.h \
+    describeconfigurationaggregatorsourcesstatusresponse_p.h \
+    describeconfigurationaggregatorsrequest.h \
+    describeconfigurationaggregatorsrequest_p.h \
+    describeconfigurationaggregatorsresponse.h \
+    describeconfigurationaggregatorsresponse_p.h \
     describeconfigurationrecordersrequest.h \
     describeconfigurationrecordersrequest_p.h \
     describeconfigurationrecordersresponse.h \
@@ -72,6 +100,18 @@ HEADERS += \
     describedeliverychannelstatusrequest_p.h \
     describedeliverychannelstatusresponse.h \
     describedeliverychannelstatusresponse_p.h \
+    describependingaggregationrequestsrequest.h \
+    describependingaggregationrequestsrequest_p.h \
+    describependingaggregationrequestsresponse.h \
+    describependingaggregationrequestsresponse_p.h \
+    getaggregatecompliancedetailsbyconfigrulerequest.h \
+    getaggregatecompliancedetailsbyconfigrulerequest_p.h \
+    getaggregatecompliancedetailsbyconfigruleresponse.h \
+    getaggregatecompliancedetailsbyconfigruleresponse_p.h \
+    getaggregateconfigrulecompliancesummaryrequest.h \
+    getaggregateconfigrulecompliancesummaryrequest_p.h \
+    getaggregateconfigrulecompliancesummaryresponse.h \
+    getaggregateconfigrulecompliancesummaryresponse_p.h \
     getcompliancedetailsbyconfigrulerequest.h \
     getcompliancedetailsbyconfigrulerequest_p.h \
     getcompliancedetailsbyconfigruleresponse.h \
@@ -98,10 +138,18 @@ HEADERS += \
     listdiscoveredresourcesrequest_p.h \
     listdiscoveredresourcesresponse.h \
     listdiscoveredresourcesresponse_p.h \
+    putaggregationauthorizationrequest.h \
+    putaggregationauthorizationrequest_p.h \
+    putaggregationauthorizationresponse.h \
+    putaggregationauthorizationresponse_p.h \
     putconfigrulerequest.h \
     putconfigrulerequest_p.h \
     putconfigruleresponse.h \
     putconfigruleresponse_p.h \
+    putconfigurationaggregatorrequest.h \
+    putconfigurationaggregatorrequest_p.h \
+    putconfigurationaggregatorresponse.h \
+    putconfigurationaggregatorresponse_p.h \
     putconfigurationrecorderrequest.h \
     putconfigurationrecorderrequest_p.h \
     putconfigurationrecorderresponse.h \
@@ -133,16 +181,26 @@ SOURCES += \
     configserviceclient.cpp \
     configservicerequest.cpp \
     configserviceresponse.cpp \
+    deleteaggregationauthorizationrequest.cpp \
+    deleteaggregationauthorizationresponse.cpp \
     deleteconfigrulerequest.cpp \
     deleteconfigruleresponse.cpp \
+    deleteconfigurationaggregatorrequest.cpp \
+    deleteconfigurationaggregatorresponse.cpp \
     deleteconfigurationrecorderrequest.cpp \
     deleteconfigurationrecorderresponse.cpp \
     deletedeliverychannelrequest.cpp \
     deletedeliverychannelresponse.cpp \
     deleteevaluationresultsrequest.cpp \
     deleteevaluationresultsresponse.cpp \
+    deletependingaggregationrequestrequest.cpp \
+    deletependingaggregationrequestresponse.cpp \
     deliverconfigsnapshotrequest.cpp \
     deliverconfigsnapshotresponse.cpp \
+    describeaggregatecompliancebyconfigrulesrequest.cpp \
+    describeaggregatecompliancebyconfigrulesresponse.cpp \
+    describeaggregationauthorizationsrequest.cpp \
+    describeaggregationauthorizationsresponse.cpp \
     describecompliancebyconfigrulerequest.cpp \
     describecompliancebyconfigruleresponse.cpp \
     describecompliancebyresourcerequest.cpp \
@@ -151,6 +209,10 @@ SOURCES += \
     describeconfigruleevaluationstatusresponse.cpp \
     describeconfigrulesrequest.cpp \
     describeconfigrulesresponse.cpp \
+    describeconfigurationaggregatorsourcesstatusrequest.cpp \
+    describeconfigurationaggregatorsourcesstatusresponse.cpp \
+    describeconfigurationaggregatorsrequest.cpp \
+    describeconfigurationaggregatorsresponse.cpp \
     describeconfigurationrecordersrequest.cpp \
     describeconfigurationrecordersresponse.cpp \
     describeconfigurationrecorderstatusrequest.cpp \
@@ -159,6 +221,12 @@ SOURCES += \
     describedeliverychannelsresponse.cpp \
     describedeliverychannelstatusrequest.cpp \
     describedeliverychannelstatusresponse.cpp \
+    describependingaggregationrequestsrequest.cpp \
+    describependingaggregationrequestsresponse.cpp \
+    getaggregatecompliancedetailsbyconfigrulerequest.cpp \
+    getaggregatecompliancedetailsbyconfigruleresponse.cpp \
+    getaggregateconfigrulecompliancesummaryrequest.cpp \
+    getaggregateconfigrulecompliancesummaryresponse.cpp \
     getcompliancedetailsbyconfigrulerequest.cpp \
     getcompliancedetailsbyconfigruleresponse.cpp \
     getcompliancedetailsbyresourcerequest.cpp \
@@ -172,8 +240,12 @@ SOURCES += \
     getresourceconfighistoryresponse.cpp \
     listdiscoveredresourcesrequest.cpp \
     listdiscoveredresourcesresponse.cpp \
+    putaggregationauthorizationrequest.cpp \
+    putaggregationauthorizationresponse.cpp \
     putconfigrulerequest.cpp \
     putconfigruleresponse.cpp \
+    putconfigurationaggregatorrequest.cpp \
+    putconfigurationaggregatorresponse.cpp \
     putconfigurationrecorderrequest.cpp \
     putconfigurationrecorderresponse.cpp \
     putdeliverychannelrequest.cpp \

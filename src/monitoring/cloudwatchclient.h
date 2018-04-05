@@ -44,6 +44,8 @@ class EnableAlarmActionsRequest;
 class EnableAlarmActionsResponse;
 class GetDashboardRequest;
 class GetDashboardResponse;
+class GetMetricDataRequest;
+class GetMetricDataResponse;
 class GetMetricStatisticsRequest;
 class GetMetricStatisticsResponse;
 class ListDashboardsRequest;
@@ -83,6 +85,7 @@ public slots:
     DisableAlarmActionsResponse * disableAlarmActions(const DisableAlarmActionsRequest &request);
     EnableAlarmActionsResponse * enableAlarmActions(const EnableAlarmActionsRequest &request);
     GetDashboardResponse * getDashboard(const GetDashboardRequest &request);
+    GetMetricDataResponse * getMetricData(const GetMetricDataRequest &request);
     GetMetricStatisticsResponse * getMetricStatistics(const GetMetricStatisticsRequest &request);
     ListDashboardsResponse * listDashboards(const ListDashboardsRequest &request);
     ListMetricsResponse * listMetrics(const ListMetricsRequest &request);

@@ -28,12 +28,22 @@ namespace QtAws {
 namespace TranscribeService {
 
 class TranscribeServiceClientPrivate;
+class CreateVocabularyRequest;
+class CreateVocabularyResponse;
+class DeleteVocabularyRequest;
+class DeleteVocabularyResponse;
 class GetTranscriptionJobRequest;
 class GetTranscriptionJobResponse;
+class GetVocabularyRequest;
+class GetVocabularyResponse;
 class ListTranscriptionJobsRequest;
 class ListTranscriptionJobsResponse;
+class ListVocabulariesRequest;
+class ListVocabulariesResponse;
 class StartTranscriptionJobRequest;
 class StartTranscriptionJobResponse;
+class UpdateVocabularyRequest;
+class UpdateVocabularyResponse;
 
 class QTAWS_EXPORT TranscribeServiceClient : public QtAws::Core::AwsAbstractClient {
     Q_OBJECT
@@ -51,9 +61,14 @@ public:
         QObject * const parent = 0);
 
 public slots:
+    CreateVocabularyResponse * createVocabulary(const CreateVocabularyRequest &request);
+    DeleteVocabularyResponse * deleteVocabulary(const DeleteVocabularyRequest &request);
     GetTranscriptionJobResponse * getTranscriptionJob(const GetTranscriptionJobRequest &request);
+    GetVocabularyResponse * getVocabulary(const GetVocabularyRequest &request);
     ListTranscriptionJobsResponse * listTranscriptionJobs(const ListTranscriptionJobsRequest &request);
+    ListVocabulariesResponse * listVocabularies(const ListVocabulariesRequest &request);
     StartTranscriptionJobResponse * startTranscriptionJob(const StartTranscriptionJobRequest &request);
+    UpdateVocabularyResponse * updateVocabulary(const UpdateVocabularyRequest &request);
 
 private:
     Q_DECLARE_PRIVATE(TranscribeServiceClient)

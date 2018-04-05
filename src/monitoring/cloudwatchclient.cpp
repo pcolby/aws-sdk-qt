@@ -37,6 +37,8 @@
 #include "enablealarmactionsresponse.h"
 #include "getdashboardrequest.h"
 #include "getdashboardresponse.h"
+#include "getmetricdatarequest.h"
+#include "getmetricdataresponse.h"
 #include "getmetricstatisticsrequest.h"
 #include "getmetricstatisticsresponse.h"
 #include "listdashboardsrequest.h"
@@ -260,6 +262,32 @@ EnableAlarmActionsResponse * CloudWatchClient::enableAlarmActions(const EnableAl
 GetDashboardResponse * CloudWatchClient::getDashboard(const GetDashboardRequest &request)
 {
     return qobject_cast<GetDashboardResponse *>(send(request));
+}
+
+/**
+ * You can use the <code>GetMetricData</code> API to retrieve as many as 100 different metrics in a single request, with a
+ * total of as many as 100,800 datapoints. You can also optionally perform math expressions on the values of the returned
+ * statistics, to create new time series that represent new insights into your data. For example, using Lambda metrics, you
+ * could divide the Errors metric by the Invocations metric to get an error rate time series. For more information about
+ * metric math expressions, see <a
+ * href="http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/using-metric-math.html#metric-math-syntax">Metric
+ * Math Syntax and Functions</a> in the <i>Amazon CloudWatch User
+ *
+ * Guide</i>>
+ *
+ * Calls to the <code>GetMetricData</code> API have a different pricing structure than calls to
+ * <code>GetMetricStatistics</code>. For more information about pricing, see <a
+ * href="https://aws.amazon.com/cloudwatch/pricing/">Amazon CloudWatch
+ *
+ * @param  request Request to send to Amazon CloudWatch.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetMetricDataResponse * CloudWatchClient::getMetricData(const GetMetricDataRequest &request)
+{
+    return qobject_cast<GetMetricDataResponse *>(send(request));
 }
 
 /**

@@ -314,6 +314,10 @@ HEADERS += \
     s3request_p.h \
     s3response.h \
     s3response_p.h \
+    selectobjectcontentrequest.h \
+    selectobjectcontentrequest_p.h \
+    selectobjectcontentresponse.h \
+    selectobjectcontentresponse_p.h \
     uploadpartcopyrequest.h \
     uploadpartcopyrequest_p.h \
     uploadpartcopyresponse.h \
@@ -476,6 +480,8 @@ SOURCES += \
     s3client.cpp \
     s3request.cpp \
     s3response.cpp \
+    selectobjectcontentrequest.cpp \
+    selectobjectcontentresponse.cpp \
     uploadpartcopyrequest.cpp \
     uploadpartcopyresponse.cpp \
     uploadpartrequest.cpp \

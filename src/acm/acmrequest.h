@@ -40,6 +40,7 @@ public:
         AddTagsToCertificateAction,
         DeleteCertificateAction,
         DescribeCertificateAction,
+        ExportCertificateAction,
         GetCertificateAction,
         ImportCertificateAction,
         ListCertificatesAction,

@@ -48,6 +48,10 @@ HEADERS += \
     getdashboardrequest_p.h \
     getdashboardresponse.h \
     getdashboardresponse_p.h \
+    getmetricdatarequest.h \
+    getmetricdatarequest_p.h \
+    getmetricdataresponse.h \
+    getmetricdataresponse_p.h \
     getmetricstatisticsrequest.h \
     getmetricstatisticsrequest_p.h \
     getmetricstatisticsresponse.h \
@@ -97,6 +101,8 @@ SOURCES += \
     enablealarmactionsresponse.cpp \
     getdashboardrequest.cpp \
     getdashboardresponse.cpp \
+    getmetricdatarequest.cpp \
+    getmetricdataresponse.cpp \
     getmetricstatisticsrequest.cpp \
     getmetricstatisticsresponse.cpp \
     listdashboardsrequest.cpp \

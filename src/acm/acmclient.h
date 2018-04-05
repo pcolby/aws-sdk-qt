@@ -34,6 +34,8 @@ class DeleteCertificateRequest;
 class DeleteCertificateResponse;
 class DescribeCertificateRequest;
 class DescribeCertificateResponse;
+class ExportCertificateRequest;
+class ExportCertificateResponse;
 class GetCertificateRequest;
 class GetCertificateResponse;
 class ImportCertificateRequest;
@@ -70,6 +72,7 @@ public slots:
     AddTagsToCertificateResponse * addTagsToCertificate(const AddTagsToCertificateRequest &request);
     DeleteCertificateResponse * deleteCertificate(const DeleteCertificateRequest &request);
     DescribeCertificateResponse * describeCertificate(const DescribeCertificateRequest &request);
+    ExportCertificateResponse * exportCertificate(const ExportCertificateRequest &request);
     GetCertificateResponse * getCertificate(const GetCertificateRequest &request);
     ImportCertificateResponse * importCertificate(const ImportCertificateRequest &request);
     ListCertificatesResponse * listCertificates(const ListCertificatesRequest &request);

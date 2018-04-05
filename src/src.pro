@@ -4,6 +4,7 @@ SUBDIRS += \
     core/core.pro \
     AWSMigrationHub/AWSMigrationHub.pro \
     acm/acm.pro \
+    acm-pca/acm-pca.pro \
     alexaforbusiness/alexaforbusiness.pro \
     apigateway/apigateway.pro \
     application-autoscaling/application-autoscaling.pro \
@@ -60,6 +61,7 @@ SUBDIRS += \
     es/es.pro \
     events/events.pro \
     firehose/firehose.pro \
+    fms/fms.pro \
     gamelift/gamelift.pro \
     glacier/glacier.pro \
     glue/glue.pro \
@@ -113,6 +115,7 @@ SUBDIRS += \
     s3/s3.pro \
     sagemaker/sagemaker.pro \
     sdb/sdb.pro \
+    secretsmanager/secretsmanager.pro \
     serverlessrepo/serverlessrepo.pro \
     servicecatalog/servicecatalog.pro \
     servicediscovery/servicediscovery.pro \

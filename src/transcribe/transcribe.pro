@@ -10,14 +10,30 @@ DEFINES += QT_NO_CAST_FROM_ASCII QT_NO_CAST_TO_ASCII
 INCLUDEPATH = $$TOPDIR/src
 
 HEADERS += \
+    createvocabularyrequest.h \
+    createvocabularyrequest_p.h \
+    createvocabularyresponse.h \
+    createvocabularyresponse_p.h \
+    deletevocabularyrequest.h \
+    deletevocabularyrequest_p.h \
+    deletevocabularyresponse.h \
+    deletevocabularyresponse_p.h \
     gettranscriptionjobrequest.h \
     gettranscriptionjobrequest_p.h \
     gettranscriptionjobresponse.h \
     gettranscriptionjobresponse_p.h \
+    getvocabularyrequest.h \
+    getvocabularyrequest_p.h \
+    getvocabularyresponse.h \
+    getvocabularyresponse_p.h \
     listtranscriptionjobsrequest.h \
     listtranscriptionjobsrequest_p.h \
     listtranscriptionjobsresponse.h \
     listtranscriptionjobsresponse_p.h \
+    listvocabulariesrequest.h \
+    listvocabulariesrequest_p.h \
+    listvocabulariesresponse.h \
+    listvocabulariesresponse_p.h \
     starttranscriptionjobrequest.h \
     starttranscriptionjobrequest_p.h \
     starttranscriptionjobresponse.h \
@@ -28,16 +44,30 @@ HEADERS += \
     transcribeservicerequest_p.h \
     transcribeserviceresponse.h \
     transcribeserviceresponse_p.h \
+    updatevocabularyrequest.h \
+    updatevocabularyrequest_p.h \
+    updatevocabularyresponse.h \
+    updatevocabularyresponse_p.h \
 
 SOURCES += \
+    createvocabularyrequest.cpp \
+    createvocabularyresponse.cpp \
+    deletevocabularyrequest.cpp \
+    deletevocabularyresponse.cpp \
     gettranscriptionjobrequest.cpp \
     gettranscriptionjobresponse.cpp \
+    getvocabularyrequest.cpp \
+    getvocabularyresponse.cpp \
     listtranscriptionjobsrequest.cpp \
     listtranscriptionjobsresponse.cpp \
+    listvocabulariesrequest.cpp \
+    listvocabulariesresponse.cpp \
     starttranscriptionjobrequest.cpp \
     starttranscriptionjobresponse.cpp \
     transcribeserviceclient.cpp \
     transcribeservicerequest.cpp \
     transcribeserviceresponse.cpp \
+    updatevocabularyrequest.cpp \
+    updatevocabularyresponse.cpp \
 
 win32:CONFIG += skip_target_version_ext

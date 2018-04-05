@@ -37,9 +37,14 @@ class QTAWS_EXPORT TranscribeServiceRequest : public QtAws::Core::AwsAbstractReq
 public:
     /// Actions supported by TranscribeService.
     enum Action {
+        CreateVocabularyAction,
+        DeleteVocabularyAction,
         GetTranscriptionJobAction,
+        GetVocabularyAction,
         ListTranscriptionJobsAction,
+        ListVocabulariesAction,
         StartTranscriptionJobAction,
+        UpdateVocabularyAction,
     };
     Q_DECLARE_FLAGS(Actions, Action)
 
