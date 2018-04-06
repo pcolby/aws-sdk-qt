@@ -1073,6 +1073,10 @@ GetCommandInvocationResponse * SsmClient::getCommandInvocation(const GetCommandI
  * Retrieves the default patch baseline. Note that Systems Manager supports creating multiple default patch baselines. For
  * example, you can create a default patch baseline for each operating
  *
+ * system>
+ *
+ * If you do not specify an operating system value, the default patch baseline for Windows is
+ *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
  *
  * @return A pointer to a related response object.
@@ -1856,35 +1860,25 @@ UpdateMaintenanceWindowTargetResponse * SsmClient::updateMaintenanceWindowTarget
 /**
  * Modifies a task assigned to a Maintenance Window. You can't change the task type, but you can change the following
  *
- * values>
+ * values> <ul> <li>
  *
- * Task ARN. For example, you can change a RUN_COMMAND task from AWS-RunPowerShellScript to
+ * TaskARN. For example, you can change a RUN_COMMAND task from AWS-RunPowerShellScript to
  *
- * AWS-RunShellScript>
+ * AWS-RunShellScript> </li> <li>
  *
- * Service role
+ * ServiceRoleAr> </li> <li>
  *
- * ARN>
+ * TaskInvocationParameter> </li> <li>
  *
- * Task
+ * Priorit> </li> <li>
  *
- * parameters>
+ * MaxConcurrenc> </li> <li>
  *
- * Task
- *
- * priority>
- *
- * Task MaxConcurrency and
- *
- * MaxErrors>
- *
- * Log
- *
- * location>
+ * MaxError> </li> </ul>
  *
  * If a parameter is null, then the corresponding field is not modified. Also, if you set Replace to true, then all fields
- * required by the RegisterTaskWithMaintenanceWindow action are required for this request. Optional fields that aren't
- * specified are set to
+ * required by the <a>RegisterTaskWithMaintenanceWindow</a> action are required for this request. Optional fields that
+ * aren't specified are set to
  *
  * @param  request Request to send to Amazon Simple Systems Manager (SSM).
  *
