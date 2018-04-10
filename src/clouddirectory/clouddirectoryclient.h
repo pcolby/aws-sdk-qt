@@ -84,6 +84,8 @@ class GetDirectoryRequest;
 class GetDirectoryResponse;
 class GetFacetRequest;
 class GetFacetResponse;
+class GetObjectAttributesRequest;
+class GetObjectAttributesResponse;
 class GetObjectInformationRequest;
 class GetObjectInformationResponse;
 class GetSchemaAsJsonRequest;
@@ -197,6 +199,7 @@ public slots:
     GetAppliedSchemaVersionResponse * getAppliedSchemaVersion(const GetAppliedSchemaVersionRequest &request);
     GetDirectoryResponse * getDirectory(const GetDirectoryRequest &request);
     GetFacetResponse * getFacet(const GetFacetRequest &request);
+    GetObjectAttributesResponse * getObjectAttributes(const GetObjectAttributesRequest &request);
     GetObjectInformationResponse * getObjectInformation(const GetObjectInformationRequest &request);
     GetSchemaAsJsonResponse * getSchemaAsJson(const GetSchemaAsJsonRequest &request);
     GetTypedLinkFacetInformationResponse * getTypedLinkFacetInformation(const GetTypedLinkFacetInformationRequest &request);

@@ -128,6 +128,10 @@ HEADERS += \
     getfacetrequest_p.h \
     getfacetresponse.h \
     getfacetresponse_p.h \
+    getobjectattributesrequest.h \
+    getobjectattributesrequest_p.h \
+    getobjectattributesresponse.h \
+    getobjectattributesresponse_p.h \
     getobjectinformationrequest.h \
     getobjectinformationrequest_p.h \
     getobjectinformationresponse.h \
@@ -325,6 +329,8 @@ SOURCES += \
     getdirectoryresponse.cpp \
     getfacetrequest.cpp \
     getfacetresponse.cpp \
+    getobjectattributesrequest.cpp \
+    getobjectattributesresponse.cpp \
     getobjectinformationrequest.cpp \
     getobjectinformationresponse.cpp \
     getschemaasjsonrequest.cpp \

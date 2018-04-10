@@ -77,6 +77,8 @@
 #include "getdirectoryresponse.h"
 #include "getfacetrequest.h"
 #include "getfacetresponse.h"
+#include "getobjectattributesrequest.h"
+#include "getobjectattributesresponse.h"
 #include "getobjectinformationrequest.h"
 #include "getobjectinformationresponse.h"
 #include "getschemaasjsonrequest.h"
@@ -225,7 +227,7 @@ CloudDirectoryClient::CloudDirectoryClient(
 }
 
 /**
- * Adds a new <a>Facet</a> to an
+ * Adds a new <a>Facet</a> to an object. An object can have more than one facet applied on
  *
  * @param  request Request to send to Amazon CloudDirectory.
  *
@@ -653,6 +655,20 @@ GetFacetResponse * CloudDirectoryClient::getFacet(const GetFacetRequest &request
 }
 
 /**
+ * Retrieves attributes within a facet that are associated with an
+ *
+ * @param  request Request to send to Amazon CloudDirectory.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+GetObjectAttributesResponse * CloudDirectoryClient::getObjectAttributes(const GetObjectAttributesRequest &request)
+{
+    return qobject_cast<GetObjectAttributesResponse *>(send(request));
+}
+
+/**
  * Retrieves metadata about an
  *
  * @param  request Request to send to Amazon CloudDirectory.
@@ -798,7 +814,7 @@ ListIncomingTypedLinksResponse * CloudDirectoryClient::listIncomingTypedLinks(co
 }
 
 /**
- * Lists objects and indexed values attached to the
+ * Lists objects attached to the specified
  *
  * @param  request Request to send to Amazon CloudDirectory.
  *
@@ -921,7 +937,8 @@ ListPolicyAttachmentsResponse * CloudDirectoryClient::listPolicyAttachments(cons
 }
 
 /**
- * Lists schema major versions for a published schema. If <code>SchemaArn</code> is provided, lists the minor
+ * Lists the major version families of each published schema. If a major version ARN is provided as <code>SchemaArn</code>,
+ * the minor version revisions in that family are listed
  *
  * @param  request Request to send to Amazon CloudDirectory.
  *

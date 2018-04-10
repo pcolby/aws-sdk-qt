@@ -65,6 +65,7 @@ public:
         GetAppliedSchemaVersionAction,
         GetDirectoryAction,
         GetFacetAction,
+        GetObjectAttributesAction,
         GetObjectInformationAction,
         GetSchemaAsJsonAction,
         GetTypedLinkFacetInformationAction,
