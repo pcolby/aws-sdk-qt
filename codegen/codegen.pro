@@ -29,3 +29,6 @@ VPATH += qrc src
 HEADERS += generator.h
 SOURCES += generator.cpp main.cpp
 RESOURCES += templates.qrc
+
+# Define the project directory so codegen can locate the API descriptions.
+DEFINES += CODEGEN_PROJECT_DIR=$$shell_quote(\"$$PWD\")

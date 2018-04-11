@@ -53,12 +53,12 @@ int main(int argc, char *argv[])
 {
     QCoreApplication app(argc, argv);
 
-    // Set default paths reletive to the codegen project's source directory.
-    const QDir srcDir = QFileInfo(QFile::decodeName(__FILE__)).dir();
-    const QString defaultTemplatesPath = QDir::cleanPath(srcDir.absoluteFilePath(
-        QStringLiteral("../aws-sdk-cpp/code-generation/api-descriptions")));
-    const QString defaultOutputPath = QDir::cleanPath(srcDir.absoluteFilePath(
-        QStringLiteral("../../src")));
+    // Set default paths reletive to the codegen project's directory.
+    const QDir projectcDir(QStringLiteral(CODEGEN_PROJECT_DIR));
+    const QString defaultTemplatesPath = QDir::cleanPath(projectcDir.absoluteFilePath(
+        QStringLiteral("aws-sdk-cpp/code-generation/api-descriptions")));
+    const QString defaultOutputPath = QDir::cleanPath(projectcDir.absoluteFilePath(
+        QStringLiteral("../src")));
 
     // Parse the command line options.
     QCommandLineParser parser;
