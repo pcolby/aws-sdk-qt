@@ -42,6 +42,10 @@ HEADERS += \
     deletegrouprequest_p.h \
     deletegroupresponse.h \
     deletegroupresponse_p.h \
+    deletemailboxpermissionsrequest.h \
+    deletemailboxpermissionsrequest_p.h \
+    deletemailboxpermissionsresponse.h \
+    deletemailboxpermissionsresponse_p.h \
     deleteresourcerequest.h \
     deleteresourcerequest_p.h \
     deleteresourceresponse.h \
@@ -90,6 +94,10 @@ HEADERS += \
     listgroupsrequest_p.h \
     listgroupsresponse.h \
     listgroupsresponse_p.h \
+    listmailboxpermissionsrequest.h \
+    listmailboxpermissionsrequest_p.h \
+    listmailboxpermissionsresponse.h \
+    listmailboxpermissionsresponse_p.h \
     listorganizationsrequest.h \
     listorganizationsrequest_p.h \
     listorganizationsresponse.h \
@@ -106,6 +114,10 @@ HEADERS += \
     listusersrequest_p.h \
     listusersresponse.h \
     listusersresponse_p.h \
+    putmailboxpermissionsrequest.h \
+    putmailboxpermissionsrequest_p.h \
+    putmailboxpermissionsresponse.h \
+    putmailboxpermissionsresponse_p.h \
     registertoworkmailrequest.h \
     registertoworkmailrequest_p.h \
     registertoworkmailresponse.h \
@@ -146,6 +158,8 @@ SOURCES += \
     deletealiasresponse.cpp \
     deletegrouprequest.cpp \
     deletegroupresponse.cpp \
+    deletemailboxpermissionsrequest.cpp \
+    deletemailboxpermissionsresponse.cpp \
     deleteresourcerequest.cpp \
     deleteresourceresponse.cpp \
     deleteuserrequest.cpp \
@@ -170,6 +184,8 @@ SOURCES += \
     listgroupmembersresponse.cpp \
     listgroupsrequest.cpp \
     listgroupsresponse.cpp \
+    listmailboxpermissionsrequest.cpp \
+    listmailboxpermissionsresponse.cpp \
     listorganizationsrequest.cpp \
     listorganizationsresponse.cpp \
     listresourcedelegatesrequest.cpp \
@@ -178,6 +194,8 @@ SOURCES += \
     listresourcesresponse.cpp \
     listusersrequest.cpp \
     listusersresponse.cpp \
+    putmailboxpermissionsrequest.cpp \
+    putmailboxpermissionsresponse.cpp \
     registertoworkmailrequest.cpp \
     registertoworkmailresponse.cpp \
     resetpasswordrequest.cpp \

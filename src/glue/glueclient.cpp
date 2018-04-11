@@ -337,7 +337,7 @@ BatchGetPartitionResponse * GlueClient::batchGetPartition(const BatchGetPartitio
 }
 
 /**
- * Stops one or more job runs for a specified
+ * Stops one or more job runs for a specified job
  *
  * @param  request Request to send to AWS Glue.
  *
@@ -423,7 +423,7 @@ CreateDevEndpointResponse * GlueClient::createDevEndpoint(const CreateDevEndpoin
 }
 
 /**
- * Creates a new
+ * Creates a new job
  *
  * @param  request Request to send to AWS Glue.
  *
@@ -577,7 +577,7 @@ DeleteDevEndpointResponse * GlueClient::deleteDevEndpoint(const DeleteDevEndpoin
 }
 
 /**
- * Deletes a specified job. If the job is not found, no exception is
+ * Deletes a specified job definition. If the job definition is not found, no exception is
  *
  * @param  request Request to send to AWS Glue.
  *
@@ -871,7 +871,7 @@ GetJobRunResponse * GlueClient::getJobRun(const GetJobRunRequest &request)
 }
 
 /**
- * Retrieves metadata for all runs of a given
+ * Retrieves metadata for all runs of a given job
  *
  * @param  request Request to send to AWS Glue.
  *
@@ -885,7 +885,7 @@ GetJobRunsResponse * GlueClient::getJobRuns(const GetJobRunsRequest &request)
 }
 
 /**
- * Retrieves all current
+ * Retrieves all current job
  *
  * @param  request Request to send to AWS Glue.
  *
@@ -1124,7 +1124,7 @@ StartCrawlerScheduleResponse * GlueClient::startCrawlerSchedule(const StartCrawl
 }
 
 /**
- * Runs a
+ * Starts a job run using a job
  *
  * @param  request Request to send to AWS Glue.
  *

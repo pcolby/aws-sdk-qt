@@ -37,6 +37,8 @@
 #include "deletealiasresponse.h"
 #include "deletegrouprequest.h"
 #include "deletegroupresponse.h"
+#include "deletemailboxpermissionsrequest.h"
+#include "deletemailboxpermissionsresponse.h"
 #include "deleteresourcerequest.h"
 #include "deleteresourceresponse.h"
 #include "deleteuserrequest.h"
@@ -61,6 +63,8 @@
 #include "listgroupmembersresponse.h"
 #include "listgroupsrequest.h"
 #include "listgroupsresponse.h"
+#include "listmailboxpermissionsrequest.h"
+#include "listmailboxpermissionsresponse.h"
 #include "listorganizationsrequest.h"
 #include "listorganizationsresponse.h"
 #include "listresourcedelegatesrequest.h"
@@ -69,6 +73,8 @@
 #include "listresourcesresponse.h"
 #include "listusersrequest.h"
 #include "listusersresponse.h"
+#include "putmailboxpermissionsrequest.h"
+#include "putmailboxpermissionsresponse.h"
 #include "registertoworkmailrequest.h"
 #include "registertoworkmailresponse.h"
 #include "resetpasswordrequest.h"
@@ -295,6 +301,20 @@ DeleteGroupResponse * WorkMailClient::deleteGroup(const DeleteGroupRequest &requ
 }
 
 /**
+ * Deletes permissions granted to a user or
+ *
+ * @param  request Request to send to Amazon WorkMail.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+DeleteMailboxPermissionsResponse * WorkMailClient::deleteMailboxPermissions(const DeleteMailboxPermissionsRequest &request)
+{
+    return qobject_cast<DeleteMailboxPermissionsResponse *>(send(request));
+}
+
+/**
  * Deletes the specified resource.
  *
  * @param  request Request to send to Amazon WorkMail.
@@ -466,6 +486,20 @@ ListGroupsResponse * WorkMailClient::listGroups(const ListGroupsRequest &request
 }
 
 /**
+ * Lists the mailbox permissions associated with a
+ *
+ * @param  request Request to send to Amazon WorkMail.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+ListMailboxPermissionsResponse * WorkMailClient::listMailboxPermissions(const ListMailboxPermissionsRequest &request)
+{
+    return qobject_cast<ListMailboxPermissionsResponse *>(send(request));
+}
+
+/**
  * Returns summaries of the customer's non-deleted
  *
  * @param  request Request to send to Amazon WorkMail.
@@ -520,6 +554,20 @@ ListResourcesResponse * WorkMailClient::listResources(const ListResourcesRequest
 ListUsersResponse * WorkMailClient::listUsers(const ListUsersRequest &request)
 {
     return qobject_cast<ListUsersResponse *>(send(request));
+}
+
+/**
+ * Sets permissions for a user or group. This replaces any pre-existing permissions set for the
+ *
+ * @param  request Request to send to Amazon WorkMail.
+ *
+ * @return A pointer to a related response object.
+ *
+ * @note   The caller is to take responsbility for the resulting pointer.
+ */
+PutMailboxPermissionsResponse * WorkMailClient::putMailboxPermissions(const PutMailboxPermissionsRequest &request)
+{
+    return qobject_cast<PutMailboxPermissionsResponse *>(send(request));
 }
 
 /**
