@@ -41,8 +41,7 @@ namespace Core {
  * \namespace QtAws::Core
  * \brief Encapsulates stuff..
  *
- * \ingroup client
- * \inmodule QtAws::Core
+ * \inmodule QtAwsCore
  *
  * @todo move this to a separate qdoc file.
  */
@@ -51,8 +50,8 @@ namespace Core {
  * \class QtAws::Core::AwsAbstractClient
  * \brief The AwsAbstractClient class provides an interface for accessing AWS services.
  *
- * \ingroup client
- * \inmodule QtAws::Core
+ * \ingroup aws-clients
+ * \inmodule QtAwsCore
  */
 
 
@@ -294,7 +293,7 @@ AwsAbstractSignature * AwsAbstractClient::signature() const
  * \brief The AwsAbstractClientPrivate class provides private implementation for the AwsAbstractClient class.
  * \internal
  *
- * \ingroup client
+ * \ingroup aws-clients
  * \inmodule QtAws::Core
  */
 
