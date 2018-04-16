@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteMethodRequest
  *
- * \brief The DeleteMethodRequest class encapsulates APIGateway DeleteMethod requests.
+ * \brief The DeleteMethodRequest class provides an interface for APIGateway DeleteMethod requests.
  *
  * \ingroup APIGateway
  *

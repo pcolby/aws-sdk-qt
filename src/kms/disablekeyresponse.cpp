@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::DisableKeyResponse
  *
- * \brief The DisableKeyResponse class encapsulates KMS DisableKey responses.
+ * \brief The DisableKeyResponse class provides an interace for KMS DisableKey responses.
  *
  * \ingroup KMS
  *

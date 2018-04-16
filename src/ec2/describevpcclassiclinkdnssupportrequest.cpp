@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVpcClassicLinkDnsSupportRequest
  *
- * \brief The DescribeVpcClassicLinkDnsSupportRequest class encapsulates EC2 DescribeVpcClassicLinkDnsSupport requests.
+ * \brief The DescribeVpcClassicLinkDnsSupportRequest class provides an interface for EC2 DescribeVpcClassicLinkDnsSupport requests.
  *
  * \ingroup EC2
  *

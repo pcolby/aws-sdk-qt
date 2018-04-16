@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVpnConnectionsResponse
  *
- * \brief The DescribeVpnConnectionsResponse class encapsulates EC2 DescribeVpnConnections responses.
+ * \brief The DescribeVpnConnectionsResponse class provides an interace for EC2 DescribeVpnConnections responses.
  *
  * \ingroup EC2
  *

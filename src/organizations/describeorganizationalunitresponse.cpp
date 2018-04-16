@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DescribeOrganizationalUnitResponse
  *
- * \brief The DescribeOrganizationalUnitResponse class encapsulates Organizations DescribeOrganizationalUnit responses.
+ * \brief The DescribeOrganizationalUnitResponse class provides an interace for Organizations DescribeOrganizationalUnit responses.
  *
  * \ingroup Organizations
  *

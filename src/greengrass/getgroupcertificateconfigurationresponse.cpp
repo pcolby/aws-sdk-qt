@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetGroupCertificateConfigurationResponse
  *
- * \brief The GetGroupCertificateConfigurationResponse class encapsulates Greengrass GetGroupCertificateConfiguration responses.
+ * \brief The GetGroupCertificateConfigurationResponse class provides an interace for Greengrass GetGroupCertificateConfiguration responses.
  *
  * \ingroup Greengrass
  *

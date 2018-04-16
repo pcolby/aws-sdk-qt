@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::ListFleetsRequest
  *
- * \brief The ListFleetsRequest class encapsulates GameLift ListFleets requests.
+ * \brief The ListFleetsRequest class provides an interface for GameLift ListFleets requests.
  *
  * \ingroup GameLift
  *

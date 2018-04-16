@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::CreateStreamingDistributionResponse
  *
- * \brief The CreateStreamingDistributionResponse class encapsulates CloudFront CreateStreamingDistribution responses.
+ * \brief The CreateStreamingDistributionResponse class provides an interace for CloudFront CreateStreamingDistribution responses.
  *
  * \ingroup CloudFront
  *

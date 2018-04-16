@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::GetPlatformApplicationAttributesResponse
  *
- * \brief The GetPlatformApplicationAttributesResponse class encapsulates SNS GetPlatformApplicationAttributes responses.
+ * \brief The GetPlatformApplicationAttributesResponse class provides an interace for SNS GetPlatformApplicationAttributes responses.
  *
  * \ingroup SNS
  *

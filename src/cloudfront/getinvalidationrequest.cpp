@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::GetInvalidationRequest
  *
- * \brief The GetInvalidationRequest class encapsulates CloudFront GetInvalidation requests.
+ * \brief The GetInvalidationRequest class provides an interface for CloudFront GetInvalidation requests.
  *
  * \ingroup CloudFront
  *

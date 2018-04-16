@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::UpdateGeoMatchSetRequest
  *
- * \brief The UpdateGeoMatchSetRequest class encapsulates WAFRegional UpdateGeoMatchSet requests.
+ * \brief The UpdateGeoMatchSetRequest class provides an interface for WAFRegional UpdateGeoMatchSet requests.
  *
  * \ingroup WAFRegional
  *

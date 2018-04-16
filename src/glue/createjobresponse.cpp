@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateJobResponse
  *
- * \brief The CreateJobResponse class encapsulates Glue CreateJob responses.
+ * \brief The CreateJobResponse class provides an interace for Glue CreateJob responses.
  *
  * \ingroup Glue
  *

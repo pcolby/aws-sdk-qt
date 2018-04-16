@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::DescribeConfigurationRequest
  *
- * \brief The DescribeConfigurationRequest class encapsulates MQ DescribeConfiguration requests.
+ * \brief The DescribeConfigurationRequest class provides an interface for MQ DescribeConfiguration requests.
  *
  * \ingroup MQ
  *

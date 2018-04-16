@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::CreateVPCAssociationAuthorizationRequest
  *
- * \brief The CreateVPCAssociationAuthorizationRequest class encapsulates Route53 CreateVPCAssociationAuthorization requests.
+ * \brief The CreateVPCAssociationAuthorizationRequest class provides an interface for Route53 CreateVPCAssociationAuthorization requests.
  *
  * \ingroup Route53
  *

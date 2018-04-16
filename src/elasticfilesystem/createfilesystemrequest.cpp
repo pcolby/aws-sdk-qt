@@ -28,7 +28,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::CreateFileSystemRequest
  *
- * \brief The CreateFileSystemRequest class encapsulates EFS CreateFileSystem requests.
+ * \brief The CreateFileSystemRequest class provides an interface for EFS CreateFileSystem requests.
  *
  * \ingroup EFS
  *

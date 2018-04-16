@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DescribeBackupsRequest
  *
- * \brief The DescribeBackupsRequest class encapsulates OpsWorksCM DescribeBackups requests.
+ * \brief The DescribeBackupsRequest class provides an interface for OpsWorksCM DescribeBackups requests.
  *
  * \ingroup OpsWorksCM
  *

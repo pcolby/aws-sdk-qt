@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetExportResponse
  *
- * \brief The GetExportResponse class encapsulates APIGateway GetExport responses.
+ * \brief The GetExportResponse class provides an interace for APIGateway GetExport responses.
  *
  * \ingroup APIGateway
  *

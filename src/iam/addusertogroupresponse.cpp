@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::AddUserToGroupResponse
  *
- * \brief The AddUserToGroupResponse class encapsulates IAM AddUserToGroup responses.
+ * \brief The AddUserToGroupResponse class provides an interace for IAM AddUserToGroup responses.
  *
  * \ingroup IAM
  *

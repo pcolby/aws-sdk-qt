@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::CreateApplicationVersionRequest
  *
- * \brief The CreateApplicationVersionRequest class encapsulates ServerlessApplicationRepository CreateApplicationVersion requests.
+ * \brief The CreateApplicationVersionRequest class provides an interface for ServerlessApplicationRepository CreateApplicationVersion requests.
  *
  * \ingroup ServerlessApplicationRepository
  *

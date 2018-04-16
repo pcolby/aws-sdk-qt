@@ -183,7 +183,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::OpsWorksClient
  *
- * \brief The OpsWorksClient class provides access the AWS OpsWorks service.
+ * \brief The OpsWorksClient class provides access to the AWS OpsWorks service.
  *
  * \ingroup OpsWorks
  *

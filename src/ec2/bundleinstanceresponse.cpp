@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::BundleInstanceResponse
  *
- * \brief The BundleInstanceResponse class encapsulates EC2 BundleInstance responses.
+ * \brief The BundleInstanceResponse class provides an interace for EC2 BundleInstance responses.
  *
  * \ingroup EC2
  *

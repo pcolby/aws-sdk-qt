@@ -30,7 +30,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::ListSecretVersionIdsResponse
  *
- * \brief The ListSecretVersionIdsResponse class encapsulates SecretsManager ListSecretVersionIds responses.
+ * \brief The ListSecretVersionIdsResponse class provides an interace for SecretsManager ListSecretVersionIds responses.
  *
  * \ingroup SecretsManager
  *

@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DescribeCacheEngineVersionsResponse
  *
- * \brief The DescribeCacheEngineVersionsResponse class encapsulates ElastiCache DescribeCacheEngineVersions responses.
+ * \brief The DescribeCacheEngineVersionsResponse class provides an interace for ElastiCache DescribeCacheEngineVersions responses.
  *
  * \ingroup ElastiCache
  *

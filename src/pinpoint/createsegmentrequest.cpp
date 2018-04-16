@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::CreateSegmentRequest
  *
- * \brief The CreateSegmentRequest class encapsulates Pinpoint CreateSegment requests.
+ * \brief The CreateSegmentRequest class provides an interface for Pinpoint CreateSegment requests.
  *
  * \ingroup Pinpoint
  *

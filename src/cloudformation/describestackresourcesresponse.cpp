@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::DescribeStackResourcesResponse
  *
- * \brief The DescribeStackResourcesResponse class encapsulates CloudFormation DescribeStackResources responses.
+ * \brief The DescribeStackResourcesResponse class provides an interace for CloudFormation DescribeStackResources responses.
  *
  * \ingroup CloudFormation
  *

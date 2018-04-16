@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeTableRestoreStatusRequest
  *
- * \brief The DescribeTableRestoreStatusRequest class encapsulates Redshift DescribeTableRestoreStatus requests.
+ * \brief The DescribeTableRestoreStatusRequest class provides an interface for Redshift DescribeTableRestoreStatus requests.
  *
  * \ingroup Redshift
  *

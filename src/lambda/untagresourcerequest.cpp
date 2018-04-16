@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::UntagResourceRequest
  *
- * \brief The UntagResourceRequest class encapsulates Lambda UntagResource requests.
+ * \brief The UntagResourceRequest class provides an interface for Lambda UntagResource requests.
  *
  * \ingroup Lambda
  *

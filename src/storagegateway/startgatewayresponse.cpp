@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::StartGatewayResponse
  *
- * \brief The StartGatewayResponse class encapsulates StorageGateway StartGateway responses.
+ * \brief The StartGatewayResponse class provides an interace for StorageGateway StartGateway responses.
  *
  * \ingroup StorageGateway
  *

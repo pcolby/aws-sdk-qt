@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::CreateCommentRequest
  *
- * \brief The CreateCommentRequest class encapsulates WorkDocs CreateComment requests.
+ * \brief The CreateCommentRequest class provides an interface for WorkDocs CreateComment requests.
  *
  * \ingroup WorkDocs
  *

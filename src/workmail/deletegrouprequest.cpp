@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DeleteGroupRequest
  *
- * \brief The DeleteGroupRequest class encapsulates WorkMail DeleteGroup requests.
+ * \brief The DeleteGroupRequest class provides an interface for WorkMail DeleteGroup requests.
  *
  * \ingroup WorkMail
  *

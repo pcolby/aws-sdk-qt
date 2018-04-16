@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::CreateDataSourceRequest
  *
- * \brief The CreateDataSourceRequest class encapsulates AppSync CreateDataSource requests.
+ * \brief The CreateDataSourceRequest class provides an interface for AppSync CreateDataSource requests.
  *
  * \ingroup AppSync
  *

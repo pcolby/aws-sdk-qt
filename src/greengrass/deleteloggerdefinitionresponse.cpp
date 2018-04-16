@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::DeleteLoggerDefinitionResponse
  *
- * \brief The DeleteLoggerDefinitionResponse class encapsulates Greengrass DeleteLoggerDefinition responses.
+ * \brief The DeleteLoggerDefinitionResponse class provides an interace for Greengrass DeleteLoggerDefinition responses.
  *
  * \ingroup Greengrass
  *

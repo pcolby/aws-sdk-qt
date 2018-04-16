@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DescribeMLModelsRequest
  *
- * \brief The DescribeMLModelsRequest class encapsulates MachineLearning DescribeMLModels requests.
+ * \brief The DescribeMLModelsRequest class provides an interface for MachineLearning DescribeMLModels requests.
  *
  * \ingroup MachineLearning
  *

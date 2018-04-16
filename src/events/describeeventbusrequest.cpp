@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::DescribeEventBusRequest
  *
- * \brief The DescribeEventBusRequest class encapsulates CloudWatchEvents DescribeEventBus requests.
+ * \brief The DescribeEventBusRequest class provides an interface for CloudWatchEvents DescribeEventBus requests.
  *
  * \ingroup CloudWatchEvents
  *

@@ -26,7 +26,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::CodeCommitRequest
  *
- * \brief The CodeCommitRequest class is the base class for all CodeCommit requests.
+ * \brief The CodeCommitRequest class provides an interface for CodeCommit requests.
  *
  * \ingroup CodeCommit
  */

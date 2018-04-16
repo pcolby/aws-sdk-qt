@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketLifecycleResponse
  *
- * \brief The GetBucketLifecycleResponse class encapsulates S3 GetBucketLifecycle responses.
+ * \brief The GetBucketLifecycleResponse class provides an interace for S3 GetBucketLifecycle responses.
  *
  * \ingroup S3
  *

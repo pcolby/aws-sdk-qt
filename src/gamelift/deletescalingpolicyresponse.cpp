@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteScalingPolicyResponse
  *
- * \brief The DeleteScalingPolicyResponse class encapsulates GameLift DeleteScalingPolicy responses.
+ * \brief The DeleteScalingPolicyResponse class provides an interace for GameLift DeleteScalingPolicy responses.
  *
  * \ingroup GameLift
  *

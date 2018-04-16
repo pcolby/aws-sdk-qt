@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeStackProvisioningParametersRequest
  *
- * \brief The DescribeStackProvisioningParametersRequest class encapsulates OpsWorks DescribeStackProvisioningParameters requests.
+ * \brief The DescribeStackProvisioningParametersRequest class provides an interface for OpsWorks DescribeStackProvisioningParameters requests.
  *
  * \ingroup OpsWorks
  *

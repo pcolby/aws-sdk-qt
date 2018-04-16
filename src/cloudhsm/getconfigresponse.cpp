@@ -30,7 +30,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::GetConfigResponse
  *
- * \brief The GetConfigResponse class encapsulates CloudHSM GetConfig responses.
+ * \brief The GetConfigResponse class provides an interace for CloudHSM GetConfig responses.
  *
  * \ingroup CloudHSM
  *

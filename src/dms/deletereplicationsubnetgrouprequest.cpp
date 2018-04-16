@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DeleteReplicationSubnetGroupRequest
  *
- * \brief The DeleteReplicationSubnetGroupRequest class encapsulates DatabaseMigrationService DeleteReplicationSubnetGroup requests.
+ * \brief The DeleteReplicationSubnetGroupRequest class provides an interface for DatabaseMigrationService DeleteReplicationSubnetGroup requests.
  *
  * \ingroup DatabaseMigrationService
  *

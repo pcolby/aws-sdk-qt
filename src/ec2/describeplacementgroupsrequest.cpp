@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribePlacementGroupsRequest
  *
- * \brief The DescribePlacementGroupsRequest class encapsulates EC2 DescribePlacementGroups requests.
+ * \brief The DescribePlacementGroupsRequest class provides an interface for EC2 DescribePlacementGroups requests.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListReviewPolicyResultsForHITRequest
  *
- * \brief The ListReviewPolicyResultsForHITRequest class encapsulates MTurk ListReviewPolicyResultsForHIT requests.
+ * \brief The ListReviewPolicyResultsForHITRequest class provides an interface for MTurk ListReviewPolicyResultsForHIT requests.
  *
  * \ingroup MTurk
  *

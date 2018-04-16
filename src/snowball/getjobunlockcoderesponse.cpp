@@ -30,7 +30,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::GetJobUnlockCodeResponse
  *
- * \brief The GetJobUnlockCodeResponse class encapsulates Snowball GetJobUnlockCode responses.
+ * \brief The GetJobUnlockCodeResponse class provides an interace for Snowball GetJobUnlockCode responses.
  *
  * \ingroup Snowball
  *

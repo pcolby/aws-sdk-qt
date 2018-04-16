@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::GetActivityTaskResponse
  *
- * \brief The GetActivityTaskResponse class encapsulates SFN GetActivityTask responses.
+ * \brief The GetActivityTaskResponse class provides an interace for SFN GetActivityTask responses.
  *
  * \ingroup SFN
  *

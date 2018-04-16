@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::ListEventSourceMappingsResponse
  *
- * \brief The ListEventSourceMappingsResponse class encapsulates Lambda ListEventSourceMappings responses.
+ * \brief The ListEventSourceMappingsResponse class provides an interace for Lambda ListEventSourceMappings responses.
  *
  * \ingroup Lambda
  *

@@ -30,7 +30,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::RegisterInstanceResponse
  *
- * \brief The RegisterInstanceResponse class encapsulates ServiceDiscovery RegisterInstance responses.
+ * \brief The RegisterInstanceResponse class provides an interace for ServiceDiscovery RegisterInstance responses.
  *
  * \ingroup ServiceDiscovery
  *

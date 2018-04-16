@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeServiceAccessPoliciesResponse
  *
- * \brief The DescribeServiceAccessPoliciesResponse class encapsulates CloudSearch DescribeServiceAccessPolicies responses.
+ * \brief The DescribeServiceAccessPoliciesResponse class provides an interace for CloudSearch DescribeServiceAccessPolicies responses.
  *
  * \ingroup CloudSearch
  *

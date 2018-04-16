@@ -26,7 +26,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::StorageGatewayRequest
  *
- * \brief The StorageGatewayRequest class is the base class for all StorageGateway requests.
+ * \brief The StorageGatewayRequest class provides an interface for StorageGateway requests.
  *
  * \ingroup StorageGateway
  */

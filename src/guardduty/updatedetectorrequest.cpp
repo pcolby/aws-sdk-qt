@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::UpdateDetectorRequest
  *
- * \brief The UpdateDetectorRequest class encapsulates GuardDuty UpdateDetector requests.
+ * \brief The UpdateDetectorRequest class provides an interface for GuardDuty UpdateDetector requests.
  *
  * \ingroup GuardDuty
  *

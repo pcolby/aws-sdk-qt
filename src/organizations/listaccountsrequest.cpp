@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListAccountsRequest
  *
- * \brief The ListAccountsRequest class encapsulates Organizations ListAccounts requests.
+ * \brief The ListAccountsRequest class provides an interface for Organizations ListAccounts requests.
  *
  * \ingroup Organizations
  *

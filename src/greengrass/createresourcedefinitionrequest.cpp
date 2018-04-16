@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateResourceDefinitionRequest
  *
- * \brief The CreateResourceDefinitionRequest class encapsulates Greengrass CreateResourceDefinition requests.
+ * \brief The CreateResourceDefinitionRequest class provides an interface for Greengrass CreateResourceDefinition requests.
  *
  * \ingroup Greengrass
  *

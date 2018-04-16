@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::DescribeIdentityRequest
  *
- * \brief The DescribeIdentityRequest class encapsulates CognitoIdentity DescribeIdentity requests.
+ * \brief The DescribeIdentityRequest class provides an interface for CognitoIdentity DescribeIdentity requests.
  *
  * \ingroup CognitoIdentity
  *

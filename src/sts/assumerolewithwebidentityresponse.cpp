@@ -30,7 +30,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::AssumeRoleWithWebIdentityResponse
  *
- * \brief The AssumeRoleWithWebIdentityResponse class encapsulates STS AssumeRoleWithWebIdentity responses.
+ * \brief The AssumeRoleWithWebIdentityResponse class provides an interace for STS AssumeRoleWithWebIdentity responses.
  *
  * \ingroup STS
  *

@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::ListRepositoriesRequest
  *
- * \brief The ListRepositoriesRequest class encapsulates CodeCommit ListRepositories requests.
+ * \brief The ListRepositoriesRequest class provides an interface for CodeCommit ListRepositories requests.
  *
  * \ingroup CodeCommit
  *

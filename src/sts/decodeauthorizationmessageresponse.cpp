@@ -30,7 +30,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::DecodeAuthorizationMessageResponse
  *
- * \brief The DecodeAuthorizationMessageResponse class encapsulates STS DecodeAuthorizationMessage responses.
+ * \brief The DecodeAuthorizationMessageResponse class provides an interace for STS DecodeAuthorizationMessage responses.
  *
  * \ingroup STS
  *

@@ -28,7 +28,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::DescribeContainerRequest
  *
- * \brief The DescribeContainerRequest class encapsulates MediaStore DescribeContainer requests.
+ * \brief The DescribeContainerRequest class provides an interface for MediaStore DescribeContainer requests.
  *
  * \ingroup MediaStore
  *

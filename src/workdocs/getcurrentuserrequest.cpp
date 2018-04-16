@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::GetCurrentUserRequest
  *
- * \brief The GetCurrentUserRequest class encapsulates WorkDocs GetCurrentUser requests.
+ * \brief The GetCurrentUserRequest class provides an interface for WorkDocs GetCurrentUser requests.
  *
  * \ingroup WorkDocs
  *

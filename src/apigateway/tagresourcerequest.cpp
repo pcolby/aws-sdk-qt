@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::TagResourceRequest
  *
- * \brief The TagResourceRequest class encapsulates APIGateway TagResource requests.
+ * \brief The TagResourceRequest class provides an interface for APIGateway TagResource requests.
  *
  * \ingroup APIGateway
  *

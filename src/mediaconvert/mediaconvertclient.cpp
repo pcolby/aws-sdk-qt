@@ -77,7 +77,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::MediaConvertClient
  *
- * \brief The MediaConvertClient class provides access the AWS Elemental MediaConvert service.
+ * \brief The MediaConvertClient class provides access to the AWS Elemental MediaConvert service.
  *
  * \ingroup MediaConvert
  *

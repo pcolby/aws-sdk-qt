@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::IsVpcPeeredResponse
  *
- * \brief The IsVpcPeeredResponse class encapsulates Lightsail IsVpcPeered responses.
+ * \brief The IsVpcPeeredResponse class provides an interace for Lightsail IsVpcPeered responses.
  *
  * \ingroup Lightsail
  *

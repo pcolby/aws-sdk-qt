@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::GetOnPremisesInstanceRequest
  *
- * \brief The GetOnPremisesInstanceRequest class encapsulates CodeDeploy GetOnPremisesInstance requests.
+ * \brief The GetOnPremisesInstanceRequest class provides an interface for CodeDeploy GetOnPremisesInstance requests.
  *
  * \ingroup CodeDeploy
  *

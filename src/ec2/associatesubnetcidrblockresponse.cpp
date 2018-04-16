@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AssociateSubnetCidrBlockResponse
  *
- * \brief The AssociateSubnetCidrBlockResponse class encapsulates EC2 AssociateSubnetCidrBlock responses.
+ * \brief The AssociateSubnetCidrBlockResponse class provides an interace for EC2 AssociateSubnetCidrBlock responses.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListTagOptionsResponse
  *
- * \brief The ListTagOptionsResponse class encapsulates ServiceCatalog ListTagOptions responses.
+ * \brief The ListTagOptionsResponse class provides an interace for ServiceCatalog ListTagOptions responses.
  *
  * \ingroup ServiceCatalog
  *

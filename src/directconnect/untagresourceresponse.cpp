@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::UntagResourceResponse
  *
- * \brief The UntagResourceResponse class encapsulates DirectConnect UntagResource responses.
+ * \brief The UntagResourceResponse class provides an interace for DirectConnect UntagResource responses.
  *
  * \ingroup DirectConnect
  *

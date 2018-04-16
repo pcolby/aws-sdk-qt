@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateApplicationRequest
  *
- * \brief The UpdateApplicationRequest class encapsulates ElasticBeanstalk UpdateApplication requests.
+ * \brief The UpdateApplicationRequest class provides an interface for ElasticBeanstalk UpdateApplication requests.
  *
  * \ingroup ElasticBeanstalk
  *

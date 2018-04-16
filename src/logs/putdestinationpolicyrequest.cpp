@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::PutDestinationPolicyRequest
  *
- * \brief The PutDestinationPolicyRequest class encapsulates CloudWatchLogs PutDestinationPolicy requests.
+ * \brief The PutDestinationPolicyRequest class provides an interface for CloudWatchLogs PutDestinationPolicy requests.
  *
  * \ingroup CloudWatchLogs
  *

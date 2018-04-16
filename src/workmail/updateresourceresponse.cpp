@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::UpdateResourceResponse
  *
- * \brief The UpdateResourceResponse class encapsulates WorkMail UpdateResource responses.
+ * \brief The UpdateResourceResponse class provides an interace for WorkMail UpdateResource responses.
  *
  * \ingroup WorkMail
  *

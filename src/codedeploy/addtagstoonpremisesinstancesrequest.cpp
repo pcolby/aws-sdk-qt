@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::AddTagsToOnPremisesInstancesRequest
  *
- * \brief The AddTagsToOnPremisesInstancesRequest class encapsulates CodeDeploy AddTagsToOnPremisesInstances requests.
+ * \brief The AddTagsToOnPremisesInstancesRequest class provides an interface for CodeDeploy AddTagsToOnPremisesInstances requests.
  *
  * \ingroup CodeDeploy
  *

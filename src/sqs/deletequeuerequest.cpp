@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::DeleteQueueRequest
  *
- * \brief The DeleteQueueRequest class encapsulates SQS DeleteQueue requests.
+ * \brief The DeleteQueueRequest class provides an interface for SQS DeleteQueue requests.
  *
  * \ingroup SQS
  *

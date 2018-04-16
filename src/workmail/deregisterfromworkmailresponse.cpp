@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DeregisterFromWorkMailResponse
  *
- * \brief The DeregisterFromWorkMailResponse class encapsulates WorkMail DeregisterFromWorkMail responses.
+ * \brief The DeregisterFromWorkMailResponse class provides an interace for WorkMail DeregisterFromWorkMail responses.
  *
  * \ingroup WorkMail
  *

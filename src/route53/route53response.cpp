@@ -29,7 +29,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::Route53Response
  *
- * \brief The Route53Response class is the base class for all Route53 responses.
+ * \brief The Route53Response class provides an interface for Route53 responses.
  *
  * \ingroup Route53
  */

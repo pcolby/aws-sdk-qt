@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateModelResponse
  *
- * \brief The UpdateModelResponse class encapsulates APIGateway UpdateModel responses.
+ * \brief The UpdateModelResponse class provides an interace for APIGateway UpdateModel responses.
  *
  * \ingroup APIGateway
  *

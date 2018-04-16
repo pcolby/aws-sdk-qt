@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetPartitionsRequest
  *
- * \brief The GetPartitionsRequest class encapsulates Glue GetPartitions requests.
+ * \brief The GetPartitionsRequest class provides an interface for Glue GetPartitions requests.
  *
  * \ingroup Glue
  *

@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DeleteProductRequest
  *
- * \brief The DeleteProductRequest class encapsulates ServiceCatalog DeleteProduct requests.
+ * \brief The DeleteProductRequest class provides an interface for ServiceCatalog DeleteProduct requests.
  *
  * \ingroup ServiceCatalog
  *

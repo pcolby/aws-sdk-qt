@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DescribeDirectoriesRequest
  *
- * \brief The DescribeDirectoriesRequest class encapsulates DirectoryService DescribeDirectories requests.
+ * \brief The DescribeDirectoriesRequest class provides an interface for DirectoryService DescribeDirectories requests.
  *
  * \ingroup DirectoryService
  *

@@ -26,7 +26,7 @@ namespace IoTDataPlane {
 /*!
  * \class QtAws::IoTDataPlane::IoTDataPlaneRequest
  *
- * \brief The IoTDataPlaneRequest class is the base class for all IoTDataPlane requests.
+ * \brief The IoTDataPlaneRequest class provides an interface for IoTDataPlane requests.
  *
  * \ingroup IoTDataPlane
  */

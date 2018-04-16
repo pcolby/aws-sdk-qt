@@ -30,7 +30,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::DescribeScalingPoliciesResponse
  *
- * \brief The DescribeScalingPoliciesResponse class encapsulates ApplicationAutoScaling DescribeScalingPolicies responses.
+ * \brief The DescribeScalingPoliciesResponse class provides an interace for ApplicationAutoScaling DescribeScalingPolicies responses.
  *
  * \ingroup ApplicationAutoScaling
  *

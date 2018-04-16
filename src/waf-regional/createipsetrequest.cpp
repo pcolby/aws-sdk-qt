@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::CreateIPSetRequest
  *
- * \brief The CreateIPSetRequest class encapsulates WAFRegional CreateIPSet requests.
+ * \brief The CreateIPSetRequest class provides an interface for WAFRegional CreateIPSet requests.
  *
  * \ingroup WAFRegional
  *

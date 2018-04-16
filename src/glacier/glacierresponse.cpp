@@ -29,7 +29,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::GlacierResponse
  *
- * \brief The GlacierResponse class is the base class for all Glacier responses.
+ * \brief The GlacierResponse class provides an interface for Glacier responses.
  *
  * \ingroup Glacier
  */

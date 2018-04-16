@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::RemoveTagsResponse
  *
- * \brief The RemoveTagsResponse class encapsulates CloudTrail RemoveTags responses.
+ * \brief The RemoveTagsResponse class provides an interace for CloudTrail RemoveTags responses.
  *
  * \ingroup CloudTrail
  *

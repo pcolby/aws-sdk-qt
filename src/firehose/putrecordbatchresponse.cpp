@@ -30,7 +30,7 @@ namespace Firehose {
 /*!
  * \class QtAws::Firehose::PutRecordBatchResponse
  *
- * \brief The PutRecordBatchResponse class encapsulates Firehose PutRecordBatch responses.
+ * \brief The PutRecordBatchResponse class provides an interace for Firehose PutRecordBatch responses.
  *
  * \ingroup Firehose
  *

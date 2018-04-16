@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::DescribeUserImportJobResponse
  *
- * \brief The DescribeUserImportJobResponse class encapsulates CognitoIdentityProvider DescribeUserImportJob responses.
+ * \brief The DescribeUserImportJobResponse class provides an interace for CognitoIdentityProvider DescribeUserImportJob responses.
  *
  * \ingroup CognitoIdentityProvider
  *

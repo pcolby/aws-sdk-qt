@@ -29,7 +29,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::MobileResponse
  *
- * \brief The MobileResponse class is the base class for all Mobile responses.
+ * \brief The MobileResponse class provides an interface for Mobile responses.
  *
  * \ingroup Mobile
  */

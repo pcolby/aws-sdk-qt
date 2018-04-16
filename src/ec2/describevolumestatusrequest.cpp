@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVolumeStatusRequest
  *
- * \brief The DescribeVolumeStatusRequest class encapsulates EC2 DescribeVolumeStatus requests.
+ * \brief The DescribeVolumeStatusRequest class provides an interface for EC2 DescribeVolumeStatus requests.
  *
  * \ingroup EC2
  *

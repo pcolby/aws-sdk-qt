@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ModifyReplicationGroupResponse
  *
- * \brief The ModifyReplicationGroupResponse class encapsulates ElastiCache ModifyReplicationGroup responses.
+ * \brief The ModifyReplicationGroupResponse class provides an interace for ElastiCache ModifyReplicationGroup responses.
  *
  * \ingroup ElastiCache
  *

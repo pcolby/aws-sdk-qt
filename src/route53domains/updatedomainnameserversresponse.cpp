@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::UpdateDomainNameserversResponse
  *
- * \brief The UpdateDomainNameserversResponse class encapsulates Route53Domains UpdateDomainNameservers responses.
+ * \brief The UpdateDomainNameserversResponse class provides an interace for Route53Domains UpdateDomainNameservers responses.
  *
  * \ingroup Route53Domains
  *

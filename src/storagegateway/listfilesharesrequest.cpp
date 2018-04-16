@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ListFileSharesRequest
  *
- * \brief The ListFileSharesRequest class encapsulates StorageGateway ListFileShares requests.
+ * \brief The ListFileSharesRequest class provides an interface for StorageGateway ListFileShares requests.
  *
  * \ingroup StorageGateway
  *

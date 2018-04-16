@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateVirtualMFADeviceResponse
  *
- * \brief The CreateVirtualMFADeviceResponse class encapsulates IAM CreateVirtualMFADevice responses.
+ * \brief The CreateVirtualMFADeviceResponse class provides an interace for IAM CreateVirtualMFADevice responses.
  *
  * \ingroup IAM
  *

@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListDocumentsResponse
  *
- * \brief The ListDocumentsResponse class encapsulates SSM ListDocuments responses.
+ * \brief The ListDocumentsResponse class provides an interace for SSM ListDocuments responses.
  *
  * \ingroup SSM
  *

@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::DeleteDeploymentGroupResponse
  *
- * \brief The DeleteDeploymentGroupResponse class encapsulates CodeDeploy DeleteDeploymentGroup responses.
+ * \brief The DeleteDeploymentGroupResponse class provides an interace for CodeDeploy DeleteDeploymentGroup responses.
  *
  * \ingroup CodeDeploy
  *

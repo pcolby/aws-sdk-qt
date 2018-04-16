@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::UpdateTemplateRequest
  *
- * \brief The UpdateTemplateRequest class encapsulates SES UpdateTemplate requests.
+ * \brief The UpdateTemplateRequest class provides an interface for SES UpdateTemplate requests.
  *
  * \ingroup SES
  *

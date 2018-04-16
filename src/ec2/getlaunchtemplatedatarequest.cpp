@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::GetLaunchTemplateDataRequest
  *
- * \brief The GetLaunchTemplateDataRequest class encapsulates EC2 GetLaunchTemplateData requests.
+ * \brief The GetLaunchTemplateDataRequest class provides an interface for EC2 GetLaunchTemplateData requests.
  *
  * \ingroup EC2
  *

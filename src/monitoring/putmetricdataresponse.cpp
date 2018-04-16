@@ -30,7 +30,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::PutMetricDataResponse
  *
- * \brief The PutMetricDataResponse class encapsulates CloudWatch PutMetricData responses.
+ * \brief The PutMetricDataResponse class provides an interace for CloudWatch PutMetricData responses.
  *
  * \ingroup CloudWatch
  *

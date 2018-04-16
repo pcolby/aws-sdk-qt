@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::UpdateFieldLevelEncryptionProfileRequest
  *
- * \brief The UpdateFieldLevelEncryptionProfileRequest class encapsulates CloudFront UpdateFieldLevelEncryptionProfile requests.
+ * \brief The UpdateFieldLevelEncryptionProfileRequest class provides an interface for CloudFront UpdateFieldLevelEncryptionProfile requests.
  *
  * \ingroup CloudFront
  *

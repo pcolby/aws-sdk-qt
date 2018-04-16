@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateOTAUpdateResponse
  *
- * \brief The CreateOTAUpdateResponse class encapsulates IoT CreateOTAUpdate responses.
+ * \brief The CreateOTAUpdateResponse class provides an interace for IoT CreateOTAUpdate responses.
  *
  * \ingroup IoT
  *

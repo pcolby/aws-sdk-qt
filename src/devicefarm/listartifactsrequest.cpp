@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListArtifactsRequest
  *
- * \brief The ListArtifactsRequest class encapsulates DeviceFarm ListArtifacts requests.
+ * \brief The ListArtifactsRequest class provides an interface for DeviceFarm ListArtifacts requests.
  *
  * \ingroup DeviceFarm
  *

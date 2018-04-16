@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::VerifyDomainDkimResponse
  *
- * \brief The VerifyDomainDkimResponse class encapsulates SES VerifyDomainDkim responses.
+ * \brief The VerifyDomainDkimResponse class provides an interace for SES VerifyDomainDkim responses.
  *
  * \ingroup SES
  *

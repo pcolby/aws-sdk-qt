@@ -28,7 +28,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::CreateStreamRequest
  *
- * \brief The CreateStreamRequest class encapsulates KinesisVideo CreateStream requests.
+ * \brief The CreateStreamRequest class provides an interface for KinesisVideo CreateStream requests.
  *
  * \ingroup KinesisVideo
  *

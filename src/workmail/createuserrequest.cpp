@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::CreateUserRequest
  *
- * \brief The CreateUserRequest class encapsulates WorkMail CreateUser requests.
+ * \brief The CreateUserRequest class provides an interface for WorkMail CreateUser requests.
  *
  * \ingroup WorkMail
  *

@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DeleteConstraintResponse
  *
- * \brief The DeleteConstraintResponse class encapsulates ServiceCatalog DeleteConstraint responses.
+ * \brief The DeleteConstraintResponse class provides an interace for ServiceCatalog DeleteConstraint responses.
  *
  * \ingroup ServiceCatalog
  *

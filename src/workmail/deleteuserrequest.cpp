@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DeleteUserRequest
  *
- * \brief The DeleteUserRequest class encapsulates WorkMail DeleteUser requests.
+ * \brief The DeleteUserRequest class provides an interface for WorkMail DeleteUser requests.
  *
  * \ingroup WorkMail
  *

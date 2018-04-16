@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DeleteClusterResponse
  *
- * \brief The DeleteClusterResponse class encapsulates DAX DeleteCluster responses.
+ * \brief The DeleteClusterResponse class provides an interace for DAX DeleteCluster responses.
  *
  * \ingroup DAX
  *

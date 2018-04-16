@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DeleteCacheSecurityGroupResponse
  *
- * \brief The DeleteCacheSecurityGroupResponse class encapsulates ElastiCache DeleteCacheSecurityGroup responses.
+ * \brief The DeleteCacheSecurityGroupResponse class provides an interace for ElastiCache DeleteCacheSecurityGroup responses.
  *
  * \ingroup ElastiCache
  *

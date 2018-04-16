@@ -28,7 +28,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::GetServiceGraphRequest
  *
- * \brief The GetServiceGraphRequest class encapsulates XRay GetServiceGraph requests.
+ * \brief The GetServiceGraphRequest class provides an interface for XRay GetServiceGraph requests.
  *
  * \ingroup XRay
  *

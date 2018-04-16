@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DeletePortfolioRequest
  *
- * \brief The DeletePortfolioRequest class encapsulates ServiceCatalog DeletePortfolio requests.
+ * \brief The DeletePortfolioRequest class provides an interface for ServiceCatalog DeletePortfolio requests.
  *
  * \ingroup ServiceCatalog
  *

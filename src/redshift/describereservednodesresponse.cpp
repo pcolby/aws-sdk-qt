@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeReservedNodesResponse
  *
- * \brief The DescribeReservedNodesResponse class encapsulates Redshift DescribeReservedNodes responses.
+ * \brief The DescribeReservedNodesResponse class provides an interace for Redshift DescribeReservedNodes responses.
  *
  * \ingroup Redshift
  *

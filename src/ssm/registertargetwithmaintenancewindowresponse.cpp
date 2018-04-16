@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::RegisterTargetWithMaintenanceWindowResponse
  *
- * \brief The RegisterTargetWithMaintenanceWindowResponse class encapsulates SSM RegisterTargetWithMaintenanceWindow responses.
+ * \brief The RegisterTargetWithMaintenanceWindowResponse class provides an interace for SSM RegisterTargetWithMaintenanceWindow responses.
  *
  * \ingroup SSM
  *

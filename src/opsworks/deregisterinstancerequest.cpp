@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeregisterInstanceRequest
  *
- * \brief The DeregisterInstanceRequest class encapsulates OpsWorks DeregisterInstance requests.
+ * \brief The DeregisterInstanceRequest class provides an interface for OpsWorks DeregisterInstance requests.
  *
  * \ingroup OpsWorks
  *

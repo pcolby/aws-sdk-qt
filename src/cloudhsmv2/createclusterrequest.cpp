@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::CreateClusterRequest
  *
- * \brief The CreateClusterRequest class encapsulates CloudHSMV2 CreateCluster requests.
+ * \brief The CreateClusterRequest class provides an interface for CloudHSMV2 CreateCluster requests.
  *
  * \ingroup CloudHSMV2
  *

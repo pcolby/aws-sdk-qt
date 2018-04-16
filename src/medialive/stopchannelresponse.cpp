@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::StopChannelResponse
  *
- * \brief The StopChannelResponse class encapsulates MediaLive StopChannel responses.
+ * \brief The StopChannelResponse class provides an interace for MediaLive StopChannel responses.
  *
  * \ingroup MediaLive
  *

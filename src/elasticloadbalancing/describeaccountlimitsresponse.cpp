@@ -30,7 +30,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::DescribeAccountLimitsResponse
  *
- * \brief The DescribeAccountLimitsResponse class encapsulates ElasticLoadBalancing DescribeAccountLimits responses.
+ * \brief The DescribeAccountLimitsResponse class provides an interace for ElasticLoadBalancing DescribeAccountLimits responses.
  *
  * \ingroup ElasticLoadBalancing
  *

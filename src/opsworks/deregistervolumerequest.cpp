@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeregisterVolumeRequest
  *
- * \brief The DeregisterVolumeRequest class encapsulates OpsWorks DeregisterVolume requests.
+ * \brief The DeregisterVolumeRequest class provides an interface for OpsWorks DeregisterVolume requests.
  *
  * \ingroup OpsWorks
  *

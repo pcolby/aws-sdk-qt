@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::PutAutoScalingPolicyRequest
  *
- * \brief The PutAutoScalingPolicyRequest class encapsulates EMR PutAutoScalingPolicy requests.
+ * \brief The PutAutoScalingPolicyRequest class provides an interface for EMR PutAutoScalingPolicy requests.
  *
  * \ingroup EMR
  *

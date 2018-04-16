@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteReceiptFilterRequest
  *
- * \brief The DeleteReceiptFilterRequest class encapsulates SES DeleteReceiptFilter requests.
+ * \brief The DeleteReceiptFilterRequest class provides an interface for SES DeleteReceiptFilter requests.
  *
  * \ingroup SES
  *

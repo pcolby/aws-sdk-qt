@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::EnableMetricsCollectionResponse
  *
- * \brief The EnableMetricsCollectionResponse class encapsulates AutoScaling EnableMetricsCollection responses.
+ * \brief The EnableMetricsCollectionResponse class provides an interace for AutoScaling EnableMetricsCollection responses.
  *
  * \ingroup AutoScaling
  *

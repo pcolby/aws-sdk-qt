@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DisassociateRouteTableResponse
  *
- * \brief The DisassociateRouteTableResponse class encapsulates EC2 DisassociateRouteTable responses.
+ * \brief The DisassociateRouteTableResponse class provides an interace for EC2 DisassociateRouteTable responses.
  *
  * \ingroup EC2
  *

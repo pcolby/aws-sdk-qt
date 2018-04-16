@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeletePermissionPolicyRequest
  *
- * \brief The DeletePermissionPolicyRequest class encapsulates WAF DeletePermissionPolicy requests.
+ * \brief The DeletePermissionPolicyRequest class provides an interface for WAF DeletePermissionPolicy requests.
  *
  * \ingroup WAF
  *

@@ -28,7 +28,7 @@ namespace Health {
 /*!
  * \class QtAws::Health::DescribeAffectedEntitiesRequest
  *
- * \brief The DescribeAffectedEntitiesRequest class encapsulates Health DescribeAffectedEntities requests.
+ * \brief The DescribeAffectedEntitiesRequest class provides an interface for Health DescribeAffectedEntities requests.
  *
  * \ingroup Health
  *

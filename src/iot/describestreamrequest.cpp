@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeStreamRequest
  *
- * \brief The DescribeStreamRequest class encapsulates IoT DescribeStream requests.
+ * \brief The DescribeStreamRequest class provides an interface for IoT DescribeStream requests.
  *
  * \ingroup IoT
  *

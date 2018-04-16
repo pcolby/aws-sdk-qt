@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateUserRequest
  *
- * \brief The CreateUserRequest class encapsulates IAM CreateUser requests.
+ * \brief The CreateUserRequest class provides an interface for IAM CreateUser requests.
  *
  * \ingroup IAM
  *

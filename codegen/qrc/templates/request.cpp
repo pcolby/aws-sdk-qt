@@ -10,7 +10,7 @@ namespace {{NameSpaceName}} {
 /*!
  * \class QtAws::{{NameSpaceName}}::{{ClassName}}
  *
- * \brief The {{ClassName}} class encapsulates {{ServiceName}} {{OperationName}} requests.
+ * \brief The {{ClassName}} class provides an interface for {{ServiceName}} {{OperationName}} requests.
  *
  * \ingroup {{NameSpaceName}}
  *

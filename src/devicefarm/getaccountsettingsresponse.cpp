@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetAccountSettingsResponse
  *
- * \brief The GetAccountSettingsResponse class encapsulates DeviceFarm GetAccountSettings responses.
+ * \brief The GetAccountSettingsResponse class provides an interace for DeviceFarm GetAccountSettings responses.
  *
  * \ingroup DeviceFarm
  *

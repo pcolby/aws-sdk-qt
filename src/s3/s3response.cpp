@@ -29,7 +29,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::S3Response
  *
- * \brief The S3Response class is the base class for all S3 responses.
+ * \brief The S3Response class provides an interface for S3 responses.
  *
  * \ingroup S3
  */

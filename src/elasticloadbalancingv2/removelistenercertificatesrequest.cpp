@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::RemoveListenerCertificatesRequest
  *
- * \brief The RemoveListenerCertificatesRequest class encapsulates ElasticLoadBalancingv2 RemoveListenerCertificates requests.
+ * \brief The RemoveListenerCertificatesRequest class provides an interface for ElasticLoadBalancingv2 RemoveListenerCertificates requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

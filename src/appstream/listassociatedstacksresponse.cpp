@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::ListAssociatedStacksResponse
  *
- * \brief The ListAssociatedStacksResponse class encapsulates AppStream ListAssociatedStacks responses.
+ * \brief The ListAssociatedStacksResponse class provides an interace for AppStream ListAssociatedStacks responses.
  *
  * \ingroup AppStream
  *

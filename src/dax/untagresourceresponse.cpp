@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::UntagResourceResponse
  *
- * \brief The UntagResourceResponse class encapsulates DAX UntagResource responses.
+ * \brief The UntagResourceResponse class provides an interace for DAX UntagResource responses.
  *
  * \ingroup DAX
  *

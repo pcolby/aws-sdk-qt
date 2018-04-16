@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateReservedInstancesListingResponse
  *
- * \brief The CreateReservedInstancesListingResponse class encapsulates EC2 CreateReservedInstancesListing responses.
+ * \brief The CreateReservedInstancesListingResponse class provides an interace for EC2 CreateReservedInstancesListing responses.
  *
  * \ingroup EC2
  *

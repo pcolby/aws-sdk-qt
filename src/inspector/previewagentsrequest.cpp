@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::PreviewAgentsRequest
  *
- * \brief The PreviewAgentsRequest class encapsulates Inspector PreviewAgents requests.
+ * \brief The PreviewAgentsRequest class provides an interface for Inspector PreviewAgents requests.
  *
  * \ingroup Inspector
  *

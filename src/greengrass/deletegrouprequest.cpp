@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::DeleteGroupRequest
  *
- * \brief The DeleteGroupRequest class encapsulates Greengrass DeleteGroup requests.
+ * \brief The DeleteGroupRequest class provides an interface for Greengrass DeleteGroup requests.
  *
  * \ingroup Greengrass
  *

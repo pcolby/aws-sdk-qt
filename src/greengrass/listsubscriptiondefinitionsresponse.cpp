@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListSubscriptionDefinitionsResponse
  *
- * \brief The ListSubscriptionDefinitionsResponse class encapsulates Greengrass ListSubscriptionDefinitions responses.
+ * \brief The ListSubscriptionDefinitionsResponse class provides an interace for Greengrass ListSubscriptionDefinitions responses.
  *
  * \ingroup Greengrass
  *

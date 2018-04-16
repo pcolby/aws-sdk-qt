@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DeleteCertificateRequest
  *
- * \brief The DeleteCertificateRequest class encapsulates DatabaseMigrationService DeleteCertificate requests.
+ * \brief The DeleteCertificateRequest class provides an interface for DatabaseMigrationService DeleteCertificate requests.
  *
  * \ingroup DatabaseMigrationService
  *

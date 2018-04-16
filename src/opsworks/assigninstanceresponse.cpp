@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::AssignInstanceResponse
  *
- * \brief The AssignInstanceResponse class encapsulates OpsWorks AssignInstance responses.
+ * \brief The AssignInstanceResponse class provides an interace for OpsWorks AssignInstance responses.
  *
  * \ingroup OpsWorks
  *

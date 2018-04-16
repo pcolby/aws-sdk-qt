@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::CreateCustomMetadataRequest
  *
- * \brief The CreateCustomMetadataRequest class encapsulates WorkDocs CreateCustomMetadata requests.
+ * \brief The CreateCustomMetadataRequest class provides an interface for WorkDocs CreateCustomMetadata requests.
  *
  * \ingroup WorkDocs
  *

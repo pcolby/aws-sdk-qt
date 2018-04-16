@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::ReceiveMessageRequest
  *
- * \brief The ReceiveMessageRequest class encapsulates SQS ReceiveMessage requests.
+ * \brief The ReceiveMessageRequest class provides an interface for SQS ReceiveMessage requests.
  *
  * \ingroup SQS
  *

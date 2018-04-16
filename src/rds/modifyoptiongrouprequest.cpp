@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ModifyOptionGroupRequest
  *
- * \brief The ModifyOptionGroupRequest class encapsulates RDS ModifyOptionGroup requests.
+ * \brief The ModifyOptionGroupRequest class provides an interface for RDS ModifyOptionGroup requests.
  *
  * \ingroup RDS
  *

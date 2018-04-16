@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::StartJobRunRequest
  *
- * \brief The StartJobRunRequest class encapsulates Glue StartJobRun requests.
+ * \brief The StartJobRunRequest class provides an interface for Glue StartJobRun requests.
  *
  * \ingroup Glue
  *

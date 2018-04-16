@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CancelSchemaExtensionResponse
  *
- * \brief The CancelSchemaExtensionResponse class encapsulates DirectoryService CancelSchemaExtension responses.
+ * \brief The CancelSchemaExtensionResponse class provides an interace for DirectoryService CancelSchemaExtension responses.
  *
  * \ingroup DirectoryService
  *

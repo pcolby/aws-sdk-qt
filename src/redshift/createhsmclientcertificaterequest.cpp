@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::CreateHsmClientCertificateRequest
  *
- * \brief The CreateHsmClientCertificateRequest class encapsulates Redshift CreateHsmClientCertificate requests.
+ * \brief The CreateHsmClientCertificateRequest class provides an interface for Redshift CreateHsmClientCertificate requests.
  *
  * \ingroup Redshift
  *

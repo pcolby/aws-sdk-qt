@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeTargetHealthResponse
  *
- * \brief The DescribeTargetHealthResponse class encapsulates ElasticLoadBalancingv2 DescribeTargetHealth responses.
+ * \brief The DescribeTargetHealthResponse class provides an interace for ElasticLoadBalancingv2 DescribeTargetHealth responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

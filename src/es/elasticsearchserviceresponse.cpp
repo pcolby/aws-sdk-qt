@@ -29,7 +29,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::ElasticsearchServiceResponse
  *
- * \brief The ElasticsearchServiceResponse class is the base class for all ElasticsearchService responses.
+ * \brief The ElasticsearchServiceResponse class provides an interface for ElasticsearchService responses.
  *
  * \ingroup ElasticsearchService
  */

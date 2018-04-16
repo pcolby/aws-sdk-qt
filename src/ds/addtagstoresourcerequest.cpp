@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::AddTagsToResourceRequest
  *
- * \brief The AddTagsToResourceRequest class encapsulates DirectoryService AddTagsToResource requests.
+ * \brief The AddTagsToResourceRequest class provides an interface for DirectoryService AddTagsToResource requests.
  *
  * \ingroup DirectoryService
  *

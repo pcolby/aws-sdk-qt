@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeEventsResponse
  *
- * \brief The DescribeEventsResponse class encapsulates DatabaseMigrationService DescribeEvents responses.
+ * \brief The DescribeEventsResponse class provides an interace for DatabaseMigrationService DescribeEvents responses.
  *
  * \ingroup DatabaseMigrationService
  *

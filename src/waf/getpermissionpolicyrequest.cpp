@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::GetPermissionPolicyRequest
  *
- * \brief The GetPermissionPolicyRequest class encapsulates WAF GetPermissionPolicy requests.
+ * \brief The GetPermissionPolicyRequest class provides an interface for WAF GetPermissionPolicy requests.
  *
  * \ingroup WAF
  *

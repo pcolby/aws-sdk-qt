@@ -47,8 +47,7 @@ namespace Core {
 /*!
  * \class QtAws::Core::AwsAbstractClient
  *
- * \brief  Interface class for providing access to individual AWS services.
- * some more
+ * \brief  The AwsAbstractClient class provides an interface for accessing AWS services.
  * \ingroup Core
  */
 

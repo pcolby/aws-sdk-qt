@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::UpdateCertificateResponse
  *
- * \brief The UpdateCertificateResponse class encapsulates IoT UpdateCertificate responses.
+ * \brief The UpdateCertificateResponse class provides an interace for IoT UpdateCertificate responses.
  *
  * \ingroup IoT
  *

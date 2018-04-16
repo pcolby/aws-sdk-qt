@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::SignalResourceResponse
  *
- * \brief The SignalResourceResponse class encapsulates CloudFormation SignalResource responses.
+ * \brief The SignalResourceResponse class provides an interace for CloudFormation SignalResource responses.
  *
  * \ingroup CloudFormation
  *

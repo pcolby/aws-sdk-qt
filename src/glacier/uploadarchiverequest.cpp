@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::UploadArchiveRequest
  *
- * \brief The UploadArchiveRequest class encapsulates Glacier UploadArchive requests.
+ * \brief The UploadArchiveRequest class provides an interface for Glacier UploadArchive requests.
  *
  * \ingroup Glacier
  *

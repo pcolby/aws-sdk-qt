@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeLoadBasedAutoScalingResponse
  *
- * \brief The DescribeLoadBasedAutoScalingResponse class encapsulates OpsWorks DescribeLoadBasedAutoScaling responses.
+ * \brief The DescribeLoadBasedAutoScalingResponse class provides an interace for OpsWorks DescribeLoadBasedAutoScaling responses.
  *
  * \ingroup OpsWorks
  *

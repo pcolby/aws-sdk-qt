@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::UpdateApiKeyRequest
  *
- * \brief The UpdateApiKeyRequest class encapsulates AppSync UpdateApiKey requests.
+ * \brief The UpdateApiKeyRequest class provides an interface for AppSync UpdateApiKey requests.
  *
  * \ingroup AppSync
  *

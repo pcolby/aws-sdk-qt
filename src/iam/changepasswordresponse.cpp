@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ChangePasswordResponse
  *
- * \brief The ChangePasswordResponse class encapsulates IAM ChangePassword responses.
+ * \brief The ChangePasswordResponse class provides an interace for IAM ChangePassword responses.
  *
  * \ingroup IAM
  *

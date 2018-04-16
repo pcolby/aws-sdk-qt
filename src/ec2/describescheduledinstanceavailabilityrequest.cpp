@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeScheduledInstanceAvailabilityRequest
  *
- * \brief The DescribeScheduledInstanceAvailabilityRequest class encapsulates EC2 DescribeScheduledInstanceAvailability requests.
+ * \brief The DescribeScheduledInstanceAvailabilityRequest class provides an interface for EC2 DescribeScheduledInstanceAvailability requests.
  *
  * \ingroup EC2
  *

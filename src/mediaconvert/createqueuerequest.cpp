@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::CreateQueueRequest
  *
- * \brief The CreateQueueRequest class encapsulates MediaConvert CreateQueue requests.
+ * \brief The CreateQueueRequest class provides an interface for MediaConvert CreateQueue requests.
  *
  * \ingroup MediaConvert
  *

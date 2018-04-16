@@ -30,7 +30,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::CreateTagsResponse
  *
- * \brief The CreateTagsResponse class encapsulates WorkSpaces CreateTags responses.
+ * \brief The CreateTagsResponse class provides an interace for WorkSpaces CreateTags responses.
  *
  * \ingroup WorkSpaces
  *

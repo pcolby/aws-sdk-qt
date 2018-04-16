@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateModelRequest
  *
- * \brief The UpdateModelRequest class encapsulates APIGateway UpdateModel requests.
+ * \brief The UpdateModelRequest class provides an interface for APIGateway UpdateModel requests.
  *
  * \ingroup APIGateway
  *

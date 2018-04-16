@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeScalingActivitiesRequest
  *
- * \brief The DescribeScalingActivitiesRequest class encapsulates AutoScaling DescribeScalingActivities requests.
+ * \brief The DescribeScalingActivitiesRequest class provides an interface for AutoScaling DescribeScalingActivities requests.
  *
  * \ingroup AutoScaling
  *

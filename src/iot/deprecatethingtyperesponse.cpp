@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeprecateThingTypeResponse
  *
- * \brief The DeprecateThingTypeResponse class encapsulates IoT DeprecateThingType responses.
+ * \brief The DeprecateThingTypeResponse class provides an interace for IoT DeprecateThingType responses.
  *
  * \ingroup IoT
  *

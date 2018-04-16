@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::AddSourceIdentifierToSubscriptionRequest
  *
- * \brief The AddSourceIdentifierToSubscriptionRequest class encapsulates RDS AddSourceIdentifierToSubscription requests.
+ * \brief The AddSourceIdentifierToSubscriptionRequest class provides an interface for RDS AddSourceIdentifierToSubscription requests.
  *
  * \ingroup RDS
  *

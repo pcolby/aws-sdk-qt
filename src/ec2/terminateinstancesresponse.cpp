@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::TerminateInstancesResponse
  *
- * \brief The TerminateInstancesResponse class encapsulates EC2 TerminateInstances responses.
+ * \brief The TerminateInstancesResponse class provides an interace for EC2 TerminateInstances responses.
  *
  * \ingroup EC2
  *

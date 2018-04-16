@@ -28,7 +28,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::DescribeApplicationStateRequest
  *
- * \brief The DescribeApplicationStateRequest class encapsulates MigrationHub DescribeApplicationState requests.
+ * \brief The DescribeApplicationStateRequest class provides an interface for MigrationHub DescribeApplicationState requests.
  *
  * \ingroup MigrationHub
  *

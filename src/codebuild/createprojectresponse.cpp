@@ -30,7 +30,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::CreateProjectResponse
  *
- * \brief The CreateProjectResponse class encapsulates CodeBuild CreateProject responses.
+ * \brief The CreateProjectResponse class provides an interace for CodeBuild CreateProject responses.
  *
  * \ingroup CodeBuild
  *

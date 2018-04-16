@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::ListModelsResponse
  *
- * \brief The ListModelsResponse class encapsulates SageMaker ListModels responses.
+ * \brief The ListModelsResponse class provides an interace for SageMaker ListModels responses.
  *
  * \ingroup SageMaker
  *

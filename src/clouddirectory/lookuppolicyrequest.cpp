@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::LookupPolicyRequest
  *
- * \brief The LookupPolicyRequest class encapsulates CloudDirectory LookupPolicy requests.
+ * \brief The LookupPolicyRequest class provides an interface for CloudDirectory LookupPolicy requests.
  *
  * \ingroup CloudDirectory
  *

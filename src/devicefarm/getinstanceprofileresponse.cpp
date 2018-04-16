@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetInstanceProfileResponse
  *
- * \brief The GetInstanceProfileResponse class encapsulates DeviceFarm GetInstanceProfile responses.
+ * \brief The GetInstanceProfileResponse class provides an interace for DeviceFarm GetInstanceProfile responses.
  *
  * \ingroup DeviceFarm
  *

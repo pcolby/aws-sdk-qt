@@ -30,7 +30,7 @@ namespace KinesisVideoArchivedMedia {
 /*!
  * \class QtAws::KinesisVideoArchivedMedia::GetMediaForFragmentListResponse
  *
- * \brief The GetMediaForFragmentListResponse class encapsulates KinesisVideoArchivedMedia GetMediaForFragmentList responses.
+ * \brief The GetMediaForFragmentListResponse class provides an interace for KinesisVideoArchivedMedia GetMediaForFragmentList responses.
  *
  * \ingroup KinesisVideoArchivedMedia
  *

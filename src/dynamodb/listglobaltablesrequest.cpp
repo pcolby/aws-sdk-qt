@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::ListGlobalTablesRequest
  *
- * \brief The ListGlobalTablesRequest class encapsulates DynamoDB ListGlobalTables requests.
+ * \brief The ListGlobalTablesRequest class provides an interface for DynamoDB ListGlobalTables requests.
  *
  * \ingroup DynamoDB
  *

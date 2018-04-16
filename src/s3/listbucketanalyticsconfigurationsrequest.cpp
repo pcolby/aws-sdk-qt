@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::ListBucketAnalyticsConfigurationsRequest
  *
- * \brief The ListBucketAnalyticsConfigurationsRequest class encapsulates S3 ListBucketAnalyticsConfigurations requests.
+ * \brief The ListBucketAnalyticsConfigurationsRequest class provides an interface for S3 ListBucketAnalyticsConfigurations requests.
  *
  * \ingroup S3
  *

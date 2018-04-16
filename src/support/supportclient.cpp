@@ -65,7 +65,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::SupportClient
  *
- * \brief The SupportClient class provides access the AWS Support service.
+ * \brief The SupportClient class provides access to the AWS Support service.
  *
  * \ingroup Support
  *

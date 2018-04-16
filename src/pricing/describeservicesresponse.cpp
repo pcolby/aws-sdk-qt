@@ -30,7 +30,7 @@ namespace Pricing {
 /*!
  * \class QtAws::Pricing::DescribeServicesResponse
  *
- * \brief The DescribeServicesResponse class encapsulates Pricing DescribeServices responses.
+ * \brief The DescribeServicesResponse class provides an interace for Pricing DescribeServices responses.
  *
  * \ingroup Pricing
  *

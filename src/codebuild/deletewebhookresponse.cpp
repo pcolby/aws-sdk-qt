@@ -30,7 +30,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::DeleteWebhookResponse
  *
- * \brief The DeleteWebhookResponse class encapsulates CodeBuild DeleteWebhook responses.
+ * \brief The DeleteWebhookResponse class provides an interace for CodeBuild DeleteWebhook responses.
  *
  * \ingroup CodeBuild
  *

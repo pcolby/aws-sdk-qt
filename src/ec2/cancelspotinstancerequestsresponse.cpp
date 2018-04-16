@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CancelSpotInstanceRequestsResponse
  *
- * \brief The CancelSpotInstanceRequestsResponse class encapsulates EC2 CancelSpotInstanceRequests responses.
+ * \brief The CancelSpotInstanceRequestsResponse class provides an interace for EC2 CancelSpotInstanceRequests responses.
  *
  * \ingroup EC2
  *

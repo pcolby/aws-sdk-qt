@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::CompleteMultipartUploadRequest
  *
- * \brief The CompleteMultipartUploadRequest class encapsulates S3 CompleteMultipartUpload requests.
+ * \brief The CompleteMultipartUploadRequest class provides an interface for S3 CompleteMultipartUpload requests.
  *
  * \ingroup S3
  *

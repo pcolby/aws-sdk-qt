@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::AttachThingPrincipalRequest
  *
- * \brief The AttachThingPrincipalRequest class encapsulates IoT AttachThingPrincipal requests.
+ * \brief The AttachThingPrincipalRequest class provides an interface for IoT AttachThingPrincipal requests.
  *
  * \ingroup IoT
  *

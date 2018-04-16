@@ -30,7 +30,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::ListPresetsResponse
  *
- * \brief The ListPresetsResponse class encapsulates MediaConvert ListPresets responses.
+ * \brief The ListPresetsResponse class provides an interace for MediaConvert ListPresets responses.
  *
  * \ingroup MediaConvert
  *

@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeInstanceInformationResponse
  *
- * \brief The DescribeInstanceInformationResponse class encapsulates SSM DescribeInstanceInformation responses.
+ * \brief The DescribeInstanceInformationResponse class provides an interace for SSM DescribeInstanceInformation responses.
  *
  * \ingroup SSM
  *

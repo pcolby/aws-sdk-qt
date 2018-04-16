@@ -30,7 +30,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::StopQueryExecutionResponse
  *
- * \brief The StopQueryExecutionResponse class encapsulates Athena StopQueryExecution responses.
+ * \brief The StopQueryExecutionResponse class provides an interace for Athena StopQueryExecution responses.
  *
  * \ingroup Athena
  *

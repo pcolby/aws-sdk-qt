@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DeleteAnalysisSchemeResponse
  *
- * \brief The DeleteAnalysisSchemeResponse class encapsulates CloudSearch DeleteAnalysisScheme responses.
+ * \brief The DeleteAnalysisSchemeResponse class provides an interace for CloudSearch DeleteAnalysisScheme responses.
  *
  * \ingroup CloudSearch
  *

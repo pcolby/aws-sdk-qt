@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DownloadDefaultKeyPairRequest
  *
- * \brief The DownloadDefaultKeyPairRequest class encapsulates Lightsail DownloadDefaultKeyPair requests.
+ * \brief The DownloadDefaultKeyPairRequest class provides an interface for Lightsail DownloadDefaultKeyPair requests.
  *
  * \ingroup Lightsail
  *

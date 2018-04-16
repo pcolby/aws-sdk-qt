@@ -26,7 +26,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GlueRequest
  *
- * \brief The GlueRequest class is the base class for all Glue requests.
+ * \brief The GlueRequest class provides an interface for Glue requests.
  *
  * \ingroup Glue
  */

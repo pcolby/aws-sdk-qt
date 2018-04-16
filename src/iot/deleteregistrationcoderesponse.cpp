@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteRegistrationCodeResponse
  *
- * \brief The DeleteRegistrationCodeResponse class encapsulates IoT DeleteRegistrationCode responses.
+ * \brief The DeleteRegistrationCodeResponse class provides an interace for IoT DeleteRegistrationCode responses.
  *
  * \ingroup IoT
  *

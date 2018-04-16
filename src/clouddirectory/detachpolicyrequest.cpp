@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DetachPolicyRequest
  *
- * \brief The DetachPolicyRequest class encapsulates CloudDirectory DetachPolicy requests.
+ * \brief The DetachPolicyRequest class provides an interface for CloudDirectory DetachPolicy requests.
  *
  * \ingroup CloudDirectory
  *

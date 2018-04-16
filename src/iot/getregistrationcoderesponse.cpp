@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::GetRegistrationCodeResponse
  *
- * \brief The GetRegistrationCodeResponse class encapsulates IoT GetRegistrationCode responses.
+ * \brief The GetRegistrationCodeResponse class provides an interace for IoT GetRegistrationCode responses.
  *
  * \ingroup IoT
  *

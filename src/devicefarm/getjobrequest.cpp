@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetJobRequest
  *
- * \brief The GetJobRequest class encapsulates DeviceFarm GetJob requests.
+ * \brief The GetJobRequest class provides an interface for DeviceFarm GetJob requests.
  *
  * \ingroup DeviceFarm
  *

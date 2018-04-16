@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DeleteModelRequest
  *
- * \brief The DeleteModelRequest class encapsulates SageMaker DeleteModel requests.
+ * \brief The DeleteModelRequest class provides an interface for SageMaker DeleteModel requests.
  *
  * \ingroup SageMaker
  *

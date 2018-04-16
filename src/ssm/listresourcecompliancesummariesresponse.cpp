@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListResourceComplianceSummariesResponse
  *
- * \brief The ListResourceComplianceSummariesResponse class encapsulates SSM ListResourceComplianceSummaries responses.
+ * \brief The ListResourceComplianceSummariesResponse class provides an interace for SSM ListResourceComplianceSummaries responses.
  *
  * \ingroup SSM
  *

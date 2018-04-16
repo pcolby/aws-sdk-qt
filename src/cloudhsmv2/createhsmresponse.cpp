@@ -30,7 +30,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::CreateHsmResponse
  *
- * \brief The CreateHsmResponse class encapsulates CloudHSMV2 CreateHsm responses.
+ * \brief The CreateHsmResponse class provides an interace for CloudHSMV2 CreateHsm responses.
  *
  * \ingroup CloudHSMV2
  *

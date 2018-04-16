@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateStageRequest
  *
- * \brief The CreateStageRequest class encapsulates APIGateway CreateStage requests.
+ * \brief The CreateStageRequest class provides an interface for APIGateway CreateStage requests.
  *
  * \ingroup APIGateway
  *

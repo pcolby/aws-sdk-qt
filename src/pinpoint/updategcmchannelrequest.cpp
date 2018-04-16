@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateGcmChannelRequest
  *
- * \brief The UpdateGcmChannelRequest class encapsulates Pinpoint UpdateGcmChannel requests.
+ * \brief The UpdateGcmChannelRequest class provides an interface for Pinpoint UpdateGcmChannel requests.
  *
  * \ingroup Pinpoint
  *

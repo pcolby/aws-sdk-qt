@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DescribeConfigurationRecorderStatusRequest
  *
- * \brief The DescribeConfigurationRecorderStatusRequest class encapsulates ConfigService DescribeConfigurationRecorderStatus requests.
+ * \brief The DescribeConfigurationRecorderStatusRequest class provides an interface for ConfigService DescribeConfigurationRecorderStatus requests.
  *
  * \ingroup ConfigService
  *

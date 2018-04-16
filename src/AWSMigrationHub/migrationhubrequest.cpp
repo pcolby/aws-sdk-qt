@@ -26,7 +26,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::MigrationHubRequest
  *
- * \brief The MigrationHubRequest class is the base class for all MigrationHub requests.
+ * \brief The MigrationHubRequest class provides an interface for MigrationHub requests.
  *
  * \ingroup MigrationHub
  */

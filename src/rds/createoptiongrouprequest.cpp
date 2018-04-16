@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CreateOptionGroupRequest
  *
- * \brief The CreateOptionGroupRequest class encapsulates RDS CreateOptionGroup requests.
+ * \brief The CreateOptionGroupRequest class provides an interface for RDS CreateOptionGroup requests.
  *
  * \ingroup RDS
  *

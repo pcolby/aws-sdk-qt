@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::UpdateEventSourceMappingRequest
  *
- * \brief The UpdateEventSourceMappingRequest class encapsulates Lambda UpdateEventSourceMapping requests.
+ * \brief The UpdateEventSourceMappingRequest class provides an interface for Lambda UpdateEventSourceMapping requests.
  *
  * \ingroup Lambda
  *

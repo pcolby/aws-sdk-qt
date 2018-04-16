@@ -29,7 +29,7 @@ namespace LexRuntimeService {
 /*!
  * \class QtAws::LexRuntimeService::LexRuntimeServiceResponse
  *
- * \brief The LexRuntimeServiceResponse class is the base class for all LexRuntimeService responses.
+ * \brief The LexRuntimeServiceResponse class provides an interface for LexRuntimeService responses.
  *
  * \ingroup LexRuntimeService
  */

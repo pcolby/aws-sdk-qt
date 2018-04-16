@@ -30,7 +30,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::DescribeSeverityLevelsResponse
  *
- * \brief The DescribeSeverityLevelsResponse class encapsulates Support DescribeSeverityLevels responses.
+ * \brief The DescribeSeverityLevelsResponse class provides an interace for Support DescribeSeverityLevels responses.
  *
  * \ingroup Support
  *

@@ -28,7 +28,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::GetJobUnlockCodeRequest
  *
- * \brief The GetJobUnlockCodeRequest class encapsulates Snowball GetJobUnlockCode requests.
+ * \brief The GetJobUnlockCodeRequest class provides an interface for Snowball GetJobUnlockCode requests.
  *
  * \ingroup Snowball
  *

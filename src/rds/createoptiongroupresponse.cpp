@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CreateOptionGroupResponse
  *
- * \brief The CreateOptionGroupResponse class encapsulates RDS CreateOptionGroup responses.
+ * \brief The CreateOptionGroupResponse class provides an interace for RDS CreateOptionGroup responses.
  *
  * \ingroup RDS
  *

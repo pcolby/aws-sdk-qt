@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::ListBucketMetricsConfigurationsRequest
  *
- * \brief The ListBucketMetricsConfigurationsRequest class encapsulates S3 ListBucketMetricsConfigurations requests.
+ * \brief The ListBucketMetricsConfigurationsRequest class provides an interface for S3 ListBucketMetricsConfigurations requests.
  *
  * \ingroup S3
  *

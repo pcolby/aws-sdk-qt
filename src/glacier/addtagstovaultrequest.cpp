@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::AddTagsToVaultRequest
  *
- * \brief The AddTagsToVaultRequest class encapsulates Glacier AddTagsToVault requests.
+ * \brief The AddTagsToVaultRequest class provides an interface for Glacier AddTagsToVault requests.
  *
  * \ingroup Glacier
  *

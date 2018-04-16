@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetDataflowGraphResponse
  *
- * \brief The GetDataflowGraphResponse class encapsulates Glue GetDataflowGraph responses.
+ * \brief The GetDataflowGraphResponse class provides an interace for Glue GetDataflowGraph responses.
  *
  * \ingroup Glue
  *

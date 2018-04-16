@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::PollForTaskRequest
  *
- * \brief The PollForTaskRequest class encapsulates DataPipeline PollForTask requests.
+ * \brief The PollForTaskRequest class provides an interface for DataPipeline PollForTask requests.
  *
  * \ingroup DataPipeline
  *

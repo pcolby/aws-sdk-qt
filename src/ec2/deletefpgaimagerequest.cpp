@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteFpgaImageRequest
  *
- * \brief The DeleteFpgaImageRequest class encapsulates EC2 DeleteFpgaImage requests.
+ * \brief The DeleteFpgaImageRequest class provides an interface for EC2 DeleteFpgaImage requests.
  *
  * \ingroup EC2
  *

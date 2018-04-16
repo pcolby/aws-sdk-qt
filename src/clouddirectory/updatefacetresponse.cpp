@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::UpdateFacetResponse
  *
- * \brief The UpdateFacetResponse class encapsulates CloudDirectory UpdateFacet responses.
+ * \brief The UpdateFacetResponse class provides an interace for CloudDirectory UpdateFacet responses.
  *
  * \ingroup CloudDirectory
  *

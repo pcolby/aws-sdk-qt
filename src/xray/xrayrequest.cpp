@@ -26,7 +26,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::XRayRequest
  *
- * \brief The XRayRequest class is the base class for all XRay requests.
+ * \brief The XRayRequest class provides an interface for XRay requests.
  *
  * \ingroup XRay
  */

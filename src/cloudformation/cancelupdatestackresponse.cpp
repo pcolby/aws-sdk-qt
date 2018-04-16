@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::CancelUpdateStackResponse
  *
- * \brief The CancelUpdateStackResponse class encapsulates CloudFormation CancelUpdateStack responses.
+ * \brief The CancelUpdateStackResponse class provides an interace for CloudFormation CancelUpdateStack responses.
  *
  * \ingroup CloudFormation
  *

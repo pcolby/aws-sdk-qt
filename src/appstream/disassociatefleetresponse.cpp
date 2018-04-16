@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DisassociateFleetResponse
  *
- * \brief The DisassociateFleetResponse class encapsulates AppStream DisassociateFleet responses.
+ * \brief The DisassociateFleetResponse class provides an interace for AppStream DisassociateFleet responses.
  *
  * \ingroup AppStream
  *

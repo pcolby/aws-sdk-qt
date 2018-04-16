@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DeleteServiceResponse
  *
- * \brief The DeleteServiceResponse class encapsulates ECS DeleteService responses.
+ * \brief The DeleteServiceResponse class provides an interace for ECS DeleteService responses.
  *
  * \ingroup ECS
  *

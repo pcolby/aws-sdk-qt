@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::PutMailboxPermissionsResponse
  *
- * \brief The PutMailboxPermissionsResponse class encapsulates WorkMail PutMailboxPermissions responses.
+ * \brief The PutMailboxPermissionsResponse class provides an interace for WorkMail PutMailboxPermissions responses.
  *
  * \ingroup WorkMail
  *

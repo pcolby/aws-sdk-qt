@@ -30,7 +30,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::UnlinkIdentityResponse
  *
- * \brief The UnlinkIdentityResponse class encapsulates CognitoIdentity UnlinkIdentity responses.
+ * \brief The UnlinkIdentityResponse class provides an interace for CognitoIdentity UnlinkIdentity responses.
  *
  * \ingroup CognitoIdentity
  *

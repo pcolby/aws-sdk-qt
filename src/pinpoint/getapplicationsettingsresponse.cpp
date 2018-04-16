@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetApplicationSettingsResponse
  *
- * \brief The GetApplicationSettingsResponse class encapsulates Pinpoint GetApplicationSettings responses.
+ * \brief The GetApplicationSettingsResponse class provides an interace for Pinpoint GetApplicationSettings responses.
  *
  * \ingroup Pinpoint
  *

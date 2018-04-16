@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DescribeModelRequest
  *
- * \brief The DescribeModelRequest class encapsulates SageMaker DescribeModel requests.
+ * \brief The DescribeModelRequest class provides an interface for SageMaker DescribeModel requests.
  *
  * \ingroup SageMaker
  *

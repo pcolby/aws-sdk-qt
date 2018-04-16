@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::DescribeExecutionResponse
  *
- * \brief The DescribeExecutionResponse class encapsulates SFN DescribeExecution responses.
+ * \brief The DescribeExecutionResponse class provides an interace for SFN DescribeExecution responses.
  *
  * \ingroup SFN
  *

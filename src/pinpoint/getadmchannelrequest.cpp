@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetAdmChannelRequest
  *
- * \brief The GetAdmChannelRequest class encapsulates Pinpoint GetAdmChannel requests.
+ * \brief The GetAdmChannelRequest class provides an interface for Pinpoint GetAdmChannel requests.
  *
  * \ingroup Pinpoint
  *

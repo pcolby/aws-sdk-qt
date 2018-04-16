@@ -30,7 +30,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::ReadPipelineResponse
  *
- * \brief The ReadPipelineResponse class encapsulates ElasticTranscoder ReadPipeline responses.
+ * \brief The ReadPipelineResponse class provides an interace for ElasticTranscoder ReadPipeline responses.
  *
  * \ingroup ElasticTranscoder
  *

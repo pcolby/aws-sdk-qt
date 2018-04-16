@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::AddListenerCertificatesResponse
  *
- * \brief The AddListenerCertificatesResponse class encapsulates ElasticLoadBalancingv2 AddListenerCertificates responses.
+ * \brief The AddListenerCertificatesResponse class provides an interace for ElasticLoadBalancingv2 AddListenerCertificates responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeSpotPriceHistoryResponse
  *
- * \brief The DescribeSpotPriceHistoryResponse class encapsulates EC2 DescribeSpotPriceHistory responses.
+ * \brief The DescribeSpotPriceHistoryResponse class provides an interace for EC2 DescribeSpotPriceHistory responses.
  *
  * \ingroup EC2
  *

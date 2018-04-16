@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::ListRecordsResponse
  *
- * \brief The ListRecordsResponse class encapsulates CognitoSync ListRecords responses.
+ * \brief The ListRecordsResponse class provides an interace for CognitoSync ListRecords responses.
  *
  * \ingroup CognitoSync
  *

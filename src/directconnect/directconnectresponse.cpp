@@ -29,7 +29,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DirectConnectResponse
  *
- * \brief The DirectConnectResponse class is the base class for all DirectConnect responses.
+ * \brief The DirectConnectResponse class provides an interface for DirectConnect responses.
  *
  * \ingroup DirectConnect
  */

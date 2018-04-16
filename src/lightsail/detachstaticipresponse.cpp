@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DetachStaticIpResponse
  *
- * \brief The DetachStaticIpResponse class encapsulates Lightsail DetachStaticIp responses.
+ * \brief The DetachStaticIpResponse class provides an interace for Lightsail DetachStaticIp responses.
  *
  * \ingroup Lightsail
  *

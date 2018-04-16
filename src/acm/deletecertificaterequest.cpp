@@ -28,7 +28,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::DeleteCertificateRequest
  *
- * \brief The DeleteCertificateRequest class encapsulates ACM DeleteCertificate requests.
+ * \brief The DeleteCertificateRequest class provides an interface for ACM DeleteCertificate requests.
  *
  * \ingroup ACM
  *

@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::DeleteBrokerResponse
  *
- * \brief The DeleteBrokerResponse class encapsulates MQ DeleteBroker responses.
+ * \brief The DeleteBrokerResponse class provides an interace for MQ DeleteBroker responses.
  *
  * \ingroup MQ
  *

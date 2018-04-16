@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::ValidatePipelineDefinitionRequest
  *
- * \brief The ValidatePipelineDefinitionRequest class encapsulates DataPipeline ValidatePipelineDefinition requests.
+ * \brief The ValidatePipelineDefinitionRequest class provides an interface for DataPipeline ValidatePipelineDefinition requests.
  *
  * \ingroup DataPipeline
  *

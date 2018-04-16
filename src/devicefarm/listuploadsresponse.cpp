@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListUploadsResponse
  *
- * \brief The ListUploadsResponse class encapsulates DeviceFarm ListUploads responses.
+ * \brief The ListUploadsResponse class provides an interace for DeviceFarm ListUploads responses.
  *
  * \ingroup DeviceFarm
  *

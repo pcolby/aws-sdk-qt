@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DeleteTagsRequest
  *
- * \brief The DeleteTagsRequest class encapsulates MachineLearning DeleteTags requests.
+ * \brief The DeleteTagsRequest class provides an interface for MachineLearning DeleteTags requests.
  *
  * \ingroup MachineLearning
  *

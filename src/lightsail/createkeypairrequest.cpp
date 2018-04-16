@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::CreateKeyPairRequest
  *
- * \brief The CreateKeyPairRequest class encapsulates Lightsail CreateKeyPair requests.
+ * \brief The CreateKeyPairRequest class provides an interface for Lightsail CreateKeyPair requests.
  *
  * \ingroup Lightsail
  *

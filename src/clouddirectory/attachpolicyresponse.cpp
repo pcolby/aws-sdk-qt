@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::AttachPolicyResponse
  *
- * \brief The AttachPolicyResponse class encapsulates CloudDirectory AttachPolicy responses.
+ * \brief The AttachPolicyResponse class provides an interace for CloudDirectory AttachPolicy responses.
  *
  * \ingroup CloudDirectory
  *

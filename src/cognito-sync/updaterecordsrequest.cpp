@@ -28,7 +28,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::UpdateRecordsRequest
  *
- * \brief The UpdateRecordsRequest class encapsulates CognitoSync UpdateRecords requests.
+ * \brief The UpdateRecordsRequest class provides an interface for CognitoSync UpdateRecords requests.
  *
  * \ingroup CognitoSync
  *

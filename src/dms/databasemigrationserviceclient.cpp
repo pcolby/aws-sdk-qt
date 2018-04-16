@@ -125,7 +125,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceClient
  *
- * \brief The DatabaseMigrationServiceClient class provides access the AWS Database Migration Service service.
+ * \brief The DatabaseMigrationServiceClient class provides access to the AWS Database Migration Service service.
  *
  * \ingroup DatabaseMigrationService
  *

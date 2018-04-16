@@ -30,7 +30,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::GetStatusResponse
  *
- * \brief The GetStatusResponse class encapsulates ImportExport GetStatus responses.
+ * \brief The GetStatusResponse class provides an interace for ImportExport GetStatus responses.
  *
  * \ingroup ImportExport
  *

@@ -30,7 +30,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::RemoveTagsFromCertificateResponse
  *
- * \brief The RemoveTagsFromCertificateResponse class encapsulates ACM RemoveTagsFromCertificate responses.
+ * \brief The RemoveTagsFromCertificateResponse class provides an interace for ACM RemoveTagsFromCertificate responses.
  *
  * \ingroup ACM
  *

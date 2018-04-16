@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::SendTestEventNotificationRequest
  *
- * \brief The SendTestEventNotificationRequest class encapsulates MTurk SendTestEventNotification requests.
+ * \brief The SendTestEventNotificationRequest class provides an interface for MTurk SendTestEventNotification requests.
  *
  * \ingroup MTurk
  *

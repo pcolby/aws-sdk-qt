@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateConfigurationTemplateResponse
  *
- * \brief The UpdateConfigurationTemplateResponse class encapsulates ElasticBeanstalk UpdateConfigurationTemplate responses.
+ * \brief The UpdateConfigurationTemplateResponse class provides an interace for ElasticBeanstalk UpdateConfigurationTemplate responses.
  *
  * \ingroup ElasticBeanstalk
  *

@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::CreateDataSourceResponse
  *
- * \brief The CreateDataSourceResponse class encapsulates AppSync CreateDataSource responses.
+ * \brief The CreateDataSourceResponse class provides an interace for AppSync CreateDataSource responses.
  *
  * \ingroup AppSync
  *

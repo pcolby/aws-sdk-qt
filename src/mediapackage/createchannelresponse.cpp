@@ -30,7 +30,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::CreateChannelResponse
  *
- * \brief The CreateChannelResponse class encapsulates MediaPackage CreateChannel responses.
+ * \brief The CreateChannelResponse class provides an interace for MediaPackage CreateChannel responses.
  *
  * \ingroup MediaPackage
  *

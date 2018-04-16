@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListRootsRequest
  *
- * \brief The ListRootsRequest class encapsulates Organizations ListRoots requests.
+ * \brief The ListRootsRequest class provides an interface for Organizations ListRoots requests.
  *
  * \ingroup Organizations
  *

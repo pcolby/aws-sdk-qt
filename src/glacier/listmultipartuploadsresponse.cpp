@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::ListMultipartUploadsResponse
  *
- * \brief The ListMultipartUploadsResponse class encapsulates Glacier ListMultipartUploads responses.
+ * \brief The ListMultipartUploadsResponse class provides an interace for Glacier ListMultipartUploads responses.
  *
  * \ingroup Glacier
  *

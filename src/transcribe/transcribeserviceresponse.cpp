@@ -29,7 +29,7 @@ namespace TranscribeService {
 /*!
  * \class QtAws::TranscribeService::TranscribeServiceResponse
  *
- * \brief The TranscribeServiceResponse class is the base class for all TranscribeService responses.
+ * \brief The TranscribeServiceResponse class provides an interface for TranscribeService responses.
  *
  * \ingroup TranscribeService
  */

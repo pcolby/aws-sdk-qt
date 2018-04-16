@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeBundleTasksResponse
  *
- * \brief The DescribeBundleTasksResponse class encapsulates EC2 DescribeBundleTasks responses.
+ * \brief The DescribeBundleTasksResponse class provides an interace for EC2 DescribeBundleTasks responses.
  *
  * \ingroup EC2
  *

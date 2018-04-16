@@ -28,7 +28,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::GetMetricStatisticsRequest
  *
- * \brief The GetMetricStatisticsRequest class encapsulates CloudWatch GetMetricStatistics requests.
+ * \brief The GetMetricStatisticsRequest class provides an interface for CloudWatch GetMetricStatistics requests.
  *
  * \ingroup CloudWatch
  *

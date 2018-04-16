@@ -43,7 +43,7 @@ namespace CloudSearchDomain {
 /*!
  * \class QtAws::CloudSearchDomain::CloudSearchDomainClient
  *
- * \brief The CloudSearchDomainClient class provides access the Amazon CloudSearch Domain service.
+ * \brief The CloudSearchDomainClient class provides access to the Amazon CloudSearch Domain service.
  *
  * \ingroup CloudSearchDomain
  *

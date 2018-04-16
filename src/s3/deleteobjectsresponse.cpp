@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::DeleteObjectsResponse
  *
- * \brief The DeleteObjectsResponse class encapsulates S3 DeleteObjects responses.
+ * \brief The DeleteObjectsResponse class provides an interace for S3 DeleteObjects responses.
  *
  * \ingroup S3
  *

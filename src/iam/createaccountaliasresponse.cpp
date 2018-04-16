@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateAccountAliasResponse
  *
- * \brief The CreateAccountAliasResponse class encapsulates IAM CreateAccountAlias responses.
+ * \brief The CreateAccountAliasResponse class provides an interace for IAM CreateAccountAlias responses.
  *
  * \ingroup IAM
  *

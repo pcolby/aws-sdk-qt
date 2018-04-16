@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ModifyDBInstanceResponse
  *
- * \brief The ModifyDBInstanceResponse class encapsulates RDS ModifyDBInstance responses.
+ * \brief The ModifyDBInstanceResponse class provides an interace for RDS ModifyDBInstance responses.
  *
  * \ingroup RDS
  *

@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::AssociateVirtualInterfaceResponse
  *
- * \brief The AssociateVirtualInterfaceResponse class encapsulates DirectConnect AssociateVirtualInterface responses.
+ * \brief The AssociateVirtualInterfaceResponse class provides an interace for DirectConnect AssociateVirtualInterface responses.
  *
  * \ingroup DirectConnect
  *

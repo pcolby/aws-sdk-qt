@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::GetKeyPolicyResponse
  *
- * \brief The GetKeyPolicyResponse class encapsulates KMS GetKeyPolicy responses.
+ * \brief The GetKeyPolicyResponse class provides an interace for KMS GetKeyPolicy responses.
  *
  * \ingroup KMS
  *

@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::ListFindingsResponse
  *
- * \brief The ListFindingsResponse class encapsulates Inspector ListFindings responses.
+ * \brief The ListFindingsResponse class provides an interace for Inspector ListFindings responses.
  *
  * \ingroup Inspector
  *

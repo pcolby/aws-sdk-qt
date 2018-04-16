@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::UpdateAliasRequest
  *
- * \brief The UpdateAliasRequest class encapsulates KMS UpdateAlias requests.
+ * \brief The UpdateAliasRequest class provides an interface for KMS UpdateAlias requests.
  *
  * \ingroup KMS
  *

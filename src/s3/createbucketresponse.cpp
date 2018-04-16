@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::CreateBucketResponse
  *
- * \brief The CreateBucketResponse class encapsulates S3 CreateBucket responses.
+ * \brief The CreateBucketResponse class provides an interace for S3 CreateBucket responses.
  *
  * \ingroup S3
  *

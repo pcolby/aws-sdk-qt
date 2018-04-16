@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::AddTagsToOnPremisesInstancesResponse
  *
- * \brief The AddTagsToOnPremisesInstancesResponse class encapsulates CodeDeploy AddTagsToOnPremisesInstances responses.
+ * \brief The AddTagsToOnPremisesInstancesResponse class provides an interace for CodeDeploy AddTagsToOnPremisesInstances responses.
  *
  * \ingroup CodeDeploy
  *

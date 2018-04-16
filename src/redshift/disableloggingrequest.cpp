@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DisableLoggingRequest
  *
- * \brief The DisableLoggingRequest class encapsulates Redshift DisableLogging requests.
+ * \brief The DisableLoggingRequest class provides an interface for Redshift DisableLogging requests.
  *
  * \ingroup Redshift
  *

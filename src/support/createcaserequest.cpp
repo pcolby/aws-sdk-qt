@@ -28,7 +28,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::CreateCaseRequest
  *
- * \brief The CreateCaseRequest class encapsulates Support CreateCase requests.
+ * \brief The CreateCaseRequest class provides an interface for Support CreateCase requests.
  *
  * \ingroup Support
  *

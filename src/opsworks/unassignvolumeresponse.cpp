@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UnassignVolumeResponse
  *
- * \brief The UnassignVolumeResponse class encapsulates OpsWorks UnassignVolume responses.
+ * \brief The UnassignVolumeResponse class provides an interace for OpsWorks UnassignVolume responses.
  *
  * \ingroup OpsWorks
  *

@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::UpdateTimeToLiveRequest
  *
- * \brief The UpdateTimeToLiveRequest class encapsulates DynamoDB UpdateTimeToLive requests.
+ * \brief The UpdateTimeToLiveRequest class provides an interface for DynamoDB UpdateTimeToLive requests.
  *
  * \ingroup DynamoDB
  *

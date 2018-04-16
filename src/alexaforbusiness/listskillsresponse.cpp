@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::ListSkillsResponse
  *
- * \brief The ListSkillsResponse class encapsulates AlexaForBusiness ListSkills responses.
+ * \brief The ListSkillsResponse class provides an interace for AlexaForBusiness ListSkills responses.
  *
  * \ingroup AlexaForBusiness
  *

@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::GetSigningCertificateRequest
  *
- * \brief The GetSigningCertificateRequest class encapsulates CognitoIdentityProvider GetSigningCertificate requests.
+ * \brief The GetSigningCertificateRequest class provides an interface for CognitoIdentityProvider GetSigningCertificate requests.
  *
  * \ingroup CognitoIdentityProvider
  *

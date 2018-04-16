@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::ListEventSubscriptionsRequest
  *
- * \brief The ListEventSubscriptionsRequest class encapsulates Inspector ListEventSubscriptions requests.
+ * \brief The ListEventSubscriptionsRequest class provides an interface for Inspector ListEventSubscriptions requests.
  *
  * \ingroup Inspector
  *

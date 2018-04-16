@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeleteXssMatchSetResponse
  *
- * \brief The DeleteXssMatchSetResponse class encapsulates WAFRegional DeleteXssMatchSet responses.
+ * \brief The DeleteXssMatchSetResponse class provides an interace for WAFRegional DeleteXssMatchSet responses.
  *
  * \ingroup WAFRegional
  *

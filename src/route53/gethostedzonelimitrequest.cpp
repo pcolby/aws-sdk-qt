@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::GetHostedZoneLimitRequest
  *
- * \brief The GetHostedZoneLimitRequest class encapsulates Route53 GetHostedZoneLimit requests.
+ * \brief The GetHostedZoneLimitRequest class provides an interface for Route53 GetHostedZoneLimit requests.
  *
  * \ingroup Route53
  *

@@ -28,7 +28,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::GetStatusRequest
  *
- * \brief The GetStatusRequest class encapsulates ImportExport GetStatus requests.
+ * \brief The GetStatusRequest class provides an interface for ImportExport GetStatus requests.
  *
  * \ingroup ImportExport
  *

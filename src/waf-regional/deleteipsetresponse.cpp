@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeleteIPSetResponse
  *
- * \brief The DeleteIPSetResponse class encapsulates WAFRegional DeleteIPSet responses.
+ * \brief The DeleteIPSetResponse class provides an interace for WAFRegional DeleteIPSet responses.
  *
  * \ingroup WAFRegional
  *

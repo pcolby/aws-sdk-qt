@@ -30,7 +30,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::RemoveTargetsResponse
  *
- * \brief The RemoveTargetsResponse class encapsulates CloudWatchEvents RemoveTargets responses.
+ * \brief The RemoveTargetsResponse class provides an interace for CloudWatchEvents RemoveTargets responses.
  *
  * \ingroup CloudWatchEvents
  *

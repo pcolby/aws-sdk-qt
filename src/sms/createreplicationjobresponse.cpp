@@ -30,7 +30,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::CreateReplicationJobResponse
  *
- * \brief The CreateReplicationJobResponse class encapsulates SMS CreateReplicationJob responses.
+ * \brief The CreateReplicationJobResponse class provides an interace for SMS CreateReplicationJob responses.
  *
  * \ingroup SMS
  *

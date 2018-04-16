@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::GetUICustomizationRequest
  *
- * \brief The GetUICustomizationRequest class encapsulates CognitoIdentityProvider GetUICustomization requests.
+ * \brief The GetUICustomizationRequest class provides an interface for CognitoIdentityProvider GetUICustomization requests.
  *
  * \ingroup CognitoIdentityProvider
  *

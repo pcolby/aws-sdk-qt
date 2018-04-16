@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DeleteDataSourceResponse
  *
- * \brief The DeleteDataSourceResponse class encapsulates MachineLearning DeleteDataSource responses.
+ * \brief The DeleteDataSourceResponse class provides an interace for MachineLearning DeleteDataSource responses.
  *
  * \ingroup MachineLearning
  *

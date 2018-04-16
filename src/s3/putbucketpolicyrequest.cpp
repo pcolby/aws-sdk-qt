@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketPolicyRequest
  *
- * \brief The PutBucketPolicyRequest class encapsulates S3 PutBucketPolicy requests.
+ * \brief The PutBucketPolicyRequest class provides an interface for S3 PutBucketPolicy requests.
  *
  * \ingroup S3
  *

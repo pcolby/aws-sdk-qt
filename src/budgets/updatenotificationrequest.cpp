@@ -28,7 +28,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::UpdateNotificationRequest
  *
- * \brief The UpdateNotificationRequest class encapsulates Budgets UpdateNotification requests.
+ * \brief The UpdateNotificationRequest class provides an interface for Budgets UpdateNotification requests.
  *
  * \ingroup Budgets
  *

@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::UpdateServerRequest
  *
- * \brief The UpdateServerRequest class encapsulates OpsWorksCM UpdateServer requests.
+ * \brief The UpdateServerRequest class provides an interface for OpsWorksCM UpdateServer requests.
  *
  * \ingroup OpsWorksCM
  *

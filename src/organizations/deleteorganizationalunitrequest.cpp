@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DeleteOrganizationalUnitRequest
  *
- * \brief The DeleteOrganizationalUnitRequest class encapsulates Organizations DeleteOrganizationalUnit requests.
+ * \brief The DeleteOrganizationalUnitRequest class provides an interface for Organizations DeleteOrganizationalUnit requests.
  *
  * \ingroup Organizations
  *

@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeIndexRequest
  *
- * \brief The DescribeIndexRequest class encapsulates IoT DescribeIndex requests.
+ * \brief The DescribeIndexRequest class provides an interface for IoT DescribeIndex requests.
  *
  * \ingroup IoT
  *

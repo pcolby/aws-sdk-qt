@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::CreateCacheClusterRequest
  *
- * \brief The CreateCacheClusterRequest class encapsulates ElastiCache CreateCacheCluster requests.
+ * \brief The CreateCacheClusterRequest class provides an interface for ElastiCache CreateCacheCluster requests.
  *
  * \ingroup ElastiCache
  *

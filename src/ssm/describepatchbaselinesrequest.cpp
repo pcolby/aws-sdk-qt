@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribePatchBaselinesRequest
  *
- * \brief The DescribePatchBaselinesRequest class encapsulates SSM DescribePatchBaselines requests.
+ * \brief The DescribePatchBaselinesRequest class provides an interface for SSM DescribePatchBaselines requests.
  *
  * \ingroup SSM
  *

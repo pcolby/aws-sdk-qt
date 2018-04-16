@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListPrincipalPoliciesResponse
  *
- * \brief The ListPrincipalPoliciesResponse class encapsulates IoT ListPrincipalPolicies responses.
+ * \brief The ListPrincipalPoliciesResponse class provides an interace for IoT ListPrincipalPolicies responses.
  *
  * \ingroup IoT
  *

@@ -30,7 +30,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::PutScalingPolicyResponse
  *
- * \brief The PutScalingPolicyResponse class encapsulates ApplicationAutoScaling PutScalingPolicy responses.
+ * \brief The PutScalingPolicyResponse class provides an interace for ApplicationAutoScaling PutScalingPolicy responses.
  *
  * \ingroup ApplicationAutoScaling
  *

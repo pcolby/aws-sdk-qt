@@ -28,7 +28,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::CreateTagsRequest
  *
- * \brief The CreateTagsRequest class encapsulates WorkSpaces CreateTags requests.
+ * \brief The CreateTagsRequest class provides an interface for WorkSpaces CreateTags requests.
  *
  * \ingroup WorkSpaces
  *

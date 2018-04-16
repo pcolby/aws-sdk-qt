@@ -30,7 +30,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::DeleteGroupResponse
  *
- * \brief The DeleteGroupResponse class encapsulates ResourceGroups DeleteGroup responses.
+ * \brief The DeleteGroupResponse class provides an interace for ResourceGroups DeleteGroup responses.
  *
  * \ingroup ResourceGroups
  *

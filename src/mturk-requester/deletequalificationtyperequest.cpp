@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::DeleteQualificationTypeRequest
  *
- * \brief The DeleteQualificationTypeRequest class encapsulates MTurk DeleteQualificationType requests.
+ * \brief The DeleteQualificationTypeRequest class provides an interface for MTurk DeleteQualificationType requests.
  *
  * \ingroup MTurk
  *

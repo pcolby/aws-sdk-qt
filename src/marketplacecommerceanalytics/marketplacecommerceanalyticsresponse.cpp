@@ -29,7 +29,7 @@ namespace MarketplaceCommerceAnalytics {
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::MarketplaceCommerceAnalyticsResponse
  *
- * \brief The MarketplaceCommerceAnalyticsResponse class is the base class for all MarketplaceCommerceAnalytics responses.
+ * \brief The MarketplaceCommerceAnalyticsResponse class provides an interface for MarketplaceCommerceAnalytics responses.
  *
  * \ingroup MarketplaceCommerceAnalytics
  */

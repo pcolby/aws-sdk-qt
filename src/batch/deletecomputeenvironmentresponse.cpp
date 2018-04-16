@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::DeleteComputeEnvironmentResponse
  *
- * \brief The DeleteComputeEnvironmentResponse class encapsulates Batch DeleteComputeEnvironment responses.
+ * \brief The DeleteComputeEnvironmentResponse class provides an interace for Batch DeleteComputeEnvironment responses.
  *
  * \ingroup Batch
  *

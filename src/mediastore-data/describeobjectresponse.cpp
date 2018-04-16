@@ -30,7 +30,7 @@ namespace MediaStoreData {
 /*!
  * \class QtAws::MediaStoreData::DescribeObjectResponse
  *
- * \brief The DescribeObjectResponse class encapsulates MediaStoreData DescribeObject responses.
+ * \brief The DescribeObjectResponse class provides an interace for MediaStoreData DescribeObject responses.
  *
  * \ingroup MediaStoreData
  *

@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::UpdateObjectAttributesRequest
  *
- * \brief The UpdateObjectAttributesRequest class encapsulates CloudDirectory UpdateObjectAttributes requests.
+ * \brief The UpdateObjectAttributesRequest class provides an interface for CloudDirectory UpdateObjectAttributes requests.
  *
  * \ingroup CloudDirectory
  *

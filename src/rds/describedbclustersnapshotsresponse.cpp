@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeDBClusterSnapshotsResponse
  *
- * \brief The DescribeDBClusterSnapshotsResponse class encapsulates RDS DescribeDBClusterSnapshots responses.
+ * \brief The DescribeDBClusterSnapshotsResponse class provides an interace for RDS DescribeDBClusterSnapshots responses.
  *
  * \ingroup RDS
  *

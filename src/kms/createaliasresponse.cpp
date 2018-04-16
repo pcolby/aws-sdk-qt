@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::CreateAliasResponse
  *
- * \brief The CreateAliasResponse class encapsulates KMS CreateAlias responses.
+ * \brief The CreateAliasResponse class provides an interace for KMS CreateAlias responses.
  *
  * \ingroup KMS
  *

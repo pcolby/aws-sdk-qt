@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeFleetAttributesResponse
  *
- * \brief The DescribeFleetAttributesResponse class encapsulates GameLift DescribeFleetAttributes responses.
+ * \brief The DescribeFleetAttributesResponse class provides an interace for GameLift DescribeFleetAttributes responses.
  *
  * \ingroup GameLift
  *

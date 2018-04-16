@@ -30,7 +30,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::CreateSecretResponse
  *
- * \brief The CreateSecretResponse class encapsulates SecretsManager CreateSecret responses.
+ * \brief The CreateSecretResponse class provides an interace for SecretsManager CreateSecret responses.
  *
  * \ingroup SecretsManager
  *

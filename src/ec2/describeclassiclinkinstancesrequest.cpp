@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeClassicLinkInstancesRequest
  *
- * \brief The DescribeClassicLinkInstancesRequest class encapsulates EC2 DescribeClassicLinkInstances requests.
+ * \brief The DescribeClassicLinkInstancesRequest class provides an interface for EC2 DescribeClassicLinkInstances requests.
  *
  * \ingroup EC2
  *

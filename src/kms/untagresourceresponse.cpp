@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::UntagResourceResponse
  *
- * \brief The UntagResourceResponse class encapsulates KMS UntagResource responses.
+ * \brief The UntagResourceResponse class provides an interace for KMS UntagResource responses.
  *
  * \ingroup KMS
  *

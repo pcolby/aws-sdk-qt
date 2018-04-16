@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyLaunchTemplateResponse
  *
- * \brief The ModifyLaunchTemplateResponse class encapsulates EC2 ModifyLaunchTemplate responses.
+ * \brief The ModifyLaunchTemplateResponse class provides an interace for EC2 ModifyLaunchTemplate responses.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListBonusPaymentsRequest
  *
- * \brief The ListBonusPaymentsRequest class encapsulates MTurk ListBonusPayments requests.
+ * \brief The ListBonusPaymentsRequest class provides an interface for MTurk ListBonusPayments requests.
  *
  * \ingroup MTurk
  *

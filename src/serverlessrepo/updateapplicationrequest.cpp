@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::UpdateApplicationRequest
  *
- * \brief The UpdateApplicationRequest class encapsulates ServerlessApplicationRepository UpdateApplication requests.
+ * \brief The UpdateApplicationRequest class provides an interface for ServerlessApplicationRepository UpdateApplication requests.
  *
  * \ingroup ServerlessApplicationRepository
  *

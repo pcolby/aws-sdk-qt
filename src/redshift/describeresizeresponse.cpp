@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeResizeResponse
  *
- * \brief The DescribeResizeResponse class encapsulates Redshift DescribeResize responses.
+ * \brief The DescribeResizeResponse class provides an interace for Redshift DescribeResize responses.
  *
  * \ingroup Redshift
  *

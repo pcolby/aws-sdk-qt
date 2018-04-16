@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::BuildSuggestersRequest
  *
- * \brief The BuildSuggestersRequest class encapsulates CloudSearch BuildSuggesters requests.
+ * \brief The BuildSuggestersRequest class provides an interface for CloudSearch BuildSuggesters requests.
  *
  * \ingroup CloudSearch
  *

@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::UpdateWebACLRequest
  *
- * \brief The UpdateWebACLRequest class encapsulates WAFRegional UpdateWebACL requests.
+ * \brief The UpdateWebACLRequest class provides an interface for WAFRegional UpdateWebACL requests.
  *
  * \ingroup WAFRegional
  *

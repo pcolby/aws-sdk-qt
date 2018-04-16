@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::InvokeRequest
  *
- * \brief The InvokeRequest class encapsulates Lambda Invoke requests.
+ * \brief The InvokeRequest class provides an interface for Lambda Invoke requests.
  *
  * \ingroup Lambda
  *

@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::StopExecutionRequest
  *
- * \brief The StopExecutionRequest class encapsulates SFN StopExecution requests.
+ * \brief The StopExecutionRequest class provides an interface for SFN StopExecution requests.
  *
  * \ingroup SFN
  *

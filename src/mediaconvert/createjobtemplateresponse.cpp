@@ -30,7 +30,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::CreateJobTemplateResponse
  *
- * \brief The CreateJobTemplateResponse class encapsulates MediaConvert CreateJobTemplate responses.
+ * \brief The CreateJobTemplateResponse class provides an interace for MediaConvert CreateJobTemplate responses.
  *
  * \ingroup MediaConvert
  *

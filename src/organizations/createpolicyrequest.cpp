@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::CreatePolicyRequest
  *
- * \brief The CreatePolicyRequest class encapsulates Organizations CreatePolicy requests.
+ * \brief The CreatePolicyRequest class provides an interface for Organizations CreatePolicy requests.
  *
  * \ingroup Organizations
  *

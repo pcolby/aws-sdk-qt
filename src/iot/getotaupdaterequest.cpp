@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::GetOTAUpdateRequest
  *
- * \brief The GetOTAUpdateRequest class encapsulates IoT GetOTAUpdate requests.
+ * \brief The GetOTAUpdateRequest class provides an interface for IoT GetOTAUpdate requests.
  *
  * \ingroup IoT
  *

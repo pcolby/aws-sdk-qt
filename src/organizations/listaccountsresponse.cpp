@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListAccountsResponse
  *
- * \brief The ListAccountsResponse class encapsulates Organizations ListAccounts responses.
+ * \brief The ListAccountsResponse class provides an interace for Organizations ListAccounts responses.
  *
  * \ingroup Organizations
  *

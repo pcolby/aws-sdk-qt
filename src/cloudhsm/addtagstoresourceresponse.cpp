@@ -30,7 +30,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::AddTagsToResourceResponse
  *
- * \brief The AddTagsToResourceResponse class encapsulates CloudHSM AddTagsToResource responses.
+ * \brief The AddTagsToResourceResponse class provides an interace for CloudHSM AddTagsToResource responses.
  *
  * \ingroup CloudHSM
  *

@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::PostCommentForPullRequestRequest
  *
- * \brief The PostCommentForPullRequestRequest class encapsulates CodeCommit PostCommentForPullRequest requests.
+ * \brief The PostCommentForPullRequestRequest class provides an interface for CodeCommit PostCommentForPullRequest requests.
  *
  * \ingroup CodeCommit
  *

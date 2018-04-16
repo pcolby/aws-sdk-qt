@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetVpcLinksRequest
  *
- * \brief The GetVpcLinksRequest class encapsulates APIGateway GetVpcLinks requests.
+ * \brief The GetVpcLinksRequest class provides an interface for APIGateway GetVpcLinks requests.
  *
  * \ingroup APIGateway
  *

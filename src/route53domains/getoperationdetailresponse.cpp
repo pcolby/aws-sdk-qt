@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::GetOperationDetailResponse
  *
- * \brief The GetOperationDetailResponse class encapsulates Route53Domains GetOperationDetail responses.
+ * \brief The GetOperationDetailResponse class provides an interace for Route53Domains GetOperationDetail responses.
  *
  * \ingroup Route53Domains
  *

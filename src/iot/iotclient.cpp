@@ -283,7 +283,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::IoTClient
  *
- * \brief The IoTClient class provides access the AWS IoT service.
+ * \brief The IoTClient class provides access to the AWS IoT service.
  *
  * \ingroup IoT
  *

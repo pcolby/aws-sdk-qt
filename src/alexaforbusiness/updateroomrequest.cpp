@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::UpdateRoomRequest
  *
- * \brief The UpdateRoomRequest class encapsulates AlexaForBusiness UpdateRoom requests.
+ * \brief The UpdateRoomRequest class provides an interface for AlexaForBusiness UpdateRoom requests.
  *
  * \ingroup AlexaForBusiness
  *

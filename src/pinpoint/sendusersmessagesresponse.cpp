@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::SendUsersMessagesResponse
  *
- * \brief The SendUsersMessagesResponse class encapsulates Pinpoint SendUsersMessages responses.
+ * \brief The SendUsersMessagesResponse class provides an interace for Pinpoint SendUsersMessages responses.
  *
  * \ingroup Pinpoint
  *

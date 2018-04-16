@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteApnsSandboxChannelRequest
  *
- * \brief The DeleteApnsSandboxChannelRequest class encapsulates Pinpoint DeleteApnsSandboxChannel requests.
+ * \brief The DeleteApnsSandboxChannelRequest class provides an interface for Pinpoint DeleteApnsSandboxChannel requests.
  *
  * \ingroup Pinpoint
  *

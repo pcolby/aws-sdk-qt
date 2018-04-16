@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CreateAssociationBatchRequest
  *
- * \brief The CreateAssociationBatchRequest class encapsulates SSM CreateAssociationBatch requests.
+ * \brief The CreateAssociationBatchRequest class provides an interface for SSM CreateAssociationBatch requests.
  *
  * \ingroup SSM
  *

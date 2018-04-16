@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::CreatePipelineRequest
  *
- * \brief The CreatePipelineRequest class encapsulates CodePipeline CreatePipeline requests.
+ * \brief The CreatePipelineRequest class provides an interface for CodePipeline CreatePipeline requests.
  *
  * \ingroup CodePipeline
  *

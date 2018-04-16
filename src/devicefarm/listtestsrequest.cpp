@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListTestsRequest
  *
- * \brief The ListTestsRequest class encapsulates DeviceFarm ListTests requests.
+ * \brief The ListTestsRequest class provides an interface for DeviceFarm ListTests requests.
  *
  * \ingroup DeviceFarm
  *

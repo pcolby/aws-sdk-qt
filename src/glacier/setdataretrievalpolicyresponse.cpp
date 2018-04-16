@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::SetDataRetrievalPolicyResponse
  *
- * \brief The SetDataRetrievalPolicyResponse class encapsulates Glacier SetDataRetrievalPolicy responses.
+ * \brief The SetDataRetrievalPolicyResponse class provides an interace for Glacier SetDataRetrievalPolicy responses.
  *
  * \ingroup Glacier
  *

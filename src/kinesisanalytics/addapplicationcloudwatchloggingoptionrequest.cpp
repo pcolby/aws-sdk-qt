@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::AddApplicationCloudWatchLoggingOptionRequest
  *
- * \brief The AddApplicationCloudWatchLoggingOptionRequest class encapsulates KinesisAnalytics AddApplicationCloudWatchLoggingOption requests.
+ * \brief The AddApplicationCloudWatchLoggingOptionRequest class provides an interface for KinesisAnalytics AddApplicationCloudWatchLoggingOption requests.
  *
  * \ingroup KinesisAnalytics
  *

@@ -28,7 +28,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::EnableDomainTransferLockRequest
  *
- * \brief The EnableDomainTransferLockRequest class encapsulates Route53Domains EnableDomainTransferLock requests.
+ * \brief The EnableDomainTransferLockRequest class provides an interface for Route53Domains EnableDomainTransferLock requests.
  *
  * \ingroup Route53Domains
  *

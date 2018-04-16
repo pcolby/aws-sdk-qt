@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::DeleteDistributionRequest
  *
- * \brief The DeleteDistributionRequest class encapsulates CloudFront DeleteDistribution requests.
+ * \brief The DeleteDistributionRequest class provides an interface for CloudFront DeleteDistribution requests.
  *
  * \ingroup CloudFront
  *

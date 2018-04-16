@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::EnableSnapshotCopyRequest
  *
- * \brief The EnableSnapshotCopyRequest class encapsulates Redshift EnableSnapshotCopy requests.
+ * \brief The EnableSnapshotCopyRequest class provides an interface for Redshift EnableSnapshotCopy requests.
  *
  * \ingroup Redshift
  *

@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListServerCertificatesRequest
  *
- * \brief The ListServerCertificatesRequest class encapsulates IAM ListServerCertificates requests.
+ * \brief The ListServerCertificatesRequest class provides an interface for IAM ListServerCertificates requests.
  *
  * \ingroup IAM
  *

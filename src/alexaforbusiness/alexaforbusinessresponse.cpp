@@ -29,7 +29,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::AlexaForBusinessResponse
  *
- * \brief The AlexaForBusinessResponse class is the base class for all AlexaForBusiness responses.
+ * \brief The AlexaForBusinessResponse class provides an interface for AlexaForBusiness responses.
  *
  * \ingroup AlexaForBusiness
  */

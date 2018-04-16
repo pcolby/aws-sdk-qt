@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::GetCredentialsForIdentityRequest
  *
- * \brief The GetCredentialsForIdentityRequest class encapsulates CognitoIdentity GetCredentialsForIdentity requests.
+ * \brief The GetCredentialsForIdentityRequest class provides an interface for CognitoIdentity GetCredentialsForIdentity requests.
  *
  * \ingroup CognitoIdentity
  *

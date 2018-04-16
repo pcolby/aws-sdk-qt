@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DisableDirectoryResponse
  *
- * \brief The DisableDirectoryResponse class encapsulates CloudDirectory DisableDirectory responses.
+ * \brief The DisableDirectoryResponse class provides an interace for CloudDirectory DisableDirectory responses.
  *
  * \ingroup CloudDirectory
  *

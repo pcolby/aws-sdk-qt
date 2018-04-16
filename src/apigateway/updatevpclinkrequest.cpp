@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateVpcLinkRequest
  *
- * \brief The UpdateVpcLinkRequest class encapsulates APIGateway UpdateVpcLink requests.
+ * \brief The UpdateVpcLinkRequest class provides an interface for APIGateway UpdateVpcLink requests.
  *
  * \ingroup APIGateway
  *

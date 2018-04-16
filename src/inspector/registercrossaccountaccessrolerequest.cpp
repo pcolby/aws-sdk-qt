@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::RegisterCrossAccountAccessRoleRequest
  *
- * \brief The RegisterCrossAccountAccessRoleRequest class encapsulates Inspector RegisterCrossAccountAccessRole requests.
+ * \brief The RegisterCrossAccountAccessRoleRequest class provides an interface for Inspector RegisterCrossAccountAccessRole requests.
  *
  * \ingroup Inspector
  *

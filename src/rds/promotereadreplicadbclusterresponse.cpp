@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::PromoteReadReplicaDBClusterResponse
  *
- * \brief The PromoteReadReplicaDBClusterResponse class encapsulates RDS PromoteReadReplicaDBCluster responses.
+ * \brief The PromoteReadReplicaDBClusterResponse class provides an interace for RDS PromoteReadReplicaDBCluster responses.
  *
  * \ingroup RDS
  *

@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::AttachToIndexRequest
  *
- * \brief The AttachToIndexRequest class encapsulates CloudDirectory AttachToIndex requests.
+ * \brief The AttachToIndexRequest class provides an interface for CloudDirectory AttachToIndex requests.
  *
  * \ingroup CloudDirectory
  *

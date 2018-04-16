@@ -30,7 +30,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::DeletePipelineResponse
  *
- * \brief The DeletePipelineResponse class encapsulates ElasticTranscoder DeletePipeline responses.
+ * \brief The DeletePipelineResponse class provides an interace for ElasticTranscoder DeletePipeline responses.
  *
  * \ingroup ElasticTranscoder
  *

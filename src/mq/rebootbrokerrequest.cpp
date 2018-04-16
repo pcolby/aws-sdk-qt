@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::RebootBrokerRequest
  *
- * \brief The RebootBrokerRequest class encapsulates MQ RebootBroker requests.
+ * \brief The RebootBrokerRequest class provides an interface for MQ RebootBroker requests.
  *
  * \ingroup MQ
  *

@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeleteRuleRequest
  *
- * \brief The DeleteRuleRequest class encapsulates ElasticLoadBalancingv2 DeleteRule requests.
+ * \brief The DeleteRuleRequest class provides an interface for ElasticLoadBalancingv2 DeleteRule requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

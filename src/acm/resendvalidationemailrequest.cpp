@@ -28,7 +28,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::ResendValidationEmailRequest
  *
- * \brief The ResendValidationEmailRequest class encapsulates ACM ResendValidationEmail requests.
+ * \brief The ResendValidationEmailRequest class provides an interface for ACM ResendValidationEmail requests.
  *
  * \ingroup ACM
  *

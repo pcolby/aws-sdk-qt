@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::AddTagsRequest
  *
- * \brief The AddTagsRequest class encapsulates DataPipeline AddTags requests.
+ * \brief The AddTagsRequest class provides an interface for DataPipeline AddTags requests.
  *
  * \ingroup DataPipeline
  *

@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::RetrieveEnvironmentInfoRequest
  *
- * \brief The RetrieveEnvironmentInfoRequest class encapsulates ElasticBeanstalk RetrieveEnvironmentInfo requests.
+ * \brief The RetrieveEnvironmentInfoRequest class provides an interface for ElasticBeanstalk RetrieveEnvironmentInfo requests.
  *
  * \ingroup ElasticBeanstalk
  *

@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::DeactivatePipelineResponse
  *
- * \brief The DeactivatePipelineResponse class encapsulates DataPipeline DeactivatePipeline responses.
+ * \brief The DeactivatePipelineResponse class provides an interace for DataPipeline DeactivatePipeline responses.
  *
  * \ingroup DataPipeline
  *

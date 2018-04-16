@@ -163,7 +163,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::RedshiftClient
  *
- * \brief The RedshiftClient class provides access the Amazon Redshift service.
+ * \brief The RedshiftClient class provides access to the Amazon Redshift service.
  *
  * \ingroup Redshift
  *

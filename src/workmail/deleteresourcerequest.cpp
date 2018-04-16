@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DeleteResourceRequest
  *
- * \brief The DeleteResourceRequest class encapsulates WorkMail DeleteResource requests.
+ * \brief The DeleteResourceRequest class provides an interface for WorkMail DeleteResource requests.
  *
  * \ingroup WorkMail
  *

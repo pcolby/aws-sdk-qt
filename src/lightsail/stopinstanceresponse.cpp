@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::StopInstanceResponse
  *
- * \brief The StopInstanceResponse class encapsulates Lightsail StopInstance responses.
+ * \brief The StopInstanceResponse class provides an interace for Lightsail StopInstance responses.
  *
  * \ingroup Lightsail
  *

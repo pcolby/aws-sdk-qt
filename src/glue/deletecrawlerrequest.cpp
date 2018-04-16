@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteCrawlerRequest
  *
- * \brief The DeleteCrawlerRequest class encapsulates Glue DeleteCrawler requests.
+ * \brief The DeleteCrawlerRequest class provides an interface for Glue DeleteCrawler requests.
  *
  * \ingroup Glue
  *

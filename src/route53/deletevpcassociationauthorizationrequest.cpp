@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::DeleteVPCAssociationAuthorizationRequest
  *
- * \brief The DeleteVPCAssociationAuthorizationRequest class encapsulates Route53 DeleteVPCAssociationAuthorization requests.
+ * \brief The DeleteVPCAssociationAuthorizationRequest class provides an interface for Route53 DeleteVPCAssociationAuthorization requests.
  *
  * \ingroup Route53
  *

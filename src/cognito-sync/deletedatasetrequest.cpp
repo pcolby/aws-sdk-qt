@@ -28,7 +28,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::DeleteDatasetRequest
  *
- * \brief The DeleteDatasetRequest class encapsulates CognitoSync DeleteDataset requests.
+ * \brief The DeleteDatasetRequest class provides an interface for CognitoSync DeleteDataset requests.
  *
  * \ingroup CognitoSync
  *

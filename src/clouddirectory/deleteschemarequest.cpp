@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DeleteSchemaRequest
  *
- * \brief The DeleteSchemaRequest class encapsulates CloudDirectory DeleteSchema requests.
+ * \brief The DeleteSchemaRequest class provides an interface for CloudDirectory DeleteSchema requests.
  *
  * \ingroup CloudDirectory
  *

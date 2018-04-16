@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::ListPartsRequest
  *
- * \brief The ListPartsRequest class encapsulates Glacier ListParts requests.
+ * \brief The ListPartsRequest class provides an interface for Glacier ListParts requests.
  *
  * \ingroup Glacier
  *

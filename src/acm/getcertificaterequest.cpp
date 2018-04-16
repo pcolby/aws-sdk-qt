@@ -28,7 +28,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::GetCertificateRequest
  *
- * \brief The GetCertificateRequest class encapsulates ACM GetCertificate requests.
+ * \brief The GetCertificateRequest class provides an interface for ACM GetCertificate requests.
  *
  * \ingroup ACM
  *

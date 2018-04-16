@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::PutNotificationConfigurationRequest
  *
- * \brief The PutNotificationConfigurationRequest class encapsulates AutoScaling PutNotificationConfiguration requests.
+ * \brief The PutNotificationConfigurationRequest class provides an interface for AutoScaling PutNotificationConfiguration requests.
  *
  * \ingroup AutoScaling
  *

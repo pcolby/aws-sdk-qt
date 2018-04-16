@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeregisterPatchBaselineForPatchGroupRequest
  *
- * \brief The DeregisterPatchBaselineForPatchGroupRequest class encapsulates SSM DeregisterPatchBaselineForPatchGroup requests.
+ * \brief The DeregisterPatchBaselineForPatchGroupRequest class provides an interface for SSM DeregisterPatchBaselineForPatchGroup requests.
  *
  * \ingroup SSM
  *

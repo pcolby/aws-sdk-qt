@@ -30,7 +30,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::DescribeAddressesResponse
  *
- * \brief The DescribeAddressesResponse class encapsulates Snowball DescribeAddresses responses.
+ * \brief The DescribeAddressesResponse class provides an interace for Snowball DescribeAddresses responses.
  *
  * \ingroup Snowball
  *

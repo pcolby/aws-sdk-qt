@@ -30,7 +30,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::ResendValidationEmailResponse
  *
- * \brief The ResendValidationEmailResponse class encapsulates ACM ResendValidationEmail responses.
+ * \brief The ResendValidationEmailResponse class provides an interace for ACM ResendValidationEmail responses.
  *
  * \ingroup ACM
  *

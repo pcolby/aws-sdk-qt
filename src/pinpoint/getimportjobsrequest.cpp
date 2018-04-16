@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetImportJobsRequest
  *
- * \brief The GetImportJobsRequest class encapsulates Pinpoint GetImportJobs requests.
+ * \brief The GetImportJobsRequest class provides an interface for Pinpoint GetImportJobs requests.
  *
  * \ingroup Pinpoint
  *

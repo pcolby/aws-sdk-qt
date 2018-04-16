@@ -30,7 +30,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::TagResponse
  *
- * \brief The TagResponse class encapsulates ResourceGroups Tag responses.
+ * \brief The TagResponse class provides an interace for ResourceGroups Tag responses.
  *
  * \ingroup ResourceGroups
  *

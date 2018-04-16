@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AttachClassicLinkVpcRequest
  *
- * \brief The AttachClassicLinkVpcRequest class encapsulates EC2 AttachClassicLinkVpc requests.
+ * \brief The AttachClassicLinkVpcRequest class provides an interface for EC2 AttachClassicLinkVpc requests.
  *
  * \ingroup EC2
  *

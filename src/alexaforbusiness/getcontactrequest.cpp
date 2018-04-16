@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::GetContactRequest
  *
- * \brief The GetContactRequest class encapsulates AlexaForBusiness GetContact requests.
+ * \brief The GetContactRequest class provides an interface for AlexaForBusiness GetContact requests.
  *
  * \ingroup AlexaForBusiness
  *

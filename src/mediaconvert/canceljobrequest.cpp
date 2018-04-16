@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::CancelJobRequest
  *
- * \brief The CancelJobRequest class encapsulates MediaConvert CancelJob requests.
+ * \brief The CancelJobRequest class provides an interface for MediaConvert CancelJob requests.
  *
  * \ingroup MediaConvert
  *

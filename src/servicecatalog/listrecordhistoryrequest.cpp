@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListRecordHistoryRequest
  *
- * \brief The ListRecordHistoryRequest class encapsulates ServiceCatalog ListRecordHistory requests.
+ * \brief The ListRecordHistoryRequest class provides an interface for ServiceCatalog ListRecordHistory requests.
  *
  * \ingroup ServiceCatalog
  *

@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::ListVaultsRequest
  *
- * \brief The ListVaultsRequest class encapsulates Glacier ListVaults requests.
+ * \brief The ListVaultsRequest class provides an interface for Glacier ListVaults requests.
  *
  * \ingroup Glacier
  *

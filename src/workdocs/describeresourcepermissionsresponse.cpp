@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeResourcePermissionsResponse
  *
- * \brief The DescribeResourcePermissionsResponse class encapsulates WorkDocs DescribeResourcePermissions responses.
+ * \brief The DescribeResourcePermissionsResponse class provides an interace for WorkDocs DescribeResourcePermissions responses.
  *
  * \ingroup WorkDocs
  *

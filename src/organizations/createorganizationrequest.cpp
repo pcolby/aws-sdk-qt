@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::CreateOrganizationRequest
  *
- * \brief The CreateOrganizationRequest class encapsulates Organizations CreateOrganization requests.
+ * \brief The CreateOrganizationRequest class provides an interface for Organizations CreateOrganization requests.
  *
  * \ingroup Organizations
  *

@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::ListUsersRequest
  *
- * \brief The ListUsersRequest class encapsulates MQ ListUsers requests.
+ * \brief The ListUsersRequest class provides an interface for MQ ListUsers requests.
  *
  * \ingroup MQ
  *

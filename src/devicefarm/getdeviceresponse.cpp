@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetDeviceResponse
  *
- * \brief The GetDeviceResponse class encapsulates DeviceFarm GetDevice responses.
+ * \brief The GetDeviceResponse class provides an interace for DeviceFarm GetDevice responses.
  *
  * \ingroup DeviceFarm
  *

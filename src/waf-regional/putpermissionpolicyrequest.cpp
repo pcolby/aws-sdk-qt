@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::PutPermissionPolicyRequest
  *
- * \brief The PutPermissionPolicyRequest class encapsulates WAFRegional PutPermissionPolicy requests.
+ * \brief The PutPermissionPolicyRequest class provides an interface for WAFRegional PutPermissionPolicy requests.
  *
  * \ingroup WAFRegional
  *

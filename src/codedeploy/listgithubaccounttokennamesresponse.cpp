@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::ListGitHubAccountTokenNamesResponse
  *
- * \brief The ListGitHubAccountTokenNamesResponse class encapsulates CodeDeploy ListGitHubAccountTokenNames responses.
+ * \brief The ListGitHubAccountTokenNamesResponse class provides an interace for CodeDeploy ListGitHubAccountTokenNames responses.
  *
  * \ingroup CodeDeploy
  *

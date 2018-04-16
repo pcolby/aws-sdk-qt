@@ -26,7 +26,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GreengrassRequest
  *
- * \brief The GreengrassRequest class is the base class for all Greengrass requests.
+ * \brief The GreengrassRequest class provides an interface for Greengrass requests.
  *
  * \ingroup Greengrass
  */

@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeregisterRdsDbInstanceRequest
  *
- * \brief The DeregisterRdsDbInstanceRequest class encapsulates OpsWorks DeregisterRdsDbInstance requests.
+ * \brief The DeregisterRdsDbInstanceRequest class provides an interface for OpsWorks DeregisterRdsDbInstance requests.
  *
  * \ingroup OpsWorks
  *

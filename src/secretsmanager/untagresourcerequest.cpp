@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::UntagResourceRequest
  *
- * \brief The UntagResourceRequest class encapsulates SecretsManager UntagResource requests.
+ * \brief The UntagResourceRequest class provides an interface for SecretsManager UntagResource requests.
  *
  * \ingroup SecretsManager
  *

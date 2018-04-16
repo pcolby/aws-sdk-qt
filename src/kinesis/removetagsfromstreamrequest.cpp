@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::RemoveTagsFromStreamRequest
  *
- * \brief The RemoveTagsFromStreamRequest class encapsulates Kinesis RemoveTagsFromStream requests.
+ * \brief The RemoveTagsFromStreamRequest class provides an interface for Kinesis RemoveTagsFromStream requests.
  *
  * \ingroup Kinesis
  *

@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListTagsForResourceResponse
  *
- * \brief The ListTagsForResourceResponse class encapsulates CloudDirectory ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class provides an interace for CloudDirectory ListTagsForResource responses.
  *
  * \ingroup CloudDirectory
  *

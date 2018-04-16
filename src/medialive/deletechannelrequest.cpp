@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::DeleteChannelRequest
  *
- * \brief The DeleteChannelRequest class encapsulates MediaLive DeleteChannel requests.
+ * \brief The DeleteChannelRequest class provides an interface for MediaLive DeleteChannel requests.
  *
  * \ingroup MediaLive
  *

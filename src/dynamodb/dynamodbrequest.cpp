@@ -26,7 +26,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DynamoDBRequest
  *
- * \brief The DynamoDBRequest class is the base class for all DynamoDB requests.
+ * \brief The DynamoDBRequest class provides an interface for DynamoDB requests.
  *
  * \ingroup DynamoDB
  */

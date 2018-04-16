@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeAvailablePatchesResponse
  *
- * \brief The DescribeAvailablePatchesResponse class encapsulates SSM DescribeAvailablePatches responses.
+ * \brief The DescribeAvailablePatchesResponse class provides an interace for SSM DescribeAvailablePatches responses.
  *
  * \ingroup SSM
  *

@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::RemovePermissionRequest
  *
- * \brief The RemovePermissionRequest class encapsulates SQS RemovePermission requests.
+ * \brief The RemovePermissionRequest class provides an interface for SQS RemovePermission requests.
  *
  * \ingroup SQS
  *

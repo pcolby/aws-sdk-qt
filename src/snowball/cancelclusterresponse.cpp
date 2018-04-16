@@ -30,7 +30,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::CancelClusterResponse
  *
- * \brief The CancelClusterResponse class encapsulates Snowball CancelCluster responses.
+ * \brief The CancelClusterResponse class provides an interace for Snowball CancelCluster responses.
  *
  * \ingroup Snowball
  *

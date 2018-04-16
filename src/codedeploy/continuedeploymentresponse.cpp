@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::ContinueDeploymentResponse
  *
- * \brief The ContinueDeploymentResponse class encapsulates CodeDeploy ContinueDeployment responses.
+ * \brief The ContinueDeploymentResponse class provides an interace for CodeDeploy ContinueDeployment responses.
  *
  * \ingroup CodeDeploy
  *

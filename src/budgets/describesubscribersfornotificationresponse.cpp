@@ -30,7 +30,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::DescribeSubscribersForNotificationResponse
  *
- * \brief The DescribeSubscribersForNotificationResponse class encapsulates Budgets DescribeSubscribersForNotification responses.
+ * \brief The DescribeSubscribersForNotificationResponse class provides an interace for Budgets DescribeSubscribersForNotification responses.
  *
  * \ingroup Budgets
  *

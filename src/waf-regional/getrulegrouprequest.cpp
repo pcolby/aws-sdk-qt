@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetRuleGroupRequest
  *
- * \brief The GetRuleGroupRequest class encapsulates WAFRegional GetRuleGroup requests.
+ * \brief The GetRuleGroupRequest class provides an interface for WAFRegional GetRuleGroup requests.
  *
  * \ingroup WAFRegional
  *

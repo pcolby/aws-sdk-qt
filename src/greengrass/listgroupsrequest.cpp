@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListGroupsRequest
  *
- * \brief The ListGroupsRequest class encapsulates Greengrass ListGroups requests.
+ * \brief The ListGroupsRequest class provides an interface for Greengrass ListGroups requests.
  *
  * \ingroup Greengrass
  *

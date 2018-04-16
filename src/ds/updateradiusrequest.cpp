@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::UpdateRadiusRequest
  *
- * \brief The UpdateRadiusRequest class encapsulates DirectoryService UpdateRadius requests.
+ * \brief The UpdateRadiusRequest class provides an interface for DirectoryService UpdateRadius requests.
  *
  * \ingroup DirectoryService
  *

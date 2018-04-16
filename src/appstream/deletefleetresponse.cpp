@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DeleteFleetResponse
  *
- * \brief The DeleteFleetResponse class encapsulates AppStream DeleteFleet responses.
+ * \brief The DeleteFleetResponse class provides an interace for AppStream DeleteFleet responses.
  *
  * \ingroup AppStream
  *

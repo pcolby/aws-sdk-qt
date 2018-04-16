@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetMethodRequest
  *
- * \brief The GetMethodRequest class encapsulates APIGateway GetMethod requests.
+ * \brief The GetMethodRequest class provides an interface for APIGateway GetMethod requests.
  *
  * \ingroup APIGateway
  *

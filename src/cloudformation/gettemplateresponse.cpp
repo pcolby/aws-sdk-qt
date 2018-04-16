@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::GetTemplateResponse
  *
- * \brief The GetTemplateResponse class encapsulates CloudFormation GetTemplate responses.
+ * \brief The GetTemplateResponse class provides an interace for CloudFormation GetTemplate responses.
  *
  * \ingroup CloudFormation
  *

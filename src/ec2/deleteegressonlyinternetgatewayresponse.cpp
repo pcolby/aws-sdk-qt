@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteEgressOnlyInternetGatewayResponse
  *
- * \brief The DeleteEgressOnlyInternetGatewayResponse class encapsulates EC2 DeleteEgressOnlyInternetGateway responses.
+ * \brief The DeleteEgressOnlyInternetGatewayResponse class provides an interace for EC2 DeleteEgressOnlyInternetGateway responses.
  *
  * \ingroup EC2
  *

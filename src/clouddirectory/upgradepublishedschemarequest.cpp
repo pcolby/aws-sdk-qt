@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::UpgradePublishedSchemaRequest
  *
- * \brief The UpgradePublishedSchemaRequest class encapsulates CloudDirectory UpgradePublishedSchema requests.
+ * \brief The UpgradePublishedSchemaRequest class provides an interface for CloudDirectory UpgradePublishedSchema requests.
  *
  * \ingroup CloudDirectory
  *

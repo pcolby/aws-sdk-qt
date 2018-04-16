@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::UpdateQueueRequest
  *
- * \brief The UpdateQueueRequest class encapsulates MediaConvert UpdateQueue requests.
+ * \brief The UpdateQueueRequest class provides an interface for MediaConvert UpdateQueue requests.
  *
  * \ingroup MediaConvert
  *

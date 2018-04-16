@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::CopySnapshotRequest
  *
- * \brief The CopySnapshotRequest class encapsulates ElastiCache CopySnapshot requests.
+ * \brief The CopySnapshotRequest class provides an interface for ElastiCache CopySnapshot requests.
  *
  * \ingroup ElastiCache
  *

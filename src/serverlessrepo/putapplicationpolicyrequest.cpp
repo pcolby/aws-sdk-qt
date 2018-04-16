@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::PutApplicationPolicyRequest
  *
- * \brief The PutApplicationPolicyRequest class encapsulates ServerlessApplicationRepository PutApplicationPolicy requests.
+ * \brief The PutApplicationPolicyRequest class provides an interface for ServerlessApplicationRepository PutApplicationPolicy requests.
  *
  * \ingroup ServerlessApplicationRepository
  *

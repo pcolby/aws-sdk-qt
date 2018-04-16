@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateTriggerResponse
  *
- * \brief The UpdateTriggerResponse class encapsulates Glue UpdateTrigger responses.
+ * \brief The UpdateTriggerResponse class provides an interace for Glue UpdateTrigger responses.
  *
  * \ingroup Glue
  *

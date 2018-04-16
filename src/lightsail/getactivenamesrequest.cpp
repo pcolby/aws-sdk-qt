@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetActiveNamesRequest
  *
- * \brief The GetActiveNamesRequest class encapsulates Lightsail GetActiveNames requests.
+ * \brief The GetActiveNamesRequest class provides an interface for Lightsail GetActiveNames requests.
  *
  * \ingroup Lightsail
  *

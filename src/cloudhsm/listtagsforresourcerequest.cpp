@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::ListTagsForResourceRequest
  *
- * \brief The ListTagsForResourceRequest class encapsulates CloudHSM ListTagsForResource requests.
+ * \brief The ListTagsForResourceRequest class provides an interface for CloudHSM ListTagsForResource requests.
  *
  * \ingroup CloudHSM
  *

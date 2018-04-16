@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateInstanceResponse
  *
- * \brief The UpdateInstanceResponse class encapsulates OpsWorks UpdateInstance responses.
+ * \brief The UpdateInstanceResponse class provides an interace for OpsWorks UpdateInstance responses.
  *
  * \ingroup OpsWorks
  *

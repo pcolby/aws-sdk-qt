@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteDevicePoolResponse
  *
- * \brief The DeleteDevicePoolResponse class encapsulates DeviceFarm DeleteDevicePool responses.
+ * \brief The DeleteDevicePoolResponse class provides an interace for DeviceFarm DeleteDevicePool responses.
  *
  * \ingroup DeviceFarm
  *

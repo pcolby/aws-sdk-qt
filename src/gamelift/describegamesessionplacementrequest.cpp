@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeGameSessionPlacementRequest
  *
- * \brief The DescribeGameSessionPlacementRequest class encapsulates GameLift DescribeGameSessionPlacement requests.
+ * \brief The DescribeGameSessionPlacementRequest class provides an interface for GameLift DescribeGameSessionPlacement requests.
  *
  * \ingroup GameLift
  *

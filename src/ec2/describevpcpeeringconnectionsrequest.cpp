@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVpcPeeringConnectionsRequest
  *
- * \brief The DescribeVpcPeeringConnectionsRequest class encapsulates EC2 DescribeVpcPeeringConnections requests.
+ * \brief The DescribeVpcPeeringConnectionsRequest class provides an interface for EC2 DescribeVpcPeeringConnections requests.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::PutRoomSkillParameterRequest
  *
- * \brief The PutRoomSkillParameterRequest class encapsulates AlexaForBusiness PutRoomSkillParameter requests.
+ * \brief The PutRoomSkillParameterRequest class provides an interface for AlexaForBusiness PutRoomSkillParameter requests.
  *
  * \ingroup AlexaForBusiness
  *

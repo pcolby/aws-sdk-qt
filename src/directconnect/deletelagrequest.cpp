@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DeleteLagRequest
  *
- * \brief The DeleteLagRequest class encapsulates DirectConnect DeleteLag requests.
+ * \brief The DeleteLagRequest class provides an interface for DirectConnect DeleteLag requests.
  *
  * \ingroup DirectConnect
  *

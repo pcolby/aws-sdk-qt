@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SetIdentityNotificationTopicRequest
  *
- * \brief The SetIdentityNotificationTopicRequest class encapsulates SES SetIdentityNotificationTopic requests.
+ * \brief The SetIdentityNotificationTopicRequest class provides an interface for SES SetIdentityNotificationTopic requests.
  *
  * \ingroup SES
  *

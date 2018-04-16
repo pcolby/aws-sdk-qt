@@ -28,7 +28,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::GetReplicationRunsRequest
  *
- * \brief The GetReplicationRunsRequest class encapsulates SMS GetReplicationRuns requests.
+ * \brief The GetReplicationRunsRequest class provides an interface for SMS GetReplicationRuns requests.
  *
  * \ingroup SMS
  *

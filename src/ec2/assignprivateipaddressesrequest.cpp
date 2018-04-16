@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AssignPrivateIpAddressesRequest
  *
- * \brief The AssignPrivateIpAddressesRequest class encapsulates EC2 AssignPrivateIpAddresses requests.
+ * \brief The AssignPrivateIpAddressesRequest class provides an interface for EC2 AssignPrivateIpAddresses requests.
  *
  * \ingroup EC2
  *

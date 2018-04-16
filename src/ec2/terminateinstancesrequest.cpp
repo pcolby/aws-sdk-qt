@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::TerminateInstancesRequest
  *
- * \brief The TerminateInstancesRequest class encapsulates EC2 TerminateInstances requests.
+ * \brief The TerminateInstancesRequest class provides an interface for EC2 TerminateInstances requests.
  *
  * \ingroup EC2
  *

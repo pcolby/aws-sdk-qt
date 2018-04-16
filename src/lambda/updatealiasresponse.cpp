@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::UpdateAliasResponse
  *
- * \brief The UpdateAliasResponse class encapsulates Lambda UpdateAlias responses.
+ * \brief The UpdateAliasResponse class provides an interace for Lambda UpdateAlias responses.
  *
  * \ingroup Lambda
  *

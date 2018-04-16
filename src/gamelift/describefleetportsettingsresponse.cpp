@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeFleetPortSettingsResponse
  *
- * \brief The DescribeFleetPortSettingsResponse class encapsulates GameLift DescribeFleetPortSettings responses.
+ * \brief The DescribeFleetPortSettingsResponse class provides an interace for GameLift DescribeFleetPortSettings responses.
  *
  * \ingroup GameLift
  *

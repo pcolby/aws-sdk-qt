@@ -29,7 +29,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::ShieldResponse
  *
- * \brief The ShieldResponse class is the base class for all Shield responses.
+ * \brief The ShieldResponse class provides an interface for Shield responses.
  *
  * \ingroup Shield
  */

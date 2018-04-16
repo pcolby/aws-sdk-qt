@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateDatabaseRequest
  *
- * \brief The CreateDatabaseRequest class encapsulates Glue CreateDatabase requests.
+ * \brief The CreateDatabaseRequest class provides an interface for Glue CreateDatabase requests.
  *
  * \ingroup Glue
  *

@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::PutActionRevisionResponse
  *
- * \brief The PutActionRevisionResponse class encapsulates CodePipeline PutActionRevision responses.
+ * \brief The PutActionRevisionResponse class provides an interace for CodePipeline PutActionRevision responses.
  *
  * \ingroup CodePipeline
  *

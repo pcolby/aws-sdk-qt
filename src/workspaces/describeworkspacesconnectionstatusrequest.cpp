@@ -28,7 +28,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::DescribeWorkspacesConnectionStatusRequest
  *
- * \brief The DescribeWorkspacesConnectionStatusRequest class encapsulates WorkSpaces DescribeWorkspacesConnectionStatus requests.
+ * \brief The DescribeWorkspacesConnectionStatusRequest class provides an interface for WorkSpaces DescribeWorkspacesConnectionStatus requests.
  *
  * \ingroup WorkSpaces
  *

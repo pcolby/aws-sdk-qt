@@ -30,7 +30,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::ListConfigurationsResponse
  *
- * \brief The ListConfigurationsResponse class encapsulates ApplicationDiscoveryService ListConfigurations responses.
+ * \brief The ListConfigurationsResponse class provides an interace for ApplicationDiscoveryService ListConfigurations responses.
  *
  * \ingroup ApplicationDiscoveryService
  *

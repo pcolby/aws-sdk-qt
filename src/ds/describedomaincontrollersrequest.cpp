@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DescribeDomainControllersRequest
  *
- * \brief The DescribeDomainControllersRequest class encapsulates DirectoryService DescribeDomainControllers requests.
+ * \brief The DescribeDomainControllersRequest class provides an interface for DirectoryService DescribeDomainControllers requests.
  *
  * \ingroup DirectoryService
  *

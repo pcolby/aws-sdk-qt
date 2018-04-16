@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::DescribeConfigurationRevisionRequest
  *
- * \brief The DescribeConfigurationRevisionRequest class encapsulates MQ DescribeConfigurationRevision requests.
+ * \brief The DescribeConfigurationRevisionRequest class provides an interface for MQ DescribeConfigurationRevision requests.
  *
  * \ingroup MQ
  *

@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::ListIdentityPoolUsageResponse
  *
- * \brief The ListIdentityPoolUsageResponse class encapsulates CognitoSync ListIdentityPoolUsage responses.
+ * \brief The ListIdentityPoolUsageResponse class provides an interace for CognitoSync ListIdentityPoolUsage responses.
  *
  * \ingroup CognitoSync
  *

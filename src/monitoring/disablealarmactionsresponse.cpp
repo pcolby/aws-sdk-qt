@@ -30,7 +30,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::DisableAlarmActionsResponse
  *
- * \brief The DisableAlarmActionsResponse class encapsulates CloudWatch DisableAlarmActions responses.
+ * \brief The DisableAlarmActionsResponse class provides an interace for CloudWatch DisableAlarmActions responses.
  *
  * \ingroup CloudWatch
  *

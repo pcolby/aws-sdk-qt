@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::TerminateJobResponse
  *
- * \brief The TerminateJobResponse class encapsulates Batch TerminateJob responses.
+ * \brief The TerminateJobResponse class provides an interace for Batch TerminateJob responses.
  *
  * \ingroup Batch
  *

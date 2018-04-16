@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateModelRequest
  *
- * \brief The CreateModelRequest class encapsulates APIGateway CreateModel requests.
+ * \brief The CreateModelRequest class provides an interface for APIGateway CreateModel requests.
  *
  * \ingroup APIGateway
  *

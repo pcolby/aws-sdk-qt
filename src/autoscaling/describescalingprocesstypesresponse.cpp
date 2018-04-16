@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeScalingProcessTypesResponse
  *
- * \brief The DescribeScalingProcessTypesResponse class encapsulates AutoScaling DescribeScalingProcessTypes responses.
+ * \brief The DescribeScalingProcessTypesResponse class provides an interace for AutoScaling DescribeScalingProcessTypes responses.
  *
  * \ingroup AutoScaling
  *

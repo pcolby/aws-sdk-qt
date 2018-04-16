@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DeleteBackupRequest
  *
- * \brief The DeleteBackupRequest class encapsulates OpsWorksCM DeleteBackup requests.
+ * \brief The DeleteBackupRequest class provides an interface for OpsWorksCM DeleteBackup requests.
  *
  * \ingroup OpsWorksCM
  *

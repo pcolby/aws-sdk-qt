@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DescribeStacksResponse
  *
- * \brief The DescribeStacksResponse class encapsulates AppStream DescribeStacks responses.
+ * \brief The DescribeStacksResponse class provides an interace for AppStream DescribeStacks responses.
  *
  * \ingroup AppStream
  *

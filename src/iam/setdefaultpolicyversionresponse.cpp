@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::SetDefaultPolicyVersionResponse
  *
- * \brief The SetDefaultPolicyVersionResponse class encapsulates IAM SetDefaultPolicyVersion responses.
+ * \brief The SetDefaultPolicyVersionResponse class provides an interace for IAM SetDefaultPolicyVersion responses.
  *
  * \ingroup IAM
  *

@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DescribeAggregationAuthorizationsRequest
  *
- * \brief The DescribeAggregationAuthorizationsRequest class encapsulates ConfigService DescribeAggregationAuthorizations requests.
+ * \brief The DescribeAggregationAuthorizationsRequest class provides an interface for ConfigService DescribeAggregationAuthorizations requests.
  *
  * \ingroup ConfigService
  *

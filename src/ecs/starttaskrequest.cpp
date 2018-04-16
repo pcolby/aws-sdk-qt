@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::StartTaskRequest
  *
- * \brief The StartTaskRequest class encapsulates ECS StartTask requests.
+ * \brief The StartTaskRequest class provides an interface for ECS StartTask requests.
  *
  * \ingroup ECS
  *

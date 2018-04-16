@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::RemoveTargetsRequest
  *
- * \brief The RemoveTargetsRequest class encapsulates CloudWatchEvents RemoveTargets requests.
+ * \brief The RemoveTargetsRequest class provides an interface for CloudWatchEvents RemoveTargets requests.
  *
  * \ingroup CloudWatchEvents
  *

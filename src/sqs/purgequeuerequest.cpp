@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::PurgeQueueRequest
  *
- * \brief The PurgeQueueRequest class encapsulates SQS PurgeQueue requests.
+ * \brief The PurgeQueueRequest class provides an interface for SQS PurgeQueue requests.
  *
  * \ingroup SQS
  *

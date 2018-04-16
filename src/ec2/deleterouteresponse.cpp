@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteRouteResponse
  *
- * \brief The DeleteRouteResponse class encapsulates EC2 DeleteRoute responses.
+ * \brief The DeleteRouteResponse class provides an interace for EC2 DeleteRoute responses.
  *
  * \ingroup EC2
  *

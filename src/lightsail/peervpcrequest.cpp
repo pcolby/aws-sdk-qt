@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::PeerVpcRequest
  *
- * \brief The PeerVpcRequest class encapsulates Lightsail PeerVpc requests.
+ * \brief The PeerVpcRequest class provides an interface for Lightsail PeerVpc requests.
  *
  * \ingroup Lightsail
  *

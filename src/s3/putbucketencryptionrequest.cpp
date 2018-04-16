@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketEncryptionRequest
  *
- * \brief The PutBucketEncryptionRequest class encapsulates S3 PutBucketEncryption requests.
+ * \brief The PutBucketEncryptionRequest class provides an interface for S3 PutBucketEncryption requests.
  *
  * \ingroup S3
  *

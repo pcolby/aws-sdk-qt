@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::RegisterOnPremisesInstanceResponse
  *
- * \brief The RegisterOnPremisesInstanceResponse class encapsulates CodeDeploy RegisterOnPremisesInstance responses.
+ * \brief The RegisterOnPremisesInstanceResponse class provides an interace for CodeDeploy RegisterOnPremisesInstance responses.
  *
  * \ingroup CodeDeploy
  *

@@ -30,7 +30,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::ListRulesResponse
  *
- * \brief The ListRulesResponse class encapsulates CloudWatchEvents ListRules responses.
+ * \brief The ListRulesResponse class provides an interace for CloudWatchEvents ListRules responses.
  *
  * \ingroup CloudWatchEvents
  *

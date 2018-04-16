@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteUserRequest
  *
- * \brief The DeleteUserRequest class encapsulates IAM DeleteUser requests.
+ * \brief The DeleteUserRequest class provides an interface for IAM DeleteUser requests.
  *
  * \ingroup IAM
  *

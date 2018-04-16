@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::UpdateKeyDescriptionRequest
  *
- * \brief The UpdateKeyDescriptionRequest class encapsulates KMS UpdateKeyDescription requests.
+ * \brief The UpdateKeyDescriptionRequest class provides an interface for KMS UpdateKeyDescription requests.
  *
  * \ingroup KMS
  *

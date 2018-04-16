@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::ConfirmPrivateVirtualInterfaceRequest
  *
- * \brief The ConfirmPrivateVirtualInterfaceRequest class encapsulates DirectConnect ConfirmPrivateVirtualInterface requests.
+ * \brief The ConfirmPrivateVirtualInterfaceRequest class provides an interface for DirectConnect ConfirmPrivateVirtualInterface requests.
  *
  * \ingroup DirectConnect
  *

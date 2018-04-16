@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::UpdateFleetPortSettingsResponse
  *
- * \brief The UpdateFleetPortSettingsResponse class encapsulates GameLift UpdateFleetPortSettings responses.
+ * \brief The UpdateFleetPortSettingsResponse class provides an interace for GameLift UpdateFleetPortSettings responses.
  *
  * \ingroup GameLift
  *

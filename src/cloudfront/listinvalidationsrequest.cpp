@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::ListInvalidationsRequest
  *
- * \brief The ListInvalidationsRequest class encapsulates CloudFront ListInvalidations requests.
+ * \brief The ListInvalidationsRequest class provides an interface for CloudFront ListInvalidations requests.
  *
  * \ingroup CloudFront
  *

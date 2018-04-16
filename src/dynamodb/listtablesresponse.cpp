@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::ListTablesResponse
  *
- * \brief The ListTablesResponse class encapsulates DynamoDB ListTables responses.
+ * \brief The ListTablesResponse class provides an interace for DynamoDB ListTables responses.
  *
  * \ingroup DynamoDB
  *

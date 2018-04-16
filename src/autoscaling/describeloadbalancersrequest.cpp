@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeLoadBalancersRequest
  *
- * \brief The DescribeLoadBalancersRequest class encapsulates AutoScaling DescribeLoadBalancers requests.
+ * \brief The DescribeLoadBalancersRequest class provides an interface for AutoScaling DescribeLoadBalancers requests.
  *
  * \ingroup AutoScaling
  *

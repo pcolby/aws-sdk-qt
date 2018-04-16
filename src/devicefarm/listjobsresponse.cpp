@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListJobsResponse
  *
- * \brief The ListJobsResponse class encapsulates DeviceFarm ListJobs responses.
+ * \brief The ListJobsResponse class provides an interace for DeviceFarm ListJobs responses.
  *
  * \ingroup DeviceFarm
  *

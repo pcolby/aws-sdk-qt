@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::RemoveRoleFromInstanceProfileResponse
  *
- * \brief The RemoveRoleFromInstanceProfileResponse class encapsulates IAM RemoveRoleFromInstanceProfile responses.
+ * \brief The RemoveRoleFromInstanceProfileResponse class provides an interace for IAM RemoveRoleFromInstanceProfile responses.
  *
  * \ingroup IAM
  *

@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::StartFleetRequest
  *
- * \brief The StartFleetRequest class encapsulates AppStream StartFleet requests.
+ * \brief The StartFleetRequest class provides an interface for AppStream StartFleet requests.
  *
  * \ingroup AppStream
  *

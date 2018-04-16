@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::CreateLagRequest
  *
- * \brief The CreateLagRequest class encapsulates DirectConnect CreateLag requests.
+ * \brief The CreateLagRequest class provides an interface for DirectConnect CreateLag requests.
  *
  * \ingroup DirectConnect
  *

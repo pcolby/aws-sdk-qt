@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateDefaultVpcRequest
  *
- * \brief The CreateDefaultVpcRequest class encapsulates EC2 CreateDefaultVpc requests.
+ * \brief The CreateDefaultVpcRequest class provides an interface for EC2 CreateDefaultVpc requests.
  *
  * \ingroup EC2
  *

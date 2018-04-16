@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeIamInstanceProfileAssociationsRequest
  *
- * \brief The DescribeIamInstanceProfileAssociationsRequest class encapsulates EC2 DescribeIamInstanceProfileAssociations requests.
+ * \brief The DescribeIamInstanceProfileAssociationsRequest class provides an interface for EC2 DescribeIamInstanceProfileAssociations requests.
  *
  * \ingroup EC2
  *

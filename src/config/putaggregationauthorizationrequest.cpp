@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::PutAggregationAuthorizationRequest
  *
- * \brief The PutAggregationAuthorizationRequest class encapsulates ConfigService PutAggregationAuthorization requests.
+ * \brief The PutAggregationAuthorizationRequest class provides an interface for ConfigService PutAggregationAuthorization requests.
  *
  * \ingroup ConfigService
  *

@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::UpdateSqlInjectionMatchSetRequest
  *
- * \brief The UpdateSqlInjectionMatchSetRequest class encapsulates WAF UpdateSqlInjectionMatchSet requests.
+ * \brief The UpdateSqlInjectionMatchSetRequest class provides an interface for WAF UpdateSqlInjectionMatchSet requests.
  *
  * \ingroup WAF
  *

@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::RespondDecisionTaskCompletedRequest
  *
- * \brief The RespondDecisionTaskCompletedRequest class encapsulates SWF RespondDecisionTaskCompleted requests.
+ * \brief The RespondDecisionTaskCompletedRequest class provides an interface for SWF RespondDecisionTaskCompleted requests.
  *
  * \ingroup SWF
  *

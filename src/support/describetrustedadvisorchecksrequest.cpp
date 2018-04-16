@@ -28,7 +28,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::DescribeTrustedAdvisorChecksRequest
  *
- * \brief The DescribeTrustedAdvisorChecksRequest class encapsulates Support DescribeTrustedAdvisorChecks requests.
+ * \brief The DescribeTrustedAdvisorChecksRequest class provides an interface for Support DescribeTrustedAdvisorChecks requests.
  *
  * \ingroup Support
  *

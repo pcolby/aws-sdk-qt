@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::BatchGetOnPremisesInstancesResponse
  *
- * \brief The BatchGetOnPremisesInstancesResponse class encapsulates CodeDeploy BatchGetOnPremisesInstances responses.
+ * \brief The BatchGetOnPremisesInstancesResponse class provides an interace for CodeDeploy BatchGetOnPremisesInstances responses.
  *
  * \ingroup CodeDeploy
  *

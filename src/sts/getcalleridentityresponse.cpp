@@ -30,7 +30,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::GetCallerIdentityResponse
  *
- * \brief The GetCallerIdentityResponse class encapsulates STS GetCallerIdentity responses.
+ * \brief The GetCallerIdentityResponse class provides an interace for STS GetCallerIdentity responses.
  *
  * \ingroup STS
  *

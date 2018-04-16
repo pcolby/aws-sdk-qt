@@ -30,7 +30,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::DeleteHapgResponse
  *
- * \brief The DeleteHapgResponse class encapsulates CloudHSM DeleteHapg responses.
+ * \brief The DeleteHapgResponse class provides an interace for CloudHSM DeleteHapg responses.
  *
  * \ingroup CloudHSM
  *

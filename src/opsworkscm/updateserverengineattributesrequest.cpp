@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::UpdateServerEngineAttributesRequest
  *
- * \brief The UpdateServerEngineAttributesRequest class encapsulates OpsWorksCM UpdateServerEngineAttributes requests.
+ * \brief The UpdateServerEngineAttributesRequest class provides an interface for OpsWorksCM UpdateServerEngineAttributes requests.
  *
  * \ingroup OpsWorksCM
  *

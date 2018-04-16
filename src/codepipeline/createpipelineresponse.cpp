@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::CreatePipelineResponse
  *
- * \brief The CreatePipelineResponse class encapsulates CodePipeline CreatePipeline responses.
+ * \brief The CreatePipelineResponse class provides an interace for CodePipeline CreatePipeline responses.
  *
  * \ingroup CodePipeline
  *

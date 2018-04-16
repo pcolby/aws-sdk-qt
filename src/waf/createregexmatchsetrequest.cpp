@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::CreateRegexMatchSetRequest
  *
- * \brief The CreateRegexMatchSetRequest class encapsulates WAF CreateRegexMatchSet requests.
+ * \brief The CreateRegexMatchSetRequest class provides an interface for WAF CreateRegexMatchSet requests.
  *
  * \ingroup WAF
  *

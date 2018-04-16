@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::SetInstanceHealthResponse
  *
- * \brief The SetInstanceHealthResponse class encapsulates AutoScaling SetInstanceHealth responses.
+ * \brief The SetInstanceHealthResponse class provides an interace for AutoScaling SetInstanceHealth responses.
  *
  * \ingroup AutoScaling
  *

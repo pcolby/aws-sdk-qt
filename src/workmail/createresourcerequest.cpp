@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::CreateResourceRequest
  *
- * \brief The CreateResourceRequest class encapsulates WorkMail CreateResource requests.
+ * \brief The CreateResourceRequest class provides an interface for WorkMail CreateResource requests.
  *
  * \ingroup WorkMail
  *

@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::InviteMembersRequest
  *
- * \brief The InviteMembersRequest class encapsulates GuardDuty InviteMembers requests.
+ * \brief The InviteMembersRequest class provides an interface for GuardDuty InviteMembers requests.
  *
  * \ingroup GuardDuty
  *

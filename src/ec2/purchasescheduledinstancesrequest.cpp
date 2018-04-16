@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::PurchaseScheduledInstancesRequest
  *
- * \brief The PurchaseScheduledInstancesRequest class encapsulates EC2 PurchaseScheduledInstances requests.
+ * \brief The PurchaseScheduledInstancesRequest class provides an interface for EC2 PurchaseScheduledInstances requests.
  *
  * \ingroup EC2
  *

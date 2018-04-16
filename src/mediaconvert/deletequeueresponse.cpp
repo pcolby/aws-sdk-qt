@@ -30,7 +30,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::DeleteQueueResponse
  *
- * \brief The DeleteQueueResponse class encapsulates MediaConvert DeleteQueue responses.
+ * \brief The DeleteQueueResponse class provides an interace for MediaConvert DeleteQueue responses.
  *
  * \ingroup MediaConvert
  *

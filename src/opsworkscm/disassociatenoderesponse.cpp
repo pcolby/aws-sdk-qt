@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DisassociateNodeResponse
  *
- * \brief The DisassociateNodeResponse class encapsulates OpsWorksCM DisassociateNode responses.
+ * \brief The DisassociateNodeResponse class provides an interace for OpsWorksCM DisassociateNode responses.
  *
  * \ingroup OpsWorksCM
  *

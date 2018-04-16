@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::SetVaultNotificationsRequest
  *
- * \brief The SetVaultNotificationsRequest class encapsulates Glacier SetVaultNotifications requests.
+ * \brief The SetVaultNotificationsRequest class provides an interface for Glacier SetVaultNotifications requests.
  *
  * \ingroup Glacier
  *

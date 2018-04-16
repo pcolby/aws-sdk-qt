@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::GetDownloadUrlForLayerResponse
  *
- * \brief The GetDownloadUrlForLayerResponse class encapsulates ECR GetDownloadUrlForLayer responses.
+ * \brief The GetDownloadUrlForLayerResponse class provides an interace for ECR GetDownloadUrlForLayer responses.
  *
  * \ingroup ECR
  *

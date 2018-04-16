@@ -30,7 +30,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::GetLexiconResponse
  *
- * \brief The GetLexiconResponse class encapsulates Polly GetLexicon responses.
+ * \brief The GetLexiconResponse class provides an interace for Polly GetLexicon responses.
  *
  * \ingroup Polly
  *

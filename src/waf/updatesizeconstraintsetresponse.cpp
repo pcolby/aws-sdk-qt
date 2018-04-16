@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::UpdateSizeConstraintSetResponse
  *
- * \brief The UpdateSizeConstraintSetResponse class encapsulates WAF UpdateSizeConstraintSet responses.
+ * \brief The UpdateSizeConstraintSetResponse class provides an interace for WAF UpdateSizeConstraintSet responses.
  *
  * \ingroup WAF
  *

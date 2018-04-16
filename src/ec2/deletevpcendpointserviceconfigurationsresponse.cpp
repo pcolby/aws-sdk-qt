@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteVpcEndpointServiceConfigurationsResponse
  *
- * \brief The DeleteVpcEndpointServiceConfigurationsResponse class encapsulates EC2 DeleteVpcEndpointServiceConfigurations responses.
+ * \brief The DeleteVpcEndpointServiceConfigurationsResponse class provides an interace for EC2 DeleteVpcEndpointServiceConfigurations responses.
  *
  * \ingroup EC2
  *

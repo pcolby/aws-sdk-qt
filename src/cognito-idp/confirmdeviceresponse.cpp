@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ConfirmDeviceResponse
  *
- * \brief The ConfirmDeviceResponse class encapsulates CognitoIdentityProvider ConfirmDevice responses.
+ * \brief The ConfirmDeviceResponse class provides an interace for CognitoIdentityProvider ConfirmDevice responses.
  *
  * \ingroup CognitoIdentityProvider
  *

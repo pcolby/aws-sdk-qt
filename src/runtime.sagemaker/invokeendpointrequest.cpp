@@ -28,7 +28,7 @@ namespace SageMakerRuntime {
 /*!
  * \class QtAws::SageMakerRuntime::InvokeEndpointRequest
  *
- * \brief The InvokeEndpointRequest class encapsulates SageMakerRuntime InvokeEndpoint requests.
+ * \brief The InvokeEndpointRequest class provides an interface for SageMakerRuntime InvokeEndpoint requests.
  *
  * \ingroup SageMakerRuntime
  *

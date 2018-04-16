@@ -28,7 +28,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::UpdateStreamRequest
  *
- * \brief The UpdateStreamRequest class encapsulates KinesisVideo UpdateStream requests.
+ * \brief The UpdateStreamRequest class provides an interface for KinesisVideo UpdateStream requests.
  *
  * \ingroup KinesisVideo
  *

@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminInitiateAuthResponse
  *
- * \brief The AdminInitiateAuthResponse class encapsulates CognitoIdentityProvider AdminInitiateAuth responses.
+ * \brief The AdminInitiateAuthResponse class provides an interace for CognitoIdentityProvider AdminInitiateAuth responses.
  *
  * \ingroup CognitoIdentityProvider
  *

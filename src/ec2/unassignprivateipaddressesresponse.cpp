@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::UnassignPrivateIpAddressesResponse
  *
- * \brief The UnassignPrivateIpAddressesResponse class encapsulates EC2 UnassignPrivateIpAddresses responses.
+ * \brief The UnassignPrivateIpAddressesResponse class provides an interace for EC2 UnassignPrivateIpAddresses responses.
  *
  * \ingroup EC2
  *

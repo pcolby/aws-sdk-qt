@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DeleteMailboxPermissionsResponse
  *
- * \brief The DeleteMailboxPermissionsResponse class encapsulates WorkMail DeleteMailboxPermissions responses.
+ * \brief The DeleteMailboxPermissionsResponse class provides an interace for WorkMail DeleteMailboxPermissions responses.
  *
  * \ingroup WorkMail
  *

@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::RegisterTargetsResponse
  *
- * \brief The RegisterTargetsResponse class encapsulates ElasticLoadBalancingv2 RegisterTargets responses.
+ * \brief The RegisterTargetsResponse class provides an interace for ElasticLoadBalancingv2 RegisterTargets responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

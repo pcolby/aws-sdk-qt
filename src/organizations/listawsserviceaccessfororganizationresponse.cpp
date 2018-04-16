@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListAWSServiceAccessForOrganizationResponse
  *
- * \brief The ListAWSServiceAccessForOrganizationResponse class encapsulates Organizations ListAWSServiceAccessForOrganization responses.
+ * \brief The ListAWSServiceAccessForOrganizationResponse class provides an interace for Organizations ListAWSServiceAccessForOrganization responses.
  *
  * \ingroup Organizations
  *

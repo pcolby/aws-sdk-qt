@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::GetXssMatchSetRequest
  *
- * \brief The GetXssMatchSetRequest class encapsulates WAF GetXssMatchSet requests.
+ * \brief The GetXssMatchSetRequest class provides an interface for WAF GetXssMatchSet requests.
  *
  * \ingroup WAF
  *

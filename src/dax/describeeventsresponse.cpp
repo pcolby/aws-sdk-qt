@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DescribeEventsResponse
  *
- * \brief The DescribeEventsResponse class encapsulates DAX DescribeEvents responses.
+ * \brief The DescribeEventsResponse class provides an interace for DAX DescribeEvents responses.
  *
  * \ingroup DAX
  *

@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::EstimateTemplateCostRequest
  *
- * \brief The EstimateTemplateCostRequest class encapsulates CloudFormation EstimateTemplateCost requests.
+ * \brief The EstimateTemplateCostRequest class provides an interface for CloudFormation EstimateTemplateCost requests.
  *
  * \ingroup CloudFormation
  *

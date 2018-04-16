@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::CopyObjectRequest
  *
- * \brief The CopyObjectRequest class encapsulates S3 CopyObject requests.
+ * \brief The CopyObjectRequest class provides an interface for S3 CopyObject requests.
  *
  * \ingroup S3
  *

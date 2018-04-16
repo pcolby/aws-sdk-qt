@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListDeviceDefinitionsRequest
  *
- * \brief The ListDeviceDefinitionsRequest class encapsulates Greengrass ListDeviceDefinitions requests.
+ * \brief The ListDeviceDefinitionsRequest class provides an interface for Greengrass ListDeviceDefinitions requests.
  *
  * \ingroup Greengrass
  *

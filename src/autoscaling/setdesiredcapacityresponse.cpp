@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::SetDesiredCapacityResponse
  *
- * \brief The SetDesiredCapacityResponse class encapsulates AutoScaling SetDesiredCapacity responses.
+ * \brief The SetDesiredCapacityResponse class provides an interace for AutoScaling SetDesiredCapacity responses.
  *
  * \ingroup AutoScaling
  *

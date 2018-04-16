@@ -30,7 +30,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::ListChannelsResponse
  *
- * \brief The ListChannelsResponse class encapsulates MediaPackage ListChannels responses.
+ * \brief The ListChannelsResponse class provides an interace for MediaPackage ListChannels responses.
  *
  * \ingroup MediaPackage
  *

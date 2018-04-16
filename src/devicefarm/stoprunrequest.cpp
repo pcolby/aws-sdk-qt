@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::StopRunRequest
  *
- * \brief The StopRunRequest class encapsulates DeviceFarm StopRun requests.
+ * \brief The StopRunRequest class provides an interface for DeviceFarm StopRun requests.
  *
  * \ingroup DeviceFarm
  *

@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::CreateCollectionResponse
  *
- * \brief The CreateCollectionResponse class encapsulates Rekognition CreateCollection responses.
+ * \brief The CreateCollectionResponse class provides an interace for Rekognition CreateCollection responses.
  *
  * \ingroup Rekognition
  *

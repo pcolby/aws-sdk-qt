@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::TerminateJobFlowsRequest
  *
- * \brief The TerminateJobFlowsRequest class encapsulates EMR TerminateJobFlows requests.
+ * \brief The TerminateJobFlowsRequest class provides an interface for EMR TerminateJobFlows requests.
  *
  * \ingroup EMR
  *

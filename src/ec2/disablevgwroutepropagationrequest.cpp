@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DisableVgwRoutePropagationRequest
  *
- * \brief The DisableVgwRoutePropagationRequest class encapsulates EC2 DisableVgwRoutePropagation requests.
+ * \brief The DisableVgwRoutePropagationRequest class provides an interface for EC2 DisableVgwRoutePropagation requests.
  *
  * \ingroup EC2
  *

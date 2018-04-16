@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::PostCommentForComparedCommitRequest
  *
- * \brief The PostCommentForComparedCommitRequest class encapsulates CodeCommit PostCommentForComparedCommit requests.
+ * \brief The PostCommentForComparedCommitRequest class provides an interface for CodeCommit PostCommentForComparedCommit requests.
  *
  * \ingroup CodeCommit
  *

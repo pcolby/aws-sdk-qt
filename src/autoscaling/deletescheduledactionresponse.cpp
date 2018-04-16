@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DeleteScheduledActionResponse
  *
- * \brief The DeleteScheduledActionResponse class encapsulates AutoScaling DeleteScheduledAction responses.
+ * \brief The DeleteScheduledActionResponse class provides an interace for AutoScaling DeleteScheduledAction responses.
  *
  * \ingroup AutoScaling
  *

@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::UpdateSizeConstraintSetRequest
  *
- * \brief The UpdateSizeConstraintSetRequest class encapsulates WAF UpdateSizeConstraintSet requests.
+ * \brief The UpdateSizeConstraintSetRequest class provides an interface for WAF UpdateSizeConstraintSet requests.
  *
  * \ingroup WAF
  *

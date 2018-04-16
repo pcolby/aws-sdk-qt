@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::UpdateApplicationRequest
  *
- * \brief The UpdateApplicationRequest class encapsulates KinesisAnalytics UpdateApplication requests.
+ * \brief The UpdateApplicationRequest class provides an interface for KinesisAnalytics UpdateApplication requests.
  *
  * \ingroup KinesisAnalytics
  *

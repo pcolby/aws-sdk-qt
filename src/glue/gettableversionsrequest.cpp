@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetTableVersionsRequest
  *
- * \brief The GetTableVersionsRequest class encapsulates Glue GetTableVersions requests.
+ * \brief The GetTableVersionsRequest class provides an interface for Glue GetTableVersions requests.
  *
  * \ingroup Glue
  *

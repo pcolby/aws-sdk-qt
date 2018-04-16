@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetDocumentationPartsResponse
  *
- * \brief The GetDocumentationPartsResponse class encapsulates APIGateway GetDocumentationParts responses.
+ * \brief The GetDocumentationPartsResponse class provides an interace for APIGateway GetDocumentationParts responses.
  *
  * \ingroup APIGateway
  *

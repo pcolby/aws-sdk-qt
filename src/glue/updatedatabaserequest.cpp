@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateDatabaseRequest
  *
- * \brief The UpdateDatabaseRequest class encapsulates Glue UpdateDatabase requests.
+ * \brief The UpdateDatabaseRequest class provides an interface for Glue UpdateDatabase requests.
  *
  * \ingroup Glue
  *

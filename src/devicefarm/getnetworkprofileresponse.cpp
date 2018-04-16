@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetNetworkProfileResponse
  *
- * \brief The GetNetworkProfileResponse class encapsulates DeviceFarm GetNetworkProfile responses.
+ * \brief The GetNetworkProfileResponse class provides an interace for DeviceFarm GetNetworkProfile responses.
  *
  * \ingroup DeviceFarm
  *

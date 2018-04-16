@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::DeleteHsmRequest
  *
- * \brief The DeleteHsmRequest class encapsulates CloudHSM DeleteHsm requests.
+ * \brief The DeleteHsmRequest class provides an interface for CloudHSM DeleteHsm requests.
  *
  * \ingroup CloudHSM
  *

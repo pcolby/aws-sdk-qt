@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::SetStackPolicyRequest
  *
- * \brief The SetStackPolicyRequest class encapsulates CloudFormation SetStackPolicy requests.
+ * \brief The SetStackPolicyRequest class provides an interface for CloudFormation SetStackPolicy requests.
  *
  * \ingroup CloudFormation
  *

@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::CreateGrantRequest
  *
- * \brief The CreateGrantRequest class encapsulates KMS CreateGrant requests.
+ * \brief The CreateGrantRequest class provides an interface for KMS CreateGrant requests.
  *
  * \ingroup KMS
  *

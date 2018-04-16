@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::LookupPolicyResponse
  *
- * \brief The LookupPolicyResponse class encapsulates CloudDirectory LookupPolicy responses.
+ * \brief The LookupPolicyResponse class provides an interace for CloudDirectory LookupPolicy responses.
  *
  * \ingroup CloudDirectory
  *

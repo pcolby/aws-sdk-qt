@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ExecuteChangeSetRequest
  *
- * \brief The ExecuteChangeSetRequest class encapsulates CloudFormation ExecuteChangeSet requests.
+ * \brief The ExecuteChangeSetRequest class provides an interface for CloudFormation ExecuteChangeSet requests.
  *
  * \ingroup CloudFormation
  *

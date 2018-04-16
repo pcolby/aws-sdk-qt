@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeMaintenanceWindowExecutionTasksRequest
  *
- * \brief The DescribeMaintenanceWindowExecutionTasksRequest class encapsulates SSM DescribeMaintenanceWindowExecutionTasks requests.
+ * \brief The DescribeMaintenanceWindowExecutionTasksRequest class provides an interface for SSM DescribeMaintenanceWindowExecutionTasks requests.
  *
  * \ingroup SSM
  *

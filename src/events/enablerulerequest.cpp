@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::EnableRuleRequest
  *
- * \brief The EnableRuleRequest class encapsulates CloudWatchEvents EnableRule requests.
+ * \brief The EnableRuleRequest class provides an interface for CloudWatchEvents EnableRule requests.
  *
  * \ingroup CloudWatchEvents
  *

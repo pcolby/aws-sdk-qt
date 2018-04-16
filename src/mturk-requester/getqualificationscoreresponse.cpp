@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::GetQualificationScoreResponse
  *
- * \brief The GetQualificationScoreResponse class encapsulates MTurk GetQualificationScore responses.
+ * \brief The GetQualificationScoreResponse class provides an interace for MTurk GetQualificationScore responses.
  *
  * \ingroup MTurk
  *

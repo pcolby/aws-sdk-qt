@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::UpdateFieldLevelEncryptionProfileResponse
  *
- * \brief The UpdateFieldLevelEncryptionProfileResponse class encapsulates CloudFront UpdateFieldLevelEncryptionProfile responses.
+ * \brief The UpdateFieldLevelEncryptionProfileResponse class provides an interace for CloudFront UpdateFieldLevelEncryptionProfile responses.
  *
  * \ingroup CloudFront
  *

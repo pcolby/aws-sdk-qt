@@ -28,7 +28,7 @@ namespace CostExplorer {
 /*!
  * \class QtAws::CostExplorer::GetReservationUtilizationRequest
  *
- * \brief The GetReservationUtilizationRequest class encapsulates CostExplorer GetReservationUtilization requests.
+ * \brief The GetReservationUtilizationRequest class provides an interface for CostExplorer GetReservationUtilization requests.
  *
  * \ingroup CostExplorer
  *

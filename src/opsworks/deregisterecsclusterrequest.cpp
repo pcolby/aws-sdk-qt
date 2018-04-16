@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeregisterEcsClusterRequest
  *
- * \brief The DeregisterEcsClusterRequest class encapsulates OpsWorks DeregisterEcsCluster requests.
+ * \brief The DeregisterEcsClusterRequest class provides an interface for OpsWorks DeregisterEcsCluster requests.
  *
  * \ingroup OpsWorks
  *

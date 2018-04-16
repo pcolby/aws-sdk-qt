@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::CreateGlobalTableRequest
  *
- * \brief The CreateGlobalTableRequest class encapsulates DynamoDB CreateGlobalTable requests.
+ * \brief The CreateGlobalTableRequest class provides an interface for DynamoDB CreateGlobalTable requests.
  *
  * \ingroup DynamoDB
  *

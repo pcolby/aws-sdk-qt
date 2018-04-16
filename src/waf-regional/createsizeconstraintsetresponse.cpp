@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::CreateSizeConstraintSetResponse
  *
- * \brief The CreateSizeConstraintSetResponse class encapsulates WAFRegional CreateSizeConstraintSet responses.
+ * \brief The CreateSizeConstraintSetResponse class provides an interace for WAFRegional CreateSizeConstraintSet responses.
  *
  * \ingroup WAFRegional
  *

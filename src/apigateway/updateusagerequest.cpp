@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateUsageRequest
  *
- * \brief The UpdateUsageRequest class encapsulates APIGateway UpdateUsage requests.
+ * \brief The UpdateUsageRequest class provides an interface for APIGateway UpdateUsage requests.
  *
  * \ingroup APIGateway
  *

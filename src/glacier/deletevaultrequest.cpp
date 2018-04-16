@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::DeleteVaultRequest
  *
- * \brief The DeleteVaultRequest class encapsulates Glacier DeleteVault requests.
+ * \brief The DeleteVaultRequest class provides an interface for Glacier DeleteVault requests.
  *
  * \ingroup Glacier
  *

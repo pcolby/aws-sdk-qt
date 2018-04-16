@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::RestoreSecretRequest
  *
- * \brief The RestoreSecretRequest class encapsulates SecretsManager RestoreSecret requests.
+ * \brief The RestoreSecretRequest class provides an interface for SecretsManager RestoreSecret requests.
  *
  * \ingroup SecretsManager
  *

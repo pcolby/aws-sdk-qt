@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::UpdateClusterResponse
  *
- * \brief The UpdateClusterResponse class encapsulates DAX UpdateCluster responses.
+ * \brief The UpdateClusterResponse class provides an interace for DAX UpdateCluster responses.
  *
  * \ingroup DAX
  *

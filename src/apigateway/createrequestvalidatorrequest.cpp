@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateRequestValidatorRequest
  *
- * \brief The CreateRequestValidatorRequest class encapsulates APIGateway CreateRequestValidator requests.
+ * \brief The CreateRequestValidatorRequest class provides an interface for APIGateway CreateRequestValidator requests.
  *
  * \ingroup APIGateway
  *

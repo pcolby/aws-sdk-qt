@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ChangePasswordResponse
  *
- * \brief The ChangePasswordResponse class encapsulates CognitoIdentityProvider ChangePassword responses.
+ * \brief The ChangePasswordResponse class provides an interace for CognitoIdentityProvider ChangePassword responses.
  *
  * \ingroup CognitoIdentityProvider
  *

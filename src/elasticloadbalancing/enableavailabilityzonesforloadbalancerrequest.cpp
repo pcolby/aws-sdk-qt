@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::EnableAvailabilityZonesForLoadBalancerRequest
  *
- * \brief The EnableAvailabilityZonesForLoadBalancerRequest class encapsulates ElasticLoadBalancing EnableAvailabilityZonesForLoadBalancer requests.
+ * \brief The EnableAvailabilityZonesForLoadBalancerRequest class provides an interface for ElasticLoadBalancing EnableAvailabilityZonesForLoadBalancer requests.
  *
  * \ingroup ElasticLoadBalancing
  *

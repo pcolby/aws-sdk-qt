@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::MergePullRequestByFastForwardResponse
  *
- * \brief The MergePullRequestByFastForwardResponse class encapsulates CodeCommit MergePullRequestByFastForward responses.
+ * \brief The MergePullRequestByFastForwardResponse class provides an interace for CodeCommit MergePullRequestByFastForward responses.
  *
  * \ingroup CodeCommit
  *

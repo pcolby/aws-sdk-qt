@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::DeleteResourceDefinitionResponse
  *
- * \brief The DeleteResourceDefinitionResponse class encapsulates Greengrass DeleteResourceDefinition responses.
+ * \brief The DeleteResourceDefinitionResponse class provides an interace for Greengrass DeleteResourceDefinition responses.
  *
  * \ingroup Greengrass
  *

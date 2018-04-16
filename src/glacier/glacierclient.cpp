@@ -103,7 +103,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::GlacierClient
  *
- * \brief The GlacierClient class provides access the Amazon Glacier service.
+ * \brief The GlacierClient class provides access to the Amazon Glacier service.
  *
  * \ingroup Glacier
  *

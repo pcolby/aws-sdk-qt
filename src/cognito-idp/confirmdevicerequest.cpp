@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ConfirmDeviceRequest
  *
- * \brief The ConfirmDeviceRequest class encapsulates CognitoIdentityProvider ConfirmDevice requests.
+ * \brief The ConfirmDeviceRequest class provides an interface for CognitoIdentityProvider ConfirmDevice requests.
  *
  * \ingroup CognitoIdentityProvider
  *

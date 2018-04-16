@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminRemoveUserFromGroupResponse
  *
- * \brief The AdminRemoveUserFromGroupResponse class encapsulates CognitoIdentityProvider AdminRemoveUserFromGroup responses.
+ * \brief The AdminRemoveUserFromGroupResponse class provides an interace for CognitoIdentityProvider AdminRemoveUserFromGroup responses.
  *
  * \ingroup CognitoIdentityProvider
  *

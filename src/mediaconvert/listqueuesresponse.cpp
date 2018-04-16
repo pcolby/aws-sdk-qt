@@ -30,7 +30,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::ListQueuesResponse
  *
- * \brief The ListQueuesResponse class encapsulates MediaConvert ListQueues responses.
+ * \brief The ListQueuesResponse class provides an interace for MediaConvert ListQueues responses.
  *
  * \ingroup MediaConvert
  *

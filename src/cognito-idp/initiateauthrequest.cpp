@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::InitiateAuthRequest
  *
- * \brief The InitiateAuthRequest class encapsulates CognitoIdentityProvider InitiateAuth requests.
+ * \brief The InitiateAuthRequest class provides an interface for CognitoIdentityProvider InitiateAuth requests.
  *
  * \ingroup CognitoIdentityProvider
  *

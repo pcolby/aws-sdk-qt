@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::UpdateDeviceRequest
  *
- * \brief The UpdateDeviceRequest class encapsulates AlexaForBusiness UpdateDevice requests.
+ * \brief The UpdateDeviceRequest class provides an interface for AlexaForBusiness UpdateDevice requests.
  *
  * \ingroup AlexaForBusiness
  *

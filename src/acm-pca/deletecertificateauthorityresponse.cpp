@@ -30,7 +30,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::DeleteCertificateAuthorityResponse
  *
- * \brief The DeleteCertificateAuthorityResponse class encapsulates ACMPCA DeleteCertificateAuthority responses.
+ * \brief The DeleteCertificateAuthorityResponse class provides an interace for ACMPCA DeleteCertificateAuthority responses.
  *
  * \ingroup ACMPCA
  *

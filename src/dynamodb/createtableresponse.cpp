@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::CreateTableResponse
  *
- * \brief The CreateTableResponse class encapsulates DynamoDB CreateTable responses.
+ * \brief The CreateTableResponse class provides an interace for DynamoDB CreateTable responses.
  *
  * \ingroup DynamoDB
  *

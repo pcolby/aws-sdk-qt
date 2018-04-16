@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListCreateAccountStatusResponse
  *
- * \brief The ListCreateAccountStatusResponse class encapsulates Organizations ListCreateAccountStatus responses.
+ * \brief The ListCreateAccountStatusResponse class provides an interace for Organizations ListCreateAccountStatus responses.
  *
  * \ingroup Organizations
  *

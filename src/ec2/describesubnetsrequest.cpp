@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeSubnetsRequest
  *
- * \brief The DescribeSubnetsRequest class encapsulates EC2 DescribeSubnets requests.
+ * \brief The DescribeSubnetsRequest class provides an interface for EC2 DescribeSubnets requests.
  *
  * \ingroup EC2
  *

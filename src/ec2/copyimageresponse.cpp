@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CopyImageResponse
  *
- * \brief The CopyImageResponse class encapsulates EC2 CopyImage responses.
+ * \brief The CopyImageResponse class provides an interace for EC2 CopyImage responses.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::RegisterVolumeResponse
  *
- * \brief The RegisterVolumeResponse class encapsulates OpsWorks RegisterVolume responses.
+ * \brief The RegisterVolumeResponse class provides an interace for OpsWorks RegisterVolume responses.
  *
  * \ingroup OpsWorks
  *

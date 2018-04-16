@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::ListApiKeysResponse
  *
- * \brief The ListApiKeysResponse class encapsulates AppSync ListApiKeys responses.
+ * \brief The ListApiKeysResponse class provides an interace for AppSync ListApiKeys responses.
  *
  * \ingroup AppSync
  *

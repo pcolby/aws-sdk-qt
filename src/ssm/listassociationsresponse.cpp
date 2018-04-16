@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListAssociationsResponse
  *
- * \brief The ListAssociationsResponse class encapsulates SSM ListAssociations responses.
+ * \brief The ListAssociationsResponse class provides an interace for SSM ListAssociations responses.
  *
  * \ingroup SSM
  *

@@ -28,7 +28,7 @@ namespace Comprehend {
 /*!
  * \class QtAws::Comprehend::ListTopicsDetectionJobsRequest
  *
- * \brief The ListTopicsDetectionJobsRequest class encapsulates Comprehend ListTopicsDetectionJobs requests.
+ * \brief The ListTopicsDetectionJobsRequest class provides an interface for Comprehend ListTopicsDetectionJobs requests.
  *
  * \ingroup Comprehend
  *

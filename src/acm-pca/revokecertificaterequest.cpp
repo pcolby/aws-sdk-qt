@@ -28,7 +28,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::RevokeCertificateRequest
  *
- * \brief The RevokeCertificateRequest class encapsulates ACMPCA RevokeCertificate requests.
+ * \brief The RevokeCertificateRequest class provides an interface for ACMPCA RevokeCertificate requests.
  *
  * \ingroup ACMPCA
  *

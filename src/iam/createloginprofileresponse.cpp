@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateLoginProfileResponse
  *
- * \brief The CreateLoginProfileResponse class encapsulates IAM CreateLoginProfile responses.
+ * \brief The CreateLoginProfileResponse class provides an interace for IAM CreateLoginProfile responses.
  *
  * \ingroup IAM
  *

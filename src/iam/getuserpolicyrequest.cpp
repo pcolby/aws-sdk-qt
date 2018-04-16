@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetUserPolicyRequest
  *
- * \brief The GetUserPolicyRequest class encapsulates IAM GetUserPolicy requests.
+ * \brief The GetUserPolicyRequest class provides an interface for IAM GetUserPolicy requests.
  *
  * \ingroup IAM
  *

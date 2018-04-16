@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateEmailChannelResponse
  *
- * \brief The UpdateEmailChannelResponse class encapsulates Pinpoint UpdateEmailChannel responses.
+ * \brief The UpdateEmailChannelResponse class provides an interace for Pinpoint UpdateEmailChannel responses.
  *
  * \ingroup Pinpoint
  *

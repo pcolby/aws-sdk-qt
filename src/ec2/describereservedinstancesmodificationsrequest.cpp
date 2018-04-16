@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeReservedInstancesModificationsRequest
  *
- * \brief The DescribeReservedInstancesModificationsRequest class encapsulates EC2 DescribeReservedInstancesModifications requests.
+ * \brief The DescribeReservedInstancesModificationsRequest class provides an interface for EC2 DescribeReservedInstancesModifications requests.
  *
  * \ingroup EC2
  *

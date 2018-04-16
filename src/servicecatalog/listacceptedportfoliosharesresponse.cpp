@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListAcceptedPortfolioSharesResponse
  *
- * \brief The ListAcceptedPortfolioSharesResponse class encapsulates ServiceCatalog ListAcceptedPortfolioShares responses.
+ * \brief The ListAcceptedPortfolioSharesResponse class provides an interace for ServiceCatalog ListAcceptedPortfolioShares responses.
  *
  * \ingroup ServiceCatalog
  *

@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteTriggerResponse
  *
- * \brief The DeleteTriggerResponse class encapsulates Glue DeleteTrigger responses.
+ * \brief The DeleteTriggerResponse class provides an interace for Glue DeleteTrigger responses.
  *
  * \ingroup Glue
  *

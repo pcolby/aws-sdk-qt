@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::DescribeElasticsearchDomainRequest
  *
- * \brief The DescribeElasticsearchDomainRequest class encapsulates ElasticsearchService DescribeElasticsearchDomain requests.
+ * \brief The DescribeElasticsearchDomainRequest class provides an interface for ElasticsearchService DescribeElasticsearchDomain requests.
  *
  * \ingroup ElasticsearchService
  *

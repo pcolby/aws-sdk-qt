@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::GetChangeRequest
  *
- * \brief The GetChangeRequest class encapsulates Route53 GetChange requests.
+ * \brief The GetChangeRequest class provides an interface for Route53 GetChange requests.
  *
  * \ingroup Route53
  *

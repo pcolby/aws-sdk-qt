@@ -30,7 +30,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::DescribeCasesResponse
  *
- * \brief The DescribeCasesResponse class encapsulates Support DescribeCases responses.
+ * \brief The DescribeCasesResponse class provides an interace for Support DescribeCases responses.
  *
  * \ingroup Support
  *

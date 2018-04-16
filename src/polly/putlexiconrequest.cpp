@@ -28,7 +28,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::PutLexiconRequest
  *
- * \brief The PutLexiconRequest class encapsulates Polly PutLexicon requests.
+ * \brief The PutLexiconRequest class provides an interface for Polly PutLexicon requests.
  *
  * \ingroup Polly
  *

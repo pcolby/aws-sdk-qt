@@ -28,7 +28,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::DescribeWorkspaceBundlesRequest
  *
- * \brief The DescribeWorkspaceBundlesRequest class encapsulates WorkSpaces DescribeWorkspaceBundles requests.
+ * \brief The DescribeWorkspaceBundlesRequest class provides an interface for WorkSpaces DescribeWorkspaceBundles requests.
  *
  * \ingroup WorkSpaces
  *

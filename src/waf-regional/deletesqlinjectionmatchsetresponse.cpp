@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeleteSqlInjectionMatchSetResponse
  *
- * \brief The DeleteSqlInjectionMatchSetResponse class encapsulates WAFRegional DeleteSqlInjectionMatchSet responses.
+ * \brief The DeleteSqlInjectionMatchSetResponse class provides an interace for WAFRegional DeleteSqlInjectionMatchSet responses.
  *
  * \ingroup WAFRegional
  *

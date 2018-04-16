@@ -30,7 +30,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::BatchDeleteAttributesResponse
  *
- * \brief The BatchDeleteAttributesResponse class encapsulates SimpleDB BatchDeleteAttributes responses.
+ * \brief The BatchDeleteAttributesResponse class provides an interace for SimpleDB BatchDeleteAttributes responses.
  *
  * \ingroup SimpleDB
  *

@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListInstanceProfilesResponse
  *
- * \brief The ListInstanceProfilesResponse class encapsulates DeviceFarm ListInstanceProfiles responses.
+ * \brief The ListInstanceProfilesResponse class provides an interace for DeviceFarm ListInstanceProfiles responses.
  *
  * \ingroup DeviceFarm
  *

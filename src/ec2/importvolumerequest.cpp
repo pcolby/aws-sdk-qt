@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ImportVolumeRequest
  *
- * \brief The ImportVolumeRequest class encapsulates EC2 ImportVolume requests.
+ * \brief The ImportVolumeRequest class provides an interface for EC2 ImportVolume requests.
  *
  * \ingroup EC2
  *

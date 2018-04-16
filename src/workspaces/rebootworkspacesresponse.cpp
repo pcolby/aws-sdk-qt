@@ -30,7 +30,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::RebootWorkspacesResponse
  *
- * \brief The RebootWorkspacesResponse class encapsulates WorkSpaces RebootWorkspaces responses.
+ * \brief The RebootWorkspacesResponse class provides an interace for WorkSpaces RebootWorkspaces responses.
  *
  * \ingroup WorkSpaces
  *

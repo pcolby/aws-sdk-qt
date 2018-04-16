@@ -123,7 +123,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DirectConnectClient
  *
- * \brief The DirectConnectClient class provides access the AWS Direct Connect service.
+ * \brief The DirectConnectClient class provides access to the AWS Direct Connect service.
  *
  * \ingroup DirectConnect
  *

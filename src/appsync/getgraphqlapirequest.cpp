@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::GetGraphqlApiRequest
  *
- * \brief The GetGraphqlApiRequest class encapsulates AppSync GetGraphqlApi requests.
+ * \brief The GetGraphqlApiRequest class provides an interface for AppSync GetGraphqlApi requests.
  *
  * \ingroup AppSync
  *

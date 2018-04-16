@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DeactivateUserRequest
  *
- * \brief The DeactivateUserRequest class encapsulates WorkDocs DeactivateUser requests.
+ * \brief The DeactivateUserRequest class provides an interface for WorkDocs DeactivateUser requests.
  *
  * \ingroup WorkDocs
  *

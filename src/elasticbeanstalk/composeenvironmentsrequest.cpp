@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::ComposeEnvironmentsRequest
  *
- * \brief The ComposeEnvironmentsRequest class encapsulates ElasticBeanstalk ComposeEnvironments requests.
+ * \brief The ComposeEnvironmentsRequest class provides an interface for ElasticBeanstalk ComposeEnvironments requests.
  *
  * \ingroup ElasticBeanstalk
  *

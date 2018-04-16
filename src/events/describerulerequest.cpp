@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::DescribeRuleRequest
  *
- * \brief The DescribeRuleRequest class encapsulates CloudWatchEvents DescribeRule requests.
+ * \brief The DescribeRuleRequest class provides an interface for CloudWatchEvents DescribeRule requests.
  *
  * \ingroup CloudWatchEvents
  *

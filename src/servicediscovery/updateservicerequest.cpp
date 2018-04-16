@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::UpdateServiceRequest
  *
- * \brief The UpdateServiceRequest class encapsulates ServiceDiscovery UpdateService requests.
+ * \brief The UpdateServiceRequest class provides an interface for ServiceDiscovery UpdateService requests.
  *
  * \ingroup ServiceDiscovery
  *

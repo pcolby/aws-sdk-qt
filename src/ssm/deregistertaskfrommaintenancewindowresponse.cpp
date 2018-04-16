@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeregisterTaskFromMaintenanceWindowResponse
  *
- * \brief The DeregisterTaskFromMaintenanceWindowResponse class encapsulates SSM DeregisterTaskFromMaintenanceWindow responses.
+ * \brief The DeregisterTaskFromMaintenanceWindowResponse class provides an interace for SSM DeregisterTaskFromMaintenanceWindow responses.
  *
  * \ingroup SSM
  *

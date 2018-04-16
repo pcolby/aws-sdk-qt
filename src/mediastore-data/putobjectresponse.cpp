@@ -30,7 +30,7 @@ namespace MediaStoreData {
 /*!
  * \class QtAws::MediaStoreData::PutObjectResponse
  *
- * \brief The PutObjectResponse class encapsulates MediaStoreData PutObject responses.
+ * \brief The PutObjectResponse class provides an interace for MediaStoreData PutObject responses.
  *
  * \ingroup MediaStoreData
  *

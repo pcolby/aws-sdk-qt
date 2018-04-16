@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::AddRoleToDBClusterResponse
  *
- * \brief The AddRoleToDBClusterResponse class encapsulates RDS AddRoleToDBCluster responses.
+ * \brief The AddRoleToDBClusterResponse class provides an interace for RDS AddRoleToDBCluster responses.
  *
  * \ingroup RDS
  *

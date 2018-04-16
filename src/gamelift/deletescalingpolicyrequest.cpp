@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteScalingPolicyRequest
  *
- * \brief The DeleteScalingPolicyRequest class encapsulates GameLift DeleteScalingPolicy requests.
+ * \brief The DeleteScalingPolicyRequest class provides an interface for GameLift DeleteScalingPolicy requests.
  *
  * \ingroup GameLift
  *

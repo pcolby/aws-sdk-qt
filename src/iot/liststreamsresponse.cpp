@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListStreamsResponse
  *
- * \brief The ListStreamsResponse class encapsulates IoT ListStreams responses.
+ * \brief The ListStreamsResponse class provides an interace for IoT ListStreams responses.
  *
  * \ingroup IoT
  *

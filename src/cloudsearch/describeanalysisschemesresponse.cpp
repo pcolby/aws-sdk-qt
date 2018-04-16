@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeAnalysisSchemesResponse
  *
- * \brief The DescribeAnalysisSchemesResponse class encapsulates CloudSearch DescribeAnalysisSchemes responses.
+ * \brief The DescribeAnalysisSchemesResponse class provides an interace for CloudSearch DescribeAnalysisSchemes responses.
  *
  * \ingroup CloudSearch
  *

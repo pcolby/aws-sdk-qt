@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::ModifyClusterSubnetGroupRequest
  *
- * \brief The ModifyClusterSubnetGroupRequest class encapsulates Redshift ModifyClusterSubnetGroup requests.
+ * \brief The ModifyClusterSubnetGroupRequest class provides an interface for Redshift ModifyClusterSubnetGroup requests.
  *
  * \ingroup Redshift
  *

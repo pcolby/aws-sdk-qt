@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::RemoveAllResourcePermissionsResponse
  *
- * \brief The RemoveAllResourcePermissionsResponse class encapsulates WorkDocs RemoveAllResourcePermissions responses.
+ * \brief The RemoveAllResourcePermissionsResponse class provides an interace for WorkDocs RemoveAllResourcePermissions responses.
  *
  * \ingroup WorkDocs
  *

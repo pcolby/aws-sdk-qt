@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::CreateInstancesRequest
  *
- * \brief The CreateInstancesRequest class encapsulates Lightsail CreateInstances requests.
+ * \brief The CreateInstancesRequest class provides an interface for Lightsail CreateInstances requests.
  *
  * \ingroup Lightsail
  *

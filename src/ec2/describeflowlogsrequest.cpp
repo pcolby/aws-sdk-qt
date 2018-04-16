@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeFlowLogsRequest
  *
- * \brief The DescribeFlowLogsRequest class encapsulates EC2 DescribeFlowLogs requests.
+ * \brief The DescribeFlowLogsRequest class provides an interface for EC2 DescribeFlowLogs requests.
  *
  * \ingroup EC2
  *

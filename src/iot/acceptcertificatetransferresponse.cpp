@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::AcceptCertificateTransferResponse
  *
- * \brief The AcceptCertificateTransferResponse class encapsulates IoT AcceptCertificateTransfer responses.
+ * \brief The AcceptCertificateTransferResponse class provides an interace for IoT AcceptCertificateTransfer responses.
  *
  * \ingroup IoT
  *

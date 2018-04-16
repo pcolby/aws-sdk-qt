@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteCertificateResponse
  *
- * \brief The DeleteCertificateResponse class encapsulates IoT DeleteCertificate responses.
+ * \brief The DeleteCertificateResponse class provides an interace for IoT DeleteCertificate responses.
  *
  * \ingroup IoT
  *

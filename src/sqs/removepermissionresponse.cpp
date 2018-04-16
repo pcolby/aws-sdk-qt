@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::RemovePermissionResponse
  *
- * \brief The RemovePermissionResponse class encapsulates SQS RemovePermission responses.
+ * \brief The RemovePermissionResponse class provides an interace for SQS RemovePermission responses.
  *
  * \ingroup SQS
  *

@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::UpdateEventConfigurationsRequest
  *
- * \brief The UpdateEventConfigurationsRequest class encapsulates IoT UpdateEventConfigurations requests.
+ * \brief The UpdateEventConfigurationsRequest class provides an interface for IoT UpdateEventConfigurations requests.
  *
  * \ingroup IoT
  *

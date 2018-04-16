@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::SetRiskConfigurationRequest
  *
- * \brief The SetRiskConfigurationRequest class encapsulates CognitoIdentityProvider SetRiskConfiguration requests.
+ * \brief The SetRiskConfigurationRequest class provides an interface for CognitoIdentityProvider SetRiskConfiguration requests.
  *
  * \ingroup CognitoIdentityProvider
  *

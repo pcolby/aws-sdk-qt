@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteNatGatewayResponse
  *
- * \brief The DeleteNatGatewayResponse class encapsulates EC2 DeleteNatGateway responses.
+ * \brief The DeleteNatGatewayResponse class provides an interace for EC2 DeleteNatGateway responses.
  *
  * \ingroup EC2
  *

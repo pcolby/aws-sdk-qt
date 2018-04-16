@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::ScanResponse
  *
- * \brief The ScanResponse class encapsulates DynamoDB Scan responses.
+ * \brief The ScanResponse class provides an interace for DynamoDB Scan responses.
  *
  * \ingroup DynamoDB
  *

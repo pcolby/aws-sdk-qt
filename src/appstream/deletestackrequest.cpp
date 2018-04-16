@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DeleteStackRequest
  *
- * \brief The DeleteStackRequest class encapsulates AppStream DeleteStack requests.
+ * \brief The DeleteStackRequest class provides an interface for AppStream DeleteStack requests.
  *
  * \ingroup AppStream
  *

@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::DeleteBrokerRequest
  *
- * \brief The DeleteBrokerRequest class encapsulates MQ DeleteBroker requests.
+ * \brief The DeleteBrokerRequest class provides an interface for MQ DeleteBroker requests.
  *
  * \ingroup MQ
  *

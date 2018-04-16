@@ -28,7 +28,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::UpdateOriginEndpointRequest
  *
- * \brief The UpdateOriginEndpointRequest class encapsulates MediaPackage UpdateOriginEndpoint requests.
+ * \brief The UpdateOriginEndpointRequest class provides an interface for MediaPackage UpdateOriginEndpoint requests.
  *
  * \ingroup MediaPackage
  *

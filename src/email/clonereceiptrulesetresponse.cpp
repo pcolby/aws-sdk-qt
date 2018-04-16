@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::CloneReceiptRuleSetResponse
  *
- * \brief The CloneReceiptRuleSetResponse class encapsulates SES CloneReceiptRuleSet responses.
+ * \brief The CloneReceiptRuleSetResponse class provides an interace for SES CloneReceiptRuleSet responses.
  *
  * \ingroup SES
  *

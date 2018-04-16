@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::PublishVersionResponse
  *
- * \brief The PublishVersionResponse class encapsulates Lambda PublishVersion responses.
+ * \brief The PublishVersionResponse class provides an interace for Lambda PublishVersion responses.
  *
  * \ingroup Lambda
  *

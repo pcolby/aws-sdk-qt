@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::TagResourceRequest
  *
- * \brief The TagResourceRequest class encapsulates CloudHSMV2 TagResource requests.
+ * \brief The TagResourceRequest class provides an interface for CloudHSMV2 TagResource requests.
  *
  * \ingroup CloudHSMV2
  *

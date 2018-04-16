@@ -30,7 +30,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::DescribeIdentityResponse
  *
- * \brief The DescribeIdentityResponse class encapsulates CognitoIdentity DescribeIdentity responses.
+ * \brief The DescribeIdentityResponse class provides an interace for CognitoIdentity DescribeIdentity responses.
  *
  * \ingroup CognitoIdentity
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::UpdateSecurityGroupRuleDescriptionsEgressRequest
  *
- * \brief The UpdateSecurityGroupRuleDescriptionsEgressRequest class encapsulates EC2 UpdateSecurityGroupRuleDescriptionsEgress requests.
+ * \brief The UpdateSecurityGroupRuleDescriptionsEgressRequest class provides an interface for EC2 UpdateSecurityGroupRuleDescriptionsEgress requests.
  *
  * \ingroup EC2
  *

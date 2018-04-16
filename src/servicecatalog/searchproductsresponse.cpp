@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::SearchProductsResponse
  *
- * \brief The SearchProductsResponse class encapsulates ServiceCatalog SearchProducts responses.
+ * \brief The SearchProductsResponse class provides an interace for ServiceCatalog SearchProducts responses.
  *
  * \ingroup ServiceCatalog
  *

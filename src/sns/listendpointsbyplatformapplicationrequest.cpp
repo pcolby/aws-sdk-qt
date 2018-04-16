@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::ListEndpointsByPlatformApplicationRequest
  *
- * \brief The ListEndpointsByPlatformApplicationRequest class encapsulates SNS ListEndpointsByPlatformApplication requests.
+ * \brief The ListEndpointsByPlatformApplicationRequest class provides an interface for SNS ListEndpointsByPlatformApplication requests.
  *
  * \ingroup SNS
  *

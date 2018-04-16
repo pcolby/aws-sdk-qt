@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::PutLogEventsResponse
  *
- * \brief The PutLogEventsResponse class encapsulates CloudWatchLogs PutLogEvents responses.
+ * \brief The PutLogEventsResponse class provides an interace for CloudWatchLogs PutLogEvents responses.
  *
  * \ingroup CloudWatchLogs
  *

@@ -47,7 +47,7 @@ namespace MediaStoreData {
 /*!
  * \class QtAws::MediaStoreData::MediaStoreDataClient
  *
- * \brief The MediaStoreDataClient class provides access the AWS Elemental MediaStore Data Plane service.
+ * \brief The MediaStoreDataClient class provides access to the AWS Elemental MediaStore Data Plane service.
  *
  * \ingroup MediaStoreData
  *

@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetServiceRoleForAccountRequest
  *
- * \brief The GetServiceRoleForAccountRequest class encapsulates Greengrass GetServiceRoleForAccount requests.
+ * \brief The GetServiceRoleForAccountRequest class provides an interface for Greengrass GetServiceRoleForAccount requests.
  *
  * \ingroup Greengrass
  *

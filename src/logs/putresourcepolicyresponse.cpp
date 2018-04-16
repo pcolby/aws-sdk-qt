@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::PutResourcePolicyResponse
  *
- * \brief The PutResourcePolicyResponse class encapsulates CloudWatchLogs PutResourcePolicy responses.
+ * \brief The PutResourcePolicyResponse class provides an interace for CloudWatchLogs PutResourcePolicy responses.
  *
  * \ingroup CloudWatchLogs
  *

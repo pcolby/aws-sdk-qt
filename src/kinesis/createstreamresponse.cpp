@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::CreateStreamResponse
  *
- * \brief The CreateStreamResponse class encapsulates Kinesis CreateStream responses.
+ * \brief The CreateStreamResponse class provides an interace for Kinesis CreateStream responses.
  *
  * \ingroup Kinesis
  *

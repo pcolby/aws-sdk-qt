@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::UpdateUserResponse
  *
- * \brief The UpdateUserResponse class encapsulates WorkDocs UpdateUser responses.
+ * \brief The UpdateUserResponse class provides an interace for WorkDocs UpdateUser responses.
  *
  * \ingroup WorkDocs
  *

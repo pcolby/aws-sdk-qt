@@ -28,7 +28,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::PutMetricDataRequest
  *
- * \brief The PutMetricDataRequest class encapsulates CloudWatch PutMetricData requests.
+ * \brief The PutMetricDataRequest class provides an interface for CloudWatch PutMetricData requests.
  *
  * \ingroup CloudWatch
  *

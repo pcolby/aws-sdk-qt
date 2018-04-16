@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateAccessKeyResponse
  *
- * \brief The CreateAccessKeyResponse class encapsulates IAM CreateAccessKey responses.
+ * \brief The CreateAccessKeyResponse class provides an interace for IAM CreateAccessKey responses.
  *
  * \ingroup IAM
  *

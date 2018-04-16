@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetIdentityVerificationAttributesRequest
  *
- * \brief The GetIdentityVerificationAttributesRequest class encapsulates SES GetIdentityVerificationAttributes requests.
+ * \brief The GetIdentityVerificationAttributesRequest class provides an interface for SES GetIdentityVerificationAttributes requests.
  *
  * \ingroup SES
  *

@@ -49,7 +49,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::XRayClient
  *
- * \brief The XRayClient class provides access the AWS X-Ray service.
+ * \brief The XRayClient class provides access to the AWS X-Ray service.
  *
  * \ingroup XRay
  *

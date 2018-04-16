@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::CreateTemplateRequest
  *
- * \brief The CreateTemplateRequest class encapsulates SES CreateTemplate requests.
+ * \brief The CreateTemplateRequest class provides an interface for SES CreateTemplate requests.
  *
  * \ingroup SES
  *

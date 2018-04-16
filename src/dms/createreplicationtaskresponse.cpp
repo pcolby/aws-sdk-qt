@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::CreateReplicationTaskResponse
  *
- * \brief The CreateReplicationTaskResponse class encapsulates DatabaseMigrationService CreateReplicationTask responses.
+ * \brief The CreateReplicationTaskResponse class provides an interace for DatabaseMigrationService CreateReplicationTask responses.
  *
  * \ingroup DatabaseMigrationService
  *

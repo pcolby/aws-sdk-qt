@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListDeviceDefinitionVersionsResponse
  *
- * \brief The ListDeviceDefinitionVersionsResponse class encapsulates Greengrass ListDeviceDefinitionVersions responses.
+ * \brief The ListDeviceDefinitionVersionsResponse class provides an interace for Greengrass ListDeviceDefinitionVersions responses.
  *
  * \ingroup Greengrass
  *

@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SendBounceResponse
  *
- * \brief The SendBounceResponse class encapsulates SES SendBounce responses.
+ * \brief The SendBounceResponse class provides an interace for SES SendBounce responses.
  *
  * \ingroup SES
  *

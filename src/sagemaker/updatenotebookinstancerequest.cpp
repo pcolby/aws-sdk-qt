@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::UpdateNotebookInstanceRequest
  *
- * \brief The UpdateNotebookInstanceRequest class encapsulates SageMaker UpdateNotebookInstance requests.
+ * \brief The UpdateNotebookInstanceRequest class provides an interface for SageMaker UpdateNotebookInstance requests.
  *
  * \ingroup SageMaker
  *

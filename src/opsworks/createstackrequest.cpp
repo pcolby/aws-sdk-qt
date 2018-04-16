@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CreateStackRequest
  *
- * \brief The CreateStackRequest class encapsulates OpsWorks CreateStack requests.
+ * \brief The CreateStackRequest class provides an interface for OpsWorks CreateStack requests.
  *
  * \ingroup OpsWorks
  *

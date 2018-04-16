@@ -28,7 +28,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::PutEventSelectorsRequest
  *
- * \brief The PutEventSelectorsRequest class encapsulates CloudTrail PutEventSelectors requests.
+ * \brief The PutEventSelectorsRequest class provides an interface for CloudTrail PutEventSelectors requests.
  *
  * \ingroup CloudTrail
  *

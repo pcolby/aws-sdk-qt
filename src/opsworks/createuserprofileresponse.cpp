@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CreateUserProfileResponse
  *
- * \brief The CreateUserProfileResponse class encapsulates OpsWorks CreateUserProfile responses.
+ * \brief The CreateUserProfileResponse class provides an interace for OpsWorks CreateUserProfile responses.
  *
  * \ingroup OpsWorks
  *

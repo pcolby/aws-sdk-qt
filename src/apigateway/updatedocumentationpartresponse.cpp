@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateDocumentationPartResponse
  *
- * \brief The UpdateDocumentationPartResponse class encapsulates APIGateway UpdateDocumentationPart responses.
+ * \brief The UpdateDocumentationPartResponse class provides an interace for APIGateway UpdateDocumentationPart responses.
  *
  * \ingroup APIGateway
  *

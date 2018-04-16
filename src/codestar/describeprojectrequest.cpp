@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::DescribeProjectRequest
  *
- * \brief The DescribeProjectRequest class encapsulates CodeStar DescribeProject requests.
+ * \brief The DescribeProjectRequest class provides an interface for CodeStar DescribeProject requests.
  *
  * \ingroup CodeStar
  *

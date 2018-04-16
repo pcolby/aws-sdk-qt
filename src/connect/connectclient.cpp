@@ -41,7 +41,7 @@ namespace Connect {
 /*!
  * \class QtAws::Connect::ConnectClient
  *
- * \brief The ConnectClient class provides access the Amazon Connect Service service.
+ * \brief The ConnectClient class provides access to the Amazon Connect Service service.
  *
  * \ingroup Connect
  *

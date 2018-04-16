@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::AllocatePublicVirtualInterfaceRequest
  *
- * \brief The AllocatePublicVirtualInterfaceRequest class encapsulates DirectConnect AllocatePublicVirtualInterface requests.
+ * \brief The AllocatePublicVirtualInterfaceRequest class provides an interface for DirectConnect AllocatePublicVirtualInterface requests.
  *
  * \ingroup DirectConnect
  *

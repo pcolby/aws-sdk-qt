@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifySubnetAttributeRequest
  *
- * \brief The ModifySubnetAttributeRequest class encapsulates EC2 ModifySubnetAttribute requests.
+ * \brief The ModifySubnetAttributeRequest class provides an interface for EC2 ModifySubnetAttribute requests.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteMatchmakingConfigurationResponse
  *
- * \brief The DeleteMatchmakingConfigurationResponse class encapsulates GameLift DeleteMatchmakingConfiguration responses.
+ * \brief The DeleteMatchmakingConfigurationResponse class provides an interace for GameLift DeleteMatchmakingConfiguration responses.
  *
  * \ingroup GameLift
  *

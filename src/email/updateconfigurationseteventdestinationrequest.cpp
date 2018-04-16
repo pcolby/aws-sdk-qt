@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::UpdateConfigurationSetEventDestinationRequest
  *
- * \brief The UpdateConfigurationSetEventDestinationRequest class encapsulates SES UpdateConfigurationSetEventDestination requests.
+ * \brief The UpdateConfigurationSetEventDestinationRequest class provides an interface for SES UpdateConfigurationSetEventDestination requests.
  *
  * \ingroup SES
  *

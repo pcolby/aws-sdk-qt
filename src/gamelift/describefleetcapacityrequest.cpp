@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeFleetCapacityRequest
  *
- * \brief The DescribeFleetCapacityRequest class encapsulates GameLift DescribeFleetCapacity requests.
+ * \brief The DescribeFleetCapacityRequest class provides an interface for GameLift DescribeFleetCapacity requests.
  *
  * \ingroup GameLift
  *

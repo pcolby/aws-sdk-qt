@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyVpcTenancyResponse
  *
- * \brief The ModifyVpcTenancyResponse class encapsulates EC2 ModifyVpcTenancy responses.
+ * \brief The ModifyVpcTenancyResponse class provides an interace for EC2 ModifyVpcTenancy responses.
  *
  * \ingroup EC2
  *

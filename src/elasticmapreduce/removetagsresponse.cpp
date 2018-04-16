@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::RemoveTagsResponse
  *
- * \brief The RemoveTagsResponse class encapsulates EMR RemoveTags responses.
+ * \brief The RemoveTagsResponse class provides an interace for EMR RemoveTags responses.
  *
  * \ingroup EMR
  *

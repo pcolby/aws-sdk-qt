@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateRdsDbInstanceRequest
  *
- * \brief The UpdateRdsDbInstanceRequest class encapsulates OpsWorks UpdateRdsDbInstance requests.
+ * \brief The UpdateRdsDbInstanceRequest class provides an interface for OpsWorks UpdateRdsDbInstance requests.
  *
  * \ingroup OpsWorks
  *

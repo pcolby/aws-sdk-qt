@@ -26,7 +26,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::KMSRequest
  *
- * \brief The KMSRequest class is the base class for all KMS requests.
+ * \brief The KMSRequest class provides an interface for KMS requests.
  *
  * \ingroup KMS
  */

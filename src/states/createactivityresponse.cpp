@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::CreateActivityResponse
  *
- * \brief The CreateActivityResponse class encapsulates SFN CreateActivity responses.
+ * \brief The CreateActivityResponse class provides an interace for SFN CreateActivity responses.
  *
  * \ingroup SFN
  *

@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DescribeDestinationsResponse
  *
- * \brief The DescribeDestinationsResponse class encapsulates CloudWatchLogs DescribeDestinations responses.
+ * \brief The DescribeDestinationsResponse class provides an interace for CloudWatchLogs DescribeDestinations responses.
  *
  * \ingroup CloudWatchLogs
  *

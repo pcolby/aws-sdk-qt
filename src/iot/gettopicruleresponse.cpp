@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::GetTopicRuleResponse
  *
- * \brief The GetTopicRuleResponse class encapsulates IoT GetTopicRule responses.
+ * \brief The GetTopicRuleResponse class provides an interace for IoT GetTopicRule responses.
  *
  * \ingroup IoT
  *

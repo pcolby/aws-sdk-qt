@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::RestoreTableToPointInTimeRequest
  *
- * \brief The RestoreTableToPointInTimeRequest class encapsulates DynamoDB RestoreTableToPointInTime requests.
+ * \brief The RestoreTableToPointInTimeRequest class provides an interface for DynamoDB RestoreTableToPointInTime requests.
  *
  * \ingroup DynamoDB
  *

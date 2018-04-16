@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::GetPublicKeyRequest
  *
- * \brief The GetPublicKeyRequest class encapsulates CloudFront GetPublicKey requests.
+ * \brief The GetPublicKeyRequest class provides an interface for CloudFront GetPublicKey requests.
  *
  * \ingroup CloudFront
  *

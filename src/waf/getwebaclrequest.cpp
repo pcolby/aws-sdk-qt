@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::GetWebACLRequest
  *
- * \brief The GetWebACLRequest class encapsulates WAF GetWebACL requests.
+ * \brief The GetWebACLRequest class provides an interface for WAF GetWebACL requests.
  *
  * \ingroup WAF
  *

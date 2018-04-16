@@ -28,7 +28,7 @@ namespace CloudSearchDomain {
 /*!
  * \class QtAws::CloudSearchDomain::SearchRequest
  *
- * \brief The SearchRequest class encapsulates CloudSearchDomain Search requests.
+ * \brief The SearchRequest class provides an interface for CloudSearchDomain Search requests.
  *
  * \ingroup CloudSearchDomain
  *

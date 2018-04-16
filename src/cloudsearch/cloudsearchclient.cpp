@@ -84,7 +84,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::CloudSearchClient
  *
- * \brief The CloudSearchClient class provides access the Amazon CloudSearch service.
+ * \brief The CloudSearchClient class provides access to the Amazon CloudSearch service.
  *
  * \ingroup CloudSearch
  *

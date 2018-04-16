@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::CreateRegexPatternSetRequest
  *
- * \brief The CreateRegexPatternSetRequest class encapsulates WAFRegional CreateRegexPatternSet requests.
+ * \brief The CreateRegexPatternSetRequest class provides an interface for WAFRegional CreateRegexPatternSet requests.
  *
  * \ingroup WAFRegional
  *

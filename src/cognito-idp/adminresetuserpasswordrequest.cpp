@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminResetUserPasswordRequest
  *
- * \brief The AdminResetUserPasswordRequest class encapsulates CognitoIdentityProvider AdminResetUserPassword requests.
+ * \brief The AdminResetUserPasswordRequest class provides an interface for CognitoIdentityProvider AdminResetUserPassword requests.
  *
  * \ingroup CognitoIdentityProvider
  *

@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeDBEngineVersionsResponse
  *
- * \brief The DescribeDBEngineVersionsResponse class encapsulates RDS DescribeDBEngineVersions responses.
+ * \brief The DescribeDBEngineVersionsResponse class provides an interace for RDS DescribeDBEngineVersions responses.
  *
  * \ingroup RDS
  *

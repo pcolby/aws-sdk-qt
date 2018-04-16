@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::SetDesiredCapacityRequest
  *
- * \brief The SetDesiredCapacityRequest class encapsulates AutoScaling SetDesiredCapacity requests.
+ * \brief The SetDesiredCapacityRequest class provides an interface for AutoScaling SetDesiredCapacity requests.
  *
  * \ingroup AutoScaling
  *

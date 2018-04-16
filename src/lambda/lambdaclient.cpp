@@ -97,7 +97,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::LambdaClient
  *
- * \brief The LambdaClient class provides access the AWS Lambda service.
+ * \brief The LambdaClient class provides access to the AWS Lambda service.
  *
  * \ingroup Lambda
  *

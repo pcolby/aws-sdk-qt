@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::ListSubscriptionsRequest
  *
- * \brief The ListSubscriptionsRequest class encapsulates SNS ListSubscriptions requests.
+ * \brief The ListSubscriptionsRequest class provides an interface for SNS ListSubscriptions requests.
  *
  * \ingroup SNS
  *

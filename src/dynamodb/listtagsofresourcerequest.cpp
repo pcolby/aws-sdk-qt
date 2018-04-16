@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::ListTagsOfResourceRequest
  *
- * \brief The ListTagsOfResourceRequest class encapsulates DynamoDB ListTagsOfResource requests.
+ * \brief The ListTagsOfResourceRequest class provides an interface for DynamoDB ListTagsOfResource requests.
  *
  * \ingroup DynamoDB
  *

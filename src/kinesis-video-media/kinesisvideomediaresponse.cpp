@@ -29,7 +29,7 @@ namespace KinesisVideoMedia {
 /*!
  * \class QtAws::KinesisVideoMedia::KinesisVideoMediaResponse
  *
- * \brief The KinesisVideoMediaResponse class is the base class for all KinesisVideoMedia responses.
+ * \brief The KinesisVideoMediaResponse class provides an interface for KinesisVideoMedia responses.
  *
  * \ingroup KinesisVideoMedia
  */

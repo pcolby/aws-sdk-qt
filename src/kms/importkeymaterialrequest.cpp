@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ImportKeyMaterialRequest
  *
- * \brief The ImportKeyMaterialRequest class encapsulates KMS ImportKeyMaterial requests.
+ * \brief The ImportKeyMaterialRequest class provides an interface for KMS ImportKeyMaterial requests.
  *
  * \ingroup KMS
  *

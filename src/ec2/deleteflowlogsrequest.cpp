@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteFlowLogsRequest
  *
- * \brief The DeleteFlowLogsRequest class encapsulates EC2 DeleteFlowLogs requests.
+ * \brief The DeleteFlowLogsRequest class provides an interface for EC2 DeleteFlowLogs requests.
  *
  * \ingroup EC2
  *

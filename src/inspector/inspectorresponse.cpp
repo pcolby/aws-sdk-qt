@@ -29,7 +29,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::InspectorResponse
  *
- * \brief The InspectorResponse class is the base class for all Inspector responses.
+ * \brief The InspectorResponse class provides an interface for Inspector responses.
  *
  * \ingroup Inspector
  */

@@ -29,7 +29,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::ConfigServiceResponse
  *
- * \brief The ConfigServiceResponse class is the base class for all ConfigService responses.
+ * \brief The ConfigServiceResponse class provides an interface for ConfigService responses.
  *
  * \ingroup ConfigService
  */

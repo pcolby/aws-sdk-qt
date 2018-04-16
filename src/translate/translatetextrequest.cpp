@@ -28,7 +28,7 @@ namespace Translate {
 /*!
  * \class QtAws::Translate::TranslateTextRequest
  *
- * \brief The TranslateTextRequest class encapsulates Translate TranslateText requests.
+ * \brief The TranslateTextRequest class provides an interface for Translate TranslateText requests.
  *
  * \ingroup Translate
  *

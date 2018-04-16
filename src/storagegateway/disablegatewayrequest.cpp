@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DisableGatewayRequest
  *
- * \brief The DisableGatewayRequest class encapsulates StorageGateway DisableGateway requests.
+ * \brief The DisableGatewayRequest class provides an interface for StorageGateway DisableGateway requests.
  *
  * \ingroup StorageGateway
  *

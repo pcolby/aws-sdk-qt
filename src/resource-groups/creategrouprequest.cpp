@@ -28,7 +28,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::CreateGroupRequest
  *
- * \brief The CreateGroupRequest class encapsulates ResourceGroups CreateGroup requests.
+ * \brief The CreateGroupRequest class provides an interface for ResourceGroups CreateGroup requests.
  *
  * \ingroup ResourceGroups
  *

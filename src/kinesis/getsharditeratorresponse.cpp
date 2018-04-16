@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::GetShardIteratorResponse
  *
- * \brief The GetShardIteratorResponse class encapsulates Kinesis GetShardIterator responses.
+ * \brief The GetShardIteratorResponse class provides an interace for Kinesis GetShardIterator responses.
  *
  * \ingroup Kinesis
  *

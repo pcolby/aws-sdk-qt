@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::VerifyTrustRequest
  *
- * \brief The VerifyTrustRequest class encapsulates DirectoryService VerifyTrust requests.
+ * \brief The VerifyTrustRequest class provides an interface for DirectoryService VerifyTrust requests.
  *
  * \ingroup DirectoryService
  *

@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::DeleteRoomRequest
  *
- * \brief The DeleteRoomRequest class encapsulates AlexaForBusiness DeleteRoom requests.
+ * \brief The DeleteRoomRequest class provides an interface for AlexaForBusiness DeleteRoom requests.
  *
  * \ingroup AlexaForBusiness
  *

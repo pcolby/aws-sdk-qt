@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::GetTrafficPolicyInstanceRequest
  *
- * \brief The GetTrafficPolicyInstanceRequest class encapsulates Route53 GetTrafficPolicyInstance requests.
+ * \brief The GetTrafficPolicyInstanceRequest class provides an interface for Route53 GetTrafficPolicyInstance requests.
  *
  * \ingroup Route53
  *

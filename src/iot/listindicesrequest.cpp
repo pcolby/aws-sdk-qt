@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListIndicesRequest
  *
- * \brief The ListIndicesRequest class encapsulates IoT ListIndices requests.
+ * \brief The ListIndicesRequest class provides an interface for IoT ListIndices requests.
  *
  * \ingroup IoT
  *

@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateLoggerDefinitionRequest
  *
- * \brief The CreateLoggerDefinitionRequest class encapsulates Greengrass CreateLoggerDefinition requests.
+ * \brief The CreateLoggerDefinitionRequest class provides an interface for Greengrass CreateLoggerDefinition requests.
  *
  * \ingroup Greengrass
  *

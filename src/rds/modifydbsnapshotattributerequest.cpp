@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ModifyDBSnapshotAttributeRequest
  *
- * \brief The ModifyDBSnapshotAttributeRequest class encapsulates RDS ModifyDBSnapshotAttribute requests.
+ * \brief The ModifyDBSnapshotAttributeRequest class provides an interface for RDS ModifyDBSnapshotAttribute requests.
  *
  * \ingroup RDS
  *

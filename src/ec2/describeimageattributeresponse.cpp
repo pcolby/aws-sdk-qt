@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeImageAttributeResponse
  *
- * \brief The DescribeImageAttributeResponse class encapsulates EC2 DescribeImageAttribute responses.
+ * \brief The DescribeImageAttributeResponse class provides an interace for EC2 DescribeImageAttribute responses.
  *
  * \ingroup EC2
  *

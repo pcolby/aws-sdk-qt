@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::BatchGetItemResponse
  *
- * \brief The BatchGetItemResponse class encapsulates DynamoDB BatchGetItem responses.
+ * \brief The BatchGetItemResponse class provides an interace for DynamoDB BatchGetItem responses.
  *
  * \ingroup DynamoDB
  *

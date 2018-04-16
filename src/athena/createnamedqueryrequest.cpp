@@ -28,7 +28,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::CreateNamedQueryRequest
  *
- * \brief The CreateNamedQueryRequest class encapsulates Athena CreateNamedQuery requests.
+ * \brief The CreateNamedQueryRequest class provides an interface for Athena CreateNamedQuery requests.
  *
  * \ingroup Athena
  *

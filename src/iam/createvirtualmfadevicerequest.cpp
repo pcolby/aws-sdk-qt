@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateVirtualMFADeviceRequest
  *
- * \brief The CreateVirtualMFADeviceRequest class encapsulates IAM CreateVirtualMFADevice requests.
+ * \brief The CreateVirtualMFADeviceRequest class provides an interface for IAM CreateVirtualMFADevice requests.
  *
  * \ingroup IAM
  *

@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetTableVersionResponse
  *
- * \brief The GetTableVersionResponse class encapsulates Glue GetTableVersion responses.
+ * \brief The GetTableVersionResponse class provides an interace for Glue GetTableVersion responses.
  *
  * \ingroup Glue
  *

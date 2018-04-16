@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListLoggerDefinitionsRequest
  *
- * \brief The ListLoggerDefinitionsRequest class encapsulates Greengrass ListLoggerDefinitions requests.
+ * \brief The ListLoggerDefinitionsRequest class provides an interface for Greengrass ListLoggerDefinitions requests.
  *
  * \ingroup Greengrass
  *

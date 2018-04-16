@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::GetFolderRequest
  *
- * \brief The GetFolderRequest class encapsulates WorkDocs GetFolder requests.
+ * \brief The GetFolderRequest class provides an interface for WorkDocs GetFolder requests.
  *
  * \ingroup WorkDocs
  *

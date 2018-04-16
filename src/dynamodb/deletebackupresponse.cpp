@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DeleteBackupResponse
  *
- * \brief The DeleteBackupResponse class encapsulates DynamoDB DeleteBackup responses.
+ * \brief The DeleteBackupResponse class provides an interace for DynamoDB DeleteBackup responses.
  *
  * \ingroup DynamoDB
  *

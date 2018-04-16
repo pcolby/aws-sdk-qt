@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteClusterParameterGroupResponse
  *
- * \brief The DeleteClusterParameterGroupResponse class encapsulates Redshift DeleteClusterParameterGroup responses.
+ * \brief The DeleteClusterParameterGroupResponse class provides an interace for Redshift DeleteClusterParameterGroup responses.
  *
  * \ingroup Redshift
  *

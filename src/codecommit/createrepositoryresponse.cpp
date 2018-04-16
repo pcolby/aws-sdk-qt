@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::CreateRepositoryResponse
  *
- * \brief The CreateRepositoryResponse class encapsulates CodeCommit CreateRepository responses.
+ * \brief The CreateRepositoryResponse class provides an interace for CodeCommit CreateRepository responses.
  *
  * \ingroup CodeCommit
  *

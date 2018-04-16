@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ResetDBParameterGroupRequest
  *
- * \brief The ResetDBParameterGroupRequest class encapsulates RDS ResetDBParameterGroup requests.
+ * \brief The ResetDBParameterGroupRequest class provides an interface for RDS ResetDBParameterGroup requests.
  *
  * \ingroup RDS
  *

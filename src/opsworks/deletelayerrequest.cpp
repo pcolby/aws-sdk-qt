@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeleteLayerRequest
  *
- * \brief The DeleteLayerRequest class encapsulates OpsWorks DeleteLayer requests.
+ * \brief The DeleteLayerRequest class provides an interface for OpsWorks DeleteLayer requests.
  *
  * \ingroup OpsWorks
  *

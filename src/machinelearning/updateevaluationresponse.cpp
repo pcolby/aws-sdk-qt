@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::UpdateEvaluationResponse
  *
- * \brief The UpdateEvaluationResponse class encapsulates MachineLearning UpdateEvaluation responses.
+ * \brief The UpdateEvaluationResponse class provides an interace for MachineLearning UpdateEvaluation responses.
  *
  * \ingroup MachineLearning
  *

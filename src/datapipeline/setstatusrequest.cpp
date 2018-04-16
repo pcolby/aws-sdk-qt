@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::SetStatusRequest
  *
- * \brief The SetStatusRequest class encapsulates DataPipeline SetStatus requests.
+ * \brief The SetStatusRequest class provides an interface for DataPipeline SetStatus requests.
  *
  * \ingroup DataPipeline
  *

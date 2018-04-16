@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DescribeAccountAttributesResponse
  *
- * \brief The DescribeAccountAttributesResponse class encapsulates OpsWorksCM DescribeAccountAttributes responses.
+ * \brief The DescribeAccountAttributesResponse class provides an interace for OpsWorksCM DescribeAccountAttributes responses.
  *
  * \ingroup OpsWorksCM
  *

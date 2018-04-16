@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GetIPSetResponse
  *
- * \brief The GetIPSetResponse class encapsulates GuardDuty GetIPSet responses.
+ * \brief The GetIPSetResponse class provides an interace for GuardDuty GetIPSet responses.
  *
  * \ingroup GuardDuty
  *

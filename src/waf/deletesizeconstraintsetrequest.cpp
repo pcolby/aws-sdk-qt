@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteSizeConstraintSetRequest
  *
- * \brief The DeleteSizeConstraintSetRequest class encapsulates WAF DeleteSizeConstraintSet requests.
+ * \brief The DeleteSizeConstraintSetRequest class provides an interface for WAF DeleteSizeConstraintSet requests.
  *
  * \ingroup WAF
  *

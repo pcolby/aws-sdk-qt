@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::GetIPSetRequest
  *
- * \brief The GetIPSetRequest class encapsulates WAF GetIPSet requests.
+ * \brief The GetIPSetRequest class provides an interface for WAF GetIPSet requests.
  *
  * \ingroup WAF
  *

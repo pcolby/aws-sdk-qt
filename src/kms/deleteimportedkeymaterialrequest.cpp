@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::DeleteImportedKeyMaterialRequest
  *
- * \brief The DeleteImportedKeyMaterialRequest class encapsulates KMS DeleteImportedKeyMaterial requests.
+ * \brief The DeleteImportedKeyMaterialRequest class provides an interface for KMS DeleteImportedKeyMaterial requests.
  *
  * \ingroup KMS
  *

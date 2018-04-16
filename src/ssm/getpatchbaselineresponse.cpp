@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetPatchBaselineResponse
  *
- * \brief The GetPatchBaselineResponse class encapsulates SSM GetPatchBaseline responses.
+ * \brief The GetPatchBaselineResponse class provides an interace for SSM GetPatchBaseline responses.
  *
  * \ingroup SSM
  *

@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::DetectLabelsResponse
  *
- * \brief The DetectLabelsResponse class encapsulates Rekognition DetectLabels responses.
+ * \brief The DetectLabelsResponse class provides an interace for Rekognition DetectLabels responses.
  *
  * \ingroup Rekognition
  *

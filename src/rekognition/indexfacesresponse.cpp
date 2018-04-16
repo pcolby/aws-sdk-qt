@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::IndexFacesResponse
  *
- * \brief The IndexFacesResponse class encapsulates Rekognition IndexFaces responses.
+ * \brief The IndexFacesResponse class provides an interace for Rekognition IndexFaces responses.
  *
  * \ingroup Rekognition
  *

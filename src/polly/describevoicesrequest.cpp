@@ -28,7 +28,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::DescribeVoicesRequest
  *
- * \brief The DescribeVoicesRequest class encapsulates Polly DescribeVoices requests.
+ * \brief The DescribeVoicesRequest class provides an interface for Polly DescribeVoices requests.
  *
  * \ingroup Polly
  *

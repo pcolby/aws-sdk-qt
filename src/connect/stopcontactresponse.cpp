@@ -30,7 +30,7 @@ namespace Connect {
 /*!
  * \class QtAws::Connect::StopContactResponse
  *
- * \brief The StopContactResponse class encapsulates Connect StopContact responses.
+ * \brief The StopContactResponse class provides an interace for Connect StopContact responses.
  *
  * \ingroup Connect
  *

@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::ListConfigurationsRequest
  *
- * \brief The ListConfigurationsRequest class encapsulates MQ ListConfigurations requests.
+ * \brief The ListConfigurationsRequest class provides an interface for MQ ListConfigurations requests.
  *
  * \ingroup MQ
  *

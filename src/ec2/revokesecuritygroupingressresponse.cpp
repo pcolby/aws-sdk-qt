@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RevokeSecurityGroupIngressResponse
  *
- * \brief The RevokeSecurityGroupIngressResponse class encapsulates EC2 RevokeSecurityGroupIngress responses.
+ * \brief The RevokeSecurityGroupIngressResponse class provides an interace for EC2 RevokeSecurityGroupIngress responses.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::ListOpenWorkflowExecutionsResponse
  *
- * \brief The ListOpenWorkflowExecutionsResponse class encapsulates SWF ListOpenWorkflowExecutions responses.
+ * \brief The ListOpenWorkflowExecutionsResponse class provides an interace for SWF ListOpenWorkflowExecutions responses.
  *
  * \ingroup SWF
  *

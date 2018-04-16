@@ -30,7 +30,7 @@ namespace Comprehend {
 /*!
  * \class QtAws::Comprehend::StartTopicsDetectionJobResponse
  *
- * \brief The StartTopicsDetectionJobResponse class encapsulates Comprehend StartTopicsDetectionJob responses.
+ * \brief The StartTopicsDetectionJobResponse class provides an interace for Comprehend StartTopicsDetectionJob responses.
  *
  * \ingroup Comprehend
  *

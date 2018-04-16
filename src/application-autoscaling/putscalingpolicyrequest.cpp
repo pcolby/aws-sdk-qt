@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::PutScalingPolicyRequest
  *
- * \brief The PutScalingPolicyRequest class encapsulates ApplicationAutoScaling PutScalingPolicy requests.
+ * \brief The PutScalingPolicyRequest class provides an interface for ApplicationAutoScaling PutScalingPolicy requests.
  *
  * \ingroup ApplicationAutoScaling
  *

@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::PutIntentResponse
  *
- * \brief The PutIntentResponse class encapsulates LexModelBuildingService PutIntent responses.
+ * \brief The PutIntentResponse class provides an interace for LexModelBuildingService PutIntent responses.
  *
  * \ingroup LexModelBuildingService
  *

@@ -30,7 +30,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::DisassociateAdminAccountResponse
  *
- * \brief The DisassociateAdminAccountResponse class encapsulates FMS DisassociateAdminAccount responses.
+ * \brief The DisassociateAdminAccountResponse class provides an interace for FMS DisassociateAdminAccount responses.
  *
  * \ingroup FMS
  *

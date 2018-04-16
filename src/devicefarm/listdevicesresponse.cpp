@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListDevicesResponse
  *
- * \brief The ListDevicesResponse class encapsulates DeviceFarm ListDevices responses.
+ * \brief The ListDevicesResponse class provides an interace for DeviceFarm ListDevices responses.
  *
  * \ingroup DeviceFarm
  *

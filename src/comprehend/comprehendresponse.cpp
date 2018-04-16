@@ -29,7 +29,7 @@ namespace Comprehend {
 /*!
  * \class QtAws::Comprehend::ComprehendResponse
  *
- * \brief The ComprehendResponse class is the base class for all Comprehend responses.
+ * \brief The ComprehendResponse class provides an interface for Comprehend responses.
  *
  * \ingroup Comprehend
  */

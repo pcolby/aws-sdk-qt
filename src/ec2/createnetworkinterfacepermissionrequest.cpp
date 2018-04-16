@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateNetworkInterfacePermissionRequest
  *
- * \brief The CreateNetworkInterfacePermissionRequest class encapsulates EC2 CreateNetworkInterfacePermission requests.
+ * \brief The CreateNetworkInterfacePermissionRequest class provides an interface for EC2 CreateNetworkInterfacePermission requests.
  *
  * \ingroup EC2
  *

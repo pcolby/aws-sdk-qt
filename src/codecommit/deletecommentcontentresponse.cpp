@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::DeleteCommentContentResponse
  *
- * \brief The DeleteCommentContentResponse class encapsulates CodeCommit DeleteCommentContent responses.
+ * \brief The DeleteCommentContentResponse class provides an interace for CodeCommit DeleteCommentContent responses.
  *
  * \ingroup CodeCommit
  *

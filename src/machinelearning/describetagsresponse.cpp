@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DescribeTagsResponse
  *
- * \brief The DescribeTagsResponse class encapsulates MachineLearning DescribeTags responses.
+ * \brief The DescribeTagsResponse class provides an interace for MachineLearning DescribeTags responses.
  *
  * \ingroup MachineLearning
  *

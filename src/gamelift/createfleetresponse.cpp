@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::CreateFleetResponse
  *
- * \brief The CreateFleetResponse class encapsulates GameLift CreateFleet responses.
+ * \brief The CreateFleetResponse class provides an interace for GameLift CreateFleet responses.
  *
  * \ingroup GameLift
  *

@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteSqlInjectionMatchSetRequest
  *
- * \brief The DeleteSqlInjectionMatchSetRequest class encapsulates WAF DeleteSqlInjectionMatchSet requests.
+ * \brief The DeleteSqlInjectionMatchSetRequest class provides an interface for WAF DeleteSqlInjectionMatchSet requests.
  *
  * \ingroup WAF
  *

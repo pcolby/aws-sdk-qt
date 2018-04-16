@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetConnectionsRequest
  *
- * \brief The GetConnectionsRequest class encapsulates Glue GetConnections requests.
+ * \brief The GetConnectionsRequest class provides an interface for Glue GetConnections requests.
  *
  * \ingroup Glue
  *

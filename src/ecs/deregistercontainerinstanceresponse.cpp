@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DeregisterContainerInstanceResponse
  *
- * \brief The DeregisterContainerInstanceResponse class encapsulates ECS DeregisterContainerInstance responses.
+ * \brief The DeregisterContainerInstanceResponse class provides an interace for ECS DeregisterContainerInstance responses.
  *
  * \ingroup ECS
  *

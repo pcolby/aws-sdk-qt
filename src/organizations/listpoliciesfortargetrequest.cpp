@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListPoliciesForTargetRequest
  *
- * \brief The ListPoliciesForTargetRequest class encapsulates Organizations ListPoliciesForTarget requests.
+ * \brief The ListPoliciesForTargetRequest class provides an interface for Organizations ListPoliciesForTarget requests.
  *
  * \ingroup Organizations
  *

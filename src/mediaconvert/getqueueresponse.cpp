@@ -30,7 +30,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::GetQueueResponse
  *
- * \brief The GetQueueResponse class encapsulates MediaConvert GetQueue responses.
+ * \brief The GetQueueResponse class provides an interace for MediaConvert GetQueue responses.
  *
  * \ingroup MediaConvert
  *

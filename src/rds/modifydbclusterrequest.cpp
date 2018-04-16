@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ModifyDBClusterRequest
  *
- * \brief The ModifyDBClusterRequest class encapsulates RDS ModifyDBCluster requests.
+ * \brief The ModifyDBClusterRequest class provides an interface for RDS ModifyDBCluster requests.
  *
  * \ingroup RDS
  *

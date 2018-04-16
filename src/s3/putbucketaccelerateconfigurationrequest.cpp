@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketAccelerateConfigurationRequest
  *
- * \brief The PutBucketAccelerateConfigurationRequest class encapsulates S3 PutBucketAccelerateConfiguration requests.
+ * \brief The PutBucketAccelerateConfigurationRequest class provides an interface for S3 PutBucketAccelerateConfiguration requests.
  *
  * \ingroup S3
  *

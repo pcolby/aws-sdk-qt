@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::CreateOrUpdateTagsResponse
  *
- * \brief The CreateOrUpdateTagsResponse class encapsulates AutoScaling CreateOrUpdateTags responses.
+ * \brief The CreateOrUpdateTagsResponse class provides an interace for AutoScaling CreateOrUpdateTags responses.
  *
  * \ingroup AutoScaling
  *

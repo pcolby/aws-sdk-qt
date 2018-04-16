@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::CreatePlatformApplicationRequest
  *
- * \brief The CreatePlatformApplicationRequest class encapsulates SNS CreatePlatformApplication requests.
+ * \brief The CreatePlatformApplicationRequest class provides an interface for SNS CreatePlatformApplication requests.
  *
  * \ingroup SNS
  *

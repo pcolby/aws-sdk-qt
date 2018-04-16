@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::RegisterRdsDbInstanceRequest
  *
- * \brief The RegisterRdsDbInstanceRequest class encapsulates OpsWorks RegisterRdsDbInstance requests.
+ * \brief The RegisterRdsDbInstanceRequest class provides an interface for OpsWorks RegisterRdsDbInstance requests.
  *
  * \ingroup OpsWorks
  *

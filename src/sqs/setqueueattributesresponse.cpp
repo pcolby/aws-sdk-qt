@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::SetQueueAttributesResponse
  *
- * \brief The SetQueueAttributesResponse class encapsulates SQS SetQueueAttributes responses.
+ * \brief The SetQueueAttributesResponse class provides an interace for SQS SetQueueAttributes responses.
  *
  * \ingroup SQS
  *

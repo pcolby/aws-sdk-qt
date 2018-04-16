@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::DescribeAssessmentTemplatesRequest
  *
- * \brief The DescribeAssessmentTemplatesRequest class encapsulates Inspector DescribeAssessmentTemplates requests.
+ * \brief The DescribeAssessmentTemplatesRequest class provides an interface for Inspector DescribeAssessmentTemplates requests.
  *
  * \ingroup Inspector
  *

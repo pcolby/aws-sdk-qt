@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ListStackSetOperationsRequest
  *
- * \brief The ListStackSetOperationsRequest class encapsulates CloudFormation ListStackSetOperations requests.
+ * \brief The ListStackSetOperationsRequest class provides an interface for CloudFormation ListStackSetOperations requests.
  *
  * \ingroup CloudFormation
  *

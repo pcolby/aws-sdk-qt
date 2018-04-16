@@ -30,7 +30,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::UpdateReplicationJobResponse
  *
- * \brief The UpdateReplicationJobResponse class encapsulates SMS UpdateReplicationJob responses.
+ * \brief The UpdateReplicationJobResponse class provides an interace for SMS UpdateReplicationJob responses.
  *
  * \ingroup SMS
  *

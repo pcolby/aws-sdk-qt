@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateKeyPairResponse
  *
- * \brief The CreateKeyPairResponse class encapsulates EC2 CreateKeyPair responses.
+ * \brief The CreateKeyPairResponse class provides an interace for EC2 CreateKeyPair responses.
  *
  * \ingroup EC2
  *

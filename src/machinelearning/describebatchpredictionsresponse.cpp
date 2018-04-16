@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DescribeBatchPredictionsResponse
  *
- * \brief The DescribeBatchPredictionsResponse class encapsulates MachineLearning DescribeBatchPredictions responses.
+ * \brief The DescribeBatchPredictionsResponse class provides an interace for MachineLearning DescribeBatchPredictions responses.
  *
  * \ingroup MachineLearning
  *

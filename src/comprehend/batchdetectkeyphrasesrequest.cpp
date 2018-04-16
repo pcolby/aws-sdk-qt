@@ -28,7 +28,7 @@ namespace Comprehend {
 /*!
  * \class QtAws::Comprehend::BatchDetectKeyPhrasesRequest
  *
- * \brief The BatchDetectKeyPhrasesRequest class encapsulates Comprehend BatchDetectKeyPhrases requests.
+ * \brief The BatchDetectKeyPhrasesRequest class provides an interface for Comprehend BatchDetectKeyPhrases requests.
  *
  * \ingroup Comprehend
  *

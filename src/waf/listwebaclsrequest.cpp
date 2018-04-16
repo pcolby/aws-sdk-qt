@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::ListWebACLsRequest
  *
- * \brief The ListWebACLsRequest class encapsulates WAF ListWebACLs requests.
+ * \brief The ListWebACLsRequest class provides an interface for WAF ListWebACLs requests.
  *
  * \ingroup WAF
  *

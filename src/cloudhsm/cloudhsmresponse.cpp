@@ -29,7 +29,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::CloudHSMResponse
  *
- * \brief The CloudHSMResponse class is the base class for all CloudHSM responses.
+ * \brief The CloudHSMResponse class provides an interface for CloudHSM responses.
  *
  * \ingroup CloudHSM
  */

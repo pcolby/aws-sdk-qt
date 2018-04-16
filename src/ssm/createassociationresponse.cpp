@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CreateAssociationResponse
  *
- * \brief The CreateAssociationResponse class encapsulates SSM CreateAssociation responses.
+ * \brief The CreateAssociationResponse class provides an interace for SSM CreateAssociation responses.
  *
  * \ingroup SSM
  *

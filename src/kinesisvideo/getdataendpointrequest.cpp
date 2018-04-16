@@ -28,7 +28,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::GetDataEndpointRequest
  *
- * \brief The GetDataEndpointRequest class encapsulates KinesisVideo GetDataEndpoint requests.
+ * \brief The GetDataEndpointRequest class provides an interface for KinesisVideo GetDataEndpoint requests.
  *
  * \ingroup KinesisVideo
  *

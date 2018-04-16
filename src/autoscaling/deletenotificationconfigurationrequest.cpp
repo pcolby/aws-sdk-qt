@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DeleteNotificationConfigurationRequest
  *
- * \brief The DeleteNotificationConfigurationRequest class encapsulates AutoScaling DeleteNotificationConfiguration requests.
+ * \brief The DeleteNotificationConfigurationRequest class provides an interface for AutoScaling DeleteNotificationConfiguration requests.
  *
  * \ingroup AutoScaling
  *

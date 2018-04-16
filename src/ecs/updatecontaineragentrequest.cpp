@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::UpdateContainerAgentRequest
  *
- * \brief The UpdateContainerAgentRequest class encapsulates ECS UpdateContainerAgent requests.
+ * \brief The UpdateContainerAgentRequest class provides an interface for ECS UpdateContainerAgent requests.
  *
  * \ingroup ECS
  *

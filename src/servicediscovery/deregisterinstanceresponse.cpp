@@ -30,7 +30,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::DeregisterInstanceResponse
  *
- * \brief The DeregisterInstanceResponse class encapsulates ServiceDiscovery DeregisterInstance responses.
+ * \brief The DeregisterInstanceResponse class provides an interace for ServiceDiscovery DeregisterInstance responses.
  *
  * \ingroup ServiceDiscovery
  *

@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeIndexFieldsRequest
  *
- * \brief The DescribeIndexFieldsRequest class encapsulates CloudSearch DescribeIndexFields requests.
+ * \brief The DescribeIndexFieldsRequest class provides an interface for CloudSearch DescribeIndexFields requests.
  *
  * \ingroup CloudSearch
  *

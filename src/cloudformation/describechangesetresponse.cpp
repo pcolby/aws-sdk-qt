@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::DescribeChangeSetResponse
  *
- * \brief The DescribeChangeSetResponse class encapsulates CloudFormation DescribeChangeSet responses.
+ * \brief The DescribeChangeSetResponse class provides an interace for CloudFormation DescribeChangeSet responses.
  *
  * \ingroup CloudFormation
  *

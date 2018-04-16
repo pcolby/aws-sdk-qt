@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::CreateApplicationRequest
  *
- * \brief The CreateApplicationRequest class encapsulates CodeDeploy CreateApplication requests.
+ * \brief The CreateApplicationRequest class provides an interface for CodeDeploy CreateApplication requests.
  *
  * \ingroup CodeDeploy
  *

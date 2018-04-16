@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DescribeConfigurationAggregatorSourcesStatusRequest
  *
- * \brief The DescribeConfigurationAggregatorSourcesStatusRequest class encapsulates ConfigService DescribeConfigurationAggregatorSourcesStatus requests.
+ * \brief The DescribeConfigurationAggregatorSourcesStatusRequest class provides an interface for ConfigService DescribeConfigurationAggregatorSourcesStatus requests.
  *
  * \ingroup ConfigService
  *

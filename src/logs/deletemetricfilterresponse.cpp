@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DeleteMetricFilterResponse
  *
- * \brief The DeleteMetricFilterResponse class encapsulates CloudWatchLogs DeleteMetricFilter responses.
+ * \brief The DeleteMetricFilterResponse class provides an interace for CloudWatchLogs DeleteMetricFilter responses.
  *
  * \ingroup CloudWatchLogs
  *

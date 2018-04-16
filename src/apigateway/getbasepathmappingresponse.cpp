@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetBasePathMappingResponse
  *
- * \brief The GetBasePathMappingResponse class encapsulates APIGateway GetBasePathMapping responses.
+ * \brief The GetBasePathMappingResponse class provides an interace for APIGateway GetBasePathMapping responses.
  *
  * \ingroup APIGateway
  *

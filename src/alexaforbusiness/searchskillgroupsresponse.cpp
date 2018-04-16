@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::SearchSkillGroupsResponse
  *
- * \brief The SearchSkillGroupsResponse class encapsulates AlexaForBusiness SearchSkillGroups responses.
+ * \brief The SearchSkillGroupsResponse class provides an interace for AlexaForBusiness SearchSkillGroups responses.
  *
  * \ingroup AlexaForBusiness
  *

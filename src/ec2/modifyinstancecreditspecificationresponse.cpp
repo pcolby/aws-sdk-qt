@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyInstanceCreditSpecificationResponse
  *
- * \brief The ModifyInstanceCreditSpecificationResponse class encapsulates EC2 ModifyInstanceCreditSpecification responses.
+ * \brief The ModifyInstanceCreditSpecificationResponse class provides an interace for EC2 ModifyInstanceCreditSpecification responses.
  *
  * \ingroup EC2
  *

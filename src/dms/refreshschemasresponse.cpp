@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::RefreshSchemasResponse
  *
- * \brief The RefreshSchemasResponse class encapsulates DatabaseMigrationService RefreshSchemas responses.
+ * \brief The RefreshSchemasResponse class provides an interace for DatabaseMigrationService RefreshSchemas responses.
  *
  * \ingroup DatabaseMigrationService
  *

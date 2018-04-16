@@ -30,7 +30,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::DescribeElasticsearchDomainsResponse
  *
- * \brief The DescribeElasticsearchDomainsResponse class encapsulates ElasticsearchService DescribeElasticsearchDomains responses.
+ * \brief The DescribeElasticsearchDomainsResponse class provides an interace for ElasticsearchService DescribeElasticsearchDomains responses.
  *
  * \ingroup ElasticsearchService
  *

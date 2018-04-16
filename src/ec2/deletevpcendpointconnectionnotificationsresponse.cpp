@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteVpcEndpointConnectionNotificationsResponse
  *
- * \brief The DeleteVpcEndpointConnectionNotificationsResponse class encapsulates EC2 DeleteVpcEndpointConnectionNotifications responses.
+ * \brief The DeleteVpcEndpointConnectionNotificationsResponse class provides an interace for EC2 DeleteVpcEndpointConnectionNotifications responses.
  *
  * \ingroup EC2
  *

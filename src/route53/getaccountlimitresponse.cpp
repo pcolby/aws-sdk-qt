@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::GetAccountLimitResponse
  *
- * \brief The GetAccountLimitResponse class encapsulates Route53 GetAccountLimit responses.
+ * \brief The GetAccountLimitResponse class provides an interace for Route53 GetAccountLimit responses.
  *
  * \ingroup Route53
  *

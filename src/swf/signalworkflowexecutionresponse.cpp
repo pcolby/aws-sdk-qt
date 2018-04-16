@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::SignalWorkflowExecutionResponse
  *
- * \brief The SignalWorkflowExecutionResponse class encapsulates SWF SignalWorkflowExecution responses.
+ * \brief The SignalWorkflowExecutionResponse class provides an interace for SWF SignalWorkflowExecution responses.
  *
  * \ingroup SWF
  *

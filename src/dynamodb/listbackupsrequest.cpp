@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::ListBackupsRequest
  *
- * \brief The ListBackupsRequest class encapsulates DynamoDB ListBackups requests.
+ * \brief The ListBackupsRequest class provides an interface for DynamoDB ListBackups requests.
  *
  * \ingroup DynamoDB
  *

@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetConnectionsResponse
  *
- * \brief The GetConnectionsResponse class encapsulates Glue GetConnections responses.
+ * \brief The GetConnectionsResponse class provides an interace for Glue GetConnections responses.
  *
  * \ingroup Glue
  *

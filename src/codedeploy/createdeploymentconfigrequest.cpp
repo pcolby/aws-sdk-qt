@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::CreateDeploymentConfigRequest
  *
- * \brief The CreateDeploymentConfigRequest class encapsulates CodeDeploy CreateDeploymentConfig requests.
+ * \brief The CreateDeploymentConfigRequest class provides an interface for CodeDeploy CreateDeploymentConfig requests.
  *
  * \ingroup CodeDeploy
  *

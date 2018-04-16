@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeTableStatisticsRequest
  *
- * \brief The DescribeTableStatisticsRequest class encapsulates DatabaseMigrationService DescribeTableStatistics requests.
+ * \brief The DescribeTableStatisticsRequest class provides an interface for DatabaseMigrationService DescribeTableStatistics requests.
  *
  * \ingroup DatabaseMigrationService
  *

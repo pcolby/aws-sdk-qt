@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::SignUpRequest
  *
- * \brief The SignUpRequest class encapsulates CognitoIdentityProvider SignUp requests.
+ * \brief The SignUpRequest class provides an interface for CognitoIdentityProvider SignUp requests.
  *
  * \ingroup CognitoIdentityProvider
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DisassociateIamInstanceProfileRequest
  *
- * \brief The DisassociateIamInstanceProfileRequest class encapsulates EC2 DisassociateIamInstanceProfile requests.
+ * \brief The DisassociateIamInstanceProfileRequest class provides an interface for EC2 DisassociateIamInstanceProfile requests.
  *
  * \ingroup EC2
  *

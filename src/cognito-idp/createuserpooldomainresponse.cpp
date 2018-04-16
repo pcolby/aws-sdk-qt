@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::CreateUserPoolDomainResponse
  *
- * \brief The CreateUserPoolDomainResponse class encapsulates CognitoIdentityProvider CreateUserPoolDomain responses.
+ * \brief The CreateUserPoolDomainResponse class provides an interace for CognitoIdentityProvider CreateUserPoolDomain responses.
  *
  * \ingroup CognitoIdentityProvider
  *

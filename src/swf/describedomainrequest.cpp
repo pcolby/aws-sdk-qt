@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::DescribeDomainRequest
  *
- * \brief The DescribeDomainRequest class encapsulates SWF DescribeDomain requests.
+ * \brief The DescribeDomainRequest class provides an interface for SWF DescribeDomain requests.
  *
  * \ingroup SWF
  *

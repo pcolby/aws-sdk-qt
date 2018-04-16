@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::ListActivitiesResponse
  *
- * \brief The ListActivitiesResponse class encapsulates SFN ListActivities responses.
+ * \brief The ListActivitiesResponse class provides an interace for SFN ListActivities responses.
  *
  * \ingroup SFN
  *

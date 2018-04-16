@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateTrustRequest
  *
- * \brief The CreateTrustRequest class encapsulates DirectoryService CreateTrust requests.
+ * \brief The CreateTrustRequest class provides an interface for DirectoryService CreateTrust requests.
  *
  * \ingroup DirectoryService
  *

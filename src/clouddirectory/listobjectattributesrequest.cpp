@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListObjectAttributesRequest
  *
- * \brief The ListObjectAttributesRequest class encapsulates CloudDirectory ListObjectAttributes requests.
+ * \brief The ListObjectAttributesRequest class provides an interface for CloudDirectory ListObjectAttributes requests.
  *
  * \ingroup CloudDirectory
  *

@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeDBClustersRequest
  *
- * \brief The DescribeDBClustersRequest class encapsulates RDS DescribeDBClusters requests.
+ * \brief The DescribeDBClustersRequest class provides an interface for RDS DescribeDBClusters requests.
  *
  * \ingroup RDS
  *

@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::AssociateVirtualInterfaceRequest
  *
- * \brief The AssociateVirtualInterfaceRequest class encapsulates DirectConnect AssociateVirtualInterface requests.
+ * \brief The AssociateVirtualInterfaceRequest class provides an interface for DirectConnect AssociateVirtualInterface requests.
  *
  * \ingroup DirectConnect
  *

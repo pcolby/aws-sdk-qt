@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeInstancePatchesResponse
  *
- * \brief The DescribeInstancePatchesResponse class encapsulates SSM DescribeInstancePatches responses.
+ * \brief The DescribeInstancePatchesResponse class provides an interace for SSM DescribeInstancePatches responses.
  *
  * \ingroup SSM
  *

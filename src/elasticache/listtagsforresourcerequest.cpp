@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ListTagsForResourceRequest
  *
- * \brief The ListTagsForResourceRequest class encapsulates ElastiCache ListTagsForResource requests.
+ * \brief The ListTagsForResourceRequest class provides an interface for ElastiCache ListTagsForResource requests.
  *
  * \ingroup ElastiCache
  *

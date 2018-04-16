@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::RegisterEcsClusterResponse
  *
- * \brief The RegisterEcsClusterResponse class encapsulates OpsWorks RegisterEcsCluster responses.
+ * \brief The RegisterEcsClusterResponse class provides an interace for OpsWorks RegisterEcsCluster responses.
  *
  * \ingroup OpsWorks
  *

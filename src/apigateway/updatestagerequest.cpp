@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateStageRequest
  *
- * \brief The UpdateStageRequest class encapsulates APIGateway UpdateStage requests.
+ * \brief The UpdateStageRequest class provides an interface for APIGateway UpdateStage requests.
  *
  * \ingroup APIGateway
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ReleaseHostsRequest
  *
- * \brief The ReleaseHostsRequest class encapsulates EC2 ReleaseHosts requests.
+ * \brief The ReleaseHostsRequest class provides an interface for EC2 ReleaseHosts requests.
  *
  * \ingroup EC2
  *

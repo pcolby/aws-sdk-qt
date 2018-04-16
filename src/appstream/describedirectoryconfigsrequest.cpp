@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DescribeDirectoryConfigsRequest
  *
- * \brief The DescribeDirectoryConfigsRequest class encapsulates AppStream DescribeDirectoryConfigs requests.
+ * \brief The DescribeDirectoryConfigsRequest class provides an interface for AppStream DescribeDirectoryConfigs requests.
  *
  * \ingroup AppStream
  *

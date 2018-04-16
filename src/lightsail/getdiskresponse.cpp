@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetDiskResponse
  *
- * \brief The GetDiskResponse class encapsulates Lightsail GetDisk responses.
+ * \brief The GetDiskResponse class provides an interace for Lightsail GetDisk responses.
  *
  * \ingroup Lightsail
  *

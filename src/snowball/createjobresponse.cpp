@@ -30,7 +30,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::CreateJobResponse
  *
- * \brief The CreateJobResponse class encapsulates Snowball CreateJob responses.
+ * \brief The CreateJobResponse class provides an interace for Snowball CreateJob responses.
  *
  * \ingroup Snowball
  *

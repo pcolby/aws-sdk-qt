@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::AssociateElasticIpRequest
  *
- * \brief The AssociateElasticIpRequest class encapsulates OpsWorks AssociateElasticIp requests.
+ * \brief The AssociateElasticIpRequest class provides an interface for OpsWorks AssociateElasticIp requests.
  *
  * \ingroup OpsWorks
  *

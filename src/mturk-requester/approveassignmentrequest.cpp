@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ApproveAssignmentRequest
  *
- * \brief The ApproveAssignmentRequest class encapsulates MTurk ApproveAssignment requests.
+ * \brief The ApproveAssignmentRequest class provides an interface for MTurk ApproveAssignment requests.
  *
  * \ingroup MTurk
  *

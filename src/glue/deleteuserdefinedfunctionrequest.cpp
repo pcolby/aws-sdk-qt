@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteUserDefinedFunctionRequest
  *
- * \brief The DeleteUserDefinedFunctionRequest class encapsulates Glue DeleteUserDefinedFunction requests.
+ * \brief The DeleteUserDefinedFunctionRequest class provides an interface for Glue DeleteUserDefinedFunction requests.
  *
  * \ingroup Glue
  *

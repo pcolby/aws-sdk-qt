@@ -157,7 +157,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ServiceCatalogClient
  *
- * \brief The ServiceCatalogClient class provides access the AWS Service Catalog service.
+ * \brief The ServiceCatalogClient class provides access to the AWS Service Catalog service.
  *
  * \ingroup ServiceCatalog
  *

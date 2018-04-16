@@ -167,7 +167,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::PinpointClient
  *
- * \brief The PinpointClient class provides access the Amazon Pinpoint service.
+ * \brief The PinpointClient class provides access to the Amazon Pinpoint service.
  *
  * \ingroup Pinpoint
  *

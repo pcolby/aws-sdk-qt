@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DetachObjectRequest
  *
- * \brief The DetachObjectRequest class encapsulates CloudDirectory DetachObject requests.
+ * \brief The DetachObjectRequest class provides an interface for CloudDirectory DetachObject requests.
  *
  * \ingroup CloudDirectory
  *

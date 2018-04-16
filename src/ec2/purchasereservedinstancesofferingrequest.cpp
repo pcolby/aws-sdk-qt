@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::PurchaseReservedInstancesOfferingRequest
  *
- * \brief The PurchaseReservedInstancesOfferingRequest class encapsulates EC2 PurchaseReservedInstancesOffering requests.
+ * \brief The PurchaseReservedInstancesOfferingRequest class provides an interface for EC2 PurchaseReservedInstancesOffering requests.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetSampledRequestsResponse
  *
- * \brief The GetSampledRequestsResponse class encapsulates WAFRegional GetSampledRequests responses.
+ * \brief The GetSampledRequestsResponse class provides an interace for WAFRegional GetSampledRequests responses.
  *
  * \ingroup WAFRegional
  *

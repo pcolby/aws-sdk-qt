@@ -28,7 +28,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::GetQueryExecutionRequest
  *
- * \brief The GetQueryExecutionRequest class encapsulates Athena GetQueryExecution requests.
+ * \brief The GetQueryExecutionRequest class provides an interface for Athena GetQueryExecution requests.
  *
  * \ingroup Athena
  *

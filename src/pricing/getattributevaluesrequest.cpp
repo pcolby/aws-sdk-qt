@@ -28,7 +28,7 @@ namespace Pricing {
 /*!
  * \class QtAws::Pricing::GetAttributeValuesRequest
  *
- * \brief The GetAttributeValuesRequest class encapsulates Pricing GetAttributeValues requests.
+ * \brief The GetAttributeValuesRequest class provides an interface for Pricing GetAttributeValues requests.
  *
  * \ingroup Pricing
  *

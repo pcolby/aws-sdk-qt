@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketWebsiteResponse
  *
- * \brief The PutBucketWebsiteResponse class encapsulates S3 PutBucketWebsite responses.
+ * \brief The PutBucketWebsiteResponse class provides an interace for S3 PutBucketWebsite responses.
  *
  * \ingroup S3
  *

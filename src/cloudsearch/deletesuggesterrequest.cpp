@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DeleteSuggesterRequest
  *
- * \brief The DeleteSuggesterRequest class encapsulates CloudSearch DeleteSuggester requests.
+ * \brief The DeleteSuggesterRequest class provides an interface for CloudSearch DeleteSuggester requests.
  *
  * \ingroup CloudSearch
  *

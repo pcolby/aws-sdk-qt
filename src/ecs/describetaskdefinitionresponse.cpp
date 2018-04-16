@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DescribeTaskDefinitionResponse
  *
- * \brief The DescribeTaskDefinitionResponse class encapsulates ECS DescribeTaskDefinition responses.
+ * \brief The DescribeTaskDefinitionResponse class provides an interace for ECS DescribeTaskDefinition responses.
  *
  * \ingroup ECS
  *

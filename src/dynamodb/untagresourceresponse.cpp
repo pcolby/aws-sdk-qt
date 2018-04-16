@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::UntagResourceResponse
  *
- * \brief The UntagResourceResponse class encapsulates DynamoDB UntagResource responses.
+ * \brief The UntagResourceResponse class provides an interace for DynamoDB UntagResource responses.
  *
  * \ingroup DynamoDB
  *

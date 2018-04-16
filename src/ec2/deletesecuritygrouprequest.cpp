@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteSecurityGroupRequest
  *
- * \brief The DeleteSecurityGroupRequest class encapsulates EC2 DeleteSecurityGroup requests.
+ * \brief The DeleteSecurityGroupRequest class provides an interface for EC2 DeleteSecurityGroup requests.
  *
  * \ingroup EC2
  *

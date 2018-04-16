@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::UpdateFleetCapacityResponse
  *
- * \brief The UpdateFleetCapacityResponse class encapsulates GameLift UpdateFleetCapacity responses.
+ * \brief The UpdateFleetCapacityResponse class provides an interace for GameLift UpdateFleetCapacity responses.
  *
  * \ingroup GameLift
  *

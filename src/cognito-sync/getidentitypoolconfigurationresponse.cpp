@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::GetIdentityPoolConfigurationResponse
  *
- * \brief The GetIdentityPoolConfigurationResponse class encapsulates CognitoSync GetIdentityPoolConfiguration responses.
+ * \brief The GetIdentityPoolConfigurationResponse class provides an interace for CognitoSync GetIdentityPoolConfiguration responses.
  *
  * \ingroup CognitoSync
  *

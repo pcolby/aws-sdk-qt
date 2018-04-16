@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListGroupsRequest
  *
- * \brief The ListGroupsRequest class encapsulates IAM ListGroups requests.
+ * \brief The ListGroupsRequest class provides an interface for IAM ListGroups requests.
  *
  * \ingroup IAM
  *

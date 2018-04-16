@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateDeviceStatusRequest
  *
- * \brief The UpdateDeviceStatusRequest class encapsulates CognitoIdentityProvider UpdateDeviceStatus requests.
+ * \brief The UpdateDeviceStatusRequest class provides an interface for CognitoIdentityProvider UpdateDeviceStatus requests.
  *
  * \ingroup CognitoIdentityProvider
  *

@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DeleteReplicationInstanceRequest
  *
- * \brief The DeleteReplicationInstanceRequest class encapsulates DatabaseMigrationService DeleteReplicationInstance requests.
+ * \brief The DeleteReplicationInstanceRequest class provides an interface for DatabaseMigrationService DeleteReplicationInstance requests.
  *
  * \ingroup DatabaseMigrationService
  *

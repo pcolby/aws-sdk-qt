@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetBaiduChannelResponse
  *
- * \brief The GetBaiduChannelResponse class encapsulates Pinpoint GetBaiduChannel responses.
+ * \brief The GetBaiduChannelResponse class provides an interace for Pinpoint GetBaiduChannel responses.
  *
  * \ingroup Pinpoint
  *

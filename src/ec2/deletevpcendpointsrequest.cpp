@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteVpcEndpointsRequest
  *
- * \brief The DeleteVpcEndpointsRequest class encapsulates EC2 DeleteVpcEndpoints requests.
+ * \brief The DeleteVpcEndpointsRequest class provides an interface for EC2 DeleteVpcEndpoints requests.
  *
  * \ingroup EC2
  *

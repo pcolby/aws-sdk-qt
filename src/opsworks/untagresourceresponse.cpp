@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UntagResourceResponse
  *
- * \brief The UntagResourceResponse class encapsulates OpsWorks UntagResource responses.
+ * \brief The UntagResourceResponse class provides an interace for OpsWorks UntagResource responses.
  *
  * \ingroup OpsWorks
  *

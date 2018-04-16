@@ -29,7 +29,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::CloudWatchLogsResponse
  *
- * \brief The CloudWatchLogsResponse class is the base class for all CloudWatchLogs responses.
+ * \brief The CloudWatchLogsResponse class provides an interface for CloudWatchLogs responses.
  *
  * \ingroup CloudWatchLogs
  */

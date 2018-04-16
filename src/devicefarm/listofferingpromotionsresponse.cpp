@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListOfferingPromotionsResponse
  *
- * \brief The ListOfferingPromotionsResponse class encapsulates DeviceFarm ListOfferingPromotions responses.
+ * \brief The ListOfferingPromotionsResponse class provides an interace for DeviceFarm ListOfferingPromotions responses.
  *
  * \ingroup DeviceFarm
  *

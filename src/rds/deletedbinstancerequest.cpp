@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DeleteDBInstanceRequest
  *
- * \brief The DeleteDBInstanceRequest class encapsulates RDS DeleteDBInstance requests.
+ * \brief The DeleteDBInstanceRequest class provides an interface for RDS DeleteDBInstance requests.
  *
  * \ingroup RDS
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeletePlacementGroupRequest
  *
- * \brief The DeletePlacementGroupRequest class encapsulates EC2 DeletePlacementGroup requests.
+ * \brief The DeletePlacementGroupRequest class provides an interface for EC2 DeletePlacementGroup requests.
  *
  * \ingroup EC2
  *

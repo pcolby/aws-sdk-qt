@@ -26,7 +26,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::CloudWatchEventsRequest
  *
- * \brief The CloudWatchEventsRequest class is the base class for all CloudWatchEvents requests.
+ * \brief The CloudWatchEventsRequest class provides an interface for CloudWatchEvents requests.
  *
  * \ingroup CloudWatchEvents
  */

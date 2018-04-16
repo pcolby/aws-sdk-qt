@@ -29,7 +29,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::ServerlessApplicationRepositoryResponse
  *
- * \brief The ServerlessApplicationRepositoryResponse class is the base class for all ServerlessApplicationRepository responses.
+ * \brief The ServerlessApplicationRepositoryResponse class provides an interface for ServerlessApplicationRepository responses.
  *
  * \ingroup ServerlessApplicationRepository
  */

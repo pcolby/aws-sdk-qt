@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeUserProfilesRequest
  *
- * \brief The DescribeUserProfilesRequest class encapsulates OpsWorks DescribeUserProfiles requests.
+ * \brief The DescribeUserProfilesRequest class provides an interface for OpsWorks DescribeUserProfiles requests.
  *
  * \ingroup OpsWorks
  *

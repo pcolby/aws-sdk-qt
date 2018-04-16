@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifySnapshotAttributeResponse
  *
- * \brief The ModifySnapshotAttributeResponse class encapsulates EC2 ModifySnapshotAttribute responses.
+ * \brief The ModifySnapshotAttributeResponse class provides an interace for EC2 ModifySnapshotAttribute responses.
  *
  * \ingroup EC2
  *

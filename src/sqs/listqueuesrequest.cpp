@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::ListQueuesRequest
  *
- * \brief The ListQueuesRequest class encapsulates SQS ListQueues requests.
+ * \brief The ListQueuesRequest class provides an interface for SQS ListQueues requests.
  *
  * \ingroup SQS
  *

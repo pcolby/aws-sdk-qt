@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::CreateBrokerResponse
  *
- * \brief The CreateBrokerResponse class encapsulates MQ CreateBroker responses.
+ * \brief The CreateBrokerResponse class provides an interace for MQ CreateBroker responses.
  *
  * \ingroup MQ
  *

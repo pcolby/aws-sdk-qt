@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteThingGroupRequest
  *
- * \brief The DeleteThingGroupRequest class encapsulates IoT DeleteThingGroup requests.
+ * \brief The DeleteThingGroupRequest class provides an interface for IoT DeleteThingGroup requests.
  *
  * \ingroup IoT
  *

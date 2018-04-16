@@ -28,7 +28,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::ImportCertificateAuthorityCertificateRequest
  *
- * \brief The ImportCertificateAuthorityCertificateRequest class encapsulates ACMPCA ImportCertificateAuthorityCertificate requests.
+ * \brief The ImportCertificateAuthorityCertificateRequest class provides an interface for ACMPCA ImportCertificateAuthorityCertificate requests.
  *
  * \ingroup ACMPCA
  *

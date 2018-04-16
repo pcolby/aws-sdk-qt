@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeDocumentResponse
  *
- * \brief The DescribeDocumentResponse class encapsulates SSM DescribeDocument responses.
+ * \brief The DescribeDocumentResponse class provides an interace for SSM DescribeDocument responses.
  *
  * \ingroup SSM
  *

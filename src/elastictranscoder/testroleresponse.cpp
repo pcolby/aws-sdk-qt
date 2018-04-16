@@ -30,7 +30,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::TestRoleResponse
  *
- * \brief The TestRoleResponse class encapsulates ElasticTranscoder TestRole responses.
+ * \brief The TestRoleResponse class provides an interace for ElasticTranscoder TestRole responses.
  *
  * \ingroup ElasticTranscoder
  *

@@ -30,7 +30,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::UpdateApplicationResponse
  *
- * \brief The UpdateApplicationResponse class encapsulates ApplicationDiscoveryService UpdateApplication responses.
+ * \brief The UpdateApplicationResponse class provides an interace for ApplicationDiscoveryService UpdateApplication responses.
  *
  * \ingroup ApplicationDiscoveryService
  *

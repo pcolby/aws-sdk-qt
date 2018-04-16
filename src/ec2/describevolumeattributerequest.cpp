@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVolumeAttributeRequest
  *
- * \brief The DescribeVolumeAttributeRequest class encapsulates EC2 DescribeVolumeAttribute requests.
+ * \brief The DescribeVolumeAttributeRequest class provides an interface for EC2 DescribeVolumeAttribute requests.
  *
  * \ingroup EC2
  *

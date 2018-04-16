@@ -26,7 +26,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RDSRequest
  *
- * \brief The RDSRequest class is the base class for all RDS requests.
+ * \brief The RDSRequest class provides an interface for RDS requests.
  *
  * \ingroup RDS
  */

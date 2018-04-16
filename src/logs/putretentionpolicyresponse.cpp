@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::PutRetentionPolicyResponse
  *
- * \brief The PutRetentionPolicyResponse class encapsulates CloudWatchLogs PutRetentionPolicy responses.
+ * \brief The PutRetentionPolicyResponse class provides an interace for CloudWatchLogs PutRetentionPolicy responses.
  *
  * \ingroup CloudWatchLogs
  *

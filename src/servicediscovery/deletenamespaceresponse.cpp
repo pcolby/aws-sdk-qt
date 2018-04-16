@@ -30,7 +30,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::DeleteNamespaceResponse
  *
- * \brief The DeleteNamespaceResponse class encapsulates ServiceDiscovery DeleteNamespace responses.
+ * \brief The DeleteNamespaceResponse class provides an interace for ServiceDiscovery DeleteNamespace responses.
  *
  * \ingroup ServiceDiscovery
  *

@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeDocumentVersionsRequest
  *
- * \brief The DescribeDocumentVersionsRequest class encapsulates WorkDocs DescribeDocumentVersions requests.
+ * \brief The DescribeDocumentVersionsRequest class provides an interface for WorkDocs DescribeDocumentVersions requests.
  *
  * \ingroup WorkDocs
  *

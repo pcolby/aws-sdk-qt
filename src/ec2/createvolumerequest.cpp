@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateVolumeRequest
  *
- * \brief The CreateVolumeRequest class encapsulates EC2 CreateVolume requests.
+ * \brief The CreateVolumeRequest class provides an interface for EC2 CreateVolume requests.
  *
  * \ingroup EC2
  *

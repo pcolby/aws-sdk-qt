@@ -30,7 +30,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::CreateApplicationResponse
  *
- * \brief The CreateApplicationResponse class encapsulates KinesisAnalytics CreateApplication responses.
+ * \brief The CreateApplicationResponse class provides an interace for KinesisAnalytics CreateApplication responses.
  *
  * \ingroup KinesisAnalytics
  *

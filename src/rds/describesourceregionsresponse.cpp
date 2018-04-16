@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeSourceRegionsResponse
  *
- * \brief The DescribeSourceRegionsResponse class encapsulates RDS DescribeSourceRegions responses.
+ * \brief The DescribeSourceRegionsResponse class provides an interace for RDS DescribeSourceRegions responses.
  *
  * \ingroup RDS
  *

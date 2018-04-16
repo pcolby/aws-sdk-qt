@@ -30,7 +30,7 @@ namespace IoTJobsDataPlane {
 /*!
  * \class QtAws::IoTJobsDataPlane::GetPendingJobExecutionsResponse
  *
- * \brief The GetPendingJobExecutionsResponse class encapsulates IoTJobsDataPlane GetPendingJobExecutions responses.
+ * \brief The GetPendingJobExecutionsResponse class provides an interace for IoTJobsDataPlane GetPendingJobExecutions responses.
  *
  * \ingroup IoTJobsDataPlane
  *

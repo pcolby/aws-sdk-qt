@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::DescribeResourceServerResponse
  *
- * \brief The DescribeResourceServerResponse class encapsulates CognitoIdentityProvider DescribeResourceServer responses.
+ * \brief The DescribeResourceServerResponse class provides an interace for CognitoIdentityProvider DescribeResourceServer responses.
  *
  * \ingroup CognitoIdentityProvider
  *

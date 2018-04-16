@@ -28,7 +28,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::CreateCertificateAuthorityAuditReportRequest
  *
- * \brief The CreateCertificateAuthorityAuditReportRequest class encapsulates ACMPCA CreateCertificateAuthorityAuditReport requests.
+ * \brief The CreateCertificateAuthorityAuditReportRequest class provides an interface for ACMPCA CreateCertificateAuthorityAuditReport requests.
  *
  * \ingroup ACMPCA
  *

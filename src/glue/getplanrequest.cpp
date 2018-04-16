@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetPlanRequest
  *
- * \brief The GetPlanRequest class encapsulates Glue GetPlan requests.
+ * \brief The GetPlanRequest class provides an interface for Glue GetPlan requests.
  *
  * \ingroup Glue
  *

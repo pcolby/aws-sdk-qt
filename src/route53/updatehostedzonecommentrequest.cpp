@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::UpdateHostedZoneCommentRequest
  *
- * \brief The UpdateHostedZoneCommentRequest class encapsulates Route53 UpdateHostedZoneComment requests.
+ * \brief The UpdateHostedZoneCommentRequest class provides an interface for Route53 UpdateHostedZoneComment requests.
  *
  * \ingroup Route53
  *

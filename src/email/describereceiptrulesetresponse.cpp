@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DescribeReceiptRuleSetResponse
  *
- * \brief The DescribeReceiptRuleSetResponse class encapsulates SES DescribeReceiptRuleSet responses.
+ * \brief The DescribeReceiptRuleSetResponse class provides an interace for SES DescribeReceiptRuleSet responses.
  *
  * \ingroup SES
  *

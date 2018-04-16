@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::SetQueueAttributesRequest
  *
- * \brief The SetQueueAttributesRequest class encapsulates SQS SetQueueAttributes requests.
+ * \brief The SetQueueAttributesRequest class provides an interface for SQS SetQueueAttributes requests.
  *
  * \ingroup SQS
  *

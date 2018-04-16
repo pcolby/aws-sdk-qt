@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::ListProjectsRequest
  *
- * \brief The ListProjectsRequest class encapsulates CodeStar ListProjects requests.
+ * \brief The ListProjectsRequest class provides an interface for CodeStar ListProjects requests.
  *
  * \ingroup CodeStar
  *

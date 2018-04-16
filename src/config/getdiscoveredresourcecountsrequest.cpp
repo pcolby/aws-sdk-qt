@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::GetDiscoveredResourceCountsRequest
  *
- * \brief The GetDiscoveredResourceCountsRequest class encapsulates ConfigService GetDiscoveredResourceCounts requests.
+ * \brief The GetDiscoveredResourceCountsRequest class provides an interface for ConfigService GetDiscoveredResourceCounts requests.
  *
  * \ingroup ConfigService
  *

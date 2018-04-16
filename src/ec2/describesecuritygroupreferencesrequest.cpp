@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeSecurityGroupReferencesRequest
  *
- * \brief The DescribeSecurityGroupReferencesRequest class encapsulates EC2 DescribeSecurityGroupReferences requests.
+ * \brief The DescribeSecurityGroupReferencesRequest class provides an interface for EC2 DescribeSecurityGroupReferences requests.
  *
  * \ingroup EC2
  *

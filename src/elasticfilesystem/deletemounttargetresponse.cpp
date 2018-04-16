@@ -30,7 +30,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::DeleteMountTargetResponse
  *
- * \brief The DeleteMountTargetResponse class encapsulates EFS DeleteMountTarget responses.
+ * \brief The DeleteMountTargetResponse class provides an interace for EFS DeleteMountTarget responses.
  *
  * \ingroup EFS
  *

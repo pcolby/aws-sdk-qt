@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::DisableRuleRequest
  *
- * \brief The DisableRuleRequest class encapsulates CloudWatchEvents DisableRule requests.
+ * \brief The DisableRuleRequest class provides an interface for CloudWatchEvents DisableRule requests.
  *
  * \ingroup CloudWatchEvents
  *

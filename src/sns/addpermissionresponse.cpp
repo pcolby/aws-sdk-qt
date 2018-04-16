@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::AddPermissionResponse
  *
- * \brief The AddPermissionResponse class encapsulates SNS AddPermission responses.
+ * \brief The AddPermissionResponse class provides an interace for SNS AddPermission responses.
  *
  * \ingroup SNS
  *

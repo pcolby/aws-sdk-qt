@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::GetPublicKeyConfigResponse
  *
- * \brief The GetPublicKeyConfigResponse class encapsulates CloudFront GetPublicKeyConfig responses.
+ * \brief The GetPublicKeyConfigResponse class provides an interace for CloudFront GetPublicKeyConfig responses.
  *
  * \ingroup CloudFront
  *

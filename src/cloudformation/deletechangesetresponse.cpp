@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::DeleteChangeSetResponse
  *
- * \brief The DeleteChangeSetResponse class encapsulates CloudFormation DeleteChangeSet responses.
+ * \brief The DeleteChangeSetResponse class provides an interace for CloudFormation DeleteChangeSet responses.
  *
  * \ingroup CloudFormation
  *

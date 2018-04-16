@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DownloadDBLogFilePortionRequest
  *
- * \brief The DownloadDBLogFilePortionRequest class encapsulates RDS DownloadDBLogFilePortion requests.
+ * \brief The DownloadDBLogFilePortionRequest class provides an interface for RDS DownloadDBLogFilePortion requests.
  *
  * \ingroup RDS
  *

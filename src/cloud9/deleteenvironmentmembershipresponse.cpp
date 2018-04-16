@@ -30,7 +30,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::DeleteEnvironmentMembershipResponse
  *
- * \brief The DeleteEnvironmentMembershipResponse class encapsulates Cloud9 DeleteEnvironmentMembership responses.
+ * \brief The DeleteEnvironmentMembershipResponse class provides an interace for Cloud9 DeleteEnvironmentMembership responses.
  *
  * \ingroup Cloud9
  *

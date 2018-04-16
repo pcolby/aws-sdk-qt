@@ -69,7 +69,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::CodeBuildClient
  *
- * \brief The CodeBuildClient class provides access the AWS CodeBuild service.
+ * \brief The CodeBuildClient class provides access to the AWS CodeBuild service.
  *
  * \ingroup CodeBuild
  *

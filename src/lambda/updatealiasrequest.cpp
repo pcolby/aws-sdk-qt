@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::UpdateAliasRequest
  *
- * \brief The UpdateAliasRequest class encapsulates Lambda UpdateAlias requests.
+ * \brief The UpdateAliasRequest class provides an interface for Lambda UpdateAlias requests.
  *
  * \ingroup Lambda
  *

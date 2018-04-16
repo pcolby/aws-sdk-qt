@@ -30,7 +30,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::UpdateSecretVersionStageResponse
  *
- * \brief The UpdateSecretVersionStageResponse class encapsulates SecretsManager UpdateSecretVersionStage responses.
+ * \brief The UpdateSecretVersionStageResponse class provides an interace for SecretsManager UpdateSecretVersionStage responses.
  *
  * \ingroup SecretsManager
  *

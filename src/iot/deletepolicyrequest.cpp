@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeletePolicyRequest
  *
- * \brief The DeletePolicyRequest class encapsulates IoT DeletePolicy requests.
+ * \brief The DeletePolicyRequest class provides an interface for IoT DeletePolicy requests.
  *
  * \ingroup IoT
  *

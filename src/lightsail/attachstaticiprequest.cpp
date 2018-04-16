@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::AttachStaticIpRequest
  *
- * \brief The AttachStaticIpRequest class encapsulates Lightsail AttachStaticIp requests.
+ * \brief The AttachStaticIpRequest class provides an interface for Lightsail AttachStaticIp requests.
  *
  * \ingroup Lightsail
  *

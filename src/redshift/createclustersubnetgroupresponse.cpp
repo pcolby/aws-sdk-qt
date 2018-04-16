@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::CreateClusterSubnetGroupResponse
  *
- * \brief The CreateClusterSubnetGroupResponse class encapsulates Redshift CreateClusterSubnetGroup responses.
+ * \brief The CreateClusterSubnetGroupResponse class provides an interace for Redshift CreateClusterSubnetGroup responses.
  *
  * \ingroup Redshift
  *

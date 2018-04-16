@@ -30,7 +30,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::DescribeJobResponse
  *
- * \brief The DescribeJobResponse class encapsulates Snowball DescribeJob responses.
+ * \brief The DescribeJobResponse class provides an interace for Snowball DescribeJob responses.
  *
  * \ingroup Snowball
  *

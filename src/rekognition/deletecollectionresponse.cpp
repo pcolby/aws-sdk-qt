@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::DeleteCollectionResponse
  *
- * \brief The DeleteCollectionResponse class encapsulates Rekognition DeleteCollection responses.
+ * \brief The DeleteCollectionResponse class provides an interace for Rekognition DeleteCollection responses.
  *
  * \ingroup Rekognition
  *

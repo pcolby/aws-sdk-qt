@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::RebootNodeRequest
  *
- * \brief The RebootNodeRequest class encapsulates DAX RebootNode requests.
+ * \brief The RebootNodeRequest class provides an interface for DAX RebootNode requests.
  *
  * \ingroup DAX
  *

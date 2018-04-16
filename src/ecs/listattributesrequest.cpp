@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::ListAttributesRequest
  *
- * \brief The ListAttributesRequest class encapsulates ECS ListAttributes requests.
+ * \brief The ListAttributesRequest class provides an interface for ECS ListAttributes requests.
  *
  * \ingroup ECS
  *

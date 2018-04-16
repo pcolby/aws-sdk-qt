@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::DeleteDeviceDefinitionRequest
  *
- * \brief The DeleteDeviceDefinitionRequest class encapsulates Greengrass DeleteDeviceDefinition requests.
+ * \brief The DeleteDeviceDefinitionRequest class provides an interface for Greengrass DeleteDeviceDefinition requests.
  *
  * \ingroup Greengrass
  *

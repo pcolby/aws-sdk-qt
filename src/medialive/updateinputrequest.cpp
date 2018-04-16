@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::UpdateInputRequest
  *
- * \brief The UpdateInputRequest class encapsulates MediaLive UpdateInput requests.
+ * \brief The UpdateInputRequest class provides an interface for MediaLive UpdateInput requests.
  *
  * \ingroup MediaLive
  *

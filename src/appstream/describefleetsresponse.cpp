@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DescribeFleetsResponse
  *
- * \brief The DescribeFleetsResponse class encapsulates AppStream DescribeFleets responses.
+ * \brief The DescribeFleetsResponse class provides an interace for AppStream DescribeFleets responses.
  *
  * \ingroup AppStream
  *

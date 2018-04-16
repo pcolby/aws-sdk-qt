@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::DeleteContactRequest
  *
- * \brief The DeleteContactRequest class encapsulates AlexaForBusiness DeleteContact requests.
+ * \brief The DeleteContactRequest class provides an interface for AlexaForBusiness DeleteContact requests.
  *
  * \ingroup AlexaForBusiness
  *

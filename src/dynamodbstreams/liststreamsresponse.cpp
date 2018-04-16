@@ -30,7 +30,7 @@ namespace DynamoDBStreams {
 /*!
  * \class QtAws::DynamoDBStreams::ListStreamsResponse
  *
- * \brief The ListStreamsResponse class encapsulates DynamoDBStreams ListStreams responses.
+ * \brief The ListStreamsResponse class provides an interace for DynamoDBStreams ListStreams responses.
  *
  * \ingroup DynamoDBStreams
  *

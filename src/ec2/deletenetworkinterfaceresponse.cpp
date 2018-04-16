@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteNetworkInterfaceResponse
  *
- * \brief The DeleteNetworkInterfaceResponse class encapsulates EC2 DeleteNetworkInterface responses.
+ * \brief The DeleteNetworkInterfaceResponse class provides an interace for EC2 DeleteNetworkInterface responses.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::GenerateDataKeyWithoutPlaintextRequest
  *
- * \brief The GenerateDataKeyWithoutPlaintextRequest class encapsulates KMS GenerateDataKeyWithoutPlaintext requests.
+ * \brief The GenerateDataKeyWithoutPlaintextRequest class provides an interface for KMS GenerateDataKeyWithoutPlaintext requests.
  *
  * \ingroup KMS
  *

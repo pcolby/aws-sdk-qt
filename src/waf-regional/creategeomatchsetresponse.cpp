@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::CreateGeoMatchSetResponse
  *
- * \brief The CreateGeoMatchSetResponse class encapsulates WAFRegional CreateGeoMatchSet responses.
+ * \brief The CreateGeoMatchSetResponse class provides an interace for WAFRegional CreateGeoMatchSet responses.
  *
  * \ingroup WAFRegional
  *

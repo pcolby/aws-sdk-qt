@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteGcmChannelRequest
  *
- * \brief The DeleteGcmChannelRequest class encapsulates Pinpoint DeleteGcmChannel requests.
+ * \brief The DeleteGcmChannelRequest class provides an interface for Pinpoint DeleteGcmChannel requests.
  *
  * \ingroup Pinpoint
  *

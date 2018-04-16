@@ -28,17 +28,17 @@ namespace Core {
 /*!
  * \class QtAws::Core::AwsRegion
  *
- * @brief  Provides AWS region information.
+ * \brief The AwsRegion class provides information about AWS regions.
  *
  * Basic usage example:
- * @code
+ * \code
  * const AwsRegion region(AwsRegion::AP_Northeast_1);
  * region.name();          // "ap-northeast-1"
  * region.fullName();      // "Asia Pacific (Tokyo) Region"
  * region.hostName("iam"); // "iam.amazonaws.com"
- * @endcode
+ * \endcode
  *
- * @see    http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
+ * \sa http://docs.aws.amazon.com/general/latest/gr/signature-version-4.html
  */
 
 /*!

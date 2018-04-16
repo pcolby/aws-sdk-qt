@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::CreateDomainResponse
  *
- * \brief The CreateDomainResponse class encapsulates CloudSearch CreateDomain responses.
+ * \brief The CreateDomainResponse class provides an interace for CloudSearch CreateDomain responses.
  *
  * \ingroup CloudSearch
  *

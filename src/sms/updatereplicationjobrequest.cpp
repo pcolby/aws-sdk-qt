@@ -28,7 +28,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::UpdateReplicationJobRequest
  *
- * \brief The UpdateReplicationJobRequest class encapsulates SMS UpdateReplicationJob requests.
+ * \brief The UpdateReplicationJobRequest class provides an interface for SMS UpdateReplicationJob requests.
  *
  * \ingroup SMS
  *

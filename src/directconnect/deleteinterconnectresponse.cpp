@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DeleteInterconnectResponse
  *
- * \brief The DeleteInterconnectResponse class encapsulates DirectConnect DeleteInterconnect responses.
+ * \brief The DeleteInterconnectResponse class provides an interace for DirectConnect DeleteInterconnect responses.
  *
  * \ingroup DirectConnect
  *

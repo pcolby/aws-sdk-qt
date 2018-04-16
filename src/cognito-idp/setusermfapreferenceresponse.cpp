@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::SetUserMFAPreferenceResponse
  *
- * \brief The SetUserMFAPreferenceResponse class encapsulates CognitoIdentityProvider SetUserMFAPreference responses.
+ * \brief The SetUserMFAPreferenceResponse class provides an interace for CognitoIdentityProvider SetUserMFAPreference responses.
  *
  * \ingroup CognitoIdentityProvider
  *

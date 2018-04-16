@@ -30,7 +30,7 @@ namespace AutoScalingPlans {
 /*!
  * \class QtAws::AutoScalingPlans::CreateScalingPlanResponse
  *
- * \brief The CreateScalingPlanResponse class encapsulates AutoScalingPlans CreateScalingPlan responses.
+ * \brief The CreateScalingPlanResponse class provides an interace for AutoScalingPlans CreateScalingPlan responses.
  *
  * \ingroup AutoScalingPlans
  *

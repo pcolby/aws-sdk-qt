@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::DescribeUserProfileRequest
  *
- * \brief The DescribeUserProfileRequest class encapsulates CodeStar DescribeUserProfile requests.
+ * \brief The DescribeUserProfileRequest class provides an interface for CodeStar DescribeUserProfile requests.
  *
  * \ingroup CodeStar
  *

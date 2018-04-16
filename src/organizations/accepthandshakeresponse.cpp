@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::AcceptHandshakeResponse
  *
- * \brief The AcceptHandshakeResponse class encapsulates Organizations AcceptHandshake responses.
+ * \brief The AcceptHandshakeResponse class provides an interace for Organizations AcceptHandshake responses.
  *
  * \ingroup Organizations
  *

@@ -26,7 +26,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::CodeBuildRequest
  *
- * \brief The CodeBuildRequest class is the base class for all CodeBuild requests.
+ * \brief The CodeBuildRequest class provides an interface for CodeBuild requests.
  *
  * \ingroup CodeBuild
  */

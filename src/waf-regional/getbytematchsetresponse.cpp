@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetByteMatchSetResponse
  *
- * \brief The GetByteMatchSetResponse class encapsulates WAFRegional GetByteMatchSet responses.
+ * \brief The GetByteMatchSetResponse class provides an interace for WAFRegional GetByteMatchSet responses.
  *
  * \ingroup WAFRegional
  *

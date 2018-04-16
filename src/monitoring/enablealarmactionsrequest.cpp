@@ -28,7 +28,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::EnableAlarmActionsRequest
  *
- * \brief The EnableAlarmActionsRequest class encapsulates CloudWatch EnableAlarmActions requests.
+ * \brief The EnableAlarmActionsRequest class provides an interface for CloudWatch EnableAlarmActions requests.
  *
  * \ingroup CloudWatch
  *

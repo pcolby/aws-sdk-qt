@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeOrderableClusterOptionsResponse
  *
- * \brief The DescribeOrderableClusterOptionsResponse class encapsulates Redshift DescribeOrderableClusterOptions responses.
+ * \brief The DescribeOrderableClusterOptionsResponse class provides an interace for Redshift DescribeOrderableClusterOptions responses.
  *
  * \ingroup Redshift
  *

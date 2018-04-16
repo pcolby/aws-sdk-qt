@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::BatchGetImageResponse
  *
- * \brief The BatchGetImageResponse class encapsulates ECR BatchGetImage responses.
+ * \brief The BatchGetImageResponse class provides an interace for ECR BatchGetImage responses.
  *
  * \ingroup ECR
  *

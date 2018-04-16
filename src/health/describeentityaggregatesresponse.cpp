@@ -30,7 +30,7 @@ namespace Health {
 /*!
  * \class QtAws::Health::DescribeEntityAggregatesResponse
  *
- * \brief The DescribeEntityAggregatesResponse class encapsulates Health DescribeEntityAggregates responses.
+ * \brief The DescribeEntityAggregatesResponse class provides an interace for Health DescribeEntityAggregates responses.
  *
  * \ingroup Health
  *

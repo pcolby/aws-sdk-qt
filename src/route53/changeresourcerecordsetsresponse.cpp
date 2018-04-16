@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ChangeResourceRecordSetsResponse
  *
- * \brief The ChangeResourceRecordSetsResponse class encapsulates Route53 ChangeResourceRecordSets responses.
+ * \brief The ChangeResourceRecordSetsResponse class provides an interace for Route53 ChangeResourceRecordSets responses.
  *
  * \ingroup Route53
  *

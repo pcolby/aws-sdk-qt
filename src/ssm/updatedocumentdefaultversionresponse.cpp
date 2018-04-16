@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::UpdateDocumentDefaultVersionResponse
  *
- * \brief The UpdateDocumentDefaultVersionResponse class encapsulates SSM UpdateDocumentDefaultVersion responses.
+ * \brief The UpdateDocumentDefaultVersionResponse class provides an interace for SSM UpdateDocumentDefaultVersion responses.
  *
  * \ingroup SSM
  *

@@ -30,7 +30,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::StopWorkspacesResponse
  *
- * \brief The StopWorkspacesResponse class encapsulates WorkSpaces StopWorkspaces responses.
+ * \brief The StopWorkspacesResponse class provides an interace for WorkSpaces StopWorkspaces responses.
  *
  * \ingroup WorkSpaces
  *

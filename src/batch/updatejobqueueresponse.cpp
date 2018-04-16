@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::UpdateJobQueueResponse
  *
- * \brief The UpdateJobQueueResponse class encapsulates Batch UpdateJobQueue responses.
+ * \brief The UpdateJobQueueResponse class provides an interace for Batch UpdateJobQueue responses.
  *
  * \ingroup Batch
  *

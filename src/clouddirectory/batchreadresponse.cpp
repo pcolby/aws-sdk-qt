@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::BatchReadResponse
  *
- * \brief The BatchReadResponse class encapsulates CloudDirectory BatchRead responses.
+ * \brief The BatchReadResponse class provides an interace for CloudDirectory BatchRead responses.
  *
  * \ingroup CloudDirectory
  *

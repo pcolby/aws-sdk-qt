@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::StartTriggerResponse
  *
- * \brief The StartTriggerResponse class encapsulates Glue StartTrigger responses.
+ * \brief The StartTriggerResponse class provides an interace for Glue StartTrigger responses.
  *
  * \ingroup Glue
  *

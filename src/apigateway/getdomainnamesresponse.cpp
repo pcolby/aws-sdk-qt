@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetDomainNamesResponse
  *
- * \brief The GetDomainNamesResponse class encapsulates APIGateway GetDomainNames responses.
+ * \brief The GetDomainNamesResponse class provides an interace for APIGateway GetDomainNames responses.
  *
  * \ingroup APIGateway
  *

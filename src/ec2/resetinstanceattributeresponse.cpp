@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ResetInstanceAttributeResponse
  *
- * \brief The ResetInstanceAttributeResponse class encapsulates EC2 ResetInstanceAttribute responses.
+ * \brief The ResetInstanceAttributeResponse class provides an interace for EC2 ResetInstanceAttribute responses.
  *
  * \ingroup EC2
  *

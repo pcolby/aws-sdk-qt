@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListOfferingPromotionsRequest
  *
- * \brief The ListOfferingPromotionsRequest class encapsulates DeviceFarm ListOfferingPromotions requests.
+ * \brief The ListOfferingPromotionsRequest class provides an interface for DeviceFarm ListOfferingPromotions requests.
  *
  * \ingroup DeviceFarm
  *

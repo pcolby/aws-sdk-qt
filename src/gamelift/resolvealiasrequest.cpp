@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::ResolveAliasRequest
  *
- * \brief The ResolveAliasRequest class encapsulates GameLift ResolveAlias requests.
+ * \brief The ResolveAliasRequest class provides an interface for GameLift ResolveAlias requests.
  *
  * \ingroup GameLift
  *

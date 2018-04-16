@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::CreateStreamRequest
  *
- * \brief The CreateStreamRequest class encapsulates Kinesis CreateStream requests.
+ * \brief The CreateStreamRequest class provides an interface for Kinesis CreateStream requests.
  *
  * \ingroup Kinesis
  *

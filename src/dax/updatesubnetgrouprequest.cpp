@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::UpdateSubnetGroupRequest
  *
- * \brief The UpdateSubnetGroupRequest class encapsulates DAX UpdateSubnetGroup requests.
+ * \brief The UpdateSubnetGroupRequest class provides an interface for DAX UpdateSubnetGroup requests.
  *
  * \ingroup DAX
  *

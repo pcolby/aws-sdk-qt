@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::GetDeviceRequest
  *
- * \brief The GetDeviceRequest class encapsulates CognitoIdentityProvider GetDevice requests.
+ * \brief The GetDeviceRequest class provides an interface for CognitoIdentityProvider GetDevice requests.
  *
  * \ingroup CognitoIdentityProvider
  *

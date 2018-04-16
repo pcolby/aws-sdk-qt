@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::DisassociateTeamMemberRequest
  *
- * \brief The DisassociateTeamMemberRequest class encapsulates CodeStar DisassociateTeamMember requests.
+ * \brief The DisassociateTeamMemberRequest class provides an interface for CodeStar DisassociateTeamMember requests.
  *
  * \ingroup CodeStar
  *

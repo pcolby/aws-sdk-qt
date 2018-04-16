@@ -26,7 +26,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::WorkMailRequest
  *
- * \brief The WorkMailRequest class is the base class for all WorkMail requests.
+ * \brief The WorkMailRequest class provides an interface for WorkMail requests.
  *
  * \ingroup WorkMail
  */

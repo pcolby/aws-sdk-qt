@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::DeleteDeploymentGroupRequest
  *
- * \brief The DeleteDeploymentGroupRequest class encapsulates CodeDeploy DeleteDeploymentGroup requests.
+ * \brief The DeleteDeploymentGroupRequest class provides an interface for CodeDeploy DeleteDeploymentGroup requests.
  *
  * \ingroup CodeDeploy
  *

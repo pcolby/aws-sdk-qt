@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::DeleteAliasRequest
  *
- * \brief The DeleteAliasRequest class encapsulates Lambda DeleteAlias requests.
+ * \brief The DeleteAliasRequest class provides an interface for Lambda DeleteAlias requests.
  *
  * \ingroup Lambda
  *

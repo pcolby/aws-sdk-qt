@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::StartMatchBackfillResponse
  *
- * \brief The StartMatchBackfillResponse class encapsulates GameLift StartMatchBackfill responses.
+ * \brief The StartMatchBackfillResponse class provides an interace for GameLift StartMatchBackfill responses.
  *
  * \ingroup GameLift
  *

@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::ResolveAliasResponse
  *
- * \brief The ResolveAliasResponse class encapsulates GameLift ResolveAlias responses.
+ * \brief The ResolveAliasResponse class provides an interace for GameLift ResolveAlias responses.
  *
  * \ingroup GameLift
  *

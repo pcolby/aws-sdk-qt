@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateDeviceStatusResponse
  *
- * \brief The UpdateDeviceStatusResponse class encapsulates CognitoIdentityProvider UpdateDeviceStatus responses.
+ * \brief The UpdateDeviceStatusResponse class provides an interace for CognitoIdentityProvider UpdateDeviceStatus responses.
  *
  * \ingroup CognitoIdentityProvider
  *

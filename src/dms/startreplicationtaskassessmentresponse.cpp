@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::StartReplicationTaskAssessmentResponse
  *
- * \brief The StartReplicationTaskAssessmentResponse class encapsulates DatabaseMigrationService StartReplicationTaskAssessment responses.
+ * \brief The StartReplicationTaskAssessmentResponse class provides an interace for DatabaseMigrationService StartReplicationTaskAssessment responses.
  *
  * \ingroup DatabaseMigrationService
  *

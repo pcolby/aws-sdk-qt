@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::CreateFleetRequest
  *
- * \brief The CreateFleetRequest class encapsulates AppStream CreateFleet requests.
+ * \brief The CreateFleetRequest class provides an interface for AppStream CreateFleet requests.
  *
  * \ingroup AppStream
  *

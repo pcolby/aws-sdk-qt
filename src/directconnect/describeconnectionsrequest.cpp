@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DescribeConnectionsRequest
  *
- * \brief The DescribeConnectionsRequest class encapsulates DirectConnect DescribeConnections requests.
+ * \brief The DescribeConnectionsRequest class provides an interface for DirectConnect DescribeConnections requests.
  *
  * \ingroup DirectConnect
  *

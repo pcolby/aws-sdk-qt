@@ -30,7 +30,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::GetComplianceDetailResponse
  *
- * \brief The GetComplianceDetailResponse class encapsulates FMS GetComplianceDetail responses.
+ * \brief The GetComplianceDetailResponse class provides an interace for FMS GetComplianceDetail responses.
  *
  * \ingroup FMS
  *

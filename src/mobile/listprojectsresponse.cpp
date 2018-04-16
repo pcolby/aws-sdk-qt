@@ -30,7 +30,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::ListProjectsResponse
  *
- * \brief The ListProjectsResponse class encapsulates Mobile ListProjects responses.
+ * \brief The ListProjectsResponse class provides an interace for Mobile ListProjects responses.
  *
  * \ingroup Mobile
  *

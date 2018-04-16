@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetSqlInjectionMatchSetRequest
  *
- * \brief The GetSqlInjectionMatchSetRequest class encapsulates WAFRegional GetSqlInjectionMatchSet requests.
+ * \brief The GetSqlInjectionMatchSetRequest class provides an interface for WAFRegional GetSqlInjectionMatchSet requests.
  *
  * \ingroup WAFRegional
  *

@@ -26,7 +26,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::RedshiftRequest
  *
- * \brief The RedshiftRequest class is the base class for all Redshift requests.
+ * \brief The RedshiftRequest class provides an interface for Redshift requests.
  *
  * \ingroup Redshift
  */

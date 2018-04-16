@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ImportInstanceResponse
  *
- * \brief The ImportInstanceResponse class encapsulates EC2 ImportInstance responses.
+ * \brief The ImportInstanceResponse class provides an interace for EC2 ImportInstance responses.
  *
  * \ingroup EC2
  *

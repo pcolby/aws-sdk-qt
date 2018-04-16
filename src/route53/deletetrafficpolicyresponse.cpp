@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::DeleteTrafficPolicyResponse
  *
- * \brief The DeleteTrafficPolicyResponse class encapsulates Route53 DeleteTrafficPolicy responses.
+ * \brief The DeleteTrafficPolicyResponse class provides an interace for Route53 DeleteTrafficPolicy responses.
  *
  * \ingroup Route53
  *

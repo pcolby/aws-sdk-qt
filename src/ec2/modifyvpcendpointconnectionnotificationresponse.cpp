@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyVpcEndpointConnectionNotificationResponse
  *
- * \brief The ModifyVpcEndpointConnectionNotificationResponse class encapsulates EC2 ModifyVpcEndpointConnectionNotification responses.
+ * \brief The ModifyVpcEndpointConnectionNotificationResponse class provides an interace for EC2 ModifyVpcEndpointConnectionNotification responses.
  *
  * \ingroup EC2
  *

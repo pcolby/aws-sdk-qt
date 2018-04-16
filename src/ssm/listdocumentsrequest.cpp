@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListDocumentsRequest
  *
- * \brief The ListDocumentsRequest class encapsulates SSM ListDocuments requests.
+ * \brief The ListDocumentsRequest class provides an interface for SSM ListDocuments requests.
  *
  * \ingroup SSM
  *

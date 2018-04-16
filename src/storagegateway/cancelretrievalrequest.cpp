@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::CancelRetrievalRequest
  *
- * \brief The CancelRetrievalRequest class encapsulates StorageGateway CancelRetrieval requests.
+ * \brief The CancelRetrievalRequest class provides an interface for StorageGateway CancelRetrieval requests.
  *
  * \ingroup StorageGateway
  *

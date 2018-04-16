@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::CreateClusterResponse
  *
- * \brief The CreateClusterResponse class encapsulates ECS CreateCluster responses.
+ * \brief The CreateClusterResponse class provides an interace for ECS CreateCluster responses.
  *
  * \ingroup ECS
  *

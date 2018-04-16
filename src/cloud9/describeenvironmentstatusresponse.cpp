@@ -30,7 +30,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::DescribeEnvironmentStatusResponse
  *
- * \brief The DescribeEnvironmentStatusResponse class encapsulates Cloud9 DescribeEnvironmentStatus responses.
+ * \brief The DescribeEnvironmentStatusResponse class provides an interace for Cloud9 DescribeEnvironmentStatus responses.
  *
  * \ingroup Cloud9
  *

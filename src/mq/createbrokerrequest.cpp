@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::CreateBrokerRequest
  *
- * \brief The CreateBrokerRequest class encapsulates MQ CreateBroker requests.
+ * \brief The CreateBrokerRequest class provides an interface for MQ CreateBroker requests.
  *
  * \ingroup MQ
  *

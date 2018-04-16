@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::UpdateWebACLRequest
  *
- * \brief The UpdateWebACLRequest class encapsulates WAF UpdateWebACL requests.
+ * \brief The UpdateWebACLRequest class provides an interface for WAF UpdateWebACL requests.
  *
  * \ingroup WAF
  *

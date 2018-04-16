@@ -28,7 +28,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::PutAttributesRequest
  *
- * \brief The PutAttributesRequest class encapsulates SimpleDB PutAttributes requests.
+ * \brief The PutAttributesRequest class provides an interface for SimpleDB PutAttributes requests.
  *
  * \ingroup SimpleDB
  *

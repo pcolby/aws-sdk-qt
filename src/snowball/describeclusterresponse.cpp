@@ -30,7 +30,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::DescribeClusterResponse
  *
- * \brief The DescribeClusterResponse class encapsulates Snowball DescribeCluster responses.
+ * \brief The DescribeClusterResponse class provides an interace for Snowball DescribeCluster responses.
  *
  * \ingroup Snowball
  *

@@ -103,7 +103,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::RekognitionClient
  *
- * \brief The RekognitionClient class provides access the Amazon Rekognition service.
+ * \brief The RekognitionClient class provides access to the Amazon Rekognition service.
  *
  * \ingroup Rekognition
  *

@@ -29,7 +29,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::LambdaResponse
  *
- * \brief The LambdaResponse class is the base class for all Lambda responses.
+ * \brief The LambdaResponse class provides an interface for Lambda responses.
  *
  * \ingroup Lambda
  */

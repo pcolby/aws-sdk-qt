@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DeleteTypedLinkFacetResponse
  *
- * \brief The DeleteTypedLinkFacetResponse class encapsulates CloudDirectory DeleteTypedLinkFacet responses.
+ * \brief The DeleteTypedLinkFacetResponse class provides an interace for CloudDirectory DeleteTypedLinkFacet responses.
  *
  * \ingroup CloudDirectory
  *

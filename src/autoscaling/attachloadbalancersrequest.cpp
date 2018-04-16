@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::AttachLoadBalancersRequest
  *
- * \brief The AttachLoadBalancersRequest class encapsulates AutoScaling AttachLoadBalancers requests.
+ * \brief The AttachLoadBalancersRequest class provides an interface for AutoScaling AttachLoadBalancers requests.
  *
  * \ingroup AutoScaling
  *

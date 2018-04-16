@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DeleteProvisioningArtifactResponse
  *
- * \brief The DeleteProvisioningArtifactResponse class encapsulates ServiceCatalog DeleteProvisioningArtifact responses.
+ * \brief The DeleteProvisioningArtifactResponse class provides an interace for ServiceCatalog DeleteProvisioningArtifact responses.
  *
  * \ingroup ServiceCatalog
  *

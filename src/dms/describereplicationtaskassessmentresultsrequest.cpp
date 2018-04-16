@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeReplicationTaskAssessmentResultsRequest
  *
- * \brief The DescribeReplicationTaskAssessmentResultsRequest class encapsulates DatabaseMigrationService DescribeReplicationTaskAssessmentResults requests.
+ * \brief The DescribeReplicationTaskAssessmentResultsRequest class provides an interface for DatabaseMigrationService DescribeReplicationTaskAssessmentResults requests.
  *
  * \ingroup DatabaseMigrationService
  *

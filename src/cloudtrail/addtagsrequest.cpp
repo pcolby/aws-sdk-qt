@@ -28,7 +28,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::AddTagsRequest
  *
- * \brief The AddTagsRequest class encapsulates CloudTrail AddTags requests.
+ * \brief The AddTagsRequest class provides an interface for CloudTrail AddTags requests.
  *
  * \ingroup CloudTrail
  *

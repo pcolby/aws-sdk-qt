@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::UpdateIPSetResponse
  *
- * \brief The UpdateIPSetResponse class encapsulates WAFRegional UpdateIPSet responses.
+ * \brief The UpdateIPSetResponse class provides an interace for WAFRegional UpdateIPSet responses.
  *
  * \ingroup WAFRegional
  *

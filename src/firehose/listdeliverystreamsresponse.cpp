@@ -30,7 +30,7 @@ namespace Firehose {
 /*!
  * \class QtAws::Firehose::ListDeliveryStreamsResponse
  *
- * \brief The ListDeliveryStreamsResponse class encapsulates Firehose ListDeliveryStreams responses.
+ * \brief The ListDeliveryStreamsResponse class provides an interace for Firehose ListDeliveryStreams responses.
  *
  * \ingroup Firehose
  *

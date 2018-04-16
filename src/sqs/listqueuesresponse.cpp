@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::ListQueuesResponse
  *
- * \brief The ListQueuesResponse class encapsulates SQS ListQueues responses.
+ * \brief The ListQueuesResponse class provides an interace for SQS ListQueues responses.
  *
  * \ingroup SQS
  *

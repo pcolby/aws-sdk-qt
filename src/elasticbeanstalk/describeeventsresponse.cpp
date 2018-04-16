@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEventsResponse
  *
- * \brief The DescribeEventsResponse class encapsulates ElasticBeanstalk DescribeEvents responses.
+ * \brief The DescribeEventsResponse class provides an interace for ElasticBeanstalk DescribeEvents responses.
  *
  * \ingroup ElasticBeanstalk
  *

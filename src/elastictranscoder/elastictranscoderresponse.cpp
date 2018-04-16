@@ -29,7 +29,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::ElasticTranscoderResponse
  *
- * \brief The ElasticTranscoderResponse class is the base class for all ElasticTranscoder responses.
+ * \brief The ElasticTranscoderResponse class provides an interface for ElasticTranscoder responses.
  *
  * \ingroup ElasticTranscoder
  */

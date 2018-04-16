@@ -28,7 +28,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::GetShippingLabelRequest
  *
- * \brief The GetShippingLabelRequest class encapsulates ImportExport GetShippingLabel requests.
+ * \brief The GetShippingLabelRequest class provides an interface for ImportExport GetShippingLabel requests.
  *
  * \ingroup ImportExport
  *

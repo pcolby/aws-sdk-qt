@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeDBLogFilesResponse
  *
- * \brief The DescribeDBLogFilesResponse class encapsulates RDS DescribeDBLogFiles responses.
+ * \brief The DescribeDBLogFilesResponse class provides an interace for RDS DescribeDBLogFiles responses.
  *
  * \ingroup RDS
  *

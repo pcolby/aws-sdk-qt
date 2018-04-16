@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::CreateTagsRequest
  *
- * \brief The CreateTagsRequest class encapsulates Redshift CreateTags requests.
+ * \brief The CreateTagsRequest class provides an interface for Redshift CreateTags requests.
  *
  * \ingroup Redshift
  *

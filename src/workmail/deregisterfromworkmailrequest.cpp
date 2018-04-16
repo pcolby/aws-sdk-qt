@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DeregisterFromWorkMailRequest
  *
- * \brief The DeregisterFromWorkMailRequest class encapsulates WorkMail DeregisterFromWorkMail requests.
+ * \brief The DeregisterFromWorkMailRequest class provides an interface for WorkMail DeregisterFromWorkMail requests.
  *
  * \ingroup WorkMail
  *

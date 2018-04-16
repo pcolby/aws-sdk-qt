@@ -118,7 +118,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::OrganizationsClient
  *
- * \brief The OrganizationsClient class provides access the AWS Organizations service.
+ * \brief The OrganizationsClient class provides access to the AWS Organizations service.
  *
  * \ingroup Organizations
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ImportImageRequest
  *
- * \brief The ImportImageRequest class encapsulates EC2 ImportImage requests.
+ * \brief The ImportImageRequest class provides an interface for EC2 ImportImage requests.
  *
  * \ingroup EC2
  *

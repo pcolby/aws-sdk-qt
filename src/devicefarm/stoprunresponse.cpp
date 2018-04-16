@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::StopRunResponse
  *
- * \brief The StopRunResponse class encapsulates DeviceFarm StopRun responses.
+ * \brief The StopRunResponse class provides an interace for DeviceFarm StopRun responses.
  *
  * \ingroup DeviceFarm
  *

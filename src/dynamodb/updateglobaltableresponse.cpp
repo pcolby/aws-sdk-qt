@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::UpdateGlobalTableResponse
  *
- * \brief The UpdateGlobalTableResponse class encapsulates DynamoDB UpdateGlobalTable responses.
+ * \brief The UpdateGlobalTableResponse class provides an interace for DynamoDB UpdateGlobalTable responses.
  *
  * \ingroup DynamoDB
  *

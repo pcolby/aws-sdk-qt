@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DeleteDomainResponse
  *
- * \brief The DeleteDomainResponse class encapsulates CloudSearch DeleteDomain responses.
+ * \brief The DeleteDomainResponse class provides an interace for CloudSearch DeleteDomain responses.
  *
  * \ingroup CloudSearch
  *

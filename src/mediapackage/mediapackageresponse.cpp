@@ -29,7 +29,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::MediaPackageResponse
  *
- * \brief The MediaPackageResponse class is the base class for all MediaPackage responses.
+ * \brief The MediaPackageResponse class provides an interface for MediaPackage responses.
  *
  * \ingroup MediaPackage
  */

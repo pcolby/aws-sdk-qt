@@ -26,7 +26,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ServiceCatalogRequest
  *
- * \brief The ServiceCatalogRequest class is the base class for all ServiceCatalog requests.
+ * \brief The ServiceCatalogRequest class provides an interface for ServiceCatalog requests.
  *
  * \ingroup ServiceCatalog
  */

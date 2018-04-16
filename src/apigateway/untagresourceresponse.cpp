@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UntagResourceResponse
  *
- * \brief The UntagResourceResponse class encapsulates APIGateway UntagResource responses.
+ * \brief The UntagResourceResponse class provides an interace for APIGateway UntagResource responses.
  *
  * \ingroup APIGateway
  *

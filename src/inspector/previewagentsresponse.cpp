@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::PreviewAgentsResponse
  *
- * \brief The PreviewAgentsResponse class encapsulates Inspector PreviewAgents responses.
+ * \brief The PreviewAgentsResponse class provides an interace for Inspector PreviewAgents responses.
  *
  * \ingroup Inspector
  *

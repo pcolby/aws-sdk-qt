@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::DeleteBucketInventoryConfigurationRequest
  *
- * \brief The DeleteBucketInventoryConfigurationRequest class encapsulates S3 DeleteBucketInventoryConfiguration requests.
+ * \brief The DeleteBucketInventoryConfigurationRequest class provides an interface for S3 DeleteBucketInventoryConfiguration requests.
  *
  * \ingroup S3
  *

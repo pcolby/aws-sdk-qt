@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::CreateTopicRequest
  *
- * \brief The CreateTopicRequest class encapsulates SNS CreateTopic requests.
+ * \brief The CreateTopicRequest class provides an interface for SNS CreateTopic requests.
  *
  * \ingroup SNS
  *

@@ -26,7 +26,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::Cloud9Request
  *
- * \brief The Cloud9Request class is the base class for all Cloud9 requests.
+ * \brief The Cloud9Request class provides an interface for Cloud9 requests.
  *
  * \ingroup Cloud9
  */

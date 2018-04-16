@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DeleteDestinationRequest
  *
- * \brief The DeleteDestinationRequest class encapsulates CloudWatchLogs DeleteDestination requests.
+ * \brief The DeleteDestinationRequest class provides an interface for CloudWatchLogs DeleteDestination requests.
  *
  * \ingroup CloudWatchLogs
  *

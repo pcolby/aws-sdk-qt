@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::CreateRepositoryRequest
  *
- * \brief The CreateRepositoryRequest class encapsulates CodeCommit CreateRepository requests.
+ * \brief The CreateRepositoryRequest class provides an interface for CodeCommit CreateRepository requests.
  *
  * \ingroup CodeCommit
  *

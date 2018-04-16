@@ -30,7 +30,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::DeleteLoadBalancerPolicyResponse
  *
- * \brief The DeleteLoadBalancerPolicyResponse class encapsulates ElasticLoadBalancing DeleteLoadBalancerPolicy responses.
+ * \brief The DeleteLoadBalancerPolicyResponse class provides an interace for ElasticLoadBalancing DeleteLoadBalancerPolicy responses.
  *
  * \ingroup ElasticLoadBalancing
  *

@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::DeleteDatasetResponse
  *
- * \brief The DeleteDatasetResponse class encapsulates CognitoSync DeleteDataset responses.
+ * \brief The DeleteDatasetResponse class provides an interace for CognitoSync DeleteDataset responses.
  *
  * \ingroup CognitoSync
  *

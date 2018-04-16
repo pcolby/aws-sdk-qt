@@ -30,7 +30,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::DescribeMigrationTaskResponse
  *
- * \brief The DescribeMigrationTaskResponse class encapsulates MigrationHub DescribeMigrationTask responses.
+ * \brief The DescribeMigrationTaskResponse class provides an interace for MigrationHub DescribeMigrationTask responses.
  *
  * \ingroup MigrationHub
  *

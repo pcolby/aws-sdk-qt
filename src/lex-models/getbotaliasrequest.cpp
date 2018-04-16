@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::GetBotAliasRequest
  *
- * \brief The GetBotAliasRequest class encapsulates LexModelBuildingService GetBotAlias requests.
+ * \brief The GetBotAliasRequest class provides an interface for LexModelBuildingService GetBotAlias requests.
  *
  * \ingroup LexModelBuildingService
  *

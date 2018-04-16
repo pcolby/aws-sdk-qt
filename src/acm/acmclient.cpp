@@ -61,7 +61,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::AcmClient
  *
- * \brief The AcmClient class provides access the AWS Certificate Manager (ACM) service.
+ * \brief The AcmClient class provides access to the AWS Certificate Manager (ACM) service.
  *
  * \ingroup ACM
  *

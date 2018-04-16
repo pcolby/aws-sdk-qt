@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateIntegrationResponseRequest
  *
- * \brief The UpdateIntegrationResponseRequest class encapsulates APIGateway UpdateIntegrationResponse requests.
+ * \brief The UpdateIntegrationResponseRequest class provides an interface for APIGateway UpdateIntegrationResponse requests.
  *
  * \ingroup APIGateway
  *

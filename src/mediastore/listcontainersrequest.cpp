@@ -28,7 +28,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::ListContainersRequest
  *
- * \brief The ListContainersRequest class encapsulates MediaStore ListContainers requests.
+ * \brief The ListContainersRequest class provides an interface for MediaStore ListContainers requests.
  *
  * \ingroup MediaStore
  *

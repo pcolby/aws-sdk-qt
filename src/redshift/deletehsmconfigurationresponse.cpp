@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteHsmConfigurationResponse
  *
- * \brief The DeleteHsmConfigurationResponse class encapsulates Redshift DeleteHsmConfiguration responses.
+ * \brief The DeleteHsmConfigurationResponse class provides an interace for Redshift DeleteHsmConfiguration responses.
  *
  * \ingroup Redshift
  *

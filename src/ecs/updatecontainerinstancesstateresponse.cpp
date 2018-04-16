@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::UpdateContainerInstancesStateResponse
  *
- * \brief The UpdateContainerInstancesStateResponse class encapsulates ECS UpdateContainerInstancesState responses.
+ * \brief The UpdateContainerInstancesStateResponse class provides an interace for ECS UpdateContainerInstancesState responses.
  *
  * \ingroup ECS
  *

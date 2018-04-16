@@ -29,7 +29,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::CodeBuildResponse
  *
- * \brief The CodeBuildResponse class is the base class for all CodeBuild responses.
+ * \brief The CodeBuildResponse class provides an interface for CodeBuild responses.
  *
  * \ingroup CodeBuild
  */

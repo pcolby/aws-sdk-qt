@@ -28,7 +28,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::DisassociateAdminAccountRequest
  *
- * \brief The DisassociateAdminAccountRequest class encapsulates FMS DisassociateAdminAccount requests.
+ * \brief The DisassociateAdminAccountRequest class provides an interface for FMS DisassociateAdminAccount requests.
  *
  * \ingroup FMS
  *

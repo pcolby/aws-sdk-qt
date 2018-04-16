@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::ListAvailableSolutionStacksResponse
  *
- * \brief The ListAvailableSolutionStacksResponse class encapsulates ElasticBeanstalk ListAvailableSolutionStacks responses.
+ * \brief The ListAvailableSolutionStacksResponse class provides an interace for ElasticBeanstalk ListAvailableSolutionStacks responses.
  *
  * \ingroup ElasticBeanstalk
  *

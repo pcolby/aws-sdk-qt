@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::ListIPSetsRequest
  *
- * \brief The ListIPSetsRequest class encapsulates WAFRegional ListIPSets requests.
+ * \brief The ListIPSetsRequest class provides an interface for WAFRegional ListIPSets requests.
  *
  * \ingroup WAFRegional
  *

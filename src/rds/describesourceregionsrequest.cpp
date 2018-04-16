@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeSourceRegionsRequest
  *
- * \brief The DescribeSourceRegionsRequest class encapsulates RDS DescribeSourceRegions requests.
+ * \brief The DescribeSourceRegionsRequest class provides an interface for RDS DescribeSourceRegions requests.
  *
  * \ingroup RDS
  *

@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::RebootCacheClusterResponse
  *
- * \brief The RebootCacheClusterResponse class encapsulates ElastiCache RebootCacheCluster responses.
+ * \brief The RebootCacheClusterResponse class provides an interace for ElastiCache RebootCacheCluster responses.
  *
  * \ingroup ElastiCache
  *

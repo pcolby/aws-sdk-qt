@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::ListActivityTypesRequest
  *
- * \brief The ListActivityTypesRequest class encapsulates SWF ListActivityTypes requests.
+ * \brief The ListActivityTypesRequest class provides an interface for SWF ListActivityTypes requests.
  *
  * \ingroup SWF
  *

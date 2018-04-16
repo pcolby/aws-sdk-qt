@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeDocumentVersionsResponse
  *
- * \brief The DescribeDocumentVersionsResponse class encapsulates WorkDocs DescribeDocumentVersions responses.
+ * \brief The DescribeDocumentVersionsResponse class provides an interace for WorkDocs DescribeDocumentVersions responses.
  *
  * \ingroup WorkDocs
  *

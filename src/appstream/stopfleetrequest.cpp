@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::StopFleetRequest
  *
- * \brief The StopFleetRequest class encapsulates AppStream StopFleet requests.
+ * \brief The StopFleetRequest class provides an interface for AppStream StopFleet requests.
  *
  * \ingroup AppStream
  *

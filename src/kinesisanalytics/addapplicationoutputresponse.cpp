@@ -30,7 +30,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::AddApplicationOutputResponse
  *
- * \brief The AddApplicationOutputResponse class encapsulates KinesisAnalytics AddApplicationOutput responses.
+ * \brief The AddApplicationOutputResponse class provides an interace for KinesisAnalytics AddApplicationOutput responses.
  *
  * \ingroup KinesisAnalytics
  *

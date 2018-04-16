@@ -30,7 +30,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::UpdateApplicationResponse
  *
- * \brief The UpdateApplicationResponse class encapsulates KinesisAnalytics UpdateApplication responses.
+ * \brief The UpdateApplicationResponse class provides an interace for KinesisAnalytics UpdateApplication responses.
  *
  * \ingroup KinesisAnalytics
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ResetFpgaImageAttributeResponse
  *
- * \brief The ResetFpgaImageAttributeResponse class encapsulates EC2 ResetFpgaImageAttribute responses.
+ * \brief The ResetFpgaImageAttributeResponse class provides an interace for EC2 ResetFpgaImageAttribute responses.
  *
  * \ingroup EC2
  *

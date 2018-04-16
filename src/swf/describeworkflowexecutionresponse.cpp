@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::DescribeWorkflowExecutionResponse
  *
- * \brief The DescribeWorkflowExecutionResponse class encapsulates SWF DescribeWorkflowExecution responses.
+ * \brief The DescribeWorkflowExecutionResponse class provides an interace for SWF DescribeWorkflowExecution responses.
  *
  * \ingroup SWF
  *

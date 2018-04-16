@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteTableVersionResponse
  *
- * \brief The DeleteTableVersionResponse class encapsulates Glue DeleteTableVersion responses.
+ * \brief The DeleteTableVersionResponse class provides an interace for Glue DeleteTableVersion responses.
  *
  * \ingroup Glue
  *

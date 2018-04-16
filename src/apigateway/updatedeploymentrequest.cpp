@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateDeploymentRequest
  *
- * \brief The UpdateDeploymentRequest class encapsulates APIGateway UpdateDeployment requests.
+ * \brief The UpdateDeploymentRequest class provides an interface for APIGateway UpdateDeployment requests.
  *
  * \ingroup APIGateway
  *

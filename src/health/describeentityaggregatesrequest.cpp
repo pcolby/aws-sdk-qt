@@ -28,7 +28,7 @@ namespace Health {
 /*!
  * \class QtAws::Health::DescribeEntityAggregatesRequest
  *
- * \brief The DescribeEntityAggregatesRequest class encapsulates Health DescribeEntityAggregates requests.
+ * \brief The DescribeEntityAggregatesRequest class provides an interface for Health DescribeEntityAggregates requests.
  *
  * \ingroup Health
  *

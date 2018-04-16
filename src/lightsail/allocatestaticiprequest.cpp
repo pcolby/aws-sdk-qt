@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::AllocateStaticIpRequest
  *
- * \brief The AllocateStaticIpRequest class encapsulates Lightsail AllocateStaticIp requests.
+ * \brief The AllocateStaticIpRequest class provides an interface for Lightsail AllocateStaticIp requests.
  *
  * \ingroup Lightsail
  *

@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::EnableAllFeaturesResponse
  *
- * \brief The EnableAllFeaturesResponse class encapsulates Organizations EnableAllFeatures responses.
+ * \brief The EnableAllFeaturesResponse class provides an interace for Organizations EnableAllFeatures responses.
  *
  * \ingroup Organizations
  *

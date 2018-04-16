@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::RegisterThingRequest
  *
- * \brief The RegisterThingRequest class encapsulates IoT RegisterThing requests.
+ * \brief The RegisterThingRequest class provides an interface for IoT RegisterThing requests.
  *
  * \ingroup IoT
  *

@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::DescribeApplicationRequest
  *
- * \brief The DescribeApplicationRequest class encapsulates KinesisAnalytics DescribeApplication requests.
+ * \brief The DescribeApplicationRequest class provides an interface for KinesisAnalytics DescribeApplication requests.
  *
  * \ingroup KinesisAnalytics
  *

@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetEmailChannelResponse
  *
- * \brief The GetEmailChannelResponse class encapsulates Pinpoint GetEmailChannel responses.
+ * \brief The GetEmailChannelResponse class provides an interace for Pinpoint GetEmailChannel responses.
  *
  * \ingroup Pinpoint
  *

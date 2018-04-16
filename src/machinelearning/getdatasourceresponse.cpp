@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::GetDataSourceResponse
  *
- * \brief The GetDataSourceResponse class encapsulates MachineLearning GetDataSource responses.
+ * \brief The GetDataSourceResponse class provides an interace for MachineLearning GetDataSource responses.
  *
  * \ingroup MachineLearning
  *

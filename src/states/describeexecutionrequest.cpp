@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::DescribeExecutionRequest
  *
- * \brief The DescribeExecutionRequest class encapsulates SFN DescribeExecution requests.
+ * \brief The DescribeExecutionRequest class provides an interface for SFN DescribeExecution requests.
  *
  * \ingroup SFN
  *

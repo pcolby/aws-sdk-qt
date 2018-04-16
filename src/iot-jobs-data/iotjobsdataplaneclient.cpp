@@ -45,7 +45,7 @@ namespace IoTJobsDataPlane {
 /*!
  * \class QtAws::IoTJobsDataPlane::IoTJobsDataPlaneClient
  *
- * \brief The IoTJobsDataPlaneClient class provides access the AWS IoT Jobs Data Plane service.
+ * \brief The IoTJobsDataPlaneClient class provides access to the AWS IoT Jobs Data Plane service.
  *
  * \ingroup IoTJobsDataPlane
  *

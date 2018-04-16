@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::CreateReplicationSubnetGroupRequest
  *
- * \brief The CreateReplicationSubnetGroupRequest class encapsulates DatabaseMigrationService CreateReplicationSubnetGroup requests.
+ * \brief The CreateReplicationSubnetGroupRequest class provides an interface for DatabaseMigrationService CreateReplicationSubnetGroup requests.
  *
  * \ingroup DatabaseMigrationService
  *

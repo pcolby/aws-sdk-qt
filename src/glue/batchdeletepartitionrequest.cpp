@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::BatchDeletePartitionRequest
  *
- * \brief The BatchDeletePartitionRequest class encapsulates Glue BatchDeletePartition requests.
+ * \brief The BatchDeletePartitionRequest class provides an interface for Glue BatchDeletePartition requests.
  *
  * \ingroup Glue
  *

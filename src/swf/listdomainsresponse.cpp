@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::ListDomainsResponse
  *
- * \brief The ListDomainsResponse class encapsulates SWF ListDomains responses.
+ * \brief The ListDomainsResponse class provides an interace for SWF ListDomains responses.
  *
  * \ingroup SWF
  *

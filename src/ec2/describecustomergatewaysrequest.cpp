@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeCustomerGatewaysRequest
  *
- * \brief The DescribeCustomerGatewaysRequest class encapsulates EC2 DescribeCustomerGateways requests.
+ * \brief The DescribeCustomerGatewaysRequest class provides an interface for EC2 DescribeCustomerGateways requests.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyHostsRequest
  *
- * \brief The ModifyHostsRequest class encapsulates EC2 ModifyHosts requests.
+ * \brief The ModifyHostsRequest class provides an interface for EC2 ModifyHosts requests.
  *
  * \ingroup EC2
  *

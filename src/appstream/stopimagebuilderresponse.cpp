@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::StopImageBuilderResponse
  *
- * \brief The StopImageBuilderResponse class encapsulates AppStream StopImageBuilder responses.
+ * \brief The StopImageBuilderResponse class provides an interace for AppStream StopImageBuilder responses.
  *
  * \ingroup AppStream
  *

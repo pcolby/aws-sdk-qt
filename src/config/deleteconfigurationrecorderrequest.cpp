@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeleteConfigurationRecorderRequest
  *
- * \brief The DeleteConfigurationRecorderRequest class encapsulates ConfigService DeleteConfigurationRecorder requests.
+ * \brief The DeleteConfigurationRecorderRequest class provides an interface for ConfigService DeleteConfigurationRecorder requests.
  *
  * \ingroup ConfigService
  *

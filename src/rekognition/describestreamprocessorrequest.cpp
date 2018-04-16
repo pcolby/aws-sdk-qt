@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::DescribeStreamProcessorRequest
  *
- * \brief The DescribeStreamProcessorRequest class encapsulates Rekognition DescribeStreamProcessor requests.
+ * \brief The DescribeStreamProcessorRequest class provides an interface for Rekognition DescribeStreamProcessor requests.
  *
  * \ingroup Rekognition
  *

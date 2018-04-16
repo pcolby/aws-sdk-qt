@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::UpdateSizeConstraintSetResponse
  *
- * \brief The UpdateSizeConstraintSetResponse class encapsulates WAFRegional UpdateSizeConstraintSet responses.
+ * \brief The UpdateSizeConstraintSetResponse class provides an interace for WAFRegional UpdateSizeConstraintSet responses.
  *
  * \ingroup WAFRegional
  *

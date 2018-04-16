@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::AddTagsResponse
  *
- * \brief The AddTagsResponse class encapsulates EMR AddTags responses.
+ * \brief The AddTagsResponse class provides an interace for EMR AddTags responses.
  *
  * \ingroup EMR
  *

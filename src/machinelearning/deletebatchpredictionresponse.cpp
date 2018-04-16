@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DeleteBatchPredictionResponse
  *
- * \brief The DeleteBatchPredictionResponse class encapsulates MachineLearning DeleteBatchPrediction responses.
+ * \brief The DeleteBatchPredictionResponse class provides an interace for MachineLearning DeleteBatchPrediction responses.
  *
  * \ingroup MachineLearning
  *

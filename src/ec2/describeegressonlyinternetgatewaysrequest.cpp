@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeEgressOnlyInternetGatewaysRequest
  *
- * \brief The DescribeEgressOnlyInternetGatewaysRequest class encapsulates EC2 DescribeEgressOnlyInternetGateways requests.
+ * \brief The DescribeEgressOnlyInternetGatewaysRequest class provides an interface for EC2 DescribeEgressOnlyInternetGateways requests.
  *
  * \ingroup EC2
  *

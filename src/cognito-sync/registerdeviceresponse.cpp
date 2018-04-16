@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::RegisterDeviceResponse
  *
- * \brief The RegisterDeviceResponse class encapsulates CognitoSync RegisterDevice responses.
+ * \brief The RegisterDeviceResponse class provides an interace for CognitoSync RegisterDevice responses.
  *
  * \ingroup CognitoSync
  *

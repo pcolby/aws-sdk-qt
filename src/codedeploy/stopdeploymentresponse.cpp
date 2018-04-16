@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::StopDeploymentResponse
  *
- * \brief The StopDeploymentResponse class encapsulates CodeDeploy StopDeployment responses.
+ * \brief The StopDeploymentResponse class provides an interace for CodeDeploy StopDeployment responses.
  *
  * \ingroup CodeDeploy
  *

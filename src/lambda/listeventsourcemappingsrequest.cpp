@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::ListEventSourceMappingsRequest
  *
- * \brief The ListEventSourceMappingsRequest class encapsulates Lambda ListEventSourceMappings requests.
+ * \brief The ListEventSourceMappingsRequest class provides an interface for Lambda ListEventSourceMappings requests.
  *
  * \ingroup Lambda
  *

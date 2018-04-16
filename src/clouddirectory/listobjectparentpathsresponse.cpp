@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListObjectParentPathsResponse
  *
- * \brief The ListObjectParentPathsResponse class encapsulates CloudDirectory ListObjectParentPaths responses.
+ * \brief The ListObjectParentPathsResponse class provides an interace for CloudDirectory ListObjectParentPaths responses.
  *
  * \ingroup CloudDirectory
  *

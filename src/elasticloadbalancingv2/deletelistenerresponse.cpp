@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeleteListenerResponse
  *
- * \brief The DeleteListenerResponse class encapsulates ElasticLoadBalancingv2 DeleteListener responses.
+ * \brief The DeleteListenerResponse class provides an interace for ElasticLoadBalancingv2 DeleteListener responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

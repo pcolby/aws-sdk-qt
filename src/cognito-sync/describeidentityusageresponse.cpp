@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::DescribeIdentityUsageResponse
  *
- * \brief The DescribeIdentityUsageResponse class encapsulates CognitoSync DescribeIdentityUsage responses.
+ * \brief The DescribeIdentityUsageResponse class provides an interace for CognitoSync DescribeIdentityUsage responses.
  *
  * \ingroup CognitoSync
  *

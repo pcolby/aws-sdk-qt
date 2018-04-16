@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DeleteAttributesRequest
  *
- * \brief The DeleteAttributesRequest class encapsulates ECS DeleteAttributes requests.
+ * \brief The DeleteAttributesRequest class provides an interface for ECS DeleteAttributes requests.
  *
  * \ingroup ECS
  *

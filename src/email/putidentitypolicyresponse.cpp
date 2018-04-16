@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::PutIdentityPolicyResponse
  *
- * \brief The PutIdentityPolicyResponse class encapsulates SES PutIdentityPolicy responses.
+ * \brief The PutIdentityPolicyResponse class provides an interace for SES PutIdentityPolicy responses.
  *
  * \ingroup SES
  *

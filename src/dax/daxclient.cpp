@@ -79,7 +79,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DaxClient
  *
- * \brief The DaxClient class provides access the Amazon DynamoDB Accelerator (DAX) ( DAX) service.
+ * \brief The DaxClient class provides access to the Amazon DynamoDB Accelerator (DAX) ( DAX) service.
  *
  * \ingroup DAX
  *

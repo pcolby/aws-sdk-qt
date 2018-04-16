@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyNetworkInterfaceAttributeRequest
  *
- * \brief The ModifyNetworkInterfaceAttributeRequest class encapsulates EC2 ModifyNetworkInterfaceAttribute requests.
+ * \brief The ModifyNetworkInterfaceAttributeRequest class provides an interface for EC2 ModifyNetworkInterfaceAttribute requests.
  *
  * \ingroup EC2
  *

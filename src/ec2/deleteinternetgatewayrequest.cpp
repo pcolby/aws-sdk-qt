@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteInternetGatewayRequest
  *
- * \brief The DeleteInternetGatewayRequest class encapsulates EC2 DeleteInternetGateway requests.
+ * \brief The DeleteInternetGatewayRequest class provides an interface for EC2 DeleteInternetGateway requests.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeIdentityIdFormatResponse
  *
- * \brief The DescribeIdentityIdFormatResponse class encapsulates EC2 DescribeIdentityIdFormat responses.
+ * \brief The DescribeIdentityIdFormatResponse class provides an interace for EC2 DescribeIdentityIdFormat responses.
  *
  * \ingroup EC2
  *

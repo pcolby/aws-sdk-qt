@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::UpdateTagOptionResponse
  *
- * \brief The UpdateTagOptionResponse class encapsulates ServiceCatalog UpdateTagOption responses.
+ * \brief The UpdateTagOptionResponse class provides an interace for ServiceCatalog UpdateTagOption responses.
  *
  * \ingroup ServiceCatalog
  *

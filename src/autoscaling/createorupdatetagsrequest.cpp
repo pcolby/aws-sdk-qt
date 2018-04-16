@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::CreateOrUpdateTagsRequest
  *
- * \brief The CreateOrUpdateTagsRequest class encapsulates AutoScaling CreateOrUpdateTags requests.
+ * \brief The CreateOrUpdateTagsRequest class provides an interface for AutoScaling CreateOrUpdateTags requests.
  *
  * \ingroup AutoScaling
  *

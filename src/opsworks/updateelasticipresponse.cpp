@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateElasticIpResponse
  *
- * \brief The UpdateElasticIpResponse class encapsulates OpsWorks UpdateElasticIp responses.
+ * \brief The UpdateElasticIpResponse class provides an interace for OpsWorks UpdateElasticIp responses.
  *
  * \ingroup OpsWorks
  *

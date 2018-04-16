@@ -30,7 +30,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::StartOnDemandReplicationRunResponse
  *
- * \brief The StartOnDemandReplicationRunResponse class encapsulates SMS StartOnDemandReplicationRun responses.
+ * \brief The StartOnDemandReplicationRunResponse class provides an interace for SMS StartOnDemandReplicationRun responses.
  *
  * \ingroup SMS
  *

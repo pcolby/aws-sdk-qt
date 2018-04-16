@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::CreateRegexPatternSetResponse
  *
- * \brief The CreateRegexPatternSetResponse class encapsulates WAFRegional CreateRegexPatternSet responses.
+ * \brief The CreateRegexPatternSetResponse class provides an interace for WAFRegional CreateRegexPatternSet responses.
  *
  * \ingroup WAFRegional
  *

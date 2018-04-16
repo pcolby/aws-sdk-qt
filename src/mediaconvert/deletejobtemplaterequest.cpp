@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::DeleteJobTemplateRequest
  *
- * \brief The DeleteJobTemplateRequest class encapsulates MediaConvert DeleteJobTemplate requests.
+ * \brief The DeleteJobTemplateRequest class provides an interface for MediaConvert DeleteJobTemplate requests.
  *
  * \ingroup MediaConvert
  *

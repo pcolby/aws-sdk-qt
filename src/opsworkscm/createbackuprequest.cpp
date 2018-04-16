@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::CreateBackupRequest
  *
- * \brief The CreateBackupRequest class encapsulates OpsWorksCM CreateBackup requests.
+ * \brief The CreateBackupRequest class provides an interface for OpsWorksCM CreateBackup requests.
  *
  * \ingroup OpsWorksCM
  *

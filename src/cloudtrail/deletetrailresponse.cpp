@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::DeleteTrailResponse
  *
- * \brief The DeleteTrailResponse class encapsulates CloudTrail DeleteTrail responses.
+ * \brief The DeleteTrailResponse class provides an interace for CloudTrail DeleteTrail responses.
  *
  * \ingroup CloudTrail
  *

@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteBasePathMappingResponse
  *
- * \brief The DeleteBasePathMappingResponse class encapsulates APIGateway DeleteBasePathMapping responses.
+ * \brief The DeleteBasePathMappingResponse class provides an interace for APIGateway DeleteBasePathMapping responses.
  *
  * \ingroup APIGateway
  *

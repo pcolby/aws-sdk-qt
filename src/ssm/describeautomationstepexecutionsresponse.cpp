@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeAutomationStepExecutionsResponse
  *
- * \brief The DescribeAutomationStepExecutionsResponse class encapsulates SSM DescribeAutomationStepExecutions responses.
+ * \brief The DescribeAutomationStepExecutionsResponse class provides an interace for SSM DescribeAutomationStepExecutions responses.
  *
  * \ingroup SSM
  *

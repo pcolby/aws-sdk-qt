@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::PutInstancePublicPortsRequest
  *
- * \brief The PutInstancePublicPortsRequest class encapsulates Lightsail PutInstancePublicPorts requests.
+ * \brief The PutInstancePublicPortsRequest class provides an interface for Lightsail PutInstancePublicPorts requests.
  *
  * \ingroup Lightsail
  *

@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeleteDeliveryChannelResponse
  *
- * \brief The DeleteDeliveryChannelResponse class encapsulates ConfigService DeleteDeliveryChannel responses.
+ * \brief The DeleteDeliveryChannelResponse class provides an interace for ConfigService DeleteDeliveryChannel responses.
  *
  * \ingroup ConfigService
  *

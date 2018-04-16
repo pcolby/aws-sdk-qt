@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DeleteBGPPeerResponse
  *
- * \brief The DeleteBGPPeerResponse class encapsulates DirectConnect DeleteBGPPeer responses.
+ * \brief The DeleteBGPPeerResponse class provides an interace for DirectConnect DeleteBGPPeer responses.
  *
  * \ingroup DirectConnect
  *

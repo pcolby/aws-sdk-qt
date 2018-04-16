@@ -29,7 +29,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::SWFResponse
  *
- * \brief The SWFResponse class is the base class for all SWF responses.
+ * \brief The SWFResponse class provides an interface for SWF responses.
  *
  * \ingroup SWF
  */

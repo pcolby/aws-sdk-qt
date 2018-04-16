@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::GetPullRequestRequest
  *
- * \brief The GetPullRequestRequest class encapsulates CodeCommit GetPullRequest requests.
+ * \brief The GetPullRequestRequest class provides an interface for CodeCommit GetPullRequest requests.
  *
  * \ingroup CodeCommit
  *

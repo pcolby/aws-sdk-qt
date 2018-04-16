@@ -30,7 +30,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::UntagResponse
  *
- * \brief The UntagResponse class encapsulates ResourceGroups Untag responses.
+ * \brief The UntagResponse class provides an interace for ResourceGroups Untag responses.
  *
  * \ingroup ResourceGroups
  *

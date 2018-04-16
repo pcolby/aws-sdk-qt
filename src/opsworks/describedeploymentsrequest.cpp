@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeDeploymentsRequest
  *
- * \brief The DescribeDeploymentsRequest class encapsulates OpsWorks DescribeDeployments requests.
+ * \brief The DescribeDeploymentsRequest class provides an interface for OpsWorks DescribeDeployments requests.
  *
  * \ingroup OpsWorks
  *

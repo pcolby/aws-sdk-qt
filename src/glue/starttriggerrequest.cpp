@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::StartTriggerRequest
  *
- * \brief The StartTriggerRequest class encapsulates Glue StartTrigger requests.
+ * \brief The StartTriggerRequest class provides an interface for Glue StartTrigger requests.
  *
  * \ingroup Glue
  *

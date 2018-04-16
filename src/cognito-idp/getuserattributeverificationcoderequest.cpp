@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::GetUserAttributeVerificationCodeRequest
  *
- * \brief The GetUserAttributeVerificationCodeRequest class encapsulates CognitoIdentityProvider GetUserAttributeVerificationCode requests.
+ * \brief The GetUserAttributeVerificationCodeRequest class provides an interface for CognitoIdentityProvider GetUserAttributeVerificationCode requests.
  *
  * \ingroup CognitoIdentityProvider
  *

@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::TestRenderTemplateRequest
  *
- * \brief The TestRenderTemplateRequest class encapsulates SES TestRenderTemplate requests.
+ * \brief The TestRenderTemplateRequest class provides an interface for SES TestRenderTemplate requests.
  *
  * \ingroup SES
  *

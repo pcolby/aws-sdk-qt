@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::BatchDeletePartitionResponse
  *
- * \brief The BatchDeletePartitionResponse class encapsulates Glue BatchDeletePartition responses.
+ * \brief The BatchDeletePartitionResponse class provides an interace for Glue BatchDeletePartition responses.
  *
  * \ingroup Glue
  *

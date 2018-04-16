@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::AssignInstanceRequest
  *
- * \brief The AssignInstanceRequest class encapsulates OpsWorks AssignInstance requests.
+ * \brief The AssignInstanceRequest class provides an interface for OpsWorks AssignInstance requests.
  *
  * \ingroup OpsWorks
  *

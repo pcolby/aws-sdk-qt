@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeKeyPairsResponse
  *
- * \brief The DescribeKeyPairsResponse class encapsulates EC2 DescribeKeyPairs responses.
+ * \brief The DescribeKeyPairsResponse class provides an interace for EC2 DescribeKeyPairs responses.
  *
  * \ingroup EC2
  *

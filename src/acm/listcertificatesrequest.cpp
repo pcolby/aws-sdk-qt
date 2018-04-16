@@ -28,7 +28,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::ListCertificatesRequest
  *
- * \brief The ListCertificatesRequest class encapsulates ACM ListCertificates requests.
+ * \brief The ListCertificatesRequest class provides an interface for ACM ListCertificates requests.
  *
  * \ingroup ACM
  *

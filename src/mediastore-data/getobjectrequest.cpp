@@ -28,7 +28,7 @@ namespace MediaStoreData {
 /*!
  * \class QtAws::MediaStoreData::GetObjectRequest
  *
- * \brief The GetObjectRequest class encapsulates MediaStoreData GetObject requests.
+ * \brief The GetObjectRequest class provides an interface for MediaStoreData GetObject requests.
  *
  * \ingroup MediaStoreData
  *

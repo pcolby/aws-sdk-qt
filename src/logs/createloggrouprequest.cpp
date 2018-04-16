@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::CreateLogGroupRequest
  *
- * \brief The CreateLogGroupRequest class encapsulates CloudWatchLogs CreateLogGroup requests.
+ * \brief The CreateLogGroupRequest class provides an interface for CloudWatchLogs CreateLogGroup requests.
  *
  * \ingroup CloudWatchLogs
  *

@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::DisableStageTransitionRequest
  *
- * \brief The DisableStageTransitionRequest class encapsulates CodePipeline DisableStageTransition requests.
+ * \brief The DisableStageTransitionRequest class provides an interface for CodePipeline DisableStageTransition requests.
  *
  * \ingroup CodePipeline
  *

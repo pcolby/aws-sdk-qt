@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::UpdateIPSetResponse
  *
- * \brief The UpdateIPSetResponse class encapsulates GuardDuty UpdateIPSet responses.
+ * \brief The UpdateIPSetResponse class provides an interace for GuardDuty UpdateIPSet responses.
  *
  * \ingroup GuardDuty
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AllocateHostsRequest
  *
- * \brief The AllocateHostsRequest class encapsulates EC2 AllocateHosts requests.
+ * \brief The AllocateHostsRequest class provides an interface for EC2 AllocateHosts requests.
  *
  * \ingroup EC2
  *

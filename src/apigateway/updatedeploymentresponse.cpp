@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateDeploymentResponse
  *
- * \brief The UpdateDeploymentResponse class encapsulates APIGateway UpdateDeployment responses.
+ * \brief The UpdateDeploymentResponse class provides an interace for APIGateway UpdateDeployment responses.
  *
  * \ingroup APIGateway
  *

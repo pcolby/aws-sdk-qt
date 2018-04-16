@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::AssociateContactWithAddressBookResponse
  *
- * \brief The AssociateContactWithAddressBookResponse class encapsulates AlexaForBusiness AssociateContactWithAddressBook responses.
+ * \brief The AssociateContactWithAddressBookResponse class provides an interace for AlexaForBusiness AssociateContactWithAddressBook responses.
  *
  * \ingroup AlexaForBusiness
  *

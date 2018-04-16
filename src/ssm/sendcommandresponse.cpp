@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::SendCommandResponse
  *
- * \brief The SendCommandResponse class encapsulates SSM SendCommand responses.
+ * \brief The SendCommandResponse class provides an interace for SSM SendCommand responses.
  *
  * \ingroup SSM
  *

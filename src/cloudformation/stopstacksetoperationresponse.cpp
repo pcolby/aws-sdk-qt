@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::StopStackSetOperationResponse
  *
- * \brief The StopStackSetOperationResponse class encapsulates CloudFormation StopStackSetOperation responses.
+ * \brief The StopStackSetOperationResponse class provides an interace for CloudFormation StopStackSetOperation responses.
  *
  * \ingroup CloudFormation
  *

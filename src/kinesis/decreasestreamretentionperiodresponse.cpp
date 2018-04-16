@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::DecreaseStreamRetentionPeriodResponse
  *
- * \brief The DecreaseStreamRetentionPeriodResponse class encapsulates Kinesis DecreaseStreamRetentionPeriod responses.
+ * \brief The DecreaseStreamRetentionPeriodResponse class provides an interace for Kinesis DecreaseStreamRetentionPeriod responses.
  *
  * \ingroup Kinesis
  *

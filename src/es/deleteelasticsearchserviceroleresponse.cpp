@@ -30,7 +30,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::DeleteElasticsearchServiceRoleResponse
  *
- * \brief The DeleteElasticsearchServiceRoleResponse class encapsulates ElasticsearchService DeleteElasticsearchServiceRole responses.
+ * \brief The DeleteElasticsearchServiceRoleResponse class provides an interace for ElasticsearchService DeleteElasticsearchServiceRole responses.
  *
  * \ingroup ElasticsearchService
  *

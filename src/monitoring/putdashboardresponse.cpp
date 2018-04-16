@@ -30,7 +30,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::PutDashboardResponse
  *
- * \brief The PutDashboardResponse class encapsulates CloudWatch PutDashboard responses.
+ * \brief The PutDashboardResponse class provides an interace for CloudWatch PutDashboard responses.
  *
  * \ingroup CloudWatch
  *

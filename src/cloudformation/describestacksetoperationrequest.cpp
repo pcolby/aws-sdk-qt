@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::DescribeStackSetOperationRequest
  *
- * \brief The DescribeStackSetOperationRequest class encapsulates CloudFormation DescribeStackSetOperation requests.
+ * \brief The DescribeStackSetOperationRequest class provides an interface for CloudFormation DescribeStackSetOperation requests.
  *
  * \ingroup CloudFormation
  *

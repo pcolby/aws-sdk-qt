@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::CreateSlotTypeVersionRequest
  *
- * \brief The CreateSlotTypeVersionRequest class encapsulates LexModelBuildingService CreateSlotTypeVersion requests.
+ * \brief The CreateSlotTypeVersionRequest class provides an interface for LexModelBuildingService CreateSlotTypeVersion requests.
  *
  * \ingroup LexModelBuildingService
  *

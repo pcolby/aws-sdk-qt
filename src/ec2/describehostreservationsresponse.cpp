@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeHostReservationsResponse
  *
- * \brief The DescribeHostReservationsResponse class encapsulates EC2 DescribeHostReservations responses.
+ * \brief The DescribeHostReservationsResponse class provides an interace for EC2 DescribeHostReservations responses.
  *
  * \ingroup EC2
  *

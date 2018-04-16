@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::ValidateMatchmakingRuleSetResponse
  *
- * \brief The ValidateMatchmakingRuleSetResponse class encapsulates GameLift ValidateMatchmakingRuleSet responses.
+ * \brief The ValidateMatchmakingRuleSetResponse class provides an interace for GameLift ValidateMatchmakingRuleSet responses.
  *
  * \ingroup GameLift
  *

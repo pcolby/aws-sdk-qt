@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::DeleteFunctionRequest
  *
- * \brief The DeleteFunctionRequest class encapsulates Lambda DeleteFunction requests.
+ * \brief The DeleteFunctionRequest class provides an interface for Lambda DeleteFunction requests.
  *
  * \ingroup Lambda
  *

@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::DescribeBrokerRequest
  *
- * \brief The DescribeBrokerRequest class encapsulates MQ DescribeBroker requests.
+ * \brief The DescribeBrokerRequest class provides an interface for MQ DescribeBroker requests.
  *
  * \ingroup MQ
  *

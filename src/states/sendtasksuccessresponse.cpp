@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::SendTaskSuccessResponse
  *
- * \brief The SendTaskSuccessResponse class encapsulates SFN SendTaskSuccess responses.
+ * \brief The SendTaskSuccessResponse class provides an interace for SFN SendTaskSuccess responses.
  *
  * \ingroup SFN
  *

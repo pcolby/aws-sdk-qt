@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateTrustResponse
  *
- * \brief The CreateTrustResponse class encapsulates DirectoryService CreateTrust responses.
+ * \brief The CreateTrustResponse class provides an interace for DirectoryService CreateTrust responses.
  *
  * \ingroup DirectoryService
  *

@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::CreatePresignedNotebookInstanceUrlResponse
  *
- * \brief The CreatePresignedNotebookInstanceUrlResponse class encapsulates SageMaker CreatePresignedNotebookInstanceUrl responses.
+ * \brief The CreatePresignedNotebookInstanceUrlResponse class provides an interace for SageMaker CreatePresignedNotebookInstanceUrl responses.
  *
  * \ingroup SageMaker
  *

@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::ListWorkflowTypesRequest
  *
- * \brief The ListWorkflowTypesRequest class encapsulates SWF ListWorkflowTypes requests.
+ * \brief The ListWorkflowTypesRequest class provides an interface for SWF ListWorkflowTypes requests.
  *
  * \ingroup SWF
  *

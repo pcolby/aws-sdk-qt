@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::EnableVpcClassicLinkDnsSupportResponse
  *
- * \brief The EnableVpcClassicLinkDnsSupportResponse class encapsulates EC2 EnableVpcClassicLinkDnsSupport responses.
+ * \brief The EnableVpcClassicLinkDnsSupportResponse class provides an interace for EC2 EnableVpcClassicLinkDnsSupport responses.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::DeletePipelineRequest
  *
- * \brief The DeletePipelineRequest class encapsulates DataPipeline DeletePipeline requests.
+ * \brief The DeletePipelineRequest class provides an interface for DataPipeline DeletePipeline requests.
  *
  * \ingroup DataPipeline
  *

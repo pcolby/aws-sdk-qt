@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::StartExecutionRequest
  *
- * \brief The StartExecutionRequest class encapsulates SFN StartExecution requests.
+ * \brief The StartExecutionRequest class provides an interface for SFN StartExecution requests.
  *
  * \ingroup SFN
  *

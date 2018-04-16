@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DescribeEndpointResponse
  *
- * \brief The DescribeEndpointResponse class encapsulates SageMaker DescribeEndpoint responses.
+ * \brief The DescribeEndpointResponse class provides an interace for SageMaker DescribeEndpoint responses.
  *
  * \ingroup SageMaker
  *

@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::RunTaskResponse
  *
- * \brief The RunTaskResponse class encapsulates ECS RunTask responses.
+ * \brief The RunTaskResponse class provides an interace for ECS RunTask responses.
  *
  * \ingroup ECS
  *

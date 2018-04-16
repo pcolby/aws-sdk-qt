@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateVolumeResponse
  *
- * \brief The CreateVolumeResponse class encapsulates EC2 CreateVolume responses.
+ * \brief The CreateVolumeResponse class provides an interace for EC2 CreateVolume responses.
  *
  * \ingroup EC2
  *

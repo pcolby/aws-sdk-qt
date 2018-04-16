@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::CreateConfigurationRequest
  *
- * \brief The CreateConfigurationRequest class encapsulates MQ CreateConfiguration requests.
+ * \brief The CreateConfigurationRequest class provides an interface for MQ CreateConfiguration requests.
  *
  * \ingroup MQ
  *

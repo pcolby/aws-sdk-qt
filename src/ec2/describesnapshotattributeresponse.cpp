@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeSnapshotAttributeResponse
  *
- * \brief The DescribeSnapshotAttributeResponse class encapsulates EC2 DescribeSnapshotAttribute responses.
+ * \brief The DescribeSnapshotAttributeResponse class provides an interace for EC2 DescribeSnapshotAttribute responses.
  *
  * \ingroup EC2
  *

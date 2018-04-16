@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::StartJobRunResponse
  *
- * \brief The StartJobRunResponse class encapsulates Glue StartJobRun responses.
+ * \brief The StartJobRunResponse class provides an interace for Glue StartJobRun responses.
  *
  * \ingroup Glue
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ReleaseAddressResponse
  *
- * \brief The ReleaseAddressResponse class encapsulates EC2 ReleaseAddress responses.
+ * \brief The ReleaseAddressResponse class provides an interace for EC2 ReleaseAddress responses.
  *
  * \ingroup EC2
  *

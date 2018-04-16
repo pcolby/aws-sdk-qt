@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateUsagePlanRequest
  *
- * \brief The CreateUsagePlanRequest class encapsulates APIGateway CreateUsagePlan requests.
+ * \brief The CreateUsagePlanRequest class provides an interface for APIGateway CreateUsagePlan requests.
  *
  * \ingroup APIGateway
  *

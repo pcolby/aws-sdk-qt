@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::DeleteHITRequest
  *
- * \brief The DeleteHITRequest class encapsulates MTurk DeleteHIT requests.
+ * \brief The DeleteHITRequest class provides an interface for MTurk DeleteHIT requests.
  *
  * \ingroup MTurk
  *

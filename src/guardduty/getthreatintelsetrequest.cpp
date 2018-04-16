@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GetThreatIntelSetRequest
  *
- * \brief The GetThreatIntelSetRequest class encapsulates GuardDuty GetThreatIntelSet requests.
+ * \brief The GetThreatIntelSetRequest class provides an interface for GuardDuty GetThreatIntelSet requests.
  *
  * \ingroup GuardDuty
  *

@@ -30,7 +30,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::ReadPresetResponse
  *
- * \brief The ReadPresetResponse class encapsulates ElasticTranscoder ReadPreset responses.
+ * \brief The ReadPresetResponse class provides an interace for ElasticTranscoder ReadPreset responses.
  *
  * \ingroup ElasticTranscoder
  *

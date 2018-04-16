@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DescribeStacksRequest
  *
- * \brief The DescribeStacksRequest class encapsulates AppStream DescribeStacks requests.
+ * \brief The DescribeStacksRequest class provides an interface for AppStream DescribeStacks requests.
  *
  * \ingroup AppStream
  *

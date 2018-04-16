@@ -30,7 +30,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::UntagStreamResponse
  *
- * \brief The UntagStreamResponse class encapsulates KinesisVideo UntagStream responses.
+ * \brief The UntagStreamResponse class provides an interace for KinesisVideo UntagStream responses.
  *
  * \ingroup KinesisVideo
  *

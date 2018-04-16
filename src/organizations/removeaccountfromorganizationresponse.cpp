@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::RemoveAccountFromOrganizationResponse
  *
- * \brief The RemoveAccountFromOrganizationResponse class encapsulates Organizations RemoveAccountFromOrganization responses.
+ * \brief The RemoveAccountFromOrganizationResponse class provides an interace for Organizations RemoveAccountFromOrganization responses.
  *
  * \ingroup Organizations
  *

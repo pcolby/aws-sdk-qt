@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ResetNetworkInterfaceAttributeRequest
  *
- * \brief The ResetNetworkInterfaceAttributeRequest class encapsulates EC2 ResetNetworkInterfaceAttribute requests.
+ * \brief The ResetNetworkInterfaceAttributeRequest class provides an interface for EC2 ResetNetworkInterfaceAttribute requests.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateSecurityGroupResponse
  *
- * \brief The CreateSecurityGroupResponse class encapsulates EC2 CreateSecurityGroup responses.
+ * \brief The CreateSecurityGroupResponse class provides an interace for EC2 CreateSecurityGroup responses.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DeleteProvisionedProductPlanResponse
  *
- * \brief The DeleteProvisionedProductPlanResponse class encapsulates ServiceCatalog DeleteProvisionedProductPlan responses.
+ * \brief The DeleteProvisionedProductPlanResponse class provides an interace for ServiceCatalog DeleteProvisionedProductPlan responses.
  *
  * \ingroup ServiceCatalog
  *

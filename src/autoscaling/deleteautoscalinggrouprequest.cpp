@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DeleteAutoScalingGroupRequest
  *
- * \brief The DeleteAutoScalingGroupRequest class encapsulates AutoScaling DeleteAutoScalingGroup requests.
+ * \brief The DeleteAutoScalingGroupRequest class provides an interface for AutoScaling DeleteAutoScalingGroup requests.
  *
  * \ingroup AutoScaling
  *

@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::UpdateApplicationRequest
  *
- * \brief The UpdateApplicationRequest class encapsulates CodeDeploy UpdateApplication requests.
+ * \brief The UpdateApplicationRequest class provides an interface for CodeDeploy UpdateApplication requests.
  *
  * \ingroup CodeDeploy
  *

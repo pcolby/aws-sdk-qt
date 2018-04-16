@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::TestFailoverResponse
  *
- * \brief The TestFailoverResponse class encapsulates ElastiCache TestFailover responses.
+ * \brief The TestFailoverResponse class provides an interace for ElastiCache TestFailover responses.
  *
  * \ingroup ElastiCache
  *

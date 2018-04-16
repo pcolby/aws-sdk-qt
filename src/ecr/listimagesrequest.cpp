@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::ListImagesRequest
  *
- * \brief The ListImagesRequest class encapsulates ECR ListImages requests.
+ * \brief The ListImagesRequest class provides an interface for ECR ListImages requests.
  *
  * \ingroup ECR
  *

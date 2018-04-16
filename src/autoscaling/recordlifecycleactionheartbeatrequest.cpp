@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::RecordLifecycleActionHeartbeatRequest
  *
- * \brief The RecordLifecycleActionHeartbeatRequest class encapsulates AutoScaling RecordLifecycleActionHeartbeat requests.
+ * \brief The RecordLifecycleActionHeartbeatRequest class provides an interface for AutoScaling RecordLifecycleActionHeartbeat requests.
  *
  * \ingroup AutoScaling
  *

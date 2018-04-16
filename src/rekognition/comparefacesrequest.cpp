@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::CompareFacesRequest
  *
- * \brief The CompareFacesRequest class encapsulates Rekognition CompareFaces requests.
+ * \brief The CompareFacesRequest class provides an interface for Rekognition CompareFaces requests.
  *
  * \ingroup Rekognition
  *

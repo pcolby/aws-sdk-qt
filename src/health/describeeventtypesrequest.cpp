@@ -28,7 +28,7 @@ namespace Health {
 /*!
  * \class QtAws::Health::DescribeEventTypesRequest
  *
- * \brief The DescribeEventTypesRequest class encapsulates Health DescribeEventTypes requests.
+ * \brief The DescribeEventTypesRequest class provides an interface for Health DescribeEventTypes requests.
  *
  * \ingroup Health
  *

@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::GetCSVHeaderResponse
  *
- * \brief The GetCSVHeaderResponse class encapsulates CognitoIdentityProvider GetCSVHeader responses.
+ * \brief The GetCSVHeaderResponse class provides an interace for CognitoIdentityProvider GetCSVHeader responses.
  *
  * \ingroup CognitoIdentityProvider
  *

@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::GetOperationRequest
  *
- * \brief The GetOperationRequest class encapsulates ServiceDiscovery GetOperation requests.
+ * \brief The GetOperationRequest class provides an interface for ServiceDiscovery GetOperation requests.
  *
  * \ingroup ServiceDiscovery
  *

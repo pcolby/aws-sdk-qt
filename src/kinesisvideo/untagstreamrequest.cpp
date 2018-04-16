@@ -28,7 +28,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::UntagStreamRequest
  *
- * \brief The UntagStreamRequest class encapsulates KinesisVideo UntagStream requests.
+ * \brief The UntagStreamRequest class provides an interface for KinesisVideo UntagStream requests.
  *
  * \ingroup KinesisVideo
  *

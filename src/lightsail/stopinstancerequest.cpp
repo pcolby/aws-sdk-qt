@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::StopInstanceRequest
  *
- * \brief The StopInstanceRequest class encapsulates Lightsail StopInstance requests.
+ * \brief The StopInstanceRequest class provides an interface for Lightsail StopInstance requests.
  *
  * \ingroup Lightsail
  *

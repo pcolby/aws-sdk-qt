@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeClusterVersionsResponse
  *
- * \brief The DescribeClusterVersionsResponse class encapsulates Redshift DescribeClusterVersions responses.
+ * \brief The DescribeClusterVersionsResponse class provides an interace for Redshift DescribeClusterVersions responses.
  *
  * \ingroup Redshift
  *

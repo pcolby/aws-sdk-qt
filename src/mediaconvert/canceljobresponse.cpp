@@ -30,7 +30,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::CancelJobResponse
  *
- * \brief The CancelJobResponse class encapsulates MediaConvert CancelJob responses.
+ * \brief The CancelJobResponse class provides an interace for MediaConvert CancelJob responses.
  *
  * \ingroup MediaConvert
  *

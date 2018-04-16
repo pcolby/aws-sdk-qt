@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::UpdateDefaultBranchRequest
  *
- * \brief The UpdateDefaultBranchRequest class encapsulates CodeCommit UpdateDefaultBranch requests.
+ * \brief The UpdateDefaultBranchRequest class provides an interface for CodeCommit UpdateDefaultBranch requests.
  *
  * \ingroup CodeCommit
  *

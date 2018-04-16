@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::AddFacetToObjectRequest
  *
- * \brief The AddFacetToObjectRequest class encapsulates CloudDirectory AddFacetToObject requests.
+ * \brief The AddFacetToObjectRequest class provides an interface for CloudDirectory AddFacetToObject requests.
  *
  * \ingroup CloudDirectory
  *

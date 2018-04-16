@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RunScheduledInstancesRequest
  *
- * \brief The RunScheduledInstancesRequest class encapsulates EC2 RunScheduledInstances requests.
+ * \brief The RunScheduledInstancesRequest class provides an interface for EC2 RunScheduledInstances requests.
  *
  * \ingroup EC2
  *

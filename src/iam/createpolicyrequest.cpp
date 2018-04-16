@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreatePolicyRequest
  *
- * \brief The CreatePolicyRequest class encapsulates IAM CreatePolicy requests.
+ * \brief The CreatePolicyRequest class provides an interface for IAM CreatePolicy requests.
  *
  * \ingroup IAM
  *

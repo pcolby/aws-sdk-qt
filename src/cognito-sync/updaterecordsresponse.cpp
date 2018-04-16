@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::UpdateRecordsResponse
  *
- * \brief The UpdateRecordsResponse class encapsulates CognitoSync UpdateRecords responses.
+ * \brief The UpdateRecordsResponse class provides an interace for CognitoSync UpdateRecords responses.
  *
  * \ingroup CognitoSync
  *

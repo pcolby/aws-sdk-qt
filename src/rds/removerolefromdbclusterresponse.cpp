@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RemoveRoleFromDBClusterResponse
  *
- * \brief The RemoveRoleFromDBClusterResponse class encapsulates RDS RemoveRoleFromDBCluster responses.
+ * \brief The RemoveRoleFromDBClusterResponse class provides an interace for RDS RemoveRoleFromDBCluster responses.
  *
  * \ingroup RDS
  *

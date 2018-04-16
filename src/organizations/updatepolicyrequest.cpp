@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::UpdatePolicyRequest
  *
- * \brief The UpdatePolicyRequest class encapsulates Organizations UpdatePolicy requests.
+ * \brief The UpdatePolicyRequest class provides an interface for Organizations UpdatePolicy requests.
  *
  * \ingroup Organizations
  *

@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeTapesRequest
  *
- * \brief The DescribeTapesRequest class encapsulates StorageGateway DescribeTapes requests.
+ * \brief The DescribeTapesRequest class provides an interface for StorageGateway DescribeTapes requests.
  *
  * \ingroup StorageGateway
  *

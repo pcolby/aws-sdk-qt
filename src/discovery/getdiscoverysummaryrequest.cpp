@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::GetDiscoverySummaryRequest
  *
- * \brief The GetDiscoverySummaryRequest class encapsulates ApplicationDiscoveryService GetDiscoverySummary requests.
+ * \brief The GetDiscoverySummaryRequest class provides an interface for ApplicationDiscoveryService GetDiscoverySummary requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

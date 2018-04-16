@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteClassifierRequest
  *
- * \brief The DeleteClassifierRequest class encapsulates Glue DeleteClassifier requests.
+ * \brief The DeleteClassifierRequest class provides an interface for Glue DeleteClassifier requests.
  *
  * \ingroup Glue
  *

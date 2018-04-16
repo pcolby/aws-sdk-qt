@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DeclineInvitationsRequest
  *
- * \brief The DeclineInvitationsRequest class encapsulates GuardDuty DeclineInvitations requests.
+ * \brief The DeclineInvitationsRequest class provides an interface for GuardDuty DeclineInvitations requests.
  *
  * \ingroup GuardDuty
  *

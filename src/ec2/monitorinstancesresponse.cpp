@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::MonitorInstancesResponse
  *
- * \brief The MonitorInstancesResponse class encapsulates EC2 MonitorInstances responses.
+ * \brief The MonitorInstancesResponse class provides an interace for EC2 MonitorInstances responses.
  *
  * \ingroup EC2
  *

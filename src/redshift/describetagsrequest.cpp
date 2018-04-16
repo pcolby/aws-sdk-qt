@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeTagsRequest
  *
- * \brief The DescribeTagsRequest class encapsulates Redshift DescribeTags requests.
+ * \brief The DescribeTagsRequest class provides an interface for Redshift DescribeTags requests.
  *
  * \ingroup Redshift
  *

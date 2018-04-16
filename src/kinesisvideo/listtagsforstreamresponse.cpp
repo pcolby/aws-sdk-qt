@@ -30,7 +30,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::ListTagsForStreamResponse
  *
- * \brief The ListTagsForStreamResponse class encapsulates KinesisVideo ListTagsForStream responses.
+ * \brief The ListTagsForStreamResponse class provides an interace for KinesisVideo ListTagsForStream responses.
  *
  * \ingroup KinesisVideo
  *

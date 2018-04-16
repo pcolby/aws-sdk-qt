@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::UpdateNumberOfDomainControllersResponse
  *
- * \brief The UpdateNumberOfDomainControllersResponse class encapsulates DirectoryService UpdateNumberOfDomainControllers responses.
+ * \brief The UpdateNumberOfDomainControllersResponse class provides an interace for DirectoryService UpdateNumberOfDomainControllers responses.
  *
  * \ingroup DirectoryService
  *

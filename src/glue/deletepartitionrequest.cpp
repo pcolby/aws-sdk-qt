@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeletePartitionRequest
  *
- * \brief The DeletePartitionRequest class encapsulates Glue DeletePartition requests.
+ * \brief The DeletePartitionRequest class provides an interface for Glue DeletePartition requests.
  *
  * \ingroup Glue
  *

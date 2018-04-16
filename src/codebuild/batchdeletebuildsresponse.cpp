@@ -30,7 +30,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::BatchDeleteBuildsResponse
  *
- * \brief The BatchDeleteBuildsResponse class encapsulates CodeBuild BatchDeleteBuilds responses.
+ * \brief The BatchDeleteBuildsResponse class provides an interace for CodeBuild BatchDeleteBuilds responses.
  *
  * \ingroup CodeBuild
  *

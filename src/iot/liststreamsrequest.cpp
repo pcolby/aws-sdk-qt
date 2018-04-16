@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListStreamsRequest
  *
- * \brief The ListStreamsRequest class encapsulates IoT ListStreams requests.
+ * \brief The ListStreamsRequest class provides an interface for IoT ListStreams requests.
  *
  * \ingroup IoT
  *

@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::UnpeerVpcRequest
  *
- * \brief The UnpeerVpcRequest class encapsulates Lightsail UnpeerVpc requests.
+ * \brief The UnpeerVpcRequest class provides an interface for Lightsail UnpeerVpc requests.
  *
  * \ingroup Lightsail
  *

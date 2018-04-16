@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::StopMatchmakingResponse
  *
- * \brief The StopMatchmakingResponse class encapsulates GameLift StopMatchmaking responses.
+ * \brief The StopMatchmakingResponse class provides an interace for GameLift StopMatchmaking responses.
  *
  * \ingroup GameLift
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateVpnGatewayRequest
  *
- * \brief The CreateVpnGatewayRequest class encapsulates EC2 CreateVpnGateway requests.
+ * \brief The CreateVpnGatewayRequest class provides an interface for EC2 CreateVpnGateway requests.
  *
  * \ingroup EC2
  *

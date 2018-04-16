@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::ListDistributionsByWebACLIdRequest
  *
- * \brief The ListDistributionsByWebACLIdRequest class encapsulates CloudFront ListDistributionsByWebACLId requests.
+ * \brief The ListDistributionsByWebACLIdRequest class provides an interface for CloudFront ListDistributionsByWebACLId requests.
  *
  * \ingroup CloudFront
  *

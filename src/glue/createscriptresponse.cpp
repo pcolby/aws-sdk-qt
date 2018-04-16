@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateScriptResponse
  *
- * \brief The CreateScriptResponse class encapsulates Glue CreateScript responses.
+ * \brief The CreateScriptResponse class provides an interace for Glue CreateScript responses.
  *
  * \ingroup Glue
  *

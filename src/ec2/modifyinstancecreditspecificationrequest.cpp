@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyInstanceCreditSpecificationRequest
  *
- * \brief The ModifyInstanceCreditSpecificationRequest class encapsulates EC2 ModifyInstanceCreditSpecification requests.
+ * \brief The ModifyInstanceCreditSpecificationRequest class provides an interface for EC2 ModifyInstanceCreditSpecification requests.
  *
  * \ingroup EC2
  *

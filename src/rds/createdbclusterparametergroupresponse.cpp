@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CreateDBClusterParameterGroupResponse
  *
- * \brief The CreateDBClusterParameterGroupResponse class encapsulates RDS CreateDBClusterParameterGroup responses.
+ * \brief The CreateDBClusterParameterGroupResponse class provides an interace for RDS CreateDBClusterParameterGroup responses.
  *
  * \ingroup RDS
  *

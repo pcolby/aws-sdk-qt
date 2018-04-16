@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::SendTestEventNotificationResponse
  *
- * \brief The SendTestEventNotificationResponse class encapsulates MTurk SendTestEventNotification responses.
+ * \brief The SendTestEventNotificationResponse class provides an interace for MTurk SendTestEventNotification responses.
  *
  * \ingroup MTurk
  *

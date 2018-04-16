@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AttachNetworkInterfaceResponse
  *
- * \brief The AttachNetworkInterfaceResponse class encapsulates EC2 AttachNetworkInterface responses.
+ * \brief The AttachNetworkInterfaceResponse class provides an interace for EC2 AttachNetworkInterface responses.
  *
  * \ingroup EC2
  *

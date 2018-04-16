@@ -28,7 +28,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::DescribeAttachmentRequest
  *
- * \brief The DescribeAttachmentRequest class encapsulates Support DescribeAttachment requests.
+ * \brief The DescribeAttachmentRequest class provides an interface for Support DescribeAttachment requests.
  *
  * \ingroup Support
  *

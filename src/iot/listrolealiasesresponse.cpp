@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListRoleAliasesResponse
  *
- * \brief The ListRoleAliasesResponse class encapsulates IoT ListRoleAliases responses.
+ * \brief The ListRoleAliasesResponse class provides an interace for IoT ListRoleAliases responses.
  *
  * \ingroup IoT
  *

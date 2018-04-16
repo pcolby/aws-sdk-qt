@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListDevelopmentSchemaArnsResponse
  *
- * \brief The ListDevelopmentSchemaArnsResponse class encapsulates CloudDirectory ListDevelopmentSchemaArns responses.
+ * \brief The ListDevelopmentSchemaArnsResponse class provides an interace for CloudDirectory ListDevelopmentSchemaArns responses.
  *
  * \ingroup CloudDirectory
  *

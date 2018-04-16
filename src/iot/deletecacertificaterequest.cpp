@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteCACertificateRequest
  *
- * \brief The DeleteCACertificateRequest class encapsulates IoT DeleteCACertificate requests.
+ * \brief The DeleteCACertificateRequest class provides an interface for IoT DeleteCACertificate requests.
  *
  * \ingroup IoT
  *

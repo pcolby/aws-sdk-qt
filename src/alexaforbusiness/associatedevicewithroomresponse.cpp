@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::AssociateDeviceWithRoomResponse
  *
- * \brief The AssociateDeviceWithRoomResponse class encapsulates AlexaForBusiness AssociateDeviceWithRoom responses.
+ * \brief The AssociateDeviceWithRoomResponse class provides an interace for AlexaForBusiness AssociateDeviceWithRoom responses.
  *
  * \ingroup AlexaForBusiness
  *

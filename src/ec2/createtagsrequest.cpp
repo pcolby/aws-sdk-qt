@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateTagsRequest
  *
- * \brief The CreateTagsRequest class encapsulates EC2 CreateTags requests.
+ * \brief The CreateTagsRequest class provides an interface for EC2 CreateTags requests.
  *
  * \ingroup EC2
  *

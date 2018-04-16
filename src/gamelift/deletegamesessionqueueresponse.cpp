@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteGameSessionQueueResponse
  *
- * \brief The DeleteGameSessionQueueResponse class encapsulates GameLift DeleteGameSessionQueue responses.
+ * \brief The DeleteGameSessionQueueResponse class provides an interace for GameLift DeleteGameSessionQueue responses.
  *
  * \ingroup GameLift
  *

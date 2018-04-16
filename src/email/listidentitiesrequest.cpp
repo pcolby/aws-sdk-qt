@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::ListIdentitiesRequest
  *
- * \brief The ListIdentitiesRequest class encapsulates SES ListIdentities requests.
+ * \brief The ListIdentitiesRequest class provides an interface for SES ListIdentities requests.
  *
  * \ingroup SES
  *

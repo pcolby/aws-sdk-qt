@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::EnableMFADeviceRequest
  *
- * \brief The EnableMFADeviceRequest class encapsulates IAM EnableMFADevice requests.
+ * \brief The EnableMFADeviceRequest class provides an interface for IAM EnableMFADevice requests.
  *
  * \ingroup IAM
  *

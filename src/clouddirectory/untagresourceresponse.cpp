@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::UntagResourceResponse
  *
- * \brief The UntagResourceResponse class encapsulates CloudDirectory UntagResource responses.
+ * \brief The UntagResourceResponse class provides an interace for CloudDirectory UntagResource responses.
  *
  * \ingroup CloudDirectory
  *

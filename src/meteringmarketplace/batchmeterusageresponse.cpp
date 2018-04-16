@@ -30,7 +30,7 @@ namespace MarketplaceMetering {
 /*!
  * \class QtAws::MarketplaceMetering::BatchMeterUsageResponse
  *
- * \brief The BatchMeterUsageResponse class encapsulates MarketplaceMetering BatchMeterUsage responses.
+ * \brief The BatchMeterUsageResponse class provides an interace for MarketplaceMetering BatchMeterUsage responses.
  *
  * \ingroup MarketplaceMetering
  *

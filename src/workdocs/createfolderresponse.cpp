@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::CreateFolderResponse
  *
- * \brief The CreateFolderResponse class encapsulates WorkDocs CreateFolder responses.
+ * \brief The CreateFolderResponse class provides an interace for WorkDocs CreateFolder responses.
  *
  * \ingroup WorkDocs
  *

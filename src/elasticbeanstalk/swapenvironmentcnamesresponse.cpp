@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::SwapEnvironmentCNAMEsResponse
  *
- * \brief The SwapEnvironmentCNAMEsResponse class encapsulates ElasticBeanstalk SwapEnvironmentCNAMEs responses.
+ * \brief The SwapEnvironmentCNAMEsResponse class provides an interace for ElasticBeanstalk SwapEnvironmentCNAMEs responses.
  *
  * \ingroup ElasticBeanstalk
  *

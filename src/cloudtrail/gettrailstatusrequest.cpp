@@ -28,7 +28,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::GetTrailStatusRequest
  *
- * \brief The GetTrailStatusRequest class encapsulates CloudTrail GetTrailStatus requests.
+ * \brief The GetTrailStatusRequest class provides an interface for CloudTrail GetTrailStatus requests.
  *
  * \ingroup CloudTrail
  *

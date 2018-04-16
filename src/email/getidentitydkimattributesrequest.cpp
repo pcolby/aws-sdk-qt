@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetIdentityDkimAttributesRequest
  *
- * \brief The GetIdentityDkimAttributesRequest class encapsulates SES GetIdentityDkimAttributes requests.
+ * \brief The GetIdentityDkimAttributesRequest class provides an interface for SES GetIdentityDkimAttributes requests.
  *
  * \ingroup SES
  *

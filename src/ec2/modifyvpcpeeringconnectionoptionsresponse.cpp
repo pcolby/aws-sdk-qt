@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyVpcPeeringConnectionOptionsResponse
  *
- * \brief The ModifyVpcPeeringConnectionOptionsResponse class encapsulates EC2 ModifyVpcPeeringConnectionOptions responses.
+ * \brief The ModifyVpcPeeringConnectionOptionsResponse class provides an interace for EC2 ModifyVpcPeeringConnectionOptions responses.
  *
  * \ingroup EC2
  *

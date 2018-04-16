@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::ListTagsOfResourceResponse
  *
- * \brief The ListTagsOfResourceResponse class encapsulates DynamoDB ListTagsOfResource responses.
+ * \brief The ListTagsOfResourceResponse class provides an interace for DynamoDB ListTagsOfResource responses.
  *
  * \ingroup DynamoDB
  *

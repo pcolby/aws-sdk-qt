@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::CreateAliasRequest
  *
- * \brief The CreateAliasRequest class encapsulates KMS CreateAlias requests.
+ * \brief The CreateAliasRequest class provides an interface for KMS CreateAlias requests.
  *
  * \ingroup KMS
  *

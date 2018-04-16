@@ -28,7 +28,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::PutNotificationChannelRequest
  *
- * \brief The PutNotificationChannelRequest class encapsulates FMS PutNotificationChannel requests.
+ * \brief The PutNotificationChannelRequest class provides an interface for FMS PutNotificationChannel requests.
  *
  * \ingroup FMS
  *

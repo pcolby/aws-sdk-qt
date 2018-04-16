@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::ListTagsForProjectRequest
  *
- * \brief The ListTagsForProjectRequest class encapsulates CodeStar ListTagsForProject requests.
+ * \brief The ListTagsForProjectRequest class provides an interface for CodeStar ListTagsForProject requests.
  *
  * \ingroup CodeStar
  *

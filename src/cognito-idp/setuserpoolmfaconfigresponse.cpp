@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::SetUserPoolMfaConfigResponse
  *
- * \brief The SetUserPoolMfaConfigResponse class encapsulates CognitoIdentityProvider SetUserPoolMfaConfig responses.
+ * \brief The SetUserPoolMfaConfigResponse class provides an interace for CognitoIdentityProvider SetUserPoolMfaConfig responses.
  *
  * \ingroup CognitoIdentityProvider
  *

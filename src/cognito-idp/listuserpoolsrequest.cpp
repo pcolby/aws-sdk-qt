@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ListUserPoolsRequest
  *
- * \brief The ListUserPoolsRequest class encapsulates CognitoIdentityProvider ListUserPools requests.
+ * \brief The ListUserPoolsRequest class provides an interface for CognitoIdentityProvider ListUserPools requests.
  *
  * \ingroup CognitoIdentityProvider
  *

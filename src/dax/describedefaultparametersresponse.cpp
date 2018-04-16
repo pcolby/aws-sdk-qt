@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DescribeDefaultParametersResponse
  *
- * \brief The DescribeDefaultParametersResponse class encapsulates DAX DescribeDefaultParameters responses.
+ * \brief The DescribeDefaultParametersResponse class provides an interace for DAX DescribeDefaultParameters responses.
  *
  * \ingroup DAX
  *

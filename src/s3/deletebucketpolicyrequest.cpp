@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::DeleteBucketPolicyRequest
  *
- * \brief The DeleteBucketPolicyRequest class encapsulates S3 DeleteBucketPolicy requests.
+ * \brief The DeleteBucketPolicyRequest class provides an interface for S3 DeleteBucketPolicy requests.
  *
  * \ingroup S3
  *

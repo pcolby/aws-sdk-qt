@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeDBInstancesRequest
  *
- * \brief The DescribeDBInstancesRequest class encapsulates RDS DescribeDBInstances requests.
+ * \brief The DescribeDBInstancesRequest class provides an interface for RDS DescribeDBInstances requests.
  *
  * \ingroup RDS
  *

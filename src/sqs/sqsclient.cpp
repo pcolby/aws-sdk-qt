@@ -77,7 +77,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::SqsClient
  *
- * \brief The SqsClient class provides access the Amazon Simple Queue Service ( SQS) service.
+ * \brief The SqsClient class provides access to the Amazon Simple Queue Service ( SQS) service.
  *
  * \ingroup SQS
  *

@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListComplianceItemsResponse
  *
- * \brief The ListComplianceItemsResponse class encapsulates SSM ListComplianceItems responses.
+ * \brief The ListComplianceItemsResponse class provides an interace for SSM ListComplianceItems responses.
  *
  * \ingroup SSM
  *

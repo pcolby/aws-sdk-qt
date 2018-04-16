@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::GetComplianceDetailsByResourceRequest
  *
- * \brief The GetComplianceDetailsByResourceRequest class encapsulates ConfigService GetComplianceDetailsByResource requests.
+ * \brief The GetComplianceDetailsByResourceRequest class provides an interface for ConfigService GetComplianceDetailsByResource requests.
  *
  * \ingroup ConfigService
  *

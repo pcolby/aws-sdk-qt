@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::ListTrainingJobsRequest
  *
- * \brief The ListTrainingJobsRequest class encapsulates SageMaker ListTrainingJobs requests.
+ * \brief The ListTrainingJobsRequest class provides an interface for SageMaker ListTrainingJobs requests.
  *
  * \ingroup SageMaker
  *

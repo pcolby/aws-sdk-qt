@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AddCustomAttributesResponse
  *
- * \brief The AddCustomAttributesResponse class encapsulates CognitoIdentityProvider AddCustomAttributes responses.
+ * \brief The AddCustomAttributesResponse class provides an interace for CognitoIdentityProvider AddCustomAttributes responses.
  *
  * \ingroup CognitoIdentityProvider
  *

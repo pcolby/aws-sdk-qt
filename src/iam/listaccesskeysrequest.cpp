@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListAccessKeysRequest
  *
- * \brief The ListAccessKeysRequest class encapsulates IAM ListAccessKeys requests.
+ * \brief The ListAccessKeysRequest class provides an interface for IAM ListAccessKeys requests.
  *
  * \ingroup IAM
  *

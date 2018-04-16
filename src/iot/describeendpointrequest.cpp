@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeEndpointRequest
  *
- * \brief The DescribeEndpointRequest class encapsulates IoT DescribeEndpoint requests.
+ * \brief The DescribeEndpointRequest class provides an interface for IoT DescribeEndpoint requests.
  *
  * \ingroup IoT
  *

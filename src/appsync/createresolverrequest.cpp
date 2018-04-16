@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::CreateResolverRequest
  *
- * \brief The CreateResolverRequest class encapsulates AppSync CreateResolver requests.
+ * \brief The CreateResolverRequest class provides an interface for AppSync CreateResolver requests.
  *
  * \ingroup AppSync
  *

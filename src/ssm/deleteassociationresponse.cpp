@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeleteAssociationResponse
  *
- * \brief The DeleteAssociationResponse class encapsulates SSM DeleteAssociation responses.
+ * \brief The DeleteAssociationResponse class provides an interace for SSM DeleteAssociation responses.
  *
  * \ingroup SSM
  *

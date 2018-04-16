@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DescribeUserResponse
  *
- * \brief The DescribeUserResponse class encapsulates WorkMail DescribeUser responses.
+ * \brief The DescribeUserResponse class provides an interace for WorkMail DescribeUser responses.
  *
  * \ingroup WorkMail
  *

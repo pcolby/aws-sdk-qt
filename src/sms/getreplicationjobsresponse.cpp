@@ -30,7 +30,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::GetReplicationJobsResponse
  *
- * \brief The GetReplicationJobsResponse class encapsulates SMS GetReplicationJobs responses.
+ * \brief The GetReplicationJobsResponse class provides an interace for SMS GetReplicationJobs responses.
  *
  * \ingroup SMS
  *

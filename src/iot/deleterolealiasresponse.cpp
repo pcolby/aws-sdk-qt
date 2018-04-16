@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteRoleAliasResponse
  *
- * \brief The DeleteRoleAliasResponse class encapsulates IoT DeleteRoleAlias responses.
+ * \brief The DeleteRoleAliasResponse class provides an interace for IoT DeleteRoleAlias responses.
  *
  * \ingroup IoT
  *

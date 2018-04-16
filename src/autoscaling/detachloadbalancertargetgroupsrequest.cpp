@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DetachLoadBalancerTargetGroupsRequest
  *
- * \brief The DetachLoadBalancerTargetGroupsRequest class encapsulates AutoScaling DetachLoadBalancerTargetGroups requests.
+ * \brief The DetachLoadBalancerTargetGroupsRequest class provides an interface for AutoScaling DetachLoadBalancerTargetGroups requests.
  *
  * \ingroup AutoScaling
  *

@@ -28,7 +28,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::DeleteJobQueueRequest
  *
- * \brief The DeleteJobQueueRequest class encapsulates Batch DeleteJobQueue requests.
+ * \brief The DeleteJobQueueRequest class provides an interface for Batch DeleteJobQueue requests.
  *
  * \ingroup Batch
  *

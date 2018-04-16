@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DeleteInstanceRequest
  *
- * \brief The DeleteInstanceRequest class encapsulates Lightsail DeleteInstance requests.
+ * \brief The DeleteInstanceRequest class provides an interface for Lightsail DeleteInstance requests.
  *
  * \ingroup Lightsail
  *

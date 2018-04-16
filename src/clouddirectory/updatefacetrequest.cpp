@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::UpdateFacetRequest
  *
- * \brief The UpdateFacetRequest class encapsulates CloudDirectory UpdateFacet requests.
+ * \brief The UpdateFacetRequest class provides an interface for CloudDirectory UpdateFacet requests.
  *
  * \ingroup CloudDirectory
  *

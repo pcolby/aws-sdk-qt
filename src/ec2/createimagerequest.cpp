@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateImageRequest
  *
- * \brief The CreateImageRequest class encapsulates EC2 CreateImage requests.
+ * \brief The CreateImageRequest class provides an interface for EC2 CreateImage requests.
  *
  * \ingroup EC2
  *

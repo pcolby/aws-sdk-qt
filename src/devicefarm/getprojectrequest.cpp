@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetProjectRequest
  *
- * \brief The GetProjectRequest class encapsulates DeviceFarm GetProject requests.
+ * \brief The GetProjectRequest class provides an interface for DeviceFarm GetProject requests.
  *
  * \ingroup DeviceFarm
  *

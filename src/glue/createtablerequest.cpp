@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateTableRequest
  *
- * \brief The CreateTableRequest class encapsulates Glue CreateTable requests.
+ * \brief The CreateTableRequest class provides an interface for Glue CreateTable requests.
  *
  * \ingroup Glue
  *

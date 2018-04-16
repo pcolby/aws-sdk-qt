@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::StartStreamEncryptionResponse
  *
- * \brief The StartStreamEncryptionResponse class encapsulates Kinesis StartStreamEncryption responses.
+ * \brief The StartStreamEncryptionResponse class provides an interace for Kinesis StartStreamEncryption responses.
  *
  * \ingroup Kinesis
  *

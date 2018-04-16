@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::DeleteImportedKeyMaterialResponse
  *
- * \brief The DeleteImportedKeyMaterialResponse class encapsulates KMS DeleteImportedKeyMaterial responses.
+ * \brief The DeleteImportedKeyMaterialResponse class provides an interace for KMS DeleteImportedKeyMaterial responses.
  *
  * \ingroup KMS
  *

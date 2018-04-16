@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListAuthorizersRequest
  *
- * \brief The ListAuthorizersRequest class encapsulates IoT ListAuthorizers requests.
+ * \brief The ListAuthorizersRequest class provides an interface for IoT ListAuthorizers requests.
  *
  * \ingroup IoT
  *

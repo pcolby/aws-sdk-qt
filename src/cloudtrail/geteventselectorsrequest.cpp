@@ -28,7 +28,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::GetEventSelectorsRequest
  *
- * \brief The GetEventSelectorsRequest class encapsulates CloudTrail GetEventSelectors requests.
+ * \brief The GetEventSelectorsRequest class provides an interface for CloudTrail GetEventSelectors requests.
  *
  * \ingroup CloudTrail
  *

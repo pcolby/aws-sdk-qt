@@ -30,7 +30,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::CreateServiceResponse
  *
- * \brief The CreateServiceResponse class encapsulates ServiceDiscovery CreateService responses.
+ * \brief The CreateServiceResponse class provides an interace for ServiceDiscovery CreateService responses.
  *
  * \ingroup ServiceDiscovery
  *

@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeregisterInstanceResponse
  *
- * \brief The DeregisterInstanceResponse class encapsulates OpsWorks DeregisterInstance responses.
+ * \brief The DeregisterInstanceResponse class provides an interace for OpsWorks DeregisterInstance responses.
  *
  * \ingroup OpsWorks
  *

@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CancelJobResponse
  *
- * \brief The CancelJobResponse class encapsulates IoT CancelJob responses.
+ * \brief The CancelJobResponse class provides an interace for IoT CancelJob responses.
  *
  * \ingroup IoT
  *

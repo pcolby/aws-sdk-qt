@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ResetCacheParameterGroupRequest
  *
- * \brief The ResetCacheParameterGroupRequest class encapsulates ElastiCache ResetCacheParameterGroup requests.
+ * \brief The ResetCacheParameterGroupRequest class provides an interface for ElastiCache ResetCacheParameterGroup requests.
  *
  * \ingroup ElastiCache
  *

@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetInstancePortStatesRequest
  *
- * \brief The GetInstancePortStatesRequest class encapsulates Lightsail GetInstancePortStates requests.
+ * \brief The GetInstancePortStatesRequest class provides an interface for Lightsail GetInstancePortStates requests.
  *
  * \ingroup Lightsail
  *

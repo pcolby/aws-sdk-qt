@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::GetQueueUrlRequest
  *
- * \brief The GetQueueUrlRequest class encapsulates SQS GetQueueUrl requests.
+ * \brief The GetQueueUrlRequest class provides an interface for SQS GetQueueUrl requests.
  *
  * \ingroup SQS
  *

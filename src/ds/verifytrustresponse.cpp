@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::VerifyTrustResponse
  *
- * \brief The VerifyTrustResponse class encapsulates DirectoryService VerifyTrust responses.
+ * \brief The VerifyTrustResponse class provides an interace for DirectoryService VerifyTrust responses.
  *
  * \ingroup DirectoryService
  *

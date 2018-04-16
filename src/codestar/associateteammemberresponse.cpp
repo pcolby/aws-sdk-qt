@@ -30,7 +30,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::AssociateTeamMemberResponse
  *
- * \brief The AssociateTeamMemberResponse class encapsulates CodeStar AssociateTeamMember responses.
+ * \brief The AssociateTeamMemberResponse class provides an interace for CodeStar AssociateTeamMember responses.
  *
  * \ingroup CodeStar
  *

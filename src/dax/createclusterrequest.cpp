@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::CreateClusterRequest
  *
- * \brief The CreateClusterRequest class encapsulates DAX CreateCluster requests.
+ * \brief The CreateClusterRequest class provides an interface for DAX CreateCluster requests.
  *
  * \ingroup DAX
  *

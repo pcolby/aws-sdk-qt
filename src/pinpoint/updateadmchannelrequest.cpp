@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateAdmChannelRequest
  *
- * \brief The UpdateAdmChannelRequest class encapsulates Pinpoint UpdateAdmChannel requests.
+ * \brief The UpdateAdmChannelRequest class provides an interface for Pinpoint UpdateAdmChannel requests.
  *
  * \ingroup Pinpoint
  *

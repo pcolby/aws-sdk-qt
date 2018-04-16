@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DescribeAccountResponse
  *
- * \brief The DescribeAccountResponse class encapsulates Organizations DescribeAccount responses.
+ * \brief The DescribeAccountResponse class provides an interace for Organizations DescribeAccount responses.
  *
  * \ingroup Organizations
  *

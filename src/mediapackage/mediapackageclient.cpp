@@ -59,7 +59,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::MediaPackageClient
  *
- * \brief The MediaPackageClient class provides access the AWS Elemental MediaPackage service.
+ * \brief The MediaPackageClient class provides access to the AWS Elemental MediaPackage service.
  *
  * \ingroup MediaPackage
  *

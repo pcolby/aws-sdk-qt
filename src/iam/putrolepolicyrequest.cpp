@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::PutRolePolicyRequest
  *
- * \brief The PutRolePolicyRequest class encapsulates IAM PutRolePolicy requests.
+ * \brief The PutRolePolicyRequest class provides an interface for IAM PutRolePolicy requests.
  *
  * \ingroup IAM
  *

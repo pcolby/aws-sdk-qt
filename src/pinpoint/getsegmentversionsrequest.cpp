@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetSegmentVersionsRequest
  *
- * \brief The GetSegmentVersionsRequest class encapsulates Pinpoint GetSegmentVersions requests.
+ * \brief The GetSegmentVersionsRequest class provides an interface for Pinpoint GetSegmentVersions requests.
  *
  * \ingroup Pinpoint
  *

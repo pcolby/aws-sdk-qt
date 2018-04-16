@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::CreateStateMachineRequest
  *
- * \brief The CreateStateMachineRequest class encapsulates SFN CreateStateMachine requests.
+ * \brief The CreateStateMachineRequest class provides an interface for SFN CreateStateMachine requests.
  *
  * \ingroup SFN
  *

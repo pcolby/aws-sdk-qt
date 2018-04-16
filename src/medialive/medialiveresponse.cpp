@@ -29,7 +29,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::MediaLiveResponse
  *
- * \brief The MediaLiveResponse class is the base class for all MediaLive responses.
+ * \brief The MediaLiveResponse class provides an interface for MediaLive responses.
  *
  * \ingroup MediaLive
  */

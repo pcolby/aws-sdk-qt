@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::BatchDeleteImageResponse
  *
- * \brief The BatchDeleteImageResponse class encapsulates ECR BatchDeleteImage responses.
+ * \brief The BatchDeleteImageResponse class provides an interace for ECR BatchDeleteImage responses.
  *
  * \ingroup ECR
  *

@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::ListQueueTagsRequest
  *
- * \brief The ListQueueTagsRequest class encapsulates SQS ListQueueTags requests.
+ * \brief The ListQueueTagsRequest class provides an interface for SQS ListQueueTags requests.
  *
  * \ingroup SQS
  *

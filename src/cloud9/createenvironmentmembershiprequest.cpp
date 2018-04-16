@@ -28,7 +28,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::CreateEnvironmentMembershipRequest
  *
- * \brief The CreateEnvironmentMembershipRequest class encapsulates Cloud9 CreateEnvironmentMembership requests.
+ * \brief The CreateEnvironmentMembershipRequest class provides an interface for Cloud9 CreateEnvironmentMembership requests.
  *
  * \ingroup Cloud9
  *

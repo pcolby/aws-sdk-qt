@@ -30,7 +30,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::CreateFileSystemResponse
  *
- * \brief The CreateFileSystemResponse class encapsulates EFS CreateFileSystem responses.
+ * \brief The CreateFileSystemResponse class provides an interace for EFS CreateFileSystem responses.
  *
  * \ingroup EFS
  *

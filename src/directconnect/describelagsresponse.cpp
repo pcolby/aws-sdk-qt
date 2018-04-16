@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DescribeLagsResponse
  *
- * \brief The DescribeLagsResponse class encapsulates DirectConnect DescribeLags responses.
+ * \brief The DescribeLagsResponse class provides an interace for DirectConnect DescribeLags responses.
  *
  * \ingroup DirectConnect
  *

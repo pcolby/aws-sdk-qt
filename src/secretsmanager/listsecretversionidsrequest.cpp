@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::ListSecretVersionIdsRequest
  *
- * \brief The ListSecretVersionIdsRequest class encapsulates SecretsManager ListSecretVersionIds requests.
+ * \brief The ListSecretVersionIdsRequest class provides an interface for SecretsManager ListSecretVersionIds requests.
  *
  * \ingroup SecretsManager
  *

@@ -29,7 +29,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::MediaConvertResponse
  *
- * \brief The MediaConvertResponse class is the base class for all MediaConvert responses.
+ * \brief The MediaConvertResponse class provides an interface for MediaConvert responses.
  *
  * \ingroup MediaConvert
  */

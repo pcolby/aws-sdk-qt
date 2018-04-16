@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::UploadMultipartPartRequest
  *
- * \brief The UploadMultipartPartRequest class encapsulates Glacier UploadMultipartPart requests.
+ * \brief The UploadMultipartPartRequest class provides an interface for Glacier UploadMultipartPart requests.
  *
  * \ingroup Glacier
  *

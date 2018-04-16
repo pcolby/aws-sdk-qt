@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::RegisterOnPremisesInstanceRequest
  *
- * \brief The RegisterOnPremisesInstanceRequest class encapsulates CodeDeploy RegisterOnPremisesInstance requests.
+ * \brief The RegisterOnPremisesInstanceRequest class provides an interface for CodeDeploy RegisterOnPremisesInstance requests.
  *
  * \ingroup CodeDeploy
  *

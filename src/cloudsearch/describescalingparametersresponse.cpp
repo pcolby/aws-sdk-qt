@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeScalingParametersResponse
  *
- * \brief The DescribeScalingParametersResponse class encapsulates CloudSearch DescribeScalingParameters responses.
+ * \brief The DescribeScalingParametersResponse class provides an interace for CloudSearch DescribeScalingParameters responses.
  *
  * \ingroup CloudSearch
  *

@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::VerifyUserAttributeResponse
  *
- * \brief The VerifyUserAttributeResponse class encapsulates CognitoIdentityProvider VerifyUserAttribute responses.
+ * \brief The VerifyUserAttributeResponse class provides an interace for CognitoIdentityProvider VerifyUserAttribute responses.
  *
  * \ingroup CognitoIdentityProvider
  *

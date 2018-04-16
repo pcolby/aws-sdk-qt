@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AssignIpv6AddressesRequest
  *
- * \brief The AssignIpv6AddressesRequest class encapsulates EC2 AssignIpv6Addresses requests.
+ * \brief The AssignIpv6AddressesRequest class provides an interface for EC2 AssignIpv6Addresses requests.
  *
  * \ingroup EC2
  *

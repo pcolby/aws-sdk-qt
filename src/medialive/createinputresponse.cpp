@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::CreateInputResponse
  *
- * \brief The CreateInputResponse class encapsulates MediaLive CreateInput responses.
+ * \brief The CreateInputResponse class provides an interace for MediaLive CreateInput responses.
  *
  * \ingroup MediaLive
  *

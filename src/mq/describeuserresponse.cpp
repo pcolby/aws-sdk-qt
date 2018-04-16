@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::DescribeUserResponse
  *
- * \brief The DescribeUserResponse class encapsulates MQ DescribeUser responses.
+ * \brief The DescribeUserResponse class provides an interace for MQ DescribeUser responses.
  *
  * \ingroup MQ
  *

@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::StartContentModerationRequest
  *
- * \brief The StartContentModerationRequest class encapsulates Rekognition StartContentModeration requests.
+ * \brief The StartContentModerationRequest class provides an interface for Rekognition StartContentModeration requests.
  *
  * \ingroup Rekognition
  *

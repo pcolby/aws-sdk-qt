@@ -30,7 +30,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::DeleteProtectionResponse
  *
- * \brief The DeleteProtectionResponse class encapsulates Shield DeleteProtection responses.
+ * \brief The DeleteProtectionResponse class provides an interace for Shield DeleteProtection responses.
  *
  * \ingroup Shield
  *

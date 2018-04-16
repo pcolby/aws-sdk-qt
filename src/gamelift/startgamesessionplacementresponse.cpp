@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::StartGameSessionPlacementResponse
  *
- * \brief The StartGameSessionPlacementResponse class encapsulates GameLift StartGameSessionPlacement responses.
+ * \brief The StartGameSessionPlacementResponse class provides an interace for GameLift StartGameSessionPlacement responses.
  *
  * \ingroup GameLift
  *

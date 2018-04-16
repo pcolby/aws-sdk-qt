@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::GetAccountSettingsRequest
  *
- * \brief The GetAccountSettingsRequest class encapsulates Lambda GetAccountSettings requests.
+ * \brief The GetAccountSettingsRequest class provides an interface for Lambda GetAccountSettings requests.
  *
  * \ingroup Lambda
  *

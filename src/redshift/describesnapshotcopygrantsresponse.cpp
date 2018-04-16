@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeSnapshotCopyGrantsResponse
  *
- * \brief The DescribeSnapshotCopyGrantsResponse class encapsulates Redshift DescribeSnapshotCopyGrants responses.
+ * \brief The DescribeSnapshotCopyGrantsResponse class provides an interace for Redshift DescribeSnapshotCopyGrants responses.
  *
  * \ingroup Redshift
  *

@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DisassociateKmsKeyResponse
  *
- * \brief The DisassociateKmsKeyResponse class encapsulates CloudWatchLogs DisassociateKmsKey responses.
+ * \brief The DisassociateKmsKeyResponse class provides an interace for CloudWatchLogs DisassociateKmsKey responses.
  *
  * \ingroup CloudWatchLogs
  *

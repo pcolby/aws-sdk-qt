@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteIPSetResponse
  *
- * \brief The DeleteIPSetResponse class encapsulates WAF DeleteIPSet responses.
+ * \brief The DeleteIPSetResponse class provides an interace for WAF DeleteIPSet responses.
  *
  * \ingroup WAF
  *

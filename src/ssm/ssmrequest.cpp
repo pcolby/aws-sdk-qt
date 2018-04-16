@@ -26,7 +26,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::SSMRequest
  *
- * \brief The SSMRequest class is the base class for all SSM requests.
+ * \brief The SSMRequest class provides an interface for SSM requests.
  *
  * \ingroup SSM
  */

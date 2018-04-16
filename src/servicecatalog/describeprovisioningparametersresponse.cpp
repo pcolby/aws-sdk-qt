@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribeProvisioningParametersResponse
  *
- * \brief The DescribeProvisioningParametersResponse class encapsulates ServiceCatalog DescribeProvisioningParameters responses.
+ * \brief The DescribeProvisioningParametersResponse class provides an interace for ServiceCatalog DescribeProvisioningParameters responses.
  *
  * \ingroup ServiceCatalog
  *

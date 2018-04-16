@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::UnmonitorInstancesResponse
  *
- * \brief The UnmonitorInstancesResponse class encapsulates EC2 UnmonitorInstances responses.
+ * \brief The UnmonitorInstancesResponse class provides an interace for EC2 UnmonitorInstances responses.
  *
  * \ingroup EC2
  *

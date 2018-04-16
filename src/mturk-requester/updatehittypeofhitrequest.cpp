@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::UpdateHITTypeOfHITRequest
  *
- * \brief The UpdateHITTypeOfHITRequest class encapsulates MTurk UpdateHITTypeOfHIT requests.
+ * \brief The UpdateHITTypeOfHITRequest class provides an interface for MTurk UpdateHITTypeOfHIT requests.
  *
  * \ingroup MTurk
  *

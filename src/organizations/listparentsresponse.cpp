@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListParentsResponse
  *
- * \brief The ListParentsResponse class encapsulates Organizations ListParents responses.
+ * \brief The ListParentsResponse class provides an interace for Organizations ListParents responses.
  *
  * \ingroup Organizations
  *

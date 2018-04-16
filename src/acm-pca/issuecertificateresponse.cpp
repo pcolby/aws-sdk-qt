@@ -30,7 +30,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::IssueCertificateResponse
  *
- * \brief The IssueCertificateResponse class encapsulates ACMPCA IssueCertificate responses.
+ * \brief The IssueCertificateResponse class provides an interace for ACMPCA IssueCertificate responses.
  *
  * \ingroup ACMPCA
  *

@@ -28,7 +28,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::RegisterDomainRequest
  *
- * \brief The RegisterDomainRequest class encapsulates Route53Domains RegisterDomain requests.
+ * \brief The RegisterDomainRequest class provides an interface for Route53Domains RegisterDomain requests.
  *
  * \ingroup Route53Domains
  *

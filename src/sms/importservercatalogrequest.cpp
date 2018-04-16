@@ -28,7 +28,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::ImportServerCatalogRequest
  *
- * \brief The ImportServerCatalogRequest class encapsulates SMS ImportServerCatalog requests.
+ * \brief The ImportServerCatalogRequest class provides an interface for SMS ImportServerCatalog requests.
  *
  * \ingroup SMS
  *

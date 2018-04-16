@@ -30,7 +30,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::DescribeEventBusResponse
  *
- * \brief The DescribeEventBusResponse class encapsulates CloudWatchEvents DescribeEventBus responses.
+ * \brief The DescribeEventBusResponse class provides an interace for CloudWatchEvents DescribeEventBus responses.
  *
  * \ingroup CloudWatchEvents
  *

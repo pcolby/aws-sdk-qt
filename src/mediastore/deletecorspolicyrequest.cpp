@@ -28,7 +28,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::DeleteCorsPolicyRequest
  *
- * \brief The DeleteCorsPolicyRequest class encapsulates MediaStore DeleteCorsPolicy requests.
+ * \brief The DeleteCorsPolicyRequest class provides an interface for MediaStore DeleteCorsPolicy requests.
  *
  * \ingroup MediaStore
  *

@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ChangePasswordRequest
  *
- * \brief The ChangePasswordRequest class encapsulates CognitoIdentityProvider ChangePassword requests.
+ * \brief The ChangePasswordRequest class provides an interface for CognitoIdentityProvider ChangePassword requests.
  *
  * \ingroup CognitoIdentityProvider
  *

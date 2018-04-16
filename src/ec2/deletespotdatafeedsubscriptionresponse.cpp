@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteSpotDatafeedSubscriptionResponse
  *
- * \brief The DeleteSpotDatafeedSubscriptionResponse class encapsulates EC2 DeleteSpotDatafeedSubscription responses.
+ * \brief The DeleteSpotDatafeedSubscriptionResponse class provides an interace for EC2 DeleteSpotDatafeedSubscription responses.
  *
  * \ingroup EC2
  *

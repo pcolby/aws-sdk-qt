@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::DescribeHsmRequest
  *
- * \brief The DescribeHsmRequest class encapsulates CloudHSM DescribeHsm requests.
+ * \brief The DescribeHsmRequest class provides an interface for CloudHSM DescribeHsm requests.
  *
  * \ingroup CloudHSM
  *

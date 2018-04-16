@@ -71,7 +71,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::SnowballClient
  *
- * \brief The SnowballClient class provides access the Amazon Import/Export Snowball service.
+ * \brief The SnowballClient class provides access to the Amazon Import/Export Snowball service.
  *
  * \ingroup Snowball
  *

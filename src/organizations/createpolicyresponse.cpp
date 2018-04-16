@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::CreatePolicyResponse
  *
- * \brief The CreatePolicyResponse class encapsulates Organizations CreatePolicy responses.
+ * \brief The CreatePolicyResponse class provides an interace for Organizations CreatePolicy responses.
  *
  * \ingroup Organizations
  *

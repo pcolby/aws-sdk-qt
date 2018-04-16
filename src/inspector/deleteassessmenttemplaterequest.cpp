@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::DeleteAssessmentTemplateRequest
  *
- * \brief The DeleteAssessmentTemplateRequest class encapsulates Inspector DeleteAssessmentTemplate requests.
+ * \brief The DeleteAssessmentTemplateRequest class provides an interface for Inspector DeleteAssessmentTemplate requests.
  *
  * \ingroup Inspector
  *

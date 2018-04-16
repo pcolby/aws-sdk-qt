@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::RegisterDefaultPatchBaselineResponse
  *
- * \brief The RegisterDefaultPatchBaselineResponse class encapsulates SSM RegisterDefaultPatchBaseline responses.
+ * \brief The RegisterDefaultPatchBaselineResponse class provides an interace for SSM RegisterDefaultPatchBaseline responses.
  *
  * \ingroup SSM
  *

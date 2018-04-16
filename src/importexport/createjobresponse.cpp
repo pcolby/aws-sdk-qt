@@ -30,7 +30,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::CreateJobResponse
  *
- * \brief The CreateJobResponse class encapsulates ImportExport CreateJob responses.
+ * \brief The CreateJobResponse class provides an interace for ImportExport CreateJob responses.
  *
  * \ingroup ImportExport
  *

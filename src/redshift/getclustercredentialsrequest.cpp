@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::GetClusterCredentialsRequest
  *
- * \brief The GetClusterCredentialsRequest class encapsulates Redshift GetClusterCredentials requests.
+ * \brief The GetClusterCredentialsRequest class provides an interface for Redshift GetClusterCredentials requests.
  *
  * \ingroup Redshift
  *

@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::DeletePipelineResponse
  *
- * \brief The DeletePipelineResponse class encapsulates CodePipeline DeletePipeline responses.
+ * \brief The DeletePipelineResponse class provides an interace for CodePipeline DeletePipeline responses.
  *
  * \ingroup CodePipeline
  *

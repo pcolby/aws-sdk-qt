@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::BatchCreatePartitionResponse
  *
- * \brief The BatchCreatePartitionResponse class encapsulates Glue BatchCreatePartition responses.
+ * \brief The BatchCreatePartitionResponse class provides an interace for Glue BatchCreatePartition responses.
  *
  * \ingroup Glue
  *

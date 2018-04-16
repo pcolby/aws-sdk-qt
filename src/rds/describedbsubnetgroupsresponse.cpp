@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeDBSubnetGroupsResponse
  *
- * \brief The DescribeDBSubnetGroupsResponse class encapsulates RDS DescribeDBSubnetGroups responses.
+ * \brief The DescribeDBSubnetGroupsResponse class provides an interace for RDS DescribeDBSubnetGroups responses.
  *
  * \ingroup RDS
  *

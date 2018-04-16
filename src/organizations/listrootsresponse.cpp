@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListRootsResponse
  *
- * \brief The ListRootsResponse class encapsulates Organizations ListRoots responses.
+ * \brief The ListRootsResponse class provides an interace for Organizations ListRoots responses.
  *
  * \ingroup Organizations
  *

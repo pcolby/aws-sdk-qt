@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::SearchDevicesResponse
  *
- * \brief The SearchDevicesResponse class encapsulates AlexaForBusiness SearchDevices responses.
+ * \brief The SearchDevicesResponse class provides an interace for AlexaForBusiness SearchDevices responses.
  *
  * \ingroup AlexaForBusiness
  *

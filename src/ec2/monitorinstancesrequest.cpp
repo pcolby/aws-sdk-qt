@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::MonitorInstancesRequest
  *
- * \brief The MonitorInstancesRequest class encapsulates EC2 MonitorInstances requests.
+ * \brief The MonitorInstancesRequest class provides an interface for EC2 MonitorInstances requests.
  *
  * \ingroup EC2
  *

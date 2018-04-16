@@ -30,7 +30,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::CreateBudgetResponse
  *
- * \brief The CreateBudgetResponse class encapsulates Budgets CreateBudget responses.
+ * \brief The CreateBudgetResponse class provides an interace for Budgets CreateBudget responses.
  *
  * \ingroup Budgets
  *

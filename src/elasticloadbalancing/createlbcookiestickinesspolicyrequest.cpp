@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::CreateLBCookieStickinessPolicyRequest
  *
- * \brief The CreateLBCookieStickinessPolicyRequest class encapsulates ElasticLoadBalancing CreateLBCookieStickinessPolicy requests.
+ * \brief The CreateLBCookieStickinessPolicyRequest class provides an interface for ElasticLoadBalancing CreateLBCookieStickinessPolicy requests.
  *
  * \ingroup ElasticLoadBalancing
  *

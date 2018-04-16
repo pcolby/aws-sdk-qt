@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::CreatePresetRequest
  *
- * \brief The CreatePresetRequest class encapsulates MediaConvert CreatePreset requests.
+ * \brief The CreatePresetRequest class provides an interface for MediaConvert CreatePreset requests.
  *
  * \ingroup MediaConvert
  *

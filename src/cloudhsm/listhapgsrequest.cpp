@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::ListHapgsRequest
  *
- * \brief The ListHapgsRequest class encapsulates CloudHSM ListHapgs requests.
+ * \brief The ListHapgsRequest class provides an interface for CloudHSM ListHapgs requests.
  *
  * \ingroup CloudHSM
  *

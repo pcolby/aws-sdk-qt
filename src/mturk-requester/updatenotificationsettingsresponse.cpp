@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::UpdateNotificationSettingsResponse
  *
- * \brief The UpdateNotificationSettingsResponse class encapsulates MTurk UpdateNotificationSettings responses.
+ * \brief The UpdateNotificationSettingsResponse class provides an interace for MTurk UpdateNotificationSettings responses.
  *
  * \ingroup MTurk
  *

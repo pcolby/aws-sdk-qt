@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteAccountAliasRequest
  *
- * \brief The DeleteAccountAliasRequest class encapsulates IAM DeleteAccountAlias requests.
+ * \brief The DeleteAccountAliasRequest class provides an interface for IAM DeleteAccountAlias requests.
  *
  * \ingroup IAM
  *

@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::PeerVpcResponse
  *
- * \brief The PeerVpcResponse class encapsulates Lightsail PeerVpc responses.
+ * \brief The PeerVpcResponse class provides an interace for Lightsail PeerVpc responses.
  *
  * \ingroup Lightsail
  *

@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DeleteSubnetGroupResponse
  *
- * \brief The DeleteSubnetGroupResponse class encapsulates DAX DeleteSubnetGroup responses.
+ * \brief The DeleteSubnetGroupResponse class provides an interace for DAX DeleteSubnetGroup responses.
  *
  * \ingroup DAX
  *

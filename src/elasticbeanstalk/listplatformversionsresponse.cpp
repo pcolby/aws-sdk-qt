@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::ListPlatformVersionsResponse
  *
- * \brief The ListPlatformVersionsResponse class encapsulates ElasticBeanstalk ListPlatformVersions responses.
+ * \brief The ListPlatformVersionsResponse class provides an interace for ElasticBeanstalk ListPlatformVersions responses.
  *
  * \ingroup ElasticBeanstalk
  *

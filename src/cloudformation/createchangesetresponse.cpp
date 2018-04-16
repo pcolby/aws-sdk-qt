@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::CreateChangeSetResponse
  *
- * \brief The CreateChangeSetResponse class encapsulates CloudFormation CreateChangeSet responses.
+ * \brief The CreateChangeSetResponse class provides an interace for CloudFormation CreateChangeSet responses.
  *
  * \ingroup CloudFormation
  *

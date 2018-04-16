@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DeleteParameterGroupResponse
  *
- * \brief The DeleteParameterGroupResponse class encapsulates DAX DeleteParameterGroup responses.
+ * \brief The DeleteParameterGroupResponse class provides an interace for DAX DeleteParameterGroup responses.
  *
  * \ingroup DAX
  *

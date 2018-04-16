@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DetachPolicyRequest
  *
- * \brief The DetachPolicyRequest class encapsulates Organizations DetachPolicy requests.
+ * \brief The DetachPolicyRequest class provides an interface for Organizations DetachPolicy requests.
  *
  * \ingroup Organizations
  *

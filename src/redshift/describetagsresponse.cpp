@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeTagsResponse
  *
- * \brief The DescribeTagsResponse class encapsulates Redshift DescribeTags responses.
+ * \brief The DescribeTagsResponse class provides an interace for Redshift DescribeTags responses.
  *
  * \ingroup Redshift
  *

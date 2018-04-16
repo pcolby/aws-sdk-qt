@@ -85,7 +85,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::Route53DomainsClient
  *
- * \brief The Route53DomainsClient class provides access the Amazon Route 53 Domains service.
+ * \brief The Route53DomainsClient class provides access to the Amazon Route 53 Domains service.
  *
  * \ingroup Route53Domains
  *

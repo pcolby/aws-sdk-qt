@@ -30,7 +30,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::ListClusterJobsResponse
  *
- * \brief The ListClusterJobsResponse class encapsulates Snowball ListClusterJobs responses.
+ * \brief The ListClusterJobsResponse class provides an interace for Snowball ListClusterJobs responses.
  *
  * \ingroup Snowball
  *

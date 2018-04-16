@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateOpenIDConnectProviderThumbprintRequest
  *
- * \brief The UpdateOpenIDConnectProviderThumbprintRequest class encapsulates IAM UpdateOpenIDConnectProviderThumbprint requests.
+ * \brief The UpdateOpenIDConnectProviderThumbprintRequest class provides an interface for IAM UpdateOpenIDConnectProviderThumbprint requests.
  *
  * \ingroup IAM
  *

@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DetachObjectResponse
  *
- * \brief The DetachObjectResponse class encapsulates CloudDirectory DetachObject responses.
+ * \brief The DetachObjectResponse class provides an interace for CloudDirectory DetachObject responses.
  *
  * \ingroup CloudDirectory
  *

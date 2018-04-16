@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateNetworkInterfaceRequest
  *
- * \brief The CreateNetworkInterfaceRequest class encapsulates EC2 CreateNetworkInterface requests.
+ * \brief The CreateNetworkInterfaceRequest class provides an interface for EC2 CreateNetworkInterface requests.
  *
  * \ingroup EC2
  *

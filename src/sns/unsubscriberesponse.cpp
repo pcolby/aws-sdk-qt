@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::UnsubscribeResponse
  *
- * \brief The UnsubscribeResponse class encapsulates SNS Unsubscribe responses.
+ * \brief The UnsubscribeResponse class provides an interace for SNS Unsubscribe responses.
  *
  * \ingroup SNS
  *

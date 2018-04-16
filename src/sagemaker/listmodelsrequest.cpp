@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::ListModelsRequest
  *
- * \brief The ListModelsRequest class encapsulates SageMaker ListModels requests.
+ * \brief The ListModelsRequest class provides an interface for SageMaker ListModels requests.
  *
  * \ingroup SageMaker
  *

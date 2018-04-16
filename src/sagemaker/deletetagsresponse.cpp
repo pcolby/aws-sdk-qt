@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DeleteTagsResponse
  *
- * \brief The DeleteTagsResponse class encapsulates SageMaker DeleteTags responses.
+ * \brief The DeleteTagsResponse class provides an interace for SageMaker DeleteTags responses.
  *
  * \ingroup SageMaker
  *

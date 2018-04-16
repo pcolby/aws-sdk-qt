@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DeleteMembersRequest
  *
- * \brief The DeleteMembersRequest class encapsulates GuardDuty DeleteMembers requests.
+ * \brief The DeleteMembersRequest class provides an interface for GuardDuty DeleteMembers requests.
  *
  * \ingroup GuardDuty
  *

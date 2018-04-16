@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::LeaveOrganizationResponse
  *
- * \brief The LeaveOrganizationResponse class encapsulates Organizations LeaveOrganization responses.
+ * \brief The LeaveOrganizationResponse class provides an interace for Organizations LeaveOrganization responses.
  *
  * \ingroup Organizations
  *

@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::CreateKeyRequest
  *
- * \brief The CreateKeyRequest class encapsulates KMS CreateKey requests.
+ * \brief The CreateKeyRequest class provides an interface for KMS CreateKey requests.
  *
  * \ingroup KMS
  *

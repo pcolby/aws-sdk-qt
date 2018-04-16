@@ -28,7 +28,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::DeleteSubscriptionRequest
  *
- * \brief The DeleteSubscriptionRequest class encapsulates Shield DeleteSubscription requests.
+ * \brief The DeleteSubscriptionRequest class provides an interface for Shield DeleteSubscription requests.
  *
  * \ingroup Shield
  *

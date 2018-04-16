@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::ListPresetsRequest
  *
- * \brief The ListPresetsRequest class encapsulates ElasticTranscoder ListPresets requests.
+ * \brief The ListPresetsRequest class provides an interface for ElasticTranscoder ListPresets requests.
  *
  * \ingroup ElasticTranscoder
  *

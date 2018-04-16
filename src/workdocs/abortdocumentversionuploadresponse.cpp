@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::AbortDocumentVersionUploadResponse
  *
- * \brief The AbortDocumentVersionUploadResponse class encapsulates WorkDocs AbortDocumentVersionUpload responses.
+ * \brief The AbortDocumentVersionUploadResponse class provides an interace for WorkDocs AbortDocumentVersionUpload responses.
  *
  * \ingroup WorkDocs
  *

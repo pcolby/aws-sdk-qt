@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::PutIntegrationRequest
  *
- * \brief The PutIntegrationRequest class encapsulates APIGateway PutIntegration requests.
+ * \brief The PutIntegrationRequest class provides an interface for APIGateway PutIntegration requests.
  *
  * \ingroup APIGateway
  *

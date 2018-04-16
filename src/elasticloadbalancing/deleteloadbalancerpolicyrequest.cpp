@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::DeleteLoadBalancerPolicyRequest
  *
- * \brief The DeleteLoadBalancerPolicyRequest class encapsulates ElasticLoadBalancing DeleteLoadBalancerPolicy requests.
+ * \brief The DeleteLoadBalancerPolicyRequest class provides an interface for ElasticLoadBalancing DeleteLoadBalancerPolicy requests.
  *
  * \ingroup ElasticLoadBalancing
  *

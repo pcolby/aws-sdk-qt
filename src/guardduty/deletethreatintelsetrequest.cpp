@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DeleteThreatIntelSetRequest
  *
- * \brief The DeleteThreatIntelSetRequest class encapsulates GuardDuty DeleteThreatIntelSet requests.
+ * \brief The DeleteThreatIntelSetRequest class provides an interface for GuardDuty DeleteThreatIntelSet requests.
  *
  * \ingroup GuardDuty
  *

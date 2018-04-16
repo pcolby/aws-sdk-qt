@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::CreateIdentityProviderRequest
  *
- * \brief The CreateIdentityProviderRequest class encapsulates CognitoIdentityProvider CreateIdentityProvider requests.
+ * \brief The CreateIdentityProviderRequest class provides an interface for CognitoIdentityProvider CreateIdentityProvider requests.
  *
  * \ingroup CognitoIdentityProvider
  *

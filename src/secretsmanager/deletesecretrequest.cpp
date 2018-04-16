@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::DeleteSecretRequest
  *
- * \brief The DeleteSecretRequest class encapsulates SecretsManager DeleteSecret requests.
+ * \brief The DeleteSecretRequest class provides an interface for SecretsManager DeleteSecret requests.
  *
  * \ingroup SecretsManager
  *

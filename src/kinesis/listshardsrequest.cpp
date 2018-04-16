@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::ListShardsRequest
  *
- * \brief The ListShardsRequest class encapsulates Kinesis ListShards requests.
+ * \brief The ListShardsRequest class provides an interface for Kinesis ListShards requests.
  *
  * \ingroup Kinesis
  *

@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeleteIPSetRequest
  *
- * \brief The DeleteIPSetRequest class encapsulates WAFRegional DeleteIPSet requests.
+ * \brief The DeleteIPSetRequest class provides an interface for WAFRegional DeleteIPSet requests.
  *
  * \ingroup WAFRegional
  *

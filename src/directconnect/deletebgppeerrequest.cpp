@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DeleteBGPPeerRequest
  *
- * \brief The DeleteBGPPeerRequest class encapsulates DirectConnect DeleteBGPPeer requests.
+ * \brief The DeleteBGPPeerRequest class provides an interface for DirectConnect DeleteBGPPeer requests.
  *
  * \ingroup DirectConnect
  *

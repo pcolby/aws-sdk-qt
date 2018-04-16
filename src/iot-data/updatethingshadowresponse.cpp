@@ -30,7 +30,7 @@ namespace IoTDataPlane {
 /*!
  * \class QtAws::IoTDataPlane::UpdateThingShadowResponse
  *
- * \brief The UpdateThingShadowResponse class encapsulates IoTDataPlane UpdateThingShadow responses.
+ * \brief The UpdateThingShadowResponse class provides an interace for IoTDataPlane UpdateThingShadow responses.
  *
  * \ingroup IoTDataPlane
  *

@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::ListDeploymentConfigsResponse
  *
- * \brief The ListDeploymentConfigsResponse class encapsulates CodeDeploy ListDeploymentConfigs responses.
+ * \brief The ListDeploymentConfigsResponse class provides an interace for CodeDeploy ListDeploymentConfigs responses.
  *
  * \ingroup CodeDeploy
  *

@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeletePolicyVersionRequest
  *
- * \brief The DeletePolicyVersionRequest class encapsulates IAM DeletePolicyVersion requests.
+ * \brief The DeletePolicyVersionRequest class provides an interface for IAM DeletePolicyVersion requests.
  *
  * \ingroup IAM
  *

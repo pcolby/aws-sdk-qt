@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateAccountRequest
  *
- * \brief The UpdateAccountRequest class encapsulates APIGateway UpdateAccount requests.
+ * \brief The UpdateAccountRequest class provides an interface for APIGateway UpdateAccount requests.
  *
  * \ingroup APIGateway
  *

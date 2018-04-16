@@ -28,7 +28,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::GetQueryResultsRequest
  *
- * \brief The GetQueryResultsRequest class encapsulates Athena GetQueryResults requests.
+ * \brief The GetQueryResultsRequest class provides an interface for Athena GetQueryResults requests.
  *
  * \ingroup Athena
  *

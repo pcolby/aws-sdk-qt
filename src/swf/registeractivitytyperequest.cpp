@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::RegisterActivityTypeRequest
  *
- * \brief The RegisterActivityTypeRequest class encapsulates SWF RegisterActivityType requests.
+ * \brief The RegisterActivityTypeRequest class provides an interface for SWF RegisterActivityType requests.
  *
  * \ingroup SWF
  *

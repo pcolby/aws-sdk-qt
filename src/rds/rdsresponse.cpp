@@ -29,7 +29,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RDSResponse
  *
- * \brief The RDSResponse class is the base class for all RDS responses.
+ * \brief The RDSResponse class provides an interface for RDS responses.
  *
  * \ingroup RDS
  */

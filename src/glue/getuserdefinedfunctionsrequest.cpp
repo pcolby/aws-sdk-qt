@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetUserDefinedFunctionsRequest
  *
- * \brief The GetUserDefinedFunctionsRequest class encapsulates Glue GetUserDefinedFunctions requests.
+ * \brief The GetUserDefinedFunctionsRequest class provides an interface for Glue GetUserDefinedFunctions requests.
  *
  * \ingroup Glue
  *

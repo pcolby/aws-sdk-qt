@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::DeleteBucketEncryptionRequest
  *
- * \brief The DeleteBucketEncryptionRequest class encapsulates S3 DeleteBucketEncryption requests.
+ * \brief The DeleteBucketEncryptionRequest class provides an interface for S3 DeleteBucketEncryption requests.
  *
  * \ingroup S3
  *

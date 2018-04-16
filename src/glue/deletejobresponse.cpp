@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteJobResponse
  *
- * \brief The DeleteJobResponse class encapsulates Glue DeleteJob responses.
+ * \brief The DeleteJobResponse class provides an interace for Glue DeleteJob responses.
  *
  * \ingroup Glue
  *

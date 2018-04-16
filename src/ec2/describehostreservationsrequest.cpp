@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeHostReservationsRequest
  *
- * \brief The DescribeHostReservationsRequest class encapsulates EC2 DescribeHostReservations requests.
+ * \brief The DescribeHostReservationsRequest class provides an interface for EC2 DescribeHostReservations requests.
  *
  * \ingroup EC2
  *

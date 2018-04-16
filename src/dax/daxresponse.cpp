@@ -29,7 +29,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DAXResponse
  *
- * \brief The DAXResponse class is the base class for all DAX responses.
+ * \brief The DAXResponse class provides an interface for DAX responses.
  *
  * \ingroup DAX
  */

@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CreateDeploymentResponse
  *
- * \brief The CreateDeploymentResponse class encapsulates OpsWorks CreateDeployment responses.
+ * \brief The CreateDeploymentResponse class provides an interace for OpsWorks CreateDeployment responses.
  *
  * \ingroup OpsWorks
  *

@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateDeploymentResponse
  *
- * \brief The CreateDeploymentResponse class encapsulates Greengrass CreateDeployment responses.
+ * \brief The CreateDeploymentResponse class provides an interace for Greengrass CreateDeployment responses.
  *
  * \ingroup Greengrass
  *

@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::ListActivityTypesResponse
  *
- * \brief The ListActivityTypesResponse class encapsulates SWF ListActivityTypes responses.
+ * \brief The ListActivityTypesResponse class provides an interace for SWF ListActivityTypes responses.
  *
  * \ingroup SWF
  *

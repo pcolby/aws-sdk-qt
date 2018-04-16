@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DeleteDBSubnetGroupResponse
  *
- * \brief The DeleteDBSubnetGroupResponse class encapsulates RDS DeleteDBSubnetGroup responses.
+ * \brief The DeleteDBSubnetGroupResponse class provides an interace for RDS DeleteDBSubnetGroup responses.
  *
  * \ingroup RDS
  *

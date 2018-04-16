@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListOutgoingCertificatesResponse
  *
- * \brief The ListOutgoingCertificatesResponse class encapsulates IoT ListOutgoingCertificates responses.
+ * \brief The ListOutgoingCertificatesResponse class provides an interace for IoT ListOutgoingCertificates responses.
  *
  * \ingroup IoT
  *

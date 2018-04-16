@@ -28,7 +28,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::ListPoliciesRequest
  *
- * \brief The ListPoliciesRequest class encapsulates FMS ListPolicies requests.
+ * \brief The ListPoliciesRequest class provides an interface for FMS ListPolicies requests.
  *
  * \ingroup FMS
  *

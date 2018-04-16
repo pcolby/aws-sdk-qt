@@ -30,7 +30,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::DeleteTagsResponse
  *
- * \brief The DeleteTagsResponse class encapsulates WorkSpaces DeleteTags responses.
+ * \brief The DeleteTagsResponse class provides an interace for WorkSpaces DeleteTags responses.
  *
  * \ingroup WorkSpaces
  *

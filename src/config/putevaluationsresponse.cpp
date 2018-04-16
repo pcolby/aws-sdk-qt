@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::PutEvaluationsResponse
  *
- * \brief The PutEvaluationsResponse class encapsulates ConfigService PutEvaluations responses.
+ * \brief The PutEvaluationsResponse class provides an interace for ConfigService PutEvaluations responses.
  *
  * \ingroup ConfigService
  *

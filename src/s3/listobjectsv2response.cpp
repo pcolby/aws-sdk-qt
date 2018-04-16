@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::ListObjectsV2Response
  *
- * \brief The ListObjectsV2Response class encapsulates S3 ListObjectsV2 responses.
+ * \brief The ListObjectsV2Response class provides an interace for S3 ListObjectsV2 responses.
  *
  * \ingroup S3
  *

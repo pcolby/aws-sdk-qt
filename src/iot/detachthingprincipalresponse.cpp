@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DetachThingPrincipalResponse
  *
- * \brief The DetachThingPrincipalResponse class encapsulates IoT DetachThingPrincipal responses.
+ * \brief The DetachThingPrincipalResponse class provides an interace for IoT DetachThingPrincipal responses.
  *
  * \ingroup IoT
  *

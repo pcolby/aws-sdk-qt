@@ -28,7 +28,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::DescribeMountTargetsRequest
  *
- * \brief The DescribeMountTargetsRequest class encapsulates EFS DescribeMountTargets requests.
+ * \brief The DescribeMountTargetsRequest class provides an interface for EFS DescribeMountTargets requests.
  *
  * \ingroup EFS
  *

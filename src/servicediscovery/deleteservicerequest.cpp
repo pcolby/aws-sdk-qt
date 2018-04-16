@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::DeleteServiceRequest
  *
- * \brief The DeleteServiceRequest class encapsulates ServiceDiscovery DeleteService requests.
+ * \brief The DeleteServiceRequest class provides an interface for ServiceDiscovery DeleteService requests.
  *
  * \ingroup ServiceDiscovery
  *

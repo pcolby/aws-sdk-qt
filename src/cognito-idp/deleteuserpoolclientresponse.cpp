@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::DeleteUserPoolClientResponse
  *
- * \brief The DeleteUserPoolClientResponse class encapsulates CognitoIdentityProvider DeleteUserPoolClient responses.
+ * \brief The DeleteUserPoolClientResponse class provides an interace for CognitoIdentityProvider DeleteUserPoolClient responses.
  *
  * \ingroup CognitoIdentityProvider
  *

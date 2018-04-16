@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ListStackSetOperationResultsResponse
  *
- * \brief The ListStackSetOperationResultsResponse class encapsulates CloudFormation ListStackSetOperationResults responses.
+ * \brief The ListStackSetOperationResultsResponse class provides an interace for CloudFormation ListStackSetOperationResults responses.
  *
  * \ingroup CloudFormation
  *

@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeMaintenanceStartTimeRequest
  *
- * \brief The DescribeMaintenanceStartTimeRequest class encapsulates StorageGateway DescribeMaintenanceStartTime requests.
+ * \brief The DescribeMaintenanceStartTimeRequest class provides an interface for StorageGateway DescribeMaintenanceStartTime requests.
  *
  * \ingroup StorageGateway
  *

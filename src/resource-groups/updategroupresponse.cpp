@@ -30,7 +30,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::UpdateGroupResponse
  *
- * \brief The UpdateGroupResponse class encapsulates ResourceGroups UpdateGroup responses.
+ * \brief The UpdateGroupResponse class provides an interace for ResourceGroups UpdateGroup responses.
  *
  * \ingroup ResourceGroups
  *

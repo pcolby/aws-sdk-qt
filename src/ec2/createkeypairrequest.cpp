@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateKeyPairRequest
  *
- * \brief The CreateKeyPairRequest class encapsulates EC2 CreateKeyPair requests.
+ * \brief The CreateKeyPairRequest class provides an interface for EC2 CreateKeyPair requests.
  *
  * \ingroup EC2
  *

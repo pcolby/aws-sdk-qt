@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::DescribeHapgRequest
  *
- * \brief The DescribeHapgRequest class encapsulates CloudHSM DescribeHapg requests.
+ * \brief The DescribeHapgRequest class provides an interface for CloudHSM DescribeHapg requests.
  *
  * \ingroup CloudHSM
  *

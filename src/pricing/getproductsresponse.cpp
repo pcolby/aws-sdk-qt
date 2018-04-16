@@ -30,7 +30,7 @@ namespace Pricing {
 /*!
  * \class QtAws::Pricing::GetProductsResponse
  *
- * \brief The GetProductsResponse class encapsulates Pricing GetProducts responses.
+ * \brief The GetProductsResponse class provides an interace for Pricing GetProducts responses.
  *
  * \ingroup Pricing
  *

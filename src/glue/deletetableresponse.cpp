@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteTableResponse
  *
- * \brief The DeleteTableResponse class encapsulates Glue DeleteTable responses.
+ * \brief The DeleteTableResponse class provides an interace for Glue DeleteTable responses.
  *
  * \ingroup Glue
  *

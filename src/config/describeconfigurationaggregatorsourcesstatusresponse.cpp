@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DescribeConfigurationAggregatorSourcesStatusResponse
  *
- * \brief The DescribeConfigurationAggregatorSourcesStatusResponse class encapsulates ConfigService DescribeConfigurationAggregatorSourcesStatus responses.
+ * \brief The DescribeConfigurationAggregatorSourcesStatusResponse class provides an interace for ConfigService DescribeConfigurationAggregatorSourcesStatus responses.
  *
  * \ingroup ConfigService
  *

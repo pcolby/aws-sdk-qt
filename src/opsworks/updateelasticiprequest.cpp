@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateElasticIpRequest
  *
- * \brief The UpdateElasticIpRequest class encapsulates OpsWorks UpdateElasticIp requests.
+ * \brief The UpdateElasticIpRequest class provides an interface for OpsWorks UpdateElasticIp requests.
  *
  * \ingroup OpsWorks
  *

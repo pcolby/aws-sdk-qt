@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeDBLogFilesRequest
  *
- * \brief The DescribeDBLogFilesRequest class encapsulates RDS DescribeDBLogFiles requests.
+ * \brief The DescribeDBLogFilesRequest class provides an interface for RDS DescribeDBLogFiles requests.
  *
  * \ingroup RDS
  *

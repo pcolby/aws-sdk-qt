@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeScheduledInstancesResponse
  *
- * \brief The DescribeScheduledInstancesResponse class encapsulates EC2 DescribeScheduledInstances responses.
+ * \brief The DescribeScheduledInstancesResponse class provides an interace for EC2 DescribeScheduledInstances responses.
  *
  * \ingroup EC2
  *

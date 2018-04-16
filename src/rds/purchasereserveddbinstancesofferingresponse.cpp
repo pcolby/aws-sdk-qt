@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::PurchaseReservedDBInstancesOfferingResponse
  *
- * \brief The PurchaseReservedDBInstancesOfferingResponse class encapsulates RDS PurchaseReservedDBInstancesOffering responses.
+ * \brief The PurchaseReservedDBInstancesOfferingResponse class provides an interace for RDS PurchaseReservedDBInstancesOffering responses.
  *
  * \ingroup RDS
  *

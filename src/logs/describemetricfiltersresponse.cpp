@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DescribeMetricFiltersResponse
  *
- * \brief The DescribeMetricFiltersResponse class encapsulates CloudWatchLogs DescribeMetricFilters responses.
+ * \brief The DescribeMetricFiltersResponse class provides an interace for CloudWatchLogs DescribeMetricFilters responses.
  *
  * \ingroup CloudWatchLogs
  *

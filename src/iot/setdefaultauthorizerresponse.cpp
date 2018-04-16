@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::SetDefaultAuthorizerResponse
  *
- * \brief The SetDefaultAuthorizerResponse class encapsulates IoT SetDefaultAuthorizer responses.
+ * \brief The SetDefaultAuthorizerResponse class provides an interace for IoT SetDefaultAuthorizer responses.
  *
  * \ingroup IoT
  *

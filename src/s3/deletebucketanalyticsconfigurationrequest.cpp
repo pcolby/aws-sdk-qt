@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::DeleteBucketAnalyticsConfigurationRequest
  *
- * \brief The DeleteBucketAnalyticsConfigurationRequest class encapsulates S3 DeleteBucketAnalyticsConfiguration requests.
+ * \brief The DeleteBucketAnalyticsConfigurationRequest class provides an interface for S3 DeleteBucketAnalyticsConfiguration requests.
  *
  * \ingroup S3
  *

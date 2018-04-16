@@ -30,7 +30,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::PutEventsResponse
  *
- * \brief The PutEventsResponse class encapsulates CloudWatchEvents PutEvents responses.
+ * \brief The PutEventsResponse class provides an interace for CloudWatchEvents PutEvents responses.
  *
  * \ingroup CloudWatchEvents
  *

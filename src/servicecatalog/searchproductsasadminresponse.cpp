@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::SearchProductsAsAdminResponse
  *
- * \brief The SearchProductsAsAdminResponse class encapsulates ServiceCatalog SearchProductsAsAdmin responses.
+ * \brief The SearchProductsAsAdminResponse class provides an interace for ServiceCatalog SearchProductsAsAdmin responses.
  *
  * \ingroup ServiceCatalog
  *

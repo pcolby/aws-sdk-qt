@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::UpdateComputeEnvironmentResponse
  *
- * \brief The UpdateComputeEnvironmentResponse class encapsulates Batch UpdateComputeEnvironment responses.
+ * \brief The UpdateComputeEnvironmentResponse class provides an interace for Batch UpdateComputeEnvironment responses.
  *
  * \ingroup Batch
  *

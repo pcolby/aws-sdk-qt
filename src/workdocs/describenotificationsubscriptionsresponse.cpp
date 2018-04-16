@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeNotificationSubscriptionsResponse
  *
- * \brief The DescribeNotificationSubscriptionsResponse class encapsulates WorkDocs DescribeNotificationSubscriptions responses.
+ * \brief The DescribeNotificationSubscriptionsResponse class provides an interace for WorkDocs DescribeNotificationSubscriptions responses.
  *
  * \ingroup WorkDocs
  *

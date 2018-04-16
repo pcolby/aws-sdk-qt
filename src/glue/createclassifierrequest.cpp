@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateClassifierRequest
  *
- * \brief The CreateClassifierRequest class encapsulates Glue CreateClassifier requests.
+ * \brief The CreateClassifierRequest class provides an interface for Glue CreateClassifier requests.
  *
  * \ingroup Glue
  *

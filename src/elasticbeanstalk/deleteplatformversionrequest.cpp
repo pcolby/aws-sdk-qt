@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DeletePlatformVersionRequest
  *
- * \brief The DeletePlatformVersionRequest class encapsulates ElasticBeanstalk DeletePlatformVersion requests.
+ * \brief The DeletePlatformVersionRequest class provides an interface for ElasticBeanstalk DeletePlatformVersion requests.
  *
  * \ingroup ElasticBeanstalk
  *

@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListWorkersWithQualificationTypeRequest
  *
- * \brief The ListWorkersWithQualificationTypeRequest class encapsulates MTurk ListWorkersWithQualificationType requests.
+ * \brief The ListWorkersWithQualificationTypeRequest class provides an interface for MTurk ListWorkersWithQualificationType requests.
  *
  * \ingroup MTurk
  *

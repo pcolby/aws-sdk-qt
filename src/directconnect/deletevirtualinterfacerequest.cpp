@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DeleteVirtualInterfaceRequest
  *
- * \brief The DeleteVirtualInterfaceRequest class encapsulates DirectConnect DeleteVirtualInterface requests.
+ * \brief The DeleteVirtualInterfaceRequest class provides an interface for DirectConnect DeleteVirtualInterface requests.
  *
  * \ingroup DirectConnect
  *

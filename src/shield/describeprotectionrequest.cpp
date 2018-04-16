@@ -28,7 +28,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::DescribeProtectionRequest
  *
- * \brief The DescribeProtectionRequest class encapsulates Shield DescribeProtection requests.
+ * \brief The DescribeProtectionRequest class provides an interface for Shield DescribeProtection requests.
  *
  * \ingroup Shield
  *

@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::AssignVolumeResponse
  *
- * \brief The AssignVolumeResponse class encapsulates OpsWorks AssignVolume responses.
+ * \brief The AssignVolumeResponse class provides an interace for OpsWorks AssignVolume responses.
  *
  * \ingroup OpsWorks
  *

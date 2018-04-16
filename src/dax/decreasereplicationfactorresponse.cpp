@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DecreaseReplicationFactorResponse
  *
- * \brief The DecreaseReplicationFactorResponse class encapsulates DAX DecreaseReplicationFactor responses.
+ * \brief The DecreaseReplicationFactorResponse class provides an interace for DAX DecreaseReplicationFactor responses.
  *
  * \ingroup DAX
  *

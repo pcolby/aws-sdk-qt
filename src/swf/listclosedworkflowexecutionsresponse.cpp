@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::ListClosedWorkflowExecutionsResponse
  *
- * \brief The ListClosedWorkflowExecutionsResponse class encapsulates SWF ListClosedWorkflowExecutions responses.
+ * \brief The ListClosedWorkflowExecutionsResponse class provides an interace for SWF ListClosedWorkflowExecutions responses.
  *
  * \ingroup SWF
  *

@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::StopThingRegistrationTaskResponse
  *
- * \brief The StopThingRegistrationTaskResponse class encapsulates IoT StopThingRegistrationTask responses.
+ * \brief The StopThingRegistrationTaskResponse class provides an interace for IoT StopThingRegistrationTask responses.
  *
  * \ingroup IoT
  *

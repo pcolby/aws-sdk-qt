@@ -30,7 +30,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::ListQueryExecutionsResponse
  *
- * \brief The ListQueryExecutionsResponse class encapsulates Athena ListQueryExecutions responses.
+ * \brief The ListQueryExecutionsResponse class provides an interace for Athena ListQueryExecutions responses.
  *
  * \ingroup Athena
  *

@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::CreateInputSecurityGroupResponse
  *
- * \brief The CreateInputSecurityGroupResponse class encapsulates MediaLive CreateInputSecurityGroup responses.
+ * \brief The CreateInputSecurityGroupResponse class provides an interace for MediaLive CreateInputSecurityGroup responses.
  *
  * \ingroup MediaLive
  *

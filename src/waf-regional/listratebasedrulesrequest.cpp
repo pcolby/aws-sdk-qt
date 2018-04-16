@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::ListRateBasedRulesRequest
  *
- * \brief The ListRateBasedRulesRequest class encapsulates WAFRegional ListRateBasedRules requests.
+ * \brief The ListRateBasedRulesRequest class provides an interface for WAFRegional ListRateBasedRules requests.
  *
  * \ingroup WAFRegional
  *

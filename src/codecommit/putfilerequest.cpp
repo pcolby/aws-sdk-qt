@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::PutFileRequest
  *
- * \brief The PutFileRequest class encapsulates CodeCommit PutFile requests.
+ * \brief The PutFileRequest class provides an interface for CodeCommit PutFile requests.
  *
  * \ingroup CodeCommit
  *

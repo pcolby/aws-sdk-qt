@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateAppRequest
  *
- * \brief The UpdateAppRequest class encapsulates OpsWorks UpdateApp requests.
+ * \brief The UpdateAppRequest class provides an interface for OpsWorks UpdateApp requests.
  *
  * \ingroup OpsWorks
  *

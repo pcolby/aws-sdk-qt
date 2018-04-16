@@ -28,7 +28,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::CreateJobQueueRequest
  *
- * \brief The CreateJobQueueRequest class encapsulates Batch CreateJobQueue requests.
+ * \brief The CreateJobQueueRequest class provides an interface for Batch CreateJobQueue requests.
  *
  * \ingroup Batch
  *

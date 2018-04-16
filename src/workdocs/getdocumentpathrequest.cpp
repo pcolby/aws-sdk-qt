@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::GetDocumentPathRequest
  *
- * \brief The GetDocumentPathRequest class encapsulates WorkDocs GetDocumentPath requests.
+ * \brief The GetDocumentPathRequest class provides an interface for WorkDocs GetDocumentPath requests.
  *
  * \ingroup WorkDocs
  *

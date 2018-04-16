@@ -28,7 +28,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::DescribeStreamRequest
  *
- * \brief The DescribeStreamRequest class encapsulates KinesisVideo DescribeStream requests.
+ * \brief The DescribeStreamRequest class provides an interface for KinesisVideo DescribeStream requests.
  *
  * \ingroup KinesisVideo
  *

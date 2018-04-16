@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::CreateConstraintResponse
  *
- * \brief The CreateConstraintResponse class encapsulates ServiceCatalog CreateConstraint responses.
+ * \brief The CreateConstraintResponse class provides an interace for ServiceCatalog CreateConstraint responses.
  *
  * \ingroup ServiceCatalog
  *

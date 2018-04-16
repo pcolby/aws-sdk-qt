@@ -28,7 +28,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::BatchDeleteAttributesRequest
  *
- * \brief The BatchDeleteAttributesRequest class encapsulates SimpleDB BatchDeleteAttributes requests.
+ * \brief The BatchDeleteAttributesRequest class provides an interface for SimpleDB BatchDeleteAttributes requests.
  *
  * \ingroup SimpleDB
  *

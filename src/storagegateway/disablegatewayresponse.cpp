@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DisableGatewayResponse
  *
- * \brief The DisableGatewayResponse class encapsulates StorageGateway DisableGateway responses.
+ * \brief The DisableGatewayResponse class provides an interace for StorageGateway DisableGateway responses.
  *
  * \ingroup StorageGateway
  *

@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::ListAssessmentRunsResponse
  *
- * \brief The ListAssessmentRunsResponse class encapsulates Inspector ListAssessmentRuns responses.
+ * \brief The ListAssessmentRunsResponse class provides an interace for Inspector ListAssessmentRuns responses.
  *
  * \ingroup Inspector
  *

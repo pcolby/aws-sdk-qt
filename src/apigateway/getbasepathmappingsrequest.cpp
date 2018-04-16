@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetBasePathMappingsRequest
  *
- * \brief The GetBasePathMappingsRequest class encapsulates APIGateway GetBasePathMappings requests.
+ * \brief The GetBasePathMappingsRequest class provides an interface for APIGateway GetBasePathMappings requests.
  *
  * \ingroup APIGateway
  *

@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::ListIdentitiesResponse
  *
- * \brief The ListIdentitiesResponse class encapsulates SES ListIdentities responses.
+ * \brief The ListIdentitiesResponse class provides an interace for SES ListIdentities responses.
  *
  * \ingroup SES
  *

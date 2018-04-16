@@ -26,7 +26,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::LambdaRequest
  *
- * \brief The LambdaRequest class is the base class for all Lambda requests.
+ * \brief The LambdaRequest class provides an interface for Lambda requests.
  *
  * \ingroup Lambda
  */

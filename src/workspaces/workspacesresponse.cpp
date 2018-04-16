@@ -29,7 +29,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::WorkSpacesResponse
  *
- * \brief The WorkSpacesResponse class is the base class for all WorkSpaces responses.
+ * \brief The WorkSpacesResponse class provides an interface for WorkSpaces responses.
  *
  * \ingroup WorkSpaces
  */

@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::StartDataCollectionByAgentIdsRequest
  *
- * \brief The StartDataCollectionByAgentIdsRequest class encapsulates ApplicationDiscoveryService StartDataCollectionByAgentIds requests.
+ * \brief The StartDataCollectionByAgentIdsRequest class provides an interface for ApplicationDiscoveryService StartDataCollectionByAgentIds requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

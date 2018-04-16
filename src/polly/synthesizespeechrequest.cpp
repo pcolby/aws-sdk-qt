@@ -28,7 +28,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::SynthesizeSpeechRequest
  *
- * \brief The SynthesizeSpeechRequest class encapsulates Polly SynthesizeSpeech requests.
+ * \brief The SynthesizeSpeechRequest class provides an interface for Polly SynthesizeSpeech requests.
  *
  * \ingroup Polly
  *

@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateResourceServerRequest
  *
- * \brief The UpdateResourceServerRequest class encapsulates CognitoIdentityProvider UpdateResourceServer requests.
+ * \brief The UpdateResourceServerRequest class provides an interface for CognitoIdentityProvider UpdateResourceServer requests.
  *
  * \ingroup CognitoIdentityProvider
  *

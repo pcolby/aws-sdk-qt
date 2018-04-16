@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::SearchFacesResponse
  *
- * \brief The SearchFacesResponse class encapsulates Rekognition SearchFaces responses.
+ * \brief The SearchFacesResponse class provides an interace for Rekognition SearchFaces responses.
  *
  * \ingroup Rekognition
  *

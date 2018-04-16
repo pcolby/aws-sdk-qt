@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::TestRoleRequest
  *
- * \brief The TestRoleRequest class encapsulates ElasticTranscoder TestRole requests.
+ * \brief The TestRoleRequest class provides an interface for ElasticTranscoder TestRole requests.
  *
  * \ingroup ElasticTranscoder
  *

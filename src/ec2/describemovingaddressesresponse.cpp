@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeMovingAddressesResponse
  *
- * \brief The DescribeMovingAddressesResponse class encapsulates EC2 DescribeMovingAddresses responses.
+ * \brief The DescribeMovingAddressesResponse class provides an interace for EC2 DescribeMovingAddresses responses.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::CopyProductResponse
  *
- * \brief The CopyProductResponse class encapsulates ServiceCatalog CopyProduct responses.
+ * \brief The CopyProductResponse class provides an interace for ServiceCatalog CopyProduct responses.
  *
  * \ingroup ServiceCatalog
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ReleaseHostsResponse
  *
- * \brief The ReleaseHostsResponse class encapsulates EC2 ReleaseHosts responses.
+ * \brief The ReleaseHostsResponse class provides an interace for EC2 ReleaseHosts responses.
  *
  * \ingroup EC2
  *

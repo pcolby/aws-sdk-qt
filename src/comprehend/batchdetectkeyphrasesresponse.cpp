@@ -30,7 +30,7 @@ namespace Comprehend {
 /*!
  * \class QtAws::Comprehend::BatchDetectKeyPhrasesResponse
  *
- * \brief The BatchDetectKeyPhrasesResponse class encapsulates Comprehend BatchDetectKeyPhrases responses.
+ * \brief The BatchDetectKeyPhrasesResponse class provides an interace for Comprehend BatchDetectKeyPhrases responses.
  *
  * \ingroup Comprehend
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeSpotInstanceRequestsRequest
  *
- * \brief The DescribeSpotInstanceRequestsRequest class encapsulates EC2 DescribeSpotInstanceRequests requests.
+ * \brief The DescribeSpotInstanceRequestsRequest class provides an interface for EC2 DescribeSpotInstanceRequests requests.
  *
  * \ingroup EC2
  *

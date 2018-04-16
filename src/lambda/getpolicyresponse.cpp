@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::GetPolicyResponse
  *
- * \brief The GetPolicyResponse class encapsulates Lambda GetPolicy responses.
+ * \brief The GetPolicyResponse class provides an interace for Lambda GetPolicy responses.
  *
  * \ingroup Lambda
  *

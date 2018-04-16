@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::ReorderReceiptRuleSetRequest
  *
- * \brief The ReorderReceiptRuleSetRequest class encapsulates SES ReorderReceiptRuleSet requests.
+ * \brief The ReorderReceiptRuleSetRequest class provides an interface for SES ReorderReceiptRuleSet requests.
  *
  * \ingroup SES
  *

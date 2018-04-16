@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ListClustersRequest
  *
- * \brief The ListClustersRequest class encapsulates EMR ListClusters requests.
+ * \brief The ListClustersRequest class provides an interface for EMR ListClusters requests.
  *
  * \ingroup EMR
  *

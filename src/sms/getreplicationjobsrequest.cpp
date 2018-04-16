@@ -28,7 +28,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::GetReplicationJobsRequest
  *
- * \brief The GetReplicationJobsRequest class encapsulates SMS GetReplicationJobs requests.
+ * \brief The GetReplicationJobsRequest class provides an interface for SMS GetReplicationJobs requests.
  *
  * \ingroup SMS
  *

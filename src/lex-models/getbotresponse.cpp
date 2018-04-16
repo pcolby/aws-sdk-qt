@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::GetBotResponse
  *
- * \brief The GetBotResponse class encapsulates LexModelBuildingService GetBot responses.
+ * \brief The GetBotResponse class provides an interace for LexModelBuildingService GetBot responses.
  *
  * \ingroup LexModelBuildingService
  *

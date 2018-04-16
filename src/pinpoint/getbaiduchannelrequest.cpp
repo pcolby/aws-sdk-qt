@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetBaiduChannelRequest
  *
- * \brief The GetBaiduChannelRequest class encapsulates Pinpoint GetBaiduChannel requests.
+ * \brief The GetBaiduChannelRequest class provides an interface for Pinpoint GetBaiduChannel requests.
  *
  * \ingroup Pinpoint
  *

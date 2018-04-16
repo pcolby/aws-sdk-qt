@@ -57,7 +57,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::CloudHSMV2Client
  *
- * \brief The CloudHSMV2Client class provides access the AWS CloudHSM V2 service.
+ * \brief The CloudHSMV2Client class provides access to the AWS CloudHSM V2 service.
  *
  * \ingroup CloudHSMV2
  *

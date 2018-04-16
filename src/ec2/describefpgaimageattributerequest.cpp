@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeFpgaImageAttributeRequest
  *
- * \brief The DescribeFpgaImageAttributeRequest class encapsulates EC2 DescribeFpgaImageAttribute requests.
+ * \brief The DescribeFpgaImageAttributeRequest class provides an interface for EC2 DescribeFpgaImageAttribute requests.
  *
  * \ingroup EC2
  *

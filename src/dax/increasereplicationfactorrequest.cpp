@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::IncreaseReplicationFactorRequest
  *
- * \brief The IncreaseReplicationFactorRequest class encapsulates DAX IncreaseReplicationFactor requests.
+ * \brief The IncreaseReplicationFactorRequest class provides an interface for DAX IncreaseReplicationFactor requests.
  *
  * \ingroup DAX
  *

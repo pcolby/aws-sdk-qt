@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::CreateAutoScalingGroupRequest
  *
- * \brief The CreateAutoScalingGroupRequest class encapsulates AutoScaling CreateAutoScalingGroup requests.
+ * \brief The CreateAutoScalingGroupRequest class provides an interface for AutoScaling CreateAutoScalingGroup requests.
  *
  * \ingroup AutoScaling
  *

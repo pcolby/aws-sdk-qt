@@ -30,7 +30,7 @@ namespace Health {
 /*!
  * \class QtAws::Health::DescribeEventDetailsResponse
  *
- * \brief The DescribeEventDetailsResponse class encapsulates Health DescribeEventDetails responses.
+ * \brief The DescribeEventDetailsResponse class provides an interace for Health DescribeEventDetails responses.
  *
  * \ingroup Health
  *

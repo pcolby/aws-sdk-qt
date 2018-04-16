@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateInternetGatewayRequest
  *
- * \brief The CreateInternetGatewayRequest class encapsulates EC2 CreateInternetGateway requests.
+ * \brief The CreateInternetGatewayRequest class provides an interface for EC2 CreateInternetGateway requests.
  *
  * \ingroup EC2
  *

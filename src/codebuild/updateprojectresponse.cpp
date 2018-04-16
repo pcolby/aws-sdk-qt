@@ -30,7 +30,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::UpdateProjectResponse
  *
- * \brief The UpdateProjectResponse class encapsulates CodeBuild UpdateProject responses.
+ * \brief The UpdateProjectResponse class provides an interace for CodeBuild UpdateProject responses.
  *
  * \ingroup CodeBuild
  *

@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribePendingMaintenanceActionsRequest
  *
- * \brief The DescribePendingMaintenanceActionsRequest class encapsulates RDS DescribePendingMaintenanceActions requests.
+ * \brief The DescribePendingMaintenanceActionsRequest class provides an interface for RDS DescribePendingMaintenanceActions requests.
  *
  * \ingroup RDS
  *

@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListDeploymentsResponse
  *
- * \brief The ListDeploymentsResponse class encapsulates Greengrass ListDeployments responses.
+ * \brief The ListDeploymentsResponse class provides an interace for Greengrass ListDeployments responses.
  *
  * \ingroup Greengrass
  *

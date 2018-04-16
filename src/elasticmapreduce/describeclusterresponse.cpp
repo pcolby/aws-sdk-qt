@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::DescribeClusterResponse
  *
- * \brief The DescribeClusterResponse class encapsulates EMR DescribeCluster responses.
+ * \brief The DescribeClusterResponse class provides an interace for EMR DescribeCluster responses.
  *
  * \ingroup EMR
  *

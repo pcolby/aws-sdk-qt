@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::AllocateStaticIpResponse
  *
- * \brief The AllocateStaticIpResponse class encapsulates Lightsail AllocateStaticIp responses.
+ * \brief The AllocateStaticIpResponse class provides an interace for Lightsail AllocateStaticIp responses.
  *
  * \ingroup Lightsail
  *

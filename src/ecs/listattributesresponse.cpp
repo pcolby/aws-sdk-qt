@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::ListAttributesResponse
  *
- * \brief The ListAttributesResponse class encapsulates ECS ListAttributes responses.
+ * \brief The ListAttributesResponse class provides an interace for ECS ListAttributes responses.
  *
  * \ingroup ECS
  *

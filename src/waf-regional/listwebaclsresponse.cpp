@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::ListWebACLsResponse
  *
- * \brief The ListWebACLsResponse class encapsulates WAFRegional ListWebACLs responses.
+ * \brief The ListWebACLsResponse class provides an interace for WAFRegional ListWebACLs responses.
  *
  * \ingroup WAFRegional
  *

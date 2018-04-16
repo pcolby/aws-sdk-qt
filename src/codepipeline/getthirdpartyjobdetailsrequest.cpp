@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::GetThirdPartyJobDetailsRequest
  *
- * \brief The GetThirdPartyJobDetailsRequest class encapsulates CodePipeline GetThirdPartyJobDetails requests.
+ * \brief The GetThirdPartyJobDetailsRequest class provides an interface for CodePipeline GetThirdPartyJobDetails requests.
  *
  * \ingroup CodePipeline
  *

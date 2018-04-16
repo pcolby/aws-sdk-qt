@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::DeregisterInstanceRequest
  *
- * \brief The DeregisterInstanceRequest class encapsulates ServiceDiscovery DeregisterInstance requests.
+ * \brief The DeregisterInstanceRequest class provides an interface for ServiceDiscovery DeregisterInstance requests.
  *
  * \ingroup ServiceDiscovery
  *

@@ -28,7 +28,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::LookupEventsRequest
  *
- * \brief The LookupEventsRequest class encapsulates CloudTrail LookupEvents requests.
+ * \brief The LookupEventsRequest class provides an interface for CloudTrail LookupEvents requests.
  *
  * \ingroup CloudTrail
  *

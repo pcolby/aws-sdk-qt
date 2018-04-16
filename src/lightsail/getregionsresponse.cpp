@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetRegionsResponse
  *
- * \brief The GetRegionsResponse class encapsulates Lightsail GetRegions responses.
+ * \brief The GetRegionsResponse class provides an interace for Lightsail GetRegions responses.
  *
  * \ingroup Lightsail
  *

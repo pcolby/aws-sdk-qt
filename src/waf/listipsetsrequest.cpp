@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::ListIPSetsRequest
  *
- * \brief The ListIPSetsRequest class encapsulates WAF ListIPSets requests.
+ * \brief The ListIPSetsRequest class provides an interface for WAF ListIPSets requests.
  *
  * \ingroup WAF
  *

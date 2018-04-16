@@ -29,7 +29,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::FMSResponse
  *
- * \brief The FMSResponse class is the base class for all FMS responses.
+ * \brief The FMSResponse class provides an interface for FMS responses.
  *
  * \ingroup FMS
  */

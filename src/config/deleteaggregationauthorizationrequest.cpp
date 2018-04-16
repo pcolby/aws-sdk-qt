@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeleteAggregationAuthorizationRequest
  *
- * \brief The DeleteAggregationAuthorizationRequest class encapsulates ConfigService DeleteAggregationAuthorization requests.
+ * \brief The DeleteAggregationAuthorizationRequest class provides an interface for ConfigService DeleteAggregationAuthorization requests.
  *
  * \ingroup ConfigService
  *

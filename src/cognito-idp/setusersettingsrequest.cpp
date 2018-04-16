@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::SetUserSettingsRequest
  *
- * \brief The SetUserSettingsRequest class encapsulates CognitoIdentityProvider SetUserSettings requests.
+ * \brief The SetUserSettingsRequest class provides an interface for CognitoIdentityProvider SetUserSettings requests.
  *
  * \ingroup CognitoIdentityProvider
  *

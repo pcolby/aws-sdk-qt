@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CreateLayerResponse
  *
- * \brief The CreateLayerResponse class encapsulates OpsWorks CreateLayer responses.
+ * \brief The CreateLayerResponse class provides an interace for OpsWorks CreateLayer responses.
  *
  * \ingroup OpsWorks
  *

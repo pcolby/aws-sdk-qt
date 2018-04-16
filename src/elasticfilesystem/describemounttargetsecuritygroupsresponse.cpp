@@ -30,7 +30,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::DescribeMountTargetSecurityGroupsResponse
  *
- * \brief The DescribeMountTargetSecurityGroupsResponse class encapsulates EFS DescribeMountTargetSecurityGroups responses.
+ * \brief The DescribeMountTargetSecurityGroupsResponse class provides an interace for EFS DescribeMountTargetSecurityGroups responses.
  *
  * \ingroup EFS
  *

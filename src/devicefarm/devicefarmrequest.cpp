@@ -26,7 +26,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeviceFarmRequest
  *
- * \brief The DeviceFarmRequest class is the base class for all DeviceFarm requests.
+ * \brief The DeviceFarmRequest class provides an interface for DeviceFarm requests.
  *
  * \ingroup DeviceFarm
  */

@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::CreateLaunchConfigurationRequest
  *
- * \brief The CreateLaunchConfigurationRequest class encapsulates AutoScaling CreateLaunchConfiguration requests.
+ * \brief The CreateLaunchConfigurationRequest class provides an interface for AutoScaling CreateLaunchConfiguration requests.
  *
  * \ingroup AutoScaling
  *

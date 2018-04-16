@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::CreateLabelsResponse
  *
- * \brief The CreateLabelsResponse class encapsulates WorkDocs CreateLabels responses.
+ * \brief The CreateLabelsResponse class provides an interace for WorkDocs CreateLabels responses.
  *
  * \ingroup WorkDocs
  *

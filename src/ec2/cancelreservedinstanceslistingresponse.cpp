@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CancelReservedInstancesListingResponse
  *
- * \brief The CancelReservedInstancesListingResponse class encapsulates EC2 CancelReservedInstancesListing responses.
+ * \brief The CancelReservedInstancesListingResponse class provides an interace for EC2 CancelReservedInstancesListing responses.
  *
  * \ingroup EC2
  *

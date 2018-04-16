@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::CreateGlobalTableResponse
  *
- * \brief The CreateGlobalTableResponse class encapsulates DynamoDB CreateGlobalTable responses.
+ * \brief The CreateGlobalTableResponse class provides an interace for DynamoDB CreateGlobalTable responses.
  *
  * \ingroup DynamoDB
  *

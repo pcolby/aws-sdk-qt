@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DescribeEventsResponse
  *
- * \brief The DescribeEventsResponse class encapsulates ElastiCache DescribeEvents responses.
+ * \brief The DescribeEventsResponse class provides an interace for ElastiCache DescribeEvents responses.
  *
  * \ingroup ElastiCache
  *

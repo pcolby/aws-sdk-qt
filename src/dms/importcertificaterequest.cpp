@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::ImportCertificateRequest
  *
- * \brief The ImportCertificateRequest class encapsulates DatabaseMigrationService ImportCertificate requests.
+ * \brief The ImportCertificateRequest class provides an interface for DatabaseMigrationService ImportCertificate requests.
  *
  * \ingroup DatabaseMigrationService
  *

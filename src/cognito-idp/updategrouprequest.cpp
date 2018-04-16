@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateGroupRequest
  *
- * \brief The UpdateGroupRequest class encapsulates CognitoIdentityProvider UpdateGroup requests.
+ * \brief The UpdateGroupRequest class provides an interface for CognitoIdentityProvider UpdateGroup requests.
  *
  * \ingroup CognitoIdentityProvider
  *

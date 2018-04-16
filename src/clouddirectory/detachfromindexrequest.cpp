@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DetachFromIndexRequest
  *
- * \brief The DetachFromIndexRequest class encapsulates CloudDirectory DetachFromIndex requests.
+ * \brief The DetachFromIndexRequest class provides an interface for CloudDirectory DetachFromIndex requests.
  *
  * \ingroup CloudDirectory
  *

@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::AssociateVPCWithHostedZoneResponse
  *
- * \brief The AssociateVPCWithHostedZoneResponse class encapsulates Route53 AssociateVPCWithHostedZone responses.
+ * \brief The AssociateVPCWithHostedZoneResponse class provides an interace for Route53 AssociateVPCWithHostedZone responses.
  *
  * \ingroup Route53
  *

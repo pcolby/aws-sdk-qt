@@ -26,7 +26,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SESRequest
  *
- * \brief The SESRequest class is the base class for all SES requests.
+ * \brief The SESRequest class provides an interface for SES requests.
  *
  * \ingroup SES
  */

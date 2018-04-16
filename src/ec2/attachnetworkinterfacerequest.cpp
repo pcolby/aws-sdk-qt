@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AttachNetworkInterfaceRequest
  *
- * \brief The AttachNetworkInterfaceRequest class encapsulates EC2 AttachNetworkInterface requests.
+ * \brief The AttachNetworkInterfaceRequest class provides an interface for EC2 AttachNetworkInterface requests.
  *
  * \ingroup EC2
  *

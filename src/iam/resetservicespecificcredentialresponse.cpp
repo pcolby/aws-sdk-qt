@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ResetServiceSpecificCredentialResponse
  *
- * \brief The ResetServiceSpecificCredentialResponse class encapsulates IAM ResetServiceSpecificCredential responses.
+ * \brief The ResetServiceSpecificCredentialResponse class provides an interace for IAM ResetServiceSpecificCredential responses.
  *
  * \ingroup IAM
  *

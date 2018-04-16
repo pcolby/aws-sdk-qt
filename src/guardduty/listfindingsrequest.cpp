@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::ListFindingsRequest
  *
- * \brief The ListFindingsRequest class encapsulates GuardDuty ListFindings requests.
+ * \brief The ListFindingsRequest class provides an interface for GuardDuty ListFindings requests.
  *
  * \ingroup GuardDuty
  *

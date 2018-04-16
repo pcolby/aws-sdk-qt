@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::AttachLoadBalancerTlsCertificateResponse
  *
- * \brief The AttachLoadBalancerTlsCertificateResponse class encapsulates Lightsail AttachLoadBalancerTlsCertificate responses.
+ * \brief The AttachLoadBalancerTlsCertificateResponse class provides an interace for Lightsail AttachLoadBalancerTlsCertificate responses.
  *
  * \ingroup Lightsail
  *

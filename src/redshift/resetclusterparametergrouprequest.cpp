@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::ResetClusterParameterGroupRequest
  *
- * \brief The ResetClusterParameterGroupRequest class encapsulates Redshift ResetClusterParameterGroup requests.
+ * \brief The ResetClusterParameterGroupRequest class provides an interface for Redshift ResetClusterParameterGroup requests.
  *
  * \ingroup Redshift
  *

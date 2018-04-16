@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::AssociatePrincipalWithPortfolioResponse
  *
- * \brief The AssociatePrincipalWithPortfolioResponse class encapsulates ServiceCatalog AssociatePrincipalWithPortfolio responses.
+ * \brief The AssociatePrincipalWithPortfolioResponse class provides an interace for ServiceCatalog AssociatePrincipalWithPortfolio responses.
  *
  * \ingroup ServiceCatalog
  *

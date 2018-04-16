@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::StopStackResponse
  *
- * \brief The StopStackResponse class encapsulates OpsWorks StopStack responses.
+ * \brief The StopStackResponse class provides an interace for OpsWorks StopStack responses.
  *
  * \ingroup OpsWorks
  *

@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DeleteEventSubscriptionResponse
  *
- * \brief The DeleteEventSubscriptionResponse class encapsulates RDS DeleteEventSubscription responses.
+ * \brief The DeleteEventSubscriptionResponse class provides an interace for RDS DeleteEventSubscription responses.
  *
  * \ingroup RDS
  *

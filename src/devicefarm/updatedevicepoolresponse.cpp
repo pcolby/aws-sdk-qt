@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::UpdateDevicePoolResponse
  *
- * \brief The UpdateDevicePoolResponse class encapsulates DeviceFarm UpdateDevicePool responses.
+ * \brief The UpdateDevicePoolResponse class provides an interace for DeviceFarm UpdateDevicePool responses.
  *
  * \ingroup DeviceFarm
  *

@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::CopyClusterSnapshotRequest
  *
- * \brief The CopyClusterSnapshotRequest class encapsulates Redshift CopyClusterSnapshot requests.
+ * \brief The CopyClusterSnapshotRequest class provides an interface for Redshift CopyClusterSnapshot requests.
  *
  * \ingroup Redshift
  *

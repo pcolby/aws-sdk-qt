@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeHsmClientCertificatesResponse
  *
- * \brief The DescribeHsmClientCertificatesResponse class encapsulates Redshift DescribeHsmClientCertificates responses.
+ * \brief The DescribeHsmClientCertificatesResponse class provides an interace for Redshift DescribeHsmClientCertificates responses.
  *
  * \ingroup Redshift
  *

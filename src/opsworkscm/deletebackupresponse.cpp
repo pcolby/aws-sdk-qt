@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DeleteBackupResponse
  *
- * \brief The DeleteBackupResponse class encapsulates OpsWorksCM DeleteBackup responses.
+ * \brief The DeleteBackupResponse class provides an interace for OpsWorksCM DeleteBackup responses.
  *
  * \ingroup OpsWorksCM
  *

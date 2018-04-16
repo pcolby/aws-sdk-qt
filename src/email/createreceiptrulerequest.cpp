@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::CreateReceiptRuleRequest
  *
- * \brief The CreateReceiptRuleRequest class encapsulates SES CreateReceiptRule requests.
+ * \brief The CreateReceiptRuleRequest class provides an interface for SES CreateReceiptRule requests.
  *
  * \ingroup SES
  *

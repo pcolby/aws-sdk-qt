@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteIPSetRequest
  *
- * \brief The DeleteIPSetRequest class encapsulates WAF DeleteIPSet requests.
+ * \brief The DeleteIPSetRequest class provides an interface for WAF DeleteIPSet requests.
  *
  * \ingroup WAF
  *

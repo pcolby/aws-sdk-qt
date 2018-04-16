@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RequestSpotInstancesRequest
  *
- * \brief The RequestSpotInstancesRequest class encapsulates EC2 RequestSpotInstances requests.
+ * \brief The RequestSpotInstancesRequest class provides an interface for EC2 RequestSpotInstances requests.
  *
  * \ingroup EC2
  *

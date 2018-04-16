@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::InitiateLayerUploadRequest
  *
- * \brief The InitiateLayerUploadRequest class encapsulates ECR InitiateLayerUpload requests.
+ * \brief The InitiateLayerUploadRequest class provides an interface for ECR InitiateLayerUpload requests.
  *
  * \ingroup ECR
  *

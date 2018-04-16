@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::UpdateChapCredentialsResponse
  *
- * \brief The UpdateChapCredentialsResponse class encapsulates StorageGateway UpdateChapCredentials responses.
+ * \brief The UpdateChapCredentialsResponse class provides an interace for StorageGateway UpdateChapCredentials responses.
  *
  * \ingroup StorageGateway
  *

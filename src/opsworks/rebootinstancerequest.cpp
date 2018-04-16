@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::RebootInstanceRequest
  *
- * \brief The RebootInstanceRequest class encapsulates OpsWorks RebootInstance requests.
+ * \brief The RebootInstanceRequest class provides an interface for OpsWorks RebootInstance requests.
  *
  * \ingroup OpsWorks
  *

@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::DeleteProjectRequest
  *
- * \brief The DeleteProjectRequest class encapsulates CodeStar DeleteProject requests.
+ * \brief The DeleteProjectRequest class provides an interface for CodeStar DeleteProject requests.
  *
  * \ingroup CodeStar
  *

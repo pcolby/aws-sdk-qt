@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::CreateQueueResponse
  *
- * \brief The CreateQueueResponse class encapsulates SQS CreateQueue responses.
+ * \brief The CreateQueueResponse class provides an interace for SQS CreateQueue responses.
  *
  * \ingroup SQS
  *

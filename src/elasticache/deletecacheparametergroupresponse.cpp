@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DeleteCacheParameterGroupResponse
  *
- * \brief The DeleteCacheParameterGroupResponse class encapsulates ElastiCache DeleteCacheParameterGroup responses.
+ * \brief The DeleteCacheParameterGroupResponse class provides an interace for ElastiCache DeleteCacheParameterGroup responses.
  *
  * \ingroup ElastiCache
  *

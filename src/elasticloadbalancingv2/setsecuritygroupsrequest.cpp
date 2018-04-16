@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetSecurityGroupsRequest
  *
- * \brief The SetSecurityGroupsRequest class encapsulates ElasticLoadBalancingv2 SetSecurityGroups requests.
+ * \brief The SetSecurityGroupsRequest class provides an interface for ElasticLoadBalancingv2 SetSecurityGroups requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

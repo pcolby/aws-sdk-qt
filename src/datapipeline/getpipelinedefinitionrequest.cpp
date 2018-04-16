@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::GetPipelineDefinitionRequest
  *
- * \brief The GetPipelineDefinitionRequest class encapsulates DataPipeline GetPipelineDefinition requests.
+ * \brief The GetPipelineDefinitionRequest class provides an interface for DataPipeline GetPipelineDefinition requests.
  *
  * \ingroup DataPipeline
  *

@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DescribeMetricFiltersRequest
  *
- * \brief The DescribeMetricFiltersRequest class encapsulates CloudWatchLogs DescribeMetricFilters requests.
+ * \brief The DescribeMetricFiltersRequest class provides an interface for CloudWatchLogs DescribeMetricFilters requests.
  *
  * \ingroup CloudWatchLogs
  *

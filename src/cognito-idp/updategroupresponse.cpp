@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateGroupResponse
  *
- * \brief The UpdateGroupResponse class encapsulates CognitoIdentityProvider UpdateGroup responses.
+ * \brief The UpdateGroupResponse class provides an interace for CognitoIdentityProvider UpdateGroup responses.
  *
  * \ingroup CognitoIdentityProvider
  *

@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::ListInvitationsResponse
  *
- * \brief The ListInvitationsResponse class encapsulates GuardDuty ListInvitations responses.
+ * \brief The ListInvitationsResponse class provides an interace for GuardDuty ListInvitations responses.
  *
  * \ingroup GuardDuty
  *

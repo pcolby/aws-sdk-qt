@@ -28,7 +28,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::DescribeClusterRequest
  *
- * \brief The DescribeClusterRequest class encapsulates Snowball DescribeCluster requests.
+ * \brief The DescribeClusterRequest class provides an interface for Snowball DescribeCluster requests.
  *
  * \ingroup Snowball
  *

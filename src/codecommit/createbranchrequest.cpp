@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::CreateBranchRequest
  *
- * \brief The CreateBranchRequest class encapsulates CodeCommit CreateBranch requests.
+ * \brief The CreateBranchRequest class provides an interface for CodeCommit CreateBranch requests.
  *
  * \ingroup CodeCommit
  *

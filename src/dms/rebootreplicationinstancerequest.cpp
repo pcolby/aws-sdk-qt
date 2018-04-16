@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::RebootReplicationInstanceRequest
  *
- * \brief The RebootReplicationInstanceRequest class encapsulates DatabaseMigrationService RebootReplicationInstance requests.
+ * \brief The RebootReplicationInstanceRequest class provides an interface for DatabaseMigrationService RebootReplicationInstance requests.
  *
  * \ingroup DatabaseMigrationService
  *

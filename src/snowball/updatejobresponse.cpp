@@ -30,7 +30,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::UpdateJobResponse
  *
- * \brief The UpdateJobResponse class encapsulates Snowball UpdateJob responses.
+ * \brief The UpdateJobResponse class provides an interace for Snowball UpdateJob responses.
  *
  * \ingroup Snowball
  *

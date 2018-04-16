@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::StopExecutionResponse
  *
- * \brief The StopExecutionResponse class encapsulates SFN StopExecution responses.
+ * \brief The StopExecutionResponse class provides an interace for SFN StopExecution responses.
  *
  * \ingroup SFN
  *

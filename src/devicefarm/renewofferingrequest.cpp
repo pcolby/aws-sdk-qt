@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::RenewOfferingRequest
  *
- * \brief The RenewOfferingRequest class encapsulates DeviceFarm RenewOffering requests.
+ * \brief The RenewOfferingRequest class provides an interface for DeviceFarm RenewOffering requests.
  *
  * \ingroup DeviceFarm
  *

@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::OptInPhoneNumberResponse
  *
- * \brief The OptInPhoneNumberResponse class encapsulates SNS OptInPhoneNumber responses.
+ * \brief The OptInPhoneNumberResponse class provides an interace for SNS OptInPhoneNumber responses.
  *
  * \ingroup SNS
  *

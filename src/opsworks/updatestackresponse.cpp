@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateStackResponse
  *
- * \brief The UpdateStackResponse class encapsulates OpsWorks UpdateStack responses.
+ * \brief The UpdateStackResponse class provides an interace for OpsWorks UpdateStack responses.
  *
  * \ingroup OpsWorks
  *

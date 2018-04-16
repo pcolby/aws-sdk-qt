@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeAgentVersionsResponse
  *
- * \brief The DescribeAgentVersionsResponse class encapsulates OpsWorks DescribeAgentVersions responses.
+ * \brief The DescribeAgentVersionsResponse class provides an interace for OpsWorks DescribeAgentVersions responses.
  *
  * \ingroup OpsWorks
  *

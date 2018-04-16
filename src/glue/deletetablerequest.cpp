@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteTableRequest
  *
- * \brief The DeleteTableRequest class encapsulates Glue DeleteTable requests.
+ * \brief The DeleteTableRequest class provides an interface for Glue DeleteTable requests.
  *
  * \ingroup Glue
  *

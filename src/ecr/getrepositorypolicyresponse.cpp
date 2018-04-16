@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::GetRepositoryPolicyResponse
  *
- * \brief The GetRepositoryPolicyResponse class encapsulates ECR GetRepositoryPolicy responses.
+ * \brief The GetRepositoryPolicyResponse class provides an interace for ECR GetRepositoryPolicy responses.
  *
  * \ingroup ECR
  *

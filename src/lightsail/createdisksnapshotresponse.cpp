@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::CreateDiskSnapshotResponse
  *
- * \brief The CreateDiskSnapshotResponse class encapsulates Lightsail CreateDiskSnapshot responses.
+ * \brief The CreateDiskSnapshotResponse class provides an interace for Lightsail CreateDiskSnapshot responses.
  *
  * \ingroup Lightsail
  *

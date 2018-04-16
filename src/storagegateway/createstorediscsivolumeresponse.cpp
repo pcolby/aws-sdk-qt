@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::CreateStorediSCSIVolumeResponse
  *
- * \brief The CreateStorediSCSIVolumeResponse class encapsulates StorageGateway CreateStorediSCSIVolume responses.
+ * \brief The CreateStorediSCSIVolumeResponse class provides an interace for StorageGateway CreateStorediSCSIVolume responses.
  *
  * \ingroup StorageGateway
  *

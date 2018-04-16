@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListRolePoliciesResponse
  *
- * \brief The ListRolePoliciesResponse class encapsulates IAM ListRolePolicies responses.
+ * \brief The ListRolePoliciesResponse class provides an interace for IAM ListRolePolicies responses.
  *
  * \ingroup IAM
  *

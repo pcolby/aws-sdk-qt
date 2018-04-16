@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::UpdateMLModelResponse
  *
- * \brief The UpdateMLModelResponse class encapsulates MachineLearning UpdateMLModel responses.
+ * \brief The UpdateMLModelResponse class provides an interace for MachineLearning UpdateMLModel responses.
  *
  * \ingroup MachineLearning
  *

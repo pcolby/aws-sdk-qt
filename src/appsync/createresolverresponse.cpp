@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::CreateResolverResponse
  *
- * \brief The CreateResolverResponse class encapsulates AppSync CreateResolver responses.
+ * \brief The CreateResolverResponse class provides an interace for AppSync CreateResolver responses.
  *
  * \ingroup AppSync
  *

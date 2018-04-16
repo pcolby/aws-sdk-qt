@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::DetectTextResponse
  *
- * \brief The DetectTextResponse class encapsulates Rekognition DetectText responses.
+ * \brief The DetectTextResponse class provides an interace for Rekognition DetectText responses.
  *
  * \ingroup Rekognition
  *

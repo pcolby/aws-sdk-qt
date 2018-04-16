@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ListKeysRequest
  *
- * \brief The ListKeysRequest class encapsulates KMS ListKeys requests.
+ * \brief The ListKeysRequest class provides an interface for KMS ListKeys requests.
  *
  * \ingroup KMS
  *

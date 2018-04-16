@@ -28,7 +28,7 @@ namespace CloudSearchDomain {
 /*!
  * \class QtAws::CloudSearchDomain::UploadDocumentsRequest
  *
- * \brief The UploadDocumentsRequest class encapsulates CloudSearchDomain UploadDocuments requests.
+ * \brief The UploadDocumentsRequest class provides an interface for CloudSearchDomain UploadDocuments requests.
  *
  * \ingroup CloudSearchDomain
  *

@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListAccountAliasesRequest
  *
- * \brief The ListAccountAliasesRequest class encapsulates IAM ListAccountAliases requests.
+ * \brief The ListAccountAliasesRequest class provides an interface for IAM ListAccountAliases requests.
  *
  * \ingroup IAM
  *

@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::UpdateDistributionResponse
  *
- * \brief The UpdateDistributionResponse class encapsulates CloudFront UpdateDistribution responses.
+ * \brief The UpdateDistributionResponse class provides an interace for CloudFront UpdateDistribution responses.
  *
  * \ingroup CloudFront
  *

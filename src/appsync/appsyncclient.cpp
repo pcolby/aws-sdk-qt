@@ -91,7 +91,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::AppSyncClient
  *
- * \brief The AppSyncClient class provides access the AWS AppSync service.
+ * \brief The AppSyncClient class provides access to the AWS AppSync service.
  *
  * \ingroup AppSync
  *

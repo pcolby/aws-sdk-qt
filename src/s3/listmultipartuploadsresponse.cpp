@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::ListMultipartUploadsResponse
  *
- * \brief The ListMultipartUploadsResponse class encapsulates S3 ListMultipartUploads responses.
+ * \brief The ListMultipartUploadsResponse class provides an interace for S3 ListMultipartUploads responses.
  *
  * \ingroup S3
  *

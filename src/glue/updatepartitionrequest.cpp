@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdatePartitionRequest
  *
- * \brief The UpdatePartitionRequest class encapsulates Glue UpdatePartition requests.
+ * \brief The UpdatePartitionRequest class provides an interface for Glue UpdatePartition requests.
  *
  * \ingroup Glue
  *

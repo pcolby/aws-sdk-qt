@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListWorkerBlocksResponse
  *
- * \brief The ListWorkerBlocksResponse class encapsulates MTurk ListWorkerBlocks responses.
+ * \brief The ListWorkerBlocksResponse class provides an interace for MTurk ListWorkerBlocks responses.
  *
  * \ingroup MTurk
  *

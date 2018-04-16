@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::SetPermissionResponse
  *
- * \brief The SetPermissionResponse class encapsulates OpsWorks SetPermission responses.
+ * \brief The SetPermissionResponse class provides an interace for OpsWorks SetPermission responses.
  *
  * \ingroup OpsWorks
  *

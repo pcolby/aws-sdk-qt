@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetCoreDefinitionResponse
  *
- * \brief The GetCoreDefinitionResponse class encapsulates Greengrass GetCoreDefinition responses.
+ * \brief The GetCoreDefinitionResponse class provides an interace for Greengrass GetCoreDefinition responses.
  *
  * \ingroup Greengrass
  *

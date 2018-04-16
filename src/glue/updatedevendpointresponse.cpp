@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateDevEndpointResponse
  *
- * \brief The UpdateDevEndpointResponse class encapsulates Glue UpdateDevEndpoint responses.
+ * \brief The UpdateDevEndpointResponse class provides an interace for Glue UpdateDevEndpoint responses.
  *
  * \ingroup Glue
  *

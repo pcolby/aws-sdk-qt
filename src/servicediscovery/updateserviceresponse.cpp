@@ -30,7 +30,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::UpdateServiceResponse
  *
- * \brief The UpdateServiceResponse class encapsulates ServiceDiscovery UpdateService responses.
+ * \brief The UpdateServiceResponse class provides an interace for ServiceDiscovery UpdateService responses.
  *
  * \ingroup ServiceDiscovery
  *

@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeChapCredentialsResponse
  *
- * \brief The DescribeChapCredentialsResponse class encapsulates StorageGateway DescribeChapCredentials responses.
+ * \brief The DescribeChapCredentialsResponse class provides an interace for StorageGateway DescribeChapCredentials responses.
  *
  * \ingroup StorageGateway
  *

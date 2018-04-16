@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::PutConfigurationAggregatorResponse
  *
- * \brief The PutConfigurationAggregatorResponse class encapsulates ConfigService PutConfigurationAggregator responses.
+ * \brief The PutConfigurationAggregatorResponse class provides an interace for ConfigService PutConfigurationAggregator responses.
  *
  * \ingroup ConfigService
  *

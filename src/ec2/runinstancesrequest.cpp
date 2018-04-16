@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RunInstancesRequest
  *
- * \brief The RunInstancesRequest class encapsulates EC2 RunInstances requests.
+ * \brief The RunInstancesRequest class provides an interface for EC2 RunInstances requests.
  *
  * \ingroup EC2
  *

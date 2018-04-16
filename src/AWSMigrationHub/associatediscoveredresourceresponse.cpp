@@ -30,7 +30,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::AssociateDiscoveredResourceResponse
  *
- * \brief The AssociateDiscoveredResourceResponse class encapsulates MigrationHub AssociateDiscoveredResource responses.
+ * \brief The AssociateDiscoveredResourceResponse class provides an interace for MigrationHub AssociateDiscoveredResource responses.
  *
  * \ingroup MigrationHub
  *

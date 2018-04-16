@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DescribeReplicationGroupsRequest
  *
- * \brief The DescribeReplicationGroupsRequest class encapsulates ElastiCache DescribeReplicationGroups requests.
+ * \brief The DescribeReplicationGroupsRequest class provides an interface for ElastiCache DescribeReplicationGroups requests.
  *
  * \ingroup ElastiCache
  *

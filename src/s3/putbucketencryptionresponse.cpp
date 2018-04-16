@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketEncryptionResponse
  *
- * \brief The PutBucketEncryptionResponse class encapsulates S3 PutBucketEncryption responses.
+ * \brief The PutBucketEncryptionResponse class provides an interace for S3 PutBucketEncryption responses.
  *
  * \ingroup S3
  *

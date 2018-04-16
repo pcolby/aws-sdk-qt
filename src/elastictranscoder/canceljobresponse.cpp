@@ -30,7 +30,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::CancelJobResponse
  *
- * \brief The CancelJobResponse class encapsulates ElasticTranscoder CancelJob responses.
+ * \brief The CancelJobResponse class provides an interace for ElasticTranscoder CancelJob responses.
  *
  * \ingroup ElasticTranscoder
  *

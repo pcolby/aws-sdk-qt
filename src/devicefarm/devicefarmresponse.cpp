@@ -29,7 +29,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeviceFarmResponse
  *
- * \brief The DeviceFarmResponse class is the base class for all DeviceFarm responses.
+ * \brief The DeviceFarmResponse class provides an interface for DeviceFarm responses.
  *
  * \ingroup DeviceFarm
  */

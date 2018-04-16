@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteConfigurationSetEventDestinationRequest
  *
- * \brief The DeleteConfigurationSetEventDestinationRequest class encapsulates SES DeleteConfigurationSetEventDestination requests.
+ * \brief The DeleteConfigurationSetEventDestinationRequest class provides an interface for SES DeleteConfigurationSetEventDestination requests.
  *
  * \ingroup SES
  *

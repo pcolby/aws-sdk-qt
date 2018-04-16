@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteEgressOnlyInternetGatewayRequest
  *
- * \brief The DeleteEgressOnlyInternetGatewayRequest class encapsulates EC2 DeleteEgressOnlyInternetGateway requests.
+ * \brief The DeleteEgressOnlyInternetGatewayRequest class provides an interface for EC2 DeleteEgressOnlyInternetGateway requests.
  *
  * \ingroup EC2
  *

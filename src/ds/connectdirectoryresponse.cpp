@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::ConnectDirectoryResponse
  *
- * \brief The ConnectDirectoryResponse class encapsulates DirectoryService ConnectDirectory responses.
+ * \brief The ConnectDirectoryResponse class provides an interace for DirectoryService ConnectDirectory responses.
  *
  * \ingroup DirectoryService
  *

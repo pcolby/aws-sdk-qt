@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::FailoverDBClusterResponse
  *
- * \brief The FailoverDBClusterResponse class encapsulates RDS FailoverDBCluster responses.
+ * \brief The FailoverDBClusterResponse class provides an interace for RDS FailoverDBCluster responses.
  *
  * \ingroup RDS
  *

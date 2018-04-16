@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::InviteAccountToOrganizationRequest
  *
- * \brief The InviteAccountToOrganizationRequest class encapsulates Organizations InviteAccountToOrganization requests.
+ * \brief The InviteAccountToOrganizationRequest class provides an interface for Organizations InviteAccountToOrganization requests.
  *
  * \ingroup Organizations
  *

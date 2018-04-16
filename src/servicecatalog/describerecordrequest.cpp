@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribeRecordRequest
  *
- * \brief The DescribeRecordRequest class encapsulates ServiceCatalog DescribeRecord requests.
+ * \brief The DescribeRecordRequest class provides an interface for ServiceCatalog DescribeRecord requests.
  *
  * \ingroup ServiceCatalog
  *

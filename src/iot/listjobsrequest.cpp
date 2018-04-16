@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListJobsRequest
  *
- * \brief The ListJobsRequest class encapsulates IoT ListJobs requests.
+ * \brief The ListJobsRequest class provides an interface for IoT ListJobs requests.
  *
  * \ingroup IoT
  *

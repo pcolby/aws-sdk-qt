@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::ListClustersResponse
  *
- * \brief The ListClustersResponse class encapsulates ECS ListClusters responses.
+ * \brief The ListClustersResponse class provides an interace for ECS ListClusters responses.
  *
  * \ingroup ECS
  *

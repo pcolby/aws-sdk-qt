@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::StopAutomationExecutionRequest
  *
- * \brief The StopAutomationExecutionRequest class encapsulates SSM StopAutomationExecution requests.
+ * \brief The StopAutomationExecutionRequest class provides an interface for SSM StopAutomationExecution requests.
  *
  * \ingroup SSM
  *

@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::ListVersionsByFunctionRequest
  *
- * \brief The ListVersionsByFunctionRequest class encapsulates Lambda ListVersionsByFunction requests.
+ * \brief The ListVersionsByFunctionRequest class provides an interface for Lambda ListVersionsByFunction requests.
  *
  * \ingroup Lambda
  *

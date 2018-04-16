@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::SetPermissionRequest
  *
- * \brief The SetPermissionRequest class encapsulates OpsWorks SetPermission requests.
+ * \brief The SetPermissionRequest class provides an interface for OpsWorks SetPermission requests.
  *
  * \ingroup OpsWorks
  *

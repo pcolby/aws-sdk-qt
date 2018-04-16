@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteRequestValidatorRequest
  *
- * \brief The DeleteRequestValidatorRequest class encapsulates APIGateway DeleteRequestValidator requests.
+ * \brief The DeleteRequestValidatorRequest class provides an interface for APIGateway DeleteRequestValidator requests.
  *
  * \ingroup APIGateway
  *

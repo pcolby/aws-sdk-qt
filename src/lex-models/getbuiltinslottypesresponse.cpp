@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::GetBuiltinSlotTypesResponse
  *
- * \brief The GetBuiltinSlotTypesResponse class encapsulates LexModelBuildingService GetBuiltinSlotTypes responses.
+ * \brief The GetBuiltinSlotTypesResponse class provides an interace for LexModelBuildingService GetBuiltinSlotTypes responses.
  *
  * \ingroup LexModelBuildingService
  *

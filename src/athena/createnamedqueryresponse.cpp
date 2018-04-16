@@ -30,7 +30,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::CreateNamedQueryResponse
  *
- * \brief The CreateNamedQueryResponse class encapsulates Athena CreateNamedQuery responses.
+ * \brief The CreateNamedQueryResponse class provides an interace for Athena CreateNamedQuery responses.
  *
  * \ingroup Athena
  *

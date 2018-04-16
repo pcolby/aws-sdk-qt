@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::UpdateItemResponse
  *
- * \brief The UpdateItemResponse class encapsulates DynamoDB UpdateItem responses.
+ * \brief The UpdateItemResponse class provides an interace for DynamoDB UpdateItem responses.
  *
  * \ingroup DynamoDB
  *

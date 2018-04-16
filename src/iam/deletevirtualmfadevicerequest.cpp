@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteVirtualMFADeviceRequest
  *
- * \brief The DeleteVirtualMFADeviceRequest class encapsulates IAM DeleteVirtualMFADevice requests.
+ * \brief The DeleteVirtualMFADeviceRequest class provides an interface for IAM DeleteVirtualMFADevice requests.
  *
  * \ingroup IAM
  *

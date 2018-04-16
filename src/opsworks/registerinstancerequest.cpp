@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::RegisterInstanceRequest
  *
- * \brief The RegisterInstanceRequest class encapsulates OpsWorks RegisterInstance requests.
+ * \brief The RegisterInstanceRequest class provides an interface for OpsWorks RegisterInstance requests.
  *
  * \ingroup OpsWorks
  *

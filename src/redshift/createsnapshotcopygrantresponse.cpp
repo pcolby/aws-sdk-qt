@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::CreateSnapshotCopyGrantResponse
  *
- * \brief The CreateSnapshotCopyGrantResponse class encapsulates Redshift CreateSnapshotCopyGrant responses.
+ * \brief The CreateSnapshotCopyGrantResponse class provides an interace for Redshift CreateSnapshotCopyGrant responses.
  *
  * \ingroup Redshift
  *

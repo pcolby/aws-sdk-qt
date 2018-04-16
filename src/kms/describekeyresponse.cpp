@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::DescribeKeyResponse
  *
- * \brief The DescribeKeyResponse class encapsulates KMS DescribeKey responses.
+ * \brief The DescribeKeyResponse class provides an interace for KMS DescribeKey responses.
  *
  * \ingroup KMS
  *

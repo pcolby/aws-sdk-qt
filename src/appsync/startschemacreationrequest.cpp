@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::StartSchemaCreationRequest
  *
- * \brief The StartSchemaCreationRequest class encapsulates AppSync StartSchemaCreation requests.
+ * \brief The StartSchemaCreationRequest class provides an interface for AppSync StartSchemaCreation requests.
  *
  * \ingroup AppSync
  *

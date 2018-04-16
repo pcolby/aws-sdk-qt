@@ -30,7 +30,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::GetIdResponse
  *
- * \brief The GetIdResponse class encapsulates CognitoIdentity GetId responses.
+ * \brief The GetIdResponse class provides an interace for CognitoIdentity GetId responses.
  *
  * \ingroup CognitoIdentity
  *

@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::CreateConfigurationSetEventDestinationResponse
  *
- * \brief The CreateConfigurationSetEventDestinationResponse class encapsulates SES CreateConfigurationSetEventDestination responses.
+ * \brief The CreateConfigurationSetEventDestinationResponse class provides an interace for SES CreateConfigurationSetEventDestination responses.
  *
  * \ingroup SES
  *

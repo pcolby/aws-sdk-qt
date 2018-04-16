@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ModifyDocumentPermissionRequest
  *
- * \brief The ModifyDocumentPermissionRequest class encapsulates SSM ModifyDocumentPermission requests.
+ * \brief The ModifyDocumentPermissionRequest class provides an interface for SSM ModifyDocumentPermission requests.
  *
  * \ingroup SSM
  *

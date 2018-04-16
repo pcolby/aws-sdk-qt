@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::ListBranchesRequest
  *
- * \brief The ListBranchesRequest class encapsulates CodeCommit ListBranches requests.
+ * \brief The ListBranchesRequest class provides an interface for CodeCommit ListBranches requests.
  *
  * \ingroup CodeCommit
  *

@@ -28,7 +28,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::GetSessionTokenRequest
  *
- * \brief The GetSessionTokenRequest class encapsulates STS GetSessionToken requests.
+ * \brief The GetSessionTokenRequest class provides an interface for STS GetSessionToken requests.
  *
  * \ingroup STS
  *

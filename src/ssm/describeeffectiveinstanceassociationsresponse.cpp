@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeEffectiveInstanceAssociationsResponse
  *
- * \brief The DescribeEffectiveInstanceAssociationsResponse class encapsulates SSM DescribeEffectiveInstanceAssociations responses.
+ * \brief The DescribeEffectiveInstanceAssociationsResponse class provides an interace for SSM DescribeEffectiveInstanceAssociations responses.
  *
  * \ingroup SSM
  *

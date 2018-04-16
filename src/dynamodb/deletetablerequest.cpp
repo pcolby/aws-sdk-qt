@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DeleteTableRequest
  *
- * \brief The DeleteTableRequest class encapsulates DynamoDB DeleteTable requests.
+ * \brief The DeleteTableRequest class provides an interface for DynamoDB DeleteTable requests.
  *
  * \ingroup DynamoDB
  *

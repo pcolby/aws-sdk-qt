@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::ListServerNeighborsRequest
  *
- * \brief The ListServerNeighborsRequest class encapsulates ApplicationDiscoveryService ListServerNeighbors requests.
+ * \brief The ListServerNeighborsRequest class provides an interface for ApplicationDiscoveryService ListServerNeighbors requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

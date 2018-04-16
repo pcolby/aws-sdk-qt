@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::RegisterTaskDefinitionRequest
  *
- * \brief The RegisterTaskDefinitionRequest class encapsulates ECS RegisterTaskDefinition requests.
+ * \brief The RegisterTaskDefinitionRequest class provides an interface for ECS RegisterTaskDefinition requests.
  *
  * \ingroup ECS
  *

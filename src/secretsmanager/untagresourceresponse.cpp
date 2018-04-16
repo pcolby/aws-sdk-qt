@@ -30,7 +30,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::UntagResourceResponse
  *
- * \brief The UntagResourceResponse class encapsulates SecretsManager UntagResource responses.
+ * \brief The UntagResourceResponse class provides an interace for SecretsManager UntagResource responses.
  *
  * \ingroup SecretsManager
  *

@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::GetRateBasedRuleManagedKeysRequest
  *
- * \brief The GetRateBasedRuleManagedKeysRequest class encapsulates WAF GetRateBasedRuleManagedKeys requests.
+ * \brief The GetRateBasedRuleManagedKeysRequest class provides an interface for WAF GetRateBasedRuleManagedKeys requests.
  *
  * \ingroup WAF
  *

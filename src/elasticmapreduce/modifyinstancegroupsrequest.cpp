@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ModifyInstanceGroupsRequest
  *
- * \brief The ModifyInstanceGroupsRequest class encapsulates EMR ModifyInstanceGroups requests.
+ * \brief The ModifyInstanceGroupsRequest class provides an interface for EMR ModifyInstanceGroups requests.
  *
  * \ingroup EMR
  *

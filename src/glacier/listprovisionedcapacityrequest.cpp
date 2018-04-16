@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::ListProvisionedCapacityRequest
  *
- * \brief The ListProvisionedCapacityRequest class encapsulates Glacier ListProvisionedCapacity requests.
+ * \brief The ListProvisionedCapacityRequest class provides an interface for Glacier ListProvisionedCapacity requests.
  *
  * \ingroup Glacier
  *

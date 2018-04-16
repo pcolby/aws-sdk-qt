@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetRequestValidatorsResponse
  *
- * \brief The GetRequestValidatorsResponse class encapsulates APIGateway GetRequestValidators responses.
+ * \brief The GetRequestValidatorsResponse class provides an interace for APIGateway GetRequestValidators responses.
  *
  * \ingroup APIGateway
  *

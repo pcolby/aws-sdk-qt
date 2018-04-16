@@ -28,7 +28,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::RequestCertificateRequest
  *
- * \brief The RequestCertificateRequest class encapsulates ACM RequestCertificate requests.
+ * \brief The RequestCertificateRequest class provides an interface for ACM RequestCertificate requests.
  *
  * \ingroup ACM
  *

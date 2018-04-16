@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ModifyListenerResponse
  *
- * \brief The ModifyListenerResponse class encapsulates ElasticLoadBalancingv2 ModifyListener responses.
+ * \brief The ModifyListenerResponse class provides an interace for ElasticLoadBalancingv2 ModifyListener responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

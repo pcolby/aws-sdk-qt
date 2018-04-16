@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateThingRequest
  *
- * \brief The CreateThingRequest class encapsulates IoT CreateThing requests.
+ * \brief The CreateThingRequest class provides an interface for IoT CreateThing requests.
  *
  * \ingroup IoT
  *

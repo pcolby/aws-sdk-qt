@@ -29,7 +29,7 @@ namespace SageMakerRuntime {
 /*!
  * \class QtAws::SageMakerRuntime::SageMakerRuntimeResponse
  *
- * \brief The SageMakerRuntimeResponse class is the base class for all SageMakerRuntime responses.
+ * \brief The SageMakerRuntimeResponse class provides an interface for SageMakerRuntime responses.
  *
  * \ingroup SageMakerRuntime
  */

@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminRemoveUserFromGroupRequest
  *
- * \brief The AdminRemoveUserFromGroupRequest class encapsulates CognitoIdentityProvider AdminRemoveUserFromGroup requests.
+ * \brief The AdminRemoveUserFromGroupRequest class provides an interface for CognitoIdentityProvider AdminRemoveUserFromGroup requests.
  *
  * \ingroup CognitoIdentityProvider
  *

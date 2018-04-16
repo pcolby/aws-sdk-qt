@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::PutGroupPolicyRequest
  *
- * \brief The PutGroupPolicyRequest class encapsulates IAM PutGroupPolicy requests.
+ * \brief The PutGroupPolicyRequest class provides an interface for IAM PutGroupPolicy requests.
  *
  * \ingroup IAM
  *

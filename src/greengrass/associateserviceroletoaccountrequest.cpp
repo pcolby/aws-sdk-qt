@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::AssociateServiceRoleToAccountRequest
  *
- * \brief The AssociateServiceRoleToAccountRequest class encapsulates Greengrass AssociateServiceRoleToAccount requests.
+ * \brief The AssociateServiceRoleToAccountRequest class provides an interface for Greengrass AssociateServiceRoleToAccount requests.
  *
  * \ingroup Greengrass
  *

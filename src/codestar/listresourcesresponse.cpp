@@ -30,7 +30,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::ListResourcesResponse
  *
- * \brief The ListResourcesResponse class encapsulates CodeStar ListResources responses.
+ * \brief The ListResourcesResponse class provides an interace for CodeStar ListResources responses.
  *
  * \ingroup CodeStar
  *

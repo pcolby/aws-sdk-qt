@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::ListBranchesResponse
  *
- * \brief The ListBranchesResponse class encapsulates CodeCommit ListBranches responses.
+ * \brief The ListBranchesResponse class provides an interace for CodeCommit ListBranches responses.
  *
  * \ingroup CodeCommit
  *

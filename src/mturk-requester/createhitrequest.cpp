@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::CreateHITRequest
  *
- * \brief The CreateHITRequest class encapsulates MTurk CreateHIT requests.
+ * \brief The CreateHITRequest class provides an interface for MTurk CreateHIT requests.
  *
  * \ingroup MTurk
  *

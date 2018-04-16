@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::DescribeVaultRequest
  *
- * \brief The DescribeVaultRequest class encapsulates Glacier DescribeVault requests.
+ * \brief The DescribeVaultRequest class provides an interface for Glacier DescribeVault requests.
  *
  * \ingroup Glacier
  *

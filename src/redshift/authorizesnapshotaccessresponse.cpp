@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::AuthorizeSnapshotAccessResponse
  *
- * \brief The AuthorizeSnapshotAccessResponse class encapsulates Redshift AuthorizeSnapshotAccess responses.
+ * \brief The AuthorizeSnapshotAccessResponse class provides an interace for Redshift AuthorizeSnapshotAccess responses.
  *
  * \ingroup Redshift
  *

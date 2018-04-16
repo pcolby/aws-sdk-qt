@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetSubnetsResponse
  *
- * \brief The SetSubnetsResponse class encapsulates ElasticLoadBalancingv2 SetSubnets responses.
+ * \brief The SetSubnetsResponse class provides an interace for ElasticLoadBalancingv2 SetSubnets responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

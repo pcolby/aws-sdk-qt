@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::SendBonusResponse
  *
- * \brief The SendBonusResponse class encapsulates MTurk SendBonus responses.
+ * \brief The SendBonusResponse class provides an interace for MTurk SendBonus responses.
  *
  * \ingroup MTurk
  *

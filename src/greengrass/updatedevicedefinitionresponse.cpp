@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::UpdateDeviceDefinitionResponse
  *
- * \brief The UpdateDeviceDefinitionResponse class encapsulates Greengrass UpdateDeviceDefinition responses.
+ * \brief The UpdateDeviceDefinitionResponse class provides an interace for Greengrass UpdateDeviceDefinition responses.
  *
  * \ingroup Greengrass
  *

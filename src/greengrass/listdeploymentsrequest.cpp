@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListDeploymentsRequest
  *
- * \brief The ListDeploymentsRequest class encapsulates Greengrass ListDeployments requests.
+ * \brief The ListDeploymentsRequest class provides an interface for Greengrass ListDeployments requests.
  *
  * \ingroup Greengrass
  *

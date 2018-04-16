@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribeProductViewRequest
  *
- * \brief The DescribeProductViewRequest class encapsulates ServiceCatalog DescribeProductView requests.
+ * \brief The DescribeProductViewRequest class provides an interface for ServiceCatalog DescribeProductView requests.
  *
  * \ingroup ServiceCatalog
  *

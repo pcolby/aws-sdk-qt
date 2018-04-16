@@ -28,7 +28,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::GetSubscriptionStateRequest
  *
- * \brief The GetSubscriptionStateRequest class encapsulates Shield GetSubscriptionState requests.
+ * \brief The GetSubscriptionStateRequest class provides an interface for Shield GetSubscriptionState requests.
  *
  * \ingroup Shield
  *

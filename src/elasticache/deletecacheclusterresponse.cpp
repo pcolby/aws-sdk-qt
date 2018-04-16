@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DeleteCacheClusterResponse
  *
- * \brief The DeleteCacheClusterResponse class encapsulates ElastiCache DeleteCacheCluster responses.
+ * \brief The DeleteCacheClusterResponse class provides an interace for ElastiCache DeleteCacheCluster responses.
  *
  * \ingroup ElastiCache
  *

@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::SendMessageRequest
  *
- * \brief The SendMessageRequest class encapsulates SQS SendMessage requests.
+ * \brief The SendMessageRequest class provides an interface for SQS SendMessage requests.
  *
  * \ingroup SQS
  *

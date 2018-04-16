@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::AssociateQualificationWithWorkerRequest
  *
- * \brief The AssociateQualificationWithWorkerRequest class encapsulates MTurk AssociateQualificationWithWorker requests.
+ * \brief The AssociateQualificationWithWorkerRequest class provides an interface for MTurk AssociateQualificationWithWorker requests.
  *
  * \ingroup MTurk
  *

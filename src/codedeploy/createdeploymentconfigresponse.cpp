@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::CreateDeploymentConfigResponse
  *
- * \brief The CreateDeploymentConfigResponse class encapsulates CodeDeploy CreateDeploymentConfig responses.
+ * \brief The CreateDeploymentConfigResponse class provides an interace for CodeDeploy CreateDeploymentConfig responses.
  *
  * \ingroup CodeDeploy
  *

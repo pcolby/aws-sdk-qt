@@ -26,7 +26,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::ElasticTranscoderRequest
  *
- * \brief The ElasticTranscoderRequest class is the base class for all ElasticTranscoder requests.
+ * \brief The ElasticTranscoderRequest class provides an interface for ElasticTranscoder requests.
  *
  * \ingroup ElasticTranscoder
  */

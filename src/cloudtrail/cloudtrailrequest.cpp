@@ -26,7 +26,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::CloudTrailRequest
  *
- * \brief The CloudTrailRequest class is the base class for all CloudTrail requests.
+ * \brief The CloudTrailRequest class provides an interface for CloudTrail requests.
  *
  * \ingroup CloudTrail
  */

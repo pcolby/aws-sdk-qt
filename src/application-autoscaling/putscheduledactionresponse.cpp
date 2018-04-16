@@ -30,7 +30,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::PutScheduledActionResponse
  *
- * \brief The PutScheduledActionResponse class encapsulates ApplicationAutoScaling PutScheduledAction responses.
+ * \brief The PutScheduledActionResponse class provides an interace for ApplicationAutoScaling PutScheduledAction responses.
  *
  * \ingroup ApplicationAutoScaling
  *

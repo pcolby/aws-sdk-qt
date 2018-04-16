@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::UpdateLoadBalancerAttributeRequest
  *
- * \brief The UpdateLoadBalancerAttributeRequest class encapsulates Lightsail UpdateLoadBalancerAttribute requests.
+ * \brief The UpdateLoadBalancerAttributeRequest class provides an interface for Lightsail UpdateLoadBalancerAttribute requests.
  *
  * \ingroup Lightsail
  *

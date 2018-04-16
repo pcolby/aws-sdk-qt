@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CopyFpgaImageRequest
  *
- * \brief The CopyFpgaImageRequest class encapsulates EC2 CopyFpgaImage requests.
+ * \brief The CopyFpgaImageRequest class provides an interface for EC2 CopyFpgaImage requests.
  *
  * \ingroup EC2
  *

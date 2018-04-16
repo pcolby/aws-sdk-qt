@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::RegisterContainerInstanceResponse
  *
- * \brief The RegisterContainerInstanceResponse class encapsulates ECS RegisterContainerInstance responses.
+ * \brief The RegisterContainerInstanceResponse class provides an interace for ECS RegisterContainerInstance responses.
  *
  * \ingroup ECS
  *

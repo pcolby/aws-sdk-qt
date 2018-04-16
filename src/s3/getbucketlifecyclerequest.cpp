@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketLifecycleRequest
  *
- * \brief The GetBucketLifecycleRequest class encapsulates S3 GetBucketLifecycle requests.
+ * \brief The GetBucketLifecycleRequest class provides an interface for S3 GetBucketLifecycle requests.
  *
  * \ingroup S3
  *

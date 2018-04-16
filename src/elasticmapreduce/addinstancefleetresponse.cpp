@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::AddInstanceFleetResponse
  *
- * \brief The AddInstanceFleetResponse class encapsulates EMR AddInstanceFleet responses.
+ * \brief The AddInstanceFleetResponse class provides an interace for EMR AddInstanceFleet responses.
  *
  * \ingroup EMR
  *

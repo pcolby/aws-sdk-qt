@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DescribeHostedConnectionsResponse
  *
- * \brief The DescribeHostedConnectionsResponse class encapsulates DirectConnect DescribeHostedConnections responses.
+ * \brief The DescribeHostedConnectionsResponse class provides an interace for DirectConnect DescribeHostedConnections responses.
  *
  * \ingroup DirectConnect
  *

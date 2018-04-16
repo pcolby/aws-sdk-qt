@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::UpdateRuleRequest
  *
- * \brief The UpdateRuleRequest class encapsulates WAFRegional UpdateRule requests.
+ * \brief The UpdateRuleRequest class provides an interface for WAFRegional UpdateRule requests.
  *
  * \ingroup WAFRegional
  *

@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteSnapshotCopyGrantRequest
  *
- * \brief The DeleteSnapshotCopyGrantRequest class encapsulates Redshift DeleteSnapshotCopyGrant requests.
+ * \brief The DeleteSnapshotCopyGrantRequest class provides an interface for Redshift DeleteSnapshotCopyGrant requests.
  *
  * \ingroup Redshift
  *

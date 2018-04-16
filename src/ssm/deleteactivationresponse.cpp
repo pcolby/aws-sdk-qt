@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeleteActivationResponse
  *
- * \brief The DeleteActivationResponse class encapsulates SSM DeleteActivation responses.
+ * \brief The DeleteActivationResponse class provides an interace for SSM DeleteActivation responses.
  *
  * \ingroup SSM
  *

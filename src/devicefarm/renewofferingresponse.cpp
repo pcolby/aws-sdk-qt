@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::RenewOfferingResponse
  *
- * \brief The RenewOfferingResponse class encapsulates DeviceFarm RenewOffering responses.
+ * \brief The RenewOfferingResponse class provides an interace for DeviceFarm RenewOffering responses.
  *
  * \ingroup DeviceFarm
  *

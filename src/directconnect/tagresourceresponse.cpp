@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::TagResourceResponse
  *
- * \brief The TagResourceResponse class encapsulates DirectConnect TagResource responses.
+ * \brief The TagResourceResponse class provides an interace for DirectConnect TagResource responses.
  *
  * \ingroup DirectConnect
  *

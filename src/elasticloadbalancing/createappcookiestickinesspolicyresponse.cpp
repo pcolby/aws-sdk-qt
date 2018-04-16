@@ -30,7 +30,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::CreateAppCookieStickinessPolicyResponse
  *
- * \brief The CreateAppCookieStickinessPolicyResponse class encapsulates ElasticLoadBalancing CreateAppCookieStickinessPolicy responses.
+ * \brief The CreateAppCookieStickinessPolicyResponse class provides an interace for ElasticLoadBalancing CreateAppCookieStickinessPolicy responses.
  *
  * \ingroup ElasticLoadBalancing
  *

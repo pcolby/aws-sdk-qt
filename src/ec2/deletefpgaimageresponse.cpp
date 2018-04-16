@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteFpgaImageResponse
  *
- * \brief The DeleteFpgaImageResponse class encapsulates EC2 DeleteFpgaImage responses.
+ * \brief The DeleteFpgaImageResponse class provides an interace for EC2 DeleteFpgaImage responses.
  *
  * \ingroup EC2
  *

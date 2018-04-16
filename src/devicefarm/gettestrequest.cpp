@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetTestRequest
  *
- * \brief The GetTestRequest class encapsulates DeviceFarm GetTest requests.
+ * \brief The GetTestRequest class provides an interface for DeviceFarm GetTest requests.
  *
  * \ingroup DeviceFarm
  *

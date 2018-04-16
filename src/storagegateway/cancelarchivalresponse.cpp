@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::CancelArchivalResponse
  *
- * \brief The CancelArchivalResponse class encapsulates StorageGateway CancelArchival responses.
+ * \brief The CancelArchivalResponse class provides an interace for StorageGateway CancelArchival responses.
  *
  * \ingroup StorageGateway
  *

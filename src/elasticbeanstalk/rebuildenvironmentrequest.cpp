@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::RebuildEnvironmentRequest
  *
- * \brief The RebuildEnvironmentRequest class encapsulates ElasticBeanstalk RebuildEnvironment requests.
+ * \brief The RebuildEnvironmentRequest class provides an interface for ElasticBeanstalk RebuildEnvironment requests.
  *
  * \ingroup ElasticBeanstalk
  *

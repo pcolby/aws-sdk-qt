@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::UpdateLoggerDefinitionResponse
  *
- * \brief The UpdateLoggerDefinitionResponse class encapsulates Greengrass UpdateLoggerDefinition responses.
+ * \brief The UpdateLoggerDefinitionResponse class provides an interace for Greengrass UpdateLoggerDefinition responses.
  *
  * \ingroup Greengrass
  *

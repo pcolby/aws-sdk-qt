@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateSSHPublicKeyResponse
  *
- * \brief The UpdateSSHPublicKeyResponse class encapsulates IAM UpdateSSHPublicKey responses.
+ * \brief The UpdateSSHPublicKeyResponse class provides an interace for IAM UpdateSSHPublicKey responses.
  *
  * \ingroup IAM
  *

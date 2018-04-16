@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetIdentityVerificationAttributesResponse
  *
- * \brief The GetIdentityVerificationAttributesResponse class encapsulates SES GetIdentityVerificationAttributes responses.
+ * \brief The GetIdentityVerificationAttributesResponse class provides an interace for SES GetIdentityVerificationAttributes responses.
  *
  * \ingroup SES
  *

@@ -69,7 +69,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::AcmpcaClient
  *
- * \brief The AcmpcaClient class provides access the AWS Certificate Manager Private Certificate Authority (ACM-PCA) service.
+ * \brief The AcmpcaClient class provides access to the AWS Certificate Manager Private Certificate Authority (ACM-PCA) service.
  *
  * \ingroup ACMPCA
  *

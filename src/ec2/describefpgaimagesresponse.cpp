@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeFpgaImagesResponse
  *
- * \brief The DescribeFpgaImagesResponse class encapsulates EC2 DescribeFpgaImages responses.
+ * \brief The DescribeFpgaImagesResponse class provides an interace for EC2 DescribeFpgaImages responses.
  *
  * \ingroup EC2
  *

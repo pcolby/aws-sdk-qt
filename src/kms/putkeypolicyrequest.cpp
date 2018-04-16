@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::PutKeyPolicyRequest
  *
- * \brief The PutKeyPolicyRequest class encapsulates KMS PutKeyPolicy requests.
+ * \brief The PutKeyPolicyRequest class provides an interface for KMS PutKeyPolicy requests.
  *
  * \ingroup KMS
  *

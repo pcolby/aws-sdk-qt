@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DeleteOptionGroupResponse
  *
- * \brief The DeleteOptionGroupResponse class encapsulates RDS DeleteOptionGroup responses.
+ * \brief The DeleteOptionGroupResponse class provides an interace for RDS DeleteOptionGroup responses.
  *
  * \ingroup RDS
  *

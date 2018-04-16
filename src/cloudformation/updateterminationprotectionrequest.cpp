@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::UpdateTerminationProtectionRequest
  *
- * \brief The UpdateTerminationProtectionRequest class encapsulates CloudFormation UpdateTerminationProtection requests.
+ * \brief The UpdateTerminationProtectionRequest class provides an interface for CloudFormation UpdateTerminationProtection requests.
  *
  * \ingroup CloudFormation
  *

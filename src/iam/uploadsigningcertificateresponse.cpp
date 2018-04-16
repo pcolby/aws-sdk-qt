@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UploadSigningCertificateResponse
  *
- * \brief The UploadSigningCertificateResponse class encapsulates IAM UploadSigningCertificate responses.
+ * \brief The UploadSigningCertificateResponse class provides an interace for IAM UploadSigningCertificate responses.
  *
  * \ingroup IAM
  *

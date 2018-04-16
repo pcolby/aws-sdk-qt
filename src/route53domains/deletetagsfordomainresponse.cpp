@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::DeleteTagsForDomainResponse
  *
- * \brief The DeleteTagsForDomainResponse class encapsulates Route53Domains DeleteTagsForDomain responses.
+ * \brief The DeleteTagsForDomainResponse class provides an interace for Route53Domains DeleteTagsForDomain responses.
  *
  * \ingroup Route53Domains
  *

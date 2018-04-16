@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::UpdateConnectivityInfoResponse
  *
- * \brief The UpdateConnectivityInfoResponse class encapsulates Greengrass UpdateConnectivityInfo responses.
+ * \brief The UpdateConnectivityInfoResponse class provides an interace for Greengrass UpdateConnectivityInfo responses.
  *
  * \ingroup Greengrass
  *

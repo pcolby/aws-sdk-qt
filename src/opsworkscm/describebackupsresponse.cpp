@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DescribeBackupsResponse
  *
- * \brief The DescribeBackupsResponse class encapsulates OpsWorksCM DescribeBackups responses.
+ * \brief The DescribeBackupsResponse class provides an interace for OpsWorksCM DescribeBackups responses.
  *
  * \ingroup OpsWorksCM
  *

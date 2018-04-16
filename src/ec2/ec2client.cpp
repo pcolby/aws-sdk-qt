@@ -573,7 +573,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::Ec2Client
  *
- * \brief The Ec2Client class provides access the Amazon Elastic Compute Cloud ( EC2) service.
+ * \brief The Ec2Client class provides access to the Amazon Elastic Compute Cloud ( EC2) service.
  *
  * \ingroup EC2
  *

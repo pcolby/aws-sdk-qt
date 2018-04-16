@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteVpcPeeringAuthorizationRequest
  *
- * \brief The DeleteVpcPeeringAuthorizationRequest class encapsulates GameLift DeleteVpcPeeringAuthorization requests.
+ * \brief The DeleteVpcPeeringAuthorizationRequest class provides an interface for GameLift DeleteVpcPeeringAuthorization requests.
  *
  * \ingroup GameLift
  *

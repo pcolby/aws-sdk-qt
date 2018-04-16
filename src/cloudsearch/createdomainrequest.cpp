@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::CreateDomainRequest
  *
- * \brief The CreateDomainRequest class encapsulates CloudSearch CreateDomain requests.
+ * \brief The CreateDomainRequest class provides an interface for CloudSearch CreateDomain requests.
  *
  * \ingroup CloudSearch
  *

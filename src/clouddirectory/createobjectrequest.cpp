@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::CreateObjectRequest
  *
- * \brief The CreateObjectRequest class encapsulates CloudDirectory CreateObject requests.
+ * \brief The CreateObjectRequest class provides an interface for CloudDirectory CreateObject requests.
  *
  * \ingroup CloudDirectory
  *

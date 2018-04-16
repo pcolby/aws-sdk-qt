@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeImportSnapshotTasksRequest
  *
- * \brief The DescribeImportSnapshotTasksRequest class encapsulates EC2 DescribeImportSnapshotTasks requests.
+ * \brief The DescribeImportSnapshotTasksRequest class provides an interface for EC2 DescribeImportSnapshotTasks requests.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteEventSubscriptionResponse
  *
- * \brief The DeleteEventSubscriptionResponse class encapsulates Redshift DeleteEventSubscription responses.
+ * \brief The DeleteEventSubscriptionResponse class provides an interace for Redshift DeleteEventSubscription responses.
  *
  * \ingroup Redshift
  *

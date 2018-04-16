@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::AttachStaticIpResponse
  *
- * \brief The AttachStaticIpResponse class encapsulates Lightsail AttachStaticIp responses.
+ * \brief The AttachStaticIpResponse class provides an interace for Lightsail AttachStaticIp responses.
  *
  * \ingroup Lightsail
  *

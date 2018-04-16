@@ -28,7 +28,7 @@ namespace CostExplorer {
 /*!
  * \class QtAws::CostExplorer::GetDimensionValuesRequest
  *
- * \brief The GetDimensionValuesRequest class encapsulates CostExplorer GetDimensionValues requests.
+ * \brief The GetDimensionValuesRequest class provides an interface for CostExplorer GetDimensionValues requests.
  *
  * \ingroup CostExplorer
  *

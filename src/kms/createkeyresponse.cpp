@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::CreateKeyResponse
  *
- * \brief The CreateKeyResponse class encapsulates KMS CreateKey responses.
+ * \brief The CreateKeyResponse class provides an interace for KMS CreateKey responses.
  *
  * \ingroup KMS
  *

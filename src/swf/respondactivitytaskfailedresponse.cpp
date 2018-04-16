@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::RespondActivityTaskFailedResponse
  *
- * \brief The RespondActivityTaskFailedResponse class encapsulates SWF RespondActivityTaskFailed responses.
+ * \brief The RespondActivityTaskFailedResponse class provides an interace for SWF RespondActivityTaskFailed responses.
  *
  * \ingroup SWF
  *

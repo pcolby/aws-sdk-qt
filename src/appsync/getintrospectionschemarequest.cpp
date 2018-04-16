@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::GetIntrospectionSchemaRequest
  *
- * \brief The GetIntrospectionSchemaRequest class encapsulates AppSync GetIntrospectionSchema requests.
+ * \brief The GetIntrospectionSchemaRequest class provides an interface for AppSync GetIntrospectionSchema requests.
  *
  * \ingroup AppSync
  *

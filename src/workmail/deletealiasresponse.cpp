@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DeleteAliasResponse
  *
- * \brief The DeleteAliasResponse class encapsulates WorkMail DeleteAlias responses.
+ * \brief The DeleteAliasResponse class provides an interace for WorkMail DeleteAlias responses.
  *
  * \ingroup WorkMail
  *

@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::UnlinkDeveloperIdentityRequest
  *
- * \brief The UnlinkDeveloperIdentityRequest class encapsulates CognitoIdentity UnlinkDeveloperIdentity requests.
+ * \brief The UnlinkDeveloperIdentityRequest class provides an interface for CognitoIdentity UnlinkDeveloperIdentity requests.
  *
  * \ingroup CognitoIdentity
  *

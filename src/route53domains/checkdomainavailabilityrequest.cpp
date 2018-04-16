@@ -28,7 +28,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::CheckDomainAvailabilityRequest
  *
- * \brief The CheckDomainAvailabilityRequest class encapsulates Route53Domains CheckDomainAvailability requests.
+ * \brief The CheckDomainAvailabilityRequest class provides an interface for Route53Domains CheckDomainAvailability requests.
  *
  * \ingroup Route53Domains
  *

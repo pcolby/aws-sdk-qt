@@ -28,7 +28,7 @@ namespace Comprehend {
 /*!
  * \class QtAws::Comprehend::BatchDetectSentimentRequest
  *
- * \brief The BatchDetectSentimentRequest class encapsulates Comprehend BatchDetectSentiment requests.
+ * \brief The BatchDetectSentimentRequest class provides an interface for Comprehend BatchDetectSentiment requests.
  *
  * \ingroup Comprehend
  *

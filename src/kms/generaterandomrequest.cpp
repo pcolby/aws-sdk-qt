@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::GenerateRandomRequest
  *
- * \brief The GenerateRandomRequest class encapsulates KMS GenerateRandom requests.
+ * \brief The GenerateRandomRequest class provides an interface for KMS GenerateRandom requests.
  *
  * \ingroup KMS
  *

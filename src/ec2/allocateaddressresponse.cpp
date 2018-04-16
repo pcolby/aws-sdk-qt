@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AllocateAddressResponse
  *
- * \brief The AllocateAddressResponse class encapsulates EC2 AllocateAddress responses.
+ * \brief The AllocateAddressResponse class provides an interace for EC2 AllocateAddress responses.
  *
  * \ingroup EC2
  *

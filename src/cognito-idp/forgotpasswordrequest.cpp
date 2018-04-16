@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ForgotPasswordRequest
  *
- * \brief The ForgotPasswordRequest class encapsulates CognitoIdentityProvider ForgotPassword requests.
+ * \brief The ForgotPasswordRequest class provides an interface for CognitoIdentityProvider ForgotPassword requests.
  *
  * \ingroup CognitoIdentityProvider
  *

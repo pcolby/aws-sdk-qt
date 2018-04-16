@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateApiKeyRequest
  *
- * \brief The UpdateApiKeyRequest class encapsulates APIGateway UpdateApiKey requests.
+ * \brief The UpdateApiKeyRequest class provides an interface for APIGateway UpdateApiKey requests.
  *
  * \ingroup APIGateway
  *

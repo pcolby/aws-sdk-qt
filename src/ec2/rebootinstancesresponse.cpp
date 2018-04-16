@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RebootInstancesResponse
  *
- * \brief The RebootInstancesResponse class encapsulates EC2 RebootInstances responses.
+ * \brief The RebootInstancesResponse class provides an interace for EC2 RebootInstances responses.
  *
  * \ingroup EC2
  *

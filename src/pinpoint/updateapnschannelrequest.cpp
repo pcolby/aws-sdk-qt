@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateApnsChannelRequest
  *
- * \brief The UpdateApnsChannelRequest class encapsulates Pinpoint UpdateApnsChannel requests.
+ * \brief The UpdateApnsChannelRequest class provides an interface for Pinpoint UpdateApnsChannel requests.
  *
  * \ingroup Pinpoint
  *

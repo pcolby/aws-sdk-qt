@@ -28,7 +28,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::ModifyWorkspacePropertiesRequest
  *
- * \brief The ModifyWorkspacePropertiesRequest class encapsulates WorkSpaces ModifyWorkspaceProperties requests.
+ * \brief The ModifyWorkspacePropertiesRequest class provides an interface for WorkSpaces ModifyWorkspaceProperties requests.
  *
  * \ingroup WorkSpaces
  *

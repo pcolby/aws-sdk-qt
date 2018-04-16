@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteDocumentationPartRequest
  *
- * \brief The DeleteDocumentationPartRequest class encapsulates APIGateway DeleteDocumentationPart requests.
+ * \brief The DeleteDocumentationPartRequest class provides an interface for APIGateway DeleteDocumentationPart requests.
  *
  * \ingroup APIGateway
  *

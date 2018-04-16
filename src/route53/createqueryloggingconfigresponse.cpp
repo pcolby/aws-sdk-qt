@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::CreateQueryLoggingConfigResponse
  *
- * \brief The CreateQueryLoggingConfigResponse class encapsulates Route53 CreateQueryLoggingConfig responses.
+ * \brief The CreateQueryLoggingConfigResponse class provides an interace for Route53 CreateQueryLoggingConfig responses.
  *
  * \ingroup Route53
  *

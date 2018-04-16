@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::DeleteStreamingDistributionRequest
  *
- * \brief The DeleteStreamingDistributionRequest class encapsulates CloudFront DeleteStreamingDistribution requests.
+ * \brief The DeleteStreamingDistributionRequest class provides an interface for CloudFront DeleteStreamingDistribution requests.
  *
  * \ingroup CloudFront
  *

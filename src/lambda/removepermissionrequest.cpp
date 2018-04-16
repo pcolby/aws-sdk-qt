@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::RemovePermissionRequest
  *
- * \brief The RemovePermissionRequest class encapsulates Lambda RemovePermission requests.
+ * \brief The RemovePermissionRequest class provides an interface for Lambda RemovePermission requests.
  *
  * \ingroup Lambda
  *

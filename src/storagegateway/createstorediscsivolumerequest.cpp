@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::CreateStorediSCSIVolumeRequest
  *
- * \brief The CreateStorediSCSIVolumeRequest class encapsulates StorageGateway CreateStorediSCSIVolume requests.
+ * \brief The CreateStorediSCSIVolumeRequest class provides an interface for StorageGateway CreateStorediSCSIVolume requests.
  *
  * \ingroup StorageGateway
  *

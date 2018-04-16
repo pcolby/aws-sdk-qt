@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::RequestUploadCredentialsRequest
  *
- * \brief The RequestUploadCredentialsRequest class encapsulates GameLift RequestUploadCredentials requests.
+ * \brief The RequestUploadCredentialsRequest class provides an interface for GameLift RequestUploadCredentials requests.
  *
  * \ingroup GameLift
  *

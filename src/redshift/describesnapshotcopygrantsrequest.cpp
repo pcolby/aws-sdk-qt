@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeSnapshotCopyGrantsRequest
  *
- * \brief The DescribeSnapshotCopyGrantsRequest class encapsulates Redshift DescribeSnapshotCopyGrants requests.
+ * \brief The DescribeSnapshotCopyGrantsRequest class provides an interface for Redshift DescribeSnapshotCopyGrants requests.
  *
  * \ingroup Redshift
  *

@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CreateDBInstanceRequest
  *
- * \brief The CreateDBInstanceRequest class encapsulates RDS CreateDBInstance requests.
+ * \brief The CreateDBInstanceRequest class provides an interface for RDS CreateDBInstance requests.
  *
  * \ingroup RDS
  *

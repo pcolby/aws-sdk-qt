@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetSdkResponse
  *
- * \brief The GetSdkResponse class encapsulates APIGateway GetSdk responses.
+ * \brief The GetSdkResponse class provides an interace for APIGateway GetSdk responses.
  *
  * \ingroup APIGateway
  *

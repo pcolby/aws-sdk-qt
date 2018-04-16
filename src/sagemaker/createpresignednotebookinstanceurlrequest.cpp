@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::CreatePresignedNotebookInstanceUrlRequest
  *
- * \brief The CreatePresignedNotebookInstanceUrlRequest class encapsulates SageMaker CreatePresignedNotebookInstanceUrl requests.
+ * \brief The CreatePresignedNotebookInstanceUrlRequest class provides an interface for SageMaker CreatePresignedNotebookInstanceUrl requests.
  *
  * \ingroup SageMaker
  *

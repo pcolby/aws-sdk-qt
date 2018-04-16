@@ -28,7 +28,7 @@ namespace Comprehend {
 /*!
  * \class QtAws::Comprehend::BatchDetectDominantLanguageRequest
  *
- * \brief The BatchDetectDominantLanguageRequest class encapsulates Comprehend BatchDetectDominantLanguage requests.
+ * \brief The BatchDetectDominantLanguageRequest class provides an interface for Comprehend BatchDetectDominantLanguage requests.
  *
  * \ingroup Comprehend
  *

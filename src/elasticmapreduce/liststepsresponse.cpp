@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ListStepsResponse
  *
- * \brief The ListStepsResponse class encapsulates EMR ListSteps responses.
+ * \brief The ListStepsResponse class provides an interace for EMR ListSteps responses.
  *
  * \ingroup EMR
  *

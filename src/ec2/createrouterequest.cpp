@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateRouteRequest
  *
- * \brief The CreateRouteRequest class encapsulates EC2 CreateRoute requests.
+ * \brief The CreateRouteRequest class provides an interface for EC2 CreateRoute requests.
  *
  * \ingroup EC2
  *

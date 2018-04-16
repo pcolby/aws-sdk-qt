@@ -63,7 +63,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::BudgetsClient
  *
- * \brief The BudgetsClient class provides access the AWS Budgets service.
+ * \brief The BudgetsClient class provides access to the AWS Budgets service.
  *
  * \ingroup Budgets
  *

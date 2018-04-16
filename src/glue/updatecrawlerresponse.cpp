@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateCrawlerResponse
  *
- * \brief The UpdateCrawlerResponse class encapsulates Glue UpdateCrawler responses.
+ * \brief The UpdateCrawlerResponse class provides an interace for Glue UpdateCrawler responses.
  *
  * \ingroup Glue
  *

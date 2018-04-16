@@ -29,7 +29,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::ACMPCAResponse
  *
- * \brief The ACMPCAResponse class is the base class for all ACMPCA responses.
+ * \brief The ACMPCAResponse class provides an interface for ACMPCA responses.
  *
  * \ingroup ACMPCA
  */

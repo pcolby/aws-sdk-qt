@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::GetGeoLocationResponse
  *
- * \brief The GetGeoLocationResponse class encapsulates Route53 GetGeoLocation responses.
+ * \brief The GetGeoLocationResponse class provides an interace for Route53 GetGeoLocation responses.
  *
  * \ingroup Route53
  *

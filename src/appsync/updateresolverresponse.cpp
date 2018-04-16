@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::UpdateResolverResponse
  *
- * \brief The UpdateResolverResponse class encapsulates AppSync UpdateResolver responses.
+ * \brief The UpdateResolverResponse class provides an interace for AppSync UpdateResolver responses.
  *
  * \ingroup AppSync
  *

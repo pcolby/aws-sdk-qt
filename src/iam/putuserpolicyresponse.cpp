@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::PutUserPolicyResponse
  *
- * \brief The PutUserPolicyResponse class encapsulates IAM PutUserPolicy responses.
+ * \brief The PutUserPolicyResponse class provides an interace for IAM PutUserPolicy responses.
  *
  * \ingroup IAM
  *

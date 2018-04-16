@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DeleteFleetRequest
  *
- * \brief The DeleteFleetRequest class encapsulates AppStream DeleteFleet requests.
+ * \brief The DeleteFleetRequest class provides an interface for AppStream DeleteFleet requests.
  *
  * \ingroup AppStream
  *

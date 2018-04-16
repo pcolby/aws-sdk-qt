@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::StopReplicationTaskResponse
  *
- * \brief The StopReplicationTaskResponse class encapsulates DatabaseMigrationService StopReplicationTask responses.
+ * \brief The StopReplicationTaskResponse class provides an interace for DatabaseMigrationService StopReplicationTask responses.
  *
  * \ingroup DatabaseMigrationService
  *

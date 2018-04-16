@@ -30,7 +30,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::DeleteHsmResponse
  *
- * \brief The DeleteHsmResponse class encapsulates CloudHSM DeleteHsm responses.
+ * \brief The DeleteHsmResponse class provides an interace for CloudHSM DeleteHsm responses.
  *
  * \ingroup CloudHSM
  *

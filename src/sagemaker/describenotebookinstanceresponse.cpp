@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DescribeNotebookInstanceResponse
  *
- * \brief The DescribeNotebookInstanceResponse class encapsulates SageMaker DescribeNotebookInstance responses.
+ * \brief The DescribeNotebookInstanceResponse class provides an interace for SageMaker DescribeNotebookInstance responses.
  *
  * \ingroup SageMaker
  *

@@ -26,7 +26,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::CognitoSyncRequest
  *
- * \brief The CognitoSyncRequest class is the base class for all CognitoSync requests.
+ * \brief The CognitoSyncRequest class provides an interface for CognitoSync requests.
  *
  * \ingroup CognitoSync
  */

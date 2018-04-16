@@ -30,7 +30,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::ListCertificatesResponse
  *
- * \brief The ListCertificatesResponse class encapsulates ACM ListCertificates responses.
+ * \brief The ListCertificatesResponse class provides an interace for ACM ListCertificates responses.
  *
  * \ingroup ACM
  *

@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::DeleteFunctionResponse
  *
- * \brief The DeleteFunctionResponse class encapsulates Lambda DeleteFunction responses.
+ * \brief The DeleteFunctionResponse class provides an interace for Lambda DeleteFunction responses.
  *
  * \ingroup Lambda
  *

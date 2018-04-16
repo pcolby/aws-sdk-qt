@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeMetricCollectionTypesResponse
  *
- * \brief The DescribeMetricCollectionTypesResponse class encapsulates AutoScaling DescribeMetricCollectionTypes responses.
+ * \brief The DescribeMetricCollectionTypesResponse class provides an interace for AutoScaling DescribeMetricCollectionTypes responses.
  *
  * \ingroup AutoScaling
  *

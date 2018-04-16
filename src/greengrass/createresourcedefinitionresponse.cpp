@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateResourceDefinitionResponse
  *
- * \brief The CreateResourceDefinitionResponse class encapsulates Greengrass CreateResourceDefinition responses.
+ * \brief The CreateResourceDefinitionResponse class provides an interace for Greengrass CreateResourceDefinition responses.
  *
  * \ingroup Greengrass
  *

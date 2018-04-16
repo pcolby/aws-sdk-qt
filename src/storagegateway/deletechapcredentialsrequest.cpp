@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DeleteChapCredentialsRequest
  *
- * \brief The DeleteChapCredentialsRequest class encapsulates StorageGateway DeleteChapCredentials requests.
+ * \brief The DeleteChapCredentialsRequest class provides an interface for StorageGateway DeleteChapCredentials requests.
  *
  * \ingroup StorageGateway
  *

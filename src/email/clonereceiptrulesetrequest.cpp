@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::CloneReceiptRuleSetRequest
  *
- * \brief The CloneReceiptRuleSetRequest class encapsulates SES CloneReceiptRuleSet requests.
+ * \brief The CloneReceiptRuleSetRequest class provides an interface for SES CloneReceiptRuleSet requests.
  *
  * \ingroup SES
  *

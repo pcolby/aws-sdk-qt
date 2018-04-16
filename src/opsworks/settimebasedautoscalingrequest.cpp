@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::SetTimeBasedAutoScalingRequest
  *
- * \brief The SetTimeBasedAutoScalingRequest class encapsulates OpsWorks SetTimeBasedAutoScaling requests.
+ * \brief The SetTimeBasedAutoScalingRequest class provides an interface for OpsWorks SetTimeBasedAutoScaling requests.
  *
  * \ingroup OpsWorks
  *

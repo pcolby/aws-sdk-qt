@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::UpdateMaintenanceWindowResponse
  *
- * \brief The UpdateMaintenanceWindowResponse class encapsulates SSM UpdateMaintenanceWindow responses.
+ * \brief The UpdateMaintenanceWindowResponse class provides an interace for SSM UpdateMaintenanceWindow responses.
  *
  * \ingroup SSM
  *

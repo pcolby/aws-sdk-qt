@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyIdentityIdFormatResponse
  *
- * \brief The ModifyIdentityIdFormatResponse class encapsulates EC2 ModifyIdentityIdFormat responses.
+ * \brief The ModifyIdentityIdFormatResponse class provides an interace for EC2 ModifyIdentityIdFormat responses.
  *
  * \ingroup EC2
  *

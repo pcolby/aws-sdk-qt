@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateTableResponse
  *
- * \brief The CreateTableResponse class encapsulates Glue CreateTable responses.
+ * \brief The CreateTableResponse class provides an interace for Glue CreateTable responses.
  *
  * \ingroup Glue
  *

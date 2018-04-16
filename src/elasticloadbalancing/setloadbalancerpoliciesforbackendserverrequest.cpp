@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::SetLoadBalancerPoliciesForBackendServerRequest
  *
- * \brief The SetLoadBalancerPoliciesForBackendServerRequest class encapsulates ElasticLoadBalancing SetLoadBalancerPoliciesForBackendServer requests.
+ * \brief The SetLoadBalancerPoliciesForBackendServerRequest class provides an interface for ElasticLoadBalancing SetLoadBalancerPoliciesForBackendServer requests.
  *
  * \ingroup ElasticLoadBalancing
  *

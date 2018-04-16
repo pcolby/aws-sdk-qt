@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::CreatePlayerSessionsRequest
  *
- * \brief The CreatePlayerSessionsRequest class encapsulates GameLift CreatePlayerSessions requests.
+ * \brief The CreatePlayerSessionsRequest class provides an interface for GameLift CreatePlayerSessions requests.
  *
  * \ingroup GameLift
  *

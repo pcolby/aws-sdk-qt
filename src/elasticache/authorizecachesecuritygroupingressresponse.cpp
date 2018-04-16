@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::AuthorizeCacheSecurityGroupIngressResponse
  *
- * \brief The AuthorizeCacheSecurityGroupIngressResponse class encapsulates ElastiCache AuthorizeCacheSecurityGroupIngress responses.
+ * \brief The AuthorizeCacheSecurityGroupIngressResponse class provides an interace for ElastiCache AuthorizeCacheSecurityGroupIngress responses.
  *
  * \ingroup ElastiCache
  *

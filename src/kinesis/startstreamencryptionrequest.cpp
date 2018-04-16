@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::StartStreamEncryptionRequest
  *
- * \brief The StartStreamEncryptionRequest class encapsulates Kinesis StartStreamEncryption requests.
+ * \brief The StartStreamEncryptionRequest class provides an interface for Kinesis StartStreamEncryption requests.
  *
  * \ingroup Kinesis
  *

@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DescribeAccountRequest
  *
- * \brief The DescribeAccountRequest class encapsulates Organizations DescribeAccount requests.
+ * \brief The DescribeAccountRequest class provides an interface for Organizations DescribeAccount requests.
  *
  * \ingroup Organizations
  *

@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteRegexPatternSetResponse
  *
- * \brief The DeleteRegexPatternSetResponse class encapsulates WAF DeleteRegexPatternSet responses.
+ * \brief The DeleteRegexPatternSetResponse class provides an interace for WAF DeleteRegexPatternSet responses.
  *
  * \ingroup WAF
  *

@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::DescribeRulesPackagesRequest
  *
- * \brief The DescribeRulesPackagesRequest class encapsulates Inspector DescribeRulesPackages requests.
+ * \brief The DescribeRulesPackagesRequest class provides an interface for Inspector DescribeRulesPackages requests.
  *
  * \ingroup Inspector
  *

@@ -30,7 +30,7 @@ namespace IoTDataPlane {
 /*!
  * \class QtAws::IoTDataPlane::PublishResponse
  *
- * \brief The PublishResponse class encapsulates IoTDataPlane Publish responses.
+ * \brief The PublishResponse class provides an interace for IoTDataPlane Publish responses.
  *
  * \ingroup IoTDataPlane
  *

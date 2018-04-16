@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteFleetRequest
  *
- * \brief The DeleteFleetRequest class encapsulates GameLift DeleteFleet requests.
+ * \brief The DeleteFleetRequest class provides an interface for GameLift DeleteFleet requests.
  *
  * \ingroup GameLift
  *

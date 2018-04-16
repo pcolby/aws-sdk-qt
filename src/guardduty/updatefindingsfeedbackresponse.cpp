@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::UpdateFindingsFeedbackResponse
  *
- * \brief The UpdateFindingsFeedbackResponse class encapsulates GuardDuty UpdateFindingsFeedback responses.
+ * \brief The UpdateFindingsFeedbackResponse class provides an interace for GuardDuty UpdateFindingsFeedback responses.
  *
  * \ingroup GuardDuty
  *

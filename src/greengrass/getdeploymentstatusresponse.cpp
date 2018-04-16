@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetDeploymentStatusResponse
  *
- * \brief The GetDeploymentStatusResponse class encapsulates Greengrass GetDeploymentStatus responses.
+ * \brief The GetDeploymentStatusResponse class provides an interace for Greengrass GetDeploymentStatus responses.
  *
  * \ingroup Greengrass
  *

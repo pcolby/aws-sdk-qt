@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::CheckDomainAvailabilityResponse
  *
- * \brief The CheckDomainAvailabilityResponse class encapsulates Route53Domains CheckDomainAvailability responses.
+ * \brief The CheckDomainAvailabilityResponse class provides an interace for Route53Domains CheckDomainAvailability responses.
  *
  * \ingroup Route53Domains
  *

@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::SetSubscriptionAttributesResponse
  *
- * \brief The SetSubscriptionAttributesResponse class encapsulates SNS SetSubscriptionAttributes responses.
+ * \brief The SetSubscriptionAttributesResponse class provides an interace for SNS SetSubscriptionAttributes responses.
  *
  * \ingroup SNS
  *

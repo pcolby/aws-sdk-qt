@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ListVolumeRecoveryPointsResponse
  *
- * \brief The ListVolumeRecoveryPointsResponse class encapsulates StorageGateway ListVolumeRecoveryPoints responses.
+ * \brief The ListVolumeRecoveryPointsResponse class provides an interace for StorageGateway ListVolumeRecoveryPoints responses.
  *
  * \ingroup StorageGateway
  *

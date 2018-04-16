@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DescribeConfigRuleEvaluationStatusRequest
  *
- * \brief The DescribeConfigRuleEvaluationStatusRequest class encapsulates ConfigService DescribeConfigRuleEvaluationStatus requests.
+ * \brief The DescribeConfigRuleEvaluationStatusRequest class provides an interface for ConfigService DescribeConfigRuleEvaluationStatus requests.
  *
  * \ingroup ConfigService
  *

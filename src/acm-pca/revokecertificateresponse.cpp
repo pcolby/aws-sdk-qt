@@ -30,7 +30,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::RevokeCertificateResponse
  *
- * \brief The RevokeCertificateResponse class encapsulates ACMPCA RevokeCertificate responses.
+ * \brief The RevokeCertificateResponse class provides an interace for ACMPCA RevokeCertificate responses.
  *
  * \ingroup ACMPCA
  *

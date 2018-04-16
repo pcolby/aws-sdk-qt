@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetSecurityGroupsResponse
  *
- * \brief The SetSecurityGroupsResponse class encapsulates ElasticLoadBalancingv2 SetSecurityGroups responses.
+ * \brief The SetSecurityGroupsResponse class provides an interace for ElasticLoadBalancingv2 SetSecurityGroups responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

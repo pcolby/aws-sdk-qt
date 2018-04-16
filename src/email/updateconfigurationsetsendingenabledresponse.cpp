@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::UpdateConfigurationSetSendingEnabledResponse
  *
- * \brief The UpdateConfigurationSetSendingEnabledResponse class encapsulates SES UpdateConfigurationSetSendingEnabled responses.
+ * \brief The UpdateConfigurationSetSendingEnabledResponse class provides an interace for SES UpdateConfigurationSetSendingEnabled responses.
  *
  * \ingroup SES
  *

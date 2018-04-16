@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::EnableVgwRoutePropagationRequest
  *
- * \brief The EnableVgwRoutePropagationRequest class encapsulates EC2 EnableVgwRoutePropagation requests.
+ * \brief The EnableVgwRoutePropagationRequest class provides an interface for EC2 EnableVgwRoutePropagation requests.
  *
  * \ingroup EC2
  *

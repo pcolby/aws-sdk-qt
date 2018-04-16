@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateRequestValidatorResponse
  *
- * \brief The UpdateRequestValidatorResponse class encapsulates APIGateway UpdateRequestValidator responses.
+ * \brief The UpdateRequestValidatorResponse class provides an interace for APIGateway UpdateRequestValidator responses.
  *
  * \ingroup APIGateway
  *

@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DeleteMetricFilterRequest
  *
- * \brief The DeleteMetricFilterRequest class encapsulates CloudWatchLogs DeleteMetricFilter requests.
+ * \brief The DeleteMetricFilterRequest class provides an interface for CloudWatchLogs DeleteMetricFilter requests.
  *
  * \ingroup CloudWatchLogs
  *

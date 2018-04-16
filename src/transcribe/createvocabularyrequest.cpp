@@ -28,7 +28,7 @@ namespace TranscribeService {
 /*!
  * \class QtAws::TranscribeService::CreateVocabularyRequest
  *
- * \brief The CreateVocabularyRequest class encapsulates TranscribeService CreateVocabulary requests.
+ * \brief The CreateVocabularyRequest class provides an interface for TranscribeService CreateVocabulary requests.
  *
  * \ingroup TranscribeService
  *

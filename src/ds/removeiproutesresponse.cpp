@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::RemoveIpRoutesResponse
  *
- * \brief The RemoveIpRoutesResponse class encapsulates DirectoryService RemoveIpRoutes responses.
+ * \brief The RemoveIpRoutesResponse class provides an interace for DirectoryService RemoveIpRoutes responses.
  *
  * \ingroup DirectoryService
  *

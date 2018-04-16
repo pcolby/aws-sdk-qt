@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListCommandsRequest
  *
- * \brief The ListCommandsRequest class encapsulates SSM ListCommands requests.
+ * \brief The ListCommandsRequest class provides an interface for SSM ListCommands requests.
  *
  * \ingroup SSM
  *

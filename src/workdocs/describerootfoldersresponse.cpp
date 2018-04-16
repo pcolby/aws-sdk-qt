@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeRootFoldersResponse
  *
- * \brief The DescribeRootFoldersResponse class encapsulates WorkDocs DescribeRootFolders responses.
+ * \brief The DescribeRootFoldersResponse class provides an interace for WorkDocs DescribeRootFolders responses.
  *
  * \ingroup WorkDocs
  *

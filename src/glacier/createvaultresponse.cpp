@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::CreateVaultResponse
  *
- * \brief The CreateVaultResponse class encapsulates Glacier CreateVault responses.
+ * \brief The CreateVaultResponse class provides an interace for Glacier CreateVault responses.
  *
  * \ingroup Glacier
  *

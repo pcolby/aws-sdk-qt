@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminLinkProviderForUserResponse
  *
- * \brief The AdminLinkProviderForUserResponse class encapsulates CognitoIdentityProvider AdminLinkProviderForUser responses.
+ * \brief The AdminLinkProviderForUserResponse class provides an interace for CognitoIdentityProvider AdminLinkProviderForUser responses.
  *
  * \ingroup CognitoIdentityProvider
  *

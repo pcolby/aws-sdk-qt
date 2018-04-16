@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CreateDBSecurityGroupRequest
  *
- * \brief The CreateDBSecurityGroupRequest class encapsulates RDS CreateDBSecurityGroup requests.
+ * \brief The CreateDBSecurityGroupRequest class provides an interface for RDS CreateDBSecurityGroup requests.
  *
  * \ingroup RDS
  *

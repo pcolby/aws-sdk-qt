@@ -26,7 +26,7 @@ namespace ResourceGroupsTaggingAPI {
 /*!
  * \class QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIRequest
  *
- * \brief The ResourceGroupsTaggingAPIRequest class is the base class for all ResourceGroupsTaggingAPI requests.
+ * \brief The ResourceGroupsTaggingAPIRequest class provides an interface for ResourceGroupsTaggingAPI requests.
  *
  * \ingroup ResourceGroupsTaggingAPI
  */

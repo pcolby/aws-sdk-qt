@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::DeprecateWorkflowTypeResponse
  *
- * \brief The DeprecateWorkflowTypeResponse class encapsulates SWF DeprecateWorkflowType responses.
+ * \brief The DeprecateWorkflowTypeResponse class provides an interace for SWF DeprecateWorkflowType responses.
  *
  * \ingroup SWF
  *

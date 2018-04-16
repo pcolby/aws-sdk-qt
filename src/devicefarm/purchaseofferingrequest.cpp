@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::PurchaseOfferingRequest
  *
- * \brief The PurchaseOfferingRequest class encapsulates DeviceFarm PurchaseOffering requests.
+ * \brief The PurchaseOfferingRequest class provides an interface for DeviceFarm PurchaseOffering requests.
  *
  * \ingroup DeviceFarm
  *

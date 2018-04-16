@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::ListPipelinesRequest
  *
- * \brief The ListPipelinesRequest class encapsulates ElasticTranscoder ListPipelines requests.
+ * \brief The ListPipelinesRequest class provides an interface for ElasticTranscoder ListPipelines requests.
  *
  * \ingroup ElasticTranscoder
  *

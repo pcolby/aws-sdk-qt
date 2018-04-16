@@ -28,7 +28,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::DeleteWebhookRequest
  *
- * \brief The DeleteWebhookRequest class encapsulates CodeBuild DeleteWebhook requests.
+ * \brief The DeleteWebhookRequest class provides an interface for CodeBuild DeleteWebhook requests.
  *
  * \ingroup CodeBuild
  *

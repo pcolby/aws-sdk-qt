@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ListVolumeRecoveryPointsRequest
  *
- * \brief The ListVolumeRecoveryPointsRequest class encapsulates StorageGateway ListVolumeRecoveryPoints requests.
+ * \brief The ListVolumeRecoveryPointsRequest class provides an interface for StorageGateway ListVolumeRecoveryPoints requests.
  *
  * \ingroup StorageGateway
  *

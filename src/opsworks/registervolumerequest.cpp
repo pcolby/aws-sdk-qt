@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::RegisterVolumeRequest
  *
- * \brief The RegisterVolumeRequest class encapsulates OpsWorks RegisterVolume requests.
+ * \brief The RegisterVolumeRequest class provides an interface for OpsWorks RegisterVolume requests.
  *
  * \ingroup OpsWorks
  *

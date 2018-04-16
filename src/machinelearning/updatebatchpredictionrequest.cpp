@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::UpdateBatchPredictionRequest
  *
- * \brief The UpdateBatchPredictionRequest class encapsulates MachineLearning UpdateBatchPrediction requests.
+ * \brief The UpdateBatchPredictionRequest class provides an interface for MachineLearning UpdateBatchPrediction requests.
  *
  * \ingroup MachineLearning
  *

@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeEventConfigurationsResponse
  *
- * \brief The DescribeEventConfigurationsResponse class encapsulates IoT DescribeEventConfigurations responses.
+ * \brief The DescribeEventConfigurationsResponse class provides an interace for IoT DescribeEventConfigurations responses.
  *
  * \ingroup IoT
  *

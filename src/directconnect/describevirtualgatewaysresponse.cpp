@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DescribeVirtualGatewaysResponse
  *
- * \brief The DescribeVirtualGatewaysResponse class encapsulates DirectConnect DescribeVirtualGateways responses.
+ * \brief The DescribeVirtualGatewaysResponse class provides an interace for DirectConnect DescribeVirtualGateways responses.
  *
  * \ingroup DirectConnect
  *

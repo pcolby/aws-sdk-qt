@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DeleteCustomMetadataResponse
  *
- * \brief The DeleteCustomMetadataResponse class encapsulates WorkDocs DeleteCustomMetadata responses.
+ * \brief The DeleteCustomMetadataResponse class provides an interace for WorkDocs DeleteCustomMetadata responses.
  *
  * \ingroup WorkDocs
  *

@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DisableLoggingResponse
  *
- * \brief The DisableLoggingResponse class encapsulates Redshift DisableLogging responses.
+ * \brief The DisableLoggingResponse class provides an interace for Redshift DisableLogging responses.
  *
  * \ingroup Redshift
  *

@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketPolicyResponse
  *
- * \brief The GetBucketPolicyResponse class encapsulates S3 GetBucketPolicy responses.
+ * \brief The GetBucketPolicyResponse class provides an interace for S3 GetBucketPolicy responses.
  *
  * \ingroup S3
  *

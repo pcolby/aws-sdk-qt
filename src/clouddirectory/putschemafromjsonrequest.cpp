@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::PutSchemaFromJsonRequest
  *
- * \brief The PutSchemaFromJsonRequest class encapsulates CloudDirectory PutSchemaFromJson requests.
+ * \brief The PutSchemaFromJsonRequest class provides an interface for CloudDirectory PutSchemaFromJson requests.
  *
  * \ingroup CloudDirectory
  *

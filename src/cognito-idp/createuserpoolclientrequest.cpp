@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::CreateUserPoolClientRequest
  *
- * \brief The CreateUserPoolClientRequest class encapsulates CognitoIdentityProvider CreateUserPoolClient requests.
+ * \brief The CreateUserPoolClientRequest class provides an interface for CognitoIdentityProvider CreateUserPoolClient requests.
  *
  * \ingroup CognitoIdentityProvider
  *

@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::UpdateConstraintResponse
  *
- * \brief The UpdateConstraintResponse class encapsulates ServiceCatalog UpdateConstraint responses.
+ * \brief The UpdateConstraintResponse class provides an interace for ServiceCatalog UpdateConstraint responses.
  *
  * \ingroup ServiceCatalog
  *

@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::RegisterCertificateRequest
  *
- * \brief The RegisterCertificateRequest class encapsulates IoT RegisterCertificate requests.
+ * \brief The RegisterCertificateRequest class provides an interface for IoT RegisterCertificate requests.
  *
  * \ingroup IoT
  *

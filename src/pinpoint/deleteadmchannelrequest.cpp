@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteAdmChannelRequest
  *
- * \brief The DeleteAdmChannelRequest class encapsulates Pinpoint DeleteAdmChannel requests.
+ * \brief The DeleteAdmChannelRequest class provides an interface for Pinpoint DeleteAdmChannel requests.
  *
  * \ingroup Pinpoint
  *

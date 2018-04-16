@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CancelReservedInstancesListingRequest
  *
- * \brief The CancelReservedInstancesListingRequest class encapsulates EC2 CancelReservedInstancesListing requests.
+ * \brief The CancelReservedInstancesListingRequest class provides an interface for EC2 CancelReservedInstancesListing requests.
  *
  * \ingroup EC2
  *

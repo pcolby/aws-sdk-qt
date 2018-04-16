@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteNetworkProfileResponse
  *
- * \brief The DeleteNetworkProfileResponse class encapsulates DeviceFarm DeleteNetworkProfile responses.
+ * \brief The DeleteNetworkProfileResponse class provides an interace for DeviceFarm DeleteNetworkProfile responses.
  *
  * \ingroup DeviceFarm
  *

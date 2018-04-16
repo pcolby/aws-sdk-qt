@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ResetImageAttributeResponse
  *
- * \brief The ResetImageAttributeResponse class encapsulates EC2 ResetImageAttribute responses.
+ * \brief The ResetImageAttributeResponse class provides an interace for EC2 ResetImageAttribute responses.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListSAMLProvidersRequest
  *
- * \brief The ListSAMLProvidersRequest class encapsulates IAM ListSAMLProviders requests.
+ * \brief The ListSAMLProvidersRequest class provides an interface for IAM ListSAMLProviders requests.
  *
  * \ingroup IAM
  *

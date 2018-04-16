@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::UnsubscribeFromEventResponse
  *
- * \brief The UnsubscribeFromEventResponse class encapsulates Inspector UnsubscribeFromEvent responses.
+ * \brief The UnsubscribeFromEventResponse class provides an interace for Inspector UnsubscribeFromEvent responses.
  *
  * \ingroup Inspector
  *

@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DescribeClustersRequest
  *
- * \brief The DescribeClustersRequest class encapsulates ECS DescribeClusters requests.
+ * \brief The DescribeClustersRequest class provides an interface for ECS DescribeClusters requests.
  *
  * \ingroup ECS
  *

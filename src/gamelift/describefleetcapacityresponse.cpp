@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeFleetCapacityResponse
  *
- * \brief The DescribeFleetCapacityResponse class encapsulates GameLift DescribeFleetCapacity responses.
+ * \brief The DescribeFleetCapacityResponse class provides an interace for GameLift DescribeFleetCapacity responses.
  *
  * \ingroup GameLift
  *

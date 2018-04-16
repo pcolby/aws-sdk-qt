@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::UpdateSnapshotScheduleResponse
  *
- * \brief The UpdateSnapshotScheduleResponse class encapsulates StorageGateway UpdateSnapshotSchedule responses.
+ * \brief The UpdateSnapshotScheduleResponse class provides an interace for StorageGateway UpdateSnapshotSchedule responses.
  *
  * \ingroup StorageGateway
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::GetPasswordDataRequest
  *
- * \brief The GetPasswordDataRequest class encapsulates EC2 GetPasswordData requests.
+ * \brief The GetPasswordDataRequest class provides an interface for EC2 GetPasswordData requests.
  *
  * \ingroup EC2
  *

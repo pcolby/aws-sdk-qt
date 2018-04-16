@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetEndpointRequest
  *
- * \brief The GetEndpointRequest class encapsulates Pinpoint GetEndpoint requests.
+ * \brief The GetEndpointRequest class provides an interface for Pinpoint GetEndpoint requests.
  *
  * \ingroup Pinpoint
  *

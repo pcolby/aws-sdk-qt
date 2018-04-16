@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::StopTriggerResponse
  *
- * \brief The StopTriggerResponse class encapsulates Glue StopTrigger responses.
+ * \brief The StopTriggerResponse class provides an interace for Glue StopTrigger responses.
  *
  * \ingroup Glue
  *

@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::GenerateDataKeyRequest
  *
- * \brief The GenerateDataKeyRequest class encapsulates KMS GenerateDataKey requests.
+ * \brief The GenerateDataKeyRequest class provides an interface for KMS GenerateDataKey requests.
  *
  * \ingroup KMS
  *

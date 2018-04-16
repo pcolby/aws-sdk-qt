@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ApplySchemaRequest
  *
- * \brief The ApplySchemaRequest class encapsulates CloudDirectory ApplySchema requests.
+ * \brief The ApplySchemaRequest class provides an interface for CloudDirectory ApplySchema requests.
  *
  * \ingroup CloudDirectory
  *

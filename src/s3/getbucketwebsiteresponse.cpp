@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketWebsiteResponse
  *
- * \brief The GetBucketWebsiteResponse class encapsulates S3 GetBucketWebsite responses.
+ * \brief The GetBucketWebsiteResponse class provides an interace for S3 GetBucketWebsite responses.
  *
  * \ingroup S3
  *

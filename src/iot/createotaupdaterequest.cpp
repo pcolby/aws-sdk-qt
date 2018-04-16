@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateOTAUpdateRequest
  *
- * \brief The CreateOTAUpdateRequest class encapsulates IoT CreateOTAUpdate requests.
+ * \brief The CreateOTAUpdateRequest class provides an interface for IoT CreateOTAUpdate requests.
  *
  * \ingroup IoT
  *

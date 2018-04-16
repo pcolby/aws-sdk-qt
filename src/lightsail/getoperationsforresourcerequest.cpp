@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetOperationsForResourceRequest
  *
- * \brief The GetOperationsForResourceRequest class encapsulates Lightsail GetOperationsForResource requests.
+ * \brief The GetOperationsForResourceRequest class provides an interface for Lightsail GetOperationsForResource requests.
  *
  * \ingroup Lightsail
  *

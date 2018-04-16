@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::IndexDocumentsResponse
  *
- * \brief The IndexDocumentsResponse class encapsulates CloudSearch IndexDocuments responses.
+ * \brief The IndexDocumentsResponse class provides an interace for CloudSearch IndexDocuments responses.
  *
  * \ingroup CloudSearch
  *

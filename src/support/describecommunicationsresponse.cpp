@@ -30,7 +30,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::DescribeCommunicationsResponse
  *
- * \brief The DescribeCommunicationsResponse class encapsulates Support DescribeCommunications responses.
+ * \brief The DescribeCommunicationsResponse class provides an interace for Support DescribeCommunications responses.
  *
  * \ingroup Support
  *

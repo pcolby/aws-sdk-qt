@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListPublishedSchemaArnsResponse
  *
- * \brief The ListPublishedSchemaArnsResponse class encapsulates CloudDirectory ListPublishedSchemaArns responses.
+ * \brief The ListPublishedSchemaArnsResponse class provides an interace for CloudDirectory ListPublishedSchemaArns responses.
  *
  * \ingroup CloudDirectory
  *

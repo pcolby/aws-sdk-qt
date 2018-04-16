@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeactivateMFADeviceRequest
  *
- * \brief The DeactivateMFADeviceRequest class encapsulates IAM DeactivateMFADevice requests.
+ * \brief The DeactivateMFADeviceRequest class provides an interface for IAM DeactivateMFADevice requests.
  *
  * \ingroup IAM
  *

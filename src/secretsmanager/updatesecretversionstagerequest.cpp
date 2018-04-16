@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::UpdateSecretVersionStageRequest
  *
- * \brief The UpdateSecretVersionStageRequest class encapsulates SecretsManager UpdateSecretVersionStage requests.
+ * \brief The UpdateSecretVersionStageRequest class provides an interface for SecretsManager UpdateSecretVersionStage requests.
  *
  * \ingroup SecretsManager
  *

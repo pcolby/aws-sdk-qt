@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteVolumeRequest
  *
- * \brief The DeleteVolumeRequest class encapsulates EC2 DeleteVolume requests.
+ * \brief The DeleteVolumeRequest class provides an interface for EC2 DeleteVolume requests.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListPolicyAttachmentsRequest
  *
- * \brief The ListPolicyAttachmentsRequest class encapsulates CloudDirectory ListPolicyAttachments requests.
+ * \brief The ListPolicyAttachmentsRequest class provides an interface for CloudDirectory ListPolicyAttachments requests.
  *
  * \ingroup CloudDirectory
  *

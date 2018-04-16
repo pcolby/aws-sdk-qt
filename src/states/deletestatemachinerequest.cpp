@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::DeleteStateMachineRequest
  *
- * \brief The DeleteStateMachineRequest class encapsulates SFN DeleteStateMachine requests.
+ * \brief The DeleteStateMachineRequest class provides an interface for SFN DeleteStateMachine requests.
  *
  * \ingroup SFN
  *

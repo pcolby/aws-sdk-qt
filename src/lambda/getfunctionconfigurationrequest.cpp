@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::GetFunctionConfigurationRequest
  *
- * \brief The GetFunctionConfigurationRequest class encapsulates Lambda GetFunctionConfiguration requests.
+ * \brief The GetFunctionConfigurationRequest class provides an interface for Lambda GetFunctionConfiguration requests.
  *
  * \ingroup Lambda
  *

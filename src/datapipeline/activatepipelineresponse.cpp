@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::ActivatePipelineResponse
  *
- * \brief The ActivatePipelineResponse class encapsulates DataPipeline ActivatePipeline responses.
+ * \brief The ActivatePipelineResponse class provides an interace for DataPipeline ActivatePipeline responses.
  *
  * \ingroup DataPipeline
  *

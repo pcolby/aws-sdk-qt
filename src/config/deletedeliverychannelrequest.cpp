@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeleteDeliveryChannelRequest
  *
- * \brief The DeleteDeliveryChannelRequest class encapsulates ConfigService DeleteDeliveryChannel requests.
+ * \brief The DeleteDeliveryChannelRequest class provides an interface for ConfigService DeleteDeliveryChannel requests.
  *
  * \ingroup ConfigService
  *

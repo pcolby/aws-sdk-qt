@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::SimulateCustomPolicyRequest
  *
- * \brief The SimulateCustomPolicyRequest class encapsulates IAM SimulateCustomPolicy requests.
+ * \brief The SimulateCustomPolicyRequest class provides an interface for IAM SimulateCustomPolicy requests.
  *
  * \ingroup IAM
  *

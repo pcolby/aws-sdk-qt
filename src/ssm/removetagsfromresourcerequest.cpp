@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::RemoveTagsFromResourceRequest
  *
- * \brief The RemoveTagsFromResourceRequest class encapsulates SSM RemoveTagsFromResource requests.
+ * \brief The RemoveTagsFromResourceRequest class provides an interface for SSM RemoveTagsFromResource requests.
  *
  * \ingroup SSM
  *

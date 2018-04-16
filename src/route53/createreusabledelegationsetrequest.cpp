@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::CreateReusableDelegationSetRequest
  *
- * \brief The CreateReusableDelegationSetRequest class encapsulates Route53 CreateReusableDelegationSet requests.
+ * \brief The CreateReusableDelegationSetRequest class provides an interface for Route53 CreateReusableDelegationSet requests.
  *
  * \ingroup Route53
  *

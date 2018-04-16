@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::ListCloudFrontOriginAccessIdentitiesRequest
  *
- * \brief The ListCloudFrontOriginAccessIdentitiesRequest class encapsulates CloudFront ListCloudFrontOriginAccessIdentities requests.
+ * \brief The ListCloudFrontOriginAccessIdentitiesRequest class provides an interface for CloudFront ListCloudFrontOriginAccessIdentities requests.
  *
  * \ingroup CloudFront
  *

@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetExportRequest
  *
- * \brief The GetExportRequest class encapsulates APIGateway GetExport requests.
+ * \brief The GetExportRequest class provides an interface for APIGateway GetExport requests.
  *
  * \ingroup APIGateway
  *

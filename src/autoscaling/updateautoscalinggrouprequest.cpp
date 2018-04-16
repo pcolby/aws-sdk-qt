@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::UpdateAutoScalingGroupRequest
  *
- * \brief The UpdateAutoScalingGroupRequest class encapsulates AutoScaling UpdateAutoScalingGroup requests.
+ * \brief The UpdateAutoScalingGroupRequest class provides an interface for AutoScaling UpdateAutoScalingGroup requests.
  *
  * \ingroup AutoScaling
  *

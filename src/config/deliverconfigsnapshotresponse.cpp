@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeliverConfigSnapshotResponse
  *
- * \brief The DeliverConfigSnapshotResponse class encapsulates ConfigService DeliverConfigSnapshot responses.
+ * \brief The DeliverConfigSnapshotResponse class provides an interace for ConfigService DeliverConfigSnapshot responses.
  *
  * \ingroup ConfigService
  *

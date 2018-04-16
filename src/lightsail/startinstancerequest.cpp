@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::StartInstanceRequest
  *
- * \brief The StartInstanceRequest class encapsulates Lightsail StartInstance requests.
+ * \brief The StartInstanceRequest class provides an interface for Lightsail StartInstance requests.
  *
  * \ingroup Lightsail
  *

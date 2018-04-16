@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketRequestPaymentResponse
  *
- * \brief The GetBucketRequestPaymentResponse class encapsulates S3 GetBucketRequestPayment responses.
+ * \brief The GetBucketRequestPaymentResponse class provides an interace for S3 GetBucketRequestPayment responses.
  *
  * \ingroup S3
  *

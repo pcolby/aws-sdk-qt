@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteOTAUpdateRequest
  *
- * \brief The DeleteOTAUpdateRequest class encapsulates IoT DeleteOTAUpdate requests.
+ * \brief The DeleteOTAUpdateRequest class provides an interface for IoT DeleteOTAUpdate requests.
  *
  * \ingroup IoT
  *

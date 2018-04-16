@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::PutInventoryResponse
  *
- * \brief The PutInventoryResponse class encapsulates SSM PutInventory responses.
+ * \brief The PutInventoryResponse class provides an interace for SSM PutInventory responses.
  *
  * \ingroup SSM
  *

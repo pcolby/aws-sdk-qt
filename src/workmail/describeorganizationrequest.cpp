@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DescribeOrganizationRequest
  *
- * \brief The DescribeOrganizationRequest class encapsulates WorkMail DescribeOrganization requests.
+ * \brief The DescribeOrganizationRequest class provides an interface for WorkMail DescribeOrganization requests.
  *
  * \ingroup WorkMail
  *

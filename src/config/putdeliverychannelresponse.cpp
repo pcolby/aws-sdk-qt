@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::PutDeliveryChannelResponse
  *
- * \brief The PutDeliveryChannelResponse class encapsulates ConfigService PutDeliveryChannel responses.
+ * \brief The PutDeliveryChannelResponse class provides an interace for ConfigService PutDeliveryChannel responses.
  *
  * \ingroup ConfigService
  *

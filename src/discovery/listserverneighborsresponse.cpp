@@ -30,7 +30,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::ListServerNeighborsResponse
  *
- * \brief The ListServerNeighborsResponse class encapsulates ApplicationDiscoveryService ListServerNeighbors responses.
+ * \brief The ListServerNeighborsResponse class provides an interace for ApplicationDiscoveryService ListServerNeighbors responses.
  *
  * \ingroup ApplicationDiscoveryService
  *

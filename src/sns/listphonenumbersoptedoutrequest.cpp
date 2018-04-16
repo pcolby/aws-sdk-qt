@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::ListPhoneNumbersOptedOutRequest
  *
- * \brief The ListPhoneNumbersOptedOutRequest class encapsulates SNS ListPhoneNumbersOptedOut requests.
+ * \brief The ListPhoneNumbersOptedOutRequest class provides an interface for SNS ListPhoneNumbersOptedOut requests.
  *
  * \ingroup SNS
  *

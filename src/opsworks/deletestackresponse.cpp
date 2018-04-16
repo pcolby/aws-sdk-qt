@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeleteStackResponse
  *
- * \brief The DeleteStackResponse class encapsulates OpsWorks DeleteStack responses.
+ * \brief The DeleteStackResponse class provides an interace for OpsWorks DeleteStack responses.
  *
  * \ingroup OpsWorks
  *

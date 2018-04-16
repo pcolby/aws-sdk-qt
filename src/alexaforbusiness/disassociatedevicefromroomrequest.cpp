@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::DisassociateDeviceFromRoomRequest
  *
- * \brief The DisassociateDeviceFromRoomRequest class encapsulates AlexaForBusiness DisassociateDeviceFromRoom requests.
+ * \brief The DisassociateDeviceFromRoomRequest class provides an interface for AlexaForBusiness DisassociateDeviceFromRoom requests.
  *
  * \ingroup AlexaForBusiness
  *

@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DetachFromIndexResponse
  *
- * \brief The DetachFromIndexResponse class encapsulates CloudDirectory DetachFromIndex responses.
+ * \brief The DetachFromIndexResponse class provides an interace for CloudDirectory DetachFromIndex responses.
  *
  * \ingroup CloudDirectory
  *

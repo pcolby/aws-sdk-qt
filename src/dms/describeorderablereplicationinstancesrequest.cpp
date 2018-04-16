@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeOrderableReplicationInstancesRequest
  *
- * \brief The DescribeOrderableReplicationInstancesRequest class encapsulates DatabaseMigrationService DescribeOrderableReplicationInstances requests.
+ * \brief The DescribeOrderableReplicationInstancesRequest class provides an interface for DatabaseMigrationService DescribeOrderableReplicationInstances requests.
  *
  * \ingroup DatabaseMigrationService
  *

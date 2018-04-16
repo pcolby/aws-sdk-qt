@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribeTagOptionResponse
  *
- * \brief The DescribeTagOptionResponse class encapsulates ServiceCatalog DescribeTagOption responses.
+ * \brief The DescribeTagOptionResponse class provides an interace for ServiceCatalog DescribeTagOption responses.
  *
  * \ingroup ServiceCatalog
  *

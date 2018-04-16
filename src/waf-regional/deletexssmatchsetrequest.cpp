@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeleteXssMatchSetRequest
  *
- * \brief The DeleteXssMatchSetRequest class encapsulates WAFRegional DeleteXssMatchSet requests.
+ * \brief The DeleteXssMatchSetRequest class provides an interface for WAFRegional DeleteXssMatchSet requests.
  *
  * \ingroup WAFRegional
  *

@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeNFSFileSharesRequest
  *
- * \brief The DescribeNFSFileSharesRequest class encapsulates StorageGateway DescribeNFSFileShares requests.
+ * \brief The DescribeNFSFileSharesRequest class provides an interface for StorageGateway DescribeNFSFileShares requests.
  *
  * \ingroup StorageGateway
  *

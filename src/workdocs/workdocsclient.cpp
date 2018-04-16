@@ -117,7 +117,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::WorkDocsClient
  *
- * \brief The WorkDocsClient class provides access the Amazon WorkDocs service.
+ * \brief The WorkDocsClient class provides access to the Amazon WorkDocs service.
  *
  * \ingroup WorkDocs
  *

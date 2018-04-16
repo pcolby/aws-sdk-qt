@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::ListTagsResponse
  *
- * \brief The ListTagsResponse class encapsulates SageMaker ListTags responses.
+ * \brief The ListTagsResponse class provides an interace for SageMaker ListTags responses.
  *
  * \ingroup SageMaker
  *

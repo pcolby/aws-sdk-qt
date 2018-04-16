@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::UpdateFunctionConfigurationResponse
  *
- * \brief The UpdateFunctionConfigurationResponse class encapsulates Lambda UpdateFunctionConfiguration responses.
+ * \brief The UpdateFunctionConfigurationResponse class provides an interace for Lambda UpdateFunctionConfiguration responses.
  *
  * \ingroup Lambda
  *

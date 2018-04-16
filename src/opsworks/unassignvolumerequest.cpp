@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UnassignVolumeRequest
  *
- * \brief The UnassignVolumeRequest class encapsulates OpsWorks UnassignVolume requests.
+ * \brief The UnassignVolumeRequest class provides an interface for OpsWorks UnassignVolume requests.
  *
  * \ingroup OpsWorks
  *

@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RemoveSourceIdentifierFromSubscriptionRequest
  *
- * \brief The RemoveSourceIdentifierFromSubscriptionRequest class encapsulates RDS RemoveSourceIdentifierFromSubscription requests.
+ * \brief The RemoveSourceIdentifierFromSubscriptionRequest class provides an interface for RDS RemoveSourceIdentifierFromSubscription requests.
  *
  * \ingroup RDS
  *

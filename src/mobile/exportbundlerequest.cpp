@@ -28,7 +28,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::ExportBundleRequest
  *
- * \brief The ExportBundleRequest class encapsulates Mobile ExportBundle requests.
+ * \brief The ExportBundleRequest class provides an interface for Mobile ExportBundle requests.
  *
  * \ingroup Mobile
  *

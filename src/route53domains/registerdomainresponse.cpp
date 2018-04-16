@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::RegisterDomainResponse
  *
- * \brief The RegisterDomainResponse class encapsulates Route53Domains RegisterDomain responses.
+ * \brief The RegisterDomainResponse class provides an interace for Route53Domains RegisterDomain responses.
  *
  * \ingroup Route53Domains
  *

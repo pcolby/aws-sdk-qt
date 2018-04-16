@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::DeleteSlotTypeVersionResponse
  *
- * \brief The DeleteSlotTypeVersionResponse class encapsulates LexModelBuildingService DeleteSlotTypeVersion responses.
+ * \brief The DeleteSlotTypeVersionResponse class provides an interace for LexModelBuildingService DeleteSlotTypeVersion responses.
  *
  * \ingroup LexModelBuildingService
  *

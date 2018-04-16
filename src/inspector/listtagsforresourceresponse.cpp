@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::ListTagsForResourceResponse
  *
- * \brief The ListTagsForResourceResponse class encapsulates Inspector ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class provides an interace for Inspector ListTagsForResource responses.
  *
  * \ingroup Inspector
  *

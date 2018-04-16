@@ -30,7 +30,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::DescribeApplicationResponse
  *
- * \brief The DescribeApplicationResponse class encapsulates KinesisAnalytics DescribeApplication responses.
+ * \brief The DescribeApplicationResponse class provides an interace for KinesisAnalytics DescribeApplication responses.
  *
  * \ingroup KinesisAnalytics
  *

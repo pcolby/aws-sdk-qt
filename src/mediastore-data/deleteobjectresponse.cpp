@@ -30,7 +30,7 @@ namespace MediaStoreData {
 /*!
  * \class QtAws::MediaStoreData::DeleteObjectResponse
  *
- * \brief The DeleteObjectResponse class encapsulates MediaStoreData DeleteObject responses.
+ * \brief The DeleteObjectResponse class provides an interace for MediaStoreData DeleteObject responses.
  *
  * \ingroup MediaStoreData
  *

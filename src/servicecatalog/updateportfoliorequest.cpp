@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::UpdatePortfolioRequest
  *
- * \brief The UpdatePortfolioRequest class encapsulates ServiceCatalog UpdatePortfolio requests.
+ * \brief The UpdatePortfolioRequest class provides an interface for ServiceCatalog UpdatePortfolio requests.
  *
  * \ingroup ServiceCatalog
  *

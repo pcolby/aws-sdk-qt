@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListBonusPaymentsResponse
  *
- * \brief The ListBonusPaymentsResponse class encapsulates MTurk ListBonusPayments responses.
+ * \brief The ListBonusPaymentsResponse class provides an interace for MTurk ListBonusPayments responses.
  *
  * \ingroup MTurk
  *

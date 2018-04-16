@@ -30,7 +30,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::GetCertificateResponse
  *
- * \brief The GetCertificateResponse class encapsulates ACM GetCertificate responses.
+ * \brief The GetCertificateResponse class provides an interace for ACM GetCertificate responses.
  *
  * \ingroup ACM
  *

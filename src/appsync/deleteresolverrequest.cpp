@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::DeleteResolverRequest
  *
- * \brief The DeleteResolverRequest class encapsulates AppSync DeleteResolver requests.
+ * \brief The DeleteResolverRequest class provides an interface for AppSync DeleteResolver requests.
  *
  * \ingroup AppSync
  *

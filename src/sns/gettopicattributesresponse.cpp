@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::GetTopicAttributesResponse
  *
- * \brief The GetTopicAttributesResponse class encapsulates SNS GetTopicAttributes responses.
+ * \brief The GetTopicAttributesResponse class provides an interace for SNS GetTopicAttributes responses.
  *
  * \ingroup SNS
  *

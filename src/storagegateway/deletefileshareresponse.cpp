@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DeleteFileShareResponse
  *
- * \brief The DeleteFileShareResponse class encapsulates StorageGateway DeleteFileShare responses.
+ * \brief The DeleteFileShareResponse class provides an interace for StorageGateway DeleteFileShare responses.
  *
  * \ingroup StorageGateway
  *

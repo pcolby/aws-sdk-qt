@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetChangeTokenResponse
  *
- * \brief The GetChangeTokenResponse class encapsulates WAFRegional GetChangeToken responses.
+ * \brief The GetChangeTokenResponse class provides an interace for WAFRegional GetChangeToken responses.
  *
  * \ingroup WAFRegional
  *

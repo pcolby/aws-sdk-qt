@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::DeleteBucketTaggingResponse
  *
- * \brief The DeleteBucketTaggingResponse class encapsulates S3 DeleteBucketTagging responses.
+ * \brief The DeleteBucketTaggingResponse class provides an interace for S3 DeleteBucketTagging responses.
  *
  * \ingroup S3
  *

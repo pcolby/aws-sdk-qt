@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::GetPipelineRequest
  *
- * \brief The GetPipelineRequest class encapsulates CodePipeline GetPipeline requests.
+ * \brief The GetPipelineRequest class provides an interface for CodePipeline GetPipeline requests.
  *
  * \ingroup CodePipeline
  *

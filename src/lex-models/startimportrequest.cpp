@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::StartImportRequest
  *
- * \brief The StartImportRequest class encapsulates LexModelBuildingService StartImport requests.
+ * \brief The StartImportRequest class provides an interface for LexModelBuildingService StartImport requests.
  *
  * \ingroup LexModelBuildingService
  *

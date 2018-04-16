@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::ListStreamsResponse
  *
- * \brief The ListStreamsResponse class encapsulates Kinesis ListStreams responses.
+ * \brief The ListStreamsResponse class provides an interace for Kinesis ListStreams responses.
  *
  * \ingroup Kinesis
  *

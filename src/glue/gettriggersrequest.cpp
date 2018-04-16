@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetTriggersRequest
  *
- * \brief The GetTriggersRequest class encapsulates Glue GetTriggers requests.
+ * \brief The GetTriggersRequest class provides an interface for Glue GetTriggers requests.
  *
  * \ingroup Glue
  *

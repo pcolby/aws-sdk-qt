@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::BatchWriteItemResponse
  *
- * \brief The BatchWriteItemResponse class encapsulates DynamoDB BatchWriteItem responses.
+ * \brief The BatchWriteItemResponse class provides an interace for DynamoDB BatchWriteItem responses.
  *
  * \ingroup DynamoDB
  *

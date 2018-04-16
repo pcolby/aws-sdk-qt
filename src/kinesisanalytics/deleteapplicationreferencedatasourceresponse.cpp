@@ -30,7 +30,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::DeleteApplicationReferenceDataSourceResponse
  *
- * \brief The DeleteApplicationReferenceDataSourceResponse class encapsulates KinesisAnalytics DeleteApplicationReferenceDataSource responses.
+ * \brief The DeleteApplicationReferenceDataSourceResponse class provides an interace for KinesisAnalytics DeleteApplicationReferenceDataSource responses.
  *
  * \ingroup KinesisAnalytics
  *

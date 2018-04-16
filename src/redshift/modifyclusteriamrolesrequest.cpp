@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::ModifyClusterIamRolesRequest
  *
- * \brief The ModifyClusterIamRolesRequest class encapsulates Redshift ModifyClusterIamRoles requests.
+ * \brief The ModifyClusterIamRolesRequest class provides an interface for Redshift ModifyClusterIamRoles requests.
  *
  * \ingroup Redshift
  *

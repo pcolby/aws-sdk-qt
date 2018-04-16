@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::UploadArchiveResponse
  *
- * \brief The UploadArchiveResponse class encapsulates Glacier UploadArchive responses.
+ * \brief The UploadArchiveResponse class provides an interace for Glacier UploadArchive responses.
  *
  * \ingroup Glacier
  *

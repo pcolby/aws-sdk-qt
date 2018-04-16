@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::CreateWorkerBlockRequest
  *
- * \brief The CreateWorkerBlockRequest class encapsulates MTurk CreateWorkerBlock requests.
+ * \brief The CreateWorkerBlockRequest class provides an interface for MTurk CreateWorkerBlock requests.
  *
  * \ingroup MTurk
  *

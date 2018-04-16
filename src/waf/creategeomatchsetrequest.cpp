@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::CreateGeoMatchSetRequest
  *
- * \brief The CreateGeoMatchSetRequest class encapsulates WAF CreateGeoMatchSet requests.
+ * \brief The CreateGeoMatchSetRequest class provides an interface for WAF CreateGeoMatchSet requests.
  *
  * \ingroup WAF
  *

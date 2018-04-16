@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::DeleteTypeResponse
  *
- * \brief The DeleteTypeResponse class encapsulates AppSync DeleteType responses.
+ * \brief The DeleteTypeResponse class provides an interace for AppSync DeleteType responses.
  *
  * \ingroup AppSync
  *

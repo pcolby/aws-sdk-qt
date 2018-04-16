@@ -28,7 +28,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::DeleteChannelRequest
  *
- * \brief The DeleteChannelRequest class encapsulates MediaPackage DeleteChannel requests.
+ * \brief The DeleteChannelRequest class provides an interface for MediaPackage DeleteChannel requests.
  *
  * \ingroup MediaPackage
  *

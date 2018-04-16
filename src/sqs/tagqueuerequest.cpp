@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::TagQueueRequest
  *
- * \brief The TagQueueRequest class encapsulates SQS TagQueue requests.
+ * \brief The TagQueueRequest class provides an interface for SQS TagQueue requests.
  *
  * \ingroup SQS
  *

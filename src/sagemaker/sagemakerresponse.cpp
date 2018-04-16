@@ -29,7 +29,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::SageMakerResponse
  *
- * \brief The SageMakerResponse class is the base class for all SageMaker responses.
+ * \brief The SageMakerResponse class provides an interface for SageMaker responses.
  *
  * \ingroup SageMaker
  */

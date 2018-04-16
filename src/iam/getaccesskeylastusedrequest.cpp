@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetAccessKeyLastUsedRequest
  *
- * \brief The GetAccessKeyLastUsedRequest class encapsulates IAM GetAccessKeyLastUsed requests.
+ * \brief The GetAccessKeyLastUsedRequest class provides an interface for IAM GetAccessKeyLastUsed requests.
  *
  * \ingroup IAM
  *

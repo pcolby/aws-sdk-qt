@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetImportJobResponse
  *
- * \brief The GetImportJobResponse class encapsulates Pinpoint GetImportJob responses.
+ * \brief The GetImportJobResponse class provides an interace for Pinpoint GetImportJob responses.
  *
  * \ingroup Pinpoint
  *

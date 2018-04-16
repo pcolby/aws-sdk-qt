@@ -28,7 +28,7 @@ namespace DynamoDBStreams {
 /*!
  * \class QtAws::DynamoDBStreams::DescribeStreamRequest
  *
- * \brief The DescribeStreamRequest class encapsulates DynamoDBStreams DescribeStream requests.
+ * \brief The DescribeStreamRequest class provides an interface for DynamoDBStreams DescribeStream requests.
  *
  * \ingroup DynamoDBStreams
  *

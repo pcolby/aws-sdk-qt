@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::DescribeImagesRequest
  *
- * \brief The DescribeImagesRequest class encapsulates ECR DescribeImages requests.
+ * \brief The DescribeImagesRequest class provides an interface for ECR DescribeImages requests.
  *
  * \ingroup ECR
  *

@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::UpdateAssessmentTargetRequest
  *
- * \brief The UpdateAssessmentTargetRequest class encapsulates Inspector UpdateAssessmentTarget requests.
+ * \brief The UpdateAssessmentTargetRequest class provides an interface for Inspector UpdateAssessmentTarget requests.
  *
  * \ingroup Inspector
  *

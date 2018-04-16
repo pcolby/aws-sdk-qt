@@ -28,7 +28,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::PutTraceSegmentsRequest
  *
- * \brief The PutTraceSegmentsRequest class encapsulates XRay PutTraceSegments requests.
+ * \brief The PutTraceSegmentsRequest class provides an interface for XRay PutTraceSegments requests.
  *
  * \ingroup XRay
  *

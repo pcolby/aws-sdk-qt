@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DescribeTimeToLiveRequest
  *
- * \brief The DescribeTimeToLiveRequest class encapsulates DynamoDB DescribeTimeToLive requests.
+ * \brief The DescribeTimeToLiveRequest class provides an interface for DynamoDB DescribeTimeToLive requests.
  *
  * \ingroup DynamoDB
  *

@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateCrawlerRequest
  *
- * \brief The CreateCrawlerRequest class encapsulates Glue CreateCrawler requests.
+ * \brief The CreateCrawlerRequest class provides an interface for Glue CreateCrawler requests.
  *
  * \ingroup Glue
  *

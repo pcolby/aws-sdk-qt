@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ListVolumeInitiatorsRequest
  *
- * \brief The ListVolumeInitiatorsRequest class encapsulates StorageGateway ListVolumeInitiators requests.
+ * \brief The ListVolumeInitiatorsRequest class provides an interface for StorageGateway ListVolumeInitiators requests.
  *
  * \ingroup StorageGateway
  *

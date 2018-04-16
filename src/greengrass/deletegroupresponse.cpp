@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::DeleteGroupResponse
  *
- * \brief The DeleteGroupResponse class encapsulates Greengrass DeleteGroup responses.
+ * \brief The DeleteGroupResponse class provides an interace for Greengrass DeleteGroup responses.
  *
  * \ingroup Greengrass
  *

@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DisassociateElasticIpResponse
  *
- * \brief The DisassociateElasticIpResponse class encapsulates OpsWorks DisassociateElasticIp responses.
+ * \brief The DisassociateElasticIpResponse class provides an interace for OpsWorks DisassociateElasticIp responses.
  *
  * \ingroup OpsWorks
  *

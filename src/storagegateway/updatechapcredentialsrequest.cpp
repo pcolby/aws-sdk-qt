@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::UpdateChapCredentialsRequest
  *
- * \brief The UpdateChapCredentialsRequest class encapsulates StorageGateway UpdateChapCredentials requests.
+ * \brief The UpdateChapCredentialsRequest class provides an interface for StorageGateway UpdateChapCredentials requests.
  *
  * \ingroup StorageGateway
  *

@@ -28,7 +28,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::SelectRequest
  *
- * \brief The SelectRequest class encapsulates SimpleDB Select requests.
+ * \brief The SelectRequest class provides an interface for SimpleDB Select requests.
  *
  * \ingroup SimpleDB
  *

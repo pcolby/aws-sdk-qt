@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::RefreshSchemasRequest
  *
- * \brief The RefreshSchemasRequest class encapsulates DatabaseMigrationService RefreshSchemas requests.
+ * \brief The RefreshSchemasRequest class provides an interface for DatabaseMigrationService RefreshSchemas requests.
  *
  * \ingroup DatabaseMigrationService
  *

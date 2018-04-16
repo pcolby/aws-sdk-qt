@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteAccessKeyResponse
  *
- * \brief The DeleteAccessKeyResponse class encapsulates IAM DeleteAccessKey responses.
+ * \brief The DeleteAccessKeyResponse class provides an interace for IAM DeleteAccessKey responses.
  *
  * \ingroup IAM
  *

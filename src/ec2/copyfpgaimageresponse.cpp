@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CopyFpgaImageResponse
  *
- * \brief The CopyFpgaImageResponse class encapsulates EC2 CopyFpgaImage responses.
+ * \brief The CopyFpgaImageResponse class provides an interace for EC2 CopyFpgaImage responses.
  *
  * \ingroup EC2
  *

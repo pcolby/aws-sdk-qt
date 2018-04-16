@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::ListExecutionsRequest
  *
- * \brief The ListExecutionsRequest class encapsulates SFN ListExecutions requests.
+ * \brief The ListExecutionsRequest class provides an interface for SFN ListExecutions requests.
  *
  * \ingroup SFN
  *

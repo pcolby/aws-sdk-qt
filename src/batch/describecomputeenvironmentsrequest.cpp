@@ -28,7 +28,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::DescribeComputeEnvironmentsRequest
  *
- * \brief The DescribeComputeEnvironmentsRequest class encapsulates Batch DescribeComputeEnvironments requests.
+ * \brief The DescribeComputeEnvironmentsRequest class provides an interface for Batch DescribeComputeEnvironments requests.
  *
  * \ingroup Batch
  *

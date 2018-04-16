@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::DescribeVaultResponse
  *
- * \brief The DescribeVaultResponse class encapsulates Glacier DescribeVault responses.
+ * \brief The DescribeVaultResponse class provides an interace for Glacier DescribeVault responses.
  *
  * \ingroup Glacier
  *

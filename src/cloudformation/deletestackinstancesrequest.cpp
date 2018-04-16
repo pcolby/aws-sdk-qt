@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::DeleteStackInstancesRequest
  *
- * \brief The DeleteStackInstancesRequest class encapsulates CloudFormation DeleteStackInstances requests.
+ * \brief The DeleteStackInstancesRequest class provides an interface for CloudFormation DeleteStackInstances requests.
  *
  * \ingroup CloudFormation
  *

@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::UpdateFleetRequest
  *
- * \brief The UpdateFleetRequest class encapsulates AppStream UpdateFleet requests.
+ * \brief The UpdateFleetRequest class provides an interface for AppStream UpdateFleet requests.
  *
  * \ingroup AppStream
  *

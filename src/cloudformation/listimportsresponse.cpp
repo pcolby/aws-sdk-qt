@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ListImportsResponse
  *
- * \brief The ListImportsResponse class encapsulates CloudFormation ListImports responses.
+ * \brief The ListImportsResponse class provides an interace for CloudFormation ListImports responses.
  *
  * \ingroup CloudFormation
  *

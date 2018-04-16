@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::GetDocumentVersionRequest
  *
- * \brief The GetDocumentVersionRequest class encapsulates WorkDocs GetDocumentVersion requests.
+ * \brief The GetDocumentVersionRequest class provides an interface for WorkDocs GetDocumentVersion requests.
  *
  * \ingroup WorkDocs
  *

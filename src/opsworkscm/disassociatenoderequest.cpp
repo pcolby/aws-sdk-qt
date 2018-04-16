@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DisassociateNodeRequest
  *
- * \brief The DisassociateNodeRequest class encapsulates OpsWorksCM DisassociateNode requests.
+ * \brief The DisassociateNodeRequest class provides an interface for OpsWorksCM DisassociateNode requests.
  *
  * \ingroup OpsWorksCM
  *

@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::GetPresetRequest
  *
- * \brief The GetPresetRequest class encapsulates MediaConvert GetPreset requests.
+ * \brief The GetPresetRequest class provides an interface for MediaConvert GetPreset requests.
  *
  * \ingroup MediaConvert
  *

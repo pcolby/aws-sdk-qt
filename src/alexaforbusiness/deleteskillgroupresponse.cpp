@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::DeleteSkillGroupResponse
  *
- * \brief The DeleteSkillGroupResponse class encapsulates AlexaForBusiness DeleteSkillGroup responses.
+ * \brief The DeleteSkillGroupResponse class provides an interace for AlexaForBusiness DeleteSkillGroup responses.
  *
  * \ingroup AlexaForBusiness
  *

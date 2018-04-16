@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DetachInstancesResponse
  *
- * \brief The DetachInstancesResponse class encapsulates AutoScaling DetachInstances responses.
+ * \brief The DetachInstancesResponse class provides an interace for AutoScaling DetachInstances responses.
  *
  * \ingroup AutoScaling
  *

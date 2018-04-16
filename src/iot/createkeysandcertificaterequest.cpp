@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateKeysAndCertificateRequest
  *
- * \brief The CreateKeysAndCertificateRequest class encapsulates IoT CreateKeysAndCertificate requests.
+ * \brief The CreateKeysAndCertificateRequest class provides an interface for IoT CreateKeysAndCertificate requests.
  *
  * \ingroup IoT
  *

@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::ListActionTypesResponse
  *
- * \brief The ListActionTypesResponse class encapsulates CodePipeline ListActionTypes responses.
+ * \brief The ListActionTypesResponse class provides an interace for CodePipeline ListActionTypes responses.
  *
  * \ingroup CodePipeline
  *

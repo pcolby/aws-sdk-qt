@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetTablesRequest
  *
- * \brief The GetTablesRequest class encapsulates Glue GetTables requests.
+ * \brief The GetTablesRequest class provides an interface for Glue GetTables requests.
  *
  * \ingroup Glue
  *

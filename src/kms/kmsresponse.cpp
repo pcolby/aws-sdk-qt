@@ -29,7 +29,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::KMSResponse
  *
- * \brief The KMSResponse class is the base class for all KMS responses.
+ * \brief The KMSResponse class provides an interface for KMS responses.
  *
  * \ingroup KMS
  */

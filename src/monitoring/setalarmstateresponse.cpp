@@ -30,7 +30,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::SetAlarmStateResponse
  *
- * \brief The SetAlarmStateResponse class encapsulates CloudWatch SetAlarmState responses.
+ * \brief The SetAlarmStateResponse class provides an interace for CloudWatch SetAlarmState responses.
  *
  * \ingroup CloudWatch
  *

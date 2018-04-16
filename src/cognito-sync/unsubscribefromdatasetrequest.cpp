@@ -28,7 +28,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::UnsubscribeFromDatasetRequest
  *
- * \brief The UnsubscribeFromDatasetRequest class encapsulates CognitoSync UnsubscribeFromDataset requests.
+ * \brief The UnsubscribeFromDatasetRequest class provides an interface for CognitoSync UnsubscribeFromDataset requests.
  *
  * \ingroup CognitoSync
  *

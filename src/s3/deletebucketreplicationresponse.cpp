@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::DeleteBucketReplicationResponse
  *
- * \brief The DeleteBucketReplicationResponse class encapsulates S3 DeleteBucketReplication responses.
+ * \brief The DeleteBucketReplicationResponse class provides an interace for S3 DeleteBucketReplication responses.
  *
  * \ingroup S3
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribePrefixListsResponse
  *
- * \brief The DescribePrefixListsResponse class encapsulates EC2 DescribePrefixLists responses.
+ * \brief The DescribePrefixListsResponse class provides an interace for EC2 DescribePrefixLists responses.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace CloudSearchDomain {
 /*!
  * \class QtAws::CloudSearchDomain::UploadDocumentsResponse
  *
- * \brief The UploadDocumentsResponse class encapsulates CloudSearchDomain UploadDocuments responses.
+ * \brief The UploadDocumentsResponse class provides an interace for CloudSearchDomain UploadDocuments responses.
  *
  * \ingroup CloudSearchDomain
  *

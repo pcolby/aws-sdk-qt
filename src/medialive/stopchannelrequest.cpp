@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::StopChannelRequest
  *
- * \brief The StopChannelRequest class encapsulates MediaLive StopChannel requests.
+ * \brief The StopChannelRequest class provides an interface for MediaLive StopChannel requests.
  *
  * \ingroup MediaLive
  *

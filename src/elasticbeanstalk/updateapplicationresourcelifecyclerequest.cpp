@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateApplicationResourceLifecycleRequest
  *
- * \brief The UpdateApplicationResourceLifecycleRequest class encapsulates ElasticBeanstalk UpdateApplicationResourceLifecycle requests.
+ * \brief The UpdateApplicationResourceLifecycleRequest class provides an interface for ElasticBeanstalk UpdateApplicationResourceLifecycle requests.
  *
  * \ingroup ElasticBeanstalk
  *

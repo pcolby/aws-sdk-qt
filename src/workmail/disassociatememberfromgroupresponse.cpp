@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DisassociateMemberFromGroupResponse
  *
- * \brief The DisassociateMemberFromGroupResponse class encapsulates WorkMail DisassociateMemberFromGroup responses.
+ * \brief The DisassociateMemberFromGroupResponse class provides an interace for WorkMail DisassociateMemberFromGroup responses.
  *
  * \ingroup WorkMail
  *

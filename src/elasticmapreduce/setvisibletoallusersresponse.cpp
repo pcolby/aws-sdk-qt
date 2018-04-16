@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::SetVisibleToAllUsersResponse
  *
- * \brief The SetVisibleToAllUsersResponse class encapsulates EMR SetVisibleToAllUsers responses.
+ * \brief The SetVisibleToAllUsersResponse class provides an interace for EMR SetVisibleToAllUsers responses.
  *
  * \ingroup EMR
  *

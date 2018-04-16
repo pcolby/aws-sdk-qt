@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeleteTargetGroupResponse
  *
- * \brief The DeleteTargetGroupResponse class encapsulates ElasticLoadBalancingv2 DeleteTargetGroup responses.
+ * \brief The DeleteTargetGroupResponse class provides an interace for ElasticLoadBalancingv2 DeleteTargetGroup responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::UpdateStackRequest
  *
- * \brief The UpdateStackRequest class encapsulates AppStream UpdateStack requests.
+ * \brief The UpdateStackRequest class provides an interface for AppStream UpdateStack requests.
  *
  * \ingroup AppStream
  *

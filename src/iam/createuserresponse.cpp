@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateUserResponse
  *
- * \brief The CreateUserResponse class encapsulates IAM CreateUser responses.
+ * \brief The CreateUserResponse class provides an interace for IAM CreateUser responses.
  *
  * \ingroup IAM
  *

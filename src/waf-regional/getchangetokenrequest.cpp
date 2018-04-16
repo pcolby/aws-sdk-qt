@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetChangeTokenRequest
  *
- * \brief The GetChangeTokenRequest class encapsulates WAFRegional GetChangeToken requests.
+ * \brief The GetChangeTokenRequest class provides an interface for WAFRegional GetChangeToken requests.
  *
  * \ingroup WAFRegional
  *

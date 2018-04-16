@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DescribeOrganizationResponse
  *
- * \brief The DescribeOrganizationResponse class encapsulates WorkMail DescribeOrganization responses.
+ * \brief The DescribeOrganizationResponse class provides an interace for WorkMail DescribeOrganization responses.
  *
  * \ingroup WorkMail
  *

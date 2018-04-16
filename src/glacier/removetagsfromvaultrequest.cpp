@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::RemoveTagsFromVaultRequest
  *
- * \brief The RemoveTagsFromVaultRequest class encapsulates Glacier RemoveTagsFromVault requests.
+ * \brief The RemoveTagsFromVaultRequest class provides an interface for Glacier RemoveTagsFromVault requests.
  *
  * \ingroup Glacier
  *

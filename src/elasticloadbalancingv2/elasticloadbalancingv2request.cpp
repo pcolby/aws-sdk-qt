@@ -26,7 +26,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ElasticLoadBalancingv2Request
  *
- * \brief The ElasticLoadBalancingv2Request class is the base class for all ElasticLoadBalancingv2 requests.
+ * \brief The ElasticLoadBalancingv2Request class provides an interface for ElasticLoadBalancingv2 requests.
  *
  * \ingroup ElasticLoadBalancingv2
  */

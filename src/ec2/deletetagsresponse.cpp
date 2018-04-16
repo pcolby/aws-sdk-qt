@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteTagsResponse
  *
- * \brief The DeleteTagsResponse class encapsulates EC2 DeleteTags responses.
+ * \brief The DeleteTagsResponse class provides an interace for EC2 DeleteTags responses.
  *
  * \ingroup EC2
  *

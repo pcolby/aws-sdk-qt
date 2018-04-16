@@ -57,7 +57,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::MediaStoreClient
  *
- * \brief The MediaStoreClient class provides access the AWS Elemental MediaStore service.
+ * \brief The MediaStoreClient class provides access to the AWS Elemental MediaStore service.
  *
  * \ingroup MediaStore
  *

@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::CreateSampleFindingsResponse
  *
- * \brief The CreateSampleFindingsResponse class encapsulates GuardDuty CreateSampleFindings responses.
+ * \brief The CreateSampleFindingsResponse class provides an interace for GuardDuty CreateSampleFindings responses.
  *
  * \ingroup GuardDuty
  *

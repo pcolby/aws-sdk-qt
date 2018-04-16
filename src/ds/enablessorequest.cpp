@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::EnableSsoRequest
  *
- * \brief The EnableSsoRequest class encapsulates DirectoryService EnableSso requests.
+ * \brief The EnableSsoRequest class provides an interface for DirectoryService EnableSso requests.
  *
  * \ingroup DirectoryService
  *

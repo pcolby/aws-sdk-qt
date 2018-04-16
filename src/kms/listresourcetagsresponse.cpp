@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ListResourceTagsResponse
  *
- * \brief The ListResourceTagsResponse class encapsulates KMS ListResourceTags responses.
+ * \brief The ListResourceTagsResponse class provides an interace for KMS ListResourceTags responses.
  *
  * \ingroup KMS
  *

@@ -30,7 +30,7 @@ namespace TranscribeService {
 /*!
  * \class QtAws::TranscribeService::GetTranscriptionJobResponse
  *
- * \brief The GetTranscriptionJobResponse class encapsulates TranscribeService GetTranscriptionJob responses.
+ * \brief The GetTranscriptionJobResponse class provides an interace for TranscribeService GetTranscriptionJob responses.
  *
  * \ingroup TranscribeService
  *

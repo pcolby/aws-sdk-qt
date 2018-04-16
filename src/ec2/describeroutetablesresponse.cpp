@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeRouteTablesResponse
  *
- * \brief The DescribeRouteTablesResponse class encapsulates EC2 DescribeRouteTables responses.
+ * \brief The DescribeRouteTablesResponse class provides an interace for EC2 DescribeRouteTables responses.
  *
  * \ingroup EC2
  *

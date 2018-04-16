@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GetFindingsStatisticsRequest
  *
- * \brief The GetFindingsStatisticsRequest class encapsulates GuardDuty GetFindingsStatistics requests.
+ * \brief The GetFindingsStatisticsRequest class provides an interface for GuardDuty GetFindingsStatistics requests.
  *
  * \ingroup GuardDuty
  *

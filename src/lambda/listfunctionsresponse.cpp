@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::ListFunctionsResponse
  *
- * \brief The ListFunctionsResponse class encapsulates Lambda ListFunctions responses.
+ * \brief The ListFunctionsResponse class provides an interace for Lambda ListFunctions responses.
  *
  * \ingroup Lambda
  *

@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::ListVaultsResponse
  *
- * \brief The ListVaultsResponse class encapsulates Glacier ListVaults responses.
+ * \brief The ListVaultsResponse class provides an interace for Glacier ListVaults responses.
  *
  * \ingroup Glacier
  *

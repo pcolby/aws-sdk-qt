@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CreateDBSnapshotResponse
  *
- * \brief The CreateDBSnapshotResponse class encapsulates RDS CreateDBSnapshot responses.
+ * \brief The CreateDBSnapshotResponse class provides an interace for RDS CreateDBSnapshot responses.
  *
  * \ingroup RDS
  *

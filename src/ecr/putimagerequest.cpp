@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::PutImageRequest
  *
- * \brief The PutImageRequest class encapsulates ECR PutImage requests.
+ * \brief The PutImageRequest class provides an interface for ECR PutImage requests.
  *
  * \ingroup ECR
  *

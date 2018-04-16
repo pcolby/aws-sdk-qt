@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyVolumeAttributeResponse
  *
- * \brief The ModifyVolumeAttributeResponse class encapsulates EC2 ModifyVolumeAttribute responses.
+ * \brief The ModifyVolumeAttributeResponse class provides an interace for EC2 ModifyVolumeAttribute responses.
  *
  * \ingroup EC2
  *

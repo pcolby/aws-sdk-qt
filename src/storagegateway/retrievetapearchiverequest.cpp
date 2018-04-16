@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::RetrieveTapeArchiveRequest
  *
- * \brief The RetrieveTapeArchiveRequest class encapsulates StorageGateway RetrieveTapeArchive requests.
+ * \brief The RetrieveTapeArchiveRequest class provides an interface for StorageGateway RetrieveTapeArchive requests.
  *
  * \ingroup StorageGateway
  *

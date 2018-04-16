@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListObjectPoliciesRequest
  *
- * \brief The ListObjectPoliciesRequest class encapsulates CloudDirectory ListObjectPolicies requests.
+ * \brief The ListObjectPoliciesRequest class provides an interface for CloudDirectory ListObjectPolicies requests.
  *
  * \ingroup CloudDirectory
  *

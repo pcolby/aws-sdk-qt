@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::ListConfigurationSetsResponse
  *
- * \brief The ListConfigurationSetsResponse class encapsulates SES ListConfigurationSets responses.
+ * \brief The ListConfigurationSetsResponse class provides an interace for SES ListConfigurationSets responses.
  *
  * \ingroup SES
  *

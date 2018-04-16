@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::ListConfigurationSetsRequest
  *
- * \brief The ListConfigurationSetsRequest class encapsulates SES ListConfigurationSets requests.
+ * \brief The ListConfigurationSetsRequest class provides an interface for SES ListConfigurationSets requests.
  *
  * \ingroup SES
  *

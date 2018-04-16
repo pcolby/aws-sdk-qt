@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::StopNotebookInstanceRequest
  *
- * \brief The StopNotebookInstanceRequest class encapsulates SageMaker StopNotebookInstance requests.
+ * \brief The StopNotebookInstanceRequest class provides an interface for SageMaker StopNotebookInstance requests.
  *
  * \ingroup SageMaker
  *

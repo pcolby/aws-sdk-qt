@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::GetPolicyRequest
  *
- * \brief The GetPolicyRequest class encapsulates Lambda GetPolicy requests.
+ * \brief The GetPolicyRequest class provides an interface for Lambda GetPolicy requests.
  *
  * \ingroup Lambda
  *

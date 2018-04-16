@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::GetRuleRequest
  *
- * \brief The GetRuleRequest class encapsulates WAF GetRule requests.
+ * \brief The GetRuleRequest class provides an interface for WAF GetRule requests.
  *
  * \ingroup WAF
  *

@@ -30,7 +30,7 @@ namespace AutoScalingPlans {
 /*!
  * \class QtAws::AutoScalingPlans::DeleteScalingPlanResponse
  *
- * \brief The DeleteScalingPlanResponse class encapsulates AutoScalingPlans DeleteScalingPlan responses.
+ * \brief The DeleteScalingPlanResponse class provides an interace for AutoScalingPlans DeleteScalingPlan responses.
  *
  * \ingroup AutoScalingPlans
  *

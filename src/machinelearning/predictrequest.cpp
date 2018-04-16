@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::PredictRequest
  *
- * \brief The PredictRequest class encapsulates MachineLearning Predict requests.
+ * \brief The PredictRequest class provides an interface for MachineLearning Predict requests.
  *
  * \ingroup MachineLearning
  *

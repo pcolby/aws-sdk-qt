@@ -28,7 +28,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::ListClusterJobsRequest
  *
- * \brief The ListClusterJobsRequest class encapsulates Snowball ListClusterJobs requests.
+ * \brief The ListClusterJobsRequest class provides an interface for Snowball ListClusterJobs requests.
  *
  * \ingroup Snowball
  *

@@ -30,7 +30,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::DisableAvailabilityZonesForLoadBalancerResponse
  *
- * \brief The DisableAvailabilityZonesForLoadBalancerResponse class encapsulates ElasticLoadBalancing DisableAvailabilityZonesForLoadBalancer responses.
+ * \brief The DisableAvailabilityZonesForLoadBalancerResponse class provides an interace for ElasticLoadBalancing DisableAvailabilityZonesForLoadBalancer responses.
  *
  * \ingroup ElasticLoadBalancing
  *

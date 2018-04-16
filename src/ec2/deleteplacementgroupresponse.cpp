@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeletePlacementGroupResponse
  *
- * \brief The DeletePlacementGroupResponse class encapsulates EC2 DeletePlacementGroup responses.
+ * \brief The DeletePlacementGroupResponse class provides an interace for EC2 DeletePlacementGroup responses.
  *
  * \ingroup EC2
  *

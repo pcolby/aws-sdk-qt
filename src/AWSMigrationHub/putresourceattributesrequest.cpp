@@ -28,7 +28,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::PutResourceAttributesRequest
  *
- * \brief The PutResourceAttributesRequest class encapsulates MigrationHub PutResourceAttributes requests.
+ * \brief The PutResourceAttributesRequest class provides an interface for MigrationHub PutResourceAttributes requests.
  *
  * \ingroup MigrationHub
  *

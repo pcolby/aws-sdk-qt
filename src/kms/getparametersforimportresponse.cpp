@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::GetParametersForImportResponse
  *
- * \brief The GetParametersForImportResponse class encapsulates KMS GetParametersForImport responses.
+ * \brief The GetParametersForImportResponse class provides an interace for KMS GetParametersForImport responses.
  *
  * \ingroup KMS
  *

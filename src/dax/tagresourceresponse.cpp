@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::TagResourceResponse
  *
- * \brief The TagResourceResponse class encapsulates DAX TagResource responses.
+ * \brief The TagResourceResponse class provides an interace for DAX TagResource responses.
  *
  * \ingroup DAX
  *

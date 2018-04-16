@@ -28,7 +28,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::ListStreamsRequest
  *
- * \brief The ListStreamsRequest class encapsulates KinesisVideo ListStreams requests.
+ * \brief The ListStreamsRequest class provides an interface for KinesisVideo ListStreams requests.
  *
  * \ingroup KinesisVideo
  *

@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetApnsChannelResponse
  *
- * \brief The GetApnsChannelResponse class encapsulates Pinpoint GetApnsChannel responses.
+ * \brief The GetApnsChannelResponse class provides an interace for Pinpoint GetApnsChannel responses.
  *
  * \ingroup Pinpoint
  *

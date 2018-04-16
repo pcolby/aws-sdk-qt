@@ -30,7 +30,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::GetServiceResponse
  *
- * \brief The GetServiceResponse class encapsulates ServiceDiscovery GetService responses.
+ * \brief The GetServiceResponse class provides an interace for ServiceDiscovery GetService responses.
  *
  * \ingroup ServiceDiscovery
  *

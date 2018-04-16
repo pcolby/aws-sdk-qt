@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DescribeBatchPredictionsRequest
  *
- * \brief The DescribeBatchPredictionsRequest class encapsulates MachineLearning DescribeBatchPredictions requests.
+ * \brief The DescribeBatchPredictionsRequest class provides an interface for MachineLearning DescribeBatchPredictions requests.
  *
  * \ingroup MachineLearning
  *

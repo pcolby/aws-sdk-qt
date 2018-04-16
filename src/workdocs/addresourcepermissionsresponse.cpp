@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::AddResourcePermissionsResponse
  *
- * \brief The AddResourcePermissionsResponse class encapsulates WorkDocs AddResourcePermissions responses.
+ * \brief The AddResourcePermissionsResponse class provides an interace for WorkDocs AddResourcePermissions responses.
  *
  * \ingroup WorkDocs
  *

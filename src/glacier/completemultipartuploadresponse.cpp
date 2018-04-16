@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::CompleteMultipartUploadResponse
  *
- * \brief The CompleteMultipartUploadResponse class encapsulates Glacier CompleteMultipartUpload responses.
+ * \brief The CompleteMultipartUploadResponse class provides an interace for Glacier CompleteMultipartUpload responses.
  *
  * \ingroup Glacier
  *

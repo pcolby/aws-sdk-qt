@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListGeoLocationsResponse
  *
- * \brief The ListGeoLocationsResponse class encapsulates Route53 ListGeoLocations responses.
+ * \brief The ListGeoLocationsResponse class provides an interace for Route53 ListGeoLocations responses.
  *
  * \ingroup Route53
  *

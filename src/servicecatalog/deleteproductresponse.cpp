@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DeleteProductResponse
  *
- * \brief The DeleteProductResponse class encapsulates ServiceCatalog DeleteProduct responses.
+ * \brief The DeleteProductResponse class provides an interace for ServiceCatalog DeleteProduct responses.
  *
  * \ingroup ServiceCatalog
  *

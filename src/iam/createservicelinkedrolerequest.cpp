@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateServiceLinkedRoleRequest
  *
- * \brief The CreateServiceLinkedRoleRequest class encapsulates IAM CreateServiceLinkedRole requests.
+ * \brief The CreateServiceLinkedRoleRequest class provides an interface for IAM CreateServiceLinkedRole requests.
  *
  * \ingroup IAM
  *

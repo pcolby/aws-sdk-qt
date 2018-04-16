@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListAttachedUserPoliciesResponse
  *
- * \brief The ListAttachedUserPoliciesResponse class encapsulates IAM ListAttachedUserPolicies responses.
+ * \brief The ListAttachedUserPoliciesResponse class provides an interace for IAM ListAttachedUserPolicies responses.
  *
  * \ingroup IAM
  *

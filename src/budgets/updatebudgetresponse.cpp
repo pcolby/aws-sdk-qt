@@ -30,7 +30,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::UpdateBudgetResponse
  *
- * \brief The UpdateBudgetResponse class encapsulates Budgets UpdateBudget responses.
+ * \brief The UpdateBudgetResponse class provides an interace for Budgets UpdateBudget responses.
  *
  * \ingroup Budgets
  *

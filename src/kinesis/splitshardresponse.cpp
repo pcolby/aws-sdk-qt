@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::SplitShardResponse
  *
- * \brief The SplitShardResponse class encapsulates Kinesis SplitShard responses.
+ * \brief The SplitShardResponse class provides an interace for Kinesis SplitShard responses.
  *
  * \ingroup Kinesis
  *

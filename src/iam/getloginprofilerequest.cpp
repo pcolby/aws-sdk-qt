@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetLoginProfileRequest
  *
- * \brief The GetLoginProfileRequest class encapsulates IAM GetLoginProfile requests.
+ * \brief The GetLoginProfileRequest class provides an interface for IAM GetLoginProfile requests.
  *
  * \ingroup IAM
  *

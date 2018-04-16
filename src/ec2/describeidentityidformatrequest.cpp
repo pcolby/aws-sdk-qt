@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeIdentityIdFormatRequest
  *
- * \brief The DescribeIdentityIdFormatRequest class encapsulates EC2 DescribeIdentityIdFormat requests.
+ * \brief The DescribeIdentityIdFormatRequest class provides an interface for EC2 DescribeIdentityIdFormat requests.
  *
  * \ingroup EC2
  *

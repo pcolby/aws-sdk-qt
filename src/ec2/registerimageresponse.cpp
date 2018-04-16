@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RegisterImageResponse
  *
- * \brief The RegisterImageResponse class encapsulates EC2 RegisterImage responses.
+ * \brief The RegisterImageResponse class provides an interace for EC2 RegisterImage responses.
  *
  * \ingroup EC2
  *

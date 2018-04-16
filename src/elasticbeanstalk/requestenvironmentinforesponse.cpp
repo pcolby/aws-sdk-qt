@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::RequestEnvironmentInfoResponse
  *
- * \brief The RequestEnvironmentInfoResponse class encapsulates ElasticBeanstalk RequestEnvironmentInfo responses.
+ * \brief The RequestEnvironmentInfoResponse class provides an interace for ElasticBeanstalk RequestEnvironmentInfo responses.
  *
  * \ingroup ElasticBeanstalk
  *

@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetLoadBalancerTlsCertificatesResponse
  *
- * \brief The GetLoadBalancerTlsCertificatesResponse class encapsulates Lightsail GetLoadBalancerTlsCertificates responses.
+ * \brief The GetLoadBalancerTlsCertificatesResponse class provides an interace for Lightsail GetLoadBalancerTlsCertificates responses.
  *
  * \ingroup Lightsail
  *

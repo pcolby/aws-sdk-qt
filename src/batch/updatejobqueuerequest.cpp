@@ -28,7 +28,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::UpdateJobQueueRequest
  *
- * \brief The UpdateJobQueueRequest class encapsulates Batch UpdateJobQueue requests.
+ * \brief The UpdateJobQueueRequest class provides an interface for Batch UpdateJobQueue requests.
  *
  * \ingroup Batch
  *

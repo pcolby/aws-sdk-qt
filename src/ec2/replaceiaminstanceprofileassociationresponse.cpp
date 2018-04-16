@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ReplaceIamInstanceProfileAssociationResponse
  *
- * \brief The ReplaceIamInstanceProfileAssociationResponse class encapsulates EC2 ReplaceIamInstanceProfileAssociation responses.
+ * \brief The ReplaceIamInstanceProfileAssociationResponse class provides an interace for EC2 ReplaceIamInstanceProfileAssociation responses.
  *
  * \ingroup EC2
  *

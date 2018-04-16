@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::GetPolicyVersionResponse
  *
- * \brief The GetPolicyVersionResponse class encapsulates IoT GetPolicyVersion responses.
+ * \brief The GetPolicyVersionResponse class provides an interace for IoT GetPolicyVersion responses.
  *
  * \ingroup IoT
  *

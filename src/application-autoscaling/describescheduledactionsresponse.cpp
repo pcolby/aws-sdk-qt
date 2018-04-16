@@ -30,7 +30,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::DescribeScheduledActionsResponse
  *
- * \brief The DescribeScheduledActionsResponse class encapsulates ApplicationAutoScaling DescribeScheduledActions responses.
+ * \brief The DescribeScheduledActionsResponse class provides an interace for ApplicationAutoScaling DescribeScheduledActions responses.
  *
  * \ingroup ApplicationAutoScaling
  *

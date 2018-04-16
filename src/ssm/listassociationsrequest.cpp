@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListAssociationsRequest
  *
- * \brief The ListAssociationsRequest class encapsulates SSM ListAssociations requests.
+ * \brief The ListAssociationsRequest class provides an interface for SSM ListAssociations requests.
  *
  * \ingroup SSM
  *

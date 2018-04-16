@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeInstanceAssociationsStatusResponse
  *
- * \brief The DescribeInstanceAssociationsStatusResponse class encapsulates SSM DescribeInstanceAssociationsStatus responses.
+ * \brief The DescribeInstanceAssociationsStatusResponse class provides an interace for SSM DescribeInstanceAssociationsStatus responses.
  *
  * \ingroup SSM
  *

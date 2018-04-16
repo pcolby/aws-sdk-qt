@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::DescribeChangeSetRequest
  *
- * \brief The DescribeChangeSetRequest class encapsulates CloudFormation DescribeChangeSet requests.
+ * \brief The DescribeChangeSetRequest class provides an interface for CloudFormation DescribeChangeSet requests.
  *
  * \ingroup CloudFormation
  *

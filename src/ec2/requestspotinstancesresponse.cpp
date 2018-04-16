@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RequestSpotInstancesResponse
  *
- * \brief The RequestSpotInstancesResponse class encapsulates EC2 RequestSpotInstances responses.
+ * \brief The RequestSpotInstancesResponse class provides an interace for EC2 RequestSpotInstances responses.
  *
  * \ingroup EC2
  *

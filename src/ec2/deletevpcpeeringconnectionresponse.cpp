@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteVpcPeeringConnectionResponse
  *
- * \brief The DeleteVpcPeeringConnectionResponse class encapsulates EC2 DeleteVpcPeeringConnection responses.
+ * \brief The DeleteVpcPeeringConnectionResponse class provides an interace for EC2 DeleteVpcPeeringConnection responses.
  *
  * \ingroup EC2
  *

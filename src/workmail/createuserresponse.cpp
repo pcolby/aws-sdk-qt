@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::CreateUserResponse
  *
- * \brief The CreateUserResponse class encapsulates WorkMail CreateUser responses.
+ * \brief The CreateUserResponse class provides an interace for WorkMail CreateUser responses.
  *
  * \ingroup WorkMail
  *

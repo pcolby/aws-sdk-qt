@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteLaunchTemplateVersionsRequest
  *
- * \brief The DeleteLaunchTemplateVersionsRequest class encapsulates EC2 DeleteLaunchTemplateVersions requests.
+ * \brief The DeleteLaunchTemplateVersionsRequest class provides an interface for EC2 DeleteLaunchTemplateVersions requests.
  *
  * \ingroup EC2
  *

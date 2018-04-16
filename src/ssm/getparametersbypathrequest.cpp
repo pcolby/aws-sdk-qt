@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetParametersByPathRequest
  *
- * \brief The GetParametersByPathRequest class encapsulates SSM GetParametersByPath requests.
+ * \brief The GetParametersByPathRequest class provides an interface for SSM GetParametersByPath requests.
  *
  * \ingroup SSM
  *

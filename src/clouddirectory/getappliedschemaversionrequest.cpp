@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::GetAppliedSchemaVersionRequest
  *
- * \brief The GetAppliedSchemaVersionRequest class encapsulates CloudDirectory GetAppliedSchemaVersion requests.
+ * \brief The GetAppliedSchemaVersionRequest class provides an interface for CloudDirectory GetAppliedSchemaVersion requests.
  *
  * \ingroup CloudDirectory
  *

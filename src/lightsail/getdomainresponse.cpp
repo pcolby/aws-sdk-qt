@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetDomainResponse
  *
- * \brief The GetDomainResponse class encapsulates Lightsail GetDomain responses.
+ * \brief The GetDomainResponse class provides an interace for Lightsail GetDomain responses.
  *
  * \ingroup Lightsail
  *

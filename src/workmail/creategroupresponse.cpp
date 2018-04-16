@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::CreateGroupResponse
  *
- * \brief The CreateGroupResponse class encapsulates WorkMail CreateGroup responses.
+ * \brief The CreateGroupResponse class provides an interace for WorkMail CreateGroup responses.
  *
  * \ingroup WorkMail
  *

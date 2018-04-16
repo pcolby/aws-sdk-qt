@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetWebACLForResourceRequest
  *
- * \brief The GetWebACLForResourceRequest class encapsulates WAFRegional GetWebACLForResource requests.
+ * \brief The GetWebACLForResourceRequest class provides an interface for WAFRegional GetWebACLForResource requests.
  *
  * \ingroup WAFRegional
  *

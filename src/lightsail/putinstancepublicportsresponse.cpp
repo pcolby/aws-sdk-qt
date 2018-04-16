@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::PutInstancePublicPortsResponse
  *
- * \brief The PutInstancePublicPortsResponse class encapsulates Lightsail PutInstancePublicPorts responses.
+ * \brief The PutInstancePublicPortsResponse class provides an interace for Lightsail PutInstancePublicPorts responses.
  *
  * \ingroup Lightsail
  *

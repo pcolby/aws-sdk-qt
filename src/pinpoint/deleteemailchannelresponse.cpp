@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteEmailChannelResponse
  *
- * \brief The DeleteEmailChannelResponse class encapsulates Pinpoint DeleteEmailChannel responses.
+ * \brief The DeleteEmailChannelResponse class provides an interace for Pinpoint DeleteEmailChannel responses.
  *
  * \ingroup Pinpoint
  *

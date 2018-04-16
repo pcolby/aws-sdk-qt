@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CreateStackResponse
  *
- * \brief The CreateStackResponse class encapsulates OpsWorks CreateStack responses.
+ * \brief The CreateStackResponse class provides an interace for OpsWorks CreateStack responses.
  *
  * \ingroup OpsWorks
  *

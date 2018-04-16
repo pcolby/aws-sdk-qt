@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::EvaluateExpressionResponse
  *
- * \brief The EvaluateExpressionResponse class encapsulates DataPipeline EvaluateExpression responses.
+ * \brief The EvaluateExpressionResponse class provides an interace for DataPipeline EvaluateExpression responses.
  *
  * \ingroup DataPipeline
  *

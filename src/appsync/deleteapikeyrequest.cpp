@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::DeleteApiKeyRequest
  *
- * \brief The DeleteApiKeyRequest class encapsulates AppSync DeleteApiKey requests.
+ * \brief The DeleteApiKeyRequest class provides an interface for AppSync DeleteApiKey requests.
  *
  * \ingroup AppSync
  *

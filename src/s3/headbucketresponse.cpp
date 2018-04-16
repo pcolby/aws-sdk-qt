@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::HeadBucketResponse
  *
- * \brief The HeadBucketResponse class encapsulates S3 HeadBucket responses.
+ * \brief The HeadBucketResponse class provides an interace for S3 HeadBucket responses.
  *
  * \ingroup S3
  *

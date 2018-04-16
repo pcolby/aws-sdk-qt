@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeleteConfigRuleResponse
  *
- * \brief The DeleteConfigRuleResponse class encapsulates ConfigService DeleteConfigRule responses.
+ * \brief The DeleteConfigRuleResponse class provides an interace for ConfigService DeleteConfigRule responses.
  *
  * \ingroup ConfigService
  *

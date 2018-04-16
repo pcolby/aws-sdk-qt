@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DownloadDBLogFilePortionResponse
  *
- * \brief The DownloadDBLogFilePortionResponse class encapsulates RDS DownloadDBLogFilePortion responses.
+ * \brief The DownloadDBLogFilePortionResponse class provides an interace for RDS DownloadDBLogFilePortion responses.
  *
  * \ingroup RDS
  *

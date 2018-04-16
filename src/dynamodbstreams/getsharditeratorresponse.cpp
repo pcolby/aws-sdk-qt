@@ -30,7 +30,7 @@ namespace DynamoDBStreams {
 /*!
  * \class QtAws::DynamoDBStreams::GetShardIteratorResponse
  *
- * \brief The GetShardIteratorResponse class encapsulates DynamoDBStreams GetShardIterator responses.
+ * \brief The GetShardIteratorResponse class provides an interace for DynamoDBStreams GetShardIterator responses.
  *
  * \ingroup DynamoDBStreams
  *

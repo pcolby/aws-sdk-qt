@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteStreamResponse
  *
- * \brief The DeleteStreamResponse class encapsulates IoT DeleteStream responses.
+ * \brief The DeleteStreamResponse class provides an interace for IoT DeleteStream responses.
  *
  * \ingroup IoT
  *

@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::CreateCustomActionTypeRequest
  *
- * \brief The CreateCustomActionTypeRequest class encapsulates CodePipeline CreateCustomActionType requests.
+ * \brief The CreateCustomActionTypeRequest class provides an interface for CodePipeline CreateCustomActionType requests.
  *
  * \ingroup CodePipeline
  *

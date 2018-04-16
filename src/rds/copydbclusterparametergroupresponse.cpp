@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CopyDBClusterParameterGroupResponse
  *
- * \brief The CopyDBClusterParameterGroupResponse class encapsulates RDS CopyDBClusterParameterGroup responses.
+ * \brief The CopyDBClusterParameterGroupResponse class provides an interace for RDS CopyDBClusterParameterGroup responses.
  *
  * \ingroup RDS
  *

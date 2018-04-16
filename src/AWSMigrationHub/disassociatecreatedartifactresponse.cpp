@@ -30,7 +30,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::DisassociateCreatedArtifactResponse
  *
- * \brief The DisassociateCreatedArtifactResponse class encapsulates MigrationHub DisassociateCreatedArtifact responses.
+ * \brief The DisassociateCreatedArtifactResponse class provides an interace for MigrationHub DisassociateCreatedArtifact responses.
  *
  * \ingroup MigrationHub
  *

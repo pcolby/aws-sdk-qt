@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ModifyCacheSubnetGroupRequest
  *
- * \brief The ModifyCacheSubnetGroupRequest class encapsulates ElastiCache ModifyCacheSubnetGroup requests.
+ * \brief The ModifyCacheSubnetGroupRequest class provides an interface for ElastiCache ModifyCacheSubnetGroup requests.
  *
  * \ingroup ElastiCache
  *

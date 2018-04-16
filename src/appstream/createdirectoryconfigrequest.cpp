@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::CreateDirectoryConfigRequest
  *
- * \brief The CreateDirectoryConfigRequest class encapsulates AppStream CreateDirectoryConfig requests.
+ * \brief The CreateDirectoryConfigRequest class provides an interface for AppStream CreateDirectoryConfig requests.
  *
  * \ingroup AppStream
  *

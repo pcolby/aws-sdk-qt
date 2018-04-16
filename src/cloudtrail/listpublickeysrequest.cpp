@@ -28,7 +28,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::ListPublicKeysRequest
  *
- * \brief The ListPublicKeysRequest class encapsulates CloudTrail ListPublicKeys requests.
+ * \brief The ListPublicKeysRequest class provides an interface for CloudTrail ListPublicKeys requests.
  *
  * \ingroup CloudTrail
  *

@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreatePartitionRequest
  *
- * \brief The CreatePartitionRequest class encapsulates Glue CreatePartition requests.
+ * \brief The CreatePartitionRequest class provides an interface for Glue CreatePartition requests.
  *
  * \ingroup Glue
  *

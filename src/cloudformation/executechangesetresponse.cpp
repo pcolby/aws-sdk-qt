@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ExecuteChangeSetResponse
  *
- * \brief The ExecuteChangeSetResponse class encapsulates CloudFormation ExecuteChangeSet responses.
+ * \brief The ExecuteChangeSetResponse class provides an interace for CloudFormation ExecuteChangeSet responses.
  *
  * \ingroup CloudFormation
  *

@@ -28,7 +28,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::ListProtectionsRequest
  *
- * \brief The ListProtectionsRequest class encapsulates Shield ListProtections requests.
+ * \brief The ListProtectionsRequest class provides an interface for Shield ListProtections requests.
  *
  * \ingroup Shield
  *

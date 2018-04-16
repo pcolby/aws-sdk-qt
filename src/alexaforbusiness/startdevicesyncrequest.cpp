@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::StartDeviceSyncRequest
  *
- * \brief The StartDeviceSyncRequest class encapsulates AlexaForBusiness StartDeviceSync requests.
+ * \brief The StartDeviceSyncRequest class provides an interface for AlexaForBusiness StartDeviceSync requests.
  *
  * \ingroup AlexaForBusiness
  *

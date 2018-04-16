@@ -26,7 +26,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::ApplicationAutoScalingRequest
  *
- * \brief The ApplicationAutoScalingRequest class is the base class for all ApplicationAutoScaling requests.
+ * \brief The ApplicationAutoScalingRequest class provides an interface for ApplicationAutoScaling requests.
  *
  * \ingroup ApplicationAutoScaling
  */

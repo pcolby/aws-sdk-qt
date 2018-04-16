@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListHandshakesForOrganizationRequest
  *
- * \brief The ListHandshakesForOrganizationRequest class encapsulates Organizations ListHandshakesForOrganization requests.
+ * \brief The ListHandshakesForOrganizationRequest class provides an interface for Organizations ListHandshakesForOrganization requests.
  *
  * \ingroup Organizations
  *

@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::RegisterWorkflowTypeResponse
  *
- * \brief The RegisterWorkflowTypeResponse class encapsulates SWF RegisterWorkflowType responses.
+ * \brief The RegisterWorkflowTypeResponse class provides an interace for SWF RegisterWorkflowType responses.
  *
  * \ingroup SWF
  *

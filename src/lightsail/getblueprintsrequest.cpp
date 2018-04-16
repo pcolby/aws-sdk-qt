@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetBlueprintsRequest
  *
- * \brief The GetBlueprintsRequest class encapsulates Lightsail GetBlueprints requests.
+ * \brief The GetBlueprintsRequest class provides an interface for Lightsail GetBlueprints requests.
  *
  * \ingroup Lightsail
  *

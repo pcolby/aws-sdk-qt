@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::ListDataSourcesResponse
  *
- * \brief The ListDataSourcesResponse class encapsulates AppSync ListDataSources responses.
+ * \brief The ListDataSourcesResponse class provides an interace for AppSync ListDataSources responses.
  *
  * \ingroup AppSync
  *

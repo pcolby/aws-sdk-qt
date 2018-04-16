@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DescribeCacheParametersResponse
  *
- * \brief The DescribeCacheParametersResponse class encapsulates ElastiCache DescribeCacheParameters responses.
+ * \brief The DescribeCacheParametersResponse class provides an interace for ElastiCache DescribeCacheParameters responses.
  *
  * \ingroup ElastiCache
  *

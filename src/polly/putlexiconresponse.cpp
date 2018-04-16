@@ -30,7 +30,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::PutLexiconResponse
  *
- * \brief The PutLexiconResponse class encapsulates Polly PutLexicon responses.
+ * \brief The PutLexiconResponse class provides an interace for Polly PutLexicon responses.
  *
  * \ingroup Polly
  *

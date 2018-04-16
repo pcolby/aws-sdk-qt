@@ -39,7 +39,7 @@ namespace MobileAnalytics {
 /*!
  * \class QtAws::MobileAnalytics::MobileAnalyticsClient
  *
- * \brief The MobileAnalyticsClient class provides access the Amazon Mobile Analytics service.
+ * \brief The MobileAnalyticsClient class provides access to the Amazon Mobile Analytics service.
  *
  * \ingroup MobileAnalytics
  *

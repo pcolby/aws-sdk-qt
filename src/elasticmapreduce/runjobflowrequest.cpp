@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::RunJobFlowRequest
  *
- * \brief The RunJobFlowRequest class encapsulates EMR RunJobFlow requests.
+ * \brief The RunJobFlowRequest class provides an interface for EMR RunJobFlow requests.
  *
  * \ingroup EMR
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeSpotDatafeedSubscriptionRequest
  *
- * \brief The DescribeSpotDatafeedSubscriptionRequest class encapsulates EC2 DescribeSpotDatafeedSubscription requests.
+ * \brief The DescribeSpotDatafeedSubscriptionRequest class provides an interface for EC2 DescribeSpotDatafeedSubscription requests.
  *
  * \ingroup EC2
  *

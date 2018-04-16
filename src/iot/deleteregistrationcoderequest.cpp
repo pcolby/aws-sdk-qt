@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteRegistrationCodeRequest
  *
- * \brief The DeleteRegistrationCodeRequest class encapsulates IoT DeleteRegistrationCode requests.
+ * \brief The DeleteRegistrationCodeRequest class provides an interface for IoT DeleteRegistrationCode requests.
  *
  * \ingroup IoT
  *

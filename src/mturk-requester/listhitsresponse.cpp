@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListHITsResponse
  *
- * \brief The ListHITsResponse class encapsulates MTurk ListHITs responses.
+ * \brief The ListHITsResponse class provides an interace for MTurk ListHITs responses.
  *
  * \ingroup MTurk
  *

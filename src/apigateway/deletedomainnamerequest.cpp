@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteDomainNameRequest
  *
- * \brief The DeleteDomainNameRequest class encapsulates APIGateway DeleteDomainName requests.
+ * \brief The DeleteDomainNameRequest class provides an interface for APIGateway DeleteDomainName requests.
  *
  * \ingroup APIGateway
  *

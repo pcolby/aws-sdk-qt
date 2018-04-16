@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::AddCacheResponse
  *
- * \brief The AddCacheResponse class encapsulates StorageGateway AddCache responses.
+ * \brief The AddCacheResponse class provides an interace for StorageGateway AddCache responses.
  *
  * \ingroup StorageGateway
  *

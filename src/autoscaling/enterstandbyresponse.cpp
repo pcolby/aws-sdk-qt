@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::EnterStandbyResponse
  *
- * \brief The EnterStandbyResponse class encapsulates AutoScaling EnterStandby responses.
+ * \brief The EnterStandbyResponse class provides an interace for AutoScaling EnterStandby responses.
  *
  * \ingroup AutoScaling
  *

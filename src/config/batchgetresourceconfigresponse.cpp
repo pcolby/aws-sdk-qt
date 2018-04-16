@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::BatchGetResourceConfigResponse
  *
- * \brief The BatchGetResourceConfigResponse class encapsulates ConfigService BatchGetResourceConfig responses.
+ * \brief The BatchGetResourceConfigResponse class provides an interace for ConfigService BatchGetResourceConfig responses.
  *
  * \ingroup ConfigService
  *

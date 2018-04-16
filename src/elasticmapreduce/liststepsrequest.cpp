@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ListStepsRequest
  *
- * \brief The ListStepsRequest class encapsulates EMR ListSteps requests.
+ * \brief The ListStepsRequest class provides an interface for EMR ListSteps requests.
  *
  * \ingroup EMR
  *

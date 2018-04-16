@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::ListTaskDefinitionsRequest
  *
- * \brief The ListTaskDefinitionsRequest class encapsulates ECS ListTaskDefinitions requests.
+ * \brief The ListTaskDefinitionsRequest class provides an interface for ECS ListTaskDefinitions requests.
  *
  * \ingroup ECS
  *

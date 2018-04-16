@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RevokeSecurityGroupEgressRequest
  *
- * \brief The RevokeSecurityGroupEgressRequest class encapsulates EC2 RevokeSecurityGroupEgress requests.
+ * \brief The RevokeSecurityGroupEgressRequest class provides an interface for EC2 RevokeSecurityGroupEgress requests.
  *
  * \ingroup EC2
  *

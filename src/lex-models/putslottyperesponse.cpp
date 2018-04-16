@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::PutSlotTypeResponse
  *
- * \brief The PutSlotTypeResponse class encapsulates LexModelBuildingService PutSlotType responses.
+ * \brief The PutSlotTypeResponse class provides an interace for LexModelBuildingService PutSlotType responses.
  *
  * \ingroup LexModelBuildingService
  *

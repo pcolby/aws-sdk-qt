@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::RegisterElasticIpRequest
  *
- * \brief The RegisterElasticIpRequest class encapsulates OpsWorks RegisterElasticIp requests.
+ * \brief The RegisterElasticIpRequest class provides an interface for OpsWorks RegisterElasticIp requests.
  *
  * \ingroup OpsWorks
  *

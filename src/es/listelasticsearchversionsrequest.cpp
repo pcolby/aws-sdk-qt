@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::ListElasticsearchVersionsRequest
  *
- * \brief The ListElasticsearchVersionsRequest class encapsulates ElasticsearchService ListElasticsearchVersions requests.
+ * \brief The ListElasticsearchVersionsRequest class provides an interface for ElasticsearchService ListElasticsearchVersions requests.
  *
  * \ingroup ElasticsearchService
  *

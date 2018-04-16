@@ -30,7 +30,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::GetJobManifestResponse
  *
- * \brief The GetJobManifestResponse class encapsulates Snowball GetJobManifest responses.
+ * \brief The GetJobManifestResponse class provides an interace for Snowball GetJobManifest responses.
  *
  * \ingroup Snowball
  *

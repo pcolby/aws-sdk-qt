@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::ModifyClusterIamRolesResponse
  *
- * \brief The ModifyClusterIamRolesResponse class encapsulates Redshift ModifyClusterIamRoles responses.
+ * \brief The ModifyClusterIamRolesResponse class provides an interace for Redshift ModifyClusterIamRoles responses.
  *
  * \ingroup Redshift
  *

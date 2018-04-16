@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::UpdateAuthorizerResponse
  *
- * \brief The UpdateAuthorizerResponse class encapsulates IoT UpdateAuthorizer responses.
+ * \brief The UpdateAuthorizerResponse class provides an interace for IoT UpdateAuthorizer responses.
  *
  * \ingroup IoT
  *

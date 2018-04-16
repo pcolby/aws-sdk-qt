@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DescribeAccountAttributesRequest
  *
- * \brief The DescribeAccountAttributesRequest class encapsulates OpsWorksCM DescribeAccountAttributes requests.
+ * \brief The DescribeAccountAttributesRequest class provides an interface for OpsWorksCM DescribeAccountAttributes requests.
  *
  * \ingroup OpsWorksCM
  *

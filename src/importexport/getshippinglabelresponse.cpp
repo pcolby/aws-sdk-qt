@@ -30,7 +30,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::GetShippingLabelResponse
  *
- * \brief The GetShippingLabelResponse class encapsulates ImportExport GetShippingLabel responses.
+ * \brief The GetShippingLabelResponse class provides an interace for ImportExport GetShippingLabel responses.
  *
  * \ingroup ImportExport
  *

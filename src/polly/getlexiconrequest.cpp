@@ -28,7 +28,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::GetLexiconRequest
  *
- * \brief The GetLexiconRequest class encapsulates Polly GetLexicon requests.
+ * \brief The GetLexiconRequest class provides an interface for Polly GetLexicon requests.
  *
  * \ingroup Polly
  *

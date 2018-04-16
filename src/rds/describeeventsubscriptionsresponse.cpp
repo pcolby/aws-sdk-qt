@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeEventSubscriptionsResponse
  *
- * \brief The DescribeEventSubscriptionsResponse class encapsulates RDS DescribeEventSubscriptions responses.
+ * \brief The DescribeEventSubscriptionsResponse class provides an interace for RDS DescribeEventSubscriptions responses.
  *
  * \ingroup RDS
  *

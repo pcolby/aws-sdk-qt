@@ -28,7 +28,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::DeleteComputeEnvironmentRequest
  *
- * \brief The DeleteComputeEnvironmentRequest class encapsulates Batch DeleteComputeEnvironment requests.
+ * \brief The DeleteComputeEnvironmentRequest class provides an interface for Batch DeleteComputeEnvironment requests.
  *
  * \ingroup Batch
  *

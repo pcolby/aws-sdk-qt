@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::SubscribeToDatasetResponse
  *
- * \brief The SubscribeToDatasetResponse class encapsulates CognitoSync SubscribeToDataset responses.
+ * \brief The SubscribeToDatasetResponse class provides an interace for CognitoSync SubscribeToDataset responses.
  *
  * \ingroup CognitoSync
  *

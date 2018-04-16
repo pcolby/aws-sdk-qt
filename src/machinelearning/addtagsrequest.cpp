@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::AddTagsRequest
  *
- * \brief The AddTagsRequest class encapsulates MachineLearning AddTags requests.
+ * \brief The AddTagsRequest class provides an interface for MachineLearning AddTags requests.
  *
  * \ingroup MachineLearning
  *

@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::StopStackSetOperationRequest
  *
- * \brief The StopStackSetOperationRequest class encapsulates CloudFormation StopStackSetOperation requests.
+ * \brief The StopStackSetOperationRequest class provides an interface for CloudFormation StopStackSetOperation requests.
  *
  * \ingroup CloudFormation
  *

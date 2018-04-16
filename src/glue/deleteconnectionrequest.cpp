@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteConnectionRequest
  *
- * \brief The DeleteConnectionRequest class encapsulates Glue DeleteConnection requests.
+ * \brief The DeleteConnectionRequest class provides an interface for Glue DeleteConnection requests.
  *
  * \ingroup Glue
  *

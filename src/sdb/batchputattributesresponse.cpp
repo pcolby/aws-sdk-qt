@@ -30,7 +30,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::BatchPutAttributesResponse
  *
- * \brief The BatchPutAttributesResponse class encapsulates SimpleDB BatchPutAttributes responses.
+ * \brief The BatchPutAttributesResponse class provides an interace for SimpleDB BatchPutAttributes responses.
  *
  * \ingroup SimpleDB
  *

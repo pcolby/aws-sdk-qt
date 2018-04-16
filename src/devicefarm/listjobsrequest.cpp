@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListJobsRequest
  *
- * \brief The ListJobsRequest class encapsulates DeviceFarm ListJobs requests.
+ * \brief The ListJobsRequest class provides an interface for DeviceFarm ListJobs requests.
  *
  * \ingroup DeviceFarm
  *

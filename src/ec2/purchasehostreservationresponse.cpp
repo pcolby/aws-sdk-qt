@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::PurchaseHostReservationResponse
  *
- * \brief The PurchaseHostReservationResponse class encapsulates EC2 PurchaseHostReservation responses.
+ * \brief The PurchaseHostReservationResponse class provides an interace for EC2 PurchaseHostReservation responses.
  *
  * \ingroup EC2
  *

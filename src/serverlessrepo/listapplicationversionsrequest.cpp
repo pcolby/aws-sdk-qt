@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::ListApplicationVersionsRequest
  *
- * \brief The ListApplicationVersionsRequest class encapsulates ServerlessApplicationRepository ListApplicationVersions requests.
+ * \brief The ListApplicationVersionsRequest class provides an interface for ServerlessApplicationRepository ListApplicationVersions requests.
  *
  * \ingroup ServerlessApplicationRepository
  *

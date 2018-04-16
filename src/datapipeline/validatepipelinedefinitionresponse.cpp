@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::ValidatePipelineDefinitionResponse
  *
- * \brief The ValidatePipelineDefinitionResponse class encapsulates DataPipeline ValidatePipelineDefinition responses.
+ * \brief The ValidatePipelineDefinitionResponse class provides an interace for DataPipeline ValidatePipelineDefinition responses.
  *
  * \ingroup DataPipeline
  *

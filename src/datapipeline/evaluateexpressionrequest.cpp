@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::EvaluateExpressionRequest
  *
- * \brief The EvaluateExpressionRequest class encapsulates DataPipeline EvaluateExpression requests.
+ * \brief The EvaluateExpressionRequest class provides an interface for DataPipeline EvaluateExpression requests.
  *
  * \ingroup DataPipeline
  *

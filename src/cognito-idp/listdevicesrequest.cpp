@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ListDevicesRequest
  *
- * \brief The ListDevicesRequest class encapsulates CognitoIdentityProvider ListDevices requests.
+ * \brief The ListDevicesRequest class provides an interface for CognitoIdentityProvider ListDevices requests.
  *
  * \ingroup CognitoIdentityProvider
  *

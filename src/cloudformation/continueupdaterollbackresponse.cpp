@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ContinueUpdateRollbackResponse
  *
- * \brief The ContinueUpdateRollbackResponse class encapsulates CloudFormation ContinueUpdateRollback responses.
+ * \brief The ContinueUpdateRollbackResponse class provides an interace for CloudFormation ContinueUpdateRollback responses.
  *
  * \ingroup CloudFormation
  *

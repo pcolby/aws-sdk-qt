@@ -30,7 +30,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::DescribeFileSystemsResponse
  *
- * \brief The DescribeFileSystemsResponse class encapsulates EFS DescribeFileSystems responses.
+ * \brief The DescribeFileSystemsResponse class provides an interace for EFS DescribeFileSystems responses.
  *
  * \ingroup EFS
  *

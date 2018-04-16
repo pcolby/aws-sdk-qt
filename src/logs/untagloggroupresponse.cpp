@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::UntagLogGroupResponse
  *
- * \brief The UntagLogGroupResponse class encapsulates CloudWatchLogs UntagLogGroup responses.
+ * \brief The UntagLogGroupResponse class provides an interace for CloudWatchLogs UntagLogGroup responses.
  *
  * \ingroup CloudWatchLogs
  *

@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::ValidateConfigurationSettingsRequest
  *
- * \brief The ValidateConfigurationSettingsRequest class encapsulates ElasticBeanstalk ValidateConfigurationSettings requests.
+ * \brief The ValidateConfigurationSettingsRequest class provides an interface for ElasticBeanstalk ValidateConfigurationSettings requests.
  *
  * \ingroup ElasticBeanstalk
  *

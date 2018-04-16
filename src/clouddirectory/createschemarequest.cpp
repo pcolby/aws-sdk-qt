@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::CreateSchemaRequest
  *
- * \brief The CreateSchemaRequest class encapsulates CloudDirectory CreateSchema requests.
+ * \brief The CreateSchemaRequest class provides an interface for CloudDirectory CreateSchema requests.
  *
  * \ingroup CloudDirectory
  *

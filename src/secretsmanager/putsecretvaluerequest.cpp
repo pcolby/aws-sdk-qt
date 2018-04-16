@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::PutSecretValueRequest
  *
- * \brief The PutSecretValueRequest class encapsulates SecretsManager PutSecretValue requests.
+ * \brief The PutSecretValueRequest class provides an interface for SecretsManager PutSecretValue requests.
  *
  * \ingroup SecretsManager
  *

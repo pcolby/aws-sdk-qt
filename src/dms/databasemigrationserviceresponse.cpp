@@ -29,7 +29,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DatabaseMigrationServiceResponse
  *
- * \brief The DatabaseMigrationServiceResponse class is the base class for all DatabaseMigrationService responses.
+ * \brief The DatabaseMigrationServiceResponse class provides an interface for DatabaseMigrationService responses.
  *
  * \ingroup DatabaseMigrationService
  */

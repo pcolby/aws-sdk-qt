@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::UpdateDevicePoolRequest
  *
- * \brief The UpdateDevicePoolRequest class encapsulates DeviceFarm UpdateDevicePool requests.
+ * \brief The UpdateDevicePoolRequest class provides an interface for DeviceFarm UpdateDevicePool requests.
  *
  * \ingroup DeviceFarm
  *

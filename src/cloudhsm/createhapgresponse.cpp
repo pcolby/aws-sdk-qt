@@ -30,7 +30,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::CreateHapgResponse
  *
- * \brief The CreateHapgResponse class encapsulates CloudHSM CreateHapg responses.
+ * \brief The CreateHapgResponse class provides an interace for CloudHSM CreateHapg responses.
  *
  * \ingroup CloudHSM
  *

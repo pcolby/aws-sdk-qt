@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::AddApplicationOutputRequest
  *
- * \brief The AddApplicationOutputRequest class encapsulates KinesisAnalytics AddApplicationOutput requests.
+ * \brief The AddApplicationOutputRequest class provides an interface for KinesisAnalytics AddApplicationOutput requests.
  *
  * \ingroup KinesisAnalytics
  *

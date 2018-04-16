@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeEngineDefaultClusterParametersResponse
  *
- * \brief The DescribeEngineDefaultClusterParametersResponse class encapsulates RDS DescribeEngineDefaultClusterParameters responses.
+ * \brief The DescribeEngineDefaultClusterParametersResponse class provides an interace for RDS DescribeEngineDefaultClusterParameters responses.
  *
  * \ingroup RDS
  *

@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListResourceRecordSetsResponse
  *
- * \brief The ListResourceRecordSetsResponse class encapsulates Route53 ListResourceRecordSets responses.
+ * \brief The ListResourceRecordSetsResponse class provides an interace for Route53 ListResourceRecordSets responses.
  *
  * \ingroup Route53
  *

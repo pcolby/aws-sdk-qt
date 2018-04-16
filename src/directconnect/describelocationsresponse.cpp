@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DescribeLocationsResponse
  *
- * \brief The DescribeLocationsResponse class encapsulates DirectConnect DescribeLocations responses.
+ * \brief The DescribeLocationsResponse class provides an interace for DirectConnect DescribeLocations responses.
  *
  * \ingroup DirectConnect
  *

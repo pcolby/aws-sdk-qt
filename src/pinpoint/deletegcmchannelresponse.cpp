@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteGcmChannelResponse
  *
- * \brief The DeleteGcmChannelResponse class encapsulates Pinpoint DeleteGcmChannel responses.
+ * \brief The DeleteGcmChannelResponse class provides an interace for Pinpoint DeleteGcmChannel responses.
  *
  * \ingroup Pinpoint
  *

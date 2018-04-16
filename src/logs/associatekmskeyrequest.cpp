@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::AssociateKmsKeyRequest
  *
- * \brief The AssociateKmsKeyRequest class encapsulates CloudWatchLogs AssociateKmsKey requests.
+ * \brief The AssociateKmsKeyRequest class provides an interface for CloudWatchLogs AssociateKmsKey requests.
  *
  * \ingroup CloudWatchLogs
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteCustomerGatewayRequest
  *
- * \brief The DeleteCustomerGatewayRequest class encapsulates EC2 DeleteCustomerGateway requests.
+ * \brief The DeleteCustomerGatewayRequest class provides an interface for EC2 DeleteCustomerGateway requests.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::StartLabelDetectionRequest
  *
- * \brief The StartLabelDetectionRequest class encapsulates Rekognition StartLabelDetection requests.
+ * \brief The StartLabelDetectionRequest class provides an interface for Rekognition StartLabelDetection requests.
  *
  * \ingroup Rekognition
  *

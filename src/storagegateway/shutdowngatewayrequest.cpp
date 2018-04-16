@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ShutdownGatewayRequest
  *
- * \brief The ShutdownGatewayRequest class encapsulates StorageGateway ShutdownGateway requests.
+ * \brief The ShutdownGatewayRequest class provides an interface for StorageGateway ShutdownGateway requests.
  *
  * \ingroup StorageGateway
  *

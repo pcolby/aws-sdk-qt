@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::ExitStandbyRequest
  *
- * \brief The ExitStandbyRequest class encapsulates AutoScaling ExitStandby requests.
+ * \brief The ExitStandbyRequest class provides an interface for AutoScaling ExitStandby requests.
  *
  * \ingroup AutoScaling
  *

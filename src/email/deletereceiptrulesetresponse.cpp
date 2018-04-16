@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteReceiptRuleSetResponse
  *
- * \brief The DeleteReceiptRuleSetResponse class encapsulates SES DeleteReceiptRuleSet responses.
+ * \brief The DeleteReceiptRuleSetResponse class provides an interace for SES DeleteReceiptRuleSet responses.
  *
  * \ingroup SES
  *

@@ -30,7 +30,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::CreateIdentityPoolResponse
  *
- * \brief The CreateIdentityPoolResponse class encapsulates CognitoIdentity CreateIdentityPool responses.
+ * \brief The CreateIdentityPoolResponse class provides an interace for CognitoIdentity CreateIdentityPool responses.
  *
  * \ingroup CognitoIdentity
  *

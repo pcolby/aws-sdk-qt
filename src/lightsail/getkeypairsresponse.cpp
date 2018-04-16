@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetKeyPairsResponse
  *
- * \brief The GetKeyPairsResponse class encapsulates Lightsail GetKeyPairs responses.
+ * \brief The GetKeyPairsResponse class provides an interace for Lightsail GetKeyPairs responses.
  *
  * \ingroup Lightsail
  *

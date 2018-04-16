@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::UploadPartCopyRequest
  *
- * \brief The UploadPartCopyRequest class encapsulates S3 UploadPartCopy requests.
+ * \brief The UploadPartCopyRequest class provides an interface for S3 UploadPartCopy requests.
  *
  * \ingroup S3
  *

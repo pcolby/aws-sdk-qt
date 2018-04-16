@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteUserDefinedFunctionResponse
  *
- * \brief The DeleteUserDefinedFunctionResponse class encapsulates Glue DeleteUserDefinedFunction responses.
+ * \brief The DeleteUserDefinedFunctionResponse class provides an interace for Glue DeleteUserDefinedFunction responses.
  *
  * \ingroup Glue
  *

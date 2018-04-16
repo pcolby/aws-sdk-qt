@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::PutConfigRuleResponse
  *
- * \brief The PutConfigRuleResponse class encapsulates ConfigService PutConfigRule responses.
+ * \brief The PutConfigRuleResponse class provides an interace for ConfigService PutConfigRule responses.
  *
  * \ingroup ConfigService
  *

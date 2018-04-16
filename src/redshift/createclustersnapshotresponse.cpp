@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::CreateClusterSnapshotResponse
  *
- * \brief The CreateClusterSnapshotResponse class encapsulates Redshift CreateClusterSnapshot responses.
+ * \brief The CreateClusterSnapshotResponse class provides an interace for Redshift CreateClusterSnapshot responses.
  *
  * \ingroup Redshift
  *

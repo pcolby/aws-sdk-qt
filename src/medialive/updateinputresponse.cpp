@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::UpdateInputResponse
  *
- * \brief The UpdateInputResponse class encapsulates MediaLive UpdateInput responses.
+ * \brief The UpdateInputResponse class provides an interace for MediaLive UpdateInput responses.
  *
  * \ingroup MediaLive
  *

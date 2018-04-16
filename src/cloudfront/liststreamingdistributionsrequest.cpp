@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::ListStreamingDistributionsRequest
  *
- * \brief The ListStreamingDistributionsRequest class encapsulates CloudFront ListStreamingDistributions requests.
+ * \brief The ListStreamingDistributionsRequest class provides an interface for CloudFront ListStreamingDistributions requests.
  *
  * \ingroup CloudFront
  *

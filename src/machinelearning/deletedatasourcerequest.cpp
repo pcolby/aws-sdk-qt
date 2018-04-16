@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DeleteDataSourceRequest
  *
- * \brief The DeleteDataSourceRequest class encapsulates MachineLearning DeleteDataSource requests.
+ * \brief The DeleteDataSourceRequest class provides an interface for MachineLearning DeleteDataSource requests.
  *
  * \ingroup MachineLearning
  *

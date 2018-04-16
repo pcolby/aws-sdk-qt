@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::ListAssociatedStacksRequest
  *
- * \brief The ListAssociatedStacksRequest class encapsulates AppStream ListAssociatedStacks requests.
+ * \brief The ListAssociatedStacksRequest class provides an interface for AppStream ListAssociatedStacks requests.
  *
  * \ingroup AppStream
  *

@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DescribeConfigurationSetResponse
  *
- * \brief The DescribeConfigurationSetResponse class encapsulates SES DescribeConfigurationSet responses.
+ * \brief The DescribeConfigurationSetResponse class provides an interace for SES DescribeConfigurationSet responses.
  *
  * \ingroup SES
  *

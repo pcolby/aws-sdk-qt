@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::UpdateAliasResponse
  *
- * \brief The UpdateAliasResponse class encapsulates KMS UpdateAlias responses.
+ * \brief The UpdateAliasResponse class provides an interace for KMS UpdateAlias responses.
  *
  * \ingroup KMS
  *

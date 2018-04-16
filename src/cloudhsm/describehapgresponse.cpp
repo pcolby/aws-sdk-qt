@@ -30,7 +30,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::DescribeHapgResponse
  *
- * \brief The DescribeHapgResponse class encapsulates CloudHSM DescribeHapg responses.
+ * \brief The DescribeHapgResponse class provides an interace for CloudHSM DescribeHapg responses.
  *
  * \ingroup CloudHSM
  *

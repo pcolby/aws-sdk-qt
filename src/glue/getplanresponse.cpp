@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetPlanResponse
  *
- * \brief The GetPlanResponse class encapsulates Glue GetPlan responses.
+ * \brief The GetPlanResponse class provides an interace for Glue GetPlan responses.
  *
  * \ingroup Glue
  *

@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::RemoveTagsFromResourceResponse
  *
- * \brief The RemoveTagsFromResourceResponse class encapsulates SSM RemoveTagsFromResource responses.
+ * \brief The RemoveTagsFromResourceResponse class provides an interace for SSM RemoveTagsFromResource responses.
  *
  * \ingroup SSM
  *

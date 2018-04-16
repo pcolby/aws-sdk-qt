@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::StartInstancesResponse
  *
- * \brief The StartInstancesResponse class encapsulates EC2 StartInstances responses.
+ * \brief The StartInstancesResponse class provides an interace for EC2 StartInstances responses.
  *
  * \ingroup EC2
  *

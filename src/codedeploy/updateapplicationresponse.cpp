@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::UpdateApplicationResponse
  *
- * \brief The UpdateApplicationResponse class encapsulates CodeDeploy UpdateApplication responses.
+ * \brief The UpdateApplicationResponse class provides an interace for CodeDeploy UpdateApplication responses.
  *
  * \ingroup CodeDeploy
  *

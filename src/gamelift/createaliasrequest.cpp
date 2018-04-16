@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::CreateAliasRequest
  *
- * \brief The CreateAliasRequest class encapsulates GameLift CreateAlias requests.
+ * \brief The CreateAliasRequest class provides an interface for GameLift CreateAlias requests.
  *
  * \ingroup GameLift
  *

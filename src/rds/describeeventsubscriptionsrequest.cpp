@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeEventSubscriptionsRequest
  *
- * \brief The DescribeEventSubscriptionsRequest class encapsulates RDS DescribeEventSubscriptions requests.
+ * \brief The DescribeEventSubscriptionsRequest class provides an interface for RDS DescribeEventSubscriptions requests.
  *
  * \ingroup RDS
  *

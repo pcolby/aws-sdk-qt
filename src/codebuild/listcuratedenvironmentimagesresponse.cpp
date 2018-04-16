@@ -30,7 +30,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::ListCuratedEnvironmentImagesResponse
  *
- * \brief The ListCuratedEnvironmentImagesResponse class encapsulates CodeBuild ListCuratedEnvironmentImages responses.
+ * \brief The ListCuratedEnvironmentImagesResponse class provides an interace for CodeBuild ListCuratedEnvironmentImages responses.
  *
  * \ingroup CodeBuild
  *

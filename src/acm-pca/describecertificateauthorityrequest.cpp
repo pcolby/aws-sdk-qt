@@ -28,7 +28,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::DescribeCertificateAuthorityRequest
  *
- * \brief The DescribeCertificateAuthorityRequest class encapsulates ACMPCA DescribeCertificateAuthority requests.
+ * \brief The DescribeCertificateAuthorityRequest class provides an interface for ACMPCA DescribeCertificateAuthority requests.
  *
  * \ingroup ACMPCA
  *

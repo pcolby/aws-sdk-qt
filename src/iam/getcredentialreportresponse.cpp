@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetCredentialReportResponse
  *
- * \brief The GetCredentialReportResponse class encapsulates IAM GetCredentialReport responses.
+ * \brief The GetCredentialReportResponse class provides an interace for IAM GetCredentialReport responses.
  *
  * \ingroup IAM
  *

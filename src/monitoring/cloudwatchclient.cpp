@@ -69,7 +69,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::CloudWatchClient
  *
- * \brief The CloudWatchClient class provides access the Amazon CloudWatch service.
+ * \brief The CloudWatchClient class provides access to the Amazon CloudWatch service.
  *
  * \ingroup CloudWatch
  *

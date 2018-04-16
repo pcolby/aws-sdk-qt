@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DeclineInvitationsResponse
  *
- * \brief The DeclineInvitationsResponse class encapsulates GuardDuty DeclineInvitations responses.
+ * \brief The DeclineInvitationsResponse class provides an interace for GuardDuty DeclineInvitations responses.
  *
  * \ingroup GuardDuty
  *

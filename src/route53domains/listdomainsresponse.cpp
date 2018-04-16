@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::ListDomainsResponse
  *
- * \brief The ListDomainsResponse class encapsulates Route53Domains ListDomains responses.
+ * \brief The ListDomainsResponse class provides an interace for Route53Domains ListDomains responses.
  *
  * \ingroup Route53Domains
  *

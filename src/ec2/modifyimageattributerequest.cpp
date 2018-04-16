@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyImageAttributeRequest
  *
- * \brief The ModifyImageAttributeRequest class encapsulates EC2 ModifyImageAttribute requests.
+ * \brief The ModifyImageAttributeRequest class provides an interface for EC2 ModifyImageAttribute requests.
  *
  * \ingroup EC2
  *

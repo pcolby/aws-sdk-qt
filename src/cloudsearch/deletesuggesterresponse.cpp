@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DeleteSuggesterResponse
  *
- * \brief The DeleteSuggesterResponse class encapsulates CloudSearch DeleteSuggester responses.
+ * \brief The DeleteSuggesterResponse class provides an interace for CloudSearch DeleteSuggester responses.
  *
  * \ingroup CloudSearch
  *

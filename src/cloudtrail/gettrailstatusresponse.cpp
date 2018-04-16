@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::GetTrailStatusResponse
  *
- * \brief The GetTrailStatusResponse class encapsulates CloudTrail GetTrailStatus responses.
+ * \brief The GetTrailStatusResponse class provides an interace for CloudTrail GetTrailStatus responses.
  *
  * \ingroup CloudTrail
  *

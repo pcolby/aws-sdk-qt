@@ -29,7 +29,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DirectoryServiceResponse
  *
- * \brief The DirectoryServiceResponse class is the base class for all DirectoryService responses.
+ * \brief The DirectoryServiceResponse class provides an interface for DirectoryService responses.
  *
  * \ingroup DirectoryService
  */

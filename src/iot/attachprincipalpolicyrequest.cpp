@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::AttachPrincipalPolicyRequest
  *
- * \brief The AttachPrincipalPolicyRequest class encapsulates IoT AttachPrincipalPolicy requests.
+ * \brief The AttachPrincipalPolicyRequest class provides an interface for IoT AttachPrincipalPolicy requests.
  *
  * \ingroup IoT
  *

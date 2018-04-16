@@ -30,7 +30,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::GetGroupQueryResponse
  *
- * \brief The GetGroupQueryResponse class encapsulates ResourceGroups GetGroupQuery responses.
+ * \brief The GetGroupQueryResponse class provides an interace for ResourceGroups GetGroupQuery responses.
  *
  * \ingroup ResourceGroups
  *

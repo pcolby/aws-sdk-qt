@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::SignalResourceRequest
  *
- * \brief The SignalResourceRequest class encapsulates CloudFormation SignalResource requests.
+ * \brief The SignalResourceRequest class provides an interface for CloudFormation SignalResource requests.
  *
  * \ingroup CloudFormation
  *

@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::DeregisterScalableTargetRequest
  *
- * \brief The DeregisterScalableTargetRequest class encapsulates ApplicationAutoScaling DeregisterScalableTarget requests.
+ * \brief The DeregisterScalableTargetRequest class provides an interface for ApplicationAutoScaling DeregisterScalableTarget requests.
  *
  * \ingroup ApplicationAutoScaling
  *

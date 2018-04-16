@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::UpdateInputSecurityGroupRequest
  *
- * \brief The UpdateInputSecurityGroupRequest class encapsulates MediaLive UpdateInputSecurityGroup requests.
+ * \brief The UpdateInputSecurityGroupRequest class provides an interface for MediaLive UpdateInputSecurityGroup requests.
  *
  * \ingroup MediaLive
  *

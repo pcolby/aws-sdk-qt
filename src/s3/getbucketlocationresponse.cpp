@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketLocationResponse
  *
- * \brief The GetBucketLocationResponse class encapsulates S3 GetBucketLocation responses.
+ * \brief The GetBucketLocationResponse class provides an interace for S3 GetBucketLocation responses.
  *
  * \ingroup S3
  *

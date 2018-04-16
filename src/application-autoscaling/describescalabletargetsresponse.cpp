@@ -30,7 +30,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::DescribeScalableTargetsResponse
  *
- * \brief The DescribeScalableTargetsResponse class encapsulates ApplicationAutoScaling DescribeScalableTargets responses.
+ * \brief The DescribeScalableTargetsResponse class provides an interace for ApplicationAutoScaling DescribeScalableTargets responses.
  *
  * \ingroup ApplicationAutoScaling
  *

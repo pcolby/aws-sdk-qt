@@ -30,7 +30,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::AddTagsResponse
  *
- * \brief The AddTagsResponse class encapsulates ElasticLoadBalancing AddTags responses.
+ * \brief The AddTagsResponse class provides an interace for ElasticLoadBalancing AddTags responses.
  *
  * \ingroup ElasticLoadBalancing
  *

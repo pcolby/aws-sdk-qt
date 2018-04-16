@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::DeregisterOnPremisesInstanceResponse
  *
- * \brief The DeregisterOnPremisesInstanceResponse class encapsulates CodeDeploy DeregisterOnPremisesInstance responses.
+ * \brief The DeregisterOnPremisesInstanceResponse class provides an interace for CodeDeploy DeregisterOnPremisesInstance responses.
  *
  * \ingroup CodeDeploy
  *

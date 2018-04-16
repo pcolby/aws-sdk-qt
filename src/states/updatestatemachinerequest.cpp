@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::UpdateStateMachineRequest
  *
- * \brief The UpdateStateMachineRequest class encapsulates SFN UpdateStateMachine requests.
+ * \brief The UpdateStateMachineRequest class provides an interface for SFN UpdateStateMachine requests.
  *
  * \ingroup SFN
  *

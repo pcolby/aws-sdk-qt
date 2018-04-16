@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeOrderableDBInstanceOptionsResponse
  *
- * \brief The DescribeOrderableDBInstanceOptionsResponse class encapsulates RDS DescribeOrderableDBInstanceOptions responses.
+ * \brief The DescribeOrderableDBInstanceOptionsResponse class provides an interace for RDS DescribeOrderableDBInstanceOptions responses.
  *
  * \ingroup RDS
  *

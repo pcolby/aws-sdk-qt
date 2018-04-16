@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SetIdentityFeedbackForwardingEnabledResponse
  *
- * \brief The SetIdentityFeedbackForwardingEnabledResponse class encapsulates SES SetIdentityFeedbackForwardingEnabled responses.
+ * \brief The SetIdentityFeedbackForwardingEnabledResponse class provides an interace for SES SetIdentityFeedbackForwardingEnabled responses.
  *
  * \ingroup SES
  *

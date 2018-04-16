@@ -30,7 +30,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::RestoreSecretResponse
  *
- * \brief The RestoreSecretResponse class encapsulates SecretsManager RestoreSecret responses.
+ * \brief The RestoreSecretResponse class provides an interace for SecretsManager RestoreSecret responses.
  *
  * \ingroup SecretsManager
  *

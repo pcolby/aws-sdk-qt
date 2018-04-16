@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::DeletePipelineRequest
  *
- * \brief The DeletePipelineRequest class encapsulates CodePipeline DeletePipeline requests.
+ * \brief The DeletePipelineRequest class provides an interface for CodePipeline DeletePipeline requests.
  *
  * \ingroup CodePipeline
  *

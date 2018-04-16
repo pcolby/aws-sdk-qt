@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::GetUserAttributeVerificationCodeResponse
  *
- * \brief The GetUserAttributeVerificationCodeResponse class encapsulates CognitoIdentityProvider GetUserAttributeVerificationCode responses.
+ * \brief The GetUserAttributeVerificationCodeResponse class provides an interace for CognitoIdentityProvider GetUserAttributeVerificationCode responses.
  *
  * \ingroup CognitoIdentityProvider
  *

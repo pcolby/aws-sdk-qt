@@ -73,7 +73,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::ServiceDiscoveryClient
  *
- * \brief The ServiceDiscoveryClient class provides access the Amazon Route 53 Auto Naming (ServiceDiscovery) service.
+ * \brief The ServiceDiscoveryClient class provides access to the Amazon Route 53 Auto Naming (ServiceDiscovery) service.
  *
  * \ingroup ServiceDiscovery
  *

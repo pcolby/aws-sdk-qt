@@ -28,7 +28,7 @@ namespace CloudSearchDomain {
 /*!
  * \class QtAws::CloudSearchDomain::SuggestRequest
  *
- * \brief The SuggestRequest class encapsulates CloudSearchDomain Suggest requests.
+ * \brief The SuggestRequest class provides an interface for CloudSearchDomain Suggest requests.
  *
  * \ingroup CloudSearchDomain
  *

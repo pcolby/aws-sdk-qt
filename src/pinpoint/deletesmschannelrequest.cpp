@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteSmsChannelRequest
  *
- * \brief The DeleteSmsChannelRequest class encapsulates Pinpoint DeleteSmsChannel requests.
+ * \brief The DeleteSmsChannelRequest class provides an interface for Pinpoint DeleteSmsChannel requests.
  *
  * \ingroup Pinpoint
  *

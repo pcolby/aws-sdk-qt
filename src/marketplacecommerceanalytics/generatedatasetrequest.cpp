@@ -28,7 +28,7 @@ namespace MarketplaceCommerceAnalytics {
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::GenerateDataSetRequest
  *
- * \brief The GenerateDataSetRequest class encapsulates MarketplaceCommerceAnalytics GenerateDataSet requests.
+ * \brief The GenerateDataSetRequest class provides an interface for MarketplaceCommerceAnalytics GenerateDataSet requests.
  *
  * \ingroup MarketplaceCommerceAnalytics
  *

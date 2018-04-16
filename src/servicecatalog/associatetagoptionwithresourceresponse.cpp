@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::AssociateTagOptionWithResourceResponse
  *
- * \brief The AssociateTagOptionWithResourceResponse class encapsulates ServiceCatalog AssociateTagOptionWithResource responses.
+ * \brief The AssociateTagOptionWithResourceResponse class provides an interace for ServiceCatalog AssociateTagOptionWithResource responses.
  *
  * \ingroup ServiceCatalog
  *

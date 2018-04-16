@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::GetDocumentPathResponse
  *
- * \brief The GetDocumentPathResponse class encapsulates WorkDocs GetDocumentPath responses.
+ * \brief The GetDocumentPathResponse class provides an interace for WorkDocs GetDocumentPath responses.
  *
  * \ingroup WorkDocs
  *

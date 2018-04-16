@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteKeyPairRequest
  *
- * \brief The DeleteKeyPairRequest class encapsulates EC2 DeleteKeyPair requests.
+ * \brief The DeleteKeyPairRequest class provides an interface for EC2 DeleteKeyPair requests.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeAssociationResponse
  *
- * \brief The DescribeAssociationResponse class encapsulates SSM DescribeAssociation responses.
+ * \brief The DescribeAssociationResponse class provides an interace for SSM DescribeAssociation responses.
  *
  * \ingroup SSM
  *

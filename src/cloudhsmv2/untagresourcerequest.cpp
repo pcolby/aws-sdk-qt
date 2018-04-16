@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::UntagResourceRequest
  *
- * \brief The UntagResourceRequest class encapsulates CloudHSMV2 UntagResource requests.
+ * \brief The UntagResourceRequest class provides an interface for CloudHSMV2 UntagResource requests.
  *
  * \ingroup CloudHSMV2
  *

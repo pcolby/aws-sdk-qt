@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateDocumentationPartResponse
  *
- * \brief The CreateDocumentationPartResponse class encapsulates APIGateway CreateDocumentationPart responses.
+ * \brief The CreateDocumentationPartResponse class provides an interace for APIGateway CreateDocumentationPart responses.
  *
  * \ingroup APIGateway
  *

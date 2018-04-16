@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeleteAppRequest
  *
- * \brief The DeleteAppRequest class encapsulates OpsWorks DeleteApp requests.
+ * \brief The DeleteAppRequest class provides an interface for OpsWorks DeleteApp requests.
  *
  * \ingroup OpsWorks
  *

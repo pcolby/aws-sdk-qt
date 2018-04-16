@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::CreateServerRequest
  *
- * \brief The CreateServerRequest class encapsulates OpsWorksCM CreateServer requests.
+ * \brief The CreateServerRequest class provides an interface for OpsWorksCM CreateServer requests.
  *
  * \ingroup OpsWorksCM
  *

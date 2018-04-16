@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::ListPublicKeysRequest
  *
- * \brief The ListPublicKeysRequest class encapsulates CloudFront ListPublicKeys requests.
+ * \brief The ListPublicKeysRequest class provides an interface for CloudFront ListPublicKeys requests.
  *
  * \ingroup CloudFront
  *

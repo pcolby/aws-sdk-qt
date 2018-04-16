@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::DeleteBucketMetricsConfigurationRequest
  *
- * \brief The DeleteBucketMetricsConfigurationRequest class encapsulates S3 DeleteBucketMetricsConfiguration requests.
+ * \brief The DeleteBucketMetricsConfigurationRequest class provides an interface for S3 DeleteBucketMetricsConfiguration requests.
  *
  * \ingroup S3
  *

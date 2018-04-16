@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeVTLDevicesRequest
  *
- * \brief The DescribeVTLDevicesRequest class encapsulates StorageGateway DescribeVTLDevices requests.
+ * \brief The DescribeVTLDevicesRequest class provides an interface for StorageGateway DescribeVTLDevices requests.
  *
  * \ingroup StorageGateway
  *

@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::TestInvokeAuthorizerRequest
  *
- * \brief The TestInvokeAuthorizerRequest class encapsulates APIGateway TestInvokeAuthorizer requests.
+ * \brief The TestInvokeAuthorizerRequest class provides an interface for APIGateway TestInvokeAuthorizer requests.
  *
  * \ingroup APIGateway
  *

@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetSubscriptionDefinitionRequest
  *
- * \brief The GetSubscriptionDefinitionRequest class encapsulates Greengrass GetSubscriptionDefinition requests.
+ * \brief The GetSubscriptionDefinitionRequest class provides an interface for Greengrass GetSubscriptionDefinition requests.
  *
  * \ingroup Greengrass
  *

@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::DescribeScalableTargetsRequest
  *
- * \brief The DescribeScalableTargetsRequest class encapsulates ApplicationAutoScaling DescribeScalableTargets requests.
+ * \brief The DescribeScalableTargetsRequest class provides an interface for ApplicationAutoScaling DescribeScalableTargets requests.
  *
  * \ingroup ApplicationAutoScaling
  *

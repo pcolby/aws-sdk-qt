@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribePatchGroupsRequest
  *
- * \brief The DescribePatchGroupsRequest class encapsulates SSM DescribePatchGroups requests.
+ * \brief The DescribePatchGroupsRequest class provides an interface for SSM DescribePatchGroups requests.
  *
  * \ingroup SSM
  *

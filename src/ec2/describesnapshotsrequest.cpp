@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeSnapshotsRequest
  *
- * \brief The DescribeSnapshotsRequest class encapsulates EC2 DescribeSnapshots requests.
+ * \brief The DescribeSnapshotsRequest class provides an interface for EC2 DescribeSnapshots requests.
  *
  * \ingroup EC2
  *

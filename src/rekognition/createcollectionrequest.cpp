@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::CreateCollectionRequest
  *
- * \brief The CreateCollectionRequest class encapsulates Rekognition CreateCollection requests.
+ * \brief The CreateCollectionRequest class provides an interface for Rekognition CreateCollection requests.
  *
  * \ingroup Rekognition
  *

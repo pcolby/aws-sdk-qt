@@ -28,7 +28,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::AddAttachmentsToSetRequest
  *
- * \brief The AddAttachmentsToSetRequest class encapsulates Support AddAttachmentsToSet requests.
+ * \brief The AddAttachmentsToSetRequest class provides an interface for Support AddAttachmentsToSet requests.
  *
  * \ingroup Support
  *

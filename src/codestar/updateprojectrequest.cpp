@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::UpdateProjectRequest
  *
- * \brief The UpdateProjectRequest class encapsulates CodeStar UpdateProject requests.
+ * \brief The UpdateProjectRequest class provides an interface for CodeStar UpdateProject requests.
  *
  * \ingroup CodeStar
  *

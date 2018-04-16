@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::UpdateGroupRequest
  *
- * \brief The UpdateGroupRequest class encapsulates Greengrass UpdateGroup requests.
+ * \brief The UpdateGroupRequest class provides an interface for Greengrass UpdateGroup requests.
  *
  * \ingroup Greengrass
  *

@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListAttachedPoliciesResponse
  *
- * \brief The ListAttachedPoliciesResponse class encapsulates IoT ListAttachedPolicies responses.
+ * \brief The ListAttachedPoliciesResponse class provides an interace for IoT ListAttachedPolicies responses.
  *
  * \ingroup IoT
  *

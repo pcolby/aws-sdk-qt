@@ -30,7 +30,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::PutSecretValueResponse
  *
- * \brief The PutSecretValueResponse class encapsulates SecretsManager PutSecretValue responses.
+ * \brief The PutSecretValueResponse class provides an interace for SecretsManager PutSecretValue responses.
  *
  * \ingroup SecretsManager
  *

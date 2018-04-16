@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateDeviceDefinitionVersionRequest
  *
- * \brief The CreateDeviceDefinitionVersionRequest class encapsulates Greengrass CreateDeviceDefinitionVersion requests.
+ * \brief The CreateDeviceDefinitionVersionRequest class provides an interface for Greengrass CreateDeviceDefinitionVersion requests.
  *
  * \ingroup Greengrass
  *

@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeUsersResponse
  *
- * \brief The DescribeUsersResponse class encapsulates WorkDocs DescribeUsers responses.
+ * \brief The DescribeUsersResponse class provides an interace for WorkDocs DescribeUsers responses.
  *
  * \ingroup WorkDocs
  *

@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::ComposeEnvironmentsResponse
  *
- * \brief The ComposeEnvironmentsResponse class encapsulates ElasticBeanstalk ComposeEnvironments responses.
+ * \brief The ComposeEnvironmentsResponse class provides an interace for ElasticBeanstalk ComposeEnvironments responses.
  *
  * \ingroup ElasticBeanstalk
  *

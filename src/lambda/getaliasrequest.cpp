@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::GetAliasRequest
  *
- * \brief The GetAliasRequest class encapsulates Lambda GetAlias requests.
+ * \brief The GetAliasRequest class provides an interface for Lambda GetAlias requests.
  *
  * \ingroup Lambda
  *

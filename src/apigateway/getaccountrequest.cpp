@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetAccountRequest
  *
- * \brief The GetAccountRequest class encapsulates APIGateway GetAccount requests.
+ * \brief The GetAccountRequest class provides an interface for APIGateway GetAccount requests.
  *
  * \ingroup APIGateway
  *

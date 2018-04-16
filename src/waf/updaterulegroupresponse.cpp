@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::UpdateRuleGroupResponse
  *
- * \brief The UpdateRuleGroupResponse class encapsulates WAF UpdateRuleGroup responses.
+ * \brief The UpdateRuleGroupResponse class provides an interace for WAF UpdateRuleGroup responses.
  *
  * \ingroup WAF
  *

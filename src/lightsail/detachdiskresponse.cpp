@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DetachDiskResponse
  *
- * \brief The DetachDiskResponse class encapsulates Lightsail DetachDisk responses.
+ * \brief The DetachDiskResponse class provides an interace for Lightsail DetachDisk responses.
  *
  * \ingroup Lightsail
  *

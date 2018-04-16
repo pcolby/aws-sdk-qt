@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketNotificationConfigurationResponse
  *
- * \brief The GetBucketNotificationConfigurationResponse class encapsulates S3 GetBucketNotificationConfiguration responses.
+ * \brief The GetBucketNotificationConfigurationResponse class provides an interace for S3 GetBucketNotificationConfiguration responses.
  *
  * \ingroup S3
  *

@@ -29,7 +29,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::WAFRegionalResponse
  *
- * \brief The WAFRegionalResponse class is the base class for all WAFRegional responses.
+ * \brief The WAFRegionalResponse class provides an interface for WAFRegional responses.
  *
  * \ingroup WAFRegional
  */

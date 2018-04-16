@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListAWSServiceAccessForOrganizationRequest
  *
- * \brief The ListAWSServiceAccessForOrganizationRequest class encapsulates Organizations ListAWSServiceAccessForOrganization requests.
+ * \brief The ListAWSServiceAccessForOrganizationRequest class provides an interface for Organizations ListAWSServiceAccessForOrganization requests.
  *
  * \ingroup Organizations
  *

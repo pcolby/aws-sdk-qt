@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::UpdateGroupCertificateConfigurationRequest
  *
- * \brief The UpdateGroupCertificateConfigurationRequest class encapsulates Greengrass UpdateGroupCertificateConfiguration requests.
+ * \brief The UpdateGroupCertificateConfigurationRequest class provides an interface for Greengrass UpdateGroupCertificateConfiguration requests.
  *
  * \ingroup Greengrass
  *

@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::SplitShardRequest
  *
- * \brief The SplitShardRequest class encapsulates Kinesis SplitShard requests.
+ * \brief The SplitShardRequest class provides an interface for Kinesis SplitShard requests.
  *
  * \ingroup Kinesis
  *

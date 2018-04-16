@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DeleteAliasRequest
  *
- * \brief The DeleteAliasRequest class encapsulates WorkMail DeleteAlias requests.
+ * \brief The DeleteAliasRequest class provides an interface for WorkMail DeleteAlias requests.
  *
  * \ingroup WorkMail
  *

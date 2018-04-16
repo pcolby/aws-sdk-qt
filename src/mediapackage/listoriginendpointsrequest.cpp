@@ -28,7 +28,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::ListOriginEndpointsRequest
  *
- * \brief The ListOriginEndpointsRequest class encapsulates MediaPackage ListOriginEndpoints requests.
+ * \brief The ListOriginEndpointsRequest class provides an interface for MediaPackage ListOriginEndpoints requests.
  *
  * \ingroup MediaPackage
  *

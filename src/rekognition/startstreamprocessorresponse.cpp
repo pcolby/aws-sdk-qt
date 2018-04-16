@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::StartStreamProcessorResponse
  *
- * \brief The StartStreamProcessorResponse class encapsulates Rekognition StartStreamProcessor responses.
+ * \brief The StartStreamProcessorResponse class provides an interace for Rekognition StartStreamProcessor responses.
  *
  * \ingroup Rekognition
  *

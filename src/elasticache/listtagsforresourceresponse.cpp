@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ListTagsForResourceResponse
  *
- * \brief The ListTagsForResourceResponse class encapsulates ElastiCache ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class provides an interace for ElastiCache ListTagsForResource responses.
  *
  * \ingroup ElastiCache
  *

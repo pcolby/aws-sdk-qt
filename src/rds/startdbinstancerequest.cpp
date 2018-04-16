@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::StartDBInstanceRequest
  *
- * \brief The StartDBInstanceRequest class encapsulates RDS StartDBInstance requests.
+ * \brief The StartDBInstanceRequest class provides an interface for RDS StartDBInstance requests.
  *
  * \ingroup RDS
  *

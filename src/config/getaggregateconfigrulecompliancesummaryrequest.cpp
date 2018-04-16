@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::GetAggregateConfigRuleComplianceSummaryRequest
  *
- * \brief The GetAggregateConfigRuleComplianceSummaryRequest class encapsulates ConfigService GetAggregateConfigRuleComplianceSummary requests.
+ * \brief The GetAggregateConfigRuleComplianceSummaryRequest class provides an interface for ConfigService GetAggregateConfigRuleComplianceSummary requests.
  *
  * \ingroup ConfigService
  *

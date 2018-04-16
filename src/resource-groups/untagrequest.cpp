@@ -28,7 +28,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::UntagRequest
  *
- * \brief The UntagRequest class encapsulates ResourceGroups Untag requests.
+ * \brief The UntagRequest class provides an interface for ResourceGroups Untag requests.
  *
  * \ingroup ResourceGroups
  *

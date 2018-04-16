@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::SelectObjectContentRequest
  *
- * \brief The SelectObjectContentRequest class encapsulates S3 SelectObjectContent requests.
+ * \brief The SelectObjectContentRequest class provides an interface for S3 SelectObjectContent requests.
  *
  * \ingroup S3
  *

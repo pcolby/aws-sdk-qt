@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::PutFunctionConcurrencyResponse
  *
- * \brief The PutFunctionConcurrencyResponse class encapsulates Lambda PutFunctionConcurrency responses.
+ * \brief The PutFunctionConcurrencyResponse class provides an interace for Lambda PutFunctionConcurrency responses.
  *
  * \ingroup Lambda
  *

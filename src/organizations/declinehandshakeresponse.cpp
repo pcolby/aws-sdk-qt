@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DeclineHandshakeResponse
  *
- * \brief The DeclineHandshakeResponse class encapsulates Organizations DeclineHandshake responses.
+ * \brief The DeclineHandshakeResponse class provides an interace for Organizations DeclineHandshake responses.
  *
  * \ingroup Organizations
  *

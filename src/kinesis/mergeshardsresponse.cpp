@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::MergeShardsResponse
  *
- * \brief The MergeShardsResponse class encapsulates Kinesis MergeShards responses.
+ * \brief The MergeShardsResponse class provides an interace for Kinesis MergeShards responses.
  *
  * \ingroup Kinesis
  *

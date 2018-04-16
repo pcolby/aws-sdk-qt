@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::UpdatePipelineRequest
  *
- * \brief The UpdatePipelineRequest class encapsulates CodePipeline UpdatePipeline requests.
+ * \brief The UpdatePipelineRequest class provides an interface for CodePipeline UpdatePipeline requests.
  *
  * \ingroup CodePipeline
  *

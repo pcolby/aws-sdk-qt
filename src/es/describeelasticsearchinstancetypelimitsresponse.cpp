@@ -30,7 +30,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::DescribeElasticsearchInstanceTypeLimitsResponse
  *
- * \brief The DescribeElasticsearchInstanceTypeLimitsResponse class encapsulates ElasticsearchService DescribeElasticsearchInstanceTypeLimits responses.
+ * \brief The DescribeElasticsearchInstanceTypeLimitsResponse class provides an interace for ElasticsearchService DescribeElasticsearchInstanceTypeLimits responses.
  *
  * \ingroup ElasticsearchService
  *

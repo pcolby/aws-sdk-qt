@@ -30,7 +30,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::DescribeAttachmentResponse
  *
- * \brief The DescribeAttachmentResponse class encapsulates Support DescribeAttachment responses.
+ * \brief The DescribeAttachmentResponse class provides an interace for Support DescribeAttachment responses.
  *
  * \ingroup Support
  *

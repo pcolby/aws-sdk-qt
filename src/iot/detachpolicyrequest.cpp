@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DetachPolicyRequest
  *
- * \brief The DetachPolicyRequest class encapsulates IoT DetachPolicy requests.
+ * \brief The DetachPolicyRequest class provides an interface for IoT DetachPolicy requests.
  *
  * \ingroup IoT
  *

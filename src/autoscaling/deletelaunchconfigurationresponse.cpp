@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DeleteLaunchConfigurationResponse
  *
- * \brief The DeleteLaunchConfigurationResponse class encapsulates AutoScaling DeleteLaunchConfiguration responses.
+ * \brief The DeleteLaunchConfigurationResponse class provides an interace for AutoScaling DeleteLaunchConfiguration responses.
  *
  * \ingroup AutoScaling
  *

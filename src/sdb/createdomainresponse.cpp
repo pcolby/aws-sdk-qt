@@ -30,7 +30,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::CreateDomainResponse
  *
- * \brief The CreateDomainResponse class encapsulates SimpleDB CreateDomain responses.
+ * \brief The CreateDomainResponse class provides an interace for SimpleDB CreateDomain responses.
  *
  * \ingroup SimpleDB
  *

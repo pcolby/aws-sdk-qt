@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateRouteResponse
  *
- * \brief The CreateRouteResponse class encapsulates EC2 CreateRoute responses.
+ * \brief The CreateRouteResponse class provides an interace for EC2 CreateRoute responses.
  *
  * \ingroup EC2
  *

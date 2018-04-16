@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::DeleteVPCAssociationAuthorizationResponse
  *
- * \brief The DeleteVPCAssociationAuthorizationResponse class encapsulates Route53 DeleteVPCAssociationAuthorization responses.
+ * \brief The DeleteVPCAssociationAuthorizationResponse class provides an interace for Route53 DeleteVPCAssociationAuthorization responses.
  *
  * \ingroup Route53
  *

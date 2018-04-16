@@ -30,7 +30,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::ListTagsForCertificateResponse
  *
- * \brief The ListTagsForCertificateResponse class encapsulates ACM ListTagsForCertificate responses.
+ * \brief The ListTagsForCertificateResponse class provides an interace for ACM ListTagsForCertificate responses.
  *
  * \ingroup ACM
  *

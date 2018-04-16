@@ -28,7 +28,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::ListTagsForStreamRequest
  *
- * \brief The ListTagsForStreamRequest class encapsulates KinesisVideo ListTagsForStream requests.
+ * \brief The ListTagsForStreamRequest class provides an interface for KinesisVideo ListTagsForStream requests.
  *
  * \ingroup KinesisVideo
  *

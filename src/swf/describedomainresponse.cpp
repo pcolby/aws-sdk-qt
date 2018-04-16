@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::DescribeDomainResponse
  *
- * \brief The DescribeDomainResponse class encapsulates SWF DescribeDomain responses.
+ * \brief The DescribeDomainResponse class provides an interace for SWF DescribeDomain responses.
  *
  * \ingroup SWF
  *

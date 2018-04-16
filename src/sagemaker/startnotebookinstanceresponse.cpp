@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::StartNotebookInstanceResponse
  *
- * \brief The StartNotebookInstanceResponse class encapsulates SageMaker StartNotebookInstance responses.
+ * \brief The StartNotebookInstanceResponse class provides an interace for SageMaker StartNotebookInstance responses.
  *
  * \ingroup SageMaker
  *

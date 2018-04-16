@@ -107,7 +107,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::KmsClient
  *
- * \brief The KmsClient class provides access the AWS Key Management Service (KMS) service.
+ * \brief The KmsClient class provides access to the AWS Key Management Service (KMS) service.
  *
  * \ingroup KMS
  *

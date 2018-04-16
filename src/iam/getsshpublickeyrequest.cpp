@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetSSHPublicKeyRequest
  *
- * \brief The GetSSHPublicKeyRequest class encapsulates IAM GetSSHPublicKey requests.
+ * \brief The GetSSHPublicKeyRequest class provides an interface for IAM GetSSHPublicKey requests.
  *
  * \ingroup IAM
  *

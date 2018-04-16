@@ -26,7 +26,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::MediaPackageRequest
  *
- * \brief The MediaPackageRequest class is the base class for all MediaPackage requests.
+ * \brief The MediaPackageRequest class provides an interface for MediaPackage requests.
  *
  * \ingroup MediaPackage
  */

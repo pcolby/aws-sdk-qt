@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DescribeReservedCacheNodesOfferingsRequest
  *
- * \brief The DescribeReservedCacheNodesOfferingsRequest class encapsulates ElastiCache DescribeReservedCacheNodesOfferings requests.
+ * \brief The DescribeReservedCacheNodesOfferingsRequest class provides an interface for ElastiCache DescribeReservedCacheNodesOfferings requests.
  *
  * \ingroup ElastiCache
  *

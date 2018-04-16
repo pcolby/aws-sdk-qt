@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::DescribeChannelRequest
  *
- * \brief The DescribeChannelRequest class encapsulates MediaLive DescribeChannel requests.
+ * \brief The DescribeChannelRequest class provides an interface for MediaLive DescribeChannel requests.
  *
  * \ingroup MediaLive
  *

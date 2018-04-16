@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::ListStreamsRequest
  *
- * \brief The ListStreamsRequest class encapsulates Kinesis ListStreams requests.
+ * \brief The ListStreamsRequest class provides an interface for Kinesis ListStreams requests.
  *
  * \ingroup Kinesis
  *

@@ -30,7 +30,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::DescribeCertificateResponse
  *
- * \brief The DescribeCertificateResponse class encapsulates ACM DescribeCertificate responses.
+ * \brief The DescribeCertificateResponse class provides an interace for ACM DescribeCertificate responses.
  *
  * \ingroup ACM
  *

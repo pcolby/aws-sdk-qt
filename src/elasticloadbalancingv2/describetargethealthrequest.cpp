@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeTargetHealthRequest
  *
- * \brief The DescribeTargetHealthRequest class encapsulates ElasticLoadBalancingv2 DescribeTargetHealth requests.
+ * \brief The DescribeTargetHealthRequest class provides an interface for ElasticLoadBalancingv2 DescribeTargetHealth requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

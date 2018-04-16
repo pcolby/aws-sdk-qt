@@ -133,7 +133,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::AlexaForBusinessClient
  *
- * \brief The AlexaForBusinessClient class provides access the Alexa For Business service.
+ * \brief The AlexaForBusinessClient class provides access to the Alexa For Business service.
  *
  * \ingroup AlexaForBusiness
  *

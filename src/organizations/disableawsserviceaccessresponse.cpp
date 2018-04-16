@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DisableAWSServiceAccessResponse
  *
- * \brief The DisableAWSServiceAccessResponse class encapsulates Organizations DisableAWSServiceAccess responses.
+ * \brief The DisableAWSServiceAccessResponse class provides an interace for Organizations DisableAWSServiceAccess responses.
  *
  * \ingroup Organizations
  *

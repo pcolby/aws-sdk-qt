@@ -30,7 +30,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::DescribeEndpointsResponse
  *
- * \brief The DescribeEndpointsResponse class encapsulates MediaConvert DescribeEndpoints responses.
+ * \brief The DescribeEndpointsResponse class provides an interace for MediaConvert DescribeEndpoints responses.
  *
  * \ingroup MediaConvert
  *

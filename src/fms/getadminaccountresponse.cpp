@@ -30,7 +30,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::GetAdminAccountResponse
  *
- * \brief The GetAdminAccountResponse class encapsulates FMS GetAdminAccount responses.
+ * \brief The GetAdminAccountResponse class provides an interace for FMS GetAdminAccount responses.
  *
  * \ingroup FMS
  *

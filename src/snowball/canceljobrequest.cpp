@@ -28,7 +28,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::CancelJobRequest
  *
- * \brief The CancelJobRequest class encapsulates Snowball CancelJob requests.
+ * \brief The CancelJobRequest class provides an interface for Snowball CancelJob requests.
  *
  * \ingroup Snowball
  *

@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::RemoveTagsFromResourceResponse
  *
- * \brief The RemoveTagsFromResourceResponse class encapsulates StorageGateway RemoveTagsFromResource responses.
+ * \brief The RemoveTagsFromResourceResponse class provides an interace for StorageGateway RemoveTagsFromResource responses.
  *
  * \ingroup StorageGateway
  *

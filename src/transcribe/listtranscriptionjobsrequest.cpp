@@ -28,7 +28,7 @@ namespace TranscribeService {
 /*!
  * \class QtAws::TranscribeService::ListTranscriptionJobsRequest
  *
- * \brief The ListTranscriptionJobsRequest class encapsulates TranscribeService ListTranscriptionJobs requests.
+ * \brief The ListTranscriptionJobsRequest class provides an interface for TranscribeService ListTranscriptionJobs requests.
  *
  * \ingroup TranscribeService
  *

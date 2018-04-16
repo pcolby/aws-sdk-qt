@@ -29,7 +29,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::RedshiftResponse
  *
- * \brief The RedshiftResponse class is the base class for all Redshift responses.
+ * \brief The RedshiftResponse class provides an interface for Redshift responses.
  *
  * \ingroup Redshift
  */

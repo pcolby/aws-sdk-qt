@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::FilterLogEventsResponse
  *
- * \brief The FilterLogEventsResponse class encapsulates CloudWatchLogs FilterLogEvents responses.
+ * \brief The FilterLogEventsResponse class provides an interace for CloudWatchLogs FilterLogEvents responses.
  *
  * \ingroup CloudWatchLogs
  *

@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::PutPermissionPolicyRequest
  *
- * \brief The PutPermissionPolicyRequest class encapsulates WAF PutPermissionPolicy requests.
+ * \brief The PutPermissionPolicyRequest class provides an interface for WAF PutPermissionPolicy requests.
  *
  * \ingroup WAF
  *

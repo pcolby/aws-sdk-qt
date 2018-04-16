@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::AttachToIndexResponse
  *
- * \brief The AttachToIndexResponse class encapsulates CloudDirectory AttachToIndex responses.
+ * \brief The AttachToIndexResponse class provides an interace for CloudDirectory AttachToIndex responses.
  *
  * \ingroup CloudDirectory
  *

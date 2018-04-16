@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::UpdateDocumentRequest
  *
- * \brief The UpdateDocumentRequest class encapsulates SSM UpdateDocument requests.
+ * \brief The UpdateDocumentRequest class provides an interface for SSM UpdateDocument requests.
  *
  * \ingroup SSM
  *

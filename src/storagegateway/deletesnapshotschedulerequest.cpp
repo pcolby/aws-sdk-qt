@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DeleteSnapshotScheduleRequest
  *
- * \brief The DeleteSnapshotScheduleRequest class encapsulates StorageGateway DeleteSnapshotSchedule requests.
+ * \brief The DeleteSnapshotScheduleRequest class provides an interface for StorageGateway DeleteSnapshotSchedule requests.
  *
  * \ingroup StorageGateway
  *

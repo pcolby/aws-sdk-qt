@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreatePlacementGroupRequest
  *
- * \brief The CreatePlacementGroupRequest class encapsulates EC2 CreatePlacementGroup requests.
+ * \brief The CreatePlacementGroupRequest class provides an interface for EC2 CreatePlacementGroup requests.
  *
  * \ingroup EC2
  *

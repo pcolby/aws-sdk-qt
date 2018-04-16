@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::ListActivitiesRequest
  *
- * \brief The ListActivitiesRequest class encapsulates SFN ListActivities requests.
+ * \brief The ListActivitiesRequest class provides an interface for SFN ListActivities requests.
  *
  * \ingroup SFN
  *

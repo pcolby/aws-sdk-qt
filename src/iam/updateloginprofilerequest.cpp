@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateLoginProfileRequest
  *
- * \brief The UpdateLoginProfileRequest class encapsulates IAM UpdateLoginProfile requests.
+ * \brief The UpdateLoginProfileRequest class provides an interface for IAM UpdateLoginProfile requests.
  *
  * \ingroup IAM
  *

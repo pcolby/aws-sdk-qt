@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::CreateActivityRequest
  *
- * \brief The CreateActivityRequest class encapsulates SFN CreateActivity requests.
+ * \brief The CreateActivityRequest class provides an interface for SFN CreateActivity requests.
  *
  * \ingroup SFN
  *

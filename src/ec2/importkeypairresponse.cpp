@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ImportKeyPairResponse
  *
- * \brief The ImportKeyPairResponse class encapsulates EC2 ImportKeyPair responses.
+ * \brief The ImportKeyPairResponse class provides an interace for EC2 ImportKeyPair responses.
  *
  * \ingroup EC2
  *

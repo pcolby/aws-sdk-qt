@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SendCustomVerificationEmailResponse
  *
- * \brief The SendCustomVerificationEmailResponse class encapsulates SES SendCustomVerificationEmail responses.
+ * \brief The SendCustomVerificationEmailResponse class provides an interace for SES SendCustomVerificationEmail responses.
  *
  * \ingroup SES
  *

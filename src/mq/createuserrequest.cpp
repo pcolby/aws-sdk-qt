@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::CreateUserRequest
  *
- * \brief The CreateUserRequest class encapsulates MQ CreateUser requests.
+ * \brief The CreateUserRequest class provides an interface for MQ CreateUser requests.
  *
  * \ingroup MQ
  *

@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::SubmitJobResponse
  *
- * \brief The SubmitJobResponse class encapsulates Batch SubmitJob responses.
+ * \brief The SubmitJobResponse class provides an interace for Batch SubmitJob responses.
  *
  * \ingroup Batch
  *

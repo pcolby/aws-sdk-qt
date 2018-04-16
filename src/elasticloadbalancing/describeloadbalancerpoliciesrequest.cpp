@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::DescribeLoadBalancerPoliciesRequest
  *
- * \brief The DescribeLoadBalancerPoliciesRequest class encapsulates ElasticLoadBalancing DescribeLoadBalancerPolicies requests.
+ * \brief The DescribeLoadBalancerPoliciesRequest class provides an interface for ElasticLoadBalancing DescribeLoadBalancerPolicies requests.
  *
  * \ingroup ElasticLoadBalancing
  *

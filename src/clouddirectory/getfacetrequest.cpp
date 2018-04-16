@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::GetFacetRequest
  *
- * \brief The GetFacetRequest class encapsulates CloudDirectory GetFacet requests.
+ * \brief The GetFacetRequest class provides an interface for CloudDirectory GetFacet requests.
  *
  * \ingroup CloudDirectory
  *

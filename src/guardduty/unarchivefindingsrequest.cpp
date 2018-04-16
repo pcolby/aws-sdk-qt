@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::UnarchiveFindingsRequest
  *
- * \brief The UnarchiveFindingsRequest class encapsulates GuardDuty UnarchiveFindings requests.
+ * \brief The UnarchiveFindingsRequest class provides an interface for GuardDuty UnarchiveFindings requests.
  *
  * \ingroup GuardDuty
  *

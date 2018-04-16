@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::AssociateDelegateToResourceRequest
  *
- * \brief The AssociateDelegateToResourceRequest class encapsulates WorkMail AssociateDelegateToResource requests.
+ * \brief The AssociateDelegateToResourceRequest class provides an interface for WorkMail AssociateDelegateToResource requests.
  *
  * \ingroup WorkMail
  *

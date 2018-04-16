@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DescribeCacheEngineVersionsRequest
  *
- * \brief The DescribeCacheEngineVersionsRequest class encapsulates ElastiCache DescribeCacheEngineVersions requests.
+ * \brief The DescribeCacheEngineVersionsRequest class provides an interface for ElastiCache DescribeCacheEngineVersions requests.
  *
  * \ingroup ElastiCache
  *

@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteWebACLResponse
  *
- * \brief The DeleteWebACLResponse class encapsulates WAF DeleteWebACL responses.
+ * \brief The DeleteWebACLResponse class provides an interace for WAF DeleteWebACL responses.
  *
  * \ingroup WAF
  *

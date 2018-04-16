@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::AddClientIDToOpenIDConnectProviderRequest
  *
- * \brief The AddClientIDToOpenIDConnectProviderRequest class encapsulates IAM AddClientIDToOpenIDConnectProvider requests.
+ * \brief The AddClientIDToOpenIDConnectProviderRequest class provides an interface for IAM AddClientIDToOpenIDConnectProvider requests.
  *
  * \ingroup IAM
  *

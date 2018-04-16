@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DeleteEvaluationResponse
  *
- * \brief The DeleteEvaluationResponse class encapsulates MachineLearning DeleteEvaluation responses.
+ * \brief The DeleteEvaluationResponse class provides an interace for MachineLearning DeleteEvaluation responses.
  *
  * \ingroup MachineLearning
  *

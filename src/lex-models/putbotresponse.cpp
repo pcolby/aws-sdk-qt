@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::PutBotResponse
  *
- * \brief The PutBotResponse class encapsulates LexModelBuildingService PutBot responses.
+ * \brief The PutBotResponse class provides an interace for LexModelBuildingService PutBot responses.
  *
  * \ingroup LexModelBuildingService
  *

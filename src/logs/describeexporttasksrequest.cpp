@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DescribeExportTasksRequest
  *
- * \brief The DescribeExportTasksRequest class encapsulates CloudWatchLogs DescribeExportTasks requests.
+ * \brief The DescribeExportTasksRequest class provides an interface for CloudWatchLogs DescribeExportTasks requests.
  *
  * \ingroup CloudWatchLogs
  *

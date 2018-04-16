@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetIdentityPoliciesResponse
  *
- * \brief The GetIdentityPoliciesResponse class encapsulates SES GetIdentityPolicies responses.
+ * \brief The GetIdentityPoliciesResponse class provides an interace for SES GetIdentityPolicies responses.
  *
  * \ingroup SES
  *

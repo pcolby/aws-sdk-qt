@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::PromoteReadReplicaDBClusterRequest
  *
- * \brief The PromoteReadReplicaDBClusterRequest class encapsulates RDS PromoteReadReplicaDBCluster requests.
+ * \brief The PromoteReadReplicaDBClusterRequest class provides an interface for RDS PromoteReadReplicaDBCluster requests.
  *
  * \ingroup RDS
  *

@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DeleteDiskSnapshotRequest
  *
- * \brief The DeleteDiskSnapshotRequest class encapsulates Lightsail DeleteDiskSnapshot requests.
+ * \brief The DeleteDiskSnapshotRequest class provides an interface for Lightsail DeleteDiskSnapshot requests.
  *
  * \ingroup Lightsail
  *

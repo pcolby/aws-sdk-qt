@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetTemplateRequest
  *
- * \brief The GetTemplateRequest class encapsulates SES GetTemplate requests.
+ * \brief The GetTemplateRequest class provides an interface for SES GetTemplate requests.
  *
  * \ingroup SES
  *

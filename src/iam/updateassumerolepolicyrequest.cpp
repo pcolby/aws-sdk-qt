@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateAssumeRolePolicyRequest
  *
- * \brief The UpdateAssumeRolePolicyRequest class encapsulates IAM UpdateAssumeRolePolicy requests.
+ * \brief The UpdateAssumeRolePolicyRequest class provides an interface for IAM UpdateAssumeRolePolicy requests.
  *
  * \ingroup IAM
  *

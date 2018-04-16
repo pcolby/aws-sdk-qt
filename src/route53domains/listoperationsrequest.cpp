@@ -28,7 +28,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::ListOperationsRequest
  *
- * \brief The ListOperationsRequest class encapsulates Route53Domains ListOperations requests.
+ * \brief The ListOperationsRequest class provides an interface for Route53Domains ListOperations requests.
  *
  * \ingroup Route53Domains
  *

@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::StartInstanceResponse
  *
- * \brief The StartInstanceResponse class encapsulates Lightsail StartInstance responses.
+ * \brief The StartInstanceResponse class provides an interace for Lightsail StartInstance responses.
  *
  * \ingroup Lightsail
  *

@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteSigningCertificateResponse
  *
- * \brief The DeleteSigningCertificateResponse class encapsulates IAM DeleteSigningCertificate responses.
+ * \brief The DeleteSigningCertificateResponse class provides an interace for IAM DeleteSigningCertificate responses.
  *
  * \ingroup IAM
  *

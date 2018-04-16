@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::GetMLModelRequest
  *
- * \brief The GetMLModelRequest class encapsulates MachineLearning GetMLModel requests.
+ * \brief The GetMLModelRequest class provides an interface for MachineLearning GetMLModel requests.
  *
  * \ingroup MachineLearning
  *

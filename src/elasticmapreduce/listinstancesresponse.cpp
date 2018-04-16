@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ListInstancesResponse
  *
- * \brief The ListInstancesResponse class encapsulates EMR ListInstances responses.
+ * \brief The ListInstancesResponse class provides an interace for EMR ListInstances responses.
  *
  * \ingroup EMR
  *

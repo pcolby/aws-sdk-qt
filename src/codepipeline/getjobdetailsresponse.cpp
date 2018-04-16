@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::GetJobDetailsResponse
  *
- * \brief The GetJobDetailsResponse class encapsulates CodePipeline GetJobDetails responses.
+ * \brief The GetJobDetailsResponse class provides an interace for CodePipeline GetJobDetails responses.
  *
  * \ingroup CodePipeline
  *

@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeleteUserProfileRequest
  *
- * \brief The DeleteUserProfileRequest class encapsulates OpsWorks DeleteUserProfile requests.
+ * \brief The DeleteUserProfileRequest class provides an interface for OpsWorks DeleteUserProfile requests.
  *
  * \ingroup OpsWorks
  *

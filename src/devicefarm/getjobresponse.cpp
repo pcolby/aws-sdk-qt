@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetJobResponse
  *
- * \brief The GetJobResponse class encapsulates DeviceFarm GetJob responses.
+ * \brief The GetJobResponse class provides an interace for DeviceFarm GetJob responses.
  *
  * \ingroup DeviceFarm
  *

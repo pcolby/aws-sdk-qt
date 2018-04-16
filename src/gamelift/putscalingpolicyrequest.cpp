@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::PutScalingPolicyRequest
  *
- * \brief The PutScalingPolicyRequest class encapsulates GameLift PutScalingPolicy requests.
+ * \brief The PutScalingPolicyRequest class provides an interface for GameLift PutScalingPolicy requests.
  *
  * \ingroup GameLift
  *

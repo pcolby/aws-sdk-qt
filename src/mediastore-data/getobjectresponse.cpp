@@ -30,7 +30,7 @@ namespace MediaStoreData {
 /*!
  * \class QtAws::MediaStoreData::GetObjectResponse
  *
- * \brief The GetObjectResponse class encapsulates MediaStoreData GetObject responses.
+ * \brief The GetObjectResponse class provides an interace for MediaStoreData GetObject responses.
  *
  * \ingroup MediaStoreData
  *

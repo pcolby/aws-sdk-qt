@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::ActivatePipelineRequest
  *
- * \brief The ActivatePipelineRequest class encapsulates DataPipeline ActivatePipeline requests.
+ * \brief The ActivatePipelineRequest class provides an interface for DataPipeline ActivatePipeline requests.
  *
  * \ingroup DataPipeline
  *

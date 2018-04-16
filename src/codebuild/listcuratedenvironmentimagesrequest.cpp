@@ -28,7 +28,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::ListCuratedEnvironmentImagesRequest
  *
- * \brief The ListCuratedEnvironmentImagesRequest class encapsulates CodeBuild ListCuratedEnvironmentImages requests.
+ * \brief The ListCuratedEnvironmentImagesRequest class provides an interface for CodeBuild ListCuratedEnvironmentImages requests.
  *
  * \ingroup CodeBuild
  *

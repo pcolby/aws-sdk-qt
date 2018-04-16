@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::UpdateSubscriptionDefinitionResponse
  *
- * \brief The UpdateSubscriptionDefinitionResponse class encapsulates Greengrass UpdateSubscriptionDefinition responses.
+ * \brief The UpdateSubscriptionDefinitionResponse class provides an interace for Greengrass UpdateSubscriptionDefinition responses.
  *
  * \ingroup Greengrass
  *

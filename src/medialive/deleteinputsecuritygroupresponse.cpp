@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::DeleteInputSecurityGroupResponse
  *
- * \brief The DeleteInputSecurityGroupResponse class encapsulates MediaLive DeleteInputSecurityGroup responses.
+ * \brief The DeleteInputSecurityGroupResponse class provides an interace for MediaLive DeleteInputSecurityGroup responses.
  *
  * \ingroup MediaLive
  *

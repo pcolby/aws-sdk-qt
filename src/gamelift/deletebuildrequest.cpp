@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteBuildRequest
  *
- * \brief The DeleteBuildRequest class encapsulates GameLift DeleteBuild requests.
+ * \brief The DeleteBuildRequest class provides an interface for GameLift DeleteBuild requests.
  *
  * \ingroup GameLift
  *

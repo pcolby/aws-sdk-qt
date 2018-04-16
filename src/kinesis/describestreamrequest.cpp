@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::DescribeStreamRequest
  *
- * \brief The DescribeStreamRequest class encapsulates Kinesis DescribeStream requests.
+ * \brief The DescribeStreamRequest class provides an interface for Kinesis DescribeStream requests.
  *
  * \ingroup Kinesis
  *

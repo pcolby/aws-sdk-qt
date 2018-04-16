@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::DeleteBotChannelAssociationRequest
  *
- * \brief The DeleteBotChannelAssociationRequest class encapsulates LexModelBuildingService DeleteBotChannelAssociation requests.
+ * \brief The DeleteBotChannelAssociationRequest class provides an interface for LexModelBuildingService DeleteBotChannelAssociation requests.
  *
  * \ingroup LexModelBuildingService
  *

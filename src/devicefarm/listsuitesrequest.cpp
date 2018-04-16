@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListSuitesRequest
  *
- * \brief The ListSuitesRequest class encapsulates DeviceFarm ListSuites requests.
+ * \brief The ListSuitesRequest class provides an interface for DeviceFarm ListSuites requests.
  *
  * \ingroup DeviceFarm
  *

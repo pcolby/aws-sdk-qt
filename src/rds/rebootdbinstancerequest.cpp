@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RebootDBInstanceRequest
  *
- * \brief The RebootDBInstanceRequest class encapsulates RDS RebootDBInstance requests.
+ * \brief The RebootDBInstanceRequest class provides an interface for RDS RebootDBInstance requests.
  *
  * \ingroup RDS
  *

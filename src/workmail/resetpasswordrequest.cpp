@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::ResetPasswordRequest
  *
- * \brief The ResetPasswordRequest class encapsulates WorkMail ResetPassword requests.
+ * \brief The ResetPasswordRequest class provides an interface for WorkMail ResetPassword requests.
  *
  * \ingroup WorkMail
  *

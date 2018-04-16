@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ReleaseAddressRequest
  *
- * \brief The ReleaseAddressRequest class encapsulates EC2 ReleaseAddress requests.
+ * \brief The ReleaseAddressRequest class provides an interface for EC2 ReleaseAddress requests.
  *
  * \ingroup EC2
  *

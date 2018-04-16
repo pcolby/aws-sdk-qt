@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ResetImageAttributeRequest
  *
- * \brief The ResetImageAttributeRequest class encapsulates EC2 ResetImageAttribute requests.
+ * \brief The ResetImageAttributeRequest class provides an interface for EC2 ResetImageAttribute requests.
  *
  * \ingroup EC2
  *

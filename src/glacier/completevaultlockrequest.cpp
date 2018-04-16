@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::CompleteVaultLockRequest
  *
- * \brief The CompleteVaultLockRequest class encapsulates Glacier CompleteVaultLock requests.
+ * \brief The CompleteVaultLockRequest class provides an interface for Glacier CompleteVaultLock requests.
  *
  * \ingroup Glacier
  *

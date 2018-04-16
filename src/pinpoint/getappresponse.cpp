@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetAppResponse
  *
- * \brief The GetAppResponse class encapsulates Pinpoint GetApp responses.
+ * \brief The GetAppResponse class provides an interace for Pinpoint GetApp responses.
  *
  * \ingroup Pinpoint
  *

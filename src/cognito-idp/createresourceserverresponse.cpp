@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::CreateResourceServerResponse
  *
- * \brief The CreateResourceServerResponse class encapsulates CognitoIdentityProvider CreateResourceServer responses.
+ * \brief The CreateResourceServerResponse class provides an interace for CognitoIdentityProvider CreateResourceServer responses.
  *
  * \ingroup CognitoIdentityProvider
  *

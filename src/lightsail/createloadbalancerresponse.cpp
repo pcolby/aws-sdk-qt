@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::CreateLoadBalancerResponse
  *
- * \brief The CreateLoadBalancerResponse class encapsulates Lightsail CreateLoadBalancer responses.
+ * \brief The CreateLoadBalancerResponse class provides an interace for Lightsail CreateLoadBalancer responses.
  *
  * \ingroup Lightsail
  *

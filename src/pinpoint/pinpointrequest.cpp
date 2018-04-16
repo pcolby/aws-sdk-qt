@@ -26,7 +26,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::PinpointRequest
  *
- * \brief The PinpointRequest class is the base class for all Pinpoint requests.
+ * \brief The PinpointRequest class provides an interface for Pinpoint requests.
  *
  * \ingroup Pinpoint
  */

@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListLoggerDefinitionsResponse
  *
- * \brief The ListLoggerDefinitionsResponse class encapsulates Greengrass ListLoggerDefinitions responses.
+ * \brief The ListLoggerDefinitionsResponse class provides an interace for Greengrass ListLoggerDefinitions responses.
  *
  * \ingroup Greengrass
  *

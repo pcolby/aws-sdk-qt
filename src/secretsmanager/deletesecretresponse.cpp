@@ -30,7 +30,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::DeleteSecretResponse
  *
- * \brief The DeleteSecretResponse class encapsulates SecretsManager DeleteSecret responses.
+ * \brief The DeleteSecretResponse class provides an interace for SecretsManager DeleteSecret responses.
  *
  * \ingroup SecretsManager
  *

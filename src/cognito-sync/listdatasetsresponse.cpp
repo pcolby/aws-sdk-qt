@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::ListDatasetsResponse
  *
- * \brief The ListDatasetsResponse class encapsulates CognitoSync ListDatasets responses.
+ * \brief The ListDatasetsResponse class provides an interace for CognitoSync ListDatasets responses.
  *
  * \ingroup CognitoSync
  *

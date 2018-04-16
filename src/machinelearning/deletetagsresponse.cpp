@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DeleteTagsResponse
  *
- * \brief The DeleteTagsResponse class encapsulates MachineLearning DeleteTags responses.
+ * \brief The DeleteTagsResponse class provides an interace for MachineLearning DeleteTags responses.
  *
  * \ingroup MachineLearning
  *

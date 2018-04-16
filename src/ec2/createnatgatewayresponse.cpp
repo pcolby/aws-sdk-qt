@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateNatGatewayResponse
  *
- * \brief The CreateNatGatewayResponse class encapsulates EC2 CreateNatGateway responses.
+ * \brief The CreateNatGatewayResponse class provides an interace for EC2 CreateNatGateway responses.
  *
  * \ingroup EC2
  *

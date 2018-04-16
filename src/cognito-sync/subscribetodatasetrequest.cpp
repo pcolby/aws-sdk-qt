@@ -28,7 +28,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::SubscribeToDatasetRequest
  *
- * \brief The SubscribeToDatasetRequest class encapsulates CognitoSync SubscribeToDataset requests.
+ * \brief The SubscribeToDatasetRequest class provides an interface for CognitoSync SubscribeToDataset requests.
  *
  * \ingroup CognitoSync
  *

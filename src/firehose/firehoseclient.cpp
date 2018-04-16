@@ -51,7 +51,7 @@ namespace Firehose {
 /*!
  * \class QtAws::Firehose::FirehoseClient
  *
- * \brief The FirehoseClient class provides access the Amazon Kinesis Firehose service.
+ * \brief The FirehoseClient class provides access to the Amazon Kinesis Firehose service.
  *
  * \ingroup Firehose
  *

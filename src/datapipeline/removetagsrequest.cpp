@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::RemoveTagsRequest
  *
- * \brief The RemoveTagsRequest class encapsulates DataPipeline RemoveTags requests.
+ * \brief The RemoveTagsRequest class provides an interface for DataPipeline RemoveTags requests.
  *
  * \ingroup DataPipeline
  *

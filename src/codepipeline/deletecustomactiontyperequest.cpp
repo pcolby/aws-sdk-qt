@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::DeleteCustomActionTypeRequest
  *
- * \brief The DeleteCustomActionTypeRequest class encapsulates CodePipeline DeleteCustomActionType requests.
+ * \brief The DeleteCustomActionTypeRequest class provides an interface for CodePipeline DeleteCustomActionType requests.
  *
  * \ingroup CodePipeline
  *

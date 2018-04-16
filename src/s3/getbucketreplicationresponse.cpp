@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketReplicationResponse
  *
- * \brief The GetBucketReplicationResponse class encapsulates S3 GetBucketReplication responses.
+ * \brief The GetBucketReplicationResponse class provides an interace for S3 GetBucketReplication responses.
  *
  * \ingroup S3
  *

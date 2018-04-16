@@ -29,7 +29,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::CloudFrontResponse
  *
- * \brief The CloudFrontResponse class is the base class for all CloudFront responses.
+ * \brief The CloudFrontResponse class provides an interface for CloudFront responses.
  *
  * \ingroup CloudFront
  */

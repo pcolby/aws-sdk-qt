@@ -28,7 +28,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::DeleteOriginEndpointRequest
  *
- * \brief The DeleteOriginEndpointRequest class encapsulates MediaPackage DeleteOriginEndpoint requests.
+ * \brief The DeleteOriginEndpointRequest class provides an interface for MediaPackage DeleteOriginEndpoint requests.
  *
  * \ingroup MediaPackage
  *

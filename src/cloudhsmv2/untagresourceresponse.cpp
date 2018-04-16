@@ -30,7 +30,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::UntagResourceResponse
  *
- * \brief The UntagResourceResponse class encapsulates CloudHSMV2 UntagResource responses.
+ * \brief The UntagResourceResponse class provides an interace for CloudHSMV2 UntagResource responses.
  *
  * \ingroup CloudHSMV2
  *

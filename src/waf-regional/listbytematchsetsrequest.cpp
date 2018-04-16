@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::ListByteMatchSetsRequest
  *
- * \brief The ListByteMatchSetsRequest class encapsulates WAFRegional ListByteMatchSets requests.
+ * \brief The ListByteMatchSetsRequest class provides an interface for WAFRegional ListByteMatchSets requests.
  *
  * \ingroup WAFRegional
  *

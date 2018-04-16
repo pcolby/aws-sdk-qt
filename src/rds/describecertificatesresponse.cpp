@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeCertificatesResponse
  *
- * \brief The DescribeCertificatesResponse class encapsulates RDS DescribeCertificates responses.
+ * \brief The DescribeCertificatesResponse class provides an interace for RDS DescribeCertificates responses.
  *
  * \ingroup RDS
  *

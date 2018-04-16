@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyInstancePlacementRequest
  *
- * \brief The ModifyInstancePlacementRequest class encapsulates EC2 ModifyInstancePlacement requests.
+ * \brief The ModifyInstancePlacementRequest class provides an interface for EC2 ModifyInstancePlacement requests.
  *
  * \ingroup EC2
  *

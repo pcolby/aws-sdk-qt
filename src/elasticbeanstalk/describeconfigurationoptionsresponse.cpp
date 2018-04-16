@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeConfigurationOptionsResponse
  *
- * \brief The DescribeConfigurationOptionsResponse class encapsulates ElasticBeanstalk DescribeConfigurationOptions responses.
+ * \brief The DescribeConfigurationOptionsResponse class provides an interace for ElasticBeanstalk DescribeConfigurationOptions responses.
  *
  * \ingroup ElasticBeanstalk
  *

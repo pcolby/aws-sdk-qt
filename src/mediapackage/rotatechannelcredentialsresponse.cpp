@@ -30,7 +30,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::RotateChannelCredentialsResponse
  *
- * \brief The RotateChannelCredentialsResponse class encapsulates MediaPackage RotateChannelCredentials responses.
+ * \brief The RotateChannelCredentialsResponse class provides an interace for MediaPackage RotateChannelCredentials responses.
  *
  * \ingroup MediaPackage
  *

@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::ListAliasesResponse
  *
- * \brief The ListAliasesResponse class encapsulates WorkMail ListAliases responses.
+ * \brief The ListAliasesResponse class provides an interace for WorkMail ListAliases responses.
  *
  * \ingroup WorkMail
  *

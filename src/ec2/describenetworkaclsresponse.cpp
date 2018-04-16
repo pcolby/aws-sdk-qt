@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeNetworkAclsResponse
  *
- * \brief The DescribeNetworkAclsResponse class encapsulates EC2 DescribeNetworkAcls responses.
+ * \brief The DescribeNetworkAclsResponse class provides an interace for EC2 DescribeNetworkAcls responses.
  *
  * \ingroup EC2
  *

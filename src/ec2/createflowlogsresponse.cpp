@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateFlowLogsResponse
  *
- * \brief The CreateFlowLogsResponse class encapsulates EC2 CreateFlowLogs responses.
+ * \brief The CreateFlowLogsResponse class provides an interace for EC2 CreateFlowLogs responses.
  *
  * \ingroup EC2
  *

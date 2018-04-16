@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListHealthChecksRequest
  *
- * \brief The ListHealthChecksRequest class encapsulates Route53 ListHealthChecks requests.
+ * \brief The ListHealthChecksRequest class provides an interface for Route53 ListHealthChecks requests.
  *
  * \ingroup Route53
  *

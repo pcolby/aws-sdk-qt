@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListObjectPoliciesResponse
  *
- * \brief The ListObjectPoliciesResponse class encapsulates CloudDirectory ListObjectPolicies responses.
+ * \brief The ListObjectPoliciesResponse class provides an interace for CloudDirectory ListObjectPolicies responses.
  *
  * \ingroup CloudDirectory
  *

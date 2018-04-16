@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DisassociateVpcCidrBlockRequest
  *
- * \brief The DisassociateVpcCidrBlockRequest class encapsulates EC2 DisassociateVpcCidrBlock requests.
+ * \brief The DisassociateVpcCidrBlockRequest class provides an interface for EC2 DisassociateVpcCidrBlock requests.
  *
  * \ingroup EC2
  *

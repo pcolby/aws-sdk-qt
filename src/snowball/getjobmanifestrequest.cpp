@@ -28,7 +28,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::GetJobManifestRequest
  *
- * \brief The GetJobManifestRequest class encapsulates Snowball GetJobManifest requests.
+ * \brief The GetJobManifestRequest class provides an interface for Snowball GetJobManifest requests.
  *
  * \ingroup Snowball
  *

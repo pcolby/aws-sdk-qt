@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::UpdateBatchPredictionResponse
  *
- * \brief The UpdateBatchPredictionResponse class encapsulates MachineLearning UpdateBatchPrediction responses.
+ * \brief The UpdateBatchPredictionResponse class provides an interace for MachineLearning UpdateBatchPrediction responses.
  *
  * \ingroup MachineLearning
  *

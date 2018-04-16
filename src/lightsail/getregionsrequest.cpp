@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetRegionsRequest
  *
- * \brief The GetRegionsRequest class encapsulates Lightsail GetRegions requests.
+ * \brief The GetRegionsRequest class provides an interface for Lightsail GetRegions requests.
  *
  * \ingroup Lightsail
  *

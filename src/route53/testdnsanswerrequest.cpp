@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::TestDNSAnswerRequest
  *
- * \brief The TestDNSAnswerRequest class encapsulates Route53 TestDNSAnswer requests.
+ * \brief The TestDNSAnswerRequest class provides an interface for Route53 TestDNSAnswer requests.
  *
  * \ingroup Route53
  *

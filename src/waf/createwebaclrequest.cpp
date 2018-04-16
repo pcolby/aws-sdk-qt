@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::CreateWebACLRequest
  *
- * \brief The CreateWebACLRequest class encapsulates WAF CreateWebACL requests.
+ * \brief The CreateWebACLRequest class provides an interface for WAF CreateWebACL requests.
  *
  * \ingroup WAF
  *

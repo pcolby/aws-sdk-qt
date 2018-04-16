@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::PurchaseOfferingResponse
  *
- * \brief The PurchaseOfferingResponse class encapsulates DeviceFarm PurchaseOffering responses.
+ * \brief The PurchaseOfferingResponse class provides an interace for DeviceFarm PurchaseOffering responses.
  *
  * \ingroup DeviceFarm
  *

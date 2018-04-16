@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::GetDataSourceResponse
  *
- * \brief The GetDataSourceResponse class encapsulates AppSync GetDataSource responses.
+ * \brief The GetDataSourceResponse class provides an interace for AppSync GetDataSource responses.
  *
  * \ingroup AppSync
  *

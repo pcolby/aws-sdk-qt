@@ -30,7 +30,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::SearchResourcesResponse
  *
- * \brief The SearchResourcesResponse class encapsulates ResourceGroups SearchResources responses.
+ * \brief The SearchResourcesResponse class provides an interace for ResourceGroups SearchResources responses.
  *
  * \ingroup ResourceGroups
  *

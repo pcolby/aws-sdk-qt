@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminUserGlobalSignOutResponse
  *
- * \brief The AdminUserGlobalSignOutResponse class encapsulates CognitoIdentityProvider AdminUserGlobalSignOut responses.
+ * \brief The AdminUserGlobalSignOutResponse class provides an interace for CognitoIdentityProvider AdminUserGlobalSignOut responses.
  *
  * \ingroup CognitoIdentityProvider
  *

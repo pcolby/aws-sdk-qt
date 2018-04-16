@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::StartCelebrityRecognitionResponse
  *
- * \brief The StartCelebrityRecognitionResponse class encapsulates Rekognition StartCelebrityRecognition responses.
+ * \brief The StartCelebrityRecognitionResponse class provides an interace for Rekognition StartCelebrityRecognition responses.
  *
  * \ingroup Rekognition
  *

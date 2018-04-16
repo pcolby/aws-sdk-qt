@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::CreateListenerResponse
  *
- * \brief The CreateListenerResponse class encapsulates ElasticLoadBalancingv2 CreateListener responses.
+ * \brief The CreateListenerResponse class provides an interace for ElasticLoadBalancingv2 CreateListener responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

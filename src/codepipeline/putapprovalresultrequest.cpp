@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::PutApprovalResultRequest
  *
- * \brief The PutApprovalResultRequest class encapsulates CodePipeline PutApprovalResult requests.
+ * \brief The PutApprovalResultRequest class provides an interface for CodePipeline PutApprovalResult requests.
  *
  * \ingroup CodePipeline
  *

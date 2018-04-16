@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::SendTaskSuccessRequest
  *
- * \brief The SendTaskSuccessRequest class encapsulates SFN SendTaskSuccess requests.
+ * \brief The SendTaskSuccessRequest class provides an interface for SFN SendTaskSuccess requests.
  *
  * \ingroup SFN
  *

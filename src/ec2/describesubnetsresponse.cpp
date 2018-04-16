@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeSubnetsResponse
  *
- * \brief The DescribeSubnetsResponse class encapsulates EC2 DescribeSubnets responses.
+ * \brief The DescribeSubnetsResponse class provides an interace for EC2 DescribeSubnets responses.
  *
  * \ingroup EC2
  *

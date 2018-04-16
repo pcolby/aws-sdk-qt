@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ApplyPendingMaintenanceActionRequest
  *
- * \brief The ApplyPendingMaintenanceActionRequest class encapsulates RDS ApplyPendingMaintenanceAction requests.
+ * \brief The ApplyPendingMaintenanceActionRequest class provides an interface for RDS ApplyPendingMaintenanceAction requests.
  *
  * \ingroup RDS
  *

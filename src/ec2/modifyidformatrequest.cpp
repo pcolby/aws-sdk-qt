@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyIdFormatRequest
  *
- * \brief The ModifyIdFormatRequest class encapsulates EC2 ModifyIdFormat requests.
+ * \brief The ModifyIdFormatRequest class provides an interface for EC2 ModifyIdFormat requests.
  *
  * \ingroup EC2
  *

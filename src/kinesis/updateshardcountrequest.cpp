@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::UpdateShardCountRequest
  *
- * \brief The UpdateShardCountRequest class encapsulates Kinesis UpdateShardCount requests.
+ * \brief The UpdateShardCountRequest class provides an interface for Kinesis UpdateShardCount requests.
  *
  * \ingroup Kinesis
  *

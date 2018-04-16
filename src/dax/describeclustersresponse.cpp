@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DescribeClustersResponse
  *
- * \brief The DescribeClustersResponse class encapsulates DAX DescribeClusters responses.
+ * \brief The DescribeClustersResponse class provides an interace for DAX DescribeClusters responses.
  *
  * \ingroup DAX
  *

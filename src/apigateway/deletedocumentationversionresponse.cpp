@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteDocumentationVersionResponse
  *
- * \brief The DeleteDocumentationVersionResponse class encapsulates APIGateway DeleteDocumentationVersion responses.
+ * \brief The DeleteDocumentationVersionResponse class provides an interace for APIGateway DeleteDocumentationVersion responses.
  *
  * \ingroup APIGateway
  *

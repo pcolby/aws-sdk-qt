@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::ListObjectVersionsRequest
  *
- * \brief The ListObjectVersionsRequest class encapsulates S3 ListObjectVersions requests.
+ * \brief The ListObjectVersionsRequest class provides an interface for S3 ListObjectVersions requests.
  *
  * \ingroup S3
  *

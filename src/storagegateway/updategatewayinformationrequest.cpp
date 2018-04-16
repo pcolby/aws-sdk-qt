@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::UpdateGatewayInformationRequest
  *
- * \brief The UpdateGatewayInformationRequest class encapsulates StorageGateway UpdateGatewayInformation requests.
+ * \brief The UpdateGatewayInformationRequest class provides an interface for StorageGateway UpdateGatewayInformation requests.
  *
  * \ingroup StorageGateway
  *

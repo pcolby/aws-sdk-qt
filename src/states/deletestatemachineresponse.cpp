@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::DeleteStateMachineResponse
  *
- * \brief The DeleteStateMachineResponse class encapsulates SFN DeleteStateMachine responses.
+ * \brief The DeleteStateMachineResponse class provides an interace for SFN DeleteStateMachine responses.
  *
  * \ingroup SFN
  *

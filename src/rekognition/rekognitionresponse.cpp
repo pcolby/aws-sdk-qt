@@ -29,7 +29,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::RekognitionResponse
  *
- * \brief The RekognitionResponse class is the base class for all Rekognition responses.
+ * \brief The RekognitionResponse class provides an interface for Rekognition responses.
  *
  * \ingroup Rekognition
  */

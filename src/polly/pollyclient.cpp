@@ -49,7 +49,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::PollyClient
  *
- * \brief The PollyClient class provides access the Amazon Polly service.
+ * \brief The PollyClient class provides access to the Amazon Polly service.
  *
  * \ingroup Polly
  *

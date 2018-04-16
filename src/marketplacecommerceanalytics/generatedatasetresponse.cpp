@@ -30,7 +30,7 @@ namespace MarketplaceCommerceAnalytics {
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::GenerateDataSetResponse
  *
- * \brief The GenerateDataSetResponse class encapsulates MarketplaceCommerceAnalytics GenerateDataSet responses.
+ * \brief The GenerateDataSetResponse class provides an interace for MarketplaceCommerceAnalytics GenerateDataSet responses.
  *
  * \ingroup MarketplaceCommerceAnalytics
  *

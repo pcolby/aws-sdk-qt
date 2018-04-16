@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListReviewableHITsResponse
  *
- * \brief The ListReviewableHITsResponse class encapsulates MTurk ListReviewableHITs responses.
+ * \brief The ListReviewableHITsResponse class provides an interace for MTurk ListReviewableHITs responses.
  *
  * \ingroup MTurk
  *

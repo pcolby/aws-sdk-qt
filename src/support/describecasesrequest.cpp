@@ -28,7 +28,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::DescribeCasesRequest
  *
- * \brief The DescribeCasesRequest class encapsulates Support DescribeCases requests.
+ * \brief The DescribeCasesRequest class provides an interface for Support DescribeCases requests.
  *
  * \ingroup Support
  *

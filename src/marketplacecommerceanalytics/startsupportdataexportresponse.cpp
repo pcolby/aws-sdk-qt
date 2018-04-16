@@ -30,7 +30,7 @@ namespace MarketplaceCommerceAnalytics {
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::StartSupportDataExportResponse
  *
- * \brief The StartSupportDataExportResponse class encapsulates MarketplaceCommerceAnalytics StartSupportDataExport responses.
+ * \brief The StartSupportDataExportResponse class provides an interace for MarketplaceCommerceAnalytics StartSupportDataExport responses.
  *
  * \ingroup MarketplaceCommerceAnalytics
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyVpcTenancyRequest
  *
- * \brief The ModifyVpcTenancyRequest class encapsulates EC2 ModifyVpcTenancy requests.
+ * \brief The ModifyVpcTenancyRequest class provides an interface for EC2 ModifyVpcTenancy requests.
  *
  * \ingroup EC2
  *

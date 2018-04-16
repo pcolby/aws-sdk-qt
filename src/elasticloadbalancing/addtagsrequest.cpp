@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::AddTagsRequest
  *
- * \brief The AddTagsRequest class encapsulates ElasticLoadBalancing AddTags requests.
+ * \brief The AddTagsRequest class provides an interface for ElasticLoadBalancing AddTags requests.
  *
  * \ingroup ElasticLoadBalancing
  *

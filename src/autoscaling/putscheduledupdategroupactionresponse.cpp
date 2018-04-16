@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::PutScheduledUpdateGroupActionResponse
  *
- * \brief The PutScheduledUpdateGroupActionResponse class encapsulates AutoScaling PutScheduledUpdateGroupAction responses.
+ * \brief The PutScheduledUpdateGroupActionResponse class provides an interace for AutoScaling PutScheduledUpdateGroupAction responses.
  *
  * \ingroup AutoScaling
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RejectVpcEndpointConnectionsRequest
  *
- * \brief The RejectVpcEndpointConnectionsRequest class encapsulates EC2 RejectVpcEndpointConnections requests.
+ * \brief The RejectVpcEndpointConnectionsRequest class provides an interface for EC2 RejectVpcEndpointConnections requests.
  *
  * \ingroup EC2
  *

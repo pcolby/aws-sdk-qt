@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeTapeArchivesResponse
  *
- * \brief The DescribeTapeArchivesResponse class encapsulates StorageGateway DescribeTapeArchives responses.
+ * \brief The DescribeTapeArchivesResponse class provides an interace for StorageGateway DescribeTapeArchives responses.
  *
  * \ingroup StorageGateway
  *

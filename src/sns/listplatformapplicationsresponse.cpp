@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::ListPlatformApplicationsResponse
  *
- * \brief The ListPlatformApplicationsResponse class encapsulates SNS ListPlatformApplications responses.
+ * \brief The ListPlatformApplicationsResponse class provides an interace for SNS ListPlatformApplications responses.
  *
  * \ingroup SNS
  *

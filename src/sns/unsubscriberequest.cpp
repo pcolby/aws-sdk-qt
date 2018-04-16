@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::UnsubscribeRequest
  *
- * \brief The UnsubscribeRequest class encapsulates SNS Unsubscribe requests.
+ * \brief The UnsubscribeRequest class provides an interface for SNS Unsubscribe requests.
  *
  * \ingroup SNS
  *

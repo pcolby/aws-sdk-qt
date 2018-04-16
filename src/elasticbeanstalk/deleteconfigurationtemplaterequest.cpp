@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DeleteConfigurationTemplateRequest
  *
- * \brief The DeleteConfigurationTemplateRequest class encapsulates ElasticBeanstalk DeleteConfigurationTemplate requests.
+ * \brief The DeleteConfigurationTemplateRequest class provides an interface for ElasticBeanstalk DeleteConfigurationTemplate requests.
  *
  * \ingroup ElasticBeanstalk
  *

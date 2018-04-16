@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::CopySnapshotResponse
  *
- * \brief The CopySnapshotResponse class encapsulates ElastiCache CopySnapshot responses.
+ * \brief The CopySnapshotResponse class provides an interace for ElastiCache CopySnapshot responses.
  *
  * \ingroup ElastiCache
  *

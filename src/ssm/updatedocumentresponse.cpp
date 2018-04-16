@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::UpdateDocumentResponse
  *
- * \brief The UpdateDocumentResponse class encapsulates SSM UpdateDocument responses.
+ * \brief The UpdateDocumentResponse class provides an interace for SSM UpdateDocument responses.
  *
  * \ingroup SSM
  *

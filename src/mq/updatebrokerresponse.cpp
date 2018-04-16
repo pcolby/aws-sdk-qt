@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::UpdateBrokerResponse
  *
- * \brief The UpdateBrokerResponse class encapsulates MQ UpdateBroker responses.
+ * \brief The UpdateBrokerResponse class provides an interace for MQ UpdateBroker responses.
  *
  * \ingroup MQ
  *

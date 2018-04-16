@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateJobResponse
  *
- * \brief The UpdateJobResponse class encapsulates Glue UpdateJob responses.
+ * \brief The UpdateJobResponse class provides an interace for Glue UpdateJob responses.
  *
  * \ingroup Glue
  *

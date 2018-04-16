@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::AddFacetToObjectResponse
  *
- * \brief The AddFacetToObjectResponse class encapsulates CloudDirectory AddFacetToObject responses.
+ * \brief The AddFacetToObjectResponse class provides an interace for CloudDirectory AddFacetToObject responses.
  *
  * \ingroup CloudDirectory
  *

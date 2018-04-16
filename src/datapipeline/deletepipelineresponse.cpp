@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::DeletePipelineResponse
  *
- * \brief The DeletePipelineResponse class encapsulates DataPipeline DeletePipeline responses.
+ * \brief The DeletePipelineResponse class provides an interace for DataPipeline DeletePipeline responses.
  *
  * \ingroup DataPipeline
  *

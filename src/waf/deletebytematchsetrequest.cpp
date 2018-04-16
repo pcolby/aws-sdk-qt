@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteByteMatchSetRequest
  *
- * \brief The DeleteByteMatchSetRequest class encapsulates WAF DeleteByteMatchSet requests.
+ * \brief The DeleteByteMatchSetRequest class provides an interface for WAF DeleteByteMatchSet requests.
  *
  * \ingroup WAF
  *

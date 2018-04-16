@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::UpdateVTLDeviceTypeRequest
  *
- * \brief The UpdateVTLDeviceTypeRequest class encapsulates StorageGateway UpdateVTLDeviceType requests.
+ * \brief The UpdateVTLDeviceTypeRequest class provides an interface for StorageGateway UpdateVTLDeviceType requests.
  *
  * \ingroup StorageGateway
  *

@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::GetCelebrityInfoResponse
  *
- * \brief The GetCelebrityInfoResponse class encapsulates Rekognition GetCelebrityInfo responses.
+ * \brief The GetCelebrityInfoResponse class provides an interace for Rekognition GetCelebrityInfo responses.
  *
  * \ingroup Rekognition
  *

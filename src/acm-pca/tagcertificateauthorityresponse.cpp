@@ -30,7 +30,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::TagCertificateAuthorityResponse
  *
- * \brief The TagCertificateAuthorityResponse class encapsulates ACMPCA TagCertificateAuthority responses.
+ * \brief The TagCertificateAuthorityResponse class provides an interace for ACMPCA TagCertificateAuthority responses.
  *
  * \ingroup ACMPCA
  *

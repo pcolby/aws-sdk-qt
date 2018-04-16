@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::GetCheckerIpRangesRequest
  *
- * \brief The GetCheckerIpRangesRequest class encapsulates Route53 GetCheckerIpRanges requests.
+ * \brief The GetCheckerIpRangesRequest class provides an interface for Route53 GetCheckerIpRanges requests.
  *
  * \ingroup Route53
  *

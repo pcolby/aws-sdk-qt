@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DeleteTypedLinkFacetRequest
  *
- * \brief The DeleteTypedLinkFacetRequest class encapsulates CloudDirectory DeleteTypedLinkFacet requests.
+ * \brief The DeleteTypedLinkFacetRequest class provides an interface for CloudDirectory DeleteTypedLinkFacet requests.
  *
  * \ingroup CloudDirectory
  *

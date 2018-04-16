@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CreateAppRequest
  *
- * \brief The CreateAppRequest class encapsulates OpsWorks CreateApp requests.
+ * \brief The CreateAppRequest class provides an interface for OpsWorks CreateApp requests.
  *
  * \ingroup OpsWorks
  *

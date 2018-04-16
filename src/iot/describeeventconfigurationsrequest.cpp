@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeEventConfigurationsRequest
  *
- * \brief The DescribeEventConfigurationsRequest class encapsulates IoT DescribeEventConfigurations requests.
+ * \brief The DescribeEventConfigurationsRequest class provides an interface for IoT DescribeEventConfigurations requests.
  *
  * \ingroup IoT
  *

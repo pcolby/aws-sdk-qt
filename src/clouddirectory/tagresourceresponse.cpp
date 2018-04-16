@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::TagResourceResponse
  *
- * \brief The TagResourceResponse class encapsulates CloudDirectory TagResource responses.
+ * \brief The TagResourceResponse class provides an interace for CloudDirectory TagResource responses.
  *
  * \ingroup CloudDirectory
  *

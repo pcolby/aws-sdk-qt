@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeOrderableDBInstanceOptionsRequest
  *
- * \brief The DescribeOrderableDBInstanceOptionsRequest class encapsulates RDS DescribeOrderableDBInstanceOptions requests.
+ * \brief The DescribeOrderableDBInstanceOptionsRequest class provides an interface for RDS DescribeOrderableDBInstanceOptions requests.
  *
  * \ingroup RDS
  *

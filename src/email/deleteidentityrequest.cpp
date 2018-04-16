@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteIdentityRequest
  *
- * \brief The DeleteIdentityRequest class encapsulates SES DeleteIdentity requests.
+ * \brief The DeleteIdentityRequest class provides an interface for SES DeleteIdentity requests.
  *
  * \ingroup SES
  *

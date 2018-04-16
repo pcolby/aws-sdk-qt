@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::UpdatePrimaryEmailAddressRequest
  *
- * \brief The UpdatePrimaryEmailAddressRequest class encapsulates WorkMail UpdatePrimaryEmailAddress requests.
+ * \brief The UpdatePrimaryEmailAddressRequest class provides an interface for WorkMail UpdatePrimaryEmailAddress requests.
  *
  * \ingroup WorkMail
  *

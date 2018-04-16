@@ -29,7 +29,7 @@ namespace CostExplorer {
 /*!
  * \class QtAws::CostExplorer::CostExplorerResponse
  *
- * \brief The CostExplorerResponse class is the base class for all CostExplorer responses.
+ * \brief The CostExplorerResponse class provides an interface for CostExplorer responses.
  *
  * \ingroup CostExplorer
  */

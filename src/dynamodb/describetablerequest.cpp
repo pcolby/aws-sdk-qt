@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DescribeTableRequest
  *
- * \brief The DescribeTableRequest class encapsulates DynamoDB DescribeTable requests.
+ * \brief The DescribeTableRequest class provides an interface for DynamoDB DescribeTable requests.
  *
  * \ingroup DynamoDB
  *

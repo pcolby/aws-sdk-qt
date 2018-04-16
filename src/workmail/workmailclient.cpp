@@ -99,7 +99,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::WorkMailClient
  *
- * \brief The WorkMailClient class provides access the Amazon WorkMail service.
+ * \brief The WorkMailClient class provides access to the Amazon WorkMail service.
  *
  * \ingroup WorkMail
  *

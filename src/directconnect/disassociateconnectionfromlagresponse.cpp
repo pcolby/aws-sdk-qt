@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DisassociateConnectionFromLagResponse
  *
- * \brief The DisassociateConnectionFromLagResponse class encapsulates DirectConnect DisassociateConnectionFromLag responses.
+ * \brief The DisassociateConnectionFromLagResponse class provides an interace for DirectConnect DisassociateConnectionFromLag responses.
  *
  * \ingroup DirectConnect
  *

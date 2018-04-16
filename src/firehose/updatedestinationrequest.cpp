@@ -28,7 +28,7 @@ namespace Firehose {
 /*!
  * \class QtAws::Firehose::UpdateDestinationRequest
  *
- * \brief The UpdateDestinationRequest class encapsulates Firehose UpdateDestination requests.
+ * \brief The UpdateDestinationRequest class provides an interface for Firehose UpdateDestination requests.
  *
  * \ingroup Firehose
  *

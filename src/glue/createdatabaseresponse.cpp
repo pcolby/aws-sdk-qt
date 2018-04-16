@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateDatabaseResponse
  *
- * \brief The CreateDatabaseResponse class encapsulates Glue CreateDatabase responses.
+ * \brief The CreateDatabaseResponse class provides an interace for Glue CreateDatabase responses.
  *
  * \ingroup Glue
  *

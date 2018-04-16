@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DeleteDirectoryResponse
  *
- * \brief The DeleteDirectoryResponse class encapsulates DirectoryService DeleteDirectory responses.
+ * \brief The DeleteDirectoryResponse class provides an interace for DirectoryService DeleteDirectory responses.
  *
  * \ingroup DirectoryService
  *

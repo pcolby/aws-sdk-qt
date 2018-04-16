@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeScalingParametersRequest
  *
- * \brief The DescribeScalingParametersRequest class encapsulates CloudSearch DescribeScalingParameters requests.
+ * \brief The DescribeScalingParametersRequest class provides an interface for CloudSearch DescribeScalingParameters requests.
  *
  * \ingroup CloudSearch
  *

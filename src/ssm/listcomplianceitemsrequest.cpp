@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListComplianceItemsRequest
  *
- * \brief The ListComplianceItemsRequest class encapsulates SSM ListComplianceItems requests.
+ * \brief The ListComplianceItemsRequest class provides an interface for SSM ListComplianceItems requests.
  *
  * \ingroup SSM
  *

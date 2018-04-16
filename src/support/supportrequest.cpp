@@ -26,7 +26,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::SupportRequest
  *
- * \brief The SupportRequest class is the base class for all Support requests.
+ * \brief The SupportRequest class provides an interface for Support requests.
  *
  * \ingroup Support
  */

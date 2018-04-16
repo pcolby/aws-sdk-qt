@@ -67,7 +67,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::CloudWatchEventsClient
  *
- * \brief The CloudWatchEventsClient class provides access the Amazon CloudWatch Events service.
+ * \brief The CloudWatchEventsClient class provides access to the Amazon CloudWatch Events service.
  *
  * \ingroup CloudWatchEvents
  *

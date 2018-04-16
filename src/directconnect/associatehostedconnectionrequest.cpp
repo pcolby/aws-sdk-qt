@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::AssociateHostedConnectionRequest
  *
- * \brief The AssociateHostedConnectionRequest class encapsulates DirectConnect AssociateHostedConnection requests.
+ * \brief The AssociateHostedConnectionRequest class provides an interface for DirectConnect AssociateHostedConnection requests.
  *
  * \ingroup DirectConnect
  *

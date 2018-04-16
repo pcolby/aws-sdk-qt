@@ -30,7 +30,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::ListElasticsearchInstanceTypesResponse
  *
- * \brief The ListElasticsearchInstanceTypesResponse class encapsulates ElasticsearchService ListElasticsearchInstanceTypes responses.
+ * \brief The ListElasticsearchInstanceTypesResponse class provides an interace for ElasticsearchService ListElasticsearchInstanceTypes responses.
  *
  * \ingroup ElasticsearchService
  *

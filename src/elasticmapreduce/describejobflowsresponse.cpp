@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::DescribeJobFlowsResponse
  *
- * \brief The DescribeJobFlowsResponse class encapsulates EMR DescribeJobFlows responses.
+ * \brief The DescribeJobFlowsResponse class provides an interace for EMR DescribeJobFlows responses.
  *
  * \ingroup EMR
  *

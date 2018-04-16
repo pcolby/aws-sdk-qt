@@ -59,7 +59,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::SmsClient
  *
- * \brief The SmsClient class provides access the AWS Server Migration Service (SMS) service.
+ * \brief The SmsClient class provides access to the AWS Server Migration Service (SMS) service.
  *
  * \ingroup SMS
  *

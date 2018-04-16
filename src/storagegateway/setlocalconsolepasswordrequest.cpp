@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::SetLocalConsolePasswordRequest
  *
- * \brief The SetLocalConsolePasswordRequest class encapsulates StorageGateway SetLocalConsolePassword requests.
+ * \brief The SetLocalConsolePasswordRequest class provides an interface for StorageGateway SetLocalConsolePassword requests.
  *
  * \ingroup StorageGateway
  *

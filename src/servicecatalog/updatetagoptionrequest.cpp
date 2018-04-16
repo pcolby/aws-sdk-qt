@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::UpdateTagOptionRequest
  *
- * \brief The UpdateTagOptionRequest class encapsulates ServiceCatalog UpdateTagOption requests.
+ * \brief The UpdateTagOptionRequest class provides an interface for ServiceCatalog UpdateTagOption requests.
  *
  * \ingroup ServiceCatalog
  *

@@ -28,7 +28,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::CheckDomainTransferabilityRequest
  *
- * \brief The CheckDomainTransferabilityRequest class encapsulates Route53Domains CheckDomainTransferability requests.
+ * \brief The CheckDomainTransferabilityRequest class provides an interface for Route53Domains CheckDomainTransferability requests.
  *
  * \ingroup Route53Domains
  *

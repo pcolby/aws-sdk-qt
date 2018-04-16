@@ -28,7 +28,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::SetAlarmStateRequest
  *
- * \brief The SetAlarmStateRequest class encapsulates CloudWatch SetAlarmState requests.
+ * \brief The SetAlarmStateRequest class provides an interface for CloudWatch SetAlarmState requests.
  *
  * \ingroup CloudWatch
  *

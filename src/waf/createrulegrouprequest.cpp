@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::CreateRuleGroupRequest
  *
- * \brief The CreateRuleGroupRequest class encapsulates WAF CreateRuleGroup requests.
+ * \brief The CreateRuleGroupRequest class provides an interface for WAF CreateRuleGroup requests.
  *
  * \ingroup WAF
  *

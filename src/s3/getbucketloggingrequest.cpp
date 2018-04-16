@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketLoggingRequest
  *
- * \brief The GetBucketLoggingRequest class encapsulates S3 GetBucketLogging requests.
+ * \brief The GetBucketLoggingRequest class provides an interface for S3 GetBucketLogging requests.
  *
  * \ingroup S3
  *

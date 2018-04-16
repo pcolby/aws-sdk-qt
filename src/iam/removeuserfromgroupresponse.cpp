@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::RemoveUserFromGroupResponse
  *
- * \brief The RemoveUserFromGroupResponse class encapsulates IAM RemoveUserFromGroup responses.
+ * \brief The RemoveUserFromGroupResponse class provides an interace for IAM RemoveUserFromGroup responses.
  *
  * \ingroup IAM
  *

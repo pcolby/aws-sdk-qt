@@ -115,7 +115,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::MTurkClient
  *
- * \brief The MTurkClient class provides access the Amazon Mechanical Turk ( MTurk) service.
+ * \brief The MTurkClient class provides access to the Amazon Mechanical Turk ( MTurk) service.
  *
  * \ingroup MTurk
  *

@@ -30,7 +30,7 @@ namespace KinesisVideoMedia {
 /*!
  * \class QtAws::KinesisVideoMedia::GetMediaResponse
  *
- * \brief The GetMediaResponse class encapsulates KinesisVideoMedia GetMedia responses.
+ * \brief The GetMediaResponse class provides an interace for KinesisVideoMedia GetMedia responses.
  *
  * \ingroup KinesisVideoMedia
  *

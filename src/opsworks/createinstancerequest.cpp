@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CreateInstanceRequest
  *
- * \brief The CreateInstanceRequest class encapsulates OpsWorks CreateInstance requests.
+ * \brief The CreateInstanceRequest class provides an interface for OpsWorks CreateInstance requests.
  *
  * \ingroup OpsWorks
  *

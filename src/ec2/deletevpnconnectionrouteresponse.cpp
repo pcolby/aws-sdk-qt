@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteVpnConnectionRouteResponse
  *
- * \brief The DeleteVpnConnectionRouteResponse class encapsulates EC2 DeleteVpnConnectionRoute responses.
+ * \brief The DeleteVpnConnectionRouteResponse class provides an interace for EC2 DeleteVpnConnectionRoute responses.
  *
  * \ingroup EC2
  *

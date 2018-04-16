@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateAccountAliasRequest
  *
- * \brief The CreateAccountAliasRequest class encapsulates IAM CreateAccountAlias requests.
+ * \brief The CreateAccountAliasRequest class provides an interface for IAM CreateAccountAlias requests.
  *
  * \ingroup IAM
  *

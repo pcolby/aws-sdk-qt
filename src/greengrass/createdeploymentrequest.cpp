@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateDeploymentRequest
  *
- * \brief The CreateDeploymentRequest class encapsulates Greengrass CreateDeployment requests.
+ * \brief The CreateDeploymentRequest class provides an interface for Greengrass CreateDeployment requests.
  *
  * \ingroup Greengrass
  *

@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListObjectParentsRequest
  *
- * \brief The ListObjectParentsRequest class encapsulates CloudDirectory ListObjectParents requests.
+ * \brief The ListObjectParentsRequest class provides an interface for CloudDirectory ListObjectParents requests.
  *
  * \ingroup CloudDirectory
  *

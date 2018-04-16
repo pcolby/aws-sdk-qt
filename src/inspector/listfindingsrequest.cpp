@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::ListFindingsRequest
  *
- * \brief The ListFindingsRequest class encapsulates Inspector ListFindings requests.
+ * \brief The ListFindingsRequest class provides an interface for Inspector ListFindings requests.
  *
  * \ingroup Inspector
  *

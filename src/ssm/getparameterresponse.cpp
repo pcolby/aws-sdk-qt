@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetParameterResponse
  *
- * \brief The GetParameterResponse class encapsulates SSM GetParameter responses.
+ * \brief The GetParameterResponse class provides an interace for SSM GetParameter responses.
  *
  * \ingroup SSM
  *

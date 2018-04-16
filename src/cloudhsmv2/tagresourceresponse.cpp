@@ -30,7 +30,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::TagResourceResponse
  *
- * \brief The TagResourceResponse class encapsulates CloudHSMV2 TagResource responses.
+ * \brief The TagResourceResponse class provides an interace for CloudHSMV2 TagResource responses.
  *
  * \ingroup CloudHSMV2
  *

@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateSoftwareUpdateJobResponse
  *
- * \brief The CreateSoftwareUpdateJobResponse class encapsulates Greengrass CreateSoftwareUpdateJob responses.
+ * \brief The CreateSoftwareUpdateJobResponse class provides an interace for Greengrass CreateSoftwareUpdateJob responses.
  *
  * \ingroup Greengrass
  *

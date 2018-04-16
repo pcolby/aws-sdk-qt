@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::DeleteUserPoolRequest
  *
- * \brief The DeleteUserPoolRequest class encapsulates CognitoIdentityProvider DeleteUserPool requests.
+ * \brief The DeleteUserPoolRequest class provides an interface for CognitoIdentityProvider DeleteUserPool requests.
  *
  * \ingroup CognitoIdentityProvider
  *

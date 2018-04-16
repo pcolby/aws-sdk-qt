@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutObjectAclResponse
  *
- * \brief The PutObjectAclResponse class encapsulates S3 PutObjectAcl responses.
+ * \brief The PutObjectAclResponse class provides an interace for S3 PutObjectAcl responses.
  *
  * \ingroup S3
  *

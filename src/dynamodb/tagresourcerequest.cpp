@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::TagResourceRequest
  *
- * \brief The TagResourceRequest class encapsulates DynamoDB TagResource requests.
+ * \brief The TagResourceRequest class provides an interface for DynamoDB TagResource requests.
  *
  * \ingroup DynamoDB
  *

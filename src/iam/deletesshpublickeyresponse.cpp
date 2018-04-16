@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteSSHPublicKeyResponse
  *
- * \brief The DeleteSSHPublicKeyResponse class encapsulates IAM DeleteSSHPublicKey responses.
+ * \brief The DeleteSSHPublicKeyResponse class provides an interace for IAM DeleteSSHPublicKey responses.
  *
  * \ingroup IAM
  *

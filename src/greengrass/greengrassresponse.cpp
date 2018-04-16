@@ -29,7 +29,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GreengrassResponse
  *
- * \brief The GreengrassResponse class is the base class for all Greengrass responses.
+ * \brief The GreengrassResponse class provides an interface for Greengrass responses.
  *
  * \ingroup Greengrass
  */

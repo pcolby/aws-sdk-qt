@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateApplicationSettingsRequest
  *
- * \brief The UpdateApplicationSettingsRequest class encapsulates Pinpoint UpdateApplicationSettings requests.
+ * \brief The UpdateApplicationSettingsRequest class provides an interface for Pinpoint UpdateApplicationSettings requests.
  *
  * \ingroup Pinpoint
  *

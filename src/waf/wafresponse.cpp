@@ -29,7 +29,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::WAFResponse
  *
- * \brief The WAFResponse class is the base class for all WAF responses.
+ * \brief The WAFResponse class provides an interface for WAF responses.
  *
  * \ingroup WAF
  */

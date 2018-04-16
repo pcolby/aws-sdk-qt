@@ -30,7 +30,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::UpdateApplicationResponse
  *
- * \brief The UpdateApplicationResponse class encapsulates ServerlessApplicationRepository UpdateApplication responses.
+ * \brief The UpdateApplicationResponse class provides an interace for ServerlessApplicationRepository UpdateApplication responses.
  *
  * \ingroup ServerlessApplicationRepository
  *

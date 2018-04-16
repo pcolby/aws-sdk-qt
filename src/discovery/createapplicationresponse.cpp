@@ -30,7 +30,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::CreateApplicationResponse
  *
- * \brief The CreateApplicationResponse class encapsulates ApplicationDiscoveryService CreateApplication responses.
+ * \brief The CreateApplicationResponse class provides an interace for ApplicationDiscoveryService CreateApplication responses.
  *
  * \ingroup ApplicationDiscoveryService
  *

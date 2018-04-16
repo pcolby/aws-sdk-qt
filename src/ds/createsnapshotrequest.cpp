@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateSnapshotRequest
  *
- * \brief The CreateSnapshotRequest class encapsulates DirectoryService CreateSnapshot requests.
+ * \brief The CreateSnapshotRequest class provides an interface for DirectoryService CreateSnapshot requests.
  *
  * \ingroup DirectoryService
  *

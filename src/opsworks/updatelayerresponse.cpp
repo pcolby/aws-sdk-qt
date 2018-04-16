@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateLayerResponse
  *
- * \brief The UpdateLayerResponse class encapsulates OpsWorks UpdateLayer responses.
+ * \brief The UpdateLayerResponse class provides an interace for OpsWorks UpdateLayer responses.
  *
  * \ingroup OpsWorks
  *

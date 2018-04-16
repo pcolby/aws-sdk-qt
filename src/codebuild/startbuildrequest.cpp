@@ -28,7 +28,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::StartBuildRequest
  *
- * \brief The StartBuildRequest class encapsulates CodeBuild StartBuild requests.
+ * \brief The StartBuildRequest class provides an interface for CodeBuild StartBuild requests.
  *
  * \ingroup CodeBuild
  *

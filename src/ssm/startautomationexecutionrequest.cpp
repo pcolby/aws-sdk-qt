@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::StartAutomationExecutionRequest
  *
- * \brief The StartAutomationExecutionRequest class encapsulates SSM StartAutomationExecution requests.
+ * \brief The StartAutomationExecutionRequest class provides an interface for SSM StartAutomationExecution requests.
  *
  * \ingroup SSM
  *

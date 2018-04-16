@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyInstanceAttributeRequest
  *
- * \brief The ModifyInstanceAttributeRequest class encapsulates EC2 ModifyInstanceAttribute requests.
+ * \brief The ModifyInstanceAttributeRequest class provides an interface for EC2 ModifyInstanceAttribute requests.
  *
  * \ingroup EC2
  *

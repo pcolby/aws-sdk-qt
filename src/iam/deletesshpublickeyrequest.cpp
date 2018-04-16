@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteSSHPublicKeyRequest
  *
- * \brief The DeleteSSHPublicKeyRequest class encapsulates IAM DeleteSSHPublicKey requests.
+ * \brief The DeleteSSHPublicKeyRequest class provides an interface for IAM DeleteSSHPublicKey requests.
  *
  * \ingroup IAM
  *

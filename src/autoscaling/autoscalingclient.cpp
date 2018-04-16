@@ -134,7 +134,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::AutoScalingClient
  *
- * \brief The AutoScalingClient class provides access the Auto Scaling service.
+ * \brief The AutoScalingClient class provides access to the Auto Scaling service.
  *
  * \ingroup AutoScaling
  *

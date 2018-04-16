@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::VerifyUserAttributeRequest
  *
- * \brief The VerifyUserAttributeRequest class encapsulates CognitoIdentityProvider VerifyUserAttribute requests.
+ * \brief The VerifyUserAttributeRequest class provides an interface for CognitoIdentityProvider VerifyUserAttribute requests.
  *
  * \ingroup CognitoIdentityProvider
  *

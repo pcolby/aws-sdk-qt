@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::CountPendingDecisionTasksRequest
  *
- * \brief The CountPendingDecisionTasksRequest class encapsulates SWF CountPendingDecisionTasks requests.
+ * \brief The CountPendingDecisionTasksRequest class provides an interface for SWF CountPendingDecisionTasks requests.
  *
  * \ingroup SWF
  *

@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteCampaignResponse
  *
- * \brief The DeleteCampaignResponse class encapsulates Pinpoint DeleteCampaign responses.
+ * \brief The DeleteCampaignResponse class provides an interace for Pinpoint DeleteCampaign responses.
  *
  * \ingroup Pinpoint
  *

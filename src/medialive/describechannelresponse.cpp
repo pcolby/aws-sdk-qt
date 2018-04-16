@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::DescribeChannelResponse
  *
- * \brief The DescribeChannelResponse class encapsulates MediaLive DescribeChannel responses.
+ * \brief The DescribeChannelResponse class provides an interace for MediaLive DescribeChannel responses.
  *
  * \ingroup MediaLive
  *

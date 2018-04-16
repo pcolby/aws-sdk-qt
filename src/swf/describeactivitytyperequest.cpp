@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::DescribeActivityTypeRequest
  *
- * \brief The DescribeActivityTypeRequest class encapsulates SWF DescribeActivityType requests.
+ * \brief The DescribeActivityTypeRequest class provides an interface for SWF DescribeActivityType requests.
  *
  * \ingroup SWF
  *

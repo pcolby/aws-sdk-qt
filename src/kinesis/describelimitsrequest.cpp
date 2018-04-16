@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::DescribeLimitsRequest
  *
- * \brief The DescribeLimitsRequest class encapsulates Kinesis DescribeLimits requests.
+ * \brief The DescribeLimitsRequest class provides an interface for Kinesis DescribeLimits requests.
  *
  * \ingroup Kinesis
  *

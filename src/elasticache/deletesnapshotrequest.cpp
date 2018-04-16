@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DeleteSnapshotRequest
  *
- * \brief The DeleteSnapshotRequest class encapsulates ElastiCache DeleteSnapshot requests.
+ * \brief The DeleteSnapshotRequest class provides an interface for ElastiCache DeleteSnapshot requests.
  *
  * \ingroup ElastiCache
  *

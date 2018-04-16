@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AcceptVpcPeeringConnectionResponse
  *
- * \brief The AcceptVpcPeeringConnectionResponse class encapsulates EC2 AcceptVpcPeeringConnection responses.
+ * \brief The AcceptVpcPeeringConnectionResponse class provides an interace for EC2 AcceptVpcPeeringConnection responses.
  *
  * \ingroup EC2
  *

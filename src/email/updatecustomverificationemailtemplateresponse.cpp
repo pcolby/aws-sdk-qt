@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::UpdateCustomVerificationEmailTemplateResponse
  *
- * \brief The UpdateCustomVerificationEmailTemplateResponse class encapsulates SES UpdateCustomVerificationEmailTemplate responses.
+ * \brief The UpdateCustomVerificationEmailTemplateResponse class provides an interace for SES UpdateCustomVerificationEmailTemplate responses.
  *
  * \ingroup SES
  *

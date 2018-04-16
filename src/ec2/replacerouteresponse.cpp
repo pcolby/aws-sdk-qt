@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ReplaceRouteResponse
  *
- * \brief The ReplaceRouteResponse class encapsulates EC2 ReplaceRoute responses.
+ * \brief The ReplaceRouteResponse class provides an interace for EC2 ReplaceRoute responses.
  *
  * \ingroup EC2
  *

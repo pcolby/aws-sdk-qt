@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListAssignmentsForHITRequest
  *
- * \brief The ListAssignmentsForHITRequest class encapsulates MTurk ListAssignmentsForHIT requests.
+ * \brief The ListAssignmentsForHITRequest class provides an interface for MTurk ListAssignmentsForHIT requests.
  *
  * \ingroup MTurk
  *

@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::TagResourceRequest
  *
- * \brief The TagResourceRequest class encapsulates CloudDirectory TagResource requests.
+ * \brief The TagResourceRequest class provides an interface for CloudDirectory TagResource requests.
  *
  * \ingroup CloudDirectory
  *

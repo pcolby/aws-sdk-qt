@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListIndicesResponse
  *
- * \brief The ListIndicesResponse class encapsulates IoT ListIndices responses.
+ * \brief The ListIndicesResponse class provides an interace for IoT ListIndices responses.
  *
  * \ingroup IoT
  *

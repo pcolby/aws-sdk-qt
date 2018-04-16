@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::ModifyHapgRequest
  *
- * \brief The ModifyHapgRequest class encapsulates CloudHSM ModifyHapg requests.
+ * \brief The ModifyHapgRequest class provides an interface for CloudHSM ModifyHapg requests.
  *
  * \ingroup CloudHSM
  *

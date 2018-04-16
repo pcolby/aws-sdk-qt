@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::GetExecutionHistoryRequest
  *
- * \brief The GetExecutionHistoryRequest class encapsulates SFN GetExecutionHistory requests.
+ * \brief The GetExecutionHistoryRequest class provides an interface for SFN GetExecutionHistory requests.
  *
  * \ingroup SFN
  *

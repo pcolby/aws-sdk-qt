@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::DeprecateWorkflowTypeRequest
  *
- * \brief The DeprecateWorkflowTypeRequest class encapsulates SWF DeprecateWorkflowType requests.
+ * \brief The DeprecateWorkflowTypeRequest class provides an interface for SWF DeprecateWorkflowType requests.
  *
  * \ingroup SWF
  *

@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::SendMessageBatchRequest
  *
- * \brief The SendMessageBatchRequest class encapsulates SQS SendMessageBatch requests.
+ * \brief The SendMessageBatchRequest class provides an interface for SQS SendMessageBatch requests.
  *
  * \ingroup SQS
  *

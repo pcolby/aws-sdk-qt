@@ -29,7 +29,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::KinesisResponse
  *
- * \brief The KinesisResponse class is the base class for all Kinesis responses.
+ * \brief The KinesisResponse class provides an interface for Kinesis responses.
  *
  * \ingroup Kinesis
  */

@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::ListAliasesResponse
  *
- * \brief The ListAliasesResponse class encapsulates GameLift ListAliases responses.
+ * \brief The ListAliasesResponse class provides an interace for GameLift ListAliases responses.
  *
  * \ingroup GameLift
  *

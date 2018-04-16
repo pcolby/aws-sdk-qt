@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::ListAssessmentRunAgentsRequest
  *
- * \brief The ListAssessmentRunAgentsRequest class encapsulates Inspector ListAssessmentRunAgents requests.
+ * \brief The ListAssessmentRunAgentsRequest class provides an interface for Inspector ListAssessmentRunAgents requests.
  *
  * \ingroup Inspector
  *

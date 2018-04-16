@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::CreateEventSubscriptionResponse
  *
- * \brief The CreateEventSubscriptionResponse class encapsulates Redshift CreateEventSubscription responses.
+ * \brief The CreateEventSubscriptionResponse class provides an interace for Redshift CreateEventSubscription responses.
  *
  * \ingroup Redshift
  *

@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::UpdateTypeResponse
  *
- * \brief The UpdateTypeResponse class encapsulates AppSync UpdateType responses.
+ * \brief The UpdateTypeResponse class provides an interace for AppSync UpdateType responses.
  *
  * \ingroup AppSync
  *

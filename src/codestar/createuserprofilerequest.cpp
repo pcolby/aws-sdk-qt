@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::CreateUserProfileRequest
  *
- * \brief The CreateUserProfileRequest class encapsulates CodeStar CreateUserProfile requests.
+ * \brief The CreateUserProfileRequest class provides an interface for CodeStar CreateUserProfile requests.
  *
  * \ingroup CodeStar
  *

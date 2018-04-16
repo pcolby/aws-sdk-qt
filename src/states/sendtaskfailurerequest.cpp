@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::SendTaskFailureRequest
  *
- * \brief The SendTaskFailureRequest class encapsulates SFN SendTaskFailure requests.
+ * \brief The SendTaskFailureRequest class provides an interface for SFN SendTaskFailure requests.
  *
  * \ingroup SFN
  *

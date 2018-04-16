@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::ListWebACLsResponse
  *
- * \brief The ListWebACLsResponse class encapsulates WAF ListWebACLs responses.
+ * \brief The ListWebACLsResponse class provides an interace for WAF ListWebACLs responses.
  *
  * \ingroup WAF
  *

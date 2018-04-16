@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteConfigurationSetTrackingOptionsRequest
  *
- * \brief The DeleteConfigurationSetTrackingOptionsRequest class encapsulates SES DeleteConfigurationSetTrackingOptions requests.
+ * \brief The DeleteConfigurationSetTrackingOptionsRequest class provides an interface for SES DeleteConfigurationSetTrackingOptions requests.
  *
  * \ingroup SES
  *

@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DescribeDataSourcesRequest
  *
- * \brief The DescribeDataSourcesRequest class encapsulates MachineLearning DescribeDataSources requests.
+ * \brief The DescribeDataSourcesRequest class provides an interface for MachineLearning DescribeDataSources requests.
  *
  * \ingroup MachineLearning
  *

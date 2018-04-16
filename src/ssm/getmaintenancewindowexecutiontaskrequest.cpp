@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetMaintenanceWindowExecutionTaskRequest
  *
- * \brief The GetMaintenanceWindowExecutionTaskRequest class encapsulates SSM GetMaintenanceWindowExecutionTask requests.
+ * \brief The GetMaintenanceWindowExecutionTaskRequest class provides an interface for SSM GetMaintenanceWindowExecutionTask requests.
  *
  * \ingroup SSM
  *

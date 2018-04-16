@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateGroupRequest
  *
- * \brief The CreateGroupRequest class encapsulates Greengrass CreateGroup requests.
+ * \brief The CreateGroupRequest class provides an interface for Greengrass CreateGroup requests.
  *
  * \ingroup Greengrass
  *

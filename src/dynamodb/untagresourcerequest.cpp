@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::UntagResourceRequest
  *
- * \brief The UntagResourceRequest class encapsulates DynamoDB UntagResource requests.
+ * \brief The UntagResourceRequest class provides an interface for DynamoDB UntagResource requests.
  *
  * \ingroup DynamoDB
  *

@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::UpdateSchemaRequest
  *
- * \brief The UpdateSchemaRequest class encapsulates CloudDirectory UpdateSchema requests.
+ * \brief The UpdateSchemaRequest class provides an interface for CloudDirectory UpdateSchema requests.
  *
  * \ingroup CloudDirectory
  *

@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::CreateDataSourceFromRedshiftRequest
  *
- * \brief The CreateDataSourceFromRedshiftRequest class encapsulates MachineLearning CreateDataSourceFromRedshift requests.
+ * \brief The CreateDataSourceFromRedshiftRequest class provides an interface for MachineLearning CreateDataSourceFromRedshift requests.
  *
  * \ingroup MachineLearning
  *

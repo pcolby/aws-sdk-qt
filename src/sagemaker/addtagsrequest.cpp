@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::AddTagsRequest
  *
- * \brief The AddTagsRequest class encapsulates SageMaker AddTags requests.
+ * \brief The AddTagsRequest class provides an interface for SageMaker AddTags requests.
  *
  * \ingroup SageMaker
  *

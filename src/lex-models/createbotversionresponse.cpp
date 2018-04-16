@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::CreateBotVersionResponse
  *
- * \brief The CreateBotVersionResponse class encapsulates LexModelBuildingService CreateBotVersion responses.
+ * \brief The CreateBotVersionResponse class provides an interace for LexModelBuildingService CreateBotVersion responses.
  *
  * \ingroup LexModelBuildingService
  *

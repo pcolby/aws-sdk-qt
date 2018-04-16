@@ -57,7 +57,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::KinesisVideoClient
  *
- * \brief The KinesisVideoClient class provides access the Amazon Kinesis Video Streams service.
+ * \brief The KinesisVideoClient class provides access to the Amazon Kinesis Video Streams service.
  *
  * \ingroup KinesisVideo
  *

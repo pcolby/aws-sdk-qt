@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeVTLDevicesResponse
  *
- * \brief The DescribeVTLDevicesResponse class encapsulates StorageGateway DescribeVTLDevices responses.
+ * \brief The DescribeVTLDevicesResponse class provides an interace for StorageGateway DescribeVTLDevices responses.
  *
  * \ingroup StorageGateway
  *

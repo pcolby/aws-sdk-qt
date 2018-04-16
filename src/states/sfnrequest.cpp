@@ -26,7 +26,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::SFNRequest
  *
- * \brief The SFNRequest class is the base class for all SFN requests.
+ * \brief The SFNRequest class provides an interface for SFN requests.
  *
  * \ingroup SFN
  */

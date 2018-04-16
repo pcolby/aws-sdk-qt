@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::UpdateLoggerDefinitionRequest
  *
- * \brief The UpdateLoggerDefinitionRequest class encapsulates Greengrass UpdateLoggerDefinition requests.
+ * \brief The UpdateLoggerDefinitionRequest class provides an interface for Greengrass UpdateLoggerDefinition requests.
  *
  * \ingroup Greengrass
  *

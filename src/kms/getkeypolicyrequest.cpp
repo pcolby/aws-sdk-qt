@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::GetKeyPolicyRequest
  *
- * \brief The GetKeyPolicyRequest class encapsulates KMS GetKeyPolicy requests.
+ * \brief The GetKeyPolicyRequest class provides an interface for KMS GetKeyPolicy requests.
  *
  * \ingroup KMS
  *

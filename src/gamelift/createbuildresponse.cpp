@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::CreateBuildResponse
  *
- * \brief The CreateBuildResponse class encapsulates GameLift CreateBuild responses.
+ * \brief The CreateBuildResponse class provides an interace for GameLift CreateBuild responses.
  *
  * \ingroup GameLift
  *

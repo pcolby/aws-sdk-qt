@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::UpdatePolicyResponse
  *
- * \brief The UpdatePolicyResponse class encapsulates Organizations UpdatePolicy responses.
+ * \brief The UpdatePolicyResponse class provides an interace for Organizations UpdatePolicy responses.
  *
  * \ingroup Organizations
  *

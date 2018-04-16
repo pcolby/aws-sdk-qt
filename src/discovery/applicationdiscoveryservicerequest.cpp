@@ -26,7 +26,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceRequest
  *
- * \brief The ApplicationDiscoveryServiceRequest class is the base class for all ApplicationDiscoveryService requests.
+ * \brief The ApplicationDiscoveryServiceRequest class provides an interface for ApplicationDiscoveryService requests.
  *
  * \ingroup ApplicationDiscoveryService
  */

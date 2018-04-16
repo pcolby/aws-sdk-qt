@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DeleteClusterRequest
  *
- * \brief The DeleteClusterRequest class encapsulates DAX DeleteCluster requests.
+ * \brief The DeleteClusterRequest class provides an interface for DAX DeleteCluster requests.
  *
  * \ingroup DAX
  *

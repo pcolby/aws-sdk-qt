@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::DescribeJobQueuesResponse
  *
- * \brief The DescribeJobQueuesResponse class encapsulates Batch DescribeJobQueues responses.
+ * \brief The DescribeJobQueuesResponse class provides an interace for Batch DescribeJobQueues responses.
  *
  * \ingroup Batch
  *

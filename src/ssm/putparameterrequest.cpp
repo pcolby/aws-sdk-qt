@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::PutParameterRequest
  *
- * \brief The PutParameterRequest class encapsulates SSM PutParameter requests.
+ * \brief The PutParameterRequest class provides an interface for SSM PutParameter requests.
  *
  * \ingroup SSM
  *

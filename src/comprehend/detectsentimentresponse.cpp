@@ -30,7 +30,7 @@ namespace Comprehend {
 /*!
  * \class QtAws::Comprehend::DetectSentimentResponse
  *
- * \brief The DetectSentimentResponse class encapsulates Comprehend DetectSentiment responses.
+ * \brief The DetectSentimentResponse class provides an interace for Comprehend DetectSentiment responses.
  *
  * \ingroup Comprehend
  *

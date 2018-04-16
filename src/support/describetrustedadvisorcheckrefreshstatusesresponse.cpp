@@ -30,7 +30,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::DescribeTrustedAdvisorCheckRefreshStatusesResponse
  *
- * \brief The DescribeTrustedAdvisorCheckRefreshStatusesResponse class encapsulates Support DescribeTrustedAdvisorCheckRefreshStatuses responses.
+ * \brief The DescribeTrustedAdvisorCheckRefreshStatusesResponse class provides an interace for Support DescribeTrustedAdvisorCheckRefreshStatuses responses.
  *
  * \ingroup Support
  *

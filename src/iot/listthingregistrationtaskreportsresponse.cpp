@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListThingRegistrationTaskReportsResponse
  *
- * \brief The ListThingRegistrationTaskReportsResponse class encapsulates IoT ListThingRegistrationTaskReports responses.
+ * \brief The ListThingRegistrationTaskReportsResponse class provides an interace for IoT ListThingRegistrationTaskReports responses.
  *
  * \ingroup IoT
  *

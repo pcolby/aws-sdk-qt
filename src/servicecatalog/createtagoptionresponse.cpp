@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::CreateTagOptionResponse
  *
- * \brief The CreateTagOptionResponse class encapsulates ServiceCatalog CreateTagOption responses.
+ * \brief The CreateTagOptionResponse class provides an interace for ServiceCatalog CreateTagOption responses.
  *
  * \ingroup ServiceCatalog
  *

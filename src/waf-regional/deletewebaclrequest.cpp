@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeleteWebACLRequest
  *
- * \brief The DeleteWebACLRequest class encapsulates WAFRegional DeleteWebACL requests.
+ * \brief The DeleteWebACLRequest class provides an interface for WAFRegional DeleteWebACL requests.
  *
  * \ingroup WAFRegional
  *

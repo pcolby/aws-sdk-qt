@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::ListAliasesResponse
  *
- * \brief The ListAliasesResponse class encapsulates Lambda ListAliases responses.
+ * \brief The ListAliasesResponse class provides an interace for Lambda ListAliases responses.
  *
  * \ingroup Lambda
  *

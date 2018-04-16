@@ -28,7 +28,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::DeleteProjectRequest
  *
- * \brief The DeleteProjectRequest class encapsulates CodeBuild DeleteProject requests.
+ * \brief The DeleteProjectRequest class provides an interface for CodeBuild DeleteProject requests.
  *
  * \ingroup CodeBuild
  *

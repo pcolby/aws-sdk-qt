@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetDeviceInstanceRequest
  *
- * \brief The GetDeviceInstanceRequest class encapsulates DeviceFarm GetDeviceInstance requests.
+ * \brief The GetDeviceInstanceRequest class provides an interface for DeviceFarm GetDeviceInstance requests.
  *
  * \ingroup DeviceFarm
  *

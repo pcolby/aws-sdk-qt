@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::IncreaseReplicationFactorResponse
  *
- * \brief The IncreaseReplicationFactorResponse class encapsulates DAX IncreaseReplicationFactor responses.
+ * \brief The IncreaseReplicationFactorResponse class provides an interace for DAX IncreaseReplicationFactor responses.
  *
  * \ingroup DAX
  *

@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::ReadJobRequest
  *
- * \brief The ReadJobRequest class encapsulates ElasticTranscoder ReadJob requests.
+ * \brief The ReadJobRequest class provides an interface for ElasticTranscoder ReadJob requests.
  *
  * \ingroup ElasticTranscoder
  *

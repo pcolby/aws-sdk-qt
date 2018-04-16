@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RestoreAddressToClassicResponse
  *
- * \brief The RestoreAddressToClassicResponse class encapsulates EC2 RestoreAddressToClassic responses.
+ * \brief The RestoreAddressToClassicResponse class provides an interace for EC2 RestoreAddressToClassic responses.
  *
  * \ingroup EC2
  *

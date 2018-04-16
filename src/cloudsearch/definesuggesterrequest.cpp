@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DefineSuggesterRequest
  *
- * \brief The DefineSuggesterRequest class encapsulates CloudSearch DefineSuggester requests.
+ * \brief The DefineSuggesterRequest class provides an interface for CloudSearch DefineSuggester requests.
  *
  * \ingroup CloudSearch
  *

@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::DeprecateDomainResponse
  *
- * \brief The DeprecateDomainResponse class encapsulates SWF DeprecateDomain responses.
+ * \brief The DeprecateDomainResponse class provides an interace for SWF DeprecateDomain responses.
  *
  * \ingroup SWF
  *

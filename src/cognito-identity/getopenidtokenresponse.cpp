@@ -30,7 +30,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::GetOpenIdTokenResponse
  *
- * \brief The GetOpenIdTokenResponse class encapsulates CognitoIdentity GetOpenIdToken responses.
+ * \brief The GetOpenIdTokenResponse class provides an interace for CognitoIdentity GetOpenIdToken responses.
  *
  * \ingroup CognitoIdentity
  *

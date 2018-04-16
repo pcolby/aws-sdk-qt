@@ -28,7 +28,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::StartLoggingRequest
  *
- * \brief The StartLoggingRequest class encapsulates CloudTrail StartLogging requests.
+ * \brief The StartLoggingRequest class provides an interface for CloudTrail StartLogging requests.
  *
  * \ingroup CloudTrail
  *

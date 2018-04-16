@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::GetFacetResponse
  *
- * \brief The GetFacetResponse class encapsulates CloudDirectory GetFacet responses.
+ * \brief The GetFacetResponse class provides an interace for CloudDirectory GetFacet responses.
  *
  * \ingroup CloudDirectory
  *

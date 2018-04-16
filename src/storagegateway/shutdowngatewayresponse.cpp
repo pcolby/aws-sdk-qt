@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ShutdownGatewayResponse
  *
- * \brief The ShutdownGatewayResponse class encapsulates StorageGateway ShutdownGateway responses.
+ * \brief The ShutdownGatewayResponse class provides an interace for StorageGateway ShutdownGateway responses.
  *
  * \ingroup StorageGateway
  *

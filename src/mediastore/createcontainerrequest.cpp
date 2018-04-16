@@ -28,7 +28,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::CreateContainerRequest
  *
- * \brief The CreateContainerRequest class encapsulates MediaStore CreateContainer requests.
+ * \brief The CreateContainerRequest class provides an interface for MediaStore CreateContainer requests.
  *
  * \ingroup MediaStore
  *

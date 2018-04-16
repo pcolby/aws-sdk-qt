@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::AssociateConnectionWithLagResponse
  *
- * \brief The AssociateConnectionWithLagResponse class encapsulates DirectConnect AssociateConnectionWithLag responses.
+ * \brief The AssociateConnectionWithLagResponse class provides an interace for DirectConnect AssociateConnectionWithLag responses.
  *
  * \ingroup DirectConnect
  *

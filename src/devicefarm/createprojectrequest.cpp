@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::CreateProjectRequest
  *
- * \brief The CreateProjectRequest class encapsulates DeviceFarm CreateProject requests.
+ * \brief The CreateProjectRequest class provides an interface for DeviceFarm CreateProject requests.
  *
  * \ingroup DeviceFarm
  *

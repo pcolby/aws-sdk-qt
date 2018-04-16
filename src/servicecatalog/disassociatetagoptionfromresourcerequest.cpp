@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DisassociateTagOptionFromResourceRequest
  *
- * \brief The DisassociateTagOptionFromResourceRequest class encapsulates ServiceCatalog DisassociateTagOptionFromResource requests.
+ * \brief The DisassociateTagOptionFromResourceRequest class provides an interface for ServiceCatalog DisassociateTagOptionFromResource requests.
  *
  * \ingroup ServiceCatalog
  *

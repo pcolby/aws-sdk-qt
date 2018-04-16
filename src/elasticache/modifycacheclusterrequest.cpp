@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ModifyCacheClusterRequest
  *
- * \brief The ModifyCacheClusterRequest class encapsulates ElastiCache ModifyCacheCluster requests.
+ * \brief The ModifyCacheClusterRequest class provides an interface for ElastiCache ModifyCacheCluster requests.
  *
  * \ingroup ElastiCache
  *

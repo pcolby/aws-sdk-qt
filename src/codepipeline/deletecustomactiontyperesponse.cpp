@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::DeleteCustomActionTypeResponse
  *
- * \brief The DeleteCustomActionTypeResponse class encapsulates CodePipeline DeleteCustomActionType responses.
+ * \brief The DeleteCustomActionTypeResponse class provides an interace for CodePipeline DeleteCustomActionType responses.
  *
  * \ingroup CodePipeline
  *

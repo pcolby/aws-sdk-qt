@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::AssociateTeamMemberRequest
  *
- * \brief The AssociateTeamMemberRequest class encapsulates CodeStar AssociateTeamMember requests.
+ * \brief The AssociateTeamMemberRequest class provides an interface for CodeStar AssociateTeamMember requests.
  *
  * \ingroup CodeStar
  *

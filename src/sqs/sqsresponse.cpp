@@ -29,7 +29,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::SQSResponse
  *
- * \brief The SQSResponse class is the base class for all SQS responses.
+ * \brief The SQSResponse class provides an interface for SQS responses.
  *
  * \ingroup SQS
  */

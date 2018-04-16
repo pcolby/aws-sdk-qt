@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeTagsResponse
  *
- * \brief The DescribeTagsResponse class encapsulates AutoScaling DescribeTags responses.
+ * \brief The DescribeTagsResponse class provides an interace for AutoScaling DescribeTags responses.
  *
  * \ingroup AutoScaling
  *

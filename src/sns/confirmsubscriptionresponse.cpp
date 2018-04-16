@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::ConfirmSubscriptionResponse
  *
- * \brief The ConfirmSubscriptionResponse class encapsulates SNS ConfirmSubscription responses.
+ * \brief The ConfirmSubscriptionResponse class provides an interace for SNS ConfirmSubscription responses.
  *
  * \ingroup SNS
  *

@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketRequestPaymentRequest
  *
- * \brief The PutBucketRequestPaymentRequest class encapsulates S3 PutBucketRequestPayment requests.
+ * \brief The PutBucketRequestPaymentRequest class provides an interface for S3 PutBucketRequestPayment requests.
  *
  * \ingroup S3
  *

@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::EnterStandbyRequest
  *
- * \brief The EnterStandbyRequest class encapsulates AutoScaling EnterStandby requests.
+ * \brief The EnterStandbyRequest class provides an interface for AutoScaling EnterStandby requests.
  *
  * \ingroup AutoScaling
  *

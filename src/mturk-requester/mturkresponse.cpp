@@ -29,7 +29,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::MTurkResponse
  *
- * \brief The MTurkResponse class is the base class for all MTurk responses.
+ * \brief The MTurkResponse class provides an interface for MTurk responses.
  *
  * \ingroup MTurk
  */

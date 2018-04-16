@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::UpdateSecurityGroupRuleDescriptionsIngressResponse
  *
- * \brief The UpdateSecurityGroupRuleDescriptionsIngressResponse class encapsulates EC2 UpdateSecurityGroupRuleDescriptionsIngress responses.
+ * \brief The UpdateSecurityGroupRuleDescriptionsIngressResponse class provides an interace for EC2 UpdateSecurityGroupRuleDescriptionsIngress responses.
  *
  * \ingroup EC2
  *

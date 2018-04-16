@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetRuleRequest
  *
- * \brief The GetRuleRequest class encapsulates WAFRegional GetRule requests.
+ * \brief The GetRuleRequest class provides an interface for WAFRegional GetRule requests.
  *
  * \ingroup WAFRegional
  *

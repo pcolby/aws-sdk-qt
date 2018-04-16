@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::CreateConfigurationSetResponse
  *
- * \brief The CreateConfigurationSetResponse class encapsulates SES CreateConfigurationSet responses.
+ * \brief The CreateConfigurationSetResponse class provides an interace for SES CreateConfigurationSet responses.
  *
  * \ingroup SES
  *

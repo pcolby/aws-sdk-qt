@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::CompleteLayerUploadRequest
  *
- * \brief The CompleteLayerUploadRequest class encapsulates ECR CompleteLayerUpload requests.
+ * \brief The CompleteLayerUploadRequest class provides an interface for ECR CompleteLayerUpload requests.
  *
  * \ingroup ECR
  *

@@ -28,7 +28,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::DescribeSeverityLevelsRequest
  *
- * \brief The DescribeSeverityLevelsRequest class encapsulates Support DescribeSeverityLevels requests.
+ * \brief The DescribeSeverityLevelsRequest class provides an interface for Support DescribeSeverityLevels requests.
  *
  * \ingroup Support
  *

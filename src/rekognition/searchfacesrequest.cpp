@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::SearchFacesRequest
  *
- * \brief The SearchFacesRequest class encapsulates Rekognition SearchFaces requests.
+ * \brief The SearchFacesRequest class provides an interface for Rekognition SearchFaces requests.
  *
  * \ingroup Rekognition
  *

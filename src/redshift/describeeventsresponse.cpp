@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeEventsResponse
  *
- * \brief The DescribeEventsResponse class encapsulates Redshift DescribeEvents responses.
+ * \brief The DescribeEventsResponse class provides an interace for Redshift DescribeEvents responses.
  *
  * \ingroup Redshift
  *

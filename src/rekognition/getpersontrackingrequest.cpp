@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::GetPersonTrackingRequest
  *
- * \brief The GetPersonTrackingRequest class encapsulates Rekognition GetPersonTracking requests.
+ * \brief The GetPersonTrackingRequest class provides an interface for Rekognition GetPersonTracking requests.
  *
  * \ingroup Rekognition
  *

@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::TestEventPatternRequest
  *
- * \brief The TestEventPatternRequest class encapsulates CloudWatchEvents TestEventPattern requests.
+ * \brief The TestEventPatternRequest class provides an interface for CloudWatchEvents TestEventPattern requests.
  *
  * \ingroup CloudWatchEvents
  *

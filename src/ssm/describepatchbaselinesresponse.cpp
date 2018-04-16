@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribePatchBaselinesResponse
  *
- * \brief The DescribePatchBaselinesResponse class encapsulates SSM DescribePatchBaselines responses.
+ * \brief The DescribePatchBaselinesResponse class provides an interace for SSM DescribePatchBaselines responses.
  *
  * \ingroup SSM
  *

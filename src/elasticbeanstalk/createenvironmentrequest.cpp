@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::CreateEnvironmentRequest
  *
- * \brief The CreateEnvironmentRequest class encapsulates ElasticBeanstalk CreateEnvironment requests.
+ * \brief The CreateEnvironmentRequest class provides an interface for ElasticBeanstalk CreateEnvironment requests.
  *
  * \ingroup ElasticBeanstalk
  *

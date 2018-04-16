@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateDatabaseResponse
  *
- * \brief The UpdateDatabaseResponse class encapsulates Glue UpdateDatabase responses.
+ * \brief The UpdateDatabaseResponse class provides an interace for Glue UpdateDatabase responses.
  *
  * \ingroup Glue
  *

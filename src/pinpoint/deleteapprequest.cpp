@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteAppRequest
  *
- * \brief The DeleteAppRequest class encapsulates Pinpoint DeleteApp requests.
+ * \brief The DeleteAppRequest class provides an interface for Pinpoint DeleteApp requests.
  *
  * \ingroup Pinpoint
  *

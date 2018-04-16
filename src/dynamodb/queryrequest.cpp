@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::QueryRequest
  *
- * \brief The QueryRequest class encapsulates DynamoDB Query requests.
+ * \brief The QueryRequest class provides an interface for DynamoDB Query requests.
  *
  * \ingroup DynamoDB
  *

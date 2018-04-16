@@ -28,7 +28,7 @@ namespace TranscribeService {
 /*!
  * \class QtAws::TranscribeService::DeleteVocabularyRequest
  *
- * \brief The DeleteVocabularyRequest class encapsulates TranscribeService DeleteVocabulary requests.
+ * \brief The DeleteVocabularyRequest class provides an interface for TranscribeService DeleteVocabulary requests.
  *
  * \ingroup TranscribeService
  *

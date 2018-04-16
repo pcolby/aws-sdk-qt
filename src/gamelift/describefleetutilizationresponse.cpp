@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeFleetUtilizationResponse
  *
- * \brief The DescribeFleetUtilizationResponse class encapsulates GameLift DescribeFleetUtilization responses.
+ * \brief The DescribeFleetUtilizationResponse class provides an interace for GameLift DescribeFleetUtilization responses.
  *
  * \ingroup GameLift
  *

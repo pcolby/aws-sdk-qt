@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListSigningCertificatesRequest
  *
- * \brief The ListSigningCertificatesRequest class encapsulates IAM ListSigningCertificates requests.
+ * \brief The ListSigningCertificatesRequest class provides an interface for IAM ListSigningCertificates requests.
  *
  * \ingroup IAM
  *

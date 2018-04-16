@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DescribeSessionsResponse
  *
- * \brief The DescribeSessionsResponse class encapsulates AppStream DescribeSessions responses.
+ * \brief The DescribeSessionsResponse class provides an interace for AppStream DescribeSessions responses.
  *
  * \ingroup AppStream
  *

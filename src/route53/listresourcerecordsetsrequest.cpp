@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListResourceRecordSetsRequest
  *
- * \brief The ListResourceRecordSetsRequest class encapsulates Route53 ListResourceRecordSets requests.
+ * \brief The ListResourceRecordSetsRequest class provides an interface for Route53 ListResourceRecordSets requests.
  *
  * \ingroup Route53
  *

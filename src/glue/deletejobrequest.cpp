@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteJobRequest
  *
- * \brief The DeleteJobRequest class encapsulates Glue DeleteJob requests.
+ * \brief The DeleteJobRequest class provides an interface for Glue DeleteJob requests.
  *
  * \ingroup Glue
  *

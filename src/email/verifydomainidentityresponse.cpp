@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::VerifyDomainIdentityResponse
  *
- * \brief The VerifyDomainIdentityResponse class encapsulates SES VerifyDomainIdentity responses.
+ * \brief The VerifyDomainIdentityResponse class provides an interace for SES VerifyDomainIdentity responses.
  *
  * \ingroup SES
  *

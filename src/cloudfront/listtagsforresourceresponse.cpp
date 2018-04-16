@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::ListTagsForResourceResponse
  *
- * \brief The ListTagsForResourceResponse class encapsulates CloudFront ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class provides an interace for CloudFront ListTagsForResource responses.
  *
  * \ingroup CloudFront
  *

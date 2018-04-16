@@ -30,7 +30,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::ListHsmsResponse
  *
- * \brief The ListHsmsResponse class encapsulates CloudHSM ListHsms responses.
+ * \brief The ListHsmsResponse class provides an interace for CloudHSM ListHsms responses.
  *
  * \ingroup CloudHSM
  *

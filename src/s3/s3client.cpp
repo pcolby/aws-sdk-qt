@@ -192,7 +192,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::S3Client
  *
- * \brief The S3Client class provides access the Amazon Simple Storage Service ( S3) service.
+ * \brief The S3Client class provides access to the Amazon Simple Storage Service ( S3) service.
  *
  * \ingroup S3
  *

@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::PurchaseReservedCacheNodesOfferingResponse
  *
- * \brief The PurchaseReservedCacheNodesOfferingResponse class encapsulates ElastiCache PurchaseReservedCacheNodesOffering responses.
+ * \brief The PurchaseReservedCacheNodesOfferingResponse class provides an interace for ElastiCache PurchaseReservedCacheNodesOffering responses.
  *
  * \ingroup ElastiCache
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AuthorizeSecurityGroupIngressRequest
  *
- * \brief The AuthorizeSecurityGroupIngressRequest class encapsulates EC2 AuthorizeSecurityGroupIngress requests.
+ * \brief The AuthorizeSecurityGroupIngressRequest class provides an interface for EC2 AuthorizeSecurityGroupIngress requests.
  *
  * \ingroup EC2
  *

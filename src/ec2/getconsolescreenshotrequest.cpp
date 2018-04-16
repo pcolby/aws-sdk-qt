@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::GetConsoleScreenshotRequest
  *
- * \brief The GetConsoleScreenshotRequest class encapsulates EC2 GetConsoleScreenshot requests.
+ * \brief The GetConsoleScreenshotRequest class provides an interface for EC2 GetConsoleScreenshot requests.
  *
  * \ingroup EC2
  *

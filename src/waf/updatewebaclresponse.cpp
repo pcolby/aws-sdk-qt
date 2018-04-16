@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::UpdateWebACLResponse
  *
- * \brief The UpdateWebACLResponse class encapsulates WAF UpdateWebACL responses.
+ * \brief The UpdateWebACLResponse class provides an interace for WAF UpdateWebACL responses.
  *
  * \ingroup WAF
  *

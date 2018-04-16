@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListWorkerBlocksRequest
  *
- * \brief The ListWorkerBlocksRequest class encapsulates MTurk ListWorkerBlocks requests.
+ * \brief The ListWorkerBlocksRequest class provides an interface for MTurk ListWorkerBlocks requests.
  *
  * \ingroup MTurk
  *

@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::UpdateAuthorizerRequest
  *
- * \brief The UpdateAuthorizerRequest class encapsulates IoT UpdateAuthorizer requests.
+ * \brief The UpdateAuthorizerRequest class provides an interface for IoT UpdateAuthorizer requests.
  *
  * \ingroup IoT
  *

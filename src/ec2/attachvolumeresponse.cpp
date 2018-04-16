@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AttachVolumeResponse
  *
- * \brief The AttachVolumeResponse class encapsulates EC2 AttachVolume responses.
+ * \brief The AttachVolumeResponse class provides an interace for EC2 AttachVolume responses.
  *
  * \ingroup EC2
  *

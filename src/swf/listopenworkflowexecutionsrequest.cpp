@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::ListOpenWorkflowExecutionsRequest
  *
- * \brief The ListOpenWorkflowExecutionsRequest class encapsulates SWF ListOpenWorkflowExecutions requests.
+ * \brief The ListOpenWorkflowExecutionsRequest class provides an interface for SWF ListOpenWorkflowExecutions requests.
  *
  * \ingroup SWF
  *

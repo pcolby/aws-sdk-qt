@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::RestartAppServerRequest
  *
- * \brief The RestartAppServerRequest class encapsulates ElasticBeanstalk RestartAppServer requests.
+ * \brief The RestartAppServerRequest class provides an interface for ElasticBeanstalk RestartAppServer requests.
  *
  * \ingroup ElasticBeanstalk
  *

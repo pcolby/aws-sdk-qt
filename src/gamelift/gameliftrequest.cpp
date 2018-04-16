@@ -26,7 +26,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::GameLiftRequest
  *
- * \brief The GameLiftRequest class is the base class for all GameLift requests.
+ * \brief The GameLiftRequest class provides an interface for GameLift requests.
  *
  * \ingroup GameLift
  */

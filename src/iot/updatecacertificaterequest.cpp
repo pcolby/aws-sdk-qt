@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::UpdateCACertificateRequest
  *
- * \brief The UpdateCACertificateRequest class encapsulates IoT UpdateCACertificate requests.
+ * \brief The UpdateCACertificateRequest class provides an interface for IoT UpdateCACertificate requests.
  *
  * \ingroup IoT
  *

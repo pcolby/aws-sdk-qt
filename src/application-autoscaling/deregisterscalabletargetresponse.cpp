@@ -30,7 +30,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::DeregisterScalableTargetResponse
  *
- * \brief The DeregisterScalableTargetResponse class encapsulates ApplicationAutoScaling DeregisterScalableTarget responses.
+ * \brief The DeregisterScalableTargetResponse class provides an interace for ApplicationAutoScaling DeregisterScalableTarget responses.
  *
  * \ingroup ApplicationAutoScaling
  *

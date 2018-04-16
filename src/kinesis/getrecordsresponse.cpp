@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::GetRecordsResponse
  *
- * \brief The GetRecordsResponse class encapsulates Kinesis GetRecords responses.
+ * \brief The GetRecordsResponse class provides an interace for Kinesis GetRecords responses.
  *
  * \ingroup Kinesis
  *

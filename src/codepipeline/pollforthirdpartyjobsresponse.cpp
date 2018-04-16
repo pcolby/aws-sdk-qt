@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::PollForThirdPartyJobsResponse
  *
- * \brief The PollForThirdPartyJobsResponse class encapsulates CodePipeline PollForThirdPartyJobs responses.
+ * \brief The PollForThirdPartyJobsResponse class provides an interace for CodePipeline PollForThirdPartyJobs responses.
  *
  * \ingroup CodePipeline
  *

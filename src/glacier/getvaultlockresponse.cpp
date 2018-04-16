@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::GetVaultLockResponse
  *
- * \brief The GetVaultLockResponse class encapsulates Glacier GetVaultLock responses.
+ * \brief The GetVaultLockResponse class provides an interace for Glacier GetVaultLock responses.
  *
  * \ingroup Glacier
  *

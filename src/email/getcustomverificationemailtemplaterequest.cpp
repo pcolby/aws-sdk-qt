@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetCustomVerificationEmailTemplateRequest
  *
- * \brief The GetCustomVerificationEmailTemplateRequest class encapsulates SES GetCustomVerificationEmailTemplate requests.
+ * \brief The GetCustomVerificationEmailTemplateRequest class provides an interface for SES GetCustomVerificationEmailTemplate requests.
  *
  * \ingroup SES
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateDhcpOptionsResponse
  *
- * \brief The CreateDhcpOptionsResponse class encapsulates EC2 CreateDhcpOptions responses.
+ * \brief The CreateDhcpOptionsResponse class provides an interace for EC2 CreateDhcpOptions responses.
  *
  * \ingroup EC2
  *

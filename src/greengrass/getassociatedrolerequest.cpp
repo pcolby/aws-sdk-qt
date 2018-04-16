@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetAssociatedRoleRequest
  *
- * \brief The GetAssociatedRoleRequest class encapsulates Greengrass GetAssociatedRole requests.
+ * \brief The GetAssociatedRoleRequest class provides an interface for Greengrass GetAssociatedRole requests.
  *
  * \ingroup Greengrass
  *

@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::RebuildEnvironmentResponse
  *
- * \brief The RebuildEnvironmentResponse class encapsulates ElasticBeanstalk RebuildEnvironment responses.
+ * \brief The RebuildEnvironmentResponse class provides an interace for ElasticBeanstalk RebuildEnvironment responses.
  *
  * \ingroup ElasticBeanstalk
  *

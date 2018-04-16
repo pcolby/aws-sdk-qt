@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DeleteTrustResponse
  *
- * \brief The DeleteTrustResponse class encapsulates DirectoryService DeleteTrust responses.
+ * \brief The DeleteTrustResponse class provides an interace for DirectoryService DeleteTrust responses.
  *
  * \ingroup DirectoryService
  *

@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::ListReceiptFiltersResponse
  *
- * \brief The ListReceiptFiltersResponse class encapsulates SES ListReceiptFilters responses.
+ * \brief The ListReceiptFiltersResponse class provides an interace for SES ListReceiptFilters responses.
  *
  * \ingroup SES
  *

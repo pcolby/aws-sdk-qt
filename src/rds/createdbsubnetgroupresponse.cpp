@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CreateDBSubnetGroupResponse
  *
- * \brief The CreateDBSubnetGroupResponse class encapsulates RDS CreateDBSubnetGroup responses.
+ * \brief The CreateDBSubnetGroupResponse class provides an interace for RDS CreateDBSubnetGroup responses.
  *
  * \ingroup RDS
  *

@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::UpdateRegexPatternSetResponse
  *
- * \brief The UpdateRegexPatternSetResponse class encapsulates WAF UpdateRegexPatternSet responses.
+ * \brief The UpdateRegexPatternSetResponse class provides an interace for WAF UpdateRegexPatternSet responses.
  *
  * \ingroup WAF
  *

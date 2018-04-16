@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeAccountAttributesResponse
  *
- * \brief The DescribeAccountAttributesResponse class encapsulates DatabaseMigrationService DescribeAccountAttributes responses.
+ * \brief The DescribeAccountAttributesResponse class provides an interace for DatabaseMigrationService DescribeAccountAttributes responses.
  *
  * \ingroup DatabaseMigrationService
  *

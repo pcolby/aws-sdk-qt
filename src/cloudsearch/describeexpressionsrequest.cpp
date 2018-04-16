@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeExpressionsRequest
  *
- * \brief The DescribeExpressionsRequest class encapsulates CloudSearch DescribeExpressions requests.
+ * \brief The DescribeExpressionsRequest class provides an interface for CloudSearch DescribeExpressions requests.
  *
  * \ingroup CloudSearch
  *

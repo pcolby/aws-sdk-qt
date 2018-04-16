@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CopyDBParameterGroupRequest
  *
- * \brief The CopyDBParameterGroupRequest class encapsulates RDS CopyDBParameterGroup requests.
+ * \brief The CopyDBParameterGroupRequest class provides an interface for RDS CopyDBParameterGroup requests.
  *
  * \ingroup RDS
  *

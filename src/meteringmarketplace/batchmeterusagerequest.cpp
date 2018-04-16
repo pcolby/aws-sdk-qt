@@ -28,7 +28,7 @@ namespace MarketplaceMetering {
 /*!
  * \class QtAws::MarketplaceMetering::BatchMeterUsageRequest
  *
- * \brief The BatchMeterUsageRequest class encapsulates MarketplaceMetering BatchMeterUsage requests.
+ * \brief The BatchMeterUsageRequest class provides an interface for MarketplaceMetering BatchMeterUsage requests.
  *
  * \ingroup MarketplaceMetering
  *

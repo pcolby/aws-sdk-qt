@@ -29,7 +29,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::LexModelBuildingServiceResponse
  *
- * \brief The LexModelBuildingServiceResponse class is the base class for all LexModelBuildingService responses.
+ * \brief The LexModelBuildingServiceResponse class provides an interface for LexModelBuildingService responses.
  *
  * \ingroup LexModelBuildingService
  */

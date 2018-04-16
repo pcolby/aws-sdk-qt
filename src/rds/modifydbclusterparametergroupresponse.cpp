@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ModifyDBClusterParameterGroupResponse
  *
- * \brief The ModifyDBClusterParameterGroupResponse class encapsulates RDS ModifyDBClusterParameterGroup responses.
+ * \brief The ModifyDBClusterParameterGroupResponse class provides an interace for RDS ModifyDBClusterParameterGroup responses.
  *
  * \ingroup RDS
  *

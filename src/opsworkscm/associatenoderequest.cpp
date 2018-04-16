@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::AssociateNodeRequest
  *
- * \brief The AssociateNodeRequest class encapsulates OpsWorksCM AssociateNode requests.
+ * \brief The AssociateNodeRequest class provides an interface for OpsWorksCM AssociateNode requests.
  *
  * \ingroup OpsWorksCM
  *

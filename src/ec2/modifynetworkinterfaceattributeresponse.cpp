@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyNetworkInterfaceAttributeResponse
  *
- * \brief The ModifyNetworkInterfaceAttributeResponse class encapsulates EC2 ModifyNetworkInterfaceAttribute responses.
+ * \brief The ModifyNetworkInterfaceAttributeResponse class provides an interace for EC2 ModifyNetworkInterfaceAttribute responses.
  *
  * \ingroup EC2
  *

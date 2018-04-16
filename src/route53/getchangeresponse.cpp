@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::GetChangeResponse
  *
- * \brief The GetChangeResponse class encapsulates Route53 GetChange responses.
+ * \brief The GetChangeResponse class provides an interace for Route53 GetChange responses.
  *
  * \ingroup Route53
  *

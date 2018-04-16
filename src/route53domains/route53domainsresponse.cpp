@@ -29,7 +29,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::Route53DomainsResponse
  *
- * \brief The Route53DomainsResponse class is the base class for all Route53Domains responses.
+ * \brief The Route53DomainsResponse class provides an interface for Route53Domains responses.
  *
  * \ingroup Route53Domains
  */

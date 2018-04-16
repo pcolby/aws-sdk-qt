@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::ListTypesResponse
  *
- * \brief The ListTypesResponse class encapsulates AppSync ListTypes responses.
+ * \brief The ListTypesResponse class provides an interace for AppSync ListTypes responses.
  *
  * \ingroup AppSync
  *

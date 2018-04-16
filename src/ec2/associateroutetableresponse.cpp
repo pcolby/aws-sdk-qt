@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AssociateRouteTableResponse
  *
- * \brief The AssociateRouteTableResponse class encapsulates EC2 AssociateRouteTable responses.
+ * \brief The AssociateRouteTableResponse class provides an interace for EC2 AssociateRouteTable responses.
  *
  * \ingroup EC2
  *

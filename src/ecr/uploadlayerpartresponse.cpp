@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::UploadLayerPartResponse
  *
- * \brief The UploadLayerPartResponse class encapsulates ECR UploadLayerPart responses.
+ * \brief The UploadLayerPartResponse class provides an interace for ECR UploadLayerPart responses.
  *
  * \ingroup ECR
  *

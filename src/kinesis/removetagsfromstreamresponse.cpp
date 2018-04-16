@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::RemoveTagsFromStreamResponse
  *
- * \brief The RemoveTagsFromStreamResponse class encapsulates Kinesis RemoveTagsFromStream responses.
+ * \brief The RemoveTagsFromStreamResponse class provides an interace for Kinesis RemoveTagsFromStream responses.
  *
  * \ingroup Kinesis
  *

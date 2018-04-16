@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SendBounceRequest
  *
- * \brief The SendBounceRequest class encapsulates SES SendBounce requests.
+ * \brief The SendBounceRequest class provides an interface for SES SendBounce requests.
  *
  * \ingroup SES
  *

@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketTaggingResponse
  *
- * \brief The GetBucketTaggingResponse class encapsulates S3 GetBucketTagging responses.
+ * \brief The GetBucketTaggingResponse class provides an interace for S3 GetBucketTagging responses.
  *
  * \ingroup S3
  *

@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::PutLifecycleHookResponse
  *
- * \brief The PutLifecycleHookResponse class encapsulates AutoScaling PutLifecycleHook responses.
+ * \brief The PutLifecycleHookResponse class provides an interace for AutoScaling PutLifecycleHook responses.
  *
  * \ingroup AutoScaling
  *

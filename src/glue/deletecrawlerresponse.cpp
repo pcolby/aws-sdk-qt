@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteCrawlerResponse
  *
- * \brief The DeleteCrawlerResponse class encapsulates Glue DeleteCrawler responses.
+ * \brief The DeleteCrawlerResponse class provides an interace for Glue DeleteCrawler responses.
  *
  * \ingroup Glue
  *

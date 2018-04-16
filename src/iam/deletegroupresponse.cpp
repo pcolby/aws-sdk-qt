@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteGroupResponse
  *
- * \brief The DeleteGroupResponse class encapsulates IAM DeleteGroup responses.
+ * \brief The DeleteGroupResponse class provides an interace for IAM DeleteGroup responses.
  *
  * \ingroup IAM
  *

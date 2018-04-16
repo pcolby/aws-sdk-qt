@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::ListTasksResponse
  *
- * \brief The ListTasksResponse class encapsulates ECS ListTasks responses.
+ * \brief The ListTasksResponse class provides an interace for ECS ListTasks responses.
  *
  * \ingroup ECS
  *

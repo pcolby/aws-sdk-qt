@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::DeleteQueueResponse
  *
- * \brief The DeleteQueueResponse class encapsulates SQS DeleteQueue responses.
+ * \brief The DeleteQueueResponse class provides an interace for SQS DeleteQueue responses.
  *
  * \ingroup SQS
  *

@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::GetAccountBalanceResponse
  *
- * \brief The GetAccountBalanceResponse class encapsulates MTurk GetAccountBalance responses.
+ * \brief The GetAccountBalanceResponse class provides an interace for MTurk GetAccountBalance responses.
  *
  * \ingroup MTurk
  *

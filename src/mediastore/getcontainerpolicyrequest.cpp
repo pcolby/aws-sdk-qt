@@ -28,7 +28,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::GetContainerPolicyRequest
  *
- * \brief The GetContainerPolicyRequest class encapsulates MediaStore GetContainerPolicy requests.
+ * \brief The GetContainerPolicyRequest class provides an interface for MediaStore GetContainerPolicy requests.
  *
  * \ingroup MediaStore
  *

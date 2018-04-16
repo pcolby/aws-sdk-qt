@@ -29,7 +29,7 @@ namespace Translate {
 /*!
  * \class QtAws::Translate::TranslateResponse
  *
- * \brief The TranslateResponse class is the base class for all Translate responses.
+ * \brief The TranslateResponse class provides an interface for Translate responses.
  *
  * \ingroup Translate
  */

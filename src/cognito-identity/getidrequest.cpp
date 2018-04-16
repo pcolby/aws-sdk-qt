@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::GetIdRequest
  *
- * \brief The GetIdRequest class encapsulates CognitoIdentity GetId requests.
+ * \brief The GetIdRequest class provides an interface for CognitoIdentity GetId requests.
  *
  * \ingroup CognitoIdentity
  *

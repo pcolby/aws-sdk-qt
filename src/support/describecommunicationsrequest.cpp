@@ -28,7 +28,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::DescribeCommunicationsRequest
  *
- * \brief The DescribeCommunicationsRequest class encapsulates Support DescribeCommunications requests.
+ * \brief The DescribeCommunicationsRequest class provides an interface for Support DescribeCommunications requests.
  *
  * \ingroup Support
  *

@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListInstanceProfilesForRoleResponse
  *
- * \brief The ListInstanceProfilesForRoleResponse class encapsulates IAM ListInstanceProfilesForRole responses.
+ * \brief The ListInstanceProfilesForRoleResponse class provides an interace for IAM ListInstanceProfilesForRole responses.
  *
  * \ingroup IAM
  *

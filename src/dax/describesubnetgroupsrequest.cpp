@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DescribeSubnetGroupsRequest
  *
- * \brief The DescribeSubnetGroupsRequest class encapsulates DAX DescribeSubnetGroups requests.
+ * \brief The DescribeSubnetGroupsRequest class provides an interface for DAX DescribeSubnetGroups requests.
  *
  * \ingroup DAX
  *

@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::SetRepositoryPolicyResponse
  *
- * \brief The SetRepositoryPolicyResponse class encapsulates ECR SetRepositoryPolicy responses.
+ * \brief The SetRepositoryPolicyResponse class provides an interace for ECR SetRepositoryPolicy responses.
  *
  * \ingroup ECR
  *

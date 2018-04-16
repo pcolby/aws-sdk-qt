@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::UpdateGameSessionRequest
  *
- * \brief The UpdateGameSessionRequest class encapsulates GameLift UpdateGameSession requests.
+ * \brief The UpdateGameSessionRequest class provides an interface for GameLift UpdateGameSession requests.
  *
  * \ingroup GameLift
  *

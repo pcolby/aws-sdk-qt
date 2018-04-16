@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::UpdateEndpointWeightsAndCapacitiesRequest
  *
- * \brief The UpdateEndpointWeightsAndCapacitiesRequest class encapsulates SageMaker UpdateEndpointWeightsAndCapacities requests.
+ * \brief The UpdateEndpointWeightsAndCapacitiesRequest class provides an interface for SageMaker UpdateEndpointWeightsAndCapacities requests.
  *
  * \ingroup SageMaker
  *

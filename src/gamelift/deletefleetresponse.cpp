@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteFleetResponse
  *
- * \brief The DeleteFleetResponse class encapsulates GameLift DeleteFleet responses.
+ * \brief The DeleteFleetResponse class provides an interace for GameLift DeleteFleet responses.
  *
  * \ingroup GameLift
  *

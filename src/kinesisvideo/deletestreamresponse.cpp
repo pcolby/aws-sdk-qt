@@ -30,7 +30,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::DeleteStreamResponse
  *
- * \brief The DeleteStreamResponse class encapsulates KinesisVideo DeleteStream responses.
+ * \brief The DeleteStreamResponse class provides an interace for KinesisVideo DeleteStream responses.
  *
  * \ingroup KinesisVideo
  *

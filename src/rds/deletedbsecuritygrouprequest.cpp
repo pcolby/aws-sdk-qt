@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DeleteDBSecurityGroupRequest
  *
- * \brief The DeleteDBSecurityGroupRequest class encapsulates RDS DeleteDBSecurityGroup requests.
+ * \brief The DeleteDBSecurityGroupRequest class provides an interface for RDS DeleteDBSecurityGroup requests.
  *
  * \ingroup RDS
  *

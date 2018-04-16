@@ -28,7 +28,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::AssumeRoleWithSAMLRequest
  *
- * \brief The AssumeRoleWithSAMLRequest class encapsulates STS AssumeRoleWithSAML requests.
+ * \brief The AssumeRoleWithSAMLRequest class provides an interface for STS AssumeRoleWithSAML requests.
  *
  * \ingroup STS
  *

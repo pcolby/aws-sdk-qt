@@ -28,7 +28,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::DescribeIdentityUsageRequest
  *
- * \brief The DescribeIdentityUsageRequest class encapsulates CognitoSync DescribeIdentityUsage requests.
+ * \brief The DescribeIdentityUsageRequest class provides an interface for CognitoSync DescribeIdentityUsage requests.
  *
  * \ingroup CognitoSync
  *

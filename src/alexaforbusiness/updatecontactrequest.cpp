@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::UpdateContactRequest
  *
- * \brief The UpdateContactRequest class encapsulates AlexaForBusiness UpdateContact requests.
+ * \brief The UpdateContactRequest class provides an interface for AlexaForBusiness UpdateContact requests.
  *
  * \ingroup AlexaForBusiness
  *

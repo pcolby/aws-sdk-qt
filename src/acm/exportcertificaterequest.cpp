@@ -28,7 +28,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::ExportCertificateRequest
  *
- * \brief The ExportCertificateRequest class encapsulates ACM ExportCertificate requests.
+ * \brief The ExportCertificateRequest class provides an interface for ACM ExportCertificate requests.
  *
  * \ingroup ACM
  *

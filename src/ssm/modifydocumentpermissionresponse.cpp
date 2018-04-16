@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ModifyDocumentPermissionResponse
  *
- * \brief The ModifyDocumentPermissionResponse class encapsulates SSM ModifyDocumentPermission responses.
+ * \brief The ModifyDocumentPermissionResponse class provides an interace for SSM ModifyDocumentPermission responses.
  *
  * \ingroup SSM
  *

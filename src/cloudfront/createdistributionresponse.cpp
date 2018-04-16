@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::CreateDistributionResponse
  *
- * \brief The CreateDistributionResponse class encapsulates CloudFront CreateDistribution responses.
+ * \brief The CreateDistributionResponse class provides an interace for CloudFront CreateDistribution responses.
  *
  * \ingroup CloudFront
  *

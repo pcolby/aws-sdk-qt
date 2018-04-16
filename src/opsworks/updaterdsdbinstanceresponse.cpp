@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateRdsDbInstanceResponse
  *
- * \brief The UpdateRdsDbInstanceResponse class encapsulates OpsWorks UpdateRdsDbInstance responses.
+ * \brief The UpdateRdsDbInstanceResponse class provides an interace for OpsWorks UpdateRdsDbInstance responses.
  *
  * \ingroup OpsWorks
  *

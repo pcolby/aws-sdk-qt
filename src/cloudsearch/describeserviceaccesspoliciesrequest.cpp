@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeServiceAccessPoliciesRequest
  *
- * \brief The DescribeServiceAccessPoliciesRequest class encapsulates CloudSearch DescribeServiceAccessPolicies requests.
+ * \brief The DescribeServiceAccessPoliciesRequest class provides an interface for CloudSearch DescribeServiceAccessPolicies requests.
  *
  * \ingroup CloudSearch
  *

@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DeleteExpressionResponse
  *
- * \brief The DeleteExpressionResponse class encapsulates CloudSearch DeleteExpression responses.
+ * \brief The DeleteExpressionResponse class provides an interace for CloudSearch DeleteExpression responses.
  *
  * \ingroup CloudSearch
  *

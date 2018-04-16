@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeElasticIpsRequest
  *
- * \brief The DescribeElasticIpsRequest class encapsulates OpsWorks DescribeElasticIps requests.
+ * \brief The DescribeElasticIpsRequest class provides an interface for OpsWorks DescribeElasticIps requests.
  *
  * \ingroup OpsWorks
  *

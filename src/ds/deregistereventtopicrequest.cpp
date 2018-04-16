@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DeregisterEventTopicRequest
  *
- * \brief The DeregisterEventTopicRequest class encapsulates DirectoryService DeregisterEventTopic requests.
+ * \brief The DeregisterEventTopicRequest class provides an interface for DirectoryService DeregisterEventTopic requests.
  *
  * \ingroup DirectoryService
  *

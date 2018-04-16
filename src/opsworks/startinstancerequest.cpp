@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::StartInstanceRequest
  *
- * \brief The StartInstanceRequest class encapsulates OpsWorks StartInstance requests.
+ * \brief The StartInstanceRequest class provides an interface for OpsWorks StartInstance requests.
  *
  * \ingroup OpsWorks
  *

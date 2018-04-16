@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::CloseInstancePublicPortsRequest
  *
- * \brief The CloseInstancePublicPortsRequest class encapsulates Lightsail CloseInstancePublicPorts requests.
+ * \brief The CloseInstancePublicPortsRequest class provides an interface for Lightsail CloseInstancePublicPorts requests.
  *
  * \ingroup Lightsail
  *

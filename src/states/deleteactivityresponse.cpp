@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::DeleteActivityResponse
  *
- * \brief The DeleteActivityResponse class encapsulates SFN DeleteActivity responses.
+ * \brief The DeleteActivityResponse class provides an interace for SFN DeleteActivity responses.
  *
  * \ingroup SFN
  *

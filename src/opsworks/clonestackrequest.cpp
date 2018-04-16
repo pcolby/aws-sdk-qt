@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CloneStackRequest
  *
- * \brief The CloneStackRequest class encapsulates OpsWorks CloneStack requests.
+ * \brief The CloneStackRequest class provides an interface for OpsWorks CloneStack requests.
  *
  * \ingroup OpsWorks
  *

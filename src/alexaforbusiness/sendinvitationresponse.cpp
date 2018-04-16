@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::SendInvitationResponse
  *
- * \brief The SendInvitationResponse class encapsulates AlexaForBusiness SendInvitation responses.
+ * \brief The SendInvitationResponse class provides an interace for AlexaForBusiness SendInvitation responses.
  *
  * \ingroup AlexaForBusiness
  *

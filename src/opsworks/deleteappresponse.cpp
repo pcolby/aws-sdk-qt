@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeleteAppResponse
  *
- * \brief The DeleteAppResponse class encapsulates OpsWorks DeleteApp responses.
+ * \brief The DeleteAppResponse class provides an interace for OpsWorks DeleteApp responses.
  *
  * \ingroup OpsWorks
  *

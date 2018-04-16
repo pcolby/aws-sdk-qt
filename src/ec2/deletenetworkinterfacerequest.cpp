@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteNetworkInterfaceRequest
  *
- * \brief The DeleteNetworkInterfaceRequest class encapsulates EC2 DeleteNetworkInterface requests.
+ * \brief The DeleteNetworkInterfaceRequest class provides an interface for EC2 DeleteNetworkInterface requests.
  *
  * \ingroup EC2
  *

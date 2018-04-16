@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyLaunchTemplateRequest
  *
- * \brief The ModifyLaunchTemplateRequest class encapsulates EC2 ModifyLaunchTemplate requests.
+ * \brief The ModifyLaunchTemplateRequest class provides an interface for EC2 ModifyLaunchTemplate requests.
  *
  * \ingroup EC2
  *

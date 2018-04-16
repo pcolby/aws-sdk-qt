@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::ModifyEventSubscriptionRequest
  *
- * \brief The ModifyEventSubscriptionRequest class encapsulates Redshift ModifyEventSubscription requests.
+ * \brief The ModifyEventSubscriptionRequest class provides an interface for Redshift ModifyEventSubscription requests.
  *
  * \ingroup Redshift
  *

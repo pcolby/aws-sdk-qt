@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribeRecordResponse
  *
- * \brief The DescribeRecordResponse class encapsulates ServiceCatalog DescribeRecord responses.
+ * \brief The DescribeRecordResponse class provides an interace for ServiceCatalog DescribeRecord responses.
  *
  * \ingroup ServiceCatalog
  *

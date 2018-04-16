@@ -29,7 +29,7 @@ namespace IoTJobsDataPlane {
 /*!
  * \class QtAws::IoTJobsDataPlane::IoTJobsDataPlaneResponse
  *
- * \brief The IoTJobsDataPlaneResponse class is the base class for all IoTJobsDataPlane responses.
+ * \brief The IoTJobsDataPlaneResponse class provides an interface for IoTJobsDataPlane responses.
  *
  * \ingroup IoTJobsDataPlane
  */

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RequestSpotFleetResponse
  *
- * \brief The RequestSpotFleetResponse class encapsulates EC2 RequestSpotFleet responses.
+ * \brief The RequestSpotFleetResponse class provides an interace for EC2 RequestSpotFleet responses.
  *
  * \ingroup EC2
  *

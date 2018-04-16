@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ListUsersInGroupResponse
  *
- * \brief The ListUsersInGroupResponse class encapsulates CognitoIdentityProvider ListUsersInGroup responses.
+ * \brief The ListUsersInGroupResponse class provides an interace for CognitoIdentityProvider ListUsersInGroup responses.
  *
  * \ingroup CognitoIdentityProvider
  *

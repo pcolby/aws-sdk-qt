@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::CreateExportJobResponse
  *
- * \brief The CreateExportJobResponse class encapsulates Pinpoint CreateExportJob responses.
+ * \brief The CreateExportJobResponse class provides an interace for Pinpoint CreateExportJob responses.
  *
  * \ingroup Pinpoint
  *

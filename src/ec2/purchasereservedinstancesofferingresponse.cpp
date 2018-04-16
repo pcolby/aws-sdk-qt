@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::PurchaseReservedInstancesOfferingResponse
  *
- * \brief The PurchaseReservedInstancesOfferingResponse class encapsulates EC2 PurchaseReservedInstancesOffering responses.
+ * \brief The PurchaseReservedInstancesOfferingResponse class provides an interace for EC2 PurchaseReservedInstancesOffering responses.
  *
  * \ingroup EC2
  *

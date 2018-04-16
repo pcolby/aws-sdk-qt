@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::RetrieveTapeRecoveryPointRequest
  *
- * \brief The RetrieveTapeRecoveryPointRequest class encapsulates StorageGateway RetrieveTapeRecoveryPoint requests.
+ * \brief The RetrieveTapeRecoveryPointRequest class provides an interface for StorageGateway RetrieveTapeRecoveryPoint requests.
  *
  * \ingroup StorageGateway
  *

@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::GetVaultNotificationsRequest
  *
- * \brief The GetVaultNotificationsRequest class encapsulates Glacier GetVaultNotifications requests.
+ * \brief The GetVaultNotificationsRequest class provides an interface for Glacier GetVaultNotifications requests.
  *
  * \ingroup Glacier
  *

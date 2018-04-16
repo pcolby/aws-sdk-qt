@@ -69,7 +69,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::MigrationHubClient
  *
- * \brief The MigrationHubClient class provides access the AWS Migration Hub service.
+ * \brief The MigrationHubClient class provides access to the AWS Migration Hub service.
  *
  * \ingroup MigrationHub
  *

@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::AttachPolicyRequest
  *
- * \brief The AttachPolicyRequest class encapsulates Organizations AttachPolicy requests.
+ * \brief The AttachPolicyRequest class provides an interface for Organizations AttachPolicy requests.
  *
  * \ingroup Organizations
  *

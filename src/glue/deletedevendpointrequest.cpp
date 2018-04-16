@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteDevEndpointRequest
  *
- * \brief The DeleteDevEndpointRequest class encapsulates Glue DeleteDevEndpoint requests.
+ * \brief The DeleteDevEndpointRequest class provides an interface for Glue DeleteDevEndpoint requests.
  *
  * \ingroup Glue
  *

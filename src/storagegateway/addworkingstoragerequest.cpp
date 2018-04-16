@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::AddWorkingStorageRequest
  *
- * \brief The AddWorkingStorageRequest class encapsulates StorageGateway AddWorkingStorage requests.
+ * \brief The AddWorkingStorageRequest class provides an interface for StorageGateway AddWorkingStorage requests.
  *
  * \ingroup StorageGateway
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateDefaultSubnetRequest
  *
- * \brief The CreateDefaultSubnetRequest class encapsulates EC2 CreateDefaultSubnet requests.
+ * \brief The CreateDefaultSubnetRequest class provides an interface for EC2 CreateDefaultSubnet requests.
  *
  * \ingroup EC2
  *

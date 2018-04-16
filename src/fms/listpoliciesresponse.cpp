@@ -30,7 +30,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::ListPoliciesResponse
  *
- * \brief The ListPoliciesResponse class encapsulates FMS ListPolicies responses.
+ * \brief The ListPoliciesResponse class provides an interace for FMS ListPolicies responses.
  *
  * \ingroup FMS
  *

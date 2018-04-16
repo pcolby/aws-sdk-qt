@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::DeleteInputSecurityGroupRequest
  *
- * \brief The DeleteInputSecurityGroupRequest class encapsulates MediaLive DeleteInputSecurityGroup requests.
+ * \brief The DeleteInputSecurityGroupRequest class provides an interface for MediaLive DeleteInputSecurityGroup requests.
  *
  * \ingroup MediaLive
  *

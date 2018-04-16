@@ -30,7 +30,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::UpdateChannelResponse
  *
- * \brief The UpdateChannelResponse class encapsulates MediaPackage UpdateChannel responses.
+ * \brief The UpdateChannelResponse class provides an interace for MediaPackage UpdateChannel responses.
  *
  * \ingroup MediaPackage
  *

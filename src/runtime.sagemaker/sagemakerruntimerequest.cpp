@@ -26,7 +26,7 @@ namespace SageMakerRuntime {
 /*!
  * \class QtAws::SageMakerRuntime::SageMakerRuntimeRequest
  *
- * \brief The SageMakerRuntimeRequest class is the base class for all SageMakerRuntime requests.
+ * \brief The SageMakerRuntimeRequest class provides an interface for SageMakerRuntime requests.
  *
  * \ingroup SageMakerRuntime
  */

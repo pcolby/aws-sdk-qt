@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::AttachTypedLinkResponse
  *
- * \brief The AttachTypedLinkResponse class encapsulates CloudDirectory AttachTypedLink responses.
+ * \brief The AttachTypedLinkResponse class provides an interace for CloudDirectory AttachTypedLink responses.
  *
  * \ingroup CloudDirectory
  *

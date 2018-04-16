@@ -30,7 +30,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::ListPresetsResponse
  *
- * \brief The ListPresetsResponse class encapsulates ElasticTranscoder ListPresets responses.
+ * \brief The ListPresetsResponse class provides an interace for ElasticTranscoder ListPresets responses.
  *
  * \ingroup ElasticTranscoder
  *

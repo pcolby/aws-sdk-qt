@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::ListChannelsRequest
  *
- * \brief The ListChannelsRequest class encapsulates MediaLive ListChannels requests.
+ * \brief The ListChannelsRequest class provides an interface for MediaLive ListChannels requests.
  *
  * \ingroup MediaLive
  *

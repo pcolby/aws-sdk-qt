@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::RetryStageExecutionResponse
  *
- * \brief The RetryStageExecutionResponse class encapsulates CodePipeline RetryStageExecution responses.
+ * \brief The RetryStageExecutionResponse class provides an interace for CodePipeline RetryStageExecution responses.
  *
  * \ingroup CodePipeline
  *

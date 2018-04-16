@@ -30,7 +30,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::RegisterScalableTargetResponse
  *
- * \brief The RegisterScalableTargetResponse class encapsulates ApplicationAutoScaling RegisterScalableTarget responses.
+ * \brief The RegisterScalableTargetResponse class provides an interace for ApplicationAutoScaling RegisterScalableTarget responses.
  *
  * \ingroup ApplicationAutoScaling
  *

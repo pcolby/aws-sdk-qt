@@ -30,7 +30,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::NotifyMigrationTaskStateResponse
  *
- * \brief The NotifyMigrationTaskStateResponse class encapsulates MigrationHub NotifyMigrationTaskState responses.
+ * \brief The NotifyMigrationTaskStateResponse class provides an interace for MigrationHub NotifyMigrationTaskState responses.
  *
  * \ingroup MigrationHub
  *

@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketInventoryConfigurationRequest
  *
- * \brief The GetBucketInventoryConfigurationRequest class encapsulates S3 GetBucketInventoryConfiguration requests.
+ * \brief The GetBucketInventoryConfigurationRequest class provides an interface for S3 GetBucketInventoryConfiguration requests.
  *
  * \ingroup S3
  *

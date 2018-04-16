@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeLifecycleHooksRequest
  *
- * \brief The DescribeLifecycleHooksRequest class encapsulates AutoScaling DescribeLifecycleHooks requests.
+ * \brief The DescribeLifecycleHooksRequest class provides an interface for AutoScaling DescribeLifecycleHooks requests.
  *
  * \ingroup AutoScaling
  *

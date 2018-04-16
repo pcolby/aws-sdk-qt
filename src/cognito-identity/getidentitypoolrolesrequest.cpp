@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::GetIdentityPoolRolesRequest
  *
- * \brief The GetIdentityPoolRolesRequest class encapsulates CognitoIdentity GetIdentityPoolRoles requests.
+ * \brief The GetIdentityPoolRolesRequest class provides an interface for CognitoIdentity GetIdentityPoolRoles requests.
  *
  * \ingroup CognitoIdentity
  *

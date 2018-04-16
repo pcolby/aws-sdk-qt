@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DescribeEventsRequest
  *
- * \brief The DescribeEventsRequest class encapsulates DAX DescribeEvents requests.
+ * \brief The DescribeEventsRequest class provides an interface for DAX DescribeEvents requests.
  *
  * \ingroup DAX
  *

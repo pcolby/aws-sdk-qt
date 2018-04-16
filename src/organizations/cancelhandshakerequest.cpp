@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::CancelHandshakeRequest
  *
- * \brief The CancelHandshakeRequest class encapsulates Organizations CancelHandshake requests.
+ * \brief The CancelHandshakeRequest class provides an interface for Organizations CancelHandshake requests.
  *
  * \ingroup Organizations
  *

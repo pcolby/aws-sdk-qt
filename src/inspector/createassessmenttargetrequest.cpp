@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::CreateAssessmentTargetRequest
  *
- * \brief The CreateAssessmentTargetRequest class encapsulates Inspector CreateAssessmentTarget requests.
+ * \brief The CreateAssessmentTargetRequest class provides an interface for Inspector CreateAssessmentTarget requests.
  *
  * \ingroup Inspector
  *

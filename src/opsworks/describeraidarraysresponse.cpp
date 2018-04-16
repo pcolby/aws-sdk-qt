@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeRaidArraysResponse
  *
- * \brief The DescribeRaidArraysResponse class encapsulates OpsWorks DescribeRaidArrays responses.
+ * \brief The DescribeRaidArraysResponse class provides an interace for OpsWorks DescribeRaidArrays responses.
  *
  * \ingroup OpsWorks
  *

@@ -28,7 +28,7 @@ namespace CostExplorer {
 /*!
  * \class QtAws::CostExplorer::GetTagsRequest
  *
- * \brief The GetTagsRequest class encapsulates CostExplorer GetTags requests.
+ * \brief The GetTagsRequest class provides an interface for CostExplorer GetTags requests.
  *
  * \ingroup CostExplorer
  *

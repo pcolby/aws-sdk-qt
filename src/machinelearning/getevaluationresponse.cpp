@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::GetEvaluationResponse
  *
- * \brief The GetEvaluationResponse class encapsulates MachineLearning GetEvaluation responses.
+ * \brief The GetEvaluationResponse class provides an interace for MachineLearning GetEvaluation responses.
  *
  * \ingroup MachineLearning
  *

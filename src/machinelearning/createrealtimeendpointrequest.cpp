@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::CreateRealtimeEndpointRequest
  *
- * \brief The CreateRealtimeEndpointRequest class encapsulates MachineLearning CreateRealtimeEndpoint requests.
+ * \brief The CreateRealtimeEndpointRequest class provides an interface for MachineLearning CreateRealtimeEndpoint requests.
  *
  * \ingroup MachineLearning
  *

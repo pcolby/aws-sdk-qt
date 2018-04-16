@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateSegmentResponse
  *
- * \brief The UpdateSegmentResponse class encapsulates Pinpoint UpdateSegment responses.
+ * \brief The UpdateSegmentResponse class provides an interace for Pinpoint UpdateSegment responses.
  *
  * \ingroup Pinpoint
  *

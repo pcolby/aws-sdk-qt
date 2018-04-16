@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateJobRequest
  *
- * \brief The UpdateJobRequest class encapsulates Glue UpdateJob requests.
+ * \brief The UpdateJobRequest class provides an interface for Glue UpdateJob requests.
  *
  * \ingroup Glue
  *

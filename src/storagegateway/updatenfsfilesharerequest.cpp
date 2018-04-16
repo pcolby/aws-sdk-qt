@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::UpdateNFSFileShareRequest
  *
- * \brief The UpdateNFSFileShareRequest class encapsulates StorageGateway UpdateNFSFileShare requests.
+ * \brief The UpdateNFSFileShareRequest class provides an interface for StorageGateway UpdateNFSFileShare requests.
  *
  * \ingroup StorageGateway
  *

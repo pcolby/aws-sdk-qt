@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyVpcEndpointRequest
  *
- * \brief The ModifyVpcEndpointRequest class encapsulates EC2 ModifyVpcEndpoint requests.
+ * \brief The ModifyVpcEndpointRequest class provides an interface for EC2 ModifyVpcEndpoint requests.
  *
  * \ingroup EC2
  *

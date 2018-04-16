@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DeleteDomainRequest
  *
- * \brief The DeleteDomainRequest class encapsulates CloudSearch DeleteDomain requests.
+ * \brief The DeleteDomainRequest class provides an interface for CloudSearch DeleteDomain requests.
  *
  * \ingroup CloudSearch
  *

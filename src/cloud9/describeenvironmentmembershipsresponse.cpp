@@ -30,7 +30,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::DescribeEnvironmentMembershipsResponse
  *
- * \brief The DescribeEnvironmentMembershipsResponse class encapsulates Cloud9 DescribeEnvironmentMemberships responses.
+ * \brief The DescribeEnvironmentMembershipsResponse class provides an interace for Cloud9 DescribeEnvironmentMemberships responses.
  *
  * \ingroup Cloud9
  *

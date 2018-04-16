@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeEndpointsResponse
  *
- * \brief The DescribeEndpointsResponse class encapsulates DatabaseMigrationService DescribeEndpoints responses.
+ * \brief The DescribeEndpointsResponse class provides an interace for DatabaseMigrationService DescribeEndpoints responses.
  *
  * \ingroup DatabaseMigrationService
  *

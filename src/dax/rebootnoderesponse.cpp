@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::RebootNodeResponse
  *
- * \brief The RebootNodeResponse class encapsulates DAX RebootNode responses.
+ * \brief The RebootNodeResponse class provides an interace for DAX RebootNode responses.
  *
  * \ingroup DAX
  *

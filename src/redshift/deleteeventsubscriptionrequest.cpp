@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteEventSubscriptionRequest
  *
- * \brief The DeleteEventSubscriptionRequest class encapsulates Redshift DeleteEventSubscription requests.
+ * \brief The DeleteEventSubscriptionRequest class provides an interface for Redshift DeleteEventSubscription requests.
  *
  * \ingroup Redshift
  *

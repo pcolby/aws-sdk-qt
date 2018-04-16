@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeScalingPoliciesResponse
  *
- * \brief The DescribeScalingPoliciesResponse class encapsulates GameLift DescribeScalingPolicies responses.
+ * \brief The DescribeScalingPoliciesResponse class provides an interace for GameLift DescribeScalingPolicies responses.
  *
  * \ingroup GameLift
  *

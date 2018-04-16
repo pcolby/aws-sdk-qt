@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::CreateDirectConnectGatewayRequest
  *
- * \brief The CreateDirectConnectGatewayRequest class encapsulates DirectConnect CreateDirectConnectGateway requests.
+ * \brief The CreateDirectConnectGatewayRequest class provides an interface for DirectConnect CreateDirectConnectGateway requests.
  *
  * \ingroup DirectConnect
  *

@@ -30,7 +30,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::RotateSecretResponse
  *
- * \brief The RotateSecretResponse class encapsulates SecretsManager RotateSecret responses.
+ * \brief The RotateSecretResponse class provides an interace for SecretsManager RotateSecret responses.
  *
  * \ingroup SecretsManager
  *

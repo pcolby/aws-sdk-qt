@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::UpdateExpirationForHITResponse
  *
- * \brief The UpdateExpirationForHITResponse class encapsulates MTurk UpdateExpirationForHIT responses.
+ * \brief The UpdateExpirationForHITResponse class provides an interace for MTurk UpdateExpirationForHIT responses.
  *
  * \ingroup MTurk
  *

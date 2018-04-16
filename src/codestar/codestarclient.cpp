@@ -73,7 +73,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::CodeStarClient
  *
- * \brief The CodeStarClient class provides access the AWS CodeStar service.
+ * \brief The CodeStarClient class provides access to the AWS CodeStar service.
  *
  * \ingroup CodeStar
  *

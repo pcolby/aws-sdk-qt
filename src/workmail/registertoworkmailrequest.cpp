@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::RegisterToWorkMailRequest
  *
- * \brief The RegisterToWorkMailRequest class encapsulates WorkMail RegisterToWorkMail requests.
+ * \brief The RegisterToWorkMailRequest class provides an interface for WorkMail RegisterToWorkMail requests.
  *
  * \ingroup WorkMail
  *

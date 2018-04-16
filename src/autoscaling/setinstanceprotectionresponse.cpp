@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::SetInstanceProtectionResponse
  *
- * \brief The SetInstanceProtectionResponse class encapsulates AutoScaling SetInstanceProtection responses.
+ * \brief The SetInstanceProtectionResponse class provides an interace for AutoScaling SetInstanceProtection responses.
  *
  * \ingroup AutoScaling
  *

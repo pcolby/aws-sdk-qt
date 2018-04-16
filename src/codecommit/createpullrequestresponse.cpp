@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::CreatePullRequestResponse
  *
- * \brief The CreatePullRequestResponse class encapsulates CodeCommit CreatePullRequest responses.
+ * \brief The CreatePullRequestResponse class provides an interace for CodeCommit CreatePullRequest responses.
  *
  * \ingroup CodeCommit
  *

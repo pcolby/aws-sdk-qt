@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::UpdateMaintenanceWindowTargetRequest
  *
- * \brief The UpdateMaintenanceWindowTargetRequest class encapsulates SSM UpdateMaintenanceWindowTarget requests.
+ * \brief The UpdateMaintenanceWindowTargetRequest class provides an interface for SSM UpdateMaintenanceWindowTarget requests.
  *
  * \ingroup SSM
  *

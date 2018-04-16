@@ -30,7 +30,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::CreateApplicationResponse
  *
- * \brief The CreateApplicationResponse class encapsulates ServerlessApplicationRepository CreateApplication responses.
+ * \brief The CreateApplicationResponse class provides an interace for ServerlessApplicationRepository CreateApplication responses.
  *
  * \ingroup ServerlessApplicationRepository
  *

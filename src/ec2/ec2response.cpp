@@ -29,7 +29,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::EC2Response
  *
- * \brief The EC2Response class is the base class for all EC2 responses.
+ * \brief The EC2Response class provides an interface for EC2 responses.
  *
  * \ingroup EC2
  */

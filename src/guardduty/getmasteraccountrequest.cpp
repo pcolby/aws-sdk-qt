@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GetMasterAccountRequest
  *
- * \brief The GetMasterAccountRequest class encapsulates GuardDuty GetMasterAccount requests.
+ * \brief The GetMasterAccountRequest class provides an interface for GuardDuty GetMasterAccount requests.
  *
  * \ingroup GuardDuty
  *

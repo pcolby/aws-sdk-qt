@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::DetectTextRequest
  *
- * \brief The DetectTextRequest class encapsulates Rekognition DetectText requests.
+ * \brief The DetectTextRequest class provides an interface for Rekognition DetectText requests.
  *
  * \ingroup Rekognition
  *

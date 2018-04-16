@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeDBClusterParameterGroupsRequest
  *
- * \brief The DescribeDBClusterParameterGroupsRequest class encapsulates RDS DescribeDBClusterParameterGroups requests.
+ * \brief The DescribeDBClusterParameterGroupsRequest class provides an interface for RDS DescribeDBClusterParameterGroups requests.
  *
  * \ingroup RDS
  *

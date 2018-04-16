@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeSpotInstanceRequestsResponse
  *
- * \brief The DescribeSpotInstanceRequestsResponse class encapsulates EC2 DescribeSpotInstanceRequests responses.
+ * \brief The DescribeSpotInstanceRequestsResponse class provides an interace for EC2 DescribeSpotInstanceRequests responses.
  *
  * \ingroup EC2
  *

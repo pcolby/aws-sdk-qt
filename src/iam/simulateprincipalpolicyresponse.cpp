@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::SimulatePrincipalPolicyResponse
  *
- * \brief The SimulatePrincipalPolicyResponse class encapsulates IAM SimulatePrincipalPolicy responses.
+ * \brief The SimulatePrincipalPolicyResponse class provides an interace for IAM SimulatePrincipalPolicy responses.
  *
  * \ingroup IAM
  *

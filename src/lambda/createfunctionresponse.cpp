@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::CreateFunctionResponse
  *
- * \brief The CreateFunctionResponse class encapsulates Lambda CreateFunction responses.
+ * \brief The CreateFunctionResponse class provides an interace for Lambda CreateFunction responses.
  *
  * \ingroup Lambda
  *

@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeDocumentPermissionResponse
  *
- * \brief The DescribeDocumentPermissionResponse class encapsulates SSM DescribeDocumentPermission responses.
+ * \brief The DescribeDocumentPermissionResponse class provides an interace for SSM DescribeDocumentPermission responses.
  *
  * \ingroup SSM
  *

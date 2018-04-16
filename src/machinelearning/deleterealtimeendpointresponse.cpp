@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DeleteRealtimeEndpointResponse
  *
- * \brief The DeleteRealtimeEndpointResponse class encapsulates MachineLearning DeleteRealtimeEndpoint responses.
+ * \brief The DeleteRealtimeEndpointResponse class provides an interace for MachineLearning DeleteRealtimeEndpoint responses.
  *
  * \ingroup MachineLearning
  *

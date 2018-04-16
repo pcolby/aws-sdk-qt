@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::CreateChannelResponse
  *
- * \brief The CreateChannelResponse class encapsulates MediaLive CreateChannel responses.
+ * \brief The CreateChannelResponse class provides an interace for MediaLive CreateChannel responses.
  *
  * \ingroup MediaLive
  *

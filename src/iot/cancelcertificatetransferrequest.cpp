@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CancelCertificateTransferRequest
  *
- * \brief The CancelCertificateTransferRequest class encapsulates IoT CancelCertificateTransfer requests.
+ * \brief The CancelCertificateTransferRequest class provides an interface for IoT CancelCertificateTransfer requests.
  *
  * \ingroup IoT
  *

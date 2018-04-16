@@ -26,7 +26,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::SMSRequest
  *
- * \brief The SMSRequest class is the base class for all SMS requests.
+ * \brief The SMSRequest class provides an interface for SMS requests.
  *
  * \ingroup SMS
  */

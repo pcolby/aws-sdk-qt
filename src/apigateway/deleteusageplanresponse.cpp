@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteUsagePlanResponse
  *
- * \brief The DeleteUsagePlanResponse class encapsulates APIGateway DeleteUsagePlan responses.
+ * \brief The DeleteUsagePlanResponse class provides an interace for APIGateway DeleteUsagePlan responses.
  *
  * \ingroup APIGateway
  *

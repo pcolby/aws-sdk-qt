@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DeleteCustomMetadataRequest
  *
- * \brief The DeleteCustomMetadataRequest class encapsulates WorkDocs DeleteCustomMetadata requests.
+ * \brief The DeleteCustomMetadataRequest class provides an interface for WorkDocs DeleteCustomMetadata requests.
  *
  * \ingroup WorkDocs
  *

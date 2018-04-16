@@ -28,7 +28,7 @@ namespace MediaStoreData {
 /*!
  * \class QtAws::MediaStoreData::PutObjectRequest
  *
- * \brief The PutObjectRequest class encapsulates MediaStoreData PutObject requests.
+ * \brief The PutObjectRequest class provides an interface for MediaStoreData PutObject requests.
  *
  * \ingroup MediaStoreData
  *

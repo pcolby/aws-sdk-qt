@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeTerminationPolicyTypesResponse
  *
- * \brief The DescribeTerminationPolicyTypesResponse class encapsulates AutoScaling DescribeTerminationPolicyTypes responses.
+ * \brief The DescribeTerminationPolicyTypesResponse class provides an interace for AutoScaling DescribeTerminationPolicyTypes responses.
  *
  * \ingroup AutoScaling
  *

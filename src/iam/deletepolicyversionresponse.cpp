@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeletePolicyVersionResponse
  *
- * \brief The DeletePolicyVersionResponse class encapsulates IAM DeletePolicyVersion responses.
+ * \brief The DeletePolicyVersionResponse class provides an interace for IAM DeletePolicyVersion responses.
  *
  * \ingroup IAM
  *

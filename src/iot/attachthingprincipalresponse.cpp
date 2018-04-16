@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::AttachThingPrincipalResponse
  *
- * \brief The AttachThingPrincipalResponse class encapsulates IoT AttachThingPrincipal responses.
+ * \brief The AttachThingPrincipalResponse class provides an interace for IoT AttachThingPrincipal responses.
  *
  * \ingroup IoT
  *

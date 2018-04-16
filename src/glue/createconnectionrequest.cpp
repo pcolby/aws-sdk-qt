@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateConnectionRequest
  *
- * \brief The CreateConnectionRequest class encapsulates Glue CreateConnection requests.
+ * \brief The CreateConnectionRequest class provides an interface for Glue CreateConnection requests.
  *
  * \ingroup Glue
  *

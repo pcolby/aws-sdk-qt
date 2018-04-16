@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DeleteEndpointConfigResponse
  *
- * \brief The DeleteEndpointConfigResponse class encapsulates SageMaker DeleteEndpointConfig responses.
+ * \brief The DeleteEndpointConfigResponse class provides an interace for SageMaker DeleteEndpointConfig responses.
  *
  * \ingroup SageMaker
  *

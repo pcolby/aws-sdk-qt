@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListSSHPublicKeysRequest
  *
- * \brief The ListSSHPublicKeysRequest class encapsulates IAM ListSSHPublicKeys requests.
+ * \brief The ListSSHPublicKeysRequest class provides an interface for IAM ListSSHPublicKeys requests.
  *
  * \ingroup IAM
  *

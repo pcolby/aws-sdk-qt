@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteVolumeResponse
  *
- * \brief The DeleteVolumeResponse class encapsulates EC2 DeleteVolume responses.
+ * \brief The DeleteVolumeResponse class provides an interace for EC2 DeleteVolume responses.
  *
  * \ingroup EC2
  *

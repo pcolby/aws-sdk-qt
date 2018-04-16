@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::EnableAllFeaturesRequest
  *
- * \brief The EnableAllFeaturesRequest class encapsulates Organizations EnableAllFeatures requests.
+ * \brief The EnableAllFeaturesRequest class provides an interface for Organizations EnableAllFeatures requests.
  *
  * \ingroup Organizations
  *

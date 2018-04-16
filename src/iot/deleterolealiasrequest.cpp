@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteRoleAliasRequest
  *
- * \brief The DeleteRoleAliasRequest class encapsulates IoT DeleteRoleAlias requests.
+ * \brief The DeleteRoleAliasRequest class provides an interface for IoT DeleteRoleAlias requests.
  *
  * \ingroup IoT
  *

@@ -28,7 +28,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::CreateEnvironmentEC2Request
  *
- * \brief The CreateEnvironmentEC2Request class encapsulates Cloud9 CreateEnvironmentEC2 requests.
+ * \brief The CreateEnvironmentEC2Request class provides an interface for Cloud9 CreateEnvironmentEC2 requests.
  *
  * \ingroup Cloud9
  *

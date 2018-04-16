@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ListRetirableGrantsRequest
  *
- * \brief The ListRetirableGrantsRequest class encapsulates KMS ListRetirableGrants requests.
+ * \brief The ListRetirableGrantsRequest class provides an interface for KMS ListRetirableGrants requests.
  *
  * \ingroup KMS
  *

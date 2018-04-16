@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribePermissionsResponse
  *
- * \brief The DescribePermissionsResponse class encapsulates OpsWorks DescribePermissions responses.
+ * \brief The DescribePermissionsResponse class provides an interace for OpsWorks DescribePermissions responses.
  *
  * \ingroup OpsWorks
  *

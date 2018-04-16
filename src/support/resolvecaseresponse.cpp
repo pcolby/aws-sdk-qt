@@ -30,7 +30,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::ResolveCaseResponse
  *
- * \brief The ResolveCaseResponse class encapsulates Support ResolveCase responses.
+ * \brief The ResolveCaseResponse class provides an interace for Support ResolveCase responses.
  *
  * \ingroup Support
  *

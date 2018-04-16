@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::GetStreamingDistributionConfigResponse
  *
- * \brief The GetStreamingDistributionConfigResponse class encapsulates CloudFront GetStreamingDistributionConfig responses.
+ * \brief The GetStreamingDistributionConfigResponse class provides an interace for CloudFront GetStreamingDistributionConfig responses.
  *
  * \ingroup CloudFront
  *

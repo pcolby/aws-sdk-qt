@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeExpressionsResponse
  *
- * \brief The DescribeExpressionsResponse class encapsulates CloudSearch DescribeExpressions responses.
+ * \brief The DescribeExpressionsResponse class provides an interace for CloudSearch DescribeExpressions responses.
  *
  * \ingroup CloudSearch
  *

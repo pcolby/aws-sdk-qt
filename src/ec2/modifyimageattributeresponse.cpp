@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyImageAttributeResponse
  *
- * \brief The ModifyImageAttributeResponse class encapsulates EC2 ModifyImageAttribute responses.
+ * \brief The ModifyImageAttributeResponse class provides an interace for EC2 ModifyImageAttribute responses.
  *
  * \ingroup EC2
  *

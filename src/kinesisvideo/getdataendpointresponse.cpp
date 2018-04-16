@@ -30,7 +30,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::GetDataEndpointResponse
  *
- * \brief The GetDataEndpointResponse class encapsulates KinesisVideo GetDataEndpoint responses.
+ * \brief The GetDataEndpointResponse class provides an interace for KinesisVideo GetDataEndpoint responses.
  *
  * \ingroup KinesisVideo
  *

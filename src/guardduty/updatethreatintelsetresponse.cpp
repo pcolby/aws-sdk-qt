@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::UpdateThreatIntelSetResponse
  *
- * \brief The UpdateThreatIntelSetResponse class encapsulates GuardDuty UpdateThreatIntelSet responses.
+ * \brief The UpdateThreatIntelSetResponse class provides an interace for GuardDuty UpdateThreatIntelSet responses.
  *
  * \ingroup GuardDuty
  *

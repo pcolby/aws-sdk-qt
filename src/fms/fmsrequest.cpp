@@ -26,7 +26,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::FMSRequest
  *
- * \brief The FMSRequest class is the base class for all FMS requests.
+ * \brief The FMSRequest class provides an interface for FMS requests.
  *
  * \ingroup FMS
  */

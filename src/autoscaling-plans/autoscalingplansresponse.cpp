@@ -29,7 +29,7 @@ namespace AutoScalingPlans {
 /*!
  * \class QtAws::AutoScalingPlans::AutoScalingPlansResponse
  *
- * \brief The AutoScalingPlansResponse class is the base class for all AutoScalingPlans responses.
+ * \brief The AutoScalingPlansResponse class provides an interface for AutoScalingPlans responses.
  *
  * \ingroup AutoScalingPlans
  */

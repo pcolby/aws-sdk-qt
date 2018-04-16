@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::UntagResourceResponse
  *
- * \brief The UntagResourceResponse class encapsulates Lambda UntagResource responses.
+ * \brief The UntagResourceResponse class provides an interace for Lambda UntagResource responses.
  *
  * \ingroup Lambda
  *

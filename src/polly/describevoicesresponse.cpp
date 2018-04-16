@@ -30,7 +30,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::DescribeVoicesResponse
  *
- * \brief The DescribeVoicesResponse class encapsulates Polly DescribeVoices responses.
+ * \brief The DescribeVoicesResponse class provides an interace for Polly DescribeVoices responses.
  *
  * \ingroup Polly
  *

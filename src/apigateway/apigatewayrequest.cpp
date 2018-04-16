@@ -26,7 +26,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::APIGatewayRequest
  *
- * \brief The APIGatewayRequest class is the base class for all APIGateway requests.
+ * \brief The APIGatewayRequest class provides an interface for APIGateway requests.
  *
  * \ingroup APIGateway
  */

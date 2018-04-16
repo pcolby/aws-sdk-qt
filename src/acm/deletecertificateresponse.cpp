@@ -30,7 +30,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::DeleteCertificateResponse
  *
- * \brief The DeleteCertificateResponse class encapsulates ACM DeleteCertificate responses.
+ * \brief The DeleteCertificateResponse class provides an interace for ACM DeleteCertificate responses.
  *
  * \ingroup ACM
  *

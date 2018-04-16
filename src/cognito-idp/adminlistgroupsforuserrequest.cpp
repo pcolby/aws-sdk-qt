@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminListGroupsForUserRequest
  *
- * \brief The AdminListGroupsForUserRequest class encapsulates CognitoIdentityProvider AdminListGroupsForUser requests.
+ * \brief The AdminListGroupsForUserRequest class provides an interface for CognitoIdentityProvider AdminListGroupsForUser requests.
  *
  * \ingroup CognitoIdentityProvider
  *

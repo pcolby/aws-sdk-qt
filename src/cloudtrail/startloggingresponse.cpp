@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::StartLoggingResponse
  *
- * \brief The StartLoggingResponse class encapsulates CloudTrail StartLogging responses.
+ * \brief The StartLoggingResponse class provides an interace for CloudTrail StartLogging responses.
  *
  * \ingroup CloudTrail
  *

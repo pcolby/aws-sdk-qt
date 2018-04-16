@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::PutEvaluationsRequest
  *
- * \brief The PutEvaluationsRequest class encapsulates ConfigService PutEvaluations requests.
+ * \brief The PutEvaluationsRequest class provides an interface for ConfigService PutEvaluations requests.
  *
  * \ingroup ConfigService
  *

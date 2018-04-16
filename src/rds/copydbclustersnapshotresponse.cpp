@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CopyDBClusterSnapshotResponse
  *
- * \brief The CopyDBClusterSnapshotResponse class encapsulates RDS CopyDBClusterSnapshot responses.
+ * \brief The CopyDBClusterSnapshotResponse class provides an interace for RDS CopyDBClusterSnapshot responses.
  *
  * \ingroup RDS
  *

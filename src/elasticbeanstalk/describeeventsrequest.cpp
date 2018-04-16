@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEventsRequest
  *
- * \brief The DescribeEventsRequest class encapsulates ElasticBeanstalk DescribeEvents requests.
+ * \brief The DescribeEventsRequest class provides an interface for ElasticBeanstalk DescribeEvents requests.
  *
  * \ingroup ElasticBeanstalk
  *

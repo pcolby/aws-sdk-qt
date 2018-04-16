@@ -28,7 +28,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::UpdateDomainNameserversRequest
  *
- * \brief The UpdateDomainNameserversRequest class encapsulates Route53Domains UpdateDomainNameservers requests.
+ * \brief The UpdateDomainNameserversRequest class provides an interface for Route53Domains UpdateDomainNameservers requests.
  *
  * \ingroup Route53Domains
  *

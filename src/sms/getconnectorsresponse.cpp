@@ -30,7 +30,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::GetConnectorsResponse
  *
- * \brief The GetConnectorsResponse class encapsulates SMS GetConnectors responses.
+ * \brief The GetConnectorsResponse class provides an interace for SMS GetConnectors responses.
  *
  * \ingroup SMS
  *

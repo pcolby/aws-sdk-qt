@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::ListTopicsRequest
  *
- * \brief The ListTopicsRequest class encapsulates SNS ListTopics requests.
+ * \brief The ListTopicsRequest class provides an interface for SNS ListTopics requests.
  *
  * \ingroup SNS
  *

@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::ModifyClusterParameterGroupRequest
  *
- * \brief The ModifyClusterParameterGroupRequest class encapsulates Redshift ModifyClusterParameterGroup requests.
+ * \brief The ModifyClusterParameterGroupRequest class provides an interface for Redshift ModifyClusterParameterGroup requests.
  *
  * \ingroup Redshift
  *

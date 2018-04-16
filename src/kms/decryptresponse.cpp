@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::DecryptResponse
  *
- * \brief The DecryptResponse class encapsulates KMS Decrypt responses.
+ * \brief The DecryptResponse class provides an interace for KMS Decrypt responses.
  *
  * \ingroup KMS
  *

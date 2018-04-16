@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::UpdateDetectorResponse
  *
- * \brief The UpdateDetectorResponse class encapsulates GuardDuty UpdateDetector responses.
+ * \brief The UpdateDetectorResponse class provides an interace for GuardDuty UpdateDetector responses.
  *
  * \ingroup GuardDuty
  *

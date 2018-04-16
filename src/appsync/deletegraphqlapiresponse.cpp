@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::DeleteGraphqlApiResponse
  *
- * \brief The DeleteGraphqlApiResponse class encapsulates AppSync DeleteGraphqlApi responses.
+ * \brief The DeleteGraphqlApiResponse class provides an interace for AppSync DeleteGraphqlApi responses.
  *
  * \ingroup AppSync
  *

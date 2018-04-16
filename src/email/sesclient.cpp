@@ -173,7 +173,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SesClient
  *
- * \brief The SesClient class provides access the Amazon Simple Email Service ( SES) service.
+ * \brief The SesClient class provides access to the Amazon Simple Email Service ( SES) service.
  *
  * \ingroup SES
  *

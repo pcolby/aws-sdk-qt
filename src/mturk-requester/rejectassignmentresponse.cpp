@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::RejectAssignmentResponse
  *
- * \brief The RejectAssignmentResponse class encapsulates MTurk RejectAssignment responses.
+ * \brief The RejectAssignmentResponse class provides an interace for MTurk RejectAssignment responses.
  *
  * \ingroup MTurk
  *

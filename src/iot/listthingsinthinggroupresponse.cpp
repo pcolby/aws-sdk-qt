@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListThingsInThingGroupResponse
  *
- * \brief The ListThingsInThingGroupResponse class encapsulates IoT ListThingsInThingGroup responses.
+ * \brief The ListThingsInThingGroupResponse class provides an interace for IoT ListThingsInThingGroup responses.
  *
  * \ingroup IoT
  *

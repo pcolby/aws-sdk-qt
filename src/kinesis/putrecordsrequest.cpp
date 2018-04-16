@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::PutRecordsRequest
  *
- * \brief The PutRecordsRequest class encapsulates Kinesis PutRecords requests.
+ * \brief The PutRecordsRequest class provides an interface for Kinesis PutRecords requests.
  *
  * \ingroup Kinesis
  *

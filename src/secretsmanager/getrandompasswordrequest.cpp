@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::GetRandomPasswordRequest
  *
- * \brief The GetRandomPasswordRequest class encapsulates SecretsManager GetRandomPassword requests.
+ * \brief The GetRandomPasswordRequest class provides an interface for SecretsManager GetRandomPassword requests.
  *
  * \ingroup SecretsManager
  *

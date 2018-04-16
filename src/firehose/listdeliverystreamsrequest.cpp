@@ -28,7 +28,7 @@ namespace Firehose {
 /*!
  * \class QtAws::Firehose::ListDeliveryStreamsRequest
  *
- * \brief The ListDeliveryStreamsRequest class encapsulates Firehose ListDeliveryStreams requests.
+ * \brief The ListDeliveryStreamsRequest class provides an interface for Firehose ListDeliveryStreams requests.
  *
  * \ingroup Firehose
  *

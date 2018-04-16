@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DeleteLifecycleHookRequest
  *
- * \brief The DeleteLifecycleHookRequest class encapsulates AutoScaling DeleteLifecycleHook requests.
+ * \brief The DeleteLifecycleHookRequest class provides an interface for AutoScaling DeleteLifecycleHook requests.
  *
  * \ingroup AutoScaling
  *

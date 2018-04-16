@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeClusterVersionsRequest
  *
- * \brief The DescribeClusterVersionsRequest class encapsulates Redshift DescribeClusterVersions requests.
+ * \brief The DescribeClusterVersionsRequest class provides an interface for Redshift DescribeClusterVersions requests.
  *
  * \ingroup Redshift
  *

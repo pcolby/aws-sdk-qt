@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteTriggerRequest
  *
- * \brief The DeleteTriggerRequest class encapsulates Glue DeleteTrigger requests.
+ * \brief The DeleteTriggerRequest class provides an interface for Glue DeleteTrigger requests.
  *
  * \ingroup Glue
  *

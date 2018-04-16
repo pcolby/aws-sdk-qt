@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetPatchBaselineRequest
  *
- * \brief The GetPatchBaselineRequest class encapsulates SSM GetPatchBaseline requests.
+ * \brief The GetPatchBaselineRequest class provides an interface for SSM GetPatchBaseline requests.
  *
  * \ingroup SSM
  *

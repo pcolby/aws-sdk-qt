@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::DeleteBucketCorsRequest
  *
- * \brief The DeleteBucketCorsRequest class encapsulates S3 DeleteBucketCors requests.
+ * \brief The DeleteBucketCorsRequest class provides an interface for S3 DeleteBucketCors requests.
  *
  * \ingroup S3
  *

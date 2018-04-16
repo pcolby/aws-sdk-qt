@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::StartMatchBackfillRequest
  *
- * \brief The StartMatchBackfillRequest class encapsulates GameLift StartMatchBackfill requests.
+ * \brief The StartMatchBackfillRequest class provides an interface for GameLift StartMatchBackfill requests.
  *
  * \ingroup GameLift
  *

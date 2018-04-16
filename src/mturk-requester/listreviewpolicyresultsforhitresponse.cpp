@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListReviewPolicyResultsForHITResponse
  *
- * \brief The ListReviewPolicyResultsForHITResponse class encapsulates MTurk ListReviewPolicyResultsForHIT responses.
+ * \brief The ListReviewPolicyResultsForHITResponse class provides an interace for MTurk ListReviewPolicyResultsForHIT responses.
  *
  * \ingroup MTurk
  *

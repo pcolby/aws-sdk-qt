@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::UpdateNotebookInstanceResponse
  *
- * \brief The UpdateNotebookInstanceResponse class encapsulates SageMaker UpdateNotebookInstance responses.
+ * \brief The UpdateNotebookInstanceResponse class provides an interace for SageMaker UpdateNotebookInstance responses.
  *
  * \ingroup SageMaker
  *

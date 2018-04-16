@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifySpotFleetRequestResponse
  *
- * \brief The ModifySpotFleetRequestResponse class encapsulates EC2 ModifySpotFleetRequest responses.
+ * \brief The ModifySpotFleetRequestResponse class provides an interace for EC2 ModifySpotFleetRequest responses.
  *
  * \ingroup EC2
  *

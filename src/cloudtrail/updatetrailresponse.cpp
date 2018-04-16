@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::UpdateTrailResponse
  *
- * \brief The UpdateTrailResponse class encapsulates CloudTrail UpdateTrail responses.
+ * \brief The UpdateTrailResponse class provides an interace for CloudTrail UpdateTrail responses.
  *
  * \ingroup CloudTrail
  *

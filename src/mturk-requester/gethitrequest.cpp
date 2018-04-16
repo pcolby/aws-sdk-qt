@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::GetHITRequest
  *
- * \brief The GetHITRequest class encapsulates MTurk GetHIT requests.
+ * \brief The GetHITRequest class provides an interface for MTurk GetHIT requests.
  *
  * \ingroup MTurk
  *

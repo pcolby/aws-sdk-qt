@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::TagResourceResponse
  *
- * \brief The TagResourceResponse class encapsulates CloudFront TagResource responses.
+ * \brief The TagResourceResponse class provides an interace for CloudFront TagResource responses.
  *
  * \ingroup CloudFront
  *

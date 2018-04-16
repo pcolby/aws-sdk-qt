@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::DisableEnhancedMonitoringRequest
  *
- * \brief The DisableEnhancedMonitoringRequest class encapsulates Kinesis DisableEnhancedMonitoring requests.
+ * \brief The DisableEnhancedMonitoringRequest class provides an interface for Kinesis DisableEnhancedMonitoring requests.
  *
  * \ingroup Kinesis
  *

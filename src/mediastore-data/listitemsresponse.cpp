@@ -30,7 +30,7 @@ namespace MediaStoreData {
 /*!
  * \class QtAws::MediaStoreData::ListItemsResponse
  *
- * \brief The ListItemsResponse class encapsulates MediaStoreData ListItems responses.
+ * \brief The ListItemsResponse class provides an interace for MediaStoreData ListItems responses.
  *
  * \ingroup MediaStoreData
  *

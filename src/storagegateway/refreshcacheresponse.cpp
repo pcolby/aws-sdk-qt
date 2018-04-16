@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::RefreshCacheResponse
  *
- * \brief The RefreshCacheResponse class encapsulates StorageGateway RefreshCache responses.
+ * \brief The RefreshCacheResponse class provides an interace for StorageGateway RefreshCache responses.
  *
  * \ingroup StorageGateway
  *

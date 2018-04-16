@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteGroupPolicyResponse
  *
- * \brief The DeleteGroupPolicyResponse class encapsulates IAM DeleteGroupPolicy responses.
+ * \brief The DeleteGroupPolicyResponse class provides an interace for IAM DeleteGroupPolicy responses.
  *
  * \ingroup IAM
  *

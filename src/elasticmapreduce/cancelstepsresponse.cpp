@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::CancelStepsResponse
  *
- * \brief The CancelStepsResponse class encapsulates EMR CancelSteps responses.
+ * \brief The CancelStepsResponse class provides an interace for EMR CancelSteps responses.
  *
  * \ingroup EMR
  *

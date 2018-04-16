@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::CreateBackupResponse
  *
- * \brief The CreateBackupResponse class encapsulates OpsWorksCM CreateBackup responses.
+ * \brief The CreateBackupResponse class provides an interace for OpsWorksCM CreateBackup responses.
  *
  * \ingroup OpsWorksCM
  *

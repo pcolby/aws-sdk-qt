@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteRunRequest
  *
- * \brief The DeleteRunRequest class encapsulates DeviceFarm DeleteRun requests.
+ * \brief The DeleteRunRequest class provides an interface for DeviceFarm DeleteRun requests.
  *
  * \ingroup DeviceFarm
  *

@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::ListGroupMembersResponse
  *
- * \brief The ListGroupMembersResponse class encapsulates WorkMail ListGroupMembers responses.
+ * \brief The ListGroupMembersResponse class provides an interace for WorkMail ListGroupMembers responses.
  *
  * \ingroup WorkMail
  *

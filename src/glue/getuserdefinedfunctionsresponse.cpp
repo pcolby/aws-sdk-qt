@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetUserDefinedFunctionsResponse
  *
- * \brief The GetUserDefinedFunctionsResponse class encapsulates Glue GetUserDefinedFunctions responses.
+ * \brief The GetUserDefinedFunctionsResponse class provides an interace for Glue GetUserDefinedFunctions responses.
  *
  * \ingroup Glue
  *

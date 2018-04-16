@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ReplaceIamInstanceProfileAssociationRequest
  *
- * \brief The ReplaceIamInstanceProfileAssociationRequest class encapsulates EC2 ReplaceIamInstanceProfileAssociation requests.
+ * \brief The ReplaceIamInstanceProfileAssociationRequest class provides an interface for EC2 ReplaceIamInstanceProfileAssociation requests.
  *
  * \ingroup EC2
  *

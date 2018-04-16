@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketInventoryConfigurationResponse
  *
- * \brief The PutBucketInventoryConfigurationResponse class encapsulates S3 PutBucketInventoryConfiguration responses.
+ * \brief The PutBucketInventoryConfigurationResponse class provides an interace for S3 PutBucketInventoryConfiguration responses.
  *
  * \ingroup S3
  *

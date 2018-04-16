@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateSecurityGroupRequest
  *
- * \brief The CreateSecurityGroupRequest class encapsulates EC2 CreateSecurityGroup requests.
+ * \brief The CreateSecurityGroupRequest class provides an interface for EC2 CreateSecurityGroup requests.
  *
  * \ingroup EC2
  *

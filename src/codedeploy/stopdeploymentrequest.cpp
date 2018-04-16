@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::StopDeploymentRequest
  *
- * \brief The StopDeploymentRequest class encapsulates CodeDeploy StopDeployment requests.
+ * \brief The StopDeploymentRequest class provides an interface for CodeDeploy StopDeployment requests.
  *
  * \ingroup CodeDeploy
  *

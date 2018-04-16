@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::CreateProvisioningArtifactResponse
  *
- * \brief The CreateProvisioningArtifactResponse class encapsulates ServiceCatalog CreateProvisioningArtifact responses.
+ * \brief The CreateProvisioningArtifactResponse class provides an interace for ServiceCatalog CreateProvisioningArtifact responses.
  *
  * \ingroup ServiceCatalog
  *

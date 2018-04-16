@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeAppsRequest
  *
- * \brief The DescribeAppsRequest class encapsulates OpsWorks DescribeApps requests.
+ * \brief The DescribeAppsRequest class provides an interface for OpsWorks DescribeApps requests.
  *
  * \ingroup OpsWorks
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::StartInstancesRequest
  *
- * \brief The StartInstancesRequest class encapsulates EC2 StartInstances requests.
+ * \brief The StartInstancesRequest class provides an interface for EC2 StartInstances requests.
  *
  * \ingroup EC2
  *

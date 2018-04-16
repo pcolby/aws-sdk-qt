@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::ListEndpointConfigsRequest
  *
- * \brief The ListEndpointConfigsRequest class encapsulates SageMaker ListEndpointConfigs requests.
+ * \brief The ListEndpointConfigsRequest class provides an interface for SageMaker ListEndpointConfigs requests.
  *
  * \ingroup SageMaker
  *

@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::DeleteTagsRequest
  *
- * \brief The DeleteTagsRequest class encapsulates ApplicationDiscoveryService DeleteTags requests.
+ * \brief The DeleteTagsRequest class provides an interface for ApplicationDiscoveryService DeleteTags requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

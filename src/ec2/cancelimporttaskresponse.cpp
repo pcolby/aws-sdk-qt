@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CancelImportTaskResponse
  *
- * \brief The CancelImportTaskResponse class encapsulates EC2 CancelImportTask responses.
+ * \brief The CancelImportTaskResponse class provides an interace for EC2 CancelImportTask responses.
  *
  * \ingroup EC2
  *

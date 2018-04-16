@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::StopStreamProcessorRequest
  *
- * \brief The StopStreamProcessorRequest class encapsulates Rekognition StopStreamProcessor requests.
+ * \brief The StopStreamProcessorRequest class provides an interface for Rekognition StopStreamProcessor requests.
  *
  * \ingroup Rekognition
  *

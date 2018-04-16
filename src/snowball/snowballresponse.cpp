@@ -29,7 +29,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::SnowballResponse
  *
- * \brief The SnowballResponse class is the base class for all Snowball responses.
+ * \brief The SnowballResponse class provides an interface for Snowball responses.
  *
  * \ingroup Snowball
  */

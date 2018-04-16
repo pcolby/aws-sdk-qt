@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::TransferDomainResponse
  *
- * \brief The TransferDomainResponse class encapsulates Route53Domains TransferDomain responses.
+ * \brief The TransferDomainResponse class provides an interace for Route53Domains TransferDomain responses.
  *
  * \ingroup Route53Domains
  *

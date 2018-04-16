@@ -28,7 +28,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::DeleteBudgetRequest
  *
- * \brief The DeleteBudgetRequest class encapsulates Budgets DeleteBudget requests.
+ * \brief The DeleteBudgetRequest class provides an interface for Budgets DeleteBudget requests.
  *
  * \ingroup Budgets
  *

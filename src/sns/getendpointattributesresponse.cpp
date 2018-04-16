@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::GetEndpointAttributesResponse
  *
- * \brief The GetEndpointAttributesResponse class encapsulates SNS GetEndpointAttributes responses.
+ * \brief The GetEndpointAttributesResponse class provides an interace for SNS GetEndpointAttributes responses.
  *
  * \ingroup SNS
  *

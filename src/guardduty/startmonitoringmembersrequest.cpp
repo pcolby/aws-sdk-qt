@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::StartMonitoringMembersRequest
  *
- * \brief The StartMonitoringMembersRequest class encapsulates GuardDuty StartMonitoringMembers requests.
+ * \brief The StartMonitoringMembersRequest class provides an interface for GuardDuty StartMonitoringMembers requests.
  *
  * \ingroup GuardDuty
  *

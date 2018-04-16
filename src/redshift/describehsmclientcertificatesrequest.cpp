@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeHsmClientCertificatesRequest
  *
- * \brief The DescribeHsmClientCertificatesRequest class encapsulates Redshift DescribeHsmClientCertificates requests.
+ * \brief The DescribeHsmClientCertificatesRequest class provides an interface for Redshift DescribeHsmClientCertificates requests.
  *
  * \ingroup Redshift
  *

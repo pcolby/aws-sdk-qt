@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateDefaultSubnetResponse
  *
- * \brief The CreateDefaultSubnetResponse class encapsulates EC2 CreateDefaultSubnet responses.
+ * \brief The CreateDefaultSubnetResponse class provides an interace for EC2 CreateDefaultSubnet responses.
  *
  * \ingroup EC2
  *

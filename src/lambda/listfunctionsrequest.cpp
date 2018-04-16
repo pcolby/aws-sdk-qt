@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::ListFunctionsRequest
  *
- * \brief The ListFunctionsRequest class encapsulates Lambda ListFunctions requests.
+ * \brief The ListFunctionsRequest class provides an interface for Lambda ListFunctions requests.
  *
  * \ingroup Lambda
  *

@@ -30,7 +30,7 @@ namespace TranscribeService {
 /*!
  * \class QtAws::TranscribeService::DeleteVocabularyResponse
  *
- * \brief The DeleteVocabularyResponse class encapsulates TranscribeService DeleteVocabulary responses.
+ * \brief The DeleteVocabularyResponse class provides an interace for TranscribeService DeleteVocabulary responses.
  *
  * \ingroup TranscribeService
  *

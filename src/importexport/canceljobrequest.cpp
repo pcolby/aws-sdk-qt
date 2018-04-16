@@ -28,7 +28,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::CancelJobRequest
  *
- * \brief The CancelJobRequest class encapsulates ImportExport CancelJob requests.
+ * \brief The CancelJobRequest class provides an interface for ImportExport CancelJob requests.
  *
  * \ingroup ImportExport
  *

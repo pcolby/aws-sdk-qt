@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::GetClusterCredentialsResponse
  *
- * \brief The GetClusterCredentialsResponse class encapsulates Redshift GetClusterCredentials responses.
+ * \brief The GetClusterCredentialsResponse class provides an interace for Redshift GetClusterCredentials responses.
  *
  * \ingroup Redshift
  *

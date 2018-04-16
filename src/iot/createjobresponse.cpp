@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateJobResponse
  *
- * \brief The CreateJobResponse class encapsulates IoT CreateJob responses.
+ * \brief The CreateJobResponse class provides an interace for IoT CreateJob responses.
  *
  * \ingroup IoT
  *

@@ -30,7 +30,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::UpdateClusterResponse
  *
- * \brief The UpdateClusterResponse class encapsulates Snowball UpdateCluster responses.
+ * \brief The UpdateClusterResponse class provides an interace for Snowball UpdateCluster responses.
  *
  * \ingroup Snowball
  *

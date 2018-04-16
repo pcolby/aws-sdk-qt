@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::ListTagsResponse
  *
- * \brief The ListTagsResponse class encapsulates DAX ListTags responses.
+ * \brief The ListTagsResponse class provides an interace for DAX ListTags responses.
  *
  * \ingroup DAX
  *

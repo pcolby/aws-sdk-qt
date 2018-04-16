@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DeleteTagOptionRequest
  *
- * \brief The DeleteTagOptionRequest class encapsulates ServiceCatalog DeleteTagOption requests.
+ * \brief The DeleteTagOptionRequest class provides an interface for ServiceCatalog DeleteTagOption requests.
  *
  * \ingroup ServiceCatalog
  *

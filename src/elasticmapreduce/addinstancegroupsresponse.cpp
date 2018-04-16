@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::AddInstanceGroupsResponse
  *
- * \brief The AddInstanceGroupsResponse class encapsulates EMR AddInstanceGroups responses.
+ * \brief The AddInstanceGroupsResponse class provides an interace for EMR AddInstanceGroups responses.
  *
  * \ingroup EMR
  *

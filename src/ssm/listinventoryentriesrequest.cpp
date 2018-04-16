@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListInventoryEntriesRequest
  *
- * \brief The ListInventoryEntriesRequest class encapsulates SSM ListInventoryEntries requests.
+ * \brief The ListInventoryEntriesRequest class provides an interface for SSM ListInventoryEntries requests.
  *
  * \ingroup SSM
  *

@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::ListBrokersResponse
  *
- * \brief The ListBrokersResponse class encapsulates MQ ListBrokers responses.
+ * \brief The ListBrokersResponse class provides an interace for MQ ListBrokers responses.
  *
  * \ingroup MQ
  *

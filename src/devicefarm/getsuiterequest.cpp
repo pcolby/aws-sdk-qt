@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetSuiteRequest
  *
- * \brief The GetSuiteRequest class encapsulates DeviceFarm GetSuite requests.
+ * \brief The GetSuiteRequest class provides an interface for DeviceFarm GetSuite requests.
  *
  * \ingroup DeviceFarm
  *

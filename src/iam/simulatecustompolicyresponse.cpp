@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::SimulateCustomPolicyResponse
  *
- * \brief The SimulateCustomPolicyResponse class encapsulates IAM SimulateCustomPolicy responses.
+ * \brief The SimulateCustomPolicyResponse class provides an interace for IAM SimulateCustomPolicy responses.
  *
  * \ingroup IAM
  *

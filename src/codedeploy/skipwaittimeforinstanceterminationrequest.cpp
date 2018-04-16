@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::SkipWaitTimeForInstanceTerminationRequest
  *
- * \brief The SkipWaitTimeForInstanceTerminationRequest class encapsulates CodeDeploy SkipWaitTimeForInstanceTermination requests.
+ * \brief The SkipWaitTimeForInstanceTerminationRequest class provides an interface for CodeDeploy SkipWaitTimeForInstanceTermination requests.
  *
  * \ingroup CodeDeploy
  *

@@ -30,7 +30,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::CreateSubscriptionResponse
  *
- * \brief The CreateSubscriptionResponse class encapsulates Shield CreateSubscription responses.
+ * \brief The CreateSubscriptionResponse class provides an interace for Shield CreateSubscription responses.
  *
  * \ingroup Shield
  *

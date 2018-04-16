@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetCommandInvocationRequest
  *
- * \brief The GetCommandInvocationRequest class encapsulates SSM GetCommandInvocation requests.
+ * \brief The GetCommandInvocationRequest class provides an interface for SSM GetCommandInvocation requests.
  *
  * \ingroup SSM
  *

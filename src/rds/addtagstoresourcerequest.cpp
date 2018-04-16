@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::AddTagsToResourceRequest
  *
- * \brief The AddTagsToResourceRequest class encapsulates RDS AddTagsToResource requests.
+ * \brief The AddTagsToResourceRequest class provides an interface for RDS AddTagsToResource requests.
  *
  * \ingroup RDS
  *

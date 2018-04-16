@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::EnableSsoResponse
  *
- * \brief The EnableSsoResponse class encapsulates DirectoryService EnableSso responses.
+ * \brief The EnableSsoResponse class provides an interace for DirectoryService EnableSso responses.
  *
  * \ingroup DirectoryService
  *

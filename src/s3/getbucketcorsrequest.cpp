@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketCorsRequest
  *
- * \brief The GetBucketCorsRequest class encapsulates S3 GetBucketCors requests.
+ * \brief The GetBucketCorsRequest class provides an interface for S3 GetBucketCors requests.
  *
  * \ingroup S3
  *

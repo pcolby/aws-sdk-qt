@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetStaticIpsRequest
  *
- * \brief The GetStaticIpsRequest class encapsulates Lightsail GetStaticIps requests.
+ * \brief The GetStaticIpsRequest class provides an interface for Lightsail GetStaticIps requests.
  *
  * \ingroup Lightsail
  *

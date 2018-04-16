@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::CreateLoadBalancerTlsCertificateRequest
  *
- * \brief The CreateLoadBalancerTlsCertificateRequest class encapsulates Lightsail CreateLoadBalancerTlsCertificate requests.
+ * \brief The CreateLoadBalancerTlsCertificateRequest class provides an interface for Lightsail CreateLoadBalancerTlsCertificate requests.
  *
  * \ingroup Lightsail
  *

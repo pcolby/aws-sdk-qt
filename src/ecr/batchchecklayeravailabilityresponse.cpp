@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::BatchCheckLayerAvailabilityResponse
  *
- * \brief The BatchCheckLayerAvailabilityResponse class encapsulates ECR BatchCheckLayerAvailability responses.
+ * \brief The BatchCheckLayerAvailabilityResponse class provides an interace for ECR BatchCheckLayerAvailability responses.
  *
  * \ingroup ECR
  *

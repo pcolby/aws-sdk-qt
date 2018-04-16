@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DetachInstancesRequest
  *
- * \brief The DetachInstancesRequest class encapsulates AutoScaling DetachInstances requests.
+ * \brief The DetachInstancesRequest class provides an interface for AutoScaling DetachInstances requests.
  *
  * \ingroup AutoScaling
  *

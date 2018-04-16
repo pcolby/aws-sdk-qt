@@ -29,7 +29,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::CloudHSMV2Response
  *
- * \brief The CloudHSMV2Response class is the base class for all CloudHSMV2 responses.
+ * \brief The CloudHSMV2Response class provides an interface for CloudHSMV2 responses.
  *
  * \ingroup CloudHSMV2
  */

@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::CreateSizeConstraintSetResponse
  *
- * \brief The CreateSizeConstraintSetResponse class encapsulates WAF CreateSizeConstraintSet responses.
+ * \brief The CreateSizeConstraintSetResponse class provides an interace for WAF CreateSizeConstraintSet responses.
  *
  * \ingroup WAF
  *

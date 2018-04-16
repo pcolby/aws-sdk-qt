@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::StartFaceSearchRequest
  *
- * \brief The StartFaceSearchRequest class encapsulates Rekognition StartFaceSearch requests.
+ * \brief The StartFaceSearchRequest class provides an interface for Rekognition StartFaceSearch requests.
  *
  * \ingroup Rekognition
  *

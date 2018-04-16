@@ -30,7 +30,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::TagResourceResponse
  *
- * \brief The TagResourceResponse class encapsulates SecretsManager TagResource responses.
+ * \brief The TagResourceResponse class provides an interace for SecretsManager TagResource responses.
  *
  * \ingroup SecretsManager
  *

@@ -30,7 +30,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::PutContainerPolicyResponse
  *
- * \brief The PutContainerPolicyResponse class encapsulates MediaStore PutContainerPolicy responses.
+ * \brief The PutContainerPolicyResponse class provides an interace for MediaStore PutContainerPolicy responses.
  *
  * \ingroup MediaStore
  *

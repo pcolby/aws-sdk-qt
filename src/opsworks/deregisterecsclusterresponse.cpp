@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeregisterEcsClusterResponse
  *
- * \brief The DeregisterEcsClusterResponse class encapsulates OpsWorks DeregisterEcsCluster responses.
+ * \brief The DeregisterEcsClusterResponse class provides an interace for OpsWorks DeregisterEcsCluster responses.
  *
  * \ingroup OpsWorks
  *

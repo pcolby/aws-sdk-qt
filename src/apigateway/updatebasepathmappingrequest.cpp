@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateBasePathMappingRequest
  *
- * \brief The UpdateBasePathMappingRequest class encapsulates APIGateway UpdateBasePathMapping requests.
+ * \brief The UpdateBasePathMappingRequest class provides an interface for APIGateway UpdateBasePathMapping requests.
  *
  * \ingroup APIGateway
  *

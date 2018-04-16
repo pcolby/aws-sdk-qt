@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::GetMergeConflictsResponse
  *
- * \brief The GetMergeConflictsResponse class encapsulates CodeCommit GetMergeConflicts responses.
+ * \brief The GetMergeConflictsResponse class provides an interace for CodeCommit GetMergeConflicts responses.
  *
  * \ingroup CodeCommit
  *

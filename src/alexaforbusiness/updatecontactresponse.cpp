@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::UpdateContactResponse
  *
- * \brief The UpdateContactResponse class encapsulates AlexaForBusiness UpdateContact responses.
+ * \brief The UpdateContactResponse class provides an interace for AlexaForBusiness UpdateContact responses.
  *
  * \ingroup AlexaForBusiness
  *

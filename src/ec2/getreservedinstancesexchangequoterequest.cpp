@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::GetReservedInstancesExchangeQuoteRequest
  *
- * \brief The GetReservedInstancesExchangeQuoteRequest class encapsulates EC2 GetReservedInstancesExchangeQuote requests.
+ * \brief The GetReservedInstancesExchangeQuoteRequest class provides an interface for EC2 GetReservedInstancesExchangeQuote requests.
  *
  * \ingroup EC2
  *

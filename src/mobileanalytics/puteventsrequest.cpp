@@ -28,7 +28,7 @@ namespace MobileAnalytics {
 /*!
  * \class QtAws::MobileAnalytics::PutEventsRequest
  *
- * \brief The PutEventsRequest class encapsulates MobileAnalytics PutEvents requests.
+ * \brief The PutEventsRequest class provides an interface for MobileAnalytics PutEvents requests.
  *
  * \ingroup MobileAnalytics
  *

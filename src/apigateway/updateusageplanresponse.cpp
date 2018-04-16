@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateUsagePlanResponse
  *
- * \brief The UpdateUsagePlanResponse class encapsulates APIGateway UpdateUsagePlan responses.
+ * \brief The UpdateUsagePlanResponse class provides an interace for APIGateway UpdateUsagePlan responses.
  *
  * \ingroup APIGateway
  *

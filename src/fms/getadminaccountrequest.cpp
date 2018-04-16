@@ -28,7 +28,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::GetAdminAccountRequest
  *
- * \brief The GetAdminAccountRequest class encapsulates FMS GetAdminAccount requests.
+ * \brief The GetAdminAccountRequest class provides an interface for FMS GetAdminAccount requests.
  *
  * \ingroup FMS
  *

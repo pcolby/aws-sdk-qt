@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::CheckDNSAvailabilityResponse
  *
- * \brief The CheckDNSAvailabilityResponse class encapsulates ElasticBeanstalk CheckDNSAvailability responses.
+ * \brief The CheckDNSAvailabilityResponse class provides an interace for ElasticBeanstalk CheckDNSAvailability responses.
  *
  * \ingroup ElasticBeanstalk
  *

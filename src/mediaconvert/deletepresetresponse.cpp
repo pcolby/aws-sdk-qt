@@ -30,7 +30,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::DeletePresetResponse
  *
- * \brief The DeletePresetResponse class encapsulates MediaConvert DeletePreset responses.
+ * \brief The DeletePresetResponse class provides an interace for MediaConvert DeletePreset responses.
  *
  * \ingroup MediaConvert
  *

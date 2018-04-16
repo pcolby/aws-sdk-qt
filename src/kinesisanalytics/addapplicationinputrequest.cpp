@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::AddApplicationInputRequest
  *
- * \brief The AddApplicationInputRequest class encapsulates KinesisAnalytics AddApplicationInput requests.
+ * \brief The AddApplicationInputRequest class provides an interface for KinesisAnalytics AddApplicationInput requests.
  *
  * \ingroup KinesisAnalytics
  *

@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::RegisterWorkflowTypeRequest
  *
- * \brief The RegisterWorkflowTypeRequest class encapsulates SWF RegisterWorkflowType requests.
+ * \brief The RegisterWorkflowTypeRequest class provides an interface for SWF RegisterWorkflowType requests.
  *
  * \ingroup SWF
  *

@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::AssignVolumeRequest
  *
- * \brief The AssignVolumeRequest class encapsulates OpsWorks AssignVolume requests.
+ * \brief The AssignVolumeRequest class provides an interface for OpsWorks AssignVolume requests.
  *
  * \ingroup OpsWorks
  *

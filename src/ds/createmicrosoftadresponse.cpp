@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateMicrosoftADResponse
  *
- * \brief The CreateMicrosoftADResponse class encapsulates DirectoryService CreateMicrosoftAD responses.
+ * \brief The CreateMicrosoftADResponse class provides an interace for DirectoryService CreateMicrosoftAD responses.
  *
  * \ingroup DirectoryService
  *

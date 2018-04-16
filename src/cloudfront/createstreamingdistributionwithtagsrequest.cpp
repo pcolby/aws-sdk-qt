@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::CreateStreamingDistributionWithTagsRequest
  *
- * \brief The CreateStreamingDistributionWithTagsRequest class encapsulates CloudFront CreateStreamingDistributionWithTags requests.
+ * \brief The CreateStreamingDistributionWithTagsRequest class provides an interface for CloudFront CreateStreamingDistributionWithTags requests.
  *
  * \ingroup CloudFront
  *

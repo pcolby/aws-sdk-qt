@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetAccountAuthorizationDetailsRequest
  *
- * \brief The GetAccountAuthorizationDetailsRequest class encapsulates IAM GetAccountAuthorizationDetails requests.
+ * \brief The GetAccountAuthorizationDetailsRequest class provides an interface for IAM GetAccountAuthorizationDetails requests.
  *
  * \ingroup IAM
  *

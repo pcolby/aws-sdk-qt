@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateSAMLProviderRequest
  *
- * \brief The CreateSAMLProviderRequest class encapsulates IAM CreateSAMLProvider requests.
+ * \brief The CreateSAMLProviderRequest class provides an interface for IAM CreateSAMLProvider requests.
  *
  * \ingroup IAM
  *

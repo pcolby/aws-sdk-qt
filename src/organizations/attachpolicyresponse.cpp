@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::AttachPolicyResponse
  *
- * \brief The AttachPolicyResponse class encapsulates Organizations AttachPolicy responses.
+ * \brief The AttachPolicyResponse class provides an interace for Organizations AttachPolicy responses.
  *
  * \ingroup Organizations
  *

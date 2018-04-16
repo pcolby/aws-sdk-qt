@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::StartImageBuilderResponse
  *
- * \brief The StartImageBuilderResponse class encapsulates AppStream StartImageBuilder responses.
+ * \brief The StartImageBuilderResponse class provides an interace for AppStream StartImageBuilder responses.
  *
  * \ingroup AppStream
  *

@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ListBootstrapActionsResponse
  *
- * \brief The ListBootstrapActionsResponse class encapsulates EMR ListBootstrapActions responses.
+ * \brief The ListBootstrapActionsResponse class provides an interace for EMR ListBootstrapActions responses.
  *
  * \ingroup EMR
  *

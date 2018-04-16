@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::IncreaseStreamRetentionPeriodRequest
  *
- * \brief The IncreaseStreamRetentionPeriodRequest class encapsulates Kinesis IncreaseStreamRetentionPeriod requests.
+ * \brief The IncreaseStreamRetentionPeriodRequest class provides an interface for Kinesis IncreaseStreamRetentionPeriod requests.
  *
  * \ingroup Kinesis
  *

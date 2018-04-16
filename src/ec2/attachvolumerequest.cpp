@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AttachVolumeRequest
  *
- * \brief The AttachVolumeRequest class encapsulates EC2 AttachVolume requests.
+ * \brief The AttachVolumeRequest class provides an interface for EC2 AttachVolume requests.
  *
  * \ingroup EC2
  *

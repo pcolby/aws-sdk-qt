@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::DeleteBucketWebsiteRequest
  *
- * \brief The DeleteBucketWebsiteRequest class encapsulates S3 DeleteBucketWebsite requests.
+ * \brief The DeleteBucketWebsiteRequest class provides an interface for S3 DeleteBucketWebsite requests.
  *
  * \ingroup S3
  *

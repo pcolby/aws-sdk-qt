@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::CreateResourceResponse
  *
- * \brief The CreateResourceResponse class encapsulates WorkMail CreateResource responses.
+ * \brief The CreateResourceResponse class provides an interace for WorkMail CreateResource responses.
  *
  * \ingroup WorkMail
  *

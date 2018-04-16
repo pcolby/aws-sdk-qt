@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::AssociateElasticIpResponse
  *
- * \brief The AssociateElasticIpResponse class encapsulates OpsWorks AssociateElasticIp responses.
+ * \brief The AssociateElasticIpResponse class provides an interace for OpsWorks AssociateElasticIp responses.
  *
  * \ingroup OpsWorks
  *

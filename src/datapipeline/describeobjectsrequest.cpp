@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::DescribeObjectsRequest
  *
- * \brief The DescribeObjectsRequest class encapsulates DataPipeline DescribeObjects requests.
+ * \brief The DescribeObjectsRequest class provides an interface for DataPipeline DescribeObjects requests.
  *
  * \ingroup DataPipeline
  *

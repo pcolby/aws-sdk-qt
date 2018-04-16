@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetObjectTorrentResponse
  *
- * \brief The GetObjectTorrentResponse class encapsulates S3 GetObjectTorrent responses.
+ * \brief The GetObjectTorrentResponse class provides an interace for S3 GetObjectTorrent responses.
  *
  * \ingroup S3
  *

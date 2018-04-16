@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetSAMLProviderResponse
  *
- * \brief The GetSAMLProviderResponse class encapsulates IAM GetSAMLProvider responses.
+ * \brief The GetSAMLProviderResponse class provides an interace for IAM GetSAMLProvider responses.
  *
  * \ingroup IAM
  *

@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::RemoveRoleFromInstanceProfileRequest
  *
- * \brief The RemoveRoleFromInstanceProfileRequest class encapsulates IAM RemoveRoleFromInstanceProfile requests.
+ * \brief The RemoveRoleFromInstanceProfileRequest class provides an interface for IAM RemoveRoleFromInstanceProfile requests.
  *
  * \ingroup IAM
  *

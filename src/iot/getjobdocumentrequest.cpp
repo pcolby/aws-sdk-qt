@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::GetJobDocumentRequest
  *
- * \brief The GetJobDocumentRequest class encapsulates IoT GetJobDocument requests.
+ * \brief The GetJobDocumentRequest class provides an interface for IoT GetJobDocument requests.
  *
  * \ingroup IoT
  *

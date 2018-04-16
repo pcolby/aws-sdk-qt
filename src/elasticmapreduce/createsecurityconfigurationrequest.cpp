@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::CreateSecurityConfigurationRequest
  *
- * \brief The CreateSecurityConfigurationRequest class encapsulates EMR CreateSecurityConfiguration requests.
+ * \brief The CreateSecurityConfigurationRequest class provides an interface for EMR CreateSecurityConfiguration requests.
  *
  * \ingroup EMR
  *

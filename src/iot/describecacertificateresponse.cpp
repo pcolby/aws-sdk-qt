@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeCACertificateResponse
  *
- * \brief The DescribeCACertificateResponse class encapsulates IoT DescribeCACertificate responses.
+ * \brief The DescribeCACertificateResponse class provides an interace for IoT DescribeCACertificate responses.
  *
  * \ingroup IoT
  *

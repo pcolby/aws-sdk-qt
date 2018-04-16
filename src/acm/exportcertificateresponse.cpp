@@ -30,7 +30,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::ExportCertificateResponse
  *
- * \brief The ExportCertificateResponse class encapsulates ACM ExportCertificate responses.
+ * \brief The ExportCertificateResponse class provides an interace for ACM ExportCertificate responses.
  *
  * \ingroup ACM
  *

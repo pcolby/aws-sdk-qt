@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::UpdateDirectoryConfigRequest
  *
- * \brief The UpdateDirectoryConfigRequest class encapsulates AppStream UpdateDirectoryConfig requests.
+ * \brief The UpdateDirectoryConfigRequest class provides an interface for AppStream UpdateDirectoryConfig requests.
  *
  * \ingroup AppStream
  *

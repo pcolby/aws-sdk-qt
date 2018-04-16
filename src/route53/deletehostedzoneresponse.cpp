@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::DeleteHostedZoneResponse
  *
- * \brief The DeleteHostedZoneResponse class encapsulates Route53 DeleteHostedZone responses.
+ * \brief The DeleteHostedZoneResponse class provides an interace for Route53 DeleteHostedZone responses.
  *
  * \ingroup Route53
  *

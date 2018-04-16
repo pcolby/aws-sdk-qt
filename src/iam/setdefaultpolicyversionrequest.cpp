@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::SetDefaultPolicyVersionRequest
  *
- * \brief The SetDefaultPolicyVersionRequest class encapsulates IAM SetDefaultPolicyVersion requests.
+ * \brief The SetDefaultPolicyVersionRequest class provides an interface for IAM SetDefaultPolicyVersion requests.
  *
  * \ingroup IAM
  *

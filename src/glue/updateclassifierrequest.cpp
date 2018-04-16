@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateClassifierRequest
  *
- * \brief The UpdateClassifierRequest class encapsulates Glue UpdateClassifier requests.
+ * \brief The UpdateClassifierRequest class provides an interface for Glue UpdateClassifier requests.
  *
  * \ingroup Glue
  *

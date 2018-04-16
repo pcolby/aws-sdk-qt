@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::DisassociateQualificationFromWorkerResponse
  *
- * \brief The DisassociateQualificationFromWorkerResponse class encapsulates MTurk DisassociateQualificationFromWorker responses.
+ * \brief The DisassociateQualificationFromWorkerResponse class provides an interace for MTurk DisassociateQualificationFromWorker responses.
  *
  * \ingroup MTurk
  *

@@ -30,7 +30,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::ListStreamsResponse
  *
- * \brief The ListStreamsResponse class encapsulates KinesisVideo ListStreams responses.
+ * \brief The ListStreamsResponse class provides an interace for KinesisVideo ListStreams responses.
  *
  * \ingroup KinesisVideo
  *

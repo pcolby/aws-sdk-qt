@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::UpdateTrafficPolicyCommentResponse
  *
- * \brief The UpdateTrafficPolicyCommentResponse class encapsulates Route53 UpdateTrafficPolicyComment responses.
+ * \brief The UpdateTrafficPolicyCommentResponse class provides an interace for Route53 UpdateTrafficPolicyComment responses.
  *
  * \ingroup Route53
  *

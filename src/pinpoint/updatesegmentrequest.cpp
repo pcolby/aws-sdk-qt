@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateSegmentRequest
  *
- * \brief The UpdateSegmentRequest class encapsulates Pinpoint UpdateSegment requests.
+ * \brief The UpdateSegmentRequest class provides an interface for Pinpoint UpdateSegment requests.
  *
  * \ingroup Pinpoint
  *

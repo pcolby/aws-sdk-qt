@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetInstanceMetricDataRequest
  *
- * \brief The GetInstanceMetricDataRequest class encapsulates Lightsail GetInstanceMetricData requests.
+ * \brief The GetInstanceMetricDataRequest class provides an interface for Lightsail GetInstanceMetricData requests.
  *
  * \ingroup Lightsail
  *

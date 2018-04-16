@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::GetAssignmentRequest
  *
- * \brief The GetAssignmentRequest class encapsulates MTurk GetAssignment requests.
+ * \brief The GetAssignmentRequest class provides an interface for MTurk GetAssignment requests.
  *
  * \ingroup MTurk
  *

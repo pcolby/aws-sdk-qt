@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::GetGroupResponse
  *
- * \brief The GetGroupResponse class encapsulates CognitoIdentityProvider GetGroup responses.
+ * \brief The GetGroupResponse class provides an interace for CognitoIdentityProvider GetGroup responses.
  *
  * \ingroup CognitoIdentityProvider
  *

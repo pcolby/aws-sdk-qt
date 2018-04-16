@@ -28,7 +28,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::DeleteNotificationChannelRequest
  *
- * \brief The DeleteNotificationChannelRequest class encapsulates FMS DeleteNotificationChannel requests.
+ * \brief The DeleteNotificationChannelRequest class provides an interface for FMS DeleteNotificationChannel requests.
  *
  * \ingroup FMS
  *

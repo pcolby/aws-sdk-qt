@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DisablePolicyTypeResponse
  *
- * \brief The DisablePolicyTypeResponse class encapsulates Organizations DisablePolicyType responses.
+ * \brief The DisablePolicyTypeResponse class provides an interace for Organizations DisablePolicyType responses.
  *
  * \ingroup Organizations
  *

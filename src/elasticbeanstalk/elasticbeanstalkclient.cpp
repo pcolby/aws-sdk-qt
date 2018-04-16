@@ -122,7 +122,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::ElasticBeanstalkClient
  *
- * \brief The ElasticBeanstalkClient class provides access the AWS Elastic Beanstalk service.
+ * \brief The ElasticBeanstalkClient class provides access to the AWS Elastic Beanstalk service.
  *
  * \ingroup ElasticBeanstalk
  *

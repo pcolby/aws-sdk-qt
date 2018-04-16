@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::DeleteEventSourceMappingResponse
  *
- * \brief The DeleteEventSourceMappingResponse class encapsulates Lambda DeleteEventSourceMapping responses.
+ * \brief The DeleteEventSourceMappingResponse class provides an interace for Lambda DeleteEventSourceMapping responses.
  *
  * \ingroup Lambda
  *

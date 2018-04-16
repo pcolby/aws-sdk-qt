@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::ReportTaskRunnerHeartbeatResponse
  *
- * \brief The ReportTaskRunnerHeartbeatResponse class encapsulates DataPipeline ReportTaskRunnerHeartbeat responses.
+ * \brief The ReportTaskRunnerHeartbeatResponse class provides an interace for DataPipeline ReportTaskRunnerHeartbeat responses.
  *
  * \ingroup DataPipeline
  *

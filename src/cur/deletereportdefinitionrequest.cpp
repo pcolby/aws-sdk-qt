@@ -28,7 +28,7 @@ namespace CostandUsageReportService {
 /*!
  * \class QtAws::CostandUsageReportService::DeleteReportDefinitionRequest
  *
- * \brief The DeleteReportDefinitionRequest class encapsulates CostandUsageReportService DeleteReportDefinition requests.
+ * \brief The DeleteReportDefinitionRequest class provides an interface for CostandUsageReportService DeleteReportDefinition requests.
  *
  * \ingroup CostandUsageReportService
  *

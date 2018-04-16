@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::UpdateNumberOfDomainControllersRequest
  *
- * \brief The UpdateNumberOfDomainControllersRequest class encapsulates DirectoryService UpdateNumberOfDomainControllers requests.
+ * \brief The UpdateNumberOfDomainControllersRequest class provides an interface for DirectoryService UpdateNumberOfDomainControllers requests.
  *
  * \ingroup DirectoryService
  *

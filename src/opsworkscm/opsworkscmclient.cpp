@@ -67,7 +67,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::OpsWorksCMClient
  *
- * \brief The OpsWorksCMClient class provides access the AWS OpsWorks for Chef Automate (OpsWorksCM) service.
+ * \brief The OpsWorksCMClient class provides access to the AWS OpsWorks for Chef Automate (OpsWorksCM) service.
  *
  * \ingroup OpsWorksCM
  *

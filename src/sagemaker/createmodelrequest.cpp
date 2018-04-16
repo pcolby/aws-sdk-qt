@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::CreateModelRequest
  *
- * \brief The CreateModelRequest class encapsulates SageMaker CreateModel requests.
+ * \brief The CreateModelRequest class provides an interface for SageMaker CreateModel requests.
  *
  * \ingroup SageMaker
  *

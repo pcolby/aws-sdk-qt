@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListTrafficPolicyVersionsRequest
  *
- * \brief The ListTrafficPolicyVersionsRequest class encapsulates Route53 ListTrafficPolicyVersions requests.
+ * \brief The ListTrafficPolicyVersionsRequest class provides an interface for Route53 ListTrafficPolicyVersions requests.
  *
  * \ingroup Route53
  *

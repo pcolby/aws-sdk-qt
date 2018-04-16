@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::UpdateCloudFrontOriginAccessIdentityRequest
  *
- * \brief The UpdateCloudFrontOriginAccessIdentityRequest class encapsulates CloudFront UpdateCloudFrontOriginAccessIdentity requests.
+ * \brief The UpdateCloudFrontOriginAccessIdentityRequest class provides an interface for CloudFront UpdateCloudFrontOriginAccessIdentity requests.
  *
  * \ingroup CloudFront
  *

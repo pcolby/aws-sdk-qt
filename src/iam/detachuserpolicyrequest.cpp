@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DetachUserPolicyRequest
  *
- * \brief The DetachUserPolicyRequest class encapsulates IAM DetachUserPolicy requests.
+ * \brief The DetachUserPolicyRequest class provides an interface for IAM DetachUserPolicy requests.
  *
  * \ingroup IAM
  *

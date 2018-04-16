@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::CreateQualificationTypeResponse
  *
- * \brief The CreateQualificationTypeResponse class encapsulates MTurk CreateQualificationType responses.
+ * \brief The CreateQualificationTypeResponse class provides an interace for MTurk CreateQualificationType responses.
  *
  * \ingroup MTurk
  *

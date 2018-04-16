@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DescribeLimitsRequest
  *
- * \brief The DescribeLimitsRequest class encapsulates DynamoDB DescribeLimits requests.
+ * \brief The DescribeLimitsRequest class provides an interface for DynamoDB DescribeLimits requests.
  *
  * \ingroup DynamoDB
  *

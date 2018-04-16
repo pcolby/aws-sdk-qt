@@ -30,7 +30,7 @@ namespace SageMakerRuntime {
 /*!
  * \class QtAws::SageMakerRuntime::InvokeEndpointResponse
  *
- * \brief The InvokeEndpointResponse class encapsulates SageMakerRuntime InvokeEndpoint responses.
+ * \brief The InvokeEndpointResponse class provides an interace for SageMakerRuntime InvokeEndpoint responses.
  *
  * \ingroup SageMakerRuntime
  *

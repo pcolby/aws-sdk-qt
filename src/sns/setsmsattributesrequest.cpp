@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::SetSMSAttributesRequest
  *
- * \brief The SetSMSAttributesRequest class encapsulates SNS SetSMSAttributes requests.
+ * \brief The SetSMSAttributesRequest class provides an interface for SNS SetSMSAttributes requests.
  *
  * \ingroup SNS
  *

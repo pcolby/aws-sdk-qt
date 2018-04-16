@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::DeleteMessageResponse
  *
- * \brief The DeleteMessageResponse class encapsulates SQS DeleteMessage responses.
+ * \brief The DeleteMessageResponse class provides an interace for SQS DeleteMessage responses.
  *
  * \ingroup SQS
  *

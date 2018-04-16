@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateNetworkInterfaceResponse
  *
- * \brief The CreateNetworkInterfaceResponse class encapsulates EC2 CreateNetworkInterface responses.
+ * \brief The CreateNetworkInterfaceResponse class provides an interace for EC2 CreateNetworkInterface responses.
  *
  * \ingroup EC2
  *

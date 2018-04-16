@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::AddListenerCertificatesRequest
  *
- * \brief The AddListenerCertificatesRequest class encapsulates ElasticLoadBalancingv2 AddListenerCertificates requests.
+ * \brief The AddListenerCertificatesRequest class provides an interface for ElasticLoadBalancingv2 AddListenerCertificates requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

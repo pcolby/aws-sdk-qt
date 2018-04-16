@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::UpdateSchemaResponse
  *
- * \brief The UpdateSchemaResponse class encapsulates CloudDirectory UpdateSchema responses.
+ * \brief The UpdateSchemaResponse class provides an interace for CloudDirectory UpdateSchema responses.
  *
  * \ingroup CloudDirectory
  *

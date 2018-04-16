@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeleteRegexPatternSetRequest
  *
- * \brief The DeleteRegexPatternSetRequest class encapsulates WAFRegional DeleteRegexPatternSet requests.
+ * \brief The DeleteRegexPatternSetRequest class provides an interface for WAFRegional DeleteRegexPatternSet requests.
  *
  * \ingroup WAFRegional
  *

@@ -30,7 +30,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::DeleteProjectResponse
  *
- * \brief The DeleteProjectResponse class encapsulates CodeStar DeleteProject responses.
+ * \brief The DeleteProjectResponse class provides an interace for CodeStar DeleteProject responses.
  *
  * \ingroup CodeStar
  *

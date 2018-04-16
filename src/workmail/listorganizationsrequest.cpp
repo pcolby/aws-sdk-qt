@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::ListOrganizationsRequest
  *
- * \brief The ListOrganizationsRequest class encapsulates WorkMail ListOrganizations requests.
+ * \brief The ListOrganizationsRequest class provides an interface for WorkMail ListOrganizations requests.
  *
  * \ingroup WorkMail
  *

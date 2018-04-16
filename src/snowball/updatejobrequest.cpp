@@ -28,7 +28,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::UpdateJobRequest
  *
- * \brief The UpdateJobRequest class encapsulates Snowball UpdateJob requests.
+ * \brief The UpdateJobRequest class provides an interface for Snowball UpdateJob requests.
  *
  * \ingroup Snowball
  *

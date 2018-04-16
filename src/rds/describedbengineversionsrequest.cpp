@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeDBEngineVersionsRequest
  *
- * \brief The DescribeDBEngineVersionsRequest class encapsulates RDS DescribeDBEngineVersions requests.
+ * \brief The DescribeDBEngineVersionsRequest class provides an interface for RDS DescribeDBEngineVersions requests.
  *
  * \ingroup RDS
  *

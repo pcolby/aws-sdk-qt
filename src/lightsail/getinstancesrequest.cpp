@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetInstancesRequest
  *
- * \brief The GetInstancesRequest class encapsulates Lightsail GetInstances requests.
+ * \brief The GetInstancesRequest class provides an interface for Lightsail GetInstances requests.
  *
  * \ingroup Lightsail
  *

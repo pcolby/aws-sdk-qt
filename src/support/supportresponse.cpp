@@ -29,7 +29,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::SupportResponse
  *
- * \brief The SupportResponse class is the base class for all Support responses.
+ * \brief The SupportResponse class provides an interface for Support responses.
  *
  * \ingroup Support
  */

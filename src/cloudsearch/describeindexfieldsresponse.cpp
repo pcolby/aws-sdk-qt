@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeIndexFieldsResponse
  *
- * \brief The DescribeIndexFieldsResponse class encapsulates CloudSearch DescribeIndexFields responses.
+ * \brief The DescribeIndexFieldsResponse class provides an interace for CloudSearch DescribeIndexFields responses.
  *
  * \ingroup CloudSearch
  *

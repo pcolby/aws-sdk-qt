@@ -167,7 +167,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::GameLiftClient
  *
- * \brief The GameLiftClient class provides access the Amazon GameLift service.
+ * \brief The GameLiftClient class provides access to the Amazon GameLift service.
  *
  * \ingroup GameLift
  *

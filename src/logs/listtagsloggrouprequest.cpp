@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::ListTagsLogGroupRequest
  *
- * \brief The ListTagsLogGroupRequest class encapsulates CloudWatchLogs ListTagsLogGroup requests.
+ * \brief The ListTagsLogGroupRequest class provides an interface for CloudWatchLogs ListTagsLogGroup requests.
  *
  * \ingroup CloudWatchLogs
  *

@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RemoveSourceIdentifierFromSubscriptionResponse
  *
- * \brief The RemoveSourceIdentifierFromSubscriptionResponse class encapsulates RDS RemoveSourceIdentifierFromSubscription responses.
+ * \brief The RemoveSourceIdentifierFromSubscriptionResponse class provides an interace for RDS RemoveSourceIdentifierFromSubscription responses.
  *
  * \ingroup RDS
  *

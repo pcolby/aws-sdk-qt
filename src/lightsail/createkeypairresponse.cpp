@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::CreateKeyPairResponse
  *
- * \brief The CreateKeyPairResponse class encapsulates Lightsail CreateKeyPair responses.
+ * \brief The CreateKeyPairResponse class provides an interace for Lightsail CreateKeyPair responses.
  *
  * \ingroup Lightsail
  *

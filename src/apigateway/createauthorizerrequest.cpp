@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateAuthorizerRequest
  *
- * \brief The CreateAuthorizerRequest class encapsulates APIGateway CreateAuthorizer requests.
+ * \brief The CreateAuthorizerRequest class provides an interface for APIGateway CreateAuthorizer requests.
  *
  * \ingroup APIGateway
  *

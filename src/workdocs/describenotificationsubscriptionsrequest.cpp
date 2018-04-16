@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeNotificationSubscriptionsRequest
  *
- * \brief The DescribeNotificationSubscriptionsRequest class encapsulates WorkDocs DescribeNotificationSubscriptions requests.
+ * \brief The DescribeNotificationSubscriptionsRequest class provides an interface for WorkDocs DescribeNotificationSubscriptions requests.
  *
  * \ingroup WorkDocs
  *

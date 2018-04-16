@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetMappingRequest
  *
- * \brief The GetMappingRequest class encapsulates Glue GetMapping requests.
+ * \brief The GetMappingRequest class provides an interface for Glue GetMapping requests.
  *
  * \ingroup Glue
  *

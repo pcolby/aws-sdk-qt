@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::CreateRateBasedRuleRequest
  *
- * \brief The CreateRateBasedRuleRequest class encapsulates WAF CreateRateBasedRule requests.
+ * \brief The CreateRateBasedRuleRequest class provides an interface for WAF CreateRateBasedRule requests.
  *
  * \ingroup WAF
  *

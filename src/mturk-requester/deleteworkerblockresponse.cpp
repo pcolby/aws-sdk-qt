@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::DeleteWorkerBlockResponse
  *
- * \brief The DeleteWorkerBlockResponse class encapsulates MTurk DeleteWorkerBlock responses.
+ * \brief The DeleteWorkerBlockResponse class provides an interace for MTurk DeleteWorkerBlock responses.
  *
  * \ingroup MTurk
  *

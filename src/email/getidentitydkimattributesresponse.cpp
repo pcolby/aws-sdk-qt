@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetIdentityDkimAttributesResponse
  *
- * \brief The GetIdentityDkimAttributesResponse class encapsulates SES GetIdentityDkimAttributes responses.
+ * \brief The GetIdentityDkimAttributesResponse class provides an interace for SES GetIdentityDkimAttributes responses.
  *
  * \ingroup SES
  *

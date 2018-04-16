@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::RemovePermissionResponse
  *
- * \brief The RemovePermissionResponse class encapsulates SNS RemovePermission responses.
+ * \brief The RemovePermissionResponse class provides an interace for SNS RemovePermission responses.
  *
  * \ingroup SNS
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AssignPrivateIpAddressesResponse
  *
- * \brief The AssignPrivateIpAddressesResponse class encapsulates EC2 AssignPrivateIpAddresses responses.
+ * \brief The AssignPrivateIpAddressesResponse class provides an interace for EC2 AssignPrivateIpAddresses responses.
  *
  * \ingroup EC2
  *

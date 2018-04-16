@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::ListIPSetsResponse
  *
- * \brief The ListIPSetsResponse class encapsulates WAFRegional ListIPSets responses.
+ * \brief The ListIPSetsResponse class provides an interace for WAFRegional ListIPSets responses.
  *
  * \ingroup WAFRegional
  *

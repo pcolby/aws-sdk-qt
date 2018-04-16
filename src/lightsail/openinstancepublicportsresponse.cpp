@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::OpenInstancePublicPortsResponse
  *
- * \brief The OpenInstancePublicPortsResponse class encapsulates Lightsail OpenInstancePublicPorts responses.
+ * \brief The OpenInstancePublicPortsResponse class provides an interace for Lightsail OpenInstancePublicPorts responses.
  *
  * \ingroup Lightsail
  *

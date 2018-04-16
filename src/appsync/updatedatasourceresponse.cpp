@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::UpdateDataSourceResponse
  *
- * \brief The UpdateDataSourceResponse class encapsulates AppSync UpdateDataSource responses.
+ * \brief The UpdateDataSourceResponse class provides an interace for AppSync UpdateDataSource responses.
  *
  * \ingroup AppSync
  *

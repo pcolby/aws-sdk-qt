@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyVpcEndpointServiceConfigurationRequest
  *
- * \brief The ModifyVpcEndpointServiceConfigurationRequest class encapsulates EC2 ModifyVpcEndpointServiceConfiguration requests.
+ * \brief The ModifyVpcEndpointServiceConfigurationRequest class provides an interface for EC2 ModifyVpcEndpointServiceConfiguration requests.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListUniqueProblemsRequest
  *
- * \brief The ListUniqueProblemsRequest class encapsulates DeviceFarm ListUniqueProblems requests.
+ * \brief The ListUniqueProblemsRequest class provides an interface for DeviceFarm ListUniqueProblems requests.
  *
  * \ingroup DeviceFarm
  *

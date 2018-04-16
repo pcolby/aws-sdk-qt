@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeRootFoldersRequest
  *
- * \brief The DescribeRootFoldersRequest class encapsulates WorkDocs DescribeRootFolders requests.
+ * \brief The DescribeRootFoldersRequest class provides an interface for WorkDocs DescribeRootFolders requests.
  *
  * \ingroup WorkDocs
  *

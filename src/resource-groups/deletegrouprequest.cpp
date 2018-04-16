@@ -28,7 +28,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::DeleteGroupRequest
  *
- * \brief The DeleteGroupRequest class encapsulates ResourceGroups DeleteGroup requests.
+ * \brief The DeleteGroupRequest class provides an interface for ResourceGroups DeleteGroup requests.
  *
  * \ingroup ResourceGroups
  *

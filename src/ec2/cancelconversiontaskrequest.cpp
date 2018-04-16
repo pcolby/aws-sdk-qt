@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CancelConversionTaskRequest
  *
- * \brief The CancelConversionTaskRequest class encapsulates EC2 CancelConversionTask requests.
+ * \brief The CancelConversionTaskRequest class provides an interface for EC2 CancelConversionTask requests.
  *
  * \ingroup EC2
  *

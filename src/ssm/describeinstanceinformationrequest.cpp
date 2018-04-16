@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeInstanceInformationRequest
  *
- * \brief The DescribeInstanceInformationRequest class encapsulates SSM DescribeInstanceInformation requests.
+ * \brief The DescribeInstanceInformationRequest class provides an interface for SSM DescribeInstanceInformation requests.
  *
  * \ingroup SSM
  *

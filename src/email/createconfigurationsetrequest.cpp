@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::CreateConfigurationSetRequest
  *
- * \brief The CreateConfigurationSetRequest class encapsulates SES CreateConfigurationSet requests.
+ * \brief The CreateConfigurationSetRequest class provides an interface for SES CreateConfigurationSet requests.
  *
  * \ingroup SES
  *

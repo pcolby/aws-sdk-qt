@@ -30,7 +30,7 @@ namespace TranscribeService {
 /*!
  * \class QtAws::TranscribeService::CreateVocabularyResponse
  *
- * \brief The CreateVocabularyResponse class encapsulates TranscribeService CreateVocabulary responses.
+ * \brief The CreateVocabularyResponse class provides an interace for TranscribeService CreateVocabulary responses.
  *
  * \ingroup TranscribeService
  *

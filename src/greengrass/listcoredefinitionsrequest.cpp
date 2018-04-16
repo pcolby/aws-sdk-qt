@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListCoreDefinitionsRequest
  *
- * \brief The ListCoreDefinitionsRequest class encapsulates Greengrass ListCoreDefinitions requests.
+ * \brief The ListCoreDefinitionsRequest class provides an interface for Greengrass ListCoreDefinitions requests.
  *
  * \ingroup Greengrass
  *

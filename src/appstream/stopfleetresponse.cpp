@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::StopFleetResponse
  *
- * \brief The StopFleetResponse class encapsulates AppStream StopFleet responses.
+ * \brief The StopFleetResponse class provides an interace for AppStream StopFleet responses.
  *
  * \ingroup AppStream
  *

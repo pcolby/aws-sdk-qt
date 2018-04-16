@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::StartInstanceResponse
  *
- * \brief The StartInstanceResponse class encapsulates OpsWorks StartInstance responses.
+ * \brief The StartInstanceResponse class provides an interace for OpsWorks StartInstance responses.
  *
  * \ingroup OpsWorks
  *

@@ -30,7 +30,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::PutPolicyResponse
  *
- * \brief The PutPolicyResponse class encapsulates FMS PutPolicy responses.
+ * \brief The PutPolicyResponse class provides an interace for FMS PutPolicy responses.
  *
  * \ingroup FMS
  *

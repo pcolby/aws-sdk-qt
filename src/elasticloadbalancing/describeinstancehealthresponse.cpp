@@ -30,7 +30,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::DescribeInstanceHealthResponse
  *
- * \brief The DescribeInstanceHealthResponse class encapsulates ElasticLoadBalancing DescribeInstanceHealth responses.
+ * \brief The DescribeInstanceHealthResponse class provides an interace for ElasticLoadBalancing DescribeInstanceHealth responses.
  *
  * \ingroup ElasticLoadBalancing
  *

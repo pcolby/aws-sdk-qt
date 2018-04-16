@@ -30,7 +30,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::DeleteApplicationResponse
  *
- * \brief The DeleteApplicationResponse class encapsulates ServerlessApplicationRepository DeleteApplication responses.
+ * \brief The DeleteApplicationResponse class provides an interace for ServerlessApplicationRepository DeleteApplication responses.
  *
  * \ingroup ServerlessApplicationRepository
  *

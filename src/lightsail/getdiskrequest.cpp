@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetDiskRequest
  *
- * \brief The GetDiskRequest class encapsulates Lightsail GetDisk requests.
+ * \brief The GetDiskRequest class provides an interface for Lightsail GetDisk requests.
  *
  * \ingroup Lightsail
  *

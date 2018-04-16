@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DeleteEndpointResponse
  *
- * \brief The DeleteEndpointResponse class encapsulates DatabaseMigrationService DeleteEndpoint responses.
+ * \brief The DeleteEndpointResponse class provides an interace for DatabaseMigrationService DeleteEndpoint responses.
  *
  * \ingroup DatabaseMigrationService
  *

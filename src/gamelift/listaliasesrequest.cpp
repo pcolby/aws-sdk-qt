@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::ListAliasesRequest
  *
- * \brief The ListAliasesRequest class encapsulates GameLift ListAliases requests.
+ * \brief The ListAliasesRequest class provides an interface for GameLift ListAliases requests.
  *
  * \ingroup GameLift
  *

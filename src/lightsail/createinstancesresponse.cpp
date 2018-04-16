@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::CreateInstancesResponse
  *
- * \brief The CreateInstancesResponse class encapsulates Lightsail CreateInstances responses.
+ * \brief The CreateInstancesResponse class provides an interace for Lightsail CreateInstances responses.
  *
  * \ingroup Lightsail
  *

@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeWorkingStorageRequest
  *
- * \brief The DescribeWorkingStorageRequest class encapsulates StorageGateway DescribeWorkingStorage requests.
+ * \brief The DescribeWorkingStorageRequest class provides an interface for StorageGateway DescribeWorkingStorage requests.
  *
  * \ingroup StorageGateway
  *

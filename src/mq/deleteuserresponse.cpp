@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::DeleteUserResponse
  *
- * \brief The DeleteUserResponse class encapsulates MQ DeleteUser responses.
+ * \brief The DeleteUserResponse class provides an interace for MQ DeleteUser responses.
  *
  * \ingroup MQ
  *

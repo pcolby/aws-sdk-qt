@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::StartStackRequest
  *
- * \brief The StartStackRequest class encapsulates OpsWorks StartStack requests.
+ * \brief The StartStackRequest class provides an interface for OpsWorks StartStack requests.
  *
  * \ingroup OpsWorks
  *

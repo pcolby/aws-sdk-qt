@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::UpdateTerminationProtectionResponse
  *
- * \brief The UpdateTerminationProtectionResponse class encapsulates CloudFormation UpdateTerminationProtection responses.
+ * \brief The UpdateTerminationProtectionResponse class provides an interace for CloudFormation UpdateTerminationProtection responses.
  *
  * \ingroup CloudFormation
  *

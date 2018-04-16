@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SendRawEmailRequest
  *
- * \brief The SendRawEmailRequest class encapsulates SES SendRawEmail requests.
+ * \brief The SendRawEmailRequest class provides an interface for SES SendRawEmail requests.
  *
  * \ingroup SES
  *

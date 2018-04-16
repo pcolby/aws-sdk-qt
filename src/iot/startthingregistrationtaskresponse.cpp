@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::StartThingRegistrationTaskResponse
  *
- * \brief The StartThingRegistrationTaskResponse class encapsulates IoT StartThingRegistrationTask responses.
+ * \brief The StartThingRegistrationTaskResponse class provides an interace for IoT StartThingRegistrationTask responses.
  *
  * \ingroup IoT
  *

@@ -30,7 +30,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::DeletePresetResponse
  *
- * \brief The DeletePresetResponse class encapsulates ElasticTranscoder DeletePreset responses.
+ * \brief The DeletePresetResponse class provides an interace for ElasticTranscoder DeletePreset responses.
  *
  * \ingroup ElasticTranscoder
  *

@@ -28,7 +28,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::TerminateWorkspacesRequest
  *
- * \brief The TerminateWorkspacesRequest class encapsulates WorkSpaces TerminateWorkspaces requests.
+ * \brief The TerminateWorkspacesRequest class provides an interface for WorkSpaces TerminateWorkspaces requests.
  *
  * \ingroup WorkSpaces
  *

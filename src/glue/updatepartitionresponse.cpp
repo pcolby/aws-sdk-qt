@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdatePartitionResponse
  *
- * \brief The UpdatePartitionResponse class encapsulates Glue UpdatePartition responses.
+ * \brief The UpdatePartitionResponse class provides an interace for Glue UpdatePartition responses.
  *
  * \ingroup Glue
  *

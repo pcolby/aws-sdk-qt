@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::ListTagsForResourceResponse
  *
- * \brief The ListTagsForResourceResponse class encapsulates ElasticBeanstalk ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class provides an interace for ElasticBeanstalk ListTagsForResource responses.
  *
  * \ingroup ElasticBeanstalk
  *

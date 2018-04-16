@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::EnableEnhancedMonitoringRequest
  *
- * \brief The EnableEnhancedMonitoringRequest class encapsulates Kinesis EnableEnhancedMonitoring requests.
+ * \brief The EnableEnhancedMonitoringRequest class provides an interface for Kinesis EnableEnhancedMonitoring requests.
  *
  * \ingroup Kinesis
  *

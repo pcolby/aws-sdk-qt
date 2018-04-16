@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeHostsRequest
  *
- * \brief The DescribeHostsRequest class encapsulates EC2 DescribeHosts requests.
+ * \brief The DescribeHostsRequest class provides an interface for EC2 DescribeHosts requests.
  *
  * \ingroup EC2
  *

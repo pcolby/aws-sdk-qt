@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ScheduleRunResponse
  *
- * \brief The ScheduleRunResponse class encapsulates DeviceFarm ScheduleRun responses.
+ * \brief The ScheduleRunResponse class provides an interace for DeviceFarm ScheduleRun responses.
  *
  * \ingroup DeviceFarm
  *

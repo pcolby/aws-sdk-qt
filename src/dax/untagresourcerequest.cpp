@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::UntagResourceRequest
  *
- * \brief The UntagResourceRequest class encapsulates DAX UntagResource requests.
+ * \brief The UntagResourceRequest class provides an interface for DAX UntagResource requests.
  *
  * \ingroup DAX
  *

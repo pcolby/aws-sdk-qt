@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListQueryLoggingConfigsResponse
  *
- * \brief The ListQueryLoggingConfigsResponse class encapsulates Route53 ListQueryLoggingConfigs responses.
+ * \brief The ListQueryLoggingConfigsResponse class provides an interace for Route53 ListQueryLoggingConfigs responses.
  *
  * \ingroup Route53
  *

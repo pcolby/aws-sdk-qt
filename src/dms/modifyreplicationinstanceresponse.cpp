@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::ModifyReplicationInstanceResponse
  *
- * \brief The ModifyReplicationInstanceResponse class encapsulates DatabaseMigrationService ModifyReplicationInstance responses.
+ * \brief The ModifyReplicationInstanceResponse class provides an interace for DatabaseMigrationService ModifyReplicationInstance responses.
  *
  * \ingroup DatabaseMigrationService
  *

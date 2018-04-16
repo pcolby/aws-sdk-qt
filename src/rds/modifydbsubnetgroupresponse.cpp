@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ModifyDBSubnetGroupResponse
  *
- * \brief The ModifyDBSubnetGroupResponse class encapsulates RDS ModifyDBSubnetGroup responses.
+ * \brief The ModifyDBSubnetGroupResponse class provides an interace for RDS ModifyDBSubnetGroup responses.
  *
  * \ingroup RDS
  *

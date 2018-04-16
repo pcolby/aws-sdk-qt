@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::UpdateDocumentVersionRequest
  *
- * \brief The UpdateDocumentVersionRequest class encapsulates WorkDocs UpdateDocumentVersion requests.
+ * \brief The UpdateDocumentVersionRequest class provides an interface for WorkDocs UpdateDocumentVersion requests.
  *
  * \ingroup WorkDocs
  *

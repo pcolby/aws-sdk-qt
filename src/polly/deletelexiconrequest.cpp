@@ -28,7 +28,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::DeleteLexiconRequest
  *
- * \brief The DeleteLexiconRequest class encapsulates Polly DeleteLexicon requests.
+ * \brief The DeleteLexiconRequest class provides an interface for Polly DeleteLexicon requests.
  *
  * \ingroup Polly
  *

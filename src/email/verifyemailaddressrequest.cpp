@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::VerifyEmailAddressRequest
  *
- * \brief The VerifyEmailAddressRequest class encapsulates SES VerifyEmailAddress requests.
+ * \brief The VerifyEmailAddressRequest class provides an interface for SES VerifyEmailAddress requests.
  *
  * \ingroup SES
  *

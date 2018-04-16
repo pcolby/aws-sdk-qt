@@ -30,7 +30,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::GetSnowballUsageResponse
  *
- * \brief The GetSnowballUsageResponse class encapsulates Snowball GetSnowballUsage responses.
+ * \brief The GetSnowballUsageResponse class provides an interace for Snowball GetSnowballUsage responses.
  *
  * \ingroup Snowball
  *

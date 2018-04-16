@@ -29,7 +29,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::XRayResponse
  *
- * \brief The XRayResponse class is the base class for all XRay responses.
+ * \brief The XRayResponse class provides an interface for XRay responses.
  *
  * \ingroup XRay
  */

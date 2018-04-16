@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteVpnConnectionRouteRequest
  *
- * \brief The DeleteVpnConnectionRouteRequest class encapsulates EC2 DeleteVpnConnectionRoute requests.
+ * \brief The DeleteVpnConnectionRouteRequest class provides an interface for EC2 DeleteVpnConnectionRoute requests.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteDevicePoolRequest
  *
- * \brief The DeleteDevicePoolRequest class encapsulates DeviceFarm DeleteDevicePool requests.
+ * \brief The DeleteDevicePoolRequest class provides an interface for DeviceFarm DeleteDevicePool requests.
  *
  * \ingroup DeviceFarm
  *

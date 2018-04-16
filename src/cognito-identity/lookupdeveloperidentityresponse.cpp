@@ -30,7 +30,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::LookupDeveloperIdentityResponse
  *
- * \brief The LookupDeveloperIdentityResponse class encapsulates CognitoIdentity LookupDeveloperIdentity responses.
+ * \brief The LookupDeveloperIdentityResponse class provides an interace for CognitoIdentity LookupDeveloperIdentity responses.
  *
  * \ingroup CognitoIdentity
  *

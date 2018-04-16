@@ -74,7 +74,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceClient
  *
- * \brief The ApplicationDiscoveryServiceClient class provides access the AWS Application Discovery Service service.
+ * \brief The ApplicationDiscoveryServiceClient class provides access to the AWS Application Discovery Service service.
  *
  * \ingroup ApplicationDiscoveryService
  *

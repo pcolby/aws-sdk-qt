@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::CreateHostedZoneRequest
  *
- * \brief The CreateHostedZoneRequest class encapsulates Route53 CreateHostedZone requests.
+ * \brief The CreateHostedZoneRequest class provides an interface for Route53 CreateHostedZone requests.
  *
  * \ingroup Route53
  *

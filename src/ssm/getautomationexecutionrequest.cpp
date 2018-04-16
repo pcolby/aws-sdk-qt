@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetAutomationExecutionRequest
  *
- * \brief The GetAutomationExecutionRequest class encapsulates SSM GetAutomationExecution requests.
+ * \brief The GetAutomationExecutionRequest class provides an interface for SSM GetAutomationExecution requests.
  *
  * \ingroup SSM
  *

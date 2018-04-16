@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::ViewBillingResponse
  *
- * \brief The ViewBillingResponse class encapsulates Route53Domains ViewBilling responses.
+ * \brief The ViewBillingResponse class provides an interace for Route53Domains ViewBilling responses.
  *
  * \ingroup Route53Domains
  *

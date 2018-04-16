@@ -26,7 +26,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::MobileRequest
  *
- * \brief The MobileRequest class is the base class for all Mobile requests.
+ * \brief The MobileRequest class provides an interface for Mobile requests.
  *
  * \ingroup Mobile
  */

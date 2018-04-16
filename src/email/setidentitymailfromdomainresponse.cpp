@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SetIdentityMailFromDomainResponse
  *
- * \brief The SetIdentityMailFromDomainResponse class encapsulates SES SetIdentityMailFromDomain responses.
+ * \brief The SetIdentityMailFromDomainResponse class provides an interace for SES SetIdentityMailFromDomain responses.
  *
  * \ingroup SES
  *

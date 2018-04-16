@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ModifyTargetGroupRequest
  *
- * \brief The ModifyTargetGroupRequest class encapsulates ElasticLoadBalancingv2 ModifyTargetGroup requests.
+ * \brief The ModifyTargetGroupRequest class provides an interface for ElasticLoadBalancingv2 ModifyTargetGroup requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

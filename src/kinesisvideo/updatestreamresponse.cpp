@@ -30,7 +30,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::UpdateStreamResponse
  *
- * \brief The UpdateStreamResponse class encapsulates KinesisVideo UpdateStream responses.
+ * \brief The UpdateStreamResponse class provides an interace for KinesisVideo UpdateStream responses.
  *
  * \ingroup KinesisVideo
  *

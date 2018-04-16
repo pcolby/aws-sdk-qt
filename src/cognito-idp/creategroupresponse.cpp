@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::CreateGroupResponse
  *
- * \brief The CreateGroupResponse class encapsulates CognitoIdentityProvider CreateGroup responses.
+ * \brief The CreateGroupResponse class provides an interace for CognitoIdentityProvider CreateGroup responses.
  *
  * \ingroup CognitoIdentityProvider
  *

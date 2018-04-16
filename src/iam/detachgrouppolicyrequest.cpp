@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DetachGroupPolicyRequest
  *
- * \brief The DetachGroupPolicyRequest class encapsulates IAM DetachGroupPolicy requests.
+ * \brief The DetachGroupPolicyRequest class provides an interface for IAM DetachGroupPolicy requests.
  *
  * \ingroup IAM
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DisassociateAddressResponse
  *
- * \brief The DisassociateAddressResponse class encapsulates EC2 DisassociateAddress responses.
+ * \brief The DisassociateAddressResponse class provides an interace for EC2 DisassociateAddress responses.
  *
  * \ingroup EC2
  *

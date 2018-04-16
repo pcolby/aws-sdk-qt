@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeGatewayInformationRequest
  *
- * \brief The DescribeGatewayInformationRequest class encapsulates StorageGateway DescribeGatewayInformation requests.
+ * \brief The DescribeGatewayInformationRequest class provides an interface for StorageGateway DescribeGatewayInformation requests.
  *
  * \ingroup StorageGateway
  *

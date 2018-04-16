@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::GetSigningCertificateResponse
  *
- * \brief The GetSigningCertificateResponse class encapsulates CognitoIdentityProvider GetSigningCertificate responses.
+ * \brief The GetSigningCertificateResponse class provides an interace for CognitoIdentityProvider GetSigningCertificate responses.
  *
  * \ingroup CognitoIdentityProvider
  *

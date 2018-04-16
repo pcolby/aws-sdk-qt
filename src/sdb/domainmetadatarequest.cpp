@@ -28,7 +28,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::DomainMetadataRequest
  *
- * \brief The DomainMetadataRequest class encapsulates SimpleDB DomainMetadata requests.
+ * \brief The DomainMetadataRequest class provides an interface for SimpleDB DomainMetadata requests.
  *
  * \ingroup SimpleDB
  *

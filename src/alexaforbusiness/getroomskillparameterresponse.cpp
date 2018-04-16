@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::GetRoomSkillParameterResponse
  *
- * \brief The GetRoomSkillParameterResponse class encapsulates AlexaForBusiness GetRoomSkillParameter responses.
+ * \brief The GetRoomSkillParameterResponse class provides an interace for AlexaForBusiness GetRoomSkillParameter responses.
  *
  * \ingroup AlexaForBusiness
  *

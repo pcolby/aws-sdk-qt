@@ -28,7 +28,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::NotifyApplicationStateRequest
  *
- * \brief The NotifyApplicationStateRequest class encapsulates MigrationHub NotifyApplicationState requests.
+ * \brief The NotifyApplicationStateRequest class provides an interface for MigrationHub NotifyApplicationState requests.
  *
  * \ingroup MigrationHub
  *

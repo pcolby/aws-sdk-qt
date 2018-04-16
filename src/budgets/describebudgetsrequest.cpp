@@ -28,7 +28,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::DescribeBudgetsRequest
  *
- * \brief The DescribeBudgetsRequest class encapsulates Budgets DescribeBudgets requests.
+ * \brief The DescribeBudgetsRequest class provides an interface for Budgets DescribeBudgets requests.
  *
  * \ingroup Budgets
  *

@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateVpcLinkResponse
  *
- * \brief The CreateVpcLinkResponse class encapsulates APIGateway CreateVpcLink responses.
+ * \brief The CreateVpcLinkResponse class provides an interace for APIGateway CreateVpcLink responses.
  *
  * \ingroup APIGateway
  *

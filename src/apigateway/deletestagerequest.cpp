@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteStageRequest
  *
- * \brief The DeleteStageRequest class encapsulates APIGateway DeleteStage requests.
+ * \brief The DeleteStageRequest class provides an interface for APIGateway DeleteStage requests.
  *
  * \ingroup APIGateway
  *

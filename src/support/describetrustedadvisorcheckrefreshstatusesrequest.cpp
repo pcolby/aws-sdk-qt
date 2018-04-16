@@ -28,7 +28,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::DescribeTrustedAdvisorCheckRefreshStatusesRequest
  *
- * \brief The DescribeTrustedAdvisorCheckRefreshStatusesRequest class encapsulates Support DescribeTrustedAdvisorCheckRefreshStatuses requests.
+ * \brief The DescribeTrustedAdvisorCheckRefreshStatusesRequest class provides an interface for Support DescribeTrustedAdvisorCheckRefreshStatuses requests.
  *
  * \ingroup Support
  *

@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::ListSchemaExtensionsResponse
  *
- * \brief The ListSchemaExtensionsResponse class encapsulates DirectoryService ListSchemaExtensions responses.
+ * \brief The ListSchemaExtensionsResponse class provides an interace for DirectoryService ListSchemaExtensions responses.
  *
  * \ingroup DirectoryService
  *

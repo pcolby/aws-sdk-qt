@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::HeadObjectRequest
  *
- * \brief The HeadObjectRequest class encapsulates S3 HeadObject requests.
+ * \brief The HeadObjectRequest class provides an interface for S3 HeadObject requests.
  *
  * \ingroup S3
  *

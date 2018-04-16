@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetResourcesRequest
  *
- * \brief The GetResourcesRequest class encapsulates APIGateway GetResources requests.
+ * \brief The GetResourcesRequest class provides an interface for APIGateway GetResources requests.
  *
  * \ingroup APIGateway
  *

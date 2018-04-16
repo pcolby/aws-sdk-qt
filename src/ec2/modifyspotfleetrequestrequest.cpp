@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifySpotFleetRequestRequest
  *
- * \brief The ModifySpotFleetRequestRequest class encapsulates EC2 ModifySpotFleetRequest requests.
+ * \brief The ModifySpotFleetRequestRequest class provides an interface for EC2 ModifySpotFleetRequest requests.
  *
  * \ingroup EC2
  *

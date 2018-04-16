@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::DescribeStreamResponse
  *
- * \brief The DescribeStreamResponse class encapsulates Kinesis DescribeStream responses.
+ * \brief The DescribeStreamResponse class provides an interace for Kinesis DescribeStream responses.
  *
  * \ingroup Kinesis
  *

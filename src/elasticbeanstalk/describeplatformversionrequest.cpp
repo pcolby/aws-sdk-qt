@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DescribePlatformVersionRequest
  *
- * \brief The DescribePlatformVersionRequest class encapsulates ElasticBeanstalk DescribePlatformVersion requests.
+ * \brief The DescribePlatformVersionRequest class provides an interface for ElasticBeanstalk DescribePlatformVersion requests.
  *
  * \ingroup ElasticBeanstalk
  *

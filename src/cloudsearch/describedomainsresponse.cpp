@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeDomainsResponse
  *
- * \brief The DescribeDomainsResponse class encapsulates CloudSearch DescribeDomains responses.
+ * \brief The DescribeDomainsResponse class provides an interace for CloudSearch DescribeDomains responses.
  *
  * \ingroup CloudSearch
  *

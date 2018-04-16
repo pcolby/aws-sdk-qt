@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::DeleteMessageBatchRequest
  *
- * \brief The DeleteMessageBatchRequest class encapsulates SQS DeleteMessageBatch requests.
+ * \brief The DeleteMessageBatchRequest class provides an interface for SQS DeleteMessageBatch requests.
  *
  * \ingroup SQS
  *

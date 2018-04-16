@@ -30,7 +30,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::GetDashboardResponse
  *
- * \brief The GetDashboardResponse class encapsulates CloudWatch GetDashboard responses.
+ * \brief The GetDashboardResponse class provides an interace for CloudWatch GetDashboard responses.
  *
  * \ingroup CloudWatch
  *

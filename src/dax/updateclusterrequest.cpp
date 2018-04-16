@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::UpdateClusterRequest
  *
- * \brief The UpdateClusterRequest class encapsulates DAX UpdateCluster requests.
+ * \brief The UpdateClusterRequest class provides an interface for DAX UpdateCluster requests.
  *
  * \ingroup DAX
  *

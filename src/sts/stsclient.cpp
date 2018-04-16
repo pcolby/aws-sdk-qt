@@ -51,7 +51,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::StsClient
  *
- * \brief The StsClient class provides access the AWS Security Token Service ( STS) service.
+ * \brief The StsClient class provides access to the AWS Security Token Service ( STS) service.
  *
  * \ingroup STS
  *

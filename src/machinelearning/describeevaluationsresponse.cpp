@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DescribeEvaluationsResponse
  *
- * \brief The DescribeEvaluationsResponse class encapsulates MachineLearning DescribeEvaluations responses.
+ * \brief The DescribeEvaluationsResponse class provides an interace for MachineLearning DescribeEvaluations responses.
  *
  * \ingroup MachineLearning
  *

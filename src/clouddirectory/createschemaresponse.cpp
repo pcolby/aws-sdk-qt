@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::CreateSchemaResponse
  *
- * \brief The CreateSchemaResponse class encapsulates CloudDirectory CreateSchema responses.
+ * \brief The CreateSchemaResponse class provides an interace for CloudDirectory CreateSchema responses.
  *
  * \ingroup CloudDirectory
  *

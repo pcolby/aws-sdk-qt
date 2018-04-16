@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::SetUICustomizationResponse
  *
- * \brief The SetUICustomizationResponse class encapsulates CognitoIdentityProvider SetUICustomization responses.
+ * \brief The SetUICustomizationResponse class provides an interace for CognitoIdentityProvider SetUICustomization responses.
  *
  * \ingroup CognitoIdentityProvider
  *

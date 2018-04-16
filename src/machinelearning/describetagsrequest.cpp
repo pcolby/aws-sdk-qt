@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DescribeTagsRequest
  *
- * \brief The DescribeTagsRequest class encapsulates MachineLearning DescribeTags requests.
+ * \brief The DescribeTagsRequest class provides an interface for MachineLearning DescribeTags requests.
  *
  * \ingroup MachineLearning
  *

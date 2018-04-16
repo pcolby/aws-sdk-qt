@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListQualificationTypesResponse
  *
- * \brief The ListQualificationTypesResponse class encapsulates MTurk ListQualificationTypes responses.
+ * \brief The ListQualificationTypesResponse class provides an interace for MTurk ListQualificationTypes responses.
  *
  * \ingroup MTurk
  *

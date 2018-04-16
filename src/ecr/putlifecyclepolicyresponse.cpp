@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::PutLifecyclePolicyResponse
  *
- * \brief The PutLifecyclePolicyResponse class encapsulates ECR PutLifecyclePolicy responses.
+ * \brief The PutLifecyclePolicyResponse class provides an interace for ECR PutLifecyclePolicy responses.
  *
  * \ingroup ECR
  *

@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::DescribeStackResourcesRequest
  *
- * \brief The DescribeStackResourcesRequest class encapsulates CloudFormation DescribeStackResources requests.
+ * \brief The DescribeStackResourcesRequest class provides an interface for CloudFormation DescribeStackResources requests.
  *
  * \ingroup CloudFormation
  *

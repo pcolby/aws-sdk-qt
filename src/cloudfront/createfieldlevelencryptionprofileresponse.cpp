@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::CreateFieldLevelEncryptionProfileResponse
  *
- * \brief The CreateFieldLevelEncryptionProfileResponse class encapsulates CloudFront CreateFieldLevelEncryptionProfile responses.
+ * \brief The CreateFieldLevelEncryptionProfileResponse class provides an interace for CloudFront CreateFieldLevelEncryptionProfile responses.
  *
  * \ingroup CloudFront
  *

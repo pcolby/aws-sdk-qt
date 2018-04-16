@@ -30,7 +30,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::ListServicesResponse
  *
- * \brief The ListServicesResponse class encapsulates ServiceDiscovery ListServices responses.
+ * \brief The ListServicesResponse class provides an interace for ServiceDiscovery ListServices responses.
  *
  * \ingroup ServiceDiscovery
  *

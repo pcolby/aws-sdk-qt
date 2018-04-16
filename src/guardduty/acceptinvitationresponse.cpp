@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::AcceptInvitationResponse
  *
- * \brief The AcceptInvitationResponse class encapsulates GuardDuty AcceptInvitation responses.
+ * \brief The AcceptInvitationResponse class provides an interace for GuardDuty AcceptInvitation responses.
  *
  * \ingroup GuardDuty
  *

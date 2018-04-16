@@ -57,7 +57,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::SimpleDBClient
  *
- * \brief The SimpleDBClient class provides access the Amazon SimpleDB service.
+ * \brief The SimpleDBClient class provides access to the Amazon SimpleDB service.
  *
  * \ingroup SimpleDB
  *

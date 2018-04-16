@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DeleteEnvironmentConfigurationResponse
  *
- * \brief The DeleteEnvironmentConfigurationResponse class encapsulates ElasticBeanstalk DeleteEnvironmentConfiguration responses.
+ * \brief The DeleteEnvironmentConfigurationResponse class provides an interace for ElasticBeanstalk DeleteEnvironmentConfiguration responses.
  *
  * \ingroup ElasticBeanstalk
  *

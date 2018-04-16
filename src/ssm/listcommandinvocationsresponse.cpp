@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListCommandInvocationsResponse
  *
- * \brief The ListCommandInvocationsResponse class encapsulates SSM ListCommandInvocations responses.
+ * \brief The ListCommandInvocationsResponse class provides an interace for SSM ListCommandInvocations responses.
  *
  * \ingroup SSM
  *

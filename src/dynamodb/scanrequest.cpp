@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::ScanRequest
  *
- * \brief The ScanRequest class encapsulates DynamoDB Scan requests.
+ * \brief The ScanRequest class provides an interface for DynamoDB Scan requests.
  *
  * \ingroup DynamoDB
  *

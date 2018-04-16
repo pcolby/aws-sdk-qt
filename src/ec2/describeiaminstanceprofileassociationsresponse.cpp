@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeIamInstanceProfileAssociationsResponse
  *
- * \brief The DescribeIamInstanceProfileAssociationsResponse class encapsulates EC2 DescribeIamInstanceProfileAssociations responses.
+ * \brief The DescribeIamInstanceProfileAssociationsResponse class provides an interace for EC2 DescribeIamInstanceProfileAssociations responses.
  *
  * \ingroup EC2
  *

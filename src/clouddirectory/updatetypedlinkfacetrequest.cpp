@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::UpdateTypedLinkFacetRequest
  *
- * \brief The UpdateTypedLinkFacetRequest class encapsulates CloudDirectory UpdateTypedLinkFacet requests.
+ * \brief The UpdateTypedLinkFacetRequest class provides an interface for CloudDirectory UpdateTypedLinkFacet requests.
  *
  * \ingroup CloudDirectory
  *

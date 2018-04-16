@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetPartitionsResponse
  *
- * \brief The GetPartitionsResponse class encapsulates Glue GetPartitions responses.
+ * \brief The GetPartitionsResponse class provides an interace for Glue GetPartitions responses.
  *
  * \ingroup Glue
  *

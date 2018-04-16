@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::CreateTagOptionRequest
  *
- * \brief The CreateTagOptionRequest class encapsulates ServiceCatalog CreateTagOption requests.
+ * \brief The CreateTagOptionRequest class provides an interface for ServiceCatalog CreateTagOption requests.
  *
  * \ingroup ServiceCatalog
  *

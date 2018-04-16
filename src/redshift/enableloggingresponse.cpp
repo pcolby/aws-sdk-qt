@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::EnableLoggingResponse
  *
- * \brief The EnableLoggingResponse class encapsulates Redshift EnableLogging responses.
+ * \brief The EnableLoggingResponse class provides an interace for Redshift EnableLogging responses.
  *
  * \ingroup Redshift
  *

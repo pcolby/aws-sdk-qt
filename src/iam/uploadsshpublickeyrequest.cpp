@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UploadSSHPublicKeyRequest
  *
- * \brief The UploadSSHPublicKeyRequest class encapsulates IAM UploadSSHPublicKey requests.
+ * \brief The UploadSSHPublicKeyRequest class provides an interface for IAM UploadSSHPublicKey requests.
  *
  * \ingroup IAM
  *

@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RemoveTagsFromResourceRequest
  *
- * \brief The RemoveTagsFromResourceRequest class encapsulates RDS RemoveTagsFromResource requests.
+ * \brief The RemoveTagsFromResourceRequest class provides an interface for RDS RemoveTagsFromResource requests.
  *
  * \ingroup RDS
  *

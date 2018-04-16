@@ -117,7 +117,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ElastiCacheClient
  *
- * \brief The ElastiCacheClient class provides access the Amazon ElastiCache service.
+ * \brief The ElastiCacheClient class provides access to the Amazon ElastiCache service.
  *
  * \ingroup ElastiCache
  *

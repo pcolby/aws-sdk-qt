@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateDomainNameRequest
  *
- * \brief The UpdateDomainNameRequest class encapsulates APIGateway UpdateDomainName requests.
+ * \brief The UpdateDomainNameRequest class provides an interface for APIGateway UpdateDomainName requests.
  *
  * \ingroup APIGateway
  *

@@ -28,7 +28,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::ListRecordsRequest
  *
- * \brief The ListRecordsRequest class encapsulates CognitoSync ListRecords requests.
+ * \brief The ListRecordsRequest class provides an interface for CognitoSync ListRecords requests.
  *
  * \ingroup CognitoSync
  *

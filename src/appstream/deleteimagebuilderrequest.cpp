@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DeleteImageBuilderRequest
  *
- * \brief The DeleteImageBuilderRequest class encapsulates AppStream DeleteImageBuilder requests.
+ * \brief The DeleteImageBuilderRequest class provides an interface for AppStream DeleteImageBuilder requests.
  *
  * \ingroup AppStream
  *

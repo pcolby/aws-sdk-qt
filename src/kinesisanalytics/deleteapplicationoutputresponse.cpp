@@ -30,7 +30,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::DeleteApplicationOutputResponse
  *
- * \brief The DeleteApplicationOutputResponse class encapsulates KinesisAnalytics DeleteApplicationOutput responses.
+ * \brief The DeleteApplicationOutputResponse class provides an interace for KinesisAnalytics DeleteApplicationOutput responses.
  *
  * \ingroup KinesisAnalytics
  *

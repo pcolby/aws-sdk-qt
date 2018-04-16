@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::StopLoggingResponse
  *
- * \brief The StopLoggingResponse class encapsulates CloudTrail StopLogging responses.
+ * \brief The StopLoggingResponse class provides an interace for CloudTrail StopLogging responses.
  *
  * \ingroup CloudTrail
  *

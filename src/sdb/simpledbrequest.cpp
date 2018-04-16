@@ -26,7 +26,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::SimpleDBRequest
  *
- * \brief The SimpleDBRequest class is the base class for all SimpleDB requests.
+ * \brief The SimpleDBRequest class provides an interface for SimpleDB requests.
  *
  * \ingroup SimpleDB
  */

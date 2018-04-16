@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListProvisioningArtifactsRequest
  *
- * \brief The ListProvisioningArtifactsRequest class encapsulates ServiceCatalog ListProvisioningArtifacts requests.
+ * \brief The ListProvisioningArtifactsRequest class provides an interface for ServiceCatalog ListProvisioningArtifacts requests.
  *
  * \ingroup ServiceCatalog
  *

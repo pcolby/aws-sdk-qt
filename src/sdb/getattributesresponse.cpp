@@ -30,7 +30,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::GetAttributesResponse
  *
- * \brief The GetAttributesResponse class encapsulates SimpleDB GetAttributes responses.
+ * \brief The GetAttributesResponse class provides an interace for SimpleDB GetAttributes responses.
  *
  * \ingroup SimpleDB
  *

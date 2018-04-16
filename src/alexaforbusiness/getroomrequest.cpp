@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::GetRoomRequest
  *
- * \brief The GetRoomRequest class encapsulates AlexaForBusiness GetRoom requests.
+ * \brief The GetRoomRequest class provides an interface for AlexaForBusiness GetRoom requests.
  *
  * \ingroup AlexaForBusiness
  *

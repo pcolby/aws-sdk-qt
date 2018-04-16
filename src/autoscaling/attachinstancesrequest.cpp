@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::AttachInstancesRequest
  *
- * \brief The AttachInstancesRequest class encapsulates AutoScaling AttachInstances requests.
+ * \brief The AttachInstancesRequest class provides an interface for AutoScaling AttachInstances requests.
  *
  * \ingroup AutoScaling
  *

@@ -28,7 +28,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::ListLexiconsRequest
  *
- * \brief The ListLexiconsRequest class encapsulates Polly ListLexicons requests.
+ * \brief The ListLexiconsRequest class provides an interface for Polly ListLexicons requests.
  *
  * \ingroup Polly
  *

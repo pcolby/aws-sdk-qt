@@ -29,7 +29,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::CodePipelineResponse
  *
- * \brief The CodePipelineResponse class is the base class for all CodePipeline responses.
+ * \brief The CodePipelineResponse class provides an interface for CodePipeline responses.
  *
  * \ingroup CodePipeline
  */

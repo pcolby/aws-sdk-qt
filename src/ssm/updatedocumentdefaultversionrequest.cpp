@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::UpdateDocumentDefaultVersionRequest
  *
- * \brief The UpdateDocumentDefaultVersionRequest class encapsulates SSM UpdateDocumentDefaultVersion requests.
+ * \brief The UpdateDocumentDefaultVersionRequest class provides an interface for SSM UpdateDocumentDefaultVersion requests.
  *
  * \ingroup SSM
  *

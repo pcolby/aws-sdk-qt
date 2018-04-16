@@ -28,7 +28,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::PutPolicyRequest
  *
- * \brief The PutPolicyRequest class encapsulates FMS PutPolicy requests.
+ * \brief The PutPolicyRequest class provides an interface for FMS PutPolicy requests.
  *
  * \ingroup FMS
  *

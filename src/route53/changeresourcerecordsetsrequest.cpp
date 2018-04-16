@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ChangeResourceRecordSetsRequest
  *
- * \brief The ChangeResourceRecordSetsRequest class encapsulates Route53 ChangeResourceRecordSets requests.
+ * \brief The ChangeResourceRecordSetsRequest class provides an interface for Route53 ChangeResourceRecordSets requests.
  *
  * \ingroup Route53
  *

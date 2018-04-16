@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::CreateFleetRequest
  *
- * \brief The CreateFleetRequest class encapsulates GameLift CreateFleet requests.
+ * \brief The CreateFleetRequest class provides an interface for GameLift CreateFleet requests.
  *
  * \ingroup GameLift
  *

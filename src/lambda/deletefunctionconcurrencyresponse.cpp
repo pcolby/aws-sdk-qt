@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::DeleteFunctionConcurrencyResponse
  *
- * \brief The DeleteFunctionConcurrencyResponse class encapsulates Lambda DeleteFunctionConcurrency responses.
+ * \brief The DeleteFunctionConcurrencyResponse class provides an interace for Lambda DeleteFunctionConcurrency responses.
  *
  * \ingroup Lambda
  *

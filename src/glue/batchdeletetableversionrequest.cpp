@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::BatchDeleteTableVersionRequest
  *
- * \brief The BatchDeleteTableVersionRequest class encapsulates Glue BatchDeleteTableVersion requests.
+ * \brief The BatchDeleteTableVersionRequest class provides an interface for Glue BatchDeleteTableVersion requests.
  *
  * \ingroup Glue
  *

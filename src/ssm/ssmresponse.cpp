@@ -29,7 +29,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::SSMResponse
  *
- * \brief The SSMResponse class is the base class for all SSM responses.
+ * \brief The SSMResponse class provides an interface for SSM responses.
  *
  * \ingroup SSM
  */

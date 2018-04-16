@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateBaiduChannelResponse
  *
- * \brief The UpdateBaiduChannelResponse class encapsulates Pinpoint UpdateBaiduChannel responses.
+ * \brief The UpdateBaiduChannelResponse class provides an interace for Pinpoint UpdateBaiduChannel responses.
  *
  * \ingroup Pinpoint
  *

@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeEventSubscriptionsRequest
  *
- * \brief The DescribeEventSubscriptionsRequest class encapsulates Redshift DescribeEventSubscriptions requests.
+ * \brief The DescribeEventSubscriptionsRequest class provides an interface for Redshift DescribeEventSubscriptions requests.
  *
  * \ingroup Redshift
  *

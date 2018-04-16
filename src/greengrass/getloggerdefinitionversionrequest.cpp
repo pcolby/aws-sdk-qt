@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetLoggerDefinitionVersionRequest
  *
- * \brief The GetLoggerDefinitionVersionRequest class encapsulates Greengrass GetLoggerDefinitionVersion requests.
+ * \brief The GetLoggerDefinitionVersionRequest class provides an interface for Greengrass GetLoggerDefinitionVersion requests.
  *
  * \ingroup Greengrass
  *

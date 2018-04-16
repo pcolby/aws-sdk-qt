@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::ListRegexMatchSetsResponse
  *
- * \brief The ListRegexMatchSetsResponse class encapsulates WAFRegional ListRegexMatchSets responses.
+ * \brief The ListRegexMatchSetsResponse class provides an interace for WAFRegional ListRegexMatchSets responses.
  *
  * \ingroup WAFRegional
  *

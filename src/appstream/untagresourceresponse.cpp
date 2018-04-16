@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::UntagResourceResponse
  *
- * \brief The UntagResourceResponse class encapsulates AppStream UntagResource responses.
+ * \brief The UntagResourceResponse class provides an interace for AppStream UntagResource responses.
  *
  * \ingroup AppStream
  *

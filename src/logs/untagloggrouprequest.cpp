@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::UntagLogGroupRequest
  *
- * \brief The UntagLogGroupRequest class encapsulates CloudWatchLogs UntagLogGroup requests.
+ * \brief The UntagLogGroupRequest class provides an interface for CloudWatchLogs UntagLogGroup requests.
  *
  * \ingroup CloudWatchLogs
  *

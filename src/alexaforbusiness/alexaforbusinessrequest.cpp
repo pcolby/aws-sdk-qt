@@ -26,7 +26,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::AlexaForBusinessRequest
  *
- * \brief The AlexaForBusinessRequest class is the base class for all AlexaForBusiness requests.
+ * \brief The AlexaForBusinessRequest class provides an interface for AlexaForBusiness requests.
  *
  * \ingroup AlexaForBusiness
  */

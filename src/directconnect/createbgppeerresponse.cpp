@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::CreateBGPPeerResponse
  *
- * \brief The CreateBGPPeerResponse class encapsulates DirectConnect CreateBGPPeer responses.
+ * \brief The CreateBGPPeerResponse class provides an interace for DirectConnect CreateBGPPeer responses.
  *
  * \ingroup DirectConnect
  *

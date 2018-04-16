@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListSAMLProvidersResponse
  *
- * \brief The ListSAMLProvidersResponse class encapsulates IAM ListSAMLProviders responses.
+ * \brief The ListSAMLProvidersResponse class provides an interace for IAM ListSAMLProviders responses.
  *
  * \ingroup IAM
  *

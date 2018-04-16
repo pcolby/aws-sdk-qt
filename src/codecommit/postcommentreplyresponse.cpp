@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::PostCommentReplyResponse
  *
- * \brief The PostCommentReplyResponse class encapsulates CodeCommit PostCommentReply responses.
+ * \brief The PostCommentReplyResponse class provides an interace for CodeCommit PostCommentReply responses.
  *
  * \ingroup CodeCommit
  *

@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DeleteTapeResponse
  *
- * \brief The DeleteTapeResponse class encapsulates StorageGateway DeleteTape responses.
+ * \brief The DeleteTapeResponse class provides an interace for StorageGateway DeleteTape responses.
  *
  * \ingroup StorageGateway
  *

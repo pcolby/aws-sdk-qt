@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DescribeTrustsRequest
  *
- * \brief The DescribeTrustsRequest class encapsulates DirectoryService DescribeTrusts requests.
+ * \brief The DescribeTrustsRequest class provides an interface for DirectoryService DescribeTrusts requests.
  *
  * \ingroup DirectoryService
  *

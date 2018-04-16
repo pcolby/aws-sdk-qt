@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListFacetAttributesResponse
  *
- * \brief The ListFacetAttributesResponse class encapsulates CloudDirectory ListFacetAttributes responses.
+ * \brief The ListFacetAttributesResponse class provides an interace for CloudDirectory ListFacetAttributes responses.
  *
  * \ingroup CloudDirectory
  *

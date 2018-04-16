@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::CreateEvaluationRequest
  *
- * \brief The CreateEvaluationRequest class encapsulates MachineLearning CreateEvaluation requests.
+ * \brief The CreateEvaluationRequest class provides an interface for MachineLearning CreateEvaluation requests.
  *
  * \ingroup MachineLearning
  *

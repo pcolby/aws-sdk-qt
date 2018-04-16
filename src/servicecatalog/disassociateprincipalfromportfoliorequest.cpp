@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DisassociatePrincipalFromPortfolioRequest
  *
- * \brief The DisassociatePrincipalFromPortfolioRequest class encapsulates ServiceCatalog DisassociatePrincipalFromPortfolio requests.
+ * \brief The DisassociatePrincipalFromPortfolioRequest class provides an interface for ServiceCatalog DisassociatePrincipalFromPortfolio requests.
  *
  * \ingroup ServiceCatalog
  *

@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::TestMetricFilterRequest
  *
- * \brief The TestMetricFilterRequest class encapsulates CloudWatchLogs TestMetricFilter requests.
+ * \brief The TestMetricFilterRequest class provides an interface for CloudWatchLogs TestMetricFilter requests.
  *
  * \ingroup CloudWatchLogs
  *

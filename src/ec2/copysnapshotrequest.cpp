@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CopySnapshotRequest
  *
- * \brief The CopySnapshotRequest class encapsulates EC2 CopySnapshot requests.
+ * \brief The CopySnapshotRequest class provides an interface for EC2 CopySnapshot requests.
  *
  * \ingroup EC2
  *

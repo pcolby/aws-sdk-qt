@@ -28,7 +28,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::GetAttributesRequest
  *
- * \brief The GetAttributesRequest class encapsulates SimpleDB GetAttributes requests.
+ * \brief The GetAttributesRequest class provides an interface for SimpleDB GetAttributes requests.
  *
  * \ingroup SimpleDB
  *

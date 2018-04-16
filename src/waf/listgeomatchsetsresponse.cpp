@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::ListGeoMatchSetsResponse
  *
- * \brief The ListGeoMatchSetsResponse class encapsulates WAF ListGeoMatchSets responses.
+ * \brief The ListGeoMatchSetsResponse class provides an interace for WAF ListGeoMatchSets responses.
  *
  * \ingroup WAF
  *

@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::AbortDocumentVersionUploadRequest
  *
- * \brief The AbortDocumentVersionUploadRequest class encapsulates WorkDocs AbortDocumentVersionUpload requests.
+ * \brief The AbortDocumentVersionUploadRequest class provides an interface for WorkDocs AbortDocumentVersionUpload requests.
  *
  * \ingroup WorkDocs
  *

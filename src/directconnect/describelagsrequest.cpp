@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DescribeLagsRequest
  *
- * \brief The DescribeLagsRequest class encapsulates DirectConnect DescribeLags requests.
+ * \brief The DescribeLagsRequest class provides an interface for DirectConnect DescribeLags requests.
  *
  * \ingroup DirectConnect
  *

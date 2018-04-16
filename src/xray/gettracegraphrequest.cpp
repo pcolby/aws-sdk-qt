@@ -28,7 +28,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::GetTraceGraphRequest
  *
- * \brief The GetTraceGraphRequest class encapsulates XRay GetTraceGraph requests.
+ * \brief The GetTraceGraphRequest class provides an interface for XRay GetTraceGraph requests.
  *
  * \ingroup XRay
  *

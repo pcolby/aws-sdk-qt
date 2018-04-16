@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::ReportTaskProgressRequest
  *
- * \brief The ReportTaskProgressRequest class encapsulates DataPipeline ReportTaskProgress requests.
+ * \brief The ReportTaskProgressRequest class provides an interface for DataPipeline ReportTaskProgress requests.
  *
  * \ingroup DataPipeline
  *

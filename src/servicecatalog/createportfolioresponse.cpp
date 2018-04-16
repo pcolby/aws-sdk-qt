@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::CreatePortfolioResponse
  *
- * \brief The CreatePortfolioResponse class encapsulates ServiceCatalog CreatePortfolio responses.
+ * \brief The CreatePortfolioResponse class provides an interace for ServiceCatalog CreatePortfolio responses.
  *
  * \ingroup ServiceCatalog
  *

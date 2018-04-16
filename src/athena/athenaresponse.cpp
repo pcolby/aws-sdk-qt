@@ -29,7 +29,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::AthenaResponse
  *
- * \brief The AthenaResponse class is the base class for all Athena responses.
+ * \brief The AthenaResponse class provides an interface for Athena responses.
  *
  * \ingroup Athena
  */

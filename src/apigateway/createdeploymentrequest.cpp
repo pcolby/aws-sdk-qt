@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateDeploymentRequest
  *
- * \brief The CreateDeploymentRequest class encapsulates APIGateway CreateDeployment requests.
+ * \brief The CreateDeploymentRequest class provides an interface for APIGateway CreateDeployment requests.
  *
  * \ingroup APIGateway
  *

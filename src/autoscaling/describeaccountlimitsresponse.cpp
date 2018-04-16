@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeAccountLimitsResponse
  *
- * \brief The DescribeAccountLimitsResponse class encapsulates AutoScaling DescribeAccountLimits responses.
+ * \brief The DescribeAccountLimitsResponse class provides an interace for AutoScaling DescribeAccountLimits responses.
  *
  * \ingroup AutoScaling
  *

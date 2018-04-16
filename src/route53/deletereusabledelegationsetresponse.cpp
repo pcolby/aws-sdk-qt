@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::DeleteReusableDelegationSetResponse
  *
- * \brief The DeleteReusableDelegationSetResponse class encapsulates Route53 DeleteReusableDelegationSet responses.
+ * \brief The DeleteReusableDelegationSetResponse class provides an interace for Route53 DeleteReusableDelegationSet responses.
  *
  * \ingroup Route53
  *

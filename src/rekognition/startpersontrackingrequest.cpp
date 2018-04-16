@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::StartPersonTrackingRequest
  *
- * \brief The StartPersonTrackingRequest class encapsulates Rekognition StartPersonTracking requests.
+ * \brief The StartPersonTrackingRequest class provides an interface for Rekognition StartPersonTracking requests.
  *
  * \ingroup Rekognition
  *

@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DescribeContainerInstancesResponse
  *
- * \brief The DescribeContainerInstancesResponse class encapsulates ECS DescribeContainerInstances responses.
+ * \brief The DescribeContainerInstancesResponse class provides an interace for ECS DescribeContainerInstances responses.
  *
  * \ingroup ECS
  *

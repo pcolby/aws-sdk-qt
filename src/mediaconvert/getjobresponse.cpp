@@ -30,7 +30,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::GetJobResponse
  *
- * \brief The GetJobResponse class encapsulates MediaConvert GetJob responses.
+ * \brief The GetJobResponse class provides an interace for MediaConvert GetJob responses.
  *
  * \ingroup MediaConvert
  *

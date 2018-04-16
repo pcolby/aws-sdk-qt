@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::GetSchemaAsJsonResponse
  *
- * \brief The GetSchemaAsJsonResponse class encapsulates CloudDirectory GetSchemaAsJson responses.
+ * \brief The GetSchemaAsJsonResponse class provides an interace for CloudDirectory GetSchemaAsJson responses.
  *
  * \ingroup CloudDirectory
  *

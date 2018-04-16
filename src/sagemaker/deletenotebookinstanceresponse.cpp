@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DeleteNotebookInstanceResponse
  *
- * \brief The DeleteNotebookInstanceResponse class encapsulates SageMaker DeleteNotebookInstance responses.
+ * \brief The DeleteNotebookInstanceResponse class provides an interace for SageMaker DeleteNotebookInstance responses.
  *
  * \ingroup SageMaker
  *

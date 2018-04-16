@@ -28,7 +28,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::DisableDomainAutoRenewRequest
  *
- * \brief The DisableDomainAutoRenewRequest class encapsulates Route53Domains DisableDomainAutoRenew requests.
+ * \brief The DisableDomainAutoRenewRequest class provides an interface for Route53Domains DisableDomainAutoRenew requests.
  *
  * \ingroup Route53Domains
  *

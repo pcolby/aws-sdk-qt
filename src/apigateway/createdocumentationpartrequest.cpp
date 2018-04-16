@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateDocumentationPartRequest
  *
- * \brief The CreateDocumentationPartRequest class encapsulates APIGateway CreateDocumentationPart requests.
+ * \brief The CreateDocumentationPartRequest class provides an interface for APIGateway CreateDocumentationPart requests.
  *
  * \ingroup APIGateway
  *

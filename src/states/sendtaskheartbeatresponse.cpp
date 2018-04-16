@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::SendTaskHeartbeatResponse
  *
- * \brief The SendTaskHeartbeatResponse class encapsulates SFN SendTaskHeartbeat responses.
+ * \brief The SendTaskHeartbeatResponse class provides an interace for SFN SendTaskHeartbeat responses.
  *
  * \ingroup SFN
  *

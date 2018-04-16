@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::SetDefaultPolicyVersionRequest
  *
- * \brief The SetDefaultPolicyVersionRequest class encapsulates IoT SetDefaultPolicyVersion requests.
+ * \brief The SetDefaultPolicyVersionRequest class provides an interface for IoT SetDefaultPolicyVersion requests.
  *
  * \ingroup IoT
  *

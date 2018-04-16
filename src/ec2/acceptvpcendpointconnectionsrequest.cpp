@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AcceptVpcEndpointConnectionsRequest
  *
- * \brief The AcceptVpcEndpointConnectionsRequest class encapsulates EC2 AcceptVpcEndpointConnections requests.
+ * \brief The AcceptVpcEndpointConnectionsRequest class provides an interface for EC2 AcceptVpcEndpointConnections requests.
  *
  * \ingroup EC2
  *

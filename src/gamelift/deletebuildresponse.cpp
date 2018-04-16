@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteBuildResponse
  *
- * \brief The DeleteBuildResponse class encapsulates GameLift DeleteBuild responses.
+ * \brief The DeleteBuildResponse class provides an interace for GameLift DeleteBuild responses.
  *
  * \ingroup GameLift
  *

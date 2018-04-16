@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::BatchStopJobRunResponse
  *
- * \brief The BatchStopJobRunResponse class encapsulates Glue BatchStopJobRun responses.
+ * \brief The BatchStopJobRunResponse class provides an interace for Glue BatchStopJobRun responses.
  *
  * \ingroup Glue
  *

@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::GrantAccessResponse
  *
- * \brief The GrantAccessResponse class encapsulates OpsWorks GrantAccess responses.
+ * \brief The GrantAccessResponse class provides an interace for OpsWorks GrantAccess responses.
  *
  * \ingroup OpsWorks
  *

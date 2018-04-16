@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::CreateTapesRequest
  *
- * \brief The CreateTapesRequest class encapsulates StorageGateway CreateTapes requests.
+ * \brief The CreateTapesRequest class provides an interface for StorageGateway CreateTapes requests.
  *
  * \ingroup StorageGateway
  *

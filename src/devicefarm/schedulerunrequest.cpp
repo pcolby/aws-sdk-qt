@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ScheduleRunRequest
  *
- * \brief The ScheduleRunRequest class encapsulates DeviceFarm ScheduleRun requests.
+ * \brief The ScheduleRunRequest class provides an interface for DeviceFarm ScheduleRun requests.
  *
  * \ingroup DeviceFarm
  *

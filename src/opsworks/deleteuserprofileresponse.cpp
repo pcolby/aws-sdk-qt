@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeleteUserProfileResponse
  *
- * \brief The DeleteUserProfileResponse class encapsulates OpsWorks DeleteUserProfile responses.
+ * \brief The DeleteUserProfileResponse class provides an interace for OpsWorks DeleteUserProfile responses.
  *
  * \ingroup OpsWorks
  *

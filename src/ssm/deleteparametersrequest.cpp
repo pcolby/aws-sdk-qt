@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeleteParametersRequest
  *
- * \brief The DeleteParametersRequest class encapsulates SSM DeleteParameters requests.
+ * \brief The DeleteParametersRequest class provides an interface for SSM DeleteParameters requests.
  *
  * \ingroup SSM
  *

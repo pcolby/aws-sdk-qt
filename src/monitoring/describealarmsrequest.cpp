@@ -28,7 +28,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::DescribeAlarmsRequest
  *
- * \brief The DescribeAlarmsRequest class encapsulates CloudWatch DescribeAlarms requests.
+ * \brief The DescribeAlarmsRequest class provides an interface for CloudWatch DescribeAlarms requests.
  *
  * \ingroup CloudWatch
  *

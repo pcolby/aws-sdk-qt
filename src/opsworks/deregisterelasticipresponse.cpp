@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeregisterElasticIpResponse
  *
- * \brief The DeregisterElasticIpResponse class encapsulates OpsWorks DeregisterElasticIp responses.
+ * \brief The DeregisterElasticIpResponse class provides an interace for OpsWorks DeregisterElasticIp responses.
  *
  * \ingroup OpsWorks
  *

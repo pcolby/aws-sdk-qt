@@ -57,7 +57,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::ShieldClient
  *
- * \brief The ShieldClient class provides access the AWS Shield service.
+ * \brief The ShieldClient class provides access to the AWS Shield service.
  *
  * \ingroup Shield
  *

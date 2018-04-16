@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::CreateServiceRequest
  *
- * \brief The CreateServiceRequest class encapsulates ECS CreateService requests.
+ * \brief The CreateServiceRequest class provides an interface for ECS CreateService requests.
  *
  * \ingroup ECS
  *

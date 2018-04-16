@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::AssociateConfigurationItemsToApplicationRequest
  *
- * \brief The AssociateConfigurationItemsToApplicationRequest class encapsulates ApplicationDiscoveryService AssociateConfigurationItemsToApplication requests.
+ * \brief The AssociateConfigurationItemsToApplicationRequest class provides an interface for ApplicationDiscoveryService AssociateConfigurationItemsToApplication requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

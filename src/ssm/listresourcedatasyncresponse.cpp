@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListResourceDataSyncResponse
  *
- * \brief The ListResourceDataSyncResponse class encapsulates SSM ListResourceDataSync responses.
+ * \brief The ListResourceDataSyncResponse class provides an interace for SSM ListResourceDataSync responses.
  *
  * \ingroup SSM
  *

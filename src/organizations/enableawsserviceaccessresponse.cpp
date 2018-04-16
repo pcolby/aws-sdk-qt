@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::EnableAWSServiceAccessResponse
  *
- * \brief The EnableAWSServiceAccessResponse class encapsulates Organizations EnableAWSServiceAccess responses.
+ * \brief The EnableAWSServiceAccessResponse class provides an interace for Organizations EnableAWSServiceAccess responses.
  *
  * \ingroup Organizations
  *

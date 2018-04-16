@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DeleteDiskResponse
  *
- * \brief The DeleteDiskResponse class encapsulates Lightsail DeleteDisk responses.
+ * \brief The DeleteDiskResponse class provides an interace for Lightsail DeleteDisk responses.
  *
  * \ingroup Lightsail
  *

@@ -26,7 +26,7 @@ namespace Connect {
 /*!
  * \class QtAws::Connect::ConnectRequest
  *
- * \brief The ConnectRequest class is the base class for all Connect requests.
+ * \brief The ConnectRequest class provides an interface for Connect requests.
  *
  * \ingroup Connect
  */

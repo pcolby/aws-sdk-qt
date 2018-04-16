@@ -28,7 +28,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::CreateSubscriberRequest
  *
- * \brief The CreateSubscriberRequest class encapsulates Budgets CreateSubscriber requests.
+ * \brief The CreateSubscriberRequest class provides an interface for Budgets CreateSubscriber requests.
  *
  * \ingroup Budgets
  *

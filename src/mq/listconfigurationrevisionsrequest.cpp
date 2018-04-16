@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::ListConfigurationRevisionsRequest
  *
- * \brief The ListConfigurationRevisionsRequest class encapsulates MQ ListConfigurationRevisions requests.
+ * \brief The ListConfigurationRevisionsRequest class provides an interface for MQ ListConfigurationRevisions requests.
  *
  * \ingroup MQ
  *

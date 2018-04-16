@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListTypedLinkFacetNamesResponse
  *
- * \brief The ListTypedLinkFacetNamesResponse class encapsulates CloudDirectory ListTypedLinkFacetNames responses.
+ * \brief The ListTypedLinkFacetNamesResponse class provides an interace for CloudDirectory ListTypedLinkFacetNames responses.
  *
  * \ingroup CloudDirectory
  *

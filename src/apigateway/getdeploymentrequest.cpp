@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetDeploymentRequest
  *
- * \brief The GetDeploymentRequest class encapsulates APIGateway GetDeployment requests.
+ * \brief The GetDeploymentRequest class provides an interface for APIGateway GetDeployment requests.
  *
  * \ingroup APIGateway
  *

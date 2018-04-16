@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::ListPartsResponse
  *
- * \brief The ListPartsResponse class encapsulates S3 ListParts responses.
+ * \brief The ListPartsResponse class provides an interace for S3 ListParts responses.
  *
  * \ingroup S3
  *

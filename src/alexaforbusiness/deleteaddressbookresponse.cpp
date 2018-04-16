@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::DeleteAddressBookResponse
  *
- * \brief The DeleteAddressBookResponse class encapsulates AlexaForBusiness DeleteAddressBook responses.
+ * \brief The DeleteAddressBookResponse class provides an interace for AlexaForBusiness DeleteAddressBook responses.
  *
  * \ingroup AlexaForBusiness
  *

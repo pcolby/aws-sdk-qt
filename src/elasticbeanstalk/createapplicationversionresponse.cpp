@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::CreateApplicationVersionResponse
  *
- * \brief The CreateApplicationVersionResponse class encapsulates ElasticBeanstalk CreateApplicationVersion responses.
+ * \brief The CreateApplicationVersionResponse class provides an interace for ElasticBeanstalk CreateApplicationVersion responses.
  *
  * \ingroup ElasticBeanstalk
  *

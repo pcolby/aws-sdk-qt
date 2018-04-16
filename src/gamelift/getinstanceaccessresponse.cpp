@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::GetInstanceAccessResponse
  *
- * \brief The GetInstanceAccessResponse class encapsulates GameLift GetInstanceAccess responses.
+ * \brief The GetInstanceAccessResponse class provides an interace for GameLift GetInstanceAccess responses.
  *
  * \ingroup GameLift
  *

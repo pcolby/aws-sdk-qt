@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AddCustomAttributesRequest
  *
- * \brief The AddCustomAttributesRequest class encapsulates CognitoIdentityProvider AddCustomAttributes requests.
+ * \brief The AddCustomAttributesRequest class provides an interface for CognitoIdentityProvider AddCustomAttributes requests.
  *
  * \ingroup CognitoIdentityProvider
  *

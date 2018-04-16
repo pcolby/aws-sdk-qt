@@ -30,7 +30,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::SetLoadBalancerListenerSSLCertificateResponse
  *
- * \brief The SetLoadBalancerListenerSSLCertificateResponse class encapsulates ElasticLoadBalancing SetLoadBalancerListenerSSLCertificate responses.
+ * \brief The SetLoadBalancerListenerSSLCertificateResponse class provides an interace for ElasticLoadBalancing SetLoadBalancerListenerSSLCertificate responses.
  *
  * \ingroup ElasticLoadBalancing
  *

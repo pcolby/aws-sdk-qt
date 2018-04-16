@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::ImportRestApiResponse
  *
- * \brief The ImportRestApiResponse class encapsulates APIGateway ImportRestApi responses.
+ * \brief The ImportRestApiResponse class provides an interace for APIGateway ImportRestApi responses.
  *
  * \ingroup APIGateway
  *

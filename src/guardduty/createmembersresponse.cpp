@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::CreateMembersResponse
  *
- * \brief The CreateMembersResponse class encapsulates GuardDuty CreateMembers responses.
+ * \brief The CreateMembersResponse class provides an interace for GuardDuty CreateMembers responses.
  *
  * \ingroup GuardDuty
  *

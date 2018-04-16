@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::ResetPasswordResponse
  *
- * \brief The ResetPasswordResponse class encapsulates WorkMail ResetPassword responses.
+ * \brief The ResetPasswordResponse class provides an interace for WorkMail ResetPassword responses.
  *
  * \ingroup WorkMail
  *

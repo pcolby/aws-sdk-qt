@@ -26,7 +26,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::CloudWatchRequest
  *
- * \brief The CloudWatchRequest class is the base class for all CloudWatch requests.
+ * \brief The CloudWatchRequest class provides an interface for CloudWatch requests.
  *
  * \ingroup CloudWatch
  */

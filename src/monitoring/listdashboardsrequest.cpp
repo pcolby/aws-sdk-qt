@@ -28,7 +28,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::ListDashboardsRequest
  *
- * \brief The ListDashboardsRequest class encapsulates CloudWatch ListDashboards requests.
+ * \brief The ListDashboardsRequest class provides an interface for CloudWatch ListDashboards requests.
  *
  * \ingroup CloudWatch
  *

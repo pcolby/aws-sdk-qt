@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateUserDefinedFunctionResponse
  *
- * \brief The UpdateUserDefinedFunctionResponse class encapsulates Glue UpdateUserDefinedFunction responses.
+ * \brief The UpdateUserDefinedFunctionResponse class provides an interace for Glue UpdateUserDefinedFunction responses.
  *
  * \ingroup Glue
  *

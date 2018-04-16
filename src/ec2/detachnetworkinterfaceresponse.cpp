@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DetachNetworkInterfaceResponse
  *
- * \brief The DetachNetworkInterfaceResponse class encapsulates EC2 DetachNetworkInterface responses.
+ * \brief The DetachNetworkInterfaceResponse class provides an interace for EC2 DetachNetworkInterface responses.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::PutKeyPolicyResponse
  *
- * \brief The PutKeyPolicyResponse class encapsulates KMS PutKeyPolicy responses.
+ * \brief The PutKeyPolicyResponse class provides an interace for KMS PutKeyPolicy responses.
  *
  * \ingroup KMS
  *

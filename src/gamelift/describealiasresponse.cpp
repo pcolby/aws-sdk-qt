@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeAliasResponse
  *
- * \brief The DescribeAliasResponse class encapsulates GameLift DescribeAlias responses.
+ * \brief The DescribeAliasResponse class provides an interace for GameLift DescribeAlias responses.
  *
  * \ingroup GameLift
  *

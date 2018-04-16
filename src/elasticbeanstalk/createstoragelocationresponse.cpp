@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::CreateStorageLocationResponse
  *
- * \brief The CreateStorageLocationResponse class encapsulates ElasticBeanstalk CreateStorageLocation responses.
+ * \brief The CreateStorageLocationResponse class provides an interace for ElasticBeanstalk CreateStorageLocation responses.
  *
  * \ingroup ElasticBeanstalk
  *

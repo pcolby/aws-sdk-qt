@@ -28,7 +28,7 @@ namespace DynamoDBStreams {
 /*!
  * \class QtAws::DynamoDBStreams::ListStreamsRequest
  *
- * \brief The ListStreamsRequest class encapsulates DynamoDBStreams ListStreams requests.
+ * \brief The ListStreamsRequest class provides an interface for DynamoDBStreams ListStreams requests.
  *
  * \ingroup DynamoDBStreams
  *

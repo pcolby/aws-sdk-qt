@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DisassociateKmsKeyRequest
  *
- * \brief The DisassociateKmsKeyRequest class encapsulates CloudWatchLogs DisassociateKmsKey requests.
+ * \brief The DisassociateKmsKeyRequest class provides an interface for CloudWatchLogs DisassociateKmsKey requests.
  *
  * \ingroup CloudWatchLogs
  *

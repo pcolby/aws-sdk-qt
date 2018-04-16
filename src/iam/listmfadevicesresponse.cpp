@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListMFADevicesResponse
  *
- * \brief The ListMFADevicesResponse class encapsulates IAM ListMFADevices responses.
+ * \brief The ListMFADevicesResponse class provides an interace for IAM ListMFADevices responses.
  *
  * \ingroup IAM
  *

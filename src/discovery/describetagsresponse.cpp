@@ -30,7 +30,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::DescribeTagsResponse
  *
- * \brief The DescribeTagsResponse class encapsulates ApplicationDiscoveryService DescribeTags responses.
+ * \brief The DescribeTagsResponse class provides an interace for ApplicationDiscoveryService DescribeTags responses.
  *
  * \ingroup ApplicationDiscoveryService
  *

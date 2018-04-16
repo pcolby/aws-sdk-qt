@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::CreateStackSetResponse
  *
- * \brief The CreateStackSetResponse class encapsulates CloudFormation CreateStackSet responses.
+ * \brief The CreateStackSetResponse class provides an interace for CloudFormation CreateStackSet responses.
  *
  * \ingroup CloudFormation
  *

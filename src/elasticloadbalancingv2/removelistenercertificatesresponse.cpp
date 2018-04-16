@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::RemoveListenerCertificatesResponse
  *
- * \brief The RemoveListenerCertificatesResponse class encapsulates ElasticLoadBalancingv2 RemoveListenerCertificates responses.
+ * \brief The RemoveListenerCertificatesResponse class provides an interace for ElasticLoadBalancingv2 RemoveListenerCertificates responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

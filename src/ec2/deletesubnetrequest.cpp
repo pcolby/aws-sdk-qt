@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteSubnetRequest
  *
- * \brief The DeleteSubnetRequest class encapsulates EC2 DeleteSubnet requests.
+ * \brief The DeleteSubnetRequest class provides an interface for EC2 DeleteSubnet requests.
  *
  * \ingroup EC2
  *

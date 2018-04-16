@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetAssociatedRoleResponse
  *
- * \brief The GetAssociatedRoleResponse class encapsulates Greengrass GetAssociatedRole responses.
+ * \brief The GetAssociatedRoleResponse class provides an interace for Greengrass GetAssociatedRole responses.
  *
  * \ingroup Greengrass
  *

@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::BatchDeleteImageRequest
  *
- * \brief The BatchDeleteImageRequest class encapsulates ECR BatchDeleteImage requests.
+ * \brief The BatchDeleteImageRequest class provides an interface for ECR BatchDeleteImage requests.
  *
  * \ingroup ECR
  *

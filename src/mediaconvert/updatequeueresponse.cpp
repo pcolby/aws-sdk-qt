@@ -30,7 +30,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::UpdateQueueResponse
  *
- * \brief The UpdateQueueResponse class encapsulates MediaConvert UpdateQueue responses.
+ * \brief The UpdateQueueResponse class provides an interace for MediaConvert UpdateQueue responses.
  *
  * \ingroup MediaConvert
  *

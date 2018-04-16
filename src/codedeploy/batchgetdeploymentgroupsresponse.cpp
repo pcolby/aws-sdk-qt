@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::BatchGetDeploymentGroupsResponse
  *
- * \brief The BatchGetDeploymentGroupsResponse class encapsulates CodeDeploy BatchGetDeploymentGroups responses.
+ * \brief The BatchGetDeploymentGroupsResponse class provides an interace for CodeDeploy BatchGetDeploymentGroups responses.
  *
  * \ingroup CodeDeploy
  *

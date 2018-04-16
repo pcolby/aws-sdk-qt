@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::StartFaceDetectionResponse
  *
- * \brief The StartFaceDetectionResponse class encapsulates Rekognition StartFaceDetection responses.
+ * \brief The StartFaceDetectionResponse class provides an interace for Rekognition StartFaceDetection responses.
  *
  * \ingroup Rekognition
  *

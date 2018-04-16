@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyInstancePlacementResponse
  *
- * \brief The ModifyInstancePlacementResponse class encapsulates EC2 ModifyInstancePlacement responses.
+ * \brief The ModifyInstancePlacementResponse class provides an interace for EC2 ModifyInstancePlacement responses.
  *
  * \ingroup EC2
  *

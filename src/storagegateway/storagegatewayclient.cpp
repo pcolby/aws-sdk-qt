@@ -163,7 +163,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::StorageGatewayClient
  *
- * \brief The StorageGatewayClient class provides access the AWS Storage Gateway service.
+ * \brief The StorageGatewayClient class provides access to the AWS Storage Gateway service.
  *
  * \ingroup StorageGateway
  *

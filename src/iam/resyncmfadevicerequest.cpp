@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ResyncMFADeviceRequest
  *
- * \brief The ResyncMFADeviceRequest class encapsulates IAM ResyncMFADevice requests.
+ * \brief The ResyncMFADeviceRequest class provides an interface for IAM ResyncMFADevice requests.
  *
  * \ingroup IAM
  *

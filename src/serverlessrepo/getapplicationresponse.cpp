@@ -30,7 +30,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::GetApplicationResponse
  *
- * \brief The GetApplicationResponse class encapsulates ServerlessApplicationRepository GetApplication responses.
+ * \brief The GetApplicationResponse class provides an interace for ServerlessApplicationRepository GetApplication responses.
  *
  * \ingroup ServerlessApplicationRepository
  *

@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::GetConfigRequest
  *
- * \brief The GetConfigRequest class encapsulates CloudHSM GetConfig requests.
+ * \brief The GetConfigRequest class provides an interface for CloudHSM GetConfig requests.
  *
  * \ingroup CloudHSM
  *

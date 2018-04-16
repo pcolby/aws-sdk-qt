@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::RetrieveTapeRecoveryPointResponse
  *
- * \brief The RetrieveTapeRecoveryPointResponse class encapsulates StorageGateway RetrieveTapeRecoveryPoint responses.
+ * \brief The RetrieveTapeRecoveryPointResponse class provides an interace for StorageGateway RetrieveTapeRecoveryPoint responses.
  *
  * \ingroup StorageGateway
  *

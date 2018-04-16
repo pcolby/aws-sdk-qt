@@ -30,7 +30,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::CancelJobResponse
  *
- * \brief The CancelJobResponse class encapsulates Snowball CancelJob responses.
+ * \brief The CancelJobResponse class provides an interace for Snowball CancelJob responses.
  *
  * \ingroup Snowball
  *

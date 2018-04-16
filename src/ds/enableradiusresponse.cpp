@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::EnableRadiusResponse
  *
- * \brief The EnableRadiusResponse class encapsulates DirectoryService EnableRadius responses.
+ * \brief The EnableRadiusResponse class provides an interace for DirectoryService EnableRadius responses.
  *
  * \ingroup DirectoryService
  *

@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteUploadResponse
  *
- * \brief The DeleteUploadResponse class encapsulates DeviceFarm DeleteUpload responses.
+ * \brief The DeleteUploadResponse class provides an interace for DeviceFarm DeleteUpload responses.
  *
  * \ingroup DeviceFarm
  *

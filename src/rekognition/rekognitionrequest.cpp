@@ -26,7 +26,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::RekognitionRequest
  *
- * \brief The RekognitionRequest class is the base class for all Rekognition requests.
+ * \brief The RekognitionRequest class provides an interface for Rekognition requests.
  *
  * \ingroup Rekognition
  */

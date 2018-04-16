@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::GetEffectivePoliciesResponse
  *
- * \brief The GetEffectivePoliciesResponse class encapsulates IoT GetEffectivePolicies responses.
+ * \brief The GetEffectivePoliciesResponse class provides an interace for IoT GetEffectivePolicies responses.
  *
  * \ingroup IoT
  *

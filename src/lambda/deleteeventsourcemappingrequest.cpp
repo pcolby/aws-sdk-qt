@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::DeleteEventSourceMappingRequest
  *
- * \brief The DeleteEventSourceMappingRequest class encapsulates Lambda DeleteEventSourceMapping requests.
+ * \brief The DeleteEventSourceMappingRequest class provides an interface for Lambda DeleteEventSourceMapping requests.
  *
  * \ingroup Lambda
  *

@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::CreateQueueRequest
  *
- * \brief The CreateQueueRequest class encapsulates SQS CreateQueue requests.
+ * \brief The CreateQueueRequest class provides an interface for SQS CreateQueue requests.
  *
  * \ingroup SQS
  *

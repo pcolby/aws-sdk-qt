@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetClassifierRequest
  *
- * \brief The GetClassifierRequest class encapsulates Glue GetClassifier requests.
+ * \brief The GetClassifierRequest class provides an interface for Glue GetClassifier requests.
  *
  * \ingroup Glue
  *

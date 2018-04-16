@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::DeletePipelineRequest
  *
- * \brief The DeletePipelineRequest class encapsulates ElasticTranscoder DeletePipeline requests.
+ * \brief The DeletePipelineRequest class provides an interface for ElasticTranscoder DeletePipeline requests.
  *
  * \ingroup ElasticTranscoder
  *

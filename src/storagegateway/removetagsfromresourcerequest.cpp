@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::RemoveTagsFromResourceRequest
  *
- * \brief The RemoveTagsFromResourceRequest class encapsulates StorageGateway RemoveTagsFromResource requests.
+ * \brief The RemoveTagsFromResourceRequest class provides an interface for StorageGateway RemoveTagsFromResource requests.
  *
  * \ingroup StorageGateway
  *

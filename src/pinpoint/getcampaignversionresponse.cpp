@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetCampaignVersionResponse
  *
- * \brief The GetCampaignVersionResponse class encapsulates Pinpoint GetCampaignVersion responses.
+ * \brief The GetCampaignVersionResponse class provides an interace for Pinpoint GetCampaignVersion responses.
  *
  * \ingroup Pinpoint
  *

@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::ListVersionsByFunctionResponse
  *
- * \brief The ListVersionsByFunctionResponse class encapsulates Lambda ListVersionsByFunction responses.
+ * \brief The ListVersionsByFunctionResponse class provides an interace for Lambda ListVersionsByFunction responses.
  *
  * \ingroup Lambda
  *

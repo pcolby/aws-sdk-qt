@@ -28,7 +28,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::GetCallerIdentityRequest
  *
- * \brief The GetCallerIdentityRequest class encapsulates STS GetCallerIdentity requests.
+ * \brief The GetCallerIdentityRequest class provides an interface for STS GetCallerIdentity requests.
  *
  * \ingroup STS
  *

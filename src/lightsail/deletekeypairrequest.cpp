@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DeleteKeyPairRequest
  *
- * \brief The DeleteKeyPairRequest class encapsulates Lightsail DeleteKeyPair requests.
+ * \brief The DeleteKeyPairRequest class provides an interface for Lightsail DeleteKeyPair requests.
  *
  * \ingroup Lightsail
  *

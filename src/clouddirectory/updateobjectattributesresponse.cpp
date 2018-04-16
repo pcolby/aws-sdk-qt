@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::UpdateObjectAttributesResponse
  *
- * \brief The UpdateObjectAttributesResponse class encapsulates CloudDirectory UpdateObjectAttributes responses.
+ * \brief The UpdateObjectAttributesResponse class provides an interace for CloudDirectory UpdateObjectAttributes responses.
  *
  * \ingroup CloudDirectory
  *

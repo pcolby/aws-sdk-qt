@@ -30,7 +30,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::ListProjectsResponse
  *
- * \brief The ListProjectsResponse class encapsulates CodeBuild ListProjects responses.
+ * \brief The ListProjectsResponse class provides an interace for CodeBuild ListProjects responses.
  *
  * \ingroup CodeBuild
  *

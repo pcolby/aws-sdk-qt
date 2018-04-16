@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateLoggerDefinitionResponse
  *
- * \brief The CreateLoggerDefinitionResponse class encapsulates Greengrass CreateLoggerDefinition responses.
+ * \brief The CreateLoggerDefinitionResponse class provides an interace for Greengrass CreateLoggerDefinition responses.
  *
  * \ingroup Greengrass
  *

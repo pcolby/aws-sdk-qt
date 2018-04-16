@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::GenerateDataKeyResponse
  *
- * \brief The GenerateDataKeyResponse class encapsulates KMS GenerateDataKey responses.
+ * \brief The GenerateDataKeyResponse class provides an interace for KMS GenerateDataKey responses.
  *
  * \ingroup KMS
  *

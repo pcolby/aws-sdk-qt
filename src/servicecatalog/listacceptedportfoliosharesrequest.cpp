@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListAcceptedPortfolioSharesRequest
  *
- * \brief The ListAcceptedPortfolioSharesRequest class encapsulates ServiceCatalog ListAcceptedPortfolioShares requests.
+ * \brief The ListAcceptedPortfolioSharesRequest class provides an interface for ServiceCatalog ListAcceptedPortfolioShares requests.
  *
  * \ingroup ServiceCatalog
  *

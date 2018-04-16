@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::GetBlobRequest
  *
- * \brief The GetBlobRequest class encapsulates CodeCommit GetBlob requests.
+ * \brief The GetBlobRequest class provides an interface for CodeCommit GetBlob requests.
  *
  * \ingroup CodeCommit
  *

@@ -30,7 +30,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::DeleteSubscriptionResponse
  *
- * \brief The DeleteSubscriptionResponse class encapsulates Shield DeleteSubscription responses.
+ * \brief The DeleteSubscriptionResponse class provides an interace for Shield DeleteSubscription responses.
  *
  * \ingroup Shield
  *

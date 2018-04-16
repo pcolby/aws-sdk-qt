@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::UpdateCommentRequest
  *
- * \brief The UpdateCommentRequest class encapsulates CodeCommit UpdateComment requests.
+ * \brief The UpdateCommentRequest class provides an interface for CodeCommit UpdateComment requests.
  *
  * \ingroup CodeCommit
  *

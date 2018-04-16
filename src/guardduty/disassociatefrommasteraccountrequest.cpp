@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DisassociateFromMasterAccountRequest
  *
- * \brief The DisassociateFromMasterAccountRequest class encapsulates GuardDuty DisassociateFromMasterAccount requests.
+ * \brief The DisassociateFromMasterAccountRequest class provides an interface for GuardDuty DisassociateFromMasterAccount requests.
  *
  * \ingroup GuardDuty
  *

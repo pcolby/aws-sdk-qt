@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListTagsForResourcesRequest
  *
- * \brief The ListTagsForResourcesRequest class encapsulates Route53 ListTagsForResources requests.
+ * \brief The ListTagsForResourcesRequest class provides an interface for Route53 ListTagsForResources requests.
  *
  * \ingroup Route53
  *

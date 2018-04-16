@@ -28,7 +28,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::ListJobsRequest
  *
- * \brief The ListJobsRequest class encapsulates ImportExport ListJobs requests.
+ * \brief The ListJobsRequest class provides an interface for ImportExport ListJobs requests.
  *
  * \ingroup ImportExport
  *

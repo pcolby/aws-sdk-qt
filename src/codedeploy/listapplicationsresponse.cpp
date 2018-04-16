@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::ListApplicationsResponse
  *
- * \brief The ListApplicationsResponse class encapsulates CodeDeploy ListApplications responses.
+ * \brief The ListApplicationsResponse class provides an interace for CodeDeploy ListApplications responses.
  *
  * \ingroup CodeDeploy
  *

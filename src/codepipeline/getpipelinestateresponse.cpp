@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::GetPipelineStateResponse
  *
- * \brief The GetPipelineStateResponse class encapsulates CodePipeline GetPipelineState responses.
+ * \brief The GetPipelineStateResponse class provides an interace for CodePipeline GetPipelineState responses.
  *
  * \ingroup CodePipeline
  *

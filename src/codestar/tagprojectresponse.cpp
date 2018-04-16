@@ -30,7 +30,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::TagProjectResponse
  *
- * \brief The TagProjectResponse class encapsulates CodeStar TagProject responses.
+ * \brief The TagProjectResponse class provides an interace for CodeStar TagProject responses.
  *
  * \ingroup CodeStar
  *

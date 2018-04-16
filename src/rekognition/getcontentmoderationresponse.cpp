@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::GetContentModerationResponse
  *
- * \brief The GetContentModerationResponse class encapsulates Rekognition GetContentModeration responses.
+ * \brief The GetContentModerationResponse class provides an interace for Rekognition GetContentModeration responses.
  *
  * \ingroup Rekognition
  *

@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribePortfolioResponse
  *
- * \brief The DescribePortfolioResponse class encapsulates ServiceCatalog DescribePortfolio responses.
+ * \brief The DescribePortfolioResponse class provides an interace for ServiceCatalog DescribePortfolio responses.
  *
  * \ingroup ServiceCatalog
  *

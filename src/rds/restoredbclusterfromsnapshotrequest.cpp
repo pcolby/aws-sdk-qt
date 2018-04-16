@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RestoreDBClusterFromSnapshotRequest
  *
- * \brief The RestoreDBClusterFromSnapshotRequest class encapsulates RDS RestoreDBClusterFromSnapshot requests.
+ * \brief The RestoreDBClusterFromSnapshotRequest class provides an interface for RDS RestoreDBClusterFromSnapshot requests.
  *
  * \ingroup RDS
  *

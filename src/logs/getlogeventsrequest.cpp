@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::GetLogEventsRequest
  *
- * \brief The GetLogEventsRequest class encapsulates CloudWatchLogs GetLogEvents requests.
+ * \brief The GetLogEventsRequest class provides an interface for CloudWatchLogs GetLogEvents requests.
  *
  * \ingroup CloudWatchLogs
  *

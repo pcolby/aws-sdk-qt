@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateGroupRequest
  *
- * \brief The CreateGroupRequest class encapsulates IAM CreateGroup requests.
+ * \brief The CreateGroupRequest class provides an interface for IAM CreateGroup requests.
  *
  * \ingroup IAM
  *

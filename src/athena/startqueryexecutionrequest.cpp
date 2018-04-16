@@ -28,7 +28,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::StartQueryExecutionRequest
  *
- * \brief The StartQueryExecutionRequest class encapsulates Athena StartQueryExecution requests.
+ * \brief The StartQueryExecutionRequest class provides an interface for Athena StartQueryExecution requests.
  *
  * \ingroup Athena
  *

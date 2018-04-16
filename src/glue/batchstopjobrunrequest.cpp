@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::BatchStopJobRunRequest
  *
- * \brief The BatchStopJobRunRequest class encapsulates Glue BatchStopJobRun requests.
+ * \brief The BatchStopJobRunRequest class provides an interface for Glue BatchStopJobRun requests.
  *
  * \ingroup Glue
  *

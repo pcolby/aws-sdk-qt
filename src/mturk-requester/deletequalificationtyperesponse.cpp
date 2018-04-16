@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::DeleteQualificationTypeResponse
  *
- * \brief The DeleteQualificationTypeResponse class encapsulates MTurk DeleteQualificationType responses.
+ * \brief The DeleteQualificationTypeResponse class provides an interace for MTurk DeleteQualificationType responses.
  *
  * \ingroup MTurk
  *

@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetDatabasesRequest
  *
- * \brief The GetDatabasesRequest class encapsulates Glue GetDatabases requests.
+ * \brief The GetDatabasesRequest class provides an interface for Glue GetDatabases requests.
  *
  * \ingroup Glue
  *

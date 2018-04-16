@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ReplaceTopicRuleRequest
  *
- * \brief The ReplaceTopicRuleRequest class encapsulates IoT ReplaceTopicRule requests.
+ * \brief The ReplaceTopicRuleRequest class provides an interface for IoT ReplaceTopicRule requests.
  *
  * \ingroup IoT
  *

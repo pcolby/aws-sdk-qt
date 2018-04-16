@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DetachTypedLinkResponse
  *
- * \brief The DetachTypedLinkResponse class encapsulates CloudDirectory DetachTypedLink responses.
+ * \brief The DetachTypedLinkResponse class provides an interace for CloudDirectory DetachTypedLink responses.
  *
  * \ingroup CloudDirectory
  *

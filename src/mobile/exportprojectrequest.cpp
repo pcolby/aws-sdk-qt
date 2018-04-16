@@ -28,7 +28,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::ExportProjectRequest
  *
- * \brief The ExportProjectRequest class encapsulates Mobile ExportProject requests.
+ * \brief The ExportProjectRequest class provides an interface for Mobile ExportProject requests.
  *
  * \ingroup Mobile
  *

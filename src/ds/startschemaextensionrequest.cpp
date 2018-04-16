@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::StartSchemaExtensionRequest
  *
- * \brief The StartSchemaExtensionRequest class encapsulates DirectoryService StartSchemaExtension requests.
+ * \brief The StartSchemaExtensionRequest class provides an interface for DirectoryService StartSchemaExtension requests.
  *
  * \ingroup DirectoryService
  *

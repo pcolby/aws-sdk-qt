@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DescribeClustersRequest
  *
- * \brief The DescribeClustersRequest class encapsulates DAX DescribeClusters requests.
+ * \brief The DescribeClustersRequest class provides an interface for DAX DescribeClusters requests.
  *
  * \ingroup DAX
  *

@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::CreateAliasResponse
  *
- * \brief The CreateAliasResponse class encapsulates Lambda CreateAlias responses.
+ * \brief The CreateAliasResponse class provides an interace for Lambda CreateAlias responses.
  *
  * \ingroup Lambda
  *

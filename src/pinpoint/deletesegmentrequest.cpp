@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteSegmentRequest
  *
- * \brief The DeleteSegmentRequest class encapsulates Pinpoint DeleteSegment requests.
+ * \brief The DeleteSegmentRequest class provides an interface for Pinpoint DeleteSegment requests.
  *
  * \ingroup Pinpoint
  *

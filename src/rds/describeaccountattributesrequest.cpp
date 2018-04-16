@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeAccountAttributesRequest
  *
- * \brief The DescribeAccountAttributesRequest class encapsulates RDS DescribeAccountAttributes requests.
+ * \brief The DescribeAccountAttributesRequest class provides an interface for RDS DescribeAccountAttributes requests.
  *
  * \ingroup RDS
  *

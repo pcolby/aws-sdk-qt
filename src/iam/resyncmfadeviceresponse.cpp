@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ResyncMFADeviceResponse
  *
- * \brief The ResyncMFADeviceResponse class encapsulates IAM ResyncMFADevice responses.
+ * \brief The ResyncMFADeviceResponse class provides an interace for IAM ResyncMFADevice responses.
  *
  * \ingroup IAM
  *

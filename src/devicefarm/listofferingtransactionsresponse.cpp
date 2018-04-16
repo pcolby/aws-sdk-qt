@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListOfferingTransactionsResponse
  *
- * \brief The ListOfferingTransactionsResponse class encapsulates DeviceFarm ListOfferingTransactions responses.
+ * \brief The ListOfferingTransactionsResponse class provides an interace for DeviceFarm ListOfferingTransactions responses.
  *
  * \ingroup DeviceFarm
  *

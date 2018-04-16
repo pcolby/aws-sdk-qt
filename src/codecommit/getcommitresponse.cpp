@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::GetCommitResponse
  *
- * \brief The GetCommitResponse class encapsulates CodeCommit GetCommit responses.
+ * \brief The GetCommitResponse class provides an interace for CodeCommit GetCommit responses.
  *
  * \ingroup CodeCommit
  *

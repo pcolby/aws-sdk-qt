@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeElasticLoadBalancersRequest
  *
- * \brief The DescribeElasticLoadBalancersRequest class encapsulates OpsWorks DescribeElasticLoadBalancers requests.
+ * \brief The DescribeElasticLoadBalancersRequest class provides an interface for OpsWorks DescribeElasticLoadBalancers requests.
  *
  * \ingroup OpsWorks
  *

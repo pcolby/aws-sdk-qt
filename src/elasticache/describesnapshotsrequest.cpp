@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DescribeSnapshotsRequest
  *
- * \brief The DescribeSnapshotsRequest class encapsulates ElastiCache DescribeSnapshots requests.
+ * \brief The DescribeSnapshotsRequest class provides an interface for ElastiCache DescribeSnapshots requests.
  *
  * \ingroup ElastiCache
  *

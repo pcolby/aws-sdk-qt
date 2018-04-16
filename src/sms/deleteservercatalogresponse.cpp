@@ -30,7 +30,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::DeleteServerCatalogResponse
  *
- * \brief The DeleteServerCatalogResponse class encapsulates SMS DeleteServerCatalog responses.
+ * \brief The DeleteServerCatalogResponse class provides an interace for SMS DeleteServerCatalog responses.
  *
  * \ingroup SMS
  *

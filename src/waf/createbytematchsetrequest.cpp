@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::CreateByteMatchSetRequest
  *
- * \brief The CreateByteMatchSetRequest class encapsulates WAF CreateByteMatchSet requests.
+ * \brief The CreateByteMatchSetRequest class provides an interface for WAF CreateByteMatchSet requests.
  *
  * \ingroup WAF
  *

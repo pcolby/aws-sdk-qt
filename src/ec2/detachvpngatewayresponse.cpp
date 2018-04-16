@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DetachVpnGatewayResponse
  *
- * \brief The DetachVpnGatewayResponse class encapsulates EC2 DetachVpnGateway responses.
+ * \brief The DetachVpnGatewayResponse class provides an interace for EC2 DetachVpnGateway responses.
  *
  * \ingroup EC2
  *

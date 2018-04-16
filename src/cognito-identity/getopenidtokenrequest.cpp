@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::GetOpenIdTokenRequest
  *
- * \brief The GetOpenIdTokenRequest class encapsulates CognitoIdentity GetOpenIdToken requests.
+ * \brief The GetOpenIdTokenRequest class provides an interface for CognitoIdentity GetOpenIdToken requests.
  *
  * \ingroup CognitoIdentity
  *

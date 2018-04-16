@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DeleteTagsRequest
  *
- * \brief The DeleteTagsRequest class encapsulates SageMaker DeleteTags requests.
+ * \brief The DeleteTagsRequest class provides an interface for SageMaker DeleteTags requests.
  *
  * \ingroup SageMaker
  *

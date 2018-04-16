@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetSendQuotaResponse
  *
- * \brief The GetSendQuotaResponse class encapsulates SES GetSendQuota responses.
+ * \brief The GetSendQuotaResponse class provides an interace for SES GetSendQuota responses.
  *
  * \ingroup SES
  *

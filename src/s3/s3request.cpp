@@ -26,7 +26,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::S3Request
  *
- * \brief The S3Request class is the base class for all S3 requests.
+ * \brief The S3Request class provides an interface for S3 requests.
  *
  * \ingroup S3
  */

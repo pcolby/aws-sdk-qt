@@ -28,7 +28,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::UpdateProjectRequest
  *
- * \brief The UpdateProjectRequest class encapsulates CodeBuild UpdateProject requests.
+ * \brief The UpdateProjectRequest class provides an interface for CodeBuild UpdateProject requests.
  *
  * \ingroup CodeBuild
  *

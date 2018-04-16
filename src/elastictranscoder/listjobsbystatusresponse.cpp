@@ -30,7 +30,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::ListJobsByStatusResponse
  *
- * \brief The ListJobsByStatusResponse class encapsulates ElasticTranscoder ListJobsByStatus responses.
+ * \brief The ListJobsByStatusResponse class provides an interace for ElasticTranscoder ListJobsByStatus responses.
  *
  * \ingroup ElasticTranscoder
  *

@@ -26,7 +26,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::CloudFormationRequest
  *
- * \brief The CloudFormationRequest class is the base class for all CloudFormation requests.
+ * \brief The CloudFormationRequest class provides an interface for CloudFormation requests.
  *
  * \ingroup CloudFormation
  */

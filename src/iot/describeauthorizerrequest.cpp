@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeAuthorizerRequest
  *
- * \brief The DescribeAuthorizerRequest class encapsulates IoT DescribeAuthorizer requests.
+ * \brief The DescribeAuthorizerRequest class provides an interface for IoT DescribeAuthorizer requests.
  *
  * \ingroup IoT
  *

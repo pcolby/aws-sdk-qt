@@ -39,7 +39,7 @@ namespace MarketplaceEntitlementService {
 /*!
  * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceClient
  *
- * \brief The MarketplaceEntitlementServiceClient class provides access the AWS Marketplace Entitlement Service service.
+ * \brief The MarketplaceEntitlementServiceClient class provides access to the AWS Marketplace Entitlement Service service.
  *
  * \ingroup MarketplaceEntitlementService
  *

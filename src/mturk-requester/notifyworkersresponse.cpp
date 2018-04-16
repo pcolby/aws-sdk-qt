@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::NotifyWorkersResponse
  *
- * \brief The NotifyWorkersResponse class encapsulates MTurk NotifyWorkers responses.
+ * \brief The NotifyWorkersResponse class provides an interace for MTurk NotifyWorkers responses.
  *
  * \ingroup MTurk
  *

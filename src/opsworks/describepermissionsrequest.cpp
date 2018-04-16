@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribePermissionsRequest
  *
- * \brief The DescribePermissionsRequest class encapsulates OpsWorks DescribePermissions requests.
+ * \brief The DescribePermissionsRequest class provides an interface for OpsWorks DescribePermissions requests.
  *
  * \ingroup OpsWorks
  *

@@ -65,7 +65,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::CloudTrailClient
  *
- * \brief The CloudTrailClient class provides access the AWS CloudTrail service.
+ * \brief The CloudTrailClient class provides access to the AWS CloudTrail service.
  *
  * \ingroup CloudTrail
  *

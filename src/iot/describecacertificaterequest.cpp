@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeCACertificateRequest
  *
- * \brief The DescribeCACertificateRequest class encapsulates IoT DescribeCACertificate requests.
+ * \brief The DescribeCACertificateRequest class provides an interface for IoT DescribeCACertificate requests.
  *
  * \ingroup IoT
  *

@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::RegisterEventTopicRequest
  *
- * \brief The RegisterEventTopicRequest class encapsulates DirectoryService RegisterEventTopic requests.
+ * \brief The RegisterEventTopicRequest class provides an interface for DirectoryService RegisterEventTopic requests.
  *
  * \ingroup DirectoryService
  *

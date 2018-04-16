@@ -47,7 +47,7 @@ namespace ResourceGroupsTaggingAPI {
 /*!
  * \class QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIClient
  *
- * \brief The ResourceGroupsTaggingAPIClient class provides access the AWS Resource Groups Tagging API service.
+ * \brief The ResourceGroupsTaggingAPIClient class provides access to the AWS Resource Groups Tagging API service.
  *
  * \ingroup ResourceGroupsTaggingAPI
  *

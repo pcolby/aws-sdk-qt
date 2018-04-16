@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CopyImageRequest
  *
- * \brief The CopyImageRequest class encapsulates EC2 CopyImage requests.
+ * \brief The CopyImageRequest class provides an interface for EC2 CopyImage requests.
  *
  * \ingroup EC2
  *

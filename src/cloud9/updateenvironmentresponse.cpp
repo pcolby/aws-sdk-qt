@@ -30,7 +30,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::UpdateEnvironmentResponse
  *
- * \brief The UpdateEnvironmentResponse class encapsulates Cloud9 UpdateEnvironment responses.
+ * \brief The UpdateEnvironmentResponse class provides an interace for Cloud9 UpdateEnvironment responses.
  *
  * \ingroup Cloud9
  *

@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::UpdateDataSourceRequest
  *
- * \brief The UpdateDataSourceRequest class encapsulates AppSync UpdateDataSource requests.
+ * \brief The UpdateDataSourceRequest class provides an interface for AppSync UpdateDataSource requests.
  *
  * \ingroup AppSync
  *

@@ -30,7 +30,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::ListBundlesResponse
  *
- * \brief The ListBundlesResponse class encapsulates Mobile ListBundles responses.
+ * \brief The ListBundlesResponse class provides an interace for Mobile ListBundles responses.
  *
  * \ingroup Mobile
  *

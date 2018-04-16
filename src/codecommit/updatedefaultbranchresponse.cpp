@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::UpdateDefaultBranchResponse
  *
- * \brief The UpdateDefaultBranchResponse class encapsulates CodeCommit UpdateDefaultBranch responses.
+ * \brief The UpdateDefaultBranchResponse class provides an interace for CodeCommit UpdateDefaultBranch responses.
  *
  * \ingroup CodeCommit
  *

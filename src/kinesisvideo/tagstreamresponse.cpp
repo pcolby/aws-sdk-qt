@@ -30,7 +30,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::TagStreamResponse
  *
- * \brief The TagStreamResponse class encapsulates KinesisVideo TagStream responses.
+ * \brief The TagStreamResponse class provides an interace for KinesisVideo TagStream responses.
  *
  * \ingroup KinesisVideo
  *

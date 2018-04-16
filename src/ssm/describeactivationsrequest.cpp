@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeActivationsRequest
  *
- * \brief The DescribeActivationsRequest class encapsulates SSM DescribeActivations requests.
+ * \brief The DescribeActivationsRequest class provides an interface for SSM DescribeActivations requests.
  *
  * \ingroup SSM
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteSecurityGroupResponse
  *
- * \brief The DeleteSecurityGroupResponse class encapsulates EC2 DeleteSecurityGroup responses.
+ * \brief The DeleteSecurityGroupResponse class provides an interace for EC2 DeleteSecurityGroup responses.
  *
  * \ingroup EC2
  *

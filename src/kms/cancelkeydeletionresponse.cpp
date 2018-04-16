@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::CancelKeyDeletionResponse
  *
- * \brief The CancelKeyDeletionResponse class encapsulates KMS CancelKeyDeletion responses.
+ * \brief The CancelKeyDeletionResponse class provides an interace for KMS CancelKeyDeletion responses.
  *
  * \ingroup KMS
  *

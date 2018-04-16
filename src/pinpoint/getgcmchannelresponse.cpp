@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetGcmChannelResponse
  *
- * \brief The GetGcmChannelResponse class encapsulates Pinpoint GetGcmChannel responses.
+ * \brief The GetGcmChannelResponse class provides an interace for Pinpoint GetGcmChannel responses.
  *
  * \ingroup Pinpoint
  *

@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateRestApiResponse
  *
- * \brief The CreateRestApiResponse class encapsulates APIGateway CreateRestApi responses.
+ * \brief The CreateRestApiResponse class provides an interace for APIGateway CreateRestApi responses.
  *
  * \ingroup APIGateway
  *

@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::GetBulkPublishDetailsResponse
  *
- * \brief The GetBulkPublishDetailsResponse class encapsulates CognitoSync GetBulkPublishDetails responses.
+ * \brief The GetBulkPublishDetailsResponse class provides an interace for CognitoSync GetBulkPublishDetails responses.
  *
  * \ingroup CognitoSync
  *

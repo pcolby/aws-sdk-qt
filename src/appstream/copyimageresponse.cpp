@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::CopyImageResponse
  *
- * \brief The CopyImageResponse class encapsulates AppStream CopyImage responses.
+ * \brief The CopyImageResponse class provides an interace for AppStream CopyImage responses.
  *
  * \ingroup AppStream
  *

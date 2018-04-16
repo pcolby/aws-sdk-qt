@@ -30,7 +30,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::DescribeWorkspaceBundlesResponse
  *
- * \brief The DescribeWorkspaceBundlesResponse class encapsulates WorkSpaces DescribeWorkspaceBundles responses.
+ * \brief The DescribeWorkspaceBundlesResponse class provides an interace for WorkSpaces DescribeWorkspaceBundles responses.
  *
  * \ingroup WorkSpaces
  *

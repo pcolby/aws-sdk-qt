@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AssociateRouteTableRequest
  *
- * \brief The AssociateRouteTableRequest class encapsulates EC2 AssociateRouteTable requests.
+ * \brief The AssociateRouteTableRequest class provides an interface for EC2 AssociateRouteTable requests.
  *
  * \ingroup EC2
  *

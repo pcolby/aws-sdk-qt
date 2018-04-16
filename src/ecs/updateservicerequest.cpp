@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::UpdateServiceRequest
  *
- * \brief The UpdateServiceRequest class encapsulates ECS UpdateService requests.
+ * \brief The UpdateServiceRequest class provides an interface for ECS UpdateService requests.
  *
  * \ingroup ECS
  *

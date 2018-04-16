@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::GetCelebrityInfoRequest
  *
- * \brief The GetCelebrityInfoRequest class encapsulates Rekognition GetCelebrityInfo requests.
+ * \brief The GetCelebrityInfoRequest class provides an interface for Rekognition GetCelebrityInfo requests.
  *
  * \ingroup Rekognition
  *

@@ -28,7 +28,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::DeleteTagsRequest
  *
- * \brief The DeleteTagsRequest class encapsulates WorkSpaces DeleteTags requests.
+ * \brief The DeleteTagsRequest class provides an interface for WorkSpaces DeleteTags requests.
  *
  * \ingroup WorkSpaces
  *

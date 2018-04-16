@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeletePermissionPolicyResponse
  *
- * \brief The DeletePermissionPolicyResponse class encapsulates WAFRegional DeletePermissionPolicy responses.
+ * \brief The DeletePermissionPolicyResponse class provides an interace for WAFRegional DeletePermissionPolicy responses.
  *
  * \ingroup WAFRegional
  *

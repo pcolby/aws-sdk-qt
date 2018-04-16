@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::TestConnectionResponse
  *
- * \brief The TestConnectionResponse class encapsulates DatabaseMigrationService TestConnection responses.
+ * \brief The TestConnectionResponse class provides an interace for DatabaseMigrationService TestConnection responses.
  *
  * \ingroup DatabaseMigrationService
  *

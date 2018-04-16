@@ -28,7 +28,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::ListDatasetsRequest
  *
- * \brief The ListDatasetsRequest class encapsulates CognitoSync ListDatasets requests.
+ * \brief The ListDatasetsRequest class provides an interface for CognitoSync ListDatasets requests.
  *
  * \ingroup CognitoSync
  *

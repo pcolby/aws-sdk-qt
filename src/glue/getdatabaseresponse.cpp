@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetDatabaseResponse
  *
- * \brief The GetDatabaseResponse class encapsulates Glue GetDatabase responses.
+ * \brief The GetDatabaseResponse class provides an interace for Glue GetDatabase responses.
  *
  * \ingroup Glue
  *

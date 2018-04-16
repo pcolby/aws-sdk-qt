@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateKeysAndCertificateResponse
  *
- * \brief The CreateKeysAndCertificateResponse class encapsulates IoT CreateKeysAndCertificate responses.
+ * \brief The CreateKeysAndCertificateResponse class provides an interace for IoT CreateKeysAndCertificate responses.
  *
  * \ingroup IoT
  *

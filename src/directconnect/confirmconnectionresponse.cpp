@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::ConfirmConnectionResponse
  *
- * \brief The ConfirmConnectionResponse class encapsulates DirectConnect ConfirmConnection responses.
+ * \brief The ConfirmConnectionResponse class provides an interace for DirectConnect ConfirmConnection responses.
  *
  * \ingroup DirectConnect
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribePlacementGroupsResponse
  *
- * \brief The DescribePlacementGroupsResponse class encapsulates EC2 DescribePlacementGroups responses.
+ * \brief The DescribePlacementGroupsResponse class provides an interace for EC2 DescribePlacementGroups responses.
  *
  * \ingroup EC2
  *

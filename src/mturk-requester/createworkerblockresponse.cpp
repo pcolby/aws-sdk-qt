@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::CreateWorkerBlockResponse
  *
- * \brief The CreateWorkerBlockResponse class encapsulates MTurk CreateWorkerBlock responses.
+ * \brief The CreateWorkerBlockResponse class provides an interace for MTurk CreateWorkerBlock responses.
  *
  * \ingroup MTurk
  *

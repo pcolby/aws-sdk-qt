@@ -26,7 +26,7 @@ namespace KinesisVideoMedia {
 /*!
  * \class QtAws::KinesisVideoMedia::KinesisVideoMediaRequest
  *
- * \brief The KinesisVideoMediaRequest class is the base class for all KinesisVideoMedia requests.
+ * \brief The KinesisVideoMediaRequest class provides an interface for KinesisVideoMedia requests.
  *
  * \ingroup KinesisVideoMedia
  */

@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::ConfigureHealthCheckRequest
  *
- * \brief The ConfigureHealthCheckRequest class encapsulates ElasticLoadBalancing ConfigureHealthCheck requests.
+ * \brief The ConfigureHealthCheckRequest class provides an interface for ElasticLoadBalancing ConfigureHealthCheck requests.
  *
  * \ingroup ElasticLoadBalancing
  *

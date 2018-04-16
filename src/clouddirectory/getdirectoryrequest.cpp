@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::GetDirectoryRequest
  *
- * \brief The GetDirectoryRequest class encapsulates CloudDirectory GetDirectory requests.
+ * \brief The GetDirectoryRequest class provides an interface for CloudDirectory GetDirectory requests.
  *
  * \ingroup CloudDirectory
  *

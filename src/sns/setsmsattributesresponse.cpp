@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::SetSMSAttributesResponse
  *
- * \brief The SetSMSAttributesResponse class encapsulates SNS SetSMSAttributes responses.
+ * \brief The SetSMSAttributesResponse class provides an interace for SNS SetSMSAttributes responses.
  *
  * \ingroup SNS
  *

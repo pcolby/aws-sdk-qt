@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::ExecutePolicyResponse
  *
- * \brief The ExecutePolicyResponse class encapsulates AutoScaling ExecutePolicy responses.
+ * \brief The ExecutePolicyResponse class provides an interace for AutoScaling ExecutePolicy responses.
  *
  * \ingroup AutoScaling
  *

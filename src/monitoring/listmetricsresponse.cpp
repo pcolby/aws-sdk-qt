@@ -30,7 +30,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::ListMetricsResponse
  *
- * \brief The ListMetricsResponse class encapsulates CloudWatch ListMetrics responses.
+ * \brief The ListMetricsResponse class provides an interace for CloudWatch ListMetrics responses.
  *
  * \ingroup CloudWatch
  *

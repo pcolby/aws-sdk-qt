@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::ListGroupMembersRequest
  *
- * \brief The ListGroupMembersRequest class encapsulates WorkMail ListGroupMembers requests.
+ * \brief The ListGroupMembersRequest class provides an interface for WorkMail ListGroupMembers requests.
  *
  * \ingroup WorkMail
  *

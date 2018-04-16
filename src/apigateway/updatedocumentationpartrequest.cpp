@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateDocumentationPartRequest
  *
- * \brief The UpdateDocumentationPartRequest class encapsulates APIGateway UpdateDocumentationPart requests.
+ * \brief The UpdateDocumentationPartRequest class provides an interface for APIGateway UpdateDocumentationPart requests.
  *
  * \ingroup APIGateway
  *

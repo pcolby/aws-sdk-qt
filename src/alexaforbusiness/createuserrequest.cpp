@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::CreateUserRequest
  *
- * \brief The CreateUserRequest class encapsulates AlexaForBusiness CreateUser requests.
+ * \brief The CreateUserRequest class provides an interface for AlexaForBusiness CreateUser requests.
  *
  * \ingroup AlexaForBusiness
  *

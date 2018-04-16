@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CreateDBParameterGroupRequest
  *
- * \brief The CreateDBParameterGroupRequest class encapsulates RDS CreateDBParameterGroup requests.
+ * \brief The CreateDBParameterGroupRequest class provides an interface for RDS CreateDBParameterGroup requests.
  *
  * \ingroup RDS
  *

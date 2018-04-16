@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::CreateMatchmakingConfigurationResponse
  *
- * \brief The CreateMatchmakingConfigurationResponse class encapsulates GameLift CreateMatchmakingConfiguration responses.
+ * \brief The CreateMatchmakingConfigurationResponse class provides an interace for GameLift CreateMatchmakingConfiguration responses.
  *
  * \ingroup GameLift
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateVpcEndpointRequest
  *
- * \brief The CreateVpcEndpointRequest class encapsulates EC2 CreateVpcEndpoint requests.
+ * \brief The CreateVpcEndpointRequest class provides an interface for EC2 CreateVpcEndpoint requests.
  *
  * \ingroup EC2
  *

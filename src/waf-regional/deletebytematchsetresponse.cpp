@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeleteByteMatchSetResponse
  *
- * \brief The DeleteByteMatchSetResponse class encapsulates WAFRegional DeleteByteMatchSet responses.
+ * \brief The DeleteByteMatchSetResponse class provides an interace for WAFRegional DeleteByteMatchSet responses.
  *
  * \ingroup WAFRegional
  *

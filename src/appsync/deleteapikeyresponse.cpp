@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::DeleteApiKeyResponse
  *
- * \brief The DeleteApiKeyResponse class encapsulates AppSync DeleteApiKey responses.
+ * \brief The DeleteApiKeyResponse class provides an interace for AppSync DeleteApiKey responses.
  *
  * \ingroup AppSync
  *

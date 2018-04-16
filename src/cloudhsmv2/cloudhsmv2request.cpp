@@ -26,7 +26,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::CloudHSMV2Request
  *
- * \brief The CloudHSMV2Request class is the base class for all CloudHSMV2 requests.
+ * \brief The CloudHSMV2Request class provides an interface for CloudHSMV2 requests.
  *
  * \ingroup CloudHSMV2
  */

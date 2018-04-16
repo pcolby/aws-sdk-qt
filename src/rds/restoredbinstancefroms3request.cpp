@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RestoreDBInstanceFromS3Request
  *
- * \brief The RestoreDBInstanceFromS3Request class encapsulates RDS RestoreDBInstanceFromS3 requests.
+ * \brief The RestoreDBInstanceFromS3Request class provides an interface for RDS RestoreDBInstanceFromS3 requests.
  *
  * \ingroup RDS
  *

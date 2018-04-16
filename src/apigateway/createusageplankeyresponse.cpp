@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateUsagePlanKeyResponse
  *
- * \brief The CreateUsagePlanKeyResponse class encapsulates APIGateway CreateUsagePlanKey responses.
+ * \brief The CreateUsagePlanKeyResponse class provides an interace for APIGateway CreateUsagePlanKey responses.
  *
  * \ingroup APIGateway
  *

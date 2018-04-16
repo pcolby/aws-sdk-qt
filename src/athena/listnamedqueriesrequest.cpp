@@ -28,7 +28,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::ListNamedQueriesRequest
  *
- * \brief The ListNamedQueriesRequest class encapsulates Athena ListNamedQueries requests.
+ * \brief The ListNamedQueriesRequest class provides an interface for Athena ListNamedQueries requests.
  *
  * \ingroup Athena
  *

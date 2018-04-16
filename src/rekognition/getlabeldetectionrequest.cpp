@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::GetLabelDetectionRequest
  *
- * \brief The GetLabelDetectionRequest class encapsulates Rekognition GetLabelDetection requests.
+ * \brief The GetLabelDetectionRequest class provides an interface for Rekognition GetLabelDetection requests.
  *
  * \ingroup Rekognition
  *

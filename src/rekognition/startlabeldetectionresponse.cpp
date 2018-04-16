@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::StartLabelDetectionResponse
  *
- * \brief The StartLabelDetectionResponse class encapsulates Rekognition StartLabelDetection responses.
+ * \brief The StartLabelDetectionResponse class provides an interace for Rekognition StartLabelDetection responses.
  *
  * \ingroup Rekognition
  *

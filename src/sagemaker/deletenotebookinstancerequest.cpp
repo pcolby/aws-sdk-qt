@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DeleteNotebookInstanceRequest
  *
- * \brief The DeleteNotebookInstanceRequest class encapsulates SageMaker DeleteNotebookInstance requests.
+ * \brief The DeleteNotebookInstanceRequest class provides an interface for SageMaker DeleteNotebookInstance requests.
  *
  * \ingroup SageMaker
  *

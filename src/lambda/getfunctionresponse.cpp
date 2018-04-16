@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::GetFunctionResponse
  *
- * \brief The GetFunctionResponse class encapsulates Lambda GetFunction responses.
+ * \brief The GetFunctionResponse class provides an interace for Lambda GetFunction responses.
  *
  * \ingroup Lambda
  *

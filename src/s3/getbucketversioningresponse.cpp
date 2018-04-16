@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketVersioningResponse
  *
- * \brief The GetBucketVersioningResponse class encapsulates S3 GetBucketVersioning responses.
+ * \brief The GetBucketVersioningResponse class provides an interace for S3 GetBucketVersioning responses.
  *
  * \ingroup S3
  *

@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DeleteCacheSubnetGroupRequest
  *
- * \brief The DeleteCacheSubnetGroupRequest class encapsulates ElastiCache DeleteCacheSubnetGroup requests.
+ * \brief The DeleteCacheSubnetGroupRequest class provides an interface for ElastiCache DeleteCacheSubnetGroup requests.
  *
  * \ingroup ElastiCache
  *

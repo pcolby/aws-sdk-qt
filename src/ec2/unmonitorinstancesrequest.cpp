@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::UnmonitorInstancesRequest
  *
- * \brief The UnmonitorInstancesRequest class encapsulates EC2 UnmonitorInstances requests.
+ * \brief The UnmonitorInstancesRequest class provides an interface for EC2 UnmonitorInstances requests.
  *
  * \ingroup EC2
  *

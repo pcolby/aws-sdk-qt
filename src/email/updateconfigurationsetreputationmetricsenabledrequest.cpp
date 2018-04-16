@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::UpdateConfigurationSetReputationMetricsEnabledRequest
  *
- * \brief The UpdateConfigurationSetReputationMetricsEnabledRequest class encapsulates SES UpdateConfigurationSetReputationMetricsEnabled requests.
+ * \brief The UpdateConfigurationSetReputationMetricsEnabledRequest class provides an interface for SES UpdateConfigurationSetReputationMetricsEnabled requests.
  *
  * \ingroup SES
  *

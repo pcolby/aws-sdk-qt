@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteClusterSnapshotRequest
  *
- * \brief The DeleteClusterSnapshotRequest class encapsulates Redshift DeleteClusterSnapshot requests.
+ * \brief The DeleteClusterSnapshotRequest class provides an interface for Redshift DeleteClusterSnapshot requests.
  *
  * \ingroup Redshift
  *

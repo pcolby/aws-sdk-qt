@@ -28,7 +28,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::DescribeTrailsRequest
  *
- * \brief The DescribeTrailsRequest class encapsulates CloudTrail DescribeTrails requests.
+ * \brief The DescribeTrailsRequest class provides an interface for CloudTrail DescribeTrails requests.
  *
  * \ingroup CloudTrail
  *

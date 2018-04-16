@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::UpdateChannelResponse
  *
- * \brief The UpdateChannelResponse class encapsulates MediaLive UpdateChannel responses.
+ * \brief The UpdateChannelResponse class provides an interace for MediaLive UpdateChannel responses.
  *
  * \ingroup MediaLive
  *

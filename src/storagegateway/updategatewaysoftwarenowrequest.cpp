@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::UpdateGatewaySoftwareNowRequest
  *
- * \brief The UpdateGatewaySoftwareNowRequest class encapsulates StorageGateway UpdateGatewaySoftwareNow requests.
+ * \brief The UpdateGatewaySoftwareNowRequest class provides an interface for StorageGateway UpdateGatewaySoftwareNow requests.
  *
  * \ingroup StorageGateway
  *

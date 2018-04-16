@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeEffectivePatchesForPatchBaselineResponse
  *
- * \brief The DescribeEffectivePatchesForPatchBaselineResponse class encapsulates SSM DescribeEffectivePatchesForPatchBaseline responses.
+ * \brief The DescribeEffectivePatchesForPatchBaselineResponse class provides an interace for SSM DescribeEffectivePatchesForPatchBaseline responses.
  *
  * \ingroup SSM
  *

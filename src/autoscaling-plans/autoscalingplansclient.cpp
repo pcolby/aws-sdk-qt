@@ -45,7 +45,7 @@ namespace AutoScalingPlans {
 /*!
  * \class QtAws::AutoScalingPlans::AutoScalingPlansClient
  *
- * \brief The AutoScalingPlansClient class provides access the AWS Auto Scaling Plans service.
+ * \brief The AutoScalingPlansClient class provides access to the AWS Auto Scaling Plans service.
  *
  * \ingroup AutoScalingPlans
  *

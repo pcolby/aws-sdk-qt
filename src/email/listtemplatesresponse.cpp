@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::ListTemplatesResponse
  *
- * \brief The ListTemplatesResponse class encapsulates SES ListTemplates responses.
+ * \brief The ListTemplatesResponse class provides an interace for SES ListTemplates responses.
  *
  * \ingroup SES
  *

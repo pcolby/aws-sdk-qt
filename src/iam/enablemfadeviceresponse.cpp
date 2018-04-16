@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::EnableMFADeviceResponse
  *
- * \brief The EnableMFADeviceResponse class encapsulates IAM EnableMFADevice responses.
+ * \brief The EnableMFADeviceResponse class provides an interace for IAM EnableMFADevice responses.
  *
  * \ingroup IAM
  *

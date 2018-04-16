@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::SetTerminationProtectionRequest
  *
- * \brief The SetTerminationProtectionRequest class encapsulates EMR SetTerminationProtection requests.
+ * \brief The SetTerminationProtectionRequest class provides an interface for EMR SetTerminationProtection requests.
  *
  * \ingroup EMR
  *

@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::PutConfigurationAggregatorRequest
  *
- * \brief The PutConfigurationAggregatorRequest class encapsulates ConfigService PutConfigurationAggregator requests.
+ * \brief The PutConfigurationAggregatorRequest class provides an interface for ConfigService PutConfigurationAggregator requests.
  *
  * \ingroup ConfigService
  *

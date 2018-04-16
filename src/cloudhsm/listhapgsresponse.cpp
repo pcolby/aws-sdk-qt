@@ -30,7 +30,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::ListHapgsResponse
  *
- * \brief The ListHapgsResponse class encapsulates CloudHSM ListHapgs responses.
+ * \brief The ListHapgsResponse class provides an interace for CloudHSM ListHapgs responses.
  *
  * \ingroup CloudHSM
  *

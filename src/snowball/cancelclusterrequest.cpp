@@ -28,7 +28,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::CancelClusterRequest
  *
- * \brief The CancelClusterRequest class encapsulates Snowball CancelCluster requests.
+ * \brief The CancelClusterRequest class provides an interface for Snowball CancelCluster requests.
  *
  * \ingroup Snowball
  *

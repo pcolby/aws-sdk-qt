@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateImageResponse
  *
- * \brief The CreateImageResponse class encapsulates EC2 CreateImage responses.
+ * \brief The CreateImageResponse class provides an interace for EC2 CreateImage responses.
  *
  * \ingroup EC2
  *

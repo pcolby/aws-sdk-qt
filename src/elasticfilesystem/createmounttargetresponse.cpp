@@ -30,7 +30,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::CreateMountTargetResponse
  *
- * \brief The CreateMountTargetResponse class encapsulates EFS CreateMountTarget responses.
+ * \brief The CreateMountTargetResponse class provides an interace for EFS CreateMountTarget responses.
  *
  * \ingroup EFS
  *

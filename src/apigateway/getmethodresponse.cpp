@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetMethodResponse
  *
- * \brief The GetMethodResponse class encapsulates APIGateway GetMethod responses.
+ * \brief The GetMethodResponse class provides an interace for APIGateway GetMethod responses.
  *
  * \ingroup APIGateway
  *

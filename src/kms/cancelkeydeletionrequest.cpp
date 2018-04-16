@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::CancelKeyDeletionRequest
  *
- * \brief The CancelKeyDeletionRequest class encapsulates KMS CancelKeyDeletion requests.
+ * \brief The CancelKeyDeletionRequest class provides an interface for KMS CancelKeyDeletion requests.
  *
  * \ingroup KMS
  *

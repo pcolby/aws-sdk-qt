@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateVpcPeeringConnectionRequest
  *
- * \brief The CreateVpcPeeringConnectionRequest class encapsulates EC2 CreateVpcPeeringConnection requests.
+ * \brief The CreateVpcPeeringConnectionRequest class provides an interface for EC2 CreateVpcPeeringConnection requests.
  *
  * \ingroup EC2
  *

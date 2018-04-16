@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::TagResourceRequest
  *
- * \brief The TagResourceRequest class encapsulates Lambda TagResource requests.
+ * \brief The TagResourceRequest class provides an interface for Lambda TagResource requests.
  *
  * \ingroup Lambda
  *

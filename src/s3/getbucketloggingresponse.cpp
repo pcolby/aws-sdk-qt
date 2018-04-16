@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketLoggingResponse
  *
- * \brief The GetBucketLoggingResponse class encapsulates S3 GetBucketLogging responses.
+ * \brief The GetBucketLoggingResponse class provides an interace for S3 GetBucketLogging responses.
  *
  * \ingroup S3
  *

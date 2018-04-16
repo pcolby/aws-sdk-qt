@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::GetCommitRequest
  *
- * \brief The GetCommitRequest class encapsulates CodeCommit GetCommit requests.
+ * \brief The GetCommitRequest class provides an interface for CodeCommit GetCommit requests.
  *
  * \ingroup CodeCommit
  *

@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::TestInvokeAuthorizerResponse
  *
- * \brief The TestInvokeAuthorizerResponse class encapsulates IoT TestInvokeAuthorizer responses.
+ * \brief The TestInvokeAuthorizerResponse class provides an interace for IoT TestInvokeAuthorizer responses.
  *
  * \ingroup IoT
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AcceptVpcPeeringConnectionRequest
  *
- * \brief The AcceptVpcPeeringConnectionRequest class encapsulates EC2 AcceptVpcPeeringConnection requests.
+ * \brief The AcceptVpcPeeringConnectionRequest class provides an interface for EC2 AcceptVpcPeeringConnection requests.
  *
  * \ingroup EC2
  *

@@ -26,7 +26,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DirectoryServiceRequest
  *
- * \brief The DirectoryServiceRequest class is the base class for all DirectoryService requests.
+ * \brief The DirectoryServiceRequest class provides an interface for DirectoryService requests.
  *
  * \ingroup DirectoryService
  */

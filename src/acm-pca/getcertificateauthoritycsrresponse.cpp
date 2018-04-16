@@ -30,7 +30,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::GetCertificateAuthorityCsrResponse
  *
- * \brief The GetCertificateAuthorityCsrResponse class encapsulates ACMPCA GetCertificateAuthorityCsr responses.
+ * \brief The GetCertificateAuthorityCsrResponse class provides an interace for ACMPCA GetCertificateAuthorityCsr responses.
  *
  * \ingroup ACMPCA
  *

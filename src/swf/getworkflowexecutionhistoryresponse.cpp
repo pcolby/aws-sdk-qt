@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::GetWorkflowExecutionHistoryResponse
  *
- * \brief The GetWorkflowExecutionHistoryResponse class encapsulates SWF GetWorkflowExecutionHistory responses.
+ * \brief The GetWorkflowExecutionHistoryResponse class provides an interace for SWF GetWorkflowExecutionHistory responses.
  *
  * \ingroup SWF
  *

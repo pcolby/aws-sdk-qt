@@ -26,7 +26,7 @@ namespace Firehose {
 /*!
  * \class QtAws::Firehose::FirehoseRequest
  *
- * \brief The FirehoseRequest class is the base class for all Firehose requests.
+ * \brief The FirehoseRequest class provides an interface for Firehose requests.
  *
  * \ingroup Firehose
  */

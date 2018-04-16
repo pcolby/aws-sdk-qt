@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::ListOrganizationsResponse
  *
- * \brief The ListOrganizationsResponse class encapsulates WorkMail ListOrganizations responses.
+ * \brief The ListOrganizationsResponse class provides an interace for WorkMail ListOrganizations responses.
  *
  * \ingroup WorkMail
  *

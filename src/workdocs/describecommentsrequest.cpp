@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeCommentsRequest
  *
- * \brief The DescribeCommentsRequest class encapsulates WorkDocs DescribeComments requests.
+ * \brief The DescribeCommentsRequest class provides an interface for WorkDocs DescribeComments requests.
  *
  * \ingroup WorkDocs
  *

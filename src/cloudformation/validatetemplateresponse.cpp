@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ValidateTemplateResponse
  *
- * \brief The ValidateTemplateResponse class encapsulates CloudFormation ValidateTemplate responses.
+ * \brief The ValidateTemplateResponse class provides an interace for CloudFormation ValidateTemplate responses.
  *
  * \ingroup CloudFormation
  *

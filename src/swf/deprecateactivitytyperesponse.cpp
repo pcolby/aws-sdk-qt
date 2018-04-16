@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::DeprecateActivityTypeResponse
  *
- * \brief The DeprecateActivityTypeResponse class encapsulates SWF DeprecateActivityType responses.
+ * \brief The DeprecateActivityTypeResponse class provides an interace for SWF DeprecateActivityType responses.
  *
  * \ingroup SWF
  *

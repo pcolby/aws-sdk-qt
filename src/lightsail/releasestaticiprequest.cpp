@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::ReleaseStaticIpRequest
  *
- * \brief The ReleaseStaticIpRequest class encapsulates Lightsail ReleaseStaticIp requests.
+ * \brief The ReleaseStaticIpRequest class provides an interface for Lightsail ReleaseStaticIp requests.
  *
  * \ingroup Lightsail
  *

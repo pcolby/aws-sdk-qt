@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::UpdateApiKeyResponse
  *
- * \brief The UpdateApiKeyResponse class encapsulates AppSync UpdateApiKey responses.
+ * \brief The UpdateApiKeyResponse class provides an interace for AppSync UpdateApiKey responses.
  *
  * \ingroup AppSync
  *

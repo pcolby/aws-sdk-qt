@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeAppsResponse
  *
- * \brief The DescribeAppsResponse class encapsulates OpsWorks DescribeApps responses.
+ * \brief The DescribeAppsResponse class provides an interace for OpsWorks DescribeApps responses.
  *
  * \ingroup OpsWorks
  *

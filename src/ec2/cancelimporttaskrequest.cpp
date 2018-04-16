@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CancelImportTaskRequest
  *
- * \brief The CancelImportTaskRequest class encapsulates EC2 CancelImportTask requests.
+ * \brief The CancelImportTaskRequest class provides an interface for EC2 CancelImportTask requests.
  *
  * \ingroup EC2
  *

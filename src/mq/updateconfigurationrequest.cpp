@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::UpdateConfigurationRequest
  *
- * \brief The UpdateConfigurationRequest class encapsulates MQ UpdateConfiguration requests.
+ * \brief The UpdateConfigurationRequest class provides an interface for MQ UpdateConfiguration requests.
  *
  * \ingroup MQ
  *

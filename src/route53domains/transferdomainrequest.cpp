@@ -28,7 +28,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::TransferDomainRequest
  *
- * \brief The TransferDomainRequest class encapsulates Route53Domains TransferDomain requests.
+ * \brief The TransferDomainRequest class provides an interface for Route53Domains TransferDomain requests.
  *
  * \ingroup Route53Domains
  *

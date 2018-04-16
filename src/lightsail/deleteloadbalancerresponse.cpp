@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DeleteLoadBalancerResponse
  *
- * \brief The DeleteLoadBalancerResponse class encapsulates Lightsail DeleteLoadBalancer responses.
+ * \brief The DeleteLoadBalancerResponse class provides an interace for Lightsail DeleteLoadBalancer responses.
  *
  * \ingroup Lightsail
  *

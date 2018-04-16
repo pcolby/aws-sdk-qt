@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteIntegrationResponseRequest
  *
- * \brief The DeleteIntegrationResponseRequest class encapsulates APIGateway DeleteIntegrationResponse requests.
+ * \brief The DeleteIntegrationResponseRequest class provides an interface for APIGateway DeleteIntegrationResponse requests.
  *
  * \ingroup APIGateway
  *

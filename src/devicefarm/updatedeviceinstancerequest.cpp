@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::UpdateDeviceInstanceRequest
  *
- * \brief The UpdateDeviceInstanceRequest class encapsulates DeviceFarm UpdateDeviceInstance requests.
+ * \brief The UpdateDeviceInstanceRequest class provides an interface for DeviceFarm UpdateDeviceInstance requests.
  *
  * \ingroup DeviceFarm
  *

@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DescribeEventsResponse
  *
- * \brief The DescribeEventsResponse class encapsulates OpsWorksCM DescribeEvents responses.
+ * \brief The DescribeEventsResponse class provides an interace for OpsWorksCM DescribeEvents responses.
  *
  * \ingroup OpsWorksCM
  *

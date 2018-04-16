@@ -26,7 +26,7 @@ namespace LexRuntimeService {
 /*!
  * \class QtAws::LexRuntimeService::LexRuntimeServiceRequest
  *
- * \brief The LexRuntimeServiceRequest class is the base class for all LexRuntimeService requests.
+ * \brief The LexRuntimeServiceRequest class provides an interface for LexRuntimeService requests.
  *
  * \ingroup LexRuntimeService
  */

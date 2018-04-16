@@ -26,7 +26,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::EFSRequest
  *
- * \brief The EFSRequest class is the base class for all EFS requests.
+ * \brief The EFSRequest class provides an interface for EFS requests.
  *
  * \ingroup EFS
  */

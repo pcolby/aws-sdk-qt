@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ModifyRuleRequest
  *
- * \brief The ModifyRuleRequest class encapsulates ElasticLoadBalancingv2 ModifyRule requests.
+ * \brief The ModifyRuleRequest class provides an interface for ElasticLoadBalancingv2 ModifyRule requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

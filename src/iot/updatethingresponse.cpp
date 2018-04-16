@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::UpdateThingResponse
  *
- * \brief The UpdateThingResponse class encapsulates IoT UpdateThing responses.
+ * \brief The UpdateThingResponse class provides an interace for IoT UpdateThing responses.
  *
  * \ingroup IoT
  *

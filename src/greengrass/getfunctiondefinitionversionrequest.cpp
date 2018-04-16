@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetFunctionDefinitionVersionRequest
  *
- * \brief The GetFunctionDefinitionVersionRequest class encapsulates Greengrass GetFunctionDefinitionVersion requests.
+ * \brief The GetFunctionDefinitionVersionRequest class provides an interface for Greengrass GetFunctionDefinitionVersion requests.
  *
  * \ingroup Greengrass
  *

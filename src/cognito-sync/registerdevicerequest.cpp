@@ -28,7 +28,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::RegisterDeviceRequest
  *
- * \brief The RegisterDeviceRequest class encapsulates CognitoSync RegisterDevice requests.
+ * \brief The RegisterDeviceRequest class provides an interface for CognitoSync RegisterDevice requests.
  *
  * \ingroup CognitoSync
  *

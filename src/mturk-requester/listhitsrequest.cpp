@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListHITsRequest
  *
- * \brief The ListHITsRequest class encapsulates MTurk ListHITs requests.
+ * \brief The ListHITsRequest class provides an interface for MTurk ListHITs requests.
  *
  * \ingroup MTurk
  *

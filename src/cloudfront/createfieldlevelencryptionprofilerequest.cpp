@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::CreateFieldLevelEncryptionProfileRequest
  *
- * \brief The CreateFieldLevelEncryptionProfileRequest class encapsulates CloudFront CreateFieldLevelEncryptionProfile requests.
+ * \brief The CreateFieldLevelEncryptionProfileRequest class provides an interface for CloudFront CreateFieldLevelEncryptionProfile requests.
  *
  * \ingroup CloudFront
  *

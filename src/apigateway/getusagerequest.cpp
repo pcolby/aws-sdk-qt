@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetUsageRequest
  *
- * \brief The GetUsageRequest class encapsulates APIGateway GetUsage requests.
+ * \brief The GetUsageRequest class provides an interface for APIGateway GetUsage requests.
  *
  * \ingroup APIGateway
  *

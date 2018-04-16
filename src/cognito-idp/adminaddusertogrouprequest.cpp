@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminAddUserToGroupRequest
  *
- * \brief The AdminAddUserToGroupRequest class encapsulates CognitoIdentityProvider AdminAddUserToGroup requests.
+ * \brief The AdminAddUserToGroupRequest class provides an interface for CognitoIdentityProvider AdminAddUserToGroup requests.
  *
  * \ingroup CognitoIdentityProvider
  *

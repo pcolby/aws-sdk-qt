@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ListSecurityConfigurationsRequest
  *
- * \brief The ListSecurityConfigurationsRequest class encapsulates EMR ListSecurityConfigurations requests.
+ * \brief The ListSecurityConfigurationsRequest class provides an interface for EMR ListSecurityConfigurations requests.
  *
  * \ingroup EMR
  *

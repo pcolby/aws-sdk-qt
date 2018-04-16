@@ -28,7 +28,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::DeleteMountTargetRequest
  *
- * \brief The DeleteMountTargetRequest class encapsulates EFS DeleteMountTarget requests.
+ * \brief The DeleteMountTargetRequest class provides an interface for EFS DeleteMountTarget requests.
  *
  * \ingroup EFS
  *

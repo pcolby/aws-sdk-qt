@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DescribeConfigurationAggregatorsResponse
  *
- * \brief The DescribeConfigurationAggregatorsResponse class encapsulates ConfigService DescribeConfigurationAggregators responses.
+ * \brief The DescribeConfigurationAggregatorsResponse class provides an interace for ConfigService DescribeConfigurationAggregators responses.
  *
  * \ingroup ConfigService
  *

@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ListVolumeInitiatorsResponse
  *
- * \brief The ListVolumeInitiatorsResponse class encapsulates StorageGateway ListVolumeInitiators responses.
+ * \brief The ListVolumeInitiatorsResponse class provides an interace for StorageGateway ListVolumeInitiators responses.
  *
  * \ingroup StorageGateway
  *

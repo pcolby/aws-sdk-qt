@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::DescribeInstanceHealthRequest
  *
- * \brief The DescribeInstanceHealthRequest class encapsulates ElasticLoadBalancing DescribeInstanceHealth requests.
+ * \brief The DescribeInstanceHealthRequest class provides an interface for ElasticLoadBalancing DescribeInstanceHealth requests.
  *
  * \ingroup ElasticLoadBalancing
  *

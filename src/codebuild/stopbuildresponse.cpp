@@ -30,7 +30,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::StopBuildResponse
  *
- * \brief The StopBuildResponse class encapsulates CodeBuild StopBuild responses.
+ * \brief The StopBuildResponse class provides an interace for CodeBuild StopBuild responses.
  *
  * \ingroup CodeBuild
  *

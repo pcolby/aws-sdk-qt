@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::AssociateTargetsWithJobRequest
  *
- * \brief The AssociateTargetsWithJobRequest class encapsulates IoT AssociateTargetsWithJob requests.
+ * \brief The AssociateTargetsWithJobRequest class provides an interface for IoT AssociateTargetsWithJob requests.
  *
  * \ingroup IoT
  *

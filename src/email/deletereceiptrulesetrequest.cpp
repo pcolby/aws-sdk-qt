@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteReceiptRuleSetRequest
  *
- * \brief The DeleteReceiptRuleSetRequest class encapsulates SES DeleteReceiptRuleSet requests.
+ * \brief The DeleteReceiptRuleSetRequest class provides an interface for SES DeleteReceiptRuleSet requests.
  *
  * \ingroup SES
  *

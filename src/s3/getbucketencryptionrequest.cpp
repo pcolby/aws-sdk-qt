@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketEncryptionRequest
  *
- * \brief The GetBucketEncryptionRequest class encapsulates S3 GetBucketEncryption requests.
+ * \brief The GetBucketEncryptionRequest class provides an interface for S3 GetBucketEncryption requests.
  *
  * \ingroup S3
  *

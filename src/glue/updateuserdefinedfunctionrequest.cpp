@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateUserDefinedFunctionRequest
  *
- * \brief The UpdateUserDefinedFunctionRequest class encapsulates Glue UpdateUserDefinedFunction requests.
+ * \brief The UpdateUserDefinedFunctionRequest class provides an interface for Glue UpdateUserDefinedFunction requests.
  *
  * \ingroup Glue
  *

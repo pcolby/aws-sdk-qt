@@ -26,7 +26,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::EMRRequest
  *
- * \brief The EMRRequest class is the base class for all EMR requests.
+ * \brief The EMRRequest class provides an interface for EMR requests.
  *
  * \ingroup EMR
  */

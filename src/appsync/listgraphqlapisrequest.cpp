@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::ListGraphqlApisRequest
  *
- * \brief The ListGraphqlApisRequest class encapsulates AppSync ListGraphqlApis requests.
+ * \brief The ListGraphqlApisRequest class provides an interface for AppSync ListGraphqlApis requests.
  *
  * \ingroup AppSync
  *

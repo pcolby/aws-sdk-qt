@@ -30,7 +30,7 @@ namespace MarketplaceMetering {
 /*!
  * \class QtAws::MarketplaceMetering::MeterUsageResponse
  *
- * \brief The MeterUsageResponse class encapsulates MarketplaceMetering MeterUsage responses.
+ * \brief The MeterUsageResponse class provides an interace for MarketplaceMetering MeterUsage responses.
  *
  * \ingroup MarketplaceMetering
  *

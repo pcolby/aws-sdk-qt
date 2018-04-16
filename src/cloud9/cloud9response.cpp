@@ -29,7 +29,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::Cloud9Response
  *
- * \brief The Cloud9Response class is the base class for all Cloud9 responses.
+ * \brief The Cloud9Response class provides an interface for Cloud9 responses.
  *
  * \ingroup Cloud9
  */

@@ -8,7 +8,7 @@ namespace {{NameSpaceName}} {
 /*!
  * \class QtAws::{{NameSpaceName}}::{{ClassName}}
  *
- * \brief The {{ClassName}} class is the base class for all {{ServiceName}} requests.
+ * \brief The {{ClassName}} class provides an interface for {{ServiceName}} requests.
  *
  * \ingroup {{NameSpaceName}}
  */

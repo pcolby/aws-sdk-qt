@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DeleteKeyPairResponse
  *
- * \brief The DeleteKeyPairResponse class encapsulates Lightsail DeleteKeyPair responses.
+ * \brief The DeleteKeyPairResponse class provides an interace for Lightsail DeleteKeyPair responses.
  *
  * \ingroup Lightsail
  *

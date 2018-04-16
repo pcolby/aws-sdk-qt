@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::UpdateReceiptRuleResponse
  *
- * \brief The UpdateReceiptRuleResponse class encapsulates SES UpdateReceiptRule responses.
+ * \brief The UpdateReceiptRuleResponse class provides an interace for SES UpdateReceiptRule responses.
  *
  * \ingroup SES
  *

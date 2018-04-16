@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::GetPasswordDataResponse
  *
- * \brief The GetPasswordDataResponse class encapsulates EC2 GetPasswordData responses.
+ * \brief The GetPasswordDataResponse class provides an interace for EC2 GetPasswordData responses.
  *
  * \ingroup EC2
  *

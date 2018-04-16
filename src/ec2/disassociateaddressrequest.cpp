@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DisassociateAddressRequest
  *
- * \brief The DisassociateAddressRequest class encapsulates EC2 DisassociateAddress requests.
+ * \brief The DisassociateAddressRequest class provides an interface for EC2 DisassociateAddress requests.
  *
  * \ingroup EC2
  *

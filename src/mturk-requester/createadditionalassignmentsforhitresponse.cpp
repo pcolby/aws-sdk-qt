@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::CreateAdditionalAssignmentsForHITResponse
  *
- * \brief The CreateAdditionalAssignmentsForHITResponse class encapsulates MTurk CreateAdditionalAssignmentsForHIT responses.
+ * \brief The CreateAdditionalAssignmentsForHITResponse class provides an interace for MTurk CreateAdditionalAssignmentsForHIT responses.
  *
  * \ingroup MTurk
  *

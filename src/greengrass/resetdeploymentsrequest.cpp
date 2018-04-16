@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ResetDeploymentsRequest
  *
- * \brief The ResetDeploymentsRequest class encapsulates Greengrass ResetDeployments requests.
+ * \brief The ResetDeploymentsRequest class provides an interface for Greengrass ResetDeployments requests.
  *
  * \ingroup Greengrass
  *

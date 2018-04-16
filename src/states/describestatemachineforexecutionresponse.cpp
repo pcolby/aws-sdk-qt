@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::DescribeStateMachineForExecutionResponse
  *
- * \brief The DescribeStateMachineForExecutionResponse class encapsulates SFN DescribeStateMachineForExecution responses.
+ * \brief The DescribeStateMachineForExecutionResponse class provides an interace for SFN DescribeStateMachineForExecution responses.
  *
  * \ingroup SFN
  *

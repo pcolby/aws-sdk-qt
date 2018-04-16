@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::PutFunctionConcurrencyRequest
  *
- * \brief The PutFunctionConcurrencyRequest class encapsulates Lambda PutFunctionConcurrency requests.
+ * \brief The PutFunctionConcurrencyRequest class provides an interface for Lambda PutFunctionConcurrency requests.
  *
  * \ingroup Lambda
  *

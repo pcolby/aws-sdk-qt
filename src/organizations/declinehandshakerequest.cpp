@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DeclineHandshakeRequest
  *
- * \brief The DeclineHandshakeRequest class encapsulates Organizations DeclineHandshake requests.
+ * \brief The DeclineHandshakeRequest class provides an interface for Organizations DeclineHandshake requests.
  *
  * \ingroup Organizations
  *

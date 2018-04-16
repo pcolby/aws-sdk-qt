@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::CreateDistributionWithTagsRequest
  *
- * \brief The CreateDistributionWithTagsRequest class encapsulates CloudFront CreateDistributionWithTags requests.
+ * \brief The CreateDistributionWithTagsRequest class provides an interface for CloudFront CreateDistributionWithTags requests.
  *
  * \ingroup CloudFront
  *

@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteAliasRequest
  *
- * \brief The DeleteAliasRequest class encapsulates GameLift DeleteAlias requests.
+ * \brief The DeleteAliasRequest class provides an interface for GameLift DeleteAlias requests.
  *
  * \ingroup GameLift
  *

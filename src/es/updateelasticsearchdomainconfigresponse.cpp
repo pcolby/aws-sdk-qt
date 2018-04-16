@@ -30,7 +30,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::UpdateElasticsearchDomainConfigResponse
  *
- * \brief The UpdateElasticsearchDomainConfigResponse class encapsulates ElasticsearchService UpdateElasticsearchDomainConfig responses.
+ * \brief The UpdateElasticsearchDomainConfigResponse class provides an interace for ElasticsearchService UpdateElasticsearchDomainConfig responses.
  *
  * \ingroup ElasticsearchService
  *

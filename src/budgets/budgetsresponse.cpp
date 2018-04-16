@@ -29,7 +29,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::BudgetsResponse
  *
- * \brief The BudgetsResponse class is the base class for all Budgets responses.
+ * \brief The BudgetsResponse class provides an interface for Budgets responses.
  *
  * \ingroup Budgets
  */

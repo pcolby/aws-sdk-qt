@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::CreateRepositoryRequest
  *
- * \brief The CreateRepositoryRequest class encapsulates ECR CreateRepository requests.
+ * \brief The CreateRepositoryRequest class provides an interface for ECR CreateRepository requests.
  *
  * \ingroup ECR
  *

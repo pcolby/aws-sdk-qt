@@ -49,7 +49,7 @@ namespace CostExplorer {
 /*!
  * \class QtAws::CostExplorer::CostExplorerClient
  *
- * \brief The CostExplorerClient class provides access the AWS Cost Explorer Service service.
+ * \brief The CostExplorerClient class provides access to the AWS Cost Explorer Service service.
  *
  * \ingroup CostExplorer
  *

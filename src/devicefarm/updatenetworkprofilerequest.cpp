@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::UpdateNetworkProfileRequest
  *
- * \brief The UpdateNetworkProfileRequest class encapsulates DeviceFarm UpdateNetworkProfile requests.
+ * \brief The UpdateNetworkProfileRequest class provides an interface for DeviceFarm UpdateNetworkProfile requests.
  *
  * \ingroup DeviceFarm
  *

@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::GetDataSourceRequest
  *
- * \brief The GetDataSourceRequest class encapsulates MachineLearning GetDataSource requests.
+ * \brief The GetDataSourceRequest class provides an interface for MachineLearning GetDataSource requests.
  *
  * \ingroup MachineLearning
  *

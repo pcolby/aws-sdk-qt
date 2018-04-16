@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::DeleteSkillGroupRequest
  *
- * \brief The DeleteSkillGroupRequest class encapsulates AlexaForBusiness DeleteSkillGroup requests.
+ * \brief The DeleteSkillGroupRequest class provides an interface for AlexaForBusiness DeleteSkillGroup requests.
  *
  * \ingroup AlexaForBusiness
  *

@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::CreateAdditionalAssignmentsForHITRequest
  *
- * \brief The CreateAdditionalAssignmentsForHITRequest class encapsulates MTurk CreateAdditionalAssignmentsForHIT requests.
+ * \brief The CreateAdditionalAssignmentsForHITRequest class provides an interface for MTurk CreateAdditionalAssignmentsForHIT requests.
  *
  * \ingroup MTurk
  *

@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::ListRulesRequest
  *
- * \brief The ListRulesRequest class encapsulates WAFRegional ListRules requests.
+ * \brief The ListRulesRequest class provides an interface for WAFRegional ListRules requests.
  *
  * \ingroup WAFRegional
  *

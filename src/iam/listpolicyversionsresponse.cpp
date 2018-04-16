@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListPolicyVersionsResponse
  *
- * \brief The ListPolicyVersionsResponse class encapsulates IAM ListPolicyVersions responses.
+ * \brief The ListPolicyVersionsResponse class provides an interace for IAM ListPolicyVersions responses.
  *
  * \ingroup IAM
  *

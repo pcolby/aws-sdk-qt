@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::PutSlotTypeRequest
  *
- * \brief The PutSlotTypeRequest class encapsulates LexModelBuildingService PutSlotType requests.
+ * \brief The PutSlotTypeRequest class provides an interface for LexModelBuildingService PutSlotType requests.
  *
  * \ingroup LexModelBuildingService
  *

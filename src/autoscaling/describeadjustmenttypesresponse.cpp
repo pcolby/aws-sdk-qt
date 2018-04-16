@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeAdjustmentTypesResponse
  *
- * \brief The DescribeAdjustmentTypesResponse class encapsulates AutoScaling DescribeAdjustmentTypes responses.
+ * \brief The DescribeAdjustmentTypesResponse class provides an interace for AutoScaling DescribeAdjustmentTypes responses.
  *
  * \ingroup AutoScaling
  *

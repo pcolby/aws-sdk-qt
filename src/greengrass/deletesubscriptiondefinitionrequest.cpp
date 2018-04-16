@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::DeleteSubscriptionDefinitionRequest
  *
- * \brief The DeleteSubscriptionDefinitionRequest class encapsulates Greengrass DeleteSubscriptionDefinition requests.
+ * \brief The DeleteSubscriptionDefinitionRequest class provides an interface for Greengrass DeleteSubscriptionDefinition requests.
  *
  * \ingroup Greengrass
  *

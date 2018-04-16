@@ -28,7 +28,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::BatchGetTracesRequest
  *
- * \brief The BatchGetTracesRequest class encapsulates XRay BatchGetTraces requests.
+ * \brief The BatchGetTracesRequest class provides an interface for XRay BatchGetTraces requests.
  *
  * \ingroup XRay
  *

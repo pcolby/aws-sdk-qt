@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::ListActivatedRulesInRuleGroupResponse
  *
- * \brief The ListActivatedRulesInRuleGroupResponse class encapsulates WAF ListActivatedRulesInRuleGroup responses.
+ * \brief The ListActivatedRulesInRuleGroupResponse class provides an interace for WAF ListActivatedRulesInRuleGroup responses.
  *
  * \ingroup WAF
  *

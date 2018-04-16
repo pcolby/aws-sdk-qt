@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::UnassignIpv6AddressesResponse
  *
- * \brief The UnassignIpv6AddressesResponse class encapsulates EC2 UnassignIpv6Addresses responses.
+ * \brief The UnassignIpv6AddressesResponse class provides an interace for EC2 UnassignIpv6Addresses responses.
  *
  * \ingroup EC2
  *

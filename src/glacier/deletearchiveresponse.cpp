@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::DeleteArchiveResponse
  *
- * \brief The DeleteArchiveResponse class encapsulates Glacier DeleteArchive responses.
+ * \brief The DeleteArchiveResponse class provides an interace for Glacier DeleteArchive responses.
  *
  * \ingroup Glacier
  *

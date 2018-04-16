@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateSoftwareUpdateJobRequest
  *
- * \brief The CreateSoftwareUpdateJobRequest class encapsulates Greengrass CreateSoftwareUpdateJob requests.
+ * \brief The CreateSoftwareUpdateJobRequest class provides an interface for Greengrass CreateSoftwareUpdateJob requests.
  *
  * \ingroup Greengrass
  *

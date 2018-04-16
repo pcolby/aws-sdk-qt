@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::GetEventSelectorsResponse
  *
- * \brief The GetEventSelectorsResponse class encapsulates CloudTrail GetEventSelectors responses.
+ * \brief The GetEventSelectorsResponse class provides an interace for CloudTrail GetEventSelectors responses.
  *
  * \ingroup CloudTrail
  *

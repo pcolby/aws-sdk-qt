@@ -26,7 +26,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::CloudDirectoryRequest
  *
- * \brief The CloudDirectoryRequest class is the base class for all CloudDirectory requests.
+ * \brief The CloudDirectoryRequest class provides an interface for CloudDirectory requests.
  *
  * \ingroup CloudDirectory
  */

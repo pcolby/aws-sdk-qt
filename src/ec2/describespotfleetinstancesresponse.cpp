@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeSpotFleetInstancesResponse
  *
- * \brief The DescribeSpotFleetInstancesResponse class encapsulates EC2 DescribeSpotFleetInstances responses.
+ * \brief The DescribeSpotFleetInstancesResponse class provides an interace for EC2 DescribeSpotFleetInstances responses.
  *
  * \ingroup EC2
  *

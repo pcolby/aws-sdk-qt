@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeLoggingStatusResponse
  *
- * \brief The DescribeLoggingStatusResponse class encapsulates Redshift DescribeLoggingStatus responses.
+ * \brief The DescribeLoggingStatusResponse class provides an interace for Redshift DescribeLoggingStatus responses.
  *
  * \ingroup Redshift
  *

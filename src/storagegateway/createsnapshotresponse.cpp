@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::CreateSnapshotResponse
  *
- * \brief The CreateSnapshotResponse class encapsulates StorageGateway CreateSnapshot responses.
+ * \brief The CreateSnapshotResponse class provides an interace for StorageGateway CreateSnapshot responses.
  *
  * \ingroup StorageGateway
  *

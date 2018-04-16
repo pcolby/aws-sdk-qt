@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::UpdateManagedInstanceRoleRequest
  *
- * \brief The UpdateManagedInstanceRoleRequest class encapsulates SSM UpdateManagedInstanceRole requests.
+ * \brief The UpdateManagedInstanceRoleRequest class provides an interface for SSM UpdateManagedInstanceRole requests.
  *
  * \ingroup SSM
  *

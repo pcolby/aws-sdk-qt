@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::UpdateRoleAliasRequest
  *
- * \brief The UpdateRoleAliasRequest class encapsulates IoT UpdateRoleAlias requests.
+ * \brief The UpdateRoleAliasRequest class provides an interface for IoT UpdateRoleAlias requests.
  *
  * \ingroup IoT
  *

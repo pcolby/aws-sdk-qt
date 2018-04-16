@@ -28,7 +28,7 @@ namespace AutoScalingPlans {
 /*!
  * \class QtAws::AutoScalingPlans::DeleteScalingPlanRequest
  *
- * \brief The DeleteScalingPlanRequest class encapsulates AutoScalingPlans DeleteScalingPlan requests.
+ * \brief The DeleteScalingPlanRequest class provides an interface for AutoScalingPlans DeleteScalingPlan requests.
  *
  * \ingroup AutoScalingPlans
  *

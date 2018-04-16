@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::CreateGrantResponse
  *
- * \brief The CreateGrantResponse class encapsulates KMS CreateGrant responses.
+ * \brief The CreateGrantResponse class provides an interace for KMS CreateGrant responses.
  *
  * \ingroup KMS
  *

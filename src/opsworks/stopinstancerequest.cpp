@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::StopInstanceRequest
  *
- * \brief The StopInstanceRequest class encapsulates OpsWorks StopInstance requests.
+ * \brief The StopInstanceRequest class provides an interface for OpsWorks StopInstance requests.
  *
  * \ingroup OpsWorks
  *

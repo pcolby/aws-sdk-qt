@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::GetAssessmentReportRequest
  *
- * \brief The GetAssessmentReportRequest class encapsulates Inspector GetAssessmentReport requests.
+ * \brief The GetAssessmentReportRequest class provides an interface for Inspector GetAssessmentReport requests.
  *
  * \ingroup Inspector
  *

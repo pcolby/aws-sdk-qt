@@ -26,7 +26,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::OpsWorksRequest
  *
- * \brief The OpsWorksRequest class is the base class for all OpsWorks requests.
+ * \brief The OpsWorksRequest class provides an interface for OpsWorks requests.
  *
  * \ingroup OpsWorks
  */

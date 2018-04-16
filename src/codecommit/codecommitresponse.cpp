@@ -29,7 +29,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::CodeCommitResponse
  *
- * \brief The CodeCommitResponse class is the base class for all CodeCommit responses.
+ * \brief The CodeCommitResponse class provides an interface for CodeCommit responses.
  *
  * \ingroup CodeCommit
  */

@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeConnectionsRequest
  *
- * \brief The DescribeConnectionsRequest class encapsulates DatabaseMigrationService DescribeConnections requests.
+ * \brief The DescribeConnectionsRequest class provides an interface for DatabaseMigrationService DescribeConnections requests.
  *
  * \ingroup DatabaseMigrationService
  *

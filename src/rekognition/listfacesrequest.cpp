@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::ListFacesRequest
  *
- * \brief The ListFacesRequest class encapsulates Rekognition ListFaces requests.
+ * \brief The ListFacesRequest class provides an interface for Rekognition ListFaces requests.
  *
  * \ingroup Rekognition
  *

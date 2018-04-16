@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::AbortEnvironmentUpdateResponse
  *
- * \brief The AbortEnvironmentUpdateResponse class encapsulates ElasticBeanstalk AbortEnvironmentUpdate responses.
+ * \brief The AbortEnvironmentUpdateResponse class provides an interace for ElasticBeanstalk AbortEnvironmentUpdate responses.
  *
  * \ingroup ElasticBeanstalk
  *

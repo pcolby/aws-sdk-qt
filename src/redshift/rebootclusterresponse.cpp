@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::RebootClusterResponse
  *
- * \brief The RebootClusterResponse class encapsulates Redshift RebootCluster responses.
+ * \brief The RebootClusterResponse class provides an interace for Redshift RebootCluster responses.
  *
  * \ingroup Redshift
  *

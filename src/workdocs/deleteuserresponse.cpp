@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DeleteUserResponse
  *
- * \brief The DeleteUserResponse class encapsulates WorkDocs DeleteUser responses.
+ * \brief The DeleteUserResponse class provides an interace for WorkDocs DeleteUser responses.
  *
  * \ingroup WorkDocs
  *

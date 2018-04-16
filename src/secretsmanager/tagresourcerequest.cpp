@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::TagResourceRequest
  *
- * \brief The TagResourceRequest class encapsulates SecretsManager TagResource requests.
+ * \brief The TagResourceRequest class provides an interface for SecretsManager TagResource requests.
  *
  * \ingroup SecretsManager
  *

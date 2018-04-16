@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetIdentityNotificationAttributesResponse
  *
- * \brief The GetIdentityNotificationAttributesResponse class encapsulates SES GetIdentityNotificationAttributes responses.
+ * \brief The GetIdentityNotificationAttributesResponse class provides an interace for SES GetIdentityNotificationAttributes responses.
  *
  * \ingroup SES
  *

@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CreateLayerRequest
  *
- * \brief The CreateLayerRequest class encapsulates OpsWorks CreateLayer requests.
+ * \brief The CreateLayerRequest class provides an interface for OpsWorks CreateLayer requests.
  *
  * \ingroup OpsWorks
  *

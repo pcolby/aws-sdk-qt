@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DeleteFacetResponse
  *
- * \brief The DeleteFacetResponse class encapsulates CloudDirectory DeleteFacet responses.
+ * \brief The DeleteFacetResponse class provides an interace for CloudDirectory DeleteFacet responses.
  *
  * \ingroup CloudDirectory
  *

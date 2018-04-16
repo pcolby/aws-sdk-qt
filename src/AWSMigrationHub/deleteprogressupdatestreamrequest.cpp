@@ -28,7 +28,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::DeleteProgressUpdateStreamRequest
  *
- * \brief The DeleteProgressUpdateStreamRequest class encapsulates MigrationHub DeleteProgressUpdateStream requests.
+ * \brief The DeleteProgressUpdateStreamRequest class provides an interface for MigrationHub DeleteProgressUpdateStream requests.
  *
  * \ingroup MigrationHub
  *

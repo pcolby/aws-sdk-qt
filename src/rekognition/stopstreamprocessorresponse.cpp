@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::StopStreamProcessorResponse
  *
- * \brief The StopStreamProcessorResponse class encapsulates Rekognition StopStreamProcessor responses.
+ * \brief The StopStreamProcessorResponse class provides an interace for Rekognition StopStreamProcessor responses.
  *
  * \ingroup Rekognition
  *

@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminDeleteUserAttributesResponse
  *
- * \brief The AdminDeleteUserAttributesResponse class encapsulates CognitoIdentityProvider AdminDeleteUserAttributes responses.
+ * \brief The AdminDeleteUserAttributesResponse class provides an interace for CognitoIdentityProvider AdminDeleteUserAttributes responses.
  *
  * \ingroup CognitoIdentityProvider
  *

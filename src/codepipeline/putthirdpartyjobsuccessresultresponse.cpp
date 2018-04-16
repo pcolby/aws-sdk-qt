@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::PutThirdPartyJobSuccessResultResponse
  *
- * \brief The PutThirdPartyJobSuccessResultResponse class encapsulates CodePipeline PutThirdPartyJobSuccessResult responses.
+ * \brief The PutThirdPartyJobSuccessResultResponse class provides an interace for CodePipeline PutThirdPartyJobSuccessResult responses.
  *
  * \ingroup CodePipeline
  *

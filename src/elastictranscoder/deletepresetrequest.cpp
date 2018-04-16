@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::DeletePresetRequest
  *
- * \brief The DeletePresetRequest class encapsulates ElasticTranscoder DeletePreset requests.
+ * \brief The DeletePresetRequest class provides an interface for ElasticTranscoder DeletePreset requests.
  *
  * \ingroup ElasticTranscoder
  *

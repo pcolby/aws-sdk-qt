@@ -28,7 +28,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::DeleteDashboardsRequest
  *
- * \brief The DeleteDashboardsRequest class encapsulates CloudWatch DeleteDashboards requests.
+ * \brief The DeleteDashboardsRequest class provides an interface for CloudWatch DeleteDashboards requests.
  *
  * \ingroup CloudWatch
  *

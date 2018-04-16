@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ListTapesResponse
  *
- * \brief The ListTapesResponse class encapsulates StorageGateway ListTapes responses.
+ * \brief The ListTapesResponse class provides an interace for StorageGateway ListTapes responses.
  *
  * \ingroup StorageGateway
  *

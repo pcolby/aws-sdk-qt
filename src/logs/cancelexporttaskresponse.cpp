@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::CancelExportTaskResponse
  *
- * \brief The CancelExportTaskResponse class encapsulates CloudWatchLogs CancelExportTask responses.
+ * \brief The CancelExportTaskResponse class provides an interace for CloudWatchLogs CancelExportTask responses.
  *
  * \ingroup CloudWatchLogs
  *

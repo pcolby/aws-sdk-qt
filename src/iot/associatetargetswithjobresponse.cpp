@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::AssociateTargetsWithJobResponse
  *
- * \brief The AssociateTargetsWithJobResponse class encapsulates IoT AssociateTargetsWithJob responses.
+ * \brief The AssociateTargetsWithJobResponse class provides an interace for IoT AssociateTargetsWithJob responses.
  *
  * \ingroup IoT
  *

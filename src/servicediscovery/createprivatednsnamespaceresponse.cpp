@@ -30,7 +30,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::CreatePrivateDnsNamespaceResponse
  *
- * \brief The CreatePrivateDnsNamespaceResponse class encapsulates ServiceDiscovery CreatePrivateDnsNamespace responses.
+ * \brief The CreatePrivateDnsNamespaceResponse class provides an interace for ServiceDiscovery CreatePrivateDnsNamespace responses.
  *
  * \ingroup ServiceDiscovery
  *

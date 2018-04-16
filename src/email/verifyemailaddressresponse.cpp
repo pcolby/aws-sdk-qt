@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::VerifyEmailAddressResponse
  *
- * \brief The VerifyEmailAddressResponse class encapsulates SES VerifyEmailAddress responses.
+ * \brief The VerifyEmailAddressResponse class provides an interace for SES VerifyEmailAddress responses.
  *
  * \ingroup SES
  *

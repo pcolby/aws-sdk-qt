@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetInventorySchemaResponse
  *
- * \brief The GetInventorySchemaResponse class encapsulates SSM GetInventorySchema responses.
+ * \brief The GetInventorySchemaResponse class provides an interace for SSM GetInventorySchema responses.
  *
  * \ingroup SSM
  *

@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteMethodResponse
  *
- * \brief The DeleteMethodResponse class encapsulates APIGateway DeleteMethod responses.
+ * \brief The DeleteMethodResponse class provides an interace for APIGateway DeleteMethod responses.
  *
  * \ingroup APIGateway
  *

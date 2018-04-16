@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DescribeTrustsResponse
  *
- * \brief The DescribeTrustsResponse class encapsulates DirectoryService DescribeTrusts responses.
+ * \brief The DescribeTrustsResponse class provides an interace for DirectoryService DescribeTrusts responses.
  *
  * \ingroup DirectoryService
  *

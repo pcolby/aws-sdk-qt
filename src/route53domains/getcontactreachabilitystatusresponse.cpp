@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::GetContactReachabilityStatusResponse
  *
- * \brief The GetContactReachabilityStatusResponse class encapsulates Route53Domains GetContactReachabilityStatus responses.
+ * \brief The GetContactReachabilityStatusResponse class provides an interace for Route53Domains GetContactReachabilityStatus responses.
  *
  * \ingroup Route53Domains
  *

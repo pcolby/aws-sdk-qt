@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteHsmConfigurationRequest
  *
- * \brief The DeleteHsmConfigurationRequest class encapsulates Redshift DeleteHsmConfiguration requests.
+ * \brief The DeleteHsmConfigurationRequest class provides an interface for Redshift DeleteHsmConfiguration requests.
  *
  * \ingroup Redshift
  *

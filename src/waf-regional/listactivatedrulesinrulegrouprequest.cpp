@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::ListActivatedRulesInRuleGroupRequest
  *
- * \brief The ListActivatedRulesInRuleGroupRequest class encapsulates WAFRegional ListActivatedRulesInRuleGroup requests.
+ * \brief The ListActivatedRulesInRuleGroupRequest class provides an interface for WAFRegional ListActivatedRulesInRuleGroup requests.
  *
  * \ingroup WAFRegional
  *

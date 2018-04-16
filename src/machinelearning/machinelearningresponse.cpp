@@ -29,7 +29,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::MachineLearningResponse
  *
- * \brief The MachineLearningResponse class is the base class for all MachineLearning responses.
+ * \brief The MachineLearningResponse class provides an interface for MachineLearning responses.
  *
  * \ingroup MachineLearning
  */

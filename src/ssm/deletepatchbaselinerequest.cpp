@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeletePatchBaselineRequest
  *
- * \brief The DeletePatchBaselineRequest class encapsulates SSM DeletePatchBaseline requests.
+ * \brief The DeletePatchBaselineRequest class provides an interface for SSM DeletePatchBaseline requests.
  *
  * \ingroup SSM
  *

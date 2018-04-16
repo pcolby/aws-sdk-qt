@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SetReceiptRulePositionResponse
  *
- * \brief The SetReceiptRulePositionResponse class encapsulates SES SetReceiptRulePosition responses.
+ * \brief The SetReceiptRulePositionResponse class provides an interace for SES SetReceiptRulePosition responses.
  *
  * \ingroup SES
  *

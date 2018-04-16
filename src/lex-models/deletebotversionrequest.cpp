@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::DeleteBotVersionRequest
  *
- * \brief The DeleteBotVersionRequest class encapsulates LexModelBuildingService DeleteBotVersion requests.
+ * \brief The DeleteBotVersionRequest class provides an interface for LexModelBuildingService DeleteBotVersion requests.
  *
  * \ingroup LexModelBuildingService
  *

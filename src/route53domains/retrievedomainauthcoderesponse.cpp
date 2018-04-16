@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::RetrieveDomainAuthCodeResponse
  *
- * \brief The RetrieveDomainAuthCodeResponse class encapsulates Route53Domains RetrieveDomainAuthCode responses.
+ * \brief The RetrieveDomainAuthCodeResponse class provides an interace for Route53Domains RetrieveDomainAuthCode responses.
  *
  * \ingroup Route53Domains
  *

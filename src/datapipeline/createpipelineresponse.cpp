@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::CreatePipelineResponse
  *
- * \brief The CreatePipelineResponse class encapsulates DataPipeline CreatePipeline responses.
+ * \brief The CreatePipelineResponse class provides an interace for DataPipeline CreatePipeline responses.
  *
  * \ingroup DataPipeline
  *

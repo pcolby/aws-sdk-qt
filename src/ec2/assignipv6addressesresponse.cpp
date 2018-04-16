@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AssignIpv6AddressesResponse
  *
- * \brief The AssignIpv6AddressesResponse class encapsulates EC2 AssignIpv6Addresses responses.
+ * \brief The AssignIpv6AddressesResponse class provides an interace for EC2 AssignIpv6Addresses responses.
  *
  * \ingroup EC2
  *

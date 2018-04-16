@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::CreateRepositoryResponse
  *
- * \brief The CreateRepositoryResponse class encapsulates ECR CreateRepository responses.
+ * \brief The CreateRepositoryResponse class provides an interace for ECR CreateRepository responses.
  *
  * \ingroup ECR
  *

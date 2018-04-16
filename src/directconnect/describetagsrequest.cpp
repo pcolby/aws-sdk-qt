@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DescribeTagsRequest
  *
- * \brief The DescribeTagsRequest class encapsulates DirectConnect DescribeTags requests.
+ * \brief The DescribeTagsRequest class provides an interface for DirectConnect DescribeTags requests.
  *
  * \ingroup DirectConnect
  *

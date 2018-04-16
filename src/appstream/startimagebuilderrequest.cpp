@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::StartImageBuilderRequest
  *
- * \brief The StartImageBuilderRequest class encapsulates AppStream StartImageBuilder requests.
+ * \brief The StartImageBuilderRequest class provides an interface for AppStream StartImageBuilder requests.
  *
  * \ingroup AppStream
  *

@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateFunctionDefinitionRequest
  *
- * \brief The CreateFunctionDefinitionRequest class encapsulates Greengrass CreateFunctionDefinition requests.
+ * \brief The CreateFunctionDefinitionRequest class provides an interface for Greengrass CreateFunctionDefinition requests.
  *
  * \ingroup Greengrass
  *

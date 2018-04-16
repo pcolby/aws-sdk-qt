@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::SearchIndexResponse
  *
- * \brief The SearchIndexResponse class encapsulates IoT SearchIndex responses.
+ * \brief The SearchIndexResponse class provides an interace for IoT SearchIndex responses.
  *
  * \ingroup IoT
  *

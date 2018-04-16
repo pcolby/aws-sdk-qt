@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::CreateTableRequest
  *
- * \brief The CreateTableRequest class encapsulates DynamoDB CreateTable requests.
+ * \brief The CreateTableRequest class provides an interface for DynamoDB CreateTable requests.
  *
  * \ingroup DynamoDB
  *

@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::AddPermissionRequest
  *
- * \brief The AddPermissionRequest class encapsulates Lambda AddPermission requests.
+ * \brief The AddPermissionRequest class provides an interface for Lambda AddPermission requests.
  *
  * \ingroup Lambda
  *

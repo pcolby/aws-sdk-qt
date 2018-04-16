@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::ListInputsRequest
  *
- * \brief The ListInputsRequest class encapsulates MediaLive ListInputs requests.
+ * \brief The ListInputsRequest class provides an interface for MediaLive ListInputs requests.
  *
  * \ingroup MediaLive
  *

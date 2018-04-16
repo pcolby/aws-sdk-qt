@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::CreateClusterSecurityGroupRequest
  *
- * \brief The CreateClusterSecurityGroupRequest class encapsulates Redshift CreateClusterSecurityGroup requests.
+ * \brief The CreateClusterSecurityGroupRequest class provides an interface for Redshift CreateClusterSecurityGroup requests.
  *
  * \ingroup Redshift
  *

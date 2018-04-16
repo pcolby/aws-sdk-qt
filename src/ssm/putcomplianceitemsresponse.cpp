@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::PutComplianceItemsResponse
  *
- * \brief The PutComplianceItemsResponse class encapsulates SSM PutComplianceItems responses.
+ * \brief The PutComplianceItemsResponse class provides an interace for SSM PutComplianceItems responses.
  *
  * \ingroup SSM
  *

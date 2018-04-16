@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetAppRequest
  *
- * \brief The GetAppRequest class encapsulates Pinpoint GetApp requests.
+ * \brief The GetAppRequest class provides an interface for Pinpoint GetApp requests.
  *
  * \ingroup Pinpoint
  *

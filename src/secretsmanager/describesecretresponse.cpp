@@ -30,7 +30,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::DescribeSecretResponse
  *
- * \brief The DescribeSecretResponse class encapsulates SecretsManager DescribeSecret responses.
+ * \brief The DescribeSecretResponse class provides an interace for SecretsManager DescribeSecret responses.
  *
  * \ingroup SecretsManager
  *

@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeDBSecurityGroupsRequest
  *
- * \brief The DescribeDBSecurityGroupsRequest class encapsulates RDS DescribeDBSecurityGroups requests.
+ * \brief The DescribeDBSecurityGroupsRequest class provides an interface for RDS DescribeDBSecurityGroups requests.
  *
  * \ingroup RDS
  *

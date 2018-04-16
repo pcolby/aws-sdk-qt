@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::RemoveTagsFromResourceResponse
  *
- * \brief The RemoveTagsFromResourceResponse class encapsulates ElastiCache RemoveTagsFromResource responses.
+ * \brief The RemoveTagsFromResourceResponse class provides an interace for ElastiCache RemoveTagsFromResource responses.
  *
  * \ingroup ElastiCache
  *

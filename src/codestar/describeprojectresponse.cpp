@@ -30,7 +30,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::DescribeProjectResponse
  *
- * \brief The DescribeProjectResponse class encapsulates CodeStar DescribeProject responses.
+ * \brief The DescribeProjectResponse class provides an interace for CodeStar DescribeProject responses.
  *
  * \ingroup CodeStar
  *

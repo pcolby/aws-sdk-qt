@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::UpdateStateMachineResponse
  *
- * \brief The UpdateStateMachineResponse class encapsulates SFN UpdateStateMachine responses.
+ * \brief The UpdateStateMachineResponse class provides an interace for SFN UpdateStateMachine responses.
  *
  * \ingroup SFN
  *

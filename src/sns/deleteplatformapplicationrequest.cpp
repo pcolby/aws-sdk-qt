@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::DeletePlatformApplicationRequest
  *
- * \brief The DeletePlatformApplicationRequest class encapsulates SNS DeletePlatformApplication requests.
+ * \brief The DeletePlatformApplicationRequest class provides an interface for SNS DeletePlatformApplication requests.
  *
  * \ingroup SNS
  *

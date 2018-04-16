@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UploadServerCertificateRequest
  *
- * \brief The UploadServerCertificateRequest class encapsulates IAM UploadServerCertificate requests.
+ * \brief The UploadServerCertificateRequest class provides an interface for IAM UploadServerCertificate requests.
  *
  * \ingroup IAM
  *

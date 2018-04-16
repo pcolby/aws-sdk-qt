@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::ListResourcesRequest
  *
- * \brief The ListResourcesRequest class encapsulates CodeStar ListResources requests.
+ * \brief The ListResourcesRequest class provides an interface for CodeStar ListResources requests.
  *
  * \ingroup CodeStar
  *

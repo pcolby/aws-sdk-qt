@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::UpdateUserRequest
  *
- * \brief The UpdateUserRequest class encapsulates MQ UpdateUser requests.
+ * \brief The UpdateUserRequest class provides an interface for MQ UpdateUser requests.
  *
  * \ingroup MQ
  *

@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateVpcLinkResponse
  *
- * \brief The UpdateVpcLinkResponse class encapsulates APIGateway UpdateVpcLink responses.
+ * \brief The UpdateVpcLinkResponse class provides an interace for APIGateway UpdateVpcLink responses.
  *
  * \ingroup APIGateway
  *

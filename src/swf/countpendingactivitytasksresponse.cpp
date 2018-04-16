@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::CountPendingActivityTasksResponse
  *
- * \brief The CountPendingActivityTasksResponse class encapsulates SWF CountPendingActivityTasks responses.
+ * \brief The CountPendingActivityTasksResponse class provides an interace for SWF CountPendingActivityTasks responses.
  *
  * \ingroup SWF
  *

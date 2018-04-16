@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::StopRemoteAccessSessionResponse
  *
- * \brief The StopRemoteAccessSessionResponse class encapsulates DeviceFarm StopRemoteAccessSession responses.
+ * \brief The StopRemoteAccessSessionResponse class provides an interace for DeviceFarm StopRemoteAccessSession responses.
  *
  * \ingroup DeviceFarm
  *

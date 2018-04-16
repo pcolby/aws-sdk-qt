@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteDhcpOptionsResponse
  *
- * \brief The DeleteDhcpOptionsResponse class encapsulates EC2 DeleteDhcpOptions responses.
+ * \brief The DeleteDhcpOptionsResponse class provides an interace for EC2 DeleteDhcpOptions responses.
  *
  * \ingroup EC2
  *

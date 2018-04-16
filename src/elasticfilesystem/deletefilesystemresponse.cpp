@@ -30,7 +30,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::DeleteFileSystemResponse
  *
- * \brief The DeleteFileSystemResponse class encapsulates EFS DeleteFileSystem responses.
+ * \brief The DeleteFileSystemResponse class provides an interace for EFS DeleteFileSystem responses.
  *
  * \ingroup EFS
  *

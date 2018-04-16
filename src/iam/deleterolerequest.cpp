@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteRoleRequest
  *
- * \brief The DeleteRoleRequest class encapsulates IAM DeleteRole requests.
+ * \brief The DeleteRoleRequest class provides an interface for IAM DeleteRole requests.
  *
  * \ingroup IAM
  *

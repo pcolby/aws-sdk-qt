@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ModifyCacheParameterGroupRequest
  *
- * \brief The ModifyCacheParameterGroupRequest class encapsulates ElastiCache ModifyCacheParameterGroup requests.
+ * \brief The ModifyCacheParameterGroupRequest class provides an interface for ElastiCache ModifyCacheParameterGroup requests.
  *
  * \ingroup ElastiCache
  *

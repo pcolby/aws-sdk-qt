@@ -26,7 +26,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::CognitoIdentityProviderRequest
  *
- * \brief The CognitoIdentityProviderRequest class is the base class for all CognitoIdentityProvider requests.
+ * \brief The CognitoIdentityProviderRequest class provides an interface for CognitoIdentityProvider requests.
  *
  * \ingroup CognitoIdentityProvider
  */

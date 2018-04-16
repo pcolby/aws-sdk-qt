@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::GetInstanceRequest
  *
- * \brief The GetInstanceRequest class encapsulates ServiceDiscovery GetInstance requests.
+ * \brief The GetInstanceRequest class provides an interface for ServiceDiscovery GetInstance requests.
  *
  * \ingroup ServiceDiscovery
  *

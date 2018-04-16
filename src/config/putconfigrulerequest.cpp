@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::PutConfigRuleRequest
  *
- * \brief The PutConfigRuleRequest class encapsulates ConfigService PutConfigRule requests.
+ * \brief The PutConfigRuleRequest class provides an interface for ConfigService PutConfigRule requests.
  *
  * \ingroup ConfigService
  *

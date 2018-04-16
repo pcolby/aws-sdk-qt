@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::DeleteInputResponse
  *
- * \brief The DeleteInputResponse class encapsulates MediaLive DeleteInput responses.
+ * \brief The DeleteInputResponse class provides an interace for MediaLive DeleteInput responses.
  *
  * \ingroup MediaLive
  *

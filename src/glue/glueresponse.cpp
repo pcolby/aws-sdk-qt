@@ -29,7 +29,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GlueResponse
  *
- * \brief The GlueResponse class is the base class for all Glue responses.
+ * \brief The GlueResponse class provides an interface for Glue responses.
  *
  * \ingroup Glue
  */

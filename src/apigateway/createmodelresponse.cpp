@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateModelResponse
  *
- * \brief The CreateModelResponse class encapsulates APIGateway CreateModel responses.
+ * \brief The CreateModelResponse class provides an interace for APIGateway CreateModel responses.
  *
  * \ingroup APIGateway
  *

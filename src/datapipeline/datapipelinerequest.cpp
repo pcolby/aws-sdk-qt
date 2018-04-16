@@ -26,7 +26,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::DataPipelineRequest
  *
- * \brief The DataPipelineRequest class is the base class for all DataPipeline requests.
+ * \brief The DataPipelineRequest class provides an interface for DataPipeline requests.
  *
  * \ingroup DataPipeline
  */

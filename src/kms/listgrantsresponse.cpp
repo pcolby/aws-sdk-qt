@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ListGrantsResponse
  *
- * \brief The ListGrantsResponse class encapsulates KMS ListGrants responses.
+ * \brief The ListGrantsResponse class provides an interace for KMS ListGrants responses.
  *
  * \ingroup KMS
  *

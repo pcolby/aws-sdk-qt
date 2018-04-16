@@ -26,7 +26,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::MQRequest
  *
- * \brief The MQRequest class is the base class for all MQ requests.
+ * \brief The MQRequest class provides an interface for MQ requests.
  *
  * \ingroup MQ
  */

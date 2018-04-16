@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateLaunchTemplateVersionResponse
  *
- * \brief The CreateLaunchTemplateVersionResponse class encapsulates EC2 CreateLaunchTemplateVersion responses.
+ * \brief The CreateLaunchTemplateVersionResponse class provides an interace for EC2 CreateLaunchTemplateVersion responses.
  *
  * \ingroup EC2
  *

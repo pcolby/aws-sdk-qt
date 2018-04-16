@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::UpdateEventSourceMappingResponse
  *
- * \brief The UpdateEventSourceMappingResponse class encapsulates Lambda UpdateEventSourceMapping responses.
+ * \brief The UpdateEventSourceMappingResponse class provides an interace for Lambda UpdateEventSourceMapping responses.
  *
  * \ingroup Lambda
  *

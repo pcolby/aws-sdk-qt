@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::UpdateOrganizationalUnitResponse
  *
- * \brief The UpdateOrganizationalUnitResponse class encapsulates Organizations UpdateOrganizationalUnit responses.
+ * \brief The UpdateOrganizationalUnitResponse class provides an interace for Organizations UpdateOrganizationalUnit responses.
  *
  * \ingroup Organizations
  *

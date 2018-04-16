@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::GetQualificationTypeRequest
  *
- * \brief The GetQualificationTypeRequest class encapsulates MTurk GetQualificationType requests.
+ * \brief The GetQualificationTypeRequest class provides an interface for MTurk GetQualificationType requests.
  *
  * \ingroup MTurk
  *

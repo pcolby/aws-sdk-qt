@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::CreateNetworkProfileRequest
  *
- * \brief The CreateNetworkProfileRequest class encapsulates DeviceFarm CreateNetworkProfile requests.
+ * \brief The CreateNetworkProfileRequest class provides an interface for DeviceFarm CreateNetworkProfile requests.
  *
  * \ingroup DeviceFarm
  *

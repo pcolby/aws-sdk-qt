@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetRuleResponse
  *
- * \brief The GetRuleResponse class encapsulates WAFRegional GetRule responses.
+ * \brief The GetRuleResponse class provides an interace for WAFRegional GetRule responses.
  *
  * \ingroup WAFRegional
  *

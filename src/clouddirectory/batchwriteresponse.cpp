@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::BatchWriteResponse
  *
- * \brief The BatchWriteResponse class encapsulates CloudDirectory BatchWrite responses.
+ * \brief The BatchWriteResponse class provides an interace for CloudDirectory BatchWrite responses.
  *
  * \ingroup CloudDirectory
  *

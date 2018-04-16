@@ -30,7 +30,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::ListDashboardsResponse
  *
- * \brief The ListDashboardsResponse class encapsulates CloudWatch ListDashboards responses.
+ * \brief The ListDashboardsResponse class provides an interace for CloudWatch ListDashboards responses.
  *
  * \ingroup CloudWatch
  *

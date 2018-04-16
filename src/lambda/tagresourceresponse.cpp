@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::TagResourceResponse
  *
- * \brief The TagResourceResponse class encapsulates Lambda TagResource responses.
+ * \brief The TagResourceResponse class provides an interace for Lambda TagResource responses.
  *
  * \ingroup Lambda
  *

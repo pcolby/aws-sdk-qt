@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::GetSlotTypeRequest
  *
- * \brief The GetSlotTypeRequest class encapsulates LexModelBuildingService GetSlotType requests.
+ * \brief The GetSlotTypeRequest class provides an interface for LexModelBuildingService GetSlotType requests.
  *
  * \ingroup LexModelBuildingService
  *

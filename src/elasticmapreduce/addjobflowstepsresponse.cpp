@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::AddJobFlowStepsResponse
  *
- * \brief The AddJobFlowStepsResponse class encapsulates EMR AddJobFlowSteps responses.
+ * \brief The AddJobFlowStepsResponse class provides an interace for EMR AddJobFlowSteps responses.
  *
  * \ingroup EMR
  *

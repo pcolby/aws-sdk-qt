@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVpcsResponse
  *
- * \brief The DescribeVpcsResponse class encapsulates EC2 DescribeVpcs responses.
+ * \brief The DescribeVpcsResponse class provides an interace for EC2 DescribeVpcs responses.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::DeleteFieldLevelEncryptionConfigRequest
  *
- * \brief The DeleteFieldLevelEncryptionConfigRequest class encapsulates CloudFront DeleteFieldLevelEncryptionConfig requests.
+ * \brief The DeleteFieldLevelEncryptionConfigRequest class provides an interface for CloudFront DeleteFieldLevelEncryptionConfig requests.
  *
  * \ingroup CloudFront
  *

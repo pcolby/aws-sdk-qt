@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteLoginProfileRequest
  *
- * \brief The DeleteLoginProfileRequest class encapsulates IAM DeleteLoginProfile requests.
+ * \brief The DeleteLoginProfileRequest class provides an interface for IAM DeleteLoginProfile requests.
  *
  * \ingroup IAM
  *

@@ -26,7 +26,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::SnowballRequest
  *
- * \brief The SnowballRequest class is the base class for all Snowball requests.
+ * \brief The SnowballRequest class provides an interface for Snowball requests.
  *
  * \ingroup Snowball
  */

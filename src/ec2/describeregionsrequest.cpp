@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeRegionsRequest
  *
- * \brief The DescribeRegionsRequest class encapsulates EC2 DescribeRegions requests.
+ * \brief The DescribeRegionsRequest class provides an interface for EC2 DescribeRegions requests.
  *
  * \ingroup EC2
  *

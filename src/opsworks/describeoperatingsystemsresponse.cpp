@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeOperatingSystemsResponse
  *
- * \brief The DescribeOperatingSystemsResponse class encapsulates OpsWorks DescribeOperatingSystems responses.
+ * \brief The DescribeOperatingSystemsResponse class provides an interace for OpsWorks DescribeOperatingSystems responses.
  *
  * \ingroup OpsWorks
  *

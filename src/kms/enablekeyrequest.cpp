@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::EnableKeyRequest
  *
- * \brief The EnableKeyRequest class encapsulates KMS EnableKey requests.
+ * \brief The EnableKeyRequest class provides an interface for KMS EnableKey requests.
  *
  * \ingroup KMS
  *

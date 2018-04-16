@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DeleteChapCredentialsResponse
  *
- * \brief The DeleteChapCredentialsResponse class encapsulates StorageGateway DeleteChapCredentials responses.
+ * \brief The DeleteChapCredentialsResponse class provides an interace for StorageGateway DeleteChapCredentials responses.
  *
  * \ingroup StorageGateway
  *

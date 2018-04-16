@@ -30,7 +30,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::PutTraceSegmentsResponse
  *
- * \brief The PutTraceSegmentsResponse class encapsulates XRay PutTraceSegments responses.
+ * \brief The PutTraceSegmentsResponse class provides an interace for XRay PutTraceSegments responses.
  *
  * \ingroup XRay
  *

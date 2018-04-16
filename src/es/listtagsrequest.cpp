@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::ListTagsRequest
  *
- * \brief The ListTagsRequest class encapsulates ElasticsearchService ListTags requests.
+ * \brief The ListTagsRequest class provides an interface for ElasticsearchService ListTags requests.
  *
  * \ingroup ElasticsearchService
  *

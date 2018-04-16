@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DescribeParameterGroupsRequest
  *
- * \brief The DescribeParameterGroupsRequest class encapsulates DAX DescribeParameterGroups requests.
+ * \brief The DescribeParameterGroupsRequest class provides an interface for DAX DescribeParameterGroups requests.
  *
  * \ingroup DAX
  *

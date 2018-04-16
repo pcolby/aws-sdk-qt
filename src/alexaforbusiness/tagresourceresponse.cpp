@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::TagResourceResponse
  *
- * \brief The TagResourceResponse class encapsulates AlexaForBusiness TagResource responses.
+ * \brief The TagResourceResponse class provides an interace for AlexaForBusiness TagResource responses.
  *
  * \ingroup AlexaForBusiness
  *

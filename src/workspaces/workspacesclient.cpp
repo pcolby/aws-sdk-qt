@@ -65,7 +65,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::WorkSpacesClient
  *
- * \brief The WorkSpacesClient class provides access the Amazon WorkSpaces service.
+ * \brief The WorkSpacesClient class provides access to the Amazon WorkSpaces service.
  *
  * \ingroup WorkSpaces
  *

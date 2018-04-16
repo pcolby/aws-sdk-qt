@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListLaunchPathsRequest
  *
- * \brief The ListLaunchPathsRequest class encapsulates ServiceCatalog ListLaunchPaths requests.
+ * \brief The ListLaunchPathsRequest class provides an interface for ServiceCatalog ListLaunchPaths requests.
  *
  * \ingroup ServiceCatalog
  *

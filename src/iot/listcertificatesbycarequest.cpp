@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListCertificatesByCARequest
  *
- * \brief The ListCertificatesByCARequest class encapsulates IoT ListCertificatesByCA requests.
+ * \brief The ListCertificatesByCARequest class provides an interface for IoT ListCertificatesByCA requests.
  *
  * \ingroup IoT
  *

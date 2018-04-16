@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::RemovePermissionRequest
  *
- * \brief The RemovePermissionRequest class encapsulates CloudWatchEvents RemovePermission requests.
+ * \brief The RemovePermissionRequest class provides an interface for CloudWatchEvents RemovePermission requests.
  *
  * \ingroup CloudWatchEvents
  *

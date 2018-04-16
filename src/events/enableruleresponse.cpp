@@ -30,7 +30,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::EnableRuleResponse
  *
- * \brief The EnableRuleResponse class encapsulates CloudWatchEvents EnableRule responses.
+ * \brief The EnableRuleResponse class provides an interace for CloudWatchEvents EnableRule responses.
  *
  * \ingroup CloudWatchEvents
  *

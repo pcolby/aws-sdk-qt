@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ScanProvisionedProductsResponse
  *
- * \brief The ScanProvisionedProductsResponse class encapsulates ServiceCatalog ScanProvisionedProducts responses.
+ * \brief The ScanProvisionedProductsResponse class provides an interace for ServiceCatalog ScanProvisionedProducts responses.
  *
  * \ingroup ServiceCatalog
  *

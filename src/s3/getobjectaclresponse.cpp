@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetObjectAclResponse
  *
- * \brief The GetObjectAclResponse class encapsulates S3 GetObjectAcl responses.
+ * \brief The GetObjectAclResponse class provides an interace for S3 GetObjectAcl responses.
  *
  * \ingroup S3
  *

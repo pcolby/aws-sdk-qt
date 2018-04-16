@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetGroupRequest
  *
- * \brief The GetGroupRequest class encapsulates Greengrass GetGroup requests.
+ * \brief The GetGroupRequest class provides an interface for Greengrass GetGroup requests.
  *
  * \ingroup Greengrass
  *

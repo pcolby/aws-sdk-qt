@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::GetJobOutputRequest
  *
- * \brief The GetJobOutputRequest class encapsulates Glacier GetJobOutput requests.
+ * \brief The GetJobOutputRequest class provides an interface for Glacier GetJobOutput requests.
  *
  * \ingroup Glacier
  *

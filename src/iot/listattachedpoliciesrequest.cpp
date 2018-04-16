@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListAttachedPoliciesRequest
  *
- * \brief The ListAttachedPoliciesRequest class encapsulates IoT ListAttachedPolicies requests.
+ * \brief The ListAttachedPoliciesRequest class provides an interface for IoT ListAttachedPolicies requests.
  *
  * \ingroup IoT
  *

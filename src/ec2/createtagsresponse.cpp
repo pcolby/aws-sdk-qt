@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateTagsResponse
  *
- * \brief The CreateTagsResponse class encapsulates EC2 CreateTags responses.
+ * \brief The CreateTagsResponse class provides an interace for EC2 CreateTags responses.
  *
  * \ingroup EC2
  *

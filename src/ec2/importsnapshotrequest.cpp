@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ImportSnapshotRequest
  *
- * \brief The ImportSnapshotRequest class encapsulates EC2 ImportSnapshot requests.
+ * \brief The ImportSnapshotRequest class provides an interface for EC2 ImportSnapshot requests.
  *
  * \ingroup EC2
  *

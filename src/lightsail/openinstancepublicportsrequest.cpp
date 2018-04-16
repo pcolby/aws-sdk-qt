@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::OpenInstancePublicPortsRequest
  *
- * \brief The OpenInstancePublicPortsRequest class encapsulates Lightsail OpenInstancePublicPorts requests.
+ * \brief The OpenInstancePublicPortsRequest class provides an interface for Lightsail OpenInstancePublicPorts requests.
  *
  * \ingroup Lightsail
  *

@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::StartMaintenanceResponse
  *
- * \brief The StartMaintenanceResponse class encapsulates OpsWorksCM StartMaintenance responses.
+ * \brief The StartMaintenanceResponse class provides an interace for OpsWorksCM StartMaintenance responses.
  *
  * \ingroup OpsWorksCM
  *

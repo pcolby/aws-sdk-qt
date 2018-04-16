@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::ResolveRoomResponse
  *
- * \brief The ResolveRoomResponse class encapsulates AlexaForBusiness ResolveRoom responses.
+ * \brief The ResolveRoomResponse class provides an interace for AlexaForBusiness ResolveRoom responses.
  *
  * \ingroup AlexaForBusiness
  *

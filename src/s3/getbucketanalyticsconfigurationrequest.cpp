@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketAnalyticsConfigurationRequest
  *
- * \brief The GetBucketAnalyticsConfigurationRequest class encapsulates S3 GetBucketAnalyticsConfiguration requests.
+ * \brief The GetBucketAnalyticsConfigurationRequest class provides an interface for S3 GetBucketAnalyticsConfiguration requests.
  *
  * \ingroup S3
  *

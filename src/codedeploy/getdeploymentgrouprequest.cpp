@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::GetDeploymentGroupRequest
  *
- * \brief The GetDeploymentGroupRequest class encapsulates CodeDeploy GetDeploymentGroup requests.
+ * \brief The GetDeploymentGroupRequest class provides an interface for CodeDeploy GetDeploymentGroup requests.
  *
  * \ingroup CodeDeploy
  *

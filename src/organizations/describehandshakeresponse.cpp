@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DescribeHandshakeResponse
  *
- * \brief The DescribeHandshakeResponse class encapsulates Organizations DescribeHandshake responses.
+ * \brief The DescribeHandshakeResponse class provides an interace for Organizations DescribeHandshake responses.
  *
  * \ingroup Organizations
  *

@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DescribeCreateAccountStatusRequest
  *
- * \brief The DescribeCreateAccountStatusRequest class encapsulates Organizations DescribeCreateAccountStatus requests.
+ * \brief The DescribeCreateAccountStatusRequest class provides an interface for Organizations DescribeCreateAccountStatus requests.
  *
  * \ingroup Organizations
  *

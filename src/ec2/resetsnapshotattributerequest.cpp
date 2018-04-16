@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ResetSnapshotAttributeRequest
  *
- * \brief The ResetSnapshotAttributeRequest class encapsulates EC2 ResetSnapshotAttribute requests.
+ * \brief The ResetSnapshotAttributeRequest class provides an interface for EC2 ResetSnapshotAttribute requests.
  *
  * \ingroup EC2
  *

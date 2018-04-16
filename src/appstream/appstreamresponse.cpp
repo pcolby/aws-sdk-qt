@@ -29,7 +29,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::AppStreamResponse
  *
- * \brief The AppStreamResponse class is the base class for all AppStream responses.
+ * \brief The AppStreamResponse class provides an interface for AppStream responses.
  *
  * \ingroup AppStream
  */

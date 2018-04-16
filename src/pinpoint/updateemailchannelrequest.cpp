@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateEmailChannelRequest
  *
- * \brief The UpdateEmailChannelRequest class encapsulates Pinpoint UpdateEmailChannel requests.
+ * \brief The UpdateEmailChannelRequest class provides an interface for Pinpoint UpdateEmailChannel requests.
  *
  * \ingroup Pinpoint
  *

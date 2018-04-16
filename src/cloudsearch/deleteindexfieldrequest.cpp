@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DeleteIndexFieldRequest
  *
- * \brief The DeleteIndexFieldRequest class encapsulates CloudSearch DeleteIndexField requests.
+ * \brief The DeleteIndexFieldRequest class provides an interface for CloudSearch DeleteIndexField requests.
  *
  * \ingroup CloudSearch
  *

@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::PurchaseReservedCacheNodesOfferingRequest
  *
- * \brief The PurchaseReservedCacheNodesOfferingRequest class encapsulates ElastiCache PurchaseReservedCacheNodesOffering requests.
+ * \brief The PurchaseReservedCacheNodesOfferingRequest class provides an interface for ElastiCache PurchaseReservedCacheNodesOffering requests.
  *
  * \ingroup ElastiCache
  *

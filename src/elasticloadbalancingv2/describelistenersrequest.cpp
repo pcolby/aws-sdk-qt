@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeListenersRequest
  *
- * \brief The DescribeListenersRequest class encapsulates ElasticLoadBalancingv2 DescribeListeners requests.
+ * \brief The DescribeListenersRequest class provides an interface for ElasticLoadBalancingv2 DescribeListeners requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

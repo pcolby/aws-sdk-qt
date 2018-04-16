@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ListExportsRequest
  *
- * \brief The ListExportsRequest class encapsulates CloudFormation ListExports requests.
+ * \brief The ListExportsRequest class provides an interface for CloudFormation ListExports requests.
  *
  * \ingroup CloudFormation
  *

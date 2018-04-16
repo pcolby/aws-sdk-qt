@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeDefaultClusterParametersResponse
  *
- * \brief The DescribeDefaultClusterParametersResponse class encapsulates Redshift DescribeDefaultClusterParameters responses.
+ * \brief The DescribeDefaultClusterParametersResponse class provides an interace for Redshift DescribeDefaultClusterParameters responses.
  *
  * \ingroup Redshift
  *

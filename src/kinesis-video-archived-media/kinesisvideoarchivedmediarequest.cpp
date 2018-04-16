@@ -26,7 +26,7 @@ namespace KinesisVideoArchivedMedia {
 /*!
  * \class QtAws::KinesisVideoArchivedMedia::KinesisVideoArchivedMediaRequest
  *
- * \brief The KinesisVideoArchivedMediaRequest class is the base class for all KinesisVideoArchivedMedia requests.
+ * \brief The KinesisVideoArchivedMediaRequest class provides an interface for KinesisVideoArchivedMedia requests.
  *
  * \ingroup KinesisVideoArchivedMedia
  */

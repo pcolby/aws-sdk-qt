@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::ModifyReplicationSubnetGroupRequest
  *
- * \brief The ModifyReplicationSubnetGroupRequest class encapsulates DatabaseMigrationService ModifyReplicationSubnetGroup requests.
+ * \brief The ModifyReplicationSubnetGroupRequest class provides an interface for DatabaseMigrationService ModifyReplicationSubnetGroup requests.
  *
  * \ingroup DatabaseMigrationService
  *

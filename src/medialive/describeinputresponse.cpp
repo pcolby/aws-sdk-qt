@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::DescribeInputResponse
  *
- * \brief The DescribeInputResponse class encapsulates MediaLive DescribeInput responses.
+ * \brief The DescribeInputResponse class provides an interace for MediaLive DescribeInput responses.
  *
  * \ingroup MediaLive
  *

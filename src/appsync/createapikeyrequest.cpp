@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::CreateApiKeyRequest
  *
- * \brief The CreateApiKeyRequest class encapsulates AppSync CreateApiKey requests.
+ * \brief The CreateApiKeyRequest class provides an interface for AppSync CreateApiKey requests.
  *
  * \ingroup AppSync
  *

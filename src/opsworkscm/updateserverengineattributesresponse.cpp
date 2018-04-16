@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::UpdateServerEngineAttributesResponse
  *
- * \brief The UpdateServerEngineAttributesResponse class encapsulates OpsWorksCM UpdateServerEngineAttributes responses.
+ * \brief The UpdateServerEngineAttributesResponse class provides an interace for OpsWorksCM UpdateServerEngineAttributes responses.
  *
  * \ingroup OpsWorksCM
  *

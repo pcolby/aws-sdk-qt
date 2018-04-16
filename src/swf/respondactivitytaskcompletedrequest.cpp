@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::RespondActivityTaskCompletedRequest
  *
- * \brief The RespondActivityTaskCompletedRequest class encapsulates SWF RespondActivityTaskCompleted requests.
+ * \brief The RespondActivityTaskCompletedRequest class provides an interface for SWF RespondActivityTaskCompleted requests.
  *
  * \ingroup SWF
  *

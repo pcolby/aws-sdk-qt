@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateVolumeResponse
  *
- * \brief The UpdateVolumeResponse class encapsulates OpsWorks UpdateVolume responses.
+ * \brief The UpdateVolumeResponse class provides an interace for OpsWorks UpdateVolume responses.
  *
  * \ingroup OpsWorks
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AssociateAddressResponse
  *
- * \brief The AssociateAddressResponse class encapsulates EC2 AssociateAddress responses.
+ * \brief The AssociateAddressResponse class provides an interace for EC2 AssociateAddress responses.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeInstancesResponse
  *
- * \brief The DescribeInstancesResponse class encapsulates GameLift DescribeInstances responses.
+ * \brief The DescribeInstancesResponse class provides an interace for GameLift DescribeInstances responses.
  *
  * \ingroup GameLift
  *

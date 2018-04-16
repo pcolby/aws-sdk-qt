@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetFunctionDefinitionResponse
  *
- * \brief The GetFunctionDefinitionResponse class encapsulates Greengrass GetFunctionDefinition responses.
+ * \brief The GetFunctionDefinitionResponse class provides an interace for Greengrass GetFunctionDefinition responses.
  *
  * \ingroup Greengrass
  *

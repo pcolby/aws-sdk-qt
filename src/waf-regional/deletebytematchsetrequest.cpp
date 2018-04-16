@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeleteByteMatchSetRequest
  *
- * \brief The DeleteByteMatchSetRequest class encapsulates WAFRegional DeleteByteMatchSet requests.
+ * \brief The DeleteByteMatchSetRequest class provides an interface for WAFRegional DeleteByteMatchSet requests.
  *
  * \ingroup WAFRegional
  *

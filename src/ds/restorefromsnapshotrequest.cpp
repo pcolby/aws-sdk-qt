@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::RestoreFromSnapshotRequest
  *
- * \brief The RestoreFromSnapshotRequest class encapsulates DirectoryService RestoreFromSnapshot requests.
+ * \brief The RestoreFromSnapshotRequest class provides an interface for DirectoryService RestoreFromSnapshot requests.
  *
  * \ingroup DirectoryService
  *

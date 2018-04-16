@@ -29,7 +29,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::SFNResponse
  *
- * \brief The SFNResponse class is the base class for all SFN responses.
+ * \brief The SFNResponse class provides an interface for SFN responses.
  *
  * \ingroup SFN
  */

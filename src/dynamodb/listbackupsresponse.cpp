@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::ListBackupsResponse
  *
- * \brief The ListBackupsResponse class encapsulates DynamoDB ListBackups responses.
+ * \brief The ListBackupsResponse class provides an interace for DynamoDB ListBackups responses.
  *
  * \ingroup DynamoDB
  *

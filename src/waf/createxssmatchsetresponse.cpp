@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::CreateXssMatchSetResponse
  *
- * \brief The CreateXssMatchSetResponse class encapsulates WAF CreateXssMatchSet responses.
+ * \brief The CreateXssMatchSetResponse class provides an interace for WAF CreateXssMatchSet responses.
  *
  * \ingroup WAF
  *

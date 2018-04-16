@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::SubscribeRequest
  *
- * \brief The SubscribeRequest class encapsulates SNS Subscribe requests.
+ * \brief The SubscribeRequest class provides an interface for SNS Subscribe requests.
  *
  * \ingroup SNS
  *

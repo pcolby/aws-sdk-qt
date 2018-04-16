@@ -29,7 +29,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::OrganizationsResponse
  *
- * \brief The OrganizationsResponse class is the base class for all Organizations responses.
+ * \brief The OrganizationsResponse class provides an interface for Organizations responses.
  *
  * \ingroup Organizations
  */

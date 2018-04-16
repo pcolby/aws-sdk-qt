@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::GetPipelineDefinitionResponse
  *
- * \brief The GetPipelineDefinitionResponse class encapsulates DataPipeline GetPipelineDefinition responses.
+ * \brief The GetPipelineDefinitionResponse class provides an interace for DataPipeline GetPipelineDefinition responses.
  *
  * \ingroup DataPipeline
  *

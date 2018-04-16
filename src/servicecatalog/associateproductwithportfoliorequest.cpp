@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::AssociateProductWithPortfolioRequest
  *
- * \brief The AssociateProductWithPortfolioRequest class encapsulates ServiceCatalog AssociateProductWithPortfolio requests.
+ * \brief The AssociateProductWithPortfolioRequest class provides an interface for ServiceCatalog AssociateProductWithPortfolio requests.
  *
  * \ingroup ServiceCatalog
  *

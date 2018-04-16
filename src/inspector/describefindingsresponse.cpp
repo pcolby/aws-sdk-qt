@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::DescribeFindingsResponse
  *
- * \brief The DescribeFindingsResponse class encapsulates Inspector DescribeFindings responses.
+ * \brief The DescribeFindingsResponse class provides an interace for Inspector DescribeFindings responses.
  *
  * \ingroup Inspector
  *

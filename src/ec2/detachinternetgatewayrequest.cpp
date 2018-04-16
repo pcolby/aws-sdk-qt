@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DetachInternetGatewayRequest
  *
- * \brief The DetachInternetGatewayRequest class encapsulates EC2 DetachInternetGateway requests.
+ * \brief The DetachInternetGatewayRequest class provides an interface for EC2 DetachInternetGateway requests.
  *
  * \ingroup EC2
  *

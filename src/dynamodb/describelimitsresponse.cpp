@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DescribeLimitsResponse
  *
- * \brief The DescribeLimitsResponse class encapsulates DynamoDB DescribeLimits responses.
+ * \brief The DescribeLimitsResponse class provides an interace for DynamoDB DescribeLimits responses.
  *
  * \ingroup DynamoDB
  *

@@ -28,7 +28,7 @@ namespace MediaStoreData {
 /*!
  * \class QtAws::MediaStoreData::DeleteObjectRequest
  *
- * \brief The DeleteObjectRequest class encapsulates MediaStoreData DeleteObject requests.
+ * \brief The DeleteObjectRequest class provides an interface for MediaStoreData DeleteObject requests.
  *
  * \ingroup MediaStoreData
  *

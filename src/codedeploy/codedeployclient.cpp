@@ -117,7 +117,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::CodeDeployClient
  *
- * \brief The CodeDeployClient class provides access the AWS CodeDeploy service.
+ * \brief The CodeDeployClient class provides access to the AWS CodeDeploy service.
  *
  * \ingroup CodeDeploy
  *

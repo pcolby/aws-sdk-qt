@@ -29,7 +29,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::BatchResponse
  *
- * \brief The BatchResponse class is the base class for all Batch responses.
+ * \brief The BatchResponse class provides an interface for Batch responses.
  *
  * \ingroup Batch
  */

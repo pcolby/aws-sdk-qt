@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::CreateApiKeyResponse
  *
- * \brief The CreateApiKeyResponse class encapsulates AppSync CreateApiKey responses.
+ * \brief The CreateApiKeyResponse class provides an interace for AppSync CreateApiKey responses.
  *
  * \ingroup AppSync
  *

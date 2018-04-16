@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::CreateIndexRequest
  *
- * \brief The CreateIndexRequest class encapsulates CloudDirectory CreateIndex requests.
+ * \brief The CreateIndexRequest class provides an interface for CloudDirectory CreateIndex requests.
  *
  * \ingroup CloudDirectory
  *

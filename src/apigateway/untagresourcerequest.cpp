@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UntagResourceRequest
  *
- * \brief The UntagResourceRequest class encapsulates APIGateway UntagResource requests.
+ * \brief The UntagResourceRequest class provides an interface for APIGateway UntagResource requests.
  *
  * \ingroup APIGateway
  *

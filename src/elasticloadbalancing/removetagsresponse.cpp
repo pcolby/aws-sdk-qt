@@ -30,7 +30,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::RemoveTagsResponse
  *
- * \brief The RemoveTagsResponse class encapsulates ElasticLoadBalancing RemoveTags responses.
+ * \brief The RemoveTagsResponse class provides an interace for ElasticLoadBalancing RemoveTags responses.
  *
  * \ingroup ElasticLoadBalancing
  *

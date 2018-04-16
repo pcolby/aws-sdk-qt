@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateServiceLinkedRoleResponse
  *
- * \brief The CreateServiceLinkedRoleResponse class encapsulates IAM CreateServiceLinkedRole responses.
+ * \brief The CreateServiceLinkedRoleResponse class provides an interace for IAM CreateServiceLinkedRole responses.
  *
  * \ingroup IAM
  *

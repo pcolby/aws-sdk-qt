@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::AddTagsToResourceResponse
  *
- * \brief The AddTagsToResourceResponse class encapsulates DirectoryService AddTagsToResource responses.
+ * \brief The AddTagsToResourceResponse class provides an interace for DirectoryService AddTagsToResource responses.
  *
  * \ingroup DirectoryService
  *

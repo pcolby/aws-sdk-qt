@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::DeprecateActivityTypeRequest
  *
- * \brief The DeprecateActivityTypeRequest class encapsulates SWF DeprecateActivityType requests.
+ * \brief The DeprecateActivityTypeRequest class provides an interface for SWF DeprecateActivityType requests.
  *
  * \ingroup SWF
  *

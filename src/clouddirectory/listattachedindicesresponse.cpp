@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListAttachedIndicesResponse
  *
- * \brief The ListAttachedIndicesResponse class encapsulates CloudDirectory ListAttachedIndices responses.
+ * \brief The ListAttachedIndicesResponse class provides an interace for CloudDirectory ListAttachedIndices responses.
  *
  * \ingroup CloudDirectory
  *

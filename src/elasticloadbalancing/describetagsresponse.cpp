@@ -30,7 +30,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::DescribeTagsResponse
  *
- * \brief The DescribeTagsResponse class encapsulates ElasticLoadBalancing DescribeTags responses.
+ * \brief The DescribeTagsResponse class provides an interace for ElasticLoadBalancing DescribeTags responses.
  *
  * \ingroup ElasticLoadBalancing
  *

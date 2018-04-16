@@ -28,7 +28,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::DeleteServerCatalogRequest
  *
- * \brief The DeleteServerCatalogRequest class encapsulates SMS DeleteServerCatalog requests.
+ * \brief The DeleteServerCatalogRequest class provides an interface for SMS DeleteServerCatalog requests.
  *
  * \ingroup SMS
  *

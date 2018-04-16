@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DescribeEndpointRequest
  *
- * \brief The DescribeEndpointRequest class encapsulates SageMaker DescribeEndpoint requests.
+ * \brief The DescribeEndpointRequest class provides an interface for SageMaker DescribeEndpoint requests.
  *
  * \ingroup SageMaker
  *

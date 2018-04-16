@@ -30,7 +30,7 @@ namespace CostandUsageReportService {
 /*!
  * \class QtAws::CostandUsageReportService::DescribeReportDefinitionsResponse
  *
- * \brief The DescribeReportDefinitionsResponse class encapsulates CostandUsageReportService DescribeReportDefinitions responses.
+ * \brief The DescribeReportDefinitionsResponse class provides an interace for CostandUsageReportService DescribeReportDefinitions responses.
  *
  * \ingroup CostandUsageReportService
  *

@@ -45,7 +45,7 @@ namespace IoTDataPlane {
 /*!
  * \class QtAws::IoTDataPlane::IoTDataPlaneClient
  *
- * \brief The IoTDataPlaneClient class provides access the AWS IoT Data Plane service.
+ * \brief The IoTDataPlaneClient class provides access to the AWS IoT Data Plane service.
  *
  * \ingroup IoTDataPlane
  *

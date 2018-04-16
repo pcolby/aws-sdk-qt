@@ -26,7 +26,7 @@ namespace AutoScalingPlans {
 /*!
  * \class QtAws::AutoScalingPlans::AutoScalingPlansRequest
  *
- * \brief The AutoScalingPlansRequest class is the base class for all AutoScalingPlans requests.
+ * \brief The AutoScalingPlansRequest class provides an interface for AutoScalingPlans requests.
  *
  * \ingroup AutoScalingPlans
  */

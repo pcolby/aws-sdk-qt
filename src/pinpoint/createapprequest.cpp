@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::CreateAppRequest
  *
- * \brief The CreateAppRequest class encapsulates Pinpoint CreateApp requests.
+ * \brief The CreateAppRequest class provides an interface for Pinpoint CreateApp requests.
  *
  * \ingroup Pinpoint
  *

@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::DescribeExportTasksRequest
  *
- * \brief The DescribeExportTasksRequest class encapsulates ApplicationDiscoveryService DescribeExportTasks requests.
+ * \brief The DescribeExportTasksRequest class provides an interface for ApplicationDiscoveryService DescribeExportTasks requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

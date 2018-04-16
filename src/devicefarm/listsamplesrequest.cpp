@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListSamplesRequest
  *
- * \brief The ListSamplesRequest class encapsulates DeviceFarm ListSamples requests.
+ * \brief The ListSamplesRequest class provides an interface for DeviceFarm ListSamples requests.
  *
  * \ingroup DeviceFarm
  *

@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::CreateSegmentResponse
  *
- * \brief The CreateSegmentResponse class encapsulates Pinpoint CreateSegment responses.
+ * \brief The CreateSegmentResponse class provides an interace for Pinpoint CreateSegment responses.
  *
  * \ingroup Pinpoint
  *

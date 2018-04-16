@@ -28,7 +28,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::UpdateDomainContactRequest
  *
- * \brief The UpdateDomainContactRequest class encapsulates Route53Domains UpdateDomainContact requests.
+ * \brief The UpdateDomainContactRequest class provides an interface for Route53Domains UpdateDomainContact requests.
  *
  * \ingroup Route53Domains
  *

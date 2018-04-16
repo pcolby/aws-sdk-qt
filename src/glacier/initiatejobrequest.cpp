@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::InitiateJobRequest
  *
- * \brief The InitiateJobRequest class encapsulates Glacier InitiateJob requests.
+ * \brief The InitiateJobRequest class provides an interface for Glacier InitiateJob requests.
  *
  * \ingroup Glacier
  *

@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::StartDBInstanceResponse
  *
- * \brief The StartDBInstanceResponse class encapsulates RDS StartDBInstance responses.
+ * \brief The StartDBInstanceResponse class provides an interace for RDS StartDBInstance responses.
  *
  * \ingroup RDS
  *

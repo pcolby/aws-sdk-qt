@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::UpdateRoleAliasResponse
  *
- * \brief The UpdateRoleAliasResponse class encapsulates IoT UpdateRoleAlias responses.
+ * \brief The UpdateRoleAliasResponse class provides an interace for IoT UpdateRoleAlias responses.
  *
  * \ingroup IoT
  *

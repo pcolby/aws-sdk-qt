@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreatePolicyRequest
  *
- * \brief The CreatePolicyRequest class encapsulates IoT CreatePolicy requests.
+ * \brief The CreatePolicyRequest class provides an interface for IoT CreatePolicy requests.
  *
  * \ingroup IoT
  *

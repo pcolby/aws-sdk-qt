@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::UpdateFunctionDefinitionRequest
  *
- * \brief The UpdateFunctionDefinitionRequest class encapsulates Greengrass UpdateFunctionDefinition requests.
+ * \brief The UpdateFunctionDefinitionRequest class provides an interface for Greengrass UpdateFunctionDefinition requests.
  *
  * \ingroup Greengrass
  *

@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetRateBasedRuleRequest
  *
- * \brief The GetRateBasedRuleRequest class encapsulates WAFRegional GetRateBasedRule requests.
+ * \brief The GetRateBasedRuleRequest class provides an interface for WAFRegional GetRateBasedRule requests.
  *
  * \ingroup WAFRegional
  *

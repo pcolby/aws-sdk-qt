@@ -30,7 +30,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::DescribeApplicationStateResponse
  *
- * \brief The DescribeApplicationStateResponse class encapsulates MigrationHub DescribeApplicationState responses.
+ * \brief The DescribeApplicationStateResponse class provides an interace for MigrationHub DescribeApplicationState responses.
  *
  * \ingroup MigrationHub
  *

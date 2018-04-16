@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::ListDetectorsResponse
  *
- * \brief The ListDetectorsResponse class encapsulates GuardDuty ListDetectors responses.
+ * \brief The ListDetectorsResponse class provides an interace for GuardDuty ListDetectors responses.
  *
  * \ingroup GuardDuty
  *

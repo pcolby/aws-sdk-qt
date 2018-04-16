@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CreateDBSecurityGroupResponse
  *
- * \brief The CreateDBSecurityGroupResponse class encapsulates RDS CreateDBSecurityGroup responses.
+ * \brief The CreateDBSecurityGroupResponse class provides an interace for RDS CreateDBSecurityGroup responses.
  *
  * \ingroup RDS
  *

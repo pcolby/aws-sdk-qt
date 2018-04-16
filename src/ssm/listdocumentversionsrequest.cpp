@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListDocumentVersionsRequest
  *
- * \brief The ListDocumentVersionsRequest class encapsulates SSM ListDocumentVersions requests.
+ * \brief The ListDocumentVersionsRequest class provides an interface for SSM ListDocumentVersions requests.
  *
  * \ingroup SSM
  *

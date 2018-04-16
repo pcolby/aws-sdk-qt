@@ -28,7 +28,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::SetIdentityPoolConfigurationRequest
  *
- * \brief The SetIdentityPoolConfigurationRequest class encapsulates CognitoSync SetIdentityPoolConfiguration requests.
+ * \brief The SetIdentityPoolConfigurationRequest class provides an interface for CognitoSync SetIdentityPoolConfiguration requests.
  *
  * \ingroup CognitoSync
  *

@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::InitiateLayerUploadResponse
  *
- * \brief The InitiateLayerUploadResponse class encapsulates ECR InitiateLayerUpload responses.
+ * \brief The InitiateLayerUploadResponse class provides an interace for ECR InitiateLayerUpload responses.
  *
  * \ingroup ECR
  *

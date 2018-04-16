@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetRoleResponse
  *
- * \brief The GetRoleResponse class encapsulates IAM GetRole responses.
+ * \brief The GetRoleResponse class provides an interace for IAM GetRole responses.
  *
  * \ingroup IAM
  *

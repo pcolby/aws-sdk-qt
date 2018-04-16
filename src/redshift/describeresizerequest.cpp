@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeResizeRequest
  *
- * \brief The DescribeResizeRequest class encapsulates Redshift DescribeResize requests.
+ * \brief The DescribeResizeRequest class provides an interface for Redshift DescribeResize requests.
  *
  * \ingroup Redshift
  *

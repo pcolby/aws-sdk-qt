@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetApnsSandboxChannelRequest
  *
- * \brief The GetApnsSandboxChannelRequest class encapsulates Pinpoint GetApnsSandboxChannel requests.
+ * \brief The GetApnsSandboxChannelRequest class provides an interface for Pinpoint GetApnsSandboxChannel requests.
  *
  * \ingroup Pinpoint
  *

@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::AbortVaultLockResponse
  *
- * \brief The AbortVaultLockResponse class encapsulates Glacier AbortVaultLock responses.
+ * \brief The AbortVaultLockResponse class provides an interace for Glacier AbortVaultLock responses.
  *
  * \ingroup Glacier
  *

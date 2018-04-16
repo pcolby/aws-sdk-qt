@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::VerifyEmailIdentityRequest
  *
- * \brief The VerifyEmailIdentityRequest class encapsulates SES VerifyEmailIdentity requests.
+ * \brief The VerifyEmailIdentityRequest class provides an interface for SES VerifyEmailIdentity requests.
  *
  * \ingroup SES
  *

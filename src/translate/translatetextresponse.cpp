@@ -30,7 +30,7 @@ namespace Translate {
 /*!
  * \class QtAws::Translate::TranslateTextResponse
  *
- * \brief The TranslateTextResponse class encapsulates Translate TranslateText responses.
+ * \brief The TranslateTextResponse class provides an interace for Translate TranslateText responses.
  *
  * \ingroup Translate
  *

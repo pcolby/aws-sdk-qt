@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::DeleteFieldLevelEncryptionProfileResponse
  *
- * \brief The DeleteFieldLevelEncryptionProfileResponse class encapsulates CloudFront DeleteFieldLevelEncryptionProfile responses.
+ * \brief The DeleteFieldLevelEncryptionProfileResponse class provides an interace for CloudFront DeleteFieldLevelEncryptionProfile responses.
  *
  * \ingroup CloudFront
  *

@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::GetDocumentVersionResponse
  *
- * \brief The GetDocumentVersionResponse class encapsulates WorkDocs GetDocumentVersion responses.
+ * \brief The GetDocumentVersionResponse class provides an interace for WorkDocs GetDocumentVersion responses.
  *
  * \ingroup WorkDocs
  *

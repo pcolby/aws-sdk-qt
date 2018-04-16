@@ -28,7 +28,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::DescribeFileSystemsRequest
  *
- * \brief The DescribeFileSystemsRequest class encapsulates EFS DescribeFileSystems requests.
+ * \brief The DescribeFileSystemsRequest class provides an interface for EFS DescribeFileSystems requests.
  *
  * \ingroup EFS
  *

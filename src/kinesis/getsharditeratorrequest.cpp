@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::GetShardIteratorRequest
  *
- * \brief The GetShardIteratorRequest class encapsulates Kinesis GetShardIterator requests.
+ * \brief The GetShardIteratorRequest class provides an interface for Kinesis GetShardIterator requests.
  *
  * \ingroup Kinesis
  *

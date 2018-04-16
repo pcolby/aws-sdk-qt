@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::AddAttributesToFindingsResponse
  *
- * \brief The AddAttributesToFindingsResponse class encapsulates Inspector AddAttributesToFindings responses.
+ * \brief The AddAttributesToFindingsResponse class provides an interace for Inspector AddAttributesToFindings responses.
  *
  * \ingroup Inspector
  *

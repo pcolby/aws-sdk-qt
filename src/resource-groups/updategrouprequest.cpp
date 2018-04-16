@@ -28,7 +28,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::UpdateGroupRequest
  *
- * \brief The UpdateGroupRequest class encapsulates ResourceGroups UpdateGroup requests.
+ * \brief The UpdateGroupRequest class provides an interface for ResourceGroups UpdateGroup requests.
  *
  * \ingroup ResourceGroups
  *

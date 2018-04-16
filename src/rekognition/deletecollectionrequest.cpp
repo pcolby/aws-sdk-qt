@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::DeleteCollectionRequest
  *
- * \brief The DeleteCollectionRequest class encapsulates Rekognition DeleteCollection requests.
+ * \brief The DeleteCollectionRequest class provides an interface for Rekognition DeleteCollection requests.
  *
  * \ingroup Rekognition
  *

@@ -29,7 +29,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::EFSResponse
  *
- * \brief The EFSResponse class is the base class for all EFS responses.
+ * \brief The EFSResponse class provides an interface for EFS responses.
  *
  * \ingroup EFS
  */

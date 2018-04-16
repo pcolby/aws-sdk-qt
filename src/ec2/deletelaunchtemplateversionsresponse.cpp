@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteLaunchTemplateVersionsResponse
  *
- * \brief The DeleteLaunchTemplateVersionsResponse class encapsulates EC2 DeleteLaunchTemplateVersions responses.
+ * \brief The DeleteLaunchTemplateVersionsResponse class provides an interace for EC2 DeleteLaunchTemplateVersions responses.
  *
  * \ingroup EC2
  *

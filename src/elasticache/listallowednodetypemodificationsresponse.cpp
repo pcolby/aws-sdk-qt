@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ListAllowedNodeTypeModificationsResponse
  *
- * \brief The ListAllowedNodeTypeModificationsResponse class encapsulates ElastiCache ListAllowedNodeTypeModifications responses.
+ * \brief The ListAllowedNodeTypeModificationsResponse class provides an interace for ElastiCache ListAllowedNodeTypeModifications responses.
  *
  * \ingroup ElastiCache
  *

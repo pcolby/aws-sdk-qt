@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CreateDBClusterRequest
  *
- * \brief The CreateDBClusterRequest class encapsulates RDS CreateDBCluster requests.
+ * \brief The CreateDBClusterRequest class provides an interface for RDS CreateDBCluster requests.
  *
  * \ingroup RDS
  *

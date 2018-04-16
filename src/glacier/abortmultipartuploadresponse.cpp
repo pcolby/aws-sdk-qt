@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::AbortMultipartUploadResponse
  *
- * \brief The AbortMultipartUploadResponse class encapsulates Glacier AbortMultipartUpload responses.
+ * \brief The AbortMultipartUploadResponse class provides an interace for Glacier AbortMultipartUpload responses.
  *
  * \ingroup Glacier
  *

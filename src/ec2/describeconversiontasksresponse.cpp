@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeConversionTasksResponse
  *
- * \brief The DescribeConversionTasksResponse class encapsulates EC2 DescribeConversionTasks responses.
+ * \brief The DescribeConversionTasksResponse class provides an interace for EC2 DescribeConversionTasks responses.
  *
  * \ingroup EC2
  *

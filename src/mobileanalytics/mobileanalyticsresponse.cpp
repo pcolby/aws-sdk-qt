@@ -29,7 +29,7 @@ namespace MobileAnalytics {
 /*!
  * \class QtAws::MobileAnalytics::MobileAnalyticsResponse
  *
- * \brief The MobileAnalyticsResponse class is the base class for all MobileAnalytics responses.
+ * \brief The MobileAnalyticsResponse class provides an interface for MobileAnalytics responses.
  *
  * \ingroup MobileAnalytics
  */

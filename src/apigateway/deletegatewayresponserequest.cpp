@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteGatewayResponseRequest
  *
- * \brief The DeleteGatewayResponseRequest class encapsulates APIGateway DeleteGatewayResponse requests.
+ * \brief The DeleteGatewayResponseRequest class provides an interface for APIGateway DeleteGatewayResponse requests.
  *
  * \ingroup APIGateway
  *

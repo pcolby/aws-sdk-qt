@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::CreatePipelineRequest
  *
- * \brief The CreatePipelineRequest class encapsulates ElasticTranscoder CreatePipeline requests.
+ * \brief The CreatePipelineRequest class provides an interface for ElasticTranscoder CreatePipeline requests.
  *
  * \ingroup ElasticTranscoder
  *

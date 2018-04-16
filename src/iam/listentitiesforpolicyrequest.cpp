@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListEntitiesForPolicyRequest
  *
- * \brief The ListEntitiesForPolicyRequest class encapsulates IAM ListEntitiesForPolicy requests.
+ * \brief The ListEntitiesForPolicyRequest class provides an interface for IAM ListEntitiesForPolicy requests.
  *
  * \ingroup IAM
  *

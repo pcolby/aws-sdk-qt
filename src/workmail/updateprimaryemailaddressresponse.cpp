@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::UpdatePrimaryEmailAddressResponse
  *
- * \brief The UpdatePrimaryEmailAddressResponse class encapsulates WorkMail UpdatePrimaryEmailAddress responses.
+ * \brief The UpdatePrimaryEmailAddressResponse class provides an interace for WorkMail UpdatePrimaryEmailAddress responses.
  *
  * \ingroup WorkMail
  *

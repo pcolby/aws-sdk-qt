@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::GetParametersForImportRequest
  *
- * \brief The GetParametersForImportRequest class encapsulates KMS GetParametersForImport requests.
+ * \brief The GetParametersForImportRequest class provides an interface for KMS GetParametersForImport requests.
  *
  * \ingroup KMS
  *

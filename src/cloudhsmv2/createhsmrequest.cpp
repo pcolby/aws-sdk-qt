@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::CreateHsmRequest
  *
- * \brief The CreateHsmRequest class encapsulates CloudHSMV2 CreateHsm requests.
+ * \brief The CreateHsmRequest class provides an interface for CloudHSMV2 CreateHsm requests.
  *
  * \ingroup CloudHSMV2
  *

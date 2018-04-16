@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateApplicationResponse
  *
- * \brief The UpdateApplicationResponse class encapsulates ElasticBeanstalk UpdateApplication responses.
+ * \brief The UpdateApplicationResponse class provides an interace for ElasticBeanstalk UpdateApplication responses.
  *
  * \ingroup ElasticBeanstalk
  *

@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ListBootstrapActionsRequest
  *
- * \brief The ListBootstrapActionsRequest class encapsulates EMR ListBootstrapActions requests.
+ * \brief The ListBootstrapActionsRequest class provides an interface for EMR ListBootstrapActions requests.
  *
  * \ingroup EMR
  *

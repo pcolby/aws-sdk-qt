@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::SearchGameSessionsRequest
  *
- * \brief The SearchGameSessionsRequest class encapsulates GameLift SearchGameSessions requests.
+ * \brief The SearchGameSessionsRequest class provides an interface for GameLift SearchGameSessions requests.
  *
  * \ingroup GameLift
  *

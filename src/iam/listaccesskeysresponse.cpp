@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListAccessKeysResponse
  *
- * \brief The ListAccessKeysResponse class encapsulates IAM ListAccessKeys responses.
+ * \brief The ListAccessKeysResponse class provides an interace for IAM ListAccessKeys responses.
  *
  * \ingroup IAM
  *

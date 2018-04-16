@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEnvironmentHealthRequest
  *
- * \brief The DescribeEnvironmentHealthRequest class encapsulates ElasticBeanstalk DescribeEnvironmentHealth requests.
+ * \brief The DescribeEnvironmentHealthRequest class provides an interface for ElasticBeanstalk DescribeEnvironmentHealth requests.
  *
  * \ingroup ElasticBeanstalk
  *

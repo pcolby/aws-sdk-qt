@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::CreateEventSourceMappingResponse
  *
- * \brief The CreateEventSourceMappingResponse class encapsulates Lambda CreateEventSourceMapping responses.
+ * \brief The CreateEventSourceMappingResponse class provides an interace for Lambda CreateEventSourceMapping responses.
  *
  * \ingroup Lambda
  *

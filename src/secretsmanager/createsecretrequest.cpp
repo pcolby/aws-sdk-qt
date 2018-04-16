@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::CreateSecretRequest
  *
- * \brief The CreateSecretRequest class encapsulates SecretsManager CreateSecret requests.
+ * \brief The CreateSecretRequest class provides an interface for SecretsManager CreateSecret requests.
  *
  * \ingroup SecretsManager
  *

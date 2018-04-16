@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::StopStreamEncryptionResponse
  *
- * \brief The StopStreamEncryptionResponse class encapsulates Kinesis StopStreamEncryption responses.
+ * \brief The StopStreamEncryptionResponse class provides an interace for Kinesis StopStreamEncryption responses.
  *
  * \ingroup Kinesis
  *

@@ -30,7 +30,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::CreateEnvironmentEC2Response
  *
- * \brief The CreateEnvironmentEC2Response class encapsulates Cloud9 CreateEnvironmentEC2 responses.
+ * \brief The CreateEnvironmentEC2Response class provides an interace for Cloud9 CreateEnvironmentEC2 responses.
  *
  * \ingroup Cloud9
  *

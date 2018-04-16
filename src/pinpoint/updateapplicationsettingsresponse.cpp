@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateApplicationSettingsResponse
  *
- * \brief The UpdateApplicationSettingsResponse class encapsulates Pinpoint UpdateApplicationSettings responses.
+ * \brief The UpdateApplicationSettingsResponse class provides an interace for Pinpoint UpdateApplicationSettings responses.
  *
  * \ingroup Pinpoint
  *

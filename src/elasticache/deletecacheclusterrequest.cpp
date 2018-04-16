@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DeleteCacheClusterRequest
  *
- * \brief The DeleteCacheClusterRequest class encapsulates ElastiCache DeleteCacheCluster requests.
+ * \brief The DeleteCacheClusterRequest class provides an interface for ElastiCache DeleteCacheCluster requests.
  *
  * \ingroup ElastiCache
  *

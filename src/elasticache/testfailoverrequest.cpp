@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::TestFailoverRequest
  *
- * \brief The TestFailoverRequest class encapsulates ElastiCache TestFailover requests.
+ * \brief The TestFailoverRequest class provides an interface for ElastiCache TestFailover requests.
  *
  * \ingroup ElastiCache
  *

@@ -30,7 +30,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::AssumeRoleWithSAMLResponse
  *
- * \brief The AssumeRoleWithSAMLResponse class encapsulates STS AssumeRoleWithSAML responses.
+ * \brief The AssumeRoleWithSAMLResponse class provides an interace for STS AssumeRoleWithSAML responses.
  *
  * \ingroup STS
  *

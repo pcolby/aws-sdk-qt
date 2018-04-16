@@ -30,7 +30,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::DeleteRuleResponse
  *
- * \brief The DeleteRuleResponse class encapsulates CloudWatchEvents DeleteRule responses.
+ * \brief The DeleteRuleResponse class provides an interace for CloudWatchEvents DeleteRule responses.
  *
  * \ingroup CloudWatchEvents
  *

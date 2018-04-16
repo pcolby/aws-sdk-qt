@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::TerminateProvisionedProductResponse
  *
- * \brief The TerminateProvisionedProductResponse class encapsulates ServiceCatalog TerminateProvisionedProduct responses.
+ * \brief The TerminateProvisionedProductResponse class provides an interace for ServiceCatalog TerminateProvisionedProduct responses.
  *
  * \ingroup ServiceCatalog
  *

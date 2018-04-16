@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::CreateBranchResponse
  *
- * \brief The CreateBranchResponse class encapsulates CodeCommit CreateBranch responses.
+ * \brief The CreateBranchResponse class provides an interace for CodeCommit CreateBranch responses.
  *
  * \ingroup CodeCommit
  *

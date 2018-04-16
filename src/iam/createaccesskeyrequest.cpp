@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateAccessKeyRequest
  *
- * \brief The CreateAccessKeyRequest class encapsulates IAM CreateAccessKey requests.
+ * \brief The CreateAccessKeyRequest class provides an interface for IAM CreateAccessKey requests.
  *
  * \ingroup IAM
  *

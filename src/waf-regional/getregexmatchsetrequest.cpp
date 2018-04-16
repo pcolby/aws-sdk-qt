@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetRegexMatchSetRequest
  *
- * \brief The GetRegexMatchSetRequest class encapsulates WAFRegional GetRegexMatchSet requests.
+ * \brief The GetRegexMatchSetRequest class provides an interface for WAFRegional GetRegexMatchSet requests.
  *
  * \ingroup WAFRegional
  *

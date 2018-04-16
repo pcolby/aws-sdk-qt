@@ -30,7 +30,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::ModifyHsmResponse
  *
- * \brief The ModifyHsmResponse class encapsulates CloudHSM ModifyHsm responses.
+ * \brief The ModifyHsmResponse class provides an interace for CloudHSM ModifyHsm responses.
  *
  * \ingroup CloudHSM
  *

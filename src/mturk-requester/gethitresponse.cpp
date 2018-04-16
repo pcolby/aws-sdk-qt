@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::GetHITResponse
  *
- * \brief The GetHITResponse class encapsulates MTurk GetHIT responses.
+ * \brief The GetHITResponse class provides an interace for MTurk GetHIT responses.
  *
  * \ingroup MTurk
  *

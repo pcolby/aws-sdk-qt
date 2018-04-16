@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::CreateUserResponse
  *
- * \brief The CreateUserResponse class encapsulates WorkDocs CreateUser responses.
+ * \brief The CreateUserResponse class provides an interace for WorkDocs CreateUser responses.
  *
  * \ingroup WorkDocs
  *

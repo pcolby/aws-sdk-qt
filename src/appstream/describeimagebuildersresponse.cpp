@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DescribeImageBuildersResponse
  *
- * \brief The DescribeImageBuildersResponse class encapsulates AppStream DescribeImageBuilders responses.
+ * \brief The DescribeImageBuildersResponse class provides an interace for AppStream DescribeImageBuilders responses.
  *
  * \ingroup AppStream
  *

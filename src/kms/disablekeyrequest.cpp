@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::DisableKeyRequest
  *
- * \brief The DisableKeyRequest class encapsulates KMS DisableKey requests.
+ * \brief The DisableKeyRequest class provides an interface for KMS DisableKey requests.
  *
  * \ingroup KMS
  *

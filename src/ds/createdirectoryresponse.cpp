@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateDirectoryResponse
  *
- * \brief The CreateDirectoryResponse class encapsulates DirectoryService CreateDirectory responses.
+ * \brief The CreateDirectoryResponse class provides an interace for DirectoryService CreateDirectory responses.
  *
  * \ingroup DirectoryService
  *

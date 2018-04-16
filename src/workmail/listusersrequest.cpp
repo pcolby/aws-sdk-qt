@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::ListUsersRequest
  *
- * \brief The ListUsersRequest class encapsulates WorkMail ListUsers requests.
+ * \brief The ListUsersRequest class provides an interface for WorkMail ListUsers requests.
  *
  * \ingroup WorkMail
  *

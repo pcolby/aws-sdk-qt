@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::ListDiscoveredResourcesResponse
  *
- * \brief The ListDiscoveredResourcesResponse class encapsulates ConfigService ListDiscoveredResources responses.
+ * \brief The ListDiscoveredResourcesResponse class provides an interace for ConfigService ListDiscoveredResources responses.
  *
  * \ingroup ConfigService
  *

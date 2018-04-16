@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DeleteDirectConnectGatewayRequest
  *
- * \brief The DeleteDirectConnectGatewayRequest class encapsulates DirectConnect DeleteDirectConnectGateway requests.
+ * \brief The DeleteDirectConnectGatewayRequest class provides an interface for DirectConnect DeleteDirectConnectGateway requests.
  *
  * \ingroup DirectConnect
  *

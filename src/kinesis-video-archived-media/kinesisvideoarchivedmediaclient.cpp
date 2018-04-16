@@ -41,7 +41,7 @@ namespace KinesisVideoArchivedMedia {
 /*!
  * \class QtAws::KinesisVideoArchivedMedia::KinesisVideoArchivedMediaClient
  *
- * \brief The KinesisVideoArchivedMediaClient class provides access the Amazon Kinesis Video Streams Archived Media (Kinesis Video Archived Media) service.
+ * \brief The KinesisVideoArchivedMediaClient class provides access to the Amazon Kinesis Video Streams Archived Media (Kinesis Video Archived Media) service.
  *
  * \ingroup KinesisVideoArchivedMedia
  *

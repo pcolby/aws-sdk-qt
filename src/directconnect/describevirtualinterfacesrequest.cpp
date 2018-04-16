@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DescribeVirtualInterfacesRequest
  *
- * \brief The DescribeVirtualInterfacesRequest class encapsulates DirectConnect DescribeVirtualInterfaces requests.
+ * \brief The DescribeVirtualInterfacesRequest class provides an interface for DirectConnect DescribeVirtualInterfaces requests.
  *
  * \ingroup DirectConnect
  *

@@ -26,7 +26,7 @@ namespace DynamoDBStreams {
 /*!
  * \class QtAws::DynamoDBStreams::DynamoDBStreamsRequest
  *
- * \brief The DynamoDBStreamsRequest class is the base class for all DynamoDBStreams requests.
+ * \brief The DynamoDBStreamsRequest class provides an interface for DynamoDBStreams requests.
  *
  * \ingroup DynamoDBStreams
  */

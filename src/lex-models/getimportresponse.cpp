@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::GetImportResponse
  *
- * \brief The GetImportResponse class encapsulates LexModelBuildingService GetImport responses.
+ * \brief The GetImportResponse class provides an interace for LexModelBuildingService GetImport responses.
  *
  * \ingroup LexModelBuildingService
  *

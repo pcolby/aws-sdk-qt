@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::DeleteQueueRequest
  *
- * \brief The DeleteQueueRequest class encapsulates MediaConvert DeleteQueue requests.
+ * \brief The DeleteQueueRequest class provides an interface for MediaConvert DeleteQueue requests.
  *
  * \ingroup MediaConvert
  *

@@ -28,7 +28,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::DeleteTrailRequest
  *
- * \brief The DeleteTrailRequest class encapsulates CloudTrail DeleteTrail requests.
+ * \brief The DeleteTrailRequest class provides an interface for CloudTrail DeleteTrail requests.
  *
  * \ingroup CloudTrail
  *

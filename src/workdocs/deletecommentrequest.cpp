@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DeleteCommentRequest
  *
- * \brief The DeleteCommentRequest class encapsulates WorkDocs DeleteComment requests.
+ * \brief The DeleteCommentRequest class provides an interface for WorkDocs DeleteComment requests.
  *
  * \ingroup WorkDocs
  *

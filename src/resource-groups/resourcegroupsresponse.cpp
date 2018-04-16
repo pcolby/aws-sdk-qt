@@ -29,7 +29,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::ResourceGroupsResponse
  *
- * \brief The ResourceGroupsResponse class is the base class for all ResourceGroups responses.
+ * \brief The ResourceGroupsResponse class provides an interface for ResourceGroups responses.
  *
  * \ingroup ResourceGroups
  */

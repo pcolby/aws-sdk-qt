@@ -29,7 +29,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::ElasticBeanstalkResponse
  *
- * \brief The ElasticBeanstalkResponse class is the base class for all ElasticBeanstalk responses.
+ * \brief The ElasticBeanstalkResponse class provides an interface for ElasticBeanstalk responses.
  *
  * \ingroup ElasticBeanstalk
  */

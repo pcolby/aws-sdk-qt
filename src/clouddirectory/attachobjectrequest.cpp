@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::AttachObjectRequest
  *
- * \brief The AttachObjectRequest class encapsulates CloudDirectory AttachObject requests.
+ * \brief The AttachObjectRequest class provides an interface for CloudDirectory AttachObject requests.
  *
  * \ingroup CloudDirectory
  *

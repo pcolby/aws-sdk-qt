@@ -26,7 +26,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::WAFRequest
  *
- * \brief The WAFRequest class is the base class for all WAF requests.
+ * \brief The WAFRequest class provides an interface for WAF requests.
  *
  * \ingroup WAF
  */

@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeRuntimeConfigurationRequest
  *
- * \brief The DescribeRuntimeConfigurationRequest class encapsulates GameLift DescribeRuntimeConfiguration requests.
+ * \brief The DescribeRuntimeConfigurationRequest class provides an interface for GameLift DescribeRuntimeConfiguration requests.
  *
  * \ingroup GameLift
  *

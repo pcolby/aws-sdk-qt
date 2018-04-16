@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::GetKeyRotationStatusRequest
  *
- * \brief The GetKeyRotationStatusRequest class encapsulates KMS GetKeyRotationStatus requests.
+ * \brief The GetKeyRotationStatusRequest class provides an interface for KMS GetKeyRotationStatus requests.
  *
  * \ingroup KMS
  *

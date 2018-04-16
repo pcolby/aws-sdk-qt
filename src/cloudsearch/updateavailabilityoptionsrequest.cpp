@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::UpdateAvailabilityOptionsRequest
  *
- * \brief The UpdateAvailabilityOptionsRequest class encapsulates CloudSearch UpdateAvailabilityOptions requests.
+ * \brief The UpdateAvailabilityOptionsRequest class provides an interface for CloudSearch UpdateAvailabilityOptions requests.
  *
  * \ingroup CloudSearch
  *

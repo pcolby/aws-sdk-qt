@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DeleteUserRequest
  *
- * \brief The DeleteUserRequest class encapsulates WorkDocs DeleteUser requests.
+ * \brief The DeleteUserRequest class provides an interface for WorkDocs DeleteUser requests.
  *
  * \ingroup WorkDocs
  *

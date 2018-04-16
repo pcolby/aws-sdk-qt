@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::StopConfigurationRecorderRequest
  *
- * \brief The StopConfigurationRecorderRequest class encapsulates ConfigService StopConfigurationRecorder requests.
+ * \brief The StopConfigurationRecorderRequest class provides an interface for ConfigService StopConfigurationRecorder requests.
  *
  * \ingroup ConfigService
  *

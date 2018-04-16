@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::PutScalingPolicyResponse
  *
- * \brief The PutScalingPolicyResponse class encapsulates GameLift PutScalingPolicy responses.
+ * \brief The PutScalingPolicyResponse class provides an interace for GameLift PutScalingPolicy responses.
  *
  * \ingroup GameLift
  *

@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListThingGroupsForThingRequest
  *
- * \brief The ListThingGroupsForThingRequest class encapsulates IoT ListThingGroupsForThing requests.
+ * \brief The ListThingGroupsForThingRequest class provides an interface for IoT ListThingGroupsForThing requests.
  *
  * \ingroup IoT
  *

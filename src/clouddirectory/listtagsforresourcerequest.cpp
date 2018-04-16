@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListTagsForResourceRequest
  *
- * \brief The ListTagsForResourceRequest class encapsulates CloudDirectory ListTagsForResource requests.
+ * \brief The ListTagsForResourceRequest class provides an interface for CloudDirectory ListTagsForResource requests.
  *
  * \ingroup CloudDirectory
  *

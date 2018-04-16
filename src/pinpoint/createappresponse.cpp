@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::CreateAppResponse
  *
- * \brief The CreateAppResponse class encapsulates Pinpoint CreateApp responses.
+ * \brief The CreateAppResponse class provides an interace for Pinpoint CreateApp responses.
  *
  * \ingroup Pinpoint
  *

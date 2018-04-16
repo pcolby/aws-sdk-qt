@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DeleteSnapshotResponse
  *
- * \brief The DeleteSnapshotResponse class encapsulates DirectoryService DeleteSnapshot responses.
+ * \brief The DeleteSnapshotResponse class provides an interace for DirectoryService DeleteSnapshot responses.
  *
  * \ingroup DirectoryService
  *

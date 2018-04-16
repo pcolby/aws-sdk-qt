@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::TerminateEnvironmentResponse
  *
- * \brief The TerminateEnvironmentResponse class encapsulates ElasticBeanstalk TerminateEnvironment responses.
+ * \brief The TerminateEnvironmentResponse class provides an interace for ElasticBeanstalk TerminateEnvironment responses.
  *
  * \ingroup ElasticBeanstalk
  *

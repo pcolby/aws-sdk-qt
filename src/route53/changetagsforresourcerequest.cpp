@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ChangeTagsForResourceRequest
  *
- * \brief The ChangeTagsForResourceRequest class encapsulates Route53 ChangeTagsForResource requests.
+ * \brief The ChangeTagsForResourceRequest class provides an interface for Route53 ChangeTagsForResource requests.
  *
  * \ingroup Route53
  *

@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::CancelHandshakeResponse
  *
- * \brief The CancelHandshakeResponse class encapsulates Organizations CancelHandshake responses.
+ * \brief The CancelHandshakeResponse class provides an interace for Organizations CancelHandshake responses.
  *
  * \ingroup Organizations
  *

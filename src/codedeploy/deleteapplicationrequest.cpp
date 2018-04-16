@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::DeleteApplicationRequest
  *
- * \brief The DeleteApplicationRequest class encapsulates CodeDeploy DeleteApplication requests.
+ * \brief The DeleteApplicationRequest class provides an interface for CodeDeploy DeleteApplication requests.
  *
  * \ingroup CodeDeploy
  *

@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetDeviceDefinitionVersionResponse
  *
- * \brief The GetDeviceDefinitionVersionResponse class encapsulates Greengrass GetDeviceDefinitionVersion responses.
+ * \brief The GetDeviceDefinitionVersionResponse class provides an interace for Greengrass GetDeviceDefinitionVersion responses.
  *
  * \ingroup Greengrass
  *

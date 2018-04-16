@@ -30,7 +30,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::RemoveTagsFromResourceResponse
  *
- * \brief The RemoveTagsFromResourceResponse class encapsulates CloudHSM RemoveTagsFromResource responses.
+ * \brief The RemoveTagsFromResourceResponse class provides an interace for CloudHSM RemoveTagsFromResource responses.
  *
  * \ingroup CloudHSM
  *

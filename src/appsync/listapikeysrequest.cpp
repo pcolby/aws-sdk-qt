@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::ListApiKeysRequest
  *
- * \brief The ListApiKeysRequest class encapsulates AppSync ListApiKeys requests.
+ * \brief The ListApiKeysRequest class provides an interface for AppSync ListApiKeys requests.
  *
  * \ingroup AppSync
  *

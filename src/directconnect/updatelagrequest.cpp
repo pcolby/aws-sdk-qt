@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::UpdateLagRequest
  *
- * \brief The UpdateLagRequest class encapsulates DirectConnect UpdateLag requests.
+ * \brief The UpdateLagRequest class provides an interface for DirectConnect UpdateLag requests.
  *
  * \ingroup DirectConnect
  *

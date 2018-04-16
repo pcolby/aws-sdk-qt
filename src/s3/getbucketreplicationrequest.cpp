@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketReplicationRequest
  *
- * \brief The GetBucketReplicationRequest class encapsulates S3 GetBucketReplication requests.
+ * \brief The GetBucketReplicationRequest class provides an interface for S3 GetBucketReplication requests.
  *
  * \ingroup S3
  *

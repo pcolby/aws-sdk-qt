@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListReviewableHITsRequest
  *
- * \brief The ListReviewableHITsRequest class encapsulates MTurk ListReviewableHITs requests.
+ * \brief The ListReviewableHITsRequest class provides an interface for MTurk ListReviewableHITs requests.
  *
  * \ingroup MTurk
  *

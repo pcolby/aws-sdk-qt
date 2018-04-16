@@ -28,7 +28,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::CreateJobRequest
  *
- * \brief The CreateJobRequest class encapsulates ImportExport CreateJob requests.
+ * \brief The CreateJobRequest class provides an interface for ImportExport CreateJob requests.
  *
  * \ingroup ImportExport
  *

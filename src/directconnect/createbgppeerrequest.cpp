@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::CreateBGPPeerRequest
  *
- * \brief The CreateBGPPeerRequest class encapsulates DirectConnect CreateBGPPeer requests.
+ * \brief The CreateBGPPeerRequest class provides an interface for DirectConnect CreateBGPPeer requests.
  *
  * \ingroup DirectConnect
  *

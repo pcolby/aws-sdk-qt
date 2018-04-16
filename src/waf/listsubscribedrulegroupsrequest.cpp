@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::ListSubscribedRuleGroupsRequest
  *
- * \brief The ListSubscribedRuleGroupsRequest class encapsulates WAF ListSubscribedRuleGroups requests.
+ * \brief The ListSubscribedRuleGroupsRequest class provides an interface for WAF ListSubscribedRuleGroups requests.
  *
  * \ingroup WAF
  *

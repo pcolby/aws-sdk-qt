@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListRoleAliasesRequest
  *
- * \brief The ListRoleAliasesRequest class encapsulates IoT ListRoleAliases requests.
+ * \brief The ListRoleAliasesRequest class provides an interface for IoT ListRoleAliases requests.
  *
  * \ingroup IoT
  *

@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteApnsVoipSandboxChannelRequest
  *
- * \brief The DeleteApnsVoipSandboxChannelRequest class encapsulates Pinpoint DeleteApnsVoipSandboxChannel requests.
+ * \brief The DeleteApnsVoipSandboxChannelRequest class provides an interface for Pinpoint DeleteApnsVoipSandboxChannel requests.
  *
  * \ingroup Pinpoint
  *

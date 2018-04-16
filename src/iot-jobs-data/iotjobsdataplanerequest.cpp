@@ -26,7 +26,7 @@ namespace IoTJobsDataPlane {
 /*!
  * \class QtAws::IoTJobsDataPlane::IoTJobsDataPlaneRequest
  *
- * \brief The IoTJobsDataPlaneRequest class is the base class for all IoTJobsDataPlane requests.
+ * \brief The IoTJobsDataPlaneRequest class provides an interface for IoTJobsDataPlane requests.
  *
  * \ingroup IoTJobsDataPlane
  */

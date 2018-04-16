@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::UpdateHITReviewStatusRequest
  *
- * \brief The UpdateHITReviewStatusRequest class encapsulates MTurk UpdateHITReviewStatus requests.
+ * \brief The UpdateHITReviewStatusRequest class provides an interface for MTurk UpdateHITReviewStatus requests.
  *
  * \ingroup MTurk
  *

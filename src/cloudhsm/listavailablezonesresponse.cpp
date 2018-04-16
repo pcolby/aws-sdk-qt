@@ -30,7 +30,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::ListAvailableZonesResponse
  *
- * \brief The ListAvailableZonesResponse class encapsulates CloudHSM ListAvailableZones responses.
+ * \brief The ListAvailableZonesResponse class provides an interace for CloudHSM ListAvailableZones responses.
  *
  * \ingroup CloudHSM
  *

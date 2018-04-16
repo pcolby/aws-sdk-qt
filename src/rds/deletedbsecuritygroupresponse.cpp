@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DeleteDBSecurityGroupResponse
  *
- * \brief The DeleteDBSecurityGroupResponse class encapsulates RDS DeleteDBSecurityGroup responses.
+ * \brief The DeleteDBSecurityGroupResponse class provides an interace for RDS DeleteDBSecurityGroup responses.
  *
  * \ingroup RDS
  *

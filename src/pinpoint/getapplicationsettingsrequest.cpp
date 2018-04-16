@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetApplicationSettingsRequest
  *
- * \brief The GetApplicationSettingsRequest class encapsulates Pinpoint GetApplicationSettings requests.
+ * \brief The GetApplicationSettingsRequest class provides an interface for Pinpoint GetApplicationSettings requests.
  *
  * \ingroup Pinpoint
  *

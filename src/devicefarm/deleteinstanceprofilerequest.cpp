@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteInstanceProfileRequest
  *
- * \brief The DeleteInstanceProfileRequest class encapsulates DeviceFarm DeleteInstanceProfile requests.
+ * \brief The DeleteInstanceProfileRequest class provides an interface for DeviceFarm DeleteInstanceProfile requests.
  *
  * \ingroup DeviceFarm
  *

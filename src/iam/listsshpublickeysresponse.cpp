@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListSSHPublicKeysResponse
  *
- * \brief The ListSSHPublicKeysResponse class encapsulates IAM ListSSHPublicKeys responses.
+ * \brief The ListSSHPublicKeysResponse class provides an interace for IAM ListSSHPublicKeys responses.
  *
  * \ingroup IAM
  *

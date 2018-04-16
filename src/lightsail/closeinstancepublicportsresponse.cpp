@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::CloseInstancePublicPortsResponse
  *
- * \brief The CloseInstancePublicPortsResponse class encapsulates Lightsail CloseInstancePublicPorts responses.
+ * \brief The CloseInstancePublicPortsResponse class provides an interace for Lightsail CloseInstancePublicPorts responses.
  *
  * \ingroup Lightsail
  *

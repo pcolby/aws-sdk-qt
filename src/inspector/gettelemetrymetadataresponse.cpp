@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::GetTelemetryMetadataResponse
  *
- * \brief The GetTelemetryMetadataResponse class encapsulates Inspector GetTelemetryMetadata responses.
+ * \brief The GetTelemetryMetadataResponse class provides an interace for Inspector GetTelemetryMetadata responses.
  *
  * \ingroup Inspector
  *

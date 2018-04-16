@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeReservedDBInstancesOfferingsResponse
  *
- * \brief The DescribeReservedDBInstancesOfferingsResponse class encapsulates RDS DescribeReservedDBInstancesOfferings responses.
+ * \brief The DescribeReservedDBInstancesOfferingsResponse class provides an interace for RDS DescribeReservedDBInstancesOfferings responses.
  *
  * \ingroup RDS
  *

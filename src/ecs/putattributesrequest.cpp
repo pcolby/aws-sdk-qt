@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::PutAttributesRequest
  *
- * \brief The PutAttributesRequest class encapsulates ECS PutAttributes requests.
+ * \brief The PutAttributesRequest class provides an interface for ECS PutAttributes requests.
  *
  * \ingroup ECS
  *

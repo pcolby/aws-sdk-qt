@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::StopCrawlerRequest
  *
- * \brief The StopCrawlerRequest class encapsulates Glue StopCrawler requests.
+ * \brief The StopCrawlerRequest class provides an interface for Glue StopCrawler requests.
  *
  * \ingroup Glue
  *

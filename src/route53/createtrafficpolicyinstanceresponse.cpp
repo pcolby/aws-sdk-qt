@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::CreateTrafficPolicyInstanceResponse
  *
- * \brief The CreateTrafficPolicyInstanceResponse class encapsulates Route53 CreateTrafficPolicyInstance responses.
+ * \brief The CreateTrafficPolicyInstanceResponse class provides an interace for Route53 CreateTrafficPolicyInstance responses.
  *
  * \ingroup Route53
  *

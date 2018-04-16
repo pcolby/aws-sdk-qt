@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::StopTaskResponse
  *
- * \brief The StopTaskResponse class encapsulates ECS StopTask responses.
+ * \brief The StopTaskResponse class provides an interace for ECS StopTask responses.
  *
  * \ingroup ECS
  *

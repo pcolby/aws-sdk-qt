@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateAccountPasswordPolicyRequest
  *
- * \brief The UpdateAccountPasswordPolicyRequest class encapsulates IAM UpdateAccountPasswordPolicy requests.
+ * \brief The UpdateAccountPasswordPolicyRequest class provides an interface for IAM UpdateAccountPasswordPolicy requests.
  *
  * \ingroup IAM
  *

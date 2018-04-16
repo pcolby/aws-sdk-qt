@@ -26,7 +26,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GuardDutyRequest
  *
- * \brief The GuardDutyRequest class is the base class for all GuardDuty requests.
+ * \brief The GuardDutyRequest class provides an interface for GuardDuty requests.
  *
  * \ingroup GuardDuty
  */

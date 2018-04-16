@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminEnableUserRequest
  *
- * \brief The AdminEnableUserRequest class encapsulates CognitoIdentityProvider AdminEnableUser requests.
+ * \brief The AdminEnableUserRequest class provides an interface for CognitoIdentityProvider AdminEnableUser requests.
  *
  * \ingroup CognitoIdentityProvider
  *

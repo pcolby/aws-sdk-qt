@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::GetDocumentRequest
  *
- * \brief The GetDocumentRequest class encapsulates WorkDocs GetDocument requests.
+ * \brief The GetDocumentRequest class provides an interface for WorkDocs GetDocument requests.
  *
  * \ingroup WorkDocs
  *

@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketAclRequest
  *
- * \brief The GetBucketAclRequest class encapsulates S3 GetBucketAcl requests.
+ * \brief The GetBucketAclRequest class provides an interface for S3 GetBucketAcl requests.
  *
  * \ingroup S3
  *

@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DescribeOrganizationalUnitRequest
  *
- * \brief The DescribeOrganizationalUnitRequest class encapsulates Organizations DescribeOrganizationalUnit requests.
+ * \brief The DescribeOrganizationalUnitRequest class provides an interface for Organizations DescribeOrganizationalUnit requests.
  *
  * \ingroup Organizations
  *

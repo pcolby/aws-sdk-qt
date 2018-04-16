@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::RemoveUserFromGroupRequest
  *
- * \brief The RemoveUserFromGroupRequest class encapsulates IAM RemoveUserFromGroup requests.
+ * \brief The RemoveUserFromGroupRequest class provides an interface for IAM RemoveUserFromGroup requests.
  *
  * \ingroup IAM
  *

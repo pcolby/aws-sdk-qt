@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetStagesRequest
  *
- * \brief The GetStagesRequest class encapsulates APIGateway GetStages requests.
+ * \brief The GetStagesRequest class provides an interface for APIGateway GetStages requests.
  *
  * \ingroup APIGateway
  *

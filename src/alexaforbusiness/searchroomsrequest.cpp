@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::SearchRoomsRequest
  *
- * \brief The SearchRoomsRequest class encapsulates AlexaForBusiness SearchRooms requests.
+ * \brief The SearchRoomsRequest class provides an interface for AlexaForBusiness SearchRooms requests.
  *
  * \ingroup AlexaForBusiness
  *

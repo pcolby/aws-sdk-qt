@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::ListTagsResponse
  *
- * \brief The ListTagsResponse class encapsulates Lambda ListTags responses.
+ * \brief The ListTagsResponse class provides an interace for Lambda ListTags responses.
  *
  * \ingroup Lambda
  *

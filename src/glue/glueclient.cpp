@@ -193,7 +193,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GlueClient
  *
- * \brief The GlueClient class provides access the AWS Glue service.
+ * \brief The GlueClient class provides access to the AWS Glue service.
  *
  * \ingroup Glue
  *

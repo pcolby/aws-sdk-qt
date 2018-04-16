@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVpnGatewaysResponse
  *
- * \brief The DescribeVpnGatewaysResponse class encapsulates EC2 DescribeVpnGateways responses.
+ * \brief The DescribeVpnGatewaysResponse class provides an interace for EC2 DescribeVpnGateways responses.
  *
  * \ingroup EC2
  *

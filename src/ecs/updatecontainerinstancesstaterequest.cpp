@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::UpdateContainerInstancesStateRequest
  *
- * \brief The UpdateContainerInstancesStateRequest class encapsulates ECS UpdateContainerInstancesState requests.
+ * \brief The UpdateContainerInstancesStateRequest class provides an interface for ECS UpdateContainerInstancesState requests.
  *
  * \ingroup ECS
  *

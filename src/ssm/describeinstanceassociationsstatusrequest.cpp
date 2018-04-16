@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeInstanceAssociationsStatusRequest
  *
- * \brief The DescribeInstanceAssociationsStatusRequest class encapsulates SSM DescribeInstanceAssociationsStatus requests.
+ * \brief The DescribeInstanceAssociationsStatusRequest class provides an interface for SSM DescribeInstanceAssociationsStatus requests.
  *
  * \ingroup SSM
  *

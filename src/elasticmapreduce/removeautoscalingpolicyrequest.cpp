@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::RemoveAutoScalingPolicyRequest
  *
- * \brief The RemoveAutoScalingPolicyRequest class encapsulates EMR RemoveAutoScalingPolicy requests.
+ * \brief The RemoveAutoScalingPolicyRequest class provides an interface for EMR RemoveAutoScalingPolicy requests.
  *
  * \ingroup EMR
  *

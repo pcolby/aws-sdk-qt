@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetAccountAuthorizationDetailsResponse
  *
- * \brief The GetAccountAuthorizationDetailsResponse class encapsulates IAM GetAccountAuthorizationDetails responses.
+ * \brief The GetAccountAuthorizationDetailsResponse class provides an interace for IAM GetAccountAuthorizationDetails responses.
  *
  * \ingroup IAM
  *

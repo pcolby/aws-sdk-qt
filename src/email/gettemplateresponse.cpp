@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetTemplateResponse
  *
- * \brief The GetTemplateResponse class encapsulates SES GetTemplate responses.
+ * \brief The GetTemplateResponse class provides an interace for SES GetTemplate responses.
  *
  * \ingroup SES
  *

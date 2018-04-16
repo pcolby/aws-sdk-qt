@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListGroupPoliciesRequest
  *
- * \brief The ListGroupPoliciesRequest class encapsulates IAM ListGroupPolicies requests.
+ * \brief The ListGroupPoliciesRequest class provides an interface for IAM ListGroupPolicies requests.
  *
  * \ingroup IAM
  *

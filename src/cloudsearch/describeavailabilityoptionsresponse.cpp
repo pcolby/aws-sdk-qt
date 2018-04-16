@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeAvailabilityOptionsResponse
  *
- * \brief The DescribeAvailabilityOptionsResponse class encapsulates CloudSearch DescribeAvailabilityOptions responses.
+ * \brief The DescribeAvailabilityOptionsResponse class provides an interace for CloudSearch DescribeAvailabilityOptions responses.
  *
  * \ingroup CloudSearch
  *

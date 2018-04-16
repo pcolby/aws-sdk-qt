@@ -26,7 +26,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::ConfigServiceRequest
  *
- * \brief The ConfigServiceRequest class is the base class for all ConfigService requests.
+ * \brief The ConfigServiceRequest class provides an interface for ConfigService requests.
  *
  * \ingroup ConfigService
  */

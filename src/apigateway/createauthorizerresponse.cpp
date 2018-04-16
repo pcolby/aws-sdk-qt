@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateAuthorizerResponse
  *
- * \brief The CreateAuthorizerResponse class encapsulates APIGateway CreateAuthorizer responses.
+ * \brief The CreateAuthorizerResponse class provides an interace for APIGateway CreateAuthorizer responses.
  *
  * \ingroup APIGateway
  *

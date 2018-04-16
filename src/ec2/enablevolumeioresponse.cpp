@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::EnableVolumeIOResponse
  *
- * \brief The EnableVolumeIOResponse class encapsulates EC2 EnableVolumeIO responses.
+ * \brief The EnableVolumeIOResponse class provides an interace for EC2 EnableVolumeIO responses.
  *
  * \ingroup EC2
  *

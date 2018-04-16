@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeAvailablePatchesRequest
  *
- * \brief The DescribeAvailablePatchesRequest class encapsulates SSM DescribeAvailablePatches requests.
+ * \brief The DescribeAvailablePatchesRequest class provides an interface for SSM DescribeAvailablePatches requests.
  *
  * \ingroup SSM
  *

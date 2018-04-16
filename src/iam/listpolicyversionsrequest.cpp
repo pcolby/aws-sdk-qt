@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListPolicyVersionsRequest
  *
- * \brief The ListPolicyVersionsRequest class encapsulates IAM ListPolicyVersions requests.
+ * \brief The ListPolicyVersionsRequest class provides an interface for IAM ListPolicyVersions requests.
  *
  * \ingroup IAM
  *

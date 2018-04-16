@@ -81,7 +81,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::EcrClient
  *
- * \brief The EcrClient class provides access the Amazon EC2 Container Registry ( ECR) service.
+ * \brief The EcrClient class provides access to the Amazon EC2 Container Registry ( ECR) service.
  *
  * \ingroup ECR
  *

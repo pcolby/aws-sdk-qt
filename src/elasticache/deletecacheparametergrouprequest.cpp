@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DeleteCacheParameterGroupRequest
  *
- * \brief The DeleteCacheParameterGroupRequest class encapsulates ElastiCache DeleteCacheParameterGroup requests.
+ * \brief The DeleteCacheParameterGroupRequest class provides an interface for ElastiCache DeleteCacheParameterGroup requests.
  *
  * \ingroup ElastiCache
  *

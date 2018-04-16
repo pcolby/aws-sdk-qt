@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CopyOptionGroupRequest
  *
- * \brief The CopyOptionGroupRequest class encapsulates RDS CopyOptionGroup requests.
+ * \brief The CopyOptionGroupRequest class provides an interface for RDS CopyOptionGroup requests.
  *
  * \ingroup RDS
  *

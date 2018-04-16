@@ -29,7 +29,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::CloudDirectoryResponse
  *
- * \brief The CloudDirectoryResponse class is the base class for all CloudDirectory responses.
+ * \brief The CloudDirectoryResponse class provides an interface for CloudDirectory responses.
  *
  * \ingroup CloudDirectory
  */

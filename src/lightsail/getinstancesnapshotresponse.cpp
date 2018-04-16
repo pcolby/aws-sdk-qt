@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetInstanceSnapshotResponse
  *
- * \brief The GetInstanceSnapshotResponse class encapsulates Lightsail GetInstanceSnapshot responses.
+ * \brief The GetInstanceSnapshotResponse class provides an interace for Lightsail GetInstanceSnapshot responses.
  *
  * \ingroup Lightsail
  *

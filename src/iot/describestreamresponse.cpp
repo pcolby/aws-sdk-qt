@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeStreamResponse
  *
- * \brief The DescribeStreamResponse class encapsulates IoT DescribeStream responses.
+ * \brief The DescribeStreamResponse class provides an interace for IoT DescribeStream responses.
  *
  * \ingroup IoT
  *

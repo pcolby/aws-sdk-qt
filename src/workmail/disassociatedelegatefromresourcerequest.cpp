@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DisassociateDelegateFromResourceRequest
  *
- * \brief The DisassociateDelegateFromResourceRequest class encapsulates WorkMail DisassociateDelegateFromResource requests.
+ * \brief The DisassociateDelegateFromResourceRequest class provides an interface for WorkMail DisassociateDelegateFromResource requests.
  *
  * \ingroup WorkMail
  *

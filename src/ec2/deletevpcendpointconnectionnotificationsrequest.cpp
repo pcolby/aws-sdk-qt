@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteVpcEndpointConnectionNotificationsRequest
  *
- * \brief The DeleteVpcEndpointConnectionNotificationsRequest class encapsulates EC2 DeleteVpcEndpointConnectionNotifications requests.
+ * \brief The DeleteVpcEndpointConnectionNotificationsRequest class provides an interface for EC2 DeleteVpcEndpointConnectionNotifications requests.
  *
  * \ingroup EC2
  *

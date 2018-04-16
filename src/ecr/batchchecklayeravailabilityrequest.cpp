@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::BatchCheckLayerAvailabilityRequest
  *
- * \brief The BatchCheckLayerAvailabilityRequest class encapsulates ECR BatchCheckLayerAvailability requests.
+ * \brief The BatchCheckLayerAvailabilityRequest class provides an interface for ECR BatchCheckLayerAvailability requests.
  *
  * \ingroup ECR
  *

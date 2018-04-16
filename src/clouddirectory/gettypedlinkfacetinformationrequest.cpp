@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::GetTypedLinkFacetInformationRequest
  *
- * \brief The GetTypedLinkFacetInformationRequest class encapsulates CloudDirectory GetTypedLinkFacetInformation requests.
+ * \brief The GetTypedLinkFacetInformationRequest class provides an interface for CloudDirectory GetTypedLinkFacetInformation requests.
  *
  * \ingroup CloudDirectory
  *

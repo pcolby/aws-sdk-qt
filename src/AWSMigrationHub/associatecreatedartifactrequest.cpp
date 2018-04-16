@@ -28,7 +28,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::AssociateCreatedArtifactRequest
  *
- * \brief The AssociateCreatedArtifactRequest class encapsulates MigrationHub AssociateCreatedArtifact requests.
+ * \brief The AssociateCreatedArtifactRequest class provides an interface for MigrationHub AssociateCreatedArtifact requests.
  *
  * \ingroup MigrationHub
  *

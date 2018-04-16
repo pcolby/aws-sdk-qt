@@ -29,7 +29,7 @@ namespace ResourceGroupsTaggingAPI {
 /*!
  * \class QtAws::ResourceGroupsTaggingAPI::ResourceGroupsTaggingAPIResponse
  *
- * \brief The ResourceGroupsTaggingAPIResponse class is the base class for all ResourceGroupsTaggingAPI responses.
+ * \brief The ResourceGroupsTaggingAPIResponse class provides an interface for ResourceGroupsTaggingAPI responses.
  *
  * \ingroup ResourceGroupsTaggingAPI
  */

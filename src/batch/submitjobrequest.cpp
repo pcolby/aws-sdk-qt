@@ -28,7 +28,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::SubmitJobRequest
  *
- * \brief The SubmitJobRequest class encapsulates Batch SubmitJob requests.
+ * \brief The SubmitJobRequest class provides an interface for Batch SubmitJob requests.
  *
  * \ingroup Batch
  *

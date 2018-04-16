@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DeleteEventSubscriptionResponse
  *
- * \brief The DeleteEventSubscriptionResponse class encapsulates DatabaseMigrationService DeleteEventSubscription responses.
+ * \brief The DeleteEventSubscriptionResponse class provides an interace for DatabaseMigrationService DeleteEventSubscription responses.
  *
  * \ingroup DatabaseMigrationService
  *

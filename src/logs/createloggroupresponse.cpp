@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::CreateLogGroupResponse
  *
- * \brief The CreateLogGroupResponse class encapsulates CloudWatchLogs CreateLogGroup responses.
+ * \brief The CreateLogGroupResponse class provides an interace for CloudWatchLogs CreateLogGroup responses.
  *
  * \ingroup CloudWatchLogs
  *

@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteSAMLProviderResponse
  *
- * \brief The DeleteSAMLProviderResponse class encapsulates IAM DeleteSAMLProvider responses.
+ * \brief The DeleteSAMLProviderResponse class provides an interace for IAM DeleteSAMLProvider responses.
  *
  * \ingroup IAM
  *

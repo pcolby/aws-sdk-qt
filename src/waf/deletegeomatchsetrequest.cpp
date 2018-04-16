@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteGeoMatchSetRequest
  *
- * \brief The DeleteGeoMatchSetRequest class encapsulates WAF DeleteGeoMatchSet requests.
+ * \brief The DeleteGeoMatchSetRequest class provides an interface for WAF DeleteGeoMatchSet requests.
  *
  * \ingroup WAF
  *

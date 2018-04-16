@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribePrincipalIdFormatRequest
  *
- * \brief The DescribePrincipalIdFormatRequest class encapsulates EC2 DescribePrincipalIdFormat requests.
+ * \brief The DescribePrincipalIdFormatRequest class provides an interface for EC2 DescribePrincipalIdFormat requests.
  *
  * \ingroup EC2
  *

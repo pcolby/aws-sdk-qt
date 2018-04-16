@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeUsersRequest
  *
- * \brief The DescribeUsersRequest class encapsulates WorkDocs DescribeUsers requests.
+ * \brief The DescribeUsersRequest class provides an interface for WorkDocs DescribeUsers requests.
  *
  * \ingroup WorkDocs
  *

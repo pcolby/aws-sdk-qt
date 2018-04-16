@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::ListPartsResponse
  *
- * \brief The ListPartsResponse class encapsulates Glacier ListParts responses.
+ * \brief The ListPartsResponse class provides an interace for Glacier ListParts responses.
  *
  * \ingroup Glacier
  *

@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::CreateLoadBalancerRequest
  *
- * \brief The CreateLoadBalancerRequest class encapsulates ElasticLoadBalancingv2 CreateLoadBalancer requests.
+ * \brief The CreateLoadBalancerRequest class provides an interface for ElasticLoadBalancingv2 CreateLoadBalancer requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

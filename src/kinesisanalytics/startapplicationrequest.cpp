@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::StartApplicationRequest
  *
- * \brief The StartApplicationRequest class encapsulates KinesisAnalytics StartApplication requests.
+ * \brief The StartApplicationRequest class provides an interface for KinesisAnalytics StartApplication requests.
  *
  * \ingroup KinesisAnalytics
  *

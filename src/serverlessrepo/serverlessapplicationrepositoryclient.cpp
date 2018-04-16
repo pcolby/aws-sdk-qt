@@ -57,7 +57,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::ServerlessApplicationRepositoryClient
  *
- * \brief The ServerlessApplicationRepositoryClient class provides access the AWSServerlessApplicationRepository service.
+ * \brief The ServerlessApplicationRepositoryClient class provides access to the AWSServerlessApplicationRepository service.
  *
  * \ingroup ServerlessApplicationRepository
  *

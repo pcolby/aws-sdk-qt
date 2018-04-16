@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::ListCollectionsRequest
  *
- * \brief The ListCollectionsRequest class encapsulates Rekognition ListCollections requests.
+ * \brief The ListCollectionsRequest class provides an interface for Rekognition ListCollections requests.
  *
  * \ingroup Rekognition
  *

@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::GetDistributionRequest
  *
- * \brief The GetDistributionRequest class encapsulates CloudFront GetDistribution requests.
+ * \brief The GetDistributionRequest class provides an interface for CloudFront GetDistribution requests.
  *
  * \ingroup CloudFront
  *

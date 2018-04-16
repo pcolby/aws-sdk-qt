@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::PutMetricFilterRequest
  *
- * \brief The PutMetricFilterRequest class encapsulates CloudWatchLogs PutMetricFilter requests.
+ * \brief The PutMetricFilterRequest class provides an interface for CloudWatchLogs PutMetricFilter requests.
  *
  * \ingroup CloudWatchLogs
  *

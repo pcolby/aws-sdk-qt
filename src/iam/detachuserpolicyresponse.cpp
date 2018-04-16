@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DetachUserPolicyResponse
  *
- * \brief The DetachUserPolicyResponse class encapsulates IAM DetachUserPolicy responses.
+ * \brief The DetachUserPolicyResponse class provides an interace for IAM DetachUserPolicy responses.
  *
  * \ingroup IAM
  *

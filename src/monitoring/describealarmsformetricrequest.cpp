@@ -28,7 +28,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::DescribeAlarmsForMetricRequest
  *
- * \brief The DescribeAlarmsForMetricRequest class encapsulates CloudWatch DescribeAlarmsForMetric requests.
+ * \brief The DescribeAlarmsForMetricRequest class provides an interface for CloudWatch DescribeAlarmsForMetric requests.
  *
  * \ingroup CloudWatch
  *

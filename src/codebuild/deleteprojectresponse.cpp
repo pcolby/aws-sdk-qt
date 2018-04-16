@@ -30,7 +30,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::DeleteProjectResponse
  *
- * \brief The DeleteProjectResponse class encapsulates CodeBuild DeleteProject responses.
+ * \brief The DeleteProjectResponse class provides an interace for CodeBuild DeleteProject responses.
  *
  * \ingroup CodeBuild
  *

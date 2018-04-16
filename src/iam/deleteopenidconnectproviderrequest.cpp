@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteOpenIDConnectProviderRequest
  *
- * \brief The DeleteOpenIDConnectProviderRequest class encapsulates IAM DeleteOpenIDConnectProvider requests.
+ * \brief The DeleteOpenIDConnectProviderRequest class provides an interface for IAM DeleteOpenIDConnectProvider requests.
  *
  * \ingroup IAM
  *

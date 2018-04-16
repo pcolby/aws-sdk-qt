@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::StopTrainingJobRequest
  *
- * \brief The StopTrainingJobRequest class encapsulates SageMaker StopTrainingJob requests.
+ * \brief The StopTrainingJobRequest class provides an interface for SageMaker StopTrainingJob requests.
  *
  * \ingroup SageMaker
  *

@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DeleteImageBuilderResponse
  *
- * \brief The DeleteImageBuilderResponse class encapsulates AppStream DeleteImageBuilder responses.
+ * \brief The DeleteImageBuilderResponse class provides an interace for AppStream DeleteImageBuilder responses.
  *
  * \ingroup AppStream
  *

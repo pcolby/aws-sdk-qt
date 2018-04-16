@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::CreateGraphqlApiResponse
  *
- * \brief The CreateGraphqlApiResponse class encapsulates AppSync CreateGraphqlApi responses.
+ * \brief The CreateGraphqlApiResponse class provides an interace for AppSync CreateGraphqlApi responses.
  *
  * \ingroup AppSync
  *

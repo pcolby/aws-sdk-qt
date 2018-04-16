@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DeleteLaunchConfigurationRequest
  *
- * \brief The DeleteLaunchConfigurationRequest class encapsulates AutoScaling DeleteLaunchConfiguration requests.
+ * \brief The DeleteLaunchConfigurationRequest class provides an interface for AutoScaling DeleteLaunchConfiguration requests.
  *
  * \ingroup AutoScaling
  *

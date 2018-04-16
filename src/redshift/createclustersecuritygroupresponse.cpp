@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::CreateClusterSecurityGroupResponse
  *
- * \brief The CreateClusterSecurityGroupResponse class encapsulates Redshift CreateClusterSecurityGroup responses.
+ * \brief The CreateClusterSecurityGroupResponse class provides an interace for Redshift CreateClusterSecurityGroup responses.
  *
  * \ingroup Redshift
  *

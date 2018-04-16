@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::ApplyEnvironmentManagedActionRequest
  *
- * \brief The ApplyEnvironmentManagedActionRequest class encapsulates ElasticBeanstalk ApplyEnvironmentManagedAction requests.
+ * \brief The ApplyEnvironmentManagedActionRequest class provides an interface for ElasticBeanstalk ApplyEnvironmentManagedAction requests.
  *
  * \ingroup ElasticBeanstalk
  *

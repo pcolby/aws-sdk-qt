@@ -30,7 +30,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::ListTagsResponse
  *
- * \brief The ListTagsResponse class encapsulates CloudHSMV2 ListTags responses.
+ * \brief The ListTagsResponse class provides an interace for CloudHSMV2 ListTags responses.
  *
  * \ingroup CloudHSMV2
  *

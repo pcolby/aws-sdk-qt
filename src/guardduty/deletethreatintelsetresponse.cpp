@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DeleteThreatIntelSetResponse
  *
- * \brief The DeleteThreatIntelSetResponse class encapsulates GuardDuty DeleteThreatIntelSet responses.
+ * \brief The DeleteThreatIntelSetResponse class provides an interace for GuardDuty DeleteThreatIntelSet responses.
  *
  * \ingroup GuardDuty
  *

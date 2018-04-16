@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DeleteLoadBalancerRequest
  *
- * \brief The DeleteLoadBalancerRequest class encapsulates Lightsail DeleteLoadBalancer requests.
+ * \brief The DeleteLoadBalancerRequest class provides an interface for Lightsail DeleteLoadBalancer requests.
  *
  * \ingroup Lightsail
  *

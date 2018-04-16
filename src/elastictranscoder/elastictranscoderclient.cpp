@@ -71,7 +71,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::ElasticTranscoderClient
  *
- * \brief The ElasticTranscoderClient class provides access the Amazon Elastic Transcoder service.
+ * \brief The ElasticTranscoderClient class provides access to the Amazon Elastic Transcoder service.
  *
  * \ingroup ElasticTranscoder
  *

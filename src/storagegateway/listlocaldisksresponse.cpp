@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ListLocalDisksResponse
  *
- * \brief The ListLocalDisksResponse class encapsulates StorageGateway ListLocalDisks responses.
+ * \brief The ListLocalDisksResponse class provides an interace for StorageGateway ListLocalDisks responses.
  *
  * \ingroup StorageGateway
  *

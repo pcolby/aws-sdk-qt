@@ -28,7 +28,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::CreateWebhookRequest
  *
- * \brief The CreateWebhookRequest class encapsulates CodeBuild CreateWebhook requests.
+ * \brief The CreateWebhookRequest class provides an interface for CodeBuild CreateWebhook requests.
  *
  * \ingroup CodeBuild
  *

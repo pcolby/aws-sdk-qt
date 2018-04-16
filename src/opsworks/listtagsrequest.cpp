@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::ListTagsRequest
  *
- * \brief The ListTagsRequest class encapsulates OpsWorks ListTags requests.
+ * \brief The ListTagsRequest class provides an interface for OpsWorks ListTags requests.
  *
  * \ingroup OpsWorks
  *

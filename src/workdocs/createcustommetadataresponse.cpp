@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::CreateCustomMetadataResponse
  *
- * \brief The CreateCustomMetadataResponse class encapsulates WorkDocs CreateCustomMetadata responses.
+ * \brief The CreateCustomMetadataResponse class provides an interace for WorkDocs CreateCustomMetadata responses.
  *
  * \ingroup WorkDocs
  *

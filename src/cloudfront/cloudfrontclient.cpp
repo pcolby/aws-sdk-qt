@@ -129,7 +129,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::CloudFrontClient
  *
- * \brief The CloudFrontClient class provides access the Amazon CloudFront service.
+ * \brief The CloudFrontClient class provides access to the Amazon CloudFront service.
  *
  * \ingroup CloudFront
  *

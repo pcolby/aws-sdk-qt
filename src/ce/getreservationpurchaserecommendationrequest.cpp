@@ -28,7 +28,7 @@ namespace CostExplorer {
 /*!
  * \class QtAws::CostExplorer::GetReservationPurchaseRecommendationRequest
  *
- * \brief The GetReservationPurchaseRecommendationRequest class encapsulates CostExplorer GetReservationPurchaseRecommendation requests.
+ * \brief The GetReservationPurchaseRecommendationRequest class provides an interface for CostExplorer GetReservationPurchaseRecommendation requests.
  *
  * \ingroup CostExplorer
  *

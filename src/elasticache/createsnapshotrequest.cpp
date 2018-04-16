@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::CreateSnapshotRequest
  *
- * \brief The CreateSnapshotRequest class encapsulates ElastiCache CreateSnapshot requests.
+ * \brief The CreateSnapshotRequest class provides an interface for ElastiCache CreateSnapshot requests.
  *
  * \ingroup ElastiCache
  *

@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DetachThingPrincipalRequest
  *
- * \brief The DetachThingPrincipalRequest class encapsulates IoT DetachThingPrincipal requests.
+ * \brief The DetachThingPrincipalRequest class provides an interface for IoT DetachThingPrincipal requests.
  *
  * \ingroup IoT
  *

@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::ImportApiKeysResponse
  *
- * \brief The ImportApiKeysResponse class encapsulates APIGateway ImportApiKeys responses.
+ * \brief The ImportApiKeysResponse class provides an interace for APIGateway ImportApiKeys responses.
  *
  * \ingroup APIGateway
  *

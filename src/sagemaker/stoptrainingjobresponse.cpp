@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::StopTrainingJobResponse
  *
- * \brief The StopTrainingJobResponse class encapsulates SageMaker StopTrainingJob responses.
+ * \brief The StopTrainingJobResponse class provides an interace for SageMaker StopTrainingJob responses.
  *
  * \ingroup SageMaker
  *

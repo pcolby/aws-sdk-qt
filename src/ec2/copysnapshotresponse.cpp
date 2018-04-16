@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CopySnapshotResponse
  *
- * \brief The CopySnapshotResponse class encapsulates EC2 CopySnapshot responses.
+ * \brief The CopySnapshotResponse class provides an interace for EC2 CopySnapshot responses.
  *
  * \ingroup EC2
  *

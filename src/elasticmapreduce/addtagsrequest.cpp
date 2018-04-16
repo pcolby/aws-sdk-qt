@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::AddTagsRequest
  *
- * \brief The AddTagsRequest class encapsulates EMR AddTags requests.
+ * \brief The AddTagsRequest class provides an interface for EMR AddTags requests.
  *
  * \ingroup EMR
  *

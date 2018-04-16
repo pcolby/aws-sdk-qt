@@ -28,7 +28,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::ListQueryExecutionsRequest
  *
- * \brief The ListQueryExecutionsRequest class encapsulates Athena ListQueryExecutions requests.
+ * \brief The ListQueryExecutionsRequest class provides an interface for Athena ListQueryExecutions requests.
  *
  * \ingroup Athena
  *

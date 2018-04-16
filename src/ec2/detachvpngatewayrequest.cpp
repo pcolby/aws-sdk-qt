@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DetachVpnGatewayRequest
  *
- * \brief The DetachVpnGatewayRequest class encapsulates EC2 DetachVpnGateway requests.
+ * \brief The DetachVpnGatewayRequest class provides an interface for EC2 DetachVpnGateway requests.
  *
  * \ingroup EC2
  *

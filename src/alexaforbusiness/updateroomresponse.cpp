@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::UpdateRoomResponse
  *
- * \brief The UpdateRoomResponse class encapsulates AlexaForBusiness UpdateRoom responses.
+ * \brief The UpdateRoomResponse class provides an interace for AlexaForBusiness UpdateRoom responses.
  *
  * \ingroup AlexaForBusiness
  *

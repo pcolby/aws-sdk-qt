@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DescribeSubscriptionFiltersResponse
  *
- * \brief The DescribeSubscriptionFiltersResponse class encapsulates CloudWatchLogs DescribeSubscriptionFilters responses.
+ * \brief The DescribeSubscriptionFiltersResponse class provides an interace for CloudWatchLogs DescribeSubscriptionFilters responses.
  *
  * \ingroup CloudWatchLogs
  *

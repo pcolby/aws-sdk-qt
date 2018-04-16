@@ -28,7 +28,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::GetCognitoEventsRequest
  *
- * \brief The GetCognitoEventsRequest class encapsulates CognitoSync GetCognitoEvents requests.
+ * \brief The GetCognitoEventsRequest class provides an interface for CognitoSync GetCognitoEvents requests.
  *
  * \ingroup CognitoSync
  *

@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::AbortVaultLockRequest
  *
- * \brief The AbortVaultLockRequest class encapsulates Glacier AbortVaultLock requests.
+ * \brief The AbortVaultLockRequest class provides an interface for Glacier AbortVaultLock requests.
  *
  * \ingroup Glacier
  *

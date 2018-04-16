@@ -28,7 +28,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::UpdateProjectRequest
  *
- * \brief The UpdateProjectRequest class encapsulates Mobile UpdateProject requests.
+ * \brief The UpdateProjectRequest class provides an interface for Mobile UpdateProject requests.
  *
  * \ingroup Mobile
  *

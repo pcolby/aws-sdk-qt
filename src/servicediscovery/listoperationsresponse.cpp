@@ -30,7 +30,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::ListOperationsResponse
  *
- * \brief The ListOperationsResponse class encapsulates ServiceDiscovery ListOperations responses.
+ * \brief The ListOperationsResponse class provides an interace for ServiceDiscovery ListOperations responses.
  *
  * \ingroup ServiceDiscovery
  *

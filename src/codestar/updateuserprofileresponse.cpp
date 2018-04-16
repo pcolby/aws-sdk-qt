@@ -30,7 +30,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::UpdateUserProfileResponse
  *
- * \brief The UpdateUserProfileResponse class encapsulates CodeStar UpdateUserProfile responses.
+ * \brief The UpdateUserProfileResponse class provides an interace for CodeStar UpdateUserProfile responses.
  *
  * \ingroup CodeStar
  *

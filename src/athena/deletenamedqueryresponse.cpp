@@ -30,7 +30,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::DeleteNamedQueryResponse
  *
- * \brief The DeleteNamedQueryResponse class encapsulates Athena DeleteNamedQuery responses.
+ * \brief The DeleteNamedQueryResponse class provides an interace for Athena DeleteNamedQuery responses.
  *
  * \ingroup Athena
  *

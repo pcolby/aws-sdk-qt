@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::IndexDocumentsRequest
  *
- * \brief The IndexDocumentsRequest class encapsulates CloudSearch IndexDocuments requests.
+ * \brief The IndexDocumentsRequest class provides an interface for CloudSearch IndexDocuments requests.
  *
  * \ingroup CloudSearch
  *

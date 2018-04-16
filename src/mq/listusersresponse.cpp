@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::ListUsersResponse
  *
- * \brief The ListUsersResponse class encapsulates MQ ListUsers responses.
+ * \brief The ListUsersResponse class provides an interace for MQ ListUsers responses.
  *
  * \ingroup MQ
  *

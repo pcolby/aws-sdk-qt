@@ -30,7 +30,7 @@ namespace ResourceGroupsTaggingAPI {
 /*!
  * \class QtAws::ResourceGroupsTaggingAPI::GetTagKeysResponse
  *
- * \brief The GetTagKeysResponse class encapsulates ResourceGroupsTaggingAPI GetTagKeys responses.
+ * \brief The GetTagKeysResponse class provides an interace for ResourceGroupsTaggingAPI GetTagKeys responses.
  *
  * \ingroup ResourceGroupsTaggingAPI
  *

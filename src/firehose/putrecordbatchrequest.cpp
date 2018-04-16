@@ -28,7 +28,7 @@ namespace Firehose {
 /*!
  * \class QtAws::Firehose::PutRecordBatchRequest
  *
- * \brief The PutRecordBatchRequest class encapsulates Firehose PutRecordBatch requests.
+ * \brief The PutRecordBatchRequest class provides an interface for Firehose PutRecordBatch requests.
  *
  * \ingroup Firehose
  *

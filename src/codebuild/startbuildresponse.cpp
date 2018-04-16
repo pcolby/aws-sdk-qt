@@ -30,7 +30,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::StartBuildResponse
  *
- * \brief The StartBuildResponse class encapsulates CodeBuild StartBuild responses.
+ * \brief The StartBuildResponse class provides an interace for CodeBuild StartBuild responses.
  *
  * \ingroup CodeBuild
  *

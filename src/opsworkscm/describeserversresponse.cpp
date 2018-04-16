@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DescribeServersResponse
  *
- * \brief The DescribeServersResponse class encapsulates OpsWorksCM DescribeServers responses.
+ * \brief The DescribeServersResponse class provides an interace for OpsWorksCM DescribeServers responses.
  *
  * \ingroup OpsWorksCM
  *

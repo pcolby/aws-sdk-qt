@@ -28,7 +28,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::CreateSubscriptionRequest
  *
- * \brief The CreateSubscriptionRequest class encapsulates Shield CreateSubscription requests.
+ * \brief The CreateSubscriptionRequest class provides an interface for Shield CreateSubscription requests.
  *
  * \ingroup Shield
  *

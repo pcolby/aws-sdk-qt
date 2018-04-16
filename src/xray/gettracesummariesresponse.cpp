@@ -30,7 +30,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::GetTraceSummariesResponse
  *
- * \brief The GetTraceSummariesResponse class encapsulates XRay GetTraceSummaries responses.
+ * \brief The GetTraceSummariesResponse class provides an interace for XRay GetTraceSummaries responses.
  *
  * \ingroup XRay
  *

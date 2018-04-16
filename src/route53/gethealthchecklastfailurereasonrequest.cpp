@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::GetHealthCheckLastFailureReasonRequest
  *
- * \brief The GetHealthCheckLastFailureReasonRequest class encapsulates Route53 GetHealthCheckLastFailureReason requests.
+ * \brief The GetHealthCheckLastFailureReasonRequest class provides an interface for Route53 GetHealthCheckLastFailureReason requests.
  *
  * \ingroup Route53
  *

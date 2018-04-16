@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::DeleteHealthCheckRequest
  *
- * \brief The DeleteHealthCheckRequest class encapsulates Route53 DeleteHealthCheck requests.
+ * \brief The DeleteHealthCheckRequest class provides an interface for Route53 DeleteHealthCheck requests.
  *
  * \ingroup Route53
  *

@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DeleteResourcePolicyRequest
  *
- * \brief The DeleteResourcePolicyRequest class encapsulates CloudWatchLogs DeleteResourcePolicy requests.
+ * \brief The DeleteResourcePolicyRequest class provides an interface for CloudWatchLogs DeleteResourcePolicy requests.
  *
  * \ingroup CloudWatchLogs
  *

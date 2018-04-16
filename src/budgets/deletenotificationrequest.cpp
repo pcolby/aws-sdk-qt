@@ -28,7 +28,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::DeleteNotificationRequest
  *
- * \brief The DeleteNotificationRequest class encapsulates Budgets DeleteNotification requests.
+ * \brief The DeleteNotificationRequest class provides an interface for Budgets DeleteNotification requests.
  *
  * \ingroup Budgets
  *

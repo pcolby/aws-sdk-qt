@@ -30,7 +30,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::UpdateTeamMemberResponse
  *
- * \brief The UpdateTeamMemberResponse class encapsulates CodeStar UpdateTeamMember responses.
+ * \brief The UpdateTeamMemberResponse class provides an interace for CodeStar UpdateTeamMember responses.
  *
  * \ingroup CodeStar
  *

@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetIpAddressTypeResponse
  *
- * \brief The SetIpAddressTypeResponse class encapsulates ElasticLoadBalancingv2 SetIpAddressType responses.
+ * \brief The SetIpAddressTypeResponse class provides an interace for ElasticLoadBalancingv2 SetIpAddressType responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

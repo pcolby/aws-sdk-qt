@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetBundlesRequest
  *
- * \brief The GetBundlesRequest class encapsulates Lightsail GetBundles requests.
+ * \brief The GetBundlesRequest class provides an interface for Lightsail GetBundles requests.
  *
  * \ingroup Lightsail
  *

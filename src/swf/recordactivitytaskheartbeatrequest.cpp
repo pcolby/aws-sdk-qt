@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::RecordActivityTaskHeartbeatRequest
  *
- * \brief The RecordActivityTaskHeartbeatRequest class encapsulates SWF RecordActivityTaskHeartbeat requests.
+ * \brief The RecordActivityTaskHeartbeatRequest class provides an interface for SWF RecordActivityTaskHeartbeat requests.
  *
  * \ingroup SWF
  *

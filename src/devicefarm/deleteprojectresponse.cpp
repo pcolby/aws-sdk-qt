@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteProjectResponse
  *
- * \brief The DeleteProjectResponse class encapsulates DeviceFarm DeleteProject responses.
+ * \brief The DeleteProjectResponse class provides an interace for DeviceFarm DeleteProject responses.
  *
  * \ingroup DeviceFarm
  *

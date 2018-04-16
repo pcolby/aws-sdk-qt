@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::UpdateCommentResponse
  *
- * \brief The UpdateCommentResponse class encapsulates CodeCommit UpdateComment responses.
+ * \brief The UpdateCommentResponse class provides an interace for CodeCommit UpdateComment responses.
  *
  * \ingroup CodeCommit
  *

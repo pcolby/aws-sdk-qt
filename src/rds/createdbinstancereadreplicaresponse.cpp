@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CreateDBInstanceReadReplicaResponse
  *
- * \brief The CreateDBInstanceReadReplicaResponse class encapsulates RDS CreateDBInstanceReadReplica responses.
+ * \brief The CreateDBInstanceReadReplicaResponse class provides an interace for RDS CreateDBInstanceReadReplica responses.
  *
  * \ingroup RDS
  *

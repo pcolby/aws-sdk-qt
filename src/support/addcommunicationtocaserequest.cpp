@@ -28,7 +28,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::AddCommunicationToCaseRequest
  *
- * \brief The AddCommunicationToCaseRequest class encapsulates Support AddCommunicationToCase requests.
+ * \brief The AddCommunicationToCaseRequest class provides an interface for Support AddCommunicationToCase requests.
  *
  * \ingroup Support
  *

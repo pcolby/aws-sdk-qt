@@ -41,7 +41,7 @@ namespace MarketplaceCommerceAnalytics {
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::MarketplaceCommerceAnalyticsClient
  *
- * \brief The MarketplaceCommerceAnalyticsClient class provides access the AWS Marketplace Commerce Analytics service.
+ * \brief The MarketplaceCommerceAnalyticsClient class provides access to the AWS Marketplace Commerce Analytics service.
  *
  * \ingroup MarketplaceCommerceAnalytics
  *

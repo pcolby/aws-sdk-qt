@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::CreateAliasRequest
  *
- * \brief The CreateAliasRequest class encapsulates Lambda CreateAlias requests.
+ * \brief The CreateAliasRequest class provides an interface for Lambda CreateAlias requests.
  *
  * \ingroup Lambda
  *

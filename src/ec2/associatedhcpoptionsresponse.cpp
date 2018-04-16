@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AssociateDhcpOptionsResponse
  *
- * \brief The AssociateDhcpOptionsResponse class encapsulates EC2 AssociateDhcpOptions responses.
+ * \brief The AssociateDhcpOptionsResponse class provides an interace for EC2 AssociateDhcpOptions responses.
  *
  * \ingroup EC2
  *

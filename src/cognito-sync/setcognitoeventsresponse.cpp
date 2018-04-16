@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::SetCognitoEventsResponse
  *
- * \brief The SetCognitoEventsResponse class encapsulates CognitoSync SetCognitoEvents responses.
+ * \brief The SetCognitoEventsResponse class provides an interace for CognitoSync SetCognitoEvents responses.
  *
  * \ingroup CognitoSync
  *

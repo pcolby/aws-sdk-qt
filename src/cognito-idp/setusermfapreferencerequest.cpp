@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::SetUserMFAPreferenceRequest
  *
- * \brief The SetUserMFAPreferenceRequest class encapsulates CognitoIdentityProvider SetUserMFAPreference requests.
+ * \brief The SetUserMFAPreferenceRequest class provides an interface for CognitoIdentityProvider SetUserMFAPreference requests.
  *
  * \ingroup CognitoIdentityProvider
  *

@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::UpdateEvaluationRequest
  *
- * \brief The UpdateEvaluationRequest class encapsulates MachineLearning UpdateEvaluation requests.
+ * \brief The UpdateEvaluationRequest class provides an interface for MachineLearning UpdateEvaluation requests.
  *
  * \ingroup MachineLearning
  *

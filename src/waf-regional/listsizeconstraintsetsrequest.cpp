@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::ListSizeConstraintSetsRequest
  *
- * \brief The ListSizeConstraintSetsRequest class encapsulates WAFRegional ListSizeConstraintSets requests.
+ * \brief The ListSizeConstraintSetsRequest class provides an interface for WAFRegional ListSizeConstraintSets requests.
  *
  * \ingroup WAFRegional
  *

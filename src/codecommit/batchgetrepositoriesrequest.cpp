@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::BatchGetRepositoriesRequest
  *
- * \brief The BatchGetRepositoriesRequest class encapsulates CodeCommit BatchGetRepositories requests.
+ * \brief The BatchGetRepositoriesRequest class provides an interface for CodeCommit BatchGetRepositories requests.
  *
  * \ingroup CodeCommit
  *

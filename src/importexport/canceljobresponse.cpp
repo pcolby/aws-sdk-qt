@@ -30,7 +30,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::CancelJobResponse
  *
- * \brief The CancelJobResponse class encapsulates ImportExport CancelJob responses.
+ * \brief The CancelJobResponse class provides an interace for ImportExport CancelJob responses.
  *
  * \ingroup ImportExport
  *

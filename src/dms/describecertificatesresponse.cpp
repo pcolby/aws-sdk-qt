@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeCertificatesResponse
  *
- * \brief The DescribeCertificatesResponse class encapsulates DatabaseMigrationService DescribeCertificates responses.
+ * \brief The DescribeCertificatesResponse class provides an interace for DatabaseMigrationService DescribeCertificates responses.
  *
  * \ingroup DatabaseMigrationService
  *

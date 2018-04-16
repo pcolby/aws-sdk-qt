@@ -30,7 +30,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::DescribeAlarmHistoryResponse
  *
- * \brief The DescribeAlarmHistoryResponse class encapsulates CloudWatch DescribeAlarmHistory responses.
+ * \brief The DescribeAlarmHistoryResponse class provides an interace for CloudWatch DescribeAlarmHistory responses.
  *
  * \ingroup CloudWatch
  *

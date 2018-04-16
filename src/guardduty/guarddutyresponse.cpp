@@ -29,7 +29,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GuardDutyResponse
  *
- * \brief The GuardDutyResponse class is the base class for all GuardDuty responses.
+ * \brief The GuardDutyResponse class provides an interface for GuardDuty responses.
  *
  * \ingroup GuardDuty
  */

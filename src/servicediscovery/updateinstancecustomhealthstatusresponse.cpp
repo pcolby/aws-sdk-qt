@@ -30,7 +30,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::UpdateInstanceCustomHealthStatusResponse
  *
- * \brief The UpdateInstanceCustomHealthStatusResponse class encapsulates ServiceDiscovery UpdateInstanceCustomHealthStatus responses.
+ * \brief The UpdateInstanceCustomHealthStatusResponse class provides an interace for ServiceDiscovery UpdateInstanceCustomHealthStatus responses.
  *
  * \ingroup ServiceDiscovery
  *

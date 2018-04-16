@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteClusterSubnetGroupRequest
  *
- * \brief The DeleteClusterSubnetGroupRequest class encapsulates Redshift DeleteClusterSubnetGroup requests.
+ * \brief The DeleteClusterSubnetGroupRequest class provides an interface for Redshift DeleteClusterSubnetGroup requests.
  *
  * \ingroup Redshift
  *

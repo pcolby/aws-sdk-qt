@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateAliasRequest
  *
- * \brief The CreateAliasRequest class encapsulates DirectoryService CreateAlias requests.
+ * \brief The CreateAliasRequest class provides an interface for DirectoryService CreateAlias requests.
  *
  * \ingroup DirectoryService
  *

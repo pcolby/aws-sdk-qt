@@ -26,7 +26,7 @@ namespace Health {
 /*!
  * \class QtAws::Health::HealthRequest
  *
- * \brief The HealthRequest class is the base class for all Health requests.
+ * \brief The HealthRequest class provides an interface for Health requests.
  *
  * \ingroup Health
  */

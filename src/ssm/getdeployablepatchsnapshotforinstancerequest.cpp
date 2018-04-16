@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetDeployablePatchSnapshotForInstanceRequest
  *
- * \brief The GetDeployablePatchSnapshotForInstanceRequest class encapsulates SSM GetDeployablePatchSnapshotForInstance requests.
+ * \brief The GetDeployablePatchSnapshotForInstanceRequest class provides an interface for SSM GetDeployablePatchSnapshotForInstance requests.
  *
  * \ingroup SSM
  *

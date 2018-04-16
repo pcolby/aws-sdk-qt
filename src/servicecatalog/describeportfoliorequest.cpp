@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribePortfolioRequest
  *
- * \brief The DescribePortfolioRequest class encapsulates ServiceCatalog DescribePortfolio requests.
+ * \brief The DescribePortfolioRequest class provides an interface for ServiceCatalog DescribePortfolio requests.
  *
  * \ingroup ServiceCatalog
  *

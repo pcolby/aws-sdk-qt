@@ -28,7 +28,7 @@ namespace Connect {
 /*!
  * \class QtAws::Connect::StopContactRequest
  *
- * \brief The StopContactRequest class encapsulates Connect StopContact requests.
+ * \brief The StopContactRequest class provides an interface for Connect StopContact requests.
  *
  * \ingroup Connect
  *

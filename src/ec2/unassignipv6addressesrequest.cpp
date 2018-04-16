@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::UnassignIpv6AddressesRequest
  *
- * \brief The UnassignIpv6AddressesRequest class encapsulates EC2 UnassignIpv6Addresses requests.
+ * \brief The UnassignIpv6AddressesRequest class provides an interface for EC2 UnassignIpv6Addresses requests.
  *
  * \ingroup EC2
  *

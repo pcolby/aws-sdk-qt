@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::ListTagsRequest
  *
- * \brief The ListTagsRequest class encapsulates CloudHSMV2 ListTags requests.
+ * \brief The ListTagsRequest class provides an interface for CloudHSMV2 ListTags requests.
  *
  * \ingroup CloudHSMV2
  *

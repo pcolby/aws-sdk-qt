@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::CreateUserResponse
  *
- * \brief The CreateUserResponse class encapsulates AlexaForBusiness CreateUser responses.
+ * \brief The CreateUserResponse class provides an interace for AlexaForBusiness CreateUser responses.
  *
  * \ingroup AlexaForBusiness
  *

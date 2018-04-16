@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::GetDomainSuggestionsResponse
  *
- * \brief The GetDomainSuggestionsResponse class encapsulates Route53Domains GetDomainSuggestions responses.
+ * \brief The GetDomainSuggestionsResponse class provides an interace for Route53Domains GetDomainSuggestions responses.
  *
  * \ingroup Route53Domains
  *

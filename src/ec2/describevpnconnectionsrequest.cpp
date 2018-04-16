@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVpnConnectionsRequest
  *
- * \brief The DescribeVpnConnectionsRequest class encapsulates EC2 DescribeVpnConnections requests.
+ * \brief The DescribeVpnConnectionsRequest class provides an interface for EC2 DescribeVpnConnections requests.
  *
  * \ingroup EC2
  *

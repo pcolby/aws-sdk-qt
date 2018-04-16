@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::TagResourceRequest
  *
- * \brief The TagResourceRequest class encapsulates CloudFront TagResource requests.
+ * \brief The TagResourceRequest class provides an interface for CloudFront TagResource requests.
  *
  * \ingroup CloudFront
  *

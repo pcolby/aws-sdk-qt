@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DescribeEventsRequest
  *
- * \brief The DescribeEventsRequest class encapsulates OpsWorksCM DescribeEvents requests.
+ * \brief The DescribeEventsRequest class provides an interface for OpsWorksCM DescribeEvents requests.
  *
  * \ingroup OpsWorksCM
  *

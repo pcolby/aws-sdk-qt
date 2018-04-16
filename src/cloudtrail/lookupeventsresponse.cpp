@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::LookupEventsResponse
  *
- * \brief The LookupEventsResponse class encapsulates CloudTrail LookupEvents responses.
+ * \brief The LookupEventsResponse class provides an interace for CloudTrail LookupEvents responses.
  *
  * \ingroup CloudTrail
  *

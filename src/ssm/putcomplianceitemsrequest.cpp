@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::PutComplianceItemsRequest
  *
- * \brief The PutComplianceItemsRequest class encapsulates SSM PutComplianceItems requests.
+ * \brief The PutComplianceItemsRequest class provides an interface for SSM PutComplianceItems requests.
  *
  * \ingroup SSM
  *

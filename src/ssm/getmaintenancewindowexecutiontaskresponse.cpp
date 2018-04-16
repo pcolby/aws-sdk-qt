@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetMaintenanceWindowExecutionTaskResponse
  *
- * \brief The GetMaintenanceWindowExecutionTaskResponse class encapsulates SSM GetMaintenanceWindowExecutionTask responses.
+ * \brief The GetMaintenanceWindowExecutionTaskResponse class provides an interace for SSM GetMaintenanceWindowExecutionTask responses.
  *
  * \ingroup SSM
  *

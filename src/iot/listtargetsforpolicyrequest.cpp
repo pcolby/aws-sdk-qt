@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListTargetsForPolicyRequest
  *
- * \brief The ListTargetsForPolicyRequest class encapsulates IoT ListTargetsForPolicy requests.
+ * \brief The ListTargetsForPolicyRequest class provides an interface for IoT ListTargetsForPolicy requests.
  *
  * \ingroup IoT
  *

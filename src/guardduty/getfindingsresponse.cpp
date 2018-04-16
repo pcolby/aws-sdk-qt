@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GetFindingsResponse
  *
- * \brief The GetFindingsResponse class encapsulates GuardDuty GetFindings responses.
+ * \brief The GetFindingsResponse class provides an interace for GuardDuty GetFindings responses.
  *
  * \ingroup GuardDuty
  *

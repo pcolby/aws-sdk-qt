@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetBundlesResponse
  *
- * \brief The GetBundlesResponse class encapsulates Lightsail GetBundles responses.
+ * \brief The GetBundlesResponse class provides an interace for Lightsail GetBundles responses.
  *
  * \ingroup Lightsail
  *

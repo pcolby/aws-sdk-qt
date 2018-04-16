@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeAutomationStepExecutionsRequest
  *
- * \brief The DescribeAutomationStepExecutionsRequest class encapsulates SSM DescribeAutomationStepExecutions requests.
+ * \brief The DescribeAutomationStepExecutionsRequest class provides an interface for SSM DescribeAutomationStepExecutions requests.
  *
  * \ingroup SSM
  *

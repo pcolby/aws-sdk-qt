@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::DescribeStepResponse
  *
- * \brief The DescribeStepResponse class encapsulates EMR DescribeStep responses.
+ * \brief The DescribeStepResponse class provides an interace for EMR DescribeStep responses.
  *
  * \ingroup EMR
  *

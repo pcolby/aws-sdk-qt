@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DeleteVirtualInterfaceResponse
  *
- * \brief The DeleteVirtualInterfaceResponse class encapsulates DirectConnect DeleteVirtualInterface responses.
+ * \brief The DeleteVirtualInterfaceResponse class provides an interace for DirectConnect DeleteVirtualInterface responses.
  *
  * \ingroup DirectConnect
  *

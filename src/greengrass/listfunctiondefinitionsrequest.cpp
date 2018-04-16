@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListFunctionDefinitionsRequest
  *
- * \brief The ListFunctionDefinitionsRequest class encapsulates Greengrass ListFunctionDefinitions requests.
+ * \brief The ListFunctionDefinitionsRequest class provides an interface for Greengrass ListFunctionDefinitions requests.
  *
  * \ingroup Greengrass
  *

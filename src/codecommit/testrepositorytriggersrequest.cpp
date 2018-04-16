@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::TestRepositoryTriggersRequest
  *
- * \brief The TestRepositoryTriggersRequest class encapsulates CodeCommit TestRepositoryTriggers requests.
+ * \brief The TestRepositoryTriggersRequest class provides an interface for CodeCommit TestRepositoryTriggers requests.
  *
  * \ingroup CodeCommit
  *

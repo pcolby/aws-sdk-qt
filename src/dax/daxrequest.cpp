@@ -26,7 +26,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DAXRequest
  *
- * \brief The DAXRequest class is the base class for all DAX requests.
+ * \brief The DAXRequest class provides an interface for DAX requests.
  *
  * \ingroup DAX
  */

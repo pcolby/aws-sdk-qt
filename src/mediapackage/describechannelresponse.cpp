@@ -30,7 +30,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::DescribeChannelResponse
  *
- * \brief The DescribeChannelResponse class encapsulates MediaPackage DescribeChannel responses.
+ * \brief The DescribeChannelResponse class provides an interace for MediaPackage DescribeChannel responses.
  *
  * \ingroup MediaPackage
  *

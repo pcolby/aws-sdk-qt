@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DeleteMailboxPermissionsRequest
  *
- * \brief The DeleteMailboxPermissionsRequest class encapsulates WorkMail DeleteMailboxPermissions requests.
+ * \brief The DeleteMailboxPermissionsRequest class provides an interface for WorkMail DeleteMailboxPermissions requests.
  *
  * \ingroup WorkMail
  *

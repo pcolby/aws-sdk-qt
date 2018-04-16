@@ -30,7 +30,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::StopApplicationResponse
  *
- * \brief The StopApplicationResponse class encapsulates KinesisAnalytics StopApplication responses.
+ * \brief The StopApplicationResponse class provides an interace for KinesisAnalytics StopApplication responses.
  *
  * \ingroup KinesisAnalytics
  *

@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::ListDeadLetterSourceQueuesRequest
  *
- * \brief The ListDeadLetterSourceQueuesRequest class encapsulates SQS ListDeadLetterSourceQueues requests.
+ * \brief The ListDeadLetterSourceQueuesRequest class provides an interface for SQS ListDeadLetterSourceQueues requests.
  *
  * \ingroup SQS
  *

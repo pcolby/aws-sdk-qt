@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteKeyPairResponse
  *
- * \brief The DeleteKeyPairResponse class encapsulates EC2 DeleteKeyPair responses.
+ * \brief The DeleteKeyPairResponse class provides an interace for EC2 DeleteKeyPair responses.
  *
  * \ingroup EC2
  *

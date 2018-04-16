@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::BatchGetItemRequest
  *
- * \brief The BatchGetItemRequest class encapsulates DynamoDB BatchGetItem requests.
+ * \brief The BatchGetItemRequest class provides an interface for DynamoDB BatchGetItem requests.
  *
  * \ingroup DynamoDB
  *

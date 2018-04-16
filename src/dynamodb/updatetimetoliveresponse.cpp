@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::UpdateTimeToLiveResponse
  *
- * \brief The UpdateTimeToLiveResponse class encapsulates DynamoDB UpdateTimeToLive responses.
+ * \brief The UpdateTimeToLiveResponse class provides an interace for DynamoDB UpdateTimeToLive responses.
  *
  * \ingroup DynamoDB
  *

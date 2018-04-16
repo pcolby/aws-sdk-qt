@@ -28,7 +28,7 @@ namespace Pricing {
 /*!
  * \class QtAws::Pricing::GetProductsRequest
  *
- * \brief The GetProductsRequest class encapsulates Pricing GetProducts requests.
+ * \brief The GetProductsRequest class provides an interface for Pricing GetProducts requests.
  *
  * \ingroup Pricing
  *

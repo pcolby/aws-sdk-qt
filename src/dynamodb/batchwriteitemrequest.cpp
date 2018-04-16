@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::BatchWriteItemRequest
  *
- * \brief The BatchWriteItemRequest class encapsulates DynamoDB BatchWriteItem requests.
+ * \brief The BatchWriteItemRequest class provides an interface for DynamoDB BatchWriteItem requests.
  *
  * \ingroup DynamoDB
  *

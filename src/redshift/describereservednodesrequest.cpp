@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeReservedNodesRequest
  *
- * \brief The DescribeReservedNodesRequest class encapsulates Redshift DescribeReservedNodes requests.
+ * \brief The DescribeReservedNodesRequest class provides an interface for Redshift DescribeReservedNodes requests.
  *
  * \ingroup Redshift
  *

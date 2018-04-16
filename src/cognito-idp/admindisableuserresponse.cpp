@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminDisableUserResponse
  *
- * \brief The AdminDisableUserResponse class encapsulates CognitoIdentityProvider AdminDisableUser responses.
+ * \brief The AdminDisableUserResponse class provides an interace for CognitoIdentityProvider AdminDisableUser responses.
  *
  * \ingroup CognitoIdentityProvider
  *

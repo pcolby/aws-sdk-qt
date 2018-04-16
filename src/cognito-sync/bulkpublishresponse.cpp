@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::BulkPublishResponse
  *
- * \brief The BulkPublishResponse class encapsulates CognitoSync BulkPublish responses.
+ * \brief The BulkPublishResponse class provides an interace for CognitoSync BulkPublish responses.
  *
  * \ingroup CognitoSync
  *

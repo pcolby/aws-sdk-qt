@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SetIdentityDkimEnabledResponse
  *
- * \brief The SetIdentityDkimEnabledResponse class encapsulates SES SetIdentityDkimEnabled responses.
+ * \brief The SetIdentityDkimEnabledResponse class provides an interace for SES SetIdentityDkimEnabled responses.
  *
  * \ingroup SES
  *

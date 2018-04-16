@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::SendMessageBatchResponse
  *
- * \brief The SendMessageBatchResponse class encapsulates SQS SendMessageBatch responses.
+ * \brief The SendMessageBatchResponse class provides an interace for SQS SendMessageBatch responses.
  *
  * \ingroup SQS
  *

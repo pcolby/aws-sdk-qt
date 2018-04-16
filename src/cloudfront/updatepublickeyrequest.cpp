@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::UpdatePublicKeyRequest
  *
- * \brief The UpdatePublicKeyRequest class encapsulates CloudFront UpdatePublicKey requests.
+ * \brief The UpdatePublicKeyRequest class provides an interface for CloudFront UpdatePublicKey requests.
  *
  * \ingroup CloudFront
  *

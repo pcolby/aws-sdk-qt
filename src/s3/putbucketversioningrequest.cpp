@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketVersioningRequest
  *
- * \brief The PutBucketVersioningRequest class encapsulates S3 PutBucketVersioning requests.
+ * \brief The PutBucketVersioningRequest class provides an interface for S3 PutBucketVersioning requests.
  *
  * \ingroup S3
  *

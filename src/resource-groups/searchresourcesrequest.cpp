@@ -28,7 +28,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::SearchResourcesRequest
  *
- * \brief The SearchResourcesRequest class encapsulates ResourceGroups SearchResources requests.
+ * \brief The SearchResourcesRequest class provides an interface for ResourceGroups SearchResources requests.
  *
  * \ingroup ResourceGroups
  *

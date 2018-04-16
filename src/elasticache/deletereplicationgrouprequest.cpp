@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DeleteReplicationGroupRequest
  *
- * \brief The DeleteReplicationGroupRequest class encapsulates ElastiCache DeleteReplicationGroup requests.
+ * \brief The DeleteReplicationGroupRequest class provides an interface for ElastiCache DeleteReplicationGroup requests.
  *
  * \ingroup ElastiCache
  *

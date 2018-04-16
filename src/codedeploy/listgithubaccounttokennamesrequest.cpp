@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::ListGitHubAccountTokenNamesRequest
  *
- * \brief The ListGitHubAccountTokenNamesRequest class encapsulates CodeDeploy ListGitHubAccountTokenNames requests.
+ * \brief The ListGitHubAccountTokenNamesRequest class provides an interface for CodeDeploy ListGitHubAccountTokenNames requests.
  *
  * \ingroup CodeDeploy
  *

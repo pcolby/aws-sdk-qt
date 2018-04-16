@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::CreatePlatformVersionResponse
  *
- * \brief The CreatePlatformVersionResponse class encapsulates ElasticBeanstalk CreatePlatformVersion responses.
+ * \brief The CreatePlatformVersionResponse class provides an interace for ElasticBeanstalk CreatePlatformVersion responses.
  *
  * \ingroup ElasticBeanstalk
  *

@@ -28,7 +28,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::ListDiscoveredResourcesRequest
  *
- * \brief The ListDiscoveredResourcesRequest class encapsulates MigrationHub ListDiscoveredResources requests.
+ * \brief The ListDiscoveredResourcesRequest class provides an interface for MigrationHub ListDiscoveredResources requests.
  *
  * \ingroup MigrationHub
  *

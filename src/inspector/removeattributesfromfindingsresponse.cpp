@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::RemoveAttributesFromFindingsResponse
  *
- * \brief The RemoveAttributesFromFindingsResponse class encapsulates Inspector RemoveAttributesFromFindings responses.
+ * \brief The RemoveAttributesFromFindingsResponse class provides an interace for Inspector RemoveAttributesFromFindings responses.
  *
  * \ingroup Inspector
  *

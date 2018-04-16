@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DescribeTableResponse
  *
- * \brief The DescribeTableResponse class encapsulates DynamoDB DescribeTable responses.
+ * \brief The DescribeTableResponse class provides an interace for DynamoDB DescribeTable responses.
  *
  * \ingroup DynamoDB
  *

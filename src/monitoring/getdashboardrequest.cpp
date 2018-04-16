@@ -28,7 +28,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::GetDashboardRequest
  *
- * \brief The GetDashboardRequest class encapsulates CloudWatch GetDashboard requests.
+ * \brief The GetDashboardRequest class provides an interface for CloudWatch GetDashboard requests.
  *
  * \ingroup CloudWatch
  *

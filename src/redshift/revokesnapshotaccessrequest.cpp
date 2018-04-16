@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::RevokeSnapshotAccessRequest
  *
- * \brief The RevokeSnapshotAccessRequest class encapsulates Redshift RevokeSnapshotAccess requests.
+ * \brief The RevokeSnapshotAccessRequest class provides an interface for Redshift RevokeSnapshotAccess requests.
  *
  * \ingroup Redshift
  *

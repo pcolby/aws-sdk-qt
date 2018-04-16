@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::UpdateStreamingDistributionRequest
  *
- * \brief The UpdateStreamingDistributionRequest class encapsulates CloudFront UpdateStreamingDistribution requests.
+ * \brief The UpdateStreamingDistributionRequest class provides an interface for CloudFront UpdateStreamingDistribution requests.
  *
  * \ingroup CloudFront
  *

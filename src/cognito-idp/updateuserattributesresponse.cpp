@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateUserAttributesResponse
  *
- * \brief The UpdateUserAttributesResponse class encapsulates CognitoIdentityProvider UpdateUserAttributes responses.
+ * \brief The UpdateUserAttributesResponse class provides an interace for CognitoIdentityProvider UpdateUserAttributes responses.
  *
  * \ingroup CognitoIdentityProvider
  *

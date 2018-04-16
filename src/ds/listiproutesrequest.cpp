@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::ListIpRoutesRequest
  *
- * \brief The ListIpRoutesRequest class encapsulates DirectoryService ListIpRoutes requests.
+ * \brief The ListIpRoutesRequest class provides an interface for DirectoryService ListIpRoutes requests.
  *
  * \ingroup DirectoryService
  *

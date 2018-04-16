@@ -28,7 +28,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::StopBuildRequest
  *
- * \brief The StopBuildRequest class encapsulates CodeBuild StopBuild requests.
+ * \brief The StopBuildRequest class provides an interface for CodeBuild StopBuild requests.
  *
  * \ingroup CodeBuild
  *

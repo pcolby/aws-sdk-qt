@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::ListBuildsRequest
  *
- * \brief The ListBuildsRequest class encapsulates GameLift ListBuilds requests.
+ * \brief The ListBuildsRequest class provides an interface for GameLift ListBuilds requests.
  *
  * \ingroup GameLift
  *

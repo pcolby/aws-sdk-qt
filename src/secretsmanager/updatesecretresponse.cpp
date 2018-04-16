@@ -30,7 +30,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::UpdateSecretResponse
  *
- * \brief The UpdateSecretResponse class encapsulates SecretsManager UpdateSecret responses.
+ * \brief The UpdateSecretResponse class provides an interace for SecretsManager UpdateSecret responses.
  *
  * \ingroup SecretsManager
  *

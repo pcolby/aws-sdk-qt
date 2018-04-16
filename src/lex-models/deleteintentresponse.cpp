@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::DeleteIntentResponse
  *
- * \brief The DeleteIntentResponse class encapsulates LexModelBuildingService DeleteIntent responses.
+ * \brief The DeleteIntentResponse class provides an interace for LexModelBuildingService DeleteIntent responses.
  *
  * \ingroup LexModelBuildingService
  *

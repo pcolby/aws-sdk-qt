@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeletePolicyVersionResponse
  *
- * \brief The DeletePolicyVersionResponse class encapsulates IoT DeletePolicyVersion responses.
+ * \brief The DeletePolicyVersionResponse class provides an interace for IoT DeletePolicyVersion responses.
  *
  * \ingroup IoT
  *

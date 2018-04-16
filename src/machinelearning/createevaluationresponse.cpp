@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::CreateEvaluationResponse
  *
- * \brief The CreateEvaluationResponse class encapsulates MachineLearning CreateEvaluation responses.
+ * \brief The CreateEvaluationResponse class provides an interace for MachineLearning CreateEvaluation responses.
  *
  * \ingroup MachineLearning
  *

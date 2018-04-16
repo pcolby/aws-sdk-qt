@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SetReceiptRulePositionRequest
  *
- * \brief The SetReceiptRulePositionRequest class encapsulates SES SetReceiptRulePosition requests.
+ * \brief The SetReceiptRulePositionRequest class provides an interface for SES SetReceiptRulePosition requests.
  *
  * \ingroup SES
  *

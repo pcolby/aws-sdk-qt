@@ -30,7 +30,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::GetCredentialsForIdentityResponse
  *
- * \brief The GetCredentialsForIdentityResponse class encapsulates CognitoIdentity GetCredentialsForIdentity responses.
+ * \brief The GetCredentialsForIdentityResponse class provides an interace for CognitoIdentity GetCredentialsForIdentity responses.
  *
  * \ingroup CognitoIdentity
  *

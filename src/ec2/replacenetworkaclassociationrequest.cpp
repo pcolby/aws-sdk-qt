@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ReplaceNetworkAclAssociationRequest
  *
- * \brief The ReplaceNetworkAclAssociationRequest class encapsulates EC2 ReplaceNetworkAclAssociation requests.
+ * \brief The ReplaceNetworkAclAssociationRequest class provides an interface for EC2 ReplaceNetworkAclAssociation requests.
  *
  * \ingroup EC2
  *

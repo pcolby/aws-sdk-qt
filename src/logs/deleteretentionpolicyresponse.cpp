@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DeleteRetentionPolicyResponse
  *
- * \brief The DeleteRetentionPolicyResponse class encapsulates CloudWatchLogs DeleteRetentionPolicy responses.
+ * \brief The DeleteRetentionPolicyResponse class provides an interace for CloudWatchLogs DeleteRetentionPolicy responses.
  *
  * \ingroup CloudWatchLogs
  *

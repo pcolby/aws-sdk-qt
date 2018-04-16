@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::RestoreObjectResponse
  *
- * \brief The RestoreObjectResponse class encapsulates S3 RestoreObject responses.
+ * \brief The RestoreObjectResponse class provides an interace for S3 RestoreObject responses.
  *
  * \ingroup S3
  *

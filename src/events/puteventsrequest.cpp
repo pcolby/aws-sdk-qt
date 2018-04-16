@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::PutEventsRequest
  *
- * \brief The PutEventsRequest class encapsulates CloudWatchEvents PutEvents requests.
+ * \brief The PutEventsRequest class provides an interface for CloudWatchEvents PutEvents requests.
  *
  * \ingroup CloudWatchEvents
  *

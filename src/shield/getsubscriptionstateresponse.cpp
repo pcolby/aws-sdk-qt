@@ -30,7 +30,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::GetSubscriptionStateResponse
  *
- * \brief The GetSubscriptionStateResponse class encapsulates Shield GetSubscriptionState responses.
+ * \brief The GetSubscriptionStateResponse class provides an interace for Shield GetSubscriptionState responses.
  *
  * \ingroup Shield
  *

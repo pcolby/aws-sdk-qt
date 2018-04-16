@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::RemovePermissionResponse
  *
- * \brief The RemovePermissionResponse class encapsulates Lambda RemovePermission responses.
+ * \brief The RemovePermissionResponse class provides an interace for Lambda RemovePermission responses.
  *
  * \ingroup Lambda
  *

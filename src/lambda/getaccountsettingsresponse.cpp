@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::GetAccountSettingsResponse
  *
- * \brief The GetAccountSettingsResponse class encapsulates Lambda GetAccountSettings responses.
+ * \brief The GetAccountSettingsResponse class provides an interace for Lambda GetAccountSettings responses.
  *
  * \ingroup Lambda
  *

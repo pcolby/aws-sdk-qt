@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::CheckDNSAvailabilityRequest
  *
- * \brief The CheckDNSAvailabilityRequest class encapsulates ElasticBeanstalk CheckDNSAvailability requests.
+ * \brief The CheckDNSAvailabilityRequest class provides an interface for ElasticBeanstalk CheckDNSAvailability requests.
  *
  * \ingroup ElasticBeanstalk
  *

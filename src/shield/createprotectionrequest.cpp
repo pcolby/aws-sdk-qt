@@ -28,7 +28,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::CreateProtectionRequest
  *
- * \brief The CreateProtectionRequest class encapsulates Shield CreateProtection requests.
+ * \brief The CreateProtectionRequest class provides an interface for Shield CreateProtection requests.
  *
  * \ingroup Shield
  *

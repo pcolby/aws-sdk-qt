@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListInventoryEntriesResponse
  *
- * \brief The ListInventoryEntriesResponse class encapsulates SSM ListInventoryEntries responses.
+ * \brief The ListInventoryEntriesResponse class provides an interace for SSM ListInventoryEntries responses.
  *
  * \ingroup SSM
  *

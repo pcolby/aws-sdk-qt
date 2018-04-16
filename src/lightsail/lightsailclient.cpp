@@ -179,7 +179,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::LightsailClient
  *
- * \brief The LightsailClient class provides access the Amazon Lightsail service.
+ * \brief The LightsailClient class provides access to the Amazon Lightsail service.
  *
  * \ingroup Lightsail
  *

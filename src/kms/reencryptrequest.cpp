@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ReEncryptRequest
  *
- * \brief The ReEncryptRequest class encapsulates KMS ReEncrypt requests.
+ * \brief The ReEncryptRequest class provides an interface for KMS ReEncrypt requests.
  *
  * \ingroup KMS
  *

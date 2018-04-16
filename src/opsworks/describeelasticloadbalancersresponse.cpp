@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeElasticLoadBalancersResponse
  *
- * \brief The DescribeElasticLoadBalancersResponse class encapsulates OpsWorks DescribeElasticLoadBalancers responses.
+ * \brief The DescribeElasticLoadBalancersResponse class provides an interace for OpsWorks DescribeElasticLoadBalancers responses.
  *
  * \ingroup OpsWorks
  *

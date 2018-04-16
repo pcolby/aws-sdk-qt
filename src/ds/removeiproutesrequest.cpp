@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::RemoveIpRoutesRequest
  *
- * \brief The RemoveIpRoutesRequest class encapsulates DirectoryService RemoveIpRoutes requests.
+ * \brief The RemoveIpRoutesRequest class provides an interface for DirectoryService RemoveIpRoutes requests.
  *
  * \ingroup DirectoryService
  *

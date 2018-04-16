@@ -30,7 +30,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::ListDomainsResponse
  *
- * \brief The ListDomainsResponse class encapsulates SimpleDB ListDomains responses.
+ * \brief The ListDomainsResponse class provides an interace for SimpleDB ListDomains responses.
  *
  * \ingroup SimpleDB
  *

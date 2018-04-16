@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DescribeClustersResponse
  *
- * \brief The DescribeClustersResponse class encapsulates ECS DescribeClusters responses.
+ * \brief The DescribeClustersResponse class provides an interace for ECS DescribeClusters responses.
  *
  * \ingroup ECS
  *

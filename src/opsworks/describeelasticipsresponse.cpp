@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeElasticIpsResponse
  *
- * \brief The DescribeElasticIpsResponse class encapsulates OpsWorks DescribeElasticIps responses.
+ * \brief The DescribeElasticIpsResponse class provides an interace for OpsWorks DescribeElasticIps responses.
  *
  * \ingroup OpsWorks
  *

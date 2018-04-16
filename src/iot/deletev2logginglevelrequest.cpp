@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteV2LoggingLevelRequest
  *
- * \brief The DeleteV2LoggingLevelRequest class encapsulates IoT DeleteV2LoggingLevel requests.
+ * \brief The DeleteV2LoggingLevelRequest class provides an interface for IoT DeleteV2LoggingLevel requests.
  *
  * \ingroup IoT
  *

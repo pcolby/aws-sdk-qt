@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeConfigurationSettingsRequest
  *
- * \brief The DescribeConfigurationSettingsRequest class encapsulates ElasticBeanstalk DescribeConfigurationSettings requests.
+ * \brief The DescribeConfigurationSettingsRequest class provides an interface for ElasticBeanstalk DescribeConfigurationSettings requests.
  *
  * \ingroup ElasticBeanstalk
  *

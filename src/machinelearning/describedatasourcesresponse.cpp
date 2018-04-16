@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DescribeDataSourcesResponse
  *
- * \brief The DescribeDataSourcesResponse class encapsulates MachineLearning DescribeDataSources responses.
+ * \brief The DescribeDataSourcesResponse class provides an interace for MachineLearning DescribeDataSources responses.
  *
  * \ingroup MachineLearning
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateSnapshotRequest
  *
- * \brief The CreateSnapshotRequest class encapsulates EC2 CreateSnapshot requests.
+ * \brief The CreateSnapshotRequest class provides an interface for EC2 CreateSnapshot requests.
  *
  * \ingroup EC2
  *

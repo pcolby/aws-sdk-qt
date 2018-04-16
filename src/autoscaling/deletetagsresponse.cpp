@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DeleteTagsResponse
  *
- * \brief The DeleteTagsResponse class encapsulates AutoScaling DeleteTags responses.
+ * \brief The DeleteTagsResponse class provides an interace for AutoScaling DeleteTags responses.
  *
  * \ingroup AutoScaling
  *

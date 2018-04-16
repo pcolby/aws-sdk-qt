@@ -30,7 +30,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::GetServersResponse
  *
- * \brief The GetServersResponse class encapsulates SMS GetServers responses.
+ * \brief The GetServersResponse class provides an interace for SMS GetServers responses.
  *
  * \ingroup SMS
  *

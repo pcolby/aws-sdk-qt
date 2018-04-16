@@ -30,7 +30,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::DescribeCertificateAuthorityResponse
  *
- * \brief The DescribeCertificateAuthorityResponse class encapsulates ACMPCA DescribeCertificateAuthority responses.
+ * \brief The DescribeCertificateAuthorityResponse class provides an interace for ACMPCA DescribeCertificateAuthority responses.
  *
  * \ingroup ACMPCA
  *

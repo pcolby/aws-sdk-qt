@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::StopStackRequest
  *
- * \brief The StopStackRequest class encapsulates OpsWorks StopStack requests.
+ * \brief The StopStackRequest class provides an interface for OpsWorks StopStack requests.
  *
  * \ingroup OpsWorks
  *

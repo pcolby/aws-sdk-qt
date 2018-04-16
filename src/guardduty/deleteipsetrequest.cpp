@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DeleteIPSetRequest
  *
- * \brief The DeleteIPSetRequest class encapsulates GuardDuty DeleteIPSet requests.
+ * \brief The DeleteIPSetRequest class provides an interface for GuardDuty DeleteIPSet requests.
  *
  * \ingroup GuardDuty
  *

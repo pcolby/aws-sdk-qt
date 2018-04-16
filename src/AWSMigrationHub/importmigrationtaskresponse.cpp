@@ -30,7 +30,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::ImportMigrationTaskResponse
  *
- * \brief The ImportMigrationTaskResponse class encapsulates MigrationHub ImportMigrationTask responses.
+ * \brief The ImportMigrationTaskResponse class provides an interace for MigrationHub ImportMigrationTask responses.
  *
  * \ingroup MigrationHub
  *

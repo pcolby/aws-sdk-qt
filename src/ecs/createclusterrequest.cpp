@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::CreateClusterRequest
  *
- * \brief The CreateClusterRequest class encapsulates ECS CreateCluster requests.
+ * \brief The CreateClusterRequest class provides an interface for ECS CreateCluster requests.
  *
  * \ingroup ECS
  *

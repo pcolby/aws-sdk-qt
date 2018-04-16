@@ -175,7 +175,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::WafClient
  *
- * \brief The WafClient class provides access the AWS WAF service.
+ * \brief The WafClient class provides access to the AWS WAF service.
  *
  * \ingroup WAF
  *

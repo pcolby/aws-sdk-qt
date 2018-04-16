@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateAuthorizerResponse
  *
- * \brief The CreateAuthorizerResponse class encapsulates IoT CreateAuthorizer responses.
+ * \brief The CreateAuthorizerResponse class provides an interace for IoT CreateAuthorizer responses.
  *
  * \ingroup IoT
  *

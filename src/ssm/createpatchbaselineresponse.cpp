@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CreatePatchBaselineResponse
  *
- * \brief The CreatePatchBaselineResponse class encapsulates SSM CreatePatchBaseline responses.
+ * \brief The CreatePatchBaselineResponse class provides an interace for SSM CreatePatchBaseline responses.
  *
  * \ingroup SSM
  *

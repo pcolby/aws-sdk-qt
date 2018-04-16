@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeFolderContentsResponse
  *
- * \brief The DescribeFolderContentsResponse class encapsulates WorkDocs DescribeFolderContents responses.
+ * \brief The DescribeFolderContentsResponse class provides an interace for WorkDocs DescribeFolderContents responses.
  *
  * \ingroup WorkDocs
  *

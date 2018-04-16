@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVolumesModificationsResponse
  *
- * \brief The DescribeVolumesModificationsResponse class encapsulates EC2 DescribeVolumesModifications responses.
+ * \brief The DescribeVolumesModificationsResponse class provides an interace for EC2 DescribeVolumesModifications responses.
  *
  * \ingroup EC2
  *

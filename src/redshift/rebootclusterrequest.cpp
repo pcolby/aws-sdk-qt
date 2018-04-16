@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::RebootClusterRequest
  *
- * \brief The RebootClusterRequest class encapsulates Redshift RebootCluster requests.
+ * \brief The RebootClusterRequest class provides an interface for Redshift RebootCluster requests.
  *
  * \ingroup Redshift
  *

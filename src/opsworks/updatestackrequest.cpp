@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateStackRequest
  *
- * \brief The UpdateStackRequest class encapsulates OpsWorks UpdateStack requests.
+ * \brief The UpdateStackRequest class provides an interface for OpsWorks UpdateStack requests.
  *
  * \ingroup OpsWorks
  *

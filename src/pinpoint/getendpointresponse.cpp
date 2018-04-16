@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetEndpointResponse
  *
- * \brief The GetEndpointResponse class encapsulates Pinpoint GetEndpoint responses.
+ * \brief The GetEndpointResponse class provides an interace for Pinpoint GetEndpoint responses.
  *
  * \ingroup Pinpoint
  *

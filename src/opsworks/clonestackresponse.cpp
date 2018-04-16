@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CloneStackResponse
  *
- * \brief The CloneStackResponse class encapsulates OpsWorks CloneStack responses.
+ * \brief The CloneStackResponse class provides an interace for OpsWorks CloneStack responses.
  *
  * \ingroup OpsWorks
  *

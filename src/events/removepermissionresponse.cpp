@@ -30,7 +30,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::RemovePermissionResponse
  *
- * \brief The RemovePermissionResponse class encapsulates CloudWatchEvents RemovePermission responses.
+ * \brief The RemovePermissionResponse class provides an interace for CloudWatchEvents RemovePermission responses.
  *
  * \ingroup CloudWatchEvents
  *

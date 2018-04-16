@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeOptionGroupsResponse
  *
- * \brief The DescribeOptionGroupsResponse class encapsulates RDS DescribeOptionGroups responses.
+ * \brief The DescribeOptionGroupsResponse class provides an interace for RDS DescribeOptionGroups responses.
  *
  * \ingroup RDS
  *

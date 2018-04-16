@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::GetSchemaCreationStatusResponse
  *
- * \brief The GetSchemaCreationStatusResponse class encapsulates AppSync GetSchemaCreationStatus responses.
+ * \brief The GetSchemaCreationStatusResponse class provides an interace for AppSync GetSchemaCreationStatus responses.
  *
  * \ingroup AppSync
  *

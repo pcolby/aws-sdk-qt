@@ -26,7 +26,7 @@ namespace Pricing {
 /*!
  * \class QtAws::Pricing::PricingRequest
  *
- * \brief The PricingRequest class is the base class for all Pricing requests.
+ * \brief The PricingRequest class provides an interface for Pricing requests.
  *
  * \ingroup Pricing
  */

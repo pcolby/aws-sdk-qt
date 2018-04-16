@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::UpdatePortfolioResponse
  *
- * \brief The UpdatePortfolioResponse class encapsulates ServiceCatalog UpdatePortfolio responses.
+ * \brief The UpdatePortfolioResponse class provides an interace for ServiceCatalog UpdatePortfolio responses.
  *
  * \ingroup ServiceCatalog
  *

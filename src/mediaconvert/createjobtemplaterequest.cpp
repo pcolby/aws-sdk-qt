@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::CreateJobTemplateRequest
  *
- * \brief The CreateJobTemplateRequest class encapsulates MediaConvert CreateJobTemplate requests.
+ * \brief The CreateJobTemplateRequest class provides an interface for MediaConvert CreateJobTemplate requests.
  *
  * \ingroup MediaConvert
  *

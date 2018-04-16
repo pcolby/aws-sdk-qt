@@ -28,7 +28,7 @@ namespace IoTDataPlane {
 /*!
  * \class QtAws::IoTDataPlane::UpdateThingShadowRequest
  *
- * \brief The UpdateThingShadowRequest class encapsulates IoTDataPlane UpdateThingShadow requests.
+ * \brief The UpdateThingShadowRequest class provides an interface for IoTDataPlane UpdateThingShadow requests.
  *
  * \ingroup IoTDataPlane
  *

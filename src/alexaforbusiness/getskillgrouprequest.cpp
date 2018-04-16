@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::GetSkillGroupRequest
  *
- * \brief The GetSkillGroupRequest class encapsulates AlexaForBusiness GetSkillGroup requests.
+ * \brief The GetSkillGroupRequest class provides an interface for AlexaForBusiness GetSkillGroup requests.
  *
  * \ingroup AlexaForBusiness
  *

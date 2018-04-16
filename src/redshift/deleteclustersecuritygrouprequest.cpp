@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteClusterSecurityGroupRequest
  *
- * \brief The DeleteClusterSecurityGroupRequest class encapsulates Redshift DeleteClusterSecurityGroup requests.
+ * \brief The DeleteClusterSecurityGroupRequest class provides an interface for Redshift DeleteClusterSecurityGroup requests.
  *
  * \ingroup Redshift
  *

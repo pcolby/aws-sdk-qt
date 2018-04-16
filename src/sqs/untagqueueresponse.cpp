@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::UntagQueueResponse
  *
- * \brief The UntagQueueResponse class encapsulates SQS UntagQueue responses.
+ * \brief The UntagQueueResponse class provides an interace for SQS UntagQueue responses.
  *
  * \ingroup SQS
  *

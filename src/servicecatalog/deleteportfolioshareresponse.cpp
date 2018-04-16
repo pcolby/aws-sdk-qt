@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DeletePortfolioShareResponse
  *
- * \brief The DeletePortfolioShareResponse class encapsulates ServiceCatalog DeletePortfolioShare responses.
+ * \brief The DeletePortfolioShareResponse class provides an interace for ServiceCatalog DeletePortfolioShare responses.
  *
  * \ingroup ServiceCatalog
  *

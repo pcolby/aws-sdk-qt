@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::DescribeJobResponse
  *
- * \brief The DescribeJobResponse class encapsulates Glacier DescribeJob responses.
+ * \brief The DescribeJobResponse class provides an interace for Glacier DescribeJob responses.
  *
  * \ingroup Glacier
  *

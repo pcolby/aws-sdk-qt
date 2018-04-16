@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeKeyPairsRequest
  *
- * \brief The DescribeKeyPairsRequest class encapsulates EC2 DescribeKeyPairs requests.
+ * \brief The DescribeKeyPairsRequest class provides an interface for EC2 DescribeKeyPairs requests.
  *
  * \ingroup EC2
  *

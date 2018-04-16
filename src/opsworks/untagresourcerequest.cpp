@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UntagResourceRequest
  *
- * \brief The UntagResourceRequest class encapsulates OpsWorks UntagResource requests.
+ * \brief The UntagResourceRequest class provides an interface for OpsWorks UntagResource requests.
  *
  * \ingroup OpsWorks
  *

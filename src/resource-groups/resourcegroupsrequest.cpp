@@ -26,7 +26,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::ResourceGroupsRequest
  *
- * \brief The ResourceGroupsRequest class is the base class for all ResourceGroups requests.
+ * \brief The ResourceGroupsRequest class provides an interface for ResourceGroups requests.
  *
  * \ingroup ResourceGroups
  */

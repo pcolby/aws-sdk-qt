@@ -43,7 +43,7 @@ namespace MarketplaceMetering {
 /*!
  * \class QtAws::MarketplaceMetering::MarketplaceMeteringClient
  *
- * \brief The MarketplaceMeteringClient class provides access the AWSMarketplace Metering service.
+ * \brief The MarketplaceMeteringClient class provides access to the AWSMarketplace Metering service.
  *
  * \ingroup MarketplaceMetering
  *

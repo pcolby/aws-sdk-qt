@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DeleteDBClusterParameterGroupResponse
  *
- * \brief The DeleteDBClusterParameterGroupResponse class encapsulates RDS DeleteDBClusterParameterGroup responses.
+ * \brief The DeleteDBClusterParameterGroupResponse class provides an interace for RDS DeleteDBClusterParameterGroup responses.
  *
  * \ingroup RDS
  *

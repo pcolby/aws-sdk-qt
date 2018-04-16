@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeValidDBInstanceModificationsRequest
  *
- * \brief The DescribeValidDBInstanceModificationsRequest class encapsulates RDS DescribeValidDBInstanceModifications requests.
+ * \brief The DescribeValidDBInstanceModificationsRequest class provides an interface for RDS DescribeValidDBInstanceModifications requests.
  *
  * \ingroup RDS
  *

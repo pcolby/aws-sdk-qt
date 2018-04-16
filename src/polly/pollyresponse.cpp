@@ -29,7 +29,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::PollyResponse
  *
- * \brief The PollyResponse class is the base class for all Polly responses.
+ * \brief The PollyResponse class provides an interface for Polly responses.
  *
  * \ingroup Polly
  */

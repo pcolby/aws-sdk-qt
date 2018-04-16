@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::DeleteAssessmentTemplateResponse
  *
- * \brief The DeleteAssessmentTemplateResponse class encapsulates Inspector DeleteAssessmentTemplate responses.
+ * \brief The DeleteAssessmentTemplateResponse class provides an interace for Inspector DeleteAssessmentTemplate responses.
  *
  * \ingroup Inspector
  *

@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateMyUserProfileResponse
  *
- * \brief The UpdateMyUserProfileResponse class encapsulates OpsWorks UpdateMyUserProfile responses.
+ * \brief The UpdateMyUserProfileResponse class provides an interace for OpsWorks UpdateMyUserProfile responses.
  *
  * \ingroup OpsWorks
  *

@@ -30,7 +30,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::DeleteChannelResponse
  *
- * \brief The DeleteChannelResponse class encapsulates MediaPackage DeleteChannel responses.
+ * \brief The DeleteChannelResponse class provides an interace for MediaPackage DeleteChannel responses.
  *
  * \ingroup MediaPackage
  *

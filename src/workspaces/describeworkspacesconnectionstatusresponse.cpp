@@ -30,7 +30,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::DescribeWorkspacesConnectionStatusResponse
  *
- * \brief The DescribeWorkspacesConnectionStatusResponse class encapsulates WorkSpaces DescribeWorkspacesConnectionStatus responses.
+ * \brief The DescribeWorkspacesConnectionStatusResponse class provides an interace for WorkSpaces DescribeWorkspacesConnectionStatus responses.
  *
  * \ingroup WorkSpaces
  *

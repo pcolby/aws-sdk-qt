@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::PutParameterResponse
  *
- * \brief The PutParameterResponse class encapsulates SSM PutParameter responses.
+ * \brief The PutParameterResponse class provides an interace for SSM PutParameter responses.
  *
  * \ingroup SSM
  *

@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::AssociateDelegateToResourceResponse
  *
- * \brief The AssociateDelegateToResourceResponse class encapsulates WorkMail AssociateDelegateToResource responses.
+ * \brief The AssociateDelegateToResourceResponse class provides an interace for WorkMail AssociateDelegateToResource responses.
  *
  * \ingroup WorkMail
  *

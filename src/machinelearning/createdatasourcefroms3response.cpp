@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::CreateDataSourceFromS3Response
  *
- * \brief The CreateDataSourceFromS3Response class encapsulates MachineLearning CreateDataSourceFromS3 responses.
+ * \brief The CreateDataSourceFromS3Response class provides an interace for MachineLearning CreateDataSourceFromS3 responses.
  *
  * \ingroup MachineLearning
  *

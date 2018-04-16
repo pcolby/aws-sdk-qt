@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DescribePolicyRequest
  *
- * \brief The DescribePolicyRequest class encapsulates Organizations DescribePolicy requests.
+ * \brief The DescribePolicyRequest class provides an interface for Organizations DescribePolicy requests.
  *
  * \ingroup Organizations
  *

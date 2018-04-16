@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::CreateSkillGroupResponse
  *
- * \brief The CreateSkillGroupResponse class encapsulates AlexaForBusiness CreateSkillGroup responses.
+ * \brief The CreateSkillGroupResponse class provides an interace for AlexaForBusiness CreateSkillGroup responses.
  *
  * \ingroup AlexaForBusiness
  *

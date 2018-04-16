@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CancelSpotFleetRequestsRequest
  *
- * \brief The CancelSpotFleetRequestsRequest class encapsulates EC2 CancelSpotFleetRequests requests.
+ * \brief The CancelSpotFleetRequestsRequest class provides an interface for EC2 CancelSpotFleetRequests requests.
  *
  * \ingroup EC2
  *

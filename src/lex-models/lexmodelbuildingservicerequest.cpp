@@ -26,7 +26,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::LexModelBuildingServiceRequest
  *
- * \brief The LexModelBuildingServiceRequest class is the base class for all LexModelBuildingService requests.
+ * \brief The LexModelBuildingServiceRequest class provides an interface for LexModelBuildingService requests.
  *
  * \ingroup LexModelBuildingService
  */

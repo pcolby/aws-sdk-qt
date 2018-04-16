@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeGroupsResponse
  *
- * \brief The DescribeGroupsResponse class encapsulates WorkDocs DescribeGroups responses.
+ * \brief The DescribeGroupsResponse class provides an interace for WorkDocs DescribeGroups responses.
  *
  * \ingroup WorkDocs
  *

@@ -30,7 +30,7 @@ namespace CostExplorer {
 /*!
  * \class QtAws::CostExplorer::GetTagsResponse
  *
- * \brief The GetTagsResponse class encapsulates CostExplorer GetTags responses.
+ * \brief The GetTagsResponse class provides an interace for CostExplorer GetTags responses.
  *
  * \ingroup CostExplorer
  *

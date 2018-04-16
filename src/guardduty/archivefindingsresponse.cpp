@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::ArchiveFindingsResponse
  *
- * \brief The ArchiveFindingsResponse class encapsulates GuardDuty ArchiveFindings responses.
+ * \brief The ArchiveFindingsResponse class provides an interace for GuardDuty ArchiveFindings responses.
  *
  * \ingroup GuardDuty
  *

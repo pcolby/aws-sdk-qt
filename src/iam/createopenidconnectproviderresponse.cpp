@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateOpenIDConnectProviderResponse
  *
- * \brief The CreateOpenIDConnectProviderResponse class encapsulates IAM CreateOpenIDConnectProvider responses.
+ * \brief The CreateOpenIDConnectProviderResponse class provides an interace for IAM CreateOpenIDConnectProvider responses.
  *
  * \ingroup IAM
  *

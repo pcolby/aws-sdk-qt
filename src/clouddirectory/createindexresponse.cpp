@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::CreateIndexResponse
  *
- * \brief The CreateIndexResponse class encapsulates CloudDirectory CreateIndex responses.
+ * \brief The CreateIndexResponse class provides an interace for CloudDirectory CreateIndex responses.
  *
  * \ingroup CloudDirectory
  *

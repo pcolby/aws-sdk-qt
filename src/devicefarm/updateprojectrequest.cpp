@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::UpdateProjectRequest
  *
- * \brief The UpdateProjectRequest class encapsulates DeviceFarm UpdateProject requests.
+ * \brief The UpdateProjectRequest class provides an interface for DeviceFarm UpdateProject requests.
  *
  * \ingroup DeviceFarm
  *

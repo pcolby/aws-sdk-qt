@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteConfigurationSetRequest
  *
- * \brief The DeleteConfigurationSetRequest class encapsulates SES DeleteConfigurationSet requests.
+ * \brief The DeleteConfigurationSetRequest class provides an interface for SES DeleteConfigurationSet requests.
  *
  * \ingroup SES
  *

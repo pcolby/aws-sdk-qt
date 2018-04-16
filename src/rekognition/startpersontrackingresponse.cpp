@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::StartPersonTrackingResponse
  *
- * \brief The StartPersonTrackingResponse class encapsulates Rekognition StartPersonTracking responses.
+ * \brief The StartPersonTrackingResponse class provides an interace for Rekognition StartPersonTracking responses.
  *
  * \ingroup Rekognition
  *

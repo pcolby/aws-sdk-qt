@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::ConfirmPrivateVirtualInterfaceResponse
  *
- * \brief The ConfirmPrivateVirtualInterfaceResponse class encapsulates DirectConnect ConfirmPrivateVirtualInterface responses.
+ * \brief The ConfirmPrivateVirtualInterfaceResponse class provides an interace for DirectConnect ConfirmPrivateVirtualInterface responses.
  *
  * \ingroup DirectConnect
  *

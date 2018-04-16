@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::DescribeUserPoolDomainResponse
  *
- * \brief The DescribeUserPoolDomainResponse class encapsulates CognitoIdentityProvider DescribeUserPoolDomain responses.
+ * \brief The DescribeUserPoolDomainResponse class provides an interace for CognitoIdentityProvider DescribeUserPoolDomain responses.
  *
  * \ingroup CognitoIdentityProvider
  *

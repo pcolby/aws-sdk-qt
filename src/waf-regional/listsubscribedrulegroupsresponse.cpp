@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::ListSubscribedRuleGroupsResponse
  *
- * \brief The ListSubscribedRuleGroupsResponse class encapsulates WAFRegional ListSubscribedRuleGroups responses.
+ * \brief The ListSubscribedRuleGroupsResponse class provides an interace for WAFRegional ListSubscribedRuleGroups responses.
  *
  * \ingroup WAFRegional
  *

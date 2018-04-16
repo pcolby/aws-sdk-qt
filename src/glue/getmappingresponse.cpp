@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetMappingResponse
  *
- * \brief The GetMappingResponse class encapsulates Glue GetMapping responses.
+ * \brief The GetMappingResponse class provides an interace for Glue GetMapping responses.
  *
  * \ingroup Glue
  *

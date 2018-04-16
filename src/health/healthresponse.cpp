@@ -29,7 +29,7 @@ namespace Health {
 /*!
  * \class QtAws::Health::HealthResponse
  *
- * \brief The HealthResponse class is the base class for all Health responses.
+ * \brief The HealthResponse class provides an interface for Health responses.
  *
  * \ingroup Health
  */

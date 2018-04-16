@@ -28,7 +28,7 @@ namespace MediaStoreData {
 /*!
  * \class QtAws::MediaStoreData::DescribeObjectRequest
  *
- * \brief The DescribeObjectRequest class encapsulates MediaStoreData DescribeObject requests.
+ * \brief The DescribeObjectRequest class provides an interface for MediaStoreData DescribeObject requests.
  *
  * \ingroup MediaStoreData
  *

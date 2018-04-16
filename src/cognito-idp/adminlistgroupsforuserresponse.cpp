@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminListGroupsForUserResponse
  *
- * \brief The AdminListGroupsForUserResponse class encapsulates CognitoIdentityProvider AdminListGroupsForUser responses.
+ * \brief The AdminListGroupsForUserResponse class provides an interace for CognitoIdentityProvider AdminListGroupsForUser responses.
  *
  * \ingroup CognitoIdentityProvider
  *

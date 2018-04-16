@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketAccelerateConfigurationResponse
  *
- * \brief The PutBucketAccelerateConfigurationResponse class encapsulates S3 PutBucketAccelerateConfiguration responses.
+ * \brief The PutBucketAccelerateConfigurationResponse class provides an interace for S3 PutBucketAccelerateConfiguration responses.
  *
  * \ingroup S3
  *

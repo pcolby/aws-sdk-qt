@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::EnableKeyRotationResponse
  *
- * \brief The EnableKeyRotationResponse class encapsulates KMS EnableKeyRotation responses.
+ * \brief The EnableKeyRotationResponse class provides an interace for KMS EnableKeyRotation responses.
  *
  * \ingroup KMS
  *

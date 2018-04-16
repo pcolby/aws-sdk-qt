@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetUsagePlanKeyRequest
  *
- * \brief The GetUsagePlanKeyRequest class encapsulates APIGateway GetUsagePlanKey requests.
+ * \brief The GetUsagePlanKeyRequest class provides an interface for APIGateway GetUsagePlanKey requests.
  *
  * \ingroup APIGateway
  *

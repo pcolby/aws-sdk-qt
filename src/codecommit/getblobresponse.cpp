@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::GetBlobResponse
  *
- * \brief The GetBlobResponse class encapsulates CodeCommit GetBlob responses.
+ * \brief The GetBlobResponse class provides an interace for CodeCommit GetBlob responses.
  *
  * \ingroup CodeCommit
  *

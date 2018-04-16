@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DescribeSnapshotsResponse
  *
- * \brief The DescribeSnapshotsResponse class encapsulates DirectoryService DescribeSnapshots responses.
+ * \brief The DescribeSnapshotsResponse class provides an interace for DirectoryService DescribeSnapshots responses.
  *
  * \ingroup DirectoryService
  *

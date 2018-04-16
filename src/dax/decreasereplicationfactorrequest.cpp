@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DecreaseReplicationFactorRequest
  *
- * \brief The DecreaseReplicationFactorRequest class encapsulates DAX DecreaseReplicationFactor requests.
+ * \brief The DecreaseReplicationFactorRequest class provides an interface for DAX DecreaseReplicationFactor requests.
  *
  * \ingroup DAX
  *

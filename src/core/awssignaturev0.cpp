@@ -32,9 +32,9 @@ namespace Core {
 /*!
  * \class QtAws::Core::AwsSignatureV0
  *
- * @brief  Implements AWS Signature Version 0 \ref deprecated "(deprecated by Amazon)"
+ * \brief The AwsSignatureV0 class provides V0 AWS signatures.
  *
- * @deprecated  Amazon has officially deprecated signature Version 0 in favor of later,
+ * \deprecated  Amazon has officially deprecated signature Version 0 in favor of later,
  *              more secure signatures, such as AwsSignatureV2 and AwsSignatureV4.
  *
  * As version 0 signatures are rightly regarded as *insecure*, this class will refuse to sign
@@ -42,7 +42,7 @@ namespace Core {
  * signatures can be enabled (why would you want to?) by defining `QTAWS_ALLOW_INSECURE_SIGNATURES`
  * when compiling this library.
  *
- * @see  http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
+ * \sa  http://s3.amazonaws.com/awsdocs/SQS/20070501/sqs-dg-20070501.pdf
  */
 
 /*!

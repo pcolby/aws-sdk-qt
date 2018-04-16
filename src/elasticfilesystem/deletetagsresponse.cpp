@@ -30,7 +30,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::DeleteTagsResponse
  *
- * \brief The DeleteTagsResponse class encapsulates EFS DeleteTags responses.
+ * \brief The DeleteTagsResponse class provides an interace for EFS DeleteTags responses.
  *
  * \ingroup EFS
  *

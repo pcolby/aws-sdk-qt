@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyVolumeResponse
  *
- * \brief The ModifyVolumeResponse class encapsulates EC2 ModifyVolume responses.
+ * \brief The ModifyVolumeResponse class provides an interace for EC2 ModifyVolume responses.
  *
  * \ingroup EC2
  *

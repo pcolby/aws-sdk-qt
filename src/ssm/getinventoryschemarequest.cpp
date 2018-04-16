@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetInventorySchemaRequest
  *
- * \brief The GetInventorySchemaRequest class encapsulates SSM GetInventorySchema requests.
+ * \brief The GetInventorySchemaRequest class provides an interface for SSM GetInventorySchema requests.
  *
  * \ingroup SSM
  *

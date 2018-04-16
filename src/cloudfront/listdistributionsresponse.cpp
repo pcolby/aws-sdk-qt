@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::ListDistributionsResponse
  *
- * \brief The ListDistributionsResponse class encapsulates CloudFront ListDistributions responses.
+ * \brief The ListDistributionsResponse class provides an interace for CloudFront ListDistributions responses.
  *
  * \ingroup CloudFront
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RejectVpcPeeringConnectionRequest
  *
- * \brief The RejectVpcPeeringConnectionRequest class encapsulates EC2 RejectVpcPeeringConnection requests.
+ * \brief The RejectVpcPeeringConnectionRequest class provides an interface for EC2 RejectVpcPeeringConnection requests.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateComputerRequest
  *
- * \brief The CreateComputerRequest class encapsulates DirectoryService CreateComputer requests.
+ * \brief The CreateComputerRequest class provides an interface for DirectoryService CreateComputer requests.
  *
  * \ingroup DirectoryService
  *

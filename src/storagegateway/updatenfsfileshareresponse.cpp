@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::UpdateNFSFileShareResponse
  *
- * \brief The UpdateNFSFileShareResponse class encapsulates StorageGateway UpdateNFSFileShare responses.
+ * \brief The UpdateNFSFileShareResponse class provides an interace for StorageGateway UpdateNFSFileShare responses.
  *
  * \ingroup StorageGateway
  *

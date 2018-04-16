@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DeleteTapeRequest
  *
- * \brief The DeleteTapeRequest class encapsulates StorageGateway DeleteTape requests.
+ * \brief The DeleteTapeRequest class provides an interface for StorageGateway DeleteTape requests.
  *
  * \ingroup StorageGateway
  *

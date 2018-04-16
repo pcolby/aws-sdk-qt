@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeAccountAttributesResponse
  *
- * \brief The DescribeAccountAttributesResponse class encapsulates ElasticBeanstalk DescribeAccountAttributes responses.
+ * \brief The DescribeAccountAttributesResponse class provides an interace for ElasticBeanstalk DescribeAccountAttributes responses.
  *
  * \ingroup ElasticBeanstalk
  *

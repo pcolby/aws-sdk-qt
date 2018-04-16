@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::SearchProductsRequest
  *
- * \brief The SearchProductsRequest class encapsulates ServiceCatalog SearchProducts requests.
+ * \brief The SearchProductsRequest class provides an interface for ServiceCatalog SearchProducts requests.
  *
  * \ingroup ServiceCatalog
  *

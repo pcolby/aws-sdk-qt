@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ResetFpgaImageAttributeRequest
  *
- * \brief The ResetFpgaImageAttributeRequest class encapsulates EC2 ResetFpgaImageAttribute requests.
+ * \brief The ResetFpgaImageAttributeRequest class provides an interface for EC2 ResetFpgaImageAttribute requests.
  *
  * \ingroup EC2
  *

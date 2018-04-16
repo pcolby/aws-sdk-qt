@@ -29,7 +29,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::STSResponse
  *
- * \brief The STSResponse class is the base class for all STS responses.
+ * \brief The STSResponse class provides an interface for STS responses.
  *
  * \ingroup STS
  */

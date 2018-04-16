@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::StartDeviceSyncResponse
  *
- * \brief The StartDeviceSyncResponse class encapsulates AlexaForBusiness StartDeviceSync responses.
+ * \brief The StartDeviceSyncResponse class provides an interace for AlexaForBusiness StartDeviceSync responses.
  *
  * \ingroup AlexaForBusiness
  *

@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RevokeDBSecurityGroupIngressResponse
  *
- * \brief The RevokeDBSecurityGroupIngressResponse class encapsulates RDS RevokeDBSecurityGroupIngress responses.
+ * \brief The RevokeDBSecurityGroupIngressResponse class provides an interace for RDS RevokeDBSecurityGroupIngress responses.
  *
  * \ingroup RDS
  *

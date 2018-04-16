@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::CreateSqlInjectionMatchSetRequest
  *
- * \brief The CreateSqlInjectionMatchSetRequest class encapsulates WAFRegional CreateSqlInjectionMatchSet requests.
+ * \brief The CreateSqlInjectionMatchSetRequest class provides an interface for WAFRegional CreateSqlInjectionMatchSet requests.
  *
  * \ingroup WAFRegional
  *

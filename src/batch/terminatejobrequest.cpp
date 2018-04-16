@@ -28,7 +28,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::TerminateJobRequest
  *
- * \brief The TerminateJobRequest class encapsulates Batch TerminateJob requests.
+ * \brief The TerminateJobRequest class provides an interface for Batch TerminateJob requests.
  *
  * \ingroup Batch
  *

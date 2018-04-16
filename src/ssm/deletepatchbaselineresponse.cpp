@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeletePatchBaselineResponse
  *
- * \brief The DeletePatchBaselineResponse class encapsulates SSM DeletePatchBaseline responses.
+ * \brief The DeletePatchBaselineResponse class provides an interace for SSM DeletePatchBaseline responses.
  *
  * \ingroup SSM
  *

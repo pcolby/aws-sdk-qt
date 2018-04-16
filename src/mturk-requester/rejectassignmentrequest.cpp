@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::RejectAssignmentRequest
  *
- * \brief The RejectAssignmentRequest class encapsulates MTurk RejectAssignment requests.
+ * \brief The RejectAssignmentRequest class provides an interface for MTurk RejectAssignment requests.
  *
  * \ingroup MTurk
  *

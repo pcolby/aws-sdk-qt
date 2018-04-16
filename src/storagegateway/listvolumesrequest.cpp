@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ListVolumesRequest
  *
- * \brief The ListVolumesRequest class encapsulates StorageGateway ListVolumes requests.
+ * \brief The ListVolumesRequest class provides an interface for StorageGateway ListVolumes requests.
  *
  * \ingroup StorageGateway
  *

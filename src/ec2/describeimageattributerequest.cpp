@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeImageAttributeRequest
  *
- * \brief The DescribeImageAttributeRequest class encapsulates EC2 DescribeImageAttribute requests.
+ * \brief The DescribeImageAttributeRequest class provides an interface for EC2 DescribeImageAttribute requests.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeServiceErrorsResponse
  *
- * \brief The DescribeServiceErrorsResponse class encapsulates OpsWorks DescribeServiceErrors responses.
+ * \brief The DescribeServiceErrorsResponse class provides an interace for OpsWorks DescribeServiceErrors responses.
  *
  * \ingroup OpsWorks
  *

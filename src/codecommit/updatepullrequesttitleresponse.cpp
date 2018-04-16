@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::UpdatePullRequestTitleResponse
  *
- * \brief The UpdatePullRequestTitleResponse class encapsulates CodeCommit UpdatePullRequestTitle responses.
+ * \brief The UpdatePullRequestTitleResponse class provides an interace for CodeCommit UpdatePullRequestTitle responses.
  *
  * \ingroup CodeCommit
  *

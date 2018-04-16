@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminGetDeviceRequest
  *
- * \brief The AdminGetDeviceRequest class encapsulates CognitoIdentityProvider AdminGetDevice requests.
+ * \brief The AdminGetDeviceRequest class provides an interface for CognitoIdentityProvider AdminGetDevice requests.
  *
  * \ingroup CognitoIdentityProvider
  *

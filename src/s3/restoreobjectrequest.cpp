@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::RestoreObjectRequest
  *
- * \brief The RestoreObjectRequest class encapsulates S3 RestoreObject requests.
+ * \brief The RestoreObjectRequest class provides an interface for S3 RestoreObject requests.
  *
  * \ingroup S3
  *

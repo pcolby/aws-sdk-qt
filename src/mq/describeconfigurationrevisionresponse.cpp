@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::DescribeConfigurationRevisionResponse
  *
- * \brief The DescribeConfigurationRevisionResponse class encapsulates MQ DescribeConfigurationRevision responses.
+ * \brief The DescribeConfigurationRevisionResponse class provides an interace for MQ DescribeConfigurationRevision responses.
  *
  * \ingroup MQ
  *

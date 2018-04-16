@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::StartTaskResponse
  *
- * \brief The StartTaskResponse class encapsulates ECS StartTask responses.
+ * \brief The StartTaskResponse class provides an interace for ECS StartTask responses.
  *
  * \ingroup ECS
  *

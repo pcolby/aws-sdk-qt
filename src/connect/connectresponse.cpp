@@ -29,7 +29,7 @@ namespace Connect {
 /*!
  * \class QtAws::Connect::ConnectResponse
  *
- * \brief The ConnectResponse class is the base class for all Connect responses.
+ * \brief The ConnectResponse class provides an interface for Connect responses.
  *
  * \ingroup Connect
  */

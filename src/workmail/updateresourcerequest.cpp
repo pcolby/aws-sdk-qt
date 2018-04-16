@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::UpdateResourceRequest
  *
- * \brief The UpdateResourceRequest class encapsulates WorkMail UpdateResource requests.
+ * \brief The UpdateResourceRequest class provides an interface for WorkMail UpdateResource requests.
  *
  * \ingroup WorkMail
  *

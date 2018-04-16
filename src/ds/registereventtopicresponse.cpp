@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::RegisterEventTopicResponse
  *
- * \brief The RegisterEventTopicResponse class encapsulates DirectoryService RegisterEventTopic responses.
+ * \brief The RegisterEventTopicResponse class provides an interace for DirectoryService RegisterEventTopic responses.
  *
  * \ingroup DirectoryService
  *

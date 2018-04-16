@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListTrafficPolicyInstancesByHostedZoneRequest
  *
- * \brief The ListTrafficPolicyInstancesByHostedZoneRequest class encapsulates Route53 ListTrafficPolicyInstancesByHostedZone requests.
+ * \brief The ListTrafficPolicyInstancesByHostedZoneRequest class provides an interface for Route53 ListTrafficPolicyInstancesByHostedZone requests.
  *
  * \ingroup Route53
  *

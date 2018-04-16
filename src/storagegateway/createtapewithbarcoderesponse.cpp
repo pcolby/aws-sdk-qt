@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::CreateTapeWithBarcodeResponse
  *
- * \brief The CreateTapeWithBarcodeResponse class encapsulates StorageGateway CreateTapeWithBarcode responses.
+ * \brief The CreateTapeWithBarcodeResponse class provides an interace for StorageGateway CreateTapeWithBarcode responses.
  *
  * \ingroup StorageGateway
  *

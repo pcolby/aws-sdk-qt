@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetCampaignActivitiesResponse
  *
- * \brief The GetCampaignActivitiesResponse class encapsulates Pinpoint GetCampaignActivities responses.
+ * \brief The GetCampaignActivitiesResponse class provides an interace for Pinpoint GetCampaignActivities responses.
  *
  * \ingroup Pinpoint
  *

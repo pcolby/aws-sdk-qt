@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::GrantAccessRequest
  *
- * \brief The GrantAccessRequest class encapsulates OpsWorks GrantAccess requests.
+ * \brief The GrantAccessRequest class provides an interface for OpsWorks GrantAccess requests.
  *
  * \ingroup OpsWorks
  *

@@ -30,7 +30,7 @@ namespace IoTJobsDataPlane {
 /*!
  * \class QtAws::IoTJobsDataPlane::StartNextPendingJobExecutionResponse
  *
- * \brief The StartNextPendingJobExecutionResponse class encapsulates IoTJobsDataPlane StartNextPendingJobExecution responses.
+ * \brief The StartNextPendingJobExecutionResponse class provides an interace for IoTJobsDataPlane StartNextPendingJobExecution responses.
  *
  * \ingroup IoTJobsDataPlane
  *

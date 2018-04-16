@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::SearchContactsRequest
  *
- * \brief The SearchContactsRequest class encapsulates AlexaForBusiness SearchContacts requests.
+ * \brief The SearchContactsRequest class provides an interface for AlexaForBusiness SearchContacts requests.
  *
  * \ingroup AlexaForBusiness
  *

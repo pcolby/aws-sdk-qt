@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::DeleteQueryLoggingConfigRequest
  *
- * \brief The DeleteQueryLoggingConfigRequest class encapsulates Route53 DeleteQueryLoggingConfig requests.
+ * \brief The DeleteQueryLoggingConfigRequest class provides an interface for Route53 DeleteQueryLoggingConfig requests.
  *
  * \ingroup Route53
  *

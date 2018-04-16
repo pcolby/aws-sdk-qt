@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetDocumentResponse
  *
- * \brief The GetDocumentResponse class encapsulates SSM GetDocument responses.
+ * \brief The GetDocumentResponse class provides an interace for SSM GetDocument responses.
  *
  * \ingroup SSM
  *

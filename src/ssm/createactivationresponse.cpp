@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CreateActivationResponse
  *
- * \brief The CreateActivationResponse class encapsulates SSM CreateActivation responses.
+ * \brief The CreateActivationResponse class provides an interace for SSM CreateActivation responses.
  *
  * \ingroup SSM
  *

@@ -29,7 +29,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::CodeStarResponse
  *
- * \brief The CodeStarResponse class is the base class for all CodeStar responses.
+ * \brief The CodeStarResponse class provides an interface for CodeStar responses.
  *
  * \ingroup CodeStar
  */

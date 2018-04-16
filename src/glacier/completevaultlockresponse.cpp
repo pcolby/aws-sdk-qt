@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::CompleteVaultLockResponse
  *
- * \brief The CompleteVaultLockResponse class encapsulates Glacier CompleteVaultLock responses.
+ * \brief The CompleteVaultLockResponse class provides an interace for Glacier CompleteVaultLock responses.
  *
  * \ingroup Glacier
  *

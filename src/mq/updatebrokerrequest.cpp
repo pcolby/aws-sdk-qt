@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::UpdateBrokerRequest
  *
- * \brief The UpdateBrokerRequest class encapsulates MQ UpdateBroker requests.
+ * \brief The UpdateBrokerRequest class provides an interface for MQ UpdateBroker requests.
  *
  * \ingroup MQ
  *

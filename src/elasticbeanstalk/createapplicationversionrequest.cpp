@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::CreateApplicationVersionRequest
  *
- * \brief The CreateApplicationVersionRequest class encapsulates ElasticBeanstalk CreateApplicationVersion requests.
+ * \brief The CreateApplicationVersionRequest class provides an interface for ElasticBeanstalk CreateApplicationVersion requests.
  *
  * \ingroup ElasticBeanstalk
  *

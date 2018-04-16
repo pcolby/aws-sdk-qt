@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteInstanceProfileResponse
  *
- * \brief The DeleteInstanceProfileResponse class encapsulates DeviceFarm DeleteInstanceProfile responses.
+ * \brief The DeleteInstanceProfileResponse class provides an interace for DeviceFarm DeleteInstanceProfile responses.
  *
  * \ingroup DeviceFarm
  *

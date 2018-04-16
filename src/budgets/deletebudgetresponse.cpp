@@ -30,7 +30,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::DeleteBudgetResponse
  *
- * \brief The DeleteBudgetResponse class encapsulates Budgets DeleteBudget responses.
+ * \brief The DeleteBudgetResponse class provides an interace for Budgets DeleteBudget responses.
  *
  * \ingroup Budgets
  *

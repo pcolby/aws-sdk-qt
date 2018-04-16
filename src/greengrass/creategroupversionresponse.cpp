@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateGroupVersionResponse
  *
- * \brief The CreateGroupVersionResponse class encapsulates Greengrass CreateGroupVersion responses.
+ * \brief The CreateGroupVersionResponse class provides an interace for Greengrass CreateGroupVersion responses.
  *
  * \ingroup Greengrass
  *

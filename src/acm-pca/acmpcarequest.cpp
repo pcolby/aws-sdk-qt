@@ -26,7 +26,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::ACMPCARequest
  *
- * \brief The ACMPCARequest class is the base class for all ACMPCA requests.
+ * \brief The ACMPCARequest class provides an interface for ACMPCA requests.
  *
  * \ingroup ACMPCA
  */

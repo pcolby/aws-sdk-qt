@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::DisassociateQualificationFromWorkerRequest
  *
- * \brief The DisassociateQualificationFromWorkerRequest class encapsulates MTurk DisassociateQualificationFromWorker requests.
+ * \brief The DisassociateQualificationFromWorkerRequest class provides an interface for MTurk DisassociateQualificationFromWorker requests.
  *
  * \ingroup MTurk
  *

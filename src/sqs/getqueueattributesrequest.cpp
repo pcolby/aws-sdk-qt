@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::GetQueueAttributesRequest
  *
- * \brief The GetQueueAttributesRequest class encapsulates SQS GetQueueAttributes requests.
+ * \brief The GetQueueAttributesRequest class provides an interface for SQS GetQueueAttributes requests.
  *
  * \ingroup SQS
  *

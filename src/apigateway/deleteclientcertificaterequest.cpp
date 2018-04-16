@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteClientCertificateRequest
  *
- * \brief The DeleteClientCertificateRequest class encapsulates APIGateway DeleteClientCertificate requests.
+ * \brief The DeleteClientCertificateRequest class provides an interface for APIGateway DeleteClientCertificate requests.
  *
  * \ingroup APIGateway
  *

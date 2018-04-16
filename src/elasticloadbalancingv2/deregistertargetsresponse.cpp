@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeregisterTargetsResponse
  *
- * \brief The DeregisterTargetsResponse class encapsulates ElasticLoadBalancingv2 DeregisterTargets responses.
+ * \brief The DeregisterTargetsResponse class provides an interace for ElasticLoadBalancingv2 DeregisterTargets responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketAnalyticsConfigurationRequest
  *
- * \brief The PutBucketAnalyticsConfigurationRequest class encapsulates S3 PutBucketAnalyticsConfiguration requests.
+ * \brief The PutBucketAnalyticsConfigurationRequest class provides an interface for S3 PutBucketAnalyticsConfiguration requests.
  *
  * \ingroup S3
  *

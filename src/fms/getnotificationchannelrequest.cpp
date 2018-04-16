@@ -28,7 +28,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::GetNotificationChannelRequest
  *
- * \brief The GetNotificationChannelRequest class encapsulates FMS GetNotificationChannel requests.
+ * \brief The GetNotificationChannelRequest class provides an interface for FMS GetNotificationChannel requests.
  *
  * \ingroup FMS
  *

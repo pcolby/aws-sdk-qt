@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetSmsChannelResponse
  *
- * \brief The GetSmsChannelResponse class encapsulates Pinpoint GetSmsChannel responses.
+ * \brief The GetSmsChannelResponse class provides an interace for Pinpoint GetSmsChannel responses.
  *
  * \ingroup Pinpoint
  *

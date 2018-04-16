@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateRestApiRequest
  *
- * \brief The CreateRestApiRequest class encapsulates APIGateway CreateRestApi requests.
+ * \brief The CreateRestApiRequest class provides an interface for APIGateway CreateRestApi requests.
  *
  * \ingroup APIGateway
  *

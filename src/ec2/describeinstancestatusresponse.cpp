@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeInstanceStatusResponse
  *
- * \brief The DescribeInstanceStatusResponse class encapsulates EC2 DescribeInstanceStatus responses.
+ * \brief The DescribeInstanceStatusResponse class provides an interace for EC2 DescribeInstanceStatus responses.
  *
  * \ingroup EC2
  *

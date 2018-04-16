@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::StartSchemaExtensionResponse
  *
- * \brief The StartSchemaExtensionResponse class encapsulates DirectoryService StartSchemaExtension responses.
+ * \brief The StartSchemaExtensionResponse class provides an interace for DirectoryService StartSchemaExtension responses.
  *
  * \ingroup DirectoryService
  *

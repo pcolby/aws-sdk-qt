@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::DeleteBotResponse
  *
- * \brief The DeleteBotResponse class encapsulates LexModelBuildingService DeleteBot responses.
+ * \brief The DeleteBotResponse class provides an interace for LexModelBuildingService DeleteBot responses.
  *
  * \ingroup LexModelBuildingService
  *

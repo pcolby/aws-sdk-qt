@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteNetworkAclResponse
  *
- * \brief The DeleteNetworkAclResponse class encapsulates EC2 DeleteNetworkAcl responses.
+ * \brief The DeleteNetworkAclResponse class provides an interace for EC2 DeleteNetworkAcl responses.
  *
  * \ingroup EC2
  *

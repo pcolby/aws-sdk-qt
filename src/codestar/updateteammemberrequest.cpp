@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::UpdateTeamMemberRequest
  *
- * \brief The UpdateTeamMemberRequest class encapsulates CodeStar UpdateTeamMember requests.
+ * \brief The UpdateTeamMemberRequest class provides an interface for CodeStar UpdateTeamMember requests.
  *
  * \ingroup CodeStar
  *

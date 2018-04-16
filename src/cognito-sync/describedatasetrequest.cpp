@@ -28,7 +28,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::DescribeDatasetRequest
  *
- * \brief The DescribeDatasetRequest class encapsulates CognitoSync DescribeDataset requests.
+ * \brief The DescribeDatasetRequest class provides an interface for CognitoSync DescribeDataset requests.
  *
  * \ingroup CognitoSync
  *

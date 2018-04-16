@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::AttachDiskResponse
  *
- * \brief The AttachDiskResponse class encapsulates Lightsail AttachDisk responses.
+ * \brief The AttachDiskResponse class provides an interace for Lightsail AttachDisk responses.
  *
  * \ingroup Lightsail
  *

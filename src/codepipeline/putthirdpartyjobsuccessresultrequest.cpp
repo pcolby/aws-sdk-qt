@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::PutThirdPartyJobSuccessResultRequest
  *
- * \brief The PutThirdPartyJobSuccessResultRequest class encapsulates CodePipeline PutThirdPartyJobSuccessResult requests.
+ * \brief The PutThirdPartyJobSuccessResultRequest class provides an interface for CodePipeline PutThirdPartyJobSuccessResult requests.
  *
  * \ingroup CodePipeline
  *

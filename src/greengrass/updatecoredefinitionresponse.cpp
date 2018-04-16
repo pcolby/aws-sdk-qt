@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::UpdateCoreDefinitionResponse
  *
- * \brief The UpdateCoreDefinitionResponse class encapsulates Greengrass UpdateCoreDefinition responses.
+ * \brief The UpdateCoreDefinitionResponse class provides an interace for Greengrass UpdateCoreDefinition responses.
  *
  * \ingroup Greengrass
  *

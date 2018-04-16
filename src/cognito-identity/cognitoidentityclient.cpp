@@ -73,7 +73,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::CognitoIdentityClient
  *
- * \brief The CognitoIdentityClient class provides access the Amazon Cognito Identity service.
+ * \brief The CognitoIdentityClient class provides access to the Amazon Cognito Identity service.
  *
  * \ingroup CognitoIdentity
  *

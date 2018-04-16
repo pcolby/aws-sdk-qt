@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::DeleteStreamProcessorResponse
  *
- * \brief The DeleteStreamProcessorResponse class encapsulates Rekognition DeleteStreamProcessor responses.
+ * \brief The DeleteStreamProcessorResponse class provides an interace for Rekognition DeleteStreamProcessor responses.
  *
  * \ingroup Rekognition
  *

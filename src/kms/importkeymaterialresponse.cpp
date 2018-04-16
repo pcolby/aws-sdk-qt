@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ImportKeyMaterialResponse
  *
- * \brief The ImportKeyMaterialResponse class encapsulates KMS ImportKeyMaterial responses.
+ * \brief The ImportKeyMaterialResponse class provides an interace for KMS ImportKeyMaterial responses.
  *
  * \ingroup KMS
  *

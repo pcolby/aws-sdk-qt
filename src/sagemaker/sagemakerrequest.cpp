@@ -26,7 +26,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::SageMakerRequest
  *
- * \brief The SageMakerRequest class is the base class for all SageMaker requests.
+ * \brief The SageMakerRequest class provides an interface for SageMaker requests.
  *
  * \ingroup SageMaker
  */

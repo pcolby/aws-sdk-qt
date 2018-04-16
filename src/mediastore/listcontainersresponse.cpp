@@ -30,7 +30,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::ListContainersResponse
  *
- * \brief The ListContainersResponse class encapsulates MediaStore ListContainers responses.
+ * \brief The ListContainersResponse class provides an interace for MediaStore ListContainers responses.
  *
  * \ingroup MediaStore
  *

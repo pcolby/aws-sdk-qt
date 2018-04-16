@@ -45,7 +45,7 @@ namespace DynamoDBStreams {
 /*!
  * \class QtAws::DynamoDBStreams::DynamoDBStreamsClient
  *
- * \brief The DynamoDBStreamsClient class provides access the Amazon DynamoDB Streams service.
+ * \brief The DynamoDBStreamsClient class provides access to the Amazon DynamoDB Streams service.
  *
  * \ingroup DynamoDBStreams
  *

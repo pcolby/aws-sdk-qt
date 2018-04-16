@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::CreateEventSourceMappingRequest
  *
- * \brief The CreateEventSourceMappingRequest class encapsulates Lambda CreateEventSourceMapping requests.
+ * \brief The CreateEventSourceMappingRequest class provides an interface for Lambda CreateEventSourceMapping requests.
  *
  * \ingroup Lambda
  *

@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetNetworkProfileRequest
  *
- * \brief The GetNetworkProfileRequest class encapsulates DeviceFarm GetNetworkProfile requests.
+ * \brief The GetNetworkProfileRequest class provides an interface for DeviceFarm GetNetworkProfile requests.
  *
  * \ingroup DeviceFarm
  *

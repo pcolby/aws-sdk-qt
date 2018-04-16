@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateUserRequest
  *
- * \brief The UpdateUserRequest class encapsulates IAM UpdateUser requests.
+ * \brief The UpdateUserRequest class provides an interface for IAM UpdateUser requests.
  *
  * \ingroup IAM
  *

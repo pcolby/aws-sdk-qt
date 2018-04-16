@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::RunJobFlowResponse
  *
- * \brief The RunJobFlowResponse class encapsulates EMR RunJobFlow responses.
+ * \brief The RunJobFlowResponse class provides an interace for EMR RunJobFlow responses.
  *
  * \ingroup EMR
  *

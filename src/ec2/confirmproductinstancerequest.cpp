@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ConfirmProductInstanceRequest
  *
- * \brief The ConfirmProductInstanceRequest class encapsulates EC2 ConfirmProductInstance requests.
+ * \brief The ConfirmProductInstanceRequest class provides an interface for EC2 ConfirmProductInstance requests.
  *
  * \ingroup EC2
  *

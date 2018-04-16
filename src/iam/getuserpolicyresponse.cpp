@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetUserPolicyResponse
  *
- * \brief The GetUserPolicyResponse class encapsulates IAM GetUserPolicy responses.
+ * \brief The GetUserPolicyResponse class provides an interace for IAM GetUserPolicy responses.
  *
  * \ingroup IAM
  *

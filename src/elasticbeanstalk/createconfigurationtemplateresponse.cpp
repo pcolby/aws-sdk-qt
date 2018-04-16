@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::CreateConfigurationTemplateResponse
  *
- * \brief The CreateConfigurationTemplateResponse class encapsulates ElasticBeanstalk CreateConfigurationTemplate responses.
+ * \brief The CreateConfigurationTemplateResponse class provides an interace for ElasticBeanstalk CreateConfigurationTemplate responses.
  *
  * \ingroup ElasticBeanstalk
  *

@@ -30,7 +30,7 @@ namespace Firehose {
 /*!
  * \class QtAws::Firehose::DeleteDeliveryStreamResponse
  *
- * \brief The DeleteDeliveryStreamResponse class encapsulates Firehose DeleteDeliveryStream responses.
+ * \brief The DeleteDeliveryStreamResponse class provides an interace for Firehose DeleteDeliveryStream responses.
  *
  * \ingroup Firehose
  *

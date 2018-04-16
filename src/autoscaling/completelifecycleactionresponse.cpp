@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::CompleteLifecycleActionResponse
  *
- * \brief The CompleteLifecycleActionResponse class encapsulates AutoScaling CompleteLifecycleAction responses.
+ * \brief The CompleteLifecycleActionResponse class provides an interace for AutoScaling CompleteLifecycleAction responses.
  *
  * \ingroup AutoScaling
  *

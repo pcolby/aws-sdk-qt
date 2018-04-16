@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetActiveNamesResponse
  *
- * \brief The GetActiveNamesResponse class encapsulates Lightsail GetActiveNames responses.
+ * \brief The GetActiveNamesResponse class provides an interace for Lightsail GetActiveNames responses.
  *
  * \ingroup Lightsail
  *

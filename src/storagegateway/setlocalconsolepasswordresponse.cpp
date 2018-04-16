@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::SetLocalConsolePasswordResponse
  *
- * \brief The SetLocalConsolePasswordResponse class encapsulates StorageGateway SetLocalConsolePassword responses.
+ * \brief The SetLocalConsolePasswordResponse class provides an interace for StorageGateway SetLocalConsolePassword responses.
  *
  * \ingroup StorageGateway
  *

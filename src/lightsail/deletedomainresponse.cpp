@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DeleteDomainResponse
  *
- * \brief The DeleteDomainResponse class encapsulates Lightsail DeleteDomain responses.
+ * \brief The DeleteDomainResponse class provides an interace for Lightsail DeleteDomain responses.
  *
  * \ingroup Lightsail
  *

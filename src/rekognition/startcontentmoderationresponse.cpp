@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::StartContentModerationResponse
  *
- * \brief The StartContentModerationResponse class encapsulates Rekognition StartContentModeration responses.
+ * \brief The StartContentModerationResponse class provides an interace for Rekognition StartContentModeration responses.
  *
  * \ingroup Rekognition
  *

@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::MoveAccountRequest
  *
- * \brief The MoveAccountRequest class encapsulates Organizations MoveAccount requests.
+ * \brief The MoveAccountRequest class provides an interface for Organizations MoveAccount requests.
  *
  * \ingroup Organizations
  *

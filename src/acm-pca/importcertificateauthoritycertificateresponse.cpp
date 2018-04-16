@@ -30,7 +30,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::ImportCertificateAuthorityCertificateResponse
  *
- * \brief The ImportCertificateAuthorityCertificateResponse class encapsulates ACMPCA ImportCertificateAuthorityCertificate responses.
+ * \brief The ImportCertificateAuthorityCertificateResponse class provides an interace for ACMPCA ImportCertificateAuthorityCertificate responses.
  *
  * \ingroup ACMPCA
  *

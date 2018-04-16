@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyHostsResponse
  *
- * \brief The ModifyHostsResponse class encapsulates EC2 ModifyHosts responses.
+ * \brief The ModifyHostsResponse class provides an interace for EC2 ModifyHosts responses.
  *
  * \ingroup EC2
  *

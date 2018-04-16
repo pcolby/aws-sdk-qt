@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteTagsRequest
  *
- * \brief The DeleteTagsRequest class encapsulates Redshift DeleteTags requests.
+ * \brief The DeleteTagsRequest class provides an interface for Redshift DeleteTags requests.
  *
  * \ingroup Redshift
  *

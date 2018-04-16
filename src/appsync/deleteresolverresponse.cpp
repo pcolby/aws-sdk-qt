@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::DeleteResolverResponse
  *
- * \brief The DeleteResolverResponse class encapsulates AppSync DeleteResolver responses.
+ * \brief The DeleteResolverResponse class provides an interace for AppSync DeleteResolver responses.
  *
  * \ingroup AppSync
  *

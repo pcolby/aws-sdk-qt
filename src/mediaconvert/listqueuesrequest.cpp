@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::ListQueuesRequest
  *
- * \brief The ListQueuesRequest class encapsulates MediaConvert ListQueues requests.
+ * \brief The ListQueuesRequest class provides an interface for MediaConvert ListQueues requests.
  *
  * \ingroup MediaConvert
  *

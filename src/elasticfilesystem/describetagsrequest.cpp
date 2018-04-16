@@ -28,7 +28,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::DescribeTagsRequest
  *
- * \brief The DescribeTagsRequest class encapsulates EFS DescribeTags requests.
+ * \brief The DescribeTagsRequest class provides an interface for EFS DescribeTags requests.
  *
  * \ingroup EFS
  *

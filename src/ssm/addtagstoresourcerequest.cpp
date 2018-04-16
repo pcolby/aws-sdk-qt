@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::AddTagsToResourceRequest
  *
- * \brief The AddTagsToResourceRequest class encapsulates SSM AddTagsToResource requests.
+ * \brief The AddTagsToResourceRequest class provides an interface for SSM AddTagsToResource requests.
  *
  * \ingroup SSM
  *

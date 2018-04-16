@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::SetInstanceHealthRequest
  *
- * \brief The SetInstanceHealthRequest class encapsulates AutoScaling SetInstanceHealth requests.
+ * \brief The SetInstanceHealthRequest class provides an interface for AutoScaling SetInstanceHealth requests.
  *
  * \ingroup AutoScaling
  *

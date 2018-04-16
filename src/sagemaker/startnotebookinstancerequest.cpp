@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::StartNotebookInstanceRequest
  *
- * \brief The StartNotebookInstanceRequest class encapsulates SageMaker StartNotebookInstance requests.
+ * \brief The StartNotebookInstanceRequest class provides an interface for SageMaker StartNotebookInstance requests.
  *
  * \ingroup SageMaker
  *

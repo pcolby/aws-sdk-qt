@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::ListSubscribedRuleGroupsRequest
  *
- * \brief The ListSubscribedRuleGroupsRequest class encapsulates WAFRegional ListSubscribedRuleGroups requests.
+ * \brief The ListSubscribedRuleGroupsRequest class provides an interface for WAFRegional ListSubscribedRuleGroups requests.
  *
  * \ingroup WAFRegional
  *

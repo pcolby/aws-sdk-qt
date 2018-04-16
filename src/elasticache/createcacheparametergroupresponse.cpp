@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::CreateCacheParameterGroupResponse
  *
- * \brief The CreateCacheParameterGroupResponse class encapsulates ElastiCache CreateCacheParameterGroup responses.
+ * \brief The CreateCacheParameterGroupResponse class provides an interace for ElastiCache CreateCacheParameterGroup responses.
  *
  * \ingroup ElastiCache
  *

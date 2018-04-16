@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetConnectivityInfoResponse
  *
- * \brief The GetConnectivityInfoResponse class encapsulates Greengrass GetConnectivityInfo responses.
+ * \brief The GetConnectivityInfoResponse class provides an interace for Greengrass GetConnectivityInfo responses.
  *
  * \ingroup Greengrass
  *

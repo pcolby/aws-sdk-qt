@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::CreateConstraintRequest
  *
- * \brief The CreateConstraintRequest class encapsulates ServiceCatalog CreateConstraint requests.
+ * \brief The CreateConstraintRequest class provides an interface for ServiceCatalog CreateConstraint requests.
  *
  * \ingroup ServiceCatalog
  *

@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::SearchGameSessionsResponse
  *
- * \brief The SearchGameSessionsResponse class encapsulates GameLift SearchGameSessions responses.
+ * \brief The SearchGameSessionsResponse class provides an interace for GameLift SearchGameSessions responses.
  *
  * \ingroup GameLift
  *

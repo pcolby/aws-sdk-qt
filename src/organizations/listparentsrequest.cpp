@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListParentsRequest
  *
- * \brief The ListParentsRequest class encapsulates Organizations ListParents requests.
+ * \brief The ListParentsRequest class provides an interface for Organizations ListParents requests.
  *
  * \ingroup Organizations
  *

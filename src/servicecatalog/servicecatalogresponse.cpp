@@ -29,7 +29,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ServiceCatalogResponse
  *
- * \brief The ServiceCatalogResponse class is the base class for all ServiceCatalog responses.
+ * \brief The ServiceCatalogResponse class provides an interface for ServiceCatalog responses.
  *
  * \ingroup ServiceCatalog
  */

@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::ListStateMachinesRequest
  *
- * \brief The ListStateMachinesRequest class encapsulates SFN ListStateMachines requests.
+ * \brief The ListStateMachinesRequest class provides an interface for SFN ListStateMachines requests.
  *
  * \ingroup SFN
  *

@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::CreateUserResponse
  *
- * \brief The CreateUserResponse class encapsulates MQ CreateUser responses.
+ * \brief The CreateUserResponse class provides an interace for MQ CreateUser responses.
  *
  * \ingroup MQ
  *

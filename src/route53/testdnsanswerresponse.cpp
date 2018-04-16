@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::TestDNSAnswerResponse
  *
- * \brief The TestDNSAnswerResponse class encapsulates Route53 TestDNSAnswer responses.
+ * \brief The TestDNSAnswerResponse class provides an interace for Route53 TestDNSAnswer responses.
  *
  * \ingroup Route53
  *

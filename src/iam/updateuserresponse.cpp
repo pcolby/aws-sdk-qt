@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateUserResponse
  *
- * \brief The UpdateUserResponse class encapsulates IAM UpdateUser responses.
+ * \brief The UpdateUserResponse class provides an interace for IAM UpdateUser responses.
  *
  * \ingroup IAM
  *

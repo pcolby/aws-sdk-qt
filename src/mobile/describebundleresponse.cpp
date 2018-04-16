@@ -30,7 +30,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::DescribeBundleResponse
  *
- * \brief The DescribeBundleResponse class encapsulates Mobile DescribeBundle responses.
+ * \brief The DescribeBundleResponse class provides an interace for Mobile DescribeBundle responses.
  *
  * \ingroup Mobile
  *

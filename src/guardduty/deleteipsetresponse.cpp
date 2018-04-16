@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DeleteIPSetResponse
  *
- * \brief The DeleteIPSetResponse class encapsulates GuardDuty DeleteIPSet responses.
+ * \brief The DeleteIPSetResponse class provides an interace for GuardDuty DeleteIPSet responses.
  *
  * \ingroup GuardDuty
  *

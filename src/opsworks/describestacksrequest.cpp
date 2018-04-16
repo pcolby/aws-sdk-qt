@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeStacksRequest
  *
- * \brief The DescribeStacksRequest class encapsulates OpsWorks DescribeStacks requests.
+ * \brief The DescribeStacksRequest class provides an interface for OpsWorks DescribeStacks requests.
  *
  * \ingroup OpsWorks
  *

@@ -30,7 +30,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::PutTelemetryRecordsResponse
  *
- * \brief The PutTelemetryRecordsResponse class encapsulates XRay PutTelemetryRecords responses.
+ * \brief The PutTelemetryRecordsResponse class provides an interace for XRay PutTelemetryRecords responses.
  *
  * \ingroup XRay
  *

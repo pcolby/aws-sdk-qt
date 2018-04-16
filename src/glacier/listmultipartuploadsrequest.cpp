@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::ListMultipartUploadsRequest
  *
- * \brief The ListMultipartUploadsRequest class encapsulates Glacier ListMultipartUploads requests.
+ * \brief The ListMultipartUploadsRequest class provides an interface for Glacier ListMultipartUploads requests.
  *
  * \ingroup Glacier
  *

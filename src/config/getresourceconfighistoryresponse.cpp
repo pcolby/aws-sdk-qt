@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::GetResourceConfigHistoryResponse
  *
- * \brief The GetResourceConfigHistoryResponse class encapsulates ConfigService GetResourceConfigHistory responses.
+ * \brief The GetResourceConfigHistoryResponse class provides an interace for ConfigService GetResourceConfigHistory responses.
  *
  * \ingroup ConfigService
  *

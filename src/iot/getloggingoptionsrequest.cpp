@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::GetLoggingOptionsRequest
  *
- * \brief The GetLoggingOptionsRequest class encapsulates IoT GetLoggingOptions requests.
+ * \brief The GetLoggingOptionsRequest class provides an interface for IoT GetLoggingOptions requests.
  *
  * \ingroup IoT
  *

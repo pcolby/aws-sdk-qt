@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminListUserAuthEventsRequest
  *
- * \brief The AdminListUserAuthEventsRequest class encapsulates CognitoIdentityProvider AdminListUserAuthEvents requests.
+ * \brief The AdminListUserAuthEventsRequest class provides an interface for CognitoIdentityProvider AdminListUserAuthEvents requests.
  *
  * \ingroup CognitoIdentityProvider
  *

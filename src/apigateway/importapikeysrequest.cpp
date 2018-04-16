@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::ImportApiKeysRequest
  *
- * \brief The ImportApiKeysRequest class encapsulates APIGateway ImportApiKeys requests.
+ * \brief The ImportApiKeysRequest class provides an interface for APIGateway ImportApiKeys requests.
  *
  * \ingroup APIGateway
  *

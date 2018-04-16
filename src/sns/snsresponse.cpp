@@ -29,7 +29,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::SNSResponse
  *
- * \brief The SNSResponse class is the base class for all SNS responses.
+ * \brief The SNSResponse class provides an interface for SNS responses.
  *
  * \ingroup SNS
  */

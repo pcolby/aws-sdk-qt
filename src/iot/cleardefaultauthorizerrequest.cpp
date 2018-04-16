@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ClearDefaultAuthorizerRequest
  *
- * \brief The ClearDefaultAuthorizerRequest class encapsulates IoT ClearDefaultAuthorizer requests.
+ * \brief The ClearDefaultAuthorizerRequest class provides an interface for IoT ClearDefaultAuthorizer requests.
  *
  * \ingroup IoT
  *

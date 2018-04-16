@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeFleetEventsRequest
  *
- * \brief The DescribeFleetEventsRequest class encapsulates GameLift DescribeFleetEvents requests.
+ * \brief The DescribeFleetEventsRequest class provides an interface for GameLift DescribeFleetEvents requests.
  *
  * \ingroup GameLift
  *

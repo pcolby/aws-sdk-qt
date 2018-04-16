@@ -30,9 +30,9 @@ namespace Core {
 /*!
  * \class QtAws::Core::AwsEndpoint
  *
- * @brief  Provides AWS endpoint information.
+ * \brief The AwsEndpoint class provides information about AWS endpoints.
  *
- * @note  This class provides fairly low-level access to AWS endpoint data.
+ * \note  This class provides fairly low-level access to AWS endpoint data.
  *        You should consider using the AwsRegion and/or various
  *        AwsService-derived classes in preference to using this class
  *        directly where possible.
@@ -44,7 +44,7 @@ namespace Core {
  * library - not fetched remotely at runtime.
  *
  * Example usage:
- * @code
+ * \code
  * AwsEndpoint endpoint(QLatin1String("cloudformation.us-east-1.amazonaws.com"));
  *
  * endpoint.hostName();    // "cloudformation.us-east-1.amazonaws.com"
@@ -61,10 +61,10 @@ namespace Core {
  *
  * ec2.host(); // "ec2.ap-southeast-2.amazonaws.com"
  * iam.host(); // "iam.amazonaws.com"
- * @endcode
+ * \endcode
  *
- * @see    AwsRegion
- * @see    AwsService
+ * \sa AwsRegion
+ * \sa AwsService
  */
 
 /*!

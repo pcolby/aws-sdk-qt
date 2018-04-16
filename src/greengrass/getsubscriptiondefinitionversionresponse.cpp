@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetSubscriptionDefinitionVersionResponse
  *
- * \brief The GetSubscriptionDefinitionVersionResponse class encapsulates Greengrass GetSubscriptionDefinitionVersion responses.
+ * \brief The GetSubscriptionDefinitionVersionResponse class provides an interace for Greengrass GetSubscriptionDefinitionVersion responses.
  *
  * \ingroup Greengrass
  *

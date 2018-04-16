@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyVpcAttributeRequest
  *
- * \brief The ModifyVpcAttributeRequest class encapsulates EC2 ModifyVpcAttribute requests.
+ * \brief The ModifyVpcAttributeRequest class provides an interface for EC2 ModifyVpcAttribute requests.
  *
  * \ingroup EC2
  *

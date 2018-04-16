@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateInstanceProfileRequest
  *
- * \brief The CreateInstanceProfileRequest class encapsulates IAM CreateInstanceProfile requests.
+ * \brief The CreateInstanceProfileRequest class provides an interface for IAM CreateInstanceProfile requests.
  *
  * \ingroup IAM
  *

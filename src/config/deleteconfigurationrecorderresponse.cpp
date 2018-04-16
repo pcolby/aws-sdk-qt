@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeleteConfigurationRecorderResponse
  *
- * \brief The DeleteConfigurationRecorderResponse class encapsulates ConfigService DeleteConfigurationRecorder responses.
+ * \brief The DeleteConfigurationRecorderResponse class provides an interace for ConfigService DeleteConfigurationRecorder responses.
  *
  * \ingroup ConfigService
  *

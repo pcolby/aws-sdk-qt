@@ -28,7 +28,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::BulkPublishRequest
  *
- * \brief The BulkPublishRequest class encapsulates CognitoSync BulkPublish requests.
+ * \brief The BulkPublishRequest class provides an interface for CognitoSync BulkPublish requests.
  *
  * \ingroup CognitoSync
  *

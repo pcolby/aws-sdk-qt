@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::ListJobsRequest
  *
- * \brief The ListJobsRequest class encapsulates MediaConvert ListJobs requests.
+ * \brief The ListJobsRequest class provides an interface for MediaConvert ListJobs requests.
  *
  * \ingroup MediaConvert
  *

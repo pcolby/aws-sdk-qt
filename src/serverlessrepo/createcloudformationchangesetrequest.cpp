@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::CreateCloudFormationChangeSetRequest
  *
- * \brief The CreateCloudFormationChangeSetRequest class encapsulates ServerlessApplicationRepository CreateCloudFormationChangeSet requests.
+ * \brief The CreateCloudFormationChangeSetRequest class provides an interface for ServerlessApplicationRepository CreateCloudFormationChangeSet requests.
  *
  * \ingroup ServerlessApplicationRepository
  *

@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::DeletePublicKeyRequest
  *
- * \brief The DeletePublicKeyRequest class encapsulates CloudFront DeletePublicKey requests.
+ * \brief The DeletePublicKeyRequest class provides an interface for CloudFront DeletePublicKey requests.
  *
  * \ingroup CloudFront
  *

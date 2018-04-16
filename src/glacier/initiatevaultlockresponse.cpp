@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::InitiateVaultLockResponse
  *
- * \brief The InitiateVaultLockResponse class encapsulates Glacier InitiateVaultLock responses.
+ * \brief The InitiateVaultLockResponse class provides an interace for Glacier InitiateVaultLock responses.
  *
  * \ingroup Glacier
  *

@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::RenewDomainResponse
  *
- * \brief The RenewDomainResponse class encapsulates Route53Domains RenewDomain responses.
+ * \brief The RenewDomainResponse class provides an interace for Route53Domains RenewDomain responses.
  *
  * \ingroup Route53Domains
  *

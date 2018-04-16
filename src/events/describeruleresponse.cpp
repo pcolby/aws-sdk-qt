@@ -30,7 +30,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::DescribeRuleResponse
  *
- * \brief The DescribeRuleResponse class encapsulates CloudWatchEvents DescribeRule responses.
+ * \brief The DescribeRuleResponse class provides an interace for CloudWatchEvents DescribeRule responses.
  *
  * \ingroup CloudWatchEvents
  *

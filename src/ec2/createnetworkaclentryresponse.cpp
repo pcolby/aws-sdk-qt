@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateNetworkAclEntryResponse
  *
- * \brief The CreateNetworkAclEntryResponse class encapsulates EC2 CreateNetworkAclEntry responses.
+ * \brief The CreateNetworkAclEntryResponse class provides an interace for EC2 CreateNetworkAclEntry responses.
  *
  * \ingroup EC2
  *

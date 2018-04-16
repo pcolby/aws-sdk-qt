@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutObjectTaggingRequest
  *
- * \brief The PutObjectTaggingRequest class encapsulates S3 PutObjectTagging requests.
+ * \brief The PutObjectTaggingRequest class provides an interface for S3 PutObjectTagging requests.
  *
  * \ingroup S3
  *

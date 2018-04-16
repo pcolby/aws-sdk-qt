@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListPublishedSchemaArnsRequest
  *
- * \brief The ListPublishedSchemaArnsRequest class encapsulates CloudDirectory ListPublishedSchemaArns requests.
+ * \brief The ListPublishedSchemaArnsRequest class provides an interface for CloudDirectory ListPublishedSchemaArns requests.
  *
  * \ingroup CloudDirectory
  *

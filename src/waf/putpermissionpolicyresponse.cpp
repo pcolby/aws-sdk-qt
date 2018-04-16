@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::PutPermissionPolicyResponse
  *
- * \brief The PutPermissionPolicyResponse class encapsulates WAF PutPermissionPolicy responses.
+ * \brief The PutPermissionPolicyResponse class provides an interace for WAF PutPermissionPolicy responses.
  *
  * \ingroup WAF
  *

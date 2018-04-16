@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::DescribeActivityTypeResponse
  *
- * \brief The DescribeActivityTypeResponse class encapsulates SWF DescribeActivityType responses.
+ * \brief The DescribeActivityTypeResponse class provides an interace for SWF DescribeActivityType responses.
  *
  * \ingroup SWF
  *

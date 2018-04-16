@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ListUserPoolsResponse
  *
- * \brief The ListUserPoolsResponse class encapsulates CognitoIdentityProvider ListUserPools responses.
+ * \brief The ListUserPoolsResponse class provides an interace for CognitoIdentityProvider ListUserPools responses.
  *
  * \ingroup CognitoIdentityProvider
  *

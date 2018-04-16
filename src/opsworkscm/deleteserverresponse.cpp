@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DeleteServerResponse
  *
- * \brief The DeleteServerResponse class encapsulates OpsWorksCM DeleteServer responses.
+ * \brief The DeleteServerResponse class provides an interace for OpsWorksCM DeleteServer responses.
  *
  * \ingroup OpsWorksCM
  *

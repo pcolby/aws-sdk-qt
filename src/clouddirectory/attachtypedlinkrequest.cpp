@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::AttachTypedLinkRequest
  *
- * \brief The AttachTypedLinkRequest class encapsulates CloudDirectory AttachTypedLink requests.
+ * \brief The AttachTypedLinkRequest class provides an interface for CloudDirectory AttachTypedLink requests.
  *
  * \ingroup CloudDirectory
  *

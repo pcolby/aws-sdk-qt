@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::RotateEncryptionKeyResponse
  *
- * \brief The RotateEncryptionKeyResponse class encapsulates Redshift RotateEncryptionKey responses.
+ * \brief The RotateEncryptionKeyResponse class provides an interace for Redshift RotateEncryptionKey responses.
  *
  * \ingroup Redshift
  *

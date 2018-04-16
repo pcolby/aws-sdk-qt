@@ -28,7 +28,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::DescribeSubscriptionRequest
  *
- * \brief The DescribeSubscriptionRequest class encapsulates Shield DescribeSubscription requests.
+ * \brief The DescribeSubscriptionRequest class provides an interface for Shield DescribeSubscription requests.
  *
  * \ingroup Shield
  *

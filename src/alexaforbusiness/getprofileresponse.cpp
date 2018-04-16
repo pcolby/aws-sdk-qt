@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::GetProfileResponse
  *
- * \brief The GetProfileResponse class encapsulates AlexaForBusiness GetProfile responses.
+ * \brief The GetProfileResponse class provides an interace for AlexaForBusiness GetProfile responses.
  *
  * \ingroup AlexaForBusiness
  *

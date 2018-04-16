@@ -28,7 +28,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::DisassociateConnectorRequest
  *
- * \brief The DisassociateConnectorRequest class encapsulates SMS DisassociateConnector requests.
+ * \brief The DisassociateConnectorRequest class provides an interface for SMS DisassociateConnector requests.
  *
  * \ingroup SMS
  *

@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::UpdateStackResponse
  *
- * \brief The UpdateStackResponse class encapsulates AppStream UpdateStack responses.
+ * \brief The UpdateStackResponse class provides an interace for AppStream UpdateStack responses.
  *
  * \ingroup AppStream
  *

@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::AssociateConnectionWithLagRequest
  *
- * \brief The AssociateConnectionWithLagRequest class encapsulates DirectConnect AssociateConnectionWithLag requests.
+ * \brief The AssociateConnectionWithLagRequest class provides an interface for DirectConnect AssociateConnectionWithLag requests.
  *
  * \ingroup DirectConnect
  *

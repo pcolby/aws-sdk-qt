@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DetachPolicyResponse
  *
- * \brief The DetachPolicyResponse class encapsulates Organizations DetachPolicy responses.
+ * \brief The DetachPolicyResponse class provides an interace for Organizations DetachPolicy responses.
  *
  * \ingroup Organizations
  *

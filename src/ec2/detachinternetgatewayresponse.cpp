@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DetachInternetGatewayResponse
  *
- * \brief The DetachInternetGatewayResponse class encapsulates EC2 DetachInternetGateway responses.
+ * \brief The DetachInternetGatewayResponse class provides an interace for EC2 DetachInternetGateway responses.
  *
  * \ingroup EC2
  *

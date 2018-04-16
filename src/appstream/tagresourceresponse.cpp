@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::TagResourceResponse
  *
- * \brief The TagResourceResponse class encapsulates AppStream TagResource responses.
+ * \brief The TagResourceResponse class provides an interace for AppStream TagResource responses.
  *
  * \ingroup AppStream
  *

@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetEmailChannelRequest
  *
- * \brief The GetEmailChannelRequest class encapsulates Pinpoint GetEmailChannel requests.
+ * \brief The GetEmailChannelRequest class provides an interface for Pinpoint GetEmailChannel requests.
  *
  * \ingroup Pinpoint
  *

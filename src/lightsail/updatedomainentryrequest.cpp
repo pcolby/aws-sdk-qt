@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::UpdateDomainEntryRequest
  *
- * \brief The UpdateDomainEntryRequest class encapsulates Lightsail UpdateDomainEntry requests.
+ * \brief The UpdateDomainEntryRequest class provides an interface for Lightsail UpdateDomainEntry requests.
  *
  * \ingroup Lightsail
  *

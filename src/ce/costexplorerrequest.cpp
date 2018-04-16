@@ -26,7 +26,7 @@ namespace CostExplorer {
 /*!
  * \class QtAws::CostExplorer::CostExplorerRequest
  *
- * \brief The CostExplorerRequest class is the base class for all CostExplorer requests.
+ * \brief The CostExplorerRequest class provides an interface for CostExplorer requests.
  *
  * \ingroup CostExplorer
  */

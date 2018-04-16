@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateComputerResponse
  *
- * \brief The CreateComputerResponse class encapsulates DirectoryService CreateComputer responses.
+ * \brief The CreateComputerResponse class provides an interace for DirectoryService CreateComputer responses.
  *
  * \ingroup DirectoryService
  *

@@ -30,7 +30,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::DeleteProgressUpdateStreamResponse
  *
- * \brief The DeleteProgressUpdateStreamResponse class encapsulates MigrationHub DeleteProgressUpdateStream responses.
+ * \brief The DeleteProgressUpdateStreamResponse class provides an interace for MigrationHub DeleteProgressUpdateStream responses.
  *
  * \ingroup MigrationHub
  *

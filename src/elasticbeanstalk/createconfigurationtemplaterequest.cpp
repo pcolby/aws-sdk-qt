@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::CreateConfigurationTemplateRequest
  *
- * \brief The CreateConfigurationTemplateRequest class encapsulates ElasticBeanstalk CreateConfigurationTemplate requests.
+ * \brief The CreateConfigurationTemplateRequest class provides an interface for ElasticBeanstalk CreateConfigurationTemplate requests.
  *
  * \ingroup ElasticBeanstalk
  *

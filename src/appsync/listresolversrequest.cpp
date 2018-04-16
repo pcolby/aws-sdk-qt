@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::ListResolversRequest
  *
- * \brief The ListResolversRequest class encapsulates AppSync ListResolvers requests.
+ * \brief The ListResolversRequest class provides an interface for AppSync ListResolvers requests.
  *
  * \ingroup AppSync
  *

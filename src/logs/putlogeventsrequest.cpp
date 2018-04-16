@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::PutLogEventsRequest
  *
- * \brief The PutLogEventsRequest class encapsulates CloudWatchLogs PutLogEvents requests.
+ * \brief The PutLogEventsRequest class provides an interface for CloudWatchLogs PutLogEvents requests.
  *
  * \ingroup CloudWatchLogs
  *

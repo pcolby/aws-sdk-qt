@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DescribeServicesResponse
  *
- * \brief The DescribeServicesResponse class encapsulates ECS DescribeServices responses.
+ * \brief The DescribeServicesResponse class provides an interace for ECS DescribeServices responses.
  *
  * \ingroup ECS
  *

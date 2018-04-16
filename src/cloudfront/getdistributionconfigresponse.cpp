@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::GetDistributionConfigResponse
  *
- * \brief The GetDistributionConfigResponse class encapsulates CloudFront GetDistributionConfig responses.
+ * \brief The GetDistributionConfigResponse class provides an interace for CloudFront GetDistributionConfig responses.
  *
  * \ingroup CloudFront
  *

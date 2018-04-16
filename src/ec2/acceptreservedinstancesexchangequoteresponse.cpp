@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AcceptReservedInstancesExchangeQuoteResponse
  *
- * \brief The AcceptReservedInstancesExchangeQuoteResponse class encapsulates EC2 AcceptReservedInstancesExchangeQuote responses.
+ * \brief The AcceptReservedInstancesExchangeQuoteResponse class provides an interace for EC2 AcceptReservedInstancesExchangeQuote responses.
  *
  * \ingroup EC2
  *

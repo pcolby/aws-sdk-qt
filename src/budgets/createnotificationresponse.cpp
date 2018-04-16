@@ -30,7 +30,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::CreateNotificationResponse
  *
- * \brief The CreateNotificationResponse class encapsulates Budgets CreateNotification responses.
+ * \brief The CreateNotificationResponse class provides an interace for Budgets CreateNotification responses.
  *
  * \ingroup Budgets
  *

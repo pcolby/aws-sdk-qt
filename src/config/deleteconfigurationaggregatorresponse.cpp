@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeleteConfigurationAggregatorResponse
  *
- * \brief The DeleteConfigurationAggregatorResponse class encapsulates ConfigService DeleteConfigurationAggregator responses.
+ * \brief The DeleteConfigurationAggregatorResponse class provides an interace for ConfigService DeleteConfigurationAggregator responses.
  *
  * \ingroup ConfigService
  *

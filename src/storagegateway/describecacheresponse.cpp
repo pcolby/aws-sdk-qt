@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeCacheResponse
  *
- * \brief The DescribeCacheResponse class encapsulates StorageGateway DescribeCache responses.
+ * \brief The DescribeCacheResponse class provides an interace for StorageGateway DescribeCache responses.
  *
  * \ingroup StorageGateway
  *

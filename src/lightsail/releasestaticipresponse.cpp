@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::ReleaseStaticIpResponse
  *
- * \brief The ReleaseStaticIpResponse class encapsulates Lightsail ReleaseStaticIp responses.
+ * \brief The ReleaseStaticIpResponse class provides an interace for Lightsail ReleaseStaticIp responses.
  *
  * \ingroup Lightsail
  *

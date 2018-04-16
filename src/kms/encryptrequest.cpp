@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::EncryptRequest
  *
- * \brief The EncryptRequest class encapsulates KMS Encrypt requests.
+ * \brief The EncryptRequest class provides an interface for KMS Encrypt requests.
  *
  * \ingroup KMS
  *

@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::ListApplicationsRequest
  *
- * \brief The ListApplicationsRequest class encapsulates KinesisAnalytics ListApplications requests.
+ * \brief The ListApplicationsRequest class provides an interface for KinesisAnalytics ListApplications requests.
  *
  * \ingroup KinesisAnalytics
  *

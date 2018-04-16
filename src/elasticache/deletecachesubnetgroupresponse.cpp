@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DeleteCacheSubnetGroupResponse
  *
- * \brief The DeleteCacheSubnetGroupResponse class encapsulates ElastiCache DeleteCacheSubnetGroup responses.
+ * \brief The DeleteCacheSubnetGroupResponse class provides an interace for ElastiCache DeleteCacheSubnetGroup responses.
  *
  * \ingroup ElastiCache
  *

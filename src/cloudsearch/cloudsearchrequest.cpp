@@ -26,7 +26,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::CloudSearchRequest
  *
- * \brief The CloudSearchRequest class is the base class for all CloudSearch requests.
+ * \brief The CloudSearchRequest class provides an interface for CloudSearch requests.
  *
  * \ingroup CloudSearch
  */

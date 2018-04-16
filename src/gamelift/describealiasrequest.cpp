@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeAliasRequest
  *
- * \brief The DescribeAliasRequest class encapsulates GameLift DescribeAlias requests.
+ * \brief The DescribeAliasRequest class provides an interface for GameLift DescribeAlias requests.
  *
  * \ingroup GameLift
  *

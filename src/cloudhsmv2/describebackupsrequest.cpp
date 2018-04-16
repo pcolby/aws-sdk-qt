@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::DescribeBackupsRequest
  *
- * \brief The DescribeBackupsRequest class encapsulates CloudHSMV2 DescribeBackups requests.
+ * \brief The DescribeBackupsRequest class provides an interface for CloudHSMV2 DescribeBackups requests.
  *
  * \ingroup CloudHSMV2
  *

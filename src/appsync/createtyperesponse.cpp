@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::CreateTypeResponse
  *
- * \brief The CreateTypeResponse class encapsulates AppSync CreateType responses.
+ * \brief The CreateTypeResponse class provides an interace for AppSync CreateType responses.
  *
  * \ingroup AppSync
  *

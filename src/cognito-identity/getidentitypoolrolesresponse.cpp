@@ -30,7 +30,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::GetIdentityPoolRolesResponse
  *
- * \brief The GetIdentityPoolRolesResponse class encapsulates CognitoIdentity GetIdentityPoolRoles responses.
+ * \brief The GetIdentityPoolRolesResponse class provides an interace for CognitoIdentity GetIdentityPoolRoles responses.
  *
  * \ingroup CognitoIdentity
  *

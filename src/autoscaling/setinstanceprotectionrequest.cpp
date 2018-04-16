@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::SetInstanceProtectionRequest
  *
- * \brief The SetInstanceProtectionRequest class encapsulates AutoScaling SetInstanceProtection requests.
+ * \brief The SetInstanceProtectionRequest class provides an interface for AutoScaling SetInstanceProtection requests.
  *
  * \ingroup AutoScaling
  *

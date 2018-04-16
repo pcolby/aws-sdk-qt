@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::DisassociateRoleFromGroupRequest
  *
- * \brief The DisassociateRoleFromGroupRequest class encapsulates Greengrass DisassociateRoleFromGroup requests.
+ * \brief The DisassociateRoleFromGroupRequest class provides an interface for Greengrass DisassociateRoleFromGroup requests.
  *
  * \ingroup Greengrass
  *

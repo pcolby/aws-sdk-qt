@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::SetV2LoggingOptionsResponse
  *
- * \brief The SetV2LoggingOptionsResponse class encapsulates IoT SetV2LoggingOptions responses.
+ * \brief The SetV2LoggingOptionsResponse class provides an interace for IoT SetV2LoggingOptions responses.
  *
  * \ingroup IoT
  *

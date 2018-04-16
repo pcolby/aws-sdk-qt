@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::CreateEndpointResponse
  *
- * \brief The CreateEndpointResponse class encapsulates DatabaseMigrationService CreateEndpoint responses.
+ * \brief The CreateEndpointResponse class provides an interace for DatabaseMigrationService CreateEndpoint responses.
  *
  * \ingroup DatabaseMigrationService
  *

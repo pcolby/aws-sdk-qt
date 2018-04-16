@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::GetDifferencesResponse
  *
- * \brief The GetDifferencesResponse class encapsulates CodeCommit GetDifferences responses.
+ * \brief The GetDifferencesResponse class provides an interace for CodeCommit GetDifferences responses.
  *
  * \ingroup CodeCommit
  *

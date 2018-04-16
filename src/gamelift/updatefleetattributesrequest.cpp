@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::UpdateFleetAttributesRequest
  *
- * \brief The UpdateFleetAttributesRequest class encapsulates GameLift UpdateFleetAttributes requests.
+ * \brief The UpdateFleetAttributesRequest class provides an interface for GameLift UpdateFleetAttributes requests.
  *
  * \ingroup GameLift
  *

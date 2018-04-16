@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::PutApprovalResultResponse
  *
- * \brief The PutApprovalResultResponse class encapsulates CodePipeline PutApprovalResult responses.
+ * \brief The PutApprovalResultResponse class provides an interace for CodePipeline PutApprovalResult responses.
  *
  * \ingroup CodePipeline
  *

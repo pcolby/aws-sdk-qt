@@ -26,7 +26,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::InspectorRequest
  *
- * \brief The InspectorRequest class is the base class for all Inspector requests.
+ * \brief The InspectorRequest class provides an interface for Inspector requests.
  *
  * \ingroup Inspector
  */

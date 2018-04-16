@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::DescribeStepRequest
  *
- * \brief The DescribeStepRequest class encapsulates EMR DescribeStep requests.
+ * \brief The DescribeStepRequest class provides an interface for EMR DescribeStep requests.
  *
  * \ingroup EMR
  *

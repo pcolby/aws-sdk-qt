@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::VerifySoftwareTokenResponse
  *
- * \brief The VerifySoftwareTokenResponse class encapsulates CognitoIdentityProvider VerifySoftwareToken responses.
+ * \brief The VerifySoftwareTokenResponse class provides an interace for CognitoIdentityProvider VerifySoftwareToken responses.
  *
  * \ingroup CognitoIdentityProvider
  *

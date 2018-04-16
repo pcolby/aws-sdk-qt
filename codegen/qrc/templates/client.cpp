@@ -25,7 +25,7 @@ namespace {{NameSpaceName}} {
 /*!
  * \class QtAws::{{NameSpaceName}}::{{ClassName}}
  *
- * \brief The {{ClassName}} class provides access the {{metadata.serviceFullName}}{% if metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS" not in metadata.serviceFullName %} ({{metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS"}}){% endif %} service.
+ * \brief The {{ClassName}} class provides access to the {{metadata.serviceFullName}}{% if metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS" not in metadata.serviceFullName %} ({{metadata.serviceAbbreviation|cut:"Amazon"|cut:"AWS"}}){% endif %} service.
  *
  * \ingroup {{NameSpaceName}}
  *

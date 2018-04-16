@@ -30,7 +30,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::CreateProjectResponse
  *
- * \brief The CreateProjectResponse class encapsulates CodeStar CreateProject responses.
+ * \brief The CreateProjectResponse class provides an interace for CodeStar CreateProject responses.
  *
  * \ingroup CodeStar
  *

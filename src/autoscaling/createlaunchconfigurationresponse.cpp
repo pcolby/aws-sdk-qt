@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::CreateLaunchConfigurationResponse
  *
- * \brief The CreateLaunchConfigurationResponse class encapsulates AutoScaling CreateLaunchConfiguration responses.
+ * \brief The CreateLaunchConfigurationResponse class provides an interace for AutoScaling CreateLaunchConfiguration responses.
  *
  * \ingroup AutoScaling
  *

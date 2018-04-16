@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::CreateMLModelRequest
  *
- * \brief The CreateMLModelRequest class encapsulates MachineLearning CreateMLModel requests.
+ * \brief The CreateMLModelRequest class provides an interface for MachineLearning CreateMLModel requests.
  *
  * \ingroup MachineLearning
  *

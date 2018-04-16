@@ -43,7 +43,7 @@ namespace CostandUsageReportService {
 /*!
  * \class QtAws::CostandUsageReportService::CostandUsageReportServiceClient
  *
- * \brief The CostandUsageReportServiceClient class provides access the AWS Cost and Usage Report Service service.
+ * \brief The CostandUsageReportServiceClient class provides access to the AWS Cost and Usage Report Service service.
  *
  * \ingroup CostandUsageReportService
  *

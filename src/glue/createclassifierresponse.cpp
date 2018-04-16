@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateClassifierResponse
  *
- * \brief The CreateClassifierResponse class encapsulates Glue CreateClassifier responses.
+ * \brief The CreateClassifierResponse class provides an interace for Glue CreateClassifier responses.
  *
  * \ingroup Glue
  *

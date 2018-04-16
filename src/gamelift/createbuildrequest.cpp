@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::CreateBuildRequest
  *
- * \brief The CreateBuildRequest class encapsulates GameLift CreateBuild requests.
+ * \brief The CreateBuildRequest class provides an interface for GameLift CreateBuild requests.
  *
  * \ingroup GameLift
  *

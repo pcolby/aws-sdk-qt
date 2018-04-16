@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeFleetEventsResponse
  *
- * \brief The DescribeFleetEventsResponse class encapsulates GameLift DescribeFleetEvents responses.
+ * \brief The DescribeFleetEventsResponse class provides an interace for GameLift DescribeFleetEvents responses.
  *
  * \ingroup GameLift
  *

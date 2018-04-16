@@ -30,7 +30,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::DescribeHsmResponse
  *
- * \brief The DescribeHsmResponse class encapsulates CloudHSM DescribeHsm responses.
+ * \brief The DescribeHsmResponse class provides an interace for CloudHSM DescribeHsm responses.
  *
  * \ingroup CloudHSM
  *

@@ -26,7 +26,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::ElasticBeanstalkRequest
  *
- * \brief The ElasticBeanstalkRequest class is the base class for all ElasticBeanstalk requests.
+ * \brief The ElasticBeanstalkRequest class provides an interface for ElasticBeanstalk requests.
  *
  * \ingroup ElasticBeanstalk
  */

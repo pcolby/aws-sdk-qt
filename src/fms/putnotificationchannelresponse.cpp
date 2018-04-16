@@ -30,7 +30,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::PutNotificationChannelResponse
  *
- * \brief The PutNotificationChannelResponse class encapsulates FMS PutNotificationChannel responses.
+ * \brief The PutNotificationChannelResponse class provides an interace for FMS PutNotificationChannel responses.
  *
  * \ingroup FMS
  *

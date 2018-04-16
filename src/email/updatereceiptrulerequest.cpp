@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::UpdateReceiptRuleRequest
  *
- * \brief The UpdateReceiptRuleRequest class encapsulates SES UpdateReceiptRule requests.
+ * \brief The UpdateReceiptRuleRequest class provides an interface for SES UpdateReceiptRule requests.
  *
  * \ingroup SES
  *

@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetContextKeysForPrincipalPolicyRequest
  *
- * \brief The GetContextKeysForPrincipalPolicyRequest class encapsulates IAM GetContextKeysForPrincipalPolicy requests.
+ * \brief The GetContextKeysForPrincipalPolicyRequest class provides an interface for IAM GetContextKeysForPrincipalPolicy requests.
  *
  * \ingroup IAM
  *

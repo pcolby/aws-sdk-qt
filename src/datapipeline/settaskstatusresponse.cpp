@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::SetTaskStatusResponse
  *
- * \brief The SetTaskStatusResponse class encapsulates DataPipeline SetTaskStatus responses.
+ * \brief The SetTaskStatusResponse class provides an interace for DataPipeline SetTaskStatus responses.
  *
  * \ingroup DataPipeline
  *

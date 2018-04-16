@@ -28,7 +28,7 @@ namespace MarketplaceCommerceAnalytics {
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::StartSupportDataExportRequest
  *
- * \brief The StartSupportDataExportRequest class encapsulates MarketplaceCommerceAnalytics StartSupportDataExport requests.
+ * \brief The StartSupportDataExportRequest class provides an interface for MarketplaceCommerceAnalytics StartSupportDataExport requests.
  *
  * \ingroup MarketplaceCommerceAnalytics
  *

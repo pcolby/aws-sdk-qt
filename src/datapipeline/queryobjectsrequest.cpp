@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::QueryObjectsRequest
  *
- * \brief The QueryObjectsRequest class encapsulates DataPipeline QueryObjects requests.
+ * \brief The QueryObjectsRequest class provides an interface for DataPipeline QueryObjects requests.
  *
  * \ingroup DataPipeline
  *

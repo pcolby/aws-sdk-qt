@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::CreateReceiptFilterRequest
  *
- * \brief The CreateReceiptFilterRequest class encapsulates SES CreateReceiptFilter requests.
+ * \brief The CreateReceiptFilterRequest class provides an interface for SES CreateReceiptFilter requests.
  *
  * \ingroup SES
  *

@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateDomainNameResponse
  *
- * \brief The UpdateDomainNameResponse class encapsulates APIGateway UpdateDomainName responses.
+ * \brief The UpdateDomainNameResponse class provides an interace for APIGateway UpdateDomainName responses.
  *
  * \ingroup APIGateway
  *

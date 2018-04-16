@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::UpdateProductRequest
  *
- * \brief The UpdateProductRequest class encapsulates ServiceCatalog UpdateProduct requests.
+ * \brief The UpdateProductRequest class provides an interface for ServiceCatalog UpdateProduct requests.
  *
  * \ingroup ServiceCatalog
  *

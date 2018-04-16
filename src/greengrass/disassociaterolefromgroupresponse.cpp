@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::DisassociateRoleFromGroupResponse
  *
- * \brief The DisassociateRoleFromGroupResponse class encapsulates Greengrass DisassociateRoleFromGroup responses.
+ * \brief The DisassociateRoleFromGroupResponse class provides an interace for Greengrass DisassociateRoleFromGroup responses.
  *
  * \ingroup Greengrass
  *

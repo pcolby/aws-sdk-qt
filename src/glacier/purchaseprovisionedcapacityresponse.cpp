@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::PurchaseProvisionedCapacityResponse
  *
- * \brief The PurchaseProvisionedCapacityResponse class encapsulates Glacier PurchaseProvisionedCapacity responses.
+ * \brief The PurchaseProvisionedCapacityResponse class provides an interace for Glacier PurchaseProvisionedCapacity responses.
  *
  * \ingroup Glacier
  *

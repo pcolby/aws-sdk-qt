@@ -30,7 +30,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::DeleteUserProfileResponse
  *
- * \brief The DeleteUserProfileResponse class encapsulates CodeStar DeleteUserProfile responses.
+ * \brief The DeleteUserProfileResponse class provides an interace for CodeStar DeleteUserProfile responses.
  *
  * \ingroup CodeStar
  *

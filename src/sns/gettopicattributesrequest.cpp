@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::GetTopicAttributesRequest
  *
- * \brief The GetTopicAttributesRequest class encapsulates SNS GetTopicAttributes requests.
+ * \brief The GetTopicAttributesRequest class provides an interface for SNS GetTopicAttributes requests.
  *
  * \ingroup SNS
  *

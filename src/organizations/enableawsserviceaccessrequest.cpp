@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::EnableAWSServiceAccessRequest
  *
- * \brief The EnableAWSServiceAccessRequest class encapsulates Organizations EnableAWSServiceAccess requests.
+ * \brief The EnableAWSServiceAccessRequest class provides an interface for Organizations EnableAWSServiceAccess requests.
  *
  * \ingroup Organizations
  *

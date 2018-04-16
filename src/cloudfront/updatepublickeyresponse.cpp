@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::UpdatePublicKeyResponse
  *
- * \brief The UpdatePublicKeyResponse class encapsulates CloudFront UpdatePublicKey responses.
+ * \brief The UpdatePublicKeyResponse class provides an interace for CloudFront UpdatePublicKey responses.
  *
  * \ingroup CloudFront
  *

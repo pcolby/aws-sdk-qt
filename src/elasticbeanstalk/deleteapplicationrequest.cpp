@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DeleteApplicationRequest
  *
- * \brief The DeleteApplicationRequest class encapsulates ElasticBeanstalk DeleteApplication requests.
+ * \brief The DeleteApplicationRequest class provides an interface for ElasticBeanstalk DeleteApplication requests.
  *
  * \ingroup ElasticBeanstalk
  *

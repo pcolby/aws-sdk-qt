@@ -71,7 +71,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::MediaLiveClient
  *
- * \brief The MediaLiveClient class provides access the AWS Elemental MediaLive service.
+ * \brief The MediaLiveClient class provides access to the AWS Elemental MediaLive service.
  *
  * \ingroup MediaLive
  *

@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::DescribeJobFlowsRequest
  *
- * \brief The DescribeJobFlowsRequest class encapsulates EMR DescribeJobFlows requests.
+ * \brief The DescribeJobFlowsRequest class provides an interface for EMR DescribeJobFlows requests.
  *
  * \ingroup EMR
  *

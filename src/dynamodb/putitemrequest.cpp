@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::PutItemRequest
  *
- * \brief The PutItemRequest class encapsulates DynamoDB PutItem requests.
+ * \brief The PutItemRequest class provides an interface for DynamoDB PutItem requests.
  *
  * \ingroup DynamoDB
  *

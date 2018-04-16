@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DescribeCacheSubnetGroupsResponse
  *
- * \brief The DescribeCacheSubnetGroupsResponse class encapsulates ElastiCache DescribeCacheSubnetGroups responses.
+ * \brief The DescribeCacheSubnetGroupsResponse class provides an interace for ElastiCache DescribeCacheSubnetGroups responses.
  *
  * \ingroup ElastiCache
  *

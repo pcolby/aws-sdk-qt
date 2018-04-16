@@ -28,7 +28,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::DisassociateCreatedArtifactRequest
  *
- * \brief The DisassociateCreatedArtifactRequest class encapsulates MigrationHub DisassociateCreatedArtifact requests.
+ * \brief The DisassociateCreatedArtifactRequest class provides an interface for MigrationHub DisassociateCreatedArtifact requests.
  *
  * \ingroup MigrationHub
  *

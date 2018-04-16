@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::CreatePublicVirtualInterfaceRequest
  *
- * \brief The CreatePublicVirtualInterfaceRequest class encapsulates DirectConnect CreatePublicVirtualInterface requests.
+ * \brief The CreatePublicVirtualInterfaceRequest class provides an interface for DirectConnect CreatePublicVirtualInterface requests.
  *
  * \ingroup DirectConnect
  *

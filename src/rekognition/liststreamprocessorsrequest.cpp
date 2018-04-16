@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::ListStreamProcessorsRequest
  *
- * \brief The ListStreamProcessorsRequest class encapsulates Rekognition ListStreamProcessors requests.
+ * \brief The ListStreamProcessorsRequest class provides an interface for Rekognition ListStreamProcessors requests.
  *
  * \ingroup Rekognition
  *

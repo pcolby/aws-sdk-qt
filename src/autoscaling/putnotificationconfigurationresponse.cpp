@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::PutNotificationConfigurationResponse
  *
- * \brief The PutNotificationConfigurationResponse class encapsulates AutoScaling PutNotificationConfiguration responses.
+ * \brief The PutNotificationConfigurationResponse class provides an interace for AutoScaling PutNotificationConfiguration responses.
  *
  * \ingroup AutoScaling
  *

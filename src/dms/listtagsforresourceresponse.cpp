@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::ListTagsForResourceResponse
  *
- * \brief The ListTagsForResourceResponse class encapsulates DatabaseMigrationService ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class provides an interace for DatabaseMigrationService ListTagsForResource responses.
  *
  * \ingroup DatabaseMigrationService
  *

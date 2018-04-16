@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::RetrieveEnvironmentInfoResponse
  *
- * \brief The RetrieveEnvironmentInfoResponse class encapsulates ElasticBeanstalk RetrieveEnvironmentInfo responses.
+ * \brief The RetrieveEnvironmentInfoResponse class provides an interace for ElasticBeanstalk RetrieveEnvironmentInfo responses.
  *
  * \ingroup ElasticBeanstalk
  *

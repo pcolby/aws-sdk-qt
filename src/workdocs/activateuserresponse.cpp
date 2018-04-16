@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::ActivateUserResponse
  *
- * \brief The ActivateUserResponse class encapsulates WorkDocs ActivateUser responses.
+ * \brief The ActivateUserResponse class provides an interace for WorkDocs ActivateUser responses.
  *
  * \ingroup WorkDocs
  *

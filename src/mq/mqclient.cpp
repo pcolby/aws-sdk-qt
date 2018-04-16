@@ -71,7 +71,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::MqClient
  *
- * \brief The MqClient class provides access the AmazonMQ service.
+ * \brief The MqClient class provides access to the AmazonMQ service.
  *
  * \ingroup MQ
  *

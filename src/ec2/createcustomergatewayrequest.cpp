@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateCustomerGatewayRequest
  *
- * \brief The CreateCustomerGatewayRequest class encapsulates EC2 CreateCustomerGateway requests.
+ * \brief The CreateCustomerGatewayRequest class provides an interface for EC2 CreateCustomerGateway requests.
  *
  * \ingroup EC2
  *

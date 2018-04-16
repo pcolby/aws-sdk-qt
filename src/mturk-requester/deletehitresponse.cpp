@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::DeleteHITResponse
  *
- * \brief The DeleteHITResponse class encapsulates MTurk DeleteHIT responses.
+ * \brief The DeleteHITResponse class provides an interace for MTurk DeleteHIT responses.
  *
  * \ingroup MTurk
  *

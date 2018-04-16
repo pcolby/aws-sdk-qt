@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::RevokeGrantRequest
  *
- * \brief The RevokeGrantRequest class encapsulates KMS RevokeGrant requests.
+ * \brief The RevokeGrantRequest class provides an interface for KMS RevokeGrant requests.
  *
  * \ingroup KMS
  *

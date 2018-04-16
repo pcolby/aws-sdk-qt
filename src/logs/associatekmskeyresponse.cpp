@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::AssociateKmsKeyResponse
  *
- * \brief The AssociateKmsKeyResponse class encapsulates CloudWatchLogs AssociateKmsKey responses.
+ * \brief The AssociateKmsKeyResponse class provides an interace for CloudWatchLogs AssociateKmsKey responses.
  *
  * \ingroup CloudWatchLogs
  *

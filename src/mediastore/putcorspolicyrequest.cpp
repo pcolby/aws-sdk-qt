@@ -28,7 +28,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::PutCorsPolicyRequest
  *
- * \brief The PutCorsPolicyRequest class encapsulates MediaStore PutCorsPolicy requests.
+ * \brief The PutCorsPolicyRequest class provides an interface for MediaStore PutCorsPolicy requests.
  *
  * \ingroup MediaStore
  *

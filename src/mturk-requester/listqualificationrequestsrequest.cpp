@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListQualificationRequestsRequest
  *
- * \brief The ListQualificationRequestsRequest class encapsulates MTurk ListQualificationRequests requests.
+ * \brief The ListQualificationRequestsRequest class provides an interface for MTurk ListQualificationRequests requests.
  *
  * \ingroup MTurk
  *

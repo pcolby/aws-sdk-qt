@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DeleteDBSnapshotRequest
  *
- * \brief The DeleteDBSnapshotRequest class encapsulates RDS DeleteDBSnapshot requests.
+ * \brief The DeleteDBSnapshotRequest class provides an interface for RDS DeleteDBSnapshot requests.
  *
  * \ingroup RDS
  *

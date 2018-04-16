@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeTagsRequest
  *
- * \brief The DescribeTagsRequest class encapsulates AutoScaling DescribeTags requests.
+ * \brief The DescribeTagsRequest class provides an interface for AutoScaling DescribeTags requests.
  *
  * \ingroup AutoScaling
  *

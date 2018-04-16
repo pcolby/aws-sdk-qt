@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::DeleteHapgRequest
  *
- * \brief The DeleteHapgRequest class encapsulates CloudHSM DeleteHapg requests.
+ * \brief The DeleteHapgRequest class provides an interface for CloudHSM DeleteHapg requests.
  *
  * \ingroup CloudHSM
  *

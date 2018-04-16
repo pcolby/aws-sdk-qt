@@ -61,7 +61,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::FmsClient
  *
- * \brief The FmsClient class provides access the Firewall Management Service (FMS) service.
+ * \brief The FmsClient class provides access to the Firewall Management Service (FMS) service.
  *
  * \ingroup FMS
  *

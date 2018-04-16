@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::PollForThirdPartyJobsRequest
  *
- * \brief The PollForThirdPartyJobsRequest class encapsulates CodePipeline PollForThirdPartyJobs requests.
+ * \brief The PollForThirdPartyJobsRequest class provides an interface for CodePipeline PollForThirdPartyJobs requests.
  *
  * \ingroup CodePipeline
  *

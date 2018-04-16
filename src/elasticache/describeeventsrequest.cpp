@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DescribeEventsRequest
  *
- * \brief The DescribeEventsRequest class encapsulates ElastiCache DescribeEvents requests.
+ * \brief The DescribeEventsRequest class provides an interface for ElastiCache DescribeEvents requests.
  *
  * \ingroup ElastiCache
  *

@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DeleteParameterGroupRequest
  *
- * \brief The DeleteParameterGroupRequest class encapsulates DAX DeleteParameterGroup requests.
+ * \brief The DeleteParameterGroupRequest class provides an interface for DAX DeleteParameterGroup requests.
  *
  * \ingroup DAX
  *

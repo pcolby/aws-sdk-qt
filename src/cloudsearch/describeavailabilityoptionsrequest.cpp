@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeAvailabilityOptionsRequest
  *
- * \brief The DescribeAvailabilityOptionsRequest class encapsulates CloudSearch DescribeAvailabilityOptions requests.
+ * \brief The DescribeAvailabilityOptionsRequest class provides an interface for CloudSearch DescribeAvailabilityOptions requests.
  *
  * \ingroup CloudSearch
  *

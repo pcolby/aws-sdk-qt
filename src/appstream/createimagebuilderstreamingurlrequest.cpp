@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::CreateImageBuilderStreamingURLRequest
  *
- * \brief The CreateImageBuilderStreamingURLRequest class encapsulates AppStream CreateImageBuilderStreamingURL requests.
+ * \brief The CreateImageBuilderStreamingURLRequest class provides an interface for AppStream CreateImageBuilderStreamingURL requests.
  *
  * \ingroup AppStream
  *

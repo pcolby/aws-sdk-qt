@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::UpdateGlobalTableRequest
  *
- * \brief The UpdateGlobalTableRequest class encapsulates DynamoDB UpdateGlobalTable requests.
+ * \brief The UpdateGlobalTableRequest class provides an interface for DynamoDB UpdateGlobalTable requests.
  *
  * \ingroup DynamoDB
  *

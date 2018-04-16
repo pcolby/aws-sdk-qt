@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::UpdateBandwidthRateLimitResponse
  *
- * \brief The UpdateBandwidthRateLimitResponse class encapsulates StorageGateway UpdateBandwidthRateLimit responses.
+ * \brief The UpdateBandwidthRateLimitResponse class provides an interace for StorageGateway UpdateBandwidthRateLimit responses.
  *
  * \ingroup StorageGateway
  *

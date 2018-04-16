@@ -28,7 +28,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::BatchGetQueryExecutionRequest
  *
- * \brief The BatchGetQueryExecutionRequest class encapsulates Athena BatchGetQueryExecution requests.
+ * \brief The BatchGetQueryExecutionRequest class provides an interface for Athena BatchGetQueryExecution requests.
  *
  * \ingroup Athena
  *

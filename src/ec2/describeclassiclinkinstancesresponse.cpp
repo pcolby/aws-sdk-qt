@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeClassicLinkInstancesResponse
  *
- * \brief The DescribeClassicLinkInstancesResponse class encapsulates EC2 DescribeClassicLinkInstances responses.
+ * \brief The DescribeClassicLinkInstancesResponse class provides an interace for EC2 DescribeClassicLinkInstances responses.
  *
  * \ingroup EC2
  *

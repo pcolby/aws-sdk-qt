@@ -30,7 +30,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::PutPermissionResponse
  *
- * \brief The PutPermissionResponse class encapsulates CloudWatchEvents PutPermission responses.
+ * \brief The PutPermissionResponse class provides an interace for CloudWatchEvents PutPermission responses.
  *
  * \ingroup CloudWatchEvents
  *

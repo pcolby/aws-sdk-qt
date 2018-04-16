@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::UntagResourceRequest
  *
- * \brief The UntagResourceRequest class encapsulates KMS UntagResource requests.
+ * \brief The UntagResourceRequest class provides an interface for KMS UntagResource requests.
  *
  * \ingroup KMS
  *

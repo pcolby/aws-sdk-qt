@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::DeleteBranchRequest
  *
- * \brief The DeleteBranchRequest class encapsulates CodeCommit DeleteBranch requests.
+ * \brief The DeleteBranchRequest class provides an interface for CodeCommit DeleteBranch requests.
  *
  * \ingroup CodeCommit
  *

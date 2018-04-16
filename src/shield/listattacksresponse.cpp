@@ -30,7 +30,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::ListAttacksResponse
  *
- * \brief The ListAttacksResponse class encapsulates Shield ListAttacks responses.
+ * \brief The ListAttacksResponse class provides an interace for Shield ListAttacks responses.
  *
  * \ingroup Shield
  *

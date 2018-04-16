@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeTargetGroupAttributesRequest
  *
- * \brief The DescribeTargetGroupAttributesRequest class encapsulates ElasticLoadBalancingv2 DescribeTargetGroupAttributes requests.
+ * \brief The DescribeTargetGroupAttributesRequest class provides an interface for ElasticLoadBalancingv2 DescribeTargetGroupAttributes requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

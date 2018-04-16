@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::StartMaintenanceRequest
  *
- * \brief The StartMaintenanceRequest class encapsulates OpsWorksCM StartMaintenance requests.
+ * \brief The StartMaintenanceRequest class provides an interface for OpsWorksCM StartMaintenance requests.
  *
  * \ingroup OpsWorksCM
  *

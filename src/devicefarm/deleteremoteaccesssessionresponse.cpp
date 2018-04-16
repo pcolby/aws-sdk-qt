@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteRemoteAccessSessionResponse
  *
- * \brief The DeleteRemoteAccessSessionResponse class encapsulates DeviceFarm DeleteRemoteAccessSession responses.
+ * \brief The DeleteRemoteAccessSessionResponse class provides an interace for DeviceFarm DeleteRemoteAccessSession responses.
  *
  * \ingroup DeviceFarm
  *

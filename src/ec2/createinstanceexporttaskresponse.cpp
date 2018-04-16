@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateInstanceExportTaskResponse
  *
- * \brief The CreateInstanceExportTaskResponse class encapsulates EC2 CreateInstanceExportTask responses.
+ * \brief The CreateInstanceExportTaskResponse class provides an interace for EC2 CreateInstanceExportTask responses.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetOfferingStatusRequest
  *
- * \brief The GetOfferingStatusRequest class encapsulates DeviceFarm GetOfferingStatus requests.
+ * \brief The GetOfferingStatusRequest class provides an interface for DeviceFarm GetOfferingStatus requests.
  *
  * \ingroup DeviceFarm
  *

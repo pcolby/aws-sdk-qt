@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeInstanceAttributeResponse
  *
- * \brief The DescribeInstanceAttributeResponse class encapsulates EC2 DescribeInstanceAttribute responses.
+ * \brief The DescribeInstanceAttributeResponse class provides an interace for EC2 DescribeInstanceAttribute responses.
  *
  * \ingroup EC2
  *

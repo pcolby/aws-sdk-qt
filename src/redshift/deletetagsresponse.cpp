@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteTagsResponse
  *
- * \brief The DeleteTagsResponse class encapsulates Redshift DeleteTags responses.
+ * \brief The DeleteTagsResponse class provides an interace for Redshift DeleteTags responses.
  *
  * \ingroup Redshift
  *

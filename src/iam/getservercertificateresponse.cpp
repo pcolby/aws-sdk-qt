@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetServerCertificateResponse
  *
- * \brief The GetServerCertificateResponse class encapsulates IAM GetServerCertificate responses.
+ * \brief The GetServerCertificateResponse class provides an interace for IAM GetServerCertificate responses.
  *
  * \ingroup IAM
  *

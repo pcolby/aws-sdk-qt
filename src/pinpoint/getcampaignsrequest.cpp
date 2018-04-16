@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetCampaignsRequest
  *
- * \brief The GetCampaignsRequest class encapsulates Pinpoint GetCampaigns requests.
+ * \brief The GetCampaignsRequest class provides an interface for Pinpoint GetCampaigns requests.
  *
  * \ingroup Pinpoint
  *

@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::StopAssessmentRunRequest
  *
- * \brief The StopAssessmentRunRequest class encapsulates Inspector StopAssessmentRun requests.
+ * \brief The StopAssessmentRunRequest class provides an interface for Inspector StopAssessmentRun requests.
  *
  * \ingroup Inspector
  *

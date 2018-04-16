@@ -75,7 +75,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::SfnClient
  *
- * \brief The SfnClient class provides access the AWS Step Functions ( SFN) service.
+ * \brief The SfnClient class provides access to the AWS Step Functions ( SFN) service.
  *
  * \ingroup SFN
  *

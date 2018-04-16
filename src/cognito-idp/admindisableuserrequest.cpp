@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminDisableUserRequest
  *
- * \brief The AdminDisableUserRequest class encapsulates CognitoIdentityProvider AdminDisableUser requests.
+ * \brief The AdminDisableUserRequest class provides an interface for CognitoIdentityProvider AdminDisableUser requests.
  *
  * \ingroup CognitoIdentityProvider
  *

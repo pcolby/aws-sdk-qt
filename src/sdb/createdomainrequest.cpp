@@ -28,7 +28,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::CreateDomainRequest
  *
- * \brief The CreateDomainRequest class encapsulates SimpleDB CreateDomain requests.
+ * \brief The CreateDomainRequest class provides an interface for SimpleDB CreateDomain requests.
  *
  * \ingroup SimpleDB
  *

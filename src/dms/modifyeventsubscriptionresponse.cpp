@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::ModifyEventSubscriptionResponse
  *
- * \brief The ModifyEventSubscriptionResponse class encapsulates DatabaseMigrationService ModifyEventSubscription responses.
+ * \brief The ModifyEventSubscriptionResponse class provides an interace for DatabaseMigrationService ModifyEventSubscription responses.
  *
  * \ingroup DatabaseMigrationService
  *

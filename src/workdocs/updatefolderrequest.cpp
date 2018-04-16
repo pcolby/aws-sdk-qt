@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::UpdateFolderRequest
  *
- * \brief The UpdateFolderRequest class encapsulates WorkDocs UpdateFolder requests.
+ * \brief The UpdateFolderRequest class provides an interface for WorkDocs UpdateFolder requests.
  *
  * \ingroup WorkDocs
  *

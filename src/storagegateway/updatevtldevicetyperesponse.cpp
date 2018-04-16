@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::UpdateVTLDeviceTypeResponse
  *
- * \brief The UpdateVTLDeviceTypeResponse class encapsulates StorageGateway UpdateVTLDeviceType responses.
+ * \brief The UpdateVTLDeviceTypeResponse class provides an interace for StorageGateway UpdateVTLDeviceType responses.
  *
  * \ingroup StorageGateway
  *

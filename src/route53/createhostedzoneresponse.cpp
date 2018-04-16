@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::CreateHostedZoneResponse
  *
- * \brief The CreateHostedZoneResponse class encapsulates Route53 CreateHostedZone responses.
+ * \brief The CreateHostedZoneResponse class provides an interace for Route53 CreateHostedZone responses.
  *
  * \ingroup Route53
  *

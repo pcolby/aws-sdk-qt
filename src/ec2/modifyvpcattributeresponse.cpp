@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyVpcAttributeResponse
  *
- * \brief The ModifyVpcAttributeResponse class encapsulates EC2 ModifyVpcAttribute responses.
+ * \brief The ModifyVpcAttributeResponse class provides an interace for EC2 ModifyVpcAttribute responses.
  *
  * \ingroup EC2
  *

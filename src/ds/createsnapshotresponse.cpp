@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateSnapshotResponse
  *
- * \brief The CreateSnapshotResponse class encapsulates DirectoryService CreateSnapshot responses.
+ * \brief The CreateSnapshotResponse class provides an interace for DirectoryService CreateSnapshot responses.
  *
  * \ingroup DirectoryService
  *

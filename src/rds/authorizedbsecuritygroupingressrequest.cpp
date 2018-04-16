@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::AuthorizeDBSecurityGroupIngressRequest
  *
- * \brief The AuthorizeDBSecurityGroupIngressRequest class encapsulates RDS AuthorizeDBSecurityGroupIngress requests.
+ * \brief The AuthorizeDBSecurityGroupIngressRequest class provides an interface for RDS AuthorizeDBSecurityGroupIngress requests.
  *
  * \ingroup RDS
  *

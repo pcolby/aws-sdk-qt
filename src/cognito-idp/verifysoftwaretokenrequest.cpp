@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::VerifySoftwareTokenRequest
  *
- * \brief The VerifySoftwareTokenRequest class encapsulates CognitoIdentityProvider VerifySoftwareToken requests.
+ * \brief The VerifySoftwareTokenRequest class provides an interface for CognitoIdentityProvider VerifySoftwareToken requests.
  *
  * \ingroup CognitoIdentityProvider
  *

@@ -28,7 +28,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::GetFederationTokenRequest
  *
- * \brief The GetFederationTokenRequest class encapsulates STS GetFederationToken requests.
+ * \brief The GetFederationTokenRequest class provides an interface for STS GetFederationToken requests.
  *
  * \ingroup STS
  *

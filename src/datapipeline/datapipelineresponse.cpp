@@ -29,7 +29,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::DataPipelineResponse
  *
- * \brief The DataPipelineResponse class is the base class for all DataPipeline responses.
+ * \brief The DataPipelineResponse class provides an interface for DataPipeline responses.
  *
  * \ingroup DataPipeline
  */

@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::UpdateUserProfileRequest
  *
- * \brief The UpdateUserProfileRequest class encapsulates CodeStar UpdateUserProfile requests.
+ * \brief The UpdateUserProfileRequest class provides an interface for CodeStar UpdateUserProfile requests.
  *
  * \ingroup CodeStar
  *

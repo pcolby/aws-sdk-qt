@@ -30,7 +30,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::GetPolicyResponse
  *
- * \brief The GetPolicyResponse class encapsulates FMS GetPolicy responses.
+ * \brief The GetPolicyResponse class provides an interace for FMS GetPolicy responses.
  *
  * \ingroup FMS
  *

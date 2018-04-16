@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::UpdateDeviceResponse
  *
- * \brief The UpdateDeviceResponse class encapsulates AlexaForBusiness UpdateDevice responses.
+ * \brief The UpdateDeviceResponse class provides an interace for AlexaForBusiness UpdateDevice responses.
  *
  * \ingroup AlexaForBusiness
  *

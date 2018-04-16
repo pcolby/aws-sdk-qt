@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::ListWebACLsRequest
  *
- * \brief The ListWebACLsRequest class encapsulates WAFRegional ListWebACLs requests.
+ * \brief The ListWebACLsRequest class provides an interface for WAFRegional ListWebACLs requests.
  *
  * \ingroup WAFRegional
  *

@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::CreateReusableDelegationSetResponse
  *
- * \brief The CreateReusableDelegationSetResponse class encapsulates Route53 CreateReusableDelegationSet responses.
+ * \brief The CreateReusableDelegationSetResponse class provides an interace for Route53 CreateReusableDelegationSet responses.
  *
  * \ingroup Route53
  *

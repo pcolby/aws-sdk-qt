@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeOptionGroupOptionsRequest
  *
- * \brief The DescribeOptionGroupOptionsRequest class encapsulates RDS DescribeOptionGroupOptions requests.
+ * \brief The DescribeOptionGroupOptionsRequest class provides an interface for RDS DescribeOptionGroupOptions requests.
  *
  * \ingroup RDS
  *

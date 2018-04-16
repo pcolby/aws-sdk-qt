@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CopyDBSnapshotRequest
  *
- * \brief The CopyDBSnapshotRequest class encapsulates RDS CopyDBSnapshot requests.
+ * \brief The CopyDBSnapshotRequest class provides an interface for RDS CopyDBSnapshot requests.
  *
  * \ingroup RDS
  *

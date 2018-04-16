@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetClientCertificateRequest
  *
- * \brief The GetClientCertificateRequest class encapsulates APIGateway GetClientCertificate requests.
+ * \brief The GetClientCertificateRequest class provides an interface for APIGateway GetClientCertificate requests.
  *
  * \ingroup APIGateway
  *

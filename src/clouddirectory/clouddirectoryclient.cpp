@@ -163,7 +163,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::CloudDirectoryClient
  *
- * \brief The CloudDirectoryClient class provides access the Amazon CloudDirectory service.
+ * \brief The CloudDirectoryClient class provides access to the Amazon CloudDirectory service.
  *
  * \ingroup CloudDirectory
  *

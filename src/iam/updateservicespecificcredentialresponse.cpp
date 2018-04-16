@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateServiceSpecificCredentialResponse
  *
- * \brief The UpdateServiceSpecificCredentialResponse class encapsulates IAM UpdateServiceSpecificCredential responses.
+ * \brief The UpdateServiceSpecificCredentialResponse class provides an interace for IAM UpdateServiceSpecificCredential responses.
  *
  * \ingroup IAM
  *

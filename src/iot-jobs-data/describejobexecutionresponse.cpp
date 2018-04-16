@@ -30,7 +30,7 @@ namespace IoTJobsDataPlane {
 /*!
  * \class QtAws::IoTJobsDataPlane::DescribeJobExecutionResponse
  *
- * \brief The DescribeJobExecutionResponse class encapsulates IoTJobsDataPlane DescribeJobExecution responses.
+ * \brief The DescribeJobExecutionResponse class provides an interace for IoTJobsDataPlane DescribeJobExecution responses.
  *
  * \ingroup IoTJobsDataPlane
  *

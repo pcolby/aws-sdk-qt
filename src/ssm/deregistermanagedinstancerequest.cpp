@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeregisterManagedInstanceRequest
  *
- * \brief The DeregisterManagedInstanceRequest class encapsulates SSM DeregisterManagedInstance requests.
+ * \brief The DeregisterManagedInstanceRequest class provides an interface for SSM DeregisterManagedInstance requests.
  *
  * \ingroup SSM
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeAddressesResponse
  *
- * \brief The DescribeAddressesResponse class encapsulates EC2 DescribeAddresses responses.
+ * \brief The DescribeAddressesResponse class provides an interace for EC2 DescribeAddresses responses.
  *
  * \ingroup EC2
  *

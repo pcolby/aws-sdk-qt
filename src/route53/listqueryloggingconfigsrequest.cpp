@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListQueryLoggingConfigsRequest
  *
- * \brief The ListQueryLoggingConfigsRequest class encapsulates Route53 ListQueryLoggingConfigs requests.
+ * \brief The ListQueryLoggingConfigsRequest class provides an interface for Route53 ListQueryLoggingConfigs requests.
  *
  * \ingroup Route53
  *

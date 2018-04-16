@@ -30,7 +30,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::SelectResponse
  *
- * \brief The SelectResponse class encapsulates SimpleDB Select responses.
+ * \brief The SelectResponse class provides an interace for SimpleDB Select responses.
  *
  * \ingroup SimpleDB
  *

@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::GetDifferencesRequest
  *
- * \brief The GetDifferencesRequest class encapsulates CodeCommit GetDifferences requests.
+ * \brief The GetDifferencesRequest class provides an interface for CodeCommit GetDifferences requests.
  *
  * \ingroup CodeCommit
  *

@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::CreateSampleFindingsRequest
  *
- * \brief The CreateSampleFindingsRequest class encapsulates GuardDuty CreateSampleFindings requests.
+ * \brief The CreateSampleFindingsRequest class provides an interface for GuardDuty CreateSampleFindings requests.
  *
  * \ingroup GuardDuty
  *

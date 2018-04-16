@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateRestApiRequest
  *
- * \brief The UpdateRestApiRequest class encapsulates APIGateway UpdateRestApi requests.
+ * \brief The UpdateRestApiRequest class provides an interface for APIGateway UpdateRestApi requests.
  *
  * \ingroup APIGateway
  *

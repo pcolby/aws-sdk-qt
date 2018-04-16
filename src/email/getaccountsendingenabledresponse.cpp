@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetAccountSendingEnabledResponse
  *
- * \brief The GetAccountSendingEnabledResponse class encapsulates SES GetAccountSendingEnabled responses.
+ * \brief The GetAccountSendingEnabledResponse class provides an interace for SES GetAccountSendingEnabled responses.
  *
  * \ingroup SES
  *

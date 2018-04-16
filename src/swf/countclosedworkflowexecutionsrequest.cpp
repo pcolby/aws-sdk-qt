@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::CountClosedWorkflowExecutionsRequest
  *
- * \brief The CountClosedWorkflowExecutionsRequest class encapsulates SWF CountClosedWorkflowExecutions requests.
+ * \brief The CountClosedWorkflowExecutionsRequest class provides an interface for SWF CountClosedWorkflowExecutions requests.
  *
  * \ingroup SWF
  *

@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::TestMetricFilterResponse
  *
- * \brief The TestMetricFilterResponse class encapsulates CloudWatchLogs TestMetricFilter responses.
+ * \brief The TestMetricFilterResponse class provides an interace for CloudWatchLogs TestMetricFilter responses.
  *
  * \ingroup CloudWatchLogs
  *

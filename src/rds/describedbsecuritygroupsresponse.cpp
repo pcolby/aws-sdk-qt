@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeDBSecurityGroupsResponse
  *
- * \brief The DescribeDBSecurityGroupsResponse class encapsulates RDS DescribeDBSecurityGroups responses.
+ * \brief The DescribeDBSecurityGroupsResponse class provides an interace for RDS DescribeDBSecurityGroups responses.
  *
  * \ingroup RDS
  *

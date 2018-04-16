@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::CreatePlatformApplicationResponse
  *
- * \brief The CreatePlatformApplicationResponse class encapsulates SNS CreatePlatformApplication responses.
+ * \brief The CreatePlatformApplicationResponse class provides an interace for SNS CreatePlatformApplication responses.
  *
  * \ingroup SNS
  *

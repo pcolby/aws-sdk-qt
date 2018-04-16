@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeRoleAliasRequest
  *
- * \brief The DescribeRoleAliasRequest class encapsulates IoT DescribeRoleAlias requests.
+ * \brief The DescribeRoleAliasRequest class provides an interface for IoT DescribeRoleAlias requests.
  *
  * \ingroup IoT
  *

@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetCatalogImportStatusRequest
  *
- * \brief The GetCatalogImportStatusRequest class encapsulates Glue GetCatalogImportStatus requests.
+ * \brief The GetCatalogImportStatusRequest class provides an interface for Glue GetCatalogImportStatus requests.
  *
  * \ingroup Glue
  *

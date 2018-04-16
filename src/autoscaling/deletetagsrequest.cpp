@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DeleteTagsRequest
  *
- * \brief The DeleteTagsRequest class encapsulates AutoScaling DeleteTags requests.
+ * \brief The DeleteTagsRequest class provides an interface for AutoScaling DeleteTags requests.
  *
  * \ingroup AutoScaling
  *

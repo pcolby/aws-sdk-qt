@@ -26,7 +26,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::PollyRequest
  *
- * \brief The PollyRequest class is the base class for all Polly requests.
+ * \brief The PollyRequest class provides an interface for Polly requests.
  *
  * \ingroup Polly
  */

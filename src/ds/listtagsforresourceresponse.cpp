@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::ListTagsForResourceResponse
  *
- * \brief The ListTagsForResourceResponse class encapsulates DirectoryService ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class provides an interace for DirectoryService ListTagsForResource responses.
  *
  * \ingroup DirectoryService
  *

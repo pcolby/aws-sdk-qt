@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::SignUpResponse
  *
- * \brief The SignUpResponse class encapsulates CognitoIdentityProvider SignUp responses.
+ * \brief The SignUpResponse class provides an interace for CognitoIdentityProvider SignUp responses.
  *
  * \ingroup CognitoIdentityProvider
  *

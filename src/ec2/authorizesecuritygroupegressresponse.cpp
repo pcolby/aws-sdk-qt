@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AuthorizeSecurityGroupEgressResponse
  *
- * \brief The AuthorizeSecurityGroupEgressResponse class encapsulates EC2 AuthorizeSecurityGroupEgress responses.
+ * \brief The AuthorizeSecurityGroupEgressResponse class provides an interace for EC2 AuthorizeSecurityGroupEgress responses.
  *
  * \ingroup EC2
  *

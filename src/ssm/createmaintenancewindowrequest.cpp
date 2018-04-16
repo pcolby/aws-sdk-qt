@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CreateMaintenanceWindowRequest
  *
- * \brief The CreateMaintenanceWindowRequest class encapsulates SSM CreateMaintenanceWindow requests.
+ * \brief The CreateMaintenanceWindowRequest class provides an interface for SSM CreateMaintenanceWindow requests.
  *
  * \ingroup SSM
  *

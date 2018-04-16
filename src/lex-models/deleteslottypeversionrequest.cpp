@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::DeleteSlotTypeVersionRequest
  *
- * \brief The DeleteSlotTypeVersionRequest class encapsulates LexModelBuildingService DeleteSlotTypeVersion requests.
+ * \brief The DeleteSlotTypeVersionRequest class provides an interface for LexModelBuildingService DeleteSlotTypeVersion requests.
  *
  * \ingroup LexModelBuildingService
  *

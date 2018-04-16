@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::GetInstanceAccessRequest
  *
- * \brief The GetInstanceAccessRequest class encapsulates GameLift GetInstanceAccess requests.
+ * \brief The GetInstanceAccessRequest class provides an interface for GameLift GetInstanceAccess requests.
  *
  * \ingroup GameLift
  *

@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ConfirmForgotPasswordRequest
  *
- * \brief The ConfirmForgotPasswordRequest class encapsulates CognitoIdentityProvider ConfirmForgotPassword requests.
+ * \brief The ConfirmForgotPasswordRequest class provides an interface for CognitoIdentityProvider ConfirmForgotPassword requests.
  *
  * \ingroup CognitoIdentityProvider
  *

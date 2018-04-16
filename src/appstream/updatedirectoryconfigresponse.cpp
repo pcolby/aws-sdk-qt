@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::UpdateDirectoryConfigResponse
  *
- * \brief The UpdateDirectoryConfigResponse class encapsulates AppStream UpdateDirectoryConfig responses.
+ * \brief The UpdateDirectoryConfigResponse class provides an interace for AppStream UpdateDirectoryConfig responses.
  *
  * \ingroup AppStream
  *

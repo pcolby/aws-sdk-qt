@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::CreateTagsRequest
  *
- * \brief The CreateTagsRequest class encapsulates ApplicationDiscoveryService CreateTags requests.
+ * \brief The CreateTagsRequest class provides an interface for ApplicationDiscoveryService CreateTags requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

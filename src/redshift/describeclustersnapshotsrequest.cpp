@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeClusterSnapshotsRequest
  *
- * \brief The DescribeClusterSnapshotsRequest class encapsulates Redshift DescribeClusterSnapshots requests.
+ * \brief The DescribeClusterSnapshotsRequest class provides an interface for Redshift DescribeClusterSnapshots requests.
  *
  * \ingroup Redshift
  *

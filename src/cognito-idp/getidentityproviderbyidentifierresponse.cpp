@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::GetIdentityProviderByIdentifierResponse
  *
- * \brief The GetIdentityProviderByIdentifierResponse class encapsulates CognitoIdentityProvider GetIdentityProviderByIdentifier responses.
+ * \brief The GetIdentityProviderByIdentifierResponse class provides an interace for CognitoIdentityProvider GetIdentityProviderByIdentifier responses.
  *
  * \ingroup CognitoIdentityProvider
  *

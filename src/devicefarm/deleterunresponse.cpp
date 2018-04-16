@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteRunResponse
  *
- * \brief The DeleteRunResponse class encapsulates DeviceFarm DeleteRun responses.
+ * \brief The DeleteRunResponse class provides an interace for DeviceFarm DeleteRun responses.
  *
  * \ingroup DeviceFarm
  *

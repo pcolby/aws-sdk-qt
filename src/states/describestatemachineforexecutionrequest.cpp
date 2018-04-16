@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::DescribeStateMachineForExecutionRequest
  *
- * \brief The DescribeStateMachineForExecutionRequest class encapsulates SFN DescribeStateMachineForExecution requests.
+ * \brief The DescribeStateMachineForExecutionRequest class provides an interface for SFN DescribeStateMachineForExecution requests.
  *
  * \ingroup SFN
  *

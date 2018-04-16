@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::StartGatewayRequest
  *
- * \brief The StartGatewayRequest class encapsulates StorageGateway StartGateway requests.
+ * \brief The StartGatewayRequest class provides an interface for StorageGateway StartGateway requests.
  *
  * \ingroup StorageGateway
  *

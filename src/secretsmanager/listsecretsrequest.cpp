@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::ListSecretsRequest
  *
- * \brief The ListSecretsRequest class encapsulates SecretsManager ListSecrets requests.
+ * \brief The ListSecretsRequest class provides an interface for SecretsManager ListSecrets requests.
  *
  * \ingroup SecretsManager
  *

@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetKeyPairsRequest
  *
- * \brief The GetKeyPairsRequest class encapsulates Lightsail GetKeyPairs requests.
+ * \brief The GetKeyPairsRequest class provides an interface for Lightsail GetKeyPairs requests.
  *
  * \ingroup Lightsail
  *

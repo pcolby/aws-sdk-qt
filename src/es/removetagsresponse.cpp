@@ -30,7 +30,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::RemoveTagsResponse
  *
- * \brief The RemoveTagsResponse class encapsulates ElasticsearchService RemoveTags responses.
+ * \brief The RemoveTagsResponse class provides an interace for ElasticsearchService RemoveTags responses.
  *
  * \ingroup ElasticsearchService
  *

@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListLaunchPathsResponse
  *
- * \brief The ListLaunchPathsResponse class encapsulates ServiceCatalog ListLaunchPaths responses.
+ * \brief The ListLaunchPathsResponse class provides an interace for ServiceCatalog ListLaunchPaths responses.
  *
  * \ingroup ServiceCatalog
  *

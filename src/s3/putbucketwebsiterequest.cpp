@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketWebsiteRequest
  *
- * \brief The PutBucketWebsiteRequest class encapsulates S3 PutBucketWebsite requests.
+ * \brief The PutBucketWebsiteRequest class provides an interface for S3 PutBucketWebsite requests.
  *
  * \ingroup S3
  *

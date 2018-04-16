@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DeleteDBClusterSnapshotResponse
  *
- * \brief The DeleteDBClusterSnapshotResponse class encapsulates RDS DeleteDBClusterSnapshot responses.
+ * \brief The DeleteDBClusterSnapshotResponse class provides an interace for RDS DeleteDBClusterSnapshot responses.
  *
  * \ingroup RDS
  *

@@ -26,7 +26,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::WorkDocsRequest
  *
- * \brief The WorkDocsRequest class is the base class for all WorkDocs requests.
+ * \brief The WorkDocsRequest class provides an interface for WorkDocs requests.
  *
  * \ingroup WorkDocs
  */

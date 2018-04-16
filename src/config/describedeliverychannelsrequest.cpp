@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DescribeDeliveryChannelsRequest
  *
- * \brief The DescribeDeliveryChannelsRequest class encapsulates ConfigService DescribeDeliveryChannels requests.
+ * \brief The DescribeDeliveryChannelsRequest class provides an interface for ConfigService DescribeDeliveryChannels requests.
  *
  * \ingroup ConfigService
  *

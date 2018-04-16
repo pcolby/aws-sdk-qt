@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeEffectiveInstanceAssociationsRequest
  *
- * \brief The DescribeEffectiveInstanceAssociationsRequest class encapsulates SSM DescribeEffectiveInstanceAssociations requests.
+ * \brief The DescribeEffectiveInstanceAssociationsRequest class provides an interface for SSM DescribeEffectiveInstanceAssociations requests.
  *
  * \ingroup SSM
  *

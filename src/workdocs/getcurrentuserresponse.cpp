@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::GetCurrentUserResponse
  *
- * \brief The GetCurrentUserResponse class encapsulates WorkDocs GetCurrentUser responses.
+ * \brief The GetCurrentUserResponse class provides an interace for WorkDocs GetCurrentUser responses.
  *
  * \ingroup WorkDocs
  *

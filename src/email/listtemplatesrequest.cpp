@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::ListTemplatesRequest
  *
- * \brief The ListTemplatesRequest class encapsulates SES ListTemplates requests.
+ * \brief The ListTemplatesRequest class provides an interface for SES ListTemplates requests.
  *
  * \ingroup SES
  *

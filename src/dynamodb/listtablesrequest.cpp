@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::ListTablesRequest
  *
- * \brief The ListTablesRequest class encapsulates DynamoDB ListTables requests.
+ * \brief The ListTablesRequest class provides an interface for DynamoDB ListTables requests.
  *
  * \ingroup DynamoDB
  *

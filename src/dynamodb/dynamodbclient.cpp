@@ -99,7 +99,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DynamoDBClient
  *
- * \brief The DynamoDBClient class provides access the Amazon DynamoDB service.
+ * \brief The DynamoDBClient class provides access to the Amazon DynamoDB service.
  *
  * \ingroup DynamoDB
  *

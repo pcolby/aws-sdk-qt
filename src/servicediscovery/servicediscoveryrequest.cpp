@@ -26,7 +26,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::ServiceDiscoveryRequest
  *
- * \brief The ServiceDiscoveryRequest class is the base class for all ServiceDiscovery requests.
+ * \brief The ServiceDiscoveryRequest class provides an interface for ServiceDiscovery requests.
  *
  * \ingroup ServiceDiscovery
  */

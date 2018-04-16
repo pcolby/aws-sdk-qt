@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::CreateDiskRequest
  *
- * \brief The CreateDiskRequest class encapsulates Lightsail CreateDisk requests.
+ * \brief The CreateDiskRequest class provides an interface for Lightsail CreateDisk requests.
  *
  * \ingroup Lightsail
  *

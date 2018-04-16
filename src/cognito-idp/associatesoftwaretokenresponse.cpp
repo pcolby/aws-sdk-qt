@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AssociateSoftwareTokenResponse
  *
- * \brief The AssociateSoftwareTokenResponse class encapsulates CognitoIdentityProvider AssociateSoftwareToken responses.
+ * \brief The AssociateSoftwareTokenResponse class provides an interace for CognitoIdentityProvider AssociateSoftwareToken responses.
  *
  * \ingroup CognitoIdentityProvider
  *

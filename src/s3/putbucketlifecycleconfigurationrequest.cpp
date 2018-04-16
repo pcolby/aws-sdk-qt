@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketLifecycleConfigurationRequest
  *
- * \brief The PutBucketLifecycleConfigurationRequest class encapsulates S3 PutBucketLifecycleConfiguration requests.
+ * \brief The PutBucketLifecycleConfigurationRequest class provides an interface for S3 PutBucketLifecycleConfiguration requests.
  *
  * \ingroup S3
  *

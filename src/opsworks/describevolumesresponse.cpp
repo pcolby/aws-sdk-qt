@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeVolumesResponse
  *
- * \brief The DescribeVolumesResponse class encapsulates OpsWorks DescribeVolumes responses.
+ * \brief The DescribeVolumesResponse class provides an interace for OpsWorks DescribeVolumes responses.
  *
  * \ingroup OpsWorks
  *

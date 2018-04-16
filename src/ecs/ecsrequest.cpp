@@ -26,7 +26,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::ECSRequest
  *
- * \brief The ECSRequest class is the base class for all ECS requests.
+ * \brief The ECSRequest class provides an interface for ECS requests.
  *
  * \ingroup ECS
  */

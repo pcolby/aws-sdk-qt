@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListPolicyPrincipalsRequest
  *
- * \brief The ListPolicyPrincipalsRequest class encapsulates IoT ListPolicyPrincipals requests.
+ * \brief The ListPolicyPrincipalsRequest class provides an interface for IoT ListPolicyPrincipals requests.
  *
  * \ingroup IoT
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribePrefixListsRequest
  *
- * \brief The DescribePrefixListsRequest class encapsulates EC2 DescribePrefixLists requests.
+ * \brief The DescribePrefixListsRequest class provides an interface for EC2 DescribePrefixLists requests.
  *
  * \ingroup EC2
  *

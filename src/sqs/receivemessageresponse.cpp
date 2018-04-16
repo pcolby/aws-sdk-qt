@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::ReceiveMessageResponse
  *
- * \brief The ReceiveMessageResponse class encapsulates SQS ReceiveMessage responses.
+ * \brief The ReceiveMessageResponse class provides an interace for SQS ReceiveMessage responses.
  *
  * \ingroup SQS
  *

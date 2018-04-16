@@ -30,7 +30,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::DescribeUserProfileResponse
  *
- * \brief The DescribeUserProfileResponse class encapsulates CodeStar DescribeUserProfile responses.
+ * \brief The DescribeUserProfileResponse class provides an interace for CodeStar DescribeUserProfile responses.
  *
  * \ingroup CodeStar
  *

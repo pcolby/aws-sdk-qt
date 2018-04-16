@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::CreateDistributionWithTagsResponse
  *
- * \brief The CreateDistributionWithTagsResponse class encapsulates CloudFront CreateDistributionWithTags responses.
+ * \brief The CreateDistributionWithTagsResponse class provides an interace for CloudFront CreateDistributionWithTags responses.
  *
  * \ingroup CloudFront
  *

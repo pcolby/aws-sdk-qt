@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::CreateBackupRequest
  *
- * \brief The CreateBackupRequest class encapsulates DynamoDB CreateBackup requests.
+ * \brief The CreateBackupRequest class provides an interface for DynamoDB CreateBackup requests.
  *
  * \ingroup DynamoDB
  *

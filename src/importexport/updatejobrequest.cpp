@@ -28,7 +28,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::UpdateJobRequest
  *
- * \brief The UpdateJobRequest class encapsulates ImportExport UpdateJob requests.
+ * \brief The UpdateJobRequest class provides an interface for ImportExport UpdateJob requests.
  *
  * \ingroup ImportExport
  *

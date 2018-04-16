@@ -29,7 +29,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::SMSResponse
  *
- * \brief The SMSResponse class is the base class for all SMS responses.
+ * \brief The SMSResponse class provides an interface for SMS responses.
  *
  * \ingroup SMS
  */

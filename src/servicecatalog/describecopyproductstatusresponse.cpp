@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribeCopyProductStatusResponse
  *
- * \brief The DescribeCopyProductStatusResponse class encapsulates ServiceCatalog DescribeCopyProductStatus responses.
+ * \brief The DescribeCopyProductStatusResponse class provides an interace for ServiceCatalog DescribeCopyProductStatus responses.
  *
  * \ingroup ServiceCatalog
  *

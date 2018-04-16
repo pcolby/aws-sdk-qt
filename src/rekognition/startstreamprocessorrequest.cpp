@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::StartStreamProcessorRequest
  *
- * \brief The StartStreamProcessorRequest class encapsulates Rekognition StartStreamProcessor requests.
+ * \brief The StartStreamProcessorRequest class provides an interface for Rekognition StartStreamProcessor requests.
  *
  * \ingroup Rekognition
  *

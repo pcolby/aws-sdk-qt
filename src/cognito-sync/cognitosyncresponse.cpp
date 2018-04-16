@@ -29,7 +29,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::CognitoSyncResponse
  *
- * \brief The CognitoSyncResponse class is the base class for all CognitoSync responses.
+ * \brief The CognitoSyncResponse class provides an interface for CognitoSync responses.
  *
  * \ingroup CognitoSync
  */

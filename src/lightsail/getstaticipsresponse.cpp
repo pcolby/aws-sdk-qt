@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetStaticIpsResponse
  *
- * \brief The GetStaticIpsResponse class encapsulates Lightsail GetStaticIps responses.
+ * \brief The GetStaticIpsResponse class provides an interace for Lightsail GetStaticIps responses.
  *
  * \ingroup Lightsail
  *

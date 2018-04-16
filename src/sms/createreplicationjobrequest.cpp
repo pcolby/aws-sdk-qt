@@ -28,7 +28,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::CreateReplicationJobRequest
  *
- * \brief The CreateReplicationJobRequest class encapsulates SMS CreateReplicationJob requests.
+ * \brief The CreateReplicationJobRequest class provides an interface for SMS CreateReplicationJob requests.
  *
  * \ingroup SMS
  *

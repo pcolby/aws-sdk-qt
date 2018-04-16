@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GetMasterAccountResponse
  *
- * \brief The GetMasterAccountResponse class encapsulates GuardDuty GetMasterAccount responses.
+ * \brief The GetMasterAccountResponse class provides an interace for GuardDuty GetMasterAccount responses.
  *
  * \ingroup GuardDuty
  *

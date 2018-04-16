@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::UpdateTemplateResponse
  *
- * \brief The UpdateTemplateResponse class encapsulates SES UpdateTemplate responses.
+ * \brief The UpdateTemplateResponse class provides an interace for SES UpdateTemplate responses.
  *
  * \ingroup SES
  *

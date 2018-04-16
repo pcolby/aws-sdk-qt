@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DetachDiskRequest
  *
- * \brief The DetachDiskRequest class encapsulates Lightsail DetachDisk requests.
+ * \brief The DetachDiskRequest class provides an interface for Lightsail DetachDisk requests.
  *
  * \ingroup Lightsail
  *

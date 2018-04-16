@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DefineAnalysisSchemeRequest
  *
- * \brief The DefineAnalysisSchemeRequest class encapsulates CloudSearch DefineAnalysisScheme requests.
+ * \brief The DefineAnalysisSchemeRequest class provides an interface for CloudSearch DefineAnalysisScheme requests.
  *
  * \ingroup CloudSearch
  *

@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DisassociateWebACLResponse
  *
- * \brief The DisassociateWebACLResponse class encapsulates WAFRegional DisassociateWebACL responses.
+ * \brief The DisassociateWebACLResponse class provides an interace for WAFRegional DisassociateWebACL responses.
  *
  * \ingroup WAFRegional
  *

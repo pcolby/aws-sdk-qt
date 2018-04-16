@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::VerifyDomainIdentityRequest
  *
- * \brief The VerifyDomainIdentityRequest class encapsulates SES VerifyDomainIdentity requests.
+ * \brief The VerifyDomainIdentityRequest class provides an interface for SES VerifyDomainIdentity requests.
  *
  * \ingroup SES
  *

@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetCatalogImportStatusResponse
  *
- * \brief The GetCatalogImportStatusResponse class encapsulates Glue GetCatalogImportStatus responses.
+ * \brief The GetCatalogImportStatusResponse class provides an interace for Glue GetCatalogImportStatus responses.
  *
  * \ingroup Glue
  *

@@ -30,7 +30,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::DeleteProjectResponse
  *
- * \brief The DeleteProjectResponse class encapsulates Mobile DeleteProject responses.
+ * \brief The DeleteProjectResponse class provides an interace for Mobile DeleteProject responses.
  *
  * \ingroup Mobile
  *

@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteVerifiedEmailAddressRequest
  *
- * \brief The DeleteVerifiedEmailAddressRequest class encapsulates SES DeleteVerifiedEmailAddress requests.
+ * \brief The DeleteVerifiedEmailAddressRequest class provides an interface for SES DeleteVerifiedEmailAddress requests.
  *
  * \ingroup SES
  *

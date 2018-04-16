@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::UpdateAliasResponse
  *
- * \brief The UpdateAliasResponse class encapsulates GameLift UpdateAlias responses.
+ * \brief The UpdateAliasResponse class provides an interace for GameLift UpdateAlias responses.
  *
  * \ingroup GameLift
  *

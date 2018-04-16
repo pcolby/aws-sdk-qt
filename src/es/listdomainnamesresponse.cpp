@@ -30,7 +30,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::ListDomainNamesResponse
  *
- * \brief The ListDomainNamesResponse class encapsulates ElasticsearchService ListDomainNames responses.
+ * \brief The ListDomainNamesResponse class provides an interace for ElasticsearchService ListDomainNames responses.
  *
  * \ingroup ElasticsearchService
  *

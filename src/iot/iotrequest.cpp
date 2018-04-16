@@ -26,7 +26,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::IoTRequest
  *
- * \brief The IoTRequest class is the base class for all IoT requests.
+ * \brief The IoTRequest class provides an interface for IoT requests.
  *
  * \ingroup IoT
  */

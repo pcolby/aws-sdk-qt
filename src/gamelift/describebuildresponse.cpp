@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeBuildResponse
  *
- * \brief The DescribeBuildResponse class encapsulates GameLift DescribeBuild responses.
+ * \brief The DescribeBuildResponse class provides an interace for GameLift DescribeBuild responses.
  *
  * \ingroup GameLift
  *

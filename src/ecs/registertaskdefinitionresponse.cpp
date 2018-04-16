@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::RegisterTaskDefinitionResponse
  *
- * \brief The RegisterTaskDefinitionResponse class encapsulates ECS RegisterTaskDefinition responses.
+ * \brief The RegisterTaskDefinitionResponse class provides an interace for ECS RegisterTaskDefinition responses.
  *
  * \ingroup ECS
  *

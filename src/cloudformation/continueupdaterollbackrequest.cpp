@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ContinueUpdateRollbackRequest
  *
- * \brief The ContinueUpdateRollbackRequest class encapsulates CloudFormation ContinueUpdateRollback requests.
+ * \brief The ContinueUpdateRollbackRequest class provides an interface for CloudFormation ContinueUpdateRollback requests.
  *
  * \ingroup CloudFormation
  *

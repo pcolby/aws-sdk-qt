@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteHsmClientCertificateRequest
  *
- * \brief The DeleteHsmClientCertificateRequest class encapsulates Redshift DeleteHsmClientCertificate requests.
+ * \brief The DeleteHsmClientCertificateRequest class provides an interface for Redshift DeleteHsmClientCertificate requests.
  *
  * \ingroup Redshift
  *

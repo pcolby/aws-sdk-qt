@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteRoleResponse
  *
- * \brief The DeleteRoleResponse class encapsulates IAM DeleteRole responses.
+ * \brief The DeleteRoleResponse class provides an interace for IAM DeleteRole responses.
  *
  * \ingroup IAM
  *

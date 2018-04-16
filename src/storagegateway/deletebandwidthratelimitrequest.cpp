@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DeleteBandwidthRateLimitRequest
  *
- * \brief The DeleteBandwidthRateLimitRequest class encapsulates StorageGateway DeleteBandwidthRateLimit requests.
+ * \brief The DeleteBandwidthRateLimitRequest class provides an interface for StorageGateway DeleteBandwidthRateLimit requests.
  *
  * \ingroup StorageGateway
  *

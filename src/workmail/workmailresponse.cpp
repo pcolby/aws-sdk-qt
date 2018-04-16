@@ -29,7 +29,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::WorkMailResponse
  *
- * \brief The WorkMailResponse class is the base class for all WorkMail responses.
+ * \brief The WorkMailResponse class provides an interface for WorkMail responses.
  *
  * \ingroup WorkMail
  */

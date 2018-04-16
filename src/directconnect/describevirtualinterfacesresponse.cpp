@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DescribeVirtualInterfacesResponse
  *
- * \brief The DescribeVirtualInterfacesResponse class encapsulates DirectConnect DescribeVirtualInterfaces responses.
+ * \brief The DescribeVirtualInterfacesResponse class provides an interace for DirectConnect DescribeVirtualInterfaces responses.
  *
  * \ingroup DirectConnect
  *

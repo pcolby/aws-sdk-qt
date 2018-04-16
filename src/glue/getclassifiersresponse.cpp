@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetClassifiersResponse
  *
- * \brief The GetClassifiersResponse class encapsulates Glue GetClassifiers responses.
+ * \brief The GetClassifiersResponse class provides an interace for Glue GetClassifiers responses.
  *
  * \ingroup Glue
  *

@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::CreateStreamingURLResponse
  *
- * \brief The CreateStreamingURLResponse class encapsulates AppStream CreateStreamingURL responses.
+ * \brief The CreateStreamingURLResponse class provides an interace for AppStream CreateStreamingURL responses.
  *
  * \ingroup AppStream
  *

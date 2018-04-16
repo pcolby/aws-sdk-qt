@@ -28,7 +28,7 @@ namespace KinesisVideoMedia {
 /*!
  * \class QtAws::KinesisVideoMedia::GetMediaRequest
  *
- * \brief The GetMediaRequest class encapsulates KinesisVideoMedia GetMedia requests.
+ * \brief The GetMediaRequest class provides an interface for KinesisVideoMedia GetMedia requests.
  *
  * \ingroup KinesisVideoMedia
  *

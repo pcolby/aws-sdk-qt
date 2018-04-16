@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateServerCertificateRequest
  *
- * \brief The UpdateServerCertificateRequest class encapsulates IAM UpdateServerCertificate requests.
+ * \brief The UpdateServerCertificateRequest class provides an interface for IAM UpdateServerCertificate requests.
  *
  * \ingroup IAM
  *

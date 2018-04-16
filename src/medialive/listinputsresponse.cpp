@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::ListInputsResponse
  *
- * \brief The ListInputsResponse class encapsulates MediaLive ListInputs responses.
+ * \brief The ListInputsResponse class provides an interace for MediaLive ListInputs responses.
  *
  * \ingroup MediaLive
  *

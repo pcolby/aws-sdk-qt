@@ -30,7 +30,7 @@ namespace DynamoDBStreams {
 /*!
  * \class QtAws::DynamoDBStreams::DescribeStreamResponse
  *
- * \brief The DescribeStreamResponse class encapsulates DynamoDBStreams DescribeStream responses.
+ * \brief The DescribeStreamResponse class provides an interace for DynamoDBStreams DescribeStream responses.
  *
  * \ingroup DynamoDBStreams
  *

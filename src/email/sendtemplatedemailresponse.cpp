@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SendTemplatedEmailResponse
  *
- * \brief The SendTemplatedEmailResponse class encapsulates SES SendTemplatedEmail responses.
+ * \brief The SendTemplatedEmailResponse class provides an interace for SES SendTemplatedEmail responses.
  *
  * \ingroup SES
  *

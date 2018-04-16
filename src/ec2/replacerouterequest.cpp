@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ReplaceRouteRequest
  *
- * \brief The ReplaceRouteRequest class encapsulates EC2 ReplaceRoute requests.
+ * \brief The ReplaceRouteRequest class provides an interface for EC2 ReplaceRoute requests.
  *
  * \ingroup EC2
  *

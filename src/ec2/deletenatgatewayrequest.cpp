@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteNatGatewayRequest
  *
- * \brief The DeleteNatGatewayRequest class encapsulates EC2 DeleteNatGateway requests.
+ * \brief The DeleteNatGatewayRequest class provides an interface for EC2 DeleteNatGateway requests.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::ListGraphqlApisResponse
  *
- * \brief The ListGraphqlApisResponse class encapsulates AppSync ListGraphqlApis responses.
+ * \brief The ListGraphqlApisResponse class provides an interace for AppSync ListGraphqlApis responses.
  *
  * \ingroup AppSync
  *

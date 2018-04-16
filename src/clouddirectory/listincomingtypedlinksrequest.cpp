@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListIncomingTypedLinksRequest
  *
- * \brief The ListIncomingTypedLinksRequest class encapsulates CloudDirectory ListIncomingTypedLinks requests.
+ * \brief The ListIncomingTypedLinksRequest class provides an interface for CloudDirectory ListIncomingTypedLinks requests.
  *
  * \ingroup CloudDirectory
  *

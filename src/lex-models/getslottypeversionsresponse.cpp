@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::GetSlotTypeVersionsResponse
  *
- * \brief The GetSlotTypeVersionsResponse class encapsulates LexModelBuildingService GetSlotTypeVersions responses.
+ * \brief The GetSlotTypeVersionsResponse class provides an interace for LexModelBuildingService GetSlotTypeVersions responses.
  *
  * \ingroup LexModelBuildingService
  *

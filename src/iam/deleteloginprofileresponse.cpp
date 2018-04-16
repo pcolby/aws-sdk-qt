@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteLoginProfileResponse
  *
- * \brief The DeleteLoginProfileResponse class encapsulates IAM DeleteLoginProfile responses.
+ * \brief The DeleteLoginProfileResponse class provides an interace for IAM DeleteLoginProfile responses.
  *
  * \ingroup IAM
  *

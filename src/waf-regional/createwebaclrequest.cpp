@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::CreateWebACLRequest
  *
- * \brief The CreateWebACLRequest class encapsulates WAFRegional CreateWebACL requests.
+ * \brief The CreateWebACLRequest class provides an interface for WAFRegional CreateWebACL requests.
  *
  * \ingroup WAFRegional
  *

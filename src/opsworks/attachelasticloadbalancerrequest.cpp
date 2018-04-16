@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::AttachElasticLoadBalancerRequest
  *
- * \brief The AttachElasticLoadBalancerRequest class encapsulates OpsWorks AttachElasticLoadBalancer requests.
+ * \brief The AttachElasticLoadBalancerRequest class provides an interface for OpsWorks AttachElasticLoadBalancer requests.
  *
  * \ingroup OpsWorks
  *

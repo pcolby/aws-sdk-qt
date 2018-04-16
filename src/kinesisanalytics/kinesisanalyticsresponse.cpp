@@ -29,7 +29,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::KinesisAnalyticsResponse
  *
- * \brief The KinesisAnalyticsResponse class is the base class for all KinesisAnalytics responses.
+ * \brief The KinesisAnalyticsResponse class provides an interface for KinesisAnalytics responses.
  *
  * \ingroup KinesisAnalytics
  */

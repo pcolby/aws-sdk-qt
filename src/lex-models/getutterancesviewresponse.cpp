@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::GetUtterancesViewResponse
  *
- * \brief The GetUtterancesViewResponse class encapsulates LexModelBuildingService GetUtterancesView responses.
+ * \brief The GetUtterancesViewResponse class provides an interace for LexModelBuildingService GetUtterancesView responses.
  *
  * \ingroup LexModelBuildingService
  *

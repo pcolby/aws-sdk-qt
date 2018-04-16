@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteAliasResponse
  *
- * \brief The DeleteAliasResponse class encapsulates GameLift DeleteAlias responses.
+ * \brief The DeleteAliasResponse class provides an interace for GameLift DeleteAlias responses.
  *
  * \ingroup GameLift
  *

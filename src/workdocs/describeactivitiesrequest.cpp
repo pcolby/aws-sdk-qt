@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeActivitiesRequest
  *
- * \brief The DescribeActivitiesRequest class encapsulates WorkDocs DescribeActivities requests.
+ * \brief The DescribeActivitiesRequest class provides an interface for WorkDocs DescribeActivities requests.
  *
  * \ingroup WorkDocs
  *

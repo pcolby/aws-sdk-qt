@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::DeletePlatformApplicationResponse
  *
- * \brief The DeletePlatformApplicationResponse class encapsulates SNS DeletePlatformApplication responses.
+ * \brief The DeletePlatformApplicationResponse class provides an interace for SNS DeletePlatformApplication responses.
  *
  * \ingroup SNS
  *

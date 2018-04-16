@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::RequestCancelWorkflowExecutionRequest
  *
- * \brief The RequestCancelWorkflowExecutionRequest class encapsulates SWF RequestCancelWorkflowExecution requests.
+ * \brief The RequestCancelWorkflowExecutionRequest class provides an interface for SWF RequestCancelWorkflowExecution requests.
  *
  * \ingroup SWF
  *

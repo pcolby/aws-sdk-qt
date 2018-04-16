@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::ExpireSessionRequest
  *
- * \brief The ExpireSessionRequest class encapsulates AppStream ExpireSession requests.
+ * \brief The ExpireSessionRequest class provides an interface for AppStream ExpireSession requests.
  *
  * \ingroup AppStream
  *

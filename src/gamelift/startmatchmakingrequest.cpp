@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::StartMatchmakingRequest
  *
- * \brief The StartMatchmakingRequest class encapsulates GameLift StartMatchmaking requests.
+ * \brief The StartMatchmakingRequest class provides an interface for GameLift StartMatchmaking requests.
  *
  * \ingroup GameLift
  *

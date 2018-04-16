@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::DeleteDeviceDefinitionResponse
  *
- * \brief The DeleteDeviceDefinitionResponse class encapsulates Greengrass DeleteDeviceDefinition responses.
+ * \brief The DeleteDeviceDefinitionResponse class provides an interace for Greengrass DeleteDeviceDefinition responses.
  *
  * \ingroup Greengrass
  *

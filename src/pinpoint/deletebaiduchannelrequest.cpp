@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteBaiduChannelRequest
  *
- * \brief The DeleteBaiduChannelRequest class encapsulates Pinpoint DeleteBaiduChannel requests.
+ * \brief The DeleteBaiduChannelRequest class provides an interface for Pinpoint DeleteBaiduChannel requests.
  *
  * \ingroup Pinpoint
  *

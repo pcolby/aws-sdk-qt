@@ -26,7 +26,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::AthenaRequest
  *
- * \brief The AthenaRequest class is the base class for all Athena requests.
+ * \brief The AthenaRequest class provides an interface for Athena requests.
  *
  * \ingroup Athena
  */

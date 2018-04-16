@@ -30,7 +30,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::BatchGetProjectsResponse
  *
- * \brief The BatchGetProjectsResponse class encapsulates CodeBuild BatchGetProjects responses.
+ * \brief The BatchGetProjectsResponse class provides an interace for CodeBuild BatchGetProjects responses.
  *
  * \ingroup CodeBuild
  *

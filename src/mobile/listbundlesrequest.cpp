@@ -28,7 +28,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::ListBundlesRequest
  *
- * \brief The ListBundlesRequest class encapsulates Mobile ListBundles requests.
+ * \brief The ListBundlesRequest class provides an interface for Mobile ListBundles requests.
  *
  * \ingroup Mobile
  *

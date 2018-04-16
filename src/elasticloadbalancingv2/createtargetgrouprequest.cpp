@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::CreateTargetGroupRequest
  *
- * \brief The CreateTargetGroupRequest class encapsulates ElasticLoadBalancingv2 CreateTargetGroup requests.
+ * \brief The CreateTargetGroupRequest class provides an interface for ElasticLoadBalancingv2 CreateTargetGroup requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

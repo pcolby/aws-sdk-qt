@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::SetEndpointAttributesResponse
  *
- * \brief The SetEndpointAttributesResponse class encapsulates SNS SetEndpointAttributes responses.
+ * \brief The SetEndpointAttributesResponse class provides an interace for SNS SetEndpointAttributes responses.
  *
  * \ingroup SNS
  *

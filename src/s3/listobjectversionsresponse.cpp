@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::ListObjectVersionsResponse
  *
- * \brief The ListObjectVersionsResponse class encapsulates S3 ListObjectVersions responses.
+ * \brief The ListObjectVersionsResponse class provides an interace for S3 ListObjectVersions responses.
  *
  * \ingroup S3
  *

@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DescribeTasksRequest
  *
- * \brief The DescribeTasksRequest class encapsulates ECS DescribeTasks requests.
+ * \brief The DescribeTasksRequest class provides an interface for ECS DescribeTasks requests.
  *
  * \ingroup ECS
  *

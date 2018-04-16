@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::GetConsoleScreenshotResponse
  *
- * \brief The GetConsoleScreenshotResponse class encapsulates EC2 GetConsoleScreenshot responses.
+ * \brief The GetConsoleScreenshotResponse class provides an interace for EC2 GetConsoleScreenshot responses.
  *
  * \ingroup EC2
  *

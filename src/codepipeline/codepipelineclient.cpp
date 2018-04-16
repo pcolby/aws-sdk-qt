@@ -91,7 +91,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::CodePipelineClient
  *
- * \brief The CodePipelineClient class provides access the AWS CodePipeline service.
+ * \brief The CodePipelineClient class provides access to the AWS CodePipeline service.
  *
  * \ingroup CodePipeline
  *

@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::DeregisterOnPremisesInstanceRequest
  *
- * \brief The DeregisterOnPremisesInstanceRequest class encapsulates CodeDeploy DeregisterOnPremisesInstance requests.
+ * \brief The DeregisterOnPremisesInstanceRequest class provides an interface for CodeDeploy DeregisterOnPremisesInstance requests.
  *
  * \ingroup CodeDeploy
  *

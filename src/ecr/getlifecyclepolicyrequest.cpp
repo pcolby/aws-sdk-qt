@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::GetLifecyclePolicyRequest
  *
- * \brief The GetLifecyclePolicyRequest class encapsulates ECR GetLifecyclePolicy requests.
+ * \brief The GetLifecyclePolicyRequest class provides an interface for ECR GetLifecyclePolicy requests.
  *
  * \ingroup ECR
  *

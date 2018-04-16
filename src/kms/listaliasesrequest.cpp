@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ListAliasesRequest
  *
- * \brief The ListAliasesRequest class encapsulates KMS ListAliases requests.
+ * \brief The ListAliasesRequest class provides an interface for KMS ListAliases requests.
  *
  * \ingroup KMS
  *

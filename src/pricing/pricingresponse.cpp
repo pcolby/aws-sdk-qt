@@ -29,7 +29,7 @@ namespace Pricing {
 /*!
  * \class QtAws::Pricing::PricingResponse
  *
- * \brief The PricingResponse class is the base class for all Pricing responses.
+ * \brief The PricingResponse class provides an interface for Pricing responses.
  *
  * \ingroup Pricing
  */

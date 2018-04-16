@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::SendCommandRequest
  *
- * \brief The SendCommandRequest class encapsulates SSM SendCommand requests.
+ * \brief The SendCommandRequest class provides an interface for SSM SendCommand requests.
  *
  * \ingroup SSM
  *

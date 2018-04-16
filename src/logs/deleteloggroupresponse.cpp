@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DeleteLogGroupResponse
  *
- * \brief The DeleteLogGroupResponse class encapsulates CloudWatchLogs DeleteLogGroup responses.
+ * \brief The DeleteLogGroupResponse class provides an interace for CloudWatchLogs DeleteLogGroup responses.
  *
  * \ingroup CloudWatchLogs
  *

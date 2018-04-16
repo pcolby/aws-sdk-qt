@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteClusterSecurityGroupResponse
  *
- * \brief The DeleteClusterSecurityGroupResponse class encapsulates Redshift DeleteClusterSecurityGroup responses.
+ * \brief The DeleteClusterSecurityGroupResponse class provides an interace for Redshift DeleteClusterSecurityGroup responses.
  *
  * \ingroup Redshift
  *

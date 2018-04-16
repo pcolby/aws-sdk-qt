@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::CreateRuleRequest
  *
- * \brief The CreateRuleRequest class encapsulates ElasticLoadBalancingv2 CreateRule requests.
+ * \brief The CreateRuleRequest class provides an interface for ElasticLoadBalancingv2 CreateRule requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

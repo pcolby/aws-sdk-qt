@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetTagsRequest
  *
- * \brief The GetTagsRequest class encapsulates APIGateway GetTags requests.
+ * \brief The GetTagsRequest class provides an interface for APIGateway GetTags requests.
  *
  * \ingroup APIGateway
  *

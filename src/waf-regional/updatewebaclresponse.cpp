@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::UpdateWebACLResponse
  *
- * \brief The UpdateWebACLResponse class encapsulates WAFRegional UpdateWebACL responses.
+ * \brief The UpdateWebACLResponse class provides an interace for WAFRegional UpdateWebACL responses.
  *
  * \ingroup WAFRegional
  *

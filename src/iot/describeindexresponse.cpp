@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeIndexResponse
  *
- * \brief The DescribeIndexResponse class encapsulates IoT DescribeIndex responses.
+ * \brief The DescribeIndexResponse class provides an interace for IoT DescribeIndex responses.
  *
  * \ingroup IoT
  *

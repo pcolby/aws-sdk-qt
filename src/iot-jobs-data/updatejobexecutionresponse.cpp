@@ -30,7 +30,7 @@ namespace IoTJobsDataPlane {
 /*!
  * \class QtAws::IoTJobsDataPlane::UpdateJobExecutionResponse
  *
- * \brief The UpdateJobExecutionResponse class encapsulates IoTJobsDataPlane UpdateJobExecution responses.
+ * \brief The UpdateJobExecutionResponse class provides an interace for IoTJobsDataPlane UpdateJobExecution responses.
  *
  * \ingroup IoTJobsDataPlane
  *

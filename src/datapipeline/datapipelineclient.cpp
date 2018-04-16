@@ -75,7 +75,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::DataPipelineClient
  *
- * \brief The DataPipelineClient class provides access the AWS Data Pipeline service.
+ * \brief The DataPipelineClient class provides access to the AWS Data Pipeline service.
  *
  * \ingroup DataPipeline
  *

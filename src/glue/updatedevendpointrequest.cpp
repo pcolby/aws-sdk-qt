@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateDevEndpointRequest
  *
- * \brief The UpdateDevEndpointRequest class encapsulates Glue UpdateDevEndpoint requests.
+ * \brief The UpdateDevEndpointRequest class provides an interface for Glue UpdateDevEndpoint requests.
  *
  * \ingroup Glue
  *

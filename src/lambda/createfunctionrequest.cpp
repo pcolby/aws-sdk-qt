@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::CreateFunctionRequest
  *
- * \brief The CreateFunctionRequest class encapsulates Lambda CreateFunction requests.
+ * \brief The CreateFunctionRequest class provides an interface for Lambda CreateFunction requests.
  *
  * \ingroup Lambda
  *

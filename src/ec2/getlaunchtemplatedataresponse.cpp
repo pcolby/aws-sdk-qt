@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::GetLaunchTemplateDataResponse
  *
- * \brief The GetLaunchTemplateDataResponse class encapsulates EC2 GetLaunchTemplateData responses.
+ * \brief The GetLaunchTemplateDataResponse class provides an interace for EC2 GetLaunchTemplateData responses.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::UpdateGroupResponse
  *
- * \brief The UpdateGroupResponse class encapsulates Greengrass UpdateGroup responses.
+ * \brief The UpdateGroupResponse class provides an interace for Greengrass UpdateGroup responses.
  *
  * \ingroup Greengrass
  *

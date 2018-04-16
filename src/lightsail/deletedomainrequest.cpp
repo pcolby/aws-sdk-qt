@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DeleteDomainRequest
  *
- * \brief The DeleteDomainRequest class encapsulates Lightsail DeleteDomain requests.
+ * \brief The DeleteDomainRequest class provides an interface for Lightsail DeleteDomain requests.
  *
  * \ingroup Lightsail
  *

@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeleteTargetGroupRequest
  *
- * \brief The DeleteTargetGroupRequest class encapsulates ElasticLoadBalancingv2 DeleteTargetGroup requests.
+ * \brief The DeleteTargetGroupRequest class provides an interface for ElasticLoadBalancingv2 DeleteTargetGroup requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

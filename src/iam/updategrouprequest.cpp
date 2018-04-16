@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateGroupRequest
  *
- * \brief The UpdateGroupRequest class encapsulates IAM UpdateGroup requests.
+ * \brief The UpdateGroupRequest class provides an interface for IAM UpdateGroup requests.
  *
  * \ingroup IAM
  *

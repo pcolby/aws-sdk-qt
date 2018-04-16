@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateScriptRequest
  *
- * \brief The CreateScriptRequest class encapsulates Glue CreateScript requests.
+ * \brief The CreateScriptRequest class provides an interface for Glue CreateScript requests.
  *
  * \ingroup Glue
  *

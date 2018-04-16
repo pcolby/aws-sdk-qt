@@ -63,7 +63,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::ElasticsearchServiceClient
  *
- * \brief The ElasticsearchServiceClient class provides access the Amazon Elasticsearch Service service.
+ * \brief The ElasticsearchServiceClient class provides access to the Amazon Elasticsearch Service service.
  *
  * \ingroup ElasticsearchService
  *

@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::RevokeGrantResponse
  *
- * \brief The RevokeGrantResponse class encapsulates KMS RevokeGrant responses.
+ * \brief The RevokeGrantResponse class provides an interace for KMS RevokeGrant responses.
  *
  * \ingroup KMS
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeExportTasksResponse
  *
- * \brief The DescribeExportTasksResponse class encapsulates EC2 DescribeExportTasks responses.
+ * \brief The DescribeExportTasksResponse class provides an interace for EC2 DescribeExportTasks responses.
  *
  * \ingroup EC2
  *

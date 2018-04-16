@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::GetHostedZoneCountRequest
  *
- * \brief The GetHostedZoneCountRequest class encapsulates Route53 GetHostedZoneCount requests.
+ * \brief The GetHostedZoneCountRequest class provides an interface for Route53 GetHostedZoneCount requests.
  *
  * \ingroup Route53
  *

@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeSSLPoliciesResponse
  *
- * \brief The DescribeSSLPoliciesResponse class encapsulates ElasticLoadBalancingv2 DescribeSSLPolicies responses.
+ * \brief The DescribeSSLPoliciesResponse class provides an interace for ElasticLoadBalancingv2 DescribeSSLPolicies responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::ListTagsForResourceRequest
  *
- * \brief The ListTagsForResourceRequest class encapsulates CloudFront ListTagsForResource requests.
+ * \brief The ListTagsForResourceRequest class provides an interface for CloudFront ListTagsForResource requests.
  *
  * \ingroup CloudFront
  *

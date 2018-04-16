@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetAccountSettingsRequest
  *
- * \brief The GetAccountSettingsRequest class encapsulates DeviceFarm GetAccountSettings requests.
+ * \brief The GetAccountSettingsRequest class provides an interface for DeviceFarm GetAccountSettings requests.
  *
  * \ingroup DeviceFarm
  *

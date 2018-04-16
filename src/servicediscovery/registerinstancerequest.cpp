@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::RegisterInstanceRequest
  *
- * \brief The RegisterInstanceRequest class encapsulates ServiceDiscovery RegisterInstance requests.
+ * \brief The RegisterInstanceRequest class provides an interface for ServiceDiscovery RegisterInstance requests.
  *
  * \ingroup ServiceDiscovery
  *

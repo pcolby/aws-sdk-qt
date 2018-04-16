@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateConnectionResponse
  *
- * \brief The UpdateConnectionResponse class encapsulates Glue UpdateConnection responses.
+ * \brief The UpdateConnectionResponse class provides an interace for Glue UpdateConnection responses.
  *
  * \ingroup Glue
  *

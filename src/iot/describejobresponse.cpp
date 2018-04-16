@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeJobResponse
  *
- * \brief The DescribeJobResponse class encapsulates IoT DescribeJob responses.
+ * \brief The DescribeJobResponse class provides an interace for IoT DescribeJob responses.
  *
  * \ingroup IoT
  *

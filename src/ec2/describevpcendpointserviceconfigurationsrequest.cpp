@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVpcEndpointServiceConfigurationsRequest
  *
- * \brief The DescribeVpcEndpointServiceConfigurationsRequest class encapsulates EC2 DescribeVpcEndpointServiceConfigurations requests.
+ * \brief The DescribeVpcEndpointServiceConfigurationsRequest class provides an interface for EC2 DescribeVpcEndpointServiceConfigurations requests.
  *
  * \ingroup EC2
  *

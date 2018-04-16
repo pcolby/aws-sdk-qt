@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::AddCacheRequest
  *
- * \brief The AddCacheRequest class encapsulates StorageGateway AddCache requests.
+ * \brief The AddCacheRequest class provides an interface for StorageGateway AddCache requests.
  *
  * \ingroup StorageGateway
  *

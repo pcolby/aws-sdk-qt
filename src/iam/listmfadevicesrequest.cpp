@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListMFADevicesRequest
  *
- * \brief The ListMFADevicesRequest class encapsulates IAM ListMFADevices requests.
+ * \brief The ListMFADevicesRequest class provides an interface for IAM ListMFADevices requests.
  *
  * \ingroup IAM
  *

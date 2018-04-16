@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeleteStackRequest
  *
- * \brief The DeleteStackRequest class encapsulates OpsWorks DeleteStack requests.
+ * \brief The DeleteStackRequest class provides an interface for OpsWorks DeleteStack requests.
  *
  * \ingroup OpsWorks
  *

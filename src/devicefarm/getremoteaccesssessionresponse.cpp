@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetRemoteAccessSessionResponse
  *
- * \brief The GetRemoteAccessSessionResponse class encapsulates DeviceFarm GetRemoteAccessSession responses.
+ * \brief The GetRemoteAccessSessionResponse class provides an interace for DeviceFarm GetRemoteAccessSession responses.
  *
  * \ingroup DeviceFarm
  *

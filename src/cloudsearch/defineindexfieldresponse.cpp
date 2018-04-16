@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DefineIndexFieldResponse
  *
- * \brief The DefineIndexFieldResponse class encapsulates CloudSearch DefineIndexField responses.
+ * \brief The DefineIndexFieldResponse class provides an interace for CloudSearch DefineIndexField responses.
  *
  * \ingroup CloudSearch
  *

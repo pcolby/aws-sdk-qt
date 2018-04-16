@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ListChangeSetsRequest
  *
- * \brief The ListChangeSetsRequest class encapsulates CloudFormation ListChangeSets requests.
+ * \brief The ListChangeSetsRequest class provides an interface for CloudFormation ListChangeSets requests.
  *
  * \ingroup CloudFormation
  *

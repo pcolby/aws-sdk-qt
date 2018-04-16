@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::StartReplicationTaskRequest
  *
- * \brief The StartReplicationTaskRequest class encapsulates DatabaseMigrationService StartReplicationTask requests.
+ * \brief The StartReplicationTaskRequest class provides an interface for DatabaseMigrationService StartReplicationTask requests.
  *
  * \ingroup DatabaseMigrationService
  *

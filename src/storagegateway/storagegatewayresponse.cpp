@@ -29,7 +29,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::StorageGatewayResponse
  *
- * \brief The StorageGatewayResponse class is the base class for all StorageGateway responses.
+ * \brief The StorageGatewayResponse class provides an interface for StorageGateway responses.
  *
  * \ingroup StorageGateway
  */

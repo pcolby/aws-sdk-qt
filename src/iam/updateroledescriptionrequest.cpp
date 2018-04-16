@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateRoleDescriptionRequest
  *
- * \brief The UpdateRoleDescriptionRequest class encapsulates IAM UpdateRoleDescription requests.
+ * \brief The UpdateRoleDescriptionRequest class provides an interface for IAM UpdateRoleDescription requests.
  *
  * \ingroup IAM
  *

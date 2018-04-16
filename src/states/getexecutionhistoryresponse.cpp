@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::GetExecutionHistoryResponse
  *
- * \brief The GetExecutionHistoryResponse class encapsulates SFN GetExecutionHistory responses.
+ * \brief The GetExecutionHistoryResponse class provides an interace for SFN GetExecutionHistory responses.
  *
  * \ingroup SFN
  *

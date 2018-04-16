@@ -29,7 +29,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::MediaStoreResponse
  *
- * \brief The MediaStoreResponse class is the base class for all MediaStore responses.
+ * \brief The MediaStoreResponse class provides an interface for MediaStore responses.
  *
  * \ingroup MediaStore
  */

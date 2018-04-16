@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeAccountAttributesResponse
  *
- * \brief The DescribeAccountAttributesResponse class encapsulates EC2 DescribeAccountAttributes responses.
+ * \brief The DescribeAccountAttributesResponse class provides an interace for EC2 DescribeAccountAttributes responses.
  *
  * \ingroup EC2
  *

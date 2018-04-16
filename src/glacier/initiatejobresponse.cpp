@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::InitiateJobResponse
  *
- * \brief The InitiateJobResponse class encapsulates Glacier InitiateJob responses.
+ * \brief The InitiateJobResponse class provides an interace for Glacier InitiateJob responses.
  *
  * \ingroup Glacier
  *

@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::DeleteTopicRequest
  *
- * \brief The DeleteTopicRequest class encapsulates SNS DeleteTopic requests.
+ * \brief The DeleteTopicRequest class provides an interface for SNS DeleteTopic requests.
  *
  * \ingroup SNS
  *

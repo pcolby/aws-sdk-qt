@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::TestRepositoryTriggersResponse
  *
- * \brief The TestRepositoryTriggersResponse class encapsulates CodeCommit TestRepositoryTriggers responses.
+ * \brief The TestRepositoryTriggersResponse class provides an interace for CodeCommit TestRepositoryTriggers responses.
  *
  * \ingroup CodeCommit
  *

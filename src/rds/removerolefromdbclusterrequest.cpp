@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RemoveRoleFromDBClusterRequest
  *
- * \brief The RemoveRoleFromDBClusterRequest class encapsulates RDS RemoveRoleFromDBCluster requests.
+ * \brief The RemoveRoleFromDBClusterRequest class provides an interface for RDS RemoveRoleFromDBCluster requests.
  *
  * \ingroup RDS
  *

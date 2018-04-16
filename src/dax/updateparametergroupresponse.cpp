@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::UpdateParameterGroupResponse
  *
- * \brief The UpdateParameterGroupResponse class encapsulates DAX UpdateParameterGroup responses.
+ * \brief The UpdateParameterGroupResponse class provides an interace for DAX UpdateParameterGroup responses.
  *
  * \ingroup DAX
  *

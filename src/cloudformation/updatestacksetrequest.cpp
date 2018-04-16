@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::UpdateStackSetRequest
  *
- * \brief The UpdateStackSetRequest class encapsulates CloudFormation UpdateStackSet requests.
+ * \brief The UpdateStackSetRequest class provides an interface for CloudFormation UpdateStackSet requests.
  *
  * \ingroup CloudFormation
  *

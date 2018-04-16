@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ImportKeyPairRequest
  *
- * \brief The ImportKeyPairRequest class encapsulates EC2 ImportKeyPair requests.
+ * \brief The ImportKeyPairRequest class provides an interface for EC2 ImportKeyPair requests.
  *
  * \ingroup EC2
  *

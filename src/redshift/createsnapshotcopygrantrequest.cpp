@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::CreateSnapshotCopyGrantRequest
  *
- * \brief The CreateSnapshotCopyGrantRequest class encapsulates Redshift CreateSnapshotCopyGrant requests.
+ * \brief The CreateSnapshotCopyGrantRequest class provides an interface for Redshift CreateSnapshotCopyGrant requests.
  *
  * \ingroup Redshift
  *

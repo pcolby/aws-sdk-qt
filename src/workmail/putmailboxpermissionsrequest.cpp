@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::PutMailboxPermissionsRequest
  *
- * \brief The PutMailboxPermissionsRequest class encapsulates WorkMail PutMailboxPermissions requests.
+ * \brief The PutMailboxPermissionsRequest class provides an interface for WorkMail PutMailboxPermissions requests.
  *
  * \ingroup WorkMail
  *

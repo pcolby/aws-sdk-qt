@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetCrawlerMetricsRequest
  *
- * \brief The GetCrawlerMetricsRequest class encapsulates Glue GetCrawlerMetrics requests.
+ * \brief The GetCrawlerMetricsRequest class provides an interface for Glue GetCrawlerMetrics requests.
  *
  * \ingroup Glue
  *

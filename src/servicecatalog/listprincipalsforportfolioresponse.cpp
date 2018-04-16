@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListPrincipalsForPortfolioResponse
  *
- * \brief The ListPrincipalsForPortfolioResponse class encapsulates ServiceCatalog ListPrincipalsForPortfolio responses.
+ * \brief The ListPrincipalsForPortfolioResponse class provides an interace for ServiceCatalog ListPrincipalsForPortfolio responses.
  *
  * \ingroup ServiceCatalog
  *

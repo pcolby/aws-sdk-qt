@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DetachClassicLinkVpcResponse
  *
- * \brief The DetachClassicLinkVpcResponse class encapsulates EC2 DetachClassicLinkVpc responses.
+ * \brief The DetachClassicLinkVpcResponse class provides an interace for EC2 DetachClassicLinkVpc responses.
  *
  * \ingroup EC2
  *

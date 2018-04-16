@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::RemoveTagsFromResourceResponse
  *
- * \brief The RemoveTagsFromResourceResponse class encapsulates DatabaseMigrationService RemoveTagsFromResource responses.
+ * \brief The RemoveTagsFromResourceResponse class provides an interace for DatabaseMigrationService RemoveTagsFromResource responses.
  *
  * \ingroup DatabaseMigrationService
  *

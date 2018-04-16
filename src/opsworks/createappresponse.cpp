@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CreateAppResponse
  *
- * \brief The CreateAppResponse class encapsulates OpsWorks CreateApp responses.
+ * \brief The CreateAppResponse class provides an interace for OpsWorks CreateApp responses.
  *
  * \ingroup OpsWorks
  *

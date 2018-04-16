@@ -26,7 +26,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::MTurkRequest
  *
- * \brief The MTurkRequest class is the base class for all MTurk requests.
+ * \brief The MTurkRequest class provides an interface for MTurk requests.
  *
  * \ingroup MTurk
  */

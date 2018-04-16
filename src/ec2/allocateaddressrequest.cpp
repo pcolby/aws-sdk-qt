@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AllocateAddressRequest
  *
- * \brief The AllocateAddressRequest class encapsulates EC2 AllocateAddress requests.
+ * \brief The AllocateAddressRequest class provides an interface for EC2 AllocateAddress requests.
  *
  * \ingroup EC2
  *

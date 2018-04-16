@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::StartImportResponse
  *
- * \brief The StartImportResponse class encapsulates LexModelBuildingService StartImport responses.
+ * \brief The StartImportResponse class provides an interace for LexModelBuildingService StartImport responses.
  *
  * \ingroup LexModelBuildingService
  *

@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ListTagsForResourceRequest
  *
- * \brief The ListTagsForResourceRequest class encapsulates RDS ListTagsForResource requests.
+ * \brief The ListTagsForResourceRequest class provides an interface for RDS ListTagsForResource requests.
  *
  * \ingroup RDS
  *

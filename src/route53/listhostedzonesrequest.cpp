@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListHostedZonesRequest
  *
- * \brief The ListHostedZonesRequest class encapsulates Route53 ListHostedZones requests.
+ * \brief The ListHostedZonesRequest class provides an interface for Route53 ListHostedZones requests.
  *
  * \ingroup Route53
  *

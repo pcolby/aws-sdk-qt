@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DescribeDestinationsRequest
  *
- * \brief The DescribeDestinationsRequest class encapsulates CloudWatchLogs DescribeDestinations requests.
+ * \brief The DescribeDestinationsRequest class provides an interface for CloudWatchLogs DescribeDestinations requests.
  *
  * \ingroup CloudWatchLogs
  *

@@ -28,7 +28,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::DeleteDomainRequest
  *
- * \brief The DeleteDomainRequest class encapsulates SimpleDB DeleteDomain requests.
+ * \brief The DeleteDomainRequest class provides an interface for SimpleDB DeleteDomain requests.
  *
  * \ingroup SimpleDB
  *

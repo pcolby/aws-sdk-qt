@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::UpdateAddressBookResponse
  *
- * \brief The UpdateAddressBookResponse class encapsulates AlexaForBusiness UpdateAddressBook responses.
+ * \brief The UpdateAddressBookResponse class provides an interace for AlexaForBusiness UpdateAddressBook responses.
  *
  * \ingroup AlexaForBusiness
  *

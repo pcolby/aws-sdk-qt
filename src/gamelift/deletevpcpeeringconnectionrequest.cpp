@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteVpcPeeringConnectionRequest
  *
- * \brief The DeleteVpcPeeringConnectionRequest class encapsulates GameLift DeleteVpcPeeringConnection requests.
+ * \brief The DeleteVpcPeeringConnectionRequest class provides an interface for GameLift DeleteVpcPeeringConnection requests.
  *
  * \ingroup GameLift
  *

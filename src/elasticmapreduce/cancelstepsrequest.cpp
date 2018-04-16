@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::CancelStepsRequest
  *
- * \brief The CancelStepsRequest class encapsulates EMR CancelSteps requests.
+ * \brief The CancelStepsRequest class provides an interface for EMR CancelSteps requests.
  *
  * \ingroup EMR
  *

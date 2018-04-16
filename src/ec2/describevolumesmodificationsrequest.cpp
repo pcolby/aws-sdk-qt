@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVolumesModificationsRequest
  *
- * \brief The DescribeVolumesModificationsRequest class encapsulates EC2 DescribeVolumesModifications requests.
+ * \brief The DescribeVolumesModificationsRequest class provides an interface for EC2 DescribeVolumesModifications requests.
  *
  * \ingroup EC2
  *

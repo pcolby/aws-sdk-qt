@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::DeleteDeploymentConfigResponse
  *
- * \brief The DeleteDeploymentConfigResponse class encapsulates CodeDeploy DeleteDeploymentConfig responses.
+ * \brief The DeleteDeploymentConfigResponse class provides an interace for CodeDeploy DeleteDeploymentConfig responses.
  *
  * \ingroup CodeDeploy
  *

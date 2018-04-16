@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeInstancePatchStatesForPatchGroupResponse
  *
- * \brief The DescribeInstancePatchStatesForPatchGroupResponse class encapsulates SSM DescribeInstancePatchStatesForPatchGroup responses.
+ * \brief The DescribeInstancePatchStatesForPatchGroupResponse class provides an interace for SSM DescribeInstancePatchStatesForPatchGroup responses.
  *
  * \ingroup SSM
  *

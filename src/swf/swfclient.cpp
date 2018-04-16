@@ -99,7 +99,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::SwfClient
  *
- * \brief The SwfClient class provides access the Amazon Simple Workflow Service ( SWF) service.
+ * \brief The SwfClient class provides access to the Amazon Simple Workflow Service ( SWF) service.
  *
  * \ingroup SWF
  *

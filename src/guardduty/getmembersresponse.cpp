@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GetMembersResponse
  *
- * \brief The GetMembersResponse class encapsulates GuardDuty GetMembers responses.
+ * \brief The GetMembersResponse class provides an interace for GuardDuty GetMembers responses.
  *
  * \ingroup GuardDuty
  *

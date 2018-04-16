@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::CreateClusterResponse
  *
- * \brief The CreateClusterResponse class encapsulates DAX CreateCluster responses.
+ * \brief The CreateClusterResponse class provides an interace for DAX CreateCluster responses.
  *
  * \ingroup DAX
  *

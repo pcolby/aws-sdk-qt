@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateRequestValidatorRequest
  *
- * \brief The UpdateRequestValidatorRequest class encapsulates APIGateway UpdateRequestValidator requests.
+ * \brief The UpdateRequestValidatorRequest class provides an interface for APIGateway UpdateRequestValidator requests.
  *
  * \ingroup APIGateway
  *

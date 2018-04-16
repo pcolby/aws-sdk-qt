@@ -28,7 +28,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::ListChannelsRequest
  *
- * \brief The ListChannelsRequest class encapsulates MediaPackage ListChannels requests.
+ * \brief The ListChannelsRequest class provides an interface for MediaPackage ListChannels requests.
  *
  * \ingroup MediaPackage
  *

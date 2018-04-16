@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::DeleteApplicationsRequest
  *
- * \brief The DeleteApplicationsRequest class encapsulates ApplicationDiscoveryService DeleteApplications requests.
+ * \brief The DeleteApplicationsRequest class provides an interface for ApplicationDiscoveryService DeleteApplications requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

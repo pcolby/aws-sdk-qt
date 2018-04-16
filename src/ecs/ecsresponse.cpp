@@ -29,7 +29,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::ECSResponse
  *
- * \brief The ECSResponse class is the base class for all ECS responses.
+ * \brief The ECSResponse class provides an interface for ECS responses.
  *
  * \ingroup ECS
  */

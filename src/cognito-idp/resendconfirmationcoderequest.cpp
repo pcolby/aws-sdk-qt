@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ResendConfirmationCodeRequest
  *
- * \brief The ResendConfirmationCodeRequest class encapsulates CognitoIdentityProvider ResendConfirmationCode requests.
+ * \brief The ResendConfirmationCodeRequest class provides an interface for CognitoIdentityProvider ResendConfirmationCode requests.
  *
  * \ingroup CognitoIdentityProvider
  *

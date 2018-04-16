@@ -26,7 +26,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::LightsailRequest
  *
- * \brief The LightsailRequest class is the base class for all Lightsail requests.
+ * \brief The LightsailRequest class provides an interface for Lightsail requests.
  *
  * \ingroup Lightsail
  */

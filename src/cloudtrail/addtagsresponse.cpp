@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::AddTagsResponse
  *
- * \brief The AddTagsResponse class encapsulates CloudTrail AddTags responses.
+ * \brief The AddTagsResponse class provides an interace for CloudTrail AddTags responses.
  *
  * \ingroup CloudTrail
  *

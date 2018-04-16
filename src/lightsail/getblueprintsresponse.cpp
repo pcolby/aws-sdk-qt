@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetBlueprintsResponse
  *
- * \brief The GetBlueprintsResponse class encapsulates Lightsail GetBlueprints responses.
+ * \brief The GetBlueprintsResponse class provides an interace for Lightsail GetBlueprints responses.
  *
  * \ingroup Lightsail
  *

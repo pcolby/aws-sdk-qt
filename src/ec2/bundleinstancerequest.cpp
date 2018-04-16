@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::BundleInstanceRequest
  *
- * \brief The BundleInstanceRequest class encapsulates EC2 BundleInstance requests.
+ * \brief The BundleInstanceRequest class provides an interface for EC2 BundleInstance requests.
  *
  * \ingroup EC2
  *

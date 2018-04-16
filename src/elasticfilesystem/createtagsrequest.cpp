@@ -28,7 +28,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::CreateTagsRequest
  *
- * \brief The CreateTagsRequest class encapsulates EFS CreateTags requests.
+ * \brief The CreateTagsRequest class provides an interface for EFS CreateTags requests.
  *
  * \ingroup EFS
  *

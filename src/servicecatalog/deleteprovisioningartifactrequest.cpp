@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DeleteProvisioningArtifactRequest
  *
- * \brief The DeleteProvisioningArtifactRequest class encapsulates ServiceCatalog DeleteProvisioningArtifact requests.
+ * \brief The DeleteProvisioningArtifactRequest class provides an interface for ServiceCatalog DeleteProvisioningArtifact requests.
  *
  * \ingroup ServiceCatalog
  *

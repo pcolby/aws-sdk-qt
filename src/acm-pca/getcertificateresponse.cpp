@@ -30,7 +30,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::GetCertificateResponse
  *
- * \brief The GetCertificateResponse class encapsulates ACMPCA GetCertificate responses.
+ * \brief The GetCertificateResponse class provides an interace for ACMPCA GetCertificate responses.
  *
  * \ingroup ACMPCA
  *

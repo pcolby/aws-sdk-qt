@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::ListInvalidationsResponse
  *
- * \brief The ListInvalidationsResponse class encapsulates CloudFront ListInvalidations responses.
+ * \brief The ListInvalidationsResponse class provides an interace for CloudFront ListInvalidations responses.
  *
  * \ingroup CloudFront
  *

@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeEcsClustersResponse
  *
- * \brief The DescribeEcsClustersResponse class encapsulates OpsWorks DescribeEcsClusters responses.
+ * \brief The DescribeEcsClustersResponse class provides an interace for OpsWorks DescribeEcsClusters responses.
  *
  * \ingroup OpsWorks
  *

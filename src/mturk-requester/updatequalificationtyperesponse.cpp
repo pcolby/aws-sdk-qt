@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::UpdateQualificationTypeResponse
  *
- * \brief The UpdateQualificationTypeResponse class encapsulates MTurk UpdateQualificationType responses.
+ * \brief The UpdateQualificationTypeResponse class provides an interace for MTurk UpdateQualificationType responses.
  *
  * \ingroup MTurk
  *

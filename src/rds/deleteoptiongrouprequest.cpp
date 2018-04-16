@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DeleteOptionGroupRequest
  *
- * \brief The DeleteOptionGroupRequest class encapsulates RDS DeleteOptionGroup requests.
+ * \brief The DeleteOptionGroupRequest class provides an interface for RDS DeleteOptionGroup requests.
  *
  * \ingroup RDS
  *

@@ -30,7 +30,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::DeleteJobTemplateResponse
  *
- * \brief The DeleteJobTemplateResponse class encapsulates MediaConvert DeleteJobTemplate responses.
+ * \brief The DeleteJobTemplateResponse class provides an interace for MediaConvert DeleteJobTemplate responses.
  *
  * \ingroup MediaConvert
  *

@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeleteConfigRuleRequest
  *
- * \brief The DeleteConfigRuleRequest class encapsulates ConfigService DeleteConfigRule requests.
+ * \brief The DeleteConfigRuleRequest class provides an interface for ConfigService DeleteConfigRule requests.
  *
  * \ingroup ConfigService
  *

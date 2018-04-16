@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::DescribeElasticsearchInstanceTypeLimitsRequest
  *
- * \brief The DescribeElasticsearchInstanceTypeLimitsRequest class encapsulates ElasticsearchService DescribeElasticsearchInstanceTypeLimits requests.
+ * \brief The DescribeElasticsearchInstanceTypeLimitsRequest class provides an interface for ElasticsearchService DescribeElasticsearchInstanceTypeLimits requests.
  *
  * \ingroup ElasticsearchService
  *

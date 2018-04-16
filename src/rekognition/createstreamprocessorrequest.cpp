@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::CreateStreamProcessorRequest
  *
- * \brief The CreateStreamProcessorRequest class encapsulates Rekognition CreateStreamProcessor requests.
+ * \brief The CreateStreamProcessorRequest class provides an interface for Rekognition CreateStreamProcessor requests.
  *
  * \ingroup Rekognition
  *

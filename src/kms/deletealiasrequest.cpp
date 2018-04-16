@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::DeleteAliasRequest
  *
- * \brief The DeleteAliasRequest class encapsulates KMS DeleteAlias requests.
+ * \brief The DeleteAliasRequest class provides an interface for KMS DeleteAlias requests.
  *
  * \ingroup KMS
  *

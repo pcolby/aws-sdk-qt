@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteSpotDatafeedSubscriptionRequest
  *
- * \brief The DeleteSpotDatafeedSubscriptionRequest class encapsulates EC2 DeleteSpotDatafeedSubscription requests.
+ * \brief The DeleteSpotDatafeedSubscriptionRequest class provides an interface for EC2 DeleteSpotDatafeedSubscription requests.
  *
  * \ingroup EC2
  *

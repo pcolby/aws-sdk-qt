@@ -30,7 +30,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::ListLexiconsResponse
  *
- * \brief The ListLexiconsResponse class encapsulates Polly ListLexicons responses.
+ * \brief The ListLexiconsResponse class provides an interace for Polly ListLexicons responses.
  *
  * \ingroup Polly
  *

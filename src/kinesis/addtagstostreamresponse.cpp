@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::AddTagsToStreamResponse
  *
- * \brief The AddTagsToStreamResponse class encapsulates Kinesis AddTagsToStream responses.
+ * \brief The AddTagsToStreamResponse class provides an interace for Kinesis AddTagsToStream responses.
  *
  * \ingroup Kinesis
  *

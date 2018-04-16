@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::ModifyLoadBalancerAttributesRequest
  *
- * \brief The ModifyLoadBalancerAttributesRequest class encapsulates ElasticLoadBalancing ModifyLoadBalancerAttributes requests.
+ * \brief The ModifyLoadBalancerAttributesRequest class provides an interface for ElasticLoadBalancing ModifyLoadBalancerAttributes requests.
  *
  * \ingroup ElasticLoadBalancing
  *

@@ -30,7 +30,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::TerminateWorkspacesResponse
  *
- * \brief The TerminateWorkspacesResponse class encapsulates WorkSpaces TerminateWorkspaces responses.
+ * \brief The TerminateWorkspacesResponse class provides an interace for WorkSpaces TerminateWorkspaces responses.
  *
  * \ingroup WorkSpaces
  *

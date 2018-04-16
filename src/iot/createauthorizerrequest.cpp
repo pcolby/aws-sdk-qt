@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateAuthorizerRequest
  *
- * \brief The CreateAuthorizerRequest class encapsulates IoT CreateAuthorizer requests.
+ * \brief The CreateAuthorizerRequest class provides an interface for IoT CreateAuthorizer requests.
  *
  * \ingroup IoT
  *

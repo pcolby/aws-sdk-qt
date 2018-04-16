@@ -30,7 +30,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::UpdatePresetResponse
  *
- * \brief The UpdatePresetResponse class encapsulates MediaConvert UpdatePreset responses.
+ * \brief The UpdatePresetResponse class provides an interace for MediaConvert UpdatePreset responses.
  *
  * \ingroup MediaConvert
  *

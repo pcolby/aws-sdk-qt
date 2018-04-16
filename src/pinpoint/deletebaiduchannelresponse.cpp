@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteBaiduChannelResponse
  *
- * \brief The DeleteBaiduChannelResponse class encapsulates Pinpoint DeleteBaiduChannel responses.
+ * \brief The DeleteBaiduChannelResponse class provides an interace for Pinpoint DeleteBaiduChannel responses.
  *
  * \ingroup Pinpoint
  *

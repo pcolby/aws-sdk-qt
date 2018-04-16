@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeletePermissionPolicyResponse
  *
- * \brief The DeletePermissionPolicyResponse class encapsulates WAF DeletePermissionPolicy responses.
+ * \brief The DeletePermissionPolicyResponse class provides an interace for WAF DeletePermissionPolicy responses.
  *
  * \ingroup WAF
  *

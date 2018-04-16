@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::UpdateRuntimeConfigurationResponse
  *
- * \brief The UpdateRuntimeConfigurationResponse class encapsulates GameLift UpdateRuntimeConfiguration responses.
+ * \brief The UpdateRuntimeConfigurationResponse class provides an interace for GameLift UpdateRuntimeConfiguration responses.
  *
  * \ingroup GameLift
  *

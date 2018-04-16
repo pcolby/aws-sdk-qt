@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::StartChannelResponse
  *
- * \brief The StartChannelResponse class encapsulates MediaLive StartChannel responses.
+ * \brief The StartChannelResponse class provides an interace for MediaLive StartChannel responses.
  *
  * \ingroup MediaLive
  *

@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetRulePrioritiesRequest
  *
- * \brief The SetRulePrioritiesRequest class encapsulates ElasticLoadBalancingv2 SetRulePriorities requests.
+ * \brief The SetRulePrioritiesRequest class provides an interface for ElasticLoadBalancingv2 SetRulePriorities requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

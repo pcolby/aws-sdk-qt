@@ -26,7 +26,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::WAFRegionalRequest
  *
- * \brief The WAFRegionalRequest class is the base class for all WAFRegional requests.
+ * \brief The WAFRegionalRequest class provides an interface for WAFRegional requests.
  *
  * \ingroup WAFRegional
  */

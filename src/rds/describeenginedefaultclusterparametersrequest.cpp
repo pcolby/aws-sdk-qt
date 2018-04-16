@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeEngineDefaultClusterParametersRequest
  *
- * \brief The DescribeEngineDefaultClusterParametersRequest class encapsulates RDS DescribeEngineDefaultClusterParameters requests.
+ * \brief The DescribeEngineDefaultClusterParametersRequest class provides an interface for RDS DescribeEngineDefaultClusterParameters requests.
  *
  * \ingroup RDS
  *

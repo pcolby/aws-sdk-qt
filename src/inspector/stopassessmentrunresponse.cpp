@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::StopAssessmentRunResponse
  *
- * \brief The StopAssessmentRunResponse class encapsulates Inspector StopAssessmentRun responses.
+ * \brief The StopAssessmentRunResponse class provides an interace for Inspector StopAssessmentRun responses.
  *
  * \ingroup Inspector
  *

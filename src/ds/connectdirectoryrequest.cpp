@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::ConnectDirectoryRequest
  *
- * \brief The ConnectDirectoryRequest class encapsulates DirectoryService ConnectDirectory requests.
+ * \brief The ConnectDirectoryRequest class provides an interface for DirectoryService ConnectDirectory requests.
  *
  * \ingroup DirectoryService
  *

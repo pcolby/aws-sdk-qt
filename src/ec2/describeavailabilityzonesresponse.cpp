@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeAvailabilityZonesResponse
  *
- * \brief The DescribeAvailabilityZonesResponse class encapsulates EC2 DescribeAvailabilityZones responses.
+ * \brief The DescribeAvailabilityZonesResponse class provides an interace for EC2 DescribeAvailabilityZones responses.
  *
  * \ingroup EC2
  *

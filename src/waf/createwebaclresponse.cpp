@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::CreateWebACLResponse
  *
- * \brief The CreateWebACLResponse class encapsulates WAF CreateWebACL responses.
+ * \brief The CreateWebACLResponse class provides an interace for WAF CreateWebACL responses.
  *
  * \ingroup WAF
  *

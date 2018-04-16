@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::UpdateKeyDescriptionResponse
  *
- * \brief The UpdateKeyDescriptionResponse class encapsulates KMS UpdateKeyDescription responses.
+ * \brief The UpdateKeyDescriptionResponse class provides an interace for KMS UpdateKeyDescription responses.
  *
  * \ingroup KMS
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeImportImageTasksRequest
  *
- * \brief The DescribeImportImageTasksRequest class encapsulates EC2 DescribeImportImageTasks requests.
+ * \brief The DescribeImportImageTasksRequest class provides an interface for EC2 DescribeImportImageTasks requests.
  *
  * \ingroup EC2
  *

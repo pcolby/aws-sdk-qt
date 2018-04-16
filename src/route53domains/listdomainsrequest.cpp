@@ -28,7 +28,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::ListDomainsRequest
  *
- * \brief The ListDomainsRequest class encapsulates Route53Domains ListDomains requests.
+ * \brief The ListDomainsRequest class provides an interface for Route53Domains ListDomains requests.
  *
  * \ingroup Route53Domains
  *

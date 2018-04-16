@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::GetDeviceResponse
  *
- * \brief The GetDeviceResponse class encapsulates CognitoIdentityProvider GetDevice responses.
+ * \brief The GetDeviceResponse class provides an interace for CognitoIdentityProvider GetDevice responses.
  *
  * \ingroup CognitoIdentityProvider
  *

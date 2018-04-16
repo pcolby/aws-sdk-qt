@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DetachPolicyResponse
  *
- * \brief The DetachPolicyResponse class encapsulates CloudDirectory DetachPolicy responses.
+ * \brief The DetachPolicyResponse class provides an interace for CloudDirectory DetachPolicy responses.
  *
  * \ingroup CloudDirectory
  *

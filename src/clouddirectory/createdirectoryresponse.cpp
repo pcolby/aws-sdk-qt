@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::CreateDirectoryResponse
  *
- * \brief The CreateDirectoryResponse class encapsulates CloudDirectory CreateDirectory responses.
+ * \brief The CreateDirectoryResponse class provides an interace for CloudDirectory CreateDirectory responses.
  *
  * \ingroup CloudDirectory
  *

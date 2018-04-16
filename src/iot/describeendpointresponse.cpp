@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeEndpointResponse
  *
- * \brief The DescribeEndpointResponse class encapsulates IoT DescribeEndpoint responses.
+ * \brief The DescribeEndpointResponse class provides an interace for IoT DescribeEndpoint responses.
  *
  * \ingroup IoT
  *

@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::GetMLModelResponse
  *
- * \brief The GetMLModelResponse class encapsulates MachineLearning GetMLModel responses.
+ * \brief The GetMLModelResponse class provides an interace for MachineLearning GetMLModel responses.
  *
  * \ingroup MachineLearning
  *

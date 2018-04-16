@@ -30,7 +30,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::CreateProjectResponse
  *
- * \brief The CreateProjectResponse class encapsulates Mobile CreateProject responses.
+ * \brief The CreateProjectResponse class provides an interace for Mobile CreateProject responses.
  *
  * \ingroup Mobile
  *

@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeregisterVolumeResponse
  *
- * \brief The DeregisterVolumeResponse class encapsulates OpsWorks DeregisterVolume responses.
+ * \brief The DeregisterVolumeResponse class provides an interace for OpsWorks DeregisterVolume responses.
  *
  * \ingroup OpsWorks
  *

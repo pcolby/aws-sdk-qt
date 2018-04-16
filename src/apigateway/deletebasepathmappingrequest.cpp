@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteBasePathMappingRequest
  *
- * \brief The DeleteBasePathMappingRequest class encapsulates APIGateway DeleteBasePathMapping requests.
+ * \brief The DeleteBasePathMappingRequest class provides an interface for APIGateway DeleteBasePathMapping requests.
  *
  * \ingroup APIGateway
  *

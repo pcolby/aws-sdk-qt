@@ -28,7 +28,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::DeleteNamedQueryRequest
  *
- * \brief The DeleteNamedQueryRequest class encapsulates Athena DeleteNamedQuery requests.
+ * \brief The DeleteNamedQueryRequest class provides an interface for Athena DeleteNamedQuery requests.
  *
  * \ingroup Athena
  *

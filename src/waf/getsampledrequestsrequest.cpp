@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::GetSampledRequestsRequest
  *
- * \brief The GetSampledRequestsRequest class encapsulates WAF GetSampledRequests requests.
+ * \brief The GetSampledRequestsRequest class provides an interface for WAF GetSampledRequests requests.
  *
  * \ingroup WAF
  *

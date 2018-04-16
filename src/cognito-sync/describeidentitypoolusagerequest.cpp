@@ -28,7 +28,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::DescribeIdentityPoolUsageRequest
  *
- * \brief The DescribeIdentityPoolUsageRequest class encapsulates CognitoSync DescribeIdentityPoolUsage requests.
+ * \brief The DescribeIdentityPoolUsageRequest class provides an interface for CognitoSync DescribeIdentityPoolUsage requests.
  *
  * \ingroup CognitoSync
  *

@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::GetAppliedSchemaVersionResponse
  *
- * \brief The GetAppliedSchemaVersionResponse class encapsulates CloudDirectory GetAppliedSchemaVersion responses.
+ * \brief The GetAppliedSchemaVersionResponse class provides an interace for CloudDirectory GetAppliedSchemaVersion responses.
  *
  * \ingroup CloudDirectory
  *

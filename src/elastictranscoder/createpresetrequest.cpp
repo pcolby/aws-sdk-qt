@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::CreatePresetRequest
  *
- * \brief The CreatePresetRequest class encapsulates ElasticTranscoder CreatePreset requests.
+ * \brief The CreatePresetRequest class provides an interface for ElasticTranscoder CreatePreset requests.
  *
  * \ingroup ElasticTranscoder
  *

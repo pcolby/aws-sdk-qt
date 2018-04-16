@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteSnapshotRequest
  *
- * \brief The DeleteSnapshotRequest class encapsulates EC2 DeleteSnapshot requests.
+ * \brief The DeleteSnapshotRequest class provides an interface for EC2 DeleteSnapshot requests.
  *
  * \ingroup EC2
  *

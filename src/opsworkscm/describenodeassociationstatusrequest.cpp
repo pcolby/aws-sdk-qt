@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DescribeNodeAssociationStatusRequest
  *
- * \brief The DescribeNodeAssociationStatusRequest class encapsulates OpsWorksCM DescribeNodeAssociationStatus requests.
+ * \brief The DescribeNodeAssociationStatusRequest class provides an interface for OpsWorksCM DescribeNodeAssociationStatus requests.
  *
  * \ingroup OpsWorksCM
  *

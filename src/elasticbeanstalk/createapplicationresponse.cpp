@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::CreateApplicationResponse
  *
- * \brief The CreateApplicationResponse class encapsulates ElasticBeanstalk CreateApplication responses.
+ * \brief The CreateApplicationResponse class provides an interace for ElasticBeanstalk CreateApplication responses.
  *
  * \ingroup ElasticBeanstalk
  *

@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::DeleteChangeSetRequest
  *
- * \brief The DeleteChangeSetRequest class encapsulates CloudFormation DeleteChangeSet requests.
+ * \brief The DeleteChangeSetRequest class provides an interface for CloudFormation DeleteChangeSet requests.
  *
  * \ingroup CloudFormation
  *

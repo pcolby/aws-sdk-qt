@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeUploadBufferResponse
  *
- * \brief The DescribeUploadBufferResponse class encapsulates StorageGateway DescribeUploadBuffer responses.
+ * \brief The DescribeUploadBufferResponse class provides an interace for StorageGateway DescribeUploadBuffer responses.
  *
  * \ingroup StorageGateway
  *

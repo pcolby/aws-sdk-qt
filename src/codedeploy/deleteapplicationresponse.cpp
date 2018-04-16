@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::DeleteApplicationResponse
  *
- * \brief The DeleteApplicationResponse class encapsulates CodeDeploy DeleteApplication responses.
+ * \brief The DeleteApplicationResponse class provides an interace for CodeDeploy DeleteApplication responses.
  *
  * \ingroup CodeDeploy
  *

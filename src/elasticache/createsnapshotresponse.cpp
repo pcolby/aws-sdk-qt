@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::CreateSnapshotResponse
  *
- * \brief The CreateSnapshotResponse class encapsulates ElastiCache CreateSnapshot responses.
+ * \brief The CreateSnapshotResponse class provides an interace for ElastiCache CreateSnapshot responses.
  *
  * \ingroup ElastiCache
  *

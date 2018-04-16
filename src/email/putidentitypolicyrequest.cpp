@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::PutIdentityPolicyRequest
  *
- * \brief The PutIdentityPolicyRequest class encapsulates SES PutIdentityPolicy requests.
+ * \brief The PutIdentityPolicyRequest class provides an interface for SES PutIdentityPolicy requests.
  *
  * \ingroup SES
  *

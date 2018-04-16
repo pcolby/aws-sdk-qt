@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::AssociateHostedConnectionResponse
  *
- * \brief The AssociateHostedConnectionResponse class encapsulates DirectConnect AssociateHostedConnection responses.
+ * \brief The AssociateHostedConnectionResponse class provides an interace for DirectConnect AssociateHostedConnection responses.
  *
  * \ingroup DirectConnect
  *

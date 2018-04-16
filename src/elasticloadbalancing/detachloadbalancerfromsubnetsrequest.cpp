@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::DetachLoadBalancerFromSubnetsRequest
  *
- * \brief The DetachLoadBalancerFromSubnetsRequest class encapsulates ElasticLoadBalancing DetachLoadBalancerFromSubnets requests.
+ * \brief The DetachLoadBalancerFromSubnetsRequest class provides an interface for ElasticLoadBalancing DetachLoadBalancerFromSubnets requests.
  *
  * \ingroup ElasticLoadBalancing
  *

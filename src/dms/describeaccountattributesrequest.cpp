@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeAccountAttributesRequest
  *
- * \brief The DescribeAccountAttributesRequest class encapsulates DatabaseMigrationService DescribeAccountAttributes requests.
+ * \brief The DescribeAccountAttributesRequest class provides an interface for DatabaseMigrationService DescribeAccountAttributes requests.
  *
  * \ingroup DatabaseMigrationService
  *

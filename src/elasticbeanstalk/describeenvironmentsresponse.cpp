@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEnvironmentsResponse
  *
- * \brief The DescribeEnvironmentsResponse class encapsulates ElasticBeanstalk DescribeEnvironments responses.
+ * \brief The DescribeEnvironmentsResponse class provides an interace for ElasticBeanstalk DescribeEnvironments responses.
  *
  * \ingroup ElasticBeanstalk
  *

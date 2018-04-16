@@ -28,7 +28,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::GetServersRequest
  *
- * \brief The GetServersRequest class encapsulates SMS GetServers requests.
+ * \brief The GetServersRequest class provides an interface for SMS GetServers requests.
  *
  * \ingroup SMS
  *

@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketReplicationRequest
  *
- * \brief The PutBucketReplicationRequest class encapsulates S3 PutBucketReplication requests.
+ * \brief The PutBucketReplicationRequest class provides an interface for S3 PutBucketReplication requests.
  *
  * \ingroup S3
  *

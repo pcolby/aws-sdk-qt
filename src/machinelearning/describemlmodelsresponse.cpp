@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DescribeMLModelsResponse
  *
- * \brief The DescribeMLModelsResponse class encapsulates MachineLearning DescribeMLModels responses.
+ * \brief The DescribeMLModelsResponse class provides an interace for MachineLearning DescribeMLModels responses.
  *
  * \ingroup MachineLearning
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeHostsResponse
  *
- * \brief The DescribeHostsResponse class encapsulates EC2 DescribeHosts responses.
+ * \brief The DescribeHostsResponse class provides an interace for EC2 DescribeHosts responses.
  *
  * \ingroup EC2
  *

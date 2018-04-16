@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::ListDeadLetterSourceQueuesResponse
  *
- * \brief The ListDeadLetterSourceQueuesResponse class encapsulates SQS ListDeadLetterSourceQueues responses.
+ * \brief The ListDeadLetterSourceQueuesResponse class provides an interace for SQS ListDeadLetterSourceQueues responses.
  *
  * \ingroup SQS
  *

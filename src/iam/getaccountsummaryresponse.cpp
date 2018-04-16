@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetAccountSummaryResponse
  *
- * \brief The GetAccountSummaryResponse class encapsulates IAM GetAccountSummary responses.
+ * \brief The GetAccountSummaryResponse class provides an interace for IAM GetAccountSummary responses.
  *
  * \ingroup IAM
  *

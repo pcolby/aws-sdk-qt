@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetIPSetRequest
  *
- * \brief The GetIPSetRequest class encapsulates WAFRegional GetIPSet requests.
+ * \brief The GetIPSetRequest class provides an interface for WAFRegional GetIPSet requests.
  *
  * \ingroup WAFRegional
  *

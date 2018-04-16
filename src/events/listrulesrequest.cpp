@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::ListRulesRequest
  *
- * \brief The ListRulesRequest class encapsulates CloudWatchEvents ListRules requests.
+ * \brief The ListRulesRequest class provides an interface for CloudWatchEvents ListRules requests.
  *
  * \ingroup CloudWatchEvents
  *

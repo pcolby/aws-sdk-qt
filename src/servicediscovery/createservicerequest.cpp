@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::CreateServiceRequest
  *
- * \brief The CreateServiceRequest class encapsulates ServiceDiscovery CreateService requests.
+ * \brief The CreateServiceRequest class provides an interface for ServiceDiscovery CreateService requests.
  *
  * \ingroup ServiceDiscovery
  *

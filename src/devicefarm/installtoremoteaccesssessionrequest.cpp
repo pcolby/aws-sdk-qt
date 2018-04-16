@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::InstallToRemoteAccessSessionRequest
  *
- * \brief The InstallToRemoteAccessSessionRequest class encapsulates DeviceFarm InstallToRemoteAccessSession requests.
+ * \brief The InstallToRemoteAccessSessionRequest class provides an interface for DeviceFarm InstallToRemoteAccessSession requests.
  *
  * \ingroup DeviceFarm
  *

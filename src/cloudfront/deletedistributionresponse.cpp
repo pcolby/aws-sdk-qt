@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::DeleteDistributionResponse
  *
- * \brief The DeleteDistributionResponse class encapsulates CloudFront DeleteDistribution responses.
+ * \brief The DeleteDistributionResponse class provides an interace for CloudFront DeleteDistribution responses.
  *
  * \ingroup CloudFront
  *

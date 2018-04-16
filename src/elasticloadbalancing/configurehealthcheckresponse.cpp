@@ -30,7 +30,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::ConfigureHealthCheckResponse
  *
- * \brief The ConfigureHealthCheckResponse class encapsulates ElasticLoadBalancing ConfigureHealthCheck responses.
+ * \brief The ConfigureHealthCheckResponse class provides an interace for ElasticLoadBalancing ConfigureHealthCheck responses.
  *
  * \ingroup ElasticLoadBalancing
  *

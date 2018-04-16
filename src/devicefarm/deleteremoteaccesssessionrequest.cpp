@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteRemoteAccessSessionRequest
  *
- * \brief The DeleteRemoteAccessSessionRequest class encapsulates DeviceFarm DeleteRemoteAccessSession requests.
+ * \brief The DeleteRemoteAccessSessionRequest class provides an interface for DeviceFarm DeleteRemoteAccessSession requests.
  *
  * \ingroup DeviceFarm
  *

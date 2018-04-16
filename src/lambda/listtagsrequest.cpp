@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::ListTagsRequest
  *
- * \brief The ListTagsRequest class encapsulates Lambda ListTags requests.
+ * \brief The ListTagsRequest class provides an interface for Lambda ListTags requests.
  *
  * \ingroup Lambda
  *

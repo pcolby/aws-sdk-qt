@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::ImportKeyPairRequest
  *
- * \brief The ImportKeyPairRequest class encapsulates Lightsail ImportKeyPair requests.
+ * \brief The ImportKeyPairRequest class provides an interface for Lightsail ImportKeyPair requests.
  *
  * \ingroup Lightsail
  *

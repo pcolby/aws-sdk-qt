@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::ListPullRequestsRequest
  *
- * \brief The ListPullRequestsRequest class encapsulates CodeCommit ListPullRequests requests.
+ * \brief The ListPullRequestsRequest class provides an interface for CodeCommit ListPullRequests requests.
  *
  * \ingroup CodeCommit
  *

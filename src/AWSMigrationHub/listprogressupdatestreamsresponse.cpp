@@ -30,7 +30,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::ListProgressUpdateStreamsResponse
  *
- * \brief The ListProgressUpdateStreamsResponse class encapsulates MigrationHub ListProgressUpdateStreams responses.
+ * \brief The ListProgressUpdateStreamsResponse class provides an interace for MigrationHub ListProgressUpdateStreams responses.
  *
  * \ingroup MigrationHub
  *

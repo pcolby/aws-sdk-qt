@@ -30,7 +30,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::ExportBundleResponse
  *
- * \brief The ExportBundleResponse class encapsulates Mobile ExportBundle responses.
+ * \brief The ExportBundleResponse class provides an interace for Mobile ExportBundle responses.
  *
  * \ingroup Mobile
  *

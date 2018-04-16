@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListJobExecutionsForJobResponse
  *
- * \brief The ListJobExecutionsForJobResponse class encapsulates IoT ListJobExecutionsForJob responses.
+ * \brief The ListJobExecutionsForJobResponse class provides an interace for IoT ListJobExecutionsForJob responses.
  *
  * \ingroup IoT
  *

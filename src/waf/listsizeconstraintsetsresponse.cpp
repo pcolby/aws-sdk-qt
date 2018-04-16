@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::ListSizeConstraintSetsResponse
  *
- * \brief The ListSizeConstraintSetsResponse class encapsulates WAF ListSizeConstraintSets responses.
+ * \brief The ListSizeConstraintSetsResponse class provides an interace for WAF ListSizeConstraintSets responses.
  *
  * \ingroup WAF
  *

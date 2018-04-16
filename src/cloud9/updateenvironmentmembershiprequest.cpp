@@ -28,7 +28,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::UpdateEnvironmentMembershipRequest
  *
- * \brief The UpdateEnvironmentMembershipRequest class encapsulates Cloud9 UpdateEnvironmentMembership requests.
+ * \brief The UpdateEnvironmentMembershipRequest class provides an interface for Cloud9 UpdateEnvironmentMembership requests.
  *
  * \ingroup Cloud9
  *

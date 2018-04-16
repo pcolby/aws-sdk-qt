@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetGcmChannelRequest
  *
- * \brief The GetGcmChannelRequest class encapsulates Pinpoint GetGcmChannel requests.
+ * \brief The GetGcmChannelRequest class provides an interface for Pinpoint GetGcmChannel requests.
  *
  * \ingroup Pinpoint
  *

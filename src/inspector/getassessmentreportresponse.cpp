@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::GetAssessmentReportResponse
  *
- * \brief The GetAssessmentReportResponse class encapsulates Inspector GetAssessmentReport responses.
+ * \brief The GetAssessmentReportResponse class provides an interace for Inspector GetAssessmentReport responses.
  *
  * \ingroup Inspector
  *

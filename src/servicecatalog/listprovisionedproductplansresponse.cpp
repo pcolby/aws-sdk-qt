@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListProvisionedProductPlansResponse
  *
- * \brief The ListProvisionedProductPlansResponse class encapsulates ServiceCatalog ListProvisionedProductPlans responses.
+ * \brief The ListProvisionedProductPlansResponse class provides an interace for ServiceCatalog ListProvisionedProductPlans responses.
  *
  * \ingroup ServiceCatalog
  *

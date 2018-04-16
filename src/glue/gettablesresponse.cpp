@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetTablesResponse
  *
- * \brief The GetTablesResponse class encapsulates Glue GetTables responses.
+ * \brief The GetTablesResponse class provides an interace for Glue GetTables responses.
  *
  * \ingroup Glue
  *

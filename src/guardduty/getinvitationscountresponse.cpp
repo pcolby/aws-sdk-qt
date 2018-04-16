@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GetInvitationsCountResponse
  *
- * \brief The GetInvitationsCountResponse class encapsulates GuardDuty GetInvitationsCount responses.
+ * \brief The GetInvitationsCountResponse class provides an interace for GuardDuty GetInvitationsCount responses.
  *
  * \ingroup GuardDuty
  *

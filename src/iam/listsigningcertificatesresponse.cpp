@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListSigningCertificatesResponse
  *
- * \brief The ListSigningCertificatesResponse class encapsulates IAM ListSigningCertificates responses.
+ * \brief The ListSigningCertificatesResponse class provides an interace for IAM ListSigningCertificates responses.
  *
  * \ingroup IAM
  *

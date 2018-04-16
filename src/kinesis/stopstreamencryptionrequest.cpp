@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::StopStreamEncryptionRequest
  *
- * \brief The StopStreamEncryptionRequest class encapsulates Kinesis StopStreamEncryption requests.
+ * \brief The StopStreamEncryptionRequest class provides an interface for Kinesis StopStreamEncryption requests.
  *
  * \ingroup Kinesis
  *

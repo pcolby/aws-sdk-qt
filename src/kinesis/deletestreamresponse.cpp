@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::DeleteStreamResponse
  *
- * \brief The DeleteStreamResponse class encapsulates Kinesis DeleteStream responses.
+ * \brief The DeleteStreamResponse class provides an interace for Kinesis DeleteStream responses.
  *
  * \ingroup Kinesis
  *

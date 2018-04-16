@@ -28,7 +28,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::DeleteCertificateAuthorityRequest
  *
- * \brief The DeleteCertificateAuthorityRequest class encapsulates ACMPCA DeleteCertificateAuthority requests.
+ * \brief The DeleteCertificateAuthorityRequest class provides an interface for ACMPCA DeleteCertificateAuthority requests.
  *
  * \ingroup ACMPCA
  *

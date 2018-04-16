@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::StopApplicationRequest
  *
- * \brief The StopApplicationRequest class encapsulates KinesisAnalytics StopApplication requests.
+ * \brief The StopApplicationRequest class provides an interface for KinesisAnalytics StopApplication requests.
  *
  * \ingroup KinesisAnalytics
  *

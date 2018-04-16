@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::CreateResourceRequest
  *
- * \brief The CreateResourceRequest class encapsulates APIGateway CreateResource requests.
+ * \brief The CreateResourceRequest class provides an interface for APIGateway CreateResource requests.
  *
  * \ingroup APIGateway
  *

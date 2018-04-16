@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateVolumeRequest
  *
- * \brief The UpdateVolumeRequest class encapsulates OpsWorks UpdateVolume requests.
+ * \brief The UpdateVolumeRequest class provides an interface for OpsWorks UpdateVolume requests.
  *
  * \ingroup OpsWorks
  *

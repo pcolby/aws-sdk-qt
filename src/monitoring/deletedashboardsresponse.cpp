@@ -30,7 +30,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::DeleteDashboardsResponse
  *
- * \brief The DeleteDashboardsResponse class encapsulates CloudWatch DeleteDashboards responses.
+ * \brief The DeleteDashboardsResponse class provides an interace for CloudWatch DeleteDashboards responses.
  *
  * \ingroup CloudWatch
  *

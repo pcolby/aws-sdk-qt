@@ -29,7 +29,7 @@ namespace MarketplaceMetering {
 /*!
  * \class QtAws::MarketplaceMetering::MarketplaceMeteringResponse
  *
- * \brief The MarketplaceMeteringResponse class is the base class for all MarketplaceMetering responses.
+ * \brief The MarketplaceMeteringResponse class provides an interface for MarketplaceMetering responses.
  *
  * \ingroup MarketplaceMetering
  */

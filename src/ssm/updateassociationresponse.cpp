@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::UpdateAssociationResponse
  *
- * \brief The UpdateAssociationResponse class encapsulates SSM UpdateAssociation responses.
+ * \brief The UpdateAssociationResponse class provides an interace for SSM UpdateAssociation responses.
  *
  * \ingroup SSM
  *

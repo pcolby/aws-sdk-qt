@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateGcmChannelResponse
  *
- * \brief The UpdateGcmChannelResponse class encapsulates Pinpoint UpdateGcmChannel responses.
+ * \brief The UpdateGcmChannelResponse class provides an interace for Pinpoint UpdateGcmChannel responses.
  *
  * \ingroup Pinpoint
  *

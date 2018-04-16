@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::DeleteStackInstancesResponse
  *
- * \brief The DeleteStackInstancesResponse class encapsulates CloudFormation DeleteStackInstances responses.
+ * \brief The DeleteStackInstancesResponse class provides an interace for CloudFormation DeleteStackInstances responses.
  *
  * \ingroup CloudFormation
  *

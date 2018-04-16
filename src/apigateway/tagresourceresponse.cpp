@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::TagResourceResponse
  *
- * \brief The TagResourceResponse class encapsulates APIGateway TagResource responses.
+ * \brief The TagResourceResponse class provides an interace for APIGateway TagResource responses.
  *
  * \ingroup APIGateway
  *

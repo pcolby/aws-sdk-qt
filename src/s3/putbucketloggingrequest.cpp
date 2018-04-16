@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketLoggingRequest
  *
- * \brief The PutBucketLoggingRequest class encapsulates S3 PutBucketLogging requests.
+ * \brief The PutBucketLoggingRequest class provides an interface for S3 PutBucketLogging requests.
  *
  * \ingroup S3
  *

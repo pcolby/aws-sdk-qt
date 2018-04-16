@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::MoveAddressToVpcResponse
  *
- * \brief The MoveAddressToVpcResponse class encapsulates EC2 MoveAddressToVpc responses.
+ * \brief The MoveAddressToVpcResponse class provides an interace for EC2 MoveAddressToVpc responses.
  *
  * \ingroup EC2
  *

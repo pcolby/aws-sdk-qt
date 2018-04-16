@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::ListDomainsRequest
  *
- * \brief The ListDomainsRequest class encapsulates SWF ListDomains requests.
+ * \brief The ListDomainsRequest class provides an interface for SWF ListDomains requests.
  *
  * \ingroup SWF
  *

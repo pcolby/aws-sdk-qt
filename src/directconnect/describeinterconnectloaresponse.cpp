@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DescribeInterconnectLoaResponse
  *
- * \brief The DescribeInterconnectLoaResponse class encapsulates DirectConnect DescribeInterconnectLoa responses.
+ * \brief The DescribeInterconnectLoaResponse class provides an interace for DirectConnect DescribeInterconnectLoa responses.
  *
  * \ingroup DirectConnect
  *

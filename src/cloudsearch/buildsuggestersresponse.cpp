@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::BuildSuggestersResponse
  *
- * \brief The BuildSuggestersResponse class encapsulates CloudSearch BuildSuggesters responses.
+ * \brief The BuildSuggestersResponse class provides an interace for CloudSearch BuildSuggesters responses.
  *
  * \ingroup CloudSearch
  *

@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DisableSsoResponse
  *
- * \brief The DisableSsoResponse class encapsulates DirectoryService DisableSso responses.
+ * \brief The DisableSsoResponse class provides an interace for DirectoryService DisableSso responses.
  *
  * \ingroup DirectoryService
  *

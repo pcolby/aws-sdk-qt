@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetDocumentRequest
  *
- * \brief The GetDocumentRequest class encapsulates SSM GetDocument requests.
+ * \brief The GetDocumentRequest class provides an interface for SSM GetDocument requests.
  *
  * \ingroup SSM
  *

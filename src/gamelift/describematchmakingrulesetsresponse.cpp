@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeMatchmakingRuleSetsResponse
  *
- * \brief The DescribeMatchmakingRuleSetsResponse class encapsulates GameLift DescribeMatchmakingRuleSets responses.
+ * \brief The DescribeMatchmakingRuleSetsResponse class provides an interace for GameLift DescribeMatchmakingRuleSets responses.
  *
  * \ingroup GameLift
  *

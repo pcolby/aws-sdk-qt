@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CreateUserProfileRequest
  *
- * \brief The CreateUserProfileRequest class encapsulates OpsWorks CreateUserProfile requests.
+ * \brief The CreateUserProfileRequest class provides an interface for OpsWorks CreateUserProfile requests.
  *
  * \ingroup OpsWorks
  *

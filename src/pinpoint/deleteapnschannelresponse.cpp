@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteApnsChannelResponse
  *
- * \brief The DeleteApnsChannelResponse class encapsulates Pinpoint DeleteApnsChannel responses.
+ * \brief The DeleteApnsChannelResponse class provides an interace for Pinpoint DeleteApnsChannel responses.
  *
  * \ingroup Pinpoint
  *

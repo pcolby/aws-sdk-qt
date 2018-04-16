@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListRunsResponse
  *
- * \brief The ListRunsResponse class encapsulates DeviceFarm ListRuns responses.
+ * \brief The ListRunsResponse class provides an interace for DeviceFarm ListRuns responses.
  *
  * \ingroup DeviceFarm
  *

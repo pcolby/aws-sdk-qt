@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::DeleteRoomSkillParameterResponse
  *
- * \brief The DeleteRoomSkillParameterResponse class encapsulates AlexaForBusiness DeleteRoomSkillParameter responses.
+ * \brief The DeleteRoomSkillParameterResponse class provides an interace for AlexaForBusiness DeleteRoomSkillParameter responses.
  *
  * \ingroup AlexaForBusiness
  *

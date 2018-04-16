@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::CreateAliasRequest
  *
- * \brief The CreateAliasRequest class encapsulates WorkMail CreateAlias requests.
+ * \brief The CreateAliasRequest class provides an interface for WorkMail CreateAlias requests.
  *
  * \ingroup WorkMail
  *

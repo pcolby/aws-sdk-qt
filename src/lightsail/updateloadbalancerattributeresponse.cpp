@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::UpdateLoadBalancerAttributeResponse
  *
- * \brief The UpdateLoadBalancerAttributeResponse class encapsulates Lightsail UpdateLoadBalancerAttribute responses.
+ * \brief The UpdateLoadBalancerAttributeResponse class provides an interace for Lightsail UpdateLoadBalancerAttribute responses.
  *
  * \ingroup Lightsail
  *

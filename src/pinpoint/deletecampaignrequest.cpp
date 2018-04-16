@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteCampaignRequest
  *
- * \brief The DeleteCampaignRequest class encapsulates Pinpoint DeleteCampaign requests.
+ * \brief The DeleteCampaignRequest class provides an interface for Pinpoint DeleteCampaign requests.
  *
  * \ingroup Pinpoint
  *

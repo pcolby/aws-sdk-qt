@@ -219,7 +219,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RdsClient
  *
- * \brief The RdsClient class provides access the Amazon Relational Database Service ( RDS) service.
+ * \brief The RdsClient class provides access to the Amazon Relational Database Service ( RDS) service.
  *
  * \ingroup RDS
  *

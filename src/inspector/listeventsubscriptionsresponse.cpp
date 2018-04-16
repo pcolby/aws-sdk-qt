@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::ListEventSubscriptionsResponse
  *
- * \brief The ListEventSubscriptionsResponse class encapsulates Inspector ListEventSubscriptions responses.
+ * \brief The ListEventSubscriptionsResponse class provides an interace for Inspector ListEventSubscriptions responses.
  *
  * \ingroup Inspector
  *

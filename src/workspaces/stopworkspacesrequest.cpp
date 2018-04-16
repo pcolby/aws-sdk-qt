@@ -28,7 +28,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::StopWorkspacesRequest
  *
- * \brief The StopWorkspacesRequest class encapsulates WorkSpaces StopWorkspaces requests.
+ * \brief The StopWorkspacesRequest class provides an interface for WorkSpaces StopWorkspaces requests.
  *
  * \ingroup WorkSpaces
  *

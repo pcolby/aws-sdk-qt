@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ReportInstanceStatusRequest
  *
- * \brief The ReportInstanceStatusRequest class encapsulates EC2 ReportInstanceStatus requests.
+ * \brief The ReportInstanceStatusRequest class provides an interface for EC2 ReportInstanceStatus requests.
  *
  * \ingroup EC2
  *

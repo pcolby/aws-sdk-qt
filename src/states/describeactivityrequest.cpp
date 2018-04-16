@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::DescribeActivityRequest
  *
- * \brief The DescribeActivityRequest class encapsulates SFN DescribeActivity requests.
+ * \brief The DescribeActivityRequest class provides an interface for SFN DescribeActivity requests.
  *
  * \ingroup SFN
  *

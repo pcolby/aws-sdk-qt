@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::CreateDomainRequest
  *
- * \brief The CreateDomainRequest class encapsulates Lightsail CreateDomain requests.
+ * \brief The CreateDomainRequest class provides an interface for Lightsail CreateDomain requests.
  *
  * \ingroup Lightsail
  *

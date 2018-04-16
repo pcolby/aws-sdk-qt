@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CreateDBClusterSnapshotRequest
  *
- * \brief The CreateDBClusterSnapshotRequest class encapsulates RDS CreateDBClusterSnapshot requests.
+ * \brief The CreateDBClusterSnapshotRequest class provides an interface for RDS CreateDBClusterSnapshot requests.
  *
  * \ingroup RDS
  *

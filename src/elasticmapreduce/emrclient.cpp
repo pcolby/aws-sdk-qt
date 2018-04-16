@@ -91,7 +91,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::EmrClient
  *
- * \brief The EmrClient class provides access the Amazon Elastic MapReduce ( EMR) service.
+ * \brief The EmrClient class provides access to the Amazon Elastic MapReduce ( EMR) service.
  *
  * \ingroup EMR
  *

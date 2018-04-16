@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::DeleteActivityRequest
  *
- * \brief The DeleteActivityRequest class encapsulates SFN DeleteActivity requests.
+ * \brief The DeleteActivityRequest class provides an interface for SFN DeleteActivity requests.
  *
  * \ingroup SFN
  *

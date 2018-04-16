@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::EstimateTemplateCostResponse
  *
- * \brief The EstimateTemplateCostResponse class encapsulates CloudFormation EstimateTemplateCost responses.
+ * \brief The EstimateTemplateCostResponse class provides an interace for CloudFormation EstimateTemplateCost responses.
  *
  * \ingroup CloudFormation
  *

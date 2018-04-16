@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateEgressOnlyInternetGatewayResponse
  *
- * \brief The CreateEgressOnlyInternetGatewayResponse class encapsulates EC2 CreateEgressOnlyInternetGateway responses.
+ * \brief The CreateEgressOnlyInternetGatewayResponse class provides an interace for EC2 CreateEgressOnlyInternetGateway responses.
  *
  * \ingroup EC2
  *

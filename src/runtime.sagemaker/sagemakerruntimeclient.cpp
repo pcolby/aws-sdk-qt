@@ -39,7 +39,7 @@ namespace SageMakerRuntime {
 /*!
  * \class QtAws::SageMakerRuntime::SageMakerRuntimeClient
  *
- * \brief The SageMakerRuntimeClient class provides access the Amazon SageMaker Runtime service.
+ * \brief The SageMakerRuntimeClient class provides access to the Amazon SageMaker Runtime service.
  *
  * \ingroup SageMakerRuntime
  *

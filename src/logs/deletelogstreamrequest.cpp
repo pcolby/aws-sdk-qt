@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DeleteLogStreamRequest
  *
- * \brief The DeleteLogStreamRequest class encapsulates CloudWatchLogs DeleteLogStream requests.
+ * \brief The DeleteLogStreamRequest class provides an interface for CloudWatchLogs DeleteLogStream requests.
  *
  * \ingroup CloudWatchLogs
  *

@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DescribeImageBuildersRequest
  *
- * \brief The DescribeImageBuildersRequest class encapsulates AppStream DescribeImageBuilders requests.
+ * \brief The DescribeImageBuildersRequest class provides an interface for AppStream DescribeImageBuilders requests.
  *
  * \ingroup AppStream
  *

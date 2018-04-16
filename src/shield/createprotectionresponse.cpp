@@ -30,7 +30,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::CreateProtectionResponse
  *
- * \brief The CreateProtectionResponse class encapsulates Shield CreateProtection responses.
+ * \brief The CreateProtectionResponse class provides an interace for Shield CreateProtection responses.
  *
  * \ingroup Shield
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteSnapshotResponse
  *
- * \brief The DeleteSnapshotResponse class encapsulates EC2 DeleteSnapshot responses.
+ * \brief The DeleteSnapshotResponse class provides an interace for EC2 DeleteSnapshot responses.
  *
  * \ingroup EC2
  *

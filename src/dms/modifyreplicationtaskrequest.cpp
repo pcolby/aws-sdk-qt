@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::ModifyReplicationTaskRequest
  *
- * \brief The ModifyReplicationTaskRequest class encapsulates DatabaseMigrationService ModifyReplicationTask requests.
+ * \brief The ModifyReplicationTaskRequest class provides an interface for DatabaseMigrationService ModifyReplicationTask requests.
  *
  * \ingroup DatabaseMigrationService
  *

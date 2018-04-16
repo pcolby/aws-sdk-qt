@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeBandwidthRateLimitRequest
  *
- * \brief The DescribeBandwidthRateLimitRequest class encapsulates StorageGateway DescribeBandwidthRateLimit requests.
+ * \brief The DescribeBandwidthRateLimitRequest class provides an interface for StorageGateway DescribeBandwidthRateLimit requests.
  *
  * \ingroup StorageGateway
  *

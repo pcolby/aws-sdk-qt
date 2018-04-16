@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::DescribeAccountLimitsResponse
  *
- * \brief The DescribeAccountLimitsResponse class encapsulates CloudFormation DescribeAccountLimits responses.
+ * \brief The DescribeAccountLimitsResponse class provides an interace for CloudFormation DescribeAccountLimits responses.
  *
  * \ingroup CloudFormation
  *

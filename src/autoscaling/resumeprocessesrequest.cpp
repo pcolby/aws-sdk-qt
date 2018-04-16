@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::ResumeProcessesRequest
  *
- * \brief The ResumeProcessesRequest class encapsulates AutoScaling ResumeProcesses requests.
+ * \brief The ResumeProcessesRequest class provides an interface for AutoScaling ResumeProcesses requests.
  *
  * \ingroup AutoScaling
  *

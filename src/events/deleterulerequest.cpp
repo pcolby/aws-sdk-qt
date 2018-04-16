@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::DeleteRuleRequest
  *
- * \brief The DeleteRuleRequest class encapsulates CloudWatchEvents DeleteRule requests.
+ * \brief The DeleteRuleRequest class provides an interface for CloudWatchEvents DeleteRule requests.
  *
  * \ingroup CloudWatchEvents
  *

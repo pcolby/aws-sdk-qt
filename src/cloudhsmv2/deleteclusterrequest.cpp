@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::DeleteClusterRequest
  *
- * \brief The DeleteClusterRequest class encapsulates CloudHSMV2 DeleteCluster requests.
+ * \brief The DeleteClusterRequest class provides an interface for CloudHSMV2 DeleteCluster requests.
  *
  * \ingroup CloudHSMV2
  *

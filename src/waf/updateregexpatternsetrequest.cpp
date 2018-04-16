@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::UpdateRegexPatternSetRequest
  *
- * \brief The UpdateRegexPatternSetRequest class encapsulates WAF UpdateRegexPatternSet requests.
+ * \brief The UpdateRegexPatternSetRequest class provides an interface for WAF UpdateRegexPatternSet requests.
  *
  * \ingroup WAF
  *

@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::SetDefaultPolicyVersionResponse
  *
- * \brief The SetDefaultPolicyVersionResponse class encapsulates IoT SetDefaultPolicyVersion responses.
+ * \brief The SetDefaultPolicyVersionResponse class provides an interace for IoT SetDefaultPolicyVersion responses.
  *
  * \ingroup IoT
  *

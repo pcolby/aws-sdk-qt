@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyVpcEndpointServiceConfigurationResponse
  *
- * \brief The ModifyVpcEndpointServiceConfigurationResponse class encapsulates EC2 ModifyVpcEndpointServiceConfiguration responses.
+ * \brief The ModifyVpcEndpointServiceConfigurationResponse class provides an interace for EC2 ModifyVpcEndpointServiceConfiguration responses.
  *
  * \ingroup EC2
  *

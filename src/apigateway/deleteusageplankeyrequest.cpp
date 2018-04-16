@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteUsagePlanKeyRequest
  *
- * \brief The DeleteUsagePlanKeyRequest class encapsulates APIGateway DeleteUsagePlanKey requests.
+ * \brief The DeleteUsagePlanKeyRequest class provides an interface for APIGateway DeleteUsagePlanKey requests.
  *
  * \ingroup APIGateway
  *

@@ -30,7 +30,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::DisassociateTeamMemberResponse
  *
- * \brief The DisassociateTeamMemberResponse class encapsulates CodeStar DisassociateTeamMember responses.
+ * \brief The DisassociateTeamMemberResponse class provides an interace for CodeStar DisassociateTeamMember responses.
  *
  * \ingroup CodeStar
  *

@@ -29,7 +29,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::CloudTrailResponse
  *
- * \brief The CloudTrailResponse class is the base class for all CloudTrail responses.
+ * \brief The CloudTrailResponse class provides an interface for CloudTrail responses.
  *
  * \ingroup CloudTrail
  */

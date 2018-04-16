@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::DeleteEndpointResponse
  *
- * \brief The DeleteEndpointResponse class encapsulates SNS DeleteEndpoint responses.
+ * \brief The DeleteEndpointResponse class provides an interace for SNS DeleteEndpoint responses.
  *
  * \ingroup SNS
  *

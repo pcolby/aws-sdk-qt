@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::ListRulesResponse
  *
- * \brief The ListRulesResponse class encapsulates WAF ListRules responses.
+ * \brief The ListRulesResponse class provides an interace for WAF ListRules responses.
  *
  * \ingroup WAF
  *

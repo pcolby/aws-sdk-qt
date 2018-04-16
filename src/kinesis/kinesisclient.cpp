@@ -83,7 +83,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::KinesisClient
  *
- * \brief The KinesisClient class provides access the Amazon Kinesis service.
+ * \brief The KinesisClient class provides access to the Amazon Kinesis service.
  *
  * \ingroup Kinesis
  *

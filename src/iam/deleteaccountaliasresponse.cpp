@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteAccountAliasResponse
  *
- * \brief The DeleteAccountAliasResponse class encapsulates IAM DeleteAccountAlias responses.
+ * \brief The DeleteAccountAliasResponse class provides an interace for IAM DeleteAccountAlias responses.
  *
  * \ingroup IAM
  *

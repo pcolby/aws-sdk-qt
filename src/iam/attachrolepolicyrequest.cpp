@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::AttachRolePolicyRequest
  *
- * \brief The AttachRolePolicyRequest class encapsulates IAM AttachRolePolicy requests.
+ * \brief The AttachRolePolicyRequest class provides an interface for IAM AttachRolePolicy requests.
  *
  * \ingroup IAM
  *

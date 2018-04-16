@@ -30,7 +30,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::ListTagsResponse
  *
- * \brief The ListTagsResponse class encapsulates ACMPCA ListTags responses.
+ * \brief The ListTagsResponse class provides an interace for ACMPCA ListTags responses.
  *
  * \ingroup ACMPCA
  *

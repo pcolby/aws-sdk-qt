@@ -28,7 +28,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::DeleteAlarmsRequest
  *
- * \brief The DeleteAlarmsRequest class encapsulates CloudWatch DeleteAlarms requests.
+ * \brief The DeleteAlarmsRequest class provides an interface for CloudWatch DeleteAlarms requests.
  *
  * \ingroup CloudWatch
  *

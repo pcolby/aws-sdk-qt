@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::GetQueueRequest
  *
- * \brief The GetQueueRequest class encapsulates MediaConvert GetQueue requests.
+ * \brief The GetQueueRequest class provides an interface for MediaConvert GetQueue requests.
  *
  * \ingroup MediaConvert
  *

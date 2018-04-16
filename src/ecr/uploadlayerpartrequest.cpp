@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::UploadLayerPartRequest
  *
- * \brief The UploadLayerPartRequest class encapsulates ECR UploadLayerPart requests.
+ * \brief The UploadLayerPartRequest class provides an interface for ECR UploadLayerPart requests.
  *
  * \ingroup ECR
  *

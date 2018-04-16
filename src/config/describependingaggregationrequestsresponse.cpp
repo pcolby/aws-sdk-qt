@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DescribePendingAggregationRequestsResponse
  *
- * \brief The DescribePendingAggregationRequestsResponse class encapsulates ConfigService DescribePendingAggregationRequests responses.
+ * \brief The DescribePendingAggregationRequestsResponse class provides an interace for ConfigService DescribePendingAggregationRequests responses.
  *
  * \ingroup ConfigService
  *

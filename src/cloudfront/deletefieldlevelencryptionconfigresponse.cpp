@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::DeleteFieldLevelEncryptionConfigResponse
  *
- * \brief The DeleteFieldLevelEncryptionConfigResponse class encapsulates CloudFront DeleteFieldLevelEncryptionConfig responses.
+ * \brief The DeleteFieldLevelEncryptionConfigResponse class provides an interace for CloudFront DeleteFieldLevelEncryptionConfig responses.
  *
  * \ingroup CloudFront
  *

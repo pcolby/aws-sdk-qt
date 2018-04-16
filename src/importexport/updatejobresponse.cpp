@@ -30,7 +30,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::UpdateJobResponse
  *
- * \brief The UpdateJobResponse class encapsulates ImportExport UpdateJob responses.
+ * \brief The UpdateJobResponse class provides an interace for ImportExport UpdateJob responses.
  *
  * \ingroup ImportExport
  *

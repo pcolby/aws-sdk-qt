@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::AcceptInvitationRequest
  *
- * \brief The AcceptInvitationRequest class encapsulates GuardDuty AcceptInvitation requests.
+ * \brief The AcceptInvitationRequest class provides an interface for GuardDuty AcceptInvitation requests.
  *
  * \ingroup GuardDuty
  *

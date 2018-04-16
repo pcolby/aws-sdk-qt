@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeRuntimeConfigurationResponse
  *
- * \brief The DescribeRuntimeConfigurationResponse class encapsulates GameLift DescribeRuntimeConfiguration responses.
+ * \brief The DescribeRuntimeConfigurationResponse class provides an interace for GameLift DescribeRuntimeConfiguration responses.
  *
  * \ingroup GameLift
  *

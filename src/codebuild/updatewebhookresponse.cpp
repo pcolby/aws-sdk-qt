@@ -30,7 +30,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::UpdateWebhookResponse
  *
- * \brief The UpdateWebhookResponse class encapsulates CodeBuild UpdateWebhook responses.
+ * \brief The UpdateWebhookResponse class provides an interace for CodeBuild UpdateWebhook responses.
  *
  * \ingroup CodeBuild
  *

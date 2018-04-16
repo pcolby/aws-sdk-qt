@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ModifyDBClusterResponse
  *
- * \brief The ModifyDBClusterResponse class encapsulates RDS ModifyDBCluster responses.
+ * \brief The ModifyDBClusterResponse class provides an interace for RDS ModifyDBCluster responses.
  *
  * \ingroup RDS
  *

@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::DiscoverInputSchemaRequest
  *
- * \brief The DiscoverInputSchemaRequest class encapsulates KinesisAnalytics DiscoverInputSchema requests.
+ * \brief The DiscoverInputSchemaRequest class provides an interface for KinesisAnalytics DiscoverInputSchema requests.
  *
  * \ingroup KinesisAnalytics
  *

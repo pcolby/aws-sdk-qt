@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::GetApplicationRevisionRequest
  *
- * \brief The GetApplicationRevisionRequest class encapsulates CodeDeploy GetApplicationRevision requests.
+ * \brief The GetApplicationRevisionRequest class provides an interface for CodeDeploy GetApplicationRevision requests.
  *
  * \ingroup CodeDeploy
  *

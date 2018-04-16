@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::CancelJobResponse
  *
- * \brief The CancelJobResponse class encapsulates Batch CancelJob responses.
+ * \brief The CancelJobResponse class provides an interace for Batch CancelJob responses.
  *
  * \ingroup Batch
  *

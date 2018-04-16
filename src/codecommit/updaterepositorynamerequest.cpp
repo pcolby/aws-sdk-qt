@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::UpdateRepositoryNameRequest
  *
- * \brief The UpdateRepositoryNameRequest class encapsulates CodeCommit UpdateRepositoryName requests.
+ * \brief The UpdateRepositoryNameRequest class provides an interface for CodeCommit UpdateRepositoryName requests.
  *
  * \ingroup CodeCommit
  *

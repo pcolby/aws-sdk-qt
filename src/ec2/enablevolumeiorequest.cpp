@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::EnableVolumeIORequest
  *
- * \brief The EnableVolumeIORequest class encapsulates EC2 EnableVolumeIO requests.
+ * \brief The EnableVolumeIORequest class provides an interface for EC2 EnableVolumeIO requests.
  *
  * \ingroup EC2
  *

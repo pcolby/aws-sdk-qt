@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateEnvironmentRequest
  *
- * \brief The UpdateEnvironmentRequest class encapsulates ElasticBeanstalk UpdateEnvironment requests.
+ * \brief The UpdateEnvironmentRequest class provides an interface for ElasticBeanstalk UpdateEnvironment requests.
  *
  * \ingroup ElasticBeanstalk
  *

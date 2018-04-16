@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::FlushStageCacheRequest
  *
- * \brief The FlushStageCacheRequest class encapsulates APIGateway FlushStageCache requests.
+ * \brief The FlushStageCacheRequest class provides an interface for APIGateway FlushStageCache requests.
  *
  * \ingroup APIGateway
  *

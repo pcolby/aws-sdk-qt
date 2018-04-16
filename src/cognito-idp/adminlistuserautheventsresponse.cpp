@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminListUserAuthEventsResponse
  *
- * \brief The AdminListUserAuthEventsResponse class encapsulates CognitoIdentityProvider AdminListUserAuthEvents responses.
+ * \brief The AdminListUserAuthEventsResponse class provides an interace for CognitoIdentityProvider AdminListUserAuthEvents responses.
  *
  * \ingroup CognitoIdentityProvider
  *

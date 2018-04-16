@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::ListTagsForStreamRequest
  *
- * \brief The ListTagsForStreamRequest class encapsulates Kinesis ListTagsForStream requests.
+ * \brief The ListTagsForStreamRequest class provides an interface for Kinesis ListTagsForStream requests.
  *
  * \ingroup Kinesis
  *

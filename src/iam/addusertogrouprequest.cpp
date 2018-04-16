@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::AddUserToGroupRequest
  *
- * \brief The AddUserToGroupRequest class encapsulates IAM AddUserToGroup requests.
+ * \brief The AddUserToGroupRequest class provides an interface for IAM AddUserToGroup requests.
  *
  * \ingroup IAM
  *

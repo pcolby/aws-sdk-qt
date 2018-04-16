@@ -30,7 +30,7 @@ namespace IoTDataPlane {
 /*!
  * \class QtAws::IoTDataPlane::GetThingShadowResponse
  *
- * \brief The GetThingShadowResponse class encapsulates IoTDataPlane GetThingShadow responses.
+ * \brief The GetThingShadowResponse class provides an interace for IoTDataPlane GetThingShadow responses.
  *
  * \ingroup IoTDataPlane
  *

@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeleteConfigurationAggregatorRequest
  *
- * \brief The DeleteConfigurationAggregatorRequest class encapsulates ConfigService DeleteConfigurationAggregator requests.
+ * \brief The DeleteConfigurationAggregatorRequest class provides an interface for ConfigService DeleteConfigurationAggregator requests.
  *
  * \ingroup ConfigService
  *

@@ -67,7 +67,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::SecretsManagerClient
  *
- * \brief The SecretsManagerClient class provides access the AWS Secrets Manager service.
+ * \brief The SecretsManagerClient class provides access to the AWS Secrets Manager service.
  *
  * \ingroup SecretsManager
  *

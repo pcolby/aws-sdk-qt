@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeLoadBalancerAttributesResponse
  *
- * \brief The DescribeLoadBalancerAttributesResponse class encapsulates ElasticLoadBalancingv2 DescribeLoadBalancerAttributes responses.
+ * \brief The DescribeLoadBalancerAttributesResponse class provides an interace for ElasticLoadBalancingv2 DescribeLoadBalancerAttributes responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

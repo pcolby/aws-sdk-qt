@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::ConfirmSubscriptionRequest
  *
- * \brief The ConfirmSubscriptionRequest class encapsulates SNS ConfirmSubscription requests.
+ * \brief The ConfirmSubscriptionRequest class provides an interface for SNS ConfirmSubscription requests.
  *
  * \ingroup SNS
  *

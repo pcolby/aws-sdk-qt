@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribeConstraintRequest
  *
- * \brief The DescribeConstraintRequest class encapsulates ServiceCatalog DescribeConstraint requests.
+ * \brief The DescribeConstraintRequest class provides an interface for ServiceCatalog DescribeConstraint requests.
  *
  * \ingroup ServiceCatalog
  *

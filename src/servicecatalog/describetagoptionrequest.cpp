@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribeTagOptionRequest
  *
- * \brief The DescribeTagOptionRequest class encapsulates ServiceCatalog DescribeTagOption requests.
+ * \brief The DescribeTagOptionRequest class provides an interface for ServiceCatalog DescribeTagOption requests.
  *
  * \ingroup ServiceCatalog
  *

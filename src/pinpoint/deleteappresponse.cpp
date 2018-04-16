@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteAppResponse
  *
- * \brief The DeleteAppResponse class encapsulates Pinpoint DeleteApp responses.
+ * \brief The DeleteAppResponse class provides an interace for Pinpoint DeleteApp responses.
  *
  * \ingroup Pinpoint
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateVpnConnectionRouteResponse
  *
- * \brief The CreateVpnConnectionRouteResponse class encapsulates EC2 CreateVpnConnectionRoute responses.
+ * \brief The CreateVpnConnectionRouteResponse class provides an interace for EC2 CreateVpnConnectionRoute responses.
  *
  * \ingroup EC2
  *

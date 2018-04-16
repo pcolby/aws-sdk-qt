@@ -30,7 +30,7 @@ namespace Health {
 /*!
  * \class QtAws::Health::DescribeAffectedEntitiesResponse
  *
- * \brief The DescribeAffectedEntitiesResponse class encapsulates Health DescribeAffectedEntities responses.
+ * \brief The DescribeAffectedEntitiesResponse class provides an interace for Health DescribeAffectedEntities responses.
  *
  * \ingroup Health
  *

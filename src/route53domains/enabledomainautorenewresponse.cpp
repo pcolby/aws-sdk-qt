@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::EnableDomainAutoRenewResponse
  *
- * \brief The EnableDomainAutoRenewResponse class encapsulates Route53Domains EnableDomainAutoRenew responses.
+ * \brief The EnableDomainAutoRenewResponse class provides an interace for Route53Domains EnableDomainAutoRenew responses.
  *
  * \ingroup Route53Domains
  *

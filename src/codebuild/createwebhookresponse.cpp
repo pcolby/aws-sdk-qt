@@ -30,7 +30,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::CreateWebhookResponse
  *
- * \brief The CreateWebhookResponse class encapsulates CodeBuild CreateWebhook responses.
+ * \brief The CreateWebhookResponse class provides an interace for CodeBuild CreateWebhook responses.
  *
  * \ingroup CodeBuild
  *

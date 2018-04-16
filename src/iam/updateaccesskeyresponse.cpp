@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateAccessKeyResponse
  *
- * \brief The UpdateAccessKeyResponse class encapsulates IAM UpdateAccessKey responses.
+ * \brief The UpdateAccessKeyResponse class provides an interace for IAM UpdateAccessKey responses.
  *
  * \ingroup IAM
  *

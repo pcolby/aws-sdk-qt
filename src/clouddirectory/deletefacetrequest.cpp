@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DeleteFacetRequest
  *
- * \brief The DeleteFacetRequest class encapsulates CloudDirectory DeleteFacet requests.
+ * \brief The DeleteFacetRequest class provides an interface for CloudDirectory DeleteFacet requests.
  *
  * \ingroup CloudDirectory
  *

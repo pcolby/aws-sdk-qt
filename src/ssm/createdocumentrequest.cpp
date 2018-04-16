@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CreateDocumentRequest
  *
- * \brief The CreateDocumentRequest class encapsulates SSM CreateDocument requests.
+ * \brief The CreateDocumentRequest class provides an interface for SSM CreateDocument requests.
  *
  * \ingroup SSM
  *

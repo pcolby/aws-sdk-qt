@@ -59,7 +59,7 @@ namespace Comprehend {
 /*!
  * \class QtAws::Comprehend::ComprehendClient
  *
- * \brief The ComprehendClient class provides access the Amazon Comprehend service.
+ * \brief The ComprehendClient class provides access to the Amazon Comprehend service.
  *
  * \ingroup Comprehend
  *

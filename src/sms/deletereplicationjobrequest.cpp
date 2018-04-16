@@ -28,7 +28,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::DeleteReplicationJobRequest
  *
- * \brief The DeleteReplicationJobRequest class encapsulates SMS DeleteReplicationJob requests.
+ * \brief The DeleteReplicationJobRequest class provides an interface for SMS DeleteReplicationJob requests.
  *
  * \ingroup SMS
  *

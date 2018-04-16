@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::PutDestinationResponse
  *
- * \brief The PutDestinationResponse class encapsulates CloudWatchLogs PutDestination responses.
+ * \brief The PutDestinationResponse class provides an interace for CloudWatchLogs PutDestination responses.
  *
  * \ingroup CloudWatchLogs
  *

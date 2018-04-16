@@ -30,7 +30,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::CreateTagsResponse
  *
- * \brief The CreateTagsResponse class encapsulates EFS CreateTags responses.
+ * \brief The CreateTagsResponse class provides an interace for EFS CreateTags responses.
  *
  * \ingroup EFS
  *

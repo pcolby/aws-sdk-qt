@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeInstanceStatusRequest
  *
- * \brief The DescribeInstanceStatusRequest class encapsulates EC2 DescribeInstanceStatus requests.
+ * \brief The DescribeInstanceStatusRequest class provides an interface for EC2 DescribeInstanceStatus requests.
  *
  * \ingroup EC2
  *

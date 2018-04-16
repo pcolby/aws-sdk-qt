@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::CreateConfigurationSetEventDestinationRequest
  *
- * \brief The CreateConfigurationSetEventDestinationRequest class encapsulates SES CreateConfigurationSetEventDestination requests.
+ * \brief The CreateConfigurationSetEventDestinationRequest class provides an interface for SES CreateConfigurationSetEventDestination requests.
  *
  * \ingroup SES
  *

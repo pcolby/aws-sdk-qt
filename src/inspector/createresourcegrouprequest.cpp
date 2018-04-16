@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::CreateResourceGroupRequest
  *
- * \brief The CreateResourceGroupRequest class encapsulates Inspector CreateResourceGroup requests.
+ * \brief The CreateResourceGroupRequest class provides an interface for Inspector CreateResourceGroup requests.
  *
  * \ingroup Inspector
  *

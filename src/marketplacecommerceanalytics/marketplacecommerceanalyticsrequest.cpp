@@ -26,7 +26,7 @@ namespace MarketplaceCommerceAnalytics {
 /*!
  * \class QtAws::MarketplaceCommerceAnalytics::MarketplaceCommerceAnalyticsRequest
  *
- * \brief The MarketplaceCommerceAnalyticsRequest class is the base class for all MarketplaceCommerceAnalytics requests.
+ * \brief The MarketplaceCommerceAnalyticsRequest class provides an interface for MarketplaceCommerceAnalytics requests.
  *
  * \ingroup MarketplaceCommerceAnalytics
  */

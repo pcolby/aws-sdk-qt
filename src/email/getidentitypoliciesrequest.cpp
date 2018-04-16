@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetIdentityPoliciesRequest
  *
- * \brief The GetIdentityPoliciesRequest class encapsulates SES GetIdentityPolicies requests.
+ * \brief The GetIdentityPoliciesRequest class provides an interface for SES GetIdentityPolicies requests.
  *
  * \ingroup SES
  *

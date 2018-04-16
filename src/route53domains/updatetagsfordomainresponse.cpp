@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::UpdateTagsForDomainResponse
  *
- * \brief The UpdateTagsForDomainResponse class encapsulates Route53Domains UpdateTagsForDomain responses.
+ * \brief The UpdateTagsForDomainResponse class provides an interace for Route53Domains UpdateTagsForDomain responses.
  *
  * \ingroup Route53Domains
  *

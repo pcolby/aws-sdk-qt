@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::FilterLogEventsRequest
  *
- * \brief The FilterLogEventsRequest class encapsulates CloudWatchLogs FilterLogEvents requests.
+ * \brief The FilterLogEventsRequest class provides an interface for CloudWatchLogs FilterLogEvents requests.
  *
  * \ingroup CloudWatchLogs
  *

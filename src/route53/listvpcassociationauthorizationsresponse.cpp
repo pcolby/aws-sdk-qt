@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListVPCAssociationAuthorizationsResponse
  *
- * \brief The ListVPCAssociationAuthorizationsResponse class encapsulates Route53 ListVPCAssociationAuthorizations responses.
+ * \brief The ListVPCAssociationAuthorizationsResponse class provides an interace for Route53 ListVPCAssociationAuthorizations responses.
  *
  * \ingroup Route53
  *

@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DeleteVolumeResponse
  *
- * \brief The DeleteVolumeResponse class encapsulates StorageGateway DeleteVolume responses.
+ * \brief The DeleteVolumeResponse class provides an interace for StorageGateway DeleteVolume responses.
  *
  * \ingroup StorageGateway
  *

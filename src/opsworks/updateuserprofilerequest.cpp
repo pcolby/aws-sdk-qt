@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateUserProfileRequest
  *
- * \brief The UpdateUserProfileRequest class encapsulates OpsWorks UpdateUserProfile requests.
+ * \brief The UpdateUserProfileRequest class provides an interface for OpsWorks UpdateUserProfile requests.
  *
  * \ingroup OpsWorks
  *

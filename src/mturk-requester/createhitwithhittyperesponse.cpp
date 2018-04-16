@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::CreateHITWithHITTypeResponse
  *
- * \brief The CreateHITWithHITTypeResponse class encapsulates MTurk CreateHITWithHITType responses.
+ * \brief The CreateHITWithHITTypeResponse class provides an interace for MTurk CreateHITWithHITType responses.
  *
  * \ingroup MTurk
  *

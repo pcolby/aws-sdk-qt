@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListCoreDefinitionsResponse
  *
- * \brief The ListCoreDefinitionsResponse class encapsulates Greengrass ListCoreDefinitions responses.
+ * \brief The ListCoreDefinitionsResponse class provides an interace for Greengrass ListCoreDefinitions responses.
  *
  * \ingroup Greengrass
  *

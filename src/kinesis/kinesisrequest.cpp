@@ -26,7 +26,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::KinesisRequest
  *
- * \brief The KinesisRequest class is the base class for all Kinesis requests.
+ * \brief The KinesisRequest class provides an interface for Kinesis requests.
  *
  * \ingroup Kinesis
  */

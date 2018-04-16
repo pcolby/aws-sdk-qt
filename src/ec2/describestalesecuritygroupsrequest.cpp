@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeStaleSecurityGroupsRequest
  *
- * \brief The DescribeStaleSecurityGroupsRequest class encapsulates EC2 DescribeStaleSecurityGroups requests.
+ * \brief The DescribeStaleSecurityGroupsRequest class provides an interface for EC2 DescribeStaleSecurityGroups requests.
  *
  * \ingroup EC2
  *

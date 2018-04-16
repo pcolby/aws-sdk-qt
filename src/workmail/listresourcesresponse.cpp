@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::ListResourcesResponse
  *
- * \brief The ListResourcesResponse class encapsulates WorkMail ListResources responses.
+ * \brief The ListResourcesResponse class provides an interace for WorkMail ListResources responses.
  *
  * \ingroup WorkMail
  *

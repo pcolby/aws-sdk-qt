@@ -28,7 +28,7 @@ namespace IoTDataPlane {
 /*!
  * \class QtAws::IoTDataPlane::PublishRequest
  *
- * \brief The PublishRequest class encapsulates IoTDataPlane Publish requests.
+ * \brief The PublishRequest class provides an interface for IoTDataPlane Publish requests.
  *
  * \ingroup IoTDataPlane
  *

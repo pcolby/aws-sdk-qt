@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::AddTagsResponse
  *
- * \brief The AddTagsResponse class encapsulates DataPipeline AddTags responses.
+ * \brief The AddTagsResponse class provides an interace for DataPipeline AddTags responses.
  *
  * \ingroup DataPipeline
  *

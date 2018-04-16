@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CreateActivationRequest
  *
- * \brief The CreateActivationRequest class encapsulates SSM CreateActivation requests.
+ * \brief The CreateActivationRequest class provides an interface for SSM CreateActivation requests.
  *
  * \ingroup SSM
  *

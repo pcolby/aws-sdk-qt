@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::GetStackPolicyResponse
  *
- * \brief The GetStackPolicyResponse class encapsulates CloudFormation GetStackPolicy responses.
+ * \brief The GetStackPolicyResponse class provides an interace for CloudFormation GetStackPolicy responses.
  *
  * \ingroup CloudFormation
  *

@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::AssociateNodeResponse
  *
- * \brief The AssociateNodeResponse class encapsulates OpsWorksCM AssociateNode responses.
+ * \brief The AssociateNodeResponse class provides an interace for OpsWorksCM AssociateNode responses.
  *
  * \ingroup OpsWorksCM
  *

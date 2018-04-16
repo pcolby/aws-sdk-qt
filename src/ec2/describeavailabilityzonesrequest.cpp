@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeAvailabilityZonesRequest
  *
- * \brief The DescribeAvailabilityZonesRequest class encapsulates EC2 DescribeAvailabilityZones requests.
+ * \brief The DescribeAvailabilityZonesRequest class provides an interface for EC2 DescribeAvailabilityZones requests.
  *
  * \ingroup EC2
  *

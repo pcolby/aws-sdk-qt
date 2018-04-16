@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DescribeDirectoryConfigsResponse
  *
- * \brief The DescribeDirectoryConfigsResponse class encapsulates AppStream DescribeDirectoryConfigs responses.
+ * \brief The DescribeDirectoryConfigsResponse class provides an interace for AppStream DescribeDirectoryConfigs responses.
  *
  * \ingroup AppStream
  *

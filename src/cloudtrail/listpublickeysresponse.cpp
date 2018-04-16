@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::ListPublicKeysResponse
  *
- * \brief The ListPublicKeysResponse class encapsulates CloudTrail ListPublicKeys responses.
+ * \brief The ListPublicKeysResponse class provides an interace for CloudTrail ListPublicKeys responses.
  *
  * \ingroup CloudTrail
  *

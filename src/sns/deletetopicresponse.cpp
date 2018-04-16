@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::DeleteTopicResponse
  *
- * \brief The DeleteTopicResponse class encapsulates SNS DeleteTopic responses.
+ * \brief The DeleteTopicResponse class provides an interace for SNS DeleteTopic responses.
  *
  * \ingroup SNS
  *

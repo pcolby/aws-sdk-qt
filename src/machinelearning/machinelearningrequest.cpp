@@ -26,7 +26,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::MachineLearningRequest
  *
- * \brief The MachineLearningRequest class is the base class for all MachineLearning requests.
+ * \brief The MachineLearningRequest class provides an interface for MachineLearning requests.
  *
  * \ingroup MachineLearning
  */

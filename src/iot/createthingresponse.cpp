@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateThingResponse
  *
- * \brief The CreateThingResponse class encapsulates IoT CreateThing responses.
+ * \brief The CreateThingResponse class provides an interace for IoT CreateThing responses.
  *
  * \ingroup IoT
  *

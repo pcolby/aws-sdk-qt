@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribeConstraintResponse
  *
- * \brief The DescribeConstraintResponse class encapsulates ServiceCatalog DescribeConstraint responses.
+ * \brief The DescribeConstraintResponse class provides an interace for ServiceCatalog DescribeConstraint responses.
  *
  * \ingroup ServiceCatalog
  *

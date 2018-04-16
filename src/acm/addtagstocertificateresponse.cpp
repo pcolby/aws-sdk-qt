@@ -30,7 +30,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::AddTagsToCertificateResponse
  *
- * \brief The AddTagsToCertificateResponse class encapsulates ACM AddTagsToCertificate responses.
+ * \brief The AddTagsToCertificateResponse class provides an interace for ACM AddTagsToCertificate responses.
  *
  * \ingroup ACM
  *

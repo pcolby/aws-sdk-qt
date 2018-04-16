@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::DescribeInputRequest
  *
- * \brief The DescribeInputRequest class encapsulates MediaLive DescribeInput requests.
+ * \brief The DescribeInputRequest class provides an interface for MediaLive DescribeInput requests.
  *
  * \ingroup MediaLive
  *

@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::ListTaskDefinitionFamiliesResponse
  *
- * \brief The ListTaskDefinitionFamiliesResponse class encapsulates ECS ListTaskDefinitionFamilies responses.
+ * \brief The ListTaskDefinitionFamiliesResponse class provides an interace for ECS ListTaskDefinitionFamilies responses.
  *
  * \ingroup ECS
  *

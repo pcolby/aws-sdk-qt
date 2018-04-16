@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::GetFieldLevelEncryptionProfileResponse
  *
- * \brief The GetFieldLevelEncryptionProfileResponse class encapsulates CloudFront GetFieldLevelEncryptionProfile responses.
+ * \brief The GetFieldLevelEncryptionProfileResponse class provides an interace for CloudFront GetFieldLevelEncryptionProfile responses.
  *
  * \ingroup CloudFront
  *

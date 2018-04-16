@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::UpdateUserResponse
  *
- * \brief The UpdateUserResponse class encapsulates MQ UpdateUser responses.
+ * \brief The UpdateUserResponse class provides an interace for MQ UpdateUser responses.
  *
  * \ingroup MQ
  *

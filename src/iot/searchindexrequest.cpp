@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::SearchIndexRequest
  *
- * \brief The SearchIndexRequest class encapsulates IoT SearchIndex requests.
+ * \brief The SearchIndexRequest class provides an interface for IoT SearchIndex requests.
  *
  * \ingroup IoT
  *

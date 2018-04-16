@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::RejectPortfolioShareResponse
  *
- * \brief The RejectPortfolioShareResponse class encapsulates ServiceCatalog RejectPortfolioShare responses.
+ * \brief The RejectPortfolioShareResponse class provides an interace for ServiceCatalog RejectPortfolioShare responses.
  *
  * \ingroup ServiceCatalog
  *

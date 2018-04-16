@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::ListChannelsResponse
  *
- * \brief The ListChannelsResponse class encapsulates MediaLive ListChannels responses.
+ * \brief The ListChannelsResponse class provides an interace for MediaLive ListChannels responses.
  *
  * \ingroup MediaLive
  *

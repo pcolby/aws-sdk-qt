@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeStackSummaryRequest
  *
- * \brief The DescribeStackSummaryRequest class encapsulates OpsWorks DescribeStackSummary requests.
+ * \brief The DescribeStackSummaryRequest class provides an interface for OpsWorks DescribeStackSummary requests.
  *
  * \ingroup OpsWorks
  *

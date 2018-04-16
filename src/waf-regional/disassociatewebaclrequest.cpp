@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DisassociateWebACLRequest
  *
- * \brief The DisassociateWebACLRequest class encapsulates WAFRegional DisassociateWebACL requests.
+ * \brief The DisassociateWebACLRequest class provides an interface for WAFRegional DisassociateWebACL requests.
  *
  * \ingroup WAFRegional
  *

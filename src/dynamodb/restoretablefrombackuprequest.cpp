@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::RestoreTableFromBackupRequest
  *
- * \brief The RestoreTableFromBackupRequest class encapsulates DynamoDB RestoreTableFromBackup requests.
+ * \brief The RestoreTableFromBackupRequest class provides an interface for DynamoDB RestoreTableFromBackup requests.
  *
  * \ingroup DynamoDB
  *

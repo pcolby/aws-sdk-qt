@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::ListSizeConstraintSetsRequest
  *
- * \brief The ListSizeConstraintSetsRequest class encapsulates WAF ListSizeConstraintSets requests.
+ * \brief The ListSizeConstraintSetsRequest class provides an interface for WAF ListSizeConstraintSets requests.
  *
  * \ingroup WAF
  *

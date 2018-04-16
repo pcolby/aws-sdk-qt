@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeParametersResponse
  *
- * \brief The DescribeParametersResponse class encapsulates SSM DescribeParameters responses.
+ * \brief The DescribeParametersResponse class provides an interace for SSM DescribeParameters responses.
  *
  * \ingroup SSM
  *

@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::ListTagsForResourceRequest
  *
- * \brief The ListTagsForResourceRequest class encapsulates ElasticBeanstalk ListTagsForResource requests.
+ * \brief The ListTagsForResourceRequest class provides an interface for ElasticBeanstalk ListTagsForResource requests.
  *
  * \ingroup ElasticBeanstalk
  *

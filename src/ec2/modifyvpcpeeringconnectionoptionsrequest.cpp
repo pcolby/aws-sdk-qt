@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyVpcPeeringConnectionOptionsRequest
  *
- * \brief The ModifyVpcPeeringConnectionOptionsRequest class encapsulates EC2 ModifyVpcPeeringConnectionOptions requests.
+ * \brief The ModifyVpcPeeringConnectionOptionsRequest class provides an interface for EC2 ModifyVpcPeeringConnectionOptions requests.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::UpdateDomainEntryResponse
  *
- * \brief The UpdateDomainEntryResponse class encapsulates Lightsail UpdateDomainEntry responses.
+ * \brief The UpdateDomainEntryResponse class provides an interace for Lightsail UpdateDomainEntry responses.
  *
  * \ingroup Lightsail
  *

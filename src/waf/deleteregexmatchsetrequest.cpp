@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteRegexMatchSetRequest
  *
- * \brief The DeleteRegexMatchSetRequest class encapsulates WAF DeleteRegexMatchSet requests.
+ * \brief The DeleteRegexMatchSetRequest class provides an interface for WAF DeleteRegexMatchSet requests.
  *
  * \ingroup WAF
  *

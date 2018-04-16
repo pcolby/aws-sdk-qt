@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ConfirmProductInstanceResponse
  *
- * \brief The ConfirmProductInstanceResponse class encapsulates EC2 ConfirmProductInstance responses.
+ * \brief The ConfirmProductInstanceResponse class provides an interace for EC2 ConfirmProductInstance responses.
  *
  * \ingroup EC2
  *

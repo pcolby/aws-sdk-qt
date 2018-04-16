@@ -109,7 +109,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::CodeCommitClient
  *
- * \brief The CodeCommitClient class provides access the AWS CodeCommit service.
+ * \brief The CodeCommitClient class provides access to the AWS CodeCommit service.
  *
  * \ingroup CodeCommit
  *

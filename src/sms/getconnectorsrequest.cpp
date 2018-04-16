@@ -28,7 +28,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::GetConnectorsRequest
  *
- * \brief The GetConnectorsRequest class encapsulates SMS GetConnectors requests.
+ * \brief The GetConnectorsRequest class provides an interface for SMS GetConnectors requests.
  *
  * \ingroup SMS
  *

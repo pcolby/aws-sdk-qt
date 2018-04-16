@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::GetSMSAttributesResponse
  *
- * \brief The GetSMSAttributesResponse class encapsulates SNS GetSMSAttributes responses.
+ * \brief The GetSMSAttributesResponse class provides an interace for SNS GetSMSAttributes responses.
  *
  * \ingroup SNS
  *

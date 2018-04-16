@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeregisterManagedInstanceResponse
  *
- * \brief The DeregisterManagedInstanceResponse class encapsulates SSM DeregisterManagedInstance responses.
+ * \brief The DeregisterManagedInstanceResponse class provides an interace for SSM DeregisterManagedInstance responses.
  *
  * \ingroup SSM
  *

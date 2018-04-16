@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminSetUserSettingsResponse
  *
- * \brief The AdminSetUserSettingsResponse class encapsulates CognitoIdentityProvider AdminSetUserSettings responses.
+ * \brief The AdminSetUserSettingsResponse class provides an interace for CognitoIdentityProvider AdminSetUserSettings responses.
  *
  * \ingroup CognitoIdentityProvider
  *

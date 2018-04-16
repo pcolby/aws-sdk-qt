@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RebootDBInstanceResponse
  *
- * \brief The RebootDBInstanceResponse class encapsulates RDS RebootDBInstance responses.
+ * \brief The RebootDBInstanceResponse class provides an interace for RDS RebootDBInstance responses.
  *
  * \ingroup RDS
  *

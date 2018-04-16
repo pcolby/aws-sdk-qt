@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::UpdateServerResponse
  *
- * \brief The UpdateServerResponse class encapsulates OpsWorksCM UpdateServer responses.
+ * \brief The UpdateServerResponse class provides an interace for OpsWorksCM UpdateServer responses.
  *
  * \ingroup OpsWorksCM
  *

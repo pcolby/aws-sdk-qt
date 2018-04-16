@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::DeleteDataSourceResponse
  *
- * \brief The DeleteDataSourceResponse class encapsulates AppSync DeleteDataSource responses.
+ * \brief The DeleteDataSourceResponse class provides an interace for AppSync DeleteDataSource responses.
  *
  * \ingroup AppSync
  *

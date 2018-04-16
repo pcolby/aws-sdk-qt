@@ -28,7 +28,7 @@ namespace IoTDataPlane {
 /*!
  * \class QtAws::IoTDataPlane::GetThingShadowRequest
  *
- * \brief The GetThingShadowRequest class encapsulates IoTDataPlane GetThingShadow requests.
+ * \brief The GetThingShadowRequest class provides an interface for IoTDataPlane GetThingShadow requests.
  *
  * \ingroup IoTDataPlane
  *

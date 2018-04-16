@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListTestsResponse
  *
- * \brief The ListTestsResponse class encapsulates DeviceFarm ListTests responses.
+ * \brief The ListTestsResponse class provides an interace for DeviceFarm ListTests responses.
  *
  * \ingroup DeviceFarm
  *

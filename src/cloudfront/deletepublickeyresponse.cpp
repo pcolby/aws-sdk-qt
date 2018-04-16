@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::DeletePublicKeyResponse
  *
- * \brief The DeletePublicKeyResponse class encapsulates CloudFront DeletePublicKey responses.
+ * \brief The DeletePublicKeyResponse class provides an interace for CloudFront DeletePublicKey responses.
  *
  * \ingroup CloudFront
  *

@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketAccelerateConfigurationRequest
  *
- * \brief The GetBucketAccelerateConfigurationRequest class encapsulates S3 GetBucketAccelerateConfiguration requests.
+ * \brief The GetBucketAccelerateConfigurationRequest class provides an interface for S3 GetBucketAccelerateConfiguration requests.
  *
  * \ingroup S3
  *

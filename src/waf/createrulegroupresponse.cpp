@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::CreateRuleGroupResponse
  *
- * \brief The CreateRuleGroupResponse class encapsulates WAF CreateRuleGroup responses.
+ * \brief The CreateRuleGroupResponse class provides an interace for WAF CreateRuleGroup responses.
  *
  * \ingroup WAF
  *

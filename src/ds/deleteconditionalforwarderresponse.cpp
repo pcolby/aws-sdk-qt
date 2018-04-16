@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DeleteConditionalForwarderResponse
  *
- * \brief The DeleteConditionalForwarderResponse class encapsulates DirectoryService DeleteConditionalForwarder responses.
+ * \brief The DeleteConditionalForwarderResponse class provides an interace for DirectoryService DeleteConditionalForwarder responses.
  *
  * \ingroup DirectoryService
  *

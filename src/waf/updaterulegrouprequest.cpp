@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::UpdateRuleGroupRequest
  *
- * \brief The UpdateRuleGroupRequest class encapsulates WAF UpdateRuleGroup requests.
+ * \brief The UpdateRuleGroupRequest class provides an interface for WAF UpdateRuleGroup requests.
  *
  * \ingroup WAF
  *

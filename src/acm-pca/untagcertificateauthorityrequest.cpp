@@ -28,7 +28,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::UntagCertificateAuthorityRequest
  *
- * \brief The UntagCertificateAuthorityRequest class encapsulates ACMPCA UntagCertificateAuthority requests.
+ * \brief The UntagCertificateAuthorityRequest class provides an interface for ACMPCA UntagCertificateAuthority requests.
  *
  * \ingroup ACMPCA
  *

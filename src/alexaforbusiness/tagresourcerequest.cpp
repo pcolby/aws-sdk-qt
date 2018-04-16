@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::TagResourceRequest
  *
- * \brief The TagResourceRequest class encapsulates AlexaForBusiness TagResource requests.
+ * \brief The TagResourceRequest class provides an interface for AlexaForBusiness TagResource requests.
  *
  * \ingroup AlexaForBusiness
  *

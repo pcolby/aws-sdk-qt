@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::ListJobsResponse
  *
- * \brief The ListJobsResponse class encapsulates Batch ListJobs responses.
+ * \brief The ListJobsResponse class provides an interace for Batch ListJobs responses.
  *
  * \ingroup Batch
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateVpcEndpointConnectionNotificationRequest
  *
- * \brief The CreateVpcEndpointConnectionNotificationRequest class encapsulates EC2 CreateVpcEndpointConnectionNotification requests.
+ * \brief The CreateVpcEndpointConnectionNotificationRequest class provides an interface for EC2 CreateVpcEndpointConnectionNotification requests.
  *
  * \ingroup EC2
  *

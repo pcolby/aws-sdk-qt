@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::PutLifecyclePolicyRequest
  *
- * \brief The PutLifecyclePolicyRequest class encapsulates ECR PutLifecyclePolicy requests.
+ * \brief The PutLifecyclePolicyRequest class provides an interface for ECR PutLifecyclePolicy requests.
  *
  * \ingroup ECR
  *

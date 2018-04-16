@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketAnalyticsConfigurationResponse
  *
- * \brief The PutBucketAnalyticsConfigurationResponse class encapsulates S3 PutBucketAnalyticsConfiguration responses.
+ * \brief The PutBucketAnalyticsConfigurationResponse class provides an interace for S3 PutBucketAnalyticsConfiguration responses.
  *
  * \ingroup S3
  *

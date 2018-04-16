@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::GetEndpointAttributesRequest
  *
- * \brief The GetEndpointAttributesRequest class encapsulates SNS GetEndpointAttributes requests.
+ * \brief The GetEndpointAttributesRequest class provides an interface for SNS GetEndpointAttributes requests.
  *
  * \ingroup SNS
  *

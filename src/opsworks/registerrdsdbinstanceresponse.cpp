@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::RegisterRdsDbInstanceResponse
  *
- * \brief The RegisterRdsDbInstanceResponse class encapsulates OpsWorks RegisterRdsDbInstance responses.
+ * \brief The RegisterRdsDbInstanceResponse class provides an interace for OpsWorks RegisterRdsDbInstance responses.
  *
  * \ingroup OpsWorks
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AttachVpnGatewayRequest
  *
- * \brief The AttachVpnGatewayRequest class encapsulates EC2 AttachVpnGateway requests.
+ * \brief The AttachVpnGatewayRequest class provides an interface for EC2 AttachVpnGateway requests.
  *
  * \ingroup EC2
  *

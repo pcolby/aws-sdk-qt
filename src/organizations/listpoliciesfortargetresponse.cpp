@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListPoliciesForTargetResponse
  *
- * \brief The ListPoliciesForTargetResponse class encapsulates Organizations ListPoliciesForTarget responses.
+ * \brief The ListPoliciesForTargetResponse class provides an interace for Organizations ListPoliciesForTarget responses.
  *
  * \ingroup Organizations
  *

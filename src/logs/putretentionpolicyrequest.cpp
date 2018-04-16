@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::PutRetentionPolicyRequest
  *
- * \brief The PutRetentionPolicyRequest class encapsulates CloudWatchLogs PutRetentionPolicy requests.
+ * \brief The PutRetentionPolicyRequest class provides an interface for CloudWatchLogs PutRetentionPolicy requests.
  *
  * \ingroup CloudWatchLogs
  *

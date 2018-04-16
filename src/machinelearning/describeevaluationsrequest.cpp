@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DescribeEvaluationsRequest
  *
- * \brief The DescribeEvaluationsRequest class encapsulates MachineLearning DescribeEvaluations requests.
+ * \brief The DescribeEvaluationsRequest class provides an interface for MachineLearning DescribeEvaluations requests.
  *
  * \ingroup MachineLearning
  *

@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CreateAssociationRequest
  *
- * \brief The CreateAssociationRequest class encapsulates SSM CreateAssociation requests.
+ * \brief The CreateAssociationRequest class provides an interface for SSM CreateAssociation requests.
  *
  * \ingroup SSM
  *

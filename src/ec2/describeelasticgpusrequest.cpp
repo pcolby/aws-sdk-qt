@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeElasticGpusRequest
  *
- * \brief The DescribeElasticGpusRequest class encapsulates EC2 DescribeElasticGpus requests.
+ * \brief The DescribeElasticGpusRequest class provides an interface for EC2 DescribeElasticGpus requests.
  *
  * \ingroup EC2
  *

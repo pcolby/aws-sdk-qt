@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DeleteExpressionRequest
  *
- * \brief The DeleteExpressionRequest class encapsulates CloudSearch DeleteExpression requests.
+ * \brief The DeleteExpressionRequest class provides an interface for CloudSearch DeleteExpression requests.
  *
  * \ingroup CloudSearch
  *

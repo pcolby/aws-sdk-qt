@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::CreateProjectRequest
  *
- * \brief The CreateProjectRequest class encapsulates CodeStar CreateProject requests.
+ * \brief The CreateProjectRequest class provides an interface for CodeStar CreateProject requests.
  *
  * \ingroup CodeStar
  *

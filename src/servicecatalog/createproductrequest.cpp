@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::CreateProductRequest
  *
- * \brief The CreateProductRequest class encapsulates ServiceCatalog CreateProduct requests.
+ * \brief The CreateProductRequest class provides an interface for ServiceCatalog CreateProduct requests.
  *
  * \ingroup ServiceCatalog
  *

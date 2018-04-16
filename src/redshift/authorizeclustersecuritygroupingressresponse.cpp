@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::AuthorizeClusterSecurityGroupIngressResponse
  *
- * \brief The AuthorizeClusterSecurityGroupIngressResponse class encapsulates Redshift AuthorizeClusterSecurityGroupIngress responses.
+ * \brief The AuthorizeClusterSecurityGroupIngressResponse class provides an interace for Redshift AuthorizeClusterSecurityGroupIngress responses.
  *
  * \ingroup Redshift
  *

@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::CreateStackRequest
  *
- * \brief The CreateStackRequest class encapsulates AppStream CreateStack requests.
+ * \brief The CreateStackRequest class provides an interface for AppStream CreateStack requests.
  *
  * \ingroup AppStream
  *

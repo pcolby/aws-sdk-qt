@@ -28,7 +28,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::DeletePolicyRequest
  *
- * \brief The DeletePolicyRequest class encapsulates FMS DeletePolicy requests.
+ * \brief The DeletePolicyRequest class provides an interface for FMS DeletePolicy requests.
  *
  * \ingroup FMS
  *

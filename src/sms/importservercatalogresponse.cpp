@@ -30,7 +30,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::ImportServerCatalogResponse
  *
- * \brief The ImportServerCatalogResponse class encapsulates SMS ImportServerCatalog responses.
+ * \brief The ImportServerCatalogResponse class provides an interace for SMS ImportServerCatalog responses.
  *
  * \ingroup SMS
  *

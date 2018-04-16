@@ -28,7 +28,7 @@ namespace MarketplaceMetering {
 /*!
  * \class QtAws::MarketplaceMetering::MeterUsageRequest
  *
- * \brief The MeterUsageRequest class encapsulates MarketplaceMetering MeterUsage requests.
+ * \brief The MeterUsageRequest class provides an interface for MarketplaceMetering MeterUsage requests.
  *
  * \ingroup MarketplaceMetering
  *

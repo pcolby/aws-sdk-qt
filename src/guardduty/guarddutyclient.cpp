@@ -111,7 +111,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GuardDutyClient
  *
- * \brief The GuardDutyClient class provides access the Amazon GuardDuty service.
+ * \brief The GuardDutyClient class provides access to the Amazon GuardDuty service.
  *
  * \ingroup GuardDuty
  *

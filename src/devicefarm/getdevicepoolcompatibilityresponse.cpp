@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetDevicePoolCompatibilityResponse
  *
- * \brief The GetDevicePoolCompatibilityResponse class encapsulates DeviceFarm GetDevicePoolCompatibility responses.
+ * \brief The GetDevicePoolCompatibilityResponse class provides an interace for DeviceFarm GetDevicePoolCompatibility responses.
  *
  * \ingroup DeviceFarm
  *

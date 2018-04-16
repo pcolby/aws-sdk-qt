@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DisassociateMembersRequest
  *
- * \brief The DisassociateMembersRequest class encapsulates GuardDuty DisassociateMembers requests.
+ * \brief The DisassociateMembersRequest class provides an interface for GuardDuty DisassociateMembers requests.
  *
  * \ingroup GuardDuty
  *

@@ -29,7 +29,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::IAMResponse
  *
- * \brief The IAMResponse class is the base class for all IAM responses.
+ * \brief The IAMResponse class provides an interface for IAM responses.
  *
  * \ingroup IAM
  */

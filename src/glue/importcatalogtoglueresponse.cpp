@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::ImportCatalogToGlueResponse
  *
- * \brief The ImportCatalogToGlueResponse class encapsulates Glue ImportCatalogToGlue responses.
+ * \brief The ImportCatalogToGlueResponse class provides an interace for Glue ImportCatalogToGlue responses.
  *
  * \ingroup Glue
  *

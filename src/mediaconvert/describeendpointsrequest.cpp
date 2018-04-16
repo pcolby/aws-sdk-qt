@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::DescribeEndpointsRequest
  *
- * \brief The DescribeEndpointsRequest class encapsulates MediaConvert DescribeEndpoints requests.
+ * \brief The DescribeEndpointsRequest class provides an interface for MediaConvert DescribeEndpoints requests.
  *
  * \ingroup MediaConvert
  *

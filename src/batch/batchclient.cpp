@@ -69,7 +69,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::BatchClient
  *
- * \brief The BatchClient class provides access the AWS Batch service.
+ * \brief The BatchClient class provides access to the AWS Batch service.
  *
  * \ingroup Batch
  *

@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminUserGlobalSignOutRequest
  *
- * \brief The AdminUserGlobalSignOutRequest class encapsulates CognitoIdentityProvider AdminUserGlobalSignOut requests.
+ * \brief The AdminUserGlobalSignOutRequest class provides an interface for CognitoIdentityProvider AdminUserGlobalSignOut requests.
  *
  * \ingroup CognitoIdentityProvider
  *

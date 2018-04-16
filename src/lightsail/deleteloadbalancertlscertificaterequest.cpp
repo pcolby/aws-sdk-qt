@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DeleteLoadBalancerTlsCertificateRequest
  *
- * \brief The DeleteLoadBalancerTlsCertificateRequest class encapsulates Lightsail DeleteLoadBalancerTlsCertificate requests.
+ * \brief The DeleteLoadBalancerTlsCertificateRequest class provides an interface for Lightsail DeleteLoadBalancerTlsCertificate requests.
  *
  * \ingroup Lightsail
  *

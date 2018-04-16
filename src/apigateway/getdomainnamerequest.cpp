@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetDomainNameRequest
  *
- * \brief The GetDomainNameRequest class encapsulates APIGateway GetDomainName requests.
+ * \brief The GetDomainNameRequest class provides an interface for APIGateway GetDomainName requests.
  *
  * \ingroup APIGateway
  *

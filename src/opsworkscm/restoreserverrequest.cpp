@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::RestoreServerRequest
  *
- * \brief The RestoreServerRequest class encapsulates OpsWorksCM RestoreServer requests.
+ * \brief The RestoreServerRequest class provides an interface for OpsWorksCM RestoreServer requests.
  *
  * \ingroup OpsWorksCM
  *

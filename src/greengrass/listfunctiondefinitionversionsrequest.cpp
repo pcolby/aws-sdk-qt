@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListFunctionDefinitionVersionsRequest
  *
- * \brief The ListFunctionDefinitionVersionsRequest class encapsulates Greengrass ListFunctionDefinitionVersions requests.
+ * \brief The ListFunctionDefinitionVersionsRequest class provides an interface for Greengrass ListFunctionDefinitionVersions requests.
  *
  * \ingroup Greengrass
  *

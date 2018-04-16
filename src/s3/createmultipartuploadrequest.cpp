@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::CreateMultipartUploadRequest
  *
- * \brief The CreateMultipartUploadRequest class encapsulates S3 CreateMultipartUpload requests.
+ * \brief The CreateMultipartUploadRequest class provides an interface for S3 CreateMultipartUpload requests.
  *
  * \ingroup S3
  *

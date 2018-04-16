@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::RebootInstanceResponse
  *
- * \brief The RebootInstanceResponse class encapsulates Lightsail RebootInstance responses.
+ * \brief The RebootInstanceResponse class provides an interace for Lightsail RebootInstance responses.
  *
  * \ingroup Lightsail
  *

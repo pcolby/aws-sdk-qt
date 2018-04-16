@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetDevicePoolRequest
  *
- * \brief The GetDevicePoolRequest class encapsulates DeviceFarm GetDevicePool requests.
+ * \brief The GetDevicePoolRequest class provides an interface for DeviceFarm GetDevicePool requests.
  *
  * \ingroup DeviceFarm
  *

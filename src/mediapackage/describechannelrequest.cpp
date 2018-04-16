@@ -28,7 +28,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::DescribeChannelRequest
  *
- * \brief The DescribeChannelRequest class encapsulates MediaPackage DescribeChannel requests.
+ * \brief The DescribeChannelRequest class provides an interface for MediaPackage DescribeChannel requests.
  *
  * \ingroup MediaPackage
  *

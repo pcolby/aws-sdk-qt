@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::TagResourceRequest
  *
- * \brief The TagResourceRequest class encapsulates KMS TagResource requests.
+ * \brief The TagResourceRequest class provides an interface for KMS TagResource requests.
  *
  * \ingroup KMS
  *

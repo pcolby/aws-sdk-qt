@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DescribeLogStreamsRequest
  *
- * \brief The DescribeLogStreamsRequest class encapsulates CloudWatchLogs DescribeLogStreams requests.
+ * \brief The DescribeLogStreamsRequest class provides an interface for CloudWatchLogs DescribeLogStreams requests.
  *
  * \ingroup CloudWatchLogs
  *

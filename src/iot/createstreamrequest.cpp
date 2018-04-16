@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateStreamRequest
  *
- * \brief The CreateStreamRequest class encapsulates IoT CreateStream requests.
+ * \brief The CreateStreamRequest class provides an interface for IoT CreateStream requests.
  *
  * \ingroup IoT
  *

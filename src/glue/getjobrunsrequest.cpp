@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetJobRunsRequest
  *
- * \brief The GetJobRunsRequest class encapsulates Glue GetJobRuns requests.
+ * \brief The GetJobRunsRequest class provides an interface for Glue GetJobRuns requests.
  *
  * \ingroup Glue
  *

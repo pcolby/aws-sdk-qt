@@ -26,7 +26,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::ShieldRequest
  *
- * \brief The ShieldRequest class is the base class for all Shield requests.
+ * \brief The ShieldRequest class provides an interface for Shield requests.
  *
  * \ingroup Shield
  */

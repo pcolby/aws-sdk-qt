@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeNetworkInterfacesRequest
  *
- * \brief The DescribeNetworkInterfacesRequest class encapsulates EC2 DescribeNetworkInterfaces requests.
+ * \brief The DescribeNetworkInterfacesRequest class provides an interface for EC2 DescribeNetworkInterfaces requests.
  *
  * \ingroup EC2
  *

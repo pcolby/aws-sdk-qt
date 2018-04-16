@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::CreateCustomActionTypeResponse
  *
- * \brief The CreateCustomActionTypeResponse class encapsulates CodePipeline CreateCustomActionType responses.
+ * \brief The CreateCustomActionTypeResponse class provides an interace for CodePipeline CreateCustomActionType responses.
  *
  * \ingroup CodePipeline
  *

@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ApplySchemaResponse
  *
- * \brief The ApplySchemaResponse class encapsulates CloudDirectory ApplySchema responses.
+ * \brief The ApplySchemaResponse class provides an interace for CloudDirectory ApplySchema responses.
  *
  * \ingroup CloudDirectory
  *

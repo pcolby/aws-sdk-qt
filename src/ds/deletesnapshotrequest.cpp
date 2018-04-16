@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DeleteSnapshotRequest
  *
- * \brief The DeleteSnapshotRequest class encapsulates DirectoryService DeleteSnapshot requests.
+ * \brief The DeleteSnapshotRequest class provides an interface for DirectoryService DeleteSnapshot requests.
  *
  * \ingroup DirectoryService
  *

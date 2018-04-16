@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::AddPermissionRequest
  *
- * \brief The AddPermissionRequest class encapsulates SQS AddPermission requests.
+ * \brief The AddPermissionRequest class provides an interface for SQS AddPermission requests.
  *
  * \ingroup SQS
  *

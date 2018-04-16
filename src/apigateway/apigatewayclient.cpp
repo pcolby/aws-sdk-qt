@@ -277,7 +277,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::APIGatewayClient
  *
- * \brief The APIGatewayClient class provides access the Amazon API Gateway service.
+ * \brief The APIGatewayClient class provides access to the Amazon API Gateway service.
  *
  * \ingroup APIGateway
  *

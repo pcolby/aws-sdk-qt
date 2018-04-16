@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetSegmentResponse
  *
- * \brief The GetSegmentResponse class encapsulates Pinpoint GetSegment responses.
+ * \brief The GetSegmentResponse class provides an interace for Pinpoint GetSegment responses.
  *
  * \ingroup Pinpoint
  *

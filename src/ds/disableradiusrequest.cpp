@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DisableRadiusRequest
  *
- * \brief The DisableRadiusRequest class encapsulates DirectoryService DisableRadius requests.
+ * \brief The DisableRadiusRequest class provides an interface for DirectoryService DisableRadius requests.
  *
  * \ingroup DirectoryService
  *

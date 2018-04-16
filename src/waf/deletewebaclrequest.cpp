@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteWebACLRequest
  *
- * \brief The DeleteWebACLRequest class encapsulates WAF DeleteWebACL requests.
+ * \brief The DeleteWebACLRequest class provides an interface for WAF DeleteWebACL requests.
  *
  * \ingroup WAF
  *

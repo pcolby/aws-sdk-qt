@@ -26,7 +26,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::Route53DomainsRequest
  *
- * \brief The Route53DomainsRequest class is the base class for all Route53Domains requests.
+ * \brief The Route53DomainsRequest class provides an interface for Route53Domains requests.
  *
  * \ingroup Route53Domains
  */

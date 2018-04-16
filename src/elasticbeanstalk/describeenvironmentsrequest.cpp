@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEnvironmentsRequest
  *
- * \brief The DescribeEnvironmentsRequest class encapsulates ElasticBeanstalk DescribeEnvironments requests.
+ * \brief The DescribeEnvironmentsRequest class provides an interface for ElasticBeanstalk DescribeEnvironments requests.
  *
  * \ingroup ElasticBeanstalk
  *

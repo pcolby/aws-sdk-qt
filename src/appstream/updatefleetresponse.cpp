@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::UpdateFleetResponse
  *
- * \brief The UpdateFleetResponse class encapsulates AppStream UpdateFleet responses.
+ * \brief The UpdateFleetResponse class provides an interace for AppStream UpdateFleet responses.
  *
  * \ingroup AppStream
  *

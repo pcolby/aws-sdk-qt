@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateUserDefinedFunctionResponse
  *
- * \brief The CreateUserDefinedFunctionResponse class encapsulates Glue CreateUserDefinedFunction responses.
+ * \brief The CreateUserDefinedFunctionResponse class provides an interace for Glue CreateUserDefinedFunction responses.
  *
  * \ingroup Glue
  *

@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::RegisterEcsClusterRequest
  *
- * \brief The RegisterEcsClusterRequest class encapsulates OpsWorks RegisterEcsCluster requests.
+ * \brief The RegisterEcsClusterRequest class provides an interface for OpsWorks RegisterEcsCluster requests.
  *
  * \ingroup OpsWorks
  *

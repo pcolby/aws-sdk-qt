@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::PollForDecisionTaskResponse
  *
- * \brief The PollForDecisionTaskResponse class encapsulates SWF PollForDecisionTask responses.
+ * \brief The PollForDecisionTaskResponse class provides an interace for SWF PollForDecisionTask responses.
  *
  * \ingroup SWF
  *

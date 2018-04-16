@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::AcknowledgeJobResponse
  *
- * \brief The AcknowledgeJobResponse class encapsulates CodePipeline AcknowledgeJob responses.
+ * \brief The AcknowledgeJobResponse class provides an interace for CodePipeline AcknowledgeJob responses.
  *
  * \ingroup CodePipeline
  *

@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListTagsForResourceRequest
  *
- * \brief The ListTagsForResourceRequest class encapsulates SSM ListTagsForResource requests.
+ * \brief The ListTagsForResourceRequest class provides an interface for SSM ListTagsForResource requests.
  *
  * \ingroup SSM
  *

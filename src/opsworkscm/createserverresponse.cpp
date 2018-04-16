@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::CreateServerResponse
  *
- * \brief The CreateServerResponse class encapsulates OpsWorksCM CreateServer responses.
+ * \brief The CreateServerResponse class provides an interace for OpsWorksCM CreateServer responses.
  *
  * \ingroup OpsWorksCM
  *

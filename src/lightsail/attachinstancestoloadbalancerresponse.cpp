@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::AttachInstancesToLoadBalancerResponse
  *
- * \brief The AttachInstancesToLoadBalancerResponse class encapsulates Lightsail AttachInstancesToLoadBalancer responses.
+ * \brief The AttachInstancesToLoadBalancerResponse class provides an interace for Lightsail AttachInstancesToLoadBalancer responses.
  *
  * \ingroup Lightsail
  *

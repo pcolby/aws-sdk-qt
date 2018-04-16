@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetModelTemplateRequest
  *
- * \brief The GetModelTemplateRequest class encapsulates APIGateway GetModelTemplate requests.
+ * \brief The GetModelTemplateRequest class provides an interface for APIGateway GetModelTemplate requests.
  *
  * \ingroup APIGateway
  *

@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DescribeEngineDefaultParametersRequest
  *
- * \brief The DescribeEngineDefaultParametersRequest class encapsulates ElastiCache DescribeEngineDefaultParameters requests.
+ * \brief The DescribeEngineDefaultParametersRequest class provides an interface for ElastiCache DescribeEngineDefaultParameters requests.
  *
  * \ingroup ElastiCache
  *

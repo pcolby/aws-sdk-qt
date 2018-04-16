@@ -29,7 +29,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::PinpointResponse
  *
- * \brief The PinpointResponse class is the base class for all Pinpoint responses.
+ * \brief The PinpointResponse class provides an interface for Pinpoint responses.
  *
  * \ingroup Pinpoint
  */

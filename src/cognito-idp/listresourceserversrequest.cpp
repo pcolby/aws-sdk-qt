@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ListResourceServersRequest
  *
- * \brief The ListResourceServersRequest class encapsulates CognitoIdentityProvider ListResourceServers requests.
+ * \brief The ListResourceServersRequest class provides an interface for CognitoIdentityProvider ListResourceServers requests.
  *
  * \ingroup CognitoIdentityProvider
  *

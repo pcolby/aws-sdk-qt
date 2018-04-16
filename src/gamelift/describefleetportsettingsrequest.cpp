@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeFleetPortSettingsRequest
  *
- * \brief The DescribeFleetPortSettingsRequest class encapsulates GameLift DescribeFleetPortSettings requests.
+ * \brief The DescribeFleetPortSettingsRequest class provides an interface for GameLift DescribeFleetPortSettings requests.
  *
  * \ingroup GameLift
  *

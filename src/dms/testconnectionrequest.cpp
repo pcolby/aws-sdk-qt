@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::TestConnectionRequest
  *
- * \brief The TestConnectionRequest class encapsulates DatabaseMigrationService TestConnection requests.
+ * \brief The TestConnectionRequest class provides an interface for DatabaseMigrationService TestConnection requests.
  *
  * \ingroup DatabaseMigrationService
  *

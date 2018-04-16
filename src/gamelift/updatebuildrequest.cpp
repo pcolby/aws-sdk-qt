@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::UpdateBuildRequest
  *
- * \brief The UpdateBuildRequest class encapsulates GameLift UpdateBuild requests.
+ * \brief The UpdateBuildRequest class provides an interface for GameLift UpdateBuild requests.
  *
  * \ingroup GameLift
  *

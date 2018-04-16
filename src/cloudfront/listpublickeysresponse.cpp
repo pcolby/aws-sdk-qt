@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::ListPublicKeysResponse
  *
- * \brief The ListPublicKeysResponse class encapsulates CloudFront ListPublicKeys responses.
+ * \brief The ListPublicKeysResponse class provides an interace for CloudFront ListPublicKeys responses.
  *
  * \ingroup CloudFront
  *

@@ -95,7 +95,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::ElasticLoadBalancingClient
  *
- * \brief The ElasticLoadBalancingClient class provides access the Elastic Load Balancing service.
+ * \brief The ElasticLoadBalancingClient class provides access to the Elastic Load Balancing service.
  *
  * \ingroup ElasticLoadBalancing
  *

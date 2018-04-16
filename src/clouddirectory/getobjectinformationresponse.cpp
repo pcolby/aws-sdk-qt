@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::GetObjectInformationResponse
  *
- * \brief The GetObjectInformationResponse class encapsulates CloudDirectory GetObjectInformation responses.
+ * \brief The GetObjectInformationResponse class provides an interace for CloudDirectory GetObjectInformation responses.
  *
  * \ingroup CloudDirectory
  *

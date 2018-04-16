@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::GetQueueUrlResponse
  *
- * \brief The GetQueueUrlResponse class encapsulates SQS GetQueueUrl responses.
+ * \brief The GetQueueUrlResponse class provides an interace for SQS GetQueueUrl responses.
  *
  * \ingroup SQS
  *

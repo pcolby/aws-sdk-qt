@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::ConfirmConnectionRequest
  *
- * \brief The ConfirmConnectionRequest class encapsulates DirectConnect ConfirmConnection requests.
+ * \brief The ConfirmConnectionRequest class provides an interface for DirectConnect ConfirmConnection requests.
  *
  * \ingroup DirectConnect
  *

@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::RegisterActivityTypeResponse
  *
- * \brief The RegisterActivityTypeResponse class encapsulates SWF RegisterActivityType responses.
+ * \brief The RegisterActivityTypeResponse class provides an interace for SWF RegisterActivityType responses.
  *
  * \ingroup SWF
  *

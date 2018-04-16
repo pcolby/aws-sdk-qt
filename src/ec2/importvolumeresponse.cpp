@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ImportVolumeResponse
  *
- * \brief The ImportVolumeResponse class encapsulates EC2 ImportVolume responses.
+ * \brief The ImportVolumeResponse class provides an interace for EC2 ImportVolume responses.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::AcceptMatchRequest
  *
- * \brief The AcceptMatchRequest class encapsulates GameLift AcceptMatch requests.
+ * \brief The AcceptMatchRequest class provides an interface for GameLift AcceptMatch requests.
  *
  * \ingroup GameLift
  *

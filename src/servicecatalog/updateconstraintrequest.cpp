@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::UpdateConstraintRequest
  *
- * \brief The UpdateConstraintRequest class encapsulates ServiceCatalog UpdateConstraint requests.
+ * \brief The UpdateConstraintRequest class provides an interface for ServiceCatalog UpdateConstraint requests.
  *
  * \ingroup ServiceCatalog
  *

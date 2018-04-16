@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DeleteUserResponse
  *
- * \brief The DeleteUserResponse class encapsulates WorkMail DeleteUser responses.
+ * \brief The DeleteUserResponse class provides an interace for WorkMail DeleteUser responses.
  *
  * \ingroup WorkMail
  *

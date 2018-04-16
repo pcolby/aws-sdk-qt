@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::CreateReplicationGroupRequest
  *
- * \brief The CreateReplicationGroupRequest class encapsulates ElastiCache CreateReplicationGroup requests.
+ * \brief The CreateReplicationGroupRequest class provides an interface for ElastiCache CreateReplicationGroup requests.
  *
  * \ingroup ElastiCache
  *

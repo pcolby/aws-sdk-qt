@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeDBParameterGroupsResponse
  *
- * \brief The DescribeDBParameterGroupsResponse class encapsulates RDS DescribeDBParameterGroups responses.
+ * \brief The DescribeDBParameterGroupsResponse class provides an interace for RDS DescribeDBParameterGroups responses.
  *
  * \ingroup RDS
  *

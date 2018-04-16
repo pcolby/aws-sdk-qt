@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminUpdateUserAttributesResponse
  *
- * \brief The AdminUpdateUserAttributesResponse class encapsulates CognitoIdentityProvider AdminUpdateUserAttributes responses.
+ * \brief The AdminUpdateUserAttributesResponse class provides an interace for CognitoIdentityProvider AdminUpdateUserAttributes responses.
  *
  * \ingroup CognitoIdentityProvider
  *

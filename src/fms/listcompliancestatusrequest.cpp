@@ -28,7 +28,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::ListComplianceStatusRequest
  *
- * \brief The ListComplianceStatusRequest class encapsulates FMS ListComplianceStatus requests.
+ * \brief The ListComplianceStatusRequest class provides an interface for FMS ListComplianceStatus requests.
  *
  * \ingroup FMS
  *

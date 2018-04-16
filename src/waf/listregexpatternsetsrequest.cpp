@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::ListRegexPatternSetsRequest
  *
- * \brief The ListRegexPatternSetsRequest class encapsulates WAF ListRegexPatternSets requests.
+ * \brief The ListRegexPatternSetsRequest class provides an interface for WAF ListRegexPatternSets requests.
  *
  * \ingroup WAF
  *

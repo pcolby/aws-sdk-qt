@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeAuthorizerResponse
  *
- * \brief The DescribeAuthorizerResponse class encapsulates IoT DescribeAuthorizer responses.
+ * \brief The DescribeAuthorizerResponse class provides an interace for IoT DescribeAuthorizer responses.
  *
  * \ingroup IoT
  *

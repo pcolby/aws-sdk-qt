@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetSSHPublicKeyResponse
  *
- * \brief The GetSSHPublicKeyResponse class encapsulates IAM GetSSHPublicKey responses.
+ * \brief The GetSSHPublicKeyResponse class provides an interace for IAM GetSSHPublicKey responses.
  *
  * \ingroup IAM
  *

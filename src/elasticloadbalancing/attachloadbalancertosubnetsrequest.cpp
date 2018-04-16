@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::AttachLoadBalancerToSubnetsRequest
  *
- * \brief The AttachLoadBalancerToSubnetsRequest class encapsulates ElasticLoadBalancing AttachLoadBalancerToSubnets requests.
+ * \brief The AttachLoadBalancerToSubnetsRequest class provides an interface for ElasticLoadBalancing AttachLoadBalancerToSubnets requests.
  *
  * \ingroup ElasticLoadBalancing
  *

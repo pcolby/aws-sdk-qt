@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::UntagResourceRequest
  *
- * \brief The UntagResourceRequest class encapsulates AlexaForBusiness UntagResource requests.
+ * \brief The UntagResourceRequest class provides an interface for AlexaForBusiness UntagResource requests.
  *
  * \ingroup AlexaForBusiness
  *

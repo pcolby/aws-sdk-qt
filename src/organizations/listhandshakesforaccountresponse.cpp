@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListHandshakesForAccountResponse
  *
- * \brief The ListHandshakesForAccountResponse class encapsulates Organizations ListHandshakesForAccount responses.
+ * \brief The ListHandshakesForAccountResponse class provides an interace for Organizations ListHandshakesForAccount responses.
  *
  * \ingroup Organizations
  *

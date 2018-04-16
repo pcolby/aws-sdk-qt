@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::DeleteVaultResponse
  *
- * \brief The DeleteVaultResponse class encapsulates Glacier DeleteVault responses.
+ * \brief The DeleteVaultResponse class provides an interace for Glacier DeleteVault responses.
  *
  * \ingroup Glacier
  *

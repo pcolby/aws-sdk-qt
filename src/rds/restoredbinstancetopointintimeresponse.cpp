@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RestoreDBInstanceToPointInTimeResponse
  *
- * \brief The RestoreDBInstanceToPointInTimeResponse class encapsulates RDS RestoreDBInstanceToPointInTime responses.
+ * \brief The RestoreDBInstanceToPointInTimeResponse class provides an interace for RDS RestoreDBInstanceToPointInTime responses.
  *
  * \ingroup RDS
  *

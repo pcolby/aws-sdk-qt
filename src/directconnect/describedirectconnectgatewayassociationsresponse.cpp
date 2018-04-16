@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DescribeDirectConnectGatewayAssociationsResponse
  *
- * \brief The DescribeDirectConnectGatewayAssociationsResponse class encapsulates DirectConnect DescribeDirectConnectGatewayAssociations responses.
+ * \brief The DescribeDirectConnectGatewayAssociationsResponse class provides an interace for DirectConnect DescribeDirectConnectGatewayAssociations responses.
  *
  * \ingroup DirectConnect
  *

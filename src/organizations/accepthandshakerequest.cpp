@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::AcceptHandshakeRequest
  *
- * \brief The AcceptHandshakeRequest class encapsulates Organizations AcceptHandshake requests.
+ * \brief The AcceptHandshakeRequest class provides an interface for Organizations AcceptHandshake requests.
  *
  * \ingroup Organizations
  *

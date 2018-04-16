@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::SearchProfilesRequest
  *
- * \brief The SearchProfilesRequest class encapsulates AlexaForBusiness SearchProfiles requests.
+ * \brief The SearchProfilesRequest class provides an interface for AlexaForBusiness SearchProfiles requests.
  *
  * \ingroup AlexaForBusiness
  *

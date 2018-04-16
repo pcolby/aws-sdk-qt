@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::UpdateDeploymentGroupResponse
  *
- * \brief The UpdateDeploymentGroupResponse class encapsulates CodeDeploy UpdateDeploymentGroup responses.
+ * \brief The UpdateDeploymentGroupResponse class provides an interace for CodeDeploy UpdateDeploymentGroup responses.
  *
  * \ingroup CodeDeploy
  *

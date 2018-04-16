@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::DisableKeyRotationRequest
  *
- * \brief The DisableKeyRotationRequest class encapsulates KMS DisableKeyRotation requests.
+ * \brief The DisableKeyRotationRequest class provides an interface for KMS DisableKeyRotation requests.
  *
  * \ingroup KMS
  *

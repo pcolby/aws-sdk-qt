@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::RemoveTagsRequest
  *
- * \brief The RemoveTagsRequest class encapsulates ElasticLoadBalancing RemoveTags requests.
+ * \brief The RemoveTagsRequest class provides an interface for ElasticLoadBalancing RemoveTags requests.
  *
  * \ingroup ElasticLoadBalancing
  *

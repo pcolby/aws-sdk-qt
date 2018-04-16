@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DeleteLabelsResponse
  *
- * \brief The DeleteLabelsResponse class encapsulates WorkDocs DeleteLabels responses.
+ * \brief The DeleteLabelsResponse class provides an interace for WorkDocs DeleteLabels responses.
  *
  * \ingroup WorkDocs
  *

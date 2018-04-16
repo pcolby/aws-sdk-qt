@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DeleteDestinationResponse
  *
- * \brief The DeleteDestinationResponse class encapsulates CloudWatchLogs DeleteDestination responses.
+ * \brief The DeleteDestinationResponse class provides an interace for CloudWatchLogs DeleteDestination responses.
  *
  * \ingroup CloudWatchLogs
  *

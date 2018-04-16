@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeSnapshotsResponse
  *
- * \brief The DescribeSnapshotsResponse class encapsulates EC2 DescribeSnapshots responses.
+ * \brief The DescribeSnapshotsResponse class provides an interace for EC2 DescribeSnapshots responses.
  *
  * \ingroup EC2
  *

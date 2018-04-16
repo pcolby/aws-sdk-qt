@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::ListTagsForResourceRequest
  *
- * \brief The ListTagsForResourceRequest class encapsulates AppStream ListTagsForResource requests.
+ * \brief The ListTagsForResourceRequest class provides an interface for AppStream ListTagsForResource requests.
  *
  * \ingroup AppStream
  *

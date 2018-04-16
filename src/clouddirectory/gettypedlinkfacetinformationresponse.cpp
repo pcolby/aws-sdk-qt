@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::GetTypedLinkFacetInformationResponse
  *
- * \brief The GetTypedLinkFacetInformationResponse class encapsulates CloudDirectory GetTypedLinkFacetInformation responses.
+ * \brief The GetTypedLinkFacetInformationResponse class provides an interace for CloudDirectory GetTypedLinkFacetInformation responses.
  *
  * \ingroup CloudDirectory
  *

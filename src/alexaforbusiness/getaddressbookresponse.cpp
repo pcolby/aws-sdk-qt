@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::GetAddressBookResponse
  *
- * \brief The GetAddressBookResponse class encapsulates AlexaForBusiness GetAddressBook responses.
+ * \brief The GetAddressBookResponse class provides an interace for AlexaForBusiness GetAddressBook responses.
  *
  * \ingroup AlexaForBusiness
  *

@@ -30,7 +30,7 @@ namespace CostExplorer {
 /*!
  * \class QtAws::CostExplorer::GetDimensionValuesResponse
  *
- * \brief The GetDimensionValuesResponse class encapsulates CostExplorer GetDimensionValues responses.
+ * \brief The GetDimensionValuesResponse class provides an interace for CostExplorer GetDimensionValues responses.
  *
  * \ingroup CostExplorer
  *

@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::SearchContactsResponse
  *
- * \brief The SearchContactsResponse class encapsulates AlexaForBusiness SearchContacts responses.
+ * \brief The SearchContactsResponse class provides an interace for AlexaForBusiness SearchContacts responses.
  *
  * \ingroup AlexaForBusiness
  *

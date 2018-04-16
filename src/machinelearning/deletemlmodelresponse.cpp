@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DeleteMLModelResponse
  *
- * \brief The DeleteMLModelResponse class encapsulates MachineLearning DeleteMLModel responses.
+ * \brief The DeleteMLModelResponse class provides an interace for MachineLearning DeleteMLModel responses.
  *
  * \ingroup MachineLearning
  *

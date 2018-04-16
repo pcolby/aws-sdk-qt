@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::AllocateConnectionOnInterconnectResponse
  *
- * \brief The AllocateConnectionOnInterconnectResponse class encapsulates DirectConnect AllocateConnectionOnInterconnect responses.
+ * \brief The AllocateConnectionOnInterconnectResponse class provides an interace for DirectConnect AllocateConnectionOnInterconnect responses.
  *
  * \ingroup DirectConnect
  *

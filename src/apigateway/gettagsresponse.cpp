@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetTagsResponse
  *
- * \brief The GetTagsResponse class encapsulates APIGateway GetTags responses.
+ * \brief The GetTagsResponse class provides an interace for APIGateway GetTags responses.
  *
  * \ingroup APIGateway
  *

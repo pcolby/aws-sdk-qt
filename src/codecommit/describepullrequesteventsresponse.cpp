@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::DescribePullRequestEventsResponse
  *
- * \brief The DescribePullRequestEventsResponse class encapsulates CodeCommit DescribePullRequestEvents responses.
+ * \brief The DescribePullRequestEventsResponse class provides an interace for CodeCommit DescribePullRequestEvents responses.
  *
  * \ingroup CodeCommit
  *

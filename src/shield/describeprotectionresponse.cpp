@@ -30,7 +30,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::DescribeProtectionResponse
  *
- * \brief The DescribeProtectionResponse class encapsulates Shield DescribeProtection responses.
+ * \brief The DescribeProtectionResponse class provides an interace for Shield DescribeProtection responses.
  *
  * \ingroup Shield
  *

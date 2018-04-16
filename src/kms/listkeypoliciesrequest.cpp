@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ListKeyPoliciesRequest
  *
- * \brief The ListKeyPoliciesRequest class encapsulates KMS ListKeyPolicies requests.
+ * \brief The ListKeyPoliciesRequest class provides an interface for KMS ListKeyPolicies requests.
  *
  * \ingroup KMS
  *

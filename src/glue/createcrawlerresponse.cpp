@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateCrawlerResponse
  *
- * \brief The CreateCrawlerResponse class encapsulates Glue CreateCrawler responses.
+ * \brief The CreateCrawlerResponse class provides an interace for Glue CreateCrawler responses.
  *
  * \ingroup Glue
  *

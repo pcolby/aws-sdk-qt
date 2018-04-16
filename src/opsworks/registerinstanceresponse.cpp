@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::RegisterInstanceResponse
  *
- * \brief The RegisterInstanceResponse class encapsulates OpsWorks RegisterInstance responses.
+ * \brief The RegisterInstanceResponse class provides an interace for OpsWorks RegisterInstance responses.
  *
  * \ingroup OpsWorks
  *

@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::DeleteBranchResponse
  *
- * \brief The DeleteBranchResponse class encapsulates CodeCommit DeleteBranch responses.
+ * \brief The DeleteBranchResponse class provides an interace for CodeCommit DeleteBranch responses.
  *
  * \ingroup CodeCommit
  *

@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeActivitiesResponse
  *
- * \brief The DescribeActivitiesResponse class encapsulates WorkDocs DescribeActivities responses.
+ * \brief The DescribeActivitiesResponse class provides an interace for WorkDocs DescribeActivities responses.
  *
  * \ingroup WorkDocs
  *

@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::AssociateTagOptionWithResourceRequest
  *
- * \brief The AssociateTagOptionWithResourceRequest class encapsulates ServiceCatalog AssociateTagOptionWithResource requests.
+ * \brief The AssociateTagOptionWithResourceRequest class provides an interface for ServiceCatalog AssociateTagOptionWithResource requests.
  *
  * \ingroup ServiceCatalog
  *

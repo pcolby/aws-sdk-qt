@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::UpdateCoreDefinitionRequest
  *
- * \brief The UpdateCoreDefinitionRequest class encapsulates Greengrass UpdateCoreDefinition requests.
+ * \brief The UpdateCoreDefinitionRequest class provides an interface for Greengrass UpdateCoreDefinition requests.
  *
  * \ingroup Greengrass
  *

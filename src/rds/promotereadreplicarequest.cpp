@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::PromoteReadReplicaRequest
  *
- * \brief The PromoteReadReplicaRequest class encapsulates RDS PromoteReadReplica requests.
+ * \brief The PromoteReadReplicaRequest class provides an interface for RDS PromoteReadReplica requests.
  *
  * \ingroup RDS
  *

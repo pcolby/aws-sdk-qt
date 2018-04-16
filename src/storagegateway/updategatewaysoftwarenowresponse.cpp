@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::UpdateGatewaySoftwareNowResponse
  *
- * \brief The UpdateGatewaySoftwareNowResponse class encapsulates StorageGateway UpdateGatewaySoftwareNow responses.
+ * \brief The UpdateGatewaySoftwareNowResponse class provides an interace for StorageGateway UpdateGatewaySoftwareNow responses.
  *
  * \ingroup StorageGateway
  *

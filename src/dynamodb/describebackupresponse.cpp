@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DescribeBackupResponse
  *
- * \brief The DescribeBackupResponse class encapsulates DynamoDB DescribeBackup responses.
+ * \brief The DescribeBackupResponse class provides an interace for DynamoDB DescribeBackup responses.
  *
  * \ingroup DynamoDB
  *

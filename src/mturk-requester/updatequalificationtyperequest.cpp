@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::UpdateQualificationTypeRequest
  *
- * \brief The UpdateQualificationTypeRequest class encapsulates MTurk UpdateQualificationType requests.
+ * \brief The UpdateQualificationTypeRequest class provides an interface for MTurk UpdateQualificationType requests.
  *
  * \ingroup MTurk
  *

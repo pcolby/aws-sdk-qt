@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::PutDeliveryChannelRequest
  *
- * \brief The PutDeliveryChannelRequest class encapsulates ConfigService PutDeliveryChannel requests.
+ * \brief The PutDeliveryChannelRequest class provides an interface for ConfigService PutDeliveryChannel requests.
  *
  * \ingroup ConfigService
  *

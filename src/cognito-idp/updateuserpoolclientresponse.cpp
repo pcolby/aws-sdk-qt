@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateUserPoolClientResponse
  *
- * \brief The UpdateUserPoolClientResponse class encapsulates CognitoIdentityProvider UpdateUserPoolClient responses.
+ * \brief The UpdateUserPoolClientResponse class provides an interace for CognitoIdentityProvider UpdateUserPoolClient responses.
  *
  * \ingroup CognitoIdentityProvider
  *

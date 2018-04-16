@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CreateAssociationBatchResponse
  *
- * \brief The CreateAssociationBatchResponse class encapsulates SSM CreateAssociationBatch responses.
+ * \brief The CreateAssociationBatchResponse class provides an interace for SSM CreateAssociationBatch responses.
  *
  * \ingroup SSM
  *

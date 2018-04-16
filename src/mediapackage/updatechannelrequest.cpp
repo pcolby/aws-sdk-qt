@@ -28,7 +28,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::UpdateChannelRequest
  *
- * \brief The UpdateChannelRequest class encapsulates MediaPackage UpdateChannel requests.
+ * \brief The UpdateChannelRequest class provides an interface for MediaPackage UpdateChannel requests.
  *
  * \ingroup MediaPackage
  *

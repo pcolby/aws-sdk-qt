@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DescribeSessionsRequest
  *
- * \brief The DescribeSessionsRequest class encapsulates AppStream DescribeSessions requests.
+ * \brief The DescribeSessionsRequest class provides an interface for AppStream DescribeSessions requests.
  *
  * \ingroup AppStream
  *

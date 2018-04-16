@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::PutMetricFilterResponse
  *
- * \brief The PutMetricFilterResponse class encapsulates CloudWatchLogs PutMetricFilter responses.
+ * \brief The PutMetricFilterResponse class provides an interace for CloudWatchLogs PutMetricFilter responses.
  *
  * \ingroup CloudWatchLogs
  *

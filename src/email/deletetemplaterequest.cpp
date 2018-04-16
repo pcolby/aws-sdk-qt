@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteTemplateRequest
  *
- * \brief The DeleteTemplateRequest class encapsulates SES DeleteTemplate requests.
+ * \brief The DeleteTemplateRequest class provides an interface for SES DeleteTemplate requests.
  *
  * \ingroup SES
  *

@@ -30,7 +30,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::DeregisterInstancesFromLoadBalancerResponse
  *
- * \brief The DeregisterInstancesFromLoadBalancerResponse class encapsulates ElasticLoadBalancing DeregisterInstancesFromLoadBalancer responses.
+ * \brief The DeregisterInstancesFromLoadBalancerResponse class provides an interace for ElasticLoadBalancing DeregisterInstancesFromLoadBalancer responses.
  *
  * \ingroup ElasticLoadBalancing
  *

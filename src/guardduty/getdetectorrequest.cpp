@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GetDetectorRequest
  *
- * \brief The GetDetectorRequest class encapsulates GuardDuty GetDetector requests.
+ * \brief The GetDetectorRequest class provides an interface for GuardDuty GetDetector requests.
  *
  * \ingroup GuardDuty
  *

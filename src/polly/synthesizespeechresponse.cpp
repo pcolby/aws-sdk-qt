@@ -30,7 +30,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::SynthesizeSpeechResponse
  *
- * \brief The SynthesizeSpeechResponse class encapsulates Polly SynthesizeSpeech responses.
+ * \brief The SynthesizeSpeechResponse class provides an interace for Polly SynthesizeSpeech responses.
  *
  * \ingroup Polly
  *

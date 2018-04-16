@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyReservedInstancesResponse
  *
- * \brief The ModifyReservedInstancesResponse class encapsulates EC2 ModifyReservedInstances responses.
+ * \brief The ModifyReservedInstancesResponse class provides an interace for EC2 ModifyReservedInstances responses.
  *
  * \ingroup EC2
  *

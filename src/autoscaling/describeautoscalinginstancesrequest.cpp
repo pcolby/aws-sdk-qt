@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeAutoScalingInstancesRequest
  *
- * \brief The DescribeAutoScalingInstancesRequest class encapsulates AutoScaling DescribeAutoScalingInstances requests.
+ * \brief The DescribeAutoScalingInstancesRequest class provides an interface for AutoScaling DescribeAutoScalingInstances requests.
  *
  * \ingroup AutoScaling
  *

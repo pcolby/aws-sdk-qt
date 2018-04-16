@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateFpgaImageRequest
  *
- * \brief The CreateFpgaImageRequest class encapsulates EC2 CreateFpgaImage requests.
+ * \brief The CreateFpgaImageRequest class provides an interface for EC2 CreateFpgaImage requests.
  *
  * \ingroup EC2
  *

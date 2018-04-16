@@ -28,7 +28,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::DeregisterJobDefinitionRequest
  *
- * \brief The DeregisterJobDefinitionRequest class encapsulates Batch DeregisterJobDefinition requests.
+ * \brief The DeregisterJobDefinitionRequest class provides an interface for Batch DeregisterJobDefinition requests.
  *
  * \ingroup Batch
  *

@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetLoadBalancerRequest
  *
- * \brief The GetLoadBalancerRequest class encapsulates Lightsail GetLoadBalancer requests.
+ * \brief The GetLoadBalancerRequest class provides an interface for Lightsail GetLoadBalancer requests.
  *
  * \ingroup Lightsail
  *

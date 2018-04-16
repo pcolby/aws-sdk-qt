@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DeleteModelResponse
  *
- * \brief The DeleteModelResponse class encapsulates SageMaker DeleteModel responses.
+ * \brief The DeleteModelResponse class provides an interace for SageMaker DeleteModel responses.
  *
  * \ingroup SageMaker
  *

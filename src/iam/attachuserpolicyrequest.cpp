@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::AttachUserPolicyRequest
  *
- * \brief The AttachUserPolicyRequest class encapsulates IAM AttachUserPolicy requests.
+ * \brief The AttachUserPolicyRequest class provides an interface for IAM AttachUserPolicy requests.
  *
  * \ingroup IAM
  *

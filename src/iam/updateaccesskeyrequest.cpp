@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateAccessKeyRequest
  *
- * \brief The UpdateAccessKeyRequest class encapsulates IAM UpdateAccessKey requests.
+ * \brief The UpdateAccessKeyRequest class provides an interface for IAM UpdateAccessKey requests.
  *
  * \ingroup IAM
  *

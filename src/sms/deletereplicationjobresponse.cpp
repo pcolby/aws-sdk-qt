@@ -30,7 +30,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::DeleteReplicationJobResponse
  *
- * \brief The DeleteReplicationJobResponse class encapsulates SMS DeleteReplicationJob responses.
+ * \brief The DeleteReplicationJobResponse class provides an interace for SMS DeleteReplicationJob responses.
  *
  * \ingroup SMS
  *

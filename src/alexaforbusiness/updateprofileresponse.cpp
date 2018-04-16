@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::UpdateProfileResponse
  *
- * \brief The UpdateProfileResponse class encapsulates AlexaForBusiness UpdateProfile responses.
+ * \brief The UpdateProfileResponse class provides an interace for AlexaForBusiness UpdateProfile responses.
  *
  * \ingroup AlexaForBusiness
  *

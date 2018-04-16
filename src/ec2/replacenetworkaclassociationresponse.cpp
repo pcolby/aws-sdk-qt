@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ReplaceNetworkAclAssociationResponse
  *
- * \brief The ReplaceNetworkAclAssociationResponse class encapsulates EC2 ReplaceNetworkAclAssociation responses.
+ * \brief The ReplaceNetworkAclAssociationResponse class provides an interace for EC2 ReplaceNetworkAclAssociation responses.
  *
  * \ingroup EC2
  *

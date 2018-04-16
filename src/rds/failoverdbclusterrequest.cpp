@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::FailoverDBClusterRequest
  *
- * \brief The FailoverDBClusterRequest class encapsulates RDS FailoverDBCluster requests.
+ * \brief The FailoverDBClusterRequest class provides an interface for RDS FailoverDBCluster requests.
  *
  * \ingroup RDS
  *

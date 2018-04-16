@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::CreateNotebookInstanceLifecycleConfigRequest
  *
- * \brief The CreateNotebookInstanceLifecycleConfigRequest class encapsulates SageMaker CreateNotebookInstanceLifecycleConfig requests.
+ * \brief The CreateNotebookInstanceLifecycleConfigRequest class provides an interface for SageMaker CreateNotebookInstanceLifecycleConfig requests.
  *
  * \ingroup SageMaker
  *

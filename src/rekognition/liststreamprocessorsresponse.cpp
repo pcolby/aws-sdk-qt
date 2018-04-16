@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::ListStreamProcessorsResponse
  *
- * \brief The ListStreamProcessorsResponse class encapsulates Rekognition ListStreamProcessors responses.
+ * \brief The ListStreamProcessorsResponse class provides an interace for Rekognition ListStreamProcessors responses.
  *
  * \ingroup Rekognition
  *

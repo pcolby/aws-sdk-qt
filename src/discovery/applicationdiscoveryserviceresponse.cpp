@@ -29,7 +29,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::ApplicationDiscoveryServiceResponse
  *
- * \brief The ApplicationDiscoveryServiceResponse class is the base class for all ApplicationDiscoveryService responses.
+ * \brief The ApplicationDiscoveryServiceResponse class provides an interface for ApplicationDiscoveryService responses.
  *
  * \ingroup ApplicationDiscoveryService
  */

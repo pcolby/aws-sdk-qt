@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateNetworkAclEntryRequest
  *
- * \brief The CreateNetworkAclEntryRequest class encapsulates EC2 CreateNetworkAclEntry requests.
+ * \brief The CreateNetworkAclEntryRequest class provides an interface for EC2 CreateNetworkAclEntry requests.
  *
  * \ingroup EC2
  *

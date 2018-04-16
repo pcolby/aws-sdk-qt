@@ -30,7 +30,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::CreateContainerResponse
  *
- * \brief The CreateContainerResponse class encapsulates MediaStore CreateContainer responses.
+ * \brief The CreateContainerResponse class provides an interace for MediaStore CreateContainer responses.
  *
  * \ingroup MediaStore
  *

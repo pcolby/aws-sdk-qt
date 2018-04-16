@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::StartExecutionResponse
  *
- * \brief The StartExecutionResponse class encapsulates SFN StartExecution responses.
+ * \brief The StartExecutionResponse class provides an interace for SFN StartExecution responses.
  *
  * \ingroup SFN
  *

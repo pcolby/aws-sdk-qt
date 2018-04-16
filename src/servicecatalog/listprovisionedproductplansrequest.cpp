@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListProvisionedProductPlansRequest
  *
- * \brief The ListProvisionedProductPlansRequest class encapsulates ServiceCatalog ListProvisionedProductPlans requests.
+ * \brief The ListProvisionedProductPlansRequest class provides an interface for ServiceCatalog ListProvisionedProductPlans requests.
  *
  * \ingroup ServiceCatalog
  *

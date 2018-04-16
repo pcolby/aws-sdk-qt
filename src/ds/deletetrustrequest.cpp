@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DeleteTrustRequest
  *
- * \brief The DeleteTrustRequest class encapsulates DirectoryService DeleteTrust requests.
+ * \brief The DeleteTrustRequest class provides an interface for DirectoryService DeleteTrust requests.
  *
  * \ingroup DirectoryService
  *

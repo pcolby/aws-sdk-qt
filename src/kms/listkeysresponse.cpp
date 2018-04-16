@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ListKeysResponse
  *
- * \brief The ListKeysResponse class encapsulates KMS ListKeys responses.
+ * \brief The ListKeysResponse class provides an interace for KMS ListKeys responses.
  *
  * \ingroup KMS
  *

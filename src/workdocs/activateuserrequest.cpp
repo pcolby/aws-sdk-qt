@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::ActivateUserRequest
  *
- * \brief The ActivateUserRequest class encapsulates WorkDocs ActivateUser requests.
+ * \brief The ActivateUserRequest class provides an interface for WorkDocs ActivateUser requests.
  *
  * \ingroup WorkDocs
  *

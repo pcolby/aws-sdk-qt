@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateAuthEventFeedbackRequest
  *
- * \brief The UpdateAuthEventFeedbackRequest class encapsulates CognitoIdentityProvider UpdateAuthEventFeedback requests.
+ * \brief The UpdateAuthEventFeedbackRequest class provides an interface for CognitoIdentityProvider UpdateAuthEventFeedback requests.
  *
  * \ingroup CognitoIdentityProvider
  *

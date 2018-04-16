@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateDevEndpointRequest
  *
- * \brief The CreateDevEndpointRequest class encapsulates Glue CreateDevEndpoint requests.
+ * \brief The CreateDevEndpointRequest class provides an interface for Glue CreateDevEndpoint requests.
  *
  * \ingroup Glue
  *

@@ -29,7 +29,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::ACMResponse
  *
- * \brief The ACMResponse class is the base class for all ACM responses.
+ * \brief The ACMResponse class provides an interface for ACM responses.
  *
  * \ingroup ACM
  */

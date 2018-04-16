@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DescribeModelResponse
  *
- * \brief The DescribeModelResponse class encapsulates SageMaker DescribeModel responses.
+ * \brief The DescribeModelResponse class provides an interace for SageMaker DescribeModel responses.
  *
  * \ingroup SageMaker
  *

@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::AddUploadBufferResponse
  *
- * \brief The AddUploadBufferResponse class encapsulates StorageGateway AddUploadBuffer responses.
+ * \brief The AddUploadBufferResponse class provides an interace for StorageGateway AddUploadBuffer responses.
  *
  * \ingroup StorageGateway
  *

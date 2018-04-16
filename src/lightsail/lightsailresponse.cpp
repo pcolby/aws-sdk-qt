@@ -29,7 +29,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::LightsailResponse
  *
- * \brief The LightsailResponse class is the base class for all Lightsail responses.
+ * \brief The LightsailResponse class provides an interface for Lightsail responses.
  *
  * \ingroup Lightsail
  */

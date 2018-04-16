@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::UpdateStreamResponse
  *
- * \brief The UpdateStreamResponse class encapsulates IoT UpdateStream responses.
+ * \brief The UpdateStreamResponse class provides an interace for IoT UpdateStream responses.
  *
  * \ingroup IoT
  *

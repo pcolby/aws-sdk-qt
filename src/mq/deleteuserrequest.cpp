@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::DeleteUserRequest
  *
- * \brief The DeleteUserRequest class encapsulates MQ DeleteUser requests.
+ * \brief The DeleteUserRequest class provides an interface for MQ DeleteUser requests.
  *
  * \ingroup MQ
  *

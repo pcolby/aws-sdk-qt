@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeleteAssociationRequest
  *
- * \brief The DeleteAssociationRequest class encapsulates SSM DeleteAssociation requests.
+ * \brief The DeleteAssociationRequest class provides an interface for SSM DeleteAssociation requests.
  *
  * \ingroup SSM
  *

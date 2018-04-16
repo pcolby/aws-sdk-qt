@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::AssociateSkillGroupWithRoomRequest
  *
- * \brief The AssociateSkillGroupWithRoomRequest class encapsulates AlexaForBusiness AssociateSkillGroupWithRoom requests.
+ * \brief The AssociateSkillGroupWithRoomRequest class provides an interface for AlexaForBusiness AssociateSkillGroupWithRoom requests.
  *
  * \ingroup AlexaForBusiness
  *

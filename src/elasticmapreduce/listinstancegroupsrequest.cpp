@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ListInstanceGroupsRequest
  *
- * \brief The ListInstanceGroupsRequest class encapsulates EMR ListInstanceGroups requests.
+ * \brief The ListInstanceGroupsRequest class provides an interface for EMR ListInstanceGroups requests.
  *
  * \ingroup EMR
  *

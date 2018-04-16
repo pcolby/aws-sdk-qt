@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::ListSubscriptionsByTopicResponse
  *
- * \brief The ListSubscriptionsByTopicResponse class encapsulates SNS ListSubscriptionsByTopic responses.
+ * \brief The ListSubscriptionsByTopicResponse class provides an interace for SNS ListSubscriptionsByTopic responses.
  *
  * \ingroup SNS
  *

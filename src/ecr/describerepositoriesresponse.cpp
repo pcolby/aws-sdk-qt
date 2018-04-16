@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::DescribeRepositoriesResponse
  *
- * \brief The DescribeRepositoriesResponse class encapsulates ECR DescribeRepositories responses.
+ * \brief The DescribeRepositoriesResponse class provides an interace for ECR DescribeRepositories responses.
  *
  * \ingroup ECR
  *

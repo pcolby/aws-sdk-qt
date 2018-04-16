@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::AttachInstancesResponse
  *
- * \brief The AttachInstancesResponse class encapsulates AutoScaling AttachInstances responses.
+ * \brief The AttachInstancesResponse class provides an interace for AutoScaling AttachInstances responses.
  *
  * \ingroup AutoScaling
  *

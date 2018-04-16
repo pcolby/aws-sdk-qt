@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DownloadDefaultKeyPairResponse
  *
- * \brief The DownloadDefaultKeyPairResponse class encapsulates Lightsail DownloadDefaultKeyPair responses.
+ * \brief The DownloadDefaultKeyPairResponse class provides an interace for Lightsail DownloadDefaultKeyPair responses.
  *
  * \ingroup Lightsail
  *

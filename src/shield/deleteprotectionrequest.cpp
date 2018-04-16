@@ -28,7 +28,7 @@ namespace Shield {
 /*!
  * \class QtAws::Shield::DeleteProtectionRequest
  *
- * \brief The DeleteProtectionRequest class encapsulates Shield DeleteProtection requests.
+ * \brief The DeleteProtectionRequest class provides an interface for Shield DeleteProtection requests.
  *
  * \ingroup Shield
  *

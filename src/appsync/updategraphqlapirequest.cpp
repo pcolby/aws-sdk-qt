@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::UpdateGraphqlApiRequest
  *
- * \brief The UpdateGraphqlApiRequest class encapsulates AppSync UpdateGraphqlApi requests.
+ * \brief The UpdateGraphqlApiRequest class provides an interface for AppSync UpdateGraphqlApi requests.
  *
  * \ingroup AppSync
  *

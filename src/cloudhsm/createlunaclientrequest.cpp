@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::CreateLunaClientRequest
  *
- * \brief The CreateLunaClientRequest class encapsulates CloudHSM CreateLunaClient requests.
+ * \brief The CreateLunaClientRequest class provides an interface for CloudHSM CreateLunaClient requests.
  *
  * \ingroup CloudHSM
  *

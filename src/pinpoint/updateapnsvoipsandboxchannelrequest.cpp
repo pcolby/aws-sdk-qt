@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateApnsVoipSandboxChannelRequest
  *
- * \brief The UpdateApnsVoipSandboxChannelRequest class encapsulates Pinpoint UpdateApnsVoipSandboxChannel requests.
+ * \brief The UpdateApnsVoipSandboxChannelRequest class provides an interface for Pinpoint UpdateApnsVoipSandboxChannel requests.
  *
  * \ingroup Pinpoint
  *

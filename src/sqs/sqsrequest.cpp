@@ -26,7 +26,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::SQSRequest
  *
- * \brief The SQSRequest class is the base class for all SQS requests.
+ * \brief The SQSRequest class provides an interface for SQS requests.
  *
  * \ingroup SQS
  */

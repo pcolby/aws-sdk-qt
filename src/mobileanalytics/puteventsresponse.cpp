@@ -30,7 +30,7 @@ namespace MobileAnalytics {
 /*!
  * \class QtAws::MobileAnalytics::PutEventsResponse
  *
- * \brief The PutEventsResponse class encapsulates MobileAnalytics PutEvents responses.
+ * \brief The PutEventsResponse class provides an interace for MobileAnalytics PutEvents responses.
  *
  * \ingroup MobileAnalytics
  *

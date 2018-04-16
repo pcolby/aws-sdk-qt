@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::AttachInstancesToLoadBalancerRequest
  *
- * \brief The AttachInstancesToLoadBalancerRequest class encapsulates Lightsail AttachInstancesToLoadBalancer requests.
+ * \brief The AttachInstancesToLoadBalancerRequest class provides an interface for Lightsail AttachInstancesToLoadBalancer requests.
  *
  * \ingroup Lightsail
  *

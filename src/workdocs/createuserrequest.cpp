@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::CreateUserRequest
  *
- * \brief The CreateUserRequest class encapsulates WorkDocs CreateUser requests.
+ * \brief The CreateUserRequest class provides an interface for WorkDocs CreateUser requests.
  *
  * \ingroup WorkDocs
  *

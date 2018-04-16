@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::CreateClusterRequest
  *
- * \brief The CreateClusterRequest class encapsulates Redshift CreateCluster requests.
+ * \brief The CreateClusterRequest class provides an interface for Redshift CreateCluster requests.
  *
  * \ingroup Redshift
  *

@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::DeregisterJobDefinitionResponse
  *
- * \brief The DeregisterJobDefinitionResponse class encapsulates Batch DeregisterJobDefinition responses.
+ * \brief The DeregisterJobDefinitionResponse class provides an interace for Batch DeregisterJobDefinition responses.
  *
  * \ingroup Batch
  *

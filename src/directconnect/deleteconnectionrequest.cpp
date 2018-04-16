@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DeleteConnectionRequest
  *
- * \brief The DeleteConnectionRequest class encapsulates DirectConnect DeleteConnection requests.
+ * \brief The DeleteConnectionRequest class provides an interface for DirectConnect DeleteConnection requests.
  *
  * \ingroup DirectConnect
  *

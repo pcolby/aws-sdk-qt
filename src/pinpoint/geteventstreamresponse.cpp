@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::GetEventStreamResponse
  *
- * \brief The GetEventStreamResponse class encapsulates Pinpoint GetEventStream responses.
+ * \brief The GetEventStreamResponse class provides an interace for Pinpoint GetEventStream responses.
  *
  * \ingroup Pinpoint
  *

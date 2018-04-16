@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminRespondToAuthChallengeRequest
  *
- * \brief The AdminRespondToAuthChallengeRequest class encapsulates CognitoIdentityProvider AdminRespondToAuthChallenge requests.
+ * \brief The AdminRespondToAuthChallengeRequest class provides an interface for CognitoIdentityProvider AdminRespondToAuthChallenge requests.
  *
  * \ingroup CognitoIdentityProvider
  *

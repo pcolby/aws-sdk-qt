@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::ListResolversResponse
  *
- * \brief The ListResolversResponse class encapsulates AppSync ListResolvers responses.
+ * \brief The ListResolversResponse class provides an interace for AppSync ListResolvers responses.
  *
  * \ingroup AppSync
  *

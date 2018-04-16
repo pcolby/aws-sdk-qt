@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListAssignmentsForHITResponse
  *
- * \brief The ListAssignmentsForHITResponse class encapsulates MTurk ListAssignmentsForHIT responses.
+ * \brief The ListAssignmentsForHITResponse class provides an interace for MTurk ListAssignmentsForHIT responses.
  *
  * \ingroup MTurk
  *

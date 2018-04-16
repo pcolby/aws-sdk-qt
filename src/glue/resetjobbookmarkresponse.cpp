@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::ResetJobBookmarkResponse
  *
- * \brief The ResetJobBookmarkResponse class encapsulates Glue ResetJobBookmark responses.
+ * \brief The ResetJobBookmarkResponse class provides an interace for Glue ResetJobBookmark responses.
  *
  * \ingroup Glue
  *

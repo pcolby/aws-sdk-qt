@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateClassifierResponse
  *
- * \brief The UpdateClassifierResponse class encapsulates Glue UpdateClassifier responses.
+ * \brief The UpdateClassifierResponse class provides an interace for Glue UpdateClassifier responses.
  *
  * \ingroup Glue
  *

@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateMicrosoftADRequest
  *
- * \brief The CreateMicrosoftADRequest class encapsulates DirectoryService CreateMicrosoftAD requests.
+ * \brief The CreateMicrosoftADRequest class provides an interface for DirectoryService CreateMicrosoftAD requests.
  *
  * \ingroup DirectoryService
  *

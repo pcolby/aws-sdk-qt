@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::QueryObjectsResponse
  *
- * \brief The QueryObjectsResponse class encapsulates DataPipeline QueryObjects responses.
+ * \brief The QueryObjectsResponse class provides an interace for DataPipeline QueryObjects responses.
  *
  * \ingroup DataPipeline
  *

@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DeleteServiceRequest
  *
- * \brief The DeleteServiceRequest class encapsulates ECS DeleteService requests.
+ * \brief The DeleteServiceRequest class provides an interface for ECS DeleteService requests.
  *
  * \ingroup ECS
  *

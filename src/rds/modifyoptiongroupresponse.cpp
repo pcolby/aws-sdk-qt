@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ModifyOptionGroupResponse
  *
- * \brief The ModifyOptionGroupResponse class encapsulates RDS ModifyOptionGroup responses.
+ * \brief The ModifyOptionGroupResponse class provides an interace for RDS ModifyOptionGroup responses.
  *
  * \ingroup RDS
  *

@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::DescribeAgentsRequest
  *
- * \brief The DescribeAgentsRequest class encapsulates ApplicationDiscoveryService DescribeAgents requests.
+ * \brief The DescribeAgentsRequest class provides an interface for ApplicationDiscoveryService DescribeAgents requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListResourceDefinitionVersionsRequest
  *
- * \brief The ListResourceDefinitionVersionsRequest class encapsulates Greengrass ListResourceDefinitionVersions requests.
+ * \brief The ListResourceDefinitionVersionsRequest class provides an interface for Greengrass ListResourceDefinitionVersions requests.
  *
  * \ingroup Greengrass
  *

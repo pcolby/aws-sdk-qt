@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteVpcPeeringAuthorizationResponse
  *
- * \brief The DeleteVpcPeeringAuthorizationResponse class encapsulates GameLift DeleteVpcPeeringAuthorization responses.
+ * \brief The DeleteVpcPeeringAuthorizationResponse class provides an interace for GameLift DeleteVpcPeeringAuthorization responses.
  *
  * \ingroup GameLift
  *

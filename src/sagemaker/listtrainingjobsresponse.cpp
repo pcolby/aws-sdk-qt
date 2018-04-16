@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::ListTrainingJobsResponse
  *
- * \brief The ListTrainingJobsResponse class encapsulates SageMaker ListTrainingJobs responses.
+ * \brief The ListTrainingJobsResponse class provides an interace for SageMaker ListTrainingJobs responses.
  *
  * \ingroup SageMaker
  *

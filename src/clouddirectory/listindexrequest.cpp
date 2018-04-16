@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListIndexRequest
  *
- * \brief The ListIndexRequest class encapsulates CloudDirectory ListIndex requests.
+ * \brief The ListIndexRequest class provides an interface for CloudDirectory ListIndex requests.
  *
  * \ingroup CloudDirectory
  *

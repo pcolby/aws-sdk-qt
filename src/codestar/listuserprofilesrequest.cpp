@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::ListUserProfilesRequest
  *
- * \brief The ListUserProfilesRequest class encapsulates CodeStar ListUserProfiles requests.
+ * \brief The ListUserProfilesRequest class provides an interface for CodeStar ListUserProfiles requests.
  *
  * \ingroup CodeStar
  *

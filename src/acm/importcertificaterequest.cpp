@@ -28,7 +28,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::ImportCertificateRequest
  *
- * \brief The ImportCertificateRequest class encapsulates ACM ImportCertificate requests.
+ * \brief The ImportCertificateRequest class provides an interface for ACM ImportCertificate requests.
  *
  * \ingroup ACM
  *

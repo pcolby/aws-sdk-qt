@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DescribeEventTopicsRequest
  *
- * \brief The DescribeEventTopicsRequest class encapsulates DirectoryService DescribeEventTopics requests.
+ * \brief The DescribeEventTopicsRequest class provides an interface for DirectoryService DescribeEventTopics requests.
  *
  * \ingroup DirectoryService
  *

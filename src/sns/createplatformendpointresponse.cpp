@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::CreatePlatformEndpointResponse
  *
- * \brief The CreatePlatformEndpointResponse class encapsulates SNS CreatePlatformEndpoint responses.
+ * \brief The CreatePlatformEndpointResponse class provides an interace for SNS CreatePlatformEndpoint responses.
  *
  * \ingroup SNS
  *

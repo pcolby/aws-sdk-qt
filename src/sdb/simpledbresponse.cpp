@@ -29,7 +29,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::SimpleDBResponse
  *
- * \brief The SimpleDBResponse class is the base class for all SimpleDB responses.
+ * \brief The SimpleDBResponse class provides an interface for SimpleDB responses.
  *
  * \ingroup SimpleDB
  */

@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeleteEvaluationResultsResponse
  *
- * \brief The DeleteEvaluationResultsResponse class encapsulates ConfigService DeleteEvaluationResults responses.
+ * \brief The DeleteEvaluationResultsResponse class provides an interace for ConfigService DeleteEvaluationResults responses.
  *
  * \ingroup ConfigService
  *

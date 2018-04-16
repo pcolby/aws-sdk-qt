@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DeleteOrganizationResponse
  *
- * \brief The DeleteOrganizationResponse class encapsulates Organizations DeleteOrganization responses.
+ * \brief The DeleteOrganizationResponse class provides an interace for Organizations DeleteOrganization responses.
  *
  * \ingroup Organizations
  *

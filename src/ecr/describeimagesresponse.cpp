@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::DescribeImagesResponse
  *
- * \brief The DescribeImagesResponse class encapsulates ECR DescribeImages responses.
+ * \brief The DescribeImagesResponse class provides an interace for ECR DescribeImages responses.
  *
  * \ingroup ECR
  *

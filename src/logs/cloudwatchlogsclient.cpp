@@ -103,7 +103,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::CloudWatchLogsClient
  *
- * \brief The CloudWatchLogsClient class provides access the Amazon CloudWatch Logs service.
+ * \brief The CloudWatchLogsClient class provides access to the Amazon CloudWatch Logs service.
  *
  * \ingroup CloudWatchLogs
  *

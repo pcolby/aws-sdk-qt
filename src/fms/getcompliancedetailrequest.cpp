@@ -28,7 +28,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::GetComplianceDetailRequest
  *
- * \brief The GetComplianceDetailRequest class encapsulates FMS GetComplianceDetail requests.
+ * \brief The GetComplianceDetailRequest class provides an interface for FMS GetComplianceDetail requests.
  *
  * \ingroup FMS
  *

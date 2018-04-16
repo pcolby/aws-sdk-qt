@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeleteRuleResponse
  *
- * \brief The DeleteRuleResponse class encapsulates ElasticLoadBalancingv2 DeleteRule responses.
+ * \brief The DeleteRuleResponse class provides an interace for ElasticLoadBalancingv2 DeleteRule responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

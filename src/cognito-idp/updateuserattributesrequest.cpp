@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::UpdateUserAttributesRequest
  *
- * \brief The UpdateUserAttributesRequest class encapsulates CognitoIdentityProvider UpdateUserAttributes requests.
+ * \brief The UpdateUserAttributesRequest class provides an interface for CognitoIdentityProvider UpdateUserAttributes requests.
  *
  * \ingroup CognitoIdentityProvider
  *

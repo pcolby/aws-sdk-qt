@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::AddAttributesToFindingsRequest
  *
- * \brief The AddAttributesToFindingsRequest class encapsulates Inspector AddAttributesToFindings requests.
+ * \brief The AddAttributesToFindingsRequest class provides an interface for Inspector AddAttributesToFindings requests.
  *
  * \ingroup Inspector
  *

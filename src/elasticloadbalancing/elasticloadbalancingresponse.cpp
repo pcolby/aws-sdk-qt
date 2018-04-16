@@ -29,7 +29,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::ElasticLoadBalancingResponse
  *
- * \brief The ElasticLoadBalancingResponse class is the base class for all ElasticLoadBalancing responses.
+ * \brief The ElasticLoadBalancingResponse class provides an interface for ElasticLoadBalancing responses.
  *
  * \ingroup ElasticLoadBalancing
  */

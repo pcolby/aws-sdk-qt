@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::ExitStandbyResponse
  *
- * \brief The ExitStandbyResponse class encapsulates AutoScaling ExitStandby responses.
+ * \brief The ExitStandbyResponse class provides an interace for AutoScaling ExitStandby responses.
  *
  * \ingroup AutoScaling
  *

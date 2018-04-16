@@ -28,7 +28,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::BatchGetBuildsRequest
  *
- * \brief The BatchGetBuildsRequest class encapsulates CodeBuild BatchGetBuilds requests.
+ * \brief The BatchGetBuildsRequest class provides an interface for CodeBuild BatchGetBuilds requests.
  *
  * \ingroup CodeBuild
  *

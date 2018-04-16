@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::CreateChannelRequest
  *
- * \brief The CreateChannelRequest class encapsulates MediaLive CreateChannel requests.
+ * \brief The CreateChannelRequest class provides an interface for MediaLive CreateChannel requests.
  *
  * \ingroup MediaLive
  *

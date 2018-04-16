@@ -26,7 +26,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::KinesisAnalyticsRequest
  *
- * \brief The KinesisAnalyticsRequest class is the base class for all KinesisAnalytics requests.
+ * \brief The KinesisAnalyticsRequest class provides an interface for KinesisAnalytics requests.
  *
  * \ingroup KinesisAnalytics
  */

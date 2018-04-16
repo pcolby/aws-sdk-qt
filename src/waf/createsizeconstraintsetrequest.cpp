@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::CreateSizeConstraintSetRequest
  *
- * \brief The CreateSizeConstraintSetRequest class encapsulates WAF CreateSizeConstraintSet requests.
+ * \brief The CreateSizeConstraintSetRequest class provides an interface for WAF CreateSizeConstraintSet requests.
  *
  * \ingroup WAF
  *

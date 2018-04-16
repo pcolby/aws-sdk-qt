@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::StopTriggerRequest
  *
- * \brief The StopTriggerRequest class encapsulates Glue StopTrigger requests.
+ * \brief The StopTriggerRequest class provides an interface for Glue StopTrigger requests.
  *
  * \ingroup Glue
  *

@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeleteInstanceRequest
  *
- * \brief The DeleteInstanceRequest class encapsulates OpsWorks DeleteInstance requests.
+ * \brief The DeleteInstanceRequest class provides an interface for OpsWorks DeleteInstance requests.
  *
  * \ingroup OpsWorks
  *

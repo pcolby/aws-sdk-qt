@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::SwapEnvironmentCNAMEsRequest
  *
- * \brief The SwapEnvironmentCNAMEsRequest class encapsulates ElasticBeanstalk SwapEnvironmentCNAMEs requests.
+ * \brief The SwapEnvironmentCNAMEsRequest class provides an interface for ElasticBeanstalk SwapEnvironmentCNAMEs requests.
  *
  * \ingroup ElasticBeanstalk
  *

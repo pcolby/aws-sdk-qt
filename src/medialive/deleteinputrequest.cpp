@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::DeleteInputRequest
  *
- * \brief The DeleteInputRequest class encapsulates MediaLive DeleteInput requests.
+ * \brief The DeleteInputRequest class provides an interface for MediaLive DeleteInput requests.
  *
  * \ingroup MediaLive
  *

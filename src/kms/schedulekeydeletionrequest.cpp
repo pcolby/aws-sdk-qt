@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ScheduleKeyDeletionRequest
  *
- * \brief The ScheduleKeyDeletionRequest class encapsulates KMS ScheduleKeyDeletion requests.
+ * \brief The ScheduleKeyDeletionRequest class provides an interface for KMS ScheduleKeyDeletion requests.
  *
  * \ingroup KMS
  *

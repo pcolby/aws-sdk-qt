@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::UnsubscribeFromDatasetResponse
  *
- * \brief The UnsubscribeFromDatasetResponse class encapsulates CognitoSync UnsubscribeFromDataset responses.
+ * \brief The UnsubscribeFromDatasetResponse class provides an interace for CognitoSync UnsubscribeFromDataset responses.
  *
  * \ingroup CognitoSync
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ImportInstanceRequest
  *
- * \brief The ImportInstanceRequest class encapsulates EC2 ImportInstance requests.
+ * \brief The ImportInstanceRequest class provides an interface for EC2 ImportInstance requests.
  *
  * \ingroup EC2
  *

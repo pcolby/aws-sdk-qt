@@ -71,7 +71,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::KinesisAnalyticsClient
  *
- * \brief The KinesisAnalyticsClient class provides access the Amazon Kinesis Analytics service.
+ * \brief The KinesisAnalyticsClient class provides access to the Amazon Kinesis Analytics service.
  *
  * \ingroup KinesisAnalytics
  *

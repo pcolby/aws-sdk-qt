@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::RemoveTagsFromResourceRequest
  *
- * \brief The RemoveTagsFromResourceRequest class encapsulates DirectoryService RemoveTagsFromResource requests.
+ * \brief The RemoveTagsFromResourceRequest class provides an interface for DirectoryService RemoveTagsFromResource requests.
  *
  * \ingroup DirectoryService
  *

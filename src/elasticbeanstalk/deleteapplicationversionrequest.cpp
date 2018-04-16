@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DeleteApplicationVersionRequest
  *
- * \brief The DeleteApplicationVersionRequest class encapsulates ElasticBeanstalk DeleteApplicationVersion requests.
+ * \brief The DeleteApplicationVersionRequest class provides an interface for ElasticBeanstalk DeleteApplicationVersion requests.
  *
  * \ingroup ElasticBeanstalk
  *

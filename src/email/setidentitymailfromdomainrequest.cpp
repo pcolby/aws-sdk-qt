@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SetIdentityMailFromDomainRequest
  *
- * \brief The SetIdentityMailFromDomainRequest class encapsulates SES SetIdentityMailFromDomain requests.
+ * \brief The SetIdentityMailFromDomainRequest class provides an interface for SES SetIdentityMailFromDomain requests.
  *
  * \ingroup SES
  *

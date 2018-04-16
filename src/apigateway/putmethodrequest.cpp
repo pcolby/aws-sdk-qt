@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::PutMethodRequest
  *
- * \brief The PutMethodRequest class encapsulates APIGateway PutMethod requests.
+ * \brief The PutMethodRequest class provides an interface for APIGateway PutMethod requests.
  *
  * \ingroup APIGateway
  *

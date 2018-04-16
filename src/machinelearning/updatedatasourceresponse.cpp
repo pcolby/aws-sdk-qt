@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::UpdateDataSourceResponse
  *
- * \brief The UpdateDataSourceResponse class encapsulates MachineLearning UpdateDataSource responses.
+ * \brief The UpdateDataSourceResponse class provides an interace for MachineLearning UpdateDataSource responses.
  *
  * \ingroup MachineLearning
  *

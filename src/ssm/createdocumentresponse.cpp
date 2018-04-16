@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CreateDocumentResponse
  *
- * \brief The CreateDocumentResponse class encapsulates SSM CreateDocument responses.
+ * \brief The CreateDocumentResponse class provides an interace for SSM CreateDocument responses.
  *
  * \ingroup SSM
  *

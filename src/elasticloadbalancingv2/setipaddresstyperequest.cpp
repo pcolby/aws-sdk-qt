@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetIpAddressTypeRequest
  *
- * \brief The SetIpAddressTypeRequest class encapsulates ElasticLoadBalancingv2 SetIpAddressType requests.
+ * \brief The SetIpAddressTypeRequest class provides an interface for ElasticLoadBalancingv2 SetIpAddressType requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

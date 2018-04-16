@@ -26,7 +26,7 @@ namespace MobileAnalytics {
 /*!
  * \class QtAws::MobileAnalytics::MobileAnalyticsRequest
  *
- * \brief The MobileAnalyticsRequest class is the base class for all MobileAnalytics requests.
+ * \brief The MobileAnalyticsRequest class provides an interface for MobileAnalytics requests.
  *
  * \ingroup MobileAnalytics
  */

@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListHealthChecksResponse
  *
- * \brief The ListHealthChecksResponse class encapsulates Route53 ListHealthChecks responses.
+ * \brief The ListHealthChecksResponse class provides an interace for Route53 ListHealthChecks responses.
  *
  * \ingroup Route53
  *

@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::UpdateStreamRequest
  *
- * \brief The UpdateStreamRequest class encapsulates IoT UpdateStream requests.
+ * \brief The UpdateStreamRequest class provides an interface for IoT UpdateStream requests.
  *
  * \ingroup IoT
  *

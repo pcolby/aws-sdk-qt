@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::GetFileUploadURLRequest
  *
- * \brief The GetFileUploadURLRequest class encapsulates MTurk GetFileUploadURL requests.
+ * \brief The GetFileUploadURLRequest class provides an interface for MTurk GetFileUploadURL requests.
  *
  * \ingroup MTurk
  *

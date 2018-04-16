@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DeleteServerRequest
  *
- * \brief The DeleteServerRequest class encapsulates OpsWorksCM DeleteServer requests.
+ * \brief The DeleteServerRequest class provides an interface for OpsWorksCM DeleteServer requests.
  *
  * \ingroup OpsWorksCM
  *

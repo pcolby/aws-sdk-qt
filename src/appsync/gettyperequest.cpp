@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::GetTypeRequest
  *
- * \brief The GetTypeRequest class encapsulates AppSync GetType requests.
+ * \brief The GetTypeRequest class provides an interface for AppSync GetType requests.
  *
  * \ingroup AppSync
  *

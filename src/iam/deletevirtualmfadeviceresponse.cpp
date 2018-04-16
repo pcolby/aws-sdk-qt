@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteVirtualMFADeviceResponse
  *
- * \brief The DeleteVirtualMFADeviceResponse class encapsulates IAM DeleteVirtualMFADevice responses.
+ * \brief The DeleteVirtualMFADeviceResponse class provides an interace for IAM DeleteVirtualMFADevice responses.
  *
  * \ingroup IAM
  *

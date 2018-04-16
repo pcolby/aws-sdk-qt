@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::AcceptMatchResponse
  *
- * \brief The AcceptMatchResponse class encapsulates GameLift AcceptMatch responses.
+ * \brief The AcceptMatchResponse class provides an interace for GameLift AcceptMatch responses.
  *
  * \ingroup GameLift
  *

@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::ResetClusterParameterGroupResponse
  *
- * \brief The ResetClusterParameterGroupResponse class encapsulates Redshift ResetClusterParameterGroup responses.
+ * \brief The ResetClusterParameterGroupResponse class provides an interace for Redshift ResetClusterParameterGroup responses.
  *
  * \ingroup Redshift
  *

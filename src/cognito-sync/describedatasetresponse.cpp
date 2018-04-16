@@ -30,7 +30,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::DescribeDatasetResponse
  *
- * \brief The DescribeDatasetResponse class encapsulates CognitoSync DescribeDataset responses.
+ * \brief The DescribeDatasetResponse class provides an interace for CognitoSync DescribeDataset responses.
  *
  * \ingroup CognitoSync
  *

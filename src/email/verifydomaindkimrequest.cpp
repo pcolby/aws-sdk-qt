@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::VerifyDomainDkimRequest
  *
- * \brief The VerifyDomainDkimRequest class encapsulates SES VerifyDomainDkim requests.
+ * \brief The VerifyDomainDkimRequest class provides an interface for SES VerifyDomainDkim requests.
  *
  * \ingroup SES
  *

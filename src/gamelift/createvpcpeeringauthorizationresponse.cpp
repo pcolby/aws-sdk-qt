@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::CreateVpcPeeringAuthorizationResponse
  *
- * \brief The CreateVpcPeeringAuthorizationResponse class encapsulates GameLift CreateVpcPeeringAuthorization responses.
+ * \brief The CreateVpcPeeringAuthorizationResponse class provides an interace for GameLift CreateVpcPeeringAuthorization responses.
  *
  * \ingroup GameLift
  *

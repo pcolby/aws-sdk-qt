@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::AbortMultipartUploadRequest
  *
- * \brief The AbortMultipartUploadRequest class encapsulates Glacier AbortMultipartUpload requests.
+ * \brief The AbortMultipartUploadRequest class provides an interface for Glacier AbortMultipartUpload requests.
  *
  * \ingroup Glacier
  *

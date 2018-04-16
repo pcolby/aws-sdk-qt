@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::UpdateGameSessionQueueResponse
  *
- * \brief The UpdateGameSessionQueueResponse class encapsulates GameLift UpdateGameSessionQueue responses.
+ * \brief The UpdateGameSessionQueueResponse class provides an interace for GameLift UpdateGameSessionQueue responses.
  *
  * \ingroup GameLift
  *

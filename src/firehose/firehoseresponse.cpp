@@ -29,7 +29,7 @@ namespace Firehose {
 /*!
  * \class QtAws::Firehose::FirehoseResponse
  *
- * \brief The FirehoseResponse class is the base class for all Firehose responses.
+ * \brief The FirehoseResponse class provides an interface for Firehose responses.
  *
  * \ingroup Firehose
  */

@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::CopyProductRequest
  *
- * \brief The CopyProductRequest class encapsulates ServiceCatalog CopyProduct requests.
+ * \brief The CopyProductRequest class provides an interface for ServiceCatalog CopyProduct requests.
  *
  * \ingroup ServiceCatalog
  *

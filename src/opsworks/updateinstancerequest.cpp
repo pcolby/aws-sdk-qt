@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateInstanceRequest
  *
- * \brief The UpdateInstanceRequest class encapsulates OpsWorks UpdateInstance requests.
+ * \brief The UpdateInstanceRequest class provides an interface for OpsWorks UpdateInstance requests.
  *
  * \ingroup OpsWorks
  *

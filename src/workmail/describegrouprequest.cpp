@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DescribeGroupRequest
  *
- * \brief The DescribeGroupRequest class encapsulates WorkMail DescribeGroup requests.
+ * \brief The DescribeGroupRequest class provides an interface for WorkMail DescribeGroup requests.
  *
  * \ingroup WorkMail
  *

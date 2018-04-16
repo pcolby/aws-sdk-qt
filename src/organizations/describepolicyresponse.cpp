@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DescribePolicyResponse
  *
- * \brief The DescribePolicyResponse class encapsulates Organizations DescribePolicy responses.
+ * \brief The DescribePolicyResponse class provides an interace for Organizations DescribePolicy responses.
  *
  * \ingroup Organizations
  *

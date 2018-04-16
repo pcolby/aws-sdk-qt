@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::ListTeamMembersRequest
  *
- * \brief The ListTeamMembersRequest class encapsulates CodeStar ListTeamMembers requests.
+ * \brief The ListTeamMembersRequest class provides an interface for CodeStar ListTeamMembers requests.
  *
  * \ingroup CodeStar
  *

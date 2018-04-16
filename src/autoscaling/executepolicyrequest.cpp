@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::ExecutePolicyRequest
  *
- * \brief The ExecutePolicyRequest class encapsulates AutoScaling ExecutePolicy requests.
+ * \brief The ExecutePolicyRequest class provides an interface for AutoScaling ExecutePolicy requests.
  *
  * \ingroup AutoScaling
  *

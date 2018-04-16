@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::UntagResourceRequest
  *
- * \brief The UntagResourceRequest class encapsulates CloudFront UntagResource requests.
+ * \brief The UntagResourceRequest class provides an interface for CloudFront UntagResource requests.
  *
  * \ingroup CloudFront
  *

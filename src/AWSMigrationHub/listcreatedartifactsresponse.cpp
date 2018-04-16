@@ -30,7 +30,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::ListCreatedArtifactsResponse
  *
- * \brief The ListCreatedArtifactsResponse class encapsulates MigrationHub ListCreatedArtifacts responses.
+ * \brief The ListCreatedArtifactsResponse class provides an interace for MigrationHub ListCreatedArtifacts responses.
  *
  * \ingroup MigrationHub
  *

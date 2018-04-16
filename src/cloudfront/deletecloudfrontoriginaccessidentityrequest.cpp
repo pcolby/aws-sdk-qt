@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::DeleteCloudFrontOriginAccessIdentityRequest
  *
- * \brief The DeleteCloudFrontOriginAccessIdentityRequest class encapsulates CloudFront DeleteCloudFrontOriginAccessIdentity requests.
+ * \brief The DeleteCloudFrontOriginAccessIdentityRequest class provides an interface for CloudFront DeleteCloudFrontOriginAccessIdentity requests.
  *
  * \ingroup CloudFront
  *

@@ -30,7 +30,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::DisassociateConnectorResponse
  *
- * \brief The DisassociateConnectorResponse class encapsulates SMS DisassociateConnector responses.
+ * \brief The DisassociateConnectorResponse class provides an interace for SMS DisassociateConnector responses.
  *
  * \ingroup SMS
  *

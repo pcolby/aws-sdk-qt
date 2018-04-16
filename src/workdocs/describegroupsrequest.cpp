@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DescribeGroupsRequest
  *
- * \brief The DescribeGroupsRequest class encapsulates WorkDocs DescribeGroups requests.
+ * \brief The DescribeGroupsRequest class provides an interface for WorkDocs DescribeGroups requests.
  *
  * \ingroup WorkDocs
  *

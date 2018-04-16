@@ -28,7 +28,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::ModifyMountTargetSecurityGroupsRequest
  *
- * \brief The ModifyMountTargetSecurityGroupsRequest class encapsulates EFS ModifyMountTargetSecurityGroups requests.
+ * \brief The ModifyMountTargetSecurityGroupsRequest class provides an interface for EFS ModifyMountTargetSecurityGroups requests.
  *
  * \ingroup EFS
  *

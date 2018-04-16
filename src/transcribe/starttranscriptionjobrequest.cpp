@@ -28,7 +28,7 @@ namespace TranscribeService {
 /*!
  * \class QtAws::TranscribeService::StartTranscriptionJobRequest
  *
- * \brief The StartTranscriptionJobRequest class encapsulates TranscribeService StartTranscriptionJob requests.
+ * \brief The StartTranscriptionJobRequest class provides an interface for TranscribeService StartTranscriptionJob requests.
  *
  * \ingroup TranscribeService
  *

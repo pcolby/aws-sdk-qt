@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GetMembersRequest
  *
- * \brief The GetMembersRequest class encapsulates GuardDuty GetMembers requests.
+ * \brief The GetMembersRequest class provides an interface for GuardDuty GetMembers requests.
  *
  * \ingroup GuardDuty
  *

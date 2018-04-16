@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeCommandsRequest
  *
- * \brief The DescribeCommandsRequest class encapsulates OpsWorks DescribeCommands requests.
+ * \brief The DescribeCommandsRequest class provides an interface for OpsWorks DescribeCommands requests.
  *
  * \ingroup OpsWorks
  *

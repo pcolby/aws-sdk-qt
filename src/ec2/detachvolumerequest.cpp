@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DetachVolumeRequest
  *
- * \brief The DetachVolumeRequest class encapsulates EC2 DetachVolume requests.
+ * \brief The DetachVolumeRequest class provides an interface for EC2 DetachVolume requests.
  *
  * \ingroup EC2
  *

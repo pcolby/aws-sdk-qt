@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::GetDirectoryLimitsRequest
  *
- * \brief The GetDirectoryLimitsRequest class encapsulates DirectoryService GetDirectoryLimits requests.
+ * \brief The GetDirectoryLimitsRequest class provides an interface for DirectoryService GetDirectoryLimits requests.
  *
  * \ingroup DirectoryService
  *

@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeMyUserProfileResponse
  *
- * \brief The DescribeMyUserProfileResponse class encapsulates OpsWorks DescribeMyUserProfile responses.
+ * \brief The DescribeMyUserProfileResponse class provides an interace for OpsWorks DescribeMyUserProfile responses.
  *
  * \ingroup OpsWorks
  *

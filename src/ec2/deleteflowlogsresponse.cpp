@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteFlowLogsResponse
  *
- * \brief The DeleteFlowLogsResponse class encapsulates EC2 DeleteFlowLogs responses.
+ * \brief The DeleteFlowLogsResponse class provides an interace for EC2 DeleteFlowLogs responses.
  *
  * \ingroup EC2
  *

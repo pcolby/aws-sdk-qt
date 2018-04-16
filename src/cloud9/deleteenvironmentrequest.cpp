@@ -28,7 +28,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::DeleteEnvironmentRequest
  *
- * \brief The DeleteEnvironmentRequest class encapsulates Cloud9 DeleteEnvironment requests.
+ * \brief The DeleteEnvironmentRequest class provides an interface for Cloud9 DeleteEnvironment requests.
  *
  * \ingroup Cloud9
  *

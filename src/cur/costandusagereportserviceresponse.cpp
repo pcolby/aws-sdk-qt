@@ -29,7 +29,7 @@ namespace CostandUsageReportService {
 /*!
  * \class QtAws::CostandUsageReportService::CostandUsageReportServiceResponse
  *
- * \brief The CostandUsageReportServiceResponse class is the base class for all CostandUsageReportService responses.
+ * \brief The CostandUsageReportServiceResponse class provides an interface for CostandUsageReportService responses.
  *
  * \ingroup CostandUsageReportService
  */

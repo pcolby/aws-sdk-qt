@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::RejectCertificateTransferResponse
  *
- * \brief The RejectCertificateTransferResponse class encapsulates IoT RejectCertificateTransfer responses.
+ * \brief The RejectCertificateTransferResponse class provides an interace for IoT RejectCertificateTransfer responses.
  *
  * \ingroup IoT
  *

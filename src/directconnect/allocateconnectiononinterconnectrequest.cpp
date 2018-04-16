@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::AllocateConnectionOnInterconnectRequest
  *
- * \brief The AllocateConnectionOnInterconnectRequest class encapsulates DirectConnect AllocateConnectionOnInterconnect requests.
+ * \brief The AllocateConnectionOnInterconnectRequest class provides an interface for DirectConnect AllocateConnectionOnInterconnect requests.
  *
  * \ingroup DirectConnect
  *

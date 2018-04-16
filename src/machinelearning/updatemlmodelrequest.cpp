@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::UpdateMLModelRequest
  *
- * \brief The UpdateMLModelRequest class encapsulates MachineLearning UpdateMLModel requests.
+ * \brief The UpdateMLModelRequest class provides an interface for MachineLearning UpdateMLModel requests.
  *
  * \ingroup MachineLearning
  *

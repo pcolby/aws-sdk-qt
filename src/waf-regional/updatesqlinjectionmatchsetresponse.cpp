@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::UpdateSqlInjectionMatchSetResponse
  *
- * \brief The UpdateSqlInjectionMatchSetResponse class encapsulates WAFRegional UpdateSqlInjectionMatchSet responses.
+ * \brief The UpdateSqlInjectionMatchSetResponse class provides an interace for WAFRegional UpdateSqlInjectionMatchSet responses.
  *
  * \ingroup WAFRegional
  *

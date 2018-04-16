@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeMatchmakingRuleSetsRequest
  *
- * \brief The DescribeMatchmakingRuleSetsRequest class encapsulates GameLift DescribeMatchmakingRuleSets requests.
+ * \brief The DescribeMatchmakingRuleSetsRequest class provides an interface for GameLift DescribeMatchmakingRuleSets requests.
  *
  * \ingroup GameLift
  *

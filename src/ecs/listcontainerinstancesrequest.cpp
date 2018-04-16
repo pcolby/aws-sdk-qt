@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::ListContainerInstancesRequest
  *
- * \brief The ListContainerInstancesRequest class encapsulates ECS ListContainerInstances requests.
+ * \brief The ListContainerInstancesRequest class provides an interface for ECS ListContainerInstances requests.
  *
  * \ingroup ECS
  *

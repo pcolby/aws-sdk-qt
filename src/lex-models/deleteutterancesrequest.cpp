@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::DeleteUtterancesRequest
  *
- * \brief The DeleteUtterancesRequest class encapsulates LexModelBuildingService DeleteUtterances requests.
+ * \brief The DeleteUtterancesRequest class provides an interface for LexModelBuildingService DeleteUtterances requests.
  *
  * \ingroup LexModelBuildingService
  *

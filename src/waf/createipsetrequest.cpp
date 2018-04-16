@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::CreateIPSetRequest
  *
- * \brief The CreateIPSetRequest class encapsulates WAF CreateIPSet requests.
+ * \brief The CreateIPSetRequest class provides an interface for WAF CreateIPSet requests.
  *
  * \ingroup WAF
  *

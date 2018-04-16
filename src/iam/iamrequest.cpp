@@ -26,7 +26,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::IAMRequest
  *
- * \brief The IAMRequest class is the base class for all IAM requests.
+ * \brief The IAMRequest class provides an interface for IAM requests.
  *
  * \ingroup IAM
  */

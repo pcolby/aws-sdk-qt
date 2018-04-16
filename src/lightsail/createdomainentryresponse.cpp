@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::CreateDomainEntryResponse
  *
- * \brief The CreateDomainEntryResponse class encapsulates Lightsail CreateDomainEntry responses.
+ * \brief The CreateDomainEntryResponse class provides an interace for Lightsail CreateDomainEntry responses.
  *
  * \ingroup Lightsail
  *

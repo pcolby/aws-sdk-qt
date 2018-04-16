@@ -28,7 +28,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::ListTagsForCertificateRequest
  *
- * \brief The ListTagsForCertificateRequest class encapsulates ACM ListTagsForCertificate requests.
+ * \brief The ListTagsForCertificateRequest class provides an interface for ACM ListTagsForCertificate requests.
  *
  * \ingroup ACM
  *

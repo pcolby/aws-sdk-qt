@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DeleteAnalysisSchemeRequest
  *
- * \brief The DeleteAnalysisSchemeRequest class encapsulates CloudSearch DeleteAnalysisScheme requests.
+ * \brief The DeleteAnalysisSchemeRequest class provides an interface for CloudSearch DeleteAnalysisScheme requests.
  *
  * \ingroup CloudSearch
  *

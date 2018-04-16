@@ -28,7 +28,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::StopQueryExecutionRequest
  *
- * \brief The StopQueryExecutionRequest class encapsulates Athena StopQueryExecution requests.
+ * \brief The StopQueryExecutionRequest class provides an interface for Athena StopQueryExecution requests.
  *
  * \ingroup Athena
  *

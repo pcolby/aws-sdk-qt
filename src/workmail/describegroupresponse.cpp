@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DescribeGroupResponse
  *
- * \brief The DescribeGroupResponse class encapsulates WorkMail DescribeGroup responses.
+ * \brief The DescribeGroupResponse class provides an interace for WorkMail DescribeGroup responses.
  *
  * \ingroup WorkMail
  *

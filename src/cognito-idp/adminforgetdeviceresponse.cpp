@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminForgetDeviceResponse
  *
- * \brief The AdminForgetDeviceResponse class encapsulates CognitoIdentityProvider AdminForgetDevice responses.
+ * \brief The AdminForgetDeviceResponse class provides an interace for CognitoIdentityProvider AdminForgetDevice responses.
  *
  * \ingroup CognitoIdentityProvider
  *

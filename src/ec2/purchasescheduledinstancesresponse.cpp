@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::PurchaseScheduledInstancesResponse
  *
- * \brief The PurchaseScheduledInstancesResponse class encapsulates EC2 PurchaseScheduledInstances responses.
+ * \brief The PurchaseScheduledInstancesResponse class provides an interace for EC2 PurchaseScheduledInstances responses.
  *
  * \ingroup EC2
  *

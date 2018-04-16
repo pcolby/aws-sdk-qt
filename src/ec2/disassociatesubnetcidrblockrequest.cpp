@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DisassociateSubnetCidrBlockRequest
  *
- * \brief The DisassociateSubnetCidrBlockRequest class encapsulates EC2 DisassociateSubnetCidrBlock requests.
+ * \brief The DisassociateSubnetCidrBlockRequest class provides an interface for EC2 DisassociateSubnetCidrBlock requests.
  *
  * \ingroup EC2
  *

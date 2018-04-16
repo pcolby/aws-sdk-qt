@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::UpdateParameterGroupRequest
  *
- * \brief The UpdateParameterGroupRequest class encapsulates DAX UpdateParameterGroup requests.
+ * \brief The UpdateParameterGroupRequest class provides an interface for DAX UpdateParameterGroup requests.
  *
  * \ingroup DAX
  *

@@ -26,7 +26,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::MediaLiveRequest
  *
- * \brief The MediaLiveRequest class is the base class for all MediaLive requests.
+ * \brief The MediaLiveRequest class provides an interface for MediaLive requests.
  *
  * \ingroup MediaLive
  */

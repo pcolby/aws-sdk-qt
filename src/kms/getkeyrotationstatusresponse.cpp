@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::GetKeyRotationStatusResponse
  *
- * \brief The GetKeyRotationStatusResponse class encapsulates KMS GetKeyRotationStatus responses.
+ * \brief The GetKeyRotationStatusResponse class provides an interace for KMS GetKeyRotationStatus responses.
  *
  * \ingroup KMS
  *

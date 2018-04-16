@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateSSHPublicKeyRequest
  *
- * \brief The UpdateSSHPublicKeyRequest class encapsulates IAM UpdateSSHPublicKey requests.
+ * \brief The UpdateSSHPublicKeyRequest class provides an interface for IAM UpdateSSHPublicKey requests.
  *
  * \ingroup IAM
  *

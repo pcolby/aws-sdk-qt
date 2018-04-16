@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::ListJobsRequest
  *
- * \brief The ListJobsRequest class encapsulates Glacier ListJobs requests.
+ * \brief The ListJobsRequest class provides an interface for Glacier ListJobs requests.
  *
  * \ingroup Glacier
  *

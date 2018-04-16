@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetServerCertificateRequest
  *
- * \brief The GetServerCertificateRequest class encapsulates IAM GetServerCertificate requests.
+ * \brief The GetServerCertificateRequest class provides an interface for IAM GetServerCertificate requests.
  *
  * \ingroup IAM
  *

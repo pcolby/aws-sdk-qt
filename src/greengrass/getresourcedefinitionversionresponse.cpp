@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetResourceDefinitionVersionResponse
  *
- * \brief The GetResourceDefinitionVersionResponse class encapsulates Greengrass GetResourceDefinitionVersion responses.
+ * \brief The GetResourceDefinitionVersionResponse class provides an interace for Greengrass GetResourceDefinitionVersion responses.
  *
  * \ingroup Greengrass
  *

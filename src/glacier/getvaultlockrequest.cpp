@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::GetVaultLockRequest
  *
- * \brief The GetVaultLockRequest class encapsulates Glacier GetVaultLock requests.
+ * \brief The GetVaultLockRequest class provides an interface for Glacier GetVaultLock requests.
  *
  * \ingroup Glacier
  *

@@ -26,7 +26,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::ServerlessApplicationRepositoryRequest
  *
- * \brief The ServerlessApplicationRepositoryRequest class is the base class for all ServerlessApplicationRepository requests.
+ * \brief The ServerlessApplicationRepositoryRequest class provides an interface for ServerlessApplicationRepository requests.
  *
  * \ingroup ServerlessApplicationRepository
  */

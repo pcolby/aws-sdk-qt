@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListHostedZonesByNameResponse
  *
- * \brief The ListHostedZonesByNameResponse class encapsulates Route53 ListHostedZonesByName responses.
+ * \brief The ListHostedZonesByNameResponse class provides an interace for Route53 ListHostedZonesByName responses.
  *
  * \ingroup Route53
  *

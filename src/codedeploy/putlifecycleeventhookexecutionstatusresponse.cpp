@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::PutLifecycleEventHookExecutionStatusResponse
  *
- * \brief The PutLifecycleEventHookExecutionStatusResponse class encapsulates CodeDeploy PutLifecycleEventHookExecutionStatus responses.
+ * \brief The PutLifecycleEventHookExecutionStatusResponse class provides an interace for CodeDeploy PutLifecycleEventHookExecutionStatus responses.
  *
  * \ingroup CodeDeploy
  *

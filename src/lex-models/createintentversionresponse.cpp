@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::CreateIntentVersionResponse
  *
- * \brief The CreateIntentVersionResponse class encapsulates LexModelBuildingService CreateIntentVersion responses.
+ * \brief The CreateIntentVersionResponse class provides an interace for LexModelBuildingService CreateIntentVersion responses.
  *
  * \ingroup LexModelBuildingService
  *

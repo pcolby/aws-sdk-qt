@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateLaunchTemplateVersionRequest
  *
- * \brief The CreateLaunchTemplateVersionRequest class encapsulates EC2 CreateLaunchTemplateVersion requests.
+ * \brief The CreateLaunchTemplateVersionRequest class provides an interface for EC2 CreateLaunchTemplateVersion requests.
  *
  * \ingroup EC2
  *

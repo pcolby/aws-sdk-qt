@@ -28,7 +28,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::PutTelemetryRecordsRequest
  *
- * \brief The PutTelemetryRecordsRequest class encapsulates XRay PutTelemetryRecords requests.
+ * \brief The PutTelemetryRecordsRequest class provides an interface for XRay PutTelemetryRecords requests.
  *
  * \ingroup XRay
  *

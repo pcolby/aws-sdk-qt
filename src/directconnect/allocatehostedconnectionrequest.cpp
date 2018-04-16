@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::AllocateHostedConnectionRequest
  *
- * \brief The AllocateHostedConnectionRequest class encapsulates DirectConnect AllocateHostedConnection requests.
+ * \brief The AllocateHostedConnectionRequest class provides an interface for DirectConnect AllocateHostedConnection requests.
  *
  * \ingroup DirectConnect
  *

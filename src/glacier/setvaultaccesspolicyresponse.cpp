@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::SetVaultAccessPolicyResponse
  *
- * \brief The SetVaultAccessPolicyResponse class encapsulates Glacier SetVaultAccessPolicy responses.
+ * \brief The SetVaultAccessPolicyResponse class provides an interace for Glacier SetVaultAccessPolicy responses.
  *
  * \ingroup Glacier
  *

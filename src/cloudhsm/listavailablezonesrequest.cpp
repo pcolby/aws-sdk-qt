@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::ListAvailableZonesRequest
  *
- * \brief The ListAvailableZonesRequest class encapsulates CloudHSM ListAvailableZones requests.
+ * \brief The ListAvailableZonesRequest class provides an interface for CloudHSM ListAvailableZones requests.
  *
  * \ingroup CloudHSM
  *

@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeregisterTaskFromMaintenanceWindowRequest
  *
- * \brief The DeregisterTaskFromMaintenanceWindowRequest class encapsulates SSM DeregisterTaskFromMaintenanceWindow requests.
+ * \brief The DeregisterTaskFromMaintenanceWindowRequest class provides an interface for SSM DeregisterTaskFromMaintenanceWindow requests.
  *
  * \ingroup SSM
  *

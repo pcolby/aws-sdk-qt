@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::MoveAccountResponse
  *
- * \brief The MoveAccountResponse class encapsulates Organizations MoveAccount responses.
+ * \brief The MoveAccountResponse class provides an interace for Organizations MoveAccount responses.
  *
  * \ingroup Organizations
  *

@@ -29,7 +29,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::CloudFormationResponse
  *
- * \brief The CloudFormationResponse class is the base class for all CloudFormation responses.
+ * \brief The CloudFormationResponse class provides an interface for CloudFormation responses.
  *
  * \ingroup CloudFormation
  */

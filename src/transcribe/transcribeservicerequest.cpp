@@ -26,7 +26,7 @@ namespace TranscribeService {
 /*!
  * \class QtAws::TranscribeService::TranscribeServiceRequest
  *
- * \brief The TranscribeServiceRequest class is the base class for all TranscribeService requests.
+ * \brief The TranscribeServiceRequest class provides an interface for TranscribeService requests.
  *
  * \ingroup TranscribeService
  */

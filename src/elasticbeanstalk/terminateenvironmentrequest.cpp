@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::TerminateEnvironmentRequest
  *
- * \brief The TerminateEnvironmentRequest class encapsulates ElasticBeanstalk TerminateEnvironment requests.
+ * \brief The TerminateEnvironmentRequest class provides an interface for ElasticBeanstalk TerminateEnvironment requests.
  *
  * \ingroup ElasticBeanstalk
  *

@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::ListVerifiedEmailAddressesResponse
  *
- * \brief The ListVerifiedEmailAddressesResponse class encapsulates SES ListVerifiedEmailAddresses responses.
+ * \brief The ListVerifiedEmailAddressesResponse class provides an interace for SES ListVerifiedEmailAddresses responses.
  *
  * \ingroup SES
  *

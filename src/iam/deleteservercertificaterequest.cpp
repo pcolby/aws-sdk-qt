@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteServerCertificateRequest
  *
- * \brief The DeleteServerCertificateRequest class encapsulates IAM DeleteServerCertificate requests.
+ * \brief The DeleteServerCertificateRequest class provides an interface for IAM DeleteServerCertificate requests.
  *
  * \ingroup IAM
  *

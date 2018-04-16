@@ -28,7 +28,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::DecodeAuthorizationMessageRequest
  *
- * \brief The DecodeAuthorizationMessageRequest class encapsulates STS DecodeAuthorizationMessage requests.
+ * \brief The DecodeAuthorizationMessageRequest class provides an interface for STS DecodeAuthorizationMessage requests.
  *
  * \ingroup STS
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AssociateVpcCidrBlockRequest
  *
- * \brief The AssociateVpcCidrBlockRequest class encapsulates EC2 AssociateVpcCidrBlock requests.
+ * \brief The AssociateVpcCidrBlockRequest class provides an interface for EC2 AssociateVpcCidrBlock requests.
  *
  * \ingroup EC2
  *

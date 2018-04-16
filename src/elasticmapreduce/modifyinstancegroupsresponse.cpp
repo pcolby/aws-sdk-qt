@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ModifyInstanceGroupsResponse
  *
- * \brief The ModifyInstanceGroupsResponse class encapsulates EMR ModifyInstanceGroups responses.
+ * \brief The ModifyInstanceGroupsResponse class provides an interace for EMR ModifyInstanceGroups responses.
  *
  * \ingroup EMR
  *

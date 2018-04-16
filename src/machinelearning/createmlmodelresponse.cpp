@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::CreateMLModelResponse
  *
- * \brief The CreateMLModelResponse class encapsulates MachineLearning CreateMLModel responses.
+ * \brief The CreateMLModelResponse class provides an interace for MachineLearning CreateMLModel responses.
  *
  * \ingroup MachineLearning
  *

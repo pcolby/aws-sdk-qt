@@ -117,7 +117,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::DirectoryServiceClient
  *
- * \brief The DirectoryServiceClient class provides access the AWS Directory Service service.
+ * \brief The DirectoryServiceClient class provides access to the AWS Directory Service service.
  *
  * \ingroup DirectoryService
  *

@@ -30,7 +30,7 @@ namespace Polly {
 /*!
  * \class QtAws::Polly::DeleteLexiconResponse
  *
- * \brief The DeleteLexiconResponse class encapsulates Polly DeleteLexicon responses.
+ * \brief The DeleteLexiconResponse class provides an interace for Polly DeleteLexicon responses.
  *
  * \ingroup Polly
  *

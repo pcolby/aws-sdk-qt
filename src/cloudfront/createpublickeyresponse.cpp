@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::CreatePublicKeyResponse
  *
- * \brief The CreatePublicKeyResponse class encapsulates CloudFront CreatePublicKey responses.
+ * \brief The CreatePublicKeyResponse class provides an interace for CloudFront CreatePublicKey responses.
  *
  * \ingroup CloudFront
  *

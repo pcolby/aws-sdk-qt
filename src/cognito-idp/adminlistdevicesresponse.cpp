@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminListDevicesResponse
  *
- * \brief The AdminListDevicesResponse class encapsulates CognitoIdentityProvider AdminListDevices responses.
+ * \brief The AdminListDevicesResponse class provides an interace for CognitoIdentityProvider AdminListDevices responses.
  *
  * \ingroup CognitoIdentityProvider
  *

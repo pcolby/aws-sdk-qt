@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::ListProvisionedCapacityResponse
  *
- * \brief The ListProvisionedCapacityResponse class encapsulates Glacier ListProvisionedCapacity responses.
+ * \brief The ListProvisionedCapacityResponse class provides an interace for Glacier ListProvisionedCapacity responses.
  *
  * \ingroup Glacier
  *

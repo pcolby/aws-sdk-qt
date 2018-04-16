@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::GetAuthorizationTokenRequest
  *
- * \brief The GetAuthorizationTokenRequest class encapsulates ECR GetAuthorizationToken requests.
+ * \brief The GetAuthorizationTokenRequest class provides an interface for ECR GetAuthorizationToken requests.
  *
  * \ingroup ECR
  *

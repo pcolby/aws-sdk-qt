@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::ListDomainNamesResponse
  *
- * \brief The ListDomainNamesResponse class encapsulates CloudSearch ListDomainNames responses.
+ * \brief The ListDomainNamesResponse class provides an interace for CloudSearch ListDomainNames responses.
  *
  * \ingroup CloudSearch
  *

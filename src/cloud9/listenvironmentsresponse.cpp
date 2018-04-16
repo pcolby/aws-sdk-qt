@@ -30,7 +30,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::ListEnvironmentsResponse
  *
- * \brief The ListEnvironmentsResponse class encapsulates Cloud9 ListEnvironments responses.
+ * \brief The ListEnvironmentsResponse class provides an interace for Cloud9 ListEnvironments responses.
  *
  * \ingroup Cloud9
  *

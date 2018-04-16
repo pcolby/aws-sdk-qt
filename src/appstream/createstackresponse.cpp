@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::CreateStackResponse
  *
- * \brief The CreateStackResponse class encapsulates AppStream CreateStack responses.
+ * \brief The CreateStackResponse class provides an interace for AppStream CreateStack responses.
  *
  * \ingroup AppStream
  *

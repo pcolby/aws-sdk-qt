@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AllocateHostsResponse
  *
- * \brief The AllocateHostsResponse class encapsulates EC2 AllocateHosts responses.
+ * \brief The AllocateHostsResponse class provides an interace for EC2 AllocateHosts responses.
  *
  * \ingroup EC2
  *

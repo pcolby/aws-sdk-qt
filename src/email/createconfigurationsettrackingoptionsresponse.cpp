@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::CreateConfigurationSetTrackingOptionsResponse
  *
- * \brief The CreateConfigurationSetTrackingOptionsResponse class encapsulates SES CreateConfigurationSetTrackingOptions responses.
+ * \brief The CreateConfigurationSetTrackingOptionsResponse class provides an interace for SES CreateConfigurationSetTrackingOptions responses.
  *
  * \ingroup SES
  *

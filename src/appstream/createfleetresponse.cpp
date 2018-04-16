@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::CreateFleetResponse
  *
- * \brief The CreateFleetResponse class encapsulates AppStream CreateFleet responses.
+ * \brief The CreateFleetResponse class provides an interace for AppStream CreateFleet responses.
  *
  * \ingroup AppStream
  *

@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::ListShardsResponse
  *
- * \brief The ListShardsResponse class encapsulates Kinesis ListShards responses.
+ * \brief The ListShardsResponse class provides an interace for Kinesis ListShards responses.
  *
  * \ingroup Kinesis
  *

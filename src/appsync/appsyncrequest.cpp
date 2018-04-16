@@ -26,7 +26,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::AppSyncRequest
  *
- * \brief The AppSyncRequest class is the base class for all AppSync requests.
+ * \brief The AppSyncRequest class provides an interface for AppSync requests.
  *
  * \ingroup AppSync
  */

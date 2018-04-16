@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ModifyReplicationGroupShardConfigurationRequest
  *
- * \brief The ModifyReplicationGroupShardConfigurationRequest class encapsulates ElastiCache ModifyReplicationGroupShardConfiguration requests.
+ * \brief The ModifyReplicationGroupShardConfigurationRequest class provides an interface for ElastiCache ModifyReplicationGroupShardConfiguration requests.
  *
  * \ingroup ElastiCache
  *

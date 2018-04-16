@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateSubnetRequest
  *
- * \brief The CreateSubnetRequest class encapsulates EC2 CreateSubnet requests.
+ * \brief The CreateSubnetRequest class provides an interface for EC2 CreateSubnet requests.
  *
  * \ingroup EC2
  *

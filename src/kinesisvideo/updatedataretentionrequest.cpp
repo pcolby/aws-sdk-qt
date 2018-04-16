@@ -28,7 +28,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::UpdateDataRetentionRequest
  *
- * \brief The UpdateDataRetentionRequest class encapsulates KinesisVideo UpdateDataRetention requests.
+ * \brief The UpdateDataRetentionRequest class provides an interface for KinesisVideo UpdateDataRetention requests.
  *
  * \ingroup KinesisVideo
  *

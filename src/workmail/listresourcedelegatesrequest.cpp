@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::ListResourceDelegatesRequest
  *
- * \brief The ListResourceDelegatesRequest class encapsulates WorkMail ListResourceDelegates requests.
+ * \brief The ListResourceDelegatesRequest class provides an interface for WorkMail ListResourceDelegates requests.
  *
  * \ingroup WorkMail
  *

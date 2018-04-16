@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::SubmitContainerStateChangeResponse
  *
- * \brief The SubmitContainerStateChangeResponse class encapsulates ECS SubmitContainerStateChange responses.
+ * \brief The SubmitContainerStateChangeResponse class provides an interace for ECS SubmitContainerStateChange responses.
  *
  * \ingroup ECS
  *

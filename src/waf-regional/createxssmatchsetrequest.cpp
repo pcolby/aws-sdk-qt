@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::CreateXssMatchSetRequest
  *
- * \brief The CreateXssMatchSetRequest class encapsulates WAFRegional CreateXssMatchSet requests.
+ * \brief The CreateXssMatchSetRequest class provides an interface for WAFRegional CreateXssMatchSet requests.
  *
  * \ingroup WAFRegional
  *

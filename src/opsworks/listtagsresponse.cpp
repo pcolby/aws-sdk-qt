@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::ListTagsResponse
  *
- * \brief The ListTagsResponse class encapsulates OpsWorks ListTags responses.
+ * \brief The ListTagsResponse class provides an interace for OpsWorks ListTags responses.
  *
  * \ingroup OpsWorks
  *

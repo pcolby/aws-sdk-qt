@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::GetApplicationRequest
  *
- * \brief The GetApplicationRequest class encapsulates ServerlessApplicationRepository GetApplication requests.
+ * \brief The GetApplicationRequest class provides an interface for ServerlessApplicationRepository GetApplication requests.
  *
  * \ingroup ServerlessApplicationRepository
  *

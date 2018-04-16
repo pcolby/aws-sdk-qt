@@ -28,7 +28,7 @@ namespace MediaStoreData {
 /*!
  * \class QtAws::MediaStoreData::ListItemsRequest
  *
- * \brief The ListItemsRequest class encapsulates MediaStoreData ListItems requests.
+ * \brief The ListItemsRequest class provides an interface for MediaStoreData ListItems requests.
  *
  * \ingroup MediaStoreData
  *

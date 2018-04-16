@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::DeleteReusableDelegationSetRequest
  *
- * \brief The DeleteReusableDelegationSetRequest class encapsulates Route53 DeleteReusableDelegationSet requests.
+ * \brief The DeleteReusableDelegationSetRequest class provides an interface for Route53 DeleteReusableDelegationSet requests.
  *
  * \ingroup Route53
  *

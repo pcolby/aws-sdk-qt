@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::DeleteElasticsearchDomainRequest
  *
- * \brief The DeleteElasticsearchDomainRequest class encapsulates ElasticsearchService DeleteElasticsearchDomain requests.
+ * \brief The DeleteElasticsearchDomainRequest class provides an interface for ElasticsearchService DeleteElasticsearchDomain requests.
  *
  * \ingroup ElasticsearchService
  *

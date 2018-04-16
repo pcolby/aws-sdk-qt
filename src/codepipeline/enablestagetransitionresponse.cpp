@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::EnableStageTransitionResponse
  *
- * \brief The EnableStageTransitionResponse class encapsulates CodePipeline EnableStageTransition responses.
+ * \brief The EnableStageTransitionResponse class provides an interace for CodePipeline EnableStageTransition responses.
  *
  * \ingroup CodePipeline
  *

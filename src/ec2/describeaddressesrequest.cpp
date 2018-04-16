@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeAddressesRequest
  *
- * \brief The DescribeAddressesRequest class encapsulates EC2 DescribeAddresses requests.
+ * \brief The DescribeAddressesRequest class provides an interface for EC2 DescribeAddresses requests.
  *
  * \ingroup EC2
  *

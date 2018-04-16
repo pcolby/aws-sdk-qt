@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::ModifyHsmRequest
  *
- * \brief The ModifyHsmRequest class encapsulates CloudHSM ModifyHsm requests.
+ * \brief The ModifyHsmRequest class provides an interface for CloudHSM ModifyHsm requests.
  *
  * \ingroup CloudHSM
  *

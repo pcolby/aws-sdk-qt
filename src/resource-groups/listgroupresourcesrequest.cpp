@@ -28,7 +28,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::ListGroupResourcesRequest
  *
- * \brief The ListGroupResourcesRequest class encapsulates ResourceGroups ListGroupResources requests.
+ * \brief The ListGroupResourcesRequest class provides an interface for ResourceGroups ListGroupResources requests.
  *
  * \ingroup ResourceGroups
  *

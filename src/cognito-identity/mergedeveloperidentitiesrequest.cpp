@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::MergeDeveloperIdentitiesRequest
  *
- * \brief The MergeDeveloperIdentitiesRequest class encapsulates CognitoIdentity MergeDeveloperIdentities requests.
+ * \brief The MergeDeveloperIdentitiesRequest class provides an interface for CognitoIdentity MergeDeveloperIdentities requests.
  *
  * \ingroup CognitoIdentity
  *

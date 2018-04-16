@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyInstanceAttributeResponse
  *
- * \brief The ModifyInstanceAttributeResponse class encapsulates EC2 ModifyInstanceAttribute responses.
+ * \brief The ModifyInstanceAttributeResponse class provides an interace for EC2 ModifyInstanceAttribute responses.
  *
  * \ingroup EC2
  *

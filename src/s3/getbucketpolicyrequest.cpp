@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketPolicyRequest
  *
- * \brief The GetBucketPolicyRequest class encapsulates S3 GetBucketPolicy requests.
+ * \brief The GetBucketPolicyRequest class provides an interface for S3 GetBucketPolicy requests.
  *
  * \ingroup S3
  *

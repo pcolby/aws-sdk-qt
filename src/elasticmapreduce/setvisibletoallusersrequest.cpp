@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::SetVisibleToAllUsersRequest
  *
- * \brief The SetVisibleToAllUsersRequest class encapsulates EMR SetVisibleToAllUsers requests.
+ * \brief The SetVisibleToAllUsersRequest class provides an interface for EMR SetVisibleToAllUsers requests.
  *
  * \ingroup EMR
  *

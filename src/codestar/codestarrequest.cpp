@@ -26,7 +26,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::CodeStarRequest
  *
- * \brief The CodeStarRequest class is the base class for all CodeStar requests.
+ * \brief The CodeStarRequest class provides an interface for CodeStar requests.
  *
  * \ingroup CodeStar
  */

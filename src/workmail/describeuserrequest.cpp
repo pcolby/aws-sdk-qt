@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DescribeUserRequest
  *
- * \brief The DescribeUserRequest class encapsulates WorkMail DescribeUser requests.
+ * \brief The DescribeUserRequest class provides an interface for WorkMail DescribeUser requests.
  *
  * \ingroup WorkMail
  *

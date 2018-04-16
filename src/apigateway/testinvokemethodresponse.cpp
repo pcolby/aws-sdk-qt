@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::TestInvokeMethodResponse
  *
- * \brief The TestInvokeMethodResponse class encapsulates APIGateway TestInvokeMethod responses.
+ * \brief The TestInvokeMethodResponse class provides an interace for APIGateway TestInvokeMethod responses.
  *
  * \ingroup APIGateway
  *

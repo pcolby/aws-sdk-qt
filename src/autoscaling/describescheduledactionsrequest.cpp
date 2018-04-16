@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeScheduledActionsRequest
  *
- * \brief The DescribeScheduledActionsRequest class encapsulates AutoScaling DescribeScheduledActions requests.
+ * \brief The DescribeScheduledActionsRequest class provides an interface for AutoScaling DescribeScheduledActions requests.
  *
  * \ingroup AutoScaling
  *

@@ -28,7 +28,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::ListBuildsRequest
  *
- * \brief The ListBuildsRequest class encapsulates CodeBuild ListBuilds requests.
+ * \brief The ListBuildsRequest class provides an interface for CodeBuild ListBuilds requests.
  *
  * \ingroup CodeBuild
  *

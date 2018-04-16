@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DeleteNotificationSubscriptionRequest
  *
- * \brief The DeleteNotificationSubscriptionRequest class encapsulates WorkDocs DeleteNotificationSubscription requests.
+ * \brief The DeleteNotificationSubscriptionRequest class provides an interface for WorkDocs DeleteNotificationSubscription requests.
  *
  * \ingroup WorkDocs
  *

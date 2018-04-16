@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::ListIpRoutesResponse
  *
- * \brief The ListIpRoutesResponse class encapsulates DirectoryService ListIpRoutes responses.
+ * \brief The ListIpRoutesResponse class provides an interace for DirectoryService ListIpRoutes responses.
  *
  * \ingroup DirectoryService
  *

@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListAttachedIndicesRequest
  *
- * \brief The ListAttachedIndicesRequest class encapsulates CloudDirectory ListAttachedIndices requests.
+ * \brief The ListAttachedIndicesRequest class provides an interface for CloudDirectory ListAttachedIndices requests.
  *
  * \ingroup CloudDirectory
  *

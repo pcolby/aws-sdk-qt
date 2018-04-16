@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::DeleteDataSourceRequest
  *
- * \brief The DeleteDataSourceRequest class encapsulates AppSync DeleteDataSource requests.
+ * \brief The DeleteDataSourceRequest class provides an interface for AppSync DeleteDataSource requests.
  *
  * \ingroup AppSync
  *

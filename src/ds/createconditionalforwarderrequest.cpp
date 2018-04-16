@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateConditionalForwarderRequest
  *
- * \brief The CreateConditionalForwarderRequest class encapsulates DirectoryService CreateConditionalForwarder requests.
+ * \brief The CreateConditionalForwarderRequest class provides an interface for DirectoryService CreateConditionalForwarder requests.
  *
  * \ingroup DirectoryService
  *

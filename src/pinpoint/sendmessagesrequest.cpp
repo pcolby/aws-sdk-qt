@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::SendMessagesRequest
  *
- * \brief The SendMessagesRequest class encapsulates Pinpoint SendMessages requests.
+ * \brief The SendMessagesRequest class provides an interface for Pinpoint SendMessages requests.
  *
  * \ingroup Pinpoint
  *

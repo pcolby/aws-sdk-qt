@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::StartCrawlerScheduleRequest
  *
- * \brief The StartCrawlerScheduleRequest class encapsulates Glue StartCrawlerSchedule requests.
+ * \brief The StartCrawlerScheduleRequest class provides an interface for Glue StartCrawlerSchedule requests.
  *
  * \ingroup Glue
  *

@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DetachElasticLoadBalancerResponse
  *
- * \brief The DetachElasticLoadBalancerResponse class encapsulates OpsWorks DetachElasticLoadBalancer responses.
+ * \brief The DetachElasticLoadBalancerResponse class provides an interace for OpsWorks DetachElasticLoadBalancer responses.
  *
  * \ingroup OpsWorks
  *

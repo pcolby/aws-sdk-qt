@@ -99,7 +99,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::EcsClient
  *
- * \brief The EcsClient class provides access the Amazon EC2 Container Service ( ECS) service.
+ * \brief The EcsClient class provides access to the Amazon EC2 Container Service ( ECS) service.
  *
  * \ingroup ECS
  *

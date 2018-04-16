@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::RotateEncryptionKeyRequest
  *
- * \brief The RotateEncryptionKeyRequest class encapsulates Redshift RotateEncryptionKey requests.
+ * \brief The RotateEncryptionKeyRequest class provides an interface for Redshift RotateEncryptionKey requests.
  *
  * \ingroup Redshift
  *

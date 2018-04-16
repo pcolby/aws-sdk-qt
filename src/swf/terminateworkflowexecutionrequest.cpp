@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::TerminateWorkflowExecutionRequest
  *
- * \brief The TerminateWorkflowExecutionRequest class encapsulates SWF TerminateWorkflowExecution requests.
+ * \brief The TerminateWorkflowExecutionRequest class provides an interface for SWF TerminateWorkflowExecution requests.
  *
  * \ingroup SWF
  *

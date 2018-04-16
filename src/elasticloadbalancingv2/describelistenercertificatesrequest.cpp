@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeListenerCertificatesRequest
  *
- * \brief The DescribeListenerCertificatesRequest class encapsulates ElasticLoadBalancingv2 DescribeListenerCertificates requests.
+ * \brief The DescribeListenerCertificatesRequest class provides an interface for ElasticLoadBalancingv2 DescribeListenerCertificates requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

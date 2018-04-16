@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DescribeBackupRequest
  *
- * \brief The DescribeBackupRequest class encapsulates DynamoDB DescribeBackup requests.
+ * \brief The DescribeBackupRequest class provides an interface for DynamoDB DescribeBackup requests.
  *
  * \ingroup DynamoDB
  *

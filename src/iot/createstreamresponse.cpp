@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateStreamResponse
  *
- * \brief The CreateStreamResponse class encapsulates IoT CreateStream responses.
+ * \brief The CreateStreamResponse class provides an interace for IoT CreateStream responses.
  *
  * \ingroup IoT
  *

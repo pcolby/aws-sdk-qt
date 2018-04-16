@@ -28,7 +28,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::RemoveTagsRequest
  *
- * \brief The RemoveTagsRequest class encapsulates CloudTrail RemoveTags requests.
+ * \brief The RemoveTagsRequest class provides an interface for CloudTrail RemoveTags requests.
  *
  * \ingroup CloudTrail
  *

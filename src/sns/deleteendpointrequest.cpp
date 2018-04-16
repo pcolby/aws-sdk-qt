@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::DeleteEndpointRequest
  *
- * \brief The DeleteEndpointRequest class encapsulates SNS DeleteEndpoint requests.
+ * \brief The DeleteEndpointRequest class provides an interface for SNS DeleteEndpoint requests.
  *
  * \ingroup SNS
  *

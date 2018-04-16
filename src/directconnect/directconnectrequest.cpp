@@ -26,7 +26,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DirectConnectRequest
  *
- * \brief The DirectConnectRequest class is the base class for all DirectConnect requests.
+ * \brief The DirectConnectRequest class provides an interface for DirectConnect requests.
  *
  * \ingroup DirectConnect
  */

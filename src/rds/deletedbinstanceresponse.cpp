@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DeleteDBInstanceResponse
  *
- * \brief The DeleteDBInstanceResponse class encapsulates RDS DeleteDBInstance responses.
+ * \brief The DeleteDBInstanceResponse class provides an interace for RDS DeleteDBInstance responses.
  *
  * \ingroup RDS
  *

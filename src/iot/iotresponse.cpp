@@ -29,7 +29,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::IoTResponse
  *
- * \brief The IoTResponse class is the base class for all IoT responses.
+ * \brief The IoTResponse class provides an interface for IoT responses.
  *
  * \ingroup IoT
  */

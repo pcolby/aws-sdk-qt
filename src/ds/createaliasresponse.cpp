@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateAliasResponse
  *
- * \brief The CreateAliasResponse class encapsulates DirectoryService CreateAlias responses.
+ * \brief The CreateAliasResponse class provides an interace for DirectoryService CreateAlias responses.
  *
  * \ingroup DirectoryService
  *

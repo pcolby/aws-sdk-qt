@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::ResendContactReachabilityEmailResponse
  *
- * \brief The ResendContactReachabilityEmailResponse class encapsulates Route53Domains ResendContactReachabilityEmail responses.
+ * \brief The ResendContactReachabilityEmailResponse class provides an interace for Route53Domains ResendContactReachabilityEmail responses.
  *
  * \ingroup Route53Domains
  *

@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DeleteDBParameterGroupRequest
  *
- * \brief The DeleteDBParameterGroupRequest class encapsulates RDS DeleteDBParameterGroup requests.
+ * \brief The DeleteDBParameterGroupRequest class provides an interface for RDS DeleteDBParameterGroup requests.
  *
  * \ingroup RDS
  *

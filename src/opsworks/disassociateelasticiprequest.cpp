@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DisassociateElasticIpRequest
  *
- * \brief The DisassociateElasticIpRequest class encapsulates OpsWorks DisassociateElasticIp requests.
+ * \brief The DisassociateElasticIpRequest class provides an interface for OpsWorks DisassociateElasticIp requests.
  *
  * \ingroup OpsWorks
  *

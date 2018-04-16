@@ -30,7 +30,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::TestEventPatternResponse
  *
- * \brief The TestEventPatternResponse class encapsulates CloudWatchEvents TestEventPattern responses.
+ * \brief The TestEventPatternResponse class provides an interace for CloudWatchEvents TestEventPattern responses.
  *
  * \ingroup CloudWatchEvents
  *

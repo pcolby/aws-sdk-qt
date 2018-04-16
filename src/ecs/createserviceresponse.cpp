@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::CreateServiceResponse
  *
- * \brief The CreateServiceResponse class encapsulates ECS CreateService responses.
+ * \brief The CreateServiceResponse class provides an interace for ECS CreateService responses.
  *
  * \ingroup ECS
  *

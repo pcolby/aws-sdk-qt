@@ -26,7 +26,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::CloudHSMRequest
  *
- * \brief The CloudHSMRequest class is the base class for all CloudHSM requests.
+ * \brief The CloudHSMRequest class provides an interface for CloudHSM requests.
  *
  * \ingroup CloudHSM
  */

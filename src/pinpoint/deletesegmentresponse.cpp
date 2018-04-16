@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteSegmentResponse
  *
- * \brief The DeleteSegmentResponse class encapsulates Pinpoint DeleteSegment responses.
+ * \brief The DeleteSegmentResponse class provides an interace for Pinpoint DeleteSegment responses.
  *
  * \ingroup Pinpoint
  *

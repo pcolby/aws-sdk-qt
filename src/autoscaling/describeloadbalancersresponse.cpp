@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeLoadBalancersResponse
  *
- * \brief The DescribeLoadBalancersResponse class encapsulates AutoScaling DescribeLoadBalancers responses.
+ * \brief The DescribeLoadBalancersResponse class provides an interace for AutoScaling DescribeLoadBalancers responses.
  *
  * \ingroup AutoScaling
  *

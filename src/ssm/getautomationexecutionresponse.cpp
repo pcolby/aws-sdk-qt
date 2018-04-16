@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetAutomationExecutionResponse
  *
- * \brief The GetAutomationExecutionResponse class encapsulates SSM GetAutomationExecution responses.
+ * \brief The GetAutomationExecutionResponse class provides an interace for SSM GetAutomationExecution responses.
  *
  * \ingroup SSM
  *

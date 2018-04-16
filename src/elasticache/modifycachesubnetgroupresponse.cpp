@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ModifyCacheSubnetGroupResponse
  *
- * \brief The ModifyCacheSubnetGroupResponse class encapsulates ElastiCache ModifyCacheSubnetGroup responses.
+ * \brief The ModifyCacheSubnetGroupResponse class provides an interace for ElastiCache ModifyCacheSubnetGroup responses.
  *
  * \ingroup ElastiCache
  *

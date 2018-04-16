@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeleteMaintenanceWindowRequest
  *
- * \brief The DeleteMaintenanceWindowRequest class encapsulates SSM DeleteMaintenanceWindow requests.
+ * \brief The DeleteMaintenanceWindowRequest class provides an interface for SSM DeleteMaintenanceWindow requests.
  *
  * \ingroup SSM
  *

@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::SendAutomationSignalRequest
  *
- * \brief The SendAutomationSignalRequest class encapsulates SSM SendAutomationSignal requests.
+ * \brief The SendAutomationSignalRequest class provides an interface for SSM SendAutomationSignal requests.
  *
  * \ingroup SSM
  *

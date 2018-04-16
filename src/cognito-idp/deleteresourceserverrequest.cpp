@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::DeleteResourceServerRequest
  *
- * \brief The DeleteResourceServerRequest class encapsulates CognitoIdentityProvider DeleteResourceServer requests.
+ * \brief The DeleteResourceServerRequest class provides an interface for CognitoIdentityProvider DeleteResourceServer requests.
  *
  * \ingroup CognitoIdentityProvider
  *

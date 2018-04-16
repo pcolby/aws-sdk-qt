@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeAgentVersionsRequest
  *
- * \brief The DescribeAgentVersionsRequest class encapsulates OpsWorks DescribeAgentVersions requests.
+ * \brief The DescribeAgentVersionsRequest class provides an interface for OpsWorks DescribeAgentVersions requests.
  *
  * \ingroup OpsWorks
  *

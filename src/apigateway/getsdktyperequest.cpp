@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetSdkTypeRequest
  *
- * \brief The GetSdkTypeRequest class encapsulates APIGateway GetSdkType requests.
+ * \brief The GetSdkTypeRequest class provides an interface for APIGateway GetSdkType requests.
  *
  * \ingroup APIGateway
  *

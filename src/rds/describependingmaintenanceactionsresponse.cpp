@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribePendingMaintenanceActionsResponse
  *
- * \brief The DescribePendingMaintenanceActionsResponse class encapsulates RDS DescribePendingMaintenanceActions responses.
+ * \brief The DescribePendingMaintenanceActionsResponse class provides an interace for RDS DescribePendingMaintenanceActions responses.
  *
  * \ingroup RDS
  *

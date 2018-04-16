@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DeleteDBSubnetGroupRequest
  *
- * \brief The DeleteDBSubnetGroupRequest class encapsulates RDS DeleteDBSubnetGroup requests.
+ * \brief The DeleteDBSubnetGroupRequest class provides an interface for RDS DeleteDBSubnetGroup requests.
  *
  * \ingroup RDS
  *

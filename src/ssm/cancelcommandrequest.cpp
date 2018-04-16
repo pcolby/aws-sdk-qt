@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CancelCommandRequest
  *
- * \brief The CancelCommandRequest class encapsulates SSM CancelCommand requests.
+ * \brief The CancelCommandRequest class provides an interface for SSM CancelCommand requests.
  *
  * \ingroup SSM
  *

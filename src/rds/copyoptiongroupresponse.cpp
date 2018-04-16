@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CopyOptionGroupResponse
  *
- * \brief The CopyOptionGroupResponse class encapsulates RDS CopyOptionGroup responses.
+ * \brief The CopyOptionGroupResponse class provides an interace for RDS CopyOptionGroup responses.
  *
  * \ingroup RDS
  *

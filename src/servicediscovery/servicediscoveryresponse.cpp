@@ -29,7 +29,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::ServiceDiscoveryResponse
  *
- * \brief The ServiceDiscoveryResponse class is the base class for all ServiceDiscovery responses.
+ * \brief The ServiceDiscoveryResponse class provides an interface for ServiceDiscovery responses.
  *
  * \ingroup ServiceDiscovery
  */

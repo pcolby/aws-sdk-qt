@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::GetResolverResponse
  *
- * \brief The GetResolverResponse class encapsulates AppSync GetResolver responses.
+ * \brief The GetResolverResponse class provides an interace for AppSync GetResolver responses.
  *
  * \ingroup AppSync
  *

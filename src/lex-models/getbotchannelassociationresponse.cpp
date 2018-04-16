@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::GetBotChannelAssociationResponse
  *
- * \brief The GetBotChannelAssociationResponse class encapsulates LexModelBuildingService GetBotChannelAssociation responses.
+ * \brief The GetBotChannelAssociationResponse class provides an interace for LexModelBuildingService GetBotChannelAssociation responses.
  *
  * \ingroup LexModelBuildingService
  *

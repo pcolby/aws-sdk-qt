@@ -28,7 +28,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::ListDomainsRequest
  *
- * \brief The ListDomainsRequest class encapsulates SimpleDB ListDomains requests.
+ * \brief The ListDomainsRequest class provides an interface for SimpleDB ListDomains requests.
  *
  * \ingroup SimpleDB
  *

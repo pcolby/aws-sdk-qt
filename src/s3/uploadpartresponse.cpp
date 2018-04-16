@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::UploadPartResponse
  *
- * \brief The UploadPartResponse class encapsulates S3 UploadPart responses.
+ * \brief The UploadPartResponse class provides an interace for S3 UploadPart responses.
  *
  * \ingroup S3
  *

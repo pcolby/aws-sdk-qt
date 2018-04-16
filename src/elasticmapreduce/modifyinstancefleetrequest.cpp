@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ModifyInstanceFleetRequest
  *
- * \brief The ModifyInstanceFleetRequest class encapsulates EMR ModifyInstanceFleet requests.
+ * \brief The ModifyInstanceFleetRequest class provides an interface for EMR ModifyInstanceFleet requests.
  *
  * \ingroup EMR
  *

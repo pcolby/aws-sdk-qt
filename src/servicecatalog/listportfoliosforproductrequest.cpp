@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListPortfoliosForProductRequest
  *
- * \brief The ListPortfoliosForProductRequest class encapsulates ServiceCatalog ListPortfoliosForProduct requests.
+ * \brief The ListPortfoliosForProductRequest class provides an interface for ServiceCatalog ListPortfoliosForProduct requests.
  *
  * \ingroup ServiceCatalog
  *

@@ -30,7 +30,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::ListGroupResourcesResponse
  *
- * \brief The ListGroupResourcesResponse class encapsulates ResourceGroups ListGroupResources responses.
+ * \brief The ListGroupResourcesResponse class provides an interace for ResourceGroups ListGroupResources responses.
  *
  * \ingroup ResourceGroups
  *

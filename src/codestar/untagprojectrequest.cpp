@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::UntagProjectRequest
  *
- * \brief The UntagProjectRequest class encapsulates CodeStar UntagProject requests.
+ * \brief The UntagProjectRequest class provides an interface for CodeStar UntagProject requests.
  *
  * \ingroup CodeStar
  *

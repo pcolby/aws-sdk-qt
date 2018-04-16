@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::CreateStackInstancesRequest
  *
- * \brief The CreateStackInstancesRequest class encapsulates CloudFormation CreateStackInstances requests.
+ * \brief The CreateStackInstancesRequest class provides an interface for CloudFormation CreateStackInstances requests.
  *
  * \ingroup CloudFormation
  *

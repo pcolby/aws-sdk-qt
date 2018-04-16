@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::GetAssignmentResponse
  *
- * \brief The GetAssignmentResponse class encapsulates MTurk GetAssignment responses.
+ * \brief The GetAssignmentResponse class provides an interace for MTurk GetAssignment responses.
  *
  * \ingroup MTurk
  *

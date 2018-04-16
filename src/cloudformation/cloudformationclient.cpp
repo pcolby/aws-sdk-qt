@@ -119,7 +119,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::CloudFormationClient
  *
- * \brief The CloudFormationClient class provides access the AWS CloudFormation service.
+ * \brief The CloudFormationClient class provides access to the AWS CloudFormation service.
  *
  * \ingroup CloudFormation
  *

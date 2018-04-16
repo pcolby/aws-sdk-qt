@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CancelBundleTaskRequest
  *
- * \brief The CancelBundleTaskRequest class encapsulates EC2 CancelBundleTask requests.
+ * \brief The CancelBundleTaskRequest class provides an interface for EC2 CancelBundleTask requests.
  *
  * \ingroup EC2
  *

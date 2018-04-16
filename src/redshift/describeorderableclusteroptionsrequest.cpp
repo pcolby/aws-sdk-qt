@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeOrderableClusterOptionsRequest
  *
- * \brief The DescribeOrderableClusterOptionsRequest class encapsulates Redshift DescribeOrderableClusterOptions requests.
+ * \brief The DescribeOrderableClusterOptionsRequest class provides an interface for Redshift DescribeOrderableClusterOptions requests.
  *
  * \ingroup Redshift
  *

@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ResendConfirmationCodeResponse
  *
- * \brief The ResendConfirmationCodeResponse class encapsulates CognitoIdentityProvider ResendConfirmationCode responses.
+ * \brief The ResendConfirmationCodeResponse class provides an interace for CognitoIdentityProvider ResendConfirmationCode responses.
  *
  * \ingroup CognitoIdentityProvider
  *

@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::PostCommentForComparedCommitResponse
  *
- * \brief The PostCommentForComparedCommitResponse class encapsulates CodeCommit PostCommentForComparedCommit responses.
+ * \brief The PostCommentForComparedCommitResponse class provides an interace for CodeCommit PostCommentForComparedCommit responses.
  *
  * \ingroup CodeCommit
  *

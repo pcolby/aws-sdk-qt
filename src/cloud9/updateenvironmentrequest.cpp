@@ -28,7 +28,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::UpdateEnvironmentRequest
  *
- * \brief The UpdateEnvironmentRequest class encapsulates Cloud9 UpdateEnvironment requests.
+ * \brief The UpdateEnvironmentRequest class provides an interface for Cloud9 UpdateEnvironment requests.
  *
  * \ingroup Cloud9
  *

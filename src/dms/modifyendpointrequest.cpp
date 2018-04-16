@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::ModifyEndpointRequest
  *
- * \brief The ModifyEndpointRequest class encapsulates DatabaseMigrationService ModifyEndpoint requests.
+ * \brief The ModifyEndpointRequest class provides an interface for DatabaseMigrationService ModifyEndpoint requests.
  *
  * \ingroup DatabaseMigrationService
  *

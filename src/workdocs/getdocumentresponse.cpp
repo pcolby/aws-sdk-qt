@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::GetDocumentResponse
  *
- * \brief The GetDocumentResponse class encapsulates WorkDocs GetDocument responses.
+ * \brief The GetDocumentResponse class provides an interace for WorkDocs GetDocument responses.
  *
  * \ingroup WorkDocs
  *

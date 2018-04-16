@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::CreateDevicePoolResponse
  *
- * \brief The CreateDevicePoolResponse class encapsulates DeviceFarm CreateDevicePool responses.
+ * \brief The CreateDevicePoolResponse class provides an interace for DeviceFarm CreateDevicePool responses.
  *
  * \ingroup DeviceFarm
  *

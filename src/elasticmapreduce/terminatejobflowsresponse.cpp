@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::TerminateJobFlowsResponse
  *
- * \brief The TerminateJobFlowsResponse class encapsulates EMR TerminateJobFlows responses.
+ * \brief The TerminateJobFlowsResponse class provides an interace for EMR TerminateJobFlows responses.
  *
  * \ingroup EMR
  *

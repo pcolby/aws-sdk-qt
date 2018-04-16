@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifySnapshotAttributeRequest
  *
- * \brief The ModifySnapshotAttributeRequest class encapsulates EC2 ModifySnapshotAttribute requests.
+ * \brief The ModifySnapshotAttributeRequest class provides an interface for EC2 ModifySnapshotAttribute requests.
  *
  * \ingroup EC2
  *

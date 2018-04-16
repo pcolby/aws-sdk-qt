@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AttachClassicLinkVpcResponse
  *
- * \brief The AttachClassicLinkVpcResponse class encapsulates EC2 AttachClassicLinkVpc responses.
+ * \brief The AttachClassicLinkVpcResponse class provides an interace for EC2 AttachClassicLinkVpc responses.
  *
  * \ingroup EC2
  *

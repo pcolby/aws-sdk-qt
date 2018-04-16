@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribePlayerSessionsRequest
  *
- * \brief The DescribePlayerSessionsRequest class encapsulates GameLift DescribePlayerSessions requests.
+ * \brief The DescribePlayerSessionsRequest class provides an interface for GameLift DescribePlayerSessions requests.
  *
  * \ingroup GameLift
  *

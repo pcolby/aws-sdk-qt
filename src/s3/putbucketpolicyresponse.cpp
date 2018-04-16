@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketPolicyResponse
  *
- * \brief The PutBucketPolicyResponse class encapsulates S3 PutBucketPolicy responses.
+ * \brief The PutBucketPolicyResponse class provides an interace for S3 PutBucketPolicy responses.
  *
  * \ingroup S3
  *

@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DeleteTagOptionResponse
  *
- * \brief The DeleteTagOptionResponse class encapsulates ServiceCatalog DeleteTagOption responses.
+ * \brief The DeleteTagOptionResponse class provides an interace for ServiceCatalog DeleteTagOption responses.
  *
  * \ingroup ServiceCatalog
  *

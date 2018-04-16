@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::UpdateServiceResponse
  *
- * \brief The UpdateServiceResponse class encapsulates ECS UpdateService responses.
+ * \brief The UpdateServiceResponse class provides an interace for ECS UpdateService responses.
  *
  * \ingroup ECS
  *

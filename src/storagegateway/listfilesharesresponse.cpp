@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ListFileSharesResponse
  *
- * \brief The ListFileSharesResponse class encapsulates StorageGateway ListFileShares responses.
+ * \brief The ListFileSharesResponse class provides an interace for StorageGateway ListFileShares responses.
  *
  * \ingroup StorageGateway
  *

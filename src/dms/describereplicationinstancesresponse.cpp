@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeReplicationInstancesResponse
  *
- * \brief The DescribeReplicationInstancesResponse class encapsulates DatabaseMigrationService DescribeReplicationInstances responses.
+ * \brief The DescribeReplicationInstancesResponse class provides an interace for DatabaseMigrationService DescribeReplicationInstances responses.
  *
  * \ingroup DatabaseMigrationService
  *

@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ListTagsForResourceResponse
  *
- * \brief The ListTagsForResourceResponse class encapsulates StorageGateway ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class provides an interace for StorageGateway ListTagsForResource responses.
  *
  * \ingroup StorageGateway
  *

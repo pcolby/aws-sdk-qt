@@ -28,7 +28,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::UpdateCertificateOptionsRequest
  *
- * \brief The UpdateCertificateOptionsRequest class encapsulates ACM UpdateCertificateOptions requests.
+ * \brief The UpdateCertificateOptionsRequest class provides an interface for ACM UpdateCertificateOptions requests.
  *
  * \ingroup ACM
  *

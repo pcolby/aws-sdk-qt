@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::PutSubscriptionFilterResponse
  *
- * \brief The PutSubscriptionFilterResponse class encapsulates CloudWatchLogs PutSubscriptionFilter responses.
+ * \brief The PutSubscriptionFilterResponse class provides an interace for CloudWatchLogs PutSubscriptionFilter responses.
  *
  * \ingroup CloudWatchLogs
  *

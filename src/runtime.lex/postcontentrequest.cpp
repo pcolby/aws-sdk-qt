@@ -28,7 +28,7 @@ namespace LexRuntimeService {
 /*!
  * \class QtAws::LexRuntimeService::PostContentRequest
  *
- * \brief The PostContentRequest class encapsulates LexRuntimeService PostContent requests.
+ * \brief The PostContentRequest class provides an interface for LexRuntimeService PostContent requests.
  *
  * \ingroup LexRuntimeService
  *

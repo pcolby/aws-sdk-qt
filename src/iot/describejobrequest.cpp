@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeJobRequest
  *
- * \brief The DescribeJobRequest class encapsulates IoT DescribeJob requests.
+ * \brief The DescribeJobRequest class provides an interface for IoT DescribeJob requests.
  *
  * \ingroup IoT
  *

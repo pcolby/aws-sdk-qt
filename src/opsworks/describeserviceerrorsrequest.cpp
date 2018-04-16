@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeServiceErrorsRequest
  *
- * \brief The DescribeServiceErrorsRequest class encapsulates OpsWorks DescribeServiceErrors requests.
+ * \brief The DescribeServiceErrorsRequest class provides an interface for OpsWorks DescribeServiceErrors requests.
  *
  * \ingroup OpsWorks
  *

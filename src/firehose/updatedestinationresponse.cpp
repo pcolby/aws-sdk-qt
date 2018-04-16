@@ -30,7 +30,7 @@ namespace Firehose {
 /*!
  * \class QtAws::Firehose::UpdateDestinationResponse
  *
- * \brief The UpdateDestinationResponse class encapsulates Firehose UpdateDestination responses.
+ * \brief The UpdateDestinationResponse class provides an interace for Firehose UpdateDestination responses.
  *
  * \ingroup Firehose
  *

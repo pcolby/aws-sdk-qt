@@ -30,7 +30,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::UpdateDataRetentionResponse
  *
- * \brief The UpdateDataRetentionResponse class encapsulates KinesisVideo UpdateDataRetention responses.
+ * \brief The UpdateDataRetentionResponse class provides an interace for KinesisVideo UpdateDataRetention responses.
  *
  * \ingroup KinesisVideo
  *

@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetStageResponse
  *
- * \brief The GetStageResponse class encapsulates APIGateway GetStage responses.
+ * \brief The GetStageResponse class provides an interace for APIGateway GetStage responses.
  *
  * \ingroup APIGateway
  *

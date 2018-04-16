@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::UpdateProvisioningArtifactRequest
  *
- * \brief The UpdateProvisioningArtifactRequest class encapsulates ServiceCatalog UpdateProvisioningArtifact requests.
+ * \brief The UpdateProvisioningArtifactRequest class provides an interface for ServiceCatalog UpdateProvisioningArtifact requests.
  *
  * \ingroup ServiceCatalog
  *

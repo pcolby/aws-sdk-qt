@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::TerminateInstanceInAutoScalingGroupRequest
  *
- * \brief The TerminateInstanceInAutoScalingGroupRequest class encapsulates AutoScaling TerminateInstanceInAutoScalingGroup requests.
+ * \brief The TerminateInstanceInAutoScalingGroupRequest class provides an interface for AutoScaling TerminateInstanceInAutoScalingGroup requests.
  *
  * \ingroup AutoScaling
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeTagsResponse
  *
- * \brief The DescribeTagsResponse class encapsulates EC2 DescribeTags responses.
+ * \brief The DescribeTagsResponse class provides an interace for EC2 DescribeTags responses.
  *
  * \ingroup EC2
  *

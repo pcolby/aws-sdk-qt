@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DeleteEnvironmentConfigurationRequest
  *
- * \brief The DeleteEnvironmentConfigurationRequest class encapsulates ElasticBeanstalk DeleteEnvironmentConfiguration requests.
+ * \brief The DeleteEnvironmentConfigurationRequest class provides an interface for ElasticBeanstalk DeleteEnvironmentConfiguration requests.
  *
  * \ingroup ElasticBeanstalk
  *

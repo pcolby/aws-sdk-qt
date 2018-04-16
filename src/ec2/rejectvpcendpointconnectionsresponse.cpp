@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RejectVpcEndpointConnectionsResponse
  *
- * \brief The RejectVpcEndpointConnectionsResponse class encapsulates EC2 RejectVpcEndpointConnections responses.
+ * \brief The RejectVpcEndpointConnectionsResponse class provides an interace for EC2 RejectVpcEndpointConnections responses.
  *
  * \ingroup EC2
  *

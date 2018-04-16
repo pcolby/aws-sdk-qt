@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ReEncryptResponse
  *
- * \brief The ReEncryptResponse class encapsulates KMS ReEncrypt responses.
+ * \brief The ReEncryptResponse class provides an interace for KMS ReEncrypt responses.
  *
  * \ingroup KMS
  *

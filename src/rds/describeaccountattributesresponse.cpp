@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeAccountAttributesResponse
  *
- * \brief The DescribeAccountAttributesResponse class encapsulates RDS DescribeAccountAttributes responses.
+ * \brief The DescribeAccountAttributesResponse class provides an interace for RDS DescribeAccountAttributes responses.
  *
  * \ingroup RDS
  *

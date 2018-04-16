@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeNetworkAclsRequest
  *
- * \brief The DescribeNetworkAclsRequest class encapsulates EC2 DescribeNetworkAcls requests.
+ * \brief The DescribeNetworkAclsRequest class provides an interface for EC2 DescribeNetworkAcls requests.
  *
  * \ingroup EC2
  *

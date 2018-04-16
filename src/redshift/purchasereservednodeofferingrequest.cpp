@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::PurchaseReservedNodeOfferingRequest
  *
- * \brief The PurchaseReservedNodeOfferingRequest class encapsulates Redshift PurchaseReservedNodeOffering requests.
+ * \brief The PurchaseReservedNodeOfferingRequest class provides an interface for Redshift PurchaseReservedNodeOffering requests.
  *
  * \ingroup Redshift
  *

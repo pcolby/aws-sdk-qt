@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetTriggerResponse
  *
- * \brief The GetTriggerResponse class encapsulates Glue GetTrigger responses.
+ * \brief The GetTriggerResponse class provides an interace for Glue GetTrigger responses.
  *
  * \ingroup Glue
  *

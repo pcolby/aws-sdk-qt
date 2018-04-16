@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::BatchDeleteConnectionRequest
  *
- * \brief The BatchDeleteConnectionRequest class encapsulates Glue BatchDeleteConnection requests.
+ * \brief The BatchDeleteConnectionRequest class provides an interface for Glue BatchDeleteConnection requests.
  *
  * \ingroup Glue
  *

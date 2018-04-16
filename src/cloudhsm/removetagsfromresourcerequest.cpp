@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::RemoveTagsFromResourceRequest
  *
- * \brief The RemoveTagsFromResourceRequest class encapsulates CloudHSM RemoveTagsFromResource requests.
+ * \brief The RemoveTagsFromResourceRequest class provides an interface for CloudHSM RemoveTagsFromResource requests.
  *
  * \ingroup CloudHSM
  *

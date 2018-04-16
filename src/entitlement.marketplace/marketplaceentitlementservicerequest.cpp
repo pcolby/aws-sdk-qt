@@ -26,7 +26,7 @@ namespace MarketplaceEntitlementService {
 /*!
  * \class QtAws::MarketplaceEntitlementService::MarketplaceEntitlementServiceRequest
  *
- * \brief The MarketplaceEntitlementServiceRequest class is the base class for all MarketplaceEntitlementService requests.
+ * \brief The MarketplaceEntitlementServiceRequest class provides an interface for MarketplaceEntitlementService requests.
  *
  * \ingroup MarketplaceEntitlementService
  */

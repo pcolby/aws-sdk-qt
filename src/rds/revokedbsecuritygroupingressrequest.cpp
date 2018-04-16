@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::RevokeDBSecurityGroupIngressRequest
  *
- * \brief The RevokeDBSecurityGroupIngressRequest class encapsulates RDS RevokeDBSecurityGroupIngress requests.
+ * \brief The RevokeDBSecurityGroupIngressRequest class provides an interface for RDS RevokeDBSecurityGroupIngress requests.
  *
  * \ingroup RDS
  *

@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::ReadPresetRequest
  *
- * \brief The ReadPresetRequest class encapsulates ElasticTranscoder ReadPreset requests.
+ * \brief The ReadPresetRequest class provides an interface for ElasticTranscoder ReadPreset requests.
  *
  * \ingroup ElasticTranscoder
  *

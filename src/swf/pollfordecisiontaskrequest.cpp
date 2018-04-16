@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::PollForDecisionTaskRequest
  *
- * \brief The PollForDecisionTaskRequest class encapsulates SWF PollForDecisionTask requests.
+ * \brief The PollForDecisionTaskRequest class provides an interface for SWF PollForDecisionTask requests.
  *
  * \ingroup SWF
  *

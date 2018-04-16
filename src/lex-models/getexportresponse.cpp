@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::GetExportResponse
  *
- * \brief The GetExportResponse class encapsulates LexModelBuildingService GetExport responses.
+ * \brief The GetExportResponse class provides an interace for LexModelBuildingService GetExport responses.
  *
  * \ingroup LexModelBuildingService
  *

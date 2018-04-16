@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetDeploymentStatusRequest
  *
- * \brief The GetDeploymentStatusRequest class encapsulates Greengrass GetDeploymentStatus requests.
+ * \brief The GetDeploymentStatusRequest class provides an interface for Greengrass GetDeploymentStatus requests.
  *
  * \ingroup Greengrass
  *

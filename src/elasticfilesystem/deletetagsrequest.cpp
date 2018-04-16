@@ -28,7 +28,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::DeleteTagsRequest
  *
- * \brief The DeleteTagsRequest class encapsulates EFS DeleteTags requests.
+ * \brief The DeleteTagsRequest class provides an interface for EFS DeleteTags requests.
  *
  * \ingroup EFS
  *

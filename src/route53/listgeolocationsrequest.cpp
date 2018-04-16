@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListGeoLocationsRequest
  *
- * \brief The ListGeoLocationsRequest class encapsulates Route53 ListGeoLocations requests.
+ * \brief The ListGeoLocationsRequest class provides an interface for Route53 ListGeoLocations requests.
  *
  * \ingroup Route53
  *

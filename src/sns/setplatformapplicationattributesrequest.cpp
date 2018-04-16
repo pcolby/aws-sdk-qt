@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::SetPlatformApplicationAttributesRequest
  *
- * \brief The SetPlatformApplicationAttributesRequest class encapsulates SNS SetPlatformApplicationAttributes requests.
+ * \brief The SetPlatformApplicationAttributesRequest class provides an interface for SNS SetPlatformApplicationAttributes requests.
  *
  * \ingroup SNS
  *

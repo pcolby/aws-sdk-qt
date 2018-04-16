@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::DescribeActivityResponse
  *
- * \brief The DescribeActivityResponse class encapsulates SFN DescribeActivity responses.
+ * \brief The DescribeActivityResponse class provides an interace for SFN DescribeActivity responses.
  *
  * \ingroup SFN
  *

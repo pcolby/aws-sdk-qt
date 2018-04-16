@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::ListInstancesRequest
  *
- * \brief The ListInstancesRequest class encapsulates ServiceDiscovery ListInstances requests.
+ * \brief The ListInstancesRequest class provides an interface for ServiceDiscovery ListInstances requests.
  *
  * \ingroup ServiceDiscovery
  *

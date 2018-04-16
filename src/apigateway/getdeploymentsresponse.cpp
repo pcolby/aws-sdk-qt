@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetDeploymentsResponse
  *
- * \brief The GetDeploymentsResponse class encapsulates APIGateway GetDeployments responses.
+ * \brief The GetDeploymentsResponse class provides an interace for APIGateway GetDeployments responses.
  *
  * \ingroup APIGateway
  *

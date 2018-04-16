@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::PutImageResponse
  *
- * \brief The PutImageResponse class encapsulates ECR PutImage responses.
+ * \brief The PutImageResponse class provides an interace for ECR PutImage responses.
  *
  * \ingroup ECR
  *

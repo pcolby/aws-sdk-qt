@@ -77,7 +77,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::CloudHSMClient
  *
- * \brief The CloudHSMClient class provides access the Amazon CloudHSM service.
+ * \brief The CloudHSMClient class provides access to the Amazon CloudHSM service.
  *
  * \ingroup CloudHSM
  *

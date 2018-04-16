@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DefineSuggesterResponse
  *
- * \brief The DefineSuggesterResponse class encapsulates CloudSearch DefineSuggester responses.
+ * \brief The DefineSuggesterResponse class provides an interace for CloudSearch DefineSuggester responses.
  *
  * \ingroup CloudSearch
  *

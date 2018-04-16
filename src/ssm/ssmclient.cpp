@@ -231,7 +231,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::SsmClient
  *
- * \brief The SsmClient class provides access the Amazon Simple Systems Manager (SSM) ( SSM) service.
+ * \brief The SsmClient class provides access to the Amazon Simple Systems Manager (SSM) ( SSM) service.
  *
  * \ingroup SSM
  *

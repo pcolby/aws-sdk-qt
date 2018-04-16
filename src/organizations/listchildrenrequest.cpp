@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListChildrenRequest
  *
- * \brief The ListChildrenRequest class encapsulates Organizations ListChildren requests.
+ * \brief The ListChildrenRequest class provides an interface for Organizations ListChildren requests.
  *
  * \ingroup Organizations
  *

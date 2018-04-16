@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListAssociationVersionsRequest
  *
- * \brief The ListAssociationVersionsRequest class encapsulates SSM ListAssociationVersions requests.
+ * \brief The ListAssociationVersionsRequest class provides an interface for SSM ListAssociationVersions requests.
  *
  * \ingroup SSM
  *

@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListDirectoriesResponse
  *
- * \brief The ListDirectoriesResponse class encapsulates CloudDirectory ListDirectories responses.
+ * \brief The ListDirectoriesResponse class provides an interace for CloudDirectory ListDirectories responses.
  *
  * \ingroup CloudDirectory
  *

@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::GetAccountBalanceRequest
  *
- * \brief The GetAccountBalanceRequest class encapsulates MTurk GetAccountBalance requests.
+ * \brief The GetAccountBalanceRequest class provides an interface for MTurk GetAccountBalance requests.
  *
  * \ingroup MTurk
  *

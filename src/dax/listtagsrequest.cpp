@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::ListTagsRequest
  *
- * \brief The ListTagsRequest class encapsulates DAX ListTags requests.
+ * \brief The ListTagsRequest class provides an interface for DAX ListTags requests.
  *
  * \ingroup DAX
  *

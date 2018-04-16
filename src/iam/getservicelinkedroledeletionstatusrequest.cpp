@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetServiceLinkedRoleDeletionStatusRequest
  *
- * \brief The GetServiceLinkedRoleDeletionStatusRequest class encapsulates IAM GetServiceLinkedRoleDeletionStatus requests.
+ * \brief The GetServiceLinkedRoleDeletionStatusRequest class provides an interface for IAM GetServiceLinkedRoleDeletionStatus requests.
  *
  * \ingroup IAM
  *

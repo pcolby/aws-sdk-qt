@@ -28,7 +28,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::ListTagsForDomainRequest
  *
- * \brief The ListTagsForDomainRequest class encapsulates Route53Domains ListTagsForDomain requests.
+ * \brief The ListTagsForDomainRequest class provides an interface for Route53Domains ListTagsForDomain requests.
  *
  * \ingroup Route53Domains
  *

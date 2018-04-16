@@ -30,7 +30,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::ListApplicationVersionsResponse
  *
- * \brief The ListApplicationVersionsResponse class encapsulates ServerlessApplicationRepository ListApplicationVersions responses.
+ * \brief The ListApplicationVersionsResponse class provides an interace for ServerlessApplicationRepository ListApplicationVersions responses.
  *
  * \ingroup ServerlessApplicationRepository
  *

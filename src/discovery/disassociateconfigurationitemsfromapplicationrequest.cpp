@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::DisassociateConfigurationItemsFromApplicationRequest
  *
- * \brief The DisassociateConfigurationItemsFromApplicationRequest class encapsulates ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication requests.
+ * \brief The DisassociateConfigurationItemsFromApplicationRequest class provides an interface for ApplicationDiscoveryService DisassociateConfigurationItemsFromApplication requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

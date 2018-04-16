@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::UpdateConditionalForwarderResponse
  *
- * \brief The UpdateConditionalForwarderResponse class encapsulates DirectoryService UpdateConditionalForwarder responses.
+ * \brief The UpdateConditionalForwarderResponse class provides an interace for DirectoryService UpdateConditionalForwarder responses.
  *
  * \ingroup DirectoryService
  *

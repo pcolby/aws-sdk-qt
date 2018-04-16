@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketNotificationConfigurationResponse
  *
- * \brief The PutBucketNotificationConfigurationResponse class encapsulates S3 PutBucketNotificationConfiguration responses.
+ * \brief The PutBucketNotificationConfigurationResponse class provides an interace for S3 PutBucketNotificationConfiguration responses.
  *
  * \ingroup S3
  *

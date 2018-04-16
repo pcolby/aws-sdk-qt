@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ListInstanceFleetsResponse
  *
- * \brief The ListInstanceFleetsResponse class encapsulates EMR ListInstanceFleets responses.
+ * \brief The ListInstanceFleetsResponse class provides an interace for EMR ListInstanceFleets responses.
  *
  * \ingroup EMR
  *

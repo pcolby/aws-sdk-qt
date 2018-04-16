@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateSAMLProviderResponse
  *
- * \brief The UpdateSAMLProviderResponse class encapsulates IAM UpdateSAMLProvider responses.
+ * \brief The UpdateSAMLProviderResponse class provides an interace for IAM UpdateSAMLProvider responses.
  *
  * \ingroup IAM
  *

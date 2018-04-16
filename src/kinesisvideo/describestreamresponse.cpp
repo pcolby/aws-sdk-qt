@@ -30,7 +30,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::DescribeStreamResponse
  *
- * \brief The DescribeStreamResponse class encapsulates KinesisVideo DescribeStream responses.
+ * \brief The DescribeStreamResponse class provides an interace for KinesisVideo DescribeStream responses.
  *
  * \ingroup KinesisVideo
  *

@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::GetReusableDelegationSetLimitRequest
  *
- * \brief The GetReusableDelegationSetLimitRequest class encapsulates Route53 GetReusableDelegationSetLimit requests.
+ * \brief The GetReusableDelegationSetLimitRequest class provides an interface for Route53 GetReusableDelegationSetLimit requests.
  *
  * \ingroup Route53
  *

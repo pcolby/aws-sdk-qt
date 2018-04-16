@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetIntegrationResponse
  *
- * \brief The GetIntegrationResponse class encapsulates APIGateway GetIntegration responses.
+ * \brief The GetIntegrationResponse class provides an interace for APIGateway GetIntegration responses.
  *
  * \ingroup APIGateway
  *

@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::AddTagsToStreamRequest
  *
- * \brief The AddTagsToStreamRequest class encapsulates Kinesis AddTagsToStream requests.
+ * \brief The AddTagsToStreamRequest class provides an interface for Kinesis AddTagsToStream requests.
  *
  * \ingroup Kinesis
  *

@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::UpdateOrganizationalUnitRequest
  *
- * \brief The UpdateOrganizationalUnitRequest class encapsulates Organizations UpdateOrganizationalUnit requests.
+ * \brief The UpdateOrganizationalUnitRequest class provides an interface for Organizations UpdateOrganizationalUnit requests.
  *
  * \ingroup Organizations
  *

@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DeleteBatchPredictionRequest
  *
- * \brief The DeleteBatchPredictionRequest class encapsulates MachineLearning DeleteBatchPrediction requests.
+ * \brief The DeleteBatchPredictionRequest class provides an interface for MachineLearning DeleteBatchPrediction requests.
  *
  * \ingroup MachineLearning
  *

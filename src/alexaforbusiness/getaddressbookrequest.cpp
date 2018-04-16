@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::GetAddressBookRequest
  *
- * \brief The GetAddressBookRequest class encapsulates AlexaForBusiness GetAddressBook requests.
+ * \brief The GetAddressBookRequest class provides an interface for AlexaForBusiness GetAddressBook requests.
  *
  * \ingroup AlexaForBusiness
  *

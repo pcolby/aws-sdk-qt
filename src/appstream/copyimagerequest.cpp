@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::CopyImageRequest
  *
- * \brief The CopyImageRequest class encapsulates AppStream CopyImage requests.
+ * \brief The CopyImageRequest class provides an interface for AppStream CopyImage requests.
  *
  * \ingroup AppStream
  *

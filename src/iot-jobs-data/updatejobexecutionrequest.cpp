@@ -28,7 +28,7 @@ namespace IoTJobsDataPlane {
 /*!
  * \class QtAws::IoTJobsDataPlane::UpdateJobExecutionRequest
  *
- * \brief The UpdateJobExecutionRequest class encapsulates IoTJobsDataPlane UpdateJobExecution requests.
+ * \brief The UpdateJobExecutionRequest class provides an interface for IoTJobsDataPlane UpdateJobExecution requests.
  *
  * \ingroup IoTJobsDataPlane
  *

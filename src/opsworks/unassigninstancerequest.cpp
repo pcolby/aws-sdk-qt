@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UnassignInstanceRequest
  *
- * \brief The UnassignInstanceRequest class encapsulates OpsWorks UnassignInstance requests.
+ * \brief The UnassignInstanceRequest class provides an interface for OpsWorks UnassignInstance requests.
  *
  * \ingroup OpsWorks
  *

@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::ListDetectorsRequest
  *
- * \brief The ListDetectorsRequest class encapsulates GuardDuty ListDetectors requests.
+ * \brief The ListDetectorsRequest class provides an interface for GuardDuty ListDetectors requests.
  *
  * \ingroup GuardDuty
  *

@@ -28,7 +28,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::CreateComputeEnvironmentRequest
  *
- * \brief The CreateComputeEnvironmentRequest class encapsulates Batch CreateComputeEnvironment requests.
+ * \brief The CreateComputeEnvironmentRequest class provides an interface for Batch CreateComputeEnvironment requests.
  *
  * \ingroup Batch
  *

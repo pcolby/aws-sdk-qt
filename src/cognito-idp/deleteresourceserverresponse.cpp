@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::DeleteResourceServerResponse
  *
- * \brief The DeleteResourceServerResponse class encapsulates CognitoIdentityProvider DeleteResourceServer responses.
+ * \brief The DeleteResourceServerResponse class provides an interace for CognitoIdentityProvider DeleteResourceServer responses.
  *
  * \ingroup CognitoIdentityProvider
  *

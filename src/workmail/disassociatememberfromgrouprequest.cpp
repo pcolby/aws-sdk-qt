@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DisassociateMemberFromGroupRequest
  *
- * \brief The DisassociateMemberFromGroupRequest class encapsulates WorkMail DisassociateMemberFromGroup requests.
+ * \brief The DisassociateMemberFromGroupRequest class provides an interface for WorkMail DisassociateMemberFromGroup requests.
  *
  * \ingroup WorkMail
  *

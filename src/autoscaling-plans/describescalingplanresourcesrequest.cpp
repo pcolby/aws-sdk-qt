@@ -28,7 +28,7 @@ namespace AutoScalingPlans {
 /*!
  * \class QtAws::AutoScalingPlans::DescribeScalingPlanResourcesRequest
  *
- * \brief The DescribeScalingPlanResourcesRequest class encapsulates AutoScalingPlans DescribeScalingPlanResources requests.
+ * \brief The DescribeScalingPlanResourcesRequest class provides an interface for AutoScalingPlans DescribeScalingPlanResources requests.
  *
  * \ingroup AutoScalingPlans
  *

@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::SetVaultNotificationsResponse
  *
- * \brief The SetVaultNotificationsResponse class encapsulates Glacier SetVaultNotifications responses.
+ * \brief The SetVaultNotificationsResponse class provides an interace for Glacier SetVaultNotifications responses.
  *
  * \ingroup Glacier
  *

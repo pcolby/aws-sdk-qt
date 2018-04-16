@@ -26,7 +26,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::AutoScalingRequest
  *
- * \brief The AutoScalingRequest class is the base class for all AutoScaling requests.
+ * \brief The AutoScalingRequest class provides an interface for AutoScaling requests.
  *
  * \ingroup AutoScaling
  */

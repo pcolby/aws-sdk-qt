@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::SearchDevicesRequest
  *
- * \brief The SearchDevicesRequest class encapsulates AlexaForBusiness SearchDevices requests.
+ * \brief The SearchDevicesRequest class provides an interface for AlexaForBusiness SearchDevices requests.
  *
  * \ingroup AlexaForBusiness
  *

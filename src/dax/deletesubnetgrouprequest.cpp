@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DeleteSubnetGroupRequest
  *
- * \brief The DeleteSubnetGroupRequest class encapsulates DAX DeleteSubnetGroup requests.
+ * \brief The DeleteSubnetGroupRequest class provides an interface for DAX DeleteSubnetGroup requests.
  *
  * \ingroup DAX
  *

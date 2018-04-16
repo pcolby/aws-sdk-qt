@@ -28,7 +28,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::DeleteUserProfileRequest
  *
- * \brief The DeleteUserProfileRequest class encapsulates CodeStar DeleteUserProfile requests.
+ * \brief The DeleteUserProfileRequest class provides an interface for CodeStar DeleteUserProfile requests.
  *
  * \ingroup CodeStar
  *

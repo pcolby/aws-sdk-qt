@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::ListTagsRequest
  *
- * \brief The ListTagsRequest class encapsulates SageMaker ListTags requests.
+ * \brief The ListTagsRequest class provides an interface for SageMaker ListTags requests.
  *
  * \ingroup SageMaker
  *

@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::DetectModerationLabelsRequest
  *
- * \brief The DetectModerationLabelsRequest class encapsulates Rekognition DetectModerationLabels requests.
+ * \brief The DetectModerationLabelsRequest class provides an interface for Rekognition DetectModerationLabels requests.
  *
  * \ingroup Rekognition
  *

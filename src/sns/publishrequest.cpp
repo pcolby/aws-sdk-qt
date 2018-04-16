@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::PublishRequest
  *
- * \brief The PublishRequest class encapsulates SNS Publish requests.
+ * \brief The PublishRequest class provides an interface for SNS Publish requests.
  *
  * \ingroup SNS
  *

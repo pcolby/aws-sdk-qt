@@ -59,7 +59,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::AthenaClient
  *
- * \brief The AthenaClient class provides access the Amazon Athena service.
+ * \brief The AthenaClient class provides access to the Amazon Athena service.
  *
  * \ingroup Athena
  *

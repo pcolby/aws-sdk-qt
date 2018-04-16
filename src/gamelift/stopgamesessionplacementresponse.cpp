@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::StopGameSessionPlacementResponse
  *
- * \brief The StopGameSessionPlacementResponse class encapsulates GameLift StopGameSessionPlacement responses.
+ * \brief The StopGameSessionPlacementResponse class provides an interace for GameLift StopGameSessionPlacement responses.
  *
  * \ingroup GameLift
  *

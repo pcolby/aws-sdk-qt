@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteAuthorizerRequest
  *
- * \brief The DeleteAuthorizerRequest class encapsulates IoT DeleteAuthorizer requests.
+ * \brief The DeleteAuthorizerRequest class provides an interface for IoT DeleteAuthorizer requests.
  *
  * \ingroup IoT
  *

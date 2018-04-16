@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::DeleteIntentVersionRequest
  *
- * \brief The DeleteIntentVersionRequest class encapsulates LexModelBuildingService DeleteIntentVersion requests.
+ * \brief The DeleteIntentVersionRequest class provides an interface for LexModelBuildingService DeleteIntentVersion requests.
  *
  * \ingroup LexModelBuildingService
  *

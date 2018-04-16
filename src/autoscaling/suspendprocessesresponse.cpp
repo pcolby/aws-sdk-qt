@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::SuspendProcessesResponse
  *
- * \brief The SuspendProcessesResponse class encapsulates AutoScaling SuspendProcesses responses.
+ * \brief The SuspendProcessesResponse class provides an interace for AutoScaling SuspendProcesses responses.
  *
  * \ingroup AutoScaling
  *

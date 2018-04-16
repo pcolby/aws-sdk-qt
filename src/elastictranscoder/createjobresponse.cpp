@@ -30,7 +30,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::CreateJobResponse
  *
- * \brief The CreateJobResponse class encapsulates ElasticTranscoder CreateJob responses.
+ * \brief The CreateJobResponse class provides an interace for ElasticTranscoder CreateJob responses.
  *
  * \ingroup ElasticTranscoder
  *

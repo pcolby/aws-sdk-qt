@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::ListRateBasedRulesRequest
  *
- * \brief The ListRateBasedRulesRequest class encapsulates WAF ListRateBasedRules requests.
+ * \brief The ListRateBasedRulesRequest class provides an interface for WAF ListRateBasedRules requests.
  *
  * \ingroup WAF
  *

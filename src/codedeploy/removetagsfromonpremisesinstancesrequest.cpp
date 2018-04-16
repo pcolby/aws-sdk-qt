@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::RemoveTagsFromOnPremisesInstancesRequest
  *
- * \brief The RemoveTagsFromOnPremisesInstancesRequest class encapsulates CodeDeploy RemoveTagsFromOnPremisesInstances requests.
+ * \brief The RemoveTagsFromOnPremisesInstancesRequest class provides an interface for CodeDeploy RemoveTagsFromOnPremisesInstances requests.
  *
  * \ingroup CodeDeploy
  *

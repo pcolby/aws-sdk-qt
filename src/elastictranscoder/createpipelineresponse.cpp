@@ -30,7 +30,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::CreatePipelineResponse
  *
- * \brief The CreatePipelineResponse class encapsulates ElasticTranscoder CreatePipeline responses.
+ * \brief The CreatePipelineResponse class provides an interace for ElasticTranscoder CreatePipeline responses.
  *
  * \ingroup ElasticTranscoder
  *

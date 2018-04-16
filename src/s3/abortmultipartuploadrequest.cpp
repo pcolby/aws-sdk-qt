@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::AbortMultipartUploadRequest
  *
- * \brief The AbortMultipartUploadRequest class encapsulates S3 AbortMultipartUpload requests.
+ * \brief The AbortMultipartUploadRequest class provides an interface for S3 AbortMultipartUpload requests.
  *
  * \ingroup S3
  *

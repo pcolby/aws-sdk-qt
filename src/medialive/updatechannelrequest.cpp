@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::UpdateChannelRequest
  *
- * \brief The UpdateChannelRequest class encapsulates MediaLive UpdateChannel requests.
+ * \brief The UpdateChannelRequest class provides an interface for MediaLive UpdateChannel requests.
  *
  * \ingroup MediaLive
  *

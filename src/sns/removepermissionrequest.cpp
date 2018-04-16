@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::RemovePermissionRequest
  *
- * \brief The RemovePermissionRequest class encapsulates SNS RemovePermission requests.
+ * \brief The RemovePermissionRequest class provides an interface for SNS RemovePermission requests.
  *
  * \ingroup SNS
  *

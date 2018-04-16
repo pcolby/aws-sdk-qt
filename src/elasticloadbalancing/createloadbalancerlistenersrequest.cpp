@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::CreateLoadBalancerListenersRequest
  *
- * \brief The CreateLoadBalancerListenersRequest class encapsulates ElasticLoadBalancing CreateLoadBalancerListeners requests.
+ * \brief The CreateLoadBalancerListenersRequest class provides an interface for ElasticLoadBalancing CreateLoadBalancerListeners requests.
  *
  * \ingroup ElasticLoadBalancing
  *

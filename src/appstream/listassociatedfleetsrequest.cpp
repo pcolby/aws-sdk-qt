@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::ListAssociatedFleetsRequest
  *
- * \brief The ListAssociatedFleetsRequest class encapsulates AppStream ListAssociatedFleets requests.
+ * \brief The ListAssociatedFleetsRequest class provides an interface for AppStream ListAssociatedFleets requests.
  *
  * \ingroup AppStream
  *

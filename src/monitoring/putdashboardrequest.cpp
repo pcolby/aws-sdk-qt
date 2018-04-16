@@ -28,7 +28,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::PutDashboardRequest
  *
- * \brief The PutDashboardRequest class encapsulates CloudWatch PutDashboard requests.
+ * \brief The PutDashboardRequest class provides an interface for CloudWatch PutDashboard requests.
  *
  * \ingroup CloudWatch
  *

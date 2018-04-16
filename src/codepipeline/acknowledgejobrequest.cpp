@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::AcknowledgeJobRequest
  *
- * \brief The AcknowledgeJobRequest class encapsulates CodePipeline AcknowledgeJob requests.
+ * \brief The AcknowledgeJobRequest class provides an interface for CodePipeline AcknowledgeJob requests.
  *
  * \ingroup CodePipeline
  *

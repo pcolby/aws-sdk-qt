@@ -28,7 +28,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::CreateChannelRequest
  *
- * \brief The CreateChannelRequest class encapsulates MediaPackage CreateChannel requests.
+ * \brief The CreateChannelRequest class provides an interface for MediaPackage CreateChannel requests.
  *
  * \ingroup MediaPackage
  *

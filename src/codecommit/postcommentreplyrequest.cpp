@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::PostCommentReplyRequest
  *
- * \brief The PostCommentReplyRequest class encapsulates CodeCommit PostCommentReply requests.
+ * \brief The PostCommentReplyRequest class provides an interface for CodeCommit PostCommentReply requests.
  *
  * \ingroup CodeCommit
  *

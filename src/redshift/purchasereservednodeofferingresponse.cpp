@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::PurchaseReservedNodeOfferingResponse
  *
- * \brief The PurchaseReservedNodeOfferingResponse class encapsulates Redshift PurchaseReservedNodeOffering responses.
+ * \brief The PurchaseReservedNodeOfferingResponse class provides an interace for Redshift PurchaseReservedNodeOffering responses.
  *
  * \ingroup Redshift
  *

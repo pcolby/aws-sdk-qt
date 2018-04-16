@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::CountOpenWorkflowExecutionsResponse
  *
- * \brief The CountOpenWorkflowExecutionsResponse class encapsulates SWF CountOpenWorkflowExecutions responses.
+ * \brief The CountOpenWorkflowExecutionsResponse class provides an interace for SWF CountOpenWorkflowExecutions responses.
  *
  * \ingroup SWF
  *

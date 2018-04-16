@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVpcEndpointConnectionsResponse
  *
- * \brief The DescribeVpcEndpointConnectionsResponse class encapsulates EC2 DescribeVpcEndpointConnections responses.
+ * \brief The DescribeVpcEndpointConnectionsResponse class provides an interace for EC2 DescribeVpcEndpointConnections responses.
  *
  * \ingroup EC2
  *

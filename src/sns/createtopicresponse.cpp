@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::CreateTopicResponse
  *
- * \brief The CreateTopicResponse class encapsulates SNS CreateTopic responses.
+ * \brief The CreateTopicResponse class provides an interace for SNS CreateTopic responses.
  *
  * \ingroup SNS
  *

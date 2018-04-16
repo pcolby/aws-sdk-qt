@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DeleteIndexFieldResponse
  *
- * \brief The DeleteIndexFieldResponse class encapsulates CloudSearch DeleteIndexField responses.
+ * \brief The DeleteIndexFieldResponse class provides an interace for CloudSearch DeleteIndexField responses.
  *
  * \ingroup CloudSearch
  *

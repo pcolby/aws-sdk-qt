@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeAssociationRequest
  *
- * \brief The DescribeAssociationRequest class encapsulates SSM DescribeAssociation requests.
+ * \brief The DescribeAssociationRequest class provides an interface for SSM DescribeAssociation requests.
  *
  * \ingroup SSM
  *

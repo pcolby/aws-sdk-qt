@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DeleteMembersResponse
  *
- * \brief The DeleteMembersResponse class encapsulates GuardDuty DeleteMembers responses.
+ * \brief The DeleteMembersResponse class provides an interace for GuardDuty DeleteMembers responses.
  *
  * \ingroup GuardDuty
  *

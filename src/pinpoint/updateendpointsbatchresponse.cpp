@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateEndpointsBatchResponse
  *
- * \brief The UpdateEndpointsBatchResponse class encapsulates Pinpoint UpdateEndpointsBatch responses.
+ * \brief The UpdateEndpointsBatchResponse class provides an interace for Pinpoint UpdateEndpointsBatch responses.
  *
  * \ingroup Pinpoint
  *

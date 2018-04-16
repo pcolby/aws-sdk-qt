@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeInstanceCreditSpecificationsResponse
  *
- * \brief The DescribeInstanceCreditSpecificationsResponse class encapsulates EC2 DescribeInstanceCreditSpecifications responses.
+ * \brief The DescribeInstanceCreditSpecificationsResponse class provides an interace for EC2 DescribeInstanceCreditSpecifications responses.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::EnablePolicyTypeRequest
  *
- * \brief The EnablePolicyTypeRequest class encapsulates Organizations EnablePolicyType requests.
+ * \brief The EnablePolicyTypeRequest class provides an interface for Organizations EnablePolicyType requests.
  *
  * \ingroup Organizations
  *

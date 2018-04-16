@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeScalingPoliciesRequest
  *
- * \brief The DescribeScalingPoliciesRequest class encapsulates GameLift DescribeScalingPolicies requests.
+ * \brief The DescribeScalingPoliciesRequest class provides an interface for GameLift DescribeScalingPolicies requests.
  *
  * \ingroup GameLift
  *

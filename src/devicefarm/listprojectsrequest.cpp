@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListProjectsRequest
  *
- * \brief The ListProjectsRequest class encapsulates DeviceFarm ListProjects requests.
+ * \brief The ListProjectsRequest class provides an interface for DeviceFarm ListProjects requests.
  *
  * \ingroup DeviceFarm
  *

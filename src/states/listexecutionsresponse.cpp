@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::ListExecutionsResponse
  *
- * \brief The ListExecutionsResponse class encapsulates SFN ListExecutions responses.
+ * \brief The ListExecutionsResponse class provides an interace for SFN ListExecutions responses.
  *
  * \ingroup SFN
  *

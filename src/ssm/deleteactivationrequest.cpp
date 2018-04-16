@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeleteActivationRequest
  *
- * \brief The DeleteActivationRequest class encapsulates SSM DeleteActivation requests.
+ * \brief The DeleteActivationRequest class provides an interface for SSM DeleteActivation requests.
  *
  * \ingroup SSM
  *

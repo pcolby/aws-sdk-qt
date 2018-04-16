@@ -30,7 +30,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::DeleteApplicationsResponse
  *
- * \brief The DeleteApplicationsResponse class encapsulates ApplicationDiscoveryService DeleteApplications responses.
+ * \brief The DeleteApplicationsResponse class provides an interace for ApplicationDiscoveryService DeleteApplications responses.
  *
  * \ingroup ApplicationDiscoveryService
  *

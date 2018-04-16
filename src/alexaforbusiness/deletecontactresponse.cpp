@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::DeleteContactResponse
  *
- * \brief The DeleteContactResponse class encapsulates AlexaForBusiness DeleteContact responses.
+ * \brief The DeleteContactResponse class provides an interace for AlexaForBusiness DeleteContact responses.
  *
  * \ingroup AlexaForBusiness
  *

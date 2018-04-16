@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SendBulkTemplatedEmailRequest
  *
- * \brief The SendBulkTemplatedEmailRequest class encapsulates SES SendBulkTemplatedEmail requests.
+ * \brief The SendBulkTemplatedEmailRequest class provides an interface for SES SendBulkTemplatedEmail requests.
  *
  * \ingroup SES
  *

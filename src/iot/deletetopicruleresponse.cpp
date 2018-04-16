@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteTopicRuleResponse
  *
- * \brief The DeleteTopicRuleResponse class encapsulates IoT DeleteTopicRule responses.
+ * \brief The DeleteTopicRuleResponse class provides an interace for IoT DeleteTopicRule responses.
  *
  * \ingroup IoT
  *

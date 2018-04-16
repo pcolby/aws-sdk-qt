@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ApproveAssignmentResponse
  *
- * \brief The ApproveAssignmentResponse class encapsulates MTurk ApproveAssignment responses.
+ * \brief The ApproveAssignmentResponse class provides an interace for MTurk ApproveAssignment responses.
  *
  * \ingroup MTurk
  *

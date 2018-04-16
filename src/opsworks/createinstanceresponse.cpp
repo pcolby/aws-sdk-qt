@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CreateInstanceResponse
  *
- * \brief The CreateInstanceResponse class encapsulates OpsWorks CreateInstance responses.
+ * \brief The CreateInstanceResponse class provides an interace for OpsWorks CreateInstance responses.
  *
  * \ingroup OpsWorks
  *

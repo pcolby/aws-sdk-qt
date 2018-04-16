@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::DeleteWorkerBlockRequest
  *
- * \brief The DeleteWorkerBlockRequest class encapsulates MTurk DeleteWorkerBlock requests.
+ * \brief The DeleteWorkerBlockRequest class provides an interface for MTurk DeleteWorkerBlock requests.
  *
  * \ingroup MTurk
  *

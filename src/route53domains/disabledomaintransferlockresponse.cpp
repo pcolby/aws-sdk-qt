@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::DisableDomainTransferLockResponse
  *
- * \brief The DisableDomainTransferLockResponse class encapsulates Route53Domains DisableDomainTransferLock responses.
+ * \brief The DisableDomainTransferLockResponse class provides an interace for Route53Domains DisableDomainTransferLock responses.
  *
  * \ingroup Route53Domains
  *

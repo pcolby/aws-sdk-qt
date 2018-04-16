@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RunScheduledInstancesResponse
  *
- * \brief The RunScheduledInstancesResponse class encapsulates EC2 RunScheduledInstances responses.
+ * \brief The RunScheduledInstancesResponse class provides an interace for EC2 RunScheduledInstances responses.
  *
  * \ingroup EC2
  *

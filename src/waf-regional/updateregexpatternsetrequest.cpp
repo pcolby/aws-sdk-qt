@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::UpdateRegexPatternSetRequest
  *
- * \brief The UpdateRegexPatternSetRequest class encapsulates WAFRegional UpdateRegexPatternSet requests.
+ * \brief The UpdateRegexPatternSetRequest class provides an interface for WAFRegional UpdateRegexPatternSet requests.
  *
  * \ingroup WAFRegional
  *

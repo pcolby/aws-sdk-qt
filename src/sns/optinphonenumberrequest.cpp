@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::OptInPhoneNumberRequest
  *
- * \brief The OptInPhoneNumberRequest class encapsulates SNS OptInPhoneNumber requests.
+ * \brief The OptInPhoneNumberRequest class provides an interface for SNS OptInPhoneNumber requests.
  *
  * \ingroup SNS
  *

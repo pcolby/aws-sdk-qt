@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeregisterImageRequest
  *
- * \brief The DeregisterImageRequest class encapsulates EC2 DeregisterImage requests.
+ * \brief The DeregisterImageRequest class provides an interface for EC2 DeregisterImage requests.
  *
  * \ingroup EC2
  *

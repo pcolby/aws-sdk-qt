@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::CreatePublicDnsNamespaceRequest
  *
- * \brief The CreatePublicDnsNamespaceRequest class encapsulates ServiceDiscovery CreatePublicDnsNamespace requests.
+ * \brief The CreatePublicDnsNamespaceRequest class provides an interface for ServiceDiscovery CreatePublicDnsNamespace requests.
  *
  * \ingroup ServiceDiscovery
  *

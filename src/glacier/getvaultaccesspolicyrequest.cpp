@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::GetVaultAccessPolicyRequest
  *
- * \brief The GetVaultAccessPolicyRequest class encapsulates Glacier GetVaultAccessPolicy requests.
+ * \brief The GetVaultAccessPolicyRequest class provides an interface for Glacier GetVaultAccessPolicy requests.
  *
  * \ingroup Glacier
  *

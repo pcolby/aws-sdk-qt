@@ -28,7 +28,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::CreateProjectRequest
  *
- * \brief The CreateProjectRequest class encapsulates Mobile CreateProject requests.
+ * \brief The CreateProjectRequest class provides an interface for Mobile CreateProject requests.
  *
  * \ingroup Mobile
  *

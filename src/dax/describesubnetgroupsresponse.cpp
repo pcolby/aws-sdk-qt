@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DescribeSubnetGroupsResponse
  *
- * \brief The DescribeSubnetGroupsResponse class encapsulates DAX DescribeSubnetGroups responses.
+ * \brief The DescribeSubnetGroupsResponse class provides an interace for DAX DescribeSubnetGroups responses.
  *
  * \ingroup DAX
  *

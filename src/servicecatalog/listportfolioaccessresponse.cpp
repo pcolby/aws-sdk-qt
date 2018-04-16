@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListPortfolioAccessResponse
  *
- * \brief The ListPortfolioAccessResponse class encapsulates ServiceCatalog ListPortfolioAccess responses.
+ * \brief The ListPortfolioAccessResponse class provides an interace for ServiceCatalog ListPortfolioAccess responses.
  *
  * \ingroup ServiceCatalog
  *

@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutObjectTaggingResponse
  *
- * \brief The PutObjectTaggingResponse class encapsulates S3 PutObjectTagging responses.
+ * \brief The PutObjectTaggingResponse class provides an interace for S3 PutObjectTagging responses.
  *
  * \ingroup S3
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateSnapshotResponse
  *
- * \brief The CreateSnapshotResponse class encapsulates EC2 CreateSnapshot responses.
+ * \brief The CreateSnapshotResponse class provides an interace for EC2 CreateSnapshot responses.
  *
  * \ingroup EC2
  *

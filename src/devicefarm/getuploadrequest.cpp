@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetUploadRequest
  *
- * \brief The GetUploadRequest class encapsulates DeviceFarm GetUpload requests.
+ * \brief The GetUploadRequest class provides an interface for DeviceFarm GetUpload requests.
  *
  * \ingroup DeviceFarm
  *

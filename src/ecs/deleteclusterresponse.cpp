@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DeleteClusterResponse
  *
- * \brief The DeleteClusterResponse class encapsulates ECS DeleteCluster responses.
+ * \brief The DeleteClusterResponse class provides an interace for ECS DeleteCluster responses.
  *
  * \ingroup ECS
  *

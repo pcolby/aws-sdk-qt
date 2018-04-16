@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::NotifyWhenUploadedResponse
  *
- * \brief The NotifyWhenUploadedResponse class encapsulates StorageGateway NotifyWhenUploaded responses.
+ * \brief The NotifyWhenUploadedResponse class provides an interace for StorageGateway NotifyWhenUploaded responses.
  *
  * \ingroup StorageGateway
  *

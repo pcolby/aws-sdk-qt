@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ModifyDBSnapshotAttributeResponse
  *
- * \brief The ModifyDBSnapshotAttributeResponse class encapsulates RDS ModifyDBSnapshotAttribute responses.
+ * \brief The ModifyDBSnapshotAttributeResponse class provides an interace for RDS ModifyDBSnapshotAttribute responses.
  *
  * \ingroup RDS
  *

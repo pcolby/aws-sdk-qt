@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DeleteAutoScalingGroupResponse
  *
- * \brief The DeleteAutoScalingGroupResponse class encapsulates AutoScaling DeleteAutoScalingGroup responses.
+ * \brief The DeleteAutoScalingGroupResponse class provides an interace for AutoScaling DeleteAutoScalingGroup responses.
  *
  * \ingroup AutoScaling
  *

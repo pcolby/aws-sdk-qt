@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::CreateCommentResponse
  *
- * \brief The CreateCommentResponse class encapsulates WorkDocs CreateComment responses.
+ * \brief The CreateCommentResponse class provides an interace for WorkDocs CreateComment responses.
  *
  * \ingroup WorkDocs
  *

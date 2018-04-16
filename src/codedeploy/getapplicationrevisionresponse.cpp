@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::GetApplicationRevisionResponse
  *
- * \brief The GetApplicationRevisionResponse class encapsulates CodeDeploy GetApplicationRevision responses.
+ * \brief The GetApplicationRevisionResponse class provides an interace for CodeDeploy GetApplicationRevision responses.
  *
  * \ingroup CodeDeploy
  *

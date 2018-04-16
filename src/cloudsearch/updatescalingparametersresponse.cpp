@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::UpdateScalingParametersResponse
  *
- * \brief The UpdateScalingParametersResponse class encapsulates CloudSearch UpdateScalingParameters responses.
+ * \brief The UpdateScalingParametersResponse class provides an interace for CloudSearch UpdateScalingParameters responses.
  *
  * \ingroup CloudSearch
  *

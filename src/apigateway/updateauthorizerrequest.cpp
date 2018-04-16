@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::UpdateAuthorizerRequest
  *
- * \brief The UpdateAuthorizerRequest class encapsulates APIGateway UpdateAuthorizer requests.
+ * \brief The UpdateAuthorizerRequest class provides an interface for APIGateway UpdateAuthorizer requests.
  *
  * \ingroup APIGateway
  *

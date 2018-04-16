@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::AddInstanceFleetRequest
  *
- * \brief The AddInstanceFleetRequest class encapsulates EMR AddInstanceFleet requests.
+ * \brief The AddInstanceFleetRequest class provides an interface for EMR AddInstanceFleet requests.
  *
  * \ingroup EMR
  *

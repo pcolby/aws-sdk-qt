@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SetIdentityHeadersInNotificationsEnabledResponse
  *
- * \brief The SetIdentityHeadersInNotificationsEnabledResponse class encapsulates SES SetIdentityHeadersInNotificationsEnabled responses.
+ * \brief The SetIdentityHeadersInNotificationsEnabledResponse class provides an interace for SES SetIdentityHeadersInNotificationsEnabled responses.
  *
  * \ingroup SES
  *

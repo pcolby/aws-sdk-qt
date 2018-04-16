@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::ListThreatIntelSetsRequest
  *
- * \brief The ListThreatIntelSetsRequest class encapsulates GuardDuty ListThreatIntelSets requests.
+ * \brief The ListThreatIntelSetsRequest class provides an interface for GuardDuty ListThreatIntelSets requests.
  *
  * \ingroup GuardDuty
  *

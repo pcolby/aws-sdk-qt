@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::ListAliasesRequest
  *
- * \brief The ListAliasesRequest class encapsulates Lambda ListAliases requests.
+ * \brief The ListAliasesRequest class provides an interface for Lambda ListAliases requests.
  *
  * \ingroup Lambda
  *

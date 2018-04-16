@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeValidDBInstanceModificationsResponse
  *
- * \brief The DescribeValidDBInstanceModificationsResponse class encapsulates RDS DescribeValidDBInstanceModifications responses.
+ * \brief The DescribeValidDBInstanceModificationsResponse class provides an interace for RDS DescribeValidDBInstanceModifications responses.
  *
  * \ingroup RDS
  *

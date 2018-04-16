@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeInstanceAttributeRequest
  *
- * \brief The DescribeInstanceAttributeRequest class encapsulates EC2 DescribeInstanceAttribute requests.
+ * \brief The DescribeInstanceAttributeRequest class provides an interface for EC2 DescribeInstanceAttribute requests.
  *
  * \ingroup EC2
  *

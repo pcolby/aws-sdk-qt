@@ -30,7 +30,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::DescribeLoadBalancersResponse
  *
- * \brief The DescribeLoadBalancersResponse class encapsulates ElasticLoadBalancing DescribeLoadBalancers responses.
+ * \brief The DescribeLoadBalancersResponse class provides an interace for ElasticLoadBalancing DescribeLoadBalancers responses.
  *
  * \ingroup ElasticLoadBalancing
  *

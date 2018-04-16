@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateSAMLProviderRequest
  *
- * \brief The UpdateSAMLProviderRequest class encapsulates IAM UpdateSAMLProvider requests.
+ * \brief The UpdateSAMLProviderRequest class provides an interface for IAM UpdateSAMLProvider requests.
  *
  * \ingroup IAM
  *

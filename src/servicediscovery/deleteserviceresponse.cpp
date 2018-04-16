@@ -30,7 +30,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::DeleteServiceResponse
  *
- * \brief The DeleteServiceResponse class encapsulates ServiceDiscovery DeleteService responses.
+ * \brief The DeleteServiceResponse class provides an interace for ServiceDiscovery DeleteService responses.
  *
  * \ingroup ServiceDiscovery
  *

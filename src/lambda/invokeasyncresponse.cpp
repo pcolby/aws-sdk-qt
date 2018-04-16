@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::InvokeAsyncResponse
  *
- * \brief The InvokeAsyncResponse class encapsulates Lambda InvokeAsync responses.
+ * \brief The InvokeAsyncResponse class provides an interace for Lambda InvokeAsync responses.
  *
  * \ingroup Lambda
  *

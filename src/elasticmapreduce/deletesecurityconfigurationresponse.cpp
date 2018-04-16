@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::DeleteSecurityConfigurationResponse
  *
- * \brief The DeleteSecurityConfigurationResponse class encapsulates EMR DeleteSecurityConfiguration responses.
+ * \brief The DeleteSecurityConfigurationResponse class provides an interace for EMR DeleteSecurityConfiguration responses.
  *
  * \ingroup EMR
  *

@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::ListActionTypesRequest
  *
- * \brief The ListActionTypesRequest class encapsulates CodePipeline ListActionTypes requests.
+ * \brief The ListActionTypesRequest class provides an interface for CodePipeline ListActionTypes requests.
  *
  * \ingroup CodePipeline
  *

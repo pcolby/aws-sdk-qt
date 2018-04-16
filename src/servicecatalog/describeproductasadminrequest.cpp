@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribeProductAsAdminRequest
  *
- * \brief The DescribeProductAsAdminRequest class encapsulates ServiceCatalog DescribeProductAsAdmin requests.
+ * \brief The DescribeProductAsAdminRequest class provides an interface for ServiceCatalog DescribeProductAsAdmin requests.
  *
  * \ingroup ServiceCatalog
  *

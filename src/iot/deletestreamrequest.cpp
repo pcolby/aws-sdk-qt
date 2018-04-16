@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteStreamRequest
  *
- * \brief The DeleteStreamRequest class encapsulates IoT DeleteStream requests.
+ * \brief The DeleteStreamRequest class provides an interface for IoT DeleteStream requests.
  *
  * \ingroup IoT
  *

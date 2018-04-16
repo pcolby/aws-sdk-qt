@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ListStacksResponse
  *
- * \brief The ListStacksResponse class encapsulates CloudFormation ListStacks responses.
+ * \brief The ListStacksResponse class provides an interace for CloudFormation ListStacks responses.
  *
  * \ingroup CloudFormation
  *

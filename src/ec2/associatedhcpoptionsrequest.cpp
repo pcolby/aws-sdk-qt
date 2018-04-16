@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AssociateDhcpOptionsRequest
  *
- * \brief The AssociateDhcpOptionsRequest class encapsulates EC2 AssociateDhcpOptions requests.
+ * \brief The AssociateDhcpOptionsRequest class provides an interface for EC2 AssociateDhcpOptions requests.
  *
  * \ingroup EC2
  *

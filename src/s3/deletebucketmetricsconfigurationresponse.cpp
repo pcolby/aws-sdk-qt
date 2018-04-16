@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::DeleteBucketMetricsConfigurationResponse
  *
- * \brief The DeleteBucketMetricsConfigurationResponse class encapsulates S3 DeleteBucketMetricsConfiguration responses.
+ * \brief The DeleteBucketMetricsConfigurationResponse class provides an interace for S3 DeleteBucketMetricsConfiguration responses.
  *
  * \ingroup S3
  *

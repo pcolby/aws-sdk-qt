@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ListGrantsRequest
  *
- * \brief The ListGrantsRequest class encapsulates KMS ListGrants requests.
+ * \brief The ListGrantsRequest class provides an interface for KMS ListGrants requests.
  *
  * \ingroup KMS
  *

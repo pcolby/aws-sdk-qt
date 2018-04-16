@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateRoleAliasResponse
  *
- * \brief The CreateRoleAliasResponse class encapsulates IoT CreateRoleAlias responses.
+ * \brief The CreateRoleAliasResponse class provides an interace for IoT CreateRoleAlias responses.
  *
  * \ingroup IoT
  *

@@ -29,7 +29,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DynamoDBResponse
  *
- * \brief The DynamoDBResponse class is the base class for all DynamoDB responses.
+ * \brief The DynamoDBResponse class provides an interface for DynamoDB responses.
  *
  * \ingroup DynamoDB
  */

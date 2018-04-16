@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::TestInvokeAuthorizerResponse
  *
- * \brief The TestInvokeAuthorizerResponse class encapsulates APIGateway TestInvokeAuthorizer responses.
+ * \brief The TestInvokeAuthorizerResponse class provides an interace for APIGateway TestInvokeAuthorizer responses.
  *
  * \ingroup APIGateway
  *

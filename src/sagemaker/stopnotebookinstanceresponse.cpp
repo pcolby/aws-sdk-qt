@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::StopNotebookInstanceResponse
  *
- * \brief The StopNotebookInstanceResponse class encapsulates SageMaker StopNotebookInstance responses.
+ * \brief The StopNotebookInstanceResponse class provides an interace for SageMaker StopNotebookInstance responses.
  *
  * \ingroup SageMaker
  *

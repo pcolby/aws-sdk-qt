@@ -30,7 +30,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::ImportCertificateResponse
  *
- * \brief The ImportCertificateResponse class encapsulates ACM ImportCertificate responses.
+ * \brief The ImportCertificateResponse class provides an interace for ACM ImportCertificate responses.
  *
  * \ingroup ACM
  *

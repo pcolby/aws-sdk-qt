@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::HeadBucketRequest
  *
- * \brief The HeadBucketRequest class encapsulates S3 HeadBucket requests.
+ * \brief The HeadBucketRequest class provides an interface for S3 HeadBucket requests.
  *
  * \ingroup S3
  *

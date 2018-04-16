@@ -30,7 +30,7 @@ namespace MarketplaceMetering {
 /*!
  * \class QtAws::MarketplaceMetering::ResolveCustomerResponse
  *
- * \brief The ResolveCustomerResponse class encapsulates MarketplaceMetering ResolveCustomer responses.
+ * \brief The ResolveCustomerResponse class provides an interace for MarketplaceMetering ResolveCustomer responses.
  *
  * \ingroup MarketplaceMetering
  *

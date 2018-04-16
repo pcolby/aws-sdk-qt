@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::PutIntegrationResponse
  *
- * \brief The PutIntegrationResponse class encapsulates APIGateway PutIntegration responses.
+ * \brief The PutIntegrationResponse class provides an interace for APIGateway PutIntegration responses.
  *
  * \ingroup APIGateway
  *

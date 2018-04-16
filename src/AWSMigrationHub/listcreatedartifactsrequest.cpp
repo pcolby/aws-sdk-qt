@@ -28,7 +28,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::ListCreatedArtifactsRequest
  *
- * \brief The ListCreatedArtifactsRequest class encapsulates MigrationHub ListCreatedArtifacts requests.
+ * \brief The ListCreatedArtifactsRequest class provides an interface for MigrationHub ListCreatedArtifacts requests.
  *
  * \ingroup MigrationHub
  *

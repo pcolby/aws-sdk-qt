@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DeleteGroupResponse
  *
- * \brief The DeleteGroupResponse class encapsulates WorkMail DeleteGroup responses.
+ * \brief The DeleteGroupResponse class provides an interace for WorkMail DeleteGroup responses.
  *
  * \ingroup WorkMail
  *

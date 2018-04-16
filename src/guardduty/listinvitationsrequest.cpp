@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::ListInvitationsRequest
  *
- * \brief The ListInvitationsRequest class encapsulates GuardDuty ListInvitations requests.
+ * \brief The ListInvitationsRequest class provides an interface for GuardDuty ListInvitations requests.
  *
  * \ingroup GuardDuty
  *

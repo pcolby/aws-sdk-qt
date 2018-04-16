@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::UpdateNotificationSettingsRequest
  *
- * \brief The UpdateNotificationSettingsRequest class encapsulates MTurk UpdateNotificationSettings requests.
+ * \brief The UpdateNotificationSettingsRequest class provides an interface for MTurk UpdateNotificationSettings requests.
  *
  * \ingroup MTurk
  *

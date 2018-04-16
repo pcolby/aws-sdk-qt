@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::DescribeDefaultParametersRequest
  *
- * \brief The DescribeDefaultParametersRequest class encapsulates DAX DescribeDefaultParameters requests.
+ * \brief The DescribeDefaultParametersRequest class provides an interface for DAX DescribeDefaultParameters requests.
  *
  * \ingroup DAX
  *

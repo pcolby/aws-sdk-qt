@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::StopMatchmakingRequest
  *
- * \brief The StopMatchmakingRequest class encapsulates GameLift StopMatchmaking requests.
+ * \brief The StopMatchmakingRequest class provides an interface for GameLift StopMatchmaking requests.
  *
  * \ingroup GameLift
  *

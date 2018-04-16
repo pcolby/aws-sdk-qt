@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DetachLoadBalancersRequest
  *
- * \brief The DetachLoadBalancersRequest class encapsulates AutoScaling DetachLoadBalancers requests.
+ * \brief The DetachLoadBalancersRequest class provides an interface for AutoScaling DetachLoadBalancers requests.
  *
  * \ingroup AutoScaling
  *

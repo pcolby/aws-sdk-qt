@@ -30,7 +30,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::CreateGroupResponse
  *
- * \brief The CreateGroupResponse class encapsulates ResourceGroups CreateGroup responses.
+ * \brief The CreateGroupResponse class provides an interace for ResourceGroups CreateGroup responses.
  *
  * \ingroup ResourceGroups
  *

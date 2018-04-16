@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteThingResponse
  *
- * \brief The DeleteThingResponse class encapsulates IoT DeleteThing responses.
+ * \brief The DeleteThingResponse class provides an interace for IoT DeleteThing responses.
  *
  * \ingroup IoT
  *

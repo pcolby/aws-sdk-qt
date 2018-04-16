@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteSubnetResponse
  *
- * \brief The DeleteSubnetResponse class encapsulates EC2 DeleteSubnet responses.
+ * \brief The DeleteSubnetResponse class provides an interace for EC2 DeleteSubnet responses.
  *
  * \ingroup EC2
  *

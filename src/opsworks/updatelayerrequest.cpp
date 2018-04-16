@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UpdateLayerRequest
  *
- * \brief The UpdateLayerRequest class encapsulates OpsWorks UpdateLayer requests.
+ * \brief The UpdateLayerRequest class provides an interface for OpsWorks UpdateLayer requests.
  *
  * \ingroup OpsWorks
  *

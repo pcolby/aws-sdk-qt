@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeEcsClustersRequest
  *
- * \brief The DescribeEcsClustersRequest class encapsulates OpsWorks DescribeEcsClusters requests.
+ * \brief The DescribeEcsClustersRequest class provides an interface for OpsWorks DescribeEcsClusters requests.
  *
  * \ingroup OpsWorks
  *

@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::AssociateFleetResponse
  *
- * \brief The AssociateFleetResponse class encapsulates AppStream AssociateFleet responses.
+ * \brief The AssociateFleetResponse class provides an interace for AppStream AssociateFleet responses.
  *
  * \ingroup AppStream
  *

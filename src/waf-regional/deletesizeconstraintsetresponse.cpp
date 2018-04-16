@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeleteSizeConstraintSetResponse
  *
- * \brief The DeleteSizeConstraintSetResponse class encapsulates WAFRegional DeleteSizeConstraintSet responses.
+ * \brief The DeleteSizeConstraintSetResponse class provides an interace for WAFRegional DeleteSizeConstraintSet responses.
  *
  * \ingroup WAFRegional
  *

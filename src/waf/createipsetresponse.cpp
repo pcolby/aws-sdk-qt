@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::CreateIPSetResponse
  *
- * \brief The CreateIPSetResponse class encapsulates WAF CreateIPSet responses.
+ * \brief The CreateIPSetResponse class provides an interace for WAF CreateIPSet responses.
  *
  * \ingroup WAF
  *

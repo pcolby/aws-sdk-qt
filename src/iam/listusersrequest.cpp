@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListUsersRequest
  *
- * \brief The ListUsersRequest class encapsulates IAM ListUsers requests.
+ * \brief The ListUsersRequest class provides an interface for IAM ListUsers requests.
  *
  * \ingroup IAM
  *

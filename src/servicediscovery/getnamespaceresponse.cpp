@@ -30,7 +30,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::GetNamespaceResponse
  *
- * \brief The GetNamespaceResponse class encapsulates ServiceDiscovery GetNamespace responses.
+ * \brief The GetNamespaceResponse class provides an interace for ServiceDiscovery GetNamespace responses.
  *
  * \ingroup ServiceDiscovery
  *

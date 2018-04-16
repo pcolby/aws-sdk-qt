@@ -26,7 +26,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::STSRequest
  *
- * \brief The STSRequest class is the base class for all STS requests.
+ * \brief The STSRequest class provides an interface for STS requests.
  *
  * \ingroup STS
  */

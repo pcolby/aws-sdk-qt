@@ -12,7 +12,7 @@ namespace {{NameSpaceName}} {
 /*!
  * \class QtAws::{{NameSpaceName}}::{{ClassName}}
  *
- * \brief The {{ClassName}} class encapsulates {{ServiceName}} {{OperationName}} responses.
+ * \brief The {{ClassName}} class provides an interace for {{ServiceName}} {{OperationName}} responses.
  *
  * \ingroup {{NameSpaceName}}
  *

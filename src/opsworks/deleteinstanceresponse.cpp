@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeleteInstanceResponse
  *
- * \brief The DeleteInstanceResponse class encapsulates OpsWorks DeleteInstance responses.
+ * \brief The DeleteInstanceResponse class provides an interace for OpsWorks DeleteInstance responses.
  *
  * \ingroup OpsWorks
  *

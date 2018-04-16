@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::UpdateProfileRequest
  *
- * \brief The UpdateProfileRequest class encapsulates AlexaForBusiness UpdateProfile requests.
+ * \brief The UpdateProfileRequest class provides an interface for AlexaForBusiness UpdateProfile requests.
  *
  * \ingroup AlexaForBusiness
  *

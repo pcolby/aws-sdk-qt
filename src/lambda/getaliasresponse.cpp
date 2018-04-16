@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::GetAliasResponse
  *
- * \brief The GetAliasResponse class encapsulates Lambda GetAlias responses.
+ * \brief The GetAliasResponse class provides an interace for Lambda GetAlias responses.
  *
  * \ingroup Lambda
  *

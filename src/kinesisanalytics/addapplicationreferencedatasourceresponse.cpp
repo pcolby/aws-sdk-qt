@@ -30,7 +30,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::AddApplicationReferenceDataSourceResponse
  *
- * \brief The AddApplicationReferenceDataSourceResponse class encapsulates KinesisAnalytics AddApplicationReferenceDataSource responses.
+ * \brief The AddApplicationReferenceDataSourceResponse class provides an interace for KinesisAnalytics AddApplicationReferenceDataSource responses.
  *
  * \ingroup KinesisAnalytics
  *

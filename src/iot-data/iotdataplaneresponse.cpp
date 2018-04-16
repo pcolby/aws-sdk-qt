@@ -29,7 +29,7 @@ namespace IoTDataPlane {
 /*!
  * \class QtAws::IoTDataPlane::IoTDataPlaneResponse
  *
- * \brief The IoTDataPlaneResponse class is the base class for all IoTDataPlane responses.
+ * \brief The IoTDataPlaneResponse class provides an interface for IoTDataPlane responses.
  *
  * \ingroup IoTDataPlane
  */

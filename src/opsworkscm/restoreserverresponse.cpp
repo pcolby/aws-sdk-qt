@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::RestoreServerResponse
  *
- * \brief The RestoreServerResponse class encapsulates OpsWorksCM RestoreServer responses.
+ * \brief The RestoreServerResponse class provides an interace for OpsWorksCM RestoreServer responses.
  *
  * \ingroup OpsWorksCM
  *

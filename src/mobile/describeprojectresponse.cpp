@@ -30,7 +30,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::DescribeProjectResponse
  *
- * \brief The DescribeProjectResponse class encapsulates Mobile DescribeProject responses.
+ * \brief The DescribeProjectResponse class provides an interace for Mobile DescribeProject responses.
  *
  * \ingroup Mobile
  *

@@ -30,7 +30,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::DeleteScalingPolicyResponse
  *
- * \brief The DeleteScalingPolicyResponse class encapsulates ApplicationAutoScaling DeleteScalingPolicy responses.
+ * \brief The DeleteScalingPolicyResponse class provides an interace for ApplicationAutoScaling DeleteScalingPolicy responses.
  *
  * \ingroup ApplicationAutoScaling
  *

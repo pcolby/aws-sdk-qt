@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::UpdateResolverRequest
  *
- * \brief The UpdateResolverRequest class encapsulates AppSync UpdateResolver requests.
+ * \brief The UpdateResolverRequest class provides an interface for AppSync UpdateResolver requests.
  *
  * \ingroup AppSync
  *

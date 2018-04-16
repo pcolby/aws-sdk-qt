@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::ChangeMessageVisibilityBatchRequest
  *
- * \brief The ChangeMessageVisibilityBatchRequest class encapsulates SQS ChangeMessageVisibilityBatch requests.
+ * \brief The ChangeMessageVisibilityBatchRequest class provides an interface for SQS ChangeMessageVisibilityBatch requests.
  *
  * \ingroup SQS
  *

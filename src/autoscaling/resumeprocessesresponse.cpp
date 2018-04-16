@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::ResumeProcessesResponse
  *
- * \brief The ResumeProcessesResponse class encapsulates AutoScaling ResumeProcesses responses.
+ * \brief The ResumeProcessesResponse class provides an interace for AutoScaling ResumeProcesses responses.
  *
  * \ingroup AutoScaling
  *

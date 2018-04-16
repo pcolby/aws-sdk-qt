@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeregisterTargetFromMaintenanceWindowRequest
  *
- * \brief The DeregisterTargetFromMaintenanceWindowRequest class encapsulates SSM DeregisterTargetFromMaintenanceWindow requests.
+ * \brief The DeregisterTargetFromMaintenanceWindowRequest class provides an interface for SSM DeregisterTargetFromMaintenanceWindow requests.
  *
  * \ingroup SSM
  *

@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeNotificationConfigurationsResponse
  *
- * \brief The DescribeNotificationConfigurationsResponse class encapsulates AutoScaling DescribeNotificationConfigurations responses.
+ * \brief The DescribeNotificationConfigurationsResponse class provides an interace for AutoScaling DescribeNotificationConfigurations responses.
  *
  * \ingroup AutoScaling
  *

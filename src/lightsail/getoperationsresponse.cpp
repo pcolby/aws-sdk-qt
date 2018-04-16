@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetOperationsResponse
  *
- * \brief The GetOperationsResponse class encapsulates Lightsail GetOperations responses.
+ * \brief The GetOperationsResponse class provides an interace for Lightsail GetOperations responses.
  *
  * \ingroup Lightsail
  *

@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DeleteDirectoryConfigResponse
  *
- * \brief The DeleteDirectoryConfigResponse class encapsulates AppStream DeleteDirectoryConfig responses.
+ * \brief The DeleteDirectoryConfigResponse class provides an interace for AppStream DeleteDirectoryConfig responses.
  *
  * \ingroup AppStream
  *

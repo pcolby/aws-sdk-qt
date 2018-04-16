@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::RegisterContainerInstanceRequest
  *
- * \brief The RegisterContainerInstanceRequest class encapsulates ECS RegisterContainerInstance requests.
+ * \brief The RegisterContainerInstanceRequest class provides an interface for ECS RegisterContainerInstance requests.
  *
  * \ingroup ECS
  *

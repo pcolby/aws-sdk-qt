@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::UntagResourceResponse
  *
- * \brief The UntagResourceResponse class encapsulates CloudFront UntagResource responses.
+ * \brief The UntagResourceResponse class provides an interace for CloudFront UntagResource responses.
  *
  * \ingroup CloudFront
  *

@@ -28,7 +28,7 @@ namespace Firehose {
 /*!
  * \class QtAws::Firehose::DeleteDeliveryStreamRequest
  *
- * \brief The DeleteDeliveryStreamRequest class encapsulates Firehose DeleteDeliveryStream requests.
+ * \brief The DeleteDeliveryStreamRequest class provides an interface for Firehose DeleteDeliveryStream requests.
  *
  * \ingroup Firehose
  *

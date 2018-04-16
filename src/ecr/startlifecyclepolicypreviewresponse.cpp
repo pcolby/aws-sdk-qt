@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::StartLifecyclePolicyPreviewResponse
  *
- * \brief The StartLifecyclePolicyPreviewResponse class encapsulates ECR StartLifecyclePolicyPreview responses.
+ * \brief The StartLifecyclePolicyPreviewResponse class provides an interace for ECR StartLifecyclePolicyPreview responses.
  *
  * \ingroup ECR
  *

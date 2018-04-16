@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::RevokeClusterSecurityGroupIngressRequest
  *
- * \brief The RevokeClusterSecurityGroupIngressRequest class encapsulates Redshift RevokeClusterSecurityGroupIngress requests.
+ * \brief The RevokeClusterSecurityGroupIngressRequest class provides an interface for Redshift RevokeClusterSecurityGroupIngress requests.
  *
  * \ingroup Redshift
  *

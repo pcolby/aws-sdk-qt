@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::ArchiveFindingsRequest
  *
- * \brief The ArchiveFindingsRequest class encapsulates GuardDuty ArchiveFindings requests.
+ * \brief The ArchiveFindingsRequest class provides an interface for GuardDuty ArchiveFindings requests.
  *
  * \ingroup GuardDuty
  *

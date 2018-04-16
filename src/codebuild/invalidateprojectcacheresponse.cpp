@@ -30,7 +30,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::InvalidateProjectCacheResponse
  *
- * \brief The InvalidateProjectCacheResponse class encapsulates CodeBuild InvalidateProjectCache responses.
+ * \brief The InvalidateProjectCacheResponse class provides an interace for CodeBuild InvalidateProjectCache responses.
  *
  * \ingroup CodeBuild
  *

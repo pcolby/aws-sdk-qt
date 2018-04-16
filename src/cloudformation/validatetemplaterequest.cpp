@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ValidateTemplateRequest
  *
- * \brief The ValidateTemplateRequest class encapsulates CloudFormation ValidateTemplate requests.
+ * \brief The ValidateTemplateRequest class provides an interface for CloudFormation ValidateTemplate requests.
  *
  * \ingroup CloudFormation
  *

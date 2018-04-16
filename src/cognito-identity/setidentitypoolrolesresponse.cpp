@@ -30,7 +30,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::SetIdentityPoolRolesResponse
  *
- * \brief The SetIdentityPoolRolesResponse class encapsulates CognitoIdentity SetIdentityPoolRoles responses.
+ * \brief The SetIdentityPoolRolesResponse class provides an interace for CognitoIdentity SetIdentityPoolRoles responses.
  *
  * \ingroup CognitoIdentity
  *

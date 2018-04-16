@@ -49,7 +49,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::ImportExportClient
  *
- * \brief The ImportExportClient class provides access the AWS Import/Export service.
+ * \brief The ImportExportClient class provides access to the AWS Import/Export service.
  *
  * \ingroup ImportExport
  *

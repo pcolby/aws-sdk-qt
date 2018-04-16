@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DescribeTimeToLiveResponse
  *
- * \brief The DescribeTimeToLiveResponse class encapsulates DynamoDB DescribeTimeToLive responses.
+ * \brief The DescribeTimeToLiveResponse class provides an interace for DynamoDB DescribeTimeToLive responses.
  *
  * \ingroup DynamoDB
  *

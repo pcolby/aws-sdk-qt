@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteDevEndpointResponse
  *
- * \brief The DeleteDevEndpointResponse class encapsulates Glue DeleteDevEndpoint responses.
+ * \brief The DeleteDevEndpointResponse class provides an interace for Glue DeleteDevEndpoint responses.
  *
  * \ingroup Glue
  *

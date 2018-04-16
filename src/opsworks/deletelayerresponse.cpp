@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DeleteLayerResponse
  *
- * \brief The DeleteLayerResponse class encapsulates OpsWorks DeleteLayer responses.
+ * \brief The DeleteLayerResponse class provides an interace for OpsWorks DeleteLayer responses.
  *
  * \ingroup OpsWorks
  *

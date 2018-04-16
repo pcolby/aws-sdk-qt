@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::CreateReplicationInstanceRequest
  *
- * \brief The CreateReplicationInstanceRequest class encapsulates DatabaseMigrationService CreateReplicationInstance requests.
+ * \brief The CreateReplicationInstanceRequest class provides an interface for DatabaseMigrationService CreateReplicationInstance requests.
  *
  * \ingroup DatabaseMigrationService
  *

@@ -30,7 +30,7 @@ namespace CostExplorer {
 /*!
  * \class QtAws::CostExplorer::GetReservationUtilizationResponse
  *
- * \brief The GetReservationUtilizationResponse class encapsulates CostExplorer GetReservationUtilization responses.
+ * \brief The GetReservationUtilizationResponse class provides an interace for CostExplorer GetReservationUtilization responses.
  *
  * \ingroup CostExplorer
  *

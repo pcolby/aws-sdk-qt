@@ -49,7 +49,7 @@ namespace Health {
 /*!
  * \class QtAws::Health::HealthClient
  *
- * \brief The HealthClient class provides access the AWS Health APIs and Notifications service.
+ * \brief The HealthClient class provides access to the AWS Health APIs and Notifications service.
  *
  * \ingroup Health
  *

@@ -29,7 +29,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::SecretsManagerResponse
  *
- * \brief The SecretsManagerResponse class is the base class for all SecretsManager responses.
+ * \brief The SecretsManagerResponse class provides an interface for SecretsManager responses.
  *
  * \ingroup SecretsManager
  */

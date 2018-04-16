@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListGroupsForUserResponse
  *
- * \brief The ListGroupsForUserResponse class encapsulates IAM ListGroupsForUser responses.
+ * \brief The ListGroupsForUserResponse class provides an interace for IAM ListGroupsForUser responses.
  *
  * \ingroup IAM
  *

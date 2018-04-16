@@ -30,7 +30,7 @@ namespace CostandUsageReportService {
 /*!
  * \class QtAws::CostandUsageReportService::PutReportDefinitionResponse
  *
- * \brief The PutReportDefinitionResponse class encapsulates CostandUsageReportService PutReportDefinition responses.
+ * \brief The PutReportDefinitionResponse class provides an interace for CostandUsageReportService PutReportDefinition responses.
  *
  * \ingroup CostandUsageReportService
  *

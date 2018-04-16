@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::ApplyEnvironmentManagedActionResponse
  *
- * \brief The ApplyEnvironmentManagedActionResponse class encapsulates ElasticBeanstalk ApplyEnvironmentManagedAction responses.
+ * \brief The ApplyEnvironmentManagedActionResponse class provides an interace for ElasticBeanstalk ApplyEnvironmentManagedAction responses.
  *
  * \ingroup ElasticBeanstalk
  *

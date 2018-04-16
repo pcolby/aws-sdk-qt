@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::StopTaskRequest
  *
- * \brief The StopTaskRequest class encapsulates ECS StopTask requests.
+ * \brief The StopTaskRequest class provides an interface for ECS StopTask requests.
  *
  * \ingroup ECS
  *

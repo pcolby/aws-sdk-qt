@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::GetHostnameSuggestionRequest
  *
- * \brief The GetHostnameSuggestionRequest class encapsulates OpsWorks GetHostnameSuggestion requests.
+ * \brief The GetHostnameSuggestionRequest class provides an interface for OpsWorks GetHostnameSuggestion requests.
  *
  * \ingroup OpsWorks
  *

@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::ListEndpointsResponse
  *
- * \brief The ListEndpointsResponse class encapsulates SageMaker ListEndpoints responses.
+ * \brief The ListEndpointsResponse class provides an interace for SageMaker ListEndpoints responses.
  *
  * \ingroup SageMaker
  *

@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::DescribeKeyRequest
  *
- * \brief The DescribeKeyRequest class encapsulates KMS DescribeKey requests.
+ * \brief The DescribeKeyRequest class provides an interface for KMS DescribeKey requests.
  *
  * \ingroup KMS
  *

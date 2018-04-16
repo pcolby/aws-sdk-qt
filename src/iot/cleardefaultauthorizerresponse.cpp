@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ClearDefaultAuthorizerResponse
  *
- * \brief The ClearDefaultAuthorizerResponse class encapsulates IoT ClearDefaultAuthorizer responses.
+ * \brief The ClearDefaultAuthorizerResponse class provides an interace for IoT ClearDefaultAuthorizer responses.
  *
  * \ingroup IoT
  *

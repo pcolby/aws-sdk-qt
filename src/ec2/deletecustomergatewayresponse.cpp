@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteCustomerGatewayResponse
  *
- * \brief The DeleteCustomerGatewayResponse class encapsulates EC2 DeleteCustomerGateway responses.
+ * \brief The DeleteCustomerGatewayResponse class provides an interace for EC2 DeleteCustomerGateway responses.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::DeleteLoggerDefinitionRequest
  *
- * \brief The DeleteLoggerDefinitionRequest class encapsulates Greengrass DeleteLoggerDefinition requests.
+ * \brief The DeleteLoggerDefinitionRequest class provides an interface for Greengrass DeleteLoggerDefinition requests.
  *
  * \ingroup Greengrass
  *

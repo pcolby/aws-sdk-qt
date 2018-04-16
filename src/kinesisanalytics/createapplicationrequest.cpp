@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::CreateApplicationRequest
  *
- * \brief The CreateApplicationRequest class encapsulates KinesisAnalytics CreateApplication requests.
+ * \brief The CreateApplicationRequest class provides an interface for KinesisAnalytics CreateApplication requests.
  *
  * \ingroup KinesisAnalytics
  *

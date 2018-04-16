@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::PublishResponse
  *
- * \brief The PublishResponse class encapsulates SNS Publish responses.
+ * \brief The PublishResponse class provides an interace for SNS Publish responses.
  *
  * \ingroup SNS
  *

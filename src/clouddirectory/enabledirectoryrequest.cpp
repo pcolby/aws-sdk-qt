@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::EnableDirectoryRequest
  *
- * \brief The EnableDirectoryRequest class encapsulates CloudDirectory EnableDirectory requests.
+ * \brief The EnableDirectoryRequest class provides an interface for CloudDirectory EnableDirectory requests.
  *
  * \ingroup CloudDirectory
  *

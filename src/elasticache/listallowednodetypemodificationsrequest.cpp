@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ListAllowedNodeTypeModificationsRequest
  *
- * \brief The ListAllowedNodeTypeModificationsRequest class encapsulates ElastiCache ListAllowedNodeTypeModifications requests.
+ * \brief The ListAllowedNodeTypeModificationsRequest class provides an interface for ElastiCache ListAllowedNodeTypeModifications requests.
  *
  * \ingroup ElastiCache
  *

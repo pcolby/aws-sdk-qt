@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateAssumeRolePolicyResponse
  *
- * \brief The UpdateAssumeRolePolicyResponse class encapsulates IAM UpdateAssumeRolePolicy responses.
+ * \brief The UpdateAssumeRolePolicyResponse class provides an interace for IAM UpdateAssumeRolePolicy responses.
  *
  * \ingroup IAM
  *

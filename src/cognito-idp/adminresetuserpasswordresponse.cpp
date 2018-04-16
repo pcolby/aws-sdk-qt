@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminResetUserPasswordResponse
  *
- * \brief The AdminResetUserPasswordResponse class encapsulates CognitoIdentityProvider AdminResetUserPassword responses.
+ * \brief The AdminResetUserPasswordResponse class provides an interace for CognitoIdentityProvider AdminResetUserPassword responses.
  *
  * \ingroup CognitoIdentityProvider
  *

@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::DescribeComputeEnvironmentsResponse
  *
- * \brief The DescribeComputeEnvironmentsResponse class encapsulates Batch DescribeComputeEnvironments responses.
+ * \brief The DescribeComputeEnvironmentsResponse class provides an interace for Batch DescribeComputeEnvironments responses.
  *
  * \ingroup Batch
  *

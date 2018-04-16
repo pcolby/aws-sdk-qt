@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::DeleteRepositoryRequest
  *
- * \brief The DeleteRepositoryRequest class encapsulates ECR DeleteRepository requests.
+ * \brief The DeleteRepositoryRequest class provides an interface for ECR DeleteRepository requests.
  *
  * \ingroup ECR
  *

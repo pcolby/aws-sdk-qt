@@ -26,7 +26,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::ECRRequest
  *
- * \brief The ECRRequest class is the base class for all ECR requests.
+ * \brief The ECRRequest class provides an interface for ECR requests.
  *
  * \ingroup ECR
  */

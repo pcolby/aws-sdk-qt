@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::UnassignPrivateIpAddressesRequest
  *
- * \brief The UnassignPrivateIpAddressesRequest class encapsulates EC2 UnassignPrivateIpAddresses requests.
+ * \brief The UnassignPrivateIpAddressesRequest class provides an interface for EC2 UnassignPrivateIpAddresses requests.
  *
  * \ingroup EC2
  *

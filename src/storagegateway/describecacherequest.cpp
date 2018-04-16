@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeCacheRequest
  *
- * \brief The DescribeCacheRequest class encapsulates StorageGateway DescribeCache requests.
+ * \brief The DescribeCacheRequest class provides an interface for StorageGateway DescribeCache requests.
  *
  * \ingroup StorageGateway
  *

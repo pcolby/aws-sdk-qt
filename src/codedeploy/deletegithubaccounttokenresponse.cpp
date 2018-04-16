@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::DeleteGitHubAccountTokenResponse
  *
- * \brief The DeleteGitHubAccountTokenResponse class encapsulates CodeDeploy DeleteGitHubAccountToken responses.
+ * \brief The DeleteGitHubAccountTokenResponse class provides an interace for CodeDeploy DeleteGitHubAccountToken responses.
  *
  * \ingroup CodeDeploy
  *

@@ -30,7 +30,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::AddCommunicationToCaseResponse
  *
- * \brief The AddCommunicationToCaseResponse class encapsulates Support AddCommunicationToCase responses.
+ * \brief The AddCommunicationToCaseResponse class provides an interace for Support AddCommunicationToCase responses.
  *
  * \ingroup Support
  *

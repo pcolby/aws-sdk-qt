@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetSubnetsRequest
  *
- * \brief The SetSubnetsRequest class encapsulates ElasticLoadBalancingv2 SetSubnets requests.
+ * \brief The SetSubnetsRequest class provides an interface for ElasticLoadBalancingv2 SetSubnets requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

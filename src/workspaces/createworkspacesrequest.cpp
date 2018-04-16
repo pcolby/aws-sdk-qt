@@ -28,7 +28,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::CreateWorkspacesRequest
  *
- * \brief The CreateWorkspacesRequest class encapsulates WorkSpaces CreateWorkspaces requests.
+ * \brief The CreateWorkspacesRequest class provides an interface for WorkSpaces CreateWorkspaces requests.
  *
  * \ingroup WorkSpaces
  *

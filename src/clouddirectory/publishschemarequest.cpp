@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::PublishSchemaRequest
  *
- * \brief The PublishSchemaRequest class encapsulates CloudDirectory PublishSchema requests.
+ * \brief The PublishSchemaRequest class provides an interface for CloudDirectory PublishSchema requests.
  *
  * \ingroup CloudDirectory
  *

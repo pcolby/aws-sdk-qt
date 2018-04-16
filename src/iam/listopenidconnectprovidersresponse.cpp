@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListOpenIDConnectProvidersResponse
  *
- * \brief The ListOpenIDConnectProvidersResponse class encapsulates IAM ListOpenIDConnectProviders responses.
+ * \brief The ListOpenIDConnectProvidersResponse class provides an interace for IAM ListOpenIDConnectProviders responses.
  *
  * \ingroup IAM
  *

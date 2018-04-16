@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteSAMLProviderRequest
  *
- * \brief The DeleteSAMLProviderRequest class encapsulates IAM DeleteSAMLProvider requests.
+ * \brief The DeleteSAMLProviderRequest class provides an interface for IAM DeleteSAMLProvider requests.
  *
  * \ingroup IAM
  *

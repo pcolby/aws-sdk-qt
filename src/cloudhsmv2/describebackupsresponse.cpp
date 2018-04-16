@@ -30,7 +30,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::DescribeBackupsResponse
  *
- * \brief The DescribeBackupsResponse class encapsulates CloudHSMV2 DescribeBackups responses.
+ * \brief The DescribeBackupsResponse class provides an interace for CloudHSMV2 DescribeBackups responses.
  *
  * \ingroup CloudHSMV2
  *

@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ResetCacheRequest
  *
- * \brief The ResetCacheRequest class encapsulates StorageGateway ResetCache requests.
+ * \brief The ResetCacheRequest class provides an interface for StorageGateway ResetCache requests.
  *
  * \ingroup StorageGateway
  *

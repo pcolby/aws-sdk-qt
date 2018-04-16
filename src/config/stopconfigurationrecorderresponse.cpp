@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::StopConfigurationRecorderResponse
  *
- * \brief The StopConfigurationRecorderResponse class encapsulates ConfigService StopConfigurationRecorder responses.
+ * \brief The StopConfigurationRecorderResponse class provides an interace for ConfigService StopConfigurationRecorder responses.
  *
  * \ingroup ConfigService
  *

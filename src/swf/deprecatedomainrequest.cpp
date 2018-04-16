@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::DeprecateDomainRequest
  *
- * \brief The DeprecateDomainRequest class encapsulates SWF DeprecateDomain requests.
+ * \brief The DeprecateDomainRequest class provides an interface for SWF DeprecateDomain requests.
  *
  * \ingroup SWF
  *

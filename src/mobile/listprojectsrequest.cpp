@@ -28,7 +28,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::ListProjectsRequest
  *
- * \brief The ListProjectsRequest class encapsulates Mobile ListProjects requests.
+ * \brief The ListProjectsRequest class provides an interface for Mobile ListProjects requests.
  *
  * \ingroup Mobile
  *

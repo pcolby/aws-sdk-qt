@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::ListImagesResponse
  *
- * \brief The ListImagesResponse class encapsulates ECR ListImages responses.
+ * \brief The ListImagesResponse class provides an interace for ECR ListImages responses.
  *
  * \ingroup ECR
  *

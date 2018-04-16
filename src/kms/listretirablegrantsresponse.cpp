@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ListRetirableGrantsResponse
  *
- * \brief The ListRetirableGrantsResponse class encapsulates KMS ListRetirableGrants responses.
+ * \brief The ListRetirableGrantsResponse class provides an interace for KMS ListRetirableGrants responses.
  *
  * \ingroup KMS
  *

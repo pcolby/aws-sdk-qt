@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::PublishSchemaResponse
  *
- * \brief The PublishSchemaResponse class encapsulates CloudDirectory PublishSchema responses.
+ * \brief The PublishSchemaResponse class provides an interace for CloudDirectory PublishSchema responses.
  *
  * \ingroup CloudDirectory
  *

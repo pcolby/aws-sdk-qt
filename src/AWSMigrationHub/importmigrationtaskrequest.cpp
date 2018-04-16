@@ -28,7 +28,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::ImportMigrationTaskRequest
  *
- * \brief The ImportMigrationTaskRequest class encapsulates MigrationHub ImportMigrationTask requests.
+ * \brief The ImportMigrationTaskRequest class provides an interface for MigrationHub ImportMigrationTask requests.
  *
  * \ingroup MigrationHub
  *

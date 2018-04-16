@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetDomainRequest
  *
- * \brief The GetDomainRequest class encapsulates Lightsail GetDomain requests.
+ * \brief The GetDomainRequest class provides an interface for Lightsail GetDomain requests.
  *
  * \ingroup Lightsail
  *

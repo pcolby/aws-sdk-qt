@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteGroupRequest
  *
- * \brief The DeleteGroupRequest class encapsulates IAM DeleteGroup requests.
+ * \brief The DeleteGroupRequest class provides an interface for IAM DeleteGroup requests.
  *
  * \ingroup IAM
  *

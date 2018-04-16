@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::StopGameSessionPlacementRequest
  *
- * \brief The StopGameSessionPlacementRequest class encapsulates GameLift StopGameSessionPlacement requests.
+ * \brief The StopGameSessionPlacementRequest class provides an interface for GameLift StopGameSessionPlacement requests.
  *
  * \ingroup GameLift
  *

@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DiscoverPollEndpointResponse
  *
- * \brief The DiscoverPollEndpointResponse class encapsulates ECS DiscoverPollEndpoint responses.
+ * \brief The DiscoverPollEndpointResponse class provides an interace for ECS DiscoverPollEndpoint responses.
  *
  * \ingroup ECS
  *

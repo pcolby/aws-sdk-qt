@@ -30,7 +30,7 @@ namespace LexRuntimeService {
 /*!
  * \class QtAws::LexRuntimeService::PostContentResponse
  *
- * \brief The PostContentResponse class encapsulates LexRuntimeService PostContent responses.
+ * \brief The PostContentResponse class provides an interace for LexRuntimeService PostContent responses.
  *
  * \ingroup LexRuntimeService
  *

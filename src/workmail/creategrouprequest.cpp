@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::CreateGroupRequest
  *
- * \brief The CreateGroupRequest class encapsulates WorkMail CreateGroup requests.
+ * \brief The CreateGroupRequest class provides an interface for WorkMail CreateGroup requests.
  *
  * \ingroup WorkMail
  *

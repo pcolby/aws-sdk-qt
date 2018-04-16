@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::DeleteRepositoryResponse
  *
- * \brief The DeleteRepositoryResponse class encapsulates ECR DeleteRepository responses.
+ * \brief The DeleteRepositoryResponse class provides an interace for ECR DeleteRepository responses.
  *
  * \ingroup ECR
  *

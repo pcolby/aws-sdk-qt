@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::RemoveClientIDFromOpenIDConnectProviderResponse
  *
- * \brief The RemoveClientIDFromOpenIDConnectProviderResponse class encapsulates IAM RemoveClientIDFromOpenIDConnectProvider responses.
+ * \brief The RemoveClientIDFromOpenIDConnectProviderResponse class provides an interace for IAM RemoveClientIDFromOpenIDConnectProvider responses.
  *
  * \ingroup IAM
  *

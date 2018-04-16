@@ -28,7 +28,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::TagCertificateAuthorityRequest
  *
- * \brief The TagCertificateAuthorityRequest class encapsulates ACMPCA TagCertificateAuthority requests.
+ * \brief The TagCertificateAuthorityRequest class provides an interface for ACMPCA TagCertificateAuthority requests.
  *
  * \ingroup ACMPCA
  *

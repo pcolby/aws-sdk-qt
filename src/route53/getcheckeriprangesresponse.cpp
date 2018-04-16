@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::GetCheckerIpRangesResponse
  *
- * \brief The GetCheckerIpRangesResponse class encapsulates Route53 GetCheckerIpRanges responses.
+ * \brief The GetCheckerIpRangesResponse class provides an interace for Route53 GetCheckerIpRanges responses.
  *
  * \ingroup Route53
  *

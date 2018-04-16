@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::RegisterDomainResponse
  *
- * \brief The RegisterDomainResponse class encapsulates SWF RegisterDomain responses.
+ * \brief The RegisterDomainResponse class provides an interace for SWF RegisterDomain responses.
  *
  * \ingroup SWF
  *

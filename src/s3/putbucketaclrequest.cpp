@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketAclRequest
  *
- * \brief The PutBucketAclRequest class encapsulates S3 PutBucketAcl requests.
+ * \brief The PutBucketAclRequest class provides an interface for S3 PutBucketAcl requests.
  *
  * \ingroup S3
  *

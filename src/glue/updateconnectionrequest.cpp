@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateConnectionRequest
  *
- * \brief The UpdateConnectionRequest class encapsulates Glue UpdateConnection requests.
+ * \brief The UpdateConnectionRequest class provides an interface for Glue UpdateConnection requests.
  *
  * \ingroup Glue
  *

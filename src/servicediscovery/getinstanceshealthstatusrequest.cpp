@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::GetInstancesHealthStatusRequest
  *
- * \brief The GetInstancesHealthStatusRequest class encapsulates ServiceDiscovery GetInstancesHealthStatus requests.
+ * \brief The GetInstancesHealthStatusRequest class provides an interface for ServiceDiscovery GetInstancesHealthStatus requests.
  *
  * \ingroup ServiceDiscovery
  *

@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::AddTagsResponse
  *
- * \brief The AddTagsResponse class encapsulates MachineLearning AddTags responses.
+ * \brief The AddTagsResponse class provides an interace for MachineLearning AddTags responses.
  *
  * \ingroup MachineLearning
  *

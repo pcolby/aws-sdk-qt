@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeRaidArraysRequest
  *
- * \brief The DescribeRaidArraysRequest class encapsulates OpsWorks DescribeRaidArrays requests.
+ * \brief The DescribeRaidArraysRequest class provides an interface for OpsWorks DescribeRaidArrays requests.
  *
  * \ingroup OpsWorks
  *

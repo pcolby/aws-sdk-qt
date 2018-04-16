@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::DescribeSecretRequest
  *
- * \brief The DescribeSecretRequest class encapsulates SecretsManager DescribeSecret requests.
+ * \brief The DescribeSecretRequest class provides an interface for SecretsManager DescribeSecret requests.
  *
  * \ingroup SecretsManager
  *

@@ -29,7 +29,7 @@ namespace DynamoDBStreams {
 /*!
  * \class QtAws::DynamoDBStreams::DynamoDBStreamsResponse
  *
- * \brief The DynamoDBStreamsResponse class is the base class for all DynamoDBStreams responses.
+ * \brief The DynamoDBStreamsResponse class provides an interface for DynamoDBStreams responses.
  *
  * \ingroup DynamoDBStreams
  */

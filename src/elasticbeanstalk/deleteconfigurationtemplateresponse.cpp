@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DeleteConfigurationTemplateResponse
  *
- * \brief The DeleteConfigurationTemplateResponse class encapsulates ElasticBeanstalk DeleteConfigurationTemplate responses.
+ * \brief The DeleteConfigurationTemplateResponse class provides an interace for ElasticBeanstalk DeleteConfigurationTemplate responses.
  *
  * \ingroup ElasticBeanstalk
  *

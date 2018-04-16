@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::ListFacesResponse
  *
- * \brief The ListFacesResponse class encapsulates Rekognition ListFaces responses.
+ * \brief The ListFacesResponse class provides an interace for Rekognition ListFaces responses.
  *
  * \ingroup Rekognition
  *

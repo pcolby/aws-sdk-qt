@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::CompleteLifecycleActionRequest
  *
- * \brief The CompleteLifecycleActionRequest class encapsulates AutoScaling CompleteLifecycleAction requests.
+ * \brief The CompleteLifecycleActionRequest class provides an interface for AutoScaling CompleteLifecycleAction requests.
  *
  * \ingroup AutoScaling
  *

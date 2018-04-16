@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeliverConfigSnapshotRequest
  *
- * \brief The DeliverConfigSnapshotRequest class encapsulates ConfigService DeliverConfigSnapshot requests.
+ * \brief The DeliverConfigSnapshotRequest class provides an interface for ConfigService DeliverConfigSnapshot requests.
  *
  * \ingroup ConfigService
  *

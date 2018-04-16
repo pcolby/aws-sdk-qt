@@ -30,7 +30,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ListTagsForResourceResponse
  *
- * \brief The ListTagsForResourceResponse class encapsulates RDS ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class provides an interace for RDS ListTagsForResource responses.
  *
  * \ingroup RDS
  *

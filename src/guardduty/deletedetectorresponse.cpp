@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DeleteDetectorResponse
  *
- * \brief The DeleteDetectorResponse class encapsulates GuardDuty DeleteDetector responses.
+ * \brief The DeleteDetectorResponse class provides an interace for GuardDuty DeleteDetector responses.
  *
  * \ingroup GuardDuty
  *

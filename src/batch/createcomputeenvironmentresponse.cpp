@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::CreateComputeEnvironmentResponse
  *
- * \brief The CreateComputeEnvironmentResponse class encapsulates Batch CreateComputeEnvironment responses.
+ * \brief The CreateComputeEnvironmentResponse class provides an interace for Batch CreateComputeEnvironment responses.
  *
  * \ingroup Batch
  *

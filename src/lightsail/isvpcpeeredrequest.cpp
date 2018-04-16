@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::IsVpcPeeredRequest
  *
- * \brief The IsVpcPeeredRequest class encapsulates Lightsail IsVpcPeered requests.
+ * \brief The IsVpcPeeredRequest class provides an interface for Lightsail IsVpcPeered requests.
  *
  * \ingroup Lightsail
  *

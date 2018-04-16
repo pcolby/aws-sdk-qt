@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::ReorderReceiptRuleSetResponse
  *
- * \brief The ReorderReceiptRuleSetResponse class encapsulates SES ReorderReceiptRuleSet responses.
+ * \brief The ReorderReceiptRuleSetResponse class provides an interace for SES ReorderReceiptRuleSet responses.
  *
  * \ingroup SES
  *

@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::ListSkillsRequest
  *
- * \brief The ListSkillsRequest class encapsulates AlexaForBusiness ListSkills requests.
+ * \brief The ListSkillsRequest class provides an interface for AlexaForBusiness ListSkills requests.
  *
  * \ingroup AlexaForBusiness
  *

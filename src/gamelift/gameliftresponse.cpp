@@ -29,7 +29,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::GameLiftResponse
  *
- * \brief The GameLiftResponse class is the base class for all GameLift responses.
+ * \brief The GameLiftResponse class provides an interface for GameLift responses.
  *
  * \ingroup GameLift
  */

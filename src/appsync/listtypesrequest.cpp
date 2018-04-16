@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::ListTypesRequest
  *
- * \brief The ListTypesRequest class encapsulates AppSync ListTypes requests.
+ * \brief The ListTypesRequest class provides an interface for AppSync ListTypes requests.
  *
  * \ingroup AppSync
  *

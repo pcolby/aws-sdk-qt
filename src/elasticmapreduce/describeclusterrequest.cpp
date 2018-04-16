@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::DescribeClusterRequest
  *
- * \brief The DescribeClusterRequest class encapsulates EMR DescribeCluster requests.
+ * \brief The DescribeClusterRequest class provides an interface for EMR DescribeCluster requests.
  *
  * \ingroup EMR
  *

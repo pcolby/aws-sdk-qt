@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ChangePasswordRequest
  *
- * \brief The ChangePasswordRequest class encapsulates IAM ChangePassword requests.
+ * \brief The ChangePasswordRequest class provides an interface for IAM ChangePassword requests.
  *
  * \ingroup IAM
  *

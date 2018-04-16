@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteCustomVerificationEmailTemplateResponse
  *
- * \brief The DeleteCustomVerificationEmailTemplateResponse class encapsulates SES DeleteCustomVerificationEmailTemplate responses.
+ * \brief The DeleteCustomVerificationEmailTemplateResponse class provides an interace for SES DeleteCustomVerificationEmailTemplate responses.
  *
  * \ingroup SES
  *

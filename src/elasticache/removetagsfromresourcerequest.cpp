@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::RemoveTagsFromResourceRequest
  *
- * \brief The RemoveTagsFromResourceRequest class encapsulates ElastiCache RemoveTagsFromResource requests.
+ * \brief The RemoveTagsFromResourceRequest class provides an interface for ElastiCache RemoveTagsFromResource requests.
  *
  * \ingroup ElastiCache
  *

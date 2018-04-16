@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::UpdateGeoMatchSetRequest
  *
- * \brief The UpdateGeoMatchSetRequest class encapsulates WAF UpdateGeoMatchSet requests.
+ * \brief The UpdateGeoMatchSetRequest class provides an interface for WAF UpdateGeoMatchSet requests.
  *
  * \ingroup WAF
  *

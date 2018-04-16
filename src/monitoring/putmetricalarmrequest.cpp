@@ -28,7 +28,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::PutMetricAlarmRequest
  *
- * \brief The PutMetricAlarmRequest class encapsulates CloudWatch PutMetricAlarm requests.
+ * \brief The PutMetricAlarmRequest class provides an interface for CloudWatch PutMetricAlarm requests.
  *
  * \ingroup CloudWatch
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyVolumeRequest
  *
- * \brief The ModifyVolumeRequest class encapsulates EC2 ModifyVolume requests.
+ * \brief The ModifyVolumeRequest class provides an interface for EC2 ModifyVolume requests.
  *
  * \ingroup EC2
  *

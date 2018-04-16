@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::UpdateIPSetRequest
  *
- * \brief The UpdateIPSetRequest class encapsulates WAFRegional UpdateIPSet requests.
+ * \brief The UpdateIPSetRequest class provides an interface for WAFRegional UpdateIPSet requests.
  *
  * \ingroup WAFRegional
  *

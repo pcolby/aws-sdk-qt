@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateJobRequest
  *
- * \brief The CreateJobRequest class encapsulates IoT CreateJob requests.
+ * \brief The CreateJobRequest class provides an interface for IoT CreateJob requests.
  *
  * \ingroup IoT
  *

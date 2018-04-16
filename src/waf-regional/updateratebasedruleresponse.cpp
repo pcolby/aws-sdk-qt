@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::UpdateRateBasedRuleResponse
  *
- * \brief The UpdateRateBasedRuleResponse class encapsulates WAFRegional UpdateRateBasedRule responses.
+ * \brief The UpdateRateBasedRuleResponse class provides an interace for WAFRegional UpdateRateBasedRule responses.
  *
  * \ingroup WAFRegional
  *

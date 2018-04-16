@@ -30,7 +30,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::GetSessionTokenResponse
  *
- * \brief The GetSessionTokenResponse class encapsulates STS GetSessionToken responses.
+ * \brief The GetSessionTokenResponse class provides an interace for STS GetSessionToken responses.
  *
  * \ingroup STS
  *

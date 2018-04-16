@@ -57,7 +57,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::Cloud9Client
  *
- * \brief The Cloud9Client class provides access the AWS Cloud9 service.
+ * \brief The Cloud9Client class provides access to the AWS Cloud9 service.
  *
  * \ingroup Cloud9
  *

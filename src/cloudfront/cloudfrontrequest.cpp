@@ -26,7 +26,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::CloudFrontRequest
  *
- * \brief The CloudFrontRequest class is the base class for all CloudFront requests.
+ * \brief The CloudFrontRequest class provides an interface for CloudFront requests.
  *
  * \ingroup CloudFront
  */

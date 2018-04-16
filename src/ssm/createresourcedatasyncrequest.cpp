@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CreateResourceDataSyncRequest
  *
- * \brief The CreateResourceDataSyncRequest class encapsulates SSM CreateResourceDataSync requests.
+ * \brief The CreateResourceDataSyncRequest class provides an interface for SSM CreateResourceDataSync requests.
  *
  * \ingroup SSM
  *

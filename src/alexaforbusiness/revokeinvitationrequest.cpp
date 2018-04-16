@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::RevokeInvitationRequest
  *
- * \brief The RevokeInvitationRequest class encapsulates AlexaForBusiness RevokeInvitation requests.
+ * \brief The RevokeInvitationRequest class provides an interface for AlexaForBusiness RevokeInvitation requests.
  *
  * \ingroup AlexaForBusiness
  *

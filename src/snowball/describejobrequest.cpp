@@ -28,7 +28,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::DescribeJobRequest
  *
- * \brief The DescribeJobRequest class encapsulates Snowball DescribeJob requests.
+ * \brief The DescribeJobRequest class provides an interface for Snowball DescribeJob requests.
  *
  * \ingroup Snowball
  *

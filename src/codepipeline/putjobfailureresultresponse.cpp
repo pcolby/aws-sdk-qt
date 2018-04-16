@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::PutJobFailureResultResponse
  *
- * \brief The PutJobFailureResultResponse class encapsulates CodePipeline PutJobFailureResult responses.
+ * \brief The PutJobFailureResultResponse class provides an interace for CodePipeline PutJobFailureResult responses.
  *
  * \ingroup CodePipeline
  *

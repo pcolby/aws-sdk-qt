@@ -30,7 +30,7 @@ namespace STS {
 /*!
  * \class QtAws::STS::GetFederationTokenResponse
  *
- * \brief The GetFederationTokenResponse class encapsulates STS GetFederationToken responses.
+ * \brief The GetFederationTokenResponse class provides an interace for STS GetFederationToken responses.
  *
  * \ingroup STS
  *

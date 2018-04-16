@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketLoggingResponse
  *
- * \brief The PutBucketLoggingResponse class encapsulates S3 PutBucketLogging responses.
+ * \brief The PutBucketLoggingResponse class provides an interace for S3 PutBucketLogging responses.
  *
  * \ingroup S3
  *

@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DescribeReservedCacheNodesResponse
  *
- * \brief The DescribeReservedCacheNodesResponse class encapsulates ElastiCache DescribeReservedCacheNodes responses.
+ * \brief The DescribeReservedCacheNodesResponse class provides an interace for ElastiCache DescribeReservedCacheNodes responses.
  *
  * \ingroup ElastiCache
  *

@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::UpdateExpirationForHITRequest
  *
- * \brief The UpdateExpirationForHITRequest class encapsulates MTurk UpdateExpirationForHIT requests.
+ * \brief The UpdateExpirationForHITRequest class provides an interface for MTurk UpdateExpirationForHIT requests.
  *
  * \ingroup MTurk
  *

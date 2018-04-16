@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeLayersResponse
  *
- * \brief The DescribeLayersResponse class encapsulates OpsWorks DescribeLayers responses.
+ * \brief The DescribeLayersResponse class provides an interace for OpsWorks DescribeLayers responses.
  *
  * \ingroup OpsWorks
  *

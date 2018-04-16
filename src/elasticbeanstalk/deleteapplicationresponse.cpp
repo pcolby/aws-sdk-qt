@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DeleteApplicationResponse
  *
- * \brief The DeleteApplicationResponse class encapsulates ElasticBeanstalk DeleteApplication responses.
+ * \brief The DeleteApplicationResponse class provides an interace for ElasticBeanstalk DeleteApplication responses.
  *
  * \ingroup ElasticBeanstalk
  *

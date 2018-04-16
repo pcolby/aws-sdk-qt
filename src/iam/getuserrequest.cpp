@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetUserRequest
  *
- * \brief The GetUserRequest class encapsulates IAM GetUser requests.
+ * \brief The GetUserRequest class provides an interface for IAM GetUser requests.
  *
  * \ingroup IAM
  *

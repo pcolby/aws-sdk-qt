@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::DisassociateVPCFromHostedZoneResponse
  *
- * \brief The DisassociateVPCFromHostedZoneResponse class encapsulates Route53 DisassociateVPCFromHostedZone responses.
+ * \brief The DisassociateVPCFromHostedZoneResponse class provides an interace for Route53 DisassociateVPCFromHostedZone responses.
  *
  * \ingroup Route53
  *

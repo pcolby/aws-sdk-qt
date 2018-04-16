@@ -30,7 +30,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::DescribeTrustedAdvisorCheckSummariesResponse
  *
- * \brief The DescribeTrustedAdvisorCheckSummariesResponse class encapsulates Support DescribeTrustedAdvisorCheckSummaries responses.
+ * \brief The DescribeTrustedAdvisorCheckSummariesResponse class provides an interace for Support DescribeTrustedAdvisorCheckSummaries responses.
  *
  * \ingroup Support
  *

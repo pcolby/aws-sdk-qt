@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeSpotPriceHistoryRequest
  *
- * \brief The DescribeSpotPriceHistoryRequest class encapsulates EC2 DescribeSpotPriceHistory requests.
+ * \brief The DescribeSpotPriceHistoryRequest class provides an interface for EC2 DescribeSpotPriceHistory requests.
  *
  * \ingroup EC2
  *

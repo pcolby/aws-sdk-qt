@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::StartPipelineExecutionRequest
  *
- * \brief The StartPipelineExecutionRequest class encapsulates CodePipeline StartPipelineExecution requests.
+ * \brief The StartPipelineExecutionRequest class provides an interface for CodePipeline StartPipelineExecution requests.
  *
  * \ingroup CodePipeline
  *

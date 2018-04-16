@@ -28,7 +28,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::AssociateAdminAccountRequest
  *
- * \brief The AssociateAdminAccountRequest class encapsulates FMS AssociateAdminAccount requests.
+ * \brief The AssociateAdminAccountRequest class provides an interface for FMS AssociateAdminAccount requests.
  *
  * \ingroup FMS
  *

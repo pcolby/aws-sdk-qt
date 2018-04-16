@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DescribeResourcePoliciesResponse
  *
- * \brief The DescribeResourcePoliciesResponse class encapsulates CloudWatchLogs DescribeResourcePolicies responses.
+ * \brief The DescribeResourcePoliciesResponse class provides an interace for CloudWatchLogs DescribeResourcePolicies responses.
  *
  * \ingroup CloudWatchLogs
  *

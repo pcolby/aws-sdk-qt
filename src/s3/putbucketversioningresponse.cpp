@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketVersioningResponse
  *
- * \brief The PutBucketVersioningResponse class encapsulates S3 PutBucketVersioning responses.
+ * \brief The PutBucketVersioningResponse class provides an interace for S3 PutBucketVersioning responses.
  *
  * \ingroup S3
  *

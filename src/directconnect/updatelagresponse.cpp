@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::UpdateLagResponse
  *
- * \brief The UpdateLagResponse class encapsulates DirectConnect UpdateLag responses.
+ * \brief The UpdateLagResponse class provides an interace for DirectConnect UpdateLag responses.
  *
  * \ingroup DirectConnect
  *

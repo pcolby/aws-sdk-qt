@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::GetBranchRequest
  *
- * \brief The GetBranchRequest class encapsulates CodeCommit GetBranch requests.
+ * \brief The GetBranchRequest class provides an interface for CodeCommit GetBranch requests.
  *
  * \ingroup CodeCommit
  *

@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::GenerateRandomResponse
  *
- * \brief The GenerateRandomResponse class encapsulates KMS GenerateRandom responses.
+ * \brief The GenerateRandomResponse class provides an interace for KMS GenerateRandom responses.
  *
  * \ingroup KMS
  *

@@ -28,7 +28,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::DescribeClustersRequest
  *
- * \brief The DescribeClustersRequest class encapsulates CloudHSMV2 DescribeClusters requests.
+ * \brief The DescribeClustersRequest class provides an interface for CloudHSMV2 DescribeClusters requests.
  *
  * \ingroup CloudHSMV2
  *

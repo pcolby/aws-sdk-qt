@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteRuleResponse
  *
- * \brief The DeleteRuleResponse class encapsulates WAF DeleteRule responses.
+ * \brief The DeleteRuleResponse class provides an interace for WAF DeleteRule responses.
  *
  * \ingroup WAF
  *

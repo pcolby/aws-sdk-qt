@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteVpnGatewayRequest
  *
- * \brief The DeleteVpnGatewayRequest class encapsulates EC2 DeleteVpnGateway requests.
+ * \brief The DeleteVpnGatewayRequest class provides an interface for EC2 DeleteVpnGateway requests.
  *
  * \ingroup EC2
  *

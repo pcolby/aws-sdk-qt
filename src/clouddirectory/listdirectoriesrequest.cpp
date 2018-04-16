@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListDirectoriesRequest
  *
- * \brief The ListDirectoriesRequest class encapsulates CloudDirectory ListDirectories requests.
+ * \brief The ListDirectoriesRequest class provides an interface for CloudDirectory ListDirectories requests.
  *
  * \ingroup CloudDirectory
  *

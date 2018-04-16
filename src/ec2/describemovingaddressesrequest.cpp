@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeMovingAddressesRequest
  *
- * \brief The DescribeMovingAddressesRequest class encapsulates EC2 DescribeMovingAddresses requests.
+ * \brief The DescribeMovingAddressesRequest class provides an interface for EC2 DescribeMovingAddresses requests.
  *
  * \ingroup EC2
  *

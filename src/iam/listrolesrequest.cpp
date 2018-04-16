@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListRolesRequest
  *
- * \brief The ListRolesRequest class encapsulates IAM ListRoles requests.
+ * \brief The ListRolesRequest class provides an interface for IAM ListRoles requests.
  *
  * \ingroup IAM
  *

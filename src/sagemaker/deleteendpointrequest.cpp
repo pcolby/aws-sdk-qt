@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DeleteEndpointRequest
  *
- * \brief The DeleteEndpointRequest class encapsulates SageMaker DeleteEndpoint requests.
+ * \brief The DeleteEndpointRequest class provides an interface for SageMaker DeleteEndpoint requests.
  *
  * \ingroup SageMaker
  *

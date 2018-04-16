@@ -30,7 +30,7 @@ namespace CostExplorer {
 /*!
  * \class QtAws::CostExplorer::GetReservationCoverageResponse
  *
- * \brief The GetReservationCoverageResponse class encapsulates CostExplorer GetReservationCoverage responses.
+ * \brief The GetReservationCoverageResponse class provides an interace for CostExplorer GetReservationCoverage responses.
  *
  * \ingroup CostExplorer
  *

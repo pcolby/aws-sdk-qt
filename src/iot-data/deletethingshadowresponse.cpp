@@ -30,7 +30,7 @@ namespace IoTDataPlane {
 /*!
  * \class QtAws::IoTDataPlane::DeleteThingShadowResponse
  *
- * \brief The DeleteThingShadowResponse class encapsulates IoTDataPlane DeleteThingShadow responses.
+ * \brief The DeleteThingShadowResponse class provides an interace for IoTDataPlane DeleteThingShadow responses.
  *
  * \ingroup IoTDataPlane
  *

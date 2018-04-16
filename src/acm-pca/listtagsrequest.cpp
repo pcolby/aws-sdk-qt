@@ -28,7 +28,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::ListTagsRequest
  *
- * \brief The ListTagsRequest class encapsulates ACMPCA ListTags requests.
+ * \brief The ListTagsRequest class provides an interface for ACMPCA ListTags requests.
  *
  * \ingroup ACMPCA
  *

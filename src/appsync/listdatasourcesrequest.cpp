@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::ListDataSourcesRequest
  *
- * \brief The ListDataSourcesRequest class encapsulates AppSync ListDataSources requests.
+ * \brief The ListDataSourcesRequest class provides an interface for AppSync ListDataSources requests.
  *
  * \ingroup AppSync
  *

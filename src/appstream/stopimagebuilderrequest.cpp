@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::StopImageBuilderRequest
  *
- * \brief The StopImageBuilderRequest class encapsulates AppStream StopImageBuilder requests.
+ * \brief The StopImageBuilderRequest class provides an interface for AppStream StopImageBuilder requests.
  *
  * \ingroup AppStream
  *

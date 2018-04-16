@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::PutItemResponse
  *
- * \brief The PutItemResponse class encapsulates DynamoDB PutItem responses.
+ * \brief The PutItemResponse class provides an interace for DynamoDB PutItem responses.
  *
  * \ingroup DynamoDB
  *

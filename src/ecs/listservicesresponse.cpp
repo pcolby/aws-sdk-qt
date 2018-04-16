@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::ListServicesResponse
  *
- * \brief The ListServicesResponse class encapsulates ECS ListServices responses.
+ * \brief The ListServicesResponse class provides an interace for ECS ListServices responses.
  *
  * \ingroup ECS
  *

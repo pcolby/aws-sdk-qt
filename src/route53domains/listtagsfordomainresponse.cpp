@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::ListTagsForDomainResponse
  *
- * \brief The ListTagsForDomainResponse class encapsulates Route53Domains ListTagsForDomain responses.
+ * \brief The ListTagsForDomainResponse class provides an interace for Route53Domains ListTagsForDomain responses.
  *
  * \ingroup Route53Domains
  *

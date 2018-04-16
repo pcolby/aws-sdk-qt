@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::ListTagsForResourcesResponse
  *
- * \brief The ListTagsForResourcesResponse class encapsulates Route53 ListTagsForResources responses.
+ * \brief The ListTagsForResourcesResponse class provides an interace for Route53 ListTagsForResources responses.
  *
  * \ingroup Route53
  *

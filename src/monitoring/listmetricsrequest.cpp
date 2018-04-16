@@ -28,7 +28,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::ListMetricsRequest
  *
- * \brief The ListMetricsRequest class encapsulates CloudWatch ListMetrics requests.
+ * \brief The ListMetricsRequest class provides an interface for CloudWatch ListMetrics requests.
  *
  * \ingroup CloudWatch
  *

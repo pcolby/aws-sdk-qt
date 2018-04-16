@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::GetTypeResponse
  *
- * \brief The GetTypeResponse class encapsulates AppSync GetType responses.
+ * \brief The GetTypeResponse class provides an interace for AppSync GetType responses.
  *
  * \ingroup AppSync
  *

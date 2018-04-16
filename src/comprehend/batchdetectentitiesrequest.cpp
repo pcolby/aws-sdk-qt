@@ -28,7 +28,7 @@ namespace Comprehend {
 /*!
  * \class QtAws::Comprehend::BatchDetectEntitiesRequest
  *
- * \brief The BatchDetectEntitiesRequest class encapsulates Comprehend BatchDetectEntities requests.
+ * \brief The BatchDetectEntitiesRequest class provides an interface for Comprehend BatchDetectEntities requests.
  *
  * \ingroup Comprehend
  *

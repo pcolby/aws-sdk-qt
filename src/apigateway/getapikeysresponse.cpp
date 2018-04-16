@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetApiKeysResponse
  *
- * \brief The GetApiKeysResponse class encapsulates APIGateway GetApiKeys responses.
+ * \brief The GetApiKeysResponse class provides an interace for APIGateway GetApiKeys responses.
  *
  * \ingroup APIGateway
  *

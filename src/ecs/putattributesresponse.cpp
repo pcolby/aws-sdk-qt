@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::PutAttributesResponse
  *
- * \brief The PutAttributesResponse class encapsulates ECS PutAttributes responses.
+ * \brief The PutAttributesResponse class provides an interace for ECS PutAttributes responses.
  *
  * \ingroup ECS
  *

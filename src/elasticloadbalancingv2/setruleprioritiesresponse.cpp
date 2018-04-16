@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::SetRulePrioritiesResponse
  *
- * \brief The SetRulePrioritiesResponse class encapsulates ElasticLoadBalancingv2 SetRulePriorities responses.
+ * \brief The SetRulePrioritiesResponse class provides an interace for ElasticLoadBalancingv2 SetRulePriorities responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

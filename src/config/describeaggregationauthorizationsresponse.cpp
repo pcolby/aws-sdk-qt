@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DescribeAggregationAuthorizationsResponse
  *
- * \brief The DescribeAggregationAuthorizationsResponse class encapsulates ConfigService DescribeAggregationAuthorizations responses.
+ * \brief The DescribeAggregationAuthorizationsResponse class provides an interace for ConfigService DescribeAggregationAuthorizations responses.
  *
  * \ingroup ConfigService
  *

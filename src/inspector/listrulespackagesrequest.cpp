@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::ListRulesPackagesRequest
  *
- * \brief The ListRulesPackagesRequest class encapsulates Inspector ListRulesPackages requests.
+ * \brief The ListRulesPackagesRequest class provides an interface for Inspector ListRulesPackages requests.
  *
  * \ingroup Inspector
  *

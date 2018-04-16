@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::UpdateRuntimeConfigurationRequest
  *
- * \brief The UpdateRuntimeConfigurationRequest class encapsulates GameLift UpdateRuntimeConfiguration requests.
+ * \brief The UpdateRuntimeConfigurationRequest class provides an interface for GameLift UpdateRuntimeConfiguration requests.
  *
  * \ingroup GameLift
  *

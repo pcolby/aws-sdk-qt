@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::StopInstancesResponse
  *
- * \brief The StopInstancesResponse class encapsulates EC2 StopInstances responses.
+ * \brief The StopInstancesResponse class provides an interace for EC2 StopInstances responses.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribeProvisioningParametersRequest
  *
- * \brief The DescribeProvisioningParametersRequest class encapsulates ServiceCatalog DescribeProvisioningParameters requests.
+ * \brief The DescribeProvisioningParametersRequest class provides an interface for ServiceCatalog DescribeProvisioningParameters requests.
  *
  * \ingroup ServiceCatalog
  *

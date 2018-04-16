@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::UpdateAddressBookRequest
  *
- * \brief The UpdateAddressBookRequest class encapsulates AlexaForBusiness UpdateAddressBook requests.
+ * \brief The UpdateAddressBookRequest class provides an interface for AlexaForBusiness UpdateAddressBook requests.
  *
  * \ingroup AlexaForBusiness
  *

@@ -28,7 +28,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::RotateChannelCredentialsRequest
  *
- * \brief The RotateChannelCredentialsRequest class encapsulates MediaPackage RotateChannelCredentials requests.
+ * \brief The RotateChannelCredentialsRequest class provides an interface for MediaPackage RotateChannelCredentials requests.
  *
  * \ingroup MediaPackage
  *

@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::CreateCertificateFromCsrRequest
  *
- * \brief The CreateCertificateFromCsrRequest class encapsulates IoT CreateCertificateFromCsr requests.
+ * \brief The CreateCertificateFromCsrRequest class provides an interface for IoT CreateCertificateFromCsr requests.
  *
  * \ingroup IoT
  *

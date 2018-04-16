@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::ListRepositoriesResponse
  *
- * \brief The ListRepositoriesResponse class encapsulates CodeCommit ListRepositories responses.
+ * \brief The ListRepositoriesResponse class provides an interace for CodeCommit ListRepositories responses.
  *
  * \ingroup CodeCommit
  *

@@ -28,7 +28,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::InvalidateProjectCacheRequest
  *
- * \brief The InvalidateProjectCacheRequest class encapsulates CodeBuild InvalidateProjectCache requests.
+ * \brief The InvalidateProjectCacheRequest class provides an interface for CodeBuild InvalidateProjectCache requests.
  *
  * \ingroup CodeBuild
  *

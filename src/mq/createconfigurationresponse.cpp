@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::CreateConfigurationResponse
  *
- * \brief The CreateConfigurationResponse class encapsulates MQ CreateConfiguration responses.
+ * \brief The CreateConfigurationResponse class provides an interace for MQ CreateConfiguration responses.
  *
  * \ingroup MQ
  *

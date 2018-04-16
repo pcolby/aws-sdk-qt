@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeParametersRequest
  *
- * \brief The DescribeParametersRequest class encapsulates SSM DescribeParameters requests.
+ * \brief The DescribeParametersRequest class provides an interface for SSM DescribeParameters requests.
  *
  * \ingroup SSM
  *

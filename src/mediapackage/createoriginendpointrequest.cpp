@@ -28,7 +28,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::CreateOriginEndpointRequest
  *
- * \brief The CreateOriginEndpointRequest class encapsulates MediaPackage CreateOriginEndpoint requests.
+ * \brief The CreateOriginEndpointRequest class provides an interface for MediaPackage CreateOriginEndpoint requests.
  *
  * \ingroup MediaPackage
  *

@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListTopicRulesRequest
  *
- * \brief The ListTopicRulesRequest class encapsulates IoT ListTopicRules requests.
+ * \brief The ListTopicRulesRequest class provides an interface for IoT ListTopicRules requests.
  *
  * \ingroup IoT
  *

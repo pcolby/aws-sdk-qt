@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::ListTagsResponse
  *
- * \brief The ListTagsResponse class encapsulates AlexaForBusiness ListTags responses.
+ * \brief The ListTagsResponse class provides an interace for AlexaForBusiness ListTags responses.
  *
  * \ingroup AlexaForBusiness
  *

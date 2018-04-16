@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::CreateAliasResponse
  *
- * \brief The CreateAliasResponse class encapsulates WorkMail CreateAlias responses.
+ * \brief The CreateAliasResponse class provides an interace for WorkMail CreateAlias responses.
  *
  * \ingroup WorkMail
  *

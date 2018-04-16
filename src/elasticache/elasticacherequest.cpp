@@ -26,7 +26,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ElastiCacheRequest
  *
- * \brief The ElastiCacheRequest class is the base class for all ElastiCache requests.
+ * \brief The ElastiCacheRequest class provides an interface for ElastiCache requests.
  *
  * \ingroup ElastiCache
  */

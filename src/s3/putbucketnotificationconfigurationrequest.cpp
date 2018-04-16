@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::PutBucketNotificationConfigurationRequest
  *
- * \brief The PutBucketNotificationConfigurationRequest class encapsulates S3 PutBucketNotificationConfiguration requests.
+ * \brief The PutBucketNotificationConfigurationRequest class provides an interface for S3 PutBucketNotificationConfiguration requests.
  *
  * \ingroup S3
  *

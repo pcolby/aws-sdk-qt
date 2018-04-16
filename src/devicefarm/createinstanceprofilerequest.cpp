@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::CreateInstanceProfileRequest
  *
- * \brief The CreateInstanceProfileRequest class encapsulates DeviceFarm CreateInstanceProfile requests.
+ * \brief The CreateInstanceProfileRequest class provides an interface for DeviceFarm CreateInstanceProfile requests.
  *
  * \ingroup DeviceFarm
  *

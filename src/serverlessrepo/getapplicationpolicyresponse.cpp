@@ -30,7 +30,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::GetApplicationPolicyResponse
  *
- * \brief The GetApplicationPolicyResponse class encapsulates ServerlessApplicationRepository GetApplicationPolicy responses.
+ * \brief The GetApplicationPolicyResponse class provides an interace for ServerlessApplicationRepository GetApplicationPolicy responses.
  *
  * \ingroup ServerlessApplicationRepository
  *

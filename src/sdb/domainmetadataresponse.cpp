@@ -30,7 +30,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::DomainMetadataResponse
  *
- * \brief The DomainMetadataResponse class encapsulates SimpleDB DomainMetadata responses.
+ * \brief The DomainMetadataResponse class provides an interace for SimpleDB DomainMetadata responses.
  *
  * \ingroup SimpleDB
  *

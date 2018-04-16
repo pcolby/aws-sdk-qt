@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteTagsRequest
  *
- * \brief The DeleteTagsRequest class encapsulates EC2 DeleteTags requests.
+ * \brief The DeleteTagsRequest class provides an interface for EC2 DeleteTags requests.
  *
  * \ingroup EC2
  *

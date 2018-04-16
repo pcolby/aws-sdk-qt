@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::RegisterCertificateResponse
  *
- * \brief The RegisterCertificateResponse class encapsulates IoT RegisterCertificate responses.
+ * \brief The RegisterCertificateResponse class provides an interace for IoT RegisterCertificate responses.
  *
  * \ingroup IoT
  *

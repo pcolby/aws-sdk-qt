@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeleteDocumentResponse
  *
- * \brief The DeleteDocumentResponse class encapsulates SSM DeleteDocument responses.
+ * \brief The DeleteDocumentResponse class provides an interace for SSM DeleteDocument responses.
  *
  * \ingroup SSM
  *

@@ -28,7 +28,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::ListTargetsByRuleRequest
  *
- * \brief The ListTargetsByRuleRequest class encapsulates CloudWatchEvents ListTargetsByRule requests.
+ * \brief The ListTargetsByRuleRequest class provides an interface for CloudWatchEvents ListTargetsByRule requests.
  *
  * \ingroup CloudWatchEvents
  *

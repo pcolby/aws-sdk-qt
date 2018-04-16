@@ -26,7 +26,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::SNSRequest
  *
- * \brief The SNSRequest class is the base class for all SNS requests.
+ * \brief The SNSRequest class provides an interface for SNS requests.
  *
  * \ingroup SNS
  */

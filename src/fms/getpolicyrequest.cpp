@@ -28,7 +28,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::GetPolicyRequest
  *
- * \brief The GetPolicyRequest class encapsulates FMS GetPolicy requests.
+ * \brief The GetPolicyRequest class provides an interface for FMS GetPolicy requests.
  *
  * \ingroup FMS
  *

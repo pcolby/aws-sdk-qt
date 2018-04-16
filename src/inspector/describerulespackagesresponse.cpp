@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::DescribeRulesPackagesResponse
  *
- * \brief The DescribeRulesPackagesResponse class encapsulates Inspector DescribeRulesPackages responses.
+ * \brief The DescribeRulesPackagesResponse class provides an interace for Inspector DescribeRulesPackages responses.
  *
  * \ingroup Inspector
  *

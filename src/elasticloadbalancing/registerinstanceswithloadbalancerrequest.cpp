@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::RegisterInstancesWithLoadBalancerRequest
  *
- * \brief The RegisterInstancesWithLoadBalancerRequest class encapsulates ElasticLoadBalancing RegisterInstancesWithLoadBalancer requests.
+ * \brief The RegisterInstancesWithLoadBalancerRequest class provides an interface for ElasticLoadBalancing RegisterInstancesWithLoadBalancer requests.
  *
  * \ingroup ElasticLoadBalancing
  *

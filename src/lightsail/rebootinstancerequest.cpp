@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::RebootInstanceRequest
  *
- * \brief The RebootInstanceRequest class encapsulates Lightsail RebootInstance requests.
+ * \brief The RebootInstanceRequest class provides an interface for Lightsail RebootInstance requests.
  *
  * \ingroup Lightsail
  *

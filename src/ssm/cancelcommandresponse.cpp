@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CancelCommandResponse
  *
- * \brief The CancelCommandResponse class encapsulates SSM CancelCommand responses.
+ * \brief The CancelCommandResponse class provides an interace for SSM CancelCommand responses.
  *
  * \ingroup SSM
  *

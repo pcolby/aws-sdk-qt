@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteConnectionResponse
  *
- * \brief The DeleteConnectionResponse class encapsulates Glue DeleteConnection responses.
+ * \brief The DeleteConnectionResponse class provides an interace for Glue DeleteConnection responses.
  *
  * \ingroup Glue
  *

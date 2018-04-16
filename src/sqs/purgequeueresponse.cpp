@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::PurgeQueueResponse
  *
- * \brief The PurgeQueueResponse class encapsulates SQS PurgeQueue responses.
+ * \brief The PurgeQueueResponse class provides an interace for SQS PurgeQueue responses.
  *
  * \ingroup SQS
  *

@@ -30,7 +30,7 @@ namespace Comprehend {
 /*!
  * \class QtAws::Comprehend::BatchDetectEntitiesResponse
  *
- * \brief The BatchDetectEntitiesResponse class encapsulates Comprehend BatchDetectEntities responses.
+ * \brief The BatchDetectEntitiesResponse class provides an interace for Comprehend BatchDetectEntities responses.
  *
  * \ingroup Comprehend
  *

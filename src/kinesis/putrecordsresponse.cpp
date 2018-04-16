@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::PutRecordsResponse
  *
- * \brief The PutRecordsResponse class encapsulates Kinesis PutRecords responses.
+ * \brief The PutRecordsResponse class provides an interace for Kinesis PutRecords responses.
  *
  * \ingroup Kinesis
  *

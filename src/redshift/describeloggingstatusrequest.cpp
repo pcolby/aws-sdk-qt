@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeLoggingStatusRequest
  *
- * \brief The DescribeLoggingStatusRequest class encapsulates Redshift DescribeLoggingStatus requests.
+ * \brief The DescribeLoggingStatusRequest class provides an interface for Redshift DescribeLoggingStatus requests.
  *
  * \ingroup Redshift
  *

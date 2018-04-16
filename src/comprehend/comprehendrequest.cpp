@@ -26,7 +26,7 @@ namespace Comprehend {
 /*!
  * \class QtAws::Comprehend::ComprehendRequest
  *
- * \brief The ComprehendRequest class is the base class for all Comprehend requests.
+ * \brief The ComprehendRequest class provides an interface for Comprehend requests.
  *
  * \ingroup Comprehend
  */

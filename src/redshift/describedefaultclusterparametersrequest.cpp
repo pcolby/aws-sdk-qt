@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeDefaultClusterParametersRequest
  *
- * \brief The DescribeDefaultClusterParametersRequest class encapsulates Redshift DescribeDefaultClusterParameters requests.
+ * \brief The DescribeDefaultClusterParametersRequest class provides an interface for Redshift DescribeDefaultClusterParameters requests.
  *
  * \ingroup Redshift
  *

@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::CreateCacheSubnetGroupRequest
  *
- * \brief The CreateCacheSubnetGroupRequest class encapsulates ElastiCache CreateCacheSubnetGroup requests.
+ * \brief The CreateCacheSubnetGroupRequest class provides an interface for ElastiCache CreateCacheSubnetGroup requests.
  *
  * \ingroup ElastiCache
  *

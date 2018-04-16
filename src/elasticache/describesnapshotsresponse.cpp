@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DescribeSnapshotsResponse
  *
- * \brief The DescribeSnapshotsResponse class encapsulates ElastiCache DescribeSnapshots responses.
+ * \brief The DescribeSnapshotsResponse class provides an interace for ElastiCache DescribeSnapshots responses.
  *
  * \ingroup ElastiCache
  *

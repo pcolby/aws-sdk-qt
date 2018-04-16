@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DescribeRefreshSchemasStatusResponse
  *
- * \brief The DescribeRefreshSchemasStatusResponse class encapsulates DatabaseMigrationService DescribeRefreshSchemasStatus responses.
+ * \brief The DescribeRefreshSchemasStatusResponse class provides an interace for DatabaseMigrationService DescribeRefreshSchemasStatus responses.
  *
  * \ingroup DatabaseMigrationService
  *

@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::CreateBatchPredictionResponse
  *
- * \brief The CreateBatchPredictionResponse class encapsulates MachineLearning CreateBatchPrediction responses.
+ * \brief The CreateBatchPredictionResponse class provides an interace for MachineLearning CreateBatchPrediction responses.
  *
  * \ingroup MachineLearning
  *

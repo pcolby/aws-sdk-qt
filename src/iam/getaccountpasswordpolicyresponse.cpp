@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetAccountPasswordPolicyResponse
  *
- * \brief The GetAccountPasswordPolicyResponse class encapsulates IAM GetAccountPasswordPolicy responses.
+ * \brief The GetAccountPasswordPolicyResponse class provides an interace for IAM GetAccountPasswordPolicy responses.
  *
  * \ingroup IAM
  *

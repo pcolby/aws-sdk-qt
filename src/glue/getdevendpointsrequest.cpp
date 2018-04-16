@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetDevEndpointsRequest
  *
- * \brief The GetDevEndpointsRequest class encapsulates Glue GetDevEndpoints requests.
+ * \brief The GetDevEndpointsRequest class provides an interface for Glue GetDevEndpoints requests.
  *
  * \ingroup Glue
  *

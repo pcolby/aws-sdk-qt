@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::CreateWebACLResponse
  *
- * \brief The CreateWebACLResponse class encapsulates WAFRegional CreateWebACL responses.
+ * \brief The CreateWebACLResponse class provides an interace for WAFRegional CreateWebACL responses.
  *
  * \ingroup WAFRegional
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AssociateAddressRequest
  *
- * \brief The AssociateAddressRequest class encapsulates EC2 AssociateAddress requests.
+ * \brief The AssociateAddressRequest class provides an interface for EC2 AssociateAddress requests.
  *
  * \ingroup EC2
  *

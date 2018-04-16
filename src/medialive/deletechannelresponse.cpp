@@ -30,7 +30,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::DeleteChannelResponse
  *
- * \brief The DeleteChannelResponse class encapsulates MediaLive DeleteChannel responses.
+ * \brief The DeleteChannelResponse class provides an interace for MediaLive DeleteChannel responses.
  *
  * \ingroup MediaLive
  *

@@ -28,7 +28,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::DescribeProjectRequest
  *
- * \brief The DescribeProjectRequest class encapsulates Mobile DescribeProject requests.
+ * \brief The DescribeProjectRequest class provides an interface for Mobile DescribeProject requests.
  *
  * \ingroup Mobile
  *

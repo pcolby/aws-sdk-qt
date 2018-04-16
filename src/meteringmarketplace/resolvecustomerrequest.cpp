@@ -28,7 +28,7 @@ namespace MarketplaceMetering {
 /*!
  * \class QtAws::MarketplaceMetering::ResolveCustomerRequest
  *
- * \brief The ResolveCustomerRequest class encapsulates MarketplaceMetering ResolveCustomer requests.
+ * \brief The ResolveCustomerRequest class provides an interface for MarketplaceMetering ResolveCustomer requests.
  *
  * \ingroup MarketplaceMetering
  *

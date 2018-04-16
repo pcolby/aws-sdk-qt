@@ -30,7 +30,7 @@ namespace CloudSearchDomain {
 /*!
  * \class QtAws::CloudSearchDomain::SuggestResponse
  *
- * \brief The SuggestResponse class encapsulates CloudSearchDomain Suggest responses.
+ * \brief The SuggestResponse class provides an interace for CloudSearchDomain Suggest responses.
  *
  * \ingroup CloudSearchDomain
  *

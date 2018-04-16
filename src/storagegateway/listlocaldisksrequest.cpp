@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ListLocalDisksRequest
  *
- * \brief The ListLocalDisksRequest class encapsulates StorageGateway ListLocalDisks requests.
+ * \brief The ListLocalDisksRequest class provides an interface for StorageGateway ListLocalDisks requests.
  *
  * \ingroup StorageGateway
  *

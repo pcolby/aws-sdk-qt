@@ -28,7 +28,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::UpdateBudgetRequest
  *
- * \brief The UpdateBudgetRequest class encapsulates Budgets UpdateBudget requests.
+ * \brief The UpdateBudgetRequest class provides an interface for Budgets UpdateBudget requests.
  *
  * \ingroup Budgets
  *

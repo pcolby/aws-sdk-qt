@@ -29,7 +29,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::EMRResponse
  *
- * \brief The EMRResponse class is the base class for all EMR responses.
+ * \brief The EMRResponse class provides an interface for EMR responses.
  *
  * \ingroup EMR
  */

@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::UpdateEndpointRequest
  *
- * \brief The UpdateEndpointRequest class encapsulates SageMaker UpdateEndpoint requests.
+ * \brief The UpdateEndpointRequest class provides an interface for SageMaker UpdateEndpoint requests.
  *
  * \ingroup SageMaker
  *

@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::RemoveTagsRequest
  *
- * \brief The RemoveTagsRequest class encapsulates ElasticsearchService RemoveTags requests.
+ * \brief The RemoveTagsRequest class provides an interface for ElasticsearchService RemoveTags requests.
  *
  * \ingroup ElasticsearchService
  *

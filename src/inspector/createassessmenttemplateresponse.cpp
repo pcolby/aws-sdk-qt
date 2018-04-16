@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::CreateAssessmentTemplateResponse
  *
- * \brief The CreateAssessmentTemplateResponse class encapsulates Inspector CreateAssessmentTemplate responses.
+ * \brief The CreateAssessmentTemplateResponse class provides an interace for Inspector CreateAssessmentTemplate responses.
  *
  * \ingroup Inspector
  *

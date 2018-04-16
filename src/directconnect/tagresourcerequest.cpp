@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::TagResourceRequest
  *
- * \brief The TagResourceRequest class encapsulates DirectConnect TagResource requests.
+ * \brief The TagResourceRequest class provides an interface for DirectConnect TagResource requests.
  *
  * \ingroup DirectConnect
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ReplaceRouteTableAssociationRequest
  *
- * \brief The ReplaceRouteTableAssociationRequest class encapsulates EC2 ReplaceRouteTableAssociation requests.
+ * \brief The ReplaceRouteTableAssociationRequest class provides an interface for EC2 ReplaceRouteTableAssociation requests.
  *
  * \ingroup EC2
  *

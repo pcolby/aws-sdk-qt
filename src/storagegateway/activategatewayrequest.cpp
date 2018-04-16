@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::ActivateGatewayRequest
  *
- * \brief The ActivateGatewayRequest class encapsulates StorageGateway ActivateGateway requests.
+ * \brief The ActivateGatewayRequest class provides an interface for StorageGateway ActivateGateway requests.
  *
  * \ingroup StorageGateway
  *

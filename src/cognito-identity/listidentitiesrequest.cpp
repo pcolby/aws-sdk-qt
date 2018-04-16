@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::ListIdentitiesRequest
  *
- * \brief The ListIdentitiesRequest class encapsulates CognitoIdentity ListIdentities requests.
+ * \brief The ListIdentitiesRequest class provides an interface for CognitoIdentity ListIdentities requests.
  *
  * \ingroup CognitoIdentity
  *

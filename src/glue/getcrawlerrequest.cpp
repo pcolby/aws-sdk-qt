@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::GetCrawlerRequest
  *
- * \brief The GetCrawlerRequest class encapsulates Glue GetCrawler requests.
+ * \brief The GetCrawlerRequest class provides an interface for Glue GetCrawler requests.
  *
  * \ingroup Glue
  *

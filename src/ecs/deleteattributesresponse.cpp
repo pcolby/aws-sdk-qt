@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DeleteAttributesResponse
  *
- * \brief The DeleteAttributesResponse class encapsulates ECS DeleteAttributes responses.
+ * \brief The DeleteAttributesResponse class provides an interace for ECS DeleteAttributes responses.
  *
  * \ingroup ECS
  *

@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::UpdateConfigurationResponse
  *
- * \brief The UpdateConfigurationResponse class encapsulates MQ UpdateConfiguration responses.
+ * \brief The UpdateConfigurationResponse class provides an interace for MQ UpdateConfiguration responses.
  *
  * \ingroup MQ
  *

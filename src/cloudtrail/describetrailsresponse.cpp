@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::DescribeTrailsResponse
  *
- * \brief The DescribeTrailsResponse class encapsulates CloudTrail DescribeTrails responses.
+ * \brief The DescribeTrailsResponse class provides an interace for CloudTrail DescribeTrails responses.
  *
  * \ingroup CloudTrail
  *

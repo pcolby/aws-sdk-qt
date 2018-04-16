@@ -29,7 +29,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::ApplicationAutoScalingResponse
  *
- * \brief The ApplicationAutoScalingResponse class is the base class for all ApplicationAutoScaling responses.
+ * \brief The ApplicationAutoScalingResponse class provides an interface for ApplicationAutoScaling responses.
  *
  * \ingroup ApplicationAutoScaling
  */

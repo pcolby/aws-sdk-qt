@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::CreateModelResponse
  *
- * \brief The CreateModelResponse class encapsulates SageMaker CreateModel responses.
+ * \brief The CreateModelResponse class provides an interace for SageMaker CreateModel responses.
  *
  * \ingroup SageMaker
  *

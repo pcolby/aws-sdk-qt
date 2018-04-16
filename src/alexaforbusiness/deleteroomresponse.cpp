@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::DeleteRoomResponse
  *
- * \brief The DeleteRoomResponse class encapsulates AlexaForBusiness DeleteRoom responses.
+ * \brief The DeleteRoomResponse class provides an interace for AlexaForBusiness DeleteRoom responses.
  *
  * \ingroup AlexaForBusiness
  *

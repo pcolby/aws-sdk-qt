@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::ListBrokersRequest
  *
- * \brief The ListBrokersRequest class encapsulates MQ ListBrokers requests.
+ * \brief The ListBrokersRequest class provides an interface for MQ ListBrokers requests.
  *
  * \ingroup MQ
  *

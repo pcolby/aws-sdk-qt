@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RegisterImageRequest
  *
- * \brief The RegisterImageRequest class encapsulates EC2 RegisterImage requests.
+ * \brief The RegisterImageRequest class provides an interface for EC2 RegisterImage requests.
  *
  * \ingroup EC2
  *

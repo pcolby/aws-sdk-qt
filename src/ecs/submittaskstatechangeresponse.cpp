@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::SubmitTaskStateChangeResponse
  *
- * \brief The SubmitTaskStateChangeResponse class encapsulates ECS SubmitTaskStateChange responses.
+ * \brief The SubmitTaskStateChangeResponse class provides an interace for ECS SubmitTaskStateChange responses.
  *
  * \ingroup ECS
  *

@@ -29,7 +29,7 @@ namespace CloudWatchEvents {
 /*!
  * \class QtAws::CloudWatchEvents::CloudWatchEventsResponse
  *
- * \brief The CloudWatchEventsResponse class is the base class for all CloudWatchEvents responses.
+ * \brief The CloudWatchEventsResponse class provides an interface for CloudWatchEvents responses.
  *
  * \ingroup CloudWatchEvents
  */

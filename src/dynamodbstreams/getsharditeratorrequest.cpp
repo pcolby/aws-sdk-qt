@@ -28,7 +28,7 @@ namespace DynamoDBStreams {
 /*!
  * \class QtAws::DynamoDBStreams::GetShardIteratorRequest
  *
- * \brief The GetShardIteratorRequest class encapsulates DynamoDBStreams GetShardIterator requests.
+ * \brief The GetShardIteratorRequest class provides an interface for DynamoDBStreams GetShardIterator requests.
  *
  * \ingroup DynamoDBStreams
  *

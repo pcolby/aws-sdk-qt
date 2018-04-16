@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::CreateDistributionRequest
  *
- * \brief The CreateDistributionRequest class encapsulates CloudFront CreateDistribution requests.
+ * \brief The CreateDistributionRequest class provides an interface for CloudFront CreateDistribution requests.
  *
  * \ingroup CloudFront
  *

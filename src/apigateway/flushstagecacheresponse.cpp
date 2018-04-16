@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::FlushStageCacheResponse
  *
- * \brief The FlushStageCacheResponse class encapsulates APIGateway FlushStageCache responses.
+ * \brief The FlushStageCacheResponse class provides an interace for APIGateway FlushStageCache responses.
  *
  * \ingroup APIGateway
  *

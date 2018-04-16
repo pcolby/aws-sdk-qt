@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::ListTagsRequest
  *
- * \brief The ListTagsRequest class encapsulates AlexaForBusiness ListTags requests.
+ * \brief The ListTagsRequest class provides an interface for AlexaForBusiness ListTags requests.
  *
  * \ingroup AlexaForBusiness
  *

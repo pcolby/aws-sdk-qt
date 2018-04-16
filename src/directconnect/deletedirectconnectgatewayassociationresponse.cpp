@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DeleteDirectConnectGatewayAssociationResponse
  *
- * \brief The DeleteDirectConnectGatewayAssociationResponse class encapsulates DirectConnect DeleteDirectConnectGatewayAssociation responses.
+ * \brief The DeleteDirectConnectGatewayAssociationResponse class provides an interace for DirectConnect DeleteDirectConnectGatewayAssociation responses.
  *
  * \ingroup DirectConnect
  *

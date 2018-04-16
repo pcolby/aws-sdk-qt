@@ -28,7 +28,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::UntagQueueRequest
  *
- * \brief The UntagQueueRequest class encapsulates SQS UntagQueue requests.
+ * \brief The UntagQueueRequest class provides an interface for SQS UntagQueue requests.
  *
  * \ingroup SQS
  *

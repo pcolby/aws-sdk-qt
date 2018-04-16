@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::GetCloudFrontOriginAccessIdentityConfigResponse
  *
- * \brief The GetCloudFrontOriginAccessIdentityConfigResponse class encapsulates CloudFront GetCloudFrontOriginAccessIdentityConfig responses.
+ * \brief The GetCloudFrontOriginAccessIdentityConfigResponse class provides an interace for CloudFront GetCloudFrontOriginAccessIdentityConfig responses.
  *
  * \ingroup CloudFront
  *

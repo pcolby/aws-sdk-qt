@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::UpdateMaintenanceStartTimeRequest
  *
- * \brief The UpdateMaintenanceStartTimeRequest class encapsulates StorageGateway UpdateMaintenanceStartTime requests.
+ * \brief The UpdateMaintenanceStartTimeRequest class provides an interface for StorageGateway UpdateMaintenanceStartTime requests.
  *
  * \ingroup StorageGateway
  *

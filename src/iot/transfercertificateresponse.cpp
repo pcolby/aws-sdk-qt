@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::TransferCertificateResponse
  *
- * \brief The TransferCertificateResponse class encapsulates IoT TransferCertificate responses.
+ * \brief The TransferCertificateResponse class provides an interace for IoT TransferCertificate responses.
  *
  * \ingroup IoT
  *

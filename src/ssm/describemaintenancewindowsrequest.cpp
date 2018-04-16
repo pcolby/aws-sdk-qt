@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeMaintenanceWindowsRequest
  *
- * \brief The DescribeMaintenanceWindowsRequest class encapsulates SSM DescribeMaintenanceWindows requests.
+ * \brief The DescribeMaintenanceWindowsRequest class provides an interface for SSM DescribeMaintenanceWindows requests.
  *
  * \ingroup SSM
  *

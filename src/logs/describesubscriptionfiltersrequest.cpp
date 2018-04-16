@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DescribeSubscriptionFiltersRequest
  *
- * \brief The DescribeSubscriptionFiltersRequest class encapsulates CloudWatchLogs DescribeSubscriptionFilters requests.
+ * \brief The DescribeSubscriptionFiltersRequest class provides an interface for CloudWatchLogs DescribeSubscriptionFilters requests.
  *
  * \ingroup CloudWatchLogs
  *

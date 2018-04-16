@@ -28,7 +28,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::DeleteSecurityConfigurationRequest
  *
- * \brief The DeleteSecurityConfigurationRequest class encapsulates EMR DeleteSecurityConfiguration requests.
+ * \brief The DeleteSecurityConfigurationRequest class provides an interface for EMR DeleteSecurityConfiguration requests.
  *
  * \ingroup EMR
  *

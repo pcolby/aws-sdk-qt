@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::UpdateDistributionRequest
  *
- * \brief The UpdateDistributionRequest class encapsulates CloudFront UpdateDistribution requests.
+ * \brief The UpdateDistributionRequest class provides an interface for CloudFront UpdateDistribution requests.
  *
  * \ingroup CloudFront
  *

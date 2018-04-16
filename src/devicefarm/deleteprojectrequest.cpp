@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteProjectRequest
  *
- * \brief The DeleteProjectRequest class encapsulates DeviceFarm DeleteProject requests.
+ * \brief The DeleteProjectRequest class provides an interface for DeviceFarm DeleteProject requests.
  *
  * \ingroup DeviceFarm
  *

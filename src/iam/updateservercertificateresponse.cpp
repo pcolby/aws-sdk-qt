@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateServerCertificateResponse
  *
- * \brief The UpdateServerCertificateResponse class encapsulates IAM UpdateServerCertificate responses.
+ * \brief The UpdateServerCertificateResponse class provides an interace for IAM UpdateServerCertificate responses.
  *
  * \ingroup IAM
  *

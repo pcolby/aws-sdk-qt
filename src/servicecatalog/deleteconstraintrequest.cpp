@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DeleteConstraintRequest
  *
- * \brief The DeleteConstraintRequest class encapsulates ServiceCatalog DeleteConstraint requests.
+ * \brief The DeleteConstraintRequest class provides an interface for ServiceCatalog DeleteConstraint requests.
  *
  * \ingroup ServiceCatalog
  *

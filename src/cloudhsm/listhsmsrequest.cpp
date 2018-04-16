@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::ListHsmsRequest
  *
- * \brief The ListHsmsRequest class encapsulates CloudHSM ListHsms requests.
+ * \brief The ListHsmsRequest class provides an interface for CloudHSM ListHsms requests.
  *
  * \ingroup CloudHSM
  *

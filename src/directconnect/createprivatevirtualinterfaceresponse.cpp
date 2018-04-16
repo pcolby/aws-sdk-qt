@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::CreatePrivateVirtualInterfaceResponse
  *
- * \brief The CreatePrivateVirtualInterfaceResponse class encapsulates DirectConnect CreatePrivateVirtualInterface responses.
+ * \brief The CreatePrivateVirtualInterfaceResponse class provides an interace for DirectConnect CreatePrivateVirtualInterface responses.
  *
  * \ingroup DirectConnect
  *

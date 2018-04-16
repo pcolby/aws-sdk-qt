@@ -28,7 +28,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::IssueCertificateRequest
  *
- * \brief The IssueCertificateRequest class encapsulates ACMPCA IssueCertificate requests.
+ * \brief The IssueCertificateRequest class provides an interface for ACMPCA IssueCertificate requests.
  *
  * \ingroup ACMPCA
  *

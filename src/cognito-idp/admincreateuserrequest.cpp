@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminCreateUserRequest
  *
- * \brief The AdminCreateUserRequest class encapsulates CognitoIdentityProvider AdminCreateUser requests.
+ * \brief The AdminCreateUserRequest class provides an interface for CognitoIdentityProvider AdminCreateUser requests.
  *
  * \ingroup CognitoIdentityProvider
  *

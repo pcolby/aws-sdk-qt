@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DisableMetricsCollectionRequest
  *
- * \brief The DisableMetricsCollectionRequest class encapsulates AutoScaling DisableMetricsCollection requests.
+ * \brief The DisableMetricsCollectionRequest class provides an interface for AutoScaling DisableMetricsCollection requests.
  *
  * \ingroup AutoScaling
  *

@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DetachLoadBalancersResponse
  *
- * \brief The DetachLoadBalancersResponse class encapsulates AutoScaling DetachLoadBalancers responses.
+ * \brief The DetachLoadBalancersResponse class provides an interace for AutoScaling DetachLoadBalancers responses.
  *
  * \ingroup AutoScaling
  *

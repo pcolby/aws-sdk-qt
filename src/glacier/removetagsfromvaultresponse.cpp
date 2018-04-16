@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::RemoveTagsFromVaultResponse
  *
- * \brief The RemoveTagsFromVaultResponse class encapsulates Glacier RemoveTagsFromVault responses.
+ * \brief The RemoveTagsFromVaultResponse class provides an interace for Glacier RemoveTagsFromVault responses.
  *
  * \ingroup Glacier
  *

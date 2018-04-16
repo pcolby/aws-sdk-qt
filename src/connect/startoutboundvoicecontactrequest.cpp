@@ -28,7 +28,7 @@ namespace Connect {
 /*!
  * \class QtAws::Connect::StartOutboundVoiceContactRequest
  *
- * \brief The StartOutboundVoiceContactRequest class encapsulates Connect StartOutboundVoiceContact requests.
+ * \brief The StartOutboundVoiceContactRequest class provides an interface for Connect StartOutboundVoiceContact requests.
  *
  * \ingroup Connect
  *

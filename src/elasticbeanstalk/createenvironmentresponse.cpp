@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::CreateEnvironmentResponse
  *
- * \brief The CreateEnvironmentResponse class encapsulates ElasticBeanstalk CreateEnvironment responses.
+ * \brief The CreateEnvironmentResponse class provides an interace for ElasticBeanstalk CreateEnvironment responses.
  *
  * \ingroup ElasticBeanstalk
  *

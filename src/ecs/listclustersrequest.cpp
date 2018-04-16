@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::ListClustersRequest
  *
- * \brief The ListClustersRequest class encapsulates ECS ListClusters requests.
+ * \brief The ListClustersRequest class provides an interface for ECS ListClusters requests.
  *
  * \ingroup ECS
  *

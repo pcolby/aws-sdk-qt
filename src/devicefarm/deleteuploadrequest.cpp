@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteUploadRequest
  *
- * \brief The DeleteUploadRequest class encapsulates DeviceFarm DeleteUpload requests.
+ * \brief The DeleteUploadRequest class provides an interface for DeviceFarm DeleteUpload requests.
  *
  * \ingroup DeviceFarm
  *

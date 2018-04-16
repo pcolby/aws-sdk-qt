@@ -29,7 +29,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::ECRResponse
  *
- * \brief The ECRResponse class is the base class for all ECR responses.
+ * \brief The ECRResponse class provides an interface for ECR responses.
  *
  * \ingroup ECR
  */

@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::StartStackResponse
  *
- * \brief The StartStackResponse class encapsulates OpsWorks StartStack responses.
+ * \brief The StartStackResponse class provides an interace for OpsWorks StartStack responses.
  *
  * \ingroup OpsWorks
  *

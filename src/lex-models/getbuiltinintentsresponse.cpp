@@ -30,7 +30,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::GetBuiltinIntentsResponse
  *
- * \brief The GetBuiltinIntentsResponse class encapsulates LexModelBuildingService GetBuiltinIntents responses.
+ * \brief The GetBuiltinIntentsResponse class provides an interace for LexModelBuildingService GetBuiltinIntents responses.
  *
  * \ingroup LexModelBuildingService
  *

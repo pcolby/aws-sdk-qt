@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::GetJobOutputResponse
  *
- * \brief The GetJobOutputResponse class encapsulates Glacier GetJobOutput responses.
+ * \brief The GetJobOutputResponse class provides an interace for Glacier GetJobOutput responses.
  *
  * \ingroup Glacier
  *

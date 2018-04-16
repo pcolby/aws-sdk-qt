@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::AssociateQualificationWithWorkerResponse
  *
- * \brief The AssociateQualificationWithWorkerResponse class encapsulates MTurk AssociateQualificationWithWorker responses.
+ * \brief The AssociateQualificationWithWorkerResponse class provides an interace for MTurk AssociateQualificationWithWorker responses.
  *
  * \ingroup MTurk
  *

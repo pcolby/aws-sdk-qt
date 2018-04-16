@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::GetApiKeysRequest
  *
- * \brief The GetApiKeysRequest class encapsulates APIGateway GetApiKeys requests.
+ * \brief The GetApiKeysRequest class provides an interface for APIGateway GetApiKeys requests.
  *
  * \ingroup APIGateway
  *

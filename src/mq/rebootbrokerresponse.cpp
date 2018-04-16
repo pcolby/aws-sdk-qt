@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::RebootBrokerResponse
  *
- * \brief The RebootBrokerResponse class encapsulates MQ RebootBroker responses.
+ * \brief The RebootBrokerResponse class provides an interace for MQ RebootBroker responses.
  *
  * \ingroup MQ
  *

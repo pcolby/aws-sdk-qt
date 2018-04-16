@@ -30,7 +30,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::StartSchemaCreationResponse
  *
- * \brief The StartSchemaCreationResponse class encapsulates AppSync StartSchemaCreation responses.
+ * \brief The StartSchemaCreationResponse class provides an interace for AppSync StartSchemaCreation responses.
  *
  * \ingroup AppSync
  *

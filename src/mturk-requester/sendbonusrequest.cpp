@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::SendBonusRequest
  *
- * \brief The SendBonusRequest class encapsulates MTurk SendBonus requests.
+ * \brief The SendBonusRequest class provides an interface for MTurk SendBonus requests.
  *
  * \ingroup MTurk
  *

@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::RunTaskRequest
  *
- * \brief The RunTaskRequest class encapsulates ECS RunTask requests.
+ * \brief The RunTaskRequest class provides an interface for ECS RunTask requests.
  *
  * \ingroup ECS
  *

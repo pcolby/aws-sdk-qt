@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeApplicationsRequest
  *
- * \brief The DescribeApplicationsRequest class encapsulates ElasticBeanstalk DescribeApplications requests.
+ * \brief The DescribeApplicationsRequest class provides an interface for ElasticBeanstalk DescribeApplications requests.
  *
  * \ingroup ElasticBeanstalk
  *

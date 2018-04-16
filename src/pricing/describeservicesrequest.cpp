@@ -28,7 +28,7 @@ namespace Pricing {
 /*!
  * \class QtAws::Pricing::DescribeServicesRequest
  *
- * \brief The DescribeServicesRequest class encapsulates Pricing DescribeServices requests.
+ * \brief The DescribeServicesRequest class provides an interface for Pricing DescribeServices requests.
  *
  * \ingroup Pricing
  *

@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::CreateJobRequest
  *
- * \brief The CreateJobRequest class encapsulates ElasticTranscoder CreateJob requests.
+ * \brief The CreateJobRequest class provides an interface for ElasticTranscoder CreateJob requests.
  *
  * \ingroup ElasticTranscoder
  *

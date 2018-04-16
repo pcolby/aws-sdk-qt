@@ -28,7 +28,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::DescribeTagsRequest
  *
- * \brief The DescribeTagsRequest class encapsulates WorkSpaces DescribeTags requests.
+ * \brief The DescribeTagsRequest class provides an interface for WorkSpaces DescribeTags requests.
  *
  * \ingroup WorkSpaces
  *

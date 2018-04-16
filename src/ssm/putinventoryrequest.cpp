@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::PutInventoryRequest
  *
- * \brief The PutInventoryRequest class encapsulates SSM PutInventory requests.
+ * \brief The PutInventoryRequest class provides an interface for SSM PutInventory requests.
  *
  * \ingroup SSM
  *

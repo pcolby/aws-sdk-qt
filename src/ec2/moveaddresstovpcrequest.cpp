@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::MoveAddressToVpcRequest
  *
- * \brief The MoveAddressToVpcRequest class encapsulates EC2 MoveAddressToVpc requests.
+ * \brief The MoveAddressToVpcRequest class provides an interface for EC2 MoveAddressToVpc requests.
  *
  * \ingroup EC2
  *

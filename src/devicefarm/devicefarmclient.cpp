@@ -151,7 +151,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeviceFarmClient
  *
- * \brief The DeviceFarmClient class provides access the AWS Device Farm service.
+ * \brief The DeviceFarmClient class provides access to the AWS Device Farm service.
  *
  * \ingroup DeviceFarm
  *

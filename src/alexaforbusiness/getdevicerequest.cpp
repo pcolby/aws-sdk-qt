@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::GetDeviceRequest
  *
- * \brief The GetDeviceRequest class encapsulates AlexaForBusiness GetDevice requests.
+ * \brief The GetDeviceRequest class provides an interface for AlexaForBusiness GetDevice requests.
  *
  * \ingroup AlexaForBusiness
  *

@@ -105,7 +105,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::SageMakerClient
  *
- * \brief The SageMakerClient class provides access the Amazon SageMaker Service service.
+ * \brief The SageMakerClient class provides access to the Amazon SageMaker Service service.
  *
  * \ingroup SageMaker
  *

@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::PutEventSelectorsResponse
  *
- * \brief The PutEventSelectorsResponse class encapsulates CloudTrail PutEventSelectors responses.
+ * \brief The PutEventSelectorsResponse class provides an interace for CloudTrail PutEventSelectors responses.
  *
  * \ingroup CloudTrail
  *

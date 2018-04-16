@@ -30,7 +30,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::StartApplicationResponse
  *
- * \brief The StartApplicationResponse class encapsulates KinesisAnalytics StartApplication responses.
+ * \brief The StartApplicationResponse class provides an interace for KinesisAnalytics StartApplication responses.
  *
  * \ingroup KinesisAnalytics
  *

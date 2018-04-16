@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeAutoScalingInstancesResponse
  *
- * \brief The DescribeAutoScalingInstancesResponse class encapsulates AutoScaling DescribeAutoScalingInstances responses.
+ * \brief The DescribeAutoScalingInstancesResponse class provides an interace for AutoScaling DescribeAutoScalingInstances responses.
  *
  * \ingroup AutoScaling
  *

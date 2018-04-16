@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::SetV2LoggingLevelRequest
  *
- * \brief The SetV2LoggingLevelRequest class encapsulates IoT SetV2LoggingLevel requests.
+ * \brief The SetV2LoggingLevelRequest class provides an interface for IoT SetV2LoggingLevel requests.
  *
  * \ingroup IoT
  *

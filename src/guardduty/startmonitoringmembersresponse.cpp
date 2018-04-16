@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::StartMonitoringMembersResponse
  *
- * \brief The StartMonitoringMembersResponse class encapsulates GuardDuty StartMonitoringMembers responses.
+ * \brief The StartMonitoringMembersResponse class provides an interace for GuardDuty StartMonitoringMembers responses.
  *
  * \ingroup GuardDuty
  *

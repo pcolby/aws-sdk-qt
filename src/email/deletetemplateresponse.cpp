@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteTemplateResponse
  *
- * \brief The DeleteTemplateResponse class encapsulates SES DeleteTemplate responses.
+ * \brief The DeleteTemplateResponse class provides an interace for SES DeleteTemplate responses.
  *
  * \ingroup SES
  *

@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListUploadsRequest
  *
- * \brief The ListUploadsRequest class encapsulates DeviceFarm ListUploads requests.
+ * \brief The ListUploadsRequest class provides an interface for DeviceFarm ListUploads requests.
  *
  * \ingroup DeviceFarm
  *

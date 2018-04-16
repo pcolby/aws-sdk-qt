@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::UpdateBuildResponse
  *
- * \brief The UpdateBuildResponse class encapsulates GameLift UpdateBuild responses.
+ * \brief The UpdateBuildResponse class provides an interace for GameLift UpdateBuild responses.
  *
  * \ingroup GameLift
  *

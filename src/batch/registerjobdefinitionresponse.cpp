@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::RegisterJobDefinitionResponse
  *
- * \brief The RegisterJobDefinitionResponse class encapsulates Batch RegisterJobDefinition responses.
+ * \brief The RegisterJobDefinitionResponse class provides an interace for Batch RegisterJobDefinition responses.
  *
  * \ingroup Batch
  *

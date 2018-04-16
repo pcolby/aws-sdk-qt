@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::GetNamespaceRequest
  *
- * \brief The GetNamespaceRequest class encapsulates ServiceDiscovery GetNamespace requests.
+ * \brief The GetNamespaceRequest class provides an interface for ServiceDiscovery GetNamespace requests.
  *
  * \ingroup ServiceDiscovery
  *

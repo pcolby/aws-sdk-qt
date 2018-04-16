@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::GetRecordsRequest
  *
- * \brief The GetRecordsRequest class encapsulates Kinesis GetRecords requests.
+ * \brief The GetRecordsRequest class provides an interface for Kinesis GetRecords requests.
  *
  * \ingroup Kinesis
  *

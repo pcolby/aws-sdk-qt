@@ -30,7 +30,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeSuggestersResponse
  *
- * \brief The DescribeSuggestersResponse class encapsulates CloudSearch DescribeSuggesters responses.
+ * \brief The DescribeSuggestersResponse class provides an interace for CloudSearch DescribeSuggesters responses.
  *
  * \ingroup CloudSearch
  *

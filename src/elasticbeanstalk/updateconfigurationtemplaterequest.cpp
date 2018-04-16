@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateConfigurationTemplateRequest
  *
- * \brief The UpdateConfigurationTemplateRequest class encapsulates ElasticBeanstalk UpdateConfigurationTemplate requests.
+ * \brief The UpdateConfigurationTemplateRequest class provides an interface for ElasticBeanstalk UpdateConfigurationTemplate requests.
  *
  * \ingroup ElasticBeanstalk
  *

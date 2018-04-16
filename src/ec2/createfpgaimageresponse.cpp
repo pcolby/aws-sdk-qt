@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateFpgaImageResponse
  *
- * \brief The CreateFpgaImageResponse class encapsulates EC2 CreateFpgaImage responses.
+ * \brief The CreateFpgaImageResponse class provides an interace for EC2 CreateFpgaImage responses.
  *
  * \ingroup EC2
  *

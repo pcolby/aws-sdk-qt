@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::DisassociateSkillGroupFromRoomRequest
  *
- * \brief The DisassociateSkillGroupFromRoomRequest class encapsulates AlexaForBusiness DisassociateSkillGroupFromRoom requests.
+ * \brief The DisassociateSkillGroupFromRoomRequest class provides an interface for AlexaForBusiness DisassociateSkillGroupFromRoom requests.
  *
  * \ingroup AlexaForBusiness
  *

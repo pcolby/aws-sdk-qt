@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminConfirmSignUpRequest
  *
- * \brief The AdminConfirmSignUpRequest class encapsulates CognitoIdentityProvider AdminConfirmSignUp requests.
+ * \brief The AdminConfirmSignUpRequest class provides an interface for CognitoIdentityProvider AdminConfirmSignUp requests.
  *
  * \ingroup CognitoIdentityProvider
  *

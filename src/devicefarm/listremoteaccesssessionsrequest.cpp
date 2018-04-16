@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListRemoteAccessSessionsRequest
  *
- * \brief The ListRemoteAccessSessionsRequest class encapsulates DeviceFarm ListRemoteAccessSessions requests.
+ * \brief The ListRemoteAccessSessionsRequest class provides an interface for DeviceFarm ListRemoteAccessSessions requests.
  *
  * \ingroup DeviceFarm
  *

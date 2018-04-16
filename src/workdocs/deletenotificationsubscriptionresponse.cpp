@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DeleteNotificationSubscriptionResponse
  *
- * \brief The DeleteNotificationSubscriptionResponse class encapsulates WorkDocs DeleteNotificationSubscription responses.
+ * \brief The DeleteNotificationSubscriptionResponse class provides an interace for WorkDocs DeleteNotificationSubscription responses.
  *
  * \ingroup WorkDocs
  *

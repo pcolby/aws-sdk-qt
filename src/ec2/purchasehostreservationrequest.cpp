@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::PurchaseHostReservationRequest
  *
- * \brief The PurchaseHostReservationRequest class encapsulates EC2 PurchaseHostReservation requests.
+ * \brief The PurchaseHostReservationRequest class provides an interface for EC2 PurchaseHostReservation requests.
  *
  * \ingroup EC2
  *

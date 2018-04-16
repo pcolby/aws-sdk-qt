@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::CreateTrainingJobRequest
  *
- * \brief The CreateTrainingJobRequest class encapsulates SageMaker CreateTrainingJob requests.
+ * \brief The CreateTrainingJobRequest class provides an interface for SageMaker CreateTrainingJob requests.
  *
  * \ingroup SageMaker
  *

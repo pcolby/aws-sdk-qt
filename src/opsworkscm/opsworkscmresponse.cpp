@@ -29,7 +29,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::OpsWorksCMResponse
  *
- * \brief The OpsWorksCMResponse class is the base class for all OpsWorksCM responses.
+ * \brief The OpsWorksCMResponse class provides an interface for OpsWorksCM responses.
  *
  * \ingroup OpsWorksCM
  */

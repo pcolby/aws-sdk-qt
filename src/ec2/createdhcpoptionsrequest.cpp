@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateDhcpOptionsRequest
  *
- * \brief The CreateDhcpOptionsRequest class encapsulates EC2 CreateDhcpOptions requests.
+ * \brief The CreateDhcpOptionsRequest class provides an interface for EC2 CreateDhcpOptions requests.
  *
  * \ingroup EC2
  *

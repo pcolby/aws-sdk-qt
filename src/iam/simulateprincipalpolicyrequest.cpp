@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::SimulatePrincipalPolicyRequest
  *
- * \brief The SimulatePrincipalPolicyRequest class encapsulates IAM SimulatePrincipalPolicy requests.
+ * \brief The SimulatePrincipalPolicyRequest class provides an interface for IAM SimulatePrincipalPolicy requests.
  *
  * \ingroup IAM
  *

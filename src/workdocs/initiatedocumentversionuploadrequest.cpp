@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::InitiateDocumentVersionUploadRequest
  *
- * \brief The InitiateDocumentVersionUploadRequest class encapsulates WorkDocs InitiateDocumentVersionUpload requests.
+ * \brief The InitiateDocumentVersionUploadRequest class provides an interface for WorkDocs InitiateDocumentVersionUpload requests.
  *
  * \ingroup WorkDocs
  *

@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ListUsersInGroupRequest
  *
- * \brief The ListUsersInGroupRequest class encapsulates CognitoIdentityProvider ListUsersInGroup requests.
+ * \brief The ListUsersInGroupRequest class provides an interface for CognitoIdentityProvider ListUsersInGroup requests.
  *
  * \ingroup CognitoIdentityProvider
  *

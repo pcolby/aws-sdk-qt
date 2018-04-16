@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::CreateHapgRequest
  *
- * \brief The CreateHapgRequest class encapsulates CloudHSM CreateHapg requests.
+ * \brief The CreateHapgRequest class provides an interface for CloudHSM CreateHapg requests.
  *
  * \ingroup CloudHSM
  *

@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::UpdateContainerAgentResponse
  *
- * \brief The UpdateContainerAgentResponse class encapsulates ECS UpdateContainerAgent responses.
+ * \brief The UpdateContainerAgentResponse class provides an interace for ECS UpdateContainerAgent responses.
  *
  * \ingroup ECS
  *

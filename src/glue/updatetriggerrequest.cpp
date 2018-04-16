@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateTriggerRequest
  *
- * \brief The UpdateTriggerRequest class encapsulates Glue UpdateTrigger requests.
+ * \brief The UpdateTriggerRequest class provides an interface for Glue UpdateTrigger requests.
  *
  * \ingroup Glue
  *

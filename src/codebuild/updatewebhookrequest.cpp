@@ -28,7 +28,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::UpdateWebhookRequest
  *
- * \brief The UpdateWebhookRequest class encapsulates CodeBuild UpdateWebhook requests.
+ * \brief The UpdateWebhookRequest class provides an interface for CodeBuild UpdateWebhook requests.
  *
  * \ingroup CodeBuild
  *

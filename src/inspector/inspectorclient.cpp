@@ -102,7 +102,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::InspectorClient
  *
- * \brief The InspectorClient class provides access the Amazon Inspector service.
+ * \brief The InspectorClient class provides access to the Amazon Inspector service.
  *
  * \ingroup Inspector
  *

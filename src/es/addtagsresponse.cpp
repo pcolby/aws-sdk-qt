@@ -30,7 +30,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::AddTagsResponse
  *
- * \brief The AddTagsResponse class encapsulates ElasticsearchService AddTags responses.
+ * \brief The AddTagsResponse class provides an interace for ElasticsearchService AddTags responses.
  *
  * \ingroup ElasticsearchService
  *

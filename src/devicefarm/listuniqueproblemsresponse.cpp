@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListUniqueProblemsResponse
  *
- * \brief The ListUniqueProblemsResponse class encapsulates DeviceFarm ListUniqueProblems responses.
+ * \brief The ListUniqueProblemsResponse class provides an interace for DeviceFarm ListUniqueProblems responses.
  *
  * \ingroup DeviceFarm
  *

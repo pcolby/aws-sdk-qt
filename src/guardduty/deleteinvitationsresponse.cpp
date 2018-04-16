@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DeleteInvitationsResponse
  *
- * \brief The DeleteInvitationsResponse class encapsulates GuardDuty DeleteInvitations responses.
+ * \brief The DeleteInvitationsResponse class provides an interace for GuardDuty DeleteInvitations responses.
  *
  * \ingroup GuardDuty
  *

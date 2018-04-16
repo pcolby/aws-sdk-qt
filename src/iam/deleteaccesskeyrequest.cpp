@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteAccessKeyRequest
  *
- * \brief The DeleteAccessKeyRequest class encapsulates IAM DeleteAccessKey requests.
+ * \brief The DeleteAccessKeyRequest class provides an interface for IAM DeleteAccessKey requests.
  *
  * \ingroup IAM
  *

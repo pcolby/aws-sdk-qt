@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::RegisterToWorkMailResponse
  *
- * \brief The RegisterToWorkMailResponse class encapsulates WorkMail RegisterToWorkMail responses.
+ * \brief The RegisterToWorkMailResponse class provides an interace for WorkMail RegisterToWorkMail responses.
  *
  * \ingroup WorkMail
  *

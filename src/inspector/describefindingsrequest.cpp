@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::DescribeFindingsRequest
  *
- * \brief The DescribeFindingsRequest class encapsulates Inspector DescribeFindings requests.
+ * \brief The DescribeFindingsRequest class provides an interface for Inspector DescribeFindings requests.
  *
  * \ingroup Inspector
  *

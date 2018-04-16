@@ -30,7 +30,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::UpdateEndpointResponse
  *
- * \brief The UpdateEndpointResponse class encapsulates SageMaker UpdateEndpoint responses.
+ * \brief The UpdateEndpointResponse class provides an interace for SageMaker UpdateEndpoint responses.
  *
  * \ingroup SageMaker
  *

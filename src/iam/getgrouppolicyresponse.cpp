@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetGroupPolicyResponse
  *
- * \brief The GetGroupPolicyResponse class encapsulates IAM GetGroupPolicy responses.
+ * \brief The GetGroupPolicyResponse class provides an interace for IAM GetGroupPolicy responses.
  *
  * \ingroup IAM
  *

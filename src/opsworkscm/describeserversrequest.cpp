@@ -28,7 +28,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DescribeServersRequest
  *
- * \brief The DescribeServersRequest class encapsulates OpsWorksCM DescribeServers requests.
+ * \brief The DescribeServersRequest class provides an interface for OpsWorksCM DescribeServers requests.
  *
  * \ingroup OpsWorksCM
  *

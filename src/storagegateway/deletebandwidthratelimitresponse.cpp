@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DeleteBandwidthRateLimitResponse
  *
- * \brief The DeleteBandwidthRateLimitResponse class encapsulates StorageGateway DeleteBandwidthRateLimit responses.
+ * \brief The DeleteBandwidthRateLimitResponse class provides an interace for StorageGateway DeleteBandwidthRateLimit responses.
  *
  * \ingroup StorageGateway
  *

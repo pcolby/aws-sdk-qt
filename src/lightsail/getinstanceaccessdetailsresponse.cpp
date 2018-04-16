@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::GetInstanceAccessDetailsResponse
  *
- * \brief The GetInstanceAccessDetailsResponse class encapsulates Lightsail GetInstanceAccessDetails responses.
+ * \brief The GetInstanceAccessDetailsResponse class provides an interace for Lightsail GetInstanceAccessDetails responses.
  *
  * \ingroup Lightsail
  *

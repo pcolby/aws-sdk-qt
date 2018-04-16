@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DisableDirectoryRequest
  *
- * \brief The DisableDirectoryRequest class encapsulates CloudDirectory DisableDirectory requests.
+ * \brief The DisableDirectoryRequest class provides an interface for CloudDirectory DisableDirectory requests.
  *
  * \ingroup CloudDirectory
  *

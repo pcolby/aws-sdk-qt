@@ -30,7 +30,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::DescribeLifecycleHooksResponse
  *
- * \brief The DescribeLifecycleHooksResponse class encapsulates AutoScaling DescribeLifecycleHooks responses.
+ * \brief The DescribeLifecycleHooksResponse class provides an interace for AutoScaling DescribeLifecycleHooks responses.
  *
  * \ingroup AutoScaling
  *

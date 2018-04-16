@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::CreateDataSourceFromRDSRequest
  *
- * \brief The CreateDataSourceFromRDSRequest class encapsulates MachineLearning CreateDataSourceFromRDS requests.
+ * \brief The CreateDataSourceFromRDSRequest class provides an interface for MachineLearning CreateDataSourceFromRDS requests.
  *
  * \ingroup MachineLearning
  *

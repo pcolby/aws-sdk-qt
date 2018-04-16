@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::DeleteNetworkProfileRequest
  *
- * \brief The DeleteNetworkProfileRequest class encapsulates DeviceFarm DeleteNetworkProfile requests.
+ * \brief The DeleteNetworkProfileRequest class provides an interface for DeviceFarm DeleteNetworkProfile requests.
  *
  * \ingroup DeviceFarm
  *

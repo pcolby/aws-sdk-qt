@@ -28,7 +28,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::DeleteLunaClientRequest
  *
- * \brief The DeleteLunaClientRequest class encapsulates CloudHSM DeleteLunaClient requests.
+ * \brief The DeleteLunaClientRequest class provides an interface for CloudHSM DeleteLunaClient requests.
  *
  * \ingroup CloudHSM
  *

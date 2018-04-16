@@ -26,7 +26,7 @@ namespace MarketplaceMetering {
 /*!
  * \class QtAws::MarketplaceMetering::MarketplaceMeteringRequest
  *
- * \brief The MarketplaceMeteringRequest class is the base class for all MarketplaceMetering requests.
+ * \brief The MarketplaceMeteringRequest class provides an interface for MarketplaceMetering requests.
  *
  * \ingroup MarketplaceMetering
  */

@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketWebsiteRequest
  *
- * \brief The GetBucketWebsiteRequest class encapsulates S3 GetBucketWebsite requests.
+ * \brief The GetBucketWebsiteRequest class provides an interface for S3 GetBucketWebsite requests.
  *
  * \ingroup S3
  *

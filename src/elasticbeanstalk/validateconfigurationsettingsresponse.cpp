@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::ValidateConfigurationSettingsResponse
  *
- * \brief The ValidateConfigurationSettingsResponse class encapsulates ElasticBeanstalk ValidateConfigurationSettings responses.
+ * \brief The ValidateConfigurationSettingsResponse class provides an interace for ElasticBeanstalk ValidateConfigurationSettings responses.
  *
  * \ingroup ElasticBeanstalk
  *

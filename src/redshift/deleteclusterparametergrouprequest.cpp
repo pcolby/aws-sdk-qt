@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteClusterParameterGroupRequest
  *
- * \brief The DeleteClusterParameterGroupRequest class encapsulates Redshift DeleteClusterParameterGroup requests.
+ * \brief The DeleteClusterParameterGroupRequest class provides an interface for Redshift DeleteClusterParameterGroup requests.
  *
  * \ingroup Redshift
  *

@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::RebootCacheClusterRequest
  *
- * \brief The RebootCacheClusterRequest class encapsulates ElastiCache RebootCacheCluster requests.
+ * \brief The RebootCacheClusterRequest class provides an interface for ElastiCache RebootCacheCluster requests.
  *
  * \ingroup ElastiCache
  *

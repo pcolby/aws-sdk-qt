@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GetGroupResponse
  *
- * \brief The GetGroupResponse class encapsulates Greengrass GetGroup responses.
+ * \brief The GetGroupResponse class provides an interace for Greengrass GetGroup responses.
  *
  * \ingroup Greengrass
  *

@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::UpdateIPSetRequest
  *
- * \brief The UpdateIPSetRequest class encapsulates WAF UpdateIPSet requests.
+ * \brief The UpdateIPSetRequest class provides an interface for WAF UpdateIPSet requests.
  *
  * \ingroup WAF
  *

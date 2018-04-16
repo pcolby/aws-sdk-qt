@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DescribeDeliveryChannelsResponse
  *
- * \brief The DescribeDeliveryChannelsResponse class encapsulates ConfigService DescribeDeliveryChannels responses.
+ * \brief The DescribeDeliveryChannelsResponse class provides an interace for ConfigService DescribeDeliveryChannels responses.
  *
  * \ingroup ConfigService
  *

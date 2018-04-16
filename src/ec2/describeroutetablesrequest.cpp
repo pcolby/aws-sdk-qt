@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeRouteTablesRequest
  *
- * \brief The DescribeRouteTablesRequest class encapsulates EC2 DescribeRouteTables requests.
+ * \brief The DescribeRouteTablesRequest class provides an interface for EC2 DescribeRouteTables requests.
  *
  * \ingroup EC2
  *

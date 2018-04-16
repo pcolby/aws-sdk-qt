@@ -30,7 +30,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::GetAuthorizationTokenResponse
  *
- * \brief The GetAuthorizationTokenResponse class encapsulates ECR GetAuthorizationToken responses.
+ * \brief The GetAuthorizationTokenResponse class provides an interace for ECR GetAuthorizationToken responses.
  *
  * \ingroup ECR
  *

@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::UpdateTypeRequest
  *
- * \brief The UpdateTypeRequest class encapsulates AppSync UpdateType requests.
+ * \brief The UpdateTypeRequest class provides an interface for AppSync UpdateType requests.
  *
  * \ingroup AppSync
  *

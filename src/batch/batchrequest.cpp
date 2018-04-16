@@ -26,7 +26,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::BatchRequest
  *
- * \brief The BatchRequest class is the base class for all Batch requests.
+ * \brief The BatchRequest class provides an interface for Batch requests.
  *
  * \ingroup Batch
  */

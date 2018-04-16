@@ -28,7 +28,7 @@ namespace ElasticsearchService {
 /*!
  * \class QtAws::ElasticsearchService::AddTagsRequest
  *
- * \brief The AddTagsRequest class encapsulates ElasticsearchService AddTags requests.
+ * \brief The AddTagsRequest class provides an interface for ElasticsearchService AddTags requests.
  *
  * \ingroup ElasticsearchService
  *

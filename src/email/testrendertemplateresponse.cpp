@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::TestRenderTemplateResponse
  *
- * \brief The TestRenderTemplateResponse class encapsulates SES TestRenderTemplate responses.
+ * \brief The TestRenderTemplateResponse class provides an interace for SES TestRenderTemplate responses.
  *
  * \ingroup SES
  *

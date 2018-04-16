@@ -28,7 +28,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::TagRequest
  *
- * \brief The TagRequest class encapsulates ResourceGroups Tag requests.
+ * \brief The TagRequest class provides an interface for ResourceGroups Tag requests.
  *
  * \ingroup ResourceGroups
  *

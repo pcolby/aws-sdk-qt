@@ -26,7 +26,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::ImportExportRequest
  *
- * \brief The ImportExportRequest class is the base class for all ImportExport requests.
+ * \brief The ImportExportRequest class provides an interface for ImportExport requests.
  *
  * \ingroup ImportExport
  */

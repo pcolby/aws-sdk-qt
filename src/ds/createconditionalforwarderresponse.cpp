@@ -30,7 +30,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateConditionalForwarderResponse
  *
- * \brief The CreateConditionalForwarderResponse class encapsulates DirectoryService CreateConditionalForwarder responses.
+ * \brief The CreateConditionalForwarderResponse class provides an interace for DirectoryService CreateConditionalForwarder responses.
  *
  * \ingroup DirectoryService
  *

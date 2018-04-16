@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::AssociateWebACLRequest
  *
- * \brief The AssociateWebACLRequest class encapsulates WAFRegional AssociateWebACL requests.
+ * \brief The AssociateWebACLRequest class provides an interface for WAFRegional AssociateWebACL requests.
  *
  * \ingroup WAFRegional
  *

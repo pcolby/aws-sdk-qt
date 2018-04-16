@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::DeleteNamespaceRequest
  *
- * \brief The DeleteNamespaceRequest class encapsulates ServiceDiscovery DeleteNamespace requests.
+ * \brief The DeleteNamespaceRequest class provides an interface for ServiceDiscovery DeleteNamespace requests.
  *
  * \ingroup ServiceDiscovery
  *

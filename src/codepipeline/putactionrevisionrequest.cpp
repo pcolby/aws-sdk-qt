@@ -28,7 +28,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::PutActionRevisionRequest
  *
- * \brief The PutActionRevisionRequest class encapsulates CodePipeline PutActionRevision requests.
+ * \brief The PutActionRevisionRequest class provides an interface for CodePipeline PutActionRevision requests.
  *
  * \ingroup CodePipeline
  *

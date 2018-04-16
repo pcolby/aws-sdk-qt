@@ -30,7 +30,7 @@ namespace CloudHSMV2 {
 /*!
  * \class QtAws::CloudHSMV2::DescribeClustersResponse
  *
- * \brief The DescribeClustersResponse class encapsulates CloudHSMV2 DescribeClusters responses.
+ * \brief The DescribeClustersResponse class provides an interace for CloudHSMV2 DescribeClusters responses.
  *
  * \ingroup CloudHSMV2
  *

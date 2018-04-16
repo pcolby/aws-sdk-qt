@@ -30,7 +30,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::DescribeContainerResponse
  *
- * \brief The DescribeContainerResponse class encapsulates MediaStore DescribeContainer responses.
+ * \brief The DescribeContainerResponse class provides an interace for MediaStore DescribeContainer responses.
  *
  * \ingroup MediaStore
  *

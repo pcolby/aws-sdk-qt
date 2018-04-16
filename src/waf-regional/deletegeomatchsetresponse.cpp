@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeleteGeoMatchSetResponse
  *
- * \brief The DeleteGeoMatchSetResponse class encapsulates WAFRegional DeleteGeoMatchSet responses.
+ * \brief The DeleteGeoMatchSetResponse class provides an interace for WAFRegional DeleteGeoMatchSet responses.
  *
  * \ingroup WAFRegional
  *

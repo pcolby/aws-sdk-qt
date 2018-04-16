@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetRoleRequest
  *
- * \brief The GetRoleRequest class encapsulates IAM GetRole requests.
+ * \brief The GetRoleRequest class provides an interface for IAM GetRole requests.
  *
  * \ingroup IAM
  *

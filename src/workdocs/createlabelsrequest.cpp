@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::CreateLabelsRequest
  *
- * \brief The CreateLabelsRequest class encapsulates WorkDocs CreateLabels requests.
+ * \brief The CreateLabelsRequest class provides an interface for WorkDocs CreateLabels requests.
  *
  * \ingroup WorkDocs
  *

@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::UpdateAssociationRequest
  *
- * \brief The UpdateAssociationRequest class encapsulates SSM UpdateAssociation requests.
+ * \brief The UpdateAssociationRequest class provides an interface for SSM UpdateAssociation requests.
  *
  * \ingroup SSM
  *

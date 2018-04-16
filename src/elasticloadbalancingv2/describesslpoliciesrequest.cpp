@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeSSLPoliciesRequest
  *
- * \brief The DescribeSSLPoliciesRequest class encapsulates ElasticLoadBalancingv2 DescribeSSLPolicies requests.
+ * \brief The DescribeSSLPoliciesRequest class provides an interface for ElasticLoadBalancingv2 DescribeSSLPolicies requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

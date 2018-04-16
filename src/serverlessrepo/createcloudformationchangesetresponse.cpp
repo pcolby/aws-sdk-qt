@@ -30,7 +30,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::CreateCloudFormationChangeSetResponse
  *
- * \brief The CreateCloudFormationChangeSetResponse class encapsulates ServerlessApplicationRepository CreateCloudFormationChangeSet responses.
+ * \brief The CreateCloudFormationChangeSetResponse class provides an interace for ServerlessApplicationRepository CreateCloudFormationChangeSet responses.
  *
  * \ingroup ServerlessApplicationRepository
  *

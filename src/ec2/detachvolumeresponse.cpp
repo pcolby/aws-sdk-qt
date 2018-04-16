@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DetachVolumeResponse
  *
- * \brief The DetachVolumeResponse class encapsulates EC2 DetachVolume responses.
+ * \brief The DetachVolumeResponse class provides an interace for EC2 DetachVolume responses.
  *
  * \ingroup EC2
  *

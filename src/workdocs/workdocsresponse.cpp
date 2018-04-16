@@ -29,7 +29,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::WorkDocsResponse
  *
- * \brief The WorkDocsResponse class is the base class for all WorkDocs responses.
+ * \brief The WorkDocsResponse class provides an interface for WorkDocs responses.
  *
  * \ingroup WorkDocs
  */

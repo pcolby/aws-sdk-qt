@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeletePermissionPolicyRequest
  *
- * \brief The DeletePermissionPolicyRequest class encapsulates WAFRegional DeletePermissionPolicy requests.
+ * \brief The DeletePermissionPolicyRequest class provides an interface for WAFRegional DeletePermissionPolicy requests.
  *
  * \ingroup WAFRegional
  *

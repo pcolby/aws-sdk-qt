@@ -41,7 +41,7 @@ namespace LexRuntimeService {
 /*!
  * \class QtAws::LexRuntimeService::LexRuntimeServiceClient
  *
- * \brief The LexRuntimeServiceClient class provides access the Amazon Lex Runtime Service service.
+ * \brief The LexRuntimeServiceClient class provides access to the Amazon Lex Runtime Service service.
  *
  * \ingroup LexRuntimeService
  *

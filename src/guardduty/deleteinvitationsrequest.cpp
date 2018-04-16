@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DeleteInvitationsRequest
  *
- * \brief The DeleteInvitationsRequest class encapsulates GuardDuty DeleteInvitations requests.
+ * \brief The DeleteInvitationsRequest class provides an interface for GuardDuty DeleteInvitations requests.
  *
  * \ingroup GuardDuty
  *

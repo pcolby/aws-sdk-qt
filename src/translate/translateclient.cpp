@@ -39,7 +39,7 @@ namespace Translate {
 /*!
  * \class QtAws::Translate::TranslateClient
  *
- * \brief The TranslateClient class provides access the Amazon Translate service.
+ * \brief The TranslateClient class provides access to the Amazon Translate service.
  *
  * \ingroup Translate
  *

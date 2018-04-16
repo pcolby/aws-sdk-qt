@@ -59,7 +59,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::EfsClient
  *
- * \brief The EfsClient class provides access the Amazon Elastic File System (EFS) service.
+ * \brief The EfsClient class provides access to the Amazon Elastic File System (EFS) service.
  *
  * \ingroup EFS
  *

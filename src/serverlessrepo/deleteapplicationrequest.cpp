@@ -28,7 +28,7 @@ namespace ServerlessApplicationRepository {
 /*!
  * \class QtAws::ServerlessApplicationRepository::DeleteApplicationRequest
  *
- * \brief The DeleteApplicationRequest class encapsulates ServerlessApplicationRepository DeleteApplication requests.
+ * \brief The DeleteApplicationRequest class provides an interface for ServerlessApplicationRepository DeleteApplication requests.
  *
  * \ingroup ServerlessApplicationRepository
  *

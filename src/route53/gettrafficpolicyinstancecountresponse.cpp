@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::GetTrafficPolicyInstanceCountResponse
  *
- * \brief The GetTrafficPolicyInstanceCountResponse class encapsulates Route53 GetTrafficPolicyInstanceCount responses.
+ * \brief The GetTrafficPolicyInstanceCountResponse class provides an interace for Route53 GetTrafficPolicyInstanceCount responses.
  *
  * \ingroup Route53
  *

@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::ListFacetNamesRequest
  *
- * \brief The ListFacetNamesRequest class encapsulates CloudDirectory ListFacetNames requests.
+ * \brief The ListFacetNamesRequest class provides an interface for CloudDirectory ListFacetNames requests.
  *
  * \ingroup CloudDirectory
  *

@@ -103,7 +103,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::AppStreamClient
  *
- * \brief The AppStreamClient class provides access the Amazon AppStream service.
+ * \brief The AppStreamClient class provides access to the Amazon AppStream service.
  *
  * \ingroup AppStream
  *

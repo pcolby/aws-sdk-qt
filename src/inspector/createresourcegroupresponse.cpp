@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::CreateResourceGroupResponse
  *
- * \brief The CreateResourceGroupResponse class encapsulates Inspector CreateResourceGroup responses.
+ * \brief The CreateResourceGroupResponse class provides an interace for Inspector CreateResourceGroup responses.
  *
  * \ingroup Inspector
  *

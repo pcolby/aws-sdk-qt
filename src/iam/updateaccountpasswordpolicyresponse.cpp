@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateAccountPasswordPolicyResponse
  *
- * \brief The UpdateAccountPasswordPolicyResponse class encapsulates IAM UpdateAccountPasswordPolicy responses.
+ * \brief The UpdateAccountPasswordPolicyResponse class provides an interace for IAM UpdateAccountPasswordPolicy responses.
  *
  * \ingroup IAM
  *

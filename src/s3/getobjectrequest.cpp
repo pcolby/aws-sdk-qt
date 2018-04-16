@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetObjectRequest
  *
- * \brief The GetObjectRequest class encapsulates S3 GetObject requests.
+ * \brief The GetObjectRequest class provides an interface for S3 GetObject requests.
  *
  * \ingroup S3
  *

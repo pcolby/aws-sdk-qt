@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::ListWorkflowTypesResponse
  *
- * \brief The ListWorkflowTypesResponse class encapsulates SWF ListWorkflowTypes responses.
+ * \brief The ListWorkflowTypesResponse class provides an interace for SWF ListWorkflowTypes responses.
  *
  * \ingroup SWF
  *

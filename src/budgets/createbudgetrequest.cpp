@@ -28,7 +28,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::CreateBudgetRequest
  *
- * \brief The CreateBudgetRequest class encapsulates Budgets CreateBudget requests.
+ * \brief The CreateBudgetRequest class provides an interface for Budgets CreateBudget requests.
  *
  * \ingroup Budgets
  *

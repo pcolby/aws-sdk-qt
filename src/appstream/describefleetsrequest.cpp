@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DescribeFleetsRequest
  *
- * \brief The DescribeFleetsRequest class encapsulates AppStream DescribeFleets requests.
+ * \brief The DescribeFleetsRequest class provides an interface for AppStream DescribeFleets requests.
  *
  * \ingroup AppStream
  *

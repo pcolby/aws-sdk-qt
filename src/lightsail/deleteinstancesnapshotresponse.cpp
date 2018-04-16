@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DeleteInstanceSnapshotResponse
  *
- * \brief The DeleteInstanceSnapshotResponse class encapsulates Lightsail DeleteInstanceSnapshot responses.
+ * \brief The DeleteInstanceSnapshotResponse class provides an interace for Lightsail DeleteInstanceSnapshot responses.
  *
  * \ingroup Lightsail
  *

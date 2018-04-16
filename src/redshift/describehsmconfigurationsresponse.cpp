@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeHsmConfigurationsResponse
  *
- * \brief The DescribeHsmConfigurationsResponse class encapsulates Redshift DescribeHsmConfigurations responses.
+ * \brief The DescribeHsmConfigurationsResponse class provides an interace for Redshift DescribeHsmConfigurations responses.
  *
  * \ingroup Redshift
  *

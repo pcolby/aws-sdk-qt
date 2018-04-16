@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::UpdateIPSetRequest
  *
- * \brief The UpdateIPSetRequest class encapsulates GuardDuty UpdateIPSet requests.
+ * \brief The UpdateIPSetRequest class provides an interface for GuardDuty UpdateIPSet requests.
  *
  * \ingroup GuardDuty
  *

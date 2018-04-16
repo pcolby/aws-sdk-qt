@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeleteRuleResponse
  *
- * \brief The DeleteRuleResponse class encapsulates WAFRegional DeleteRule responses.
+ * \brief The DeleteRuleResponse class provides an interace for WAFRegional DeleteRule responses.
  *
  * \ingroup WAFRegional
  *

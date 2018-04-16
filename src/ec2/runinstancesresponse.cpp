@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RunInstancesResponse
  *
- * \brief The RunInstancesResponse class encapsulates EC2 RunInstances responses.
+ * \brief The RunInstancesResponse class provides an interace for EC2 RunInstances responses.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ModifyDBInstanceRequest
  *
- * \brief The ModifyDBInstanceRequest class encapsulates RDS ModifyDBInstance requests.
+ * \brief The ModifyDBInstanceRequest class provides an interface for RDS ModifyDBInstance requests.
  *
  * \ingroup RDS
  *

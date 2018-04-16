@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribeProductAsAdminResponse
  *
- * \brief The DescribeProductAsAdminResponse class encapsulates ServiceCatalog DescribeProductAsAdmin responses.
+ * \brief The DescribeProductAsAdminResponse class provides an interace for ServiceCatalog DescribeProductAsAdmin responses.
  *
  * \ingroup ServiceCatalog
  *

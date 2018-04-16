@@ -28,7 +28,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::DeleteServiceLinkedRoleRequest
  *
- * \brief The DeleteServiceLinkedRoleRequest class encapsulates CloudFront DeleteServiceLinkedRole requests.
+ * \brief The DeleteServiceLinkedRoleRequest class provides an interface for CloudFront DeleteServiceLinkedRole requests.
  *
  * \ingroup CloudFront
  *

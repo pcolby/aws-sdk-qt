@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::GetDetectorResponse
  *
- * \brief The GetDetectorResponse class encapsulates GuardDuty GetDetector responses.
+ * \brief The GetDetectorResponse class provides an interace for GuardDuty GetDetector responses.
  *
  * \ingroup GuardDuty
  *

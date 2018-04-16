@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListPortfoliosForProductResponse
  *
- * \brief The ListPortfoliosForProductResponse class encapsulates ServiceCatalog ListPortfoliosForProduct responses.
+ * \brief The ListPortfoliosForProductResponse class provides an interace for ServiceCatalog ListPortfoliosForProduct responses.
  *
  * \ingroup ServiceCatalog
  *

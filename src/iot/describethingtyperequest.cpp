@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeThingTypeRequest
  *
- * \brief The DescribeThingTypeRequest class encapsulates IoT DescribeThingType requests.
+ * \brief The DescribeThingTypeRequest class provides an interface for IoT DescribeThingType requests.
  *
  * \ingroup IoT
  *

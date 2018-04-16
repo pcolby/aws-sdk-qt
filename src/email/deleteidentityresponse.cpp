@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteIdentityResponse
  *
- * \brief The DeleteIdentityResponse class encapsulates SES DeleteIdentity responses.
+ * \brief The DeleteIdentityResponse class provides an interace for SES DeleteIdentity responses.
  *
  * \ingroup SES
  *

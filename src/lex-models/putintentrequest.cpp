@@ -28,7 +28,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::PutIntentRequest
  *
- * \brief The PutIntentRequest class encapsulates LexModelBuildingService PutIntent requests.
+ * \brief The PutIntentRequest class provides an interface for LexModelBuildingService PutIntent requests.
  *
  * \ingroup LexModelBuildingService
  *

@@ -28,7 +28,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::CreateMountTargetRequest
  *
- * \brief The CreateMountTargetRequest class encapsulates EFS CreateMountTarget requests.
+ * \brief The CreateMountTargetRequest class provides an interface for EFS CreateMountTarget requests.
  *
  * \ingroup EFS
  *

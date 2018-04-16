@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ListSecurityConfigurationsResponse
  *
- * \brief The ListSecurityConfigurationsResponse class encapsulates EMR ListSecurityConfigurations responses.
+ * \brief The ListSecurityConfigurationsResponse class provides an interace for EMR ListSecurityConfigurations responses.
  *
  * \ingroup EMR
  *

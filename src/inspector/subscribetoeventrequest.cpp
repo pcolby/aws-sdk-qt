@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::SubscribeToEventRequest
  *
- * \brief The SubscribeToEventRequest class encapsulates Inspector SubscribeToEvent requests.
+ * \brief The SubscribeToEventRequest class provides an interface for Inspector SubscribeToEvent requests.
  *
  * \ingroup Inspector
  *

@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DescribeConfigurationSetRequest
  *
- * \brief The DescribeConfigurationSetRequest class encapsulates SES DescribeConfigurationSet requests.
+ * \brief The DescribeConfigurationSetRequest class provides an interface for SES DescribeConfigurationSet requests.
  *
  * \ingroup SES
  *

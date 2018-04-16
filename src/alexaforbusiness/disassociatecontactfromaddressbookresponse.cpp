@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::DisassociateContactFromAddressBookResponse
  *
- * \brief The DisassociateContactFromAddressBookResponse class encapsulates AlexaForBusiness DisassociateContactFromAddressBook responses.
+ * \brief The DisassociateContactFromAddressBookResponse class provides an interace for AlexaForBusiness DisassociateContactFromAddressBook responses.
  *
  * \ingroup AlexaForBusiness
  *

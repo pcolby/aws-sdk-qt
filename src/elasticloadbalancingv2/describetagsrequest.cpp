@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DescribeTagsRequest
  *
- * \brief The DescribeTagsRequest class encapsulates ElasticLoadBalancingv2 DescribeTags requests.
+ * \brief The DescribeTagsRequest class provides an interface for ElasticLoadBalancingv2 DescribeTags requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

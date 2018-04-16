@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::RegisterApplicationRevisionResponse
  *
- * \brief The RegisterApplicationRevisionResponse class encapsulates CodeDeploy RegisterApplicationRevision responses.
+ * \brief The RegisterApplicationRevisionResponse class provides an interace for CodeDeploy RegisterApplicationRevision responses.
  *
  * \ingroup CodeDeploy
  *

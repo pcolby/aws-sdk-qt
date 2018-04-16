@@ -28,7 +28,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::DeleteFileSystemRequest
  *
- * \brief The DeleteFileSystemRequest class encapsulates EFS DeleteFileSystem requests.
+ * \brief The DeleteFileSystemRequest class provides an interface for EFS DeleteFileSystem requests.
  *
  * \ingroup EFS
  *

@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::DeletePresetRequest
  *
- * \brief The DeletePresetRequest class encapsulates MediaConvert DeletePreset requests.
+ * \brief The DeletePresetRequest class provides an interface for MediaConvert DeletePreset requests.
  *
  * \ingroup MediaConvert
  *

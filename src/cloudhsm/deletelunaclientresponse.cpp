@@ -30,7 +30,7 @@ namespace CloudHSM {
 /*!
  * \class QtAws::CloudHSM::DeleteLunaClientResponse
  *
- * \brief The DeleteLunaClientResponse class encapsulates CloudHSM DeleteLunaClient responses.
+ * \brief The DeleteLunaClientResponse class provides an interace for CloudHSM DeleteLunaClient responses.
  *
  * \ingroup CloudHSM
  *

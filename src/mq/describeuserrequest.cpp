@@ -28,7 +28,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::DescribeUserRequest
  *
- * \brief The DescribeUserRequest class encapsulates MQ DescribeUser requests.
+ * \brief The DescribeUserRequest class provides an interface for MQ DescribeUser requests.
  *
  * \ingroup MQ
  *

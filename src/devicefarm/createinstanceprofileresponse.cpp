@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::CreateInstanceProfileResponse
  *
- * \brief The CreateInstanceProfileResponse class encapsulates DeviceFarm CreateInstanceProfile responses.
+ * \brief The CreateInstanceProfileResponse class provides an interace for DeviceFarm CreateInstanceProfile responses.
  *
  * \ingroup DeviceFarm
  *

@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeGameSessionDetailsResponse
  *
- * \brief The DescribeGameSessionDetailsResponse class encapsulates GameLift DescribeGameSessionDetails responses.
+ * \brief The DescribeGameSessionDetailsResponse class provides an interace for GameLift DescribeGameSessionDetails responses.
  *
  * \ingroup GameLift
  *

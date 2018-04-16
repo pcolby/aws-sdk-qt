@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DetachTypedLinkRequest
  *
- * \brief The DetachTypedLinkRequest class encapsulates CloudDirectory DetachTypedLink requests.
+ * \brief The DetachTypedLinkRequest class provides an interface for CloudDirectory DetachTypedLink requests.
  *
  * \ingroup CloudDirectory
  *

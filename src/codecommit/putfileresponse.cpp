@@ -30,7 +30,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::PutFileResponse
  *
- * \brief The PutFileResponse class encapsulates CodeCommit PutFile responses.
+ * \brief The PutFileResponse class provides an interace for CodeCommit PutFile responses.
  *
  * \ingroup CodeCommit
  *

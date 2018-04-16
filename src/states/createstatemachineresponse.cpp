@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::CreateStateMachineResponse
  *
- * \brief The CreateStateMachineResponse class encapsulates SFN CreateStateMachine responses.
+ * \brief The CreateStateMachineResponse class provides an interace for SFN CreateStateMachine responses.
  *
  * \ingroup SFN
  *

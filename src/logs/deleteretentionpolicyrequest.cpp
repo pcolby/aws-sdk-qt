@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DeleteRetentionPolicyRequest
  *
- * \brief The DeleteRetentionPolicyRequest class encapsulates CloudWatchLogs DeleteRetentionPolicy requests.
+ * \brief The DeleteRetentionPolicyRequest class provides an interface for CloudWatchLogs DeleteRetentionPolicy requests.
  *
  * \ingroup CloudWatchLogs
  *

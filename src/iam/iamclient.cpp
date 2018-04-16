@@ -278,7 +278,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::IamClient
  *
- * \brief The IamClient class provides access the AWS Identity and Access Management (IAM) service.
+ * \brief The IamClient class provides access to the AWS Identity and Access Management (IAM) service.
  *
  * \ingroup IAM
  *

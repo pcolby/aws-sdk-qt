@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::CreateInstancesFromSnapshotRequest
  *
- * \brief The CreateInstancesFromSnapshotRequest class encapsulates Lightsail CreateInstancesFromSnapshot requests.
+ * \brief The CreateInstancesFromSnapshotRequest class provides an interface for Lightsail CreateInstancesFromSnapshot requests.
  *
  * \ingroup Lightsail
  *

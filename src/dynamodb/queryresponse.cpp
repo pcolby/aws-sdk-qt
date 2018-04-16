@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::QueryResponse
  *
- * \brief The QueryResponse class encapsulates DynamoDB Query responses.
+ * \brief The QueryResponse class provides an interace for DynamoDB Query responses.
  *
  * \ingroup DynamoDB
  *

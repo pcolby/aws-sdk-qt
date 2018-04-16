@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::ForgotPasswordResponse
  *
- * \brief The ForgotPasswordResponse class encapsulates CognitoIdentityProvider ForgotPassword responses.
+ * \brief The ForgotPasswordResponse class provides an interace for CognitoIdentityProvider ForgotPassword responses.
  *
  * \ingroup CognitoIdentityProvider
  *

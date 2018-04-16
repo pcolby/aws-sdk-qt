@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::ListAliasesRequest
  *
- * \brief The ListAliasesRequest class encapsulates WorkMail ListAliases requests.
+ * \brief The ListAliasesRequest class provides an interface for WorkMail ListAliases requests.
  *
  * \ingroup WorkMail
  *

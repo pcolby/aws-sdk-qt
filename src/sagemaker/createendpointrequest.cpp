@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::CreateEndpointRequest
  *
- * \brief The CreateEndpointRequest class encapsulates SageMaker CreateEndpoint requests.
+ * \brief The CreateEndpointRequest class provides an interface for SageMaker CreateEndpoint requests.
  *
  * \ingroup SageMaker
  *

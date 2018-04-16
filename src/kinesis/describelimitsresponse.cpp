@@ -30,7 +30,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::DescribeLimitsResponse
  *
- * \brief The DescribeLimitsResponse class encapsulates Kinesis DescribeLimits responses.
+ * \brief The DescribeLimitsResponse class provides an interace for Kinesis DescribeLimits responses.
  *
  * \ingroup Kinesis
  *

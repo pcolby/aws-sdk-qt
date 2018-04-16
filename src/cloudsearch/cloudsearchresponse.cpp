@@ -29,7 +29,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::CloudSearchResponse
  *
- * \brief The CloudSearchResponse class is the base class for all CloudSearch responses.
+ * \brief The CloudSearchResponse class provides an interface for CloudSearch responses.
  *
  * \ingroup CloudSearch
  */

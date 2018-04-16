@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::AttachPrincipalPolicyResponse
  *
- * \brief The AttachPrincipalPolicyResponse class encapsulates IoT AttachPrincipalPolicy responses.
+ * \brief The AttachPrincipalPolicyResponse class provides an interace for IoT AttachPrincipalPolicy responses.
  *
  * \ingroup IoT
  *

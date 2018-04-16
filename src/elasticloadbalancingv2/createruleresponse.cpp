@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::CreateRuleResponse
  *
- * \brief The CreateRuleResponse class encapsulates ElasticLoadBalancingv2 CreateRule responses.
+ * \brief The CreateRuleResponse class provides an interace for ElasticLoadBalancingv2 CreateRule responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

@@ -28,7 +28,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::UpdateComputeEnvironmentRequest
  *
- * \brief The UpdateComputeEnvironmentRequest class encapsulates Batch UpdateComputeEnvironment requests.
+ * \brief The UpdateComputeEnvironmentRequest class provides an interface for Batch UpdateComputeEnvironment requests.
  *
  * \ingroup Batch
  *

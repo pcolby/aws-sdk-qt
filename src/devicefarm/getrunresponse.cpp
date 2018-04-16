@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetRunResponse
  *
- * \brief The GetRunResponse class encapsulates DeviceFarm GetRun responses.
+ * \brief The GetRunResponse class provides an interace for DeviceFarm GetRun responses.
  *
  * \ingroup DeviceFarm
  *

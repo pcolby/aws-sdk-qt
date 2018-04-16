@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::DeleteSubscriptionDefinitionResponse
  *
- * \brief The DeleteSubscriptionDefinitionResponse class encapsulates Greengrass DeleteSubscriptionDefinition responses.
+ * \brief The DeleteSubscriptionDefinitionResponse class provides an interace for Greengrass DeleteSubscriptionDefinition responses.
  *
  * \ingroup Greengrass
  *

@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::SetPlatformApplicationAttributesResponse
  *
- * \brief The SetPlatformApplicationAttributesResponse class encapsulates SNS SetPlatformApplicationAttributes responses.
+ * \brief The SetPlatformApplicationAttributesResponse class provides an interace for SNS SetPlatformApplicationAttributes responses.
  *
  * \ingroup SNS
  *

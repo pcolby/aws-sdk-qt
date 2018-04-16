@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeInternetGatewaysRequest
  *
- * \brief The DescribeInternetGatewaysRequest class encapsulates EC2 DescribeInternetGateways requests.
+ * \brief The DescribeInternetGatewaysRequest class provides an interface for EC2 DescribeInternetGateways requests.
  *
  * \ingroup EC2
  *

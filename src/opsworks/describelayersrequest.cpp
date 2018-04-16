@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeLayersRequest
  *
- * \brief The DescribeLayersRequest class encapsulates OpsWorks DescribeLayers requests.
+ * \brief The DescribeLayersRequest class provides an interface for OpsWorks DescribeLayers requests.
  *
  * \ingroup OpsWorks
  *

@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeApplicationsResponse
  *
- * \brief The DescribeApplicationsResponse class encapsulates ElasticBeanstalk DescribeApplications responses.
+ * \brief The DescribeApplicationsResponse class provides an interace for ElasticBeanstalk DescribeApplications responses.
  *
  * \ingroup ElasticBeanstalk
  *

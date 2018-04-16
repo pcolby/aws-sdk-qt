@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteNetworkAclRequest
  *
- * \brief The DeleteNetworkAclRequest class encapsulates EC2 DeleteNetworkAcl requests.
+ * \brief The DeleteNetworkAclRequest class provides an interface for EC2 DeleteNetworkAcl requests.
  *
  * \ingroup EC2
  *

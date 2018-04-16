@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ListAliasesResponse
  *
- * \brief The ListAliasesResponse class encapsulates KMS ListAliases responses.
+ * \brief The ListAliasesResponse class provides an interace for KMS ListAliases responses.
  *
  * \ingroup KMS
  *

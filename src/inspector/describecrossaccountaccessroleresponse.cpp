@@ -30,7 +30,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::DescribeCrossAccountAccessRoleResponse
  *
- * \brief The DescribeCrossAccountAccessRoleResponse class encapsulates Inspector DescribeCrossAccountAccessRole responses.
+ * \brief The DescribeCrossAccountAccessRoleResponse class provides an interace for Inspector DescribeCrossAccountAccessRole responses.
  *
  * \ingroup Inspector
  *

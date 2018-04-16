@@ -30,7 +30,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::UpdateDomainContactResponse
  *
- * \brief The UpdateDomainContactResponse class encapsulates Route53Domains UpdateDomainContact responses.
+ * \brief The UpdateDomainContactResponse class provides an interace for Route53Domains UpdateDomainContact responses.
  *
  * \ingroup Route53Domains
  *

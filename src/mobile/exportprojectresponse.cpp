@@ -30,7 +30,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::ExportProjectResponse
  *
- * \brief The ExportProjectResponse class encapsulates Mobile ExportProject responses.
+ * \brief The ExportProjectResponse class provides an interace for Mobile ExportProject responses.
  *
  * \ingroup Mobile
  *

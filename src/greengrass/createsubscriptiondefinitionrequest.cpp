@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateSubscriptionDefinitionRequest
  *
- * \brief The CreateSubscriptionDefinitionRequest class encapsulates Greengrass CreateSubscriptionDefinition requests.
+ * \brief The CreateSubscriptionDefinitionRequest class provides an interface for Greengrass CreateSubscriptionDefinition requests.
  *
  * \ingroup Greengrass
  *

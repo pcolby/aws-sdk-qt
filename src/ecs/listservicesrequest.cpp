@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::ListServicesRequest
  *
- * \brief The ListServicesRequest class encapsulates ECS ListServices requests.
+ * \brief The ListServicesRequest class provides an interface for ECS ListServices requests.
  *
  * \ingroup ECS
  *

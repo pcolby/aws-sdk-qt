@@ -28,7 +28,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::CreateLogStreamRequest
  *
- * \brief The CreateLogStreamRequest class encapsulates CloudWatchLogs CreateLogStream requests.
+ * \brief The CreateLogStreamRequest class provides an interface for CloudWatchLogs CreateLogStream requests.
  *
  * \ingroup CloudWatchLogs
  *

@@ -28,7 +28,7 @@ namespace ApplicationAutoScaling {
 /*!
  * \class QtAws::ApplicationAutoScaling::DeleteScheduledActionRequest
  *
- * \brief The DeleteScheduledActionRequest class encapsulates ApplicationAutoScaling DeleteScheduledAction requests.
+ * \brief The DeleteScheduledActionRequest class provides an interface for ApplicationAutoScaling DeleteScheduledAction requests.
  *
  * \ingroup ApplicationAutoScaling
  *

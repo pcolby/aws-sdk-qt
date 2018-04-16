@@ -30,7 +30,7 @@ namespace Athena {
 /*!
  * \class QtAws::Athena::StartQueryExecutionResponse
  *
- * \brief The StartQueryExecutionResponse class encapsulates Athena StartQueryExecution responses.
+ * \brief The StartQueryExecutionResponse class provides an interace for Athena StartQueryExecution responses.
  *
  * \ingroup Athena
  *

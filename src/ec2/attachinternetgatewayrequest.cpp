@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AttachInternetGatewayRequest
  *
- * \brief The AttachInternetGatewayRequest class encapsulates EC2 AttachInternetGateway requests.
+ * \brief The AttachInternetGatewayRequest class provides an interface for EC2 AttachInternetGateway requests.
  *
  * \ingroup EC2
  *

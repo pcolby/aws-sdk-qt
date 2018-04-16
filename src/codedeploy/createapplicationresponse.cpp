@@ -30,7 +30,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::CreateApplicationResponse
  *
- * \brief The CreateApplicationResponse class encapsulates CodeDeploy CreateApplication responses.
+ * \brief The CreateApplicationResponse class provides an interace for CodeDeploy CreateApplication responses.
  *
  * \ingroup CodeDeploy
  *

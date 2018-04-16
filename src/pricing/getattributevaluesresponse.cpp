@@ -30,7 +30,7 @@ namespace Pricing {
 /*!
  * \class QtAws::Pricing::GetAttributeValuesResponse
  *
- * \brief The GetAttributeValuesResponse class encapsulates Pricing GetAttributeValues responses.
+ * \brief The GetAttributeValuesResponse class provides an interace for Pricing GetAttributeValues responses.
  *
  * \ingroup Pricing
  *

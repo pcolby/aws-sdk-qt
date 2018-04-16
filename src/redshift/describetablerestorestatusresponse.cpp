@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DescribeTableRestoreStatusResponse
  *
- * \brief The DescribeTableRestoreStatusResponse class encapsulates Redshift DescribeTableRestoreStatus responses.
+ * \brief The DescribeTableRestoreStatusResponse class provides an interace for Redshift DescribeTableRestoreStatus responses.
  *
  * \ingroup Redshift
  *

@@ -28,7 +28,7 @@ namespace MarketplaceEntitlementService {
 /*!
  * \class QtAws::MarketplaceEntitlementService::GetEntitlementsRequest
  *
- * \brief The GetEntitlementsRequest class encapsulates MarketplaceEntitlementService GetEntitlements requests.
+ * \brief The GetEntitlementsRequest class provides an interface for MarketplaceEntitlementService GetEntitlements requests.
  *
  * \ingroup MarketplaceEntitlementService
  *

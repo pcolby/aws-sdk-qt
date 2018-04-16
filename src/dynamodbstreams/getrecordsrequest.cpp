@@ -28,7 +28,7 @@ namespace DynamoDBStreams {
 /*!
  * \class QtAws::DynamoDBStreams::GetRecordsRequest
  *
- * \brief The GetRecordsRequest class encapsulates DynamoDBStreams GetRecords requests.
+ * \brief The GetRecordsRequest class provides an interface for DynamoDBStreams GetRecords requests.
  *
  * \ingroup DynamoDBStreams
  *

@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::UpdatePipelineResponse
  *
- * \brief The UpdatePipelineResponse class encapsulates CodePipeline UpdatePipeline responses.
+ * \brief The UpdatePipelineResponse class provides an interace for CodePipeline UpdatePipeline responses.
  *
  * \ingroup CodePipeline
  *

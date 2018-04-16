@@ -28,7 +28,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::UpdateTrailRequest
  *
- * \brief The UpdateTrailRequest class encapsulates CloudTrail UpdateTrail requests.
+ * \brief The UpdateTrailRequest class provides an interface for CloudTrail UpdateTrail requests.
  *
  * \ingroup CloudTrail
  *

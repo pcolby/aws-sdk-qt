@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::GetAggregateComplianceDetailsByConfigRuleResponse
  *
- * \brief The GetAggregateComplianceDetailsByConfigRuleResponse class encapsulates ConfigService GetAggregateComplianceDetailsByConfigRule responses.
+ * \brief The GetAggregateComplianceDetailsByConfigRuleResponse class provides an interace for ConfigService GetAggregateComplianceDetailsByConfigRule responses.
  *
  * \ingroup ConfigService
  *

@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::ResolveRoomRequest
  *
- * \brief The ResolveRoomRequest class encapsulates AlexaForBusiness ResolveRoom requests.
+ * \brief The ResolveRoomRequest class provides an interface for AlexaForBusiness ResolveRoom requests.
  *
  * \ingroup AlexaForBusiness
  *

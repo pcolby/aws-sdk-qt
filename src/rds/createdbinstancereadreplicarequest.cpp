@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::CreateDBInstanceReadReplicaRequest
  *
- * \brief The CreateDBInstanceReadReplicaRequest class encapsulates RDS CreateDBInstanceReadReplica requests.
+ * \brief The CreateDBInstanceReadReplicaRequest class provides an interface for RDS CreateDBInstanceReadReplica requests.
  *
  * \ingroup RDS
  *

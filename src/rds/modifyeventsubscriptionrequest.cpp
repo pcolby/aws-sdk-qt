@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ModifyEventSubscriptionRequest
  *
- * \brief The ModifyEventSubscriptionRequest class encapsulates RDS ModifyEventSubscription requests.
+ * \brief The ModifyEventSubscriptionRequest class provides an interface for RDS ModifyEventSubscription requests.
  *
  * \ingroup RDS
  *

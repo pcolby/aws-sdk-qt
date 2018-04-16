@@ -28,7 +28,7 @@ namespace AutoScaling {
 /*!
  * \class QtAws::AutoScaling::PutLifecycleHookRequest
  *
- * \brief The PutLifecycleHookRequest class encapsulates AutoScaling PutLifecycleHook requests.
+ * \brief The PutLifecycleHookRequest class provides an interface for AutoScaling PutLifecycleHook requests.
  *
  * \ingroup AutoScaling
  *

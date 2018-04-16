@@ -30,7 +30,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::AssociateAdminAccountResponse
  *
- * \brief The AssociateAdminAccountResponse class encapsulates FMS AssociateAdminAccount responses.
+ * \brief The AssociateAdminAccountResponse class provides an interace for FMS AssociateAdminAccount responses.
  *
  * \ingroup FMS
  *

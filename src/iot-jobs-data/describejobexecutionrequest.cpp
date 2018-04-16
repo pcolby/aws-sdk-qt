@@ -28,7 +28,7 @@ namespace IoTJobsDataPlane {
 /*!
  * \class QtAws::IoTJobsDataPlane::DescribeJobExecutionRequest
  *
- * \brief The DescribeJobExecutionRequest class encapsulates IoTJobsDataPlane DescribeJobExecution requests.
+ * \brief The DescribeJobExecutionRequest class provides an interface for IoTJobsDataPlane DescribeJobExecution requests.
  *
  * \ingroup IoTJobsDataPlane
  *

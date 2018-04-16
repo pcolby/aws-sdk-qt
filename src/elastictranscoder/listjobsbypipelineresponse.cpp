@@ -30,7 +30,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::ListJobsByPipelineResponse
  *
- * \brief The ListJobsByPipelineResponse class encapsulates ElasticTranscoder ListJobsByPipeline responses.
+ * \brief The ListJobsByPipelineResponse class provides an interace for ElasticTranscoder ListJobsByPipeline responses.
  *
  * \ingroup ElasticTranscoder
  *

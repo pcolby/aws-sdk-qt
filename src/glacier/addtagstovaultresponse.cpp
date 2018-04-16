@@ -30,7 +30,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::AddTagsToVaultResponse
  *
- * \brief The AddTagsToVaultResponse class encapsulates Glacier AddTagsToVault responses.
+ * \brief The AddTagsToVaultResponse class provides an interace for Glacier AddTagsToVault responses.
  *
  * \ingroup Glacier
  *

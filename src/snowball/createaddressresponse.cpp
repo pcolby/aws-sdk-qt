@@ -30,7 +30,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::CreateAddressResponse
  *
- * \brief The CreateAddressResponse class encapsulates Snowball CreateAddress responses.
+ * \brief The CreateAddressResponse class provides an interace for Snowball CreateAddress responses.
  *
  * \ingroup Snowball
  *

@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetSendStatisticsResponse
  *
- * \brief The GetSendStatisticsResponse class encapsulates SES GetSendStatistics responses.
+ * \brief The GetSendStatisticsResponse class provides an interace for SES GetSendStatistics responses.
  *
  * \ingroup SES
  *

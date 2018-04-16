@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteOTAUpdateResponse
  *
- * \brief The DeleteOTAUpdateResponse class encapsulates IoT DeleteOTAUpdate responses.
+ * \brief The DeleteOTAUpdateResponse class provides an interace for IoT DeleteOTAUpdate responses.
  *
  * \ingroup IoT
  *

@@ -30,7 +30,7 @@ namespace ACMPCA {
 /*!
  * \class QtAws::ACMPCA::UntagCertificateAuthorityResponse
  *
- * \brief The UntagCertificateAuthorityResponse class encapsulates ACMPCA UntagCertificateAuthority responses.
+ * \brief The UntagCertificateAuthorityResponse class provides an interace for ACMPCA UntagCertificateAuthority responses.
  *
  * \ingroup ACMPCA
  *

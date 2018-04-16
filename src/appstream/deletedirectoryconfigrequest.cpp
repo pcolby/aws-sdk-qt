@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DeleteDirectoryConfigRequest
  *
- * \brief The DeleteDirectoryConfigRequest class encapsulates AppStream DeleteDirectoryConfig requests.
+ * \brief The DeleteDirectoryConfigRequest class provides an interface for AppStream DeleteDirectoryConfig requests.
  *
  * \ingroup AppStream
  *

@@ -185,7 +185,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::GreengrassClient
  *
- * \brief The GreengrassClient class provides access the AWS Greengrass service.
+ * \brief The GreengrassClient class provides access to the AWS Greengrass service.
  *
  * \ingroup Greengrass
  *

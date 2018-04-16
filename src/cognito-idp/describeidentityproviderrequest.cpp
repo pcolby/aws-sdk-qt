@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::DescribeIdentityProviderRequest
  *
- * \brief The DescribeIdentityProviderRequest class encapsulates CognitoIdentityProvider DescribeIdentityProvider requests.
+ * \brief The DescribeIdentityProviderRequest class provides an interface for CognitoIdentityProvider DescribeIdentityProvider requests.
  *
  * \ingroup CognitoIdentityProvider
  *

@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::DeleteJobQueueResponse
  *
- * \brief The DeleteJobQueueResponse class encapsulates Batch DeleteJobQueue responses.
+ * \brief The DeleteJobQueueResponse class provides an interace for Batch DeleteJobQueue responses.
  *
  * \ingroup Batch
  *

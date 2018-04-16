@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::RebootInstanceResponse
  *
- * \brief The RebootInstanceResponse class encapsulates OpsWorks RebootInstance responses.
+ * \brief The RebootInstanceResponse class provides an interace for OpsWorks RebootInstance responses.
  *
  * \ingroup OpsWorks
  *

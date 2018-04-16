@@ -28,7 +28,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::DeleteUserRequest
  *
- * \brief The DeleteUserRequest class encapsulates AlexaForBusiness DeleteUser requests.
+ * \brief The DeleteUserRequest class provides an interface for AlexaForBusiness DeleteUser requests.
  *
  * \ingroup AlexaForBusiness
  *

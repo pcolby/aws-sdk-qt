@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::ImportCatalogToGlueRequest
  *
- * \brief The ImportCatalogToGlueRequest class encapsulates Glue ImportCatalogToGlue requests.
+ * \brief The ImportCatalogToGlueRequest class provides an interface for Glue ImportCatalogToGlue requests.
  *
  * \ingroup Glue
  *

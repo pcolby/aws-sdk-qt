@@ -30,7 +30,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::DescribeTagsResponse
  *
- * \brief The DescribeTagsResponse class encapsulates WorkSpaces DescribeTags responses.
+ * \brief The DescribeTagsResponse class provides an interace for WorkSpaces DescribeTags responses.
  *
  * \ingroup WorkSpaces
  *

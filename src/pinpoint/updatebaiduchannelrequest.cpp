@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateBaiduChannelRequest
  *
- * \brief The UpdateBaiduChannelRequest class encapsulates Pinpoint UpdateBaiduChannel requests.
+ * \brief The UpdateBaiduChannelRequest class provides an interface for Pinpoint UpdateBaiduChannel requests.
  *
  * \ingroup Pinpoint
  *

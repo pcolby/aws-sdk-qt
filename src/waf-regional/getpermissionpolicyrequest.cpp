@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetPermissionPolicyRequest
  *
- * \brief The GetPermissionPolicyRequest class encapsulates WAFRegional GetPermissionPolicy requests.
+ * \brief The GetPermissionPolicyRequest class provides an interface for WAFRegional GetPermissionPolicy requests.
  *
  * \ingroup WAFRegional
  *

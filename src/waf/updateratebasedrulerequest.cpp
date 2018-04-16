@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::UpdateRateBasedRuleRequest
  *
- * \brief The UpdateRateBasedRuleRequest class encapsulates WAF UpdateRateBasedRule requests.
+ * \brief The UpdateRateBasedRuleRequest class provides an interface for WAF UpdateRateBasedRule requests.
  *
  * \ingroup WAF
  *

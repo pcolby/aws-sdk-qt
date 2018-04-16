@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListAuthorizersResponse
  *
- * \brief The ListAuthorizersResponse class encapsulates IoT ListAuthorizers responses.
+ * \brief The ListAuthorizersResponse class provides an interace for IoT ListAuthorizers responses.
  *
  * \ingroup IoT
  *

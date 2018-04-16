@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::DeleteObjectRequest
  *
- * \brief The DeleteObjectRequest class encapsulates S3 DeleteObject requests.
+ * \brief The DeleteObjectRequest class provides an interface for S3 DeleteObject requests.
  *
  * \ingroup S3
  *

@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::RemoveFacetFromObjectRequest
  *
- * \brief The RemoveFacetFromObjectRequest class encapsulates CloudDirectory RemoveFacetFromObject requests.
+ * \brief The RemoveFacetFromObjectRequest class provides an interface for CloudDirectory RemoveFacetFromObject requests.
  *
  * \ingroup CloudDirectory
  *

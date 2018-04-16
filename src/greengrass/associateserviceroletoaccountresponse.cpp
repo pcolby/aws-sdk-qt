@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::AssociateServiceRoleToAccountResponse
  *
- * \brief The AssociateServiceRoleToAccountResponse class encapsulates Greengrass AssociateServiceRoleToAccount responses.
+ * \brief The AssociateServiceRoleToAccountResponse class provides an interace for Greengrass AssociateServiceRoleToAccount responses.
  *
  * \ingroup Greengrass
  *

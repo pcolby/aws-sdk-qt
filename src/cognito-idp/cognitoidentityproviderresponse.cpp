@@ -29,7 +29,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::CognitoIdentityProviderResponse
  *
- * \brief The CognitoIdentityProviderResponse class is the base class for all CognitoIdentityProvider responses.
+ * \brief The CognitoIdentityProviderResponse class provides an interface for CognitoIdentityProvider responses.
  *
  * \ingroup CognitoIdentityProvider
  */

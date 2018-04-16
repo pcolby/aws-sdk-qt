@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::CreateSnapshotFromVolumeRecoveryPointResponse
  *
- * \brief The CreateSnapshotFromVolumeRecoveryPointResponse class encapsulates StorageGateway CreateSnapshotFromVolumeRecoveryPoint responses.
+ * \brief The CreateSnapshotFromVolumeRecoveryPointResponse class provides an interace for StorageGateway CreateSnapshotFromVolumeRecoveryPoint responses.
  *
  * \ingroup StorageGateway
  *

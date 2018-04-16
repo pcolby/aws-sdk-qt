@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::ModifyClusterParameterGroupResponse
  *
- * \brief The ModifyClusterParameterGroupResponse class encapsulates Redshift ModifyClusterParameterGroup responses.
+ * \brief The ModifyClusterParameterGroupResponse class provides an interace for Redshift ModifyClusterParameterGroup responses.
  *
  * \ingroup Redshift
  *

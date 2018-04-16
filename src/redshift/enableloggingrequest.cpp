@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::EnableLoggingRequest
  *
- * \brief The EnableLoggingRequest class encapsulates Redshift EnableLogging requests.
+ * \brief The EnableLoggingRequest class provides an interface for Redshift EnableLogging requests.
  *
  * \ingroup Redshift
  *

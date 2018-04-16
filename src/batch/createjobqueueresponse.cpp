@@ -30,7 +30,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::CreateJobQueueResponse
  *
- * \brief The CreateJobQueueResponse class encapsulates Batch CreateJobQueue responses.
+ * \brief The CreateJobQueueResponse class provides an interace for Batch CreateJobQueue responses.
  *
  * \ingroup Batch
  *

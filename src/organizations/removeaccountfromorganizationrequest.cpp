@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::RemoveAccountFromOrganizationRequest
  *
- * \brief The RemoveAccountFromOrganizationRequest class encapsulates Organizations RemoveAccountFromOrganization requests.
+ * \brief The RemoveAccountFromOrganizationRequest class provides an interface for Organizations RemoveAccountFromOrganization requests.
  *
  * \ingroup Organizations
  *

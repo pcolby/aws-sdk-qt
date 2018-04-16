@@ -28,7 +28,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DescribeLoaRequest
  *
- * \brief The DescribeLoaRequest class encapsulates DirectConnect DescribeLoa requests.
+ * \brief The DescribeLoaRequest class provides an interface for DirectConnect DescribeLoa requests.
  *
  * \ingroup DirectConnect
  *

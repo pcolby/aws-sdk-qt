@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::TestInvokeMethodRequest
  *
- * \brief The TestInvokeMethodRequest class encapsulates APIGateway TestInvokeMethod requests.
+ * \brief The TestInvokeMethodRequest class provides an interface for APIGateway TestInvokeMethod requests.
  *
  * \ingroup APIGateway
  *

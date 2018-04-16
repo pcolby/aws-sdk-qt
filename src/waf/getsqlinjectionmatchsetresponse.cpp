@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::GetSqlInjectionMatchSetResponse
  *
- * \brief The GetSqlInjectionMatchSetResponse class encapsulates WAF GetSqlInjectionMatchSet responses.
+ * \brief The GetSqlInjectionMatchSetResponse class provides an interace for WAF GetSqlInjectionMatchSet responses.
  *
  * \ingroup WAF
  *

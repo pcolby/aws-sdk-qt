@@ -28,7 +28,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::ListPresetsRequest
  *
- * \brief The ListPresetsRequest class encapsulates MediaConvert ListPresets requests.
+ * \brief The ListPresetsRequest class provides an interface for MediaConvert ListPresets requests.
  *
  * \ingroup MediaConvert
  *

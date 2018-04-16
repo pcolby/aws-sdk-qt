@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListRecordHistoryResponse
  *
- * \brief The ListRecordHistoryResponse class encapsulates ServiceCatalog ListRecordHistory responses.
+ * \brief The ListRecordHistoryResponse class provides an interace for ServiceCatalog ListRecordHistory responses.
  *
  * \ingroup ServiceCatalog
  *

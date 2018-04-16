@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DisassociateRouteTableRequest
  *
- * \brief The DisassociateRouteTableRequest class encapsulates EC2 DisassociateRouteTable requests.
+ * \brief The DisassociateRouteTableRequest class provides an interface for EC2 DisassociateRouteTable requests.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteVerifiedEmailAddressResponse
  *
- * \brief The DeleteVerifiedEmailAddressResponse class encapsulates SES DeleteVerifiedEmailAddress responses.
+ * \brief The DeleteVerifiedEmailAddressResponse class provides an interace for SES DeleteVerifiedEmailAddress responses.
  *
  * \ingroup SES
  *

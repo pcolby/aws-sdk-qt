@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::DescribeAssessmentTargetsRequest
  *
- * \brief The DescribeAssessmentTargetsRequest class encapsulates Inspector DescribeAssessmentTargets requests.
+ * \brief The DescribeAssessmentTargetsRequest class provides an interface for Inspector DescribeAssessmentTargets requests.
  *
  * \ingroup Inspector
  *

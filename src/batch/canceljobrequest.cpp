@@ -28,7 +28,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::CancelJobRequest
  *
- * \brief The CancelJobRequest class encapsulates Batch CancelJob requests.
+ * \brief The CancelJobRequest class provides an interface for Batch CancelJob requests.
  *
  * \ingroup Batch
  *

@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::DeleteSubscriptionFilterResponse
  *
- * \brief The DeleteSubscriptionFilterResponse class encapsulates CloudWatchLogs DeleteSubscriptionFilter responses.
+ * \brief The DeleteSubscriptionFilterResponse class provides an interace for CloudWatchLogs DeleteSubscriptionFilter responses.
  *
  * \ingroup CloudWatchLogs
  *

@@ -28,7 +28,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::EnableKeyRotationRequest
  *
- * \brief The EnableKeyRotationRequest class encapsulates KMS EnableKeyRotation requests.
+ * \brief The EnableKeyRotationRequest class provides an interface for KMS EnableKeyRotation requests.
  *
  * \ingroup KMS
  *

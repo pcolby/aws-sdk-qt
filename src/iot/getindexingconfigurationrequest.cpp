@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::GetIndexingConfigurationRequest
  *
- * \brief The GetIndexingConfigurationRequest class encapsulates IoT GetIndexingConfiguration requests.
+ * \brief The GetIndexingConfigurationRequest class provides an interface for IoT GetIndexingConfiguration requests.
  *
  * \ingroup IoT
  *

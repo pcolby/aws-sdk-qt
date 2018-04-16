@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::GetCommentRequest
  *
- * \brief The GetCommentRequest class encapsulates CodeCommit GetComment requests.
+ * \brief The GetCommentRequest class provides an interface for CodeCommit GetComment requests.
  *
  * \ingroup CodeCommit
  *

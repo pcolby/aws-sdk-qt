@@ -29,7 +29,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::ElastiCacheResponse
  *
- * \brief The ElastiCacheResponse class is the base class for all ElastiCache responses.
+ * \brief The ElastiCacheResponse class provides an interface for ElastiCache responses.
  *
  * \ingroup ElastiCache
  */

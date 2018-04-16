@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DefineIndexFieldRequest
  *
- * \brief The DefineIndexFieldRequest class encapsulates CloudSearch DefineIndexField requests.
+ * \brief The DefineIndexFieldRequest class provides an interface for CloudSearch DefineIndexField requests.
  *
  * \ingroup CloudSearch
  *

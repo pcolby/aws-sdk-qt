@@ -26,7 +26,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::EC2Request
  *
- * \brief The EC2Request class is the base class for all EC2 requests.
+ * \brief The EC2Request class provides an interface for EC2 requests.
  *
  * \ingroup EC2
  */

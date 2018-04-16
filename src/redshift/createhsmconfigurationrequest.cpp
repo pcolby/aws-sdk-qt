@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::CreateHsmConfigurationRequest
  *
- * \brief The CreateHsmConfigurationRequest class encapsulates Redshift CreateHsmConfiguration requests.
+ * \brief The CreateHsmConfigurationRequest class provides an interface for Redshift CreateHsmConfiguration requests.
  *
  * \ingroup Redshift
  *

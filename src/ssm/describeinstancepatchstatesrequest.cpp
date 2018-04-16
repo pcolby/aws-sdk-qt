@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeInstancePatchStatesRequest
  *
- * \brief The DescribeInstancePatchStatesRequest class encapsulates SSM DescribeInstancePatchStates requests.
+ * \brief The DescribeInstancePatchStatesRequest class provides an interface for SSM DescribeInstancePatchStates requests.
  *
  * \ingroup SSM
  *

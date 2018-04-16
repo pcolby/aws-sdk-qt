@@ -30,7 +30,7 @@ namespace SimpleDB {
 /*!
  * \class QtAws::SimpleDB::DeleteDomainResponse
  *
- * \brief The DeleteDomainResponse class encapsulates SimpleDB DeleteDomain responses.
+ * \brief The DeleteDomainResponse class provides an interace for SimpleDB DeleteDomain responses.
  *
  * \ingroup SimpleDB
  *

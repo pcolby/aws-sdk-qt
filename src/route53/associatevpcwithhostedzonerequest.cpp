@@ -28,7 +28,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::AssociateVPCWithHostedZoneRequest
  *
- * \brief The AssociateVPCWithHostedZoneRequest class encapsulates Route53 AssociateVPCWithHostedZone requests.
+ * \brief The AssociateVPCWithHostedZoneRequest class provides an interface for Route53 AssociateVPCWithHostedZone requests.
  *
  * \ingroup Route53
  *

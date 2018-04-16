@@ -30,7 +30,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::DeleteLoadBalancerListenersResponse
  *
- * \brief The DeleteLoadBalancerListenersResponse class encapsulates ElasticLoadBalancing DeleteLoadBalancerListeners responses.
+ * \brief The DeleteLoadBalancerListenersResponse class provides an interace for ElasticLoadBalancing DeleteLoadBalancerListeners responses.
  *
  * \ingroup ElasticLoadBalancing
  *

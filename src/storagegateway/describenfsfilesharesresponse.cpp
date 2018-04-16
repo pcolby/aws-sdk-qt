@@ -30,7 +30,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeNFSFileSharesResponse
  *
- * \brief The DescribeNFSFileSharesResponse class encapsulates StorageGateway DescribeNFSFileShares responses.
+ * \brief The DescribeNFSFileSharesResponse class provides an interace for StorageGateway DescribeNFSFileShares responses.
  *
  * \ingroup StorageGateway
  *

@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetGroupRequest
  *
- * \brief The GetGroupRequest class encapsulates IAM GetGroup requests.
+ * \brief The GetGroupRequest class provides an interface for IAM GetGroup requests.
  *
  * \ingroup IAM
  *

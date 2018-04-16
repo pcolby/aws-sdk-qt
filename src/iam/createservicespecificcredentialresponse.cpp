@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateServiceSpecificCredentialResponse
  *
- * \brief The CreateServiceSpecificCredentialResponse class encapsulates IAM CreateServiceSpecificCredential responses.
+ * \brief The CreateServiceSpecificCredentialResponse class provides an interace for IAM CreateServiceSpecificCredential responses.
  *
  * \ingroup IAM
  *

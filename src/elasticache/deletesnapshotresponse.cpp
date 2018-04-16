@@ -30,7 +30,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::DeleteSnapshotResponse
  *
- * \brief The DeleteSnapshotResponse class encapsulates ElastiCache DeleteSnapshot responses.
+ * \brief The DeleteSnapshotResponse class provides an interace for ElastiCache DeleteSnapshot responses.
  *
  * \ingroup ElastiCache
  *

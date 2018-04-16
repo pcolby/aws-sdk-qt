@@ -30,7 +30,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::UpdateProjectResponse
  *
- * \brief The UpdateProjectResponse class encapsulates Mobile UpdateProject responses.
+ * \brief The UpdateProjectResponse class provides an interace for Mobile UpdateProject responses.
  *
  * \ingroup Mobile
  *

@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::RegisterDefaultPatchBaselineRequest
  *
- * \brief The RegisterDefaultPatchBaselineRequest class encapsulates SSM RegisterDefaultPatchBaseline requests.
+ * \brief The RegisterDefaultPatchBaselineRequest class provides an interface for SSM RegisterDefaultPatchBaseline requests.
  *
  * \ingroup SSM
  *

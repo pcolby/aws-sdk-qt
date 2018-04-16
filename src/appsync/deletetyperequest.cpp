@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::DeleteTypeRequest
  *
- * \brief The DeleteTypeRequest class encapsulates AppSync DeleteType requests.
+ * \brief The DeleteTypeRequest class provides an interface for AppSync DeleteType requests.
  *
  * \ingroup AppSync
  *

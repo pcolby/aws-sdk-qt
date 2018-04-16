@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::RespondActivityTaskCanceledRequest
  *
- * \brief The RespondActivityTaskCanceledRequest class encapsulates SWF RespondActivityTaskCanceled requests.
+ * \brief The RespondActivityTaskCanceledRequest class provides an interface for SWF RespondActivityTaskCanceled requests.
  *
  * \ingroup SWF
  *

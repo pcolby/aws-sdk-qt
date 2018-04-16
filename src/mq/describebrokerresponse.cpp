@@ -30,7 +30,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::DescribeBrokerResponse
  *
- * \brief The DescribeBrokerResponse class encapsulates MQ DescribeBroker responses.
+ * \brief The DescribeBrokerResponse class provides an interace for MQ DescribeBroker responses.
  *
  * \ingroup MQ
  *

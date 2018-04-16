@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AssociateIamInstanceProfileRequest
  *
- * \brief The AssociateIamInstanceProfileRequest class encapsulates EC2 AssociateIamInstanceProfile requests.
+ * \brief The AssociateIamInstanceProfileRequest class provides an interface for EC2 AssociateIamInstanceProfile requests.
  *
  * \ingroup EC2
  *

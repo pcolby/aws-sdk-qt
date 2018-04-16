@@ -28,7 +28,7 @@ namespace DirectoryService {
 /*!
  * \class QtAws::DirectoryService::CreateDirectoryRequest
  *
- * \brief The CreateDirectoryRequest class encapsulates DirectoryService CreateDirectory requests.
+ * \brief The CreateDirectoryRequest class provides an interface for DirectoryService CreateDirectory requests.
  *
  * \ingroup DirectoryService
  *

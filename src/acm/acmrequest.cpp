@@ -26,7 +26,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::ACMRequest
  *
- * \brief The ACMRequest class is the base class for all ACM requests.
+ * \brief The ACMRequest class provides an interface for ACM requests.
  *
  * \ingroup ACM
  */

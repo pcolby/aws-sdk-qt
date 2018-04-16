@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::CreateLagResponse
  *
- * \brief The CreateLagResponse class encapsulates DirectConnect CreateLag responses.
+ * \brief The CreateLagResponse class provides an interace for DirectConnect CreateLag responses.
  *
  * \ingroup DirectConnect
  *

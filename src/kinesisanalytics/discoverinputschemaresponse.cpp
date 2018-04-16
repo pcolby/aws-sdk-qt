@@ -30,7 +30,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::DiscoverInputSchemaResponse
  *
- * \brief The DiscoverInputSchemaResponse class encapsulates KinesisAnalytics DiscoverInputSchema responses.
+ * \brief The DiscoverInputSchemaResponse class provides an interace for KinesisAnalytics DiscoverInputSchema responses.
  *
  * \ingroup KinesisAnalytics
  *

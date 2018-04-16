@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteEventStreamRequest
  *
- * \brief The DeleteEventStreamRequest class encapsulates Pinpoint DeleteEventStream requests.
+ * \brief The DeleteEventStreamRequest class provides an interface for Pinpoint DeleteEventStream requests.
  *
  * \ingroup Pinpoint
  *

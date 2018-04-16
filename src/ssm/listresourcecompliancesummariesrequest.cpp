@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListResourceComplianceSummariesRequest
  *
- * \brief The ListResourceComplianceSummariesRequest class encapsulates SSM ListResourceComplianceSummaries requests.
+ * \brief The ListResourceComplianceSummariesRequest class provides an interface for SSM ListResourceComplianceSummaries requests.
  *
  * \ingroup SSM
  *

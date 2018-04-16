@@ -28,7 +28,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::StopLoggingRequest
  *
- * \brief The StopLoggingRequest class encapsulates CloudTrail StopLogging requests.
+ * \brief The StopLoggingRequest class provides an interface for CloudTrail StopLogging requests.
  *
  * \ingroup CloudTrail
  *

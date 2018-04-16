@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DeleteDetectorRequest
  *
- * \brief The DeleteDetectorRequest class encapsulates GuardDuty DeleteDetector requests.
+ * \brief The DeleteDetectorRequest class provides an interface for GuardDuty DeleteDetector requests.
  *
  * \ingroup GuardDuty
  *

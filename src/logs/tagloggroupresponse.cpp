@@ -30,7 +30,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::TagLogGroupResponse
  *
- * \brief The TagLogGroupResponse class encapsulates CloudWatchLogs TagLogGroup responses.
+ * \brief The TagLogGroupResponse class provides an interace for CloudWatchLogs TagLogGroup responses.
  *
  * \ingroup CloudWatchLogs
  *

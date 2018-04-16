@@ -30,7 +30,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::ModifyRuleResponse
  *
- * \brief The ModifyRuleResponse class encapsulates ElasticLoadBalancingv2 ModifyRule responses.
+ * \brief The ModifyRuleResponse class provides an interace for ElasticLoadBalancingv2 ModifyRule responses.
  *
  * \ingroup ElasticLoadBalancingv2
  *

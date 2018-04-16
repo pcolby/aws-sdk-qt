@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::IndexFacesRequest
  *
- * \brief The IndexFacesRequest class encapsulates Rekognition IndexFaces requests.
+ * \brief The IndexFacesRequest class provides an interface for Rekognition IndexFaces requests.
  *
  * \ingroup Rekognition
  *

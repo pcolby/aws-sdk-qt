@@ -30,7 +30,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::GetNotificationChannelResponse
  *
- * \brief The GetNotificationChannelResponse class encapsulates FMS GetNotificationChannel responses.
+ * \brief The GetNotificationChannelResponse class provides an interace for FMS GetNotificationChannel responses.
  *
  * \ingroup FMS
  *

@@ -28,7 +28,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::BatchDeleteBuildsRequest
  *
- * \brief The BatchDeleteBuildsRequest class encapsulates CodeBuild BatchDeleteBuilds requests.
+ * \brief The BatchDeleteBuildsRequest class provides an interface for CodeBuild BatchDeleteBuilds requests.
  *
  * \ingroup CodeBuild
  *

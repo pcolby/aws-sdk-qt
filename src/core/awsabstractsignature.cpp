@@ -29,7 +29,7 @@ namespace Core {
 /*!
  * \class QtAws::Core::AwsAbstractSignature
  *
- * @brief  Interface class for providing AWS signatures.
+ * \brief The AwsAbstractSignature class provides an interface for generating AWS signatures.
  */
 
 /*!

@@ -28,7 +28,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::GetDomainDetailRequest
  *
- * \brief The GetDomainDetailRequest class encapsulates Route53Domains GetDomainDetail requests.
+ * \brief The GetDomainDetailRequest class provides an interface for Route53Domains GetDomainDetail requests.
  *
  * \ingroup Route53Domains
  *

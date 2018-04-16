@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteRouteRequest
  *
- * \brief The DeleteRouteRequest class encapsulates EC2 DeleteRoute requests.
+ * \brief The DeleteRouteRequest class provides an interface for EC2 DeleteRoute requests.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::DeleteConfigurationSetResponse
  *
- * \brief The DeleteConfigurationSetResponse class encapsulates SES DeleteConfigurationSet responses.
+ * \brief The DeleteConfigurationSetResponse class provides an interace for SES DeleteConfigurationSet responses.
  *
  * \ingroup SES
  *

@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::UpdateDataSourceRequest
  *
- * \brief The UpdateDataSourceRequest class encapsulates MachineLearning UpdateDataSource requests.
+ * \brief The UpdateDataSourceRequest class provides an interface for MachineLearning UpdateDataSource requests.
  *
  * \ingroup MachineLearning
  *

@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UploadSSHPublicKeyResponse
  *
- * \brief The UploadSSHPublicKeyResponse class encapsulates IAM UploadSSHPublicKey responses.
+ * \brief The UploadSSHPublicKeyResponse class provides an interace for IAM UploadSSHPublicKey responses.
  *
  * \ingroup IAM
  *

@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeletePolicyResponse
  *
- * \brief The DeletePolicyResponse class encapsulates IoT DeletePolicy responses.
+ * \brief The DeletePolicyResponse class provides an interace for IoT DeletePolicy responses.
  *
  * \ingroup IoT
  *

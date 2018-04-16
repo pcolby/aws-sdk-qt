@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeletePendingAggregationRequestRequest
  *
- * \brief The DeletePendingAggregationRequestRequest class encapsulates ConfigService DeletePendingAggregationRequest requests.
+ * \brief The DeletePendingAggregationRequestRequest class provides an interface for ConfigService DeletePendingAggregationRequest requests.
  *
  * \ingroup ConfigService
  *

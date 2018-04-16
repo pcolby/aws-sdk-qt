@@ -28,7 +28,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::DescribeContinuousBackupsRequest
  *
- * \brief The DescribeContinuousBackupsRequest class encapsulates DynamoDB DescribeContinuousBackups requests.
+ * \brief The DescribeContinuousBackupsRequest class provides an interface for DynamoDB DescribeContinuousBackups requests.
  *
  * \ingroup DynamoDB
  *

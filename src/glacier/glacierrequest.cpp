@@ -26,7 +26,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::GlacierRequest
  *
- * \brief The GlacierRequest class is the base class for all Glacier requests.
+ * \brief The GlacierRequest class provides an interface for Glacier requests.
  *
  * \ingroup Glacier
  */

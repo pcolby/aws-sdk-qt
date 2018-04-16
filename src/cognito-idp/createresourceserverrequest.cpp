@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::CreateResourceServerRequest
  *
- * \brief The CreateResourceServerRequest class encapsulates CognitoIdentityProvider CreateResourceServer requests.
+ * \brief The CreateResourceServerRequest class provides an interface for CognitoIdentityProvider CreateResourceServer requests.
  *
  * \ingroup CognitoIdentityProvider
  *

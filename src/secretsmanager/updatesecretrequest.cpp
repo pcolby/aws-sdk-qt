@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::UpdateSecretRequest
  *
- * \brief The UpdateSecretRequest class encapsulates SecretsManager UpdateSecret requests.
+ * \brief The UpdateSecretRequest class provides an interface for SecretsManager UpdateSecret requests.
  *
  * \ingroup SecretsManager
  *

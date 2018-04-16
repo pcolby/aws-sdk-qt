@@ -61,7 +61,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::ResourceGroupsClient
  *
- * \brief The ResourceGroupsClient class provides access the AWS Resource Groups service.
+ * \brief The ResourceGroupsClient class provides access to the AWS Resource Groups service.
  *
  * \ingroup ResourceGroups
  *

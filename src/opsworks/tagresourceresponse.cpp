@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::TagResourceResponse
  *
- * \brief The TagResourceResponse class encapsulates OpsWorks TagResource responses.
+ * \brief The TagResourceResponse class provides an interace for OpsWorks TagResource responses.
  *
  * \ingroup OpsWorks
  *

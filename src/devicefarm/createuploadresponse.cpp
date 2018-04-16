@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::CreateUploadResponse
  *
- * \brief The CreateUploadResponse class encapsulates DeviceFarm CreateUpload responses.
+ * \brief The CreateUploadResponse class provides an interace for DeviceFarm CreateUpload responses.
  *
  * \ingroup DeviceFarm
  *

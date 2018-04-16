@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::CreateBucketRequest
  *
- * \brief The CreateBucketRequest class encapsulates S3 CreateBucket requests.
+ * \brief The CreateBucketRequest class provides an interface for S3 CreateBucket requests.
  *
  * \ingroup S3
  *

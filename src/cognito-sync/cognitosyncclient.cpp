@@ -71,7 +71,7 @@ namespace CognitoSync {
 /*!
  * \class QtAws::CognitoSync::CognitoSyncClient
  *
- * \brief The CognitoSyncClient class provides access the Amazon Cognito Sync service.
+ * \brief The CognitoSyncClient class provides access to the Amazon Cognito Sync service.
  *
  * \ingroup CognitoSync
  *

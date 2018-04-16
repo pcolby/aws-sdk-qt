@@ -30,7 +30,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::BatchGetTracesResponse
  *
- * \brief The BatchGetTracesResponse class encapsulates XRay BatchGetTraces responses.
+ * \brief The BatchGetTracesResponse class provides an interace for XRay BatchGetTraces responses.
  *
  * \ingroup XRay
  *

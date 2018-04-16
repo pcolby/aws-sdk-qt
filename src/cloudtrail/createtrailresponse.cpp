@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::CreateTrailResponse
  *
- * \brief The CreateTrailResponse class encapsulates CloudTrail CreateTrail responses.
+ * \brief The CreateTrailResponse class provides an interace for CloudTrail CreateTrail responses.
  *
  * \ingroup CloudTrail
  *

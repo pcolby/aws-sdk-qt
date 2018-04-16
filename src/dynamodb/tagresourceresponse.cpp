@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::TagResourceResponse
  *
- * \brief The TagResourceResponse class encapsulates DynamoDB TagResource responses.
+ * \brief The TagResourceResponse class provides an interace for DynamoDB TagResource responses.
  *
  * \ingroup DynamoDB
  *

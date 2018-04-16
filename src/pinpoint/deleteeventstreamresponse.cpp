@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::DeleteEventStreamResponse
  *
- * \brief The DeleteEventStreamResponse class encapsulates Pinpoint DeleteEventStream responses.
+ * \brief The DeleteEventStreamResponse class provides an interace for Pinpoint DeleteEventStream responses.
  *
  * \ingroup Pinpoint
  *

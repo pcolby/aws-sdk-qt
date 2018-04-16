@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeVpcPeeringConnectionsRequest
  *
- * \brief The DescribeVpcPeeringConnectionsRequest class encapsulates GameLift DescribeVpcPeeringConnections requests.
+ * \brief The DescribeVpcPeeringConnectionsRequest class provides an interface for GameLift DescribeVpcPeeringConnections requests.
  *
  * \ingroup GameLift
  *

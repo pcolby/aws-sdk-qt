@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListSamplesResponse
  *
- * \brief The ListSamplesResponse class encapsulates DeviceFarm ListSamples responses.
+ * \brief The ListSamplesResponse class provides an interace for DeviceFarm ListSamples responses.
  *
  * \ingroup DeviceFarm
  *

@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeExportTasksRequest
  *
- * \brief The DescribeExportTasksRequest class encapsulates EC2 DescribeExportTasks requests.
+ * \brief The DescribeExportTasksRequest class provides an interface for EC2 DescribeExportTasks requests.
  *
  * \ingroup EC2
  *

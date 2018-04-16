@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::StopDBInstanceRequest
  *
- * \brief The StopDBInstanceRequest class encapsulates RDS StopDBInstance requests.
+ * \brief The StopDBInstanceRequest class provides an interface for RDS StopDBInstance requests.
  *
  * \ingroup RDS
  *

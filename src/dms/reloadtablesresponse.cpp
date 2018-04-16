@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::ReloadTablesResponse
  *
- * \brief The ReloadTablesResponse class encapsulates DatabaseMigrationService ReloadTables responses.
+ * \brief The ReloadTablesResponse class provides an interace for DatabaseMigrationService ReloadTables responses.
  *
  * \ingroup DatabaseMigrationService
  *

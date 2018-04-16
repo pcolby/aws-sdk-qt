@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::CreateTagsResponse
  *
- * \brief The CreateTagsResponse class encapsulates Redshift CreateTags responses.
+ * \brief The CreateTagsResponse class provides an interace for Redshift CreateTags responses.
  *
  * \ingroup Redshift
  *

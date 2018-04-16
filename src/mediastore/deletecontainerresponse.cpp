@@ -30,7 +30,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::DeleteContainerResponse
  *
- * \brief The DeleteContainerResponse class encapsulates MediaStore DeleteContainer responses.
+ * \brief The DeleteContainerResponse class provides an interace for MediaStore DeleteContainer responses.
  *
  * \ingroup MediaStore
  *

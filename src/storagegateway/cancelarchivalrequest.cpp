@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::CancelArchivalRequest
  *
- * \brief The CancelArchivalRequest class encapsulates StorageGateway CancelArchival requests.
+ * \brief The CancelArchivalRequest class provides an interface for StorageGateway CancelArchival requests.
  *
  * \ingroup StorageGateway
  *

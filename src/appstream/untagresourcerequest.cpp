@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::UntagResourceRequest
  *
- * \brief The UntagResourceRequest class encapsulates AppStream UntagResource requests.
+ * \brief The UntagResourceRequest class provides an interface for AppStream UntagResource requests.
  *
  * \ingroup AppStream
  *

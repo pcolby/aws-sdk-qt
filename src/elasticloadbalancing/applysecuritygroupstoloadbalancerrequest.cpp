@@ -28,7 +28,7 @@ namespace ElasticLoadBalancing {
 /*!
  * \class QtAws::ElasticLoadBalancing::ApplySecurityGroupsToLoadBalancerRequest
  *
- * \brief The ApplySecurityGroupsToLoadBalancerRequest class encapsulates ElasticLoadBalancing ApplySecurityGroupsToLoadBalancer requests.
+ * \brief The ApplySecurityGroupsToLoadBalancerRequest class provides an interface for ElasticLoadBalancing ApplySecurityGroupsToLoadBalancer requests.
  *
  * \ingroup ElasticLoadBalancing
  *

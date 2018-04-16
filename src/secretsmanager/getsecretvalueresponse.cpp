@@ -30,7 +30,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::GetSecretValueResponse
  *
- * \brief The GetSecretValueResponse class encapsulates SecretsManager GetSecretValue responses.
+ * \brief The GetSecretValueResponse class provides an interace for SecretsManager GetSecretValue responses.
  *
  * \ingroup SecretsManager
  *

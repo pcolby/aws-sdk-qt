@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::CreateSubnetGroupResponse
  *
- * \brief The CreateSubnetGroupResponse class encapsulates DAX CreateSubnetGroup responses.
+ * \brief The CreateSubnetGroupResponse class provides an interace for DAX CreateSubnetGroup responses.
  *
  * \ingroup DAX
  *

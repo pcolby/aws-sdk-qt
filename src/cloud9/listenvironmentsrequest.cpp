@@ -28,7 +28,7 @@ namespace Cloud9 {
 /*!
  * \class QtAws::Cloud9::ListEnvironmentsRequest
  *
- * \brief The ListEnvironmentsRequest class encapsulates Cloud9 ListEnvironments requests.
+ * \brief The ListEnvironmentsRequest class provides an interface for Cloud9 ListEnvironments requests.
  *
  * \ingroup Cloud9
  *

@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::GetContactResponse
  *
- * \brief The GetContactResponse class encapsulates AlexaForBusiness GetContact responses.
+ * \brief The GetContactResponse class provides an interace for AlexaForBusiness GetContact responses.
  *
  * \ingroup AlexaForBusiness
  *

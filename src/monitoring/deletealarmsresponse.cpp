@@ -30,7 +30,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::DeleteAlarmsResponse
  *
- * \brief The DeleteAlarmsResponse class encapsulates CloudWatch DeleteAlarms responses.
+ * \brief The DeleteAlarmsResponse class provides an interace for CloudWatch DeleteAlarms responses.
  *
  * \ingroup CloudWatch
  *

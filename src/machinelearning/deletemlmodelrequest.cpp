@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DeleteMLModelRequest
  *
- * \brief The DeleteMLModelRequest class encapsulates MachineLearning DeleteMLModel requests.
+ * \brief The DeleteMLModelRequest class provides an interface for MachineLearning DeleteMLModel requests.
  *
  * \ingroup MachineLearning
  *

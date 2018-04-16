@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::UpdatePullRequestDescriptionRequest
  *
- * \brief The UpdatePullRequestDescriptionRequest class encapsulates CodeCommit UpdatePullRequestDescription requests.
+ * \brief The UpdatePullRequestDescriptionRequest class provides an interface for CodeCommit UpdatePullRequestDescription requests.
  *
  * \ingroup CodeCommit
  *

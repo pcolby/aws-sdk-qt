@@ -28,7 +28,7 @@ namespace StorageGateway {
 /*!
  * \class QtAws::StorageGateway::DescribeChapCredentialsRequest
  *
- * \brief The DescribeChapCredentialsRequest class encapsulates StorageGateway DescribeChapCredentials requests.
+ * \brief The DescribeChapCredentialsRequest class provides an interface for StorageGateway DescribeChapCredentials requests.
  *
  * \ingroup StorageGateway
  *

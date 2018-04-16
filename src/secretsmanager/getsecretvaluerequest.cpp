@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::GetSecretValueRequest
  *
- * \brief The GetSecretValueRequest class encapsulates SecretsManager GetSecretValue requests.
+ * \brief The GetSecretValueRequest class provides an interface for SecretsManager GetSecretValue requests.
  *
  * \ingroup SecretsManager
  *

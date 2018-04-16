@@ -28,7 +28,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::DeleteApplicationCloudWatchLoggingOptionRequest
  *
- * \brief The DeleteApplicationCloudWatchLoggingOptionRequest class encapsulates KinesisAnalytics DeleteApplicationCloudWatchLoggingOption requests.
+ * \brief The DeleteApplicationCloudWatchLoggingOptionRequest class provides an interface for KinesisAnalytics DeleteApplicationCloudWatchLoggingOption requests.
  *
  * \ingroup KinesisAnalytics
  *

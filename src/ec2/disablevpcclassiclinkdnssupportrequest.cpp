@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DisableVpcClassicLinkDnsSupportRequest
  *
- * \brief The DisableVpcClassicLinkDnsSupportRequest class encapsulates EC2 DisableVpcClassicLinkDnsSupport requests.
+ * \brief The DisableVpcClassicLinkDnsSupportRequest class provides an interface for EC2 DisableVpcClassicLinkDnsSupport requests.
  *
  * \ingroup EC2
  *

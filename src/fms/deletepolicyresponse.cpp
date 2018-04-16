@@ -30,7 +30,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::DeletePolicyResponse
  *
- * \brief The DeletePolicyResponse class encapsulates FMS DeletePolicy responses.
+ * \brief The DeletePolicyResponse class provides an interace for FMS DeletePolicy responses.
  *
  * \ingroup FMS
  *

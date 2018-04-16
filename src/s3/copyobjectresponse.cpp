@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::CopyObjectResponse
  *
- * \brief The CopyObjectResponse class encapsulates S3 CopyObject responses.
+ * \brief The CopyObjectResponse class provides an interace for S3 CopyObject responses.
  *
  * \ingroup S3
  *

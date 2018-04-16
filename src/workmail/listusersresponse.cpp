@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::ListUsersResponse
  *
- * \brief The ListUsersResponse class encapsulates WorkMail ListUsers responses.
+ * \brief The ListUsersResponse class provides an interace for WorkMail ListUsers responses.
  *
  * \ingroup WorkMail
  *

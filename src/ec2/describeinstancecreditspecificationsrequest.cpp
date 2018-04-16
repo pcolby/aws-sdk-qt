@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeInstanceCreditSpecificationsRequest
  *
- * \brief The DescribeInstanceCreditSpecificationsRequest class encapsulates EC2 DescribeInstanceCreditSpecifications requests.
+ * \brief The DescribeInstanceCreditSpecificationsRequest class provides an interface for EC2 DescribeInstanceCreditSpecifications requests.
  *
  * \ingroup EC2
  *

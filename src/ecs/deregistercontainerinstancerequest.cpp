@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DeregisterContainerInstanceRequest
  *
- * \brief The DeregisterContainerInstanceRequest class encapsulates ECS DeregisterContainerInstance requests.
+ * \brief The DeregisterContainerInstanceRequest class provides an interface for ECS DeregisterContainerInstance requests.
  *
  * \ingroup ECS
  *

@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::NotifyWorkersRequest
  *
- * \brief The NotifyWorkersRequest class encapsulates MTurk NotifyWorkers requests.
+ * \brief The NotifyWorkersRequest class provides an interface for MTurk NotifyWorkers requests.
  *
  * \ingroup MTurk
  *

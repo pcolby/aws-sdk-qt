@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::ListIPSetsRequest
  *
- * \brief The ListIPSetsRequest class encapsulates GuardDuty ListIPSets requests.
+ * \brief The ListIPSetsRequest class provides an interface for GuardDuty ListIPSets requests.
  *
  * \ingroup GuardDuty
  *

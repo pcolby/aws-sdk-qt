@@ -26,7 +26,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::MediaStoreRequest
  *
- * \brief The MediaStoreRequest class is the base class for all MediaStore requests.
+ * \brief The MediaStoreRequest class provides an interface for MediaStore requests.
  *
  * \ingroup MediaStore
  */

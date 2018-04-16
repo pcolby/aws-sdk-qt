@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::RebootInstancesRequest
  *
- * \brief The RebootInstancesRequest class encapsulates EC2 RebootInstances requests.
+ * \brief The RebootInstancesRequest class provides an interface for EC2 RebootInstances requests.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace OpsWorksCM {
 /*!
  * \class QtAws::OpsWorksCM::DescribeNodeAssociationStatusResponse
  *
- * \brief The DescribeNodeAssociationStatusResponse class encapsulates OpsWorksCM DescribeNodeAssociationStatus responses.
+ * \brief The DescribeNodeAssociationStatusResponse class provides an interace for OpsWorksCM DescribeNodeAssociationStatus responses.
  *
  * \ingroup OpsWorksCM
  *

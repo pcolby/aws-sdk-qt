@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::PredictResponse
  *
- * \brief The PredictResponse class encapsulates MachineLearning Predict responses.
+ * \brief The PredictResponse class provides an interace for MachineLearning Predict responses.
  *
  * \ingroup MachineLearning
  *

@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::ContinueDeploymentRequest
  *
- * \brief The ContinueDeploymentRequest class encapsulates CodeDeploy ContinueDeployment requests.
+ * \brief The ContinueDeploymentRequest class provides an interface for CodeDeploy ContinueDeployment requests.
  *
  * \ingroup CodeDeploy
  *

@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::DeleteStreamProcessorRequest
  *
- * \brief The DeleteStreamProcessorRequest class encapsulates Rekognition DeleteStreamProcessor requests.
+ * \brief The DeleteStreamProcessorRequest class provides an interface for Rekognition DeleteStreamProcessor requests.
  *
  * \ingroup Rekognition
  *

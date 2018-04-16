@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateSpotDatafeedSubscriptionResponse
  *
- * \brief The CreateSpotDatafeedSubscriptionResponse class encapsulates EC2 CreateSpotDatafeedSubscription responses.
+ * \brief The CreateSpotDatafeedSubscriptionResponse class provides an interace for EC2 CreateSpotDatafeedSubscription responses.
  *
  * \ingroup EC2
  *

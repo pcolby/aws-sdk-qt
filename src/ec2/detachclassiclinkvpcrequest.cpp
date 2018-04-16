@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DetachClassicLinkVpcRequest
  *
- * \brief The DetachClassicLinkVpcRequest class encapsulates EC2 DetachClassicLinkVpc requests.
+ * \brief The DetachClassicLinkVpcRequest class provides an interface for EC2 DetachClassicLinkVpc requests.
  *
  * \ingroup EC2
  *

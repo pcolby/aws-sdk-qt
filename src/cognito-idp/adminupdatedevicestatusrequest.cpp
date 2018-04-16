@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminUpdateDeviceStatusRequest
  *
- * \brief The AdminUpdateDeviceStatusRequest class encapsulates CognitoIdentityProvider AdminUpdateDeviceStatus requests.
+ * \brief The AdminUpdateDeviceStatusRequest class provides an interface for CognitoIdentityProvider AdminUpdateDeviceStatus requests.
  *
  * \ingroup CognitoIdentityProvider
  *

@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::ResetJobBookmarkRequest
  *
- * \brief The ResetJobBookmarkRequest class encapsulates Glue ResetJobBookmark requests.
+ * \brief The ResetJobBookmarkRequest class provides an interface for Glue ResetJobBookmark requests.
  *
  * \ingroup Glue
  *

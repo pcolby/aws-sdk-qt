@@ -28,7 +28,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::DeleteContainerPolicyRequest
  *
- * \brief The DeleteContainerPolicyRequest class encapsulates MediaStore DeleteContainerPolicy requests.
+ * \brief The DeleteContainerPolicyRequest class provides an interface for MediaStore DeleteContainerPolicy requests.
  *
  * \ingroup MediaStore
  *

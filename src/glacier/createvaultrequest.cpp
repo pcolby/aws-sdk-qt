@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::CreateVaultRequest
  *
- * \brief The CreateVaultRequest class encapsulates Glacier CreateVault requests.
+ * \brief The CreateVaultRequest class provides an interface for Glacier CreateVault requests.
  *
  * \ingroup Glacier
  *

@@ -28,7 +28,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateCampaignRequest
  *
- * \brief The UpdateCampaignRequest class encapsulates Pinpoint UpdateCampaign requests.
+ * \brief The UpdateCampaignRequest class provides an interface for Pinpoint UpdateCampaign requests.
  *
  * \ingroup Pinpoint
  *

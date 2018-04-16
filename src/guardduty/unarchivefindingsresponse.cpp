@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::UnarchiveFindingsResponse
  *
- * \brief The UnarchiveFindingsResponse class encapsulates GuardDuty UnarchiveFindings responses.
+ * \brief The UnarchiveFindingsResponse class provides an interace for GuardDuty UnarchiveFindings responses.
  *
  * \ingroup GuardDuty
  *

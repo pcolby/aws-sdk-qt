@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::CreateApplicationRequest
  *
- * \brief The CreateApplicationRequest class encapsulates ApplicationDiscoveryService CreateApplication requests.
+ * \brief The CreateApplicationRequest class provides an interface for ApplicationDiscoveryService CreateApplication requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

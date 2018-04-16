@@ -149,7 +149,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::Route53Client
  *
- * \brief The Route53Client class provides access the Amazon Route 53 service.
+ * \brief The Route53Client class provides access to the Amazon Route 53 service.
  *
  * \ingroup Route53
  *

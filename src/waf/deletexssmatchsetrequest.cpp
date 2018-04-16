@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteXssMatchSetRequest
  *
- * \brief The DeleteXssMatchSetRequest class encapsulates WAF DeleteXssMatchSet requests.
+ * \brief The DeleteXssMatchSetRequest class provides an interface for WAF DeleteXssMatchSet requests.
  *
  * \ingroup WAF
  *

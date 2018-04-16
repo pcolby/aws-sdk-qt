@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DetachInstancesFromLoadBalancerResponse
  *
- * \brief The DetachInstancesFromLoadBalancerResponse class encapsulates Lightsail DetachInstancesFromLoadBalancer responses.
+ * \brief The DetachInstancesFromLoadBalancerResponse class provides an interace for Lightsail DetachInstancesFromLoadBalancer responses.
  *
  * \ingroup Lightsail
  *

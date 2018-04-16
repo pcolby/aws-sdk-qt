@@ -97,7 +97,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::SnsClient
  *
- * \brief The SnsClient class provides access the Amazon Simple Notification Service ( SNS) service.
+ * \brief The SnsClient class provides access to the Amazon Simple Notification Service ( SNS) service.
  *
  * \ingroup SNS
  *

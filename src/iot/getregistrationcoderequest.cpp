@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::GetRegistrationCodeRequest
  *
- * \brief The GetRegistrationCodeRequest class encapsulates IoT GetRegistrationCode requests.
+ * \brief The GetRegistrationCodeRequest class provides an interface for IoT GetRegistrationCode requests.
  *
  * \ingroup IoT
  *

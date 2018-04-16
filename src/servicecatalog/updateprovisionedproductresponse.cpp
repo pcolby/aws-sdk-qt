@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::UpdateProvisionedProductResponse
  *
- * \brief The UpdateProvisionedProductResponse class encapsulates ServiceCatalog UpdateProvisionedProduct responses.
+ * \brief The UpdateProvisionedProductResponse class provides an interace for ServiceCatalog UpdateProvisionedProduct responses.
  *
  * \ingroup ServiceCatalog
  *

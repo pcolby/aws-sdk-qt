@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::CompareFacesResponse
  *
- * \brief The CompareFacesResponse class encapsulates Rekognition CompareFaces responses.
+ * \brief The CompareFacesResponse class provides an interace for Rekognition CompareFaces responses.
  *
  * \ingroup Rekognition
  *

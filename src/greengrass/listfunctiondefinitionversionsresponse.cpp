@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListFunctionDefinitionVersionsResponse
  *
- * \brief The ListFunctionDefinitionVersionsResponse class encapsulates Greengrass ListFunctionDefinitionVersions responses.
+ * \brief The ListFunctionDefinitionVersionsResponse class provides an interace for Greengrass ListFunctionDefinitionVersions responses.
  *
  * \ingroup Greengrass
  *

@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::DeleteStreamRequest
  *
- * \brief The DeleteStreamRequest class encapsulates Kinesis DeleteStream requests.
+ * \brief The DeleteStreamRequest class provides an interface for Kinesis DeleteStream requests.
  *
  * \ingroup Kinesis
  *

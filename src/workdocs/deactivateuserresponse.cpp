@@ -30,7 +30,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DeactivateUserResponse
  *
- * \brief The DeactivateUserResponse class encapsulates WorkDocs DeactivateUser responses.
+ * \brief The DeactivateUserResponse class provides an interace for WorkDocs DeactivateUser responses.
  *
  * \ingroup WorkDocs
  *

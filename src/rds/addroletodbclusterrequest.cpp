@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::AddRoleToDBClusterRequest
  *
- * \brief The AddRoleToDBClusterRequest class encapsulates RDS AddRoleToDBCluster requests.
+ * \brief The AddRoleToDBClusterRequest class provides an interface for RDS AddRoleToDBCluster requests.
  *
  * \ingroup RDS
  *

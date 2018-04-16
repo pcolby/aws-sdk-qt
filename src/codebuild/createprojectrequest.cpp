@@ -28,7 +28,7 @@ namespace CodeBuild {
 /*!
  * \class QtAws::CodeBuild::CreateProjectRequest
  *
- * \brief The CreateProjectRequest class encapsulates CodeBuild CreateProject requests.
+ * \brief The CreateProjectRequest class provides an interface for CodeBuild CreateProject requests.
  *
  * \ingroup CodeBuild
  *

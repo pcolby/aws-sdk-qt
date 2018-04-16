@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::UpdateFindingsFeedbackRequest
  *
- * \brief The UpdateFindingsFeedbackRequest class encapsulates GuardDuty UpdateFindingsFeedback requests.
+ * \brief The UpdateFindingsFeedbackRequest class provides an interface for GuardDuty UpdateFindingsFeedback requests.
  *
  * \ingroup GuardDuty
  *

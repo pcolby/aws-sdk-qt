@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeNetworkInterfacesResponse
  *
- * \brief The DescribeNetworkInterfacesResponse class encapsulates EC2 DescribeNetworkInterfaces responses.
+ * \brief The DescribeNetworkInterfacesResponse class provides an interace for EC2 DescribeNetworkInterfaces responses.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::CreateMembersRequest
  *
- * \brief The CreateMembersRequest class encapsulates GuardDuty CreateMembers requests.
+ * \brief The CreateMembersRequest class provides an interface for GuardDuty CreateMembers requests.
  *
  * \ingroup GuardDuty
  *

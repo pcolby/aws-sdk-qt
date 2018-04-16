@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateServiceSpecificCredentialRequest
  *
- * \brief The CreateServiceSpecificCredentialRequest class encapsulates IAM CreateServiceSpecificCredential requests.
+ * \brief The CreateServiceSpecificCredentialRequest class provides an interface for IAM CreateServiceSpecificCredential requests.
  *
  * \ingroup IAM
  *

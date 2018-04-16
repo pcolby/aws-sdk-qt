@@ -30,7 +30,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::CreateCaseResponse
  *
- * \brief The CreateCaseResponse class encapsulates Support CreateCase responses.
+ * \brief The CreateCaseResponse class provides an interace for Support CreateCase responses.
  *
  * \ingroup Support
  *

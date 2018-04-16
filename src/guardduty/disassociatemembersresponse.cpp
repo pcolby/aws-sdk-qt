@@ -30,7 +30,7 @@ namespace GuardDuty {
 /*!
  * \class QtAws::GuardDuty::DisassociateMembersResponse
  *
- * \brief The DisassociateMembersResponse class encapsulates GuardDuty DisassociateMembers responses.
+ * \brief The DisassociateMembersResponse class provides an interace for GuardDuty DisassociateMembers responses.
  *
  * \ingroup GuardDuty
  *

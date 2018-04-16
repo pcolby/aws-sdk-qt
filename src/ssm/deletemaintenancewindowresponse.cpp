@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeleteMaintenanceWindowResponse
  *
- * \brief The DeleteMaintenanceWindowResponse class encapsulates SSM DeleteMaintenanceWindow responses.
+ * \brief The DeleteMaintenanceWindowResponse class provides an interace for SSM DeleteMaintenanceWindow responses.
  *
  * \ingroup SSM
  *

@@ -30,7 +30,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::ListStateMachinesResponse
  *
- * \brief The ListStateMachinesResponse class encapsulates SFN ListStateMachines responses.
+ * \brief The ListStateMachinesResponse class provides an interace for SFN ListStateMachines responses.
  *
  * \ingroup SFN
  *

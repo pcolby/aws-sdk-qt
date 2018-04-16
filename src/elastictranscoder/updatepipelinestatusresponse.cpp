@@ -30,7 +30,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::UpdatePipelineStatusResponse
  *
- * \brief The UpdatePipelineStatusResponse class encapsulates ElasticTranscoder UpdatePipelineStatus responses.
+ * \brief The UpdatePipelineStatusResponse class provides an interace for ElasticTranscoder UpdatePipelineStatus responses.
  *
  * \ingroup ElasticTranscoder
  *

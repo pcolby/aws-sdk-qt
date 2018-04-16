@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::GetRepositoryRequest
  *
- * \brief The GetRepositoryRequest class encapsulates CodeCommit GetRepository requests.
+ * \brief The GetRepositoryRequest class provides an interface for CodeCommit GetRepository requests.
  *
  * \ingroup CodeCommit
  *

@@ -53,7 +53,7 @@ namespace TranscribeService {
 /*!
  * \class QtAws::TranscribeService::TranscribeServiceClient
  *
- * \brief The TranscribeServiceClient class provides access the Amazon Transcribe Service service.
+ * \brief The TranscribeServiceClient class provides access to the Amazon Transcribe Service service.
  *
  * \ingroup TranscribeService
  *

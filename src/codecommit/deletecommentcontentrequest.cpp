@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::DeleteCommentContentRequest
  *
- * \brief The DeleteCommentContentRequest class encapsulates CodeCommit DeleteCommentContent requests.
+ * \brief The DeleteCommentContentRequest class provides an interface for CodeCommit DeleteCommentContent requests.
  *
  * \ingroup CodeCommit
  *

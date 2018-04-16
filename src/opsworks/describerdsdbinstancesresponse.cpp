@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeRdsDbInstancesResponse
  *
- * \brief The DescribeRdsDbInstancesResponse class encapsulates OpsWorks DescribeRdsDbInstances responses.
+ * \brief The DescribeRdsDbInstancesResponse class provides an interace for OpsWorks DescribeRdsDbInstances responses.
  *
  * \ingroup OpsWorks
  *

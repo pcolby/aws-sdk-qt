@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::InviteAccountToOrganizationResponse
  *
- * \brief The InviteAccountToOrganizationResponse class encapsulates Organizations InviteAccountToOrganization responses.
+ * \brief The InviteAccountToOrganizationResponse class provides an interace for Organizations InviteAccountToOrganization responses.
  *
  * \ingroup Organizations
  *

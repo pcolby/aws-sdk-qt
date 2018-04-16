@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeregisterImageResponse
  *
- * \brief The DeregisterImageResponse class encapsulates EC2 DeregisterImage responses.
+ * \brief The DeregisterImageResponse class provides an interace for EC2 DeregisterImage responses.
  *
  * \ingroup EC2
  *

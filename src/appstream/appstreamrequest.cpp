@@ -26,7 +26,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::AppStreamRequest
  *
- * \brief The AppStreamRequest class is the base class for all AppStream requests.
+ * \brief The AppStreamRequest class provides an interface for AppStream requests.
  *
  * \ingroup AppStream
  */

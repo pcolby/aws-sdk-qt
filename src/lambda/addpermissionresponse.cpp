@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::AddPermissionResponse
  *
- * \brief The AddPermissionResponse class encapsulates Lambda AddPermission responses.
+ * \brief The AddPermissionResponse class provides an interace for Lambda AddPermission responses.
  *
  * \ingroup Lambda
  *

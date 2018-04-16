@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeNatGatewaysResponse
  *
- * \brief The DescribeNatGatewaysResponse class encapsulates EC2 DescribeNatGateways responses.
+ * \brief The DescribeNatGatewaysResponse class provides an interace for EC2 DescribeNatGateways responses.
  *
  * \ingroup EC2
  *

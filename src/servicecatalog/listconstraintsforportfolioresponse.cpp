@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListConstraintsForPortfolioResponse
  *
- * \brief The ListConstraintsForPortfolioResponse class encapsulates ServiceCatalog ListConstraintsForPortfolio responses.
+ * \brief The ListConstraintsForPortfolioResponse class provides an interace for ServiceCatalog ListConstraintsForPortfolio responses.
  *
  * \ingroup ServiceCatalog
  *

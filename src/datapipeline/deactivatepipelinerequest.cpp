@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::DeactivatePipelineRequest
  *
- * \brief The DeactivatePipelineRequest class encapsulates DataPipeline DeactivatePipeline requests.
+ * \brief The DeactivatePipelineRequest class provides an interface for DataPipeline DeactivatePipeline requests.
  *
  * \ingroup DataPipeline
  *

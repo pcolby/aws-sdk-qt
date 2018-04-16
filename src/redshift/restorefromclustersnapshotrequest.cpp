@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::RestoreFromClusterSnapshotRequest
  *
- * \brief The RestoreFromClusterSnapshotRequest class encapsulates Redshift RestoreFromClusterSnapshot requests.
+ * \brief The RestoreFromClusterSnapshotRequest class provides an interface for Redshift RestoreFromClusterSnapshot requests.
  *
  * \ingroup Redshift
  *

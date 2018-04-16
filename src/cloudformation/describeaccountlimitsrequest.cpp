@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::DescribeAccountLimitsRequest
  *
- * \brief The DescribeAccountLimitsRequest class encapsulates CloudFormation DescribeAccountLimits requests.
+ * \brief The DescribeAccountLimitsRequest class provides an interface for CloudFormation DescribeAccountLimits requests.
  *
  * \ingroup CloudFormation
  *

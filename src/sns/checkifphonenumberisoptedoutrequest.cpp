@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::CheckIfPhoneNumberIsOptedOutRequest
  *
- * \brief The CheckIfPhoneNumberIsOptedOutRequest class encapsulates SNS CheckIfPhoneNumberIsOptedOut requests.
+ * \brief The CheckIfPhoneNumberIsOptedOutRequest class provides an interface for SNS CheckIfPhoneNumberIsOptedOut requests.
  *
  * \ingroup SNS
  *

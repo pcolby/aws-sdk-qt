@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::AbortEnvironmentUpdateRequest
  *
- * \brief The AbortEnvironmentUpdateRequest class encapsulates ElasticBeanstalk AbortEnvironmentUpdate requests.
+ * \brief The AbortEnvironmentUpdateRequest class provides an interface for ElasticBeanstalk AbortEnvironmentUpdate requests.
  *
  * \ingroup ElasticBeanstalk
  *

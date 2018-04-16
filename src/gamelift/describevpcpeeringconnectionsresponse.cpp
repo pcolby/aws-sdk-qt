@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeVpcPeeringConnectionsResponse
  *
- * \brief The DescribeVpcPeeringConnectionsResponse class encapsulates GameLift DescribeVpcPeeringConnections responses.
+ * \brief The DescribeVpcPeeringConnectionsResponse class provides an interace for GameLift DescribeVpcPeeringConnections responses.
  *
  * \ingroup GameLift
  *

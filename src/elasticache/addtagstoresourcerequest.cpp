@@ -28,7 +28,7 @@ namespace ElastiCache {
 /*!
  * \class QtAws::ElastiCache::AddTagsToResourceRequest
  *
- * \brief The AddTagsToResourceRequest class encapsulates ElastiCache AddTagsToResource requests.
+ * \brief The AddTagsToResourceRequest class provides an interface for ElastiCache AddTagsToResource requests.
  *
  * \ingroup ElastiCache
  *

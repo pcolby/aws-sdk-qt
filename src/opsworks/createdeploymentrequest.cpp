@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::CreateDeploymentRequest
  *
- * \brief The CreateDeploymentRequest class encapsulates OpsWorks CreateDeployment requests.
+ * \brief The CreateDeploymentRequest class provides an interface for OpsWorks CreateDeployment requests.
  *
  * \ingroup OpsWorks
  *

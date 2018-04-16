@@ -30,7 +30,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::ListApplicationsResponse
  *
- * \brief The ListApplicationsResponse class encapsulates KinesisAnalytics ListApplications responses.
+ * \brief The ListApplicationsResponse class provides an interace for KinesisAnalytics ListApplications responses.
  *
  * \ingroup KinesisAnalytics
  *

@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeleteTopicRuleRequest
  *
- * \brief The DeleteTopicRuleRequest class encapsulates IoT DeleteTopicRule requests.
+ * \brief The DeleteTopicRuleRequest class provides an interface for IoT DeleteTopicRule requests.
  *
  * \ingroup IoT
  *

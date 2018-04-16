@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DeleteResourceResponse
  *
- * \brief The DeleteResourceResponse class encapsulates WorkMail DeleteResource responses.
+ * \brief The DeleteResourceResponse class provides an interace for WorkMail DeleteResource responses.
  *
  * \ingroup WorkMail
  *

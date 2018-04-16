@@ -30,7 +30,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::CreateTemplateResponse
  *
- * \brief The CreateTemplateResponse class encapsulates SES CreateTemplate responses.
+ * \brief The CreateTemplateResponse class provides an interace for SES CreateTemplate responses.
  *
  * \ingroup SES
  *

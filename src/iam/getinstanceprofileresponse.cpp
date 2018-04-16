@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetInstanceProfileResponse
  *
- * \brief The GetInstanceProfileResponse class encapsulates IAM GetInstanceProfile responses.
+ * \brief The GetInstanceProfileResponse class provides an interace for IAM GetInstanceProfile responses.
  *
  * \ingroup IAM
  *

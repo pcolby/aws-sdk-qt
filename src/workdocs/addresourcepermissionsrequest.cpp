@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::AddResourcePermissionsRequest
  *
- * \brief The AddResourcePermissionsRequest class encapsulates WorkDocs AddResourcePermissions requests.
+ * \brief The AddResourcePermissionsRequest class provides an interface for WorkDocs AddResourcePermissions requests.
  *
  * \ingroup WorkDocs
  *

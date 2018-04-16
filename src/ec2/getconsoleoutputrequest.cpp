@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::GetConsoleOutputRequest
  *
- * \brief The GetConsoleOutputRequest class encapsulates EC2 GetConsoleOutput requests.
+ * \brief The GetConsoleOutputRequest class provides an interface for EC2 GetConsoleOutput requests.
  *
  * \ingroup EC2
  *

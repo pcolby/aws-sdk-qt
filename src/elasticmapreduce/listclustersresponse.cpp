@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::ListClustersResponse
  *
- * \brief The ListClustersResponse class encapsulates EMR ListClusters responses.
+ * \brief The ListClustersResponse class provides an interace for EMR ListClusters responses.
  *
  * \ingroup EMR
  *

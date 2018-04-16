@@ -30,7 +30,7 @@ namespace Pinpoint {
 /*!
  * \class QtAws::Pinpoint::UpdateCampaignResponse
  *
- * \brief The UpdateCampaignResponse class encapsulates Pinpoint UpdateCampaign responses.
+ * \brief The UpdateCampaignResponse class provides an interace for Pinpoint UpdateCampaign responses.
  *
  * \ingroup Pinpoint
  *

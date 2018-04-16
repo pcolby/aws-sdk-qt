@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::ScheduleKeyDeletionResponse
  *
- * \brief The ScheduleKeyDeletionResponse class encapsulates KMS ScheduleKeyDeletion responses.
+ * \brief The ScheduleKeyDeletionResponse class provides an interace for KMS ScheduleKeyDeletion responses.
  *
  * \ingroup KMS
  *

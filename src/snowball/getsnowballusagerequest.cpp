@@ -28,7 +28,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::GetSnowballUsageRequest
  *
- * \brief The GetSnowballUsageRequest class encapsulates Snowball GetSnowballUsage requests.
+ * \brief The GetSnowballUsageRequest class provides an interface for Snowball GetSnowballUsage requests.
  *
  * \ingroup Snowball
  *

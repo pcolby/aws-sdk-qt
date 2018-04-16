@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteAuthorizerRequest
  *
- * \brief The DeleteAuthorizerRequest class encapsulates APIGateway DeleteAuthorizer requests.
+ * \brief The DeleteAuthorizerRequest class provides an interface for APIGateway DeleteAuthorizer requests.
  *
  * \ingroup APIGateway
  *

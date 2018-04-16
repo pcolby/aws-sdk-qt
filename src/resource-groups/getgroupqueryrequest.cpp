@@ -28,7 +28,7 @@ namespace ResourceGroups {
 /*!
  * \class QtAws::ResourceGroups::GetGroupQueryRequest
  *
- * \brief The GetGroupQueryRequest class encapsulates ResourceGroups GetGroupQuery requests.
+ * \brief The GetGroupQueryRequest class provides an interface for ResourceGroups GetGroupQuery requests.
  *
  * \ingroup ResourceGroups
  *

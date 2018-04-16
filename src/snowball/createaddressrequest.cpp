@@ -28,7 +28,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::CreateAddressRequest
  *
- * \brief The CreateAddressRequest class encapsulates Snowball CreateAddress requests.
+ * \brief The CreateAddressRequest class provides an interface for Snowball CreateAddress requests.
  *
  * \ingroup Snowball
  *

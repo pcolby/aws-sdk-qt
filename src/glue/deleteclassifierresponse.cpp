@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::DeleteClassifierResponse
  *
- * \brief The DeleteClassifierResponse class encapsulates Glue DeleteClassifier responses.
+ * \brief The DeleteClassifierResponse class provides an interace for Glue DeleteClassifier responses.
  *
  * \ingroup Glue
  *

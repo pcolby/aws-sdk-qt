@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::DeleteFacesRequest
  *
- * \brief The DeleteFacesRequest class encapsulates Rekognition DeleteFaces requests.
+ * \brief The DeleteFacesRequest class provides an interface for Rekognition DeleteFaces requests.
  *
  * \ingroup Rekognition
  *

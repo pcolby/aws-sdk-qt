@@ -30,7 +30,7 @@ namespace DynamoDB {
 /*!
  * \class QtAws::DynamoDB::CreateBackupResponse
  *
- * \brief The CreateBackupResponse class encapsulates DynamoDB CreateBackup responses.
+ * \brief The CreateBackupResponse class provides an interace for DynamoDB CreateBackup responses.
  *
  * \ingroup DynamoDB
  *

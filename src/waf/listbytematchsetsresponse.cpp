@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::ListByteMatchSetsResponse
  *
- * \brief The ListByteMatchSetsResponse class encapsulates WAF ListByteMatchSets responses.
+ * \brief The ListByteMatchSetsResponse class provides an interace for WAF ListByteMatchSets responses.
  *
  * \ingroup WAF
  *

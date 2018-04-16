@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::DeleteDeploymentConfigRequest
  *
- * \brief The DeleteDeploymentConfigRequest class encapsulates CodeDeploy DeleteDeploymentConfig requests.
+ * \brief The DeleteDeploymentConfigRequest class provides an interface for CodeDeploy DeleteDeploymentConfig requests.
  *
  * \ingroup CodeDeploy
  *

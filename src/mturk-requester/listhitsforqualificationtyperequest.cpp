@@ -28,7 +28,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::ListHITsForQualificationTypeRequest
  *
- * \brief The ListHITsForQualificationTypeRequest class encapsulates MTurk ListHITsForQualificationType requests.
+ * \brief The ListHITsForQualificationTypeRequest class provides an interface for MTurk ListHITsForQualificationType requests.
  *
  * \ingroup MTurk
  *

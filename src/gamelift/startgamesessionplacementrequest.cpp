@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::StartGameSessionPlacementRequest
  *
- * \brief The StartGameSessionPlacementRequest class encapsulates GameLift StartGameSessionPlacement requests.
+ * \brief The StartGameSessionPlacementRequest class provides an interface for GameLift StartGameSessionPlacement requests.
  *
  * \ingroup GameLift
  *

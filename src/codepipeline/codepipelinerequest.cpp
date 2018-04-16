@@ -26,7 +26,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::CodePipelineRequest
  *
- * \brief The CodePipelineRequest class is the base class for all CodePipeline requests.
+ * \brief The CodePipelineRequest class provides an interface for CodePipeline requests.
  *
  * \ingroup CodePipeline
  */

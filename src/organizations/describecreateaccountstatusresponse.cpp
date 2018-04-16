@@ -30,7 +30,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DescribeCreateAccountStatusResponse
  *
- * \brief The DescribeCreateAccountStatusResponse class encapsulates Organizations DescribeCreateAccountStatus responses.
+ * \brief The DescribeCreateAccountStatusResponse class provides an interace for Organizations DescribeCreateAccountStatus responses.
  *
  * \ingroup Organizations
  *

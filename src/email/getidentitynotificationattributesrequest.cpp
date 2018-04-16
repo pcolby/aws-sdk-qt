@@ -28,7 +28,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::GetIdentityNotificationAttributesRequest
  *
- * \brief The GetIdentityNotificationAttributesRequest class encapsulates SES GetIdentityNotificationAttributes requests.
+ * \brief The GetIdentityNotificationAttributesRequest class provides an interface for SES GetIdentityNotificationAttributes requests.
  *
  * \ingroup SES
  *

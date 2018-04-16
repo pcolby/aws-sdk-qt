@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::DescribeTagsRequest
  *
- * \brief The DescribeTagsRequest class encapsulates ApplicationDiscoveryService DescribeTags requests.
+ * \brief The DescribeTagsRequest class provides an interface for ApplicationDiscoveryService DescribeTags requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

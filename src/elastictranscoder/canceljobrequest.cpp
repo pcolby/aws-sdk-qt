@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::CancelJobRequest
  *
- * \brief The CancelJobRequest class encapsulates ElasticTranscoder CancelJob requests.
+ * \brief The CancelJobRequest class provides an interface for ElasticTranscoder CancelJob requests.
  *
  * \ingroup ElasticTranscoder
  *

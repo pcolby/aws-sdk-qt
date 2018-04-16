@@ -26,7 +26,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::SWFRequest
  *
- * \brief The SWFRequest class is the base class for all SWF requests.
+ * \brief The SWFRequest class provides an interface for SWF requests.
  *
  * \ingroup SWF
  */

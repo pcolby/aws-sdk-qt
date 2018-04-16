@@ -43,7 +43,7 @@ namespace Pricing {
 /*!
  * \class QtAws::Pricing::PricingClient
  *
- * \brief The PricingClient class provides access the AWS Price List Service ( Pricing) service.
+ * \brief The PricingClient class provides access to the AWS Price List Service ( Pricing) service.
  *
  * \ingroup Pricing
  *

@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::StartChannelRequest
  *
- * \brief The StartChannelRequest class encapsulates MediaLive StartChannel requests.
+ * \brief The StartChannelRequest class provides an interface for MediaLive StartChannel requests.
  *
  * \ingroup MediaLive
  *

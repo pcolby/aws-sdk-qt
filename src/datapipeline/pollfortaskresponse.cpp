@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::PollForTaskResponse
  *
- * \brief The PollForTaskResponse class encapsulates DataPipeline PollForTask responses.
+ * \brief The PollForTaskResponse class provides an interace for DataPipeline PollForTask responses.
  *
  * \ingroup DataPipeline
  *

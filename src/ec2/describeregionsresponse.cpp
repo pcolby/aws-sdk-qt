@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeRegionsResponse
  *
- * \brief The DescribeRegionsResponse class encapsulates EC2 DescribeRegions responses.
+ * \brief The DescribeRegionsResponse class provides an interace for EC2 DescribeRegions responses.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::CreateOriginEndpointResponse
  *
- * \brief The CreateOriginEndpointResponse class encapsulates MediaPackage CreateOriginEndpoint responses.
+ * \brief The CreateOriginEndpointResponse class provides an interace for MediaPackage CreateOriginEndpoint responses.
  *
  * \ingroup MediaPackage
  *

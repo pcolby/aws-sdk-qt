@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::DeleteLabelsRequest
  *
- * \brief The DeleteLabelsRequest class encapsulates WorkDocs DeleteLabels requests.
+ * \brief The DeleteLabelsRequest class provides an interface for WorkDocs DeleteLabels requests.
  *
  * \ingroup WorkDocs
  *

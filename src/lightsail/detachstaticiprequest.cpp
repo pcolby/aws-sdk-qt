@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::DetachStaticIpRequest
  *
- * \brief The DetachStaticIpRequest class encapsulates Lightsail DetachStaticIp requests.
+ * \brief The DetachStaticIpRequest class provides an interface for Lightsail DetachStaticIp requests.
  *
  * \ingroup Lightsail
  *

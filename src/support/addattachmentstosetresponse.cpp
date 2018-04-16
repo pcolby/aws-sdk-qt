@@ -30,7 +30,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::AddAttachmentsToSetResponse
  *
- * \brief The AddAttachmentsToSetResponse class encapsulates Support AddAttachmentsToSet responses.
+ * \brief The AddAttachmentsToSetResponse class provides an interace for Support AddAttachmentsToSet responses.
  *
  * \ingroup Support
  *

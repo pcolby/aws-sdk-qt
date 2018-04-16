@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::GetPolicyVersionRequest
  *
- * \brief The GetPolicyVersionRequest class encapsulates IAM GetPolicyVersion requests.
+ * \brief The GetPolicyVersionRequest class provides an interface for IAM GetPolicyVersion requests.
  *
  * \ingroup IAM
  *

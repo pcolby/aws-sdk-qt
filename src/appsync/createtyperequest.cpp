@@ -28,7 +28,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::CreateTypeRequest
  *
- * \brief The CreateTypeRequest class encapsulates AppSync CreateType requests.
+ * \brief The CreateTypeRequest class provides an interface for AppSync CreateType requests.
  *
  * \ingroup AppSync
  *

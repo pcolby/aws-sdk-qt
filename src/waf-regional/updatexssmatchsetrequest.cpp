@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::UpdateXssMatchSetRequest
  *
- * \brief The UpdateXssMatchSetRequest class encapsulates WAFRegional UpdateXssMatchSet requests.
+ * \brief The UpdateXssMatchSetRequest class provides an interface for WAFRegional UpdateXssMatchSet requests.
  *
  * \ingroup WAFRegional
  *

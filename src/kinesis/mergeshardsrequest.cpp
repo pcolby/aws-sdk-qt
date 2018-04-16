@@ -28,7 +28,7 @@ namespace Kinesis {
 /*!
  * \class QtAws::Kinesis::MergeShardsRequest
  *
- * \brief The MergeShardsRequest class encapsulates Kinesis MergeShards requests.
+ * \brief The MergeShardsRequest class provides an interface for Kinesis MergeShards requests.
  *
  * \ingroup Kinesis
  *

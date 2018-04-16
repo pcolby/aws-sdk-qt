@@ -30,7 +30,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DeregisterTaskDefinitionResponse
  *
- * \brief The DeregisterTaskDefinitionResponse class encapsulates ECS DeregisterTaskDefinition responses.
+ * \brief The DeregisterTaskDefinitionResponse class provides an interace for ECS DeregisterTaskDefinition responses.
  *
  * \ingroup ECS
  *

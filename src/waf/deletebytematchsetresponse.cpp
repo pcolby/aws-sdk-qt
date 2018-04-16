@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteByteMatchSetResponse
  *
- * \brief The DeleteByteMatchSetResponse class encapsulates WAF DeleteByteMatchSet responses.
+ * \brief The DeleteByteMatchSetResponse class provides an interace for WAF DeleteByteMatchSet responses.
  *
  * \ingroup WAF
  *

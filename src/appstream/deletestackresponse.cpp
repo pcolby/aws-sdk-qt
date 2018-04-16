@@ -30,7 +30,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DeleteStackResponse
  *
- * \brief The DeleteStackResponse class encapsulates AppStream DeleteStack responses.
+ * \brief The DeleteStackResponse class provides an interace for AppStream DeleteStack responses.
  *
  * \ingroup AppStream
  *

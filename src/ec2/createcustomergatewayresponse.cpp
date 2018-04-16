@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateCustomerGatewayResponse
  *
- * \brief The CreateCustomerGatewayResponse class encapsulates EC2 CreateCustomerGateway responses.
+ * \brief The CreateCustomerGatewayResponse class provides an interace for EC2 CreateCustomerGateway responses.
  *
  * \ingroup EC2
  *

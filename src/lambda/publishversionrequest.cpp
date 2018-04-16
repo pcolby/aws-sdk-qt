@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::PublishVersionRequest
  *
- * \brief The PublishVersionRequest class encapsulates Lambda PublishVersion requests.
+ * \brief The PublishVersionRequest class provides an interface for Lambda PublishVersion requests.
  *
  * \ingroup Lambda
  *

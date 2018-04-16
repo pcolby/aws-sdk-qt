@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminForgetDeviceRequest
  *
- * \brief The AdminForgetDeviceRequest class encapsulates CognitoIdentityProvider AdminForgetDevice requests.
+ * \brief The AdminForgetDeviceRequest class provides an interface for CognitoIdentityProvider AdminForgetDevice requests.
  *
  * \ingroup CognitoIdentityProvider
  *

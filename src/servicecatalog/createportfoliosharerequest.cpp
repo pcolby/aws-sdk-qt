@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::CreatePortfolioShareRequest
  *
- * \brief The CreatePortfolioShareRequest class encapsulates ServiceCatalog CreatePortfolioShare requests.
+ * \brief The CreatePortfolioShareRequest class provides an interface for ServiceCatalog CreatePortfolioShare requests.
  *
  * \ingroup ServiceCatalog
  *

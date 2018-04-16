@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::SendAutomationSignalResponse
  *
- * \brief The SendAutomationSignalResponse class encapsulates SSM SendAutomationSignal responses.
+ * \brief The SendAutomationSignalResponse class provides an interace for SSM SendAutomationSignal responses.
  *
  * \ingroup SSM
  *

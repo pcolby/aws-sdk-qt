@@ -30,7 +30,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::DeleteVpcLinkResponse
  *
- * \brief The DeleteVpcLinkResponse class encapsulates APIGateway DeleteVpcLink responses.
+ * \brief The DeleteVpcLinkResponse class provides an interace for APIGateway DeleteVpcLink responses.
  *
  * \ingroup APIGateway
  *

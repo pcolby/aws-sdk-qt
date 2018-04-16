@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeleteResourceDataSyncRequest
  *
- * \brief The DeleteResourceDataSyncRequest class encapsulates SSM DeleteResourceDataSync requests.
+ * \brief The DeleteResourceDataSyncRequest class provides an interface for SSM DeleteResourceDataSync requests.
  *
  * \ingroup SSM
  *

@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::AttachObjectResponse
  *
- * \brief The AttachObjectResponse class encapsulates CloudDirectory AttachObject responses.
+ * \brief The AttachObjectResponse class provides an interace for CloudDirectory AttachObject responses.
  *
  * \ingroup CloudDirectory
  *

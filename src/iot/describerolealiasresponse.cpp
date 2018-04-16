@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeRoleAliasResponse
  *
- * \brief The DescribeRoleAliasResponse class encapsulates IoT DescribeRoleAlias responses.
+ * \brief The DescribeRoleAliasResponse class provides an interace for IoT DescribeRoleAlias responses.
  *
  * \ingroup IoT
  *

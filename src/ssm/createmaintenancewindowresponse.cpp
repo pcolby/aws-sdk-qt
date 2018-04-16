@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::CreateMaintenanceWindowResponse
  *
- * \brief The CreateMaintenanceWindowResponse class encapsulates SSM CreateMaintenanceWindow responses.
+ * \brief The CreateMaintenanceWindowResponse class provides an interace for SSM CreateMaintenanceWindow responses.
  *
  * \ingroup SSM
  *

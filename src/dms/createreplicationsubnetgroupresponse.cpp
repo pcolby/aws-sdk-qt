@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::CreateReplicationSubnetGroupResponse
  *
- * \brief The CreateReplicationSubnetGroupResponse class encapsulates DatabaseMigrationService CreateReplicationSubnetGroup responses.
+ * \brief The CreateReplicationSubnetGroupResponse class provides an interace for DatabaseMigrationService CreateReplicationSubnetGroup responses.
  *
  * \ingroup DatabaseMigrationService
  *

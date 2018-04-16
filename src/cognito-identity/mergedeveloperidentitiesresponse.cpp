@@ -30,7 +30,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::MergeDeveloperIdentitiesResponse
  *
- * \brief The MergeDeveloperIdentitiesResponse class encapsulates CognitoIdentity MergeDeveloperIdentities responses.
+ * \brief The MergeDeveloperIdentitiesResponse class provides an interace for CognitoIdentity MergeDeveloperIdentities responses.
  *
  * \ingroup CognitoIdentity
  *

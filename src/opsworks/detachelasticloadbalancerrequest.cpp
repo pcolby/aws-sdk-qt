@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DetachElasticLoadBalancerRequest
  *
- * \brief The DetachElasticLoadBalancerRequest class encapsulates OpsWorks DetachElasticLoadBalancer requests.
+ * \brief The DetachElasticLoadBalancerRequest class provides an interface for OpsWorks DetachElasticLoadBalancer requests.
  *
  * \ingroup OpsWorks
  *

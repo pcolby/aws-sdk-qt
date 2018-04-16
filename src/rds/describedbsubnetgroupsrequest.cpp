@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeDBSubnetGroupsRequest
  *
- * \brief The DescribeDBSubnetGroupsRequest class encapsulates RDS DescribeDBSubnetGroups requests.
+ * \brief The DescribeDBSubnetGroupsRequest class provides an interface for RDS DescribeDBSubnetGroups requests.
  *
  * \ingroup RDS
  *

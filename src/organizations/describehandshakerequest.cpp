@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DescribeHandshakeRequest
  *
- * \brief The DescribeHandshakeRequest class encapsulates Organizations DescribeHandshake requests.
+ * \brief The DescribeHandshakeRequest class provides an interface for Organizations DescribeHandshake requests.
  *
  * \ingroup Organizations
  *

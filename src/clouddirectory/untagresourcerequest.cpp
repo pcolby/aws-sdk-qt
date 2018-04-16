@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::UntagResourceRequest
  *
- * \brief The UntagResourceRequest class encapsulates CloudDirectory UntagResource requests.
+ * \brief The UntagResourceRequest class provides an interface for CloudDirectory UntagResource requests.
  *
  * \ingroup CloudDirectory
  *

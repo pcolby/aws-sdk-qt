@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DeletePolicyRequest
  *
- * \brief The DeletePolicyRequest class encapsulates Organizations DeletePolicy requests.
+ * \brief The DeletePolicyRequest class provides an interface for Organizations DeletePolicy requests.
  *
  * \ingroup Organizations
  *

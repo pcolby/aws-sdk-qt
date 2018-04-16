@@ -28,7 +28,7 @@ namespace KinesisVideo {
 /*!
  * \class QtAws::KinesisVideo::TagStreamRequest
  *
- * \brief The TagStreamRequest class encapsulates KinesisVideo TagStream requests.
+ * \brief The TagStreamRequest class provides an interface for KinesisVideo TagStream requests.
  *
  * \ingroup KinesisVideo
  *

@@ -30,7 +30,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::CheckIfPhoneNumberIsOptedOutResponse
  *
- * \brief The CheckIfPhoneNumberIsOptedOutResponse class encapsulates SNS CheckIfPhoneNumberIsOptedOut responses.
+ * \brief The CheckIfPhoneNumberIsOptedOutResponse class provides an interace for SNS CheckIfPhoneNumberIsOptedOut responses.
  *
  * \ingroup SNS
  *

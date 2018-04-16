@@ -28,7 +28,7 @@ namespace KinesisVideoArchivedMedia {
 /*!
  * \class QtAws::KinesisVideoArchivedMedia::ListFragmentsRequest
  *
- * \brief The ListFragmentsRequest class encapsulates KinesisVideoArchivedMedia ListFragments requests.
+ * \brief The ListFragmentsRequest class provides an interface for KinesisVideoArchivedMedia ListFragments requests.
  *
  * \ingroup KinesisVideoArchivedMedia
  *

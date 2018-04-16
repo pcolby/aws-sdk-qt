@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::UpdateHITTypeOfHITResponse
  *
- * \brief The UpdateHITTypeOfHITResponse class encapsulates MTurk UpdateHITTypeOfHIT responses.
+ * \brief The UpdateHITTypeOfHITResponse class provides an interace for MTurk UpdateHITTypeOfHIT responses.
  *
  * \ingroup MTurk
  *

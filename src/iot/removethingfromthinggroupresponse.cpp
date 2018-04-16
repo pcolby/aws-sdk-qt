@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::RemoveThingFromThingGroupResponse
  *
- * \brief The RemoveThingFromThingGroupResponse class encapsulates IoT RemoveThingFromThingGroup responses.
+ * \brief The RemoveThingFromThingGroupResponse class provides an interace for IoT RemoveThingFromThingGroup responses.
  *
  * \ingroup IoT
  *

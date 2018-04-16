@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::CreateRuleRequest
  *
- * \brief The CreateRuleRequest class encapsulates WAFRegional CreateRule requests.
+ * \brief The CreateRuleRequest class provides an interface for WAFRegional CreateRule requests.
  *
  * \ingroup WAFRegional
  *

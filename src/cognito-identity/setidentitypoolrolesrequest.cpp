@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::SetIdentityPoolRolesRequest
  *
- * \brief The SetIdentityPoolRolesRequest class encapsulates CognitoIdentity SetIdentityPoolRoles requests.
+ * \brief The SetIdentityPoolRolesRequest class provides an interface for CognitoIdentity SetIdentityPoolRoles requests.
  *
  * \ingroup CognitoIdentity
  *

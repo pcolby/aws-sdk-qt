@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ReplaceRouteTableAssociationResponse
  *
- * \brief The ReplaceRouteTableAssociationResponse class encapsulates EC2 ReplaceRouteTableAssociation responses.
+ * \brief The ReplaceRouteTableAssociationResponse class provides an interace for EC2 ReplaceRouteTableAssociation responses.
  *
  * \ingroup EC2
  *

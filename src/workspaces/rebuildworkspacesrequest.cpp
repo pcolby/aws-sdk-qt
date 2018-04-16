@@ -28,7 +28,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::RebuildWorkspacesRequest
  *
- * \brief The RebuildWorkspacesRequest class encapsulates WorkSpaces RebuildWorkspaces requests.
+ * \brief The RebuildWorkspacesRequest class provides an interface for WorkSpaces RebuildWorkspaces requests.
  *
  * \ingroup WorkSpaces
  *

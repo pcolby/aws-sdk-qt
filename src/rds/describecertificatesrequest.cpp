@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::DescribeCertificatesRequest
  *
- * \brief The DescribeCertificatesRequest class encapsulates RDS DescribeCertificates requests.
+ * \brief The DescribeCertificatesRequest class provides an interface for RDS DescribeCertificates requests.
  *
  * \ingroup RDS
  *

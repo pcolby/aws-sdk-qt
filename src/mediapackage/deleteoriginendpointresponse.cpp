@@ -30,7 +30,7 @@ namespace MediaPackage {
 /*!
  * \class QtAws::MediaPackage::DeleteOriginEndpointResponse
  *
- * \brief The DeleteOriginEndpointResponse class encapsulates MediaPackage DeleteOriginEndpoint responses.
+ * \brief The DeleteOriginEndpointResponse class provides an interace for MediaPackage DeleteOriginEndpoint responses.
  *
  * \ingroup MediaPackage
  *

@@ -28,7 +28,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::CreateRoleRequest
  *
- * \brief The CreateRoleRequest class encapsulates IAM CreateRole requests.
+ * \brief The CreateRoleRequest class provides an interface for IAM CreateRole requests.
  *
  * \ingroup IAM
  *

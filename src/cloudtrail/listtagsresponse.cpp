@@ -30,7 +30,7 @@ namespace CloudTrail {
 /*!
  * \class QtAws::CloudTrail::ListTagsResponse
  *
- * \brief The ListTagsResponse class encapsulates CloudTrail ListTags responses.
+ * \brief The ListTagsResponse class provides an interace for CloudTrail ListTags responses.
  *
  * \ingroup CloudTrail
  *

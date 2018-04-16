@@ -30,7 +30,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::DeleteSnapshotCopyGrantResponse
  *
- * \brief The DeleteSnapshotCopyGrantResponse class encapsulates Redshift DeleteSnapshotCopyGrant responses.
+ * \brief The DeleteSnapshotCopyGrantResponse class provides an interace for Redshift DeleteSnapshotCopyGrant responses.
  *
  * \ingroup Redshift
  *

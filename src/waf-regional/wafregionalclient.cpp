@@ -183,7 +183,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::WAFRegionalClient
  *
- * \brief The WAFRegionalClient class provides access the AWS WAF Regional service.
+ * \brief The WAFRegionalClient class provides access to the AWS WAF Regional service.
  *
  * \ingroup WAFRegional
  *

@@ -28,7 +28,7 @@ namespace MediaLive {
 /*!
  * \class QtAws::MediaLive::CreateInputRequest
  *
- * \brief The CreateInputRequest class encapsulates MediaLive CreateInput requests.
+ * \brief The CreateInputRequest class provides an interface for MediaLive CreateInput requests.
  *
  * \ingroup MediaLive
  *

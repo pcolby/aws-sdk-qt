@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::UpdateMatchmakingConfigurationRequest
  *
- * \brief The UpdateMatchmakingConfigurationRequest class encapsulates GameLift UpdateMatchmakingConfiguration requests.
+ * \brief The UpdateMatchmakingConfigurationRequest class provides an interface for GameLift UpdateMatchmakingConfiguration requests.
  *
  * \ingroup GameLift
  *

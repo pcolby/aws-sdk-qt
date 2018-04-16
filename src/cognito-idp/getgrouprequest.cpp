@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::GetGroupRequest
  *
- * \brief The GetGroupRequest class encapsulates CognitoIdentityProvider GetGroup requests.
+ * \brief The GetGroupRequest class provides an interface for CognitoIdentityProvider GetGroup requests.
  *
  * \ingroup CognitoIdentityProvider
  *

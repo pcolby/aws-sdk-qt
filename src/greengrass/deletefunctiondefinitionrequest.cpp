@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::DeleteFunctionDefinitionRequest
  *
- * \brief The DeleteFunctionDefinitionRequest class encapsulates Greengrass DeleteFunctionDefinition requests.
+ * \brief The DeleteFunctionDefinitionRequest class provides an interface for Greengrass DeleteFunctionDefinition requests.
  *
  * \ingroup Greengrass
  *

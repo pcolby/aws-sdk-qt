@@ -28,7 +28,7 @@ namespace Route53Domains {
 /*!
  * \class QtAws::Route53Domains::GetContactReachabilityStatusRequest
  *
- * \brief The GetContactReachabilityStatusRequest class encapsulates Route53Domains GetContactReachabilityStatus requests.
+ * \brief The GetContactReachabilityStatusRequest class provides an interface for Route53Domains GetContactReachabilityStatus requests.
  *
  * \ingroup Route53Domains
  *

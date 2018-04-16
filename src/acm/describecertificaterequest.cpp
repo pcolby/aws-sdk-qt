@@ -28,7 +28,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::DescribeCertificateRequest
  *
- * \brief The DescribeCertificateRequest class encapsulates ACM DescribeCertificate requests.
+ * \brief The DescribeCertificateRequest class provides an interface for ACM DescribeCertificate requests.
  *
  * \ingroup ACM
  *

@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ListChangeSetsResponse
  *
- * \brief The ListChangeSetsResponse class encapsulates CloudFormation ListChangeSets responses.
+ * \brief The ListChangeSetsResponse class provides an interace for CloudFormation ListChangeSets responses.
  *
  * \ingroup CloudFormation
  *

@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListGroupVersionsResponse
  *
- * \brief The ListGroupVersionsResponse class encapsulates Greengrass ListGroupVersions responses.
+ * \brief The ListGroupVersionsResponse class provides an interace for Greengrass ListGroupVersions responses.
  *
  * \ingroup Greengrass
  *

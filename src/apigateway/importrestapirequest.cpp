@@ -28,7 +28,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::ImportRestApiRequest
  *
- * \brief The ImportRestApiRequest class encapsulates APIGateway ImportRestApi requests.
+ * \brief The ImportRestApiRequest class provides an interface for APIGateway ImportRestApi requests.
  *
  * \ingroup APIGateway
  *

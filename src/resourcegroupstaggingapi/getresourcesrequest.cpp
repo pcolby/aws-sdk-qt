@@ -28,7 +28,7 @@ namespace ResourceGroupsTaggingAPI {
 /*!
  * \class QtAws::ResourceGroupsTaggingAPI::GetResourcesRequest
  *
- * \brief The GetResourcesRequest class encapsulates ResourceGroupsTaggingAPI GetResources requests.
+ * \brief The GetResourcesRequest class provides an interface for ResourceGroupsTaggingAPI GetResources requests.
  *
  * \ingroup ResourceGroupsTaggingAPI
  *

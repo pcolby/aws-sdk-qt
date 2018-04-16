@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::GetRunRequest
  *
- * \brief The GetRunRequest class encapsulates DeviceFarm GetRun requests.
+ * \brief The GetRunRequest class provides an interface for DeviceFarm GetRun requests.
  *
  * \ingroup DeviceFarm
  *

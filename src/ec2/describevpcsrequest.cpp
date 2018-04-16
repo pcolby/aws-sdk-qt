@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVpcsRequest
  *
- * \brief The DescribeVpcsRequest class encapsulates EC2 DescribeVpcs requests.
+ * \brief The DescribeVpcsRequest class provides an interface for EC2 DescribeVpcs requests.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace EFS {
 /*!
  * \class QtAws::EFS::DescribeTagsResponse
  *
- * \brief The DescribeTagsResponse class encapsulates EFS DescribeTags responses.
+ * \brief The DescribeTagsResponse class provides an interace for EFS DescribeTags responses.
  *
  * \ingroup EFS
  *

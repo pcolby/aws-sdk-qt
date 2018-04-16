@@ -29,7 +29,7 @@ namespace APIGateway {
 /*!
  * \class QtAws::APIGateway::APIGatewayResponse
  *
- * \brief The APIGatewayResponse class is the base class for all APIGateway responses.
+ * \brief The APIGatewayResponse class provides an interface for APIGateway responses.
  *
  * \ingroup APIGateway
  */

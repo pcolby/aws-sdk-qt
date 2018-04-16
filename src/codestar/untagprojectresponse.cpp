@@ -30,7 +30,7 @@ namespace CodeStar {
 /*!
  * \class QtAws::CodeStar::UntagProjectResponse
  *
- * \brief The UntagProjectResponse class encapsulates CodeStar UntagProject responses.
+ * \brief The UntagProjectResponse class provides an interace for CodeStar UntagProject responses.
  *
  * \ingroup CodeStar
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVolumeAttributeResponse
  *
- * \brief The DescribeVolumeAttributeResponse class encapsulates EC2 DescribeVolumeAttribute responses.
+ * \brief The DescribeVolumeAttributeResponse class provides an interace for EC2 DescribeVolumeAttribute responses.
  *
  * \ingroup EC2
  *

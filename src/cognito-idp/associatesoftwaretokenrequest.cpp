@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AssociateSoftwareTokenRequest
  *
- * \brief The AssociateSoftwareTokenRequest class encapsulates CognitoIdentityProvider AssociateSoftwareToken requests.
+ * \brief The AssociateSoftwareTokenRequest class provides an interface for CognitoIdentityProvider AssociateSoftwareToken requests.
  *
  * \ingroup CognitoIdentityProvider
  *

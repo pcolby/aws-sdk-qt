@@ -30,7 +30,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::ListComplianceStatusResponse
  *
- * \brief The ListComplianceStatusResponse class encapsulates FMS ListComplianceStatus responses.
+ * \brief The ListComplianceStatusResponse class provides an interace for FMS ListComplianceStatus responses.
  *
  * \ingroup FMS
  *

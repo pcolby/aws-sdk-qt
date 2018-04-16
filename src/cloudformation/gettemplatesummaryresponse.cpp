@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::GetTemplateSummaryResponse
  *
- * \brief The GetTemplateSummaryResponse class encapsulates CloudFormation GetTemplateSummary responses.
+ * \brief The GetTemplateSummaryResponse class provides an interace for CloudFormation GetTemplateSummary responses.
  *
  * \ingroup CloudFormation
  *

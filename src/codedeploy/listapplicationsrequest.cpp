@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::ListApplicationsRequest
  *
- * \brief The ListApplicationsRequest class encapsulates CodeDeploy ListApplications requests.
+ * \brief The ListApplicationsRequest class provides an interface for CodeDeploy ListApplications requests.
  *
  * \ingroup CodeDeploy
  *

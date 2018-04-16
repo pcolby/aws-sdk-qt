@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DeleteMatchmakingConfigurationRequest
  *
- * \brief The DeleteMatchmakingConfigurationRequest class encapsulates GameLift DeleteMatchmakingConfiguration requests.
+ * \brief The DeleteMatchmakingConfigurationRequest class provides an interface for GameLift DeleteMatchmakingConfiguration requests.
  *
  * \ingroup GameLift
  *

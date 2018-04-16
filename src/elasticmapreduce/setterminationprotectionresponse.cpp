@@ -30,7 +30,7 @@ namespace EMR {
 /*!
  * \class QtAws::EMR::SetTerminationProtectionResponse
  *
- * \brief The SetTerminationProtectionResponse class encapsulates EMR SetTerminationProtection responses.
+ * \brief The SetTerminationProtectionResponse class provides an interace for EMR SetTerminationProtection responses.
  *
  * \ingroup EMR
  *

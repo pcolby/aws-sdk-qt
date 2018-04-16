@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateVpcResponse
  *
- * \brief The CreateVpcResponse class encapsulates EC2 CreateVpc responses.
+ * \brief The CreateVpcResponse class provides an interace for EC2 CreateVpc responses.
  *
  * \ingroup EC2
  *

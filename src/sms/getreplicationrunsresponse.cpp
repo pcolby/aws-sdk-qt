@@ -30,7 +30,7 @@ namespace SMS {
 /*!
  * \class QtAws::SMS::GetReplicationRunsResponse
  *
- * \brief The GetReplicationRunsResponse class encapsulates SMS GetReplicationRuns responses.
+ * \brief The GetReplicationRunsResponse class provides an interace for SMS GetReplicationRuns responses.
  *
  * \ingroup SMS
  *

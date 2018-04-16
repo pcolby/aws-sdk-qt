@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeEC2InstanceLimitsResponse
  *
- * \brief The DescribeEC2InstanceLimitsResponse class encapsulates GameLift DescribeEC2InstanceLimits responses.
+ * \brief The DescribeEC2InstanceLimitsResponse class provides an interace for GameLift DescribeEC2InstanceLimits responses.
  *
  * \ingroup GameLift
  *

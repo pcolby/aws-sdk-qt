@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::TagResourceRequest
  *
- * \brief The TagResourceRequest class encapsulates OpsWorks TagResource requests.
+ * \brief The TagResourceRequest class provides an interface for OpsWorks TagResource requests.
  *
  * \ingroup OpsWorks
  *

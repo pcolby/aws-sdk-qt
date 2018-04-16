@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DisableTopicRuleRequest
  *
- * \brief The DisableTopicRuleRequest class encapsulates IoT DisableTopicRule requests.
+ * \brief The DisableTopicRuleRequest class provides an interface for IoT DisableTopicRule requests.
  *
  * \ingroup IoT
  *

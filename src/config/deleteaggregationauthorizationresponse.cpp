@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::DeleteAggregationAuthorizationResponse
  *
- * \brief The DeleteAggregationAuthorizationResponse class encapsulates ConfigService DeleteAggregationAuthorization responses.
+ * \brief The DeleteAggregationAuthorizationResponse class provides an interace for ConfigService DeleteAggregationAuthorization responses.
  *
  * \ingroup ConfigService
  *

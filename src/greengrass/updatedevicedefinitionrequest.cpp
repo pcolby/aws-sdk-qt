@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::UpdateDeviceDefinitionRequest
  *
- * \brief The UpdateDeviceDefinitionRequest class encapsulates Greengrass UpdateDeviceDefinition requests.
+ * \brief The UpdateDeviceDefinitionRequest class provides an interface for Greengrass UpdateDeviceDefinition requests.
  *
  * \ingroup Greengrass
  *

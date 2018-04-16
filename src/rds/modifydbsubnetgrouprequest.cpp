@@ -28,7 +28,7 @@ namespace RDS {
 /*!
  * \class QtAws::RDS::ModifyDBSubnetGroupRequest
  *
- * \brief The ModifyDBSubnetGroupRequest class encapsulates RDS ModifyDBSubnetGroup requests.
+ * \brief The ModifyDBSubnetGroupRequest class provides an interface for RDS ModifyDBSubnetGroup requests.
  *
  * \ingroup RDS
  *

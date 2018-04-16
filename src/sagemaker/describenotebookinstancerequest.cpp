@@ -28,7 +28,7 @@ namespace SageMaker {
 /*!
  * \class QtAws::SageMaker::DescribeNotebookInstanceRequest
  *
- * \brief The DescribeNotebookInstanceRequest class encapsulates SageMaker DescribeNotebookInstance requests.
+ * \brief The DescribeNotebookInstanceRequest class provides an interface for SageMaker DescribeNotebookInstance requests.
  *
  * \ingroup SageMaker
  *

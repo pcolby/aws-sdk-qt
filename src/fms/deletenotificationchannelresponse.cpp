@@ -30,7 +30,7 @@ namespace FMS {
 /*!
  * \class QtAws::FMS::DeleteNotificationChannelResponse
  *
- * \brief The DeleteNotificationChannelResponse class encapsulates FMS DeleteNotificationChannel responses.
+ * \brief The DeleteNotificationChannelResponse class provides an interace for FMS DeleteNotificationChannel responses.
  *
  * \ingroup FMS
  *

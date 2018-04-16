@@ -28,7 +28,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::DescribeBundleRequest
  *
- * \brief The DescribeBundleRequest class encapsulates Mobile DescribeBundle requests.
+ * \brief The DescribeBundleRequest class provides an interface for Mobile DescribeBundle requests.
  *
  * \ingroup Mobile
  *

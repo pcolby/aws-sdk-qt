@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::UpdateApplicationRequest
  *
- * \brief The UpdateApplicationRequest class encapsulates ApplicationDiscoveryService UpdateApplication requests.
+ * \brief The UpdateApplicationRequest class provides an interface for ApplicationDiscoveryService UpdateApplication requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

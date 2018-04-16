@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListAccountAliasesResponse
  *
- * \brief The ListAccountAliasesResponse class encapsulates IAM ListAccountAliases responses.
+ * \brief The ListAccountAliasesResponse class provides an interace for IAM ListAccountAliases responses.
  *
  * \ingroup IAM
  *

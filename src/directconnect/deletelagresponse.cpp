@@ -30,7 +30,7 @@ namespace DirectConnect {
 /*!
  * \class QtAws::DirectConnect::DeleteLagResponse
  *
- * \brief The DeleteLagResponse class encapsulates DirectConnect DeleteLag responses.
+ * \brief The DeleteLagResponse class provides an interace for DirectConnect DeleteLag responses.
  *
  * \ingroup DirectConnect
  *

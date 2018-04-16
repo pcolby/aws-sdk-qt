@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::DescribeResourceRequest
  *
- * \brief The DescribeResourceRequest class encapsulates WorkMail DescribeResource requests.
+ * \brief The DescribeResourceRequest class provides an interface for WorkMail DescribeResource requests.
  *
  * \ingroup WorkMail
  *

@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DeprecateThingTypeRequest
  *
- * \brief The DeprecateThingTypeRequest class encapsulates IoT DeprecateThingType requests.
+ * \brief The DeprecateThingTypeRequest class provides an interface for IoT DeprecateThingType requests.
  *
  * \ingroup IoT
  *

@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::DeleteRepositoryRequest
  *
- * \brief The DeleteRepositoryRequest class encapsulates CodeCommit DeleteRepository requests.
+ * \brief The DeleteRepositoryRequest class provides an interface for CodeCommit DeleteRepository requests.
  *
  * \ingroup CodeCommit
  *

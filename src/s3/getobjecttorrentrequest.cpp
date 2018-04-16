@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetObjectTorrentRequest
  *
- * \brief The GetObjectTorrentRequest class encapsulates S3 GetObjectTorrent requests.
+ * \brief The GetObjectTorrentRequest class provides an interface for S3 GetObjectTorrent requests.
  *
  * \ingroup S3
  *

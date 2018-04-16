@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::DisassociateFleetRequest
  *
- * \brief The DisassociateFleetRequest class encapsulates AppStream DisassociateFleet requests.
+ * \brief The DisassociateFleetRequest class provides an interface for AppStream DisassociateFleet requests.
  *
  * \ingroup AppStream
  *

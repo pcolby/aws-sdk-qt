@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::DeleteObjectTaggingRequest
  *
- * \brief The DeleteObjectTaggingRequest class encapsulates S3 DeleteObjectTagging requests.
+ * \brief The DeleteObjectTaggingRequest class provides an interface for S3 DeleteObjectTagging requests.
  *
  * \ingroup S3
  *

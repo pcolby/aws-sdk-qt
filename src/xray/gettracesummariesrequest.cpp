@@ -28,7 +28,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::GetTraceSummariesRequest
  *
- * \brief The GetTraceSummariesRequest class encapsulates XRay GetTraceSummaries requests.
+ * \brief The GetTraceSummariesRequest class provides an interface for XRay GetTraceSummaries requests.
  *
  * \ingroup XRay
  *

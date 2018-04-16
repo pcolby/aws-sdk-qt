@@ -28,7 +28,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::DisassociateDiscoveredResourceRequest
  *
- * \brief The DisassociateDiscoveredResourceRequest class encapsulates MigrationHub DisassociateDiscoveredResource requests.
+ * \brief The DisassociateDiscoveredResourceRequest class provides an interface for MigrationHub DisassociateDiscoveredResource requests.
  *
  * \ingroup MigrationHub
  *

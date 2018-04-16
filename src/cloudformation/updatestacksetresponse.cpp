@@ -30,7 +30,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::UpdateStackSetResponse
  *
- * \brief The UpdateStackSetResponse class encapsulates CloudFormation UpdateStackSet responses.
+ * \brief The UpdateStackSetResponse class provides an interace for CloudFormation UpdateStackSet responses.
  *
  * \ingroup CloudFormation
  *

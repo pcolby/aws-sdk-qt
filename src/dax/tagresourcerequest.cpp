@@ -28,7 +28,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::TagResourceRequest
  *
- * \brief The TagResourceRequest class encapsulates DAX TagResource requests.
+ * \brief The TagResourceRequest class provides an interface for DAX TagResource requests.
  *
  * \ingroup DAX
  *

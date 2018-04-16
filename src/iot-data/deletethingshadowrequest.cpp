@@ -28,7 +28,7 @@ namespace IoTDataPlane {
 /*!
  * \class QtAws::IoTDataPlane::DeleteThingShadowRequest
  *
- * \brief The DeleteThingShadowRequest class encapsulates IoTDataPlane DeleteThingShadow requests.
+ * \brief The DeleteThingShadowRequest class provides an interface for IoTDataPlane DeleteThingShadow requests.
  *
  * \ingroup IoTDataPlane
  *

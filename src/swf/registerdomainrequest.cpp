@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::RegisterDomainRequest
  *
- * \brief The RegisterDomainRequest class encapsulates SWF RegisterDomain requests.
+ * \brief The RegisterDomainRequest class provides an interface for SWF RegisterDomain requests.
  *
  * \ingroup SWF
  *

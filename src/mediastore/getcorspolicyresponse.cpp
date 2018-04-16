@@ -30,7 +30,7 @@ namespace MediaStore {
 /*!
  * \class QtAws::MediaStore::GetCorsPolicyResponse
  *
- * \brief The GetCorsPolicyResponse class encapsulates MediaStore GetCorsPolicy responses.
+ * \brief The GetCorsPolicyResponse class provides an interace for MediaStore GetCorsPolicy responses.
  *
  * \ingroup MediaStore
  *

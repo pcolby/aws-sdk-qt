@@ -30,7 +30,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::AssociateMemberToGroupResponse
  *
- * \brief The AssociateMemberToGroupResponse class encapsulates WorkMail AssociateMemberToGroup responses.
+ * \brief The AssociateMemberToGroupResponse class provides an interace for WorkMail AssociateMemberToGroup responses.
  *
  * \ingroup WorkMail
  *

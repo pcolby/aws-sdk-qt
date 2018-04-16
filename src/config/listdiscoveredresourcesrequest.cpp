@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::ListDiscoveredResourcesRequest
  *
- * \brief The ListDiscoveredResourcesRequest class encapsulates ConfigService ListDiscoveredResources requests.
+ * \brief The ListDiscoveredResourcesRequest class provides an interface for ConfigService ListDiscoveredResources requests.
  *
  * \ingroup ConfigService
  *

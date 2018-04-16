@@ -28,7 +28,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::StartConfigRulesEvaluationRequest
  *
- * \brief The StartConfigRulesEvaluationRequest class encapsulates ConfigService StartConfigRulesEvaluation requests.
+ * \brief The StartConfigRulesEvaluationRequest class provides an interface for ConfigService StartConfigRulesEvaluation requests.
  *
  * \ingroup ConfigService
  *

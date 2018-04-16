@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::ListImportsRequest
  *
- * \brief The ListImportsRequest class encapsulates CloudFormation ListImports requests.
+ * \brief The ListImportsRequest class provides an interface for CloudFormation ListImports requests.
  *
  * \ingroup CloudFormation
  *

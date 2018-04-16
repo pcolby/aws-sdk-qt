@@ -116,7 +116,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::ConfigServiceClient
  *
- * \brief The ConfigServiceClient class provides access the AWS Config (Config Service) service.
+ * \brief The ConfigServiceClient class provides access to the AWS Config (Config Service) service.
  *
  * \ingroup ConfigService
  *

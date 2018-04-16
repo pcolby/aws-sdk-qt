@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListGroupCertificateAuthoritiesResponse
  *
- * \brief The ListGroupCertificateAuthoritiesResponse class encapsulates Greengrass ListGroupCertificateAuthorities responses.
+ * \brief The ListGroupCertificateAuthoritiesResponse class provides an interace for Greengrass ListGroupCertificateAuthorities responses.
  *
  * \ingroup Greengrass
  *

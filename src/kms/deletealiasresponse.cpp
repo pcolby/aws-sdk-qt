@@ -30,7 +30,7 @@ namespace KMS {
 /*!
  * \class QtAws::KMS::DeleteAliasResponse
  *
- * \brief The DeleteAliasResponse class encapsulates KMS DeleteAlias responses.
+ * \brief The DeleteAliasResponse class provides an interace for KMS DeleteAlias responses.
  *
  * \ingroup KMS
  *

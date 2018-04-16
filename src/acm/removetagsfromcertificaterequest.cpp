@@ -28,7 +28,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::RemoveTagsFromCertificateRequest
  *
- * \brief The RemoveTagsFromCertificateRequest class encapsulates ACM RemoveTagsFromCertificate requests.
+ * \brief The RemoveTagsFromCertificateRequest class provides an interface for ACM RemoveTagsFromCertificate requests.
  *
  * \ingroup ACM
  *

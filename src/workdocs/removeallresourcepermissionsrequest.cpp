@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::RemoveAllResourcePermissionsRequest
  *
- * \brief The RemoveAllResourcePermissionsRequest class encapsulates WorkDocs RemoveAllResourcePermissions requests.
+ * \brief The RemoveAllResourcePermissionsRequest class provides an interface for WorkDocs RemoveAllResourcePermissions requests.
  *
  * \ingroup WorkDocs
  *

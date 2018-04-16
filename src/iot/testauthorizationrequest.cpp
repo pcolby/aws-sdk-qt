@@ -28,7 +28,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::TestAuthorizationRequest
  *
- * \brief The TestAuthorizationRequest class encapsulates IoT TestAuthorization requests.
+ * \brief The TestAuthorizationRequest class provides an interface for IoT TestAuthorization requests.
  *
  * \ingroup IoT
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::AttachInternetGatewayResponse
  *
- * \brief The AttachInternetGatewayResponse class encapsulates EC2 AttachInternetGateway responses.
+ * \brief The AttachInternetGatewayResponse class provides an interace for EC2 AttachInternetGateway responses.
  *
  * \ingroup EC2
  *

@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DeleteClusterRequest
  *
- * \brief The DeleteClusterRequest class encapsulates ECS DeleteCluster requests.
+ * \brief The DeleteClusterRequest class provides an interface for ECS DeleteCluster requests.
  *
  * \ingroup ECS
  *

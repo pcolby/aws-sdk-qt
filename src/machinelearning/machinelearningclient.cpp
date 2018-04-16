@@ -93,7 +93,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::MachineLearningClient
  *
- * \brief The MachineLearningClient class provides access the Amazon Machine Learning service.
+ * \brief The MachineLearningClient class provides access to the Amazon Machine Learning service.
  *
  * \ingroup MachineLearning
  *

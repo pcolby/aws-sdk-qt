@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::DeleteEvaluationRequest
  *
- * \brief The DeleteEvaluationRequest class encapsulates MachineLearning DeleteEvaluation requests.
+ * \brief The DeleteEvaluationRequest class provides an interface for MachineLearning DeleteEvaluation requests.
  *
  * \ingroup MachineLearning
  *

@@ -28,7 +28,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::RegisterJobDefinitionRequest
  *
- * \brief The RegisterJobDefinitionRequest class encapsulates Batch RegisterJobDefinition requests.
+ * \brief The RegisterJobDefinitionRequest class provides an interface for Batch RegisterJobDefinition requests.
  *
  * \ingroup Batch
  *

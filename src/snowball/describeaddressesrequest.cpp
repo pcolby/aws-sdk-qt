@@ -28,7 +28,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::DescribeAddressesRequest
  *
- * \brief The DescribeAddressesRequest class encapsulates Snowball DescribeAddresses requests.
+ * \brief The DescribeAddressesRequest class provides an interface for Snowball DescribeAddresses requests.
  *
  * \ingroup Snowball
  *

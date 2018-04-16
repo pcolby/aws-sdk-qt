@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::CreateIPSetResponse
  *
- * \brief The CreateIPSetResponse class encapsulates WAFRegional CreateIPSet responses.
+ * \brief The CreateIPSetResponse class provides an interace for WAFRegional CreateIPSet responses.
  *
  * \ingroup WAFRegional
  *

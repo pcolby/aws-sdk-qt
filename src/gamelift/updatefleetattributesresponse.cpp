@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::UpdateFleetAttributesResponse
  *
- * \brief The UpdateFleetAttributesResponse class encapsulates GameLift UpdateFleetAttributes responses.
+ * \brief The UpdateFleetAttributesResponse class provides an interace for GameLift UpdateFleetAttributes responses.
  *
  * \ingroup GameLift
  *

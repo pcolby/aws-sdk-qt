@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateSubscriptionDefinitionResponse
  *
- * \brief The CreateSubscriptionDefinitionResponse class encapsulates Greengrass CreateSubscriptionDefinition responses.
+ * \brief The CreateSubscriptionDefinitionResponse class provides an interace for Greengrass CreateSubscriptionDefinition responses.
  *
  * \ingroup Greengrass
  *

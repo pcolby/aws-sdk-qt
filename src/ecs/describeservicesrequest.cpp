@@ -28,7 +28,7 @@ namespace ECS {
 /*!
  * \class QtAws::ECS::DescribeServicesRequest
  *
- * \brief The DescribeServicesRequest class encapsulates ECS DescribeServices requests.
+ * \brief The DescribeServicesRequest class provides an interface for ECS DescribeServices requests.
  *
  * \ingroup ECS
  *

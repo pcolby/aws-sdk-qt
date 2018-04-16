@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DisassociateIamInstanceProfileResponse
  *
- * \brief The DisassociateIamInstanceProfileResponse class encapsulates EC2 DisassociateIamInstanceProfile responses.
+ * \brief The DisassociateIamInstanceProfileResponse class provides an interace for EC2 DisassociateIamInstanceProfile responses.
  *
  * \ingroup EC2
  *

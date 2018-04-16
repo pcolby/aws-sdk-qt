@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::RemoveTagsResponse
  *
- * \brief The RemoveTagsResponse class encapsulates DataPipeline RemoveTags responses.
+ * \brief The RemoveTagsResponse class provides an interace for DataPipeline RemoveTags responses.
  *
  * \ingroup DataPipeline
  *

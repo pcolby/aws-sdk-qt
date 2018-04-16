@@ -30,7 +30,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::DescribeAlarmsForMetricResponse
  *
- * \brief The DescribeAlarmsForMetricResponse class encapsulates CloudWatch DescribeAlarmsForMetric responses.
+ * \brief The DescribeAlarmsForMetricResponse class provides an interace for CloudWatch DescribeAlarmsForMetric responses.
  *
  * \ingroup CloudWatch
  *

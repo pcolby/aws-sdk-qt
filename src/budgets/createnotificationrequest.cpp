@@ -28,7 +28,7 @@ namespace Budgets {
 /*!
  * \class QtAws::Budgets::CreateNotificationRequest
  *
- * \brief The CreateNotificationRequest class encapsulates Budgets CreateNotification requests.
+ * \brief The CreateNotificationRequest class provides an interface for Budgets CreateNotification requests.
  *
  * \ingroup Budgets
  *

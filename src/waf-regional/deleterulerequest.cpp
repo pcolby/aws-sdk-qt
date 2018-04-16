@@ -28,7 +28,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::DeleteRuleRequest
  *
- * \brief The DeleteRuleRequest class encapsulates WAFRegional DeleteRule requests.
+ * \brief The DeleteRuleRequest class provides an interface for WAFRegional DeleteRule requests.
  *
  * \ingroup WAFRegional
  *

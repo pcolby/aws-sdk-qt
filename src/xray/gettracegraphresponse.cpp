@@ -30,7 +30,7 @@ namespace XRay {
 /*!
  * \class QtAws::XRay::GetTraceGraphResponse
  *
- * \brief The GetTraceGraphResponse class encapsulates XRay GetTraceGraph responses.
+ * \brief The GetTraceGraphResponse class provides an interace for XRay GetTraceGraph responses.
  *
  * \ingroup XRay
  *

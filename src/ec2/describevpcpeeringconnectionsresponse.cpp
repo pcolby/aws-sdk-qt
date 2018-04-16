@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeVpcPeeringConnectionsResponse
  *
- * \brief The DescribeVpcPeeringConnectionsResponse class encapsulates EC2 DescribeVpcPeeringConnections responses.
+ * \brief The DescribeVpcPeeringConnectionsResponse class provides an interace for EC2 DescribeVpcPeeringConnections responses.
  *
  * \ingroup EC2
  *

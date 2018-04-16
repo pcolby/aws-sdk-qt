@@ -30,7 +30,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::GetRegexPatternSetResponse
  *
- * \brief The GetRegexPatternSetResponse class encapsulates WAF GetRegexPatternSet responses.
+ * \brief The GetRegexPatternSetResponse class provides an interace for WAF GetRegexPatternSet responses.
  *
  * \ingroup WAF
  *

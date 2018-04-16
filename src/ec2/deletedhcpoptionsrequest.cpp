@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DeleteDhcpOptionsRequest
  *
- * \brief The DeleteDhcpOptionsRequest class encapsulates EC2 DeleteDhcpOptions requests.
+ * \brief The DeleteDhcpOptionsRequest class provides an interface for EC2 DeleteDhcpOptions requests.
  *
  * \ingroup EC2
  *

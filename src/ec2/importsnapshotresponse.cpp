@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ImportSnapshotResponse
  *
- * \brief The ImportSnapshotResponse class encapsulates EC2 ImportSnapshot responses.
+ * \brief The ImportSnapshotResponse class provides an interace for EC2 ImportSnapshot responses.
  *
  * \ingroup EC2
  *

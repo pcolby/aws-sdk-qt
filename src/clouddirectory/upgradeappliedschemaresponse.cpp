@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::UpgradeAppliedSchemaResponse
  *
- * \brief The UpgradeAppliedSchemaResponse class encapsulates CloudDirectory UpgradeAppliedSchema responses.
+ * \brief The UpgradeAppliedSchemaResponse class provides an interace for CloudDirectory UpgradeAppliedSchema responses.
  *
  * \ingroup CloudDirectory
  *

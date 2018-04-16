@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribePatchGroupStateResponse
  *
- * \brief The DescribePatchGroupStateResponse class encapsulates SSM DescribePatchGroupState responses.
+ * \brief The DescribePatchGroupStateResponse class provides an interace for SSM DescribePatchGroupState responses.
  *
  * \ingroup SSM
  *

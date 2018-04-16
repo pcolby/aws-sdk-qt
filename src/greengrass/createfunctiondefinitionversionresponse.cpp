@@ -30,7 +30,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::CreateFunctionDefinitionVersionResponse
  *
- * \brief The CreateFunctionDefinitionVersionResponse class encapsulates Greengrass CreateFunctionDefinitionVersion responses.
+ * \brief The CreateFunctionDefinitionVersionResponse class provides an interace for Greengrass CreateFunctionDefinitionVersion responses.
  *
  * \ingroup Greengrass
  *

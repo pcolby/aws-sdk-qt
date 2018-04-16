@@ -30,7 +30,7 @@ namespace WAFRegional {
 /*!
  * \class QtAws::WAFRegional::GetXssMatchSetResponse
  *
- * \brief The GetXssMatchSetResponse class encapsulates WAFRegional GetXssMatchSet responses.
+ * \brief The GetXssMatchSetResponse class provides an interace for WAFRegional GetXssMatchSet responses.
  *
  * \ingroup WAFRegional
  *

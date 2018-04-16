@@ -55,7 +55,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::MobileClient
  *
- * \brief The MobileClient class provides access the AWS Mobile service.
+ * \brief The MobileClient class provides access to the AWS Mobile service.
  *
  * \ingroup Mobile
  *

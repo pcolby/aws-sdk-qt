@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifyFpgaImageAttributeResponse
  *
- * \brief The ModifyFpgaImageAttributeResponse class encapsulates EC2 ModifyFpgaImageAttribute responses.
+ * \brief The ModifyFpgaImageAttributeResponse class provides an interace for EC2 ModifyFpgaImageAttribute responses.
  *
  * \ingroup EC2
  *

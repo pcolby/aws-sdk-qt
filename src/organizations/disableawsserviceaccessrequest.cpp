@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::DisableAWSServiceAccessRequest
  *
- * \brief The DisableAWSServiceAccessRequest class encapsulates Organizations DisableAWSServiceAccess requests.
+ * \brief The DisableAWSServiceAccessRequest class provides an interface for Organizations DisableAWSServiceAccess requests.
  *
  * \ingroup Organizations
  *

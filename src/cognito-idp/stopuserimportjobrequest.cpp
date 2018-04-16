@@ -28,7 +28,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::StopUserImportJobRequest
  *
- * \brief The StopUserImportJobRequest class encapsulates CognitoIdentityProvider StopUserImportJob requests.
+ * \brief The StopUserImportJobRequest class provides an interface for CognitoIdentityProvider StopUserImportJob requests.
  *
  * \ingroup CognitoIdentityProvider
  *

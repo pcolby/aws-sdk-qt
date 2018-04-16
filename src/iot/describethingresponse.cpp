@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DescribeThingResponse
  *
- * \brief The DescribeThingResponse class encapsulates IoT DescribeThing responses.
+ * \brief The DescribeThingResponse class provides an interace for IoT DescribeThing responses.
  *
  * \ingroup IoT
  *

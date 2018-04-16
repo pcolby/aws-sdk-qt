@@ -30,7 +30,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::PutPipelineDefinitionResponse
  *
- * \brief The PutPipelineDefinitionResponse class encapsulates DataPipeline PutPipelineDefinition responses.
+ * \brief The PutPipelineDefinitionResponse class provides an interace for DataPipeline PutPipelineDefinition responses.
  *
  * \ingroup DataPipeline
  *

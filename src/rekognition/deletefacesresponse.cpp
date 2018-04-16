@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::DeleteFacesResponse
  *
- * \brief The DeleteFacesResponse class encapsulates Rekognition DeleteFaces responses.
+ * \brief The DeleteFacesResponse class provides an interace for Rekognition DeleteFaces responses.
  *
  * \ingroup Rekognition
  *

@@ -28,7 +28,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::DeleteGitHubAccountTokenRequest
  *
- * \brief The DeleteGitHubAccountTokenRequest class encapsulates CodeDeploy DeleteGitHubAccountToken requests.
+ * \brief The DeleteGitHubAccountTokenRequest class provides an interface for CodeDeploy DeleteGitHubAccountToken requests.
  *
  * \ingroup CodeDeploy
  *

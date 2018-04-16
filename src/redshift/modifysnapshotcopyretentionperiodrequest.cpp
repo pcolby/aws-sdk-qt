@@ -28,7 +28,7 @@ namespace Redshift {
 /*!
  * \class QtAws::Redshift::ModifySnapshotCopyRetentionPeriodRequest
  *
- * \brief The ModifySnapshotCopyRetentionPeriodRequest class encapsulates Redshift ModifySnapshotCopyRetentionPeriod requests.
+ * \brief The ModifySnapshotCopyRetentionPeriodRequest class provides an interface for Redshift ModifySnapshotCopyRetentionPeriod requests.
  *
  * \ingroup Redshift
  *

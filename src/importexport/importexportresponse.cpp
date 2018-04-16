@@ -29,7 +29,7 @@ namespace ImportExport {
 /*!
  * \class QtAws::ImportExport::ImportExportResponse
  *
- * \brief The ImportExportResponse class is the base class for all ImportExport responses.
+ * \brief The ImportExportResponse class provides an interface for ImportExport responses.
  *
  * \ingroup ImportExport
  */

@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::GetDiscoveredResourceCountsResponse
  *
- * \brief The GetDiscoveredResourceCountsResponse class encapsulates ConfigService GetDiscoveredResourceCounts responses.
+ * \brief The GetDiscoveredResourceCountsResponse class provides an interace for ConfigService GetDiscoveredResourceCounts responses.
  *
  * \ingroup ConfigService
  *

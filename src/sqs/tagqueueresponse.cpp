@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::TagQueueResponse
  *
- * \brief The TagQueueResponse class encapsulates SQS TagQueue responses.
+ * \brief The TagQueueResponse class provides an interace for SQS TagQueue responses.
  *
  * \ingroup SQS
  *

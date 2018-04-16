@@ -30,7 +30,7 @@ namespace MTurk {
 /*!
  * \class QtAws::MTurk::RejectQualificationRequestResponse
  *
- * \brief The RejectQualificationRequestResponse class encapsulates MTurk RejectQualificationRequest responses.
+ * \brief The RejectQualificationRequestResponse class provides an interace for MTurk RejectQualificationRequest responses.
  *
  * \ingroup MTurk
  *

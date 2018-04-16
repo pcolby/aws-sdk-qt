@@ -30,7 +30,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::UpdateEnvironmentResponse
  *
- * \brief The UpdateEnvironmentResponse class encapsulates ElasticBeanstalk UpdateEnvironment responses.
+ * \brief The UpdateEnvironmentResponse class provides an interace for ElasticBeanstalk UpdateEnvironment responses.
  *
  * \ingroup ElasticBeanstalk
  *

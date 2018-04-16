@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::ListPrincipalThingsResponse
  *
- * \brief The ListPrincipalThingsResponse class encapsulates IoT ListPrincipalThings responses.
+ * \brief The ListPrincipalThingsResponse class provides an interace for IoT ListPrincipalThings responses.
  *
  * \ingroup IoT
  *

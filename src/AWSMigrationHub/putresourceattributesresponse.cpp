@@ -30,7 +30,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::PutResourceAttributesResponse
  *
- * \brief The PutResourceAttributesResponse class encapsulates MigrationHub PutResourceAttributes responses.
+ * \brief The PutResourceAttributesResponse class provides an interace for MigrationHub PutResourceAttributes responses.
  *
  * \ingroup MigrationHub
  *

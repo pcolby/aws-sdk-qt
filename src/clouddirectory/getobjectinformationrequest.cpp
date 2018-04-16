@@ -28,7 +28,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::GetObjectInformationRequest
  *
- * \brief The GetObjectInformationRequest class encapsulates CloudDirectory GetObjectInformation requests.
+ * \brief The GetObjectInformationRequest class provides an interface for CloudDirectory GetObjectInformation requests.
  *
  * \ingroup CloudDirectory
  *

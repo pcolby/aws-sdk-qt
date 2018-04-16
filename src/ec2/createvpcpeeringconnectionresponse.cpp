@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateVpcPeeringConnectionResponse
  *
- * \brief The CreateVpcPeeringConnectionResponse class encapsulates EC2 CreateVpcPeeringConnection responses.
+ * \brief The CreateVpcPeeringConnectionResponse class provides an interace for EC2 CreateVpcPeeringConnection responses.
  *
  * \ingroup EC2
  *

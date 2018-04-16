@@ -29,7 +29,7 @@ namespace CloudWatch {
 /*!
  * \class QtAws::CloudWatch::CloudWatchResponse
  *
- * \brief The CloudWatchResponse class is the base class for all CloudWatch responses.
+ * \brief The CloudWatchResponse class provides an interface for CloudWatch responses.
  *
  * \ingroup CloudWatch
  */

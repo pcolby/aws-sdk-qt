@@ -30,7 +30,7 @@ namespace CognitoIdentityProvider {
 /*!
  * \class QtAws::CognitoIdentityProvider::AdminUpdateAuthEventFeedbackResponse
  *
- * \brief The AdminUpdateAuthEventFeedbackResponse class encapsulates CognitoIdentityProvider AdminUpdateAuthEventFeedback responses.
+ * \brief The AdminUpdateAuthEventFeedbackResponse class provides an interace for CognitoIdentityProvider AdminUpdateAuthEventFeedback responses.
  *
  * \ingroup CognitoIdentityProvider
  *

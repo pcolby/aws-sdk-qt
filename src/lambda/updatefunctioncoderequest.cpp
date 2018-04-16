@@ -28,7 +28,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::UpdateFunctionCodeRequest
  *
- * \brief The UpdateFunctionCodeRequest class encapsulates Lambda UpdateFunctionCode requests.
+ * \brief The UpdateFunctionCodeRequest class provides an interface for Lambda UpdateFunctionCode requests.
  *
  * \ingroup Lambda
  *

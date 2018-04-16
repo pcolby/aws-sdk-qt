@@ -28,7 +28,7 @@ namespace Greengrass {
 /*!
  * \class QtAws::Greengrass::ListGroupCertificateAuthoritiesRequest
  *
- * \brief The ListGroupCertificateAuthoritiesRequest class encapsulates Greengrass ListGroupCertificateAuthorities requests.
+ * \brief The ListGroupCertificateAuthoritiesRequest class provides an interface for Greengrass ListGroupCertificateAuthorities requests.
  *
  * \ingroup Greengrass
  *

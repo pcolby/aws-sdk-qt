@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::ListTagsForResourceResponse
  *
- * \brief The ListTagsForResourceResponse class encapsulates SSM ListTagsForResource responses.
+ * \brief The ListTagsForResourceResponse class provides an interace for SSM ListTagsForResource responses.
  *
  * \ingroup SSM
  *

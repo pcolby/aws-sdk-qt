@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::DeleteRateBasedRuleRequest
  *
- * \brief The DeleteRateBasedRuleRequest class encapsulates WAF DeleteRateBasedRule requests.
+ * \brief The DeleteRateBasedRuleRequest class provides an interface for WAF DeleteRateBasedRule requests.
  *
  * \ingroup WAF
  *

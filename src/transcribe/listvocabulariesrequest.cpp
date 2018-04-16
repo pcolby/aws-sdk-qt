@@ -28,7 +28,7 @@ namespace TranscribeService {
 /*!
  * \class QtAws::TranscribeService::ListVocabulariesRequest
  *
- * \brief The ListVocabulariesRequest class encapsulates TranscribeService ListVocabularies requests.
+ * \brief The ListVocabulariesRequest class provides an interface for TranscribeService ListVocabularies requests.
  *
  * \ingroup TranscribeService
  *

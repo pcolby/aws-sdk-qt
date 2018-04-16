@@ -28,7 +28,7 @@ namespace CloudFormation {
 /*!
  * \class QtAws::CloudFormation::GetTemplateSummaryRequest
  *
- * \brief The GetTemplateSummaryRequest class encapsulates CloudFormation GetTemplateSummary requests.
+ * \brief The GetTemplateSummaryRequest class provides an interface for CloudFormation GetTemplateSummary requests.
  *
  * \ingroup CloudFormation
  *

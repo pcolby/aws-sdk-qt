@@ -28,7 +28,7 @@ namespace Batch {
 /*!
  * \class QtAws::Batch::DescribeJobDefinitionsRequest
  *
- * \brief The DescribeJobDefinitionsRequest class encapsulates Batch DescribeJobDefinitions requests.
+ * \brief The DescribeJobDefinitionsRequest class provides an interface for Batch DescribeJobDefinitions requests.
  *
  * \ingroup Batch
  *

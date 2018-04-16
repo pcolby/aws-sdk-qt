@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeAggregateIdFormatResponse
  *
- * \brief The DescribeAggregateIdFormatResponse class encapsulates EC2 DescribeAggregateIdFormat responses.
+ * \brief The DescribeAggregateIdFormatResponse class provides an interace for EC2 DescribeAggregateIdFormat responses.
  *
  * \ingroup EC2
  *

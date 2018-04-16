@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::AssociateMemberToGroupRequest
  *
- * \brief The AssociateMemberToGroupRequest class encapsulates WorkMail AssociateMemberToGroup requests.
+ * \brief The AssociateMemberToGroupRequest class provides an interface for WorkMail AssociateMemberToGroup requests.
  *
  * \ingroup WorkMail
  *

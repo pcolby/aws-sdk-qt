@@ -28,7 +28,7 @@ namespace ElasticTranscoder {
 /*!
  * \class QtAws::ElasticTranscoder::UpdatePipelineNotificationsRequest
  *
- * \brief The UpdatePipelineNotificationsRequest class encapsulates ElasticTranscoder UpdatePipelineNotifications requests.
+ * \brief The UpdatePipelineNotificationsRequest class provides an interface for ElasticTranscoder UpdatePipelineNotifications requests.
  *
  * \ingroup ElasticTranscoder
  *

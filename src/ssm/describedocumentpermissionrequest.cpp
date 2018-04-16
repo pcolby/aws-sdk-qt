@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeDocumentPermissionRequest
  *
- * \brief The DescribeDocumentPermissionRequest class encapsulates SSM DescribeDocumentPermission requests.
+ * \brief The DescribeDocumentPermissionRequest class provides an interface for SSM DescribeDocumentPermission requests.
  *
  * \ingroup SSM
  *

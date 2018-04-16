@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::InstallToRemoteAccessSessionResponse
  *
- * \brief The InstallToRemoteAccessSessionResponse class encapsulates DeviceFarm InstallToRemoteAccessSession responses.
+ * \brief The InstallToRemoteAccessSessionResponse class provides an interace for DeviceFarm InstallToRemoteAccessSession responses.
  *
  * \ingroup DeviceFarm
  *

@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeleteResourceDataSyncResponse
  *
- * \brief The DeleteResourceDataSyncResponse class encapsulates SSM DeleteResourceDataSync responses.
+ * \brief The DeleteResourceDataSyncResponse class provides an interace for SSM DeleteResourceDataSync responses.
  *
  * \ingroup SSM
  *

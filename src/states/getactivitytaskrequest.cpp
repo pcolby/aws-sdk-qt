@@ -28,7 +28,7 @@ namespace SFN {
 /*!
  * \class QtAws::SFN::GetActivityTaskRequest
  *
- * \brief The GetActivityTaskRequest class encapsulates SFN GetActivityTask requests.
+ * \brief The GetActivityTaskRequest class provides an interface for SFN GetActivityTask requests.
  *
  * \ingroup SFN
  *

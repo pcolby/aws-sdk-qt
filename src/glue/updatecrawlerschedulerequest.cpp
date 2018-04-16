@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::UpdateCrawlerScheduleRequest
  *
- * \brief The UpdateCrawlerScheduleRequest class encapsulates Glue UpdateCrawlerSchedule requests.
+ * \brief The UpdateCrawlerScheduleRequest class provides an interface for Glue UpdateCrawlerSchedule requests.
  *
  * \ingroup Glue
  *

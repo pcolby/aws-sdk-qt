@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeleteDocumentRequest
  *
- * \brief The DeleteDocumentRequest class encapsulates SSM DeleteDocument requests.
+ * \brief The DeleteDocumentRequest class provides an interface for SSM DeleteDocument requests.
  *
  * \ingroup SSM
  *

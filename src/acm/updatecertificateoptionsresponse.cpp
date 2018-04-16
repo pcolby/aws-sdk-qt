@@ -30,7 +30,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::UpdateCertificateOptionsResponse
  *
- * \brief The UpdateCertificateOptionsResponse class encapsulates ACM UpdateCertificateOptions responses.
+ * \brief The UpdateCertificateOptionsResponse class provides an interace for ACM UpdateCertificateOptions responses.
  *
  * \ingroup ACM
  *

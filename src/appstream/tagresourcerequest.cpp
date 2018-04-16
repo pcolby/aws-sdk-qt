@@ -28,7 +28,7 @@ namespace AppStream {
 /*!
  * \class QtAws::AppStream::TagResourceRequest
  *
- * \brief The TagResourceRequest class encapsulates AppStream TagResource requests.
+ * \brief The TagResourceRequest class provides an interface for AppStream TagResource requests.
  *
  * \ingroup AppStream
  *

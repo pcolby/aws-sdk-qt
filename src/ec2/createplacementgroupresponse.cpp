@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreatePlacementGroupResponse
  *
- * \brief The CreatePlacementGroupResponse class encapsulates EC2 CreatePlacementGroup responses.
+ * \brief The CreatePlacementGroupResponse class provides an interace for EC2 CreatePlacementGroup responses.
  *
  * \ingroup EC2
  *

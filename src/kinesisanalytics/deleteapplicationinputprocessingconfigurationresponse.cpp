@@ -30,7 +30,7 @@ namespace KinesisAnalytics {
 /*!
  * \class QtAws::KinesisAnalytics::DeleteApplicationInputProcessingConfigurationResponse
  *
- * \brief The DeleteApplicationInputProcessingConfigurationResponse class encapsulates KinesisAnalytics DeleteApplicationInputProcessingConfiguration responses.
+ * \brief The DeleteApplicationInputProcessingConfigurationResponse class provides an interace for KinesisAnalytics DeleteApplicationInputProcessingConfiguration responses.
  *
  * \ingroup KinesisAnalytics
  *

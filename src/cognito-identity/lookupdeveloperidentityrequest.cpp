@@ -28,7 +28,7 @@ namespace CognitoIdentity {
 /*!
  * \class QtAws::CognitoIdentity::LookupDeveloperIdentityRequest
  *
- * \brief The LookupDeveloperIdentityRequest class encapsulates CognitoIdentity LookupDeveloperIdentity requests.
+ * \brief The LookupDeveloperIdentityRequest class provides an interface for CognitoIdentity LookupDeveloperIdentity requests.
  *
  * \ingroup CognitoIdentity
  *

@@ -28,7 +28,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::ListCreateAccountStatusRequest
  *
- * \brief The ListCreateAccountStatusRequest class encapsulates Organizations ListCreateAccountStatus requests.
+ * \brief The ListCreateAccountStatusRequest class provides an interface for Organizations ListCreateAccountStatus requests.
  *
  * \ingroup Organizations
  *

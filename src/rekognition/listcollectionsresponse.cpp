@@ -30,7 +30,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::ListCollectionsResponse
  *
- * \brief The ListCollectionsResponse class encapsulates Rekognition ListCollections responses.
+ * \brief The ListCollectionsResponse class provides an interace for Rekognition ListCollections responses.
  *
  * \ingroup Rekognition
  *

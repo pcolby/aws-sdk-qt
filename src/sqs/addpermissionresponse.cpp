@@ -30,7 +30,7 @@ namespace SQS {
 /*!
  * \class QtAws::SQS::AddPermissionResponse
  *
- * \brief The AddPermissionResponse class encapsulates SQS AddPermission responses.
+ * \brief The AddPermissionResponse class provides an interace for SQS AddPermission responses.
  *
  * \ingroup SQS
  *

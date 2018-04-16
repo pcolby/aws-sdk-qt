@@ -30,7 +30,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::UnassignInstanceResponse
  *
- * \brief The UnassignInstanceResponse class encapsulates OpsWorks UnassignInstance responses.
+ * \brief The UnassignInstanceResponse class provides an interace for OpsWorks UnassignInstance responses.
  *
  * \ingroup OpsWorks
  *

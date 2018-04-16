@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::ValidateMatchmakingRuleSetRequest
  *
- * \brief The ValidateMatchmakingRuleSetRequest class encapsulates GameLift ValidateMatchmakingRuleSet requests.
+ * \brief The ValidateMatchmakingRuleSetRequest class provides an interface for GameLift ValidateMatchmakingRuleSet requests.
  *
  * \ingroup GameLift
  *

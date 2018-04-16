@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::ImportKeyPairResponse
  *
- * \brief The ImportKeyPairResponse class encapsulates Lightsail ImportKeyPair responses.
+ * \brief The ImportKeyPairResponse class provides an interace for Lightsail ImportKeyPair responses.
  *
  * \ingroup Lightsail
  *

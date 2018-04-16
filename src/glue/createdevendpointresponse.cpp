@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateDevEndpointResponse
  *
- * \brief The CreateDevEndpointResponse class encapsulates Glue CreateDevEndpoint responses.
+ * \brief The CreateDevEndpointResponse class provides an interace for Glue CreateDevEndpoint responses.
  *
  * \ingroup Glue
  *

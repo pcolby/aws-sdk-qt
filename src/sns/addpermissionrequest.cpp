@@ -28,7 +28,7 @@ namespace SNS {
 /*!
  * \class QtAws::SNS::AddPermissionRequest
  *
- * \brief The AddPermissionRequest class encapsulates SNS AddPermission requests.
+ * \brief The AddPermissionRequest class provides an interface for SNS AddPermission requests.
  *
  * \ingroup SNS
  *

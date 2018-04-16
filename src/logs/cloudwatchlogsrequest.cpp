@@ -26,7 +26,7 @@ namespace CloudWatchLogs {
 /*!
  * \class QtAws::CloudWatchLogs::CloudWatchLogsRequest
  *
- * \brief The CloudWatchLogsRequest class is the base class for all CloudWatchLogs requests.
+ * \brief The CloudWatchLogsRequest class provides an interface for CloudWatchLogs requests.
  *
  * \ingroup CloudWatchLogs
  */

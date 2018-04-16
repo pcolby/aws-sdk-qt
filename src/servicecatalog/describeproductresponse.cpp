@@ -30,7 +30,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::DescribeProductResponse
  *
- * \brief The DescribeProductResponse class encapsulates ServiceCatalog DescribeProduct responses.
+ * \brief The DescribeProductResponse class provides an interace for ServiceCatalog DescribeProduct responses.
  *
  * \ingroup ServiceCatalog
  *

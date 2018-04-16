@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::StartConfigurationRecorderResponse
  *
- * \brief The StartConfigurationRecorderResponse class encapsulates ConfigService StartConfigurationRecorder responses.
+ * \brief The StartConfigurationRecorderResponse class provides an interace for ConfigService StartConfigurationRecorder responses.
  *
  * \ingroup ConfigService
  *

@@ -29,7 +29,7 @@ namespace MigrationHub {
 /*!
  * \class QtAws::MigrationHub::MigrationHubResponse
  *
- * \brief The MigrationHubResponse class is the base class for all MigrationHub responses.
+ * \brief The MigrationHubResponse class provides an interface for MigrationHub responses.
  *
  * \ingroup MigrationHub
  */

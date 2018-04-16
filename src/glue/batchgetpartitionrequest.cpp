@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::BatchGetPartitionRequest
  *
- * \brief The BatchGetPartitionRequest class encapsulates Glue BatchGetPartition requests.
+ * \brief The BatchGetPartitionRequest class provides an interface for Glue BatchGetPartition requests.
  *
  * \ingroup Glue
  *

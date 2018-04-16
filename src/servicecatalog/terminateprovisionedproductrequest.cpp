@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::TerminateProvisionedProductRequest
  *
- * \brief The TerminateProvisionedProductRequest class encapsulates ServiceCatalog TerminateProvisionedProduct requests.
+ * \brief The TerminateProvisionedProductRequest class provides an interface for ServiceCatalog TerminateProvisionedProduct requests.
  *
  * \ingroup ServiceCatalog
  *

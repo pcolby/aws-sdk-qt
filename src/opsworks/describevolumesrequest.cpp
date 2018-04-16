@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeVolumesRequest
  *
- * \brief The DescribeVolumesRequest class encapsulates OpsWorks DescribeVolumes requests.
+ * \brief The DescribeVolumesRequest class provides an interface for OpsWorks DescribeVolumes requests.
  *
  * \ingroup OpsWorks
  *

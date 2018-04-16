@@ -30,7 +30,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::StartCrawlerResponse
  *
- * \brief The StartCrawlerResponse class encapsulates Glue StartCrawler responses.
+ * \brief The StartCrawlerResponse class provides an interace for Glue StartCrawler responses.
  *
  * \ingroup Glue
  *

@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DescribeActivationsResponse
  *
- * \brief The DescribeActivationsResponse class encapsulates SSM DescribeActivations responses.
+ * \brief The DescribeActivationsResponse class provides an interace for SSM DescribeActivations responses.
  *
  * \ingroup SSM
  *

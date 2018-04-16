@@ -30,7 +30,7 @@ namespace WorkSpaces {
 /*!
  * \class QtAws::WorkSpaces::ModifyWorkspacePropertiesResponse
  *
- * \brief The ModifyWorkspacePropertiesResponse class encapsulates WorkSpaces ModifyWorkspaceProperties responses.
+ * \brief The ModifyWorkspacePropertiesResponse class provides an interace for WorkSpaces ModifyWorkspaceProperties responses.
  *
  * \ingroup WorkSpaces
  *

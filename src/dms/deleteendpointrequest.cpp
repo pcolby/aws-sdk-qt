@@ -28,7 +28,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DeleteEndpointRequest
  *
- * \brief The DeleteEndpointRequest class encapsulates DatabaseMigrationService DeleteEndpoint requests.
+ * \brief The DeleteEndpointRequest class provides an interface for DatabaseMigrationService DeleteEndpoint requests.
  *
  * \ingroup DatabaseMigrationService
  *

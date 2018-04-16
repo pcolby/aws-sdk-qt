@@ -11,7 +11,7 @@ namespace {{NameSpaceName}} {
 /*!
  * \class QtAws::{{NameSpaceName}}::{{ClassName}}
  *
- * \brief The {{ClassName}} class is the base class for all {{ServiceName}} responses.
+ * \brief The {{ClassName}} class provides an interface for {{ServiceName}} responses.
  *
  * \ingroup {{NameSpaceName}}
  */

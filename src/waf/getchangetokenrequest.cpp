@@ -28,7 +28,7 @@ namespace WAF {
 /*!
  * \class QtAws::WAF::GetChangeTokenRequest
  *
- * \brief The GetChangeTokenRequest class encapsulates WAF GetChangeToken requests.
+ * \brief The GetChangeTokenRequest class provides an interface for WAF GetChangeToken requests.
  *
  * \ingroup WAF
  *

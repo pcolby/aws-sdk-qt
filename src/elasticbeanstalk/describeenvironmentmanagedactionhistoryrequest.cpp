@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeEnvironmentManagedActionHistoryRequest
  *
- * \brief The DescribeEnvironmentManagedActionHistoryRequest class encapsulates ElasticBeanstalk DescribeEnvironmentManagedActionHistory requests.
+ * \brief The DescribeEnvironmentManagedActionHistoryRequest class provides an interface for ElasticBeanstalk DescribeEnvironmentManagedActionHistory requests.
  *
  * \ingroup ElasticBeanstalk
  *

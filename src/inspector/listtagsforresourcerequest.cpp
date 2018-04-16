@@ -28,7 +28,7 @@ namespace Inspector {
 /*!
  * \class QtAws::Inspector::ListTagsForResourceRequest
  *
- * \brief The ListTagsForResourceRequest class encapsulates Inspector ListTagsForResource requests.
+ * \brief The ListTagsForResourceRequest class provides an interface for Inspector ListTagsForResource requests.
  *
  * \ingroup Inspector
  *

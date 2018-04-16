@@ -28,7 +28,7 @@ namespace SecretsManager {
 /*!
  * \class QtAws::SecretsManager::CancelRotateSecretRequest
  *
- * \brief The CancelRotateSecretRequest class encapsulates SecretsManager CancelRotateSecret requests.
+ * \brief The CancelRotateSecretRequest class provides an interface for SecretsManager CancelRotateSecret requests.
  *
  * \ingroup SecretsManager
  *

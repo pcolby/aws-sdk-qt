@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::DeleteCertificateResponse
  *
- * \brief The DeleteCertificateResponse class encapsulates DatabaseMigrationService DeleteCertificate responses.
+ * \brief The DeleteCertificateResponse class provides an interace for DatabaseMigrationService DeleteCertificate responses.
  *
  * \ingroup DatabaseMigrationService
  *

@@ -28,7 +28,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::AttachDiskRequest
  *
- * \brief The AttachDiskRequest class encapsulates Lightsail AttachDisk requests.
+ * \brief The AttachDiskRequest class provides an interface for Lightsail AttachDisk requests.
  *
  * \ingroup Lightsail
  *

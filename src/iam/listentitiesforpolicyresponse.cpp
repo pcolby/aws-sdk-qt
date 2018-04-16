@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::ListEntitiesForPolicyResponse
  *
- * \brief The ListEntitiesForPolicyResponse class encapsulates IAM ListEntitiesForPolicy responses.
+ * \brief The ListEntitiesForPolicyResponse class provides an interace for IAM ListEntitiesForPolicy responses.
  *
  * \ingroup IAM
  *

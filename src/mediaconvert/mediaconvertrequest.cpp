@@ -26,7 +26,7 @@ namespace MediaConvert {
 /*!
  * \class QtAws::MediaConvert::MediaConvertRequest
  *
- * \brief The MediaConvertRequest class is the base class for all MediaConvert requests.
+ * \brief The MediaConvertRequest class provides an interface for MediaConvert requests.
  *
  * \ingroup MediaConvert
  */

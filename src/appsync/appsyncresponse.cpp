@@ -29,7 +29,7 @@ namespace AppSync {
 /*!
  * \class QtAws::AppSync::AppSyncResponse
  *
- * \brief The AppSyncResponse class is the base class for all AppSync responses.
+ * \brief The AppSyncResponse class provides an interface for AppSync responses.
  *
  * \ingroup AppSync
  */

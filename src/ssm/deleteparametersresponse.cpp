@@ -30,7 +30,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::DeleteParametersResponse
  *
- * \brief The DeleteParametersResponse class encapsulates SSM DeleteParameters responses.
+ * \brief The DeleteParametersResponse class provides an interace for SSM DeleteParameters responses.
  *
  * \ingroup SSM
  *

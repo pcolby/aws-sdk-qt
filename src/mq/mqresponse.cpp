@@ -29,7 +29,7 @@ namespace MQ {
 /*!
  * \class QtAws::MQ::MQResponse
  *
- * \brief The MQResponse class is the base class for all MQ responses.
+ * \brief The MQResponse class provides an interface for MQ responses.
  *
  * \ingroup MQ
  */

@@ -109,7 +109,7 @@ namespace LexModelBuildingService {
 /*!
  * \class QtAws::LexModelBuildingService::LexModelBuildingServiceClient
  *
- * \brief The LexModelBuildingServiceClient class provides access the Amazon Lex Model Building Service service.
+ * \brief The LexModelBuildingServiceClient class provides access to the Amazon Lex Model Building Service service.
  *
  * \ingroup LexModelBuildingService
  *

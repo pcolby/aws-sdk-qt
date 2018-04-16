@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketEncryptionResponse
  *
- * \brief The GetBucketEncryptionResponse class encapsulates S3 GetBucketEncryption responses.
+ * \brief The GetBucketEncryptionResponse class provides an interace for S3 GetBucketEncryption responses.
  *
  * \ingroup S3
  *

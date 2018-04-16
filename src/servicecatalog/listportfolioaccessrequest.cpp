@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ListPortfolioAccessRequest
  *
- * \brief The ListPortfolioAccessRequest class encapsulates ServiceCatalog ListPortfolioAccess requests.
+ * \brief The ListPortfolioAccessRequest class provides an interface for ServiceCatalog ListPortfolioAccess requests.
  *
  * \ingroup ServiceCatalog
  *

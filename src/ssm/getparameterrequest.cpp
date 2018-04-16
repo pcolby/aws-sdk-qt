@@ -28,7 +28,7 @@ namespace SSM {
 /*!
  * \class QtAws::SSM::GetParameterRequest
  *
- * \brief The GetParameterRequest class encapsulates SSM GetParameter requests.
+ * \brief The GetParameterRequest class provides an interface for SSM GetParameter requests.
  *
  * \ingroup SSM
  *

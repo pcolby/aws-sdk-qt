@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::ModifySubnetAttributeResponse
  *
- * \brief The ModifySubnetAttributeResponse class encapsulates EC2 ModifySubnetAttribute responses.
+ * \brief The ModifySubnetAttributeResponse class provides an interace for EC2 ModifySubnetAttribute responses.
  *
  * \ingroup EC2
  *

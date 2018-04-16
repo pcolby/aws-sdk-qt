@@ -28,7 +28,7 @@ namespace ServiceDiscovery {
 /*!
  * \class QtAws::ServiceDiscovery::ListOperationsRequest
  *
- * \brief The ListOperationsRequest class encapsulates ServiceDiscovery ListOperations requests.
+ * \brief The ListOperationsRequest class provides an interface for ServiceDiscovery ListOperations requests.
  *
  * \ingroup ServiceDiscovery
  *

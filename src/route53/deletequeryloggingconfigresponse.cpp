@@ -30,7 +30,7 @@ namespace Route53 {
 /*!
  * \class QtAws::Route53::DeleteQueryLoggingConfigResponse
  *
- * \brief The DeleteQueryLoggingConfigResponse class encapsulates Route53 DeleteQueryLoggingConfig responses.
+ * \brief The DeleteQueryLoggingConfigResponse class provides an interace for Route53 DeleteQueryLoggingConfig responses.
  *
  * \ingroup Route53
  *

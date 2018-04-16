@@ -30,7 +30,7 @@ namespace DatabaseMigrationService {
 /*!
  * \class QtAws::DatabaseMigrationService::ImportCertificateResponse
  *
- * \brief The ImportCertificateResponse class encapsulates DatabaseMigrationService ImportCertificate responses.
+ * \brief The ImportCertificateResponse class provides an interace for DatabaseMigrationService ImportCertificate responses.
  *
  * \ingroup DatabaseMigrationService
  *

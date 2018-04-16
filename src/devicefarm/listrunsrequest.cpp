@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListRunsRequest
  *
- * \brief The ListRunsRequest class encapsulates DeviceFarm ListRuns requests.
+ * \brief The ListRunsRequest class provides an interface for DeviceFarm ListRuns requests.
  *
  * \ingroup DeviceFarm
  *

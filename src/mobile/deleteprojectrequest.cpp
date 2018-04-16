@@ -28,7 +28,7 @@ namespace Mobile {
 /*!
  * \class QtAws::Mobile::DeleteProjectRequest
  *
- * \brief The DeleteProjectRequest class encapsulates Mobile DeleteProject requests.
+ * \brief The DeleteProjectRequest class provides an interface for Mobile DeleteProject requests.
  *
  * \ingroup Mobile
  *

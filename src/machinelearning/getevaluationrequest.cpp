@@ -28,7 +28,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::GetEvaluationRequest
  *
- * \brief The GetEvaluationRequest class encapsulates MachineLearning GetEvaluation requests.
+ * \brief The GetEvaluationRequest class provides an interface for MachineLearning GetEvaluation requests.
  *
  * \ingroup MachineLearning
  *

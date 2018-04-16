@@ -28,7 +28,7 @@ namespace Snowball {
 /*!
  * \class QtAws::Snowball::UpdateClusterRequest
  *
- * \brief The UpdateClusterRequest class encapsulates Snowball UpdateCluster requests.
+ * \brief The UpdateClusterRequest class provides an interface for Snowball UpdateCluster requests.
  *
  * \ingroup Snowball
  *

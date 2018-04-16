@@ -28,7 +28,7 @@ namespace Rekognition {
 /*!
  * \class QtAws::Rekognition::GetContentModerationRequest
  *
- * \brief The GetContentModerationRequest class encapsulates Rekognition GetContentModeration requests.
+ * \brief The GetContentModerationRequest class provides an interface for Rekognition GetContentModeration requests.
  *
  * \ingroup Rekognition
  *

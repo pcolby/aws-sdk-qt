@@ -28,7 +28,7 @@ namespace ECR {
 /*!
  * \class QtAws::ECR::DescribeRepositoriesRequest
  *
- * \brief The DescribeRepositoriesRequest class encapsulates ECR DescribeRepositories requests.
+ * \brief The DescribeRepositoriesRequest class provides an interface for ECR DescribeRepositories requests.
  *
  * \ingroup ECR
  *

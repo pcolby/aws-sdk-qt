@@ -30,7 +30,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::SelectObjectContentResponse
  *
- * \brief The SelectObjectContentResponse class encapsulates S3 SelectObjectContent responses.
+ * \brief The SelectObjectContentResponse class provides an interace for S3 SelectObjectContent responses.
  *
  * \ingroup S3
  *

@@ -30,7 +30,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListProjectsResponse
  *
- * \brief The ListProjectsResponse class encapsulates DeviceFarm ListProjects responses.
+ * \brief The ListProjectsResponse class provides an interace for DeviceFarm ListProjects responses.
  *
  * \ingroup DeviceFarm
  *

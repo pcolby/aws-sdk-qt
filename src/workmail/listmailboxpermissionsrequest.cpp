@@ -28,7 +28,7 @@ namespace WorkMail {
 /*!
  * \class QtAws::WorkMail::ListMailboxPermissionsRequest
  *
- * \brief The ListMailboxPermissionsRequest class encapsulates WorkMail ListMailboxPermissions requests.
+ * \brief The ListMailboxPermissionsRequest class provides an interface for WorkMail ListMailboxPermissions requests.
  *
  * \ingroup WorkMail
  *

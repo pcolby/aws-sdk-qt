@@ -28,7 +28,7 @@ namespace CodeCommit {
 /*!
  * \class QtAws::CodeCommit::UpdateRepositoryDescriptionRequest
  *
- * \brief The UpdateRepositoryDescriptionRequest class encapsulates CodeCommit UpdateRepositoryDescription requests.
+ * \brief The UpdateRepositoryDescriptionRequest class provides an interface for CodeCommit UpdateRepositoryDescription requests.
  *
  * \ingroup CodeCommit
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateVpnGatewayResponse
  *
- * \brief The CreateVpnGatewayResponse class encapsulates EC2 CreateVpnGateway responses.
+ * \brief The CreateVpnGatewayResponse class provides an interace for EC2 CreateVpnGateway responses.
  *
  * \ingroup EC2
  *

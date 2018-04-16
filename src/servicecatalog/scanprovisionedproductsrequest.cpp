@@ -28,7 +28,7 @@ namespace ServiceCatalog {
 /*!
  * \class QtAws::ServiceCatalog::ScanProvisionedProductsRequest
  *
- * \brief The ScanProvisionedProductsRequest class encapsulates ServiceCatalog ScanProvisionedProducts requests.
+ * \brief The ScanProvisionedProductsRequest class provides an interface for ServiceCatalog ScanProvisionedProducts requests.
  *
  * \ingroup ServiceCatalog
  *

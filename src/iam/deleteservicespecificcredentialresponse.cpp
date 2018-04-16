@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::DeleteServiceSpecificCredentialResponse
  *
- * \brief The DeleteServiceSpecificCredentialResponse class encapsulates IAM DeleteServiceSpecificCredential responses.
+ * \brief The DeleteServiceSpecificCredentialResponse class provides an interace for IAM DeleteServiceSpecificCredential responses.
  *
  * \ingroup IAM
  *

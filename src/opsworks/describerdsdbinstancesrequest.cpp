@@ -28,7 +28,7 @@ namespace OpsWorks {
 /*!
  * \class QtAws::OpsWorks::DescribeRdsDbInstancesRequest
  *
- * \brief The DescribeRdsDbInstancesRequest class encapsulates OpsWorks DescribeRdsDbInstances requests.
+ * \brief The DescribeRdsDbInstancesRequest class provides an interface for OpsWorks DescribeRdsDbInstances requests.
  *
  * \ingroup OpsWorks
  *

@@ -28,7 +28,7 @@ namespace S3 {
 /*!
  * \class QtAws::S3::GetBucketVersioningRequest
  *
- * \brief The GetBucketVersioningRequest class encapsulates S3 GetBucketVersioning requests.
+ * \brief The GetBucketVersioningRequest class provides an interface for S3 GetBucketVersioning requests.
  *
  * \ingroup S3
  *

@@ -30,7 +30,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::DescribeStaleSecurityGroupsResponse
  *
- * \brief The DescribeStaleSecurityGroupsResponse class encapsulates EC2 DescribeStaleSecurityGroups responses.
+ * \brief The DescribeStaleSecurityGroupsResponse class provides an interace for EC2 DescribeStaleSecurityGroups responses.
  *
  * \ingroup EC2
  *

@@ -30,7 +30,7 @@ namespace IoT {
 /*!
  * \class QtAws::IoT::DetachPrincipalPolicyResponse
  *
- * \brief The DetachPrincipalPolicyResponse class encapsulates IoT DetachPrincipalPolicy responses.
+ * \brief The DetachPrincipalPolicyResponse class provides an interace for IoT DetachPrincipalPolicy responses.
  *
  * \ingroup IoT
  *

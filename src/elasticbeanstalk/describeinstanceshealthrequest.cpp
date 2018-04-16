@@ -28,7 +28,7 @@ namespace ElasticBeanstalk {
 /*!
  * \class QtAws::ElasticBeanstalk::DescribeInstancesHealthRequest
  *
- * \brief The DescribeInstancesHealthRequest class encapsulates ElasticBeanstalk DescribeInstancesHealth requests.
+ * \brief The DescribeInstancesHealthRequest class provides an interface for ElasticBeanstalk DescribeInstancesHealth requests.
  *
  * \ingroup ElasticBeanstalk
  *

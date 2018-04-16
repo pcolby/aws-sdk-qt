@@ -28,7 +28,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::DescribeBuildRequest
  *
- * \brief The DescribeBuildRequest class encapsulates GameLift DescribeBuild requests.
+ * \brief The DescribeBuildRequest class provides an interface for GameLift DescribeBuild requests.
  *
  * \ingroup GameLift
  *

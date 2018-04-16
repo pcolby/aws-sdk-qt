@@ -28,7 +28,7 @@ namespace DeviceFarm {
 /*!
  * \class QtAws::DeviceFarm::ListNetworkProfilesRequest
  *
- * \brief The ListNetworkProfilesRequest class encapsulates DeviceFarm ListNetworkProfiles requests.
+ * \brief The ListNetworkProfilesRequest class provides an interface for DeviceFarm ListNetworkProfiles requests.
  *
  * \ingroup DeviceFarm
  *

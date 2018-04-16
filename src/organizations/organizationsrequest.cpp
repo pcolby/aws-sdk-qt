@@ -26,7 +26,7 @@ namespace Organizations {
 /*!
  * \class QtAws::Organizations::OrganizationsRequest
  *
- * \brief The OrganizationsRequest class is the base class for all Organizations requests.
+ * \brief The OrganizationsRequest class provides an interface for Organizations requests.
  *
  * \ingroup Organizations
  */

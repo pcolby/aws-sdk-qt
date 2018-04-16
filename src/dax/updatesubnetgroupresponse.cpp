@@ -30,7 +30,7 @@ namespace DAX {
 /*!
  * \class QtAws::DAX::UpdateSubnetGroupResponse
  *
- * \brief The UpdateSubnetGroupResponse class encapsulates DAX UpdateSubnetGroup responses.
+ * \brief The UpdateSubnetGroupResponse class provides an interace for DAX UpdateSubnetGroup responses.
  *
  * \ingroup DAX
  *

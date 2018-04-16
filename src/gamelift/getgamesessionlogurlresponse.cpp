@@ -30,7 +30,7 @@ namespace GameLift {
 /*!
  * \class QtAws::GameLift::GetGameSessionLogUrlResponse
  *
- * \brief The GetGameSessionLogUrlResponse class encapsulates GameLift GetGameSessionLogUrl responses.
+ * \brief The GetGameSessionLogUrlResponse class provides an interace for GameLift GetGameSessionLogUrl responses.
  *
  * \ingroup GameLift
  *

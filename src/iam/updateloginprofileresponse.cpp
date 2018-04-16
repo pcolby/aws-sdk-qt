@@ -30,7 +30,7 @@ namespace IAM {
 /*!
  * \class QtAws::IAM::UpdateLoginProfileResponse
  *
- * \brief The UpdateLoginProfileResponse class encapsulates IAM UpdateLoginProfile responses.
+ * \brief The UpdateLoginProfileResponse class provides an interace for IAM UpdateLoginProfile responses.
  *
  * \ingroup IAM
  *

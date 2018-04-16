@@ -30,7 +30,7 @@ namespace Comprehend {
 /*!
  * \class QtAws::Comprehend::DetectDominantLanguageResponse
  *
- * \brief The DetectDominantLanguageResponse class encapsulates Comprehend DetectDominantLanguage responses.
+ * \brief The DetectDominantLanguageResponse class provides an interace for Comprehend DetectDominantLanguage responses.
  *
  * \ingroup Comprehend
  *

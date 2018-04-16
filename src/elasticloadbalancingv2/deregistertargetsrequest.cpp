@@ -28,7 +28,7 @@ namespace ElasticLoadBalancingv2 {
 /*!
  * \class QtAws::ElasticLoadBalancingv2::DeregisterTargetsRequest
  *
- * \brief The DeregisterTargetsRequest class encapsulates ElasticLoadBalancingv2 DeregisterTargets requests.
+ * \brief The DeregisterTargetsRequest class provides an interface for ElasticLoadBalancingv2 DeregisterTargets requests.
  *
  * \ingroup ElasticLoadBalancingv2
  *

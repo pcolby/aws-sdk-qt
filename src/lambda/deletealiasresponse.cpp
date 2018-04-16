@@ -30,7 +30,7 @@ namespace Lambda {
 /*!
  * \class QtAws::Lambda::DeleteAliasResponse
  *
- * \brief The DeleteAliasResponse class encapsulates Lambda DeleteAlias responses.
+ * \brief The DeleteAliasResponse class provides an interace for Lambda DeleteAlias responses.
  *
  * \ingroup Lambda
  *

@@ -30,7 +30,7 @@ namespace MachineLearning {
 /*!
  * \class QtAws::MachineLearning::CreateDataSourceFromRedshiftResponse
  *
- * \brief The CreateDataSourceFromRedshiftResponse class encapsulates MachineLearning CreateDataSourceFromRedshift responses.
+ * \brief The CreateDataSourceFromRedshiftResponse class provides an interace for MachineLearning CreateDataSourceFromRedshift responses.
  *
  * \ingroup MachineLearning
  *

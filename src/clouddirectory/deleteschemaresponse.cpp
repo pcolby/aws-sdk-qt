@@ -30,7 +30,7 @@ namespace CloudDirectory {
 /*!
  * \class QtAws::CloudDirectory::DeleteSchemaResponse
  *
- * \brief The DeleteSchemaResponse class encapsulates CloudDirectory DeleteSchema responses.
+ * \brief The DeleteSchemaResponse class provides an interace for CloudDirectory DeleteSchema responses.
  *
  * \ingroup CloudDirectory
  *

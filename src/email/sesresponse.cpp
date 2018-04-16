@@ -29,7 +29,7 @@ namespace SES {
 /*!
  * \class QtAws::SES::SESResponse
  *
- * \brief The SESResponse class is the base class for all SES responses.
+ * \brief The SESResponse class provides an interface for SES responses.
  *
  * \ingroup SES
  */

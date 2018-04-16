@@ -30,7 +30,7 @@ namespace ACM {
 /*!
  * \class QtAws::ACM::RequestCertificateResponse
  *
- * \brief The RequestCertificateResponse class encapsulates ACM RequestCertificate responses.
+ * \brief The RequestCertificateResponse class provides an interace for ACM RequestCertificate responses.
  *
  * \ingroup ACM
  *

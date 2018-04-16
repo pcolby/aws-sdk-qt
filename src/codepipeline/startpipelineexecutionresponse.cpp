@@ -30,7 +30,7 @@ namespace CodePipeline {
 /*!
  * \class QtAws::CodePipeline::StartPipelineExecutionResponse
  *
- * \brief The StartPipelineExecutionResponse class encapsulates CodePipeline StartPipelineExecution responses.
+ * \brief The StartPipelineExecutionResponse class provides an interace for CodePipeline StartPipelineExecution responses.
  *
  * \ingroup CodePipeline
  *

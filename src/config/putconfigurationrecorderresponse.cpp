@@ -30,7 +30,7 @@ namespace ConfigService {
 /*!
  * \class QtAws::ConfigService::PutConfigurationRecorderResponse
  *
- * \brief The PutConfigurationRecorderResponse class encapsulates ConfigService PutConfigurationRecorder responses.
+ * \brief The PutConfigurationRecorderResponse class provides an interace for ConfigService PutConfigurationRecorder responses.
  *
  * \ingroup ConfigService
  *

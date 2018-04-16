@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::DeleteStreamingDistributionResponse
  *
- * \brief The DeleteStreamingDistributionResponse class encapsulates CloudFront DeleteStreamingDistribution responses.
+ * \brief The DeleteStreamingDistributionResponse class provides an interace for CloudFront DeleteStreamingDistribution responses.
  *
  * \ingroup CloudFront
  *

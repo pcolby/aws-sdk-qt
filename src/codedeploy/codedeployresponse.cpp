@@ -29,7 +29,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::CodeDeployResponse
  *
- * \brief The CodeDeployResponse class is the base class for all CodeDeploy responses.
+ * \brief The CodeDeployResponse class provides an interface for CodeDeploy responses.
  *
  * \ingroup CodeDeploy
  */

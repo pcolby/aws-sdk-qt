@@ -30,7 +30,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::RespondDecisionTaskCompletedResponse
  *
- * \brief The RespondDecisionTaskCompletedResponse class encapsulates SWF RespondDecisionTaskCompleted responses.
+ * \brief The RespondDecisionTaskCompletedResponse class provides an interace for SWF RespondDecisionTaskCompleted responses.
  *
  * \ingroup SWF
  *

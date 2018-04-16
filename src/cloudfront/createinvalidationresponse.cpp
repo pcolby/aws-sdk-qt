@@ -30,7 +30,7 @@ namespace CloudFront {
 /*!
  * \class QtAws::CloudFront::CreateInvalidationResponse
  *
- * \brief The CreateInvalidationResponse class encapsulates CloudFront CreateInvalidation responses.
+ * \brief The CreateInvalidationResponse class provides an interace for CloudFront CreateInvalidation responses.
  *
  * \ingroup CloudFront
  *

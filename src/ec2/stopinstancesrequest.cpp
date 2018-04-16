@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::StopInstancesRequest
  *
- * \brief The StopInstancesRequest class encapsulates EC2 StopInstances requests.
+ * \brief The StopInstancesRequest class provides an interface for EC2 StopInstances requests.
  *
  * \ingroup EC2
  *

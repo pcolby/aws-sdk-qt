@@ -28,7 +28,7 @@ namespace EC2 {
 /*!
  * \class QtAws::EC2::CreateNatGatewayRequest
  *
- * \brief The CreateNatGatewayRequest class encapsulates EC2 CreateNatGateway requests.
+ * \brief The CreateNatGatewayRequest class provides an interface for EC2 CreateNatGateway requests.
  *
  * \ingroup EC2
  *

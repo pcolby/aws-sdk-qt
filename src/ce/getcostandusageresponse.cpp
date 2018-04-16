@@ -30,7 +30,7 @@ namespace CostExplorer {
 /*!
  * \class QtAws::CostExplorer::GetCostAndUsageResponse
  *
- * \brief The GetCostAndUsageResponse class encapsulates CostExplorer GetCostAndUsage responses.
+ * \brief The GetCostAndUsageResponse class provides an interace for CostExplorer GetCostAndUsage responses.
  *
  * \ingroup CostExplorer
  *

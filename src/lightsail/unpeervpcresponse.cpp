@@ -30,7 +30,7 @@ namespace Lightsail {
 /*!
  * \class QtAws::Lightsail::UnpeerVpcResponse
  *
- * \brief The UnpeerVpcResponse class encapsulates Lightsail UnpeerVpc responses.
+ * \brief The UnpeerVpcResponse class provides an interace for Lightsail UnpeerVpc responses.
  *
  * \ingroup Lightsail
  *

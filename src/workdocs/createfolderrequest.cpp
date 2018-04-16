@@ -28,7 +28,7 @@ namespace WorkDocs {
 /*!
  * \class QtAws::WorkDocs::CreateFolderRequest
  *
- * \brief The CreateFolderRequest class encapsulates WorkDocs CreateFolder requests.
+ * \brief The CreateFolderRequest class provides an interface for WorkDocs CreateFolder requests.
  *
  * \ingroup WorkDocs
  *

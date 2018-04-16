@@ -30,7 +30,7 @@ namespace AlexaForBusiness {
 /*!
  * \class QtAws::AlexaForBusiness::DisassociateSkillGroupFromRoomResponse
  *
- * \brief The DisassociateSkillGroupFromRoomResponse class encapsulates AlexaForBusiness DisassociateSkillGroupFromRoom responses.
+ * \brief The DisassociateSkillGroupFromRoomResponse class provides an interace for AlexaForBusiness DisassociateSkillGroupFromRoom responses.
  *
  * \ingroup AlexaForBusiness
  *

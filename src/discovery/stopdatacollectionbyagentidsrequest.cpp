@@ -28,7 +28,7 @@ namespace ApplicationDiscoveryService {
 /*!
  * \class QtAws::ApplicationDiscoveryService::StopDataCollectionByAgentIdsRequest
  *
- * \brief The StopDataCollectionByAgentIdsRequest class encapsulates ApplicationDiscoveryService StopDataCollectionByAgentIds requests.
+ * \brief The StopDataCollectionByAgentIdsRequest class provides an interface for ApplicationDiscoveryService StopDataCollectionByAgentIds requests.
  *
  * \ingroup ApplicationDiscoveryService
  *

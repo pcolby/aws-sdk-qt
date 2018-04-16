@@ -28,7 +28,7 @@ namespace Glue {
 /*!
  * \class QtAws::Glue::CreateTriggerRequest
  *
- * \brief The CreateTriggerRequest class encapsulates Glue CreateTrigger requests.
+ * \brief The CreateTriggerRequest class provides an interface for Glue CreateTrigger requests.
  *
  * \ingroup Glue
  *

@@ -28,7 +28,7 @@ namespace DataPipeline {
 /*!
  * \class QtAws::DataPipeline::ListPipelinesRequest
  *
- * \brief The ListPipelinesRequest class encapsulates DataPipeline ListPipelines requests.
+ * \brief The ListPipelinesRequest class provides an interface for DataPipeline ListPipelines requests.
  *
  * \ingroup DataPipeline
  *

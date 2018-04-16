@@ -28,7 +28,7 @@ namespace Glacier {
 /*!
  * \class QtAws::Glacier::PurchaseProvisionedCapacityRequest
  *
- * \brief The PurchaseProvisionedCapacityRequest class encapsulates Glacier PurchaseProvisionedCapacity requests.
+ * \brief The PurchaseProvisionedCapacityRequest class provides an interface for Glacier PurchaseProvisionedCapacity requests.
  *
  * \ingroup Glacier
  *

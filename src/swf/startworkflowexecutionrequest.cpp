@@ -28,7 +28,7 @@ namespace SWF {
 /*!
  * \class QtAws::SWF::StartWorkflowExecutionRequest
  *
- * \brief The StartWorkflowExecutionRequest class encapsulates SWF StartWorkflowExecution requests.
+ * \brief The StartWorkflowExecutionRequest class provides an interface for SWF StartWorkflowExecution requests.
  *
  * \ingroup SWF
  *

@@ -26,7 +26,7 @@ namespace CodeDeploy {
 /*!
  * \class QtAws::CodeDeploy::CodeDeployRequest
  *
- * \brief The CodeDeployRequest class is the base class for all CodeDeploy requests.
+ * \brief The CodeDeployRequest class provides an interface for CodeDeploy requests.
  *
  * \ingroup CodeDeploy
  */

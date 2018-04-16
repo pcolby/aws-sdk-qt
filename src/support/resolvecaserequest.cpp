@@ -28,7 +28,7 @@ namespace Support {
 /*!
  * \class QtAws::Support::ResolveCaseRequest
  *
- * \brief The ResolveCaseRequest class encapsulates Support ResolveCase requests.
+ * \brief The ResolveCaseRequest class provides an interface for Support ResolveCase requests.
  *
  * \ingroup Support
  *

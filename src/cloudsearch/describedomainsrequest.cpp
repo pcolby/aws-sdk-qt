@@ -28,7 +28,7 @@ namespace CloudSearch {
 /*!
  * \class QtAws::CloudSearch::DescribeDomainsRequest
  *
- * \brief The DescribeDomainsRequest class encapsulates CloudSearch DescribeDomains requests.
+ * \brief The DescribeDomainsRequest class provides an interface for CloudSearch DescribeDomains requests.
  *
  * \ingroup CloudSearch
  *
